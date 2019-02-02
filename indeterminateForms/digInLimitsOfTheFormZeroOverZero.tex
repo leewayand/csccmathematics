@@ -79,27 +79,8 @@ Let's finish the example with the function above.
     \frac{x^2-3x+2}{x-2} = \frac{(x-2)(\answer[given]{x-1})}{(x-2)} = \answer[given]{x-1}.
     \]
   
-    \begin{image}
-      \begin{tikzpicture}
-        \begin{axis}[
-            domain=-2:4,
-            width=2.5in,
-            axis lines =middle, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            xtick={-2,...,4},
-            ytick={-3,...,3},
-          ]
-	  \addplot [very thick, penColor, smooth] {x-1};
-        \end{axis}
-        \node [penColor] at (2,-.75) {$y= x-1$};
-      \end{tikzpicture}
-      \quad
 
-
-
-
-    \end{image}
+  
       So, ``our function" is equal to the polynomial $x-1$ everywhere, except at $x=2$. Therefore, for all values of $x$ near $2$, ``our function" is equal to the polynomial $x-1$!
     This means that
     \[
