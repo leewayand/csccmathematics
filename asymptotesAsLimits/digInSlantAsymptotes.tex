@@ -54,7 +54,7 @@ f(x) = L,
 \]
 and in this case, the asymptote is the horizontal line
 \[
-\l(x) = L.
+\ell(x) = L.
 \]
 
 
@@ -65,11 +65,11 @@ On the other hand, a \textit{slant asymptote} is a somewhat different
 beast.
 
 \begin{definition}\index{slant asymptote}\index{asymptote!slant}
-  If there is a nonhorizontal line $\l(x) = m\cdot x+b$ such that
+  If there is a nonhorizontal line $\ell(x) = m\cdot x+b$ such that
   \[
-  \lim_{x\to \infty}\left(f(x) - \l(x)\right) = 0 \qquad\text{or}\qquad \lim_{x\to -\infty} \left( f(x) - \l(x)\right) = 0,
+  \lim_{x\to \infty}\left(f(x) - \ell(x)\right) = 0 \qquad\text{or}\qquad \lim_{x\to -\infty} \left( f(x) - \ell(x)\right) = 0,
   \]
-  then $\l$ is a \textbf{slant asymptote} for $f$.
+  then $\ell$ is a \textbf{slant asymptote} for $f$.
 \end{definition}
 \begin{question}
   Consider the graph of the following function. 
@@ -91,7 +91,7 @@ beast.
   What is the slant asymptote of this function?
   \begin{prompt}
     \[
-    \l(x) = \answer{x/2 -1}
+    \ell(x) = \answer{x/2 -1}
     \]
   \end{prompt}
 \end{question}
@@ -114,17 +114,17 @@ f(x) = \frac{3x^2+x+2}{x+2}.
   \begin{explanation}
     We are looking to see if there is a line $\l$ such that
     \[
-    \lim_{x\to \infty}\left(f(x) - \l(x)\right) = 0\qquad\text{or}\qquad \lim_{x\to -\infty} \left( f(x) - \l(x)\right) = 0.
+    \lim_{x\to \infty}\left(f(x) - \ell(x)\right) = 0\qquad\text{or}\qquad \lim_{x\to -\infty} \left( f(x) - \ell(x)\right) = 0.
     \]
     First, let's consider the limit as $x$ approaches positive infinity.  We will imagine that we have such a line
     \[
-    \l(x) = m\cdot x + b
+    \ell(x) = m\cdot x + b
     \]
     and attempt to find the correct values for $m$ and $b$.  Let's look again at our limit.  We are assuming:
 \[
     \lim_{x \to \infty} \left (\frac{3x^2 + x + 2}{x+2} - (mx + b) \right) = 0.
 \]
-    We know that $f(x)$ is continuous everywhere except at $x = -2$ and $\l(x)$ is continuous everywhere, so 
+    We know that $f(x)$ is continuous everywhere except at $x = -2$ and $\ell(x)$ is continuous everywhere, so 
     we can apply our limit laws away from $x = -2$.  We're looking at large values of $x$, so this is no problem.  We use the fact that the sum of the limits is the limit of the sums.
     \begin{align*}
     \lim_{x \to \infty} \left ( \frac{3x^2 + x + 2}{x+2} \right ) - &\lim_{x\to\infty} (mx+b) = 0 \\
@@ -166,13 +166,13 @@ f(x) = \frac{3x^2+x+2}{x+2}.
     \[
     \lim_{x\to\infty}\left(\frac{3x^2+x+2}{x+2} - (3x-5) \right) = 0.
     \]
-   In other words, $\l(x) = \answer[given]{3x-5}$ is a slant asymptote
+   In other words, $\ell(x) = \answer[given]{3x-5}$ is a slant asymptote
    for our function $f$.  You should check that we get the same slant
-   asymptote $\l(x) = \answer[given]{3x-5}$ when we take the limit to
+   asymptote $\ell(x) = \answer[given]{3x-5}$ when we take the limit to
    negative infinity as well.
    \begin{onlineOnly}
      We can confirm our results by looking at the graph of $y=f(x)$
-     and $y=\l(x)$:
+     and $y=\ell(x)$:
      \[
      \graph[xmin=-40,xmax=40,ymin=-50,ymax=50]{\frac{3x^2+x+2}{x+2}, 3x-5}
      \]
