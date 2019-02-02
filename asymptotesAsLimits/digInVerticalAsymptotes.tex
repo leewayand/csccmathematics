@@ -1,0 +1,175 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\title[Dig-In:]{Vertical asymptotes}
+
+\outcome{Recognize when a limit is indicating there is a vertical asymptote.}
+\outcome{Evaluate the limit as $x$ approaches a point where there is a vertical asymptote.}
+\outcome{Match graphs of functions with their equations based on vertical asymptotes.}
+\outcome{Discuss what it means for a limit to equal $\infty$.}
+\outcome{Define a vertical asymptote.}
+\outcome{Understand the relationship between limits and vertical asymptotes.}
+\outcome{Find vertical asymptotes of famous functions.}
+\outcome{Find vertical asymptotes by looking at a graph.}
+
+
+\begin{document}
+\begin{abstract}
+We explore functions that ``shoot to infinity'' near certain points.
+
+\end{abstract}
+\maketitle
+
+Consider the function
+\[
+f(x) = \frac{1}{(x+1)^2}.
+\]
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-2:1,
+            ymax=100,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth, domain=(-2:-1.1)] {1/(x+1)^2};
+          \addplot [very thick, penColor, smooth, domain=(-.9:1)] {1/(x+1)^2};
+          \addplot [textColor, dashed] plot coordinates {(-1,0) (-1,100)};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x)=\protect\frac{1}{(x+1)^2}$.}
+%% \label{plot:1/(x+1)^2}
+\end{image}
+While the $\lim_{x\to -1} f(x)$ does not exist, something can still be
+said.
+
+\begin{definition}\label{def:inflimit}\index{infinite limit}
+If $f(x)$ grows arbitrarily large as $x$ approaches $a$, we write
+\[
+\lim_{x\to a} f(x) = \infty
+\]
+and say that the limit of $f(x)$ is equal to \textbf{ infinity} as $x$
+goes to $a$.
+
+If $|f(x)|$ grows arbitrarily large as $x$ approaches $a$ and $f(x)$ is
+negative near $a$, we write
+\[
+\lim_{x\to a} f(x) = -\infty
+\]
+and say that the limit of $f(x)$ is equal to \textbf{ negative infinity}
+as $x$ goes to $a$.
+\end{definition}
+
+\begin{question}
+  Which of the following are correct?
+  \begin{selectAll}
+    \choice[correct]{$\lim_{x\to -1} \frac{1}{(x+1)^2} = \infty$}
+    \choice{$\lim_{x\to -1} \frac{1}{(x+1)^2} \to \infty$}
+    \choice{$f(x) = \frac{1}{(x+1)^2}$, so $f(-1) = \infty$}
+    \choice[correct]{$f(x) = \frac{1}{(x+1)^2}$, so as $x\to -1$,
+      $f(x) \to \infty$}
+  \end{selectAll}
+\end{question}
+
+On the other hand, consider the function 
+\[
+f(x) = \frac{1}{(x-1)}.
+\]
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-1:2,
+            ymax=50,
+            ymin=-50,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth, domain=(1.02:2)] {1/(x-1)};
+          \addplot [very thick, penColor, smooth, domain=(-1:.98)] {1/(x-1)};
+          \addplot [textColor, dashed] plot coordinates {(1,-50) (1,50)};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x)=\protect\frac{1}{x-1}$.}
+%% \label{plot:1/(x-1)}
+\end{image}
+While the two sides of the limit as $x$ approaches $1$ do not agree, we can still consider the one-sided
+limits.  We see $\lim_{x\to 1^+} f(x) = \infty$ and $\lim_{x\to 1^-} f(x) =
+-\infty$.
+
+
+\begin{definition}\label{def:vert asymptote}\index{asymptote!vertical}\index{vertical asymptote}
+If at least one of the following hold:
+\begin{itemize}
+\item $\lim_{x\to a} f(x) = \pm\infty$,
+\item $\lim_{x\to a^+} f(x) = \pm\infty$,
+\item $\lim_{x\to a^-} f(x) = \pm\infty$,
+\end{itemize}
+then the line $x=a$ is a \textbf{vertical asymptote} of $f$.
+\end{definition}
+
+
+\begin{example}
+Find the vertical asymptotes of 
+\[
+f(x) = \frac{x^2-9x+14}{x^2-5x+6}.
+\]
+
+\begin{explanation}
+Since $f$ is a rational function, it is continuous on its domain. So the only points where the function can possibly have a vertical asymptote are zeros of the denominator. \\
+Start by factoring both the numerator and the denominator:
+\[
+\frac{x^2-9x+14}{x^2-5x+6} = \frac{(x-2)(x-7)}{(x-2)(x-3)}
+\]
+Using limits, we must investigate what happens with $ f(x)$ when $x\to 2$ and $x\to 3$, since $2$ and $3$ are the only zeros of the denominator. Write
+\begin{align*}
+\lim_{x\to 2} \frac{\cancel{(x-2)}(x-7)}{\cancel{(x-2)}(x-3)} &= \lim_{x\to 2} \frac{(x-7)}{(x-3)}\\
+&= \frac{-5}{-1}\\
+&=5.
+\end{align*}
+Now write
+\begin{align*}
+\lim_{x\to 3} \frac{\cancel{(x-2)}(x-7)}{\cancel{(x-2)}(x-3)} &= \lim_{x\to 3} \frac{(x-7)}{(x-3)}\\
+&= \lim_{x\to 3}\frac{-4}{x-3}.
+\end{align*}
+Consider the one-sided limits separately. 
+
+ When $x\to 3^+$, the quantity $
+(x-3)$ is positive and approaches $0$ and the numerator is negative, therefore, 
+$\lim_{x\to 3^+} f(x) = -\infty$.
+
+ On the other hand,  when $x\to 3^-$, the quantity $
+(x-3)$ is negative and approaches $0$ and the numerator is negative, therefore, 
+$\lim_{x\to 3^-} f(x) = \infty$.
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=1:4,
+            ymax=50,
+            ymin=-50,
+            samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+	  \addplot [very thick, penColor, smooth, domain=(3.02:4)] {(x-7)/(x-3)};
+          \addplot [very thick, penColor, smooth, domain=(1:2.98)] {(x-7)/(x-3)};
+          \addplot [textColor, dashed] plot coordinates {(3,-50) (3,50)};
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(2,5)};  %% open hole
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x)=\protect\frac{x^2-9x+14}{x^2-5+6}$.}
+%% \label{plot:(x^2-9x+14)/(x^2-5x+6)}
+\end{image}
+Hence we have a vertical asymptote at $x=3$.
+\end{explanation}
+\end{example}
+
+
+
+\end{document}
