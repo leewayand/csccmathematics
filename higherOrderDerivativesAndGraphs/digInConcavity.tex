@@ -1,0 +1,209 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+
+\outcome{Use the first derivative to determine whether a function is increasing or decreasing.}
+\outcome{Identify the relationships between the function and its first and second derivatives.}
+\outcome{Sketch a graph of the second derivative, given the original function.}
+\outcome{Sketch a graph of the original function, given the graph of its first and second derivatives.}
+\outcome{State the relationship between concavity and the second derivative.}
+
+\title[Dig-In:]{Concavity}
+
+\begin{document}
+\begin{abstract}
+  Here we examine what the second derivative tells us about the
+  geometry of functions.
+\end{abstract}
+\maketitle
+
+The graphs of two functions, $f$ and $g$, both increasing on the given interval, are given below.
+\begin{image}
+  \begin{tikzpicture}
+    \draw [penColor,  ultra thick,domain=180:270] plot ({2*cos(\x)+4},{9-2*sin(\x)});
+    \draw [penColor, ultra thick,domain=270:360] plot ({2*cos(\x)+8}, {2*sin(\x)+11});
+    \draw [color=red,thick, domain=1.92:2.2] plot({\x},{cot(193)*(\x-(2*cos(193)+4))+9-2*sin(193)});
+    \draw [color=red, thick, domain=2.3:3.1] plot({\x},{cot(225)*(\x-(2*cos(225)+4))+9-2*sin(225)});    
+    \draw [color=red, thick, domain=3.19:4.2] plot({\x},{cot(260)*(\x-(2*cos(260)+4))+9-2*sin(260)});
+    \draw [color=red, thick, domain=7.8:9.01] plot({\x},{-cot(280)*(\x-(2*cos(280)+8))+11+2*sin(280)});
+    \draw [color=red, thick, domain=9.05:9.79] plot({\x},{-cot(315)*(\x-(2*cos(315)+8))+11+2*sin(315)});
+    \draw [color=red, thick, domain=9.82:10.08] plot({\x},{-cot(347)*(\x-(2*cos(347)+8))+11+2*sin(347)});
+    \node at (3,7.5) [text width=5cm] {
+      The function $f$ is increasing, while the rate itself is decreasing.
+      In this case the curve  $y=f(x)$is \textbf{concave down}.};
+    \node at (9,7.5) [text width=5cm] {
+      The function $g$ is increasing, while the rate itself is increasing.
+      In this case the curve  $y=g(x)$is \textbf{concave up}.};
+  \end{tikzpicture}
+\end{image}
+
+
+\begin{definition} Let $f$ be a  function differentiable on an open interval $I$.
+  \begin{itemize}
+    \item We say that the graph of $f$ is \textbf{concave up} on $I$
+      if $f'$, the derivative of $f$, is \textit{increasing} on
+      $I$.
+    \item We say that the graph of $f$ is \textbf{concave down} on
+      $I$ if $f'$, the derivative of $f$, is \textit{decreasing} on
+      $I$.
+  \end{itemize}
+\end{definition}
+
+We know that the sign of the derivative tells us whether a function is
+increasing or decreasing at some point. Likewise, the sign of the
+second derivative $f''(x)$ tells us whether $f'(x)$ is increasing or
+decreasing at $x$. 
+If we are trying to understand the shape of the graph of a function,
+knowing where it is concave up and concave down helps us to get a more
+accurate picture. This is  summarized in a single theorem.
+
+
+\begin{theorem}[Test for Concavity]\index{concavity test} Let $I$ be an open interval.
+\begin{itemize}
+\item If $f''(x)>0$ for all $x$ in $I$, then the graph of $f$ is  concave up on $I$.
+\item If $f''(x)<0$ for all $x$ in $I$, then the graph of $f$ is  concave down on $I$.
+\end{itemize}
+\end{theorem}
+We summarize the consequences of this theorem  in the table below:
+
+
+\begin{image}
+  \begin{tikzpicture}
+    \draw (0,0) -- (0,12);
+    \draw (0,0) -- (12,0);
+    \draw (6,0) -- (6,12);
+    \draw (0,6) -- (12,6);
+    \draw (12,0) -- (12,12);
+    \draw (0,12) -- (12,12);
+    
+    \node at (-1.3,9) {\Large$0<f''(x)$};
+    \node at (-1.3,3) {\Large$f''(x)<0$};
+    \node at (3,12.4) {\Large$f'(x)<0$};
+    \node at (9,12.4) {\Large$0<f'(x)$};
+    
+    \draw [penColor,ultra thick,domain=180:270] plot ({2*cos(\x)+4}, {2*sin(\x)+11});
+    \draw [penColor,ultra thick,domain=270:360] plot ({2*cos(\x)+8}, {2*sin(\x)+11});
+    \draw [penColor,ultra thick,domain=0:90] plot ({2*cos(\x)+2}, {2*sin(\x)+3});
+    \draw [penColor,ultra thick,domain=180:90] plot ({2*cos(\x)+10}, {2*sin(\x)+3});
+
+    \node at (3,7.5) [text width=5cm] {\large
+      The function $f$ is decreasing, while the rate itself is increasing.
+      In this case the curve $y=f(x)$ is \textbf{concave up}.};
+
+    \node at (9,7.5) [text width=5cm] {\large
+     The function $f$ is increasing, while the rate itself is increasing.
+      In this case the curve $y=f(x)$ is \textbf{concave up}.};
+
+    \node at (3,1.5) [text width=5cm] {\large
+      The function $f$  is decreasing, while the rate itself is decreasing.
+      In this case the curve  $y=f(x)$ is \textbf{concave down}.};
+
+    \node at (9,1.5) [text width=5cm] {\large
+     The function $f$ is increasing, while the rate itself is decreasing.
+      In this case the curve $y=f(x)$ is \textbf{concave down}.};
+  \end{tikzpicture}
+\end{image}
+
+
+\begin{example}
+  Let $f$ be a continuous function and suppose that:
+  \begin{itemize}
+  \item $f'(x) > 0$ for $-1< x<1$.
+  \item $f'(x) < 0$ for $-2< x<-1$ and $1<x<2$.
+  \item $f''(x) > 0$ for $-2<x<0$ and $1<x< 2$.
+  \item $f''(x) < 0$ for $0<x< 1$.  
+  \end{itemize}
+  Sketch a possible graph of $f$.
+  \begin{explanation}
+    Start by marking points in the domain where the derivative changes sign and indicate
+    intervals where $f$ is increasing and intervals $f$ is
+    decreasing. The function $f$ has a negative derivative from $-2$
+    to $x=\answer[given]{-1}$. This means that $f$ is
+    \wordChoice{\choice{increasing}\choice[correct]{decreasing}} on
+    this interval. The function $f$ has a positive derivative from
+    $x=\answer[given]{-1}$ to $x=\answer[given]{1}$. This means that
+    $f$ is
+    \wordChoice{\choice[correct]{increasing}\choice{decreasing}} on
+    this interval. Finally, The function $f$ has a negative derivative
+    from $x=\answer[given]{1}$ to $2$. This means that $f$ is
+    \wordChoice{\choice{increasing}\choice[correct]{decreasing}} on
+    this interval.
+  \begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xmin=-2,xmax=2,ymin=-2,ymax=2,
+        axis lines=center,
+        width=6in,
+        height=3in,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+      ]
+      \addplot [dashed, penColor2] plot coordinates {(-1,-2) (-1,2)}; %% Critical points
+      \addplot [dashed, penColor2] plot coordinates {(1,-2) (1,2)}; %% Critical points
+
+      \addplot [->, line width=10, penColor!10!background] plot coordinates {(-1+.2,-2+.2) (1-.2,2-.2)};
+      \addplot [->, line width=10, penColor!10!background] plot coordinates {(-2+.2,2-.2) (-1-.2,-2+.2)};
+      \addplot [->, line width=10, penColor!10!background] plot coordinates {(1+.2,2-.2) (2-.2,-2+.2)}; 
+      
+      %\addplot [very thick,penColor,smooth, domain=(-2:2)] {x^3+x^2-2*x)};
+    \end{axis}
+  \end{tikzpicture}
+  \end{image}
+  Now we should sketch the concavity: \wordChoice{\choice[correct]{concave up}\choice{concave down}} when the second
+  derivative is positive, \wordChoice{\choice{concave up}\choice[correct]{concave down}} when the second derivative is
+  negative.
+    \begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xmin=-2,xmax=2,ymin=-2,ymax=2,
+        axis lines=center,
+        width=6in,
+        height=3in,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+      ]
+      \addplot [dashed, penColor2] plot coordinates {(-1,-2) (-1,2)}; %% Critical points
+      \addplot [dashed, penColor2] plot coordinates {(1,-2) (1,2)}; %% Critical points
+
+      %\addplot [->, line width=10, penColor!10!background] plot coordinates {(-1+.2,-2+.2) (1-.2,2-.2)};
+      %\addplot [->, line width=10, penColor!10!background] plot coordinates {(-2+.2,2-.2) (-1-.2,-2+.2)};
+      %\addplot [->, line width=10, penColor!10!background] plot coordinates {(1+.2,2-.2) (2-.2,-2+.2)};
+
+      \addplot [penColor3!20!background,line width=10,domain=180:270] ({-1.1+.7*cos(x)}, {1.2+2*sin(x)});
+      \addplot [penColor3!20!background,line width=10,domain=270:360] ({-.9+.7*cos(x)}, {-.1+.7*sin(x)});
+      \addplot [penColor3!20!background,line width=10,domain=180:90] ({.9+.7*cos(x)}, {.1+.7*sin(x)});
+      \addplot [penColor3!20!background,line width=10,domain=180:265] ({1.9+.7*cos(x)}, {.9+ 2*sin(x)});
+
+      \addplot [->, line width=10, penColor3!20!background] plot coordinates {(-1.1,-.1-.7) (-1,-.1-.7)};
+      \addplot [->, line width=10, penColor3!20!background] plot coordinates {(.9,.1+.7) (1,.1+.7)};
+      
+      \addplot [->, line width=10, penColor3!20!background] plot coordinates {(-.9+.7,-.2) (-.9+.8,.2)};
+      \addplot [->, line width=10, penColor3!20!background] plot coordinates {(1.8,-1.1) (2,-1.2)};
+      
+      %\addplot [very thick,penColor,smooth, domain=(-2:2)] {x^3+x^2-2*x)};
+    \end{axis}
+  \end{tikzpicture}
+    \end{image}
+    Finally, we can sketch our curve:
+        \begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+        xmin=-2,xmax=2,ymin=-2,ymax=2,
+        axis lines=center,
+        width=6in,
+        height=3in,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+      ]
+      \addplot [dashed, penColor2] plot coordinates {(-1,-2) (-1,2)}; %% Critical points
+      \addplot [dashed, penColor2] plot coordinates {(1,-2) (1,2)}; %% Critical points
+
+      \addplot [penColor,ultra thick,domain=-2:1,smooth] {(-x^3+3*x)*.5};
+      \addplot [penColor,ultra thick,domain=1:2,smooth] {(-(x-3)^3+3*(x-3))*.5};
+    \end{axis}
+  \end{tikzpicture}
+  \end{image}
+  \end{explanation}
+\end{example}
+
+\end{document}
