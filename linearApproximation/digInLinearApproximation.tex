@@ -415,6 +415,72 @@ We should not be surprised, since the slope of the tangent line in the figure is
 
 
 
+Essentially, differentials allow us to solve the problems presented in
+the previous examples from a slightly different point of view. Recall,
+when $h$ is near but not equal zero,
+\[
+f'(x) \approx \frac{f(x+h)-f(x)}{h}.
+\]
+Hence, 
+\[
+f'(x)h \approx f(x+h)-f(x).
+\]
+We can replace a quantity $h$ with a quantity $dx$ to write
+\begin{align*}
+f'(x)\cdot dx &\approx f(x+dx)-f(x)\\
+df &\approx f(x+dx)-f(x).
+\end{align*}
+Adding $f(x)$ to both sides we see
+\[
+f(x) + df\approx f(x+dx)
+\]
+or, equivalently
+\[
+f(x+dx)\approx f(x) + df .
+\]
+There
+are contexts where the language of differentials is common. Here is
+the basic strategy:
+\begin{image}
+  \begin{tikzpicture}
+    \node at (0,0) {
+      $\underbrace{f(x + dx)} \approx  \overbrace{f(x)} + \underbrace{df}$
+    };
+    \node at (-1.4,-.7) {\small{what you want}};
+    \node at (.3,.7) {\small{what you know}};
+    \node at (1.7,-.7) {\small{what you compute}};
+  \end{tikzpicture}
+\end{image}
+
+We will repeat our previous examples using differentials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
