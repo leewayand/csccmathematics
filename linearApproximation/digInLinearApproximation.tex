@@ -569,6 +569,65 @@ Hence $\sin(0.3) \approx \sin(0) + 0.3 \approx 0.3$.
 
 
 
+The upshot is that linear approximations and differentials are simply
+two slightly different ways of doing the exact same thing.
+
+\section{Error approximation}
+
+Differentials also help us estimate error in real life settings.
+
+\begin{example}
+  The cross-section of a $250$ ml glass can be modeled by the function
+  $r(x) = \frac{x^4}{3}$:
+  \begin{image}
+    \begin{tikzpicture}[
+        declare function = {f(x) = (1/3)* pow(x,4);} ]
+      \begin{axis}[
+          xmin =-4,xmax=4,ymax=23,ymin=-.2,
+          axis lines=center, xlabel=$x$, ylabel=$y$,
+          every axis y label/.style={at=(current axis.above origin),anchor=south},
+          every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          axis on top,
+        ]
+        \addplot [draw=none,fill=fillp!50!white,domain=-2.65:2.65, smooth] {.8*sqrt(2.65^2-x^2)+16.8} \closedcycle;
+        \addplot [draw=none,fill=fillp,domain=-2.65:2.65, smooth] {-.8*sqrt(2.65^2-x^2)+16.8} \closedcycle; 
+        \addplot [draw=none,fill=white,domain=-2.7:2.7, smooth] {f(x)} \closedcycle;
+        \addplot [ultra thick,penColor, smooth,domain=-2.75:2.75] {f(x)};
+
+        \draw[penColor,very thick] (axis cs:0,16.8) ellipse (265 and 20);
+        \draw[penColor,very thick] (axis cs:0,19) ellipse (275 and 20);
+
+        \node[black] at (axis cs:2.5,3) {$y=\frac{x^4}{3}$};       
+      \end{axis}
+    \end{tikzpicture}
+  \end{image}
+  At $16.8$ cm from the base of the glass, there is a mark indicating
+  when the glass is filled to $250$ ml. If the glass is filled within
+  $\pm 2$ millimeters of the mark, what are the bounds on the volume?
+  As a gesture of friendship, we will tell you that the volume in
+  milliliters, as a function of the height of water in centimeters, $y$,
+  is given by
+  \[
+  V(y) = \frac{2\pi y^{3/2}}{\sqrt{3}}.
+  \]
+  Note: If you persist in your quest to learn calculus, you will be
+  able to derive the formula above like it's no-big-deal.
+  \begin{explanation}
+    We want to know what a small change in the height, $y$, does to the
+    volume $V$.  These small changes can be modeled by the
+    differentials $dV$ and $dy$. Since
+    \[
+    dV = V'(y) dy
+    \]
+    and $V'(y) = \answer[given]{\pi \sqrt{3 y}}$ we use the fact that
+    $dy = \pm 0.2$ with $y=\answer[given]{16.8}$ to see
+    \[
+    dV = \answer[given]{\pi \sqrt{3 \cdot 16.8}} \cdot 0.2.
+    \]
+    Hence the volume will vary by roughly $\pm\answer[given,tolerance=.01]{4.46062}$
+    milliliters.
+  \end{explanation}
+\end{example}
 
 
 
