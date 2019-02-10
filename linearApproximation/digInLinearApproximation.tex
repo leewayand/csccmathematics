@@ -359,6 +359,85 @@ Also, two quantities, $dx$ and $df$, and a point $P$ are marked in the figure. L
 
 
 
+\begin{question}
+Based on  the figure and the expression for $L(x)$, select all the correct expressions for $df$.
+ \begin{hint}
+    Recall: $df=L(x)-f(a)=f(a)+f'(a)(x-a)-f(a)=f'(a)(x-a)=f'(a)dx$.
+    \end{hint}
+      \begin{selectAll}
+      \choice[correct]{ $df=f'(a)(x-a)$}
+      \choice[correct]{ $df=f'(a)dx$}
+      \choice{$df=f'(x-a)$}
+      \choice{$df=f'(x)dx$}
+      \choice{$df=f'(x)(x-a)$}
+      \end{selectAll}
+  \end{question}
+  
+ So, we can write $df=f'(a)dx$ and call it a \textbf{differential} of $f$ at $a$. Notice that we can define a differential at any point $x$ of the domain of $f$, provided that $f'(x)$ exists.
+We will  do that in our next definition.
+\begin{definition}
+Let $f$ be a differentiable function, let $x$ be a point in the domain of $f$, and let  $dx$ be some quantity, called a \textbf{differential of $x$}.
+We define  $df$, a differential of $f$,  at a point $x$ by 
+\[
+df=f'(x)\cdot dx
+\] 
+
+ Geometrically, differentials can be interpreted via the diagram below.
+\begin{image}
+%\begin{marginfigure}[0in]
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=1, xmax=2, range=0:6,ymax=6,ymin=0,
+            axis lines =left, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            ticks=none,
+            axis on top,
+          ]         
+          \addplot [draw=black,dashed,->,>=stealth'] plot coordinates {(1.4,10/6) (1.7,10/6)};
+          \addplot [draw=black,dashed,->,>=stealth'] plot coordinates {(1.7,10/6) (1.7,10/6 +.3/.36)};
+          \addplot [very thick,penColor, smooth,samples=100,domain=(0:1.833)] {-1/(x-2)};
+          \addplot [very thick,penColor2, smooth,samples=100,domain=(0:1.833)] {1/0.6+(1/0.36)*(x-1.4)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.7,1/0.3)};  %% closed hole  
+          \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(1.7,10/6 +.3/.36)};  %% closed hole  
+          \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(1.4,10/6)};  %% closed hole            
+          \node at (axis cs:1.55,1.67) [below] {$dx$};
+          \node at (axis cs:1.7,2.08) [right] {$df$};
+          \node at (axis cs:1.15,1.85) [below] {$f$};
+          \node at (axis cs:1.05,0.55) [right] {$L$};
+          \node at (axis cs:1.24,2.0) [right] {$(x,f(x))$};
+          \node at (axis cs:1.26,3.6) [right] {$(x+dx,f(x+dx))$};
+          
+        \end{axis}
+\end{tikzpicture}
+%\caption{While $dy$ and $\d x$ are both variables, $dy$ depends on $\d x$,
+  %and approximates how much a function grows after a change of size
+  %$\d x$ from a given point.}
+%\label{figure:differentials}
+%\end{marginfigure}
+\end{image}
+
+Note, it is now the case (by definition!) that 
+\[
+ f'(x)=\frac{df}{dx}.
+\]
+\end{definition}
+We should not be surprised, since the slope of the tangent line in the figure is $f'(x)$,  and this slope is also given by $\frac{df }{dx}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
