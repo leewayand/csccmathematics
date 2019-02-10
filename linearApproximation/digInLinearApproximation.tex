@@ -438,7 +438,93 @@ We should not be surprised, since the slope of the tangent line in the figure is
 
 
 
+Essentially, differentials allow us to solve the problems presented in
+the previous examples from a slightly different point of view. Recall,
+when $h$ is near but not equal zero,
+\[
+f'(x) \approx \frac{f(x+h)-f(x)}{h}.
+\]
+Hence, 
+\[
+f'(x)h \approx f(x+h)-f(x).
+\]
+We can replace a quantity $h$ with a quantity $dx$ to write
+\begin{align*}
+f'(x)\cdot dx &\approx f(x+dx)-f(x)\\
+df &\approx f(x+dx)-f(x).
+\end{align*}
+Adding $f(x)$ to both sides we see
+\[
+f(x) + df\approx f(x+dx)
+\]
+or, equivalently
+\[
+f(x+dx)\approx f(x) + df .
+\]
+There
+are contexts where the language of differentials is common. Here is
+the basic strategy:
+\begin{image}
+  \begin{tikzpicture}
+    \node at (0,0) {
+      $\underbrace{f(x + dx)} \approx  \overbrace{f(x)} + \underbrace{df}$
+    };
+    \node at (-1.4,-.7) {\small{what you want}};
+    \node at (.3,.7) {\small{what you know}};
+    \node at (1.7,-.7) {\small{what you compute}};
+  \end{tikzpicture}
+\end{image}
 
+We will repeat our previous examples using differentials.
+
+\begin{example}
+Use differentials to approximate $\sqrt[3]{50}$.
+\begin{explanation}
+  Set $f(x) = \sqrt[3]{x}$. We want to know $\sqrt[3]{50}$.  Since
+  $4^3 = 64$, we set $x=64$.  Setting $dx=50-64=-14$, we have
+  \begin{align*}
+  \sqrt[3]{50} = f(x + dx) &\approx  f(x) + df\\
+  &\approx \sqrt[3]{64} + df.
+  \end{align*}
+  Here we see a plot of $y=\sqrt[3]{x}$ with the differentials above
+  marked:
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=40,xmax=70,ymin=3,ymax=4.5,
+          axis lines=center,
+          xlabel=$x$, ylabel=$y$,
+          every axis y label/.style={at=(current axis.above origin),anchor=south},
+          every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        ]        
+        \addplot [very thick, penColor, samples=150,smooth,domain=(0:100)] {x^(1/3))};
+        %\addplot [very thick, penColor2, domain=(50:64)] {x/48+8/3};
+        %\addplot [textColor,dashed] plot coordinates {(64,0) (64,4)};
+        \addplot [draw=black,dashed,->,>=stealth'] plot coordinates {(50,4) (50,3.71)};
+        \addplot [draw=black,dashed,->,>=stealth'] plot coordinates {(64,4) (50, 4)};
+        \addplot [very thick, penColor2, domain=(0:100)] {x/48+8/3};
+        \node [above] at (axis cs:57,4) {$dx$};
+        \node [left] at (axis cs:50,3.86) {$df$};
+        \node [below,penColor3] at (axis cs:64,4) {$(64,4)$};
+        \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(64,4)};  %% closed hole    
+        \node at (axis cs:45,3.5) [penColor] {$f$};
+        \node at (axis cs:45,3.67) [penColor2] {$L$};        
+      \end{axis}
+    \end{tikzpicture}
+    %\caption{A plot of $f(x) = \sqrt[3]{x}$  along with the differentials $\d x$ and $dy$.}
+    \label{figure:diff sqrt3x}
+  \end{image}
+  Now we must compute $df$:
+  \begin{align*}
+    df &= f'(x) \cdot dx\\
+    &= \answer[given]{\frac{1}{3x^{2/3}}} \cdot dx\\
+    &= \frac{1}{3\cdot64^{2/3}} \cdot(\answer[given]{-14})\\
+    &= \frac{1}{3\cdot64^{2/3}} \cdot(-14)\\
+    &= \frac{-7}{24}
+  \end{align*}
+  Hence $f(50) \approx f(64) + \frac{-7}{24} \approx 3.71$.
+\end{explanation}
+\end{example}
 
 
 
