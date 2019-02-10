@@ -616,7 +616,28 @@ Differentials also help us estimate error in real life settings.
   
 
 
+\begin{image}
+    \begin{tikzpicture}[
+        declare function = {f(x) = (1/3)* pow(x,4);} ]
+      \begin{axis}[
+          xmin =-4,xmax=4,ymax=23,ymin=-.2,
+          axis lines=center, xlabel=$x$, ylabel=$y$,
+          every axis y label/.style={at=(current axis.above origin),anchor=south},
+          every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          axis on top,
+        ]
+        \addplot [draw=none,fill=fillp!50!white,domain=-2.65:2.65, smooth] {.8*sqrt(2.65^2-x^2)+16.8} \closedcycle;
+        \addplot [draw=none,fill=fillp,domain=-2.65:2.65, smooth] {-.8*sqrt(2.65^2-x^2)+16.8} \closedcycle; 
+        \addplot [draw=none,fill=white,domain=-2.7:2.7, smooth] {f(x)} \closedcycle;
+        \addplot [ultra thick,penColor, smooth,domain=-2.75:2.75] {f(x)};
 
+        \draw[penColor,very thick] (axis cs:0,16.8) ellipse (265 and 20);
+        \draw[penColor,very thick] (axis cs:0,19) ellipse (275 and 20);
+
+        \node[black] at (axis cs:2.5,3) {$y=\frac{x^4}{3}$};       
+      \end{axis}
+    \end{tikzpicture}
+  \end{image}
 
 
 
