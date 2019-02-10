@@ -681,6 +681,60 @@ Differentials also help us estimate error in real life settings.
 
 
 
+\section{New and old friends}
+
+You might be wondering, given a plot $y=f(x)$,
+\begin{quote}
+  What's the difference between $\Delta x$ and $dx$? What about
+  $\Delta y$ and $dy$?
+\end{quote}
+Regardless, it is now a pressing question. Here's the deal: 
+\[
+\frac{\Delta y}{\Delta x}
+\]
+is the \textbf{average rate of change} of $y=f(x)$ with respect to $x$.
+On the other hand:
+\[
+\frac{dy}{dx}
+\]
+is the \textbf{instantaneous rate of change} of $y=f(x)$ with respect to
+$x$. Essentially, $\Delta x$ and $dx$ are the same type of thing,
+they are (usually small) changes in $x$. However, $\Delta y$ and $dy$ are very different things.
+\begin{itemize}
+\item $\Delta y=f(x+\Delta x)-f(x)$; it  is the change in $y=f(x)$ associated to $\Delta x$.
+\item $dy=L(x+dx)-L(x)$, it is the change in $y=L(x)$ associated to $\Delta x=dx$.
+  \[
+  dy =f'(x)dx
+  \]
+  Note: $ L(x+dx)= f(x)+f'(x)dx$.
+   
+  So, the change
+  \begin{align*}
+    dy &= L(x+dx)-L(x)\\
+    &= f(x)+f'(x)dx-L(x)\\
+    &= f(x)+f'(x)dx-f(x)\\
+    &=f'(x)dx
+  \end{align*}
+\end{itemize}
+\begin{question}
+  Suppose $f(x) = x^2$. If we are at the point $x=1$ and $\Delta x =dx
+  = 0.1$, what is $\Delta y$? What is $dy$?
+  \begin{hint}
+ $ \Delta y=f(1+\Delta x)-f(1)=f(1.1)-f(1)$
+    \end{hint}
+      \begin{hint}
+ $dy=f'(1)\cdot dx=f'(1)\cdot0.1$
+    \end{hint}
+  \begin{prompt}
+    \[
+    \Delta y = \answer{0.21}\qquad \d y = \answer{0.2}
+    \]
+  \end{prompt}
+\end{question}
+Differentials can be confusing at first. However, when you master
+them, you will have a powerful tool at your disposal.
+
+
 
 
 
