@@ -529,7 +529,336 @@ hold:
 \end{explanation}
 \end{theorem}
 
+Due to the geometric nature of integration, geometric properties of
+functions can help us compute integrals.
 
+\begin{example}
+  Compute:
+  \[
+  \int_0^6 |x-3|  dx
+  \]
+  \begin{explanation}
+    This may seem difficult at first. Perhaps the first thing to do is
+    look at a graph of $y=x-3$:
+  \begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=6in,
+        height=3in,
+        xmin=-.5, xmax=6.5,ymin=-4,ymax=4,domain=0:6,
+        axis lines =center, xlabel=$x$, ylabel=$y$,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        axis on top,
+    ] 
+      \addplot [penColor,ultra thick,domain=0:6] {x-3};
+    \end{axis}
+  \end{tikzpicture}
+    \end{image}
+        Now we can graph $y=|x-3|$:
+    \begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+        width=6in,
+        height=3in,
+        xmin=-.5, xmax=6.5,ymin=-4,ymax=4,domain=0:6,
+        axis lines =center, xlabel=$x$, ylabel=$y$,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        axis on top,
+    ] 
+      \addplot [draw=none, fill=fillp,domain=0:3] {3-x} \closedcycle;
+      \addplot [draw=none, fill=fillp,domain=3:6] {x-3} \closedcycle;
+      \addplot [penColor,ultra thick,domain=3:6] {x-3};
+      \addplot [penColor,ultra thick,domain=0:3] {3-x};
+    \end{axis}
+  \end{tikzpicture}
+    \end{image}
+    Recall,  $|x-3|$ is in fact  a piece-wise defined function
+    
+     \[
+  |x-3| = 
+  \begin{cases}
+    x-3 & \text{if $0\le x $}\\
+  -(x-3)&\text{if $x<0$}. 
+  \end{cases}
+  \]
+
+    Now we see that we really have two triangles, each with base $3$
+    and height $3$.  Hence
+    \begin{align*}
+    \int_0^6 |x-3| dx &= \int_0^3 \answer[given]{3-x} dx + \int_3^6 \answer[given]{x-3} dx\\
+    &= \frac{3\cdot 3}{2} + \frac{3\cdot 3}{2}\\
+    &=\answer[given]{9}.
+    \end{align*}
+  \end{explanation}
+\end{example}
+
+\begin{definition}
+  A function $f$ is an \textbf{odd} function if
+  \[
+  f(-x) = -f(x),
+  \]
+  and a function $g$ is an \textbf{even} function if
+  \[
+  g(-x) = g(x).
+  \]
+\end{definition}
+
+The names \textit{odd} and \textit{even} come from the fact that these
+properties are shared by functions of the form $x^n$ where $n$ is
+either odd or even. For example, if $f(x) = x^3$, then
+\[
+f(-7) = -f(7),
+\]
+and if $g(x) = x^4$, then
+\[
+g(-7) = g(7).
+\]
+Geometrically, even functions have 
+  symmetry with respect to the $y-$axis
+  . Cosine is an even function:
+\begin{image}
+ \begin{tikzpicture}
+  \begin{axis}[
+            xmin=-6.75,xmax=6.75,ymin=-1.5,ymax=1.5,
+            axis lines=center,
+            xtick={-6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$-2\pi$,$-3\pi/2$,$-\pi$, $-\pi/2$, $0$, $\pi/2$, $\pi$, $3\pi/2$, $2\pi$},
+            ytick={-1,1},
+            %ticks=none,
+            width=6in,
+            height=3in,
+            unit vector ratio*=1 1 1,
+            xlabel=$\theta$, ylabel=$x$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [ultra thick, penColor2, samples=100,smooth, domain=(-6.75:6.75)] {cos(deg(x))};
+          \node at (axis cs:-1.57,.75) [penColor2] {$\cos(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+On the other hand, odd functions have $180^\circ$ \textit{rotational symmetry}
+around the origin. Sine is an odd function:
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-6.75,xmax=6.75,ymin=-1.5,ymax=1.5,
+            axis lines=center,
+            xtick={-6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$-2\pi$,$-3\pi/2$,$-\pi$, $-\pi/2$, $0$, $\pi/2$, $\pi$, $3\pi/2$, $2\pi$},
+            ytick={-1,1},
+            %ticks=none,
+            width=6in,
+            height=3in,
+            unit vector ratio*=1 1 1,
+            xlabel=$\theta$, ylabel=$x$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [ultra thick, penColor, samples=100,smooth, domain=(-6.75:6.75)] {sin(deg(x))};
+          
+          \node at (axis cs:3.14,.75) [penColor] {$\sin(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+\begin{question}
+  Let $f$ be an odd function defined for all real numbers. Compute:
+  \[
+  \int_{-2}^2 f(x) dx \begin{prompt}=\answer{0}\end{prompt}
+  \]
+  \begin{hint}
+    Since our function is odd, it must look something like:
+    \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}[
+            xmin=-2.5, xmax=2.5,ymin=-1,ymax=1,domain=-2.2:2.2,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ] 
+          \addplot [penColor,ultra thick,smooth] {sin(deg(x))*sin(deg(x^2/1.3))};
+        \end{axis}
+      \end{tikzpicture}
+    \end{image}
+  \end{hint}
+  \begin{hint}
+    The integral above computes the following net area:
+    \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}[
+            xmin=-2.5, xmax=2.5,ymin=-1,ymax=1,domain=-2.2:2.2,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+          \addplot [draw=none,fill=fillp,domain=0:2, smooth] {sin(deg(x))*sin(deg(x^2/1.3))} \closedcycle;
+          \addplot [draw=none,fill=filln,domain=-2:0, smooth] {sin(deg(x))*sin(deg(x^2/1.3))} \closedcycle;
+          \addplot [penColor,ultra thick,smooth] {sin(deg(x))*sin(deg(x^2/1.3))};
+        \end{axis}
+      \end{tikzpicture}
+    \end{image}
+  \end{hint}
+\end{question}
+
+
+\begin{question}
+  Let $f$ be an odd function defined for all real numbers. Which of
+  the following are equal to
+  \[
+  \int_2^4 f(x) dx ?
+  \]
+  \begin{selectAll}
+    \choice{$\int_{4}^{2} f(x) dx$}
+    \choice{$\int_{-4}^{-2} f(x) dx$}
+    \choice[correct]{$\int_{-2}^{-4} f(x) dx$}
+    \choice[correct]{$\int_{-2}^{4} f(x) dx$}
+    \choice{$\int_{4}^{-2} f(x) dx$}
+    \choice[correct]{$\int_{2}^{-4} f(x) dx$}
+    \choice{$\int_{-4}^{2} f(x) dx$}
+    \choice[correct]{$-\int_{-4}^{2} f(x) dx$}
+    \choice[correct]{$-\int_{-4}^{-2} f(x) dx$}
+  \end{selectAll}
+\end{question}
+
+
+
+
+\section{Net area versus geometric area}
+
+
+We know that the net area of the region between a curve $y=f(x)$ and the $x$-axis
+on $[a,b]$ is given by
+\[
+\int_a^b f(x) dx.
+\]
+On the other hand, if we want to know the \textit{geometric area},
+meaning the ``actual'' area, we compute
+\[
+\int_a^b |f(x)| dx.
+\]
+\begin{example}
+The graph of a function $f$ is given in the figure below.
+ \begin{image}
+  \begin{tikzpicture}[
+      declare function = {f(\x) = (1/4)*(x-1)*(x-5)* (x-8);}]
+    \begin{axis}[  
+        domain=0:9, xmin =-1,xmax=9.1,ymax=10,ymin=-10,
+        width=6in,
+        height=3in,xtick={0,1,...,9},
+        xticklabels={0,1,...,9},
+        %% ytick style={draw=none},
+    %% yticklabels={},
+        axis lines=center, xlabel=$x$, ylabel=$y$,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        axis on top,
+      ]
+        \addplot [draw=none,fill=fillp,domain=0:1, smooth] {f(x)} \closedcycle;
+       \addplot [draw=none,fill=fillp,domain=1:5, smooth] {f(x)} \closedcycle;
+            \addplot [draw=none,fill=fillp,domain=5:8, smooth] {f(x)} \closedcycle;
+              \addplot [draw=none,fill=fillp,domain=8:9, smooth] {f(x)} \closedcycle;
+          \addplot [ultra thick,penColor, smooth] {f(x)};
+            \node at (axis cs:0.5,-1.2) {\large$A_1$};
+              \node at (axis cs:3,1.2) {\large$A_2$};
+              \node at (axis cs:6.5,-1.2) {\large$A_3$};
+              \node at (axis cs:8.5,1.2) {\large$A_4$};
+                \node at (axis cs:6,6.2) {\large$y=f(x)$};
+        \end{axis}  
+  \end{tikzpicture}
+\end{image}
+\begin{enumerate}
+\item Express the  geometric  area of the region between the curve $y=f(x)$ and the $x$-axis on the interval $[0,9]$ as a definite integral.
+\item Express the  geometric  area of the region between the curve $y=f(x)$ and the $x$-axis on the interval $[0,9]$ in terms of  definite integrals of $f$.
+\item Express the  geometric  area of the region between the curve $y=f(x)$ and the $x$-axis on the interval $[0,9]$ in terms of areas $A_1$, $A_2$, $A_3$ and $A_4$.
+
+\begin{explanation}
+\begin{enumerate}
+\item The geometric area is given by the  integral
+ \[
+  \int_0^9 |f(x)| dx 
+  \]
+The figure below depicts the graph of $|f|$.
+ \begin{image}
+  \begin{tikzpicture}[
+      declare function = {f(\x) = (1/4)*(x-1)*(x-5)* (x-8);}]
+    \begin{axis}[  
+        domain=0:9, xmin =-1,xmax=9.1,ymax=10,ymin=-10,
+        width=6in,
+        height=3in,xtick={0,1,...,9},
+        xticklabels={0,1,...,9},
+        %% ytick style={draw=none},
+    %% yticklabels={},
+        axis lines=center, xlabel=$x$, ylabel=$y$,
+        every axis y label/.style={at=(current axis.above origin),anchor=south},
+        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+        axis on top,
+      ]
+        \addplot [draw=none,fill=fillp,domain=0:1, smooth] {-f(x)} \closedcycle;
+       \addplot [draw=none,fill=fillp,domain=1:5, smooth] {f(x)} \closedcycle;
+            \addplot [draw=none,fill=fillp,domain=5:8, smooth] {-f(x)} \closedcycle;
+              \addplot [draw=none,fill=fillp,domain=8:9, smooth] {f(x)} \closedcycle;
+          \addplot [ultra thick,penColor,domain=0:1, smooth] {-f(x)};
+            \addplot [ultra thick,penColor,domain=1:5, smooth] {f(x)};
+              \addplot [ultra thick,penColor,domain=5:8, smooth] {-f(x)};
+                \addplot [ultra thick,penColor,domain=8:9, smooth] {f(x)};
+            \node at (axis cs:0.5,1.2) {\large$A_1$};
+              \node at (axis cs:3,1.2) {\large$A_2$};
+              \node at (axis cs:6.5,1.2) {\large$A_3$};
+              \node at (axis cs:8.5,1.2) {\large$A_4$};
+                \node at (axis cs:6,6.2) {\large$y=|f(x)|$};
+        \end{axis}  
+  \end{tikzpicture}
+\end{image}
+\item Using the properties of definite integrals, we can write
+\begin{align*}
+  \int_0^9 |f(x)| dx = \int_0^1 |f(x) | dx &+ \int_1^5 |f(x)| dx\\
+  &+ \int_5^8 |f(x)| dx\\
+  &+ \int_8^9 |f(x)| dx 
+\end{align*}
+Rewriting the absolute value signs:
+\begin{align*}
+  = \int_0^1 (-f(x)) dx &+ \int_1^5 f(x) dx\\
+  &+ \int_5^8 (-f(x)) dx\\
+  &+ \int_8^9 f(x) dx
+\end{align*}
+Pulling out negative signs:
+\begin{align*}
+  = -\int_0^1 f(x) dx &+ \int_1^5 f(x) dx\\
+  &- \int_5^8 f(x) dx\\
+  &+ \int_8^9 f(x) dx
+ \end{align*}
+  \item
+   \[
+  \int_0^9 |f(x)| dx =A_1 +A_2+A_3+A_4
+  \]
+
+ \end{enumerate}
+\end{explanation}
+ \end{enumerate}
+\end{example}
+\begin{question}
+  True or false:
+  \[
+  \int_a^b |f(x)| dx = \left|\int_a^b f(x) dx\right|
+  \]
+  \begin{prompt}
+  \begin{multipleChoice}
+    \choice{true}
+    \choice[correct]{false}
+  \end{multipleChoice}
+  \begin{feedback}
+    Consider $f(x) = x$ on the interval $[-1,1]$. Here
+    \[
+    \int_a^b |f(x)| dx = 1 \qquad\text{but}\qquad \left|\int_a^b
+    f(x) dx\right| = 0.
+    \]
+  \end{feedback}
+  \end{prompt}
+\end{question}
 
 
 
