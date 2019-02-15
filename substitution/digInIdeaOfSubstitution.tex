@@ -41,7 +41,58 @@ On the other hand, it is also true that
 \]
 
  
+This simple observation  leads to the following theorem. 
 
+
+\begin{theorem}[Integral Substitution Formula]\index{integral substitution formula} 
+Let $g'$ be the derivative of a  function $g$ and let $f'$ be the derivative of a function $f$. If $g'$ is continuous on the interval $[a,b]$ and  $f'$ is
+continuous on the interval $[g(a),g(b)]$, then
+\[
+\int_a^b f'(g(x)) g'(x) dx =\int_{g(a)}^{g(b)} f'(u) du.
+\]
+\end{theorem}
+The integral on the right appears to be much simpler than the original integral.
+So, when evaluating a difficult integral,  we try to apply this theorem and replace the original integral with a simpler one.
+ We can do this as long as the conditions of the theorem are satisfied.
+
+We will apply the Integral Substitution Formula (ISF)  to the following example.
+
+\begin{example}
+Compute:
+\[
+\int_0^2 x e^{x^2} dx
+\]
+\begin{explanation}
+Why do we think that the ISF can be useful in this example?
+
+Does this integral have the structure
+\[
+\int_a^b f'(g(x)) g'(x)  dx ,  
+\]
+so that we can apply the ISF?
+
+We set $g(x) =x^2$, so $g'(x)dx =2xdx$, and note that
+
+\[
+\int_0^2 x e^{x^2} dx
+=\frac{1}{2}\int_0^{2} e^{\underbrace{x^2}}\underbrace{2x dx}=\frac{1}{2}\int_0^{2} e^{g(x)}g'(x) dx
+\]
+So we wrote the integral in a form suitable for application of the ISF. Therefore, we can substitute $u$ for $g(x)$ and $ du$ for $g'(x) dx$ and write
+
+\[
+\int_0^2 x e^{x^2} dx=\frac{1}{2}\int_0^{2} e^{g(x)}g'(x) dx=\frac{1}{2}\int_{g(0)}^{g(2)} e^{u} du
+\]
+Now, compute the endpoints: 
+\begin{align*}
+g(0) &= 0^2 = 0  \\
+g(2) &=2^2 = 4.
+\end{align*}
+We can easily evaluate the last integral
+\[
+\frac{1}{2}\int_{g(0)}^{g(2)} e^{u} du=
+\frac{1}{2}\int_{0}^{4} e^{u} du=\frac{1}{2}\bigg[ e^u \bigg]_0^4=\frac{1}{2}\left(\answer[given]{e^4}-e^0\right)=\frac{\answer[given]{e^4}-1}{2}
+\]
+In summary,
 
 
 
