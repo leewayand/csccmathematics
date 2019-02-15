@@ -300,7 +300,43 @@ and so
 
 
 
+\begin{example}
+  Compute:
+  \[
+  \int_{1}^{e^{\frac{\pi}{4}}} \frac{\cos(\ln x)}{x} dx
+  \]
+\begin{explanation}
+Here the ``ugly'' part here is $\cos(\ln x)$.  So we substitute for
+the inside:
+\[
+u=g(x)=\answer[given]{\ln x}.
+\]
+Then
+\[
+du =  \answer[given]{\frac{1}{x}} dx  \qquad  \Rightarrow \qquad  dx = \answer[given]{x} du.
+\]
+Notice that
+\begin{align*}
+g(1) &= \ln (1) = \answer[given]{0} \\
+g \left( e^{\frac{\pi}{4}} \right) &= \ln \left( e^{\frac{\pi}{4}} \right) = \answer[given]{\frac{\pi}{4}}.
+\end{align*}
+Then we substitute back into the original integral and solve:
+\begin{align*}
+\int_{1}^{e^{\frac{\pi}{4}}} \frac{\cos(\ln x)}{x} dx &= \int_0^{\frac{\pi}{4}} \frac{\cos(u)}{x} x du  \\
+&= \int_0^{\frac{\pi}{4}} \cos(u) du  \\
+&= \bigg[ \answer[given]{\sin(u)} \bigg]_{0}^{\frac{\pi}{4}}  \\
+&= \frac{\sqrt{2}}{\answer[given]{2}} - \answer[given]{0} = \frac{\sqrt{2}}{\answer[given]{2}}.
+\end{align*}
+\end{explanation}
+\end{example}
 
+To summarize, if we suspect that a given function is the derivative of
+another via the chain rule, we introduce a new variable $u=g(x)$, where $g$ is a likely candidate for
+the inner function. We rewrite the integral
+ entirely in terms of $u$, with no $x$ remaining in the
+expression. If we can integrate this new function of $u$, then the
+antiderivative of the original function is obtained by replacing $u$
+by $g(x)$.
 
 
 
