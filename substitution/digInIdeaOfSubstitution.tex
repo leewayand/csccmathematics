@@ -77,22 +77,7 @@ We set $g(x) =x^2$, so $g'(x)dx =2xdx$, and note that
 \int_0^2 x e^{x^2} dx
 =\frac{1}{2}\int_0^{2} e^{\underbrace{x^2}}\underbrace{2x dx}=\frac{1}{2}\int_0^{2} e^{g(x)}g'(x) dx
 \]
-So we wrote the integral in a form suitable for application of the ISF. Therefore, we can substitute $u$ for $g(x)$ and $ du$ for $g'(x) dx$ and write
 
-\[
-\int_0^2 x e^{x^2} dx=\frac{1}{2}\int_0^{2} e^{g(x)}g'(x) dx=\frac{1}{2}\int_{g(0)}^{g(2)} e^{u} du
-\]
-Now, compute the endpoints: 
-\begin{align*}
-g(0) &= 0^2 = 0  \\
-g(2) &=2^2 = 4.
-\end{align*}
-We can easily evaluate the last integral
-\[
-\frac{1}{2}\int_{g(0)}^{g(2)} e^{u} du=
-\frac{1}{2}\int_{0}^{4} e^{u} du=\frac{1}{2}\bigg[ e^u \bigg]_0^4=\frac{1}{2}\left(\answer[given]{e^4}-e^0\right)=\frac{\answer[given]{e^4}-1}{2}
-\]
-In summary,
 
 
 
