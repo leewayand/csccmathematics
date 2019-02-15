@@ -158,7 +158,40 @@ Therefore, whenever we are faced with a problem of evaluating a difficult integr
 \end{explanation}
 \end{example}
 
+We can solve a problem like this in a slightly different
+way. Let's do the same example again, this time we will think in terms
+of differentials.
 
+\begin{example}\label{main example}
+Compute:
+\[
+\int_0^2 x e^{x^2} dx
+\]
+\begin{explanation}
+Here we will set
+\[ u=g(x) = x^2.
+\]
+ Then 
+ \[
+ du =g'(x) dx=2x dx.
+ \]
+Here, we are thinking in terms of differentials.
+We can solve for $dx$ to get 
+\[
+dx = \frac{du}{2x}.
+\]
+Using this equality, we can write
+
+\begin{align*}
+\int_0^2 x e^{x^2} dx &= \int_{g(0)}^{g(2)} x  e^{u} \frac{du}{2x}\\
+  &= \int_{0}^{4} \frac{e^u}{2} du .
+\end{align*}
+At this point, we can continue as we did before and write
+\[
+ \int_{0}^{4} \frac{e^u}{2} du= \frac{\answer[given]{e^4} -e^0}{2}.
+\]
+\end{explanation}
+\end{example}
 
 
 
