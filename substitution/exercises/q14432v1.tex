@@ -1,0 +1,33 @@
+\documentclass{ximera}
+\input{../../preamble.tex}
+\author{Emma Smith Zbarsky\and Nela Lakos}
+\license{Creative Commons Attribution 3.0 Unported}
+\acknowledgement{https://quadbase.org/questions/q14432v1}
+\begin{document}
+
+\begin{exercise}
+
+Find the antiderivative: \[\int 2e^{4x}\; dx.\]
+
+
+\begin{hint}
+Use: $u=4x$.
+\end{hint}
+
+
+\begin{hint}
+Then $du=4 dx$, $dx=\frac{1}{4} du$, and 
+\[\int 2e^{4x}\; dx=\int 2e^{u}\frac{1}{4} du\;.\]
+\end{hint}
+
+
+\begin{multipleChoice}
+\choice{$2e^{4x}+C$}
+\choice{$8e^{4x}+C$}
+\choice{$8e^{4x}$}
+\choice{$2e^{4x}$}
+\choice[correct]{$\frac{1}{2}e^{4x}+C$}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

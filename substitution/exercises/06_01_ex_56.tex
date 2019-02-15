@@ -1,0 +1,40 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Gregory Hartman \and Matthew Carr\and Nela Lakos}
+\license{Creative Commons 3.0 By-NC}
+\acknowledgement{https://github.com/APEXCalculus}
+
+\outcome{Compute basic antiderivatives.}
+\outcome{Use integral notation for both antiderivatives and definite integrals.}
+\outcome{Undo the Chain Rule.}
+\outcome{Calculate indefinite integrals (antiderivatives) using basic substitution.}
+
+\begin{document}
+\begin{exercise}
+
+Find the indefinite integral of $\frac{x}{x^4+81}$ with respect to $x$.
+
+\[
+\int \frac{x}{x^4+81} dx=\answer{\frac{1}{18}\arctan(\frac{x^2}{9})}+C
+\]
+\begin{hint}
+Use: $u=x^2$.
+\end{hint}
+
+\begin{hint}
+Then,  $du=2x dx$, and 
+\[
+\int \frac{x}{u^2+81}\cdot\frac{du}{2x}=\frac{1}{2}\int \frac{1}{u^2+81} du
+\]
+Now we need to simplify! 
+\[
+\int \frac{1}{u^2+81} du=\frac{1}{81}\int \frac{1}{\frac{u^2}{81}+1} du=\frac{1}{81}\int \frac{1}{\left(\frac{u}{9}\right)^2+1} du
+\]
+\begin{hint}
+Use anothe substitution: $v=\frac{u}{9}$.
+\end{hint}
+\end{hint}
+\end{exercise}
+\end{document}

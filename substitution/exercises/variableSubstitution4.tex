@@ -1,0 +1,22 @@
+\documentclass{ximera}
+\input{../../preamble.tex}
+\author{Steven Gubkin\and Nela Lakos}
+\license{Creative Commons 3.0 By-NC}
+\begin{document}
+\begin{exercise}
+
+\[
+\int \frac{\cos(\frac{1}{x})}{x^2} dx \begin{prompt} = \answer{-\sin\left(\frac{1}{x}\right)}+C \end{prompt}
+\]
+\begin{hint}
+Use: $u=\frac{1}{x}$.
+
+\end{hint}
+\begin{hint}
+Then: $du=-\frac{1}{x^2}\d x$,  $dx=-(x^2) du$, and 
+
+$\int \frac{\cos(\frac{1}{x})}{x^2} dx=\int \frac{\cos(u)}{x^2}(-x^2) du=-\int \cos(u) du$
+
+\end{hint}
+\end{exercise}
+\end{document}
