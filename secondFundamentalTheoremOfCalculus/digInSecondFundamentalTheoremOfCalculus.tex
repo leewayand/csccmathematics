@@ -70,12 +70,12 @@ notation is often used in the process of evaluating definite integrals
 using the Fundamental Theorem of Calculus. Instead of explicitly
 writing $F(b)-F(a)$, we often write
 \[
-\eval{F(x)}_a^b
+\bigg[ F(x) \bigg]_a^b
 \]
 meaning that one should evaluate $F(x)$ at $b$ and then subtract
 $F(x)$ evaluated at $a$
 \[
-\eval{F(x)}_a^b = F(b)-F(a).
+\bigg[ F(x) \bigg]_a^b = F(b)-F(a).
 \]
 
 Let's see some examples of the fundamental theorem in action.
@@ -90,7 +90,7 @@ Let's see some examples of the fundamental theorem in action.
     is $\frac{x^{4}}{4}$, one could verify this by taking the
     derivative. Hence
     \begin{align*}
-      \int_{-2}^2 x^3 dx &=\eval{\frac{x^4}{4}}_{-2}^2\\
+      \int_{-2}^2 x^3 dx &=\\bigg[ \frac{x^4}{4} \bigg]_{-2}^2\\
       &= \frac{2^4}{4} - \frac{(-2)^4}{4}\\
       &= 0.
     \end{align*}
@@ -108,7 +108,7 @@ Let's see some examples of the fundamental theorem in action.
     choice is $-\cos\theta$, one could verify this by taking the
     derivative. Hence
     \begin{align*}
-      \int_0^\pi \sin\theta d\theta &= \eval{-\cos\theta}_0^\pi\\
+      \int_0^\pi \sin\theta d\theta &= \bigg[ -\cos\theta \bigg]_0^\pi\\
       &=\answer[given]{-\cos(\pi)} - (-\cos(0))\\
       &=\answer[given]{2}.
     \end{align*}
@@ -127,7 +127,7 @@ Let's see some examples of the fundamental theorem in action.
     is $\answer[given]{e^t}$, one could verify this by taking the
     derivative. Hence
     \begin{align*}
-      \int_0^5 e^t dt &= \eval{e^t}_0^5 \\
+      \int_0^5 e^t dt &= \bigg[ e^t \bigg]_0^5 \\
       &= e^5-\answer[given]{e^0}\\
       &= e^5-\answer[given]{1}.
     \end{align*}
@@ -145,7 +145,7 @@ We start by finding an antiderivative of $x^9 + \frac{1}{x}$.  A
 correct choice is $\frac{x^{10}}{10} + \ln(x)$, one could verify this
 by taking the derivative. Hence
 \begin{align*}
-\int_1^2\left(x^9 + \frac{1}{x}\right) dx &= \eval{\frac{x^{10}}{10} + \ln(x)}_1^2 \\
+\int_1^2\left(x^9 + \frac{1}{x}\right) dx &= \bigg[ \frac{x^{10}}{10} + \ln(x) \bigg]_1^2 \\
 &= \frac{2^{10}}{10} + \ln(2) - \answer[given]{\frac{1}{10}}.
 \end{align*}
 \end{explanation}
@@ -182,7 +182,7 @@ V(a)$ measures a \textbf{change in position}, or \textbf{displacement}.
       Using the Second Fundamental Theorem of Calculus, we have
       \begin{align*}
         \int_0^1 v(t) dt &= \int_0^1 (-32t+20) dt \\
-	&= \eval{\answer[given]{-16t^2 + 20t}}_0^1 \\
+	&= \bigg[ \answer[given]{-16t^2 + 20t} \bigg]_0^1 \\
 	&= 4.
       \end{align*}
       Thus if a ball is thrown straight up into the air with velocity
