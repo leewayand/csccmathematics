@@ -193,7 +193,42 @@ At this point, we can continue as we did before and write
 \end{explanation}
 \end{example}
 
+Finally, sometimes we simply want to deal with the antiderivative on
+its own.  We will repeat the example one more time in oder to demonstrate this approach.
 
+\begin{example}
+Compute:
+\[
+\int_0^2 x e^{x^2} dx
+\]
+\begin{explanation}
+We can apply the Second Fundamental Theorem of Calculus and, in order to do that, we first need to compute an indefinite integral.
+\[
+\int  x e^{x^2}  dx.
+\]
+
+As before, we set $u=g(x)=x^2$, and compute $ du =  2x  dx$,
+ thinking in terms of differentials. Now we see that
+\[
+\int   x e^{x^2} dx = \int x e^{u} \frac{du}{2x} = \int \frac{e^{u}}{2} du .
+\]
+Hence 
+\[
+\int  x e^{x^2} dx = \frac{e^{u}}{2}+C .
+\]
+This does not look right, since  we need to find an antiderivative of the function $ x e^{x^2},$ and our result is a function of $u$.
+We can easily fix this, by simply substituting $u$ with $g(x)=x^2$.
+Therefore,
+\[
+\int xe^{x^2} dx =\frac{e^{u}}{2}+C= \frac{e^{x^2}}{2}+C .
+\]
+Finally, we can apply the SFTOC
+\begin{align*}
+\int_0^2 x e^{x^2} dx &=\bigg[ \frac{e^{x^2}}{2} \bigg]_0^2\\
+&= \frac{\answer[given]{e^4} -e^0}{2}.
+\end{align*}
+\end{explanation}
+\end{example}
 
 
 
