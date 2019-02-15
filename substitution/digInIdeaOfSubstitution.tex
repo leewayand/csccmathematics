@@ -230,6 +230,72 @@ Finally, we can apply the SFTOC
 \end{explanation}
 \end{example}
 
+\section{More examples}
+
+With some experience, it is (usually) not too hard to see what to
+substitute as $u$.  We will work through the following examples in the
+same way that we did for Example \ref{main example}.
+\begin{example}
+Compute:
+\[
+\int x^4(x^5+1)^{9} dx
+\]
+\begin{explanation}
+Here we set $u =  \answer[given]{x^5+1}$, so $du =  \answer[given]{5x^4} dx$.  Then
+it follows that $dx=\frac{du}{5x^4}$. Therefore
+\begin{align*}
+  \int x^4(x^5+1)^{9} dx &= \int x^4 (u)^{9} \frac{du}{5x^4} \\
+  &= \frac{1}{5} \int u^{9} du\\
+&=\frac{u^{10}}{ \answer[given]{50}}.
+\end{align*}
+Notice that this example is an indefinite integral and not a definite
+integral, meaning that there are no limits of integration.  So we do
+not need to worry about changing the endpoints of the integral.  However,
+we do need to back-substitute into our answer, so that our final
+answer is a function of $x$.  Recalling that $u= x^5+1$, we have
+our final answer
+\[
+\int x^4(x^5+1)^{9} dx= \frac{(x^5+1)^{10}}{\answer[given]{50}}+C.
+\]
+Reminder: you can always verify your result by differentiating.
+
+\end{explanation}
+\end{example}
+
+
+If substitution works to solve an integral (and that is not always the
+case!), a common trick to find what to substitute for is to locate the
+``ugly'' part of the function being integrated.  We then substitute
+for the ``inside'' of this ugly part.  While this technique is
+certainly not rigorous, it can prove to be very helpful.  This is
+especially true for students new to the technique of substitution.
+The next two problems are really good examples of this philosophy.
+
+\begin{example}
+Compute:
+\[
+\int_{-1}^0 12x^3 \cos({x^4}) dx
+\]
+\begin{explanation}
+The ``ugly'' part of the function being integrated is $\cos({x^4})$.  The
+``inside'' of this term is then $x^4$.  So a good possibility is to
+try
+\[
+u =g(x)= x^4.
+\]
+Then
+\[
+du = (4x^3) dx  \qquad  \Rightarrow \qquad  dx = \answer[given]{\frac{1}{4x^3}} du
+\]
+and so
+\begin{align*}
+\int_{-1}^0 12x^3 \cos({x^4}) dx &= \int_{g(-1)}^{g(0)} 12 x^3 \cos({u}) \answer[given]{\frac{1}{4x^3}} du  \\
+&= \int_{\answer[given]{1}}^{\answer[given]{0}} 3 \cos({u}) du  \\
+&= \bigg[ 3\sin({u}) \bigg]_{\answer[given]{1}}^{\answer[given]{0}}  \\
+&= \answer[given]{3(0-\sin({1}))}.
+\end{align*}
+\end{explanation}
+\end{example}
 
 
 
