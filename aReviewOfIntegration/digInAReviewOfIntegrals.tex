@@ -78,7 +78,7 @@ Many of the helpful rules that allow us to find derivatives of more complicated 
 \begin{theorem}[Antiderivative Rules] 
 Suppose that $f(x)$ and $g(x)$ are functions and $k$ is a constant:
 \begin{itemize}
-\item (Addition) $\int \left(f(x) + g(x) \right) dx = \int f(x) \d x+\int g(x)  dx$
+\item (Addition) $\int \left(f(x) + g(x) \right) dx = \int f(x) dx+\int g(x)  dx$
 \item (Scalar Multiplication) $\int \left(k f(x)\right) dx = k \int f(x) dx$
 \end{itemize}
 \end{theorem}
@@ -147,7 +147,7 @@ The following is a question that employs the same logic, but is phrased a bit di
  Find a function $f(x)$ such that $\int f(x) dx = xe^x +C$.
   
   \begin{explanation}
-    We are looking for a function $f(x)$ whose \emph{antiderivatives} are $xe^x +C$.  To do this, we simply have to take the derivative of the righthand side; since $\int f(x) dx =xe^x +C$, then $f(x) = \ddx\left(\answer[given]{xe^x +C}\right) =\answer[given]{e^x + xe^x}$.
+    We are looking for a function $f(x)$ whose \emph{antiderivatives} are $xe^x +C$.  To do this, we simply have to take the derivative of the righthand side; since $\int f(x) dx =xe^x +C$, then $f(x) = \frac{d}{dx} \left(\answer[given]{xe^x +C}\right) =\answer[given]{e^x + xe^x}$.
     
     \end{explanation}
 \end{example}
@@ -188,7 +188,7 @@ Calculate $\int_0^{3} x^2-2x  dx.$
 Note that $\int x^2-2x dx = \answer[given]{\frac{1}{3}x^3-x^2}+C$, so by the Fundamental Theorem of Calculus:
 
 \[
-\int_0^3 x^2-2x dx = \eval{\frac{1}{3}x^3-x^2 }_0^3 = \answer{0}
+\int_0^3 x^2-2x dx = \bigg[\frac{1}{3}x^3-x^2 \bigg]_0^3 = \answer{0}
 \]
 \end{explanation}
 
