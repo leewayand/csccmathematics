@@ -12,6 +12,7 @@
 
 \title[Dig-In:]{A review of integration techniques}
 
+
 \begin{document}
 \begin{abstract}
   We review common techniques to compute indefinite and definite integrals.
@@ -44,6 +45,9 @@ A good first step in attempting to compute antiderivatives involves simplifying 
 
 
 
+
+
+
 %\begin{example}
 %Consider the indefinite integral $\int \sqrt{x}(x+1)^2 \d x$.  
 %
@@ -70,7 +74,10 @@ While it may be tempting, note that $\frac{2x^2-3}{2x^2} \neq \frac{\cancel{2x^2
 
 \end{example}
 
-  
+
+
+
+
 \section{Substitution}
 
 Sometimes, it is helpful to try to recognize when an integral involves reversing the chain rule for differentiation. When an integrand involves a composition of a trigonometric, exponential, or power and another function, letting a new variable represent the inner function helps.
@@ -112,6 +119,9 @@ Note that when we change the variable of integration, it is necessary to replace
 
 In the last example, after letting $u$ be the exponent and transforming $dx$, there were no $x$ terms left.  This does not always happen, but it does not mean that substitution does not aid in computing the indefinite integral.
 
+
+
+
 \begin{example}
 Compute $\int 4x \sqrt{2x+1} dx$.
 
@@ -142,6 +152,8 @@ Substituting $u=2x+1$ to obtain the antiderivatives in terms of $x$, we find tha
 \]
 \end{explanation}
 \end{example}
+
+
 
 
 %Sometimes, the substitutions involve some preliminary algebra:
@@ -240,7 +252,7 @@ We can now write our original integral in terms of $u$:
 We can now evaluate the integral:
 
 \[
-\int_{u=1}^{u=9} \frac{2}{u^2} du = \int_{u=1}^{u=9}2u^{-2} du = \eval{-2u^{-1}}_{u=1}^{u=9} = -\frac{2}{9} - (-2) = \frac{16}{9}
+\int_{u=1}^{u=9} \frac{2}{u^2} du = \int_{u=1}^{u=9}2u^{-2} du = \bigg[-2u^{-1}\bigg]_{u=1}^{u=9} = -\frac{2}{9} - (-2) = \frac{16}{9}
 \]
 \end{explanation}
 \end{example}
@@ -371,6 +383,10 @@ We can now evaluate the integral:
 %\end{example}
 %\end{comment}
 
+
+
+
+
 \section{Splitting Up Fractions}
 
 In a similar vein, if you have a rational function, it can help to separate the
@@ -491,4 +507,27 @@ Understanding how to integrate is highly dependent on having a good grasp on how
 %\begin{quote}
 %  \textbf{Always remember: Don't give up.}
 %\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
