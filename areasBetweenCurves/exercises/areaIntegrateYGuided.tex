@@ -65,7 +65,7 @@ Since we want to integrate with respect to $y$, we need to describe the curves a
           \node at (axis cs:2,1.5) [penColor2] {$y=\sqrt{x-1}$};
           \node at (axis cs:4.5,0.7) [penColor] {$y=x-3$};
 
-	  \addplot [draw=penColor, fill = gray!50] plot coordinates {(2,1) (2,1.1) (4, 1.1) (4,1) (2, 1)};
+	        \addplot [draw=penColor, fill = gray!50] plot coordinates {(2,1) (2,1.1) (4, 1.1) (4,1) (2, 1)};
 
           \draw[decoration={brace,raise=.2cm},decorate,thin] (axis cs:2,1)--(axis cs:2,1.1);
           \node at (axis cs:1.5,1.05) {$\Delta y$};
@@ -88,7 +88,7 @@ The lower limit of integration is $y= \begin{prompt} \answer{0} \end{prompt}$ an
  
    \begin{align*}
     y+3 &= y^2 +1\\
-  y^2-y-2 &= 0\\
+    y^2-y-2 &= 0\\
     y &= -1 \text{ or }\answer[given]{2}.
   \end{align*}
   From the picture, note that $y=-1$ is not relevant for this problem!
