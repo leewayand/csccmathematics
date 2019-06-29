@@ -1,0 +1,58 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jim Talamo}
+\license{Creative Commons 3.0 By-NC}
+
+
+\outcome{Understand why a constant of integration is not needed when integrating $dv$.}
+
+
+\begin{document}
+\begin{exercise}
+Suppose $f(x)$ is a twice differentiable function for which the following table of values is known.
+
+\large
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$x$ & $f(x)$ & $f'(x)$ \\
+\hline 
+$2$ & $1$ & $-2$ \\
+\hline
+$5$ & $-3$ & $4$ \\
+\hline
+\end{tabular}
+
+\end{center}
+\normalsize
+
+
+Calculate $\int_2^5 x f''(x) dx$.
+
+\[
+\int_2^5 x f''(x) dx = \answer{28}
+\]
+
+\begin{hint}
+We have no information about $f''(x)$, but we can use integration by parts here.  Choosing the correct expressions for $u$ and $dv$ is important.  To do this, note that since we have information about $f'(x)$ but $f''(x)$ appears in the integral, we should \wordChoice{\choice{differentiate}\choice[correct]{integrate}} $f''(x)$.
+
+\begin{question}
+\[\begin{array}{ll}
+u = \answer{x}  & dv = f''(x) dx \\
+du = \answer{1} dx & v = f'(x)
+\end{array}\]
+
+Thus, $\int_2^5 x f''(x) dx = \bigg[x f'(x)\bigg]_2^5-\int_2^5 f'(x) dx$. 
+
+\begin{itemize}
+\item Using the table, we find $ \bigg[x f'(x)\bigg]_2^5 = \answer{24}$.
+\item Since $\int_2^5 f'(x) dx = \bigg[f(x)\bigg]_2^5$, we find $\int_2^5 f'(x) dx = \answer{-4}$.
+\end{itemize}
+
+\end{question}
+\end{hint}
+
+\end{exercise}
+\end{document}

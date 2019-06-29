@@ -1,0 +1,28 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bart Snapp}
+\license{Creative Commons 3.0 By-NC}
+
+
+\outcome{Evaluate integrals using integration by parts, including mulitple iterations}
+
+
+\begin{document}
+\begin{exercise}
+Calculate $\int 4x \sin\left(x^2\right) dx $.
+
+\begin{question}
+  Suppose that $f(x)$ and $g(x)$ are differentiable.  Which of the following are always true? 
+  \begin{selectAll}
+    \choice{$\int f(x) \cdot g(x) dx = \left(\int f(x) dx\right) \cdot \left(\int g(x) dx\right)$}
+    \choice{$\int f(x) \cdot 4 dx = \left(\int f(x) dx\right) \cdot \left(\int 4 dx\right)$}
+    \choice[correct]{$\int f(x) \cdot 4 dx = 4\int f(x) dx$}
+    \choice[correct]{$\int f(x) \cdot g'(x) dx = f(x) g(x) - \int f'(x)\cdot g(x) dx$}
+    \choice{$\int_a^b f(x) \cdot g'(x) dx = f(x) g(x) - \int_a^b f'(x)\cdot g(x) dx$}
+    \choice[correct]{$\int_a^b f(x) \cdot g'(x) dx = \eval{f(x) g(x)}_a^b + \int_b^a f(x)'\cdot g(x) dx$}
+  \end{selectAll}
+\end{question}
+\end{exercise}
+\end{document}

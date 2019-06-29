@@ -1,0 +1,38 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jason Miller and Jim Talamo}
+\license{Creative Commons 3.0 By-NC}
+
+
+\outcome{Evaluate integrals using integration by parts, including multiple iterations}
+
+
+\begin{document}
+\begin{exercise}
+Use integration by parts to determine the integral.
+\[
+\int \arcsin(x) dx 
+\]
+
+
+Choose $u=\answer{ \arcsin(x) }$ and $\d v=\answer{1 } dx$. 
+
+Then $du= \answer{ \frac{1}{\sqrt{1-x^{2}}} } dx$ and $v= \answer{x}$.
+
+Using the integration by parts formula, we obtain
+
+\[
+\int \arcsin(x) dx= \answer{x\arcsin(x)} - \int \answer{ \frac{x}{\sqrt{1-x^{2}}} } dx.
+\]
+
+Calculating the right hand side we obtain
+
+\[
+\int \arcsin(x) dx= \answer{x\arcsin(x)+\sqrt{1-x^2}+C}.
+\]
+(Use $C$ for the constant of integration)
+
+\end{exercise}
+\end{document}

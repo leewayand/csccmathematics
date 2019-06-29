@@ -1,0 +1,38 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jason Miller}
+\license{Creative Commons 3.0 By-NC}
+
+
+\outcome{Evaluate integrals using integration by parts, including mulitple iterations}
+
+
+\begin{document}
+\begin{exercise}
+Use integration by parts to determine the integral.
+\[
+\int x \ln(x) dx 
+\]
+
+
+Choose $u=\answer{ \ln(x) }$ and $dv=\answer{x } dx$. 
+
+Then $du= \answer{ \frac{1}{x} } dx$ and $v= \answer{\frac{x^{2}}{2}}$.
+
+Using the integration by parts formula, we obtain:
+
+\[
+\int x \ln(x) dx= \answer{\frac{x^{2}}{2} \ln(x)} - \int \answer{ \frac{x}{2}  } dx
+\]
+
+Calculating the right hand side we obtain:
+
+\[
+\int x \ln(x) dx= \answer{\frac{x^{2}}{2} \ln(x) -\frac{ x^{2}  }{4}  + C}
+\]
+(Use $C$ for the constant of integration)
+
+\end{exercise}
+\end{document}
