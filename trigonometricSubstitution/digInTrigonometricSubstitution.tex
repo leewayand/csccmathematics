@@ -24,24 +24,13 @@ We have seen that the definite integral can be interpreted as giving us the sign
 \]
 
  This integral can be interpreted as area of the following region:
-\begin{image}
-  \begin{tikzpicture}
-    \begin{axis}[
-        width=6in,
-        %height=3in,
-        unit vector ratio*=1 1 1,            
-        xmin=-1.1, xmax=1.1,ymin=-.1,ymax=1.1,
-        axis lines =center, xlabel=$x$, ylabel=$y$,
-        every axis y label/.style={at=(current axis.above origin),anchor=south},
-        every axis x label/.style={at=(current axis.right of origin),anchor=west},
-        axis on top,
-      ] 
-      \addplot [draw=none, fill=fillp,samples=200,domain=-1:1] {sqrt(1-x^2)} \closedcycle;
-      
-      \addplot [penColor,very thick,samples=200,domain=-1:1] {sqrt(1-x^2)};
-    \end{axis}
-  \end{tikzpicture}
-\end{image}
+
+
+
+
+
+
+
 
 \begin{question}
   Using the graph above and basic facts from geometry, compute:
@@ -74,14 +63,12 @@ Let's rewrite the substitution formula in a more suggestive manner for our purpo
 
 
 
-\begin{image}
-  \begin{tikzpicture}[scale=1,every node/.style={transform shape}]
-    \draw [->, line width=10, penColor!10!background] (-1,0)--(.5,0);
-    \node at (0,0) {
-      $\int_{x(a)}^{x(b)} f(x) dx=\int_a^b f(x(\theta)) x'(\theta) d\theta$
-    };
-  \end{tikzpicture}
-\end{image}
+
+
+
+
+
+
 
 This is just the substitution formula again but now we are thinking of transforming from left-to-right.  Initially this may seem to complicate matters. We go from a simple integral to one that looks more complicated. 
 However in certain cases we may not know how to integrate $f(x)$, but we may be able to integrate 
@@ -147,14 +134,12 @@ We must also convert  $dx$ as well as the bounds on the integral.
       \theta &= \answer[given]{-\pi/2}.
     \end{align*}
     Now we may transform our integral via
-    \begin{image}
-      \begin{tikzpicture}[scale=1,every node/.style={transform shape}]
-        \draw [->, line width=10, penColor!10!background] (-1,0)--(.5,0);
-        \node at (0,0) {
-          $\int_{x(a)}^{x(b)} f(x) dx=\int_a^b f(x(\theta)) x'(\theta) d\theta$
-        };
-      \end{tikzpicture}
-    \end{image}
+   
+
+
+
+
+
     \begin{align*}
       \int_{-1}^1\sqrt{1-x^2} dx &= \int_{\answer[given]{-\pi/2}}^{\answer[given]{\pi/2}} \sqrt{1-\sin^2(\theta)} \cdot \cos(\theta) d\theta \\
       &= \int_{\answer[given]{-\pi/2}}^{\answer[given]{\pi/2}} \sqrt{\cos^2(\theta)}\cdot \cos(\theta) d\theta \\
@@ -213,45 +198,21 @@ in a simpler form.
 $\sin(\theta)=\frac{x}{1}$, we can think of $x$ as the length of the side opposite the angle $\theta$ 
 and we can think of $1$ as the length of the hypotenuse of the right triangle. 
 
-    \begin{image}
-      \begin{tikzpicture}
-        \coordinate (C) at (0,2);
-        \coordinate (D) at (4,2);
-        \coordinate (E) at (4,4);
-        \tkzMarkRightAngle(C,D,E)
-        \tkzMarkAngle(D,C,E)
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,2)--(4,2);
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (4,2)--(4,4);
-        \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,4);
-        \draw[very thick] (D)--(E)--(C)--cycle;
-        \node at (2,2-.7) {$?$}; %% adj
-        \node[anchor=west] at (4+.3,3) {$x$}; %% opp
-        \node at (2-.3,3+.5) {$1$}; %% hyp
-        \node at (1.2,2.3) {$\theta$};
-      \end{tikzpicture}
-    \end{image}
+    
+
+
+
+
    
 We can then use the Pythagorean Theorem
 to find the adjacent leg of the triangle. Using $?^{2}+x^{2}=1^{2}$ and solving for $?$ we obtain 
 that the length of the adjacent side is $\sqrt{1-x^{2}}$. 
 
-    \begin{image}
-      \begin{tikzpicture}
-        \coordinate (C) at (0,2);
-        \coordinate (D) at (4,2);
-        \coordinate (E) at (4,4);
-        \tkzMarkRightAngle(C,D,E)
-        \tkzMarkAngle(D,C,E)
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,2)--(4,2);
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (4,2)--(4,4);
-        \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,4);
-        \draw[very thick] (D)--(E)--(C)--cycle;
-        \node at (2,2-.7) {$\sqrt{1-x^{2}}$}; %% adj
-        \node[anchor=west] at (4+.3,3) {$x$}; %% opp
-        \node at (2-.3,3+.5) {$1$}; %% hyp
-        \node at (1.2,2.3) {$\theta$};
-      \end{tikzpicture}
-    \end{image}
+    
+
+
+
+
 
 Now we still need to express $\sin(2\theta)$ in terms of $x$ using this triangle. However the angle in our 
 right triangle is $\theta$, not $2\theta$. Recall the trig identity
@@ -376,23 +337,14 @@ Since
 we can label the triangle with $x$ as the length of the opposite side and $3$ as the length of the adjacent side. Note we have already used the Pythagorean Theorem to 
 find the length of the hypotenuse. 
 
-    \begin{image}
-      \begin{tikzpicture}
-        \coordinate (C) at (0,2);
-        \coordinate (D) at (4,2);
-        \coordinate (E) at (4,4);
-        \tkzMarkRightAngle(C,D,E)
-        \tkzMarkAngle(D,C,E)
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,2)--(4,2);
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (4,2)--(4,4);
-        \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,4);
-        \draw[very thick] (D)--(E)--(C)--cycle;
-        \node at (2,2-.5) {$3$}; %% adj
-        \node[anchor=west] at (4+.3,3) {$x$}; %% opp
-        \node at (2-.5,3+.7) {$\sqrt{x^{2}+9}$}; %% hyp
-        \node at (1.2,2.3) {$\theta$};
-      \end{tikzpicture}
-    \end{image}
+    
+
+
+
+
+
+
+
     Thus
     \[
     \cos(\theta) =  \answer[given]{\frac{3}{\sqrt{x^{2}+9}}}
@@ -642,23 +594,11 @@ $\tan(\theta) \geq 0$:
     \]
     and using a reference triangle and using the Pythagorean Theorem
 to find the length of the opposite side we have:
-    \begin{image}
-      \begin{tikzpicture}
-        \coordinate (C) at (0,2);
-        \coordinate (D) at (4,2);
-        \coordinate (E) at (4,4);
-        \tkzMarkRightAngle(C,D,E)
-        \tkzMarkAngle(D,C,E)
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,2)--(4,2);
-        \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (4,2)--(4,4);
-        \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,4);
-        \draw[very thick] (D)--(E)--(C)--cycle;
-        \node at (2,2-.5) {$2$}; %% adj
-        \node[anchor=west] at (4+.3,3) {$\sqrt{(x+3)^{2}-4}$}; %% opp
-        \node at (2-.3,3+.5) {$x+3$}; %% hyp
-        \node at (1.2,2.3) {$\theta$};
-      \end{tikzpicture}
-    \end{image}
+   
+
+
+
+   
     Thus
     \[
     \tan(\theta) = \answer[given]{\frac{\sqrt{(x+3)^{2}-4}}{2}}
