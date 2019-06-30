@@ -39,17 +39,17 @@ A real-valued \textbf{sequence} is a function whose domain is an interval of int
 We denote a sequence by 
 
 \begin{align*}
-f : \{n_0,n_{0+1},n_{0+2}, \ldots\} & \to \R \\
+f : \{n_0,n_{0+1},n_{0+2}, \ldots\} & \to \mathbb R \\
     n &\mapsto f(n)
 \end{align*}
 where the first line indicates the domain and range and the second line gives the rule that defines the terms in the sequence.
 \end{definition}
 
 \begin{example}
-Suppose that the domain of a sequence is the set of natural numbers $\{1,2,3,\ldots\}$, which we denote by $\N$ and the sequence maps each natural number to two times itself.  We would write
+Suppose that the domain of a sequence is the set of natural numbers $\{1,2,3,\ldots\}$, which we denote by $\mathbb N$ and the sequence maps each natural number to two times itself.  We would write
 
 \begin{align*}
-f : \N & \to \R \\
+f : \mathbb N & \to \mathbb R \\
     n &\mapsto 2n
 \end{align*}
 
@@ -118,8 +118,8 @@ In this text, we will use $\left\{a_n\right\}_{n=n_0}$ to refer to the sequence 
 An important, yet subtle note, two different sequences can be represented by the same ordered list of numbers.  For example, the sequences $f_1$ and $f_2$ below
 
 \[ \begin{array}{rl}
-f_1 : \{0,1,2,\ldots \} & \to \R \qquad \textrm{ where } f_1(n) =2(n+1) \\
-f_2 : \{1,2,3, \ldots \} & \to \R \qquad \textrm{ where } f_2(n) =2n \\
+f_1 : \{0,1,2,\ldots \} & \to \mathbb R \qquad \textrm{ where } f_1(n) =2(n+1) \\
+f_2 : \{1,2,3, \ldots \} & \to \mathbb R \qquad \textrm{ where } f_2(n) =2n \\
 \end{array}
 \]
 
@@ -539,25 +539,12 @@ Continuing in the same way, we find the next few terms.
 \begin{remark} 
 The following observation will be important later on, so we offer it here to give the reader a little exposure.  Note that there are two ways to compute each of the terms above.  One way is to perform the explicit addition each time, but the clever reader may notice that there is a faster way.  For instance, if we have already computed $s_3$, there is a way to use it to find $s_4$ quickly.
 
-\begin{image}
-  \begin{tikzpicture}
-        \node at (0,0) {
-          $s_4 = \underbrace{a_1+a_2+a_3} + a_4 = 15+11 =26$
-        };
-        \node at (-1.2,-.5) {\small{this is $s_3$}};
-      \end{tikzpicture}
-  \end{image}
 
-Of course, there is a more general observation.
 
-\begin{image}
-  \begin{tikzpicture}
-        \node at (0,0) {
-          $s_n = \underbrace{a_1+\ldots+a_{n-1}} + a_n = s_{n-1} + a_n$
-        };
-        \node at (-.8,-.5) {\small{this is $s_{n-1}$}};
-      \end{tikzpicture}
-  \end{image}
+
+
+
+
 so that in this example, where $a_n = 3n-1$, we have a recursive formula for $\{s_n\}_{n=1}$.
 
 \[
