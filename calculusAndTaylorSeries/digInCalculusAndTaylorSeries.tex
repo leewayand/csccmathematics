@@ -170,12 +170,12 @@ A few notes about the theorem above:
 
 We'll use this idea to investigate the function 
 \[
-\si(x) = \int_0^x \frac{\sin(t)}{t} dt
+Si(x) = \int_0^x \frac{\sin(t)}{t} dt
 \]
 an important function in signal analysis.
 
 \begin{example}
-  Find a power series for $\si(x)$ centered at zero and give the
+  Find a power series for $Si(x)$ centered at zero and give the
   radius and interval of convergence.
 \begin{explanation}
   We can find a series expression for $\sin(x)/x$ using division, write with me
@@ -186,14 +186,14 @@ an important function in signal analysis.
   \[
   \frac{\sin(x)}{x} =1-\frac{x^2}{3!}+\frac{x^4}{5!}-\dots = \sum_{n=0}^\infty \frac{\answer[given]{(-1)^n x^{2n}}}{(2n+1)!} 
   \]
-  Now we integrate term-by-term to find $\si(x)$:
+  Now we integrate term-by-term to find $Si(x)$:
   \begin{align*}
   \int &\frac{\sin(x)}{x} dx = C+x-\frac{x^3}{3 \cdot 3!}+\frac{x^5}{5 \cdot 5!}-\cdots \\
   &= \sum_{n=0}^\infty \frac{\answer[given]{(-1)^nx^{2n+1}}}{\answer[given]{(2n+1)} \cdot (2n+1)!} 
   \end{align*}
-  $\si(x)$ is the antiderivative of $f(x)$ with $\si(0) = 0$, so  $C=0$, and 
+  $Si(x)$ is the antiderivative of $f(x)$ with $Si(0) = 0$, so  $C=0$, and 
   \[
-  \si(x) = \sum_{n=0}^\infty \frac{(-1)^nx^{2n+1}}{(2n+1) \cdot (2n+1)!}.
+  Si(x) = \sum_{n=0}^\infty \frac{(-1)^nx^{2n+1}}{(2n+1) \cdot (2n+1)!}.
   \]
   To find the radius of convergence, use the ratio test. Write with me
   \begin{align*}
@@ -210,9 +210,9 @@ an important function in signal analysis.
 \begin{example}
   If
   \[
-  \si(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{(2n+1) \cdot (2n+1)!} 
+  Si(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{(2n+1) \cdot (2n+1)!} 
   \]
-  which $n$ is needed to approximate $\si(2)$ with an accuracy
+  which $n$ is needed to approximate $Si(2)$ with an accuracy
   of $\frac{1}{10}$?
   \begin{explanation}
     By the alternating series estimation test, we would need
@@ -224,7 +224,7 @@ an important function in signal analysis.
     \[
     n= \answer[given]{1}
     \]
-    Thus $\si(2) \approx 2-\frac{8}{3 \cdot 3!} = 1.\bar{5}$ should be
+    Thus $Si(2) \approx 2-\frac{8}{3 \cdot 3!} = 1.\bar{5}$ should be
     accurate to within $\frac{1}{10}$.  Wolfram alpha reports that $Si(2)
     \approx 1.60541 $, we this appears to be accurate!
   \end{explanation}
