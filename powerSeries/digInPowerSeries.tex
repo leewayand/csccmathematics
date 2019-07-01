@@ -568,7 +568,7 @@ multiplication, and exponentiation!
   \begin{itemize}
   \item $f(x)$ is continuous and differentiable on $(c-R,c+R)$.
   \item	$f'(x) = \sum_{n=1}^\infty a_n\cdot n\cdot (x-c)^{n-1}$, with radius of convergence $R$.
-  \item	$\int f(x) \d x = C+\sum_{n=0}^\infty a_n\frac{(x-c)^{n+1}}{n+1}$, with radius of convergence $R$.
+  \item	$\int f(x) dx = C+\sum_{n=0}^\infty a_n\frac{(x-c)^{n+1}}{n+1}$, with radius of convergence $R$.
   \end{itemize}
 \end{theorem}
 %% https://gowers.wordpress.com/2014/02/22/differentiating-power-series/
@@ -594,11 +594,11 @@ Let's see an example.
   \begin{explanation}
     Since
     \[
-    \int\frac{1}{1+x^2} \d x = \arctan(x)+C
+    \int\frac{1}{1+x^2} dx = \arctan(x)+C
     \]
     we can find the desired power series by integrating. Write with me.
     \[
-    \int \left(1 - x^2 + x^4 - x^6 + \cdots\right)\d x = \answer[given]{x - \frac{x^3}{3} + \frac{x^5}{5}} - \frac{x^7}{7} + \cdots +C
+    \int \left(1 - x^2 + x^4 - x^6 + \cdots\right)dx = \answer[given]{x - \frac{x^3}{3} + \frac{x^5}{5}} - \frac{x^7}{7} + \cdots +C
     \]
     Since $\arctan(0) = 0$, $C=0$, and we have our desired power
     series. Its radius of convergence is $R=1$. However,
