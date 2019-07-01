@@ -95,7 +95,7 @@ this:
 
 Let's be explicit:
 \begin{definition}
-  A \dfn{slope field}, also called a \dfn{direction field}, is a
+  A \textbf{slope field}, also called a \textbf{direction field}, is a
   graphical aid for understanding a differential equation, formed by:
   \begin{itemize}
 	\item Choosing a grid of points.
@@ -156,7 +156,7 @@ y' = x^3,\qquad y'=(y+1)(y-2), \qquad y'= x+y.
 
 The first differential equation, $y' = x^3$, is rather easy to solve,
 we simply integrate both sides. This type of differential equation is
-called a \dfn{pure-time differential equation}. Pure-time differential
+called a \textbf{pure-time differential equation}. Pure-time differential
 equations express the derivative of the solution explicitly as a
 function of an independent variable. We can symbolically describe a
 pure-time differential equation as
@@ -171,7 +171,7 @@ equations.
 
 \begin{definition}
   A differential equation that does not involve the independent
-  variable is called an \dfn{autonomous differential equation}. We can
+  variable is called an \textbf{autonomous differential equation}. We can
   symbolically write
   \[
   \frac{dy}{dx} = F(y)
@@ -181,7 +181,7 @@ equations.
 
 Finally the third differential equation, $y'= x+y$, expresses $y'$ as
 a function of both $y$ and the independent variable $x$. Such a
-differential equation is called a \dfn{nonautonomous differential
+differential equation is called a \textbf{nonautonomous differential
   equation}. We can symbolically describe  a nonautonomous differential equation as
 \[
 \frac{dy}{dx} = F(x,y).
@@ -469,7 +469,7 @@ differential equation.  In fact, for any autonomous differential
 equation $y' = F(y)$, where $F$ is a function of $y$, if $F(c) = 0$
 for any constant $c$, then $y = c$ will be a constant solution to the
 differential equation.  These constant solutions are also known as
-\dfn{equilibrium} solutions. We can witness these solutions if we
+\textbf{equilibrium} solutions. We can witness these solutions if we
 inspect the slope field:
 \begin{image}
 {\def\length{sqrt(1+((y+1)*(2-y))^2)}
@@ -680,7 +680,7 @@ Plotting our approximation with the actual solution we find:
 This approximation could be improved by using more subintervals.  We
 will now formalize the method of using repeated linear approximation
 to approximate solutions to differential equations, and call it
-\dfn{Euler's Method}.
+\textbf{Euler's Method}.
 
 \begin{definition}[Euler's Method]
   Consider a differential equation on the interval $[a,b]$
@@ -709,7 +709,7 @@ to approximate solutions to differential equations, and call it
 Let's try an example.
 
 \begin{example}
-Use Euler's method to approximate $y$ on $[0,2]$ where $\dx = .5$ for
+Use Euler's method to approximate $y$ on $[0,2]$ where $dx = .5$ for
 the differential equation
 \[
 y'=x+y
