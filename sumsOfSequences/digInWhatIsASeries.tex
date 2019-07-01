@@ -46,22 +46,10 @@ A student, feeling quite clever, decides to illustrate the sum by drawing a squa
 
 \paragraph{Step 1:} Shade the left half of the square.  
 
-\begin{image}[1in]
-  \begin{tikzpicture}[scale=3,rounded corners=.5pt]      
-    \tkzDefPoint(0,0){A1} 
-    \tkzDefPoint(1,0){A2}
-    \tkzDefPoint(1,1){A3}
-    \tkzDefPoint(0,1){A4}
-    \draw[penColor,very thick] (A1)--(A2)--(A3)--(A4)--cycle;
 
-    \tkzDefPoint(0,0){B1} 
-    \tkzDefPoint(.5,0){B2}
-    \tkzDefPoint(.5,1){B3}
-    \tkzDefPoint(0,1){B4}
-    \draw[penColor,fill=fill2,very thick] (B1)--(B2)--(B3)--(B4)--cycle;
-  \end{tikzpicture}
 
-\end{image}
+
+
 There are two quantities of which we can keep track now.
 \begin{itemize}
 \item Call the area shaded this step $A_1$.  Then, we have $A_1=\answer[given]{1/2}$.
@@ -70,28 +58,10 @@ There are two quantities of which we can keep track now.
 
 \paragraph{Step 2:} Shade the bottom half of the unshaded region.  
 
-\begin{image}[1in]
-  \begin{tikzpicture}[scale=3,rounded corners=.5pt]      
-    \tkzDefPoint(0,0){A1} 
-    \tkzDefPoint(1,0){A2}
-    \tkzDefPoint(1,1){A3}
-    \tkzDefPoint(0,1){A4}
-    \draw[penColor,very thick] (A1)--(A2)--(A3)--(A4)--cycle;
 
-    \tkzDefPoint(0,0){B1} 
-    \tkzDefPoint(.5,0){B2}
-    \tkzDefPoint(.5,1){B3}
-    \tkzDefPoint(0,1){B4}
-    \draw[penColor,fill=fill1,very thick] (B1)--(B2)--(B3)--(B4)--cycle;
-    
-    \tkzDefPoint(.5,0){C1} 
-    \tkzDefPoint(1,0){C2}
-    \tkzDefPoint(1,.5){C3}
-    \tkzDefPoint(.5,.5){C4}
-    \draw[penColor,fill=fill2,very thick] (C1)--(C2)--(C3)--(C4)--cycle;
-    
-  \end{tikzpicture}
-\end{image}
+
+
+
 
 \begin{itemize}
 \item Call the area shaded this step $A_2$.  Then, we have $A_2=\answer[given]{1/4}$.
@@ -104,34 +74,10 @@ and writing down the total shaded are of the square.
 
 Analytically, we can write $S_2=A_1+A_2.$
 
-\paragraph{Step 3:} Shade the left half of the unshaded region.  \begin{image}[1in]
-  \begin{tikzpicture}[scale=3,rounded corners=.5pt]      
-    \tkzDefPoint(0,0){A1} 
-    \tkzDefPoint(1,0){A2}
-    \tkzDefPoint(1,1){A3}
-    \tkzDefPoint(0,1){A4}
-    \draw[penColor,very thick] (A1)--(A2)--(A3)--(A4)--cycle;
+\paragraph{Step 3:} Shade the left half of the unshaded region.  
 
-    \tkzDefPoint(0,0){B1} 
-    \tkzDefPoint(.5,0){B2}
-    \tkzDefPoint(.5,1){B3}
-    \tkzDefPoint(0,1){B4}
-    \draw[penColor,fill=fill1,very thick] (B1)--(B2)--(B3)--(B4)--cycle;
-    
-    \tkzDefPoint(.5,0){C1} 
-    \tkzDefPoint(1,0){C2}
-    \tkzDefPoint(1,.5){C3}
-    \tkzDefPoint(.5,.5){C4}
-    \draw[penColor,fill=fill1,very thick] (C1)--(C2)--(C3)--(C4)--cycle;
-    
-    \tkzDefPoint(.5,.5){D1} 
-    \tkzDefPoint(.75,.5){D2}
-    \tkzDefPoint(.75,1){D3}
-    \tkzDefPoint(.5,1){D4}
-    \draw[penColor,fill=fill2,very thick] (D1)--(D2)--(D3)--(D4)--cycle;
-    
-  \end{tikzpicture}
-\end{image}
+
+
 
 \begin{itemize}
 \item Call the area shaded this step $A_3$.  Then, we have $A_3=\answer[given]{1/8}$.
@@ -360,20 +306,8 @@ Since $\sum_{k=1}^{\infty} a_k$ converges, changing the lower index to $k=4$ \wo
 
 Let's write out the series and make a few observations.
 
-\begin{image}
-  \begin{tikzpicture}
-        \node at (0,0) {
-          $\underbrace{\sum_{k=1}^{\infty} a_k}=\overbrace{a_1+a_2+a_3}+ \underbrace{a_4+a_5 + \ldots}$};
-        \node at (1.8,-.7) {\small{This is the series}};
-        \node at (1.8,-1) {\small{we want to find.}};
-        
-        \node at (-2.5,-.9) {\small{This is $0$ from }};
-        \node at (-2.5,-1.2) {\small{the last part.}};    
-        
-        \node at (-.6,.9) {\small{This is $s_3$. }};
-        
-      \end{tikzpicture}
-  \end{image}
+
+
   
  Putting this together, we have:
  
