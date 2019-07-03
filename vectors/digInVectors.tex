@@ -165,9 +165,285 @@ magnitude. This visualization leads us to our definition of a vector.
   \end{feedback}
 \end{question}
 Two vectors are equal when they have the same direction and magnitude.
+\begin{question}
+  True or False: Given vectors $\overset{\rightharpoonup}{\mathbf{v}}$ and $\overset{\rightharpoonup}{\mathbf{w}}$ in the diagram
+  below
+  \begin{image}
+  \begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1,xmax=5,ymin=-1,ymax=4,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            %ytick={-2,-1,...,7},
+      %xtick={-2,-1,...,10},
+      grid = major,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]
+          \addplot[very thick,penColor,->] plot coordinates {(1,2) (4,3)};
+          \addplot[very thick,penColor2,->] plot coordinates {(0,0) (3,1)};
+          \node[above] at (axis cs:2.5, 2.5) [penColor] {$\overset{\rightharpoonup}{\mathbf{v}}$};
+          \node[above] at (axis cs:1.5, .5) [penColor2] {$\overset{\rightharpoonup}{\mathbf{w}}$};
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+  we have that $\overset{\rightharpoonup}{\mathbf{v}}=\overset{\rightharpoonup}{\mathbf{w}}$.
+  \begin{prompt}
+  \begin{multipleChoice}
+    \choice[correct]{true}
+    \choice{false}
+  \end{multipleChoice}
+  \end{prompt}
+\end{question}
+
+Vectors need not be limited to the $(x,y)$-plane. They can have any \textit{dimension}.
+
+
+\begin{definition}
+The \textbf{dimension} of a vector is the number of entries. Each
+individual entry of a vector is called a \textbf{component}.
+\end{definition}
+
+In $\mathbb{R}^2$ we usually label the first component the ``$x$-component,''
+and the second component the ``$y$-component.'' In $\mathbb{R}^3$ we usually
+label the components ``$x$,'' ``$y$,'' and ``$z$.''
+
+
+\begin{question}
+  What is the dimension of the vector 
+  \[
+  \left\langle 3,4,1,-4 \right\rangle?
+  \]
+  \begin{prompt}
+  \[
+  \text{Dimension} = \answer{4}
+  \]
+  \end{prompt}
+  \begin{question}
+    What are the components of the vector $\left\langle 1,2,3 \right\rangle$?
+    \begin{prompt}
+      \begin{itemize}
+      \item The $x$-component is $\answer{1}$.
+      \item The $y$-component is $\answer{2}$.
+      \item The $z$-component is $\answer{3}$.
+      \end{itemize}
+    \end{prompt}
+  \end{question}
+\end{question}
+
+
+So far, we have mostly studied functions which take single numbers as
+their inputs and output either individual numbers or ordered pairs (as
+in the case of parametric functions).  Now, we set the stage for the
+study of functions that accept lists of numbers as inputs and give lists of
+numbers as outputs. When we want to keep track of more than one number
+at a time, especially when we have more than one output depending on the 
+same input, we often use a vector.
 
 
 
+
+
+\subsection{Computing the direction and magnitude of vectors}
+
+
+Since vectors are determined only by their direction and magnitude,
+notation such as
+\[
+\left\langle a,b,c \right\rangle
+\]
+completely describes a vector, since we assume the tail is at the
+origin. We should point out that the following are other types of notation for vectors.
+\[
+\begin{bmatrix}
+  a\\
+  b\\
+  c
+\end{bmatrix}, \quad
+\begin{bmatrix}
+  a & b & c
+\end{bmatrix},
+\quad
+(a,b,c).
+\]
+When dealing with a vector in $1$, $2$, or $3$ dimensions, we can
+visualize the vector as a directed arrow, where the \textit{magnitude} of the vector 
+is the length of the arrow.
+
+\begin{question}
+  What is the magnitude of the vector $\left\langle 1,1 \right\rangle$?
+  \begin{prompt}
+    \[
+    \text{Magnitude}  = \answer{\sqrt{2}}
+    \]
+  \end{prompt}
+\end{question}
+
+You were able to find the answer to the question above because you are
+used to working with $2$ dimensional objects.  We make the following
+definition in $n$ dimensions.
+
+\begin{definition}
+  Let $\overset{\rightharpoonup}{\mathbf{v}} = \left\langle v_1, v_2, v_3, \dots, v_n \right\rangle$ in $\mathbb{R}^n$
+        be an $n$-dimensional vector.  Then the \textbf{magnitude} of
+        $\overset{\rightharpoonup}{\mathbf{v}}$ is denoted by $|\overset{\rightharpoonup}{\mathbf{v}}|$ and is defined by:
+  \[
+  |\overset{\rightharpoonup}{\mathbf{v}}| = \sqrt{v_1^2+v_2^2+v_3^2+\dots+v_n^2}
+  \]
+\end{definition}
+
+Notice that the magnitude of the vector is just the distance between 
+the origin and the point determined by the components of our vector!
+
+\begin{question}
+  What is the magnitude of the vector
+  \[
+  \overset{\rightharpoonup}{\mathbf{v}}=\left\langle 2,-1,4,-2 \right\rangle?
+  \]
+  \begin{prompt}
+    \[
+    |\overset{\rightharpoonup}{\mathbf{v}}|=\answer{5}
+    \]
+  \end{prompt}
+\end{question}
+
+
+
+
+
+
+
+
+\section{Operations on vectors}
+
+
+We can add vectors of the same dimension together by component-wise
+addition. Here, it is useful to write vectors vertically.
+\[
+\begin{bmatrix}
+  a\\
+  b\\
+  c
+\end{bmatrix}
++
+\begin{bmatrix}
+  d\\
+  e\\
+  f
+\end{bmatrix}
+=
+\begin{bmatrix}
+  a+d\\
+  b+e\\
+  c+f
+\end{bmatrix}.
+\]
+
+\begin{question}
+  \[
+  \left\langle 1,2,3 \right\langle + \left\langle -1,2,2 \right\rangle =
+  \left\langle \answer{0},\answer{4},\answer{5} \right\rangle
+  \]
+\end{question}
+
+Now, let us investigate the geometry of addition of vectors. Let
+$\overset{\rightharpoonup}{\mathbf{v}} = \left\langle 1,2 \right\rangle$ and $\overset{\rightharpoonup}{\mathbf{w}} = \left\langle 3,1 \right\rangle$.  If we
+place the tail of the vector $\overset{\rightharpoonup}{\mathbf{w}}$ at the tip of the vector
+$\overset{\rightharpoonup}{\mathbf{v}}$, like this:
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+        xmin=-1,xmax=5,ymin=-1,ymax=4,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ytick={-2,-1,...,7},
+      %yticklabels={$0.5$,$1$,$1.5$,$2$},
+      xtick={-2,-1,...,10},
+      %xticklabels={$0.5$,$1$,$1.5$,$2$},
+      grid = major,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]
+          \addplot[very thick,penColor,->] plot coordinates {(1,2) (4,3)};
+          \addplot[very thick,penColor2,->] plot coordinates {(0,0) (1,2)};
+          \addplot[ultra thick,penColor3,->] plot coordinates {(0,0) (4,3)};
+
+           \node[left] at (axis cs:.5, 1) [penColor2] {$\overset{\rightharpoonup}{\mathbf{v}}$};
+           \node[above] at (axis cs:2.5, 2.5 ) [penColor] {$\overset{\rightharpoonup}{\mathbf{w}}$};
+           \node[below right] at (axis cs:2, 1.5 ) [penColor3] {$\overset{\rightharpoonup}{\mathbf{v}}+\overset{\rightharpoonup}{\mathbf{w}}$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+or like this:
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+        xmin=-1,xmax=5,ymin=-1,ymax=4,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ytick={-2,-1,...,7},
+      %yticklabels={$0.5$,$1$,$1.5$,$2$},
+      xtick={-2,-1,...,10},
+      %xticklabels={$0.5$,$1$,$1.5$,$2$},
+      grid = major,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]
+          \addplot[very thick,penColor2,->] plot coordinates {(3,1) (4,3)};
+          \addplot[very thick,penColor3,->] plot coordinates {(0,0) (4,3)};
+          \addplot[ultra thick,penColor,->] plot coordinates {(0,0) (3,1)};
+
+           \node[right] at (axis cs:3.5, 2) [penColor2] {$\overset{\rightharpoonup}{\mathbf{v}}$};
+           \node[below] at (axis cs:1.5, .5 ) [penColor] {$\overset{\rightharpoonup}{\mathbf{w}}$};
+           \node[above left] at (axis cs:2, 1.5 ) [penColor3] {$\overset{\rightharpoonup}{\mathbf{v}}+\overset{\rightharpoonup}{\mathbf{w}}$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+then the sum $\overset{\rightharpoonup}{\mathbf{v}}+\overset{\rightharpoonup}{\mathbf{w}}$ connects the tail of $\overset{\rightharpoonup}{\mathbf{v}}$ to the
+tip of $\overset{\rightharpoonup}{\mathbf{w}}$. In fact, you can think of the sum of two vectors as
+being the diagonal of the parallelogram formed by the two vectors.
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+        xmin=-1,xmax=5,ymin=-1,ymax=4,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ytick={-2,-1,...,7},
+      %yticklabels={$0.5$,$1$,$1.5$,$2$},
+      xtick={-2,-1,...,10},
+      %xticklabels={$0.5$,$1$,$1.5$,$2$},
+      grid = major,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]
+          \addplot[very thick,penColor,->] plot coordinates {(1,2) (4,3)};
+          \addplot[very thick,penColor2,->] plot coordinates {(0,0) (1,2)};
+          \addplot[ultra thick,penColor3,->] plot coordinates {(0,0) (4,3)};
+
+          \node[left] at (axis cs:.5, 1) [penColor2] {$\overset{\rightharpoonup}{\mathbf{v}}$};
+          \node[above] at (axis cs:2.5, 2.5 ) [penColor] {$\overset{\rightharpoonup}{\mathbf{w}}$};
+          \node[below right] at (axis cs:1.9, 1.6 ) [penColor3] {$\overset{\rightharpoonup}{\mathbf{v}}+\overset{\rightharpoonup}{\mathbf{w}}$};
+          
+          \addplot[very thick,penColor2,->] plot coordinates {(3,1) (4,3)};
+          \addplot[very thick,penColor3,->] plot coordinates {(0,0) (4,3)};
+          \addplot[ultra thick,penColor,->] plot coordinates {(0,0) (3,1)};
+          
+          \node[right] at (axis cs:3.5, 2) [penColor2] {$\overset{\rightharpoonup}{\mathbf{v}}$};
+          \node[below] at (axis cs:1.5, .5 ) [penColor] {$\overset{\rightharpoonup}{\mathbf{w}}$};
+          %\node[above left] at (axis cs:2, 1.5 ) [penColor3] {$\overset{\rightharpoonup}{\mathbf{v}}+\overset{\rightharpoonup}{\mathbf{w}}$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
