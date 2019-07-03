@@ -122,6 +122,49 @@ magnitude. This visualization leads us to our definition of a vector.
 
 
 
+\begin{definition}
+  A \textbf{vector} is something that can be ascribed the qualities of
+  direction and magnitude. 
+\end{definition}
+
+\begin{question}
+  What vector has its tip at $(1,2)$ and its tail at $(4,3)$?
+  \begin{prompt}
+    \[
+    \overset{\rightharpoonup}{\mathbf{v}} = \left\langle \answer{-3},\answer{-1} \right\rangle
+    \]
+  \end{prompt}
+  
+  \begin{feedback}[correct]
+    Note that since we are denoting the vector by a single pair of
+    numbers, this pair of numbers represents the tip of the vector,
+    and we assume that the tail of the vector is at the origin.
+     \begin{image}
+       \begin{tikzpicture}
+        \begin{axis}[
+            xmin=-4,xmax=5,ymin=-2,ymax=4,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ytick={-2,-1,...,4},
+      xtick={-4,-3,...,5},
+      grid = major,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]
+          \addplot[very thick,penColor,->] plot coordinates {(4,3) (1,2)};
+          \addplot[very thick,penColor2,->] plot coordinates {(0,0) (-3,-1)};
+          \node[above] at (axis cs:2.5, 2.5) [penColor] {$\overset{\rightharpoonup}{\mathbf{v}}$};
+          \node[above] at (axis cs:-1.5, -.5) [penColor2] {$\overset{\rightharpoonup}{\mathbf{v}}$};
+
+         \end{axis}
+       \end{tikzpicture}
+     \end{image}
+  \end{feedback}
+\end{question}
+Two vectors are equal when they have the same direction and magnitude.
 
 
 
