@@ -135,53 +135,6 @@ An interesting observation is that the dot product gives information about how `
 
 
 
-It might (and likely \emph{should}) be entirely unclear at this point why the above definition and theorem are consistent with each other.  The appendix to this section establishes this in more detail, but here's an example that demonstrates their equivalence in the context of a specific pair of vectors.
-
-\begin{example}
-Suppose that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are two dimensional vectors.  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ has magnitude $1$ and makes an angle of $\frac{\pi}{6}$ with the positive $x$-axis, and  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ has magnitude $2$ and makes an angle of $\frac{\pi}{3}$ with the positive $x$-axis. The vectors are shown below.
-
-\begin{image}
-\begin{tikzpicture}
-
-\begin{axis}
-  [
-  domain=0:6, ymax=1.9,xmax=1.9, ymin=-.4, xmin=-.4,
-  axis lines=center, xlabel=$x$, ylabel=$y$,
-  xtick={.866,1.1},
-  xticklabels={$u_1$,$v_1$},
-  ytick={.5,1.732},
-  yticklabels={$u_2$,$v_2$},
-  every axis y label/.style={at=(current axis.above origin),anchor=south},
-  every axis x label/.style={at=(current axis.right of origin),anchor=west},
-  axis on top,
-  typeset ticklabels with strut,
-  ]
-
-          \addplot[very thick,penColor,->] plot coordinates {(0,0) (.866,.5)};
-          \addplot[very thick,penColor2,->] plot coordinates {(0,0) (1.1,1.732)}; %x-comp exaggerated to produce a better image
-  
-  \node at (axis cs:.533,.15) [penColor] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$};
-  \node at (axis cs:.433,1.1) [penColor2] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$};
-  \node at (axis cs:.3,.3) [penColor] {$\theta$};
-\end{axis}
-
-\end{tikzpicture}
-\end{image}
-
-\begin{itemize}
-\item The magnitude-angle definition requires that we find the angle $\theta$ between the two vectors.  Since  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$  makes an angle of $\frac{\pi}{6}$ with the positive $x$-axis, and  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ makes an angle of $\frac{\pi}{3}$ with the positive $x$-axis, we find that 
-
-\[
-\theta = \frac{\pi}{3}-\frac{\pi}{6} = \frac{\pi}{6}.
-\]
-
-Thus, $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}||\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}| \cos(\theta) = \answer[given]{\sqrt{3}}$.
-
-\item The component definition requires that we find the components $u_1$, $v_1$, $u_2$, and $v_2$.  We can use trigonometry to find  $u_1$ and $u_2$.
-\begin{align*}
-u_1 &= |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|\cos\left(\frac{\pi}{6}\right) =\frac{\sqrt{3}}{2} \\
-u_2 &= |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|\sin\left(\frac{\pi}{6}\right) =\frac{1}{2} \\
-\end{align*}
 
 
 
