@@ -1,0 +1,115 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+\author{Jim Talamo}
+
+\outcome{Define dot products two ways.}
+\outcome{Explore the utility of both the magnitude-angle and component formulation of the dot product.}
+\outcome{Use dot products to compute the angle between vectors.}
+\outcome{Use the dot product to define orthogonality.}
+
+\title[Dig-In:]{The Dot Product}
+
+\begin{document}
+\begin{abstract}
+The dot product is an important operation between vectors that captures geometric information. 
+\end{abstract}
+\maketitle
+
+
+\section{The dot product}
+
+We have already seen how to add vectors and how to multiply vectors by
+scalars.  As it turns out, there is not a single useful way to define ``multiplication'' of vectors, but there are several types of products defined for two vectors that have intrinsic meaning.  One such example is the \emph{dot product}, which we motivate using the example below.
+
+\begin{model}
+Imagine the following scenario.
+
+A person is trying to drag a table from one side of a room to the other across a carpeted floor.  While moving, the table is dragged only, not lifted.  In order to cause the table to move, the person applies a force, which is directed along the person's arms. We can consider two scenarios - one in which the force applied is mostly in the direction that the table moves, and one in which only a small part of the force is in the direction of motion.  
+ \begin{image}
+    \begin{tikzpicture}
+        \begin{axis}[ymax=1.5,xmax=2.8, ymin=-.8, xmin=-2.8,
+            unit vector ratio*=1 1 1,
+            axis lines=none
+          ]
+                      \addplot[very thick,penColor] plot coordinates {(0,0)(0,.5)(2,.5)(2,0)(0,0)};
+          \addplot[very thick,penColor2,->] plot coordinates {(0,.5) (-2,1)};
+          \addplot[very thick,penColor5,->] plot coordinates {(0,.5) (-2,.5)};
+          \node[above] at (axis cs:-.8, .8) [penColor2] {force};
+                    \node[left] at (axis cs:-.5, .3) [penColor5] {direction};
+                    \node[left] at (axis cs:1.4, .25) [penColor] {Table};
+         \node[left] at (axis cs:2.8, -.5) [black] {\footnotesize Most of the force is in the direction of motion.};
+                      \addplot[very thin,penColor] plot coordinates {(0,-1)};
+        \end{axis}
+    \end{tikzpicture}
+  \end{image}
+
+ \begin{image}
+    \begin{tikzpicture}
+        \begin{axis}[ymax=1.8,xmax=2.8, ymin=-.8, xmin=-2.8,
+            unit vector ratio*=1 1 1,
+            axis lines=none
+          ]
+                      \addplot[very thick,penColor] plot coordinates {(0,0)(0,.5)(2,.5)(2,0)(0,0)};
+          \addplot[very thick,penColor2,->] plot coordinates {(0,.5) (-1.5,1.8)};
+          \addplot[very thick,penColor5,->] plot coordinates {(0,.5) (-2,.5)};
+          \node[above] at (axis cs:-.5, 1.2) [penColor2] {force};
+                    \node[left] at (axis cs:-.5, .3) [penColor5] {direction};
+                    \node[left] at (axis cs:1.4, .25) [penColor] {Table};
+         \node[left] at (axis cs:2.8, -.5) [black] {\footnotesize Some of the force is in the direction of motion.};
+                      \addplot[very thin,penColor] plot coordinates {(0,-1)};
+        \end{axis}
+    \end{tikzpicture}
+  \end{image}
+
+Since there is frictional force to overcome in order to move the table, work is done when the table is moved.  The person trying to move the table will notice that much more force is necessary to apply in the scenario when less of the applied force is in the direction of motion.  In fact, a result from physics ensures that the work done is given by
+
+\[
+\textrm{Work} = \left<\textrm{ component of force in the direction of motion }\right> \cdot \left<\textrm{ distance }\right>.
+\]
+
+By denoting the force by $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F}}$ and the displacement vector by $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{d}}$, and letting $\theta$ be the angle between them, we note that the component of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F}}$ in the direction of motion is $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F}}|\cos(\theta)$, so 
+
+\[
+W = |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F}}| \cos(\theta) \cdot |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{d}}| = |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F}}||\overset{\boldsymbol{\rightharpoonup}}{\mathbf{d}}|\cos(\theta)
+\]
+
+Let's now return to our original scenarios.  The same amount of work in both scenarios is done when dragging the table across the room and in both scenarios, the angle lies between $0$ and $90^{\circ}$.  Letting $\theta_1$ be the angle in the first scenario and $\theta_2$ be the angle in the second one, note $\theta_1 <\theta_2$.  Letting $F_1$ and $F_2$ be the force required to apply in each scenario, we now have 
+
+\[
+|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_1}}|\cancel{|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{d}}|}\cos(\theta_1) = |\vec{F_2}|\cancel{|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{d}}|}\cos(\theta_2)
+\]
+Since $\cos(\theta)$ is \wordChoice{\choice{increasing}\choice[correct]{decreasing}} for $0\leq \theta\leq \frac{\pi}{2}$, in order for the above equality to hold,  we must have $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_1}}|$ \wordChoice{\choice[correct]{$<$}\choice{$=$}\choice{$>$}} $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_2}}|$.
+\end{model}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
