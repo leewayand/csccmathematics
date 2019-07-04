@@ -1,0 +1,50 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jim Talamo}
+
+\outcome{Add and subtract vectors.}
+
+\begin{document}
+\begin{exercise}
+Suppose that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \left\langle 0,-1,3 \right\rangle$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} =
+\left\langle -1,2,0 \right\rangle$.  Find a vector
+$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$  with a positive $y$-component of magnitude $7$ that is parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}+2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.
+
+\[
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \left\langle \answer{\frac{-14}{\sqrt{22}} \right\rangle, \answer{ \frac{21}{\sqrt{22}} } , \answer{ \frac{21}{\sqrt{22}} }}
+\]
+
+\begin{hint}
+To begin, let's find a vector in the same direction as $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}+2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.  Using the rules of addition and scalar multiplication, we find:
+
+\[
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}+2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left\langle \answer{-2} , \answer{3} , \answer{3} \right\rangle
+\]
+
+How should we proceed?
+
+\begin{multipleChoice}
+\choice{Multiply this result by $7$; that is, $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \left\langle -14 , 21, 21 \right\rangle$.}
+\choice[correct]{Find the magnitude of $\left\langle -2, 3, 3 \right\rangle$ and scale it appropriately if necessary.}
+\end{multipleChoice}
+
+We compute:
+
+\[
+\left|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}+2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}\right| = \sqrt{\left( \answer{-2} \right)^2+\left(  \answer{3} \right)^2+\left(  \answer{3}\right)^2 }  = \sqrt{\answer{22}}
+\]
+(type the components in the order of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}+2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$)
+
+A unit vector in the direction of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ is thus $\frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}+2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{\left|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}+2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}\right|}$, so:
+
+\[
+\mathbf{\hat{w}} = \left\langle \answer{\frac{-2}{\sqrt{22}} }, \answer{ \frac{3}{\sqrt{22}} } , \answer{ \frac{3}{\sqrt{22}} } \right\rangle
+\]
+
+and  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \answer{7} \mathbf{\hat{w}}$.
+\end{hint}
+
+\end{exercise}
+\end{document}

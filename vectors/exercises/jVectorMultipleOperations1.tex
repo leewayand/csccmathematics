@@ -1,0 +1,48 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jim Talamo}
+
+\outcome{Add and subtract vectors.}
+
+\begin{document}
+\begin{exercise}
+Suppose that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left\langle -1,2,2 \right\rangle$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left\langle -2,0,1 \right\rangle$.  Find a vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ of magnitude $4$ that is parallel to $2 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} - 3 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.
+
+\[
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \left\langle \answer{\frac{16}{\sqrt{33}} }, \answer{ \frac{16}{\sqrt{33}} } , \answer{ \frac{4}{\sqrt{33}} } \right\rangle
+\]
+
+\begin{hint}
+To begin, let's find a vector in the same direction as $2 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} - 3 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.  Using the rules of addition and scalar multiplication, we find:
+
+\[
+2 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} - 3 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left\langle \answer{4} , \answer{4} , \answer{1} \right\rangle
+\]
+
+How should we proceed?
+
+\begin{multipleChoice}
+\choice{Multiply this result by $4$; that is, $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \left\langle 16 , 16, 4 \right\rangle$.}
+\choice[correct]{Find the magnitude of $\left\langle 4, 4, 1 \right\rangle$ and scale it appropriately if necessary.}
+\end{multipleChoice}
+
+We compute:
+
+\[
+|2 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} - 3 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}| = \sqrt{\left( \answer{4} \right)^2+\left(  \answer{4} \right)^2+\left(  \answer{1}\right)^2 }  = \sqrt{\answer{33}}
+\]
+(type the components in the order of $2 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} - 3 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$)
+
+A unit vector in the direction of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ is thus $\frac{2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}-3\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{\left|2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}-3\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}\right|}$, so:
+
+\[
+\mathbf{\hat{w}} = \left\langle \answer{\frac{4}{\sqrt{33}} }, \answer{ \frac{4}{\sqrt{33}} } , \answer{ \frac{1}{\sqrt{33}} }\right\rangle
+\]
+
+and  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \answer{4} \mathbf{\hat{w}}$.
+\end{hint}
+
+\end{exercise}
+\end{document}
