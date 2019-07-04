@@ -50,6 +50,46 @@ In essence we imagine the ``sun'' directly over a vector, casting a shadow onto 
 
 
 
+While this is good starting point for understanding orthogonal
+projections, now we need the definition.
+
+\begin{definition}
+  The \textbf{orthogonal projection}\index{projection} of vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ in the direction
+  of vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ is a new vector denoted
+  $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$
+  \begin{image}
+    \begin{tikzpicture}
+      \draw[dashed] (-.5,-.5) -- (3.5,3.5);
+      \draw[ultra thick,penColor4,->] (0,0) -- (3,1);
+      \draw[ultra thick,penColor2,->] (-0,0) -- (0.707,0.707);
+      %\draw[textColor, dashed] (3,1) -- (2,2);
+      \node[below] at (1.5, 0.5) [penColor4] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$};
+      \node at (0.2, .5) [penColor2] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$};
+    \end{tikzpicture}
+    \qquad
+    \begin{tikzpicture}
+      \draw[textColor, dashed] (3,1) -- (2,2);
+      \draw[textColor, thin] (2.2,1.8) -- (2,1.6)--(1.8,1.8);
+      \draw[draw=none] (-.5,-.5) -- (3.5,3.5);
+      \draw[very thick, penColor,->] (0,0) -- (2,2);
+      \draw[ultra thick,penColor4,->] (0,0) -- (3,1);
+      \draw[ultra thick,penColor2,->] (-0,0) -- (0.707,0.707);
+      %\node[above] at (1.5, 0.5) [penColor] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$};
+      %\node at (0.2, .5) [penColor2] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$};
+      \node[above left] at (1, 1) [penColor] {$\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$};
+    \end{tikzpicture}
+  \end{image}
+  that lies on the line containing $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$, with the vector
+  $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) - \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ perpendicular to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$.
+  \begin{onlineOnly}
+    Below we see vectors $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ along with
+    $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$. Move the tips of vectors $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ and
+    $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ to help you understand $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$.
+    \begin{center}
+      \geogebra{f8bqsRAz}{800}{600}
+    \end{center}
+\end{onlineOnly}
+\end{definition}
 
 
 
