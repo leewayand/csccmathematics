@@ -1,0 +1,96 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+\author{Bart Snapp and Jim Talamo}
+
+
+\outcome{Define orthogonal decomposition.}
+\outcome{Define orthogonal and scalar projections.}
+\outcome{Use the dot product in applied settings.}
+
+\title[Dig-In:]{Projections and orthogonal decomposition}
+
+\begin{document}
+\begin{abstract}
+ Projections tell us how much of one vector lies in the direction of another and are important in physical applications.
+\end{abstract}
+\maketitle
+
+
+\section{Projections and components}
+
+\subsection{Projections}
+One of the major uses of the dot product is to let us \textit{project}
+one vector in the direction of another. Conceptually, we are looking
+at the ``shadow'' of one vector projected onto another, sort of like
+in the case of a sundial.
+\begin{image}%%https://commons.wikimedia.org/wiki/File:Perceton_sundial_-_detail.JPG
+  \includegraphics{sundial.jpg}
+\end{image}
+In essence we imagine the ``sun'' directly over a vector, casting a shadow onto another vector.
+\begin{image}
+  \begin{tikzpicture}
+    \foreach \angle in { 270,280,...,450 }{
+      \draw [ultra thick, yellow!70!orange, rotate around={\angle:(3,4)}]
+      (3,3.5)--(3,3);
+    };
+    \draw[very thick, penColor,->] (0,0) -- (5,0);
+    \draw[ultra thick,penColor4,->] (0,0) -- (3,2);
+    \draw[ultra thick,penColor2,->] (0,0) -- (3,0);
+    \draw[ultra thick, yellow!50!orange] (2.5,4) arc (180:360:.5);
+
+    \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,0)--(3,0);
+    \node at (1.5,-.5) {projection};
+
+  \end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
