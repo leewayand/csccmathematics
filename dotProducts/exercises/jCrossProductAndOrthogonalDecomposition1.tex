@@ -1,0 +1,75 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jim Talamo}
+
+\outcome{Use dot products and cross products to find vectors with given properties.}
+
+\begin{document}
+\begin{exercise}
+Suppose that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \left< 5,0,2 \right>$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left< 2,1,0 \right>$.  
+
+Find a vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ of magnitude 3 that is orthogonal to both $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.
+
+\[
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \left< \answer{\frac{2}{\sqrt{5}}},\answer{\frac{-4}{\sqrt{5}}}, \answer{\frac{5}{\sqrt{5}}} \right>
+\]
+
+
+\begin{hint}
+To find a vector orthogonal to both $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$, we can:
+
+\begin{multipleChoice}
+\choice{Compute $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.}
+\choice[correct]{Compute $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \cross \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.}
+\end{multipleChoice}
+
+We find:
+
+\[
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \cross \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left< \answer{2},\answer{-4},\answer{5} \right>
+\]
+
+To find a vector of magnitude 5 in this direction:
+
+\begin{multipleChoice}
+\choice{Multiply the above vector by 5.}
+\choice[correct]{Compute the magnitude and scale the vector accordingly.}
+\end{multipleChoice}
+
+Computing:
+
+\[
+|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \cross \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} | = \answer{\sqrt{45}}
+\]
+We can make the vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ by finding a unit vector $\hat{w}$ in the appropriate direction:
+
+\[
+\hat{w} = \frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \cross \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \cross{v}|} = \left< \answer{\frac{2}{\sqrt{45}}},\answer{\frac{-4}{\sqrt{45}}}, \answer{\frac{5}{\sqrt{45}}} \right>
+\]
+
+Recall that if $a>0$ is a scalar, the length of $a\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ is $a$ times the length of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$, so a vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ of magnitude 3 in the direction of $\hat{w}$ is $\answer{3}\hat{w}$. 
+\end{hint}
+
+%%%%%%%%%
+\begin{exercise}
+Find a vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$ parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and a vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$ orthogonal to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ so $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}} +\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$.
+
+\begin{align*}
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}} = \left< \answer{4},\answer{2}, \answer{0} \right> \\
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = \left< \answer{1},\answer{-2},\answer{-2} \right> \\
+\end{align*} 
+
+\begin{hint}
+ We should proceed by:
+ 
+ \begin{multipleChoice}
+ \choice{Find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$ by computing $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \cross \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$, then find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$ from $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}-\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$.}
+ \choice[correct]{Find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$ by computing $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \cross \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$, then find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$ from $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}-\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$.}
+ \end{multipleChoice}
+ \end{hint}
+ 
+  \end{exercise}
+\end{exercise}
+\end{document}
