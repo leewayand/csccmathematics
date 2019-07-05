@@ -302,6 +302,62 @@ perpendicular to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{y}}$''.
 
 
 
+\begin{question}
+Let $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \left< -2,1 \right>$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left< 3,1 \right>$.  What is the
+orthogonal decomposition of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ in terms of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$?
+\begin{prompt}
+\[
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \underbrace{\left< \answer{-1.5},\answer{-0.5} \right> }_{\parallel \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} + \underbrace{\left< \answer{-0.5},\answer{1.5}\right>}_{\perp \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}
+\]
+\end{prompt}
+\begin{question}
+  Let $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \left< 2,1,3 \right>$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{x}}  = \left< 1,1,1 \right>$. What is the
+  orthogonal decomposition of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$ in terms of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{x}}$?
+  \begin{prompt}
+  \[
+  \overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}  = \underbrace{\left< \answer{2},\answer{2},\answer{2}\right>}_{\parallel \overset{\boldsymbol{\rightharpoonup}}{\mathbf{x}}} + \underbrace{\left< \answer{0},\answer{-1},\answer{1}\right>}_{\perp\overset{\boldsymbol{\rightharpoonup}}{\mathbf{x}}}
+  \]
+  \end{prompt}
+\end{question}
+\end{question}
+
+
+
+
+
+We conclude this section with a physical example where orthogonal decomposition is useful.
+
+\begin{example}
+  Consider a box weighing $50\mathrm{lb}$ placed on a frictionless ramp that rises
+  $5\mathrm{ft}$ over a span of $20\mathrm{ft}$.
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{scope}[scale=.25]
+  \draw [thin] (20,5) -- node [right,pos=.5] {\scriptsize $5$} (20,0);
+        \draw [very thick,->,penColor] (0,0) --  (20,5) node [above] {\scriptsize $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}$};
+        \draw [thin] (0,0) --  node [below,pos=.6] {\scriptsize $20$}(20,0);
+  \draw [thin] (10,2.5) -- (9.25,5.5) -- (12.25,6.25) -- (13,3.25); %box
+  \draw [very thick,->,penColor2] (11.125,4.375) -- (11.125,-3.625) node [below] {\scriptsize $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{g}}$}; %g
+      \end{scope}
+    \end{tikzpicture}
+  \end{image}
+  
+What will happen to the box after it is placed and let go?  Since there is no friction, the box will slide down the ramp.  Objects initially at rest will only start to move if there is an unbalanced force, so there must be a force parallel to the ramp.  We know that the force of gravity is pointing straight down, so part of the force due to gravity is certainly directed along the ramp.  
+  
+Furthermore, the box is confined to slide along the ramp; it does not fall through the ramp, nor does it jump off of the ramp.  This means that the net force in the direction perpendicular to the ramp must be $0$.  There is a component of gravity in this direction too, so there must be a force that balances this component.  In physics, this force is referred to as the \emph{normal force}, which we will denote by $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_N}}$.  
+
+We can find both the force gravity exerts on the box in the direction of the ramp, and the normal force from the orthogonal decomposition of the gravitational force, which we will denote by $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}$.  Since we are given the weight of the box, we have $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}} =   \left< 0,-50 \right>$.
+
+
+\begin{remark}
+For those more familiar with physics, recall that the kilogram is a measure of \emph{mass}, but the pound is a measure of \emph{weight}.  These quantities are proportional, and the acceleration due to gravity is the constant of proportionality; that is 
+
+\[
+\left<\textrm{ weight }\right> = \left< \textrm{ mass }\right> \cdot \left<\textrm{ acceleration due to gravity } \right>.
+\]
+
+Thus, there is no need to multiply the weight by the acceleration due to gravity.
+\end{remark} 
 
 
 
@@ -309,7 +365,55 @@ perpendicular to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{y}}$''.
 
 
 
-
+Let's now find the orthogonal decomposition of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}} =
+  \left< 0,-50 \right>$ in terms of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}$. 
+  
+    \begin{explanation}
+    To find the force of gravity in the direction of the ramp, which we denote by $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \parallel}$ we
+    compute $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{g}})$.
+    \begin{align*}
+     \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \parallel} = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}) &= \left(\frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}}{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}}\right)\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}\\
+      &=  \answer[given]{\frac{-250}{425}} \left< 20,5 \right>\\
+      &= \left< \answer[given]{\frac{-200}{17}},\answer[given]{\frac{-50}{17}} \right>
+    \end{align*}
+    To find the component $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \perp}$ of gravity orthogonal to the ramp, we subtract the part of gravity parallel to the ramp from the gravitational force.
+    \begin{align*}
+      \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \perp} &= \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}} - \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \parallel} \\
+      &= \left< \answer[given]{\frac{200}{17}},\answer[given]{\frac{-800}{17}} \right>
+    \end{align*}
+    \begin{image}
+    \begin{tikzpicture}
+      \begin{scope}[scale=.25]
+        \draw [thin] (20,5) -- node [right,pos=.5] {\scriptsize $5$} (20,0);
+        \draw [very thick,->,penColor] (0,0) --  (20,5) node [above] {\scriptsize $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}$};
+        \draw [thin] (0,0) --  node [below,pos=.6] {\scriptsize $$}(20,0);
+        \draw [thin] (5,0) --  node [below,pos=.6] {\scriptsize $20$}(10,0);
+  \draw [thin] (10,2.5) -- (9.25,5.5) -- (12.25,6.25) -- (13,3.25); %box
+  \draw [very thick,->,penColor2] (11.125,4.375) -- (11.125,-3.625) node [left] {\scriptsize $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{g}}$}; %g
+  \draw [penColor3,very thick,->] (11.125,4.375) -- (13,-3.15) node [right,pos=.4,penColor3] {\scriptsize $ \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \perp}$};
+  \draw [penColor4,very thick,->] (13,-3.15) -- (11.125,-3.625)node [shift={(25pt,-13pt)} ,penColor4,pos=0] {\scriptsize $ \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \parallel} = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{r}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{g}})$};
+      \end{scope}
+    \end{tikzpicture}
+    \end{image}
+    
+    Now, the normal force $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_N}}$ must balance the perpendicular force that gravity exerts on the ramp; that is
+    
+    \[
+     \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_g}}_{, \perp} + \overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_N}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}
+    \]
+    
+    since the box is confined to move along the ramp.  We can use this to find that the normal force is $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_N}} = \left< \answer{-\frac{200}{17}},\answer{\frac{800}{17}} \right>$.
+    
+    \begin{remark}
+    The normal force plays an important role in determining how to model how the box slides down the ramp when the ramp has friction.  In this case, the frictional force $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_f}}$ points in the direction directly opposite of the motion, and it's given by the formula
+    
+\[
+    |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_f}}| =  \mu |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{F_n}}|
+\]
+where $\mu$ is the the coefficient of kinetic friction and is an intrinsic property of the material from which the ramp is made.  Roughly, this measures how much the surface impedes motion along it; for instance, ice has a much lower coefficient of kinetic friction than dry concrete.       
+    \end{remark}
+\end{explanation}
+\end{example}
 
 
 
