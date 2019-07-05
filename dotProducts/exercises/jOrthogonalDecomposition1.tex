@@ -1,0 +1,66 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jim Talamo}
+
+\outcome{Compute dot products.}
+
+\begin{document}
+\begin{exercise}
+Suppose that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \left< 2,-2 \right>$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left< 3,2 \right>$.  Find a vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$ parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ and a vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$ orthogonal to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ so $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}} +\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$.
+
+\begin{align*}
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}} = \left< \answer{\frac{6}{13}},\answer{\frac{4}{13}} \right> \\
+\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}= \left< \answer{\frac{20}{13}},\answer{-\frac{30}{13}} \right> \\
+\end{align*} 
+
+\begin{hint}
+  Consider the vectors below:
+  \begin{image}
+    \begin{tikzpicture}
+        \begin{axis}[
+            unit vector ratio*=1 1 1,
+            axis lines=none
+          ]
+          \addplot[very thick,penColor,->] plot coordinates {(0,0) (2,-2)};
+          \addplot[very thick,penColor2,->] plot coordinates {(0,0) (3,2)};
+          \addplot[very thick,penColor5,->] plot coordinates {(6/13,4/13) (2,-2)};
+            \addplot[very thick,penColor5,->] plot coordinates {(0,0)(6/13,4/13)};
+          \node[left] at (axis cs:1, -1) [penColor] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$};
+          \node[above] at (axis cs:2, .6) [penColor2] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$};
+                    \node[left] at (axis cs:.4, .5) [penColor5] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$};
+          \node[above] at (axis cs:1.2, -.6) [penColor5] {$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$};
+        \end{axis}
+    \end{tikzpicture}
+  \end{image}
+ \end{hint}
+ 
+ From the picture, we should proceed by:
+ 
+ \begin{multipleChoice}
+ \choice{Find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$ by computing $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$, then find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$ from $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}-\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$.}
+ \choice[correct]{Find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$ by computing $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$, then find $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$ from $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}-\overset{\boldsymbol{\rightharpoonup}}{\mathbf{P}}$.}
+ \end{multipleChoice}
+ 
+ \begin{exercise}
+ To check that the vector $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$ we found is orthogonal to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$, we should:
+ 
+ \begin{multipleChoice}
+ \choice{Verify $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = 0$}
+ \choice{Verify $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = 0$}
+  \choice[correct]{Verify $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = 0$}
+   \choice{Verify $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = 0$}
+ \choice{Verify $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = 0$}
+  \choice{Verify $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = 0$}
+ \end{multipleChoice}
+ 
+ Computing this, we find  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}} = \answer{0}$, so $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{N}}$:
+ 
+ \begin{multipleChoice}
+ \choice[correct]{are orthogonal.}
+ \choice{are not orthogonal.}
+ \end{multipleChoice}
+ \end{exercise}
+\end{exercise}
+\end{document}
