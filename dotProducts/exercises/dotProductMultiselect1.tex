@@ -58,6 +58,8 @@ Geometrically, this is difficult to think about, but note that $\overset{\boldsy
 \end{question}
 \end{problem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{problem}
 True or False?  If $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel, then $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$.
 
@@ -81,7 +83,7 @@ In this case, note that there is a nonzero constant $c$ so $\overset{\boldsymbol
 
 \begin{align*}
 \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) &=\left[\frac{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\right] \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = c \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}\\
-\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) = \proj_{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) &= \left[\frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\right] c \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}\\
+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) = \mathbf{proj}_{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) &= \left[\frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\right] c \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}\\
 \end{align*}
 
 Thus,  $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$  \wordChoice{\choice[correct]{only if $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}=\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$}\choice{whenever $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel}\choice{whenever $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are orthogonal}\choice{cannot happen}}.
@@ -92,6 +94,10 @@ Take a step back and look at both the algebraic and geometric reasoning used her
 \end{question}
 \end{problem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 \begin{problem}
 True or False?  If $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$, then $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel.
 
@@ -110,6 +116,11 @@ If $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbo
 The logic that can be used to show this can be extracted from the description given in the previous part of the problem.
 \end{question}
 \end{problem}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{problem}
 True or False?  $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ is defined.
@@ -130,7 +141,7 @@ Would you like to see an explanation?
 
 \begin{question}
 \begin{itemize}
-\item Geometrically, $scal_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ gives the signed magnitude of the component of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ that is parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$, so we expect $scal_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})=$ \wordChoice{\choice[correct]{$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$}{$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}$}}.
+\item Geometrically, $scal_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ gives the signed magnitude of the component of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ that is parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$, so we expect $scal_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})=$ \wordChoice{\choice[correct]{$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$}{$\vec{0}$}}.
 
 \item Algebraically, we can write out $scal_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$.
 
@@ -144,8 +155,6 @@ Once again, note that both the algebraic and geometric reasoning lead to the sam
 \end{question}
 \end{problem}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
