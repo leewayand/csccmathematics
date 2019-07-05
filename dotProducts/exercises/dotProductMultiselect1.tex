@@ -1,0 +1,155 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Jim Talamo}
+
+\outcome{Answer conceptual questions about dot products.}
+
+\begin{document}
+\begin{exercise}
+Suppose that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are nonzero three dimensional vectors and let $\bullet$ denote the vector dot product and $\cdot$ denote scalar multiplication.  Select all of the following that must be true.  Try to think about each statement both algebraically and geometrically.
+
+\begin{selectAll}
+\choice{If $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) =0$, then $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ must be parallel.}
+\choice[correct]{$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \leq |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}| \cdot |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}|$.}
+\choice{If $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel, then $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$.}
+\choice{If $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$, then $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel.}
+\choice{$|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ is defined.}
+\choice[correct]{$scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|$.}
+
+\begin{hint}
+Let's analyze the statements one at a time.
+\begin{problem}
+True or False? If $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) =0$, then $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ must be parallel.
+
+Would you like to see an explanation?
+\wordChoice{\choice[correct]{Yes}\choice{No}}.
+
+\begin{question}
+\begin{itemize}
+\item Geometrically, $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ gives the signed magnitude of the component of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ that is parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$; when the angle between $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ is acute, $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ is positive, and $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = |\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})|$, and when the angle is obtuse, $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$  is negative and $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = -|\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})|$ 
+
+(think in terms of what this represents; don't get lost in the notation!).
+
+Since $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \neq \overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}$ but $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) =0$, this means no part of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ is parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.
+
+\item Algebraically, if $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) =0$ we have
+
+\[
+0 = scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}|}.
+\]
+
+Hence $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = 0$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are \wordChoice{\choice[correct]{orthogonal}\choice{parallel}\choice{neither orthogonal nor parallel}}, not \wordChoice{\choice{orthogonal}\choice[correct]{parallel}\choice{orthogonal nor parallel}}.
+\end{itemize}
+\end{question}
+\end{problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+True or False?  $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \leq |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}| \cdot |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}|$
+
+Would you like to see an explanation?
+\wordChoice{\choice[correct]{Yes}\choice{No}}.
+
+\begin{question}
+\begin{itemize}
+Geometrically, this is difficult to think about, but note that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} =  |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}| \cdot |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}| \cos(\theta)$, where $\theta$ is the angle between $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.  Since $\cos(\theta) \leq 1$, $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} =  |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}| \cdot |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}| \cos(\theta)$ \wordChoice{\choice[correct]{$\leq$}\choice{$\geq$}} $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}| \cdot |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}|$
+\end{itemize}
+\end{question}
+\end{problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+True or False?  If $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel, then $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$.
+
+Would you like to see an explanation?
+\wordChoice{\choice[correct]{Yes}\choice{No}}.
+
+\begin{question}
+\begin{itemize}
+\item Geometrically, $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ gives the vector component of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ that is parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.  Since $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel by assumption, $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) =\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$.  Similarly, $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) =\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$, so $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$ \wordChoice{\choice[correct]{only if $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}=\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$}\choice{whenever $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel}\choice{whenever $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are orthogonal}\choice{cannot happen}}.
+
+\item Algebraically, we can write out the expressions for both orthogonal projections.
+
+\begin{align*}
+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) &= \left[\frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\right] \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \\
+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) &= \left[\frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}\right] \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \\
+\end{align*}
+
+Since $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ is a vector in a direction parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ and $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$ is a vector in a direction parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$, the only way  $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ and $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$ \emph{could} be equal is when $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel.
+
+In this case, note that there is a nonzero constant $c$ so $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = c \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$, and thus
+
+\begin{align*}
+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) &=\left[\frac{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\right] \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = c \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}\\
+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) = \proj_{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) &= \left[\frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}{c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \bullet c\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}\right] c \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}\\
+\end{align*}
+
+Thus,  $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$  \wordChoice{\choice[correct]{only if $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}=\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$}\choice{whenever $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel}\choice{whenever $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are orthogonal}\choice{cannot happen}}.
+
+\end{itemize}
+
+Take a step back and look at both the algebraic and geometric reasoning used here.  Both use the same observation, but it is \emph{very} easy to lose sight of the geometric intuition in the context of the algebraic argument.
+\end{question}
+\end{problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+True or False?  If $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$, then $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel.
+
+Would you like to see an explanation?
+\wordChoice{\choice[correct]{Yes}\choice{No}}.
+
+\begin{question}
+If $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are orthogonal, then $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}$ and $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}) = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}$.  
+
+What is true:
+
+\begin{quote}
+If $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are not orthogonal and $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}})$, then $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel.
+\end{quote}
+
+The logic that can be used to show this can be extracted from the description given in the previous part of the problem.
+\end{question}
+\end{problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+True or False?  $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ is defined.
+
+Would you like to see an explanation?
+\wordChoice{\choice[correct]{Yes}\choice{No}}.
+
+\begin{question}
+Note that $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|$ is \wordChoice{\choice{a vector}\choice[correct]{a scalar}\choice{undefined}}  and $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ is a \wordChoice{\choice[correct]{a vector}\choice{a scalar}\choice{undefined}} so  $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|+\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ is \wordChoice{\choice{defined}\choice[correct]{undefined}}.
+\end{question}
+\end{problem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+True or False?  $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|$.
+
+Would you like to see an explanation?
+\wordChoice{\choice[correct]{Yes}\choice{No}}.
+
+\begin{question}
+\begin{itemize}
+\item Geometrically, $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$ gives the signed magnitude of the component of $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ that is parallel to $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$, so we expect $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})=$ \wordChoice{\choice[correct]{$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$}{$\overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}$}}.
+
+\item Algebraically, we can write out $scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}})$.
+
+\[
+scal_\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}(\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) = \frac{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}}{|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|} =  \frac{|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|^2}{|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|} = |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}|.
+\]
+
+\end{itemize}
+
+Once again, note that both the algebraic and geometric reasoning lead to the same result, but it's easy to lose sight of the geometry in the algebra unless you force yourself to consider both perspectives.
+\end{question}
+\end{problem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{hint}
+\end{selectAll}
+\end{exercise}
+\end{document}
