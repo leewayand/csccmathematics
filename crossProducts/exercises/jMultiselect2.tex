@@ -1,0 +1,53 @@
+\documentclass{ximera}
+\author{Jim Talamo}
+\input{../../preamble.tex}
+
+
+
+\outcome{Compute cross products.}
+\outcome{Use cross products in applied settings.}
+
+
+\begin{document}
+\begin{exercise}
+Suppose that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} , \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} $ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} $ are nonzero three dimensional vectors. Select all the statements that \emph{must} be true.
+
+\begin{selectAll}
+\choice{$|5 \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} + 2\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} | = 5 |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} | + 2|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}|$}
+\choice[correct]{$ \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}$}
+\choice[correct]{$ (\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} -\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} =0$.}
+\choice{$ \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = |\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} | | \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} | \sin \theta$}
+\choice[correct]{$(\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{0}}$}
+\choice{$ \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} =  \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$}
+\choice{If $|\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} | = | \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} |$, then $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.}
+\choice[correct]{If $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} $ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are parallel, $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}} = \mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{w}}$}
+\end{selectAll}
+
+\begin{hint}
+If you are unsure of a statement test it on easy to use vectors like $\left< 0,1,1 \right> =\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} , \left< 1,0,1 \right> = \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.
+\end{hint}
+
+\begin{hint}
+Check that the items on the left and right of the equality are both
+scalars or vectors.
+\end{hint}
+
+\begin{hint}
+Remember that $\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ is parallel $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.
+\end{hint}
+
+\begin{hint}
+Since $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ are nonzero and parallel then there is some $c$ such that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} = c \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$.
+\end{hint}
+
+\begin{hint}
+Remember that $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \boldsymbol\times \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ is orthogonal to both $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}$ and $\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}$.
+\end{hint}
+
+\begin{hint}
+\[
+(\mathbf{proj}_{\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} -\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}) \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} = \left(\frac {\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}} \bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} {\overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}\bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}} \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}} -\overset{\boldsymbol{\rightharpoonup}}{\mathbf{u}}\right)\bullet \overset{\boldsymbol{\rightharpoonup}}{\mathbf{v}}
+\]
+\end{hint}
+\end{exercise}
+\end{document}
