@@ -100,7 +100,10 @@ A relation is a package.  It is a package of three sets. The domain and codomain
 
 
 
-\large{Table Representations} \\
+
+\section{Table Representations}
+
+
 
 Lists are good representations of relations when the sets are not very big. The parentheses become difficulty to browse when there is a lot of them. Another representation is via a table. A table visually organizes the pairs much better.
 
@@ -124,10 +127,7 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 
 Each line of the table shows a pairing. From this table, we can tell that the relation \textit{KindergartenIceCream} pairs Kevin with Chocolate.  (Kevin, CHocolate) is a pair in \textit{KindergartenIceCream}.
 
-\textbf{Notice} that Charlie is not in a pair.  Charlie doesn't like ice cream. Linda is in two pairs.  SHe has two favorite flavors.  Nobody has Cherry as their favorite flavor.
-
-
-
+\textbf{Notice} that Charlie is not in a pair.  Charlie doesn't like ice cream. Linda is in two pairs.  She has two favorite flavors.  Nobody has Cherry as their favorite flavor.
 
 \end{example} 
 
@@ -135,12 +135,96 @@ Each line of the table shows a pairing. From this table, we can tell that the re
 
 
 
+\section{Questions}
+
+
+We have created some mathematical structure for questions. From this structure, we can see that there are basically two kinds of questions.
+
+\begin{itemize}
+\item [Type 1] You know the domain item and want the corresponding codomain items.
+\item [Type 2] You know the codomain item and want the corresponding domain items.
+\end{itemize}
+
+
+
+\begin{example} \textit{KindergartenIceCream}
+The \textit{KindergartenIceCream} relation pairs kindergarteners with the favorite ice cream flavors.
+
+domain = \{ Kevin, Shay, Linda, Charmain, Charlie \}  
+codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \} 
+
+\[
+\begin{array}{l|l}
+    domain      & codomain      \\ \hline
+    Kevin   &  Chocolate \\
+    Shay   & Strawberry \\
+    Linda  &  Chocolate \\
+    Linda  &  Peach \\
+    Charmain &  Vanilla \\ 
+\end{array}
+\]
+
+
+Type 1 : What flavors does Linda like?
+We are looking for pairs of the form (Linda, ???).
+
+Type 2 : Who likes Chocolate?
+We are looking for pairs of the form (???, Chocolate).
+
+\end{example} 
+
+
+
+\section{Too Much}
+
+Our examples, so far, have been small.  But what are we going to do when we want to examine the relation between something like movies and actors?  
+
+
+\begin{example} \textit{ActorsInMovies}
+The \textit{ActorsInMovies} relation pairs actors with movies they were in.
+
+domain = All actors 
+codomain = All movies
+
+The table would begin like this.
+
+\[
+\begin{array}{l|l}
+    domain      & codomain      \\ \hline
+    Vincent Price   &  House of Wax \\
+    Humphrey Bogart   & Casablanca \\
+    Peter O'Toole  &  Lawrence of Arabia \\
+    Vincent Price  &  The Fly \\
+    Al Pacino &  The Godfather \\ 
+\end{array}
+\]
+
+\end{example} 
+
+
+This table would have many rows. The Internet Movie Database lists over a million movies.  There would be more than 100 rows just for Vincent Price. There is no way we could visually sift through such a table - just to talk about Vincent Price movies.
+
+We need to narrow our investigation here, quickly. Otherwise, we will be buried in a mountain of data.
+
+Our plan is to investigate only certain types of relations.
 
 
 
 
 
 
+
+
+\section{Focusing Our Investigation}
+
+
+Our examples, so far, have been small.  But what are we going to do when we want to examine the relation between movies and actors?  That list or table is going to be too big to look at with our eyes.  How would we look through a table with millions of rows and find the ones holding Vincent Price?  All relations is just too big of an investigation. Let's focus in on a particular type of relation.
+
+Most of our questions really identify a single hypothesis (antecedent) and then want to know about the resulting conclusion (consequent).
+
+This would translate into a domain member connected to a single codomain member.
+
+Let's focus our investigation to these types of relations.  These types of relations are called \textbf{functions}.
 
 
 
