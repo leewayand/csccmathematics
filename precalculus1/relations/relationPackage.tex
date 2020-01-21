@@ -44,7 +44,7 @@ A relation is a package containing three sets or collections. One set is called 
 Relations are just about the vaguest, thinnest structure any two sets could have. There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  But, we don't want to.  We are just laying the groundwork for more complex structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets in a relation have the names domain and codomain.
 \\
 
-Because a relation might encountered as an if-then statement or a cause-and-effect association, we have a natural direction feeling for the information.  The "if" part comes before the "then" part.  The "cause" comes before the "effect".  We would like this feeling reflected in our relation structure.  Therefore, relations come prepackaged with a feeling the information is connected from the domain to the codomain.
+Because a relation might encountered as an if-then statement or a cause-and-effect association, we have a natural direction feeling for the information.  The "if" part comes before the "then" part.  The "cause" comes before the "effect".  We would like this feeling reflected in our relation structure.  Therefore, relations come prepackaged with a feeling that the information is connected from the domain to the codomain.
 
 \begin{itemize}
 \item If you pick items from the domain, then you get items from the codomain.
@@ -53,9 +53,35 @@ Because a relation might encountered as an if-then statement or a cause-and-effe
 \item Elements of the codomain happen at items of the domain.
 \end{itemize}
 
+Most of our communication is going to be written in this course, so we need some agreements on how we will represent relations.  We already have several ways of representing sets.  The easiest is to just list the memebers inside curly braces.
+
+\begin{center} 
+domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \} 
+\end{center}
+
+\begin{center} 
+codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford \} 
+\end{center}
+
+Now we need a way to indicate the pairings.  The traditonal way is to written the as ordered pairs.  The left item coming from the domain and the right item the paired codomain item.  We can list these ordered pairs in a set of ordered pairs.
+
+\begin{center} 
+pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casablanca, Humphrey Bogart), (Lawrence of Arabia, Peter O'Toole) \} 
+\end{center}
 
 
+These three sets would make up a relation. \\
 
+Of course, we will have many relations, which could get confusing.  Let's help ourselves out with names.  The name of this relation will be AppearedIn.
+
+
+\begin{example} AppearedIn
+\begin{itemize}
+\item domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \}  
+\tem codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford \} 
+\item pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casablanca, Humphrey Bogart), (Lawrence of Arabia, Peter O'Toole) \} 
+\end{itemize}
+\end{example}
 
 
 
