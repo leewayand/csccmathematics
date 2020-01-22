@@ -22,23 +22,60 @@ Functions are special relations. While a relation is just two sets of items and 
 \end{itemize}
 
 
-This simple rule makes a world of difference. But, we can do a little better for this course.
-
-This course is a study of the real numbers.  Therefore, the domains and ranges of our functions will be subsets of the real numbers.
+If a supposed function satisfies our one and only rule, then it is said to be a \textbf{well-defined} function.  Otherwise, it is not well-defined.
 
 
-With the addition of this one rule and the restricting of our domain and codomain to be sets of real numbers, we are ready to begin our journey towards Calculus.
+\begin{example}
+The \textit{SSN} function has a domain consisting of all U.S. citizens and a codomain of all 9-digit numbers.  \textit{SSN} pairs a U.S. citizen in the domain with the 9-digit number in the codomain that was issued to them as their social security number. 
+
+This function is not well-defined, because there are U.S. citizens without a social security number, like many new-born nanies.
+\end{example}
+
+
+\begin{example}
+The \textit{ReverseSSN} function has a domain consisting of all 9-digit numbers and a codomain consisting of all U.S. citizens.  \textit{ReverseSSN} pairs a number in the domain with the person in the codomain that was issued the number as their social security number. 
+
+This function is not well-defined, because there are 9-digit numbers that have not been issued yet.
+\end{example}
+
+
+\begin{example}
+The \textit{RationalAdd} function has a domain consisting of all rational numbers and a codomain consisting of all integers.  \textit{RationalAdd} pairs a rational number in the domain with an integer in the codomain according to this rule.
+
+Since a chosen domain number is a rational number, it can be written as $\tfrac{A}{B}$, where $A$ and $B$ are integers. This domain rational number is paired with $A+B$ in the codomain.
+
+This function is not well-defined.  The ratonal number two-thirds can be written as $\tfrac{2}{3}$ and thus it would be paired with $5$.  However, two-thirds can also be written as $\tfrac{4}{6}$ and thus would be paired with $10$.  This violates the only rule we have.  Two-thirds from the domain must be paired with exactly one codomain number.
+
+When funciton values depend on how you write numbers, that is a pretty good clue that the function is not well-defined.
+\end{example}
 
 
 
+\begin{example}
+The \textit{SuperBowlWinner} function has a domain consisting of the NFL Superbowls played and a codomain consisting of all of the NFL teams that have existed.  \textit{SuperBowlWinner} pairs a Superbowl in the domain with the NFL team in the codomain that won that Superbowl. 
+
+This function is well-defined. Each Superbowl has exactly one winner.
+\end{example}
+
+Whew!  We finally found a function. That one little rule actually narrows the pool of relations quite a bit.
 
 
 
+\section{Function Notation}
 
+Now that we are only investigating functions, rather than all relations, we discover some opportunities to help our communication.  It turns out that when you select a domain item in a function, you have automatically selected a codomain item.
 
+Each domain item is paired with EXACTLY one codomain item.  Not 0. Not 2.  NOt 3.  Exactly 1.  Thus, when you pick a domain item, you have automatically selected its partner in the codomain.  We could certainly hunt it down.  But, we can also just talk about "the domain member's partner in the codomain."  We have function notation for this thought.
 
+\begin{notation} Function Notation \\
+Let functionName be the name of a function. \\
+Let d represent a domain item.
 
+Then, functionName(d) represents d's partner in the codomain.
 
+functionName(d) is called "the value of functionName \underline{AT} d". \\
+functionName(d) is pronounced as "functionName OF d".
+\end{notation}
 
 
 
