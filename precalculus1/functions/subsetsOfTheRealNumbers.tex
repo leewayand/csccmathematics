@@ -40,12 +40,14 @@ This means we will need to communicate about sets of real numbers.  We have seve
           ]      
        
 
-          \addplot [very thick, penColor2, smooth,samples=100,domain=(-5:5),<-] ({x},{0});
-          \addplot [very thick, penColor2, smooth,samples=100,domain=(7:10)] ({x},{0});
-          \addplot [line width=0.2cm, penColor2, smooth,samples=100,domain=(13:14)] ({x},{0});
+          \addplot [line width=0.1cm, penColor2, smooth,samples=100,domain=(-5:5),<-] ({x},{0});
+          \addplot [line width=0.1cm, penColor2, smooth,samples=100,domain=(7:10)] ({x},{0});
+          \addplot [line width=0.1cm, penColor2, smooth,samples=100,domain=(13:14),->] ({x},{0});
 
-          \node at (axis cs:5,0) [penColor] {$]$};
-          \node at (axis cs:7,0) [penColor] {$($};
+          \node at (axis cs:5,0) [penColor2] {$]$};
+          \node at (axis cs:7,0) [penColor2] {$($};
+          \node at (axis cs:10,0) [penColor2] {$]$};
+          \node at (axis cs:13,0) [penColor2] {$($};
 
 
            %\addplot [ultra thick, penColor5, smooth,domain=0:60] {1/2*(x-31)+26};  
