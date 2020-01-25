@@ -33,21 +33,21 @@ This means we will need to communicate about sets of real numbers.  We have seve
             %ticks=none,
             unit vector ratio*=1 1 1,
             ymajorticks=false,
-            xtick={-5,0,5,7,10,13,14},
+            xtick={-5,0,5,10,15},
             %xlabel=$x$, ylabel=$y$,
             %every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
           ]      
        
 
-          \addplot [line width=0.1cm, penColor2, smooth,samples=100,domain=(-5:5),<-] ({x},{0});
-          \addplot [line width=0.1cm, penColor2, smooth,samples=100,domain=(7:10)] ({x},{0});
-          \addplot [line width=0.1cm, penColor2, smooth,samples=100,domain=(13:14),->] ({x},{0});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-5:2),<-] ({x},{0});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(5:9)] ({x},{0});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(10:14),->] ({x},{0});
 
-          \node at (axis cs:5,0) [penColor2] {$]$};
-          \node at (axis cs:7,0) [penColor2] {$($};
-          \node at (axis cs:10,0) [penColor2] {$]$};
-          \node at (axis cs:13,0) [penColor2] {$($};
+          \node at (axis cs:2,0) [penColor2] {$]$};
+          \node at (axis cs:5,0) [penColor2] {$($};
+          \node at (axis cs:9,0) [penColor2] {$]$};
+          \node at (axis cs:10,0) [penColor2] {$($};
 
 
            %\addplot [ultra thick, penColor5, smooth,domain=0:60] {1/2*(x-31)+26};  
@@ -62,90 +62,39 @@ This means we will need to communicate about sets of real numbers.  We have seve
 
 
 
-
-
-%%%%%%%%PICTURE%%%%%%%%%%%
-
 \begin{image}
 \begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,0,5,10,15},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
 
-\begin{axis}
-	[
-	domain=-1.2:1.2, ymax=25,xmax=2.2, ymin=-4, xmin=-1.2,
-	axis lines=center, xlabel=$x$, ylabel=$y$,
-	xtick={-1,1,2},
-	ymajorticks=false,
-	every axis y label/.style={at=(current axis.above origin),anchor=south},
-	every axis x label/.style={at=(current axis.right of origin),anchor=west},
-	axis on top,
-	]
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-5:2),<-] ({x},{0});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(5:9)] ({x},{0});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(10:14),->] ({x},{0});
 
-	%\addplot [draw=penColor,very thick, smooth,<->] {4*x^3 + 15};	
-	%\addplot [draw=penColor2,very thick, smooth] {3*x^2-2};
-	
-	\draw [penColor2,thick] (-1,1) -- (-1,11);
-	\draw [penColor,thick] (1,1) -- (1,19);
-	
-	\draw [penColor,thick] (-1,5) -- (1,5);
-	
-	\node at (axis cs:.6,5) [penColor] {$[-3, 5)$};
+          \node at (axis cs:2,0) [penColor2] {$]$};
+          \node at (axis cs:5,0) [penColor2] {$($};
+          \node at (axis cs:9,0) [penColor2] {$]$};
+          \node at (axis cs:10,0) [penColor2] {$($};
 
-\end{axis}
 
+           %\addplot [ultra thick, penColor5, smooth,domain=0:60] {1/2*(x-31)+26};  
+           %\addplot[only marks, mark=*] coordinates {(31, 26)};
+          %\addplot [ultra thick, penColor4, smooth,domain=20:43] {-2*(x-31)+26};  
+            \end{axis}
 \end{tikzpicture}
 \end{image}
-
-%%%%%%%%PICTURE%%%%%%%%%%%
-
-below picture
-
-
-
-
-
-
-
-%%%%%%%%PICTURE%%%%%%%%%%%
-
-\begin{image}
-\begin{tikzpicture}
-
-\begin{axis}
-	[
-	domain=-1.2:1.2, ymax=25,xmax=2.2, ymin=-4, xmin=-1.2,
-	axis lines=center, xlabel=$x$, ylabel=$y$,
-	xtick={-1,1},
-	ymajorticks=false,
-	every axis y label/.style={at=(current axis.above origin),anchor=south},
-	every axis x label/.style={at=(current axis.right of origin),anchor=west},
-	axis on top,
-	]
-
-	\addplot [draw=penColor,very thick, smooth,<->] {4*x^3 + 15};	
-	\addplot [draw=penColor2,very thick, smooth] {3*x^2-2};
-	
-	\draw [penColor,thick] (-1,1) -- (-1,11);
-	\draw [penColor,thick] (1,1) -- (1,19);
-	
-	\addplot [name path=A,domain=-1:1,draw=none] {4*x^3 + 15};	
-	\addplot [name path=B,domain=-1:1,draw=none] {3*x^2-2};
-	\addplot [fillp] fill between[of=A and B];
-	
-	\node at (axis cs:.6,22) [penColor] {$y=4x^3 + 15$};
-	\node at (axis cs:1.7,4) [penColor2] {$y = 3x^2-2$};
-\end{axis}
-
-\end{tikzpicture}
-\end{image}
-
-%%%%%%%%PICTURE%%%%%%%%%%%
-
-
-
-
-
-
-
 
 
 
@@ -157,7 +106,7 @@ below picture
 Set builder notation is an official way to use inequalities when describing sets of real numbers.
 
 
-
+$\{ r \in R\, | \, r \leq 7 \}$
 
 
 
@@ -165,7 +114,7 @@ Set builder notation is an official way to use inequalities when describing sets
 
 \section{Interval Notation}
 
-
+$[-\infty, -3] \cup (4,8) \cup \{9\}$
 
 
 
