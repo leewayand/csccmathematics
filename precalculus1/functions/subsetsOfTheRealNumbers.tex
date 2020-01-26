@@ -48,13 +48,14 @@ Our subsets might include one or more individual isolated numbers.
             %xlabel=$x$, ylabel=$y$,
             %every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]      
-       
-       		\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+          ]     
+
           	\addplot [color=penColor2,only marks,mark=*] coordinates{(-3,0)};
           	\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
           	\addplot [color=penColor2,only marks,mark=*] coordinates{(5,0)};
+
+          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
         \end{axis}
 	\end{tikzpicture}
@@ -89,8 +90,9 @@ Our subsets might include pieces of the real number line.  These are called \tex
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$[$};
@@ -122,8 +124,9 @@ Our subsets might include pieces of the real number line.  These are called \tex
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$[$};
@@ -154,8 +157,9 @@ Our subsets might include pieces of the real number line.  These are called \tex
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$($};
@@ -186,8 +190,9 @@ Our subsets might include pieces of the real number line.  These are called \tex
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$($};
@@ -226,8 +231,9 @@ Our subsets might include half of the real number line.  These are called \textb
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-2:4),<-] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$]$};
@@ -255,8 +261,9 @@ Our subsets might include half of the real number line.  These are called \textb
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-2:4),<-] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$)$};
@@ -284,8 +291,9 @@ Our subsets might include half of the real number line.  These are called \textb
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7),->] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$[$};
@@ -313,8 +321,9 @@ Our subsets might include half of the real number line.  These are called \textb
           ]      
        
           	\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7),->] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
           	\node at (axis cs:4,0) [penColor2] {$($};
@@ -338,10 +347,10 @@ In the examples above, we used \textbf{interval notation} to describe the interv
 
 \begin{itemize}
 \item Write the two numbers in the order they would occur on the number line, separated by a comma.  These are called \textbf{endpoints}.
-\item use a square bracket to indicate the endpoint is included in the interval.
-\item use a parenthesis to indicate the endpoint is excluded from the interval.
-\item use $-\infty$ to indicate the interval extends without end to the left. $-\infty$ always appears on the left side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number.
-\item use $\infty$ to indicate the interval extends without end to the right. $\infty$ always appears on the right side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number.
+\item Use a square bracket to indicate the endpoint is included in the interval.
+\item Use a parenthesis to indicate the endpoint is excluded from the interval.
+\item Use $-\infty$ to indicate the interval extends without end to the left. $-\infty$ always appears on the left side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number.
+\item Use $\infty$ to indicate the interval extends without end to the right. $\infty$ always appears on the right side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number.
 \end{itemize}
 
 
@@ -365,93 +374,18 @@ Which is valid interval notation?
 
 
 
-
-
-
-
-
-
-\section{Number Line Graphs}
-
-First, we have graphical ways of communicating subsets of real numbers.
-
-Our sets are collections of two types
-
-\begin{image}
-\begin{tikzpicture}
-	\begin{axis}[
-            %xmin=-25,xmax=25,ymin=-25,ymax=25,
-            %width=3in,
-            clip=false,
-            axis lines=center,
-            %ticks=none,
-            unit vector ratio*=1 1 1,
-            ymajorticks=false,
-            xtick={-5,0,5,10,15},
-            %xlabel=$x$, ylabel=$y$,
-            %every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]      
-       
-
-          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-5:2),<-] ({x},{0});
-          \addplot [line width=2, penColor2, smooth,samples=100,domain=(5:9)] ({x},{0});
-          \addplot [line width=2, penColor2, smooth,samples=100,domain=(10:14),->] ({x},{0});
-          %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(4,0)};
-          \addplot [color=penColor2,only marks,mark=*] coordinates{(4,0)};
-
-          \node at (axis cs:2,0) [penColor2] {$]$};
-          \node at (axis cs:5,0) [penColor2] {$($};
-          \node at (axis cs:9,0) [penColor2] {$]$};
-          \node at (axis cs:10,0) [penColor2] {$($};
-
-
-           %\addplot [ultra thick, penColor5, smooth,domain=0:60] {1/2*(x-31)+26};  
-           %\addplot[only marks, mark=*] coordinates {(31, 26)};
-          %\addplot [ultra thick, penColor4, smooth,domain=20:43] {-2*(x-31)+26};  
-            \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-	\begin{axis}[
-            %xmin=-25,xmax=25,ymin=-25,ymax=25,
-            %width=3in,
-            clip=false,
-            axis lines=center,
-            %ticks=none,
-            unit vector ratio*=1 1 1,
-            ymajorticks=false,
-            xtick={-5,0,5,10,15},
-            %xlabel=$x$, ylabel=$y$,
-            %every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]      
-       
-
-          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-5:2),<-] ({x},{0});
-          \addplot [line width=2, penColor2, smooth,samples=100,domain=(5:9)] ({x},{0});
-          \addplot [line width=2, penColor2, smooth,samples=100,domain=(10:14),->] ({x},{0});
-
-          \node at (axis cs:2,0) [penColor2] {$]$};
-          \node at (axis cs:5,0) [penColor2] {$($};
-          \node at (axis cs:9,0) [penColor2] {$]$};
-          \node at (axis cs:10,0) [penColor2] {$($};
-
-
-           %\addplot [ultra thick, penColor5, smooth,domain=0:60] {1/2*(x-31)+26};  
-           %\addplot[only marks, mark=*] coordinates {(31, 26)};
-          %\addplot [ultra thick, penColor4, smooth,domain=20:43] {-2*(x-31)+26};  
-            \end{axis}
-\end{tikzpicture}
-\end{image}
-
+\begin{problem}
+Select all that have valid interval notation.
+	\begin{selectAll}
+	\choice {$[-3, 5]$}
+	\choice [correct]{$[1, 8)$}
+	\choice [correct]{$(-\infty, -4]$}
+	\choice {$[-\infty, 7)$}
+	\choice {$(-3, 3)$}
+	\choice [correct]{$(-1, 2]$}
+	\choice {$[6, 2]$}
+	\end{selectAll}
+\end{problem}
 
 
 
@@ -459,18 +393,213 @@ Our sets are collections of two types
 
 \section{Set Builder Notation}
 
-Set builder notation is an official way to use inequalities when describing sets of real numbers.
+A second way to represent intervals in writting is with inequalities. However, we cannot simply insert an inequality into our description, because people use inequalities several contexts.  So, we need some notation that tells people we are describing a set. \textbf{Set builder notation} includes shorthand symbols to represent sentences such as 
+
+"The set of all real numbers such that the numbers are greater than or equal to 4 and less than 7."
+
+We begin with a pair of curly braces containing a vertical bar:  ${|}$.  The vertical bar separates two areas. The left portion is where we describe the types of numbers we are working with (real, integers, rational, etc).  The right portion is where we place our inequality.
+
+\begin{example}
+"The set of all real numbers such that the numbers are greater than or equal to 4 and less than 7."
+\[ \{ r \in \mathbb {R} \, | \, 4 \leq r < 7 \} \]
+\end{example}
 
 
-$\{ r \in R\, | \, r \leq 7 \}$
+
+\begin{problem}
+Select the interval notation that desacribes the same set as 
+\[ \{ r \in \mathbb {R} \, | \, 2 < r \leq 9 \} \]
+	\begin{multipleChoice}
+	\choice {$[9, 2)$}
+	\choice {$[2, 9)$}
+	\choice [correct]{$(2, 9]$}
+	\choice {$[2, 9]$}
+	\choice {$(2, 9)$}
+	\end{multipleChoice}
+\end{problem}
 
 
 
 
 
-\section{Interval Notation}
+\section{Describing Sets with the Building Blocks}
 
-$[-\infty, -3] \cup (4,8) \cup \{9\}$
+Our building blocks for sets of real numbers are lists of individual numbers along with intervals.  We can combine these to describe any set of real numbers that we need.  These combinations are called \textbf{unions}.  The union symbol is $\cup$. Unions are usually written with interval notation.
+
+
+
+\begin{example}
+
+\[ [-4, -2] \cup \{ 2 \} \cup (3, 6] \]
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-4,-2,2,4, 6},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:-2)] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(3:6)] ({x},{0});
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+          	\node at (axis cs:-4,0) [penColor2] {$[$};
+          	\node at (axis cs:-2,0) [penColor2] {$]$};
+          	\node at (axis cs:3,0) [penColor2] {$($};
+          	\node at (axis cs:6,0) [penColor2] {$]$};
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+\end{example}
+
+
+
+
+\begin{example}
+
+\[ (-\infty, -1]  \cup (4, 8) \]
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-1, 4, 8},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:-1),<-] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:8)] ({x},{0});
+          	%\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+          	\node at (axis cs:-1,0) [penColor2] {$]$};
+          	\node at (axis cs:4,0) [penColor2] {$($};
+          	\node at (axis cs:8,0) [penColor2] {$)$};
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+\end{example}
+
+
+
+
+\begin{example}
+
+\[ (-7, -4] \cup \{ -1, 1 \} \cup (3, \infty) \]
+
+	\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-7,-4,-1,1,3},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(3:8),->] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:-4)] ({x},{0});
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(-1,0)};
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(1,0)};
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+          	\node at (axis cs:-7,0) [penColor2] {$($};
+          	\node at (axis cs:-4,0) [penColor2] {$]$};
+          	\node at (axis cs:3,0) [penColor2] {$($};
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+\end{example}
+
+
+
+
+
+\begin{problem}
+Select the interval notation that describes the same set as the following graph.
+	\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-3,2,4,7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-3:2)] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+          	\node at (axis cs:-3,0) [penColor2] {$[$};
+          	\node at (axis cs:2,0) [penColor2] {$)$};
+          	\node at (axis cs:4,0) [penColor2] {$($};
+          	\node at (axis cs:7,0) [penColor2] {$)$};
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+	\begin{multipleChoice}
+	\choice {$(-3, 2) \cup (4, 7)$}
+	\choice {$[-3, 2) (4, 7)$}
+	\choice {$(-3, 2] \cup [4, 7]$}
+	\choice [correct]{$[-3, 2) \cup (4, 7)$}
+	\choice {$[-3, 2), (4, 7)$}
+	\end{multipleChoice}
+\end{problem}
+
+
+
 
 
 
