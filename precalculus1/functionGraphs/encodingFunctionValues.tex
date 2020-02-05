@@ -50,25 +50,46 @@ That's it!!!!
 
 \begin{image}
 \begin{tikzpicture}
-\begin{axis}[
-            domain=0:4, ymax=5,xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$x$, ylabel=$y=f(x)$,
+        \begin{axis}[
+            domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top,
           ]
           
-%\addplot [draw=penColor,very thick,smooth] {2*x-3};
-%\addplot [draw=penColor2,very thick,smooth] {9/x};
-%\addplot [draw=black!60!green,very thick,smooth] coordinates {(1,-4)(1,12)};
-           
-%\addplot [name path=A,domain=1:3,draw=none] {9/x};   
-%\addplot [name path=B,domain=1:3,draw=none] {2*x-3};
-%\addplot [fillp] fill between[of=A and B];
-
-  
-          
         \addplot [color=penColor2,only marks,mark=*] coordinates{(3,2)};
+
+
+        \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (axis cs:3.05,0)--(axis cs:3.05,2);
+        \draw[decoration={brace,raise=.2cm},decorate,thin] (axis cs:0,2.05)--(axis cs:3,2.05);
+        \node[anchor=east] at (axis cs:1.85,3) {$d$};
+        \node[anchor=east] at (axis cs:4.5,1) {$f(d)$};
+                     
+        \node at (axis cs:4,2.7) [penColor] {$(d,f(d))$};
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{example}
+
+The fact that $f(3)=2$ for the function $f$, is encoded with a dot at $(3, 2)$.
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+        
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(3,2)};
 
 
           \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (axis cs:3.05,0)--(axis cs:3.05,2);
@@ -78,11 +99,129 @@ That's it!!!!
                     
           
           \node at (axis cs:3.7,2.7) [penColor] {$(3,2)$};
-          %\node at (axis cs:2,7) [penColor2] {$y=\frac{9}{x}$};
-          %\node at (axis cs:0.5,4) [black!60!green] {$x=1$};
+
         \end{axis}
 \end{tikzpicture}
+\end{image}
 
+\end{example}
+
+
+
+\begin{example}
+Here is a graph of $y=H(t)$. Which point represents $H(-3) = -2$?
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+          
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(-3,2)};
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-2)};
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(-3,-2)};
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,2)};
+
+        \node at (axis cs:-3.4,2.4) [penColor] {$A$};
+        \node at (axis cs:3.4,2.4) [penColor] {$B$};
+        \node at (axis cs:-3.4,-2.4) [penColor] {$C$};
+        \node at (axis cs:3.4,-2.4) [penColor] {$D$};
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{multipleChoice}
+\choice {$A$}
+\choice {$B$}
+\choice[correct] {$C$}
+\choice {$D$}
+\end{multipleChoice}
+
+\end{example}
+
+
+
+\begin{example}
+Suppose $k$ is a funnction with $k(-1)>0$, then which quadrant will its corresponding dot be plotted?
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        
+        \node at (axis cs:3.4,2.4) [penColor] {$I$};
+        \node at (axis cs:-3.4,2.4) [penColor] {$II$};
+        \node at (axis cs:-3.4,-2.4) [penColor] {$III$};
+        \node at (axis cs:3.4,-2.4) [penColor] {$IV$};
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{multipleChoice}
+\choice {$I$}
+\choice[correct] {$II$}
+\choice {$II$}
+\choice {$IV$}
+\end{multipleChoice}
+
+\end{example}
+
+
+
+Graphs of functions are just a collection of a bunch of dots (a curve).  Each dot represents a pair in the function.  Each dot has two coordinates.  The horizontal (first) coordinate is the domain number and the vertical (Second) coordinate is the function value at that domain value.
+
+The functions we are most interested in have milloions and billions of trillions of dots.  They get very difficult to see when bumped up against each other.  Pretty soon your eyes get tricked into seeing an object.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+          
+    \addplot [draw=penColor2,very thick,smooth] {(x+1)*(x-3)};
+    \node at (axis cs:1,3) [penColor2] {$y=(x+1)(x-3)$};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax]
+        \addplot {sin(deg(x))};
+        \node (sin) at (axis cs:4,1) {sin};
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west]
+        \addplot {cos(deg(x))};
+        \node (cos) at (axis cs:-4,1) {cos};
+    \end{axis}
+
+\draw (cos) -- (sin);
+
+\end{tikzpicture}
 \end{image}
 
 
@@ -97,6 +236,17 @@ That's it!!!!
 
 
 
+
+
+
+
+
+
+
+
+
+
+Of course, our functions will have more than four points, because their domains are going to include intervals of the real numbers.
 
 
 
