@@ -55,7 +55,7 @@ That's it!!!!
             axis lines =center, xlabel=$x$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top,
+            axis on top
           ]
           
         \addplot [color=penColor2,only marks,mark=*] coordinates{(3,2)};
@@ -86,7 +86,7 @@ The fact that $f(3)=2$ for the function $f$, is encoded with a dot at $(3, 2)$.
             axis lines =center, xlabel=$x$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top,
+            axis on top
           ]
         
           \addplot [color=penColor2,only marks,mark=*] coordinates{(3,2)};
@@ -117,7 +117,7 @@ Here is a graph of $y=H(t)$. Which point represents $H(-3) = -2$?
             axis lines =center, xlabel=$t$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top,
+            axis on top
           ]
 
           
@@ -156,7 +156,7 @@ Suppose $k$ is a funnction with $k(-1)>0$, then which quadrant will its correspo
             axis lines =center, xlabel=$t$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top,
+            axis on top
           ]
 
         
@@ -183,22 +183,84 @@ Suppose $k$ is a funnction with $k(-1)>0$, then which quadrant will its correspo
 
 Graphs of functions are just a collection of a bunch of dots (a curve).  Each dot represents a pair in the function.  Each dot has two coordinates.  The horizontal (first) coordinate is the domain number and the vertical (Second) coordinate is the function value at that domain value.
 
-The functions we are most interested in have milloions and billions of trillions of dots.  They get very difficult to see when bumped up against each other.  Pretty soon your eyes get tricked into seeing an object.
+The functions we are most interested in have millions of billions of trillions of dots.  
 
 
 
 \begin{image}
-\begin{tikzpicture}
+\begin{tikzpicture} 
   \begin{axis}[
             domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top,
+            axis on top
           ]
           
-    \addplot [draw=penColor2,very thick,smooth] {(x+1)*(x-3)};
-    \node at (axis cs:1,3) [penColor2] {$y=(x+1)(x-3)$};
+    \addplot [color=penColor2,only marks,mark=*] coordinates{(-2,5) (-1,0) (0,-3) (1,-4) (2,-3) (3,0)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+As we add more and more dots....
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+    \addplot [color=penColor2,only marks,mark=*] coordinates{(-2.5,8.25) (-2,5) (-1.5,2.25) (-1,0) (-0.5,-1.75) (0,-3) (0.5,-3.75) (1,-4) (1.5,-3.75) (2,-3) (2.5,-1.75) (3,0) (3.5,2.25)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+It soon becomes difficult to distinguish the individual dots.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      \foreach \x in {-3,-2.75,...,3}
+      \addplot [color=penColor2,only marks,mark=*] coordinates{(\x,\x*\x-2*\x-3)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+They begin to overlap...
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      \foreach \x in {-3,-2.9,...,3}
+      \addplot [color=penColor2,only marks,mark=*] coordinates{(\x,\x*\x-2*\x-3)};
            
 
   \end{axis}
@@ -208,24 +270,32 @@ The functions we are most interested in have milloions and billions of trillions
 
 
 
+Eventually, your eyes play tricks on you.  You think you see a single object.  A thing - like a wire twisted on a piece of paper.
+
+
+
 \begin{image}
-\begin{tikzpicture}
-    \begin{axis}[name = sinax]
-        \addplot {sin(deg(x))};
-        \node (sin) at (axis cs:4,1) {sin};
-    \end{axis}
-    \begin{axis}[at={(sinax.outer east)},anchor=outer west]
-        \addplot {cos(deg(x))};
-        \node (cos) at (axis cs:-4,1) {cos};
-    \end{axis}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(t)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+    \addplot [draw=penColor2,very thick,smooth] {(x+1)*(x-3)};
+           
 
-\draw (cos) -- (sin);
-
+  \end{axis}
 \end{tikzpicture}
 \end{image}
 
 
 
+It isn't!!!!!!
+
+It is a bunch of individual dots very close together. They are forming a pattern that you eye likes.
 
 
 
@@ -239,14 +309,6 @@ The functions we are most interested in have milloions and billions of trillions
 
 
 
-
-
-
-
-
-
-
-Of course, our functions will have more than four points, because their domains are going to include intervals of the real numbers.
 
 
 
