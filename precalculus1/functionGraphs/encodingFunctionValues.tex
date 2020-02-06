@@ -24,7 +24,7 @@ $d$ is sitting in the left position of our ordered pair, therefore it represents
 
 
 \begin{example}
-SUppose 4 is a member of the domain of the function $H$. Then $H(4)$ represents the value of $H$ at $4$. $H(4)$ is a member of the range of $H$. $(4, H(4))$ is a pair in the function $H$.
+Suppose 4 is a member of the domain of the function $H$. Then $H(4)$ represents the value of $H$ at $4$. $H(4)$ is a member of the range of $H$. $(4, H(4))$ is a pair in the function $H$.
 
 If we happen to know that $(4, 9)$ is a pair in the funciton $H$, then we know $H(4) = 9$.
 
@@ -401,11 +401,8 @@ On the other hand, from all of the dots, we can see that the domain of $K$ inclu
 \begin{example} 
 
 
-Below is the graph of $h(f)$. We can create its domain, by collecting all of the first coordinates of all of the dots.  
+Below is the graph of $h(f)$. We can identify its domain, by collecting all of the first coordinates of all of the dots.   We can identify its range, by collecting all of the second coordinates of all of the dots.  
 
-\[
-domain = [-4,0] \cup [1,7]
-\]
 
 \begin{image}
 \begin{tikzpicture} 
@@ -419,7 +416,7 @@ domain = [-4,0] \cup [1,7]
           
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:0)] ({x},{-0.5*x+1});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5*x-7});
-          \addplot [color=penColor,only marks,mark=*] coordinates{(-4,4) (0,1) (1,-6.5) (7,-3.5)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-4,3) (0,1) (1,-6.5) (7,-3.5)};
 
 
   \end{axis}
@@ -429,6 +426,9 @@ domain = [-4,0] \cup [1,7]
 
 
 We could think of the horizontal axis as the domain number line and draw in the intervals of the domain.
+\[
+domain = [-4,0] \cup [1,7]
+\]
 
 \begin{image}
 \begin{tikzpicture} 
@@ -456,6 +456,10 @@ We could think of the horizontal axis as the domain number line and draw in the 
 
 
 We could think of the vertical axis as the range number line and draw in the intervals of the range.
+
+\[
+range = [-6.5, -3.5] \cup [1, 4]
+\]
 
 \begin{image}
 \begin{tikzpicture} 
