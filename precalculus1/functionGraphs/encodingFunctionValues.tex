@@ -295,19 +295,52 @@ Eventually, your eyes play tricks on you.  You think you see a single object.  A
 
 It isn't!!!!!!
 
-It is a bunch of individual dots very close together. They are forming a pattern that you eye likes.
+It is a bunch of individual dots very close together. They are forming a pattern that your eye likes.
 
 
 
 
 
+\begin{example}
+The domain of the function, $p$, only contains positicve numbers.  Which quadrants cannot not contain points on the graph of $p$?
+
+\begin{selectAll}
+\choice {$I$}
+\choice[correct] {$II$}
+\choice[correct] {$III$}
+\choice {$IV$}
+\end{selectAll}
+
+\end{example}
 
 
 
+Of course, the dots on a graph of a function are wrong. They are too big.
 
+Does the graph below tell us that $K(1) = -4$ or $K(1.03) = -4.1$ or $K(0.95) = -3.97$ or $K(1.01) = -3.95$?
 
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
+            axis lines =center, xlabel=$t$, ylabel={$y=K(v)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+    \addplot [color=penColor2,only marks,mark=*] coordinates{(-2,5) (-1,0) (0,-3) (1,-4) (2,-3) (3,0)};
+           
 
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
+The answer is yes.  It says all of those, becasue the dot is too big.  Our graph should consist of points, but points are dimensionless.  We wouldn't be able to see them.  So, we draw dots that we can see and accept the inaccuracy of the graph.
+
+Graphs are inherently inaccurate and there is nothing you can do about that.  They are communication tools. We have to keep this in mind when discussing mathematics with other people. Algebra is our tool for exactness.  Graphs give us the overall picture, but at the expense of accuracy.
+
+We want to use both Algebra and graphs.  They each tell us whatthe other should be doing.  We just have to remember what each tool provides us.
 
 
 
