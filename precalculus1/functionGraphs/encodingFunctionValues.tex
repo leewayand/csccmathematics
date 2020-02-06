@@ -351,9 +351,137 @@ We want to use both Algebra and graphs.  They each tell us whatthe other should 
 
 
 
+\section{Domain and Range}
+
+
+From this visual encoding, we see that the first coordinate of dots will be numbers from the domain of the function and the second coordinate of dots will be numbers from the range of the function.  More specifically, the second coordinate is the function value of the first coordinate.  The horizontal and vertical axis are seen as holding the domain and range.
+
+\begin{itemize}
+\item \textbf{DOMAIN:} We think of the domain as sitting on the horizontal axis.
+\item \textbf{RANGE:} We think of the range as sitting on the vertical axis.
+\end{itemize}
+
+
+The two axes in our Cartesian plane are performing double duty.  We need double vision to see them correctly. If a dot on the graph happens to land on an axis, then we have function value information.
+
+If thegraph of $K(v)$, there were three dots on the axes.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
+            axis lines =center, xlabel=$v$, ylabel={$y=K(v)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+    \addplot [color=penColor2,only marks,mark=*] coordinates{(-2,5) (-1,0) (0,-3) (1,-4) (2,-3) (3,0)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{itemize}
+\item The dot at $(-1,0)$ tells us that $K(-1) = 0$.
+\item The dot at $(0,-3)$ tells us that $K(0) = -3$.
+\item The dot at $(3,0)$ tells us that $K(3) = 0$.
+\end{itemize}
+
+
+On the other hand, from all of the dots, we can see that the domain of $K$ includes $\{ -2, -1, 0, 1, 2, 3 \}$. We might want to visualize the domain and the range of the function.  When visualizing the domain and range, we would view the axes as individual number lines.  Rather than thinking of the axes as holding dots with coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
 
 
 
+
+
+
+
+\begin{example} 
+
+
+Below is the graph of $h(f)$. We can create its domain, by collecting all of the first coordinates of all of the dots.  
+
+\[
+domain = [-4,0] \cup [1,7]
+\]
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:0)] ({x},{-0.5*x+1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5*x-7});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-4,4) (0,1) (1,-6.5) (7,-3.5)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We could think of the horizontal axis as the domain number line and draw in the intervals of the domain.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:0)] ({x},{-0.5*x+1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5*x-7});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-4,3) (0,1) (1,-6.5) (7,-3.5)};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0) (0,0) (1,0) (7,0)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We could think of the vertical axis as the range number line and draw in the intervals of the range.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:0)] ({x},{-0.5*x+1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5*x-7});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-4,3) (0,1) (1,-6.5) (7,-3.5)};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-6.5:-3.5)] ({0},{x});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:4)] ({0},{x});
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0, -6.5) (0,-3.5) (0,1) (0,4)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\end{example}
 
 
 
