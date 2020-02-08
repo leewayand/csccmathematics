@@ -116,6 +116,44 @@ According to the graph for $y = m(x)$ above, $m(1.1)$  \wordChoice{\choice{$<$}\
 
 
 
+\begin{problem}
+
+Below is the graph for $k = T(w)$. Use this graph to answer the following questions.
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=${k = T(w)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-7:-1)] {-2*x-8};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-7,6)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,-6)};
+
+        \addplot [very thick,penColor, smooth,domain=(3:8)] {x-7};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(3,-4)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(8,1)};
+          
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{itemize}
+\item $T(-5) = \answer[tolerance=0.3]{10}$
+\item $T(-1) = \answer[tolerance=0.3]{-6}$
+\item $T(4) = \answer[tolerance=0.3]{-3}$
+\item $T(8) = \answer[tolerance=0.3]{1}$
+\end{itemize}
+
+
+\end{problem}
 
 
 
@@ -124,6 +162,123 @@ According to the graph for $y = m(x)$ above, $m(1.1)$  \wordChoice{\choice{$<$}\
 
 
 
+\begin{problem}
+
+Below is the graph for $k = T(w)$. Use this graph to answer the following questions.
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=${k = T(w)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-7:-1)] {-2*x-8};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-7,6)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,-6)};
+
+        \addplot [very thick,penColor, smooth,domain=(3:8)] {x-7};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(3,-4)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(8,1)};
+          
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Which of the expressions below best desccibes the domain of $T$?
+\begin{multipleChoice}
+\choice  {$[-7,8]$}
+\choice  {$[-6,6]$}
+\choice  {$[-7,-1] \cup [3,8]$}
+\choice [correct] {$[-7,-1] \cup (3,8]$}
+\end{multipleChoice}
+
+
+
+
+Which of the expressions below best desccibes the range of $T$?
+\begin{multipleChoice}
+\choice [correct] {$[-6,6]$}
+\choice  {$(-4, 1]$}
+\choice  {$[-6,6] \cup (-4,1]$}
+\choice  {$[-6,6] \cup [-4,1]$}
+\end{multipleChoice}
+
+
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+
+\begin{problem}
+
+Below is the graph for $z = x(y)$.
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$y$, ylabel=${z = x(y)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-7:-1)] {2*x+8};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-7,-6)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,6)};
+
+        \addplot [very thick,penColor, smooth,domain=(3:8)] {x-3};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(3,0)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(8,5)};
+          
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+According to the graph, how many solutions are there to the equation $x(y) = 2$?
+\begin{multipleChoice}
+\choice  {$0$}
+\choice  {$1$}
+\choice [correct] {$2$}
+\choice  {$4$}
+\end{multipleChoice}
+
+
+
+According to the graph, how many solutions are there to the equation $x(y) = 0$?
+\begin{multipleChoice}
+\choice  {$0$}
+\choice [correct] {$1$}
+\choice  {$2$}
+\choice  {$4$}
+\end{multipleChoice}
+
+
+According to the graph, how many solutions are there to the equation $x(y) = -3$?
+\begin{multipleChoice}
+\choice  {$0$}
+\choice [correct] {$1$}
+\choice  {$2$}
+\choice  {$4$}
+\end{multipleChoice}
+
+\end{problem}
 
 
 
