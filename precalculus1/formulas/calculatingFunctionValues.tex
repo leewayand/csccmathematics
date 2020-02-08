@@ -22,7 +22,7 @@ We can use a graph to estimate function values, but we cannot escape the approxi
 
 
 A \textbf{formula} for a function is an algebraic expression involving the domain number, that produces the function value at the domain number.
-\end{defintion}
+\end{definition}
 
 
 
@@ -48,7 +48,7 @@ expression involving domain number, $d$ = $f(d)$
 
 
 The symbol in the function's formulas, which represents the domain number, is called the \textbf{variable}.
-\end{defintion}
+\end{definition}
 
 
 
@@ -56,11 +56,11 @@ The symbol in the function's formulas, which represents the domain number, is ca
 
 
 
-\begin{example}
+\begin{example}   All Three Pieces
 
 $P(k) = 3k - 2$
-domain = $[-2, 4)$
-range = $[-8, 10)$
+domain = $[-2, 6)$
+range = $[-8, 16)$
 
 
 $P(k)$ is our function representing the function's value at $k$.  $k$ must be representing domain values. $3k - 2$ is the expression involing the domain number.
@@ -95,26 +95,123 @@ We want to replace all occurrences of the variable with the domain number, while
 
 
 
-
-\begin{example}
+  
+\begin{example}   Replacement
 
 $P(k) = 3k - 2$
-domain = $[-2, 4)$
-range = $[-8, 10)$
+domain = $[-2, 6)$
+range = $[-8, 16)$
 
 
-$P(5) = 3(5) - 2 = 13$
+\begin{itemize}
+\item $P(5) = 3(5) - 2 = 13$
+\item $P(-1) = 3(-1) - 2 = -5$
+\item $P(7) = DNE$
+\end{itemize}
+
+
+$P(7)$ does not exist, because the domain is $[-2, 6)$, which does not contain $7$.  A formula tells us how to connect domain and range numbers.  A formula does not define a function.  We still need to know what is allowed to be substituted into the formula.
+
 
 \end{example}
 
 
 
+\begin{warning}  Formula $\ne$ Function
+
+A formula is not a function.  A function is a package containing three sets, following one rule.  A formula describes the connection between the domain and range.
+
+\end{warning}
+
+
+
+
+
+\begin{example}   Substitution
+
+$F(h) = \frac{h-1}{3-h^2}$
+domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$
+range = $(-\infty, \infty)$
+
+
+\begin{itemize}
+\item $F(0) = \frac{(0) - 1}{3 - (0)^2} = \frac{-1}{3}$
+\item $F(1) = \frac{(1) - 1}{0 - (1)^2} = \frac{0}{-1} = 0$
+\item $F(-1) = \frac{(-1) - 1}{3 - (-1)^2} = \frac{-2}{2} = -1$
+\end{itemize}
+
+\end{example}
+
+
+
+A formula describes the connection between domain numbers and their range partners.  Given a domain number, substitution and then direct calculation gives the funciton value.  We can also go the other way.  Given a range value or function value, we can find the domain numbers connected to it.
+
+We do this by creating an equation involving function notaion.
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+\begin{example}   Solving
+
+$F(h) = \frac{h-1}{3-h^2}$
+domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$
+range = $(-\infty, \infty)$
+
+
+We saw earlier that $-1$ is in the range of $F$. $2$ was one domain number where the function value was $-1$. Are there others?
+
+
+We are looking for domain numbers, $d$, where $F(d) = -1$.  
+
+We are looking for domain numbers, $d$, where $\frac{h-1}{3-h^2} = -1$.  
+
+We need to solve $\frac{h-1}{3-h^2} = -1$.
+
+
+
+\[
+\begin{array}{ll}
+
+\frac{h-1}{3-h^2} = -1 &  \\
+h - 1 = -1 (3 - h^2)    &   \sqrt{3} \text{ not in domain, therefore } 3 - h^2 \text{ cannot be } 0  \\
+h - 1 = -3 + h^2    &      \\
+0 = h^2 - h - 2    &      \\
+0 =(h-2)(h+1)    &      \\
+\end{array}
+\]
+
+
+Either $h-2 = 0$, which tells us that $h = 2$. Or, $h+1 = 0$, which tells us that $h = -1$.
+
+Both $2$ and $-1$ are in the domain.  We have identified two domain numbers where $F$ has the value $-1$.
+
+
+
+\end{example}
+
+
+
+\begin{remark}  The Rule
+
+Remember the only rule a function follows is that each domain number is paired to exactly one range number.  The rule doesnot go the other way.  A range value can be paired with many domain numbers.
+
+Each domain number is in exactly one pair.
+Each range number may be in multiple pairs.
+
+
+\end{remark}
 
 
 
