@@ -134,7 +134,48 @@ From the formula above, we can see that the domain of $p$ is $(-7, 1] \cup (3, \
 
 
 
-here
+
+\begin{example}
+
+\[
+T(v) = 
+\begin{cases}
+  2v-1 & \text{ if }  -4 < v \leq -1 \\
+  -v+3 & \text{ if } 1 \leq v < 7
+\end{cases}
+\]
+
+
+On the interval $(-4, -1]$, the graph should be a line for $T(v) = 2v-1$. On the interval $[1, 7)$, the graph should be another line for $T(v) = -v+3$
+
+
+
+
+Graph of $y = T(v)$.
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	\addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+3};
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\end{example}
 
 
 
