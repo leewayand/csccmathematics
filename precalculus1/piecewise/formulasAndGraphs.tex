@@ -35,19 +35,19 @@ The step function uses different formulas depending on the domain number.  If th
 
 
 
-
+Graph of $y = step(x)$.
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
-            domain=-10:10, ymax=10,xmax=10, ymin=-10, xmin=10,
-            axis lines =center, xlabel=$x$, ylabel={$y = step(x)$},
+            domain=-10:10, ymax=5, xmax=10, ymin=-5, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y$},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top,
+            axis on top
           ]
           
-	\addplot [draw=penColor,very thick,smooth,domain=(-9,0),<-] {0};
-	\addplot [draw=penColor2,very thick,smooth,domain=(0,9),->] {1};
+	\addplot [draw=penColor,very thick,smooth,domain=(-9:0),<-] {0};
+	\addplot [draw=penColor,very thick,smooth,domain=(0:9),->] {1};
 	\addplot[color=penColor,only marks,mark=*] coordinates{(0,0)}; 
 	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,1)}; 
 
@@ -56,25 +56,75 @@ The step function uses different formulas depending on the domain number.  If th
 \end{image}
 
 
-
-
-
 \end{example}
 
 
 
 
 
+The step function uses two formulas, but only one at a time.  $step(x) = 0$, if $x <= 0$. $step(x) = 0$, if $x > 1$.  Either you use the formula $0$ or your use the formula $1$.  The domain number at which you are evaluating $step$ tells y ou which formula to use.
+
+
+The traditional way to write this formula looks like
+
+\[
+step(x) = 
+\begin{cases}
+  0 & \text{ if } x \leq 0 \\
+  1 & \text{ if } x > 0
+\end{cases}
+\]
+
+The formulas are list in the left column and the domain conditions are listed in the right column.  When evaluating a piecewise defined function, you don;t look for the formula first.  First, you decide which domain condition in the right column your domain number satisfies.  Then you choose the corresponding formula and evaluate with your domain number.
+
+
+
+\begin{example}
+
+\[
+G(t) = 
+\begin{cases}
+  2t-1 & \text{ if } t \leq -3 \\
+  t^2 & \text{ if } t > -3
+\end{cases}
+\]
+
+
+\begin{itemize}
+\item $G(-5) = 2(-5) - 1 = -11$  
+\item $G(-3) = 2(-3) - 1 = -7$ 
+\item $G(-2) = 2^2 = 4$ 
+\item $G(0) = 0^2 = 0$ 
+\item $G(3) = 3^2 = 9$ 
+\end{itemize}
+
+\end{example}
 
 
 
 
+\begin{question}
+
+\[
+p(k) = 
+\begin{cases}
+  k^2 + 1 & \text{ if } k \leq -4 \\
+  -4k + 3 & \text{ if } -4 < k \leq 1 \\
+  1 - 3k & \text{ if } k > 1
+\end{cases}
+\]
 
 
+\begin{itemize}
+\item $p(-6) = \answer{37}$  
+\item $p(-2) = \answer{11}$ 
+\item $p(-1) = \answer{7}$ 
+\item $p(0) = \answer{1}$ 
+\item $p(1) = \answer{-2}$ 
+\item $p(3) = \answer{-8}$ 
+\end{itemize}
 
-
-
-
+\end{question}
 
 
 
