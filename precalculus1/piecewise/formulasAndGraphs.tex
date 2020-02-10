@@ -1,0 +1,88 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Piecewise Functions}
+
+\begin{document}
+
+\begin{abstract}
+pieces and parts
+\end{abstract}
+\maketitle
+
+
+
+Piecewise functions are defined by using pieces of other functions.
+
+
+
+
+\begin{example} Step Function
+
+
+The step function uses different formulas depending on the domain number.  If the domain number is positive, then the value of $step$ is $1$. If the value of the domain number is nonpositive, then the value of $step$ is $0$.
+
+
+
+\begin{itemize}
+\item $step(-5.3) = 0$
+\item $step(-0.7) = 0$
+\item $step(0) = 0$
+\item $step(1.2) = 1$
+\item $step(142) = 1$
+\end{itemize}
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=10,xmax=10, ymin=-10, xmin=10,
+            axis lines =center, xlabel=$x$, ylabel={$y = step(x)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+          
+	\addplot [draw=penColor,very thick,smooth,domain=(-9,0),<-] {0};
+	\addplot [draw=penColor2,very thick,smooth,domain=(0,9),->] {1};
+	\addplot[color=penColor,only marks,mark=*] coordinates{(0,0)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,1)}; 
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
