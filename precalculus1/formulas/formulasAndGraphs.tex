@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Formula and Graphs}
+\title{Formulas and Graphs}
 
 
 \begin{document}
@@ -44,9 +44,9 @@ The pairs are the most important part of a function.  They give the connection b
 
 Graphs display pairs.  The dots included in the graph are visually encoding the function pair.  They are deciphered into the domain number and function value. The domain number is the first coordinate and the function value is the second number.
 
-\[
-formula \leftrightarrow second coordinate
-\]
+\begin{center}
+formula $\leftrightarrow$ second coordinate
+\end{center}
 
 
 
@@ -55,7 +55,44 @@ formula \leftrightarrow second coordinate
 
 
 
+\begin{example}
 
+Linear functions are functions that can be described by formulas that look like $L(x) = A x + B$, with $A \ne 0$.  Their graphs are lines.  It takes two points to draw a line. Given a formula, we can evaluate it twice, from which we can create two points, plot them, and draw the line.
+
+Let $L(x) = 2x-3$ with its implied domain.
+
+\begin{itemize}
+\item $L(-2) = 2(-2) - 3 = -7$, which gives the point $(-2, -7)$.
+\item $L(4) = 2(4) - 3 = 5$, which gives the point $(4, 5)$.
+\end{itemize}
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=L(x))$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-3:5),<->] {2*x-3};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The arrows indicate that the graph continues with the same pattern - indicating that the implied domain is $(-\infty, \infty)$.
+
+
+\end{example}
 
 
 
@@ -94,21 +131,21 @@ formula \leftrightarrow second coordinate
 
 We encounter functions in several ways, each affecting the domain of a function.
 
-\begin{enumeration}
-\item \textbf{stated domain}
+\begin{enumerate}
+\item  \textbf{stated domain}
 A function may come already equipped with a stated domain.  Graphs communicate the domain - just collect all of the first coordinates from the points. Many times we use inteval notation to state the domain.
 
 
-\item \textbf{implied domain}
+\item  \textbf{implied domain}
 Mathematicians like shorthand. The best shorthand is just nothing.  Nothing is used all over the place. If a function is described with a formula and there is no stated domain, then there is an implied domain.  The implied domain si all real numbers that don't cause a problem with the formula.
 
 We know of two problems: square (even) roots of negative numbers and fractions with $0$ denominators.  Any real numbers that cause this to happen are removed from the domain.
 
 
-\item \textbf{applied domain}
+\item  \textbf{applied domain}
 We use functions to model many measuring situations. In this case, we want our model to describe the situation.  Therefore, the domain should not contain numbers that don't fit the situation. An applied domain is a subset of the implied domain.  The applied domain includes all of the real numbers that make sense in the situation.
 
-\end{enumeration}
+\end{enumerate}
 
 
 
