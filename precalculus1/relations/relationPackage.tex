@@ -7,7 +7,7 @@
 \begin{document}
 
 \begin{abstract}
-Information Packages
+information packages
 \end{abstract}
 \maketitle
 
@@ -29,7 +29,7 @@ We view the world through relationships. That is, some information is connected 
 \end{itemize}
 
 
-All of these relationships are different and yet the same.  Some relationships can be viewed as objects possessing characteristics. Some relationships can be viewed if-then statements.  Some relationships can be viewed as cause and effect. But, they can all be viewed as two collections with associated elements.
+All of these relationships are different and yet the same.  Some relationships can be viewed as objects possessing characteristics. Some relationships can be viewed as if-then statements.  Some relationships can be viewed as cause and effect. But, they can all be viewed as two collections with associated elements.
 
 
 
@@ -37,15 +37,15 @@ All of these relationships are different and yet the same.  Some relationships c
 
 
 
-\begin{definition} \textbf{relation} 
+\begin{definition} \textbf{relation} \\
 A relation is a package containing three sets or collections. One set is called the \textbf{domain}. One set is called the \textbf{codomain}.  Finally, there is a set of pairings.  Each pairing pairs a member of the domain with a memmber of the codomain.
 \end{definition}
 
 
-Relations are just about the vaguest, thinnest structure any two sets could have. There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  But, we don't want to.  We are just laying the groundwork for more complex structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets in a relation have the names domain and codomain.
+Relations are just about the vaguest, thinnest structure any two sets could possibly have. There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  Fortunately, we don't want to do much with relations.  We are just laying the groundwork for more complex structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets in a relation have the names \textit{domain} and \textit{codomain}.
 
 
-Because a relation might encountered as an if-then statement or a cause-and-effect association, we have a natural direction feeling for the information.  The "if" part comes before the "then" part.  The "cause" comes before the "effect".  We would like this feeling reflected in our relation structure.  Therefore, relations come prepackaged with a feeling that the information is connected from the domain to the codomain.
+Because a relation might be encountered as an if-then statement or a cause-and-effect association, we have a natural directional feeling for the information.  The "if" part comes before the "then" part.  The "cause" comes before the "effect".  We would like this feeling reflected in our relation structure.  Therefore, relations come prepackaged with a feeling that the information is connected from the domain to the codomain.
 
 \begin{itemize}
 \item If you pick items from the domain, then you get items from the codomain.
@@ -56,7 +56,9 @@ Because a relation might encountered as an if-then statement or a cause-and-effe
 
 
 
-Most of our communication is going to be written in this course, so we need some agreements on how we will represent relations.  We already have several ways of representing sets.  The easiest is to just list the memebers inside curly braces.
+\section{List Representations}
+
+Most of our communication is going to be written in this course, so we need some agreements on how we will represent relations.  We already have several ways of representing sets.  The easiest is to just list the members inside curly braces.
 
 \begin{center} 
 domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \} 
@@ -66,7 +68,7 @@ domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy St
 codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino \} 
 \end{center}
 
-Now we need a way to indicate the pairings.  The traditonal way is to written the as ordered pairs.  The left item coming from the domain and the right item the paired codomain item.  We can list these ordered pairs in a set of ordered pairs.
+Now we need a way to indicate the pairings.  The traditonal way is to write them as ordered pairs.  The left (or first) item coming from the domain and the right (or second) item from the codomain.  We can list these ordered pairs in a set of ordered pairs. 
 
 \begin{center} 
 pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casablanca, Humphrey Bogart), (Lawrence of Arabia, Peter O'Toole), (The Fly, Vincent Price), (The Godfather, Al Pacino) \} 
@@ -78,7 +80,7 @@ These three sets would make up a relation.
 Of course, we will have many relations, which could get confusing.  Let's help ourselves out with names.  The name of this relation will be \textit{AppearedIn}.
 
 
-\begin{example} \textit{AppearedIn}
+\begin{example} \textit{AppearedIn} \\
 \begin{itemize}
 \item domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \}  
 \item codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino  \} 
@@ -91,8 +93,8 @@ A relation is a package.  It is a package of three sets. The domain and codomain
 
 \begin{observation}
 \begin{itemize}
-\item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in no pair of \textit{AppearedIn}.
-\item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in no pair of \textit{AppearedIn}.
+\item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in the domain and in no pair of \textit{AppearedIn}.
+\item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in the codomain and in no pair of \textit{AppearedIn}.
 \item Nobody said domain members could not appear in multiple pairs.  The Godfather appears in two pairs of \textit{AppearedIn}.
 \item Nobody said codomain members could not appear in multiple pairs.  Vincent Price appears in two pairs of \textit{AppearedIn}.
 \end{itemize}
@@ -105,12 +107,12 @@ A relation is a package.  It is a package of three sets. The domain and codomain
 
 
 
-Lists are good representations of relations when the sets are not very big. The parentheses become difficulty to browse when there is a lot of them. Another representation is via a table. A table visually organizes the pairs much better.
+Lists are good representations of relations when the sets are not very big. The parentheses become difficult to browse through when there are a lot of them. Another representation is via a table. A table visually organizes the pairs much better.
 
-\begin{example} \textit{KindergartenIceCream}
-The \textit{KindergartenIceCream} relation pairs kindergarteners with the favorite ice cream flavors.
+\begin{example} \textit{KindergartenIceCream} \\
+The \textit{KindergartenIceCream} relation pairs kindergarteners with their favorite ice cream flavors.
 
-domain = \{ Kevin, Shay, Linda, Charmain, Charlie \}  
+domain = \{ Kevin, Shay, Linda, Charmain, Charlie \}  \\
 codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \} 
 
 \[
@@ -125,9 +127,9 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 \]
 
 
-Each line of the table shows a pairing. From this table, we can tell that the relation \textit{KindergartenIceCream} pairs Kevin with Chocolate.  (Kevin, CHocolate) is a pair in \textit{KindergartenIceCream}.
+Each line of the table shows a pairing. From this table, we can tell that the relation \textit{KindergartenIceCream} pairs Kevin with Chocolate.  (Kevin, Chocolate) is a pair in \textit{KindergartenIceCream}.
 
-\textbf{Notice} that Charlie is not in a pair.  Charlie doesn't like ice cream. Linda is in two pairs.  She has two favorite flavors.  Nobody has Cherry as their favorite flavor.
+\textbf{Note} Charlie is not in a pair.  Charlie doesn't like ice cream. Linda is in two pairs.  She has two favorite flavors.  Nobody has Cherry as their favorite flavor.
 
 \end{example} 
 
