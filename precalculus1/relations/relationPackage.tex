@@ -91,14 +91,26 @@ Of course, we will have many relations, which could get confusing.  Let's help o
 
 A relation is a package.  It is a package of three sets. The domain and codomain are sets of information.  The third set is a set of pairs.  Each pair connects a member of the domain with a memeber of the codomain. 
 
-\begin{observation}
+
+\begin{template} Ordered Pairs \\
+The template for writing an ordered pair looks like  
+
+\begin{center}
+( domain \, item, codomain \, item )
+\end{center}
+\end{template}
+
+There is a domain item written on the left and a codmain item written to the right.  They are separated with a comma.  All of htat is wrapped in parentheses.
+
+
+\begin{warning} Did You Notice? \\
 \begin{itemize}
 \item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in the domain and in no pair of \textit{AppearedIn}.
 \item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in the codomain and in no pair of \textit{AppearedIn}.
 \item Nobody said domain members could not appear in multiple pairs.  The Godfather appears in two pairs of \textit{AppearedIn}.
 \item Nobody said codomain members could not appear in multiple pairs.  Vincent Price appears in two pairs of \textit{AppearedIn}.
 \end{itemize}
-\end{observation}
+\end{warning}
 
 
 
@@ -149,10 +161,10 @@ We have created some mathematical structure for questions. From this structure, 
 
 
 
-\begin{example} \textit{KindergartenIceCream}
-The \textit{KindergartenIceCream} relation pairs kindergarteners with the favorite ice cream flavors.
+\begin{example} \textit{KindergartenIceCream} \\
+The \textit{KindergartenIceCream} relation pairs kindergarteners with their favorite ice cream flavors.
 
-domain = \{ Kevin, Shay, Linda, Charmain, Charlie \}  
+domain = \{ Kevin, Shay, Linda, Charmain, Charlie \}  \\
 codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \} 
 
 \[
@@ -167,10 +179,10 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 \]
 
 
-Type 1 : What flavors does Linda like?
+Question Type 1 : What flavors does Linda like? \\
 We are looking for pairs of the form (Linda, ???).
 
-Type 2 : Who likes Chocolate?
+Question Type 2 : Who likes Chocolate? \\
 We are looking for pairs of the form (???, Chocolate).
 
 \end{example} 
@@ -182,7 +194,7 @@ We are looking for pairs of the form (???, Chocolate).
 Our examples, so far, have been small.  But what are we going to do when we want to examine the relation between something like movies and actors?  
 
 
-\begin{example} \textit{ActorsInMovies}
+\begin{example} \textit{ActorsInMovies} \\
 The \textit{ActorsInMovies} relation pairs actors with movies they were in.
 
 domain = All actors 
@@ -193,11 +205,11 @@ The table would begin like this.
 \[
 \begin{array}{l|l}
     domain      & codomain      \\ \hline
-    Vincent Price   &  House of Wax \\
-    Humphrey Bogart   & Casablanca \\
-    Peter O'Toole  &  Lawrence of Arabia \\
-    Vincent Price  &  The Fly \\
-    Al Pacino &  The Godfather \\ 
+    \text{Vincent Price}   &  \text{House of Wax} \\
+    \text{Humphrey Bogart}   & \text{Casablanca} \\
+    \text{Peter O'Toole}  &  \text{Lawrence of Arabia} \\
+    \text{Vincent Price}  &  \text{The Fly} \\
+    \text{Al Pacino} &  \text{The Godfather} \\ 
 \end{array}
 \]
 
@@ -220,7 +232,7 @@ Our plan is to investigate only certain types of relations.
 \section{Focusing Our Investigation}
 
 
-Our examples, so far, have been small.  But what are we going to do when we want to examine the relation between movies and actors?  That list or table is going to be too big to look at with our eyes.  How would we look through a table with millions of rows and find the ones holding Vincent Price?  All relations is just too big of an investigation. Let's focus in on a particular type of relation.
+Our examples, so far, have been small.  But what are we going to do when we want to examine the relation between movies and actors?  That list or table is going to be too big to look at with our eyes.  How would we look through a table with millions of rows and find the ones holding Vincent Price?  The topic of all relations is just too big of an investigation. Let's focus in on a particular type of relation.
 
 Most of our questions really identify a single hypothesis (antecedent) and then want to know about the resulting conclusion (consequent).
 
