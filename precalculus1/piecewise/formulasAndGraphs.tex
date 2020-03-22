@@ -13,7 +13,22 @@ pieces and parts
 
 
 
-Piecewise functions are defined by using pieces of other functions.
+Piecewise functions are defined by using pieces of other functions. In other words, we take subsets of pairs from different functions and make a new collection of pairs with them.  We have to make sure that we do not duplicate domain numbers, otherwise we will not have a function.  This new collection of pairs will give us a domain by coletcing all of the first coordinates.
+
+For example, we could start with two constant functions: $Zero$ and $One$.
+
+\begin{itemize}
+\item $Zero(r) = 0$ with $(-\infty, \infty)$ as its domain.
+\item $One(r) = 1$ with $(-\infty, \infty)$ as its domain.
+\end{itemize}
+
+We can create a new function called \textit{step}, by selecting some pairs from each of these functions.  
+\begin{itemize}
+\item From $Zero$ we'll take pairs with negative domain values.
+\item From $One$ we'll take pairs with nonnegative domain values.
+\end{itemize}
+
+\textbf{*} Nonnegative means positive or 0.
 
 
 
@@ -21,7 +36,7 @@ Piecewise functions are defined by using pieces of other functions.
 \begin{example} Step Function
 
 
-The step function uses different formulas depending on the domain number.  If the domain number is positive, then the value of $step$ is $1$. If the value of the domain number is nonpositive, then the value of $step$ is $0$.
+The \textit{step} function uses different formulas depending on the domain number.  If the domain number is positive, then the value of $step$ is $1$. If the value of the domain number is nonpositive, then the value of $step$ is $0$.
 
 
 
@@ -62,7 +77,7 @@ Graph of $y = step(x)$.
 
 
 
-The step function uses two formulas, but only one at a time.  $step(x) = 0$, if $x <= 0$. $step(x) = 0$, if $x > 1$.  Either you use the formula $0$ or your use the formula $1$.  The domain number at which you are evaluating $step$ tells y ou which formula to use.
+The step function uses two formulas, but only one at a time.  $step(x) = 0$, if $x \leq 0$. $step(x) = 0$, if $x > 1$.  Either you use the formula $0$ or your use the formula $1$.  The domain number at which you are evaluating $step$ tells you which formula to use.
 
 
 The traditional way to write this formula looks like
@@ -75,7 +90,7 @@ step(x) =
 \end{cases}
 \]
 
-The formulas are list in the left column and the domain conditions are listed in the right column.  When evaluating a piecewise defined function, you don;t look for the formula first.  First, you decide which domain condition in the right column your domain number satisfies.  Then you choose the corresponding formula and evaluate with your domain number.
+The formulas are list in the left column and the domain conditions are listed in the right column.  When evaluating a piecewise defined function, you don't look for the formula first.  First, you decide which domain condition in the right column your domain number satisfies.  Then you choose the corresponding formula and evaluate with your domain number.
 
 
 
@@ -97,6 +112,10 @@ G(t) =
 \item $G(0) = 0^2 = 0$ 
 \item $G(3) = 3^2 = 9$ 
 \end{itemize}
+
+
+$-5$ and $-3$ satisfy $t \leq -3$, therefore we use $2t-1$ as their formula. \\
+$-2$ and $0$ and $3$ satisfy $t > -3$, therefore we use $t^2$ as their formula. \\
 
 \end{example}
 
@@ -175,7 +194,16 @@ Graph of $y = T(v)$.
 \end{image}
 
 
+
+The line graph for $y = 2v - 1$ is only drawn over the domain interval $(-4, -1]$. \\
+The line graph for $y = -v+3$ is only drawn over the domain interval $[1, 7)$. 
+
 \end{example}
+
+
+
+
+
 
 
 
