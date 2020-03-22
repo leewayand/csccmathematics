@@ -14,6 +14,8 @@ one additional rule
 
 
 
+\section{Functions}
+
 Functions are special relations. While a relation is just two sets of items and some pairings between the two sets, functions satisfy one rule. 
 
 \begin{itemize}
@@ -25,33 +27,35 @@ Functions are special relations. While a relation is just two sets of items and 
 If a supposed function satisfies our one and only rule, then it is said to be a \textbf{well-defined} function.  Otherwise, it is not well-defined.
 
 
-\begin{example}
+\begin{example} SSN \\
 The \textit{SSN} function has a domain consisting of all U.S. citizens and a codomain of all 9-digit numbers.  \textit{SSN} pairs a U.S. citizen in the domain with the 9-digit number in the codomain that was issued to them as their social security number. 
 
-This function is not well-defined, because there are U.S. citizens without a social security number, like many new-born nanies.
+This function is not well-defined, because there are U.S. citizens without a social security number, like many new-born babies.
 \end{example}
 
 
-\begin{example}
-The \textit{ReverseSSN} function has a domain consisting of all 9-digit numbers and a codomain consisting of all U.S. citizens.  \textit{ReverseSSN} pairs a number in the domain with the person in the codomain that was issued the number as their social security number. 
+\begin{example} ReverseSSN \\
+The \textit{ReverseSSN} function has a domain consisting of all 9-digit numbers and a codomain consisting of all U.S. citizens.  \textit{ReverseSSN} pairs a number in the domain with the person in the codomain who was issued the number as their social security number. 
 
 This function is not well-defined, because there are 9-digit numbers that have not been issued yet.
 \end{example}
 
 
-\begin{example}
-The \textit{RationalAdd} function has a domain consisting of all rational numbers and a codomain consisting of all integers.  \textit{RationalAdd} pairs a rational number in the domain with an integer in the codomain according to this rule.
+\begin{example} RationalAdd \\
+The \textit{RationalAdd} function has a domain consisting of all rational numbers and a codomain consisting of all integers.  \textit{RationalAdd} pairs a rational number in the domain with an integer in the codomain according to the following rule.
 
-Since a chosen domain number is a rational number, it can be written as $\tfrac{A}{B}$, where $A$ and $B$ are integers. This domain rational number is paired with $A+B$ in the codomain.
+Since a chosen domain number is a rational number, it can be written as $\tfrac{A}{B}$, where $A$ and $B$ are integers. This domain rational number, $\tfrac{A}{B}$, is paired with $A+B$ in the codomain.
 
 This function is not well-defined.  The ratonal number two-thirds can be written as $\tfrac{2}{3}$ and thus it would be paired with $5$.  However, two-thirds can also be written as $\tfrac{4}{6}$ and thus would be paired with $10$.  This violates the only rule we have.  Two-thirds from the domain must be paired with exactly one codomain number.
 
+\begin{warning}
 When function values depend on how you write numbers, that is a pretty good clue that the function is not going to be well-defined.
+\end{warning}
 \end{example}
 
 
 
-\begin{example}
+\begin{example} SuperBowlWinner  \\
 The \textit{SuperBowlWinner} function has a domain consisting of the NFL Superbowls played and a codomain consisting of all of the NFL teams that have existed.  \textit{SuperBowlWinner} pairs a Superbowl in the domain with the NFL team in the codomain that won that Superbowl. 
 
 This function is well-defined. Each Superbowl has exactly one winner.
@@ -66,9 +70,10 @@ Whew!  We finally found a function. That one little rule actually narrows the po
 
 Now that we are only investigating functions, rather than all relations, we discover some opportunities to help our communication.  It turns out that when you select a domain item in a function, you have automatically selected a codomain item.
 
-Each domain item is paired with EXACTLY one codomain item.  Not 0. Not 2.  Not 3.  Exactly 1.  Thus, when you pick a domain item, you have automatically selected its partner in the codomain.  We could certainly hunt it down.  But, we can also just talk about "the domain member's partner in the codomain."  We have function notation for this thought.
+Each domain item is paired with EXACTLY one codomain item.  Not 0. Not 2.  Not 3.  Exactly 1.  Thus, when you pick a domain item, you have automatically selected its partner in the codomain.  We could certainly hunt it down inside the codomain.  But, we can also just talk about "the domain member's partner in the codomain."  We have function notation for this thought.
 
 \begin{notation} Function Notation \\
+
 Let functionName be the name of a function. \\
 Let d represent a domain item.
 
@@ -86,15 +91,15 @@ functionName(d) is pronounced as "functionName \underline{OF} d".
 \item \textit{SuperBowlWinner}(Superbowl 13) = Pittsburgh Steelers  
 \end{itemize}
 
-\textit{SuperBowlWinner}(Superbowl 13) represents the winner team from Superbowl 13, which is the Pittsburgh Steelers.  This equality is communicated with an equation.
+\textit{SuperBowlWinner}(Superbowl 13) represents the winning team from Superbowl 13, which is the Pittsburgh Steelers.  This equality is communicated with an equation.
 
 \end{example}
 
-Not every NFL team has won a Superbowl. The Cleveland Browns have not won a Superbowl.  So, there are codomain items that are not partnered with a domain item.  This is not true of the domain.  Every domain item is paired with a codomain item.  That is our one and only function rule.  Every domain item appears in exactly one pair.  But not every codomain item appears in a pair.  This is significant and deserves some language.
+Not every NFL team has won a Superbowl. As of 2020, the Cleveland Browns had not won a Superbowl.  So, there are codomain items that are not partnered with a domain item.  This is not true of the domain.  Every domain item is paired with a codomain item.  That is our one and only function rule.  Every domain item appears in exactly one pair.  But not every codomain item appears in a pair.  This is significant and deserves some language.
 
 The \textbf{range} of a function is the collection of items in the codaim which are paired with some item in the domain.  The range is the collection of function values.
 
-The Cleveland Browns are not in the rnage of \textit{SuperBowlWinner}.  The Pittsburgh Steelers are in the range of \textit{SuperBowlWinner}.
+The Cleveland Browns are not in the range of \textit{SuperBowlWinner}.  The Pittsburgh Steelers are in the range of \textit{SuperBowlWinner}.
 
 
 
@@ -103,15 +108,17 @@ The Cleveland Browns are not in the rnage of \textit{SuperBowlWinner}.  The Pitt
 
 \section{Real Number Functions}
 
-We make functions connecting just about everything.  In particular, we could make functions where both the domain and codomain are sets of real numbers. These are the types of functions of Calculus.  Therefore, we are making yet another effort to focus our attention.  We will concentrate on functions that connect real numbers with real numbers.
+We make functions connecting just about everything.  In particular, we could make functions where both the domain and codomain are sets of real numbers. These are the types of functions of Calculus.  Therefore, we are making yet another effort to focus our attention.  We will concentrate on functions that connect sets of real numbers with sets of real numbers.
 
-For the most part, these sets of real numbers will be coming from measurements.  So, technically, our funcitons connect sets of measurements with sets of measurements. However, we will hold the units of the measurements off to the side and just work with the numbers.  Once we arrive at any conclusions, then we will bring back in the units of the measurements for a descriptions and communication.
+For the most part, these sets of real numbers will be coming from measurements.  So, technically, our funcitons connect sets of measurements with sets of measurements. However, we usually hold the measurment units off to the side, work with the numbers, and then bring back the units when we interpret our results.  Once we arrive at any conclusions, then we will interpret our findings within the context of the situation under investigation.
+
+
 
 
 \begin{example} \textit{Double} \\
 The \textit{Double} function pairs a real number with its double.
 
-domain = all real numbers  
+domain = all real numbers  \\ 
 codomain = all real numbers
 
 
@@ -121,9 +128,6 @@ codomain = all real numbers
 \item \textit{Double}($\pi$) = $2 \pi$.
 
 \item $\textit{Double}(7) = \begin{prompt}\answer{14}\end{prompt}$.
-
-
-
 \end{itemize}
 
 \end{example} 
@@ -133,13 +137,13 @@ codomain = all real numbers
 \begin{example} \textit{Half} \\
 The \textit{Half} function pairs a real number with its half.
 
-domain = all real numbers  
+domain = all real numbers  \\ 
 codomain = all real numbers
 
 
 Solve \textit{Half}(d) = $8$ \\
 
-Solution $d = 16$.
+The solution is $d = 16$.
 
 \end{example} 
 
