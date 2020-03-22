@@ -14,40 +14,33 @@ exact tools
 
 
 
-We can use a graph to estimate function values, but we cannot escape the approximation.  Some functions have an algebraic description of the pairings.  We call this algebraic tool a \textbf{formula}.
+Funcitons can be defined via a graph. Each dot on a graph is highlighting a point and this point illustrates a pair in the function. We can use a graph to estimate function values, but we cannot escape the approximation.  To communicate about exactness, some functions have an algebraic description of the pairings.  We call this algebraic tool a \textbf{formula} or an \textbf{equation}. Not all functions have formulas with which we can calculate.  But when they do, there is an operation manual to follow.
 
 
 
-\begin{definition}  Formula
-
+\begin{definition}  Formula 
 
 A \textbf{formula} for a function is an algebraic expression involving the domain number, that produces the function value at the domain number.
 \end{definition}
 
 
 
-
-\begin{center}
-expression involving domain number = function value at the domain number 
-\end{center}
-
-
-\begin{center}
-expression involving domain number, $d$ = function, $f$, value at the domain number, $d$
-\end{center}
-
-
-\begin{center}
-expression involving domain number, $d$ = $f(d)$
-\end{center}
+\[
+\begin{array}{rcl}
+     \text{expression involving domain number} & = &  \text{function value at the domain number}  \\ 
+      \text{expression involving domain number,} \, d  & = &  \text{function,} \, f \text{, value at the domain number,} \, d \\ 
+      \text{expression involving domain number,} \, d & = & f(d) 
+\end{array}
+\]
 
 
 
 
-\begin{definition}  Variable
 
 
-The symbol in the function's formulas, which represents the domain number, is called the \textbf{variable}.
+
+\begin{definition}  Variable 
+In function notation, $f(d)$, the symbol inside the parentheses is called the \textbf{variable}. It represents domain values.
 \end{definition}
 
 
@@ -56,14 +49,14 @@ The symbol in the function's formulas, which represents the domain number, is ca
 
 
 
-\begin{example}   All Three Pieces
+\begin{example}   All Three Pieces 
 
-$P(k) = 3k - 2$
-domain = $[-2, 6)$
+$P(k) = 3k - 2$ \\
+domain = $[-2, 6)$ \\
 range = $[-8, 16)$
 
 
-$P(k)$ is our function representing the function's value at $k$.  $k$ must be representing domain values. $3k - 2$ is the expression involing the domain number.
+$P(k)$ represents the function's value at $k$.  $k$ is representing domain values. $3k - 2$ is the expression involing the domain number.
 
 \end{example}
 
@@ -79,30 +72,61 @@ $P(k)$ is our function representing the function's value at $k$.  $k$ must be re
 
 \section{Operating Instructions}
 
-A formula is a tool.  We use it to connect domain numbers to their range partners.  But it is a tool, so there is a way to operate it.
+A formula is a tool.  We use it to connect domain numbers to their range partners.  And, like any tool, it has an operation manual.
 
 
 
-The above formula was $P(k) = 3k - 2$.  How would we use this formula to calculate the value of $P$ at $5$?   In other words, how would we use it to calculate $P(5)$?
+The formula in the example above is $P(k) = 3k - 2$.  How would we use this formula to calculate the value of $P$ at $5$?   In other words, how would we use it to calculate $P(5)$?
 
 We just gave ourselves our first clue. We went from $P(k)$ to $P(5)$ by replacing $k$ with $5$.  We should do the samething with the formula. However, this doesn't work.
 
 
-Replacing $k$ with $5$ in $3k - 2$ gives us $35-2$, which equals $33$.  $33$ is not $P(5)$. The problem is that our formula is using shorthand notation. Simply replacing the variable with the domain number fails to maintain the meaning of the expression.  In this case, a number next to a variable is shorthand for multiplication and this was lost when we replaced with the $5$.
+
+
+
+
+Replacing $k$ with $5$ in $3k - 2$ gives us $35-2$, which equals $33$.  $33$ is not $P(5)$. The problem is that our formula is using shorthand notation. Simply replacing the variable with the domain number fails to maintain the meaning of the expression.  In this case, a number next to a variable is shorthand for multiplication and this was lost when we replaced $k$ with the $5$.
 
 We want to replace all occurrences of the variable with the domain number, while maintain the meaning of the expression.  As you gain experience with formauls, you will be able to do this on-the-fly.  But a quick rule that cures this problem is to replace all occurrences of the variable in the formula with the domain number wrapped in parentheses.
+
+
+\begin{procedure} Evaluation 
+
+Calculating a function value via a formlus is called \textbf{evaluating} the formula.  Common mistakes can be avoided if all occurrences of the varibale are wrapped in parentheses first.
+\end{procedure}
+
+
+
+\begin{example}   Parentheses 
+
+When in doubt, first wrap all occurrences of the variable with parentheses.
+\begin{itemize}
+\item $P(n) = 3n - 5$ becomes $P(n) = 3(n) - 5$
+\item $f(k) = 3k^2 - 5k + 3$ becomes $f(k) = 3(k)^2 - 5(k) + 3$
+\item $T(y) = \frac{y^3 - 8y + 1}{8y^2 + 4y - 3}$ becomes $T(y) = \frac{(y)^3 - 8(y) + 1}{8(y)^2 + 4(y) - 3}$
+\end{itemize}
+
+\end{example}
+
+Once you are comfortable with the meaning of a formula, then you can see the parentheses in your head and no longer need to write them.
+
+
+
+
+
+
 
 
 
 
   
-\begin{example}   Replacement
+\begin{example}   Replacement 
 
 $P(k) = 3k - 2$
 domain = $[-2, 6)$
 range = $[-8, 16)$
 
-
+Evaluating $P$...
 \begin{itemize}
 \item $P(5) = 3(5) - 2 = 13$
 \item $P(-1) = 3(-1) - 2 = -5$
@@ -112,14 +136,14 @@ range = $[-8, 16)$
 
 $P(7)$ does not exist, because the domain is $[-2, 6)$, which does not contain $7$.  A formula tells us how to connect domain and range numbers.  A formula does not define a function.  We still need to know what is allowed to be substituted into the formula.
 
-
 \end{example}
 
 
 
-\begin{warning}  Formula $\ne$ Function
 
-A formula is not a function.  A function is a package containing three sets, following one rule.  A formula describes the connection between the domain and range.
+\begin{warning}  Formula $\ne$ Function 
+
+A formula is not a function.  A function is a package containing three sets, following one rule.  A formula describes the connection between the domain and range numbers.
 
 \end{warning}
 
@@ -127,10 +151,10 @@ A formula is not a function.  A function is a package containing three sets, fol
 
 
 
-\begin{example}   Substitution
+\begin{example}   Substitution 
 
-$F(h) = \frac{h-1}{3-h^2}$
-domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$
+$F(h) = \frac{h-1}{3-h^2}$ \\
+domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$ \\
 range = $(-\infty, \infty)$
 
 
@@ -144,7 +168,7 @@ range = $(-\infty, \infty)$
 
 
 
-A formula describes the connection between domain numbers and their range partners.  Given a domain number, substitution and then direct calculation gives the funciton value.  We can also go the other way.  Given a range value or function value, we can find the domain numbers connected to it.
+A formula describes the connection between domain numbers and their range partners.  Given a domain number, substitution and then direct calculation gives the function value.  We can also go the other way.  Given a range value or function value, we can find the domain numbers connected to it.
 
 We do this by creating an equation involving function notaion.
 
@@ -163,14 +187,14 @@ We do this by creating an equation involving function notaion.
 
 
 
-\begin{example}   Solving
+\begin{example}   Solving 
 
-$F(h) = \frac{h-1}{3-h^2}$
-domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$
+$F(h) = \frac{h-1}{3-h^2}$ \\
+domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$ \\
 range = $(-\infty, \infty)$
 
 
-We saw earlier that $-1$ is in the range of $F$. $2$ was one domain number where the function value was $-1$. Are there others?
+We see that $-1$ is in the range of $F$ and an earllier example shoed that $2$ was one domain number where the function value was $-1$. Are there others?
 
 
 We are looking for domain numbers, $d$, where $F(d) = -1$.  
@@ -194,7 +218,7 @@ h - 1 = -3 + h^2    &      \text{distribute}\\
 
 Note:  $\sqrt{3}$ is not in domain, therefore $3 - h^2 \ne 0$. Therefore, we can multiply both sides by it.  
 
-Either $h-2 = 0$, which tells us that $h = 2$. Or, $h+1 = 0$, which tells us that $h = -1$.
+By the Zero Product Property of real numebrs, either $h-2 = 0$, which tells us that $h = 2$. Or, $h+1 = 0$, which tells us that $h = -1$.
 
 Both $2$ and $-1$ are in the domain.  We have identified two domain numbers where $F$ has the value $-1$.
 
@@ -206,9 +230,9 @@ Both $2$ and $-1$ are in the domain.  We have identified two domain numbers wher
 
 \begin{remark}  The Rule
 
-Remember the only rule a function follows is that each domain number is paired to exactly one range number.  The rule doesnot go the other way.  A range value can be paired with many domain numbers.
+Remember the only rule a function follows is that each domain number is paired to exactly one range number.  The rule does not go the other way.  A range value can be paired with many domain numbers.
 
-Each domain number is in exactly one pair.
+Each domain number is in exactly one pair. \\
 Each range number may be in multiple pairs.
 
 
@@ -216,13 +240,25 @@ Each range number may be in multiple pairs.
 
 
 
+
+\begin{remark}  Language
+
+The above example illustrates a common theme in function analysis.  Functions have values $\large{AT}$ domain numbers.  This theme will continue through Calculus.  We will describe characteristics and features of functions by their range values and then identify places in the domain $\large{WHERE}$ the behavior $\large{OCCURS}$. 
+
+
+\end{remark}
+
+
+
+
+
 \section{Two Questions}
 
 Questions about functions generally come in two types.
 \begin{enumerate}
-\item You know the domain number and you want the range partner or function values.  This questions is answerws with evaluation. Either you evalute the formula or you track the funciton value down inside a graph.
+\item You know the domain number and you want the range partner or function value.  This question is answerwed with evaluation. Mostly you evaluate a formula or you track the function value down inside a graph.
 
-\item You know the funciton value and you want the associated domain values.  This questions is usually phrased in terms of an equation to solve.  The solution set include more than one domain number.
+\item You know the function value and you want the associated domain values.  This question is usually phrased in terms of an equation to solve.  The solution set may include more than one domain number.
 \end{enumerate}
 
 
@@ -233,8 +269,8 @@ Questions about functions generally come in two types.
 
 \begin{question}
 
-$g(f) = 4f+1$
-domain = $(-\infty, \infty)$
+Let $g(f) = 4f+1$ \\
+domain = $(-\infty, \infty)$ \\
 range = $(-\infty, \infty)$
 
 
@@ -242,4 +278,12 @@ $g(5) = \answer{21}$
 
 If $g(f) = -3$ then $f = \answer{-1}$.
 \end{question}
+
+
+
+
+
+
+
+
 \end{document}
