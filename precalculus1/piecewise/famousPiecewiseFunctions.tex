@@ -13,7 +13,9 @@ examples
 
 
 
-Absolute value, step, greatest integer function, on/off switch.
+We have many famous functions, which are piecewise defined function.  We have already seen the step function.  It acts as a mathematical on/off switch.
+
+Perhaps more famous are the absolute value funciton and greatest integer function.
 
 
 
@@ -21,7 +23,7 @@ Absolute value, step, greatest integer function, on/off switch.
 
 
 
-\begin{example} Absolute Value Function
+\begin{example} \textit{Absolute Value Function}
 The Absolute Value function is made from pieces of two linear functions: $L_1(x) = x$ and $L_2(x) = -x$. 
 
 \begin{itemize}
@@ -78,70 +80,36 @@ Graph of $y = |x|$.
 
 
 
-\begin{example} Greatest Integer Function
-The Greatest Integer function (GIF) is made from an infinite number of pieces fo constant functions 
+\begin{example} \textit{Greatest Integer Function}
+Also known as the \textit{floor function}, the \textit{Greatest Integer function} (\textit{GIF}) pairs a domain number with the greatest integer less than or equal to the domain number.
+
+If you think of a number line, then you start at the domain on go down (or left) to the next integer.  If you domina number is already an integer, then you don't need to go anywhere.
+
+
+Like the absolute value function, the greatest integer function has its own symbol:  $GIF(x) = \lfloor x\rfloor$. The little feet remind us to go down to the next integer.
 
 \begin{itemize}
-\item From $L_1$ we'll take pairs with nonnegative domain values.
-\item From $L_2$ we'll take pairs with negative domain values.
+\item $GIF(4.5) = 4$
+\item $GIF(2) = 2$
+\item $GIF(0.5) = 0$
+\item $GIF(0) = 0$
+\item $GIF(-4.5) = -5$
+\item $GIF(-7) = -7$
 \end{itemize}
 
-The traditional way of notating the absolute value function is with little vertical bars.
-
-
-\[
-|x| = 
-\begin{cases}
-  -x & \text{ if }  x < 0 \\
-  x & \text{ if } x \geq 0
-\end{cases}
-\]
 
 
 
-Graph of $y = |x|$.
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-  \addplot [draw=penColor,very thick,smooth,domain=(-6:0),<-] {-x};
-  \addplot [draw=penColor,very thick,smooth,domain=(0:6),->] {x};
+Let $N$ be any integer. On the interval $[N, N+1)$, we have $GIF(x) = N$.
 
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-\end{example}
+\textit{GIF} is made from an infinite number of pieces of constant functions.
 
 
 
 
 
 
-
-
-Our next example may be a function that is new to you. It is the
-\textit{greatest integer function}.
-
-\begin{example}
-Consider the \textbf{greatest integer function}.  This function maps
-any real number $x$ to the greatest integer less than or equal to $x$.
-%\[
-%f(x) = \parbox{3in}{The function that maps any real number $x$
-%  to the greatest integer less than or equal to $x$.}
-%\]
-People sometimes write this as $f(x) = \lfloor x\rfloor$, where those
-funny symbols mean exactly the words above describing the
-function. For your viewing pleasure, here is a graph of the greatest
-integer function:
+Graph of $y = \lfloor x\rfloor$ is below, except the steps keep going up to the right and down to the left.
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
@@ -156,7 +124,7 @@ integer function:
           ]
           \addplot [textColor, very thin, domain=(0:2.3)] {0}; % puts the axis back, axis on top clobbers our open holes
           \addplot [textColor, very thin] plot coordinates {(0,0) (0,2)}; % puts the axis back, axis on top clobbers our open holes
-    \addplot [very thick, penColor, domain=(-2:-1)] {-2};
+          \addplot [very thick, penColor, domain=(-2:-1)] {-2};
           \addplot [very thick, penColor, domain=(-1:0)] {-1};
           \addplot [very thick, penColor, domain=(0:1)] {0};
           \addplot [very thick, penColor, domain=(1:2)] {1};
@@ -176,27 +144,51 @@ integer function:
           \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(4,3)};  %% open hole
         \end{axis}
 \end{tikzpicture}
-%% \caption{A plot of $f(x)=\lfloor x\rfloor$. Here we can see that for each input (a
-%%   value on the $x$-axis), there is exactly one output (a value on the
-%%   $y$-axis).}
-%% \label{plot:greatest-integer fxn}
 \end{image}
-Observe that here we have multiple inputs that give
-the same output.  This is not a problem! To be a function, we
-merely need to check that for each input, there is exactly one output,
-and this condition is satisfied.
+
+
+Notice that we have many domain numbers with the same function value. That is ok. To be a function, we just need that each domain number only has one function value.  The \textit{GIF} passes this test.
+
+
+
+
 \end{example}
 
+
+
+
+
+
+
+\[
+GIF{x} = 
+\begin{cases}
+   etc. &    \\
+  -2 & \text{ on } [-2, -1)] \\
+  -1 & \text{ on } [-1, 0) \\ 
+   0 & \text{ on } [0, 1)] \\
+  1 & \text{ on } [1, 2) \\
+   2 & \text{ on } [2, 3)] \\
+  etc. &  
+\end{cases}
+\]
+
+
+
+
+
 \begin{question}
-  Compute:
+  Calculate:
   \[
   \lfloor 2.4 \rfloor
   \begin{prompt}
     =\answer{2}
   \end{prompt}
   \]
+  \end{question}
+
   \begin{question}
-  Compute:
+  Calculate:
   \[
   \lfloor -2.4 \rfloor
   \begin{prompt}
@@ -204,15 +196,15 @@ and this condition is satisfied.
   \end{prompt}
   \]
 \end{question}
-\end{question}
 
 
-Notice that both the functions described above pass the so-called
-\textit{vertical line test}.
 
-\begin{theorem}
-The curve $y=f(x)$ represents $y$ as a function of $x$ at $x=a$ if and
-only if the vertical line $x=a$ intersects the curve $y=f(x)$ at
+
+
+Notice that both the functions described above pass the so-called \textit{vertical line test}.
+
+\begin{theorem} \textit{Vertical Line Test}
+The curve $y=f(x)$ represents $y$ as a function of $x$ at $x=a$ if and only if the vertical line $x=a$ intersects the curve $y=f(x)$ at
 exactly one point. This is called the \textbf{vertical line test}.
 \end{theorem}
 
