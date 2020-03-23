@@ -13,11 +13,58 @@ breaks
 
 
 
-Piecewise functions are defined by using pieces of other functions.
+The graphs we have seen so far clearly show all kinds of breaks.  The function represented by the graph is exhibiting some drastic behavior around some individual domain numbers.  Let's examine some of these breaks and classify them into a few types.
 
 
 
 
+
+
+
+\section{Basic Types of Breaks}
+
+A quick review of graphs seen so far in this course shows there are three basic types of breaks.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:3), <->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+    
+    	
+    	 %\addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,5)}; 
+    	 %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,1.88)};
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\section{Break Location}
+One of the strongest purposes of mathematics is simply communication.  We like mathematics to be explicit and this is supported by lots of language. As we investigate breaks in the graphs of functions, we want language that is explicit, so that we can communicate about the underlying function behavior.
+
+With this in mind, our first question is about the location of breaks. 
 
 
 
