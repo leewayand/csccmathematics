@@ -7,13 +7,237 @@
 \begin{document}
 
 \begin{abstract}
-max and min value
+minimum and maximum
 \end{abstract}
 \maketitle
 
 
 
-Piecewise functions are defined by using pieces of other functions.
+When using functions to analyze situations, we are often interested in the maximum and minimum values that a function takes on. These are often called \textbf{textreme} values. We would like to know the extreme values and where, in the domain, they occur.
+
+
+
+There are two views on extreme values.
+
+\textbf{Global Extreme Values} 
+
+\begin{itemize}
+\item The \textbf{global maximum value} is the greatest value of the function.  This maximum may occur at mulitple domain numbers.  A function can also not have a maximum value.
+
+\[  f(c) \text{ is a global maximum if } f(x) \leq f(c) \text{ for all } x \text{ in the domain of } f \]
+
+\item The \textbf{global minimum value} is the least value of the function.  This mnimum may occur at mulitple domain numbers.  A function can also not have a minimum value.
+
+\[  f(c) \text{ is a global minimum if } f(c) \leq f(x) \text{ for all } x \text{ in the domain of } f \]
+\end{itemize}
+
+A function has at most, one maximum value and one minimum value.
+
+In contrast to a sinle maximum or minimum value, a function also values which are the greatest value in their own neighborhood.  We see these as tops of hills and bottom of valleys on the graph.  A function may have many of these \textbf{local} or \textbf{relative} extrema.
+
+
+
+
+
+
+
+\textbf{Local Extreme Values} \\
+\begin{itemize}
+\item $f(c)$ is a \textbf{local maximum value} of the function $f$ if there exists an $0 < \epsilon$ such that $f(x) \leq f(c)$ for all $x$ within a distance of $\epsilon$ of $c$.
+
+\item $f(c)$ is a \textbf{local minimu value} of the function $f$ if there exists an $0 < \epsilon$ such that $f(c) \leq f(x)$ for all $x$ within a distance of $\epsilon$ of $c$.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Extrema \\
+
+Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$k$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:5), ->] {0.05*(x+7)*(x+2)*(x-3)};
+        %\addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {0.5*x-1};
+        %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,-3.3)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{itemize}
+\item $g$ has no global maximum.
+\item The global minimum of $g$ is $-3.3$, which occurs at $-8$.
+\item $g$ has a local minimum of $-3.3$, which occurs at $-8$ and a local minimum of $-2.5$, which occurs at $0.9$.
+\item $g$ has a local maximum of $2.4$, which occurs at $-4.9$
+\end{itemize}
+
+\end{example}
+
+
+
+
+\textit{Local Explanations} \\
+
+Let $0 < \epsilon = 0.5$.  $g(-8) \leq g(k)$ for all $k$ in the domain within a distance of $0.5$ of $-8$, which would be the interval $[-8, -7.5)$.
+
+Let $0 < \epsilon = 0.3$.  $g(0.9) \leq g(k)$ for all $k$ in the domain within a distance of $0.53$ of $0.9$, which would be the interval $(0.6, 1.2)$.
+
+Let $0 < \epsilon = 0.4$.  $g(k) \leq g(-4.9)$ for all $k$ in the domain within a distance of $0.4$ of $-4.9$, which would be the interval $(-5.3, -4.6)$.
+
+
+
+
+\textbf{Note:} As the previous example illustrates, global extrema are also local extrema.
+
+
+
+\begin{example} Extrema \\
+
+Let $B(w)$ be a function.  The graph of $y = B(w)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$w$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:4), <->] {0.01*(x+4)*(x+7)*(x+2)*(x-3)};
+        %\addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {0.5*x-1};
+        %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,4.3)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{itemize}
+\item $B$ has no global maximum.
+\item The global minimum of $B$ is $-2.5$, which occurs at $1.4$.
+\item $B$ has a local minimum of $-2.5$, which occurs at $1.4$ and a local minimum of $-0.7$, which occurs at $-5.9$.
+\item $B$ has a local maximum of $0.25$, which occurs at $-3$
+\end{itemize}
+
+\end{example}
+
+
+\textit{Local Explanations} \\
+
+Let $0 < \epsilon = 0.6$.  $B(1.4) \leq B(w)$ for all $w$ in the domain within a distance of $0.6$ of $1.4$, which would be the interval $(0.8, 2)$.
+
+Let $0 < \epsilon = 0.25$.  $B(-5.9) \leq B(w)$ for all $w$ in the domain within a distance of $0.25$ of $-5.9$, which would be the interval $(0.6, 1.2)$.
+
+Let $0 < \epsilon = 0.5$.  $B(w) \leq B(-3)$ for all $w$ in the domain within a distance of $0.5$ of $-3$, which would be the interval $(-3.5, -2.5)$.
+
+
+
+
+
+
+
+
+\begin{example} Extrema \\
+
+Let $T(p)$ be a function.  The graph of $y=  T(p)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$p$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-1)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:8), ->] {-2*x+10};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,-2)};
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,1)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,-1.5)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,6)};
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,0.5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,4)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,-6)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{itemize}
+\item $T$ has no global maximum.
+\item $T$ has no global minimum.
+\item $T$ has a local minimum of $-2$, which occurs at $-8$.
+\item $T$ has a local minimum of $-6$, which occurs at $3$.
+\item $T$ has a local maximum of $6$, which occurs at $-1$.
+\end{itemize}
+
+\end{example}
+
+
+
+
+
+It appears that $8$ would have been the global maximum of $T$, however, the point $(-8, 8)$ is missing from the graph and $8$ is not in the range.  And, there is no real number "just below $8$".  If you choose any real number, $r$, below $8$ to be the possible candidate for global maximum, there is the number $\frac{8+r}{2}$. This number is in the domain and $T(r) < T\left(\frac{8+r}{2}\right)$.
+
+
+
+
+\textit{Local Explanations} \\
+
+Let $0 < \epsilon = 0.5$.  $B(-8) \leq B(w)$ for all $w$ in the domain within a distance of $0.5$ of $-8$, which would be the interval $[-8, -7.5)$.
+
+Let $0 < \epsilon = 0.4$.  $B(3) \leq B(w)$ for all $w$ in the domain within a distance of $0.4$ of $3$, which would be the interval $(3.4, 2.6)$.
+
+Let $0 < \epsilon = 0.3$.  $B(w) \leq B(-1)$ for all $w$ in the domain within a distance of $0.3$ of $-1$, which would be the interval $(-1.3, -0.7)$.
+
+
+
+
+
+
+
+
 
 
 
