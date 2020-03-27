@@ -12,7 +12,356 @@ intersection
 \maketitle
 
 
-SYstems
+
+\section{Common Pairs}
+
+Your journey through mathematics has brought you to a major step in your thinking. You have been working wih individual numbers for years and years. Functions brings a totally different viewpoint. Our basic mathematical tool is growing from a number to a function.  Our basic thought is about huge collecitons of pairs of numbers.  Our anlysis is moving from how numbers combine and compare to how functions combine and compare.
+
+We are learning how to investigate functions.  Given a function, we would like to know its domain and range; zeros; discontinuities, singularities, where it is increasing or decreasing, and what its graph looks like.
+
+We would also like to compare functions.  For instance, what pairs they have in common. Let's try this for linear functions.
+
+
+
+\section{Intersections}
+
+Given two linear functions (1) do they share any pairs?; (2) what are the common pairs?
+
+
+
+If $f$ and $g$ are two linear functions and they shared the pair $(a, b)$, then we would have $f(a)=b$ and $g(a)=b$.  Their graphs would share a point. The lines would intersect. Since each linear function corresponds to exactly one line, it might be benefitial to think geometrically.  
+
+How can two lines intersect?
+
+\begin{example} One Point 
+
+Two lines can interesect in exactly one point.
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        \addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(5.333,-1.333)};
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {0.5*x-4};
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:8),<->] {-x+4};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\end{example}
+
+One point of intersection is probably theusual expectation.
+
+
+
+The other two possibilities are more uncommon.
+
+
+
+
+
+
+
+
+
+\begin{example} No Intersection 
+
+Parallel lines would not intersect.
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {-x-3};
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:8),<->] {-x+3};
+
+        %\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(16/3,-4/3)};
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,-1)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Distinct linear functions with the same rate-of-chage cannot share any pairs.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Everywhere 
+
+Two lines that were in fact the same line, would intersect at every point, becasue they are the same line.
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {x-1};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+While this is completely obvious when examining graphs, it might not be so obvious during an algebraic investigation.
+
+It might be immediate clear that $L(k) = \frac{4}{3}k - \frac{8}{5}$ and $p(h) = \frac{4(5h-6)}{15}$ are in fact the same linear function and share every pair.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\section{Proof}
+
+
+
+Linear functions can share no pairs, exactly $1$ pair, or all of their pairs.  Is that it?  Our intuition tells us that the graph of a line cannot turn around and have a second intersection point.  But, that is far from a convincing argument.  Perhaps the graphs do not show enough and our intuition is wrong.  
+
+How do we convince people that this is true, without say "trust me"?
+
+Graphing and geometry are excellent tools for believing, but when you need an argument that accounts for EVERYTHIUNG, then you need algebra.  Algebra helps us make sure we have accounted for EVERYTHING.  These types of desciptions, that account for everything, are called \textbf{proofs}.
+
+
+
+\begin{explanation} Proof 
+
+
+Let $f(x) = m_1 x + b_1$ and $g(x) = m_2 x + b_2$ be two linear functions with domain $(-\infty, \infty)$. \\
+Suppose they share a pair. Let's call it $(T, R)$.
+
+Then we have 
+
+\begin{itemize}
+\item $f(T) = m_1 T + b_1$
+\item $g(T) = m_2 T + b_2$
+\end{itemize}
+
+If they share this pair, then $f(T) = g(T)$, which gives us
+
+\[     m_1 T + b_1 =  m_2 T + b_2  \]
+
+
+What are all of the possibilities?
+
+
+\text{case 1:}  $m_1 \ne m_2$ \\
+
+If the rates-of-change are different then we can solve for $T$.
+
+\[     m_1 T - m_2 T =  b_2 -b_1 \]
+
+
+\[     T =  \frac{b_2 -b_1}{m_1 - m_2}  \]
+
+This fraction is valid since the denominator does nto eqaual $0$.  Therefore, $T$ has one value.  We can one pair in commone.  We have one point of intersection for the corresponding lines.
+
+
+
+\text{case 2:}  $m_1 = m_2$ \\
+
+What are all of the possibilities?
+
+So, we have $m_1 = m_2$.  Setting $f(T) = g(T)$ gives us 
+
+
+
+\[     m_1 T - m_1 T =  b_2 - b_1 \]
+
+
+\[     0 T =  b_2 - b_1 \]
+
+
+What values of $T$ make this true?
+
+
+\begin{itemize}
+\item If $b_2 \ne b_1$, then no value of $T$ will make the equation true.  We have parallel lines with no intersection.
+
+\item If $b_2 = b_1$, then we have $0 T =  0$ and every value of $T$ will make the equation true.  In this case, we have $m_1 = m_2$ and $b_1 = b_2$.  We have the same function and the same line.
+\end{itemize}
+
+
+
+And, that is ALL of the possibilities.  That is a proof.
+
+
+\begin{itemize}
+\item Two linear functions have one pair in common. Their lines have exactly one intersection point, or
+
+\item Two linear functions share no pairs and their lines are parallel, or
+
+\item Two linear functions are the same function and have the same line.
+
+
+
+\end{itemize}
+
+
+
+
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+\section{Systems of Linear Equations}
+
+The thinking above is part of a larger idea in which there are multiple equations and you are looking for a common solution - a solution they share.
+
+A group of equations is commonly called a \textbf{system}. They are commonly written together with the equal signs aligned.
+
+The system might include two equations with two variables.
+
+\begin{align*}
+2x & = 3y + 5 \\
+4x & = 7y + 11
+\end{align*}
+
+
+
+The system might include two equations with three variables.
+
+\begin{align*}
+2x & = 3y - 3z + 5 \\
+4x & = 7y - z - 7
+\end{align*}
+
+
+
+
+The system might include three equations with three variables.
+
+\begin{align*}
+2x & = 3y - 3z + 5 \\
+4x & = 7y - z - 7 \\
+x & = y - z + 2 
+\end{align*}
+
+
+A systemn of linear equations can have any number of equations with any number of variables.  The study of these types of systems is called \textbf{Linear Algebra}.
+
+For us, solving the system - identifying the common solutions - always uses the same thinking - EQUALS.
+
+
+
+\begin{fact} Replacement
+
+You can replace equal things with equal things and get equal things.
+
+\end{fact}
+
+
+\begin{fact} Operations
+
+You can do the same thing to equal things and get equal things.
+
+\end{fact}
+
+
+
+
+
+
+\begin{example} Solve System
+
+
+Solve the system
+\begin{align*}
+2x & = 3y + 5 \\
+4x & = 7y + 11
+\end{align*}
+
+
+We have $2x = 3y + 5$, therefore we can multiply both sides by $2$ to get $4x = 6y + 10$
+
+\begin{align*}
+4x & = 6y + 10 \\
+4x & = 7y + 11
+\end{align*}
+
+
+We now have two expressions both equal to $4x$, they must, themselves, be equal.
+
+
+\[   6y + 10 =  7y + 11   \]
+
+We can subtract $6y$ from both sides and subtract $11$ from both sides
+
+
+\[   -1 =  y   \]
+
+
+
+We now know that $y=-1$ and we know that $4x = 7y + 11$.  That tell us that 
+
+
+\[   4x = 7(-1) + 11   \]
+
+\[   4x = 4   \]
+
+
+$x = 1$
+
+
+Our common solution to the two original equations is $x = 1$ and $y = -1$.  You you graphed the two lines, then $(1, -1)$ would be the intersection point.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{example}
 
 
 

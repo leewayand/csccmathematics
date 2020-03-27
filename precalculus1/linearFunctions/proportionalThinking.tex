@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Thinking Proportional}
+\title{Proportional Reasoning}
 
 \begin{document}
 
@@ -13,7 +13,88 @@ similarity
 
 
 
-proportions
+When two quantities are \textbf{proportional}, then they are connected by a linear function of the form $f(x) = m x$.  The ratio of corresponding amounts is a constant: $\frac{f(x)}{x} = m$.   
+
+The graph is a line going through the origin with slope $m$.  This means that the ratio of change is also a constant - the same constant $\frac{\Delta f(x)}{\Delta x} = m$. 
+
+The value of one quantity is always the same multiple of the other quantity.
+
+
+
+
+\begin{example}
+In a simple circuit with a fixed resistor, the flow of current through the resistor, $I$, and the voltage drop across the resistor, $V$, are proportial.
+
+\[   V = R I  \]
+
+Here the rate-of-change is the resistance, $R$.  It is the multiplier.   When the current changes, that change is multiplied by $R$ giving the corresponding change in voltage $V$.
+
+
+\end{example}
+
+
+
+
+
+
+
+We can also change multiple proportions together.
+
+
+
+\begin{example}
+
+Water rushes through a turbine, which turns a generator to make electricity. The water posses potential energy, but not all of this energy is transmitted through the turbine.  The turbine has an 86\% efficiency. The energy is the processed through the generator at an efficiency 92\%.
+
+Suppose the generator produces $864 \, gigaJoules$ of energy in the form  of electricity.  What amount of energy did the water originally hold?
+
+
+We have two proportions:
+
+\begin{itemize}
+\item $T = 0.86 W$
+\item $G = 0.92 T$
+\end{itemize} 
+
+Combining these gives 
+\[   G = 0.92 T = 0.92 0.86 W   \]
+
+\[   864 \, gigaJoules = 0.92 0.86 W    \]
+
+
+\[   1092 \, gigaJoules = W    \]
+
+
+
+
+
+\end{example}
+
+
+Written in function language, the two proportions would have looked like
+
+\begin{itemize}
+\item $T(W) = 0.86 W$
+\item $G(T) = 0.92 T$
+\end{itemize} 
+
+And, the chaining would have look like, $G(T(W)) = 0.92 (0.86 W))$.  In the function world, this is known as \textbf{composition}.
+
+
+
+
+
+
+
+
+
+
+
+
+inverse
+
+
+change
 
 
 

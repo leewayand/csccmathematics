@@ -25,24 +25,110 @@ No matter which two numbers you select from the domain of $L$, the rate-of-chang
 
 
 
-\begin{example} \textit{nonLinear}
+\begin{example} \textit{Constant Rate-of-Change}
 
-\end{example}
 
 Suppose $f$ is a function, which contains the pairs $(3, 7)$, $(5, 17)$, and $(6, 23)$.
 
 
-The rate-of-change from $(3, 7)$ to $(5, 17)$ is $\answer{5}$.
+The rate-of-change from $3$ to $5$ is $\answer{5}$.
 
-The rate-of-change from $(5, 17)$ to $(6, 23)$ is $\answer{6}$.
+The rate-of-change from $5$ to $6$ is $\answer{6}$.
 
 $f$ is a linear function.
 \begin{multipleChoice}
-\choice {Yes}
-\choice [correct]{No}
+\choice {True}
+\choice [correct]{False}
 \end{multipleChoice}
 
 
+\end{example}
+
+
+
+\section{A Formula}
+
+Let $L$ be a linear function.  That means it has is own constant rate-of-chnage.  Let's call it $m$. \\
+
+Let $(a, b)$ be one specific point in the domain of $L$.\\
+
+
+Let $(x, y)$ represent any other pair in the funciton $L$. Then the rate-of-change from $(a,b)$ to $(x, y)$ has to equal $m$.
+
+
+\[  \frac{y - b}{y-a} = m \]
+
+However, since $(a, b)$ is a pair in $L$, we know that $b = L(a)$.  And, since $(x, y)$ is a pair in $L$, we know that $y = L(x)$.  Repacing these in the equation for constant slope gives
+
+
+\[  \frac{L(x) - L(a)}{y-a} = m \]
+
+Solving this for $L(x)$ gives
+
+\[  L(x) = m (x-a) + L(a)     \]
+
+
+
+
+
+
+
+
+\begin{example} \textit{A pair and a rate-of-change}
+
+
+Suppose $W$ is a linear function with constant rate-of-change equal to $5$ and $(3, -1)$ is one pair in $W$.
+
+Then the template: $L(x) = m (x-a) + L(a)$ tell us that a formula for $W$ is 
+
+
+\[  W(x) = 5 (x-3) + (-1)     \]
+
+
+\[  W(x) = 5 (x-3) - 1     \]
+
+We could multiply this out and collect like terms and obtain the equivalent equation
+
+
+\[  W(x) = 5x - 16   \]
+
+
+Perhaps, we do not like $x$ as the variable for our formula.  Perhaps $v$ suits our situation better.
+
+\[  W(v) = 5v - 16   \]
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example} \textit{Two Pairs}
+
+
+Suppose $g$ is a linear function with $(0, 6)$ and $(-2, -5)$ as two pairs in $W$.
+
+Then the template: $L(x) = m (x-a) + L(a)$ will need a rate-of-change
+
+
+
+\[  m = frac{-5 - 6}{-2 - 0} = \frac{-11}{-2} = \frac{11}{2}  \]
+
+A formula for $g$ is
+
+
+\[  g(t) = \frac{11}{2} (t-0) + 6     \]
+
+
+\[  g(t) = \frac{11}{2} t + 6    \]
+
+
+
+\end{example}
 
 
 
@@ -53,8 +139,98 @@ $f$ is a linear function.
 
 
 
+\section{A Graph}
 
 
+
+
+A linear function has a line as its graph.  The line includes points for every pair in the function.  And, since it is a line, only two points are needed to draw the graph.  Any two points will do.
+
+
+
+
+
+\begin{example} \textit{A Line}
+
+
+Let $g(k) = 0.5k - 4$ be a linear function.  Let's select two random domain numbers: $-4$ and $6$.  The function values at these domain numbers are $g(-4) = -6$ and $g(6) = -1$.  Therefore, the points $(-4, -6)$ and $(6, -1)$ are on the graph, which is a line.  We'll plot the two points and draw a line through them.
+
+
+Below is the graph of $y=g(k)$.
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$k$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {0.5*x-4};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-6)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,-1)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} \textit{A Line}
+
+
+Let $B(t)$ be a linear function.    Below is the graph of $y = B(t)$.
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$t$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:8),<->] {(3/2)*x-5};
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-6)};
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,-1)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+From the graph we can approximate the points $(0, -5)$ and $(3.3, 0)$.  These give a slope of
+
+\[  slope = \frac{0 - (-5)}{3.3 - 0} \approx 1.5     \]
+
+
+This would give the formula $B(t) = 1.5 (t - 0) - 5 = 1.5 t - 5$
+
+
+\end{example}
 
 
 
