@@ -14,6 +14,179 @@ inverse square law
 
 
 
+This section is just to set the scene.  Below is some information to make the rest of the section believable. 
+
+
+
+
+\section{Newton}
+
+Newton's law of gravitation is an inverse square law
+
+\[ F_g = \frac{G m_1 m_2}{r^2}    \]
+
+
+
+
+where $G = 6.67 \times 10^{-11} \frac{m^3}{kg \cdot s^2}$ is the gravitational constant. \\
+
+
+$F_g$ is the gravitational force between point-masses $m_1$ and $m_2$, which are a distance $r$ apart. \\
+
+
+
+This tells us that the gravity we feel from the Earth is given by
+
+
+\[ g = \frac{F_g}{m_1}  = \frac{G m_e}{(r_e)^2}    \]
+
+
+\[ g = \frac{(6.67 \times 10^{-11} \frac{m^3}{kg \cdot s^2}) \cdot (5.972 \times 10^{24} kg)}{(6356 km)^2} = 9.81 \frac{m}{s^2}   \]
+
+
+This is the acceleration we feel on Earth.  Compared to the Earth's radius we don't add very much height (or weight), so we can consider $r$ to be constant for most of our investigations.  That means, for most of our investigations, the acceleration due to the Earth can be considered a constant.
+
+
+
+
+\section{Calculus}
+
+This requires a bit of trust.  \\
+
+In this course we have worked with the average rate-of-change over an interval.  Calculus expands upon this and develops the idea of the instantaneous rate-of-change of a function.This better known as the derivative.  
+
+The derivative of distance with respect to time is velocity or speed. \\
+
+The derivative of velocity with respect to time mis acceleration and above we found out that the Earth's gravitation acceleration is a constant (for the most part).
+
+
+Working Calculus backwards we get
+
+
+\[ a(t) = 9.81 \frac{m}{s^2}  \]
+
+
+\[ v(t) = v_0 - 9.81 t  \]
+
+
+\[ h(t) = s_0 + v_0 t - \frac{9.81}{2} t^2  \]
+
+
+
+$v_0$ is the initial velocity for a projectile thrown into the air. \\
+
+$h_0$ is the initial height for a projectile thrown into the air. \\
+
+$h(t)$ is height as a function of time.  Seconds is the domain measurement and meters is the range measurement.
+
+
+
+
+\section{Projectile Motion}
+
+
+Actually, all of those quantities are vectors.  
+
+\begin{example}
+\item There is a vertical position, a vertical velocity, and a vertical acceleration
+\item There is a horizontal position, a horizontal velocity, and a horizontal acceleration
+\end{example}
+
+
+
+Both the vertical, $y$, and horizontal, $x$, components of position are functions of time.
+
+We have already seen this equation for the height of a projectile.
+\[ h_y(t) = s_{y0} + v_{y0} t - \frac{9.81}{2} t^2  \]
+
+Horizontal motion isn't effected by the Earth's gravity, since gravity is a downward acceleration. Therefore, the horizontal distance is just affected by the initial horizontal velocity.
+
+
+\[ d_x(t) = s_{x0} + v_{x0} t  \]
+
+
+
+
+
+
+
+
+\section{Parabolas}
+
+Parabolas are geometric curves.  They are defined as the collection of points which are equidistant from a point, called the textbf{focus}, and a line, called teh \textbf{directrix}.  In the diagram below,  we have rotated out viewpoint so that the directrix is hte horizontal line $y = c$ and the focus is $(0,c)$.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+
+	
+        \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0,3)};
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {0.125*x^2};
+        \addplot [draw=gray, very thick, dashed, domain=(-8:8),<->] {-3};
+
+        \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(7,6.125)};
+        \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(7,-3)};
+
+
+        
+
+
+
+
+		\node[penColor] at (axis cs:8.5,6.125) {$(x,y)$};
+		\node[penColor] at (axis cs:7,-4) {$(x,-c)$};
+		\node[penColor] at (axis cs:-2,3) {$(0,c)$};
+
+
+        \addplot [ultra thick,penColor2] plot coordinates {(7,6.125) (7,-3)};
+        \addplot [ultra thick,penColor2] plot coordinates {(7,6.125) (0,3)};
+    
+
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+If we select a random point, $(x,y)$, on the parabola then the distance from this point to the focus has to equal the distance to the directrix.
+
+
+\[  \sqrt{x^2 + (y-c)^2} = y+c   \]
+
+
+Solving this for $y$ gives
+
+
+\[  x^2 + (y-c)^2 = (y+c)^2   \]
+
+\[  x^2 + y^2 - 2 y c + c^2 = y^2 + 2 y c + c^2   \]
+
+\[  x^2  - 2 y c  =  2 y c    \]
+
+\[  x^2   =  4 y c    \]
+
+
+The coordinates of the point on the parabola satisfy a quadratic equation.  Parabolas are the graphs of quadratic equations.
 
 
 
@@ -26,18 +199,56 @@ inverse square law
 
 
 
+\section{Projectile Trajectory}
+
+
+We have descriptions of the vertical height and the horizontal distance for a projectile under the influence of gravity.  Let's put those together and get height as a function of distance.  That will coorespond to our normal experience standing on the ground watching a projectile fly.
+
+
+\begin{itemize}
+\item $h_y(t) = s_{y0} + v_{y0} t - \frac{9.81}{2} t^2$
+
+
+\item $d_x(t) = s_{x0} + v_{x0} t$
+\end{itemize}
 
 
 
 
+First, let's go back to our separate equations and let's just assume we are firing the projectile off the ground.  Then our initial position will be $0$.  
+
+And, let's use the more common symbol $g$, for the acceleration due to gravity, $g = \frac{9.81}{2}$.
 
 
 
 
+\begin{itemize}
+\item $y = v_{y0} t - g \, t^2$
+
+
+\item $x = v_{x0} t$
+\end{itemize}
+
+
+We'll solve for $t$ in the horizonal equation.
+
+
+\[ t = \frac{x}{v_{x0}} \]
+
+We'll substitute this into the vertical equation.
+
+
+\[  y = v_{y0} \, \frac{x}{v_{x0}} - g \left(\frac{x}{v_{x0}}\right)^2  \]
 
 
 
+\[  y = \frac{v_{y0}}{v_{x0}} \, x  - \frac{g}{(v_{x0})^2} \, x^2 \]
 
+
+
+A quadratic! 
+
+The projectile follows a parabola tractory.
 
 
 
