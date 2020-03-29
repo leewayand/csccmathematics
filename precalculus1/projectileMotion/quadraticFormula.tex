@@ -1,0 +1,433 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Quadratic Forms}
+
+\begin{document}
+
+\begin{abstract}
+zeros
+\end{abstract}
+\maketitle
+
+
+
+We have seen that the trajectories of projectiles are described by quadratic equations.  In fact, quadratic equations and formulas are used everywhere.
+
+
+\begin{itemize}
+\item \link[101 Uses of a Quadratic Equation Part 1]{https://plus.maths.org/content/101-uses-quadratic-equation}
+\item \link[101 Uses of a Quadratic Equation Part 2]{https://plus.maths.org/content/101-uses-quadratic-equation-part-ii}
+\end{itemize}
+
+
+
+
+
+
+
+\section{Quadratic Functions}
+
+
+\begin{definition}
+\textbf{Quadratic functions} are functions which can be described with a formula of the form
+
+\[  Q(t) = a \, t^2 + b \, t + c  \]
+
+where $a$, $b$, and $c$ are real numbers with $a \ne 0$
+
+
+
+\begin{itemize}
+\item $a$ is called the \textbf{leading coefficient} 
+\item $a \, t^2$ is called the \textbf{leading term} 
+\item $b \, t$ is called the \textbf{linear term} 
+\item $c$ is called the \textbf{constant term} 
+\end{itemize}
+
+\end{definition}
+
+
+
+
+As we have seen the graph of a quadratic equation is a parabola. The sign of the leading coefficient determines if the parabola opens up or down.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-7:-1),<->] {0.5*(x+4)^2 -2};
+        \addplot [draw=penColor2, very thick, smooth, domain=(1:9),<->] {-0.5*(x-5)^2 +3};
+
+        
+
+		\node[penColor] at (axis cs:-6.5,6.125) {$0.5 x^2 + 4 x + 6$};
+		\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\section{Analysis}
+
+What do we want to know when we analyze functions?
+
+We want to know the domain, range, zeros, intervals of increasing and decreasing, global maximum and minimum, local maximums and minimums, discontinuities, singularities, symmetry, endbehavior, and a nice graph.
+
+
+
+\textbf{Domain and Range} \\
+
+The implied domain of a quadratic function is all real numbers.  Any quadratic funciton could come with a stated domain that restricted this.
+
+From the graphs above we can see that the implied range of a quadratic comes in two types.  
+
+\begin{itemize}
+\item The range could be all real numbers greater than or equal to some particular.
+\item The range could be all real numbers less than or equal to some particular.
+\end{itemize}
+
+If there is a stated domain, then the range will be restricted similarly.
+
+
+
+
+\textbf{Zeros} \\
+
+Zero has a unique property appropriately named as the \textbf{zero product property}.  
+
+
+
+\begin{fact} \textit {Zero Product Property}
+
+If $a$ and $b$ are real numbers and $a\cdot b = 0$, then either $a=0$ or $b=0$.
+
+\end{fact}
+
+
+Zero is the ONLY number with such an identifiable test, therefore, we use it...A LOT! 
+
+
+Unless we happen to know something special, when solving equations our general approach is to set everything equal tp zero and then chnage the expression into a product.  This process is called \textbf{factoring}.  The whole idea is to make our situation look like the zero product property.
+
+Thus, it comes as no surprise that identifying zeros of functions is a top priority.  Factoring is a top priority.
+
+As we can see from the graph below, quadratics can have $0$, $1$, or $2$ real zeros.  How do we find them?
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-4),<->] {2*(x+6)^2 + 2};
+        \addplot [draw=penColor2, very thick, smooth, domain=(-1:3),<->] {2*(x-1)^2 };
+        \addplot [draw=penColor4, very thick, smooth, domain=(5:9),<->] {2*(x-7)^2 - 3};
+        
+
+		%\node[penColor] at (axis cs:-6.5,6.125) {$0.5 x^2 + 4 x + 6$};
+		%\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\section{Completing the Square}
+
+Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they are to different degrees. They cannot be combined to leave just one occurrence.
+
+Therefore, an idea is to rearrange the quadratic expression so that there is only one occurrence of hte varible.  This process is called \textbf{completing the square}.
+
+The idea is to rearrange  $0 = a \, t^2 + b \, t + c$ to look like $0 = A \, (t-B)^2 + C$.  Then there will only be  one occurrence of the $t$ and we can solve for it.
+
+
+To accomplish this, we need to investigate $A \, (t-B)^2 + C$. For the moment, let's multiply it back out.
+
+
+\begin{align*}
+A \, (t-B)^2 + C & = A \, (t-B)(t-B) + C \\
+& = A \, (t^2 - 2 t B + B^2) + C  \\
+& = A \, t^2 - 2 t A B + A \, B^2 + C
+\end{align*}
+
+This last line $A \, t^2 - 2 t A B + A \, B^2 + C$ should turn out to be $a \, t^2 + b \, t + c$, our original quadratic.
+
+The only way that is going to happen is if $A = a$. As long as we know $A = a$, then let's start over.
+
+\textbf{Step 1}  Factor out the leading coefficent.
+
+
+Starting over...starting with a leading coefficient of $1$...
+
+
+
+We want to complete the square on $t^2 + b \, t + c$.  When the leading coefficent is $1$, then we call this quadratic \textbf{monic}.
+
+
+
+\begin{align*}
+(t-B)^2 + C & = (t-B)(t-B) + C \\
+& = t^2 - 2 t B + B^2 + C  \\
+& = t^2 - 2 t B +  B^2 + C
+\end{align*}
+
+
+This last line $t^2 - 2 t B + B^2 + C$ should turn out to be $t^2 + b \, t + c$.
+
+
+
+The leading term is $1$ in both. Now, the linear terms need to be the same: $ - 2 t B = b \, t$.  That tells us that $B = \frac{b}{-2}$.
+
+
+To complete the square with a monic quadratic, we need $B = \frac{b}{-2}$.  Let's put that in.
+
+
+$t^2 - 2 t B + B^2 + C = t^2 - 2 t \frac{b}{-2} + \left(\frac{b}{-2}\right)^2 + C = t^2 + b t + \left(\frac{b}{-2}\right)^2 + C$
+
+
+We want this to be $t^2 + b \, t + c$. \\
+
+leading terms match...check \\
+linear terms match...check \\
+
+Now there is a mess for the constant term.  We have $\left(\frac{b}{-2}\right)^2 + C$, when we just wanted $c$.  Then let's just pick $C$ to be $-\left(\frac{b}{-2}\right)^2 + c = -\left(\frac{b}{2}\right)^2 + c$
+
+
+
+Whew!
+
+Let's see some examples
+
+
+
+
+
+
+
+
+\begin{procedure} \textit{Completing the Square}
+
+
+
+Completing the square on $2 \, t^2 + 4 \, t + 6$.
+
+
+\textbf{Step 1} Factor out the leading coefficent, $2$. \\
+
+\[     2 \, t^2 + 4 \, t + 6 = 2 (t^2 + 2 \, t + 3)   \] 
+
+
+Now we have a monic to work with inside the parentheses. Let's move inside the parentheses.
+
+\[ t^2 + 2 t + 3 \]
+
+Take half of the linear coefficient, $\frac{2}{2} = 1$, squre that $1^2 = 1$, and add and subtract it, so thatwe have just added $0$ to the expression and nbt changed its value.
+
+
+\[ t^2 + 2 t + 1 - 1 +3 \]
+
+
+Now, group.
+
+\[ (t^2 + 2 t + 1)- 1 +3 \]
+
+the grouped part is a square.
+
+\[ (t+1)^2- 1 +3 \]
+
+\[ (t+1)^2 + 2 \]
+
+Remember, this was inside parentheses.
+
+\[     2 \, t^2 + 4 \, t + 6 = 2 (t^2 + 2 \, t + 3)  = 2 ((t+1)^2 + 2) =  2 (t+1)^2 + 4\] 
+
+
+$2 (t+1)^2 + 4$ is the completed square form of $2 \, t^2 + 4 \, t + 6$
+
+
+\end{procedure}
+
+
+
+\begin{example} \textit{Solving a Quadratic Equation}
+
+Solve $4 \, t^2 - 4 t - 8 = 0$ \\
+
+
+First complete the square.
+
+
+
+\[ 4 t^2 -  4 t - 8 = 0 \]
+
+\[ 4 (t^2 - t - 2) = 0 \]
+
+\[ 4 (t^2 - t + \frac{1}{4} - \frac{1}{4} - 2) = 0 \]
+
+
+\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right) = 0 \]
+
+
+\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right) = 0 \]
+
+\[ 4 \left(t - \frac{1}{2}\right)^2 - 1 - 8 = 0 \]
+
+\[ 4 \left(t - \frac{1}{2}\right)^2 - 9 = 0 \]
+
+
+One occurrence of $t$, good. Now to get $t$ by itself.
+
+
+\[ 4 \left(t - \frac{1}{2}\right)^2 = 9  \]
+
+\[  \left(t - \frac{1}{2}\right)^2 = \frac{9}{4}  \]
+
+The only way this can happen is if \\
+
+
+
+either   $t - \frac{1}{2} = \frac{3}{2}$  or  $t - \frac{1}{2} = -\frac{3}{2}$ \\
+
+The first choice gives us $t = 2$ and the second choice gives us $t = -1$
+
+
+
+Let's check those solutions.
+
+\begin{itemize}
+\item $4 (2)^2 - 4 (2) - 8 = 0$ ... check
+\item $4 (-1)^2 - 4 (-1) - 8 = 0$ ... check
+\end{itemize}
+
+
+
+We have already seen that a quadratic equation can have at most two solutions.  So, we must have all of the solutions.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+\section{The Quadratic Formula}
+
+
+After stepping through the procedure of completing the square, we could have continued, like we did in the example, and solved for $t$.
+
+
+Completing the square gave us 
+\[ a t^2 + b t + c = a(t + \frac{b}{2 a})^2 + c - \frac{b^2}{4 a^2} \]
+
+
+Now, pretend this was equal to $0$ in a quadratic equation.
+
+\[ a(t + \frac{b}{2 a})^2 + c - \frac{b^2}{4 a^2}  = 0\]
+
+Solve for $t$.
+
+
+\[ a(t + \frac{b}{2 a})^2  = \frac{b^2}{4 a^2} - c\]
+
+\[ (t + \frac{b}{2 a})^2  = \frac{b^2}{4 a^2} - \frac{c}{a}\]
+
+\[ (t + \frac{b}{2 a})^2  = \frac{b^2 - 4 a c}{4 a^2} \]
+
+
+
+Either 
+
+
+\[ t + \frac{b}{2 a}  = \sqrt{\frac{b^2 - 4 a c}{4 a^2}}  = \frac{\sqrt{b^2 - 4 a c}}{2a}   \]
+
+or
+
+
+\[ t + \frac{b}{2 a}  = -\sqrt{\frac{b^2 - 4 a c}{4 a^2}} = -\frac{\sqrt{b^2 - 4 a c}}{2a}    \]
+
+
+And, finally \\
+
+
+
+Either 
+
+
+\[ t   = - \frac{b}{2 a} + \frac{\sqrt{b^2 - 4 a c}}{2a}  = \frac{-b + \sqrt{b^2 - 4 a c}}{2a}      \]
+
+or
+
+
+\[ t  = - \frac{b}{2 a}  -\frac{\sqrt{b^2 - 4 a c}}{2a} =    \frac{-b - \sqrt{b^2 - 4 a c}}{2a}      \]
+
+
+
+
+People generally shorthand these two separate solutions as
+
+
+
+\[ t  =   \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}      \]
+
+
+This is know as \textbf{The Quadratic Formula}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
