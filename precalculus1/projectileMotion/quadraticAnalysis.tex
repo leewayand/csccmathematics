@@ -15,25 +15,84 @@ behavior
 
 
 
+\section{Analysis}
+
+What do we want to know when we analyze functions?
+
+We want to know the domain, range, zeros, intervals of increasing and decreasing, global maximum and minimum, local maximums and minimums, discontinuities, singularities, symmetry, endbehavior, and a nice graph.
+
+For a quadratic function much of this information is connected to vertex of the graph.
+
+
+
+
+
+
+
+\textbf{Vertex} \\
+
+The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula.
+
+Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$,and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola would have opened downward and the extreme point would be at the top.
 
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
-            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
-            	every axis y label/.style={at=(current axis.above origin),anchor=south},
-            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            	axis on top,
-          		]
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-7:-1),<->] {0.5*(x+4)^2 -2};
-        \addplot [draw=penColor2, very thick, smooth, domain=(1:9),<->] {-0.5*(x-5)^2 +3};
-
+        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {2*(x-3)^2 - 4};
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
         
 
-		\node[penColor] at (axis cs:-6.5,6.125) {$0.5 x^2 + 4 x + 6$};
-		\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+        \node[penColor] at (axis cs:5,-4) {$(h, k))$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The vertex visually encodes the  minimum (or maximum) value of the function. 
+
+We can see from the formula $f(x) = a (x - h)^2 + k$, that since $x - h)$ is squared and $a>0$, the value of $f(x)$ is greater than or equal to $k$. This corresponds to the graph opening up.  That makes the vertex $(k, h)$.
+
+
+If $a<0$, then everything is reveresed.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {-2*(x-3)^2 + 4};
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,4)};
+        
+
+
+        \node[penColor] at (axis cs:5,4) {$(h, k))$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
 
 
 
@@ -42,23 +101,19 @@ behavior
 \end{image}
 
 
-\section{Analysis}
-
-What do we want to know when we analyze functions?
-
-We want to know the domain, range, zeros, intervals of increasing and decreasing, global maximum and minimum, local maximums and minimums, discontinuities, singularities, symmetry, endbehavior, and a nice graph.
 
 
 
-\textbf{Vertex} \\
 
-The implied domain of a quadratic function is all real numbers.  Any quadratic funciton could come with a stated domain that restricted this.
+
+
+
 
 From the graphs above we can see that the implied range of a quadratic comes in two types.  
 
 \begin{itemize}
-\item The range could be all real numbers greater than or equal to some particular.
-\item The range could be all real numbers less than or equal to some particular.
+\item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \}$.
+\item The range could be all real numbers less than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \leq k \}$.
 \end{itemize}
 
 If there is a stated domain, then the range will be restricted similarly.
@@ -66,7 +121,63 @@ If there is a stated domain, then the range will be restricted similarly.
 
 
 
+
+
+\textbf{Symmetry} \\
+
+
+If we take two domain numbers equidistant from $h$, like $h - \epsilon$ and $h + \epsilon$, and evaluate $f(x)$ at these two numbers we get the same value.
+
+
+\begin{align*}
+f(h - \epsilon) & = a (h - \epsilon - h)^2 + k \\
+& = a (-\epsilon)^2 + k  \\
+& = a (\epsilon)^2 + k  \\
+& = a (h + \epsilon - h)^2 + k \\
+& = f(h + \epsilon)
+\end{align*}
+
+
+The graph is symmetric about the line $x = h$.
+
+
+When developing the quadratic formula, we had the opportunity to complete the square and that gave us a squared term that looked like 
+
+\[  a \, \left(x - \frac{b}{2a}\right)^2       \]
+
+
+The domain coordinate of the vertex is $h = \frac{b}{2a}$.
+
+
+The graph is symmetric about the line $x = \frac{b}{2a}$.
+
+
+
+
+
+
+The zeros must also be symmetric about $\frac{b}{2a}$, which we can see in the quadratic formula.
+
+
+
+
+
 \textbf{Zeros} \\
+
+The quadratic formula is
+
+\[ t  =   \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}      \]
+
+
+
+which we can separate into 
+
+
+
+\[ t  =   \frac{b}{2a} \pm \frac{\sqrt{b^2 - 4 a c}}{2a}      \]
+
+
+to see that the zeros are symmetric about $\frac{b}{2a}$ and the intercepts are symmetric about the line $x = \frac{b}{2a}$.
 
 
 
@@ -75,21 +186,25 @@ If there is a stated domain, then the range will be restricted similarly.
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
-            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
-            	every axis y label/.style={at=(current axis.above origin),anchor=south},
-            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            	axis on top,
-          		]
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-8:-4),<->] {2*(x+6)^2 + 2};
-        \addplot [draw=penColor2, very thick, smooth, domain=(-1:3),<->] {2*(x-1)^2 };
-        \addplot [draw=penColor4, very thick, smooth, domain=(5:9),<->] {2*(x-7)^2 - 3};
+        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {-2*(x-3)^2 + 4};
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,4)};
+
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(1.585,0)};
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(4.414,0)};
         
 
-		%\node[penColor] at (axis cs:-6.5,6.125) {$0.5 x^2 + 4 x + 6$};
-		%\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+        %\node[penColor] at (axis cs:5,4) {$(h, k))$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
 
 
 
@@ -101,6 +216,28 @@ If there is a stated domain, then the range will be restricted similarly.
 
 
 
+Working backwards, we can see that if we have the zeros, like from factoring, then we have the intercepts, and the \textbf{line of symmetry} must run in the middle.
+
+
+
+
+
+\section{Increasing and Decreasing}
+
+
+
+We can see from the graph that a quadratic function switches from increasing to decreasing at the symmetric number in the domain.
+
+
+\begin{itemize}
+\item If the graph is opening up, then the function is \\
+
+decreasing on $\left( -\infty, \frac{b}{2a} \right)$ and increasing on $\left( \frac{b}{2a}, \infty \right)$
+
+\item If the graph is opening down, then the function is \\
+
+increasing on $\left( -\infty, \frac{b}{2a} \right)$ and decreasing on $\left( \frac{b}{2a}, \infty \right)$
+\end{itemize}
 
 
 
@@ -110,6 +247,28 @@ If there is a stated domain, then the range will be restricted similarly.
 
 
 
+
+
+\section{Maximum and Minimum}
+
+
+The maximum and minimum values of a function are visually encoded in the highest and lowest points on the  graph, which is teh vertex here.
+
+Depending on the sign of $a$, the maximum or minimum value of $f(x) = a \, x^2 + b \, x + c$ occurs at $\frac{b}{2a}$. The maximum or minimum value is $f\left( \frac{b}{2a} \right)$
+
+
+Depending on the sign of $a$, the maximum or minimum value of $f(x) = a \, (x - h)^2 + k$ is $k$ and occurs at $h$. 
+
+
+
+
+
+
+
+\section{Discontinuities}
+
+
+A quaadratic function has no discontinuities.  It is continuous for all real numbers.
 
 
 
@@ -121,3 +280,7 @@ If there is a stated domain, then the range will be restricted similarly.
 
 
 \end{document}
+
+
+
+
