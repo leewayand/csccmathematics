@@ -7,13 +7,346 @@
 \begin{document}
 
 \begin{abstract}
-movement
+equations
 \end{abstract}
 \maketitle
 
 
 
-Piecewise functions are defined by using pieces of other functions.
+
+
+Below are two piecewise defined functions and their graphs: $V(h)$ an $K(m)$. 
+
+
+
+
+
+
+
+\[
+V(h) = 
+\begin{cases}
+  -2h-3 & \text{ if } [-6, -2]   \\
+  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
+  \frac{7h}{4} - 8 & \text{ if } (4,8)
+\end{cases}
+\]
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=V(h)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {1.75*x-8};
+
+
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\[
+K(m) = 
+\begin{cases}
+  m+4 & \text{ if } (-7, 0]   \\
+  m^2-7m+9 & \text{ if } (1,6]
+\end{cases}
+\]
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$m$, ylabel={$y=K(m)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(-7:0)] {x+4};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
+
+
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-7,-3)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,4)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,3)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};
+
+       
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Find the points of intersection.
+
+
+From the graphs there appear to be three points of intersection.
+
+\section{First Point}
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$m$, ylabel={$y=K(m)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(-7:0)] {x+4};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
+
+
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-7,-3)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,4)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
+
+       
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\[ -2x-3 =   x+4       \]
+
+
+\[ -3x =  7      \]
+
+\[ x =  \frac{7}{-3}      \]
+
+
+Check....
+\begin{itemize}
+\item $V(\tfrac{7}{-3}) = -2 \cdot \tfrac{7}{-3} - 3 = \tfrac{14}{3} - \tfrac{9}{3} = \tfrac{5}{3}$
+\item $K(\tfrac{7}{-3}) =   \tfrac{7}{-3} + 4 =  \tfrac{7}{-3} + \frac{12}{3} = \tfrac{5}{3} $
+\end{itemize}
+
+
+The intersection point is $\left(\frac{7}{-3}, \frac{5}{3}\right)$.
+
+
+
+
+
+
+
+
+\section{Second Point}
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=V(h)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
+
+
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,3)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
+
+		
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\[    -(t+3)(t-3) = t^2 - 7 t + 9             \]
+
+\[    -t^2 + 9 = t^2 - 7 t + 9             \]
+
+\[   = 2 t^2 - 7 t  = t (2t - 7)          \]
+
+
+This gives two solutions, $0$ and $\frac{7}{2}$.  
+
+However, The formula for $0$ in $K$ is not $m^2 - 7m + 9$.  After considering the domains of $V$ and $H$, the only solution here is $\frac{7}{2}$.
+
+
+
+
+
+
+Check....
+\begin{itemize}
+\item $V(\tfrac{7}{2}) = -\left(\tfrac{7}{2} + 3\right) \left(\tfrac{7}{2} - 3\right) = -\tfrac{13}{2}  \cdot \tfrac{1}{2} = -\frac{13}{4}$
+\item $K(\tfrac{7}{2}) =   \left(\tfrac{7}{2}\right)^2 - 7\left(\tfrac{7}{2}\right) + 9 = -\frac{13}{4}$
+\end{itemize}
+
+
+The intersection point is $\left(\tfrac{7}{2}, -\frac{13}{4}\right)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Third Point}
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=V(h)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {1.75*x-8};
+
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
+
+
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,3)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\[    \frac{7w}{4} - 8 = w^2 - 7 w + 9             \]
+
+
+\[  0 = w^2 - \frac{35w}{4} + 17             \]
+
+
+\[   w = \frac{-(- \tfrac{35}{4}) \pm  \sqrt{(- \tfrac{35}{4})^2 - 4 \cdot 1 \cdot 17}}{2 \cdot 1}     \]
+
+
+
+\[   w = \frac{\tfrac{35}{4} \pm  \sqrt{\tfrac{137}{16}}}{2}     \]
+
+
+\[   w = \frac{35}{8} \pm  \frac{\sqrt{137}}{8}   \]
+
+
+\[   w = \frac{35 \pm \sqrt{137}}{8}    \]
+
+
+
+The graph shows us that we only have one of these solutions because the line segment doesn't extend further to the left to intercept the parabola twice.
+
+
+The only soution here is $w = \frac{35 + \sqrt{137}}{8} $.
+
+
+
+
+
+
+
+
+Check....
+\begin{itemize}
+\item $V\left(\frac{35 + \sqrt{137}}{8}\right) =  \frac{1}{32}(7 \sqrt{137} - 11)  $
+
+
+
+
+\item $K\left(\frac{35 + \sqrt{137}}{8}\right) =  \frac{1}{32}(7 \sqrt{137} - 11)  $
+\end{itemize}
+
+
+The intersection point is $\left(\frac{35 + \sqrt{137}}{8}, \frac{1}{32}(7 \sqrt{137} - 11) \right)$.
+
+
+
+
 
 
 
