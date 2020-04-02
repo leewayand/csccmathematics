@@ -12,6 +12,466 @@ power functions
 \maketitle
 
 
+In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers.  
+
+
+Given any real number, no matter what small distance you think of there is a rational number within that distance of the real number.
+
+No matter what continuous function you think of on a closed interval, there is a polynomial within that "distance" of the continuous function.
+
+This makes polynomials extremely interesting.
+
+
+
+
+
+
+\section{Power Functions}
+
+\begin{definition} \textit{Power Function}
+
+A power function is any function that can be represented with a formula of the form
+
+\[   f(x) = k x^p      \]
+
+where $k$ and $p$ are real numbers.
+
+$k$ is called the \textbf{coefficient}.
+
+
+\end{definition}
+
+
+
+When the power, $p$, is positive then we have two types of behavior.
+
+\begin{enumerate}
+\item When $p$ is even the endbehavior is the same - up or down on the graph depending on the sign of the coeeficient, $k$.
+\item When $p$ is odd the endbehavior is opposite - one side up and one side down on the graph, which switches depending on the sign of the coeeficient, $k$.
+\end{enumerate}
+
+
+\begin{image}
+\begin{tikzpicture}
+  	\begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth, domain=(-9:9), <->] {0.1*x^2};
+
+
+  	\end{axis}
+  	\begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+     	\addplot [line width=2, penColor, smooth, domain=(-4:4), <->] {0.1*x^3};
+
+           
+  	\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+When the power, $p$, is negative then we have two types of behavior. around the singularity at $0$. In either case, the endbehavior is to tend toward $0$.
+
+\begin{enumerate}
+\item When $p$ is even the behavior around the singularity is the same - up or down on the graph depending on the sign of the coeeficient, $k$.
+\item When $p$ is odd the behavior around the singularity is opposite - one side up and one side down on the graph, which switches depending on the sign of the coeeficient, $k$.
+\end{enumerate}
+
+
+\begin{image}
+\begin{tikzpicture}
+  	\begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:-0.1), <->] {0.1*x^(-2};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(0.1:9), <->] {0.1*x^(-2};
+
+
+  	\end{axis}
+  	\begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+     	\addplot [line width=2, penColor, smooth, samples=200, domain=(-9:-0.23), <->] {0.1*x^(-3)};
+     	\addplot [line width=2, penColor, smooth, samples=200, domain=(0.23:9), <->] {0.1*x^(-3)};
+
+           
+  	\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Limit Notation}
+
+
+
+In the previous descriptions, we referenced the graphs to describe the behavior around the singularity and the endbehavior.  We also need some algebraic descriptions of this behvavior.
+
+
+\textbf{Endbehavior}
+
+The domain for a power function is either all the real numbers, \textbf{R}, or all of the real numbers except $0$, $\textbf{R} \setminus 0$.  In either case we can imagine move far off to the left or right on the number line to where the domain is made up of very large positive or very large negative numbers.  When we want the reader to think of moving even further to the right we use the phrase "tending to infinity". When we want the reader to think of moving even further to the left we use the phrase "tending to negative infinity".
+
+For power functions with a negative power, the function value becomes smaller and smaller as the domain tends to positive or negative infinity.
+
+The mathematical word for this "tending" relationship is called \textbf{limit}.
+
+If we name a power functions with a negative power $f(x)$, then we see that as $x$ tends to positive infinity, the value of $f$ tends to $0$.  The algebraic way of writing this looks like
+
+
+\[    \lim_{x \to \infty} f(x) = 0,        \]
+
+
+We also have,
+
+\[    \lim_{x \to -\infty} f(x) = 0,        \]
+
+
+
+For power functions with a postive power, we have limits such as 
+
+
+
+\[    \lim_{x \to -\infty} f(x) =  \infty  \,   \text{ and }  \,     \lim_{x \to \infty} f(x) = \infty      \]
+
+
+and 
+
+\[    \lim_{x \to -\infty} f(x) =  -\infty  \,   \text{ and }  \,     \lim_{x \to \infty} f(x) = \infty      \]
+
+
+
+
+
+
+\textbf{Singularity}
+
+
+
+For a power function with a negative power we have seen that there is a singularity at $0$, where the function value heads to infinity.  THis time we want to specify the direction we are approaching $0$.  
+
+\begin{itemize}
+\item A superscript $+$ means we are approaching from the positive side or the right side.
+\item A superscript $-$ means we are approaching from the negative side or the left side.
+\end{itemize}
+
+
+Describing this with limit notation looks like
+
+
+
+
+\[    \lim_{x \to 0^-} f(x) =  \infty  \,   \text{ and }  \,     \lim_{x \to 0^+} f(x) = \infty      \]
+
+
+and 
+
+\[    \lim_{x \to 0^-} f(x) =  -\infty  \,   \text{ and }  \,     \lim_{x \to 0^+} f(x) = \infty      \]
+
+
+
+
+
+
+
+
+
+\section{Polynomial Function}
+
+
+Polynomial function are sums of power functions that do not have negative powers.
+
+
+\begin{definition} \textit{Polynomial Functions}
+
+A polynomial function is any function that can be represented with a formula of the form
+
+\[    a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
+
+where the $a_k$ are real numbers and $a_n \ne 0$.
+
+$a_k$ are called \textbf{coefficient}.
+
+
+
+\begin{itemize}
+\item $n$ is called the \textbf{degree} of the polynomial.
+\item $a_n$ is called the \textbf{leading coefficient}.
+\item $a_n x^n$ is called the \textbf{leading term}.
+\item $a_1 x^1$ is called the \textbf{linear term}.
+\item $a_0 + x^0$ is called the \textbf{constant term}.
+\item $x$ is called the \textbf{variable}.
+\end{itemize}
+
+
+\end{definition}
+
+
+
+
+\textbf{Shorthand Notation}
+
+
+Let's see some shorthand notation through an example.  We'll begin with this polynomial
+
+
+\[  1 x^7 + 1 x^6 + (-1) x^5 + 0 x^4 + 0 x^3 + 5 x^2 + (-7) x^1 + 8 x^0              \]
+
+
+
+The following shorthand notation is totally voluntary.  You are more than welcome to write this polynomial as it is written. However, people you work with may use the shorthand notation, so you should be familiar with it.
+
+
+
+\begin{itemize}
+\item If the leading coefficient is a $1$, then people usually do not write it. If the leading coefficient is a $-1$, then people usually just write the negative sign, $-$.
+
+
+\[  x^7 + 1 x^6 + (-1) x^5 + 0 x^4 + 0 x^3 + 5 x^2 + (-7) x^1 + 8 x^0              \]
+
+
+\item If a coefficient is a negative number, then people usually change the notation to subtraction.
+
+
+\[  x^7 + 1 x^6 - 1 x^5 + 0 x^4 + 0 x^3 + 5 x^2 - 7 x^1 + 8 x^0              \]
+
+
+
+\item If a coefficient is a $1$, then people usually do not write the $1$.
+
+
+\[  x^7 + x^6 - x^5 + 0 x^4 + 0 x^3 + 5 x^2 - 7 x^1 + 8 x^0              \]
+
+
+\item If a coefficient is $0$, then people just remove the whole term.
+
+\[  x^7 + x^6 - x^5 + 5 x^2 - 7 x^1 + 8 x^0              \]
+
+
+\item People don't write the exponent $1$.
+
+\[  x^7 + x^6 - x^5 + 5 x^2 - 7 x + 8 x^0              \]
+
+
+
+\item People don't write $x^0$.
+
+\[  x^7 + x^6 - x^5 + 5 x^2 - 7 x + 8             \]
+
+
+
+
+\end{itemize}
+
+
+
+
+The last version is much shorter than the original, but they represent the exact same polynomial.
+
+
+
+
+
+
+
+
+\section{Products vs. Sums}
+
+
+There are two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytical investigation.  Polynomials are functions for us and we are interested in anlyzing them as functions.  THis means we are interested in their zeros.  F0r this, and other reasons, we prefer to write polynomials in factored form.
+
+
+
+Rather than a sum
+
+\[   f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
+
+we would prefer a product
+
+\[   f(x) = (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  \]
+
+
+
+
+
+Unfortunately, we will need complex numbers to ALWAYS get a product of linear factors.  We only have the real numbers for this class and the best we can do is linear and quadratic factors.
+
+
+
+\begin{theorem} \textit{Fundamental Theorem of Algebra}
+
+When restricted to real coefficients, every polynomial can be factored into a product of linear and irreducible quadratic factors.
+
+\end{theorem}
+
+
+The theorem says that every polynomial does have such a factorization, but it does not tells us how to obtain it.  We are on our own for that, which means we need lots of practice factoring polynomials.
+
+When analyzing polinomial funcitons, our first step is going to be to factor it.
+
+
+
+
+
+\section {Graphs}
+
+
+
+
+Polynomials are continuous everywhere (All real numbers).  Therefore, their graphs are smooth, wavy curves.
+
+
+
+\begin{example}
+
+
+The graph of $y = f(x) = \frac{1}{100} x^3 + \frac{1}{25} x^2 - \frac{31}{100} x - \frac{7}{10}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, domain=(-9:9),<->] {0.01*(x+7)*(x+2)*(x-5)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+The graph of $y = g(t) = \frac{1}{100} (t+7) (t+2) (t-2) (t-4) $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, domain=(-8:6),<->] {0.01*(x+7)*(x+2)*(x-2)*(x-4)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+There are no discontinuities or singularities.  Polynomial functions do have local maximums and minimums, however, they do not have global maximums or minimums.
+
+
+\section{Endbehavior}
+
+
+
+Depending on the sign of the leading coefficient, we have
+
+
+
+
+\[    \lim_{t \to -\infty} p(t) =  \infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = \infty      \]
+
+
+or 
+
+\[    \lim_{t \to -\infty} p(t) =  -\infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = \infty      \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
