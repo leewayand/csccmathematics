@@ -12,6 +12,163 @@ separating dimensions
 \maketitle
 
 
+While polynomials and rational functions only deal with positive powers on their terms, we have seen that power functions, by themselves, include any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
+
+
+
+\begin{definition} \textit{Roots}
+
+$x^{\tfrac{1}{n}}$ is called \textbf{the nth root of x}, where $n$ is a natural number.
+
+
+
+
+\textbf{odd roots}
+
+When $n$ is odd, $x^{\tfrac{1}{n}}$ is defined to be the unique real number, $r$, such that $r^n = x$. The domain is all real numbers.
+
+
+
+
+\textbf{even roots}
+
+When $n$ is even, $x^{\tfrac{1}{n}}$ is defined to be the unique nonnegative real number, $r$, such that $r^n = x$. The domain is all nonnegative real numbers.
+
+
+\end{definition}
+
+
+
+\begin{definition} \textit{Radicals}
+
+An alternate point-of-view uses radical notation rather than exponents.
+
+\[   \sqrt[n]{x} =  x^{\tfrac{1}{n}}     \]
+
+where $\sqrt{ }$ is called the \textbf{radical} symbol.
+
+
+\end{definition}
+
+
+
+
+\section{Algebra Rules}
+
+The nth-root is an exponent, so it follows all of the exponent rules.
+
+
+\begin{itemize}
+\item $a^n \cdot a^m = a^{n+m}$
+
+\item $\frac{a^n}{a^m} = a^{n-m}$
+
+\item $(a^n)^m = a^{n \cdot m}$
+
+\item $a^n \cdot b^n = (a \cdot b)^n$
+
+\item $\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$
+
+
+\end{itemize}
+
+
+
+Similar rules for radicals.
+
+\begin{itemize}
+
+\item $\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{a \cdot b}$
+
+\item $\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}$
+
+\item $\sqrt[m]{\sqrt[n]{a}} = \sqrt[nm]{a}$
+
+\end{itemize}
+
+
+
+
+
+
+\section{Graphs}
+
+
+
+Negative numbers raised to odd powers result in negative numbers, which means every real number has an odd root.  The domain of odd roots or radicals is all real numbers.
+
+\begin{example}
+
+
+The graph of $y = R(t) = t^{\tfrac{1}{3}} = \sqrt[3]{t}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(0:9),->] {x^(0.333333)};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:0),<-] {-(-x)^(0.333333)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+
+
+
+Negative numbers raised to even powers result in positive numbers, like positive numbers raised to even power.  This makes going backwards a problem.  We are forces to choose between two even roots.  We pick positive numbers  The domain and range of even roots are both $[0, \infty)$.
+
+\begin{example}
+
+
+The graph of $y = R(t) = t^{\tfrac{1}{2}} = \sqrt{t} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(0:9),->] {x^(0.5)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+
+
+
+
+There are no horizontal asymptotes on these graphs.  The graph keeps moving up or down unbounded.  The root and radical functions are unbounded. Their values tend to $\pm \infty$ as the domain moves out towards $\pm \infty$.
+
 
 
 
