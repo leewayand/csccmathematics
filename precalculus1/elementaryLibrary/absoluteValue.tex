@@ -13,6 +13,117 @@ distance
 
 
 
+The absolute value function, $|x|$, gives the distance a number is from $0$.  Since distance cannot be naegative, it appears that the function just "makes numbers positive".
+
+
+To do this, the absolute value function just returns nonnegative numbers unharmed, and makes negative numbers turn positive.  Algebraically, this is accomplished through a piecewise defined function.
+
+
+
+
+
+
+\[
+|x| = 
+\begin{cases}
+  -x &\text{if $x<0$,}\\
+  x & \text{if $x\ge 0$}.
+\end{cases}
+\]
+
+
+Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The absolute value function nnegatives negative numbers.
+
+
+\textbf{Note:} just becasue you see a negaitve sign doesn't mean you have a negative number.
+
+
+
+\begin{example}
+\begin{itemize}
+\item $|4| = 4$
+\item $|0| = 0$
+\item $|-\pi| = -(-\pi) = \pi$
+\item $|cos(\pi)| = |-1| = 1$
+\item $|sin(\tfrac{\pi}{4})| = \tfrac{1}{\sqrt{2}}$
+
+\end{itemize}
+\end{example}
+
+
+
+
+
+\begin{example}
+\begin{itemize}
+\item $|-\sqrt{5}| = \answer{\sqrt{5}}$
+\item $|4-4| = =\answer{0}$
+\item $\left|\frac{-4}{-3}\right| = \answer{\frac{4}{3}}$
+\item $|cos(\tfrac{\pi}{2})| = \answer{0}$
+\item $|sin(\tfrac{3\pi}{2})| = \answer{1}$
+
+\end{itemize}
+\end{example}
+
+
+
+
+
+Graph of $y = A(t) = |t|$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth, domain=(-9:9), <->] {abs(x)};
+   
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
