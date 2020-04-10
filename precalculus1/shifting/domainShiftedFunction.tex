@@ -147,7 +147,7 @@ Graph of $z = B(k)$.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$z$,
+            axis lines =center, xlabel=$k$, ylabel=$z$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -183,7 +183,7 @@ When we look at the graphs side-by-side, we can see that the graph has simply sh
 \begin{tikzpicture}
 	\begin{axis}[name = leftgraph,
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$y$,
+            axis lines =center, xlabel=$v$, ylabel={$y=T(v)$},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -200,7 +200,7 @@ When we look at the graphs side-by-side, we can see that the graph has simply sh
     \end{axis}
 	\begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$z$,
+            axis lines =center, xlabel=$k$, ylabel={$z=B(k)$},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -230,6 +230,101 @@ From the definition, $B(k) = T(k+3)$, we can see that $v=k+3$, or $k=v-3$.  All 
 
 
 
+\begin{example} Shifting the Domain 
+
+
+
+
+
+
+\[
+V(h) = 
+\begin{cases}
+  -2h-3 & \text{ if } [-6, -2]   \\
+  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
+  \frac{7h}{4} - 8 & \text{ if } (4,6)
+\end{cases}
+\]
+
+
+
+A graph always helps our thinking. Here is theg raph of $y = V(h)$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(4:6)] {1.75*x-8};
+
+
+
+
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,2.5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Let $f(x) = V(x-1)$ with the induced domain.
+
+The domain of $V$ is $[-6, 6)$.  These values are represented by $x-1$ in this definition, because $x-1$ is the expression inside the parentheses for $V$ and that is where the expression lives for the domain values of $V$.
+
+However, $x$ represents the domain values of $f$.   If $x - 1 \in [-6, 6)$, then $x \in [-5, 7)$.  This is the domain for $f$.  It is shifted up $1$ or to the right $1$.  The individual maximal intervals become $-5, -1]$, $(-1, 5]$, and $(5, 7)$.
+
+
+
+
+
+\[
+f(x) = V(x-1) = 
+\begin{cases}
+  -2(x-1)-3 & \text{ if } [-5, -1]   \\
+  -((x-1)+3)((x-1)-3) & \text{ if } (-1, 5]  \\
+  \frac{7(x-1)}{4} - 8 & \text{ if } (5, 7)
+\end{cases}
+\]
+
+
+
+
+
+\[
+f(x) = 
+\begin{cases}
+  -2x - 1 & \text{ if } [-5, -1]   \\
+  -(x+2)(x-4) & \text{ if } (-1, 5]  \\
+  \frac{7(x-1)}{4} - 8 & \text{ if } (5, 7)
+\end{cases}
+\]
 
 
 
@@ -239,6 +334,73 @@ From the definition, $B(k) = T(k+3)$, we can see that $v=k+3$, or $k=v-3$.  All 
 
 
 
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$z=f(x)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:-1)] {-2*x-1};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-1:5)] {-1*(x+2)*(x-4))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:7)] {1.75*(x-1)-8};
+
+
+
+
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,9)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,1)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,5)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-7)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,-1)};
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,2.5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The graph has the same three shapes. The endpoints are hollow or folled as they were in the graph of $y=V(h)$.
+
+
+
+\end{example}
+
+
+
+
+
+
+\begin{example} Shifting Domain
+
+
+Let $P(t)$ be a function with domain $[-11, -7) \cup {-6} \cup [-4,3) \cup (4, 7] \cup {8} \cup [9, 10)$.
+
+Let $g(w)$ be defined as a shifted domain version of $p(t)$ with domain $[-7, -3) \cup {-2} \cup [0,7) \cup (8, 11] \cup {12} \cup [13, 14)$.
+
+Then  $g(w) = P(\answer{w+3})$
+
+
+
+\end{example}
 
 
 
