@@ -21,6 +21,248 @@ sliding the graph
 
 
 
+Let $D(y)$ be a function with its domain.
+
+Let $K(r)$ be defined as $K(r) = D(r)-7$ with its induced domain.
+
+
+Then the domain of $K$ is
+
+\begin{multipleChoice}
+\choice {the domain of $D$ shifted left $7$}
+\choice {the domain of $D$ shifted right $7$}
+\choice[correct] {the same as for $D$}
+\end{multipleChoice}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Shifting Vertically
+
+
+
+
+Graph of $y = m(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	\addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+	\addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-7};
+	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+7};
+
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-3,2)}; 
+	
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,-9)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,-6)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,6)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+\begin{itemize}
+
+\item The domain of $m$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
+\item $m$ has a global (and local) maximum of $6$, which occurs at $1$. 
+\item $m$ has a global (and local) minimum of $-9$, which occurs at $-2$. 
+\item $m$ has a local maximum of $1$, which occurs at $-7$.
+
+\end{itemize}
+
+
+$2$ is both a local maximum and minimum of $m$.  \\
+
+To see this is a maximum, imagine the interval $(-2.9, -3.1)$. For all of the domain elements in this interval, $T(-3)=2$ is the maximum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval..  But, the definition never promised that there would be others.  It simply says that you need to supply an open interval such that $T(-3)$ is greater than or equal to all function values for domain numbers inside the interval. \\
+
+To see this is a minimum, imagine the interval $(-2.9, -3.1)$. For all of the domain elements in this interval, $T(-3)=2$ is the minimum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval..  But, the definition never promised that there would be others.  It simply says that you need to supply an open interval such that $T(-3)$ is less than or equal to all function values for domain numbers inside the interval. \\
+
+
+
+
+Now, we'll shift the range. \\
+
+
+
+Graph of $z = P(t) = m(t)+3$.
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	\addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-3};
+	\addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-4};
+	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+10};
+
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-3,5)}; 
+	
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-7,4)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,1)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,-6)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,-3)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,9)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,3)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{itemize}
+
+\item The domain of $P$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
+\item $m$ has a global (and local) maximum of $6+3=9$, which occurs at $1$. 
+\item $m$ has a global (and local) minimum of $-9+3=-6$, which occurs at $-2$. 
+\item $m$ has a local maximum of $1+3=4$, which occurs at $-7$.
+
+\end{itemize}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Sine
+
+
+
+Graph of $y = sin(\theta)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-3.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x))};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\begin{itemize}
+\item The zeros of $sin(\theta)$ are all integer multiples of $\pi$.
+\item The maximum value is $1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\item The minimum value is $-1$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\end{itemize}
+
+
+
+
+
+
+Graph of $y = sin(\theta) - 2$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-3.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x))-2};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\begin{itemize}
+\item No zeros.
+\item The maximum value is $-1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\item The minimum value is $-3$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+Adding or subtracting a constant from the function, as oposed to the domain, shifts the graph up and down.  The shape of the graph doesn't change.  All of the characteristics and features of the function, like maximums and minimums, occur at the same places in the domain.  Their values just change accordingly.
 
 
 
