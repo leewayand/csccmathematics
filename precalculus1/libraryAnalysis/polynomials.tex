@@ -115,9 +115,78 @@ The $e_k$ are the exponents and tell us how many times a particular root repeats
 
 
 
-\underline{\textbf{\large Running the Number Line}}
+\textbf{\large Running the Number Line}
 
-If we think of the real numbers as lining up to form the number line, then we could imagine ourselves running over the number line from $-\infty$ to $\infty$, or from left to right.  We would hit every real number once.
+If we think of the real numbers as lining up to form the number line, then we could imagine ourselves running over the number line from $-\infty$ to $\infty$, or from left to right.  We would hit every real number once.  We would run through each distinct.  As we ran from the left side to the right side of each root, the sign of the value of the polynomial with either change or stay the same.
+
+At each root. $r_k$, the value of the polynomial is $0$.  But on either side of hte root, the polynomial is either positive or negative.
+
+
+\[
+\begin{array}{rcl}
+\text{Left of Root}  & \text{Root}  & \text{Right of Root} \\
+positive & 0 & positive \\
+negative & 0 & negative \\
+positive & 0 & negative \\
+negative & 0 & positive
+\end{array}
+\]
+
+
+Either the sign switches or it stays the same.  What in the formula decides this?
+
+
+
+\[   f(x) = a (x-r_n)^{e_n} (x-r_{n-1})^{e_{n-1}}  \cdots (x-r_2)^{e_2} (x-r_1)^{e_1}  \]
+
+
+If we imagine ourselves running through $(x-r_k)^{e_k}$ is the only factor that could possibly change sign.  All of the other factors maintain their same sign when we run through $r_k$.
+
+
+When $x<r_k$, then $x-r_k <0$.  When $x>r_k$, then $x-r_k >0$.
+
+If $e_k$ is even then it doesn't matter if $x-r_k <0$ or $x-r_k >0$. $(x-r_k)^{e_k}$ will be positve. 
+
+If $e_k$ is odd then it does matter, because, unlike an even power, a negative number raise to an odd power will remain negative.
+
+
+
+
+
+\begin{itemize}
+\item If $e_k$ is odd, then $(x-r_k)^{e_k}$ will change its sign.
+\item If $e_k$ is even, then $(x-r_k)^{e_k}$ will not change its sign.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
