@@ -12,6 +12,95 @@ characteristics
 \maketitle
 
 
+Polynomials are functions that can be described by sums power functions
+
+
+\[    a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
+
+where the $a_k$ are real numbers and $a_n \ne 0$.
+
+
+\begin{itemize}
+
+\item $n$ is called the \textbf{degree} of the polynomial.
+\item $a_k$ are called \textbf{coefficients}.
+\item $a_n$ is called the \textbf{leading coefficient}.
+\item Each of the summands are called a \textbf{term}.  
+\item $a_n x^n$ is called the \textbf{leading term}.
+\item $a_2 x^2$ is called the \textbf{quadratic term}.
+\item $a_1 x^1$ is called the \textbf{linear term}, often written as $a_1 x$.
+\item $a_0 x^0$ is called the \textbf{constant term}, often written as $a_0$.
+
+\end{itemize}
+
+
+
+
+
+
+
+For analytical purposes, we would prefer a product
+
+\[   f(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  \]
+
+
+\begin{itemize}
+
+\item $a$ is called the \textbf{leading coefficient}.
+\item $(x-r_k)$ are called \textbf{factors}.
+\item $r_k$ are called the \textbf{zeros} or \textbf{roots}.
+
+\end{itemize}
+
+
+
+
+
+
+Polynomials are the nicest functions we have. \\
+
+The graph of $y = f(x) = \frac{1}{100} x^3 + \frac{1}{25} x^2 - \frac{31}{100} x - \frac{7}{10}$
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, domain=(-9:9),<->] {0.01*(x+7)*(x+2)*(x-5)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+All of their characteristics and features are nice.
+
+\begin{itemize}
+\item Their domains include all real numbers. 
+\item They are continuous everywhere.
+\item No discontinuities or singularities.
+\item No asymptotes on the graph.
+\item Their graphs are smooth - no corners or endpoints
+\end{itemize}
+
+
+Polynomials smoothly alternative between increasing and decreasing and they switch at maximums and minimums.
+
+As you will see later, polynomials have a limit on the number of zeros and extrema.  They cannot have more than the degree of the polynomial. 
+
+
+
+
+
+
 
 
 
