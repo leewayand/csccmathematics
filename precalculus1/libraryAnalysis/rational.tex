@@ -20,6 +20,256 @@ characteristics
 
 
 
+Rational functions are fractions of polynomials
+
+
+
+
+\[ p(x) =   \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   \]
+
+
+
+where the $a_k$ and $b_k$ are real numbers and $a_n \ne 0$ and $b_m \ne 0$.
+
+
+
+
+
+
+
+
+Again, we prefer polynomials in factored form.  Therefore, usually our first step is to transform the rational function to look like
+
+
+
+\[ p(x) =   \frac{ a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  } { b (x-s_m)(x-s_{m-1})  \cdots (x-s_2)(x-s_1) }   \]
+
+
+
+
+And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist only linear and irreducible quadratics.
+
+
+
+
+Finally, we would like to clean up the factors and group them together
+
+
+
+
+
+
+\[ p(x) =   \frac{ a (x-r_n)^{e_n} (x-r_{n-1})^{e_{n-1}}  \cdots (x-r_2)^{e_2} (x-r_1)^{e_1}  } { b (x-s_m)^{f_m} (x-s_{m-1})^{f_{m-1}}  \cdots (x-s_2)^{f_2} (x-s_1)^{f_1} }   \]
+
+
+
+
+
+
+\section{Reduced Form}
+
+\textbf{Shared Roots}
+
+Suppose the numerator and denominater share a root, $r_i = s_j$.  Then we can reduce the expression but we must remember that $s_j$ is not in the domain.
+
+
+Otherwise, let's assume that we have reduced and there are no shared roots between the numerator and denominator. \\
+
+
+
+
+\textbf{No Shared Roots}
+
+In this case, 
+
+\begin{itemize}
+\item $r_i = s_j$ for all possible $i$ and $j$
+\item $r_i = r_j$ for all possible $i$ and $j$
+\item $s_i = s_j$ for all possible $i$ and $j$
+\end{itemize}
+
+
+Now we can analyze our rational function.
+
+
+
+\section{Numerator}
+
+
+
+The numerator is a polynomial.  Each factor gives a root or zero of the function, which corresponds to an intercept on the graph. \\
+
+If the multipicity is odd, then the graph crosses the axis at this intercept.  \\
+If the multipicity is even, then the graph does not cross the axis at this intercept. 
+
+
+
+
+
+
+\section{Denominator}
+
+
+The numerator is a polynomial.  Each factor gives a root or zero of the denominator, which corresponds to a singularity and a vertical asymptote on the graph. \\
+
+
+The factors in the denominoatr still affect the sign of the function values.
+
+
+If the multipicity is odd, then the graph changes sign across the singularity and vertical asymptote.  \\
+If the multipicity is even, then the graph does not change sign across the singularity and vertical asymptote. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Rational Function
+
+
+The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
+          \addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
+          \addplot [line width=2, penColor, smooth, domain=(4.1:9),<->] {(x-1)/((x+3)*(x-4))};
+
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The numerator has the factor $w-1$, which has multiplicity $1$, odd.  Therefore $H$ has $1$ as a root and he graph has $(-1,0)$ as its only intercept, the only place where the graph crosses the horizontal axis.
+
+
+The denominator has two factors $w+3$ and $w-4$.  Both have odd multiplicity, therefore, the function changes sign over these singularities and vertical asymptotes.
+
+
+The degree of the denominator is larger than the degree of the numerator, therefore the $w$-axis is a horizontal asymptote.
+
+
+
+The endbehavior is
+
+
+
+\[       \lim_{w \to -\infty} H(w) = 0   \, \text{ and } \,    \lim_{w \to \infty} H(w) = 0               \]
+
+
+
+
+
+\textbf{asymptote $w = -3$}
+
+
+Near $-3$, on either side of $-3$, the factors $w-1$ and $w-4$ do not change sign. $w-1$ is near $-4$.  $w-4$ is near $-7$.  Both factors take on negative values near $-3$.
+
+The factor $w+3$ does change sign, since its multiplicity is odd.
+
+\begin{itemize}
+\item On the left side, where $w < -3$, we have $w+3<0$, negative.
+\item On the right side, where $w > -3$, we have $w+3>0$, positive.
+\end{itemize}
+
+
+On the left side of $-3$, $H(w) = \frac{neg}{neg \cdot neg} = negative$.  Plus, the denominator is approaching $0$ making the whole fraction get bigger and bigger negatively.
+
+We can see this in the graph.  The graph moves down the left side of the $w=-3$ vertical asymptote.
+
+Since this singularity has an odd multiplicity, we also know that $H$ changes sign across this vertical asymptote.
+
+
+We can no walk through the sign changes of $H$.
+
+\begin{itemize}
+\item $w = 1$ is zero with odd multipicity.  The sign changes across this zero. The graph crosses at this intercept.
+\item $w = 4$ is an odd singularity. The sign changes across this singularity.  The graph jumps to the other infinity across the vertical asymptote.
+\end{itemize}
+
+
+
+We can now categorize the rate of change for $H$.
+
+\begin{itemize}
+\item $H$ is decreasing on $(-\infty, -3)$.
+\item $H$ is decreasing on $(-3, 4)$.
+\item $H$ is decreasing on $(4,\infty)$.
+\end{itemize}
+
+$H$ is decreasing everywhere in its domain.
+
+
+
+
+
+$H$ has no global or local maximums or minimums.
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+\section{Sign Chnages}
+
+For rational functions, the sign can change only at a zero or a singularity of odd degree. This is helpful when graphing. These requirements force the graph to go in particular directions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
