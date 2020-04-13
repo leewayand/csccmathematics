@@ -20,6 +20,244 @@ characteristics
 
 
 
+\section{Even Roots}
+
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers.
+
+Even roots
+
+\[   Even(x) = \sqrt[2n]{x} = x^{\tfrac{1}{2n}}          \]
+
+look a lot like the square root
+
+
+\[   Even(x) = \sqrt{x} = x^{\tfrac{1}{2}}          \]
+
+
+
+Their domains do not include negative numbers: $[0, \infty)$, the \textbf{nonnegative} numbers.  And, they increase very slowly over this domain, becoming unbounded.
+
+
+
+
+
+
+
+The graph of $y = Square(x) = \sqrt{x} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {sqrt(x)};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The square root function begins where the inside of the formula equals $0$.  It then moves in the direction of positive inside.
+
+
+
+
+\begin{example} Even Root
+
+The graph of $y = f(v) = \sqrt{v+3} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-3:9),->] {sqrt(x+3)};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Here the inside $v+3=0$ equals $0$ when $v=-3$.  That is the start of the domain.  Then the inside is positive $v+3>0$, when $v>-3$, which means the graph moves up to the right.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Even Root
+
+The graph of $y = T(k) = \sqrt{-k+5} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:5),<-] {sqrt(-x+5)};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Here the inside $-k+5=0$ equals $0$ when $k=5$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k<5$, which means the graph moves up to the left.  The domain is $(-\infty,5]$.
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Odd Roots}
+
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers, we do have odd roots of negative numbers
+
+Odd roots
+
+\[   Odd(x) = \sqrt[2n+1]{x} = x^{\tfrac{1}{2n+1}}          \]
+
+look a lot like the cube root
+
+
+\[   Odd(x) = \sqrt[3]{x} = x^{\tfrac{1}{3}}          \]
+
+
+
+Their domains dall real numbers: $(-\infty, \infty)$.  They increase very slowly over this domain, becoming unbounded.
+
+
+
+
+
+
+
+The graph of $y = Cube(x) = \sqrt[3]{x} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {x^0.33333};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:0),<-] {-(-x)^0.33333};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The cube root function has a vertical tangent line where the inside of the formula equals $0$.
+
+
+
+\begin{example} Odd Root
+
+The graph of $y = f(v) = \sqrt[3]{v+3} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-3:9),->] {(x+3)^0.33333};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:-3),<-] {-((-x-3)^0.33333)};
+
+          	\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Here the inside $v+3=0$ equals $0$ when $v=-3$.  The graph has a vertical tangent line there.  Otherwise, the cube root function is increasing everywhere, but increasing slower and slower and slower.
+
+
+\end{example}
+
+
+
+
+
+
 
 
 \end{document}
