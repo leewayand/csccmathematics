@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Absoute Value}
+\title{Absolute Value}
 
 \begin{document}
 
@@ -10,6 +10,198 @@
 characteristics
 \end{abstract}
 \maketitle
+
+
+
+
+
+Absolute value makes negative numbers positive and leaves nonnegative numbers alone.  The algebra lokos like
+
+
+
+\[
+|K| = 
+\begin{cases}
+  -K & \text{if $K<0$,}\\
+   K & \text{if $K\ge 0$}.
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+Graph of $y = |K|$.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$K$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:9),<->] {abs(x)};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{example}  Shifting
+
+Graph of $y = P(t) = |t+4|$.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:6),<->] {abs(x+4)};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The graph is position by its corner, which occurs when the inside of the absolute value formula equals $0$.  $t+4=0$, when $t=-4$.
+
+
+$P$ has a global minimum of $0$, which occurs at $-4$. $P$ has no maximums.
+
+$P$ decreases on $(-\infty, -4]$ and increases on $[-4, \infty)$ 
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Solving Equations
+
+Let $B(r) = |r-3| + 2$.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$r$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-5:9),<->] {abs(x-3)+2};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Solve $B(r) = 5$.
+
+We can see from the graph that there are two solutions to this equation. Our first goal in solving this equation is to getthe absolute term by itself.
+
+
+$|r-3| + 2 = 5$
+
+
+$|r-3| = 3$
+
+There are only two numbers whose absolute value is $3$.  They are $-3$ or $3$.
+
+We have two possibilities, either the inside of the absolute value, $r-3=-3$ or $r-3=3$.
+
+If $r-3=-3$, then $r=0$. If $r-3=3$, then $r=6$. 
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$r$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+           \addplot [line width=2, penColor, smooth, samples=200, domain=(-5:9),<->] {abs(x-3)+2};
+           \addplot [line width=2, penColor3, smooth, samples=200, domain=(-9:9)] {5};
+
+           \addplot[color=penColor,fill=penColor3,only marks,mark=*] coordinates{(0,5)};
+           \addplot[color=penColor,fill=penColor3,only marks,mark=*] coordinates{(6,5)};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
