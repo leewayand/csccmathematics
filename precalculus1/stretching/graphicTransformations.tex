@@ -13,51 +13,64 @@ shape
 
 
 
+We now have four graphical transformations:
 
 
-shape stays the same even if backwards and upside down
+\begin{itemize}
+\item horizontal shift
+\item horizontal stretch or compression
+\item vertical shift
+\item vertical stretch or compression
+\end{itemize}
 
 
+The horizontal transformations are controlled by multiplication and addition inside the domain parentheses in the function's formula.
 
+\[      f(x) \longrightarrow   f(A \cdot x + B)  \]
 
-
-Let $D(y)$ be a function with its domain.
-
-Let $K(r)$ be defined as $K(r) = D(r)-7$ with its induced domain.
-
-
-Then the domain of $K$ is
-
-\begin{multipleChoice}
-\choice {the domain of $D$ shifted left $7$}
-\choice {the domain of $D$ shifted right $7$}
-\choice[correct] {the same as for $D$}
-\end{multipleChoice}
+Multiplication by $A$ results in horizontal stretching or compression. \\
+Addition by $B$ results in horizontal shifting. \\
 
 
 
+The vertical transformations are controlled by multiplication and addition outside on the function's formula.
 
+\[      f(x) \longrightarrow   C \cdot f(x) + D \]
 
-
-
-
+Multiplication by $C$ results in vertical stretching or compression. \\
+Addition by $D$ results in vertical shifting. \\
 
 
 
 
 
-\begin{example} Shifting Vertically
+The effects of $A$ and $B$ are reverse of the arithmetic, because they presences means we are not loger loking at the formulas original variable.  We need to solve for the variable, which reverses all of the arithmetic. The effects of $C$ and $D$ are the same as the arithmetic, because they are applied directly to the original range variable, the function value.
 
 
 
 
-Graph of $y = m(f)$.
+
+
+
+
+
+
+\begin{example} A Little Bit of Everything
+
+
+
+
+Graph of $y = G(h)$, the original (basic) function.
 
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$,
+            domain=-15:15, ymax=15, xmax=15, ymin=-15, xmin=-15, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}, xtick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14},
+            yticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$}, xticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$},
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$h$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -73,7 +86,7 @@ Graph of $y = m(f)$.
 	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
 	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,-9)}; 
 	\addplot[color=penColor,only marks,mark=*] coordinates{(1,-6)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(1,6)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,6)}; 
 	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
 
 
@@ -90,51 +103,218 @@ Graph of $y = m(f)$.
 
 \begin{itemize}
 
-\item The domain of $m$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
-\item $m$ has a global (and local) maximum of $6$, which occurs at $1$. 
-\item $m$ has a global (and local) minimum of $-9$, which occurs at $-2$. 
-\item $m$ has a local maximum of $1$, which occurs at $-7$.
-
+\item The domain of $G$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
+\item $G$ has no global maximum
+\item $G$ has a global (and local) minimum of $-9$, which occurs at $-2$. 
+\item $G$ has a local maximum of $1$, which occurs at $-7$.
+\item $G$ has a both a local minimum and local maximum of $1$, which occurs at $-3$.
 \end{itemize}
 
 
-$2$ is both a local maximum and minimum of $m$.  \\
-
-To see this is a maximum, imagine the interval $(-2.9, -3.1)$. For all of the domain elements in this interval, $T(-3)=2$ is the maximum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval..  But, the definition never promised that there would be others.  It simply says that you need to supply an open interval such that $T(-3)$ is greater than or equal to all function values for domain numbers inside the interval. \\
-
-To see this is a minimum, imagine the interval $(-2.9, -3.1)$. For all of the domain elements in this interval, $T(-3)=2$ is the minimum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval..  But, the definition never promised that there would be others.  It simply says that you need to supply an open interval such that $T(-3)$ is less than or equal to all function values for domain numbers inside the interval. \\
 
 
 
-
-Now, we'll shift the range. \\
-
+Now to define a new function based off of $G$.
 
 
-Graph of $z = P(t) = m(t)+3$.
+
+
+
+
+Define  $T(p) = -2G(\frac{1}{2} p - 4) + 1$.
+
+
+Graph of $z = T(p) = -2G\left(\frac{1}{2} p - 4\right) + 1$.
+
+First, let's map all of the endpoints.
+
+\begin{itemize}
+ \item \textbf{Domain:}  $2 (h+4)$ 
+    \begin{itemize}
+      \item (1) add $4$
+      \item (2) multiply by $2$
+    \end{itemize}
+
+ \item \textbf{Range:}  $-2 G + 1$ 
+    \begin{itemize}
+      \item (1) multiply by $-2$
+      \item (2) add $1$
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\[
+\begin{array}{ccccc}
+\text{Original}  &  +4           &  \times2   &  \times-2  & + 1          \\
+\hline
+(-7, 1)          &  (-3, 1)      &  (-6, 1)     &  (-6, -2)    &  (-6,-1)     \\
+(-4, -2)         &  (0, -2)      &  (0, -2)     &  (0,4)      &  (0,5)       \\
+(-3,2)           &  (1,2)        &  (2,4)       &  (2,-8)     &  (2,-7)     \\
+(-2,-9)          &  (2, -9)      &  (4,-9)      &  (4, 18)    &  (4,19)      \\
+(1,-6)           &  (5,-6)       &  (10,-6)     &  (10,12)    &  (10,13)     \\
+(1,6)            &  (5, 6)       &  (10,6)      &  (10,-12)   &  (10,-11)   \\
+(7,0)            &  (11,0)       &  (22,0)      &  (22,0)     &  (22,1)
+\end{array}
+\]
+
+
+
+
+Graphical mapping of important points from $y=G(h)$ to $t = T(p)$:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{image}
 \begin{tikzpicture}
-	\begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$,
+  \begin{axis}[name = leftgraph,
+            domain=-15:15, ymax=15, xmax=15, ymin=-15, xmin=-15, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}, xtick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14},
+            yticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$}, xticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$},
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$h$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-	\addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-3};
-	\addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-4};
-	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+10};
+        \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+        \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-7};
+        \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+7};
 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-3,5)}; 
-	
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-7,4)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,1)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,-6)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(1,-3)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(1,9)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,3)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-3,2)}; 
+  
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-9)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(1,-6)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,6)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
+
+
+
+        \node at (axis cs:-7,2) [anchor=west] {$A$};  
+        \node at (axis cs:-4,-2) [anchor=north] {$B$};  
+        \node at (axis cs:-3,2) [anchor=south] {$C$};  
+        \node at (axis cs:-2,-10) [anchor=east] {$D$};
+        \node at (axis cs:1,-6) [anchor=west] {$E$};
+        \node at (axis cs:-1,6) [anchor=south] {$F$};
+        \node at (axis cs:7,0) [anchor=south] {$G$};
+
+    \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west,
+            domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$p$, ylabel=$t$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-6,-1)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,5)}; 
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(2,-7)}; 
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(4,19)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(10,13)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(10,-11)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(22,1)}; 
+
+
+
+        \node at (axis cs:-6,-1) [anchor=south] {$A$}; 
+        \node at (axis cs:0,5) [anchor=west] {$B$}; 
+        \node at (axis cs:2,-7) [anchor=north] {$C$};  
+        \node at (axis cs:4,19) [anchor=west] {$D$};
+        \node at (axis cs:10,13) [anchor=west] {$E$}; 
+        \node at (axis cs:10,-11) [anchor=north] {$F$};
+        \node at (axis cs:20,1) [anchor=south] {$G$};
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+The linear transformations cannot change the shape of the graph, and they didn't.  The graph may have flipped vertically, but relatively speaking its shape is the same.
+
+The table above shows that the transformations follow the order of operations applied to the original function and graph.  The only thing to keep in mind is that you have to phrase the arithmetic of the transformation as being applied to the orginal function notation.  To accomplish this, we set the new domain inside equal to the original domain variable.  That reverses what we see, but rephrases it back to what happened to the original domain numbers. Then you can just apply the arithmetic to the coordinates of each point - following the order of operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$p$, ylabel=$t$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [draw=penColor,very thick,smooth,domain=(-6:0)] {x+5};
+        \addplot [draw=penColor,very thick,smooth,domain=(4:10)] {-x+23};
+        \addplot [draw=penColor,very thick,smooth,domain=(10:22)] {x-21};
+
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-6,-1)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,5)}; 
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(2,-7)}; 
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(4,19)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(10,13)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(10,-11)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(22,1)}; 
 
 
     \end{axis}
@@ -144,14 +324,207 @@ Graph of $z = P(t) = m(t)+3$.
 
 
 
-\begin{itemize}
 
-\item The domain of $P$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
-\item $m$ has a global (and local) maximum of $6+3=9$, which occurs at $1$. 
-\item $m$ has a global (and local) minimum of $-9+3=-6$, which occurs at $-2$. 
-\item $m$ has a local maximum of $1+3=4$, which occurs at $-7$.
 
-\end{itemize}
+\textbf{What Happened?} \\
+
+
+
+On the inside of the domain parentheses, we have $\frac{1}{2} p - 4$.  Remember, $h$ is the variable representing domain numbers. The new function has $h = \frac{1}{2} p - 4$. Solving for $h$, gives us $2(h+4)$.  Now we can read off the arithmetic according to the \textbf{order of operations}.  The parentheses are grouping symbols here.  We perform the arithmitic inside these parentheses first. \\
+
+First, add $4$. The graph should shift ot the right $4$. \\
+Second, multiplication by $2$. The graph should stretch horizontally by a factor of $2$.
+
+
+
+
+On the outside of $G(h)$, we have multiplication by $-2$ and then Addition of $1$.  These are applied in the order of operations. \\
+
+First, multiplication by $-2$. This is negative, so thegraph should flip vertically over the horizontal axis. The graph should also stretch vertically by a factor of $2$.  Adding $1$ shifts the whole graph up $1$.
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+Take another look at the functions from the example above.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[name = leftgraph,
+            domain=-15:15, ymax=15, xmax=15, ymin=-15, xmin=-15, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}, xtick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14},
+            yticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$}, xticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$},
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$h$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+        \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-7};
+        \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+7};
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-3,2)}; 
+  
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-9)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(1,-6)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,6)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
+
+
+
+    \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west,
+            domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$p$, ylabel=$t$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [draw=penColor,very thick,smooth,domain=(-6:0)] {x+5};
+        \addplot [draw=penColor,very thick,smooth,domain=(4:10)] {-x+23};
+        \addplot [draw=penColor,very thick,smooth,domain=(10:22)] {x-21};
+
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-6,-1)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,5)}; 
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(2,-7)}; 
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(4,19)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(10,13)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(10,-11)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(22,1)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{enumerate}
+\item On both graphs there are three line segments and one isolated point.
+\item On both graphs the longest line segment has to hollow endpoints
+\item On both graphs there is a short line segment with solid and one hollow endpoint. 
+\item On both graphs the line segments in (a) and (c) are parallel.
+\item On both graphs there is a third line segment, which is perpendicular to the other two.
+\end{enumerate}
+
+
+
+
+The transformations did not change the shape of the graph.
+
+
+
+All of the relative graphical relationships within each graph is also a relationship in the other graph. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Transformation
+
+Let $B(r) = \frac{1}{2}|3r-1| + 4$. \\
+
+
+\textbf{Thinking Ahead}
+
+
+The basic absolute value function has a formula like $|x|$, with \textbf{R} as its domain. The graph has a corner at $(0,0$) and a "V" shape.  The shape can't change.
+
+The graph of $B$ is also a "V", with a corner. The corner occurs where $3r-1=0$, which is when $r=\frac{1}{3}$.  The corner is at $\left( \frac{1}{3}, 4 \right)$
+
+The outside coefficient of the transformation is $\frac{1}{2}$, which is positive.  Therefore the "V" will again open up for the graph of $B$.
+
+The "V" is mad of two line segments and the corner is one point on each line segment.  Therefore, we just need another point on each line segment to plot the graph.
+
+We can randomly choose any numberson either side of $\frac{1}{3}$, like $r=-5$ and $r=5$.
+
+$B(-5) = 12$ and $B(5) = 11$, giving us the points $(-5, 12)$ and $(5, 11)$.
+
+We can now draw the graph of $B$.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$p$, ylabel=$t$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [draw=penColor,very thick,smooth,domain=(-9:9),<->] {0.5*abs(3*x-1)+4};
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(0.333,4)}; 
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
 
 
 \end{example}
@@ -173,38 +546,103 @@ Graph of $z = P(t) = m(t)+3$.
 
 
 
-\begin{example} Sine
 
 
 
-Graph of $y = sin(\theta)$.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Transformation
+
+Here is a graph of $y=k(A)$
+
+
+
+
+
+
+
+
+
+
 
 \begin{image}
-\begin{tikzpicture} 
+\begin{tikzpicture}
   \begin{axis}[
-            domain=-10:10, ymax=1.5, xmax=10, ymin=-3.5, xmin=-10,
-            xtick={-6.28, -3.14, 3.14, 6.28}, 
-            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
-            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$A$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x))};
+        \addplot [draw=penColor,very thick,smooth,domain=(-9:-3)] {8};
+        \addplot [draw=penColor,very thick,smooth,domain=(3:6)] {4};
 
-           
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-9,8)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,8)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,4)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(6,4)}; 
 
-  \end{axis}
+
+
+    \end{axis}
 \end{tikzpicture}
 \end{image}
 
+This graph (or function) has a shape.
+
+\begin{itemize}
+
+\item The domain of $k$ is the union of two intervals: $[-9,-3) \cup (3,6]$.  
+
+\item The longer interval is twice as long as the shorter interval. 
+
+\item The inner endpoints are hollow on the graph.
+
+\item The outer endpoints are solid on the graph.
+
+
+\end{itemize}
+
+A transformation will maintain this shape.
+
+
+
+What will the graph of $z = f(m) = -2 k\left(-\frac{1}{2} m + 1\right) - 5$ look like?
+
+
+
+$A = -\frac{1}{2} m + 1$  gives us $-2(A-1)$
+Reading the order of operations, horizontally, the graph will shift left $6$, then the graph will reflect about the vertical axis, then the graph will stretch by a factor of $2$.
+
+
+
+The order of operations can be read directly on the outside.  Reflect vertically, then stretch by a factor of $2$, then shift down $5$.
+
+The values of $f(m)$ wil become $-2 \cdot 8 - 5 = -21$ and $-2 \cdot 4 - 5 = -13$.  
+
+The endpoints of the intervals will become
 
 
 \begin{itemize}
-\item The zeros of $sin(\theta)$ are all integer multiples of $\pi$.
-\item The maximum value is $1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
-\item The minimum value is $-1$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\item $-2(-9-1) = 20$
+\item $-2(-3-1) = 8$
+\item $-2(3-1) = -4$
+\item $-2(6-1) = -10$
 \end{itemize}
 
 
@@ -212,93 +650,66 @@ Graph of $y = sin(\theta)$.
 
 
 
-Graph of $y = sin(\theta) - 2$.
+The graph of $z = f(m)$.
+
+
+
 
 \begin{image}
-\begin{tikzpicture} 
+\begin{tikzpicture}
   \begin{axis}[
-            domain=-10:10, ymax=1.5, xmax=10, ymin=-3.5, xmin=-10,
-            xtick={-6.28, -3.14, 3.14, 6.28}, 
-            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
-            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
+            grid = both, 
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ticklabel style={font=\scriptsize},
+            axis lines =center, xlabel=$m$, ylabel=$z$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x))-2};
+        \addplot [draw=penColor,very thick,smooth,domain=(8:20)] {-21};
+        \addplot [draw=penColor,very thick,smooth,domain=(-10:-4)] {-13};
 
-           
+        \addplot[color=penColor,only marks,mark=*] coordinates{(20,-21)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-21)}; 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-13)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-10,-13)}; 
 
-  \end{axis}
+
+
+    \end{axis}
 \end{tikzpicture}
 \end{image}
 
 
 
-\begin{itemize}
-\item No zeros.
-\item The maximum value is $-1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
-\item The minimum value is $-3$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
-\end{itemize}
+The length of the longer interval is $12$.  The length of the shorter interval is $6$.  Twice as long. \\
+
+The inner endpoints are hollow on the graph. \\
+
+The outer endpoints are solid on the graph. \\
 
 
 
+The longer interval is now on the right, because multiplication by $-\frac{1}{2}$ reflected the graph horizontally. \\
 
 
-
-
-
-
-
-
-
+The longer interval is now on the bottom, because multiplication by $-2$ reflected the graph vertically. \\
 
 
 \end{example}
 
 
-
-
-
-
-Adding or subtracting a constant from the function, as oposed to the domain, shifts the graph up and down.  The shape of the graph doesn't change.  All of the characteristics and features of the function, like maximums and minimums, occur at the same places in the domain.  Their values just change accordingly.
-
-
-
-
-
-\section{Together}
-
-We can apply horizontal and vertical shifts together as well.
+The shape didn't change.  The relative relationships were maintained within each graph.
 
 
 
 
 
-\begin{example}  Shifting
-
-Let $B(r) = |r-3| + 2$.
 
 
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$r$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-5:9),<->] {abs(x-3)+2};
-        
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-\end{example}
 
 
 

@@ -15,62 +15,37 @@ stretch the domain
 
 
 
+We have seen that addition (or subtraction) shifts the domain or range and hifts the graph as a rigid object. ALl of the movement is the same for every point.
+
+Mulitplication behaves differently.
 
 
 
 
-Let $D(y)$ be a function with its domain.
-
-Let $K(r)$ be defined as $K(r) = D(r+7)$ with its induced domain.
-
-
-Then the domain of $K$ is the domain of $D$, but shifted \wordChoice{\choice[correct] {Left} \choice {Right}} by 
-\wordChoice{\choice{5} \choice{6} \choice[correct]{7}}
-
-
-Then the graph of $K$ is the domain of $D$, but shifted \wordChoice{\choice[correct] {Left} \choice {Right}} by 
-\wordChoice{\choice{5} \choice{6} \choice[correct]{7}}
+\section{Stretching Horizontally}
 
 
 
 
 
 
-\begin{example} Shifting Horizontally
+
+Consider the function $T$ defined as
+
+\[
+T(k) = 
+\begin{cases}
+  -2k-6 & \text{ if }  -8 \leq k < -2 \\
+  -k+3 & \text{ if } 0 \leq k < 10
+\end{cases}
+\]
 
 
 
 
-Graph of $y = T(v)$.
-
-\begin{image}
-\begin{tikzpicture}
-	\begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-	\addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
-	\addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {-7};
-	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+7};
-	
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,-7)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(1,-7)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(1,6)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
 
 
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-Which is the graph of $z=W(h)=T(h+3)$?
+Graph of $y = T(k)$.
 
 
 
@@ -78,81 +53,249 @@ Which is the graph of $z=W(h)=T(h+3)$?
 
 \begin{image}
 \begin{tikzpicture}
-	\begin{axis}[name = leftgraph,
+  \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$h$, ylabel=$z$,
+            axis lines =center, xlabel=$k$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-	\addplot [draw=penColor,very thick,smooth,domain=(-10:-7)] {-(x+3)-6};
-	\addplot [draw=penColor,very thick,smooth,domain=(-5:-2)] {-7};
-	\addplot [draw=penColor,very thick,smooth,domain=(-2:4)] {-(x+3)+7};
-	
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-10,1)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-7,-2)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-5,-7)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,-7)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,6)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,0)}; 
+  \addplot [draw=penColor,very thick,smooth,domain=(-8:-2)] {-2*x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(0:10)] {-x+3};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-8,10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(0,3)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(10,-7)}; 
 
 
     \end{axis}
-	\begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$h$, ylabel=$z$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-	\addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {-(x-3)-6};
-	\addplot [draw=penColor,very thick,smooth,domain=(1:4)] {-7};
-	\addplot [draw=penColor,very thick,smooth,domain=(4:10)] {-(x-3)+7};
-	
-	\addplot[color=penColor,only marks,mark=*] coordinates{(-4,1)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,-2)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(1,-7)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(4,-7)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(4,6)}; 
-	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(10,0)}; 
-
-
-    \end{axis}
-
-
 \end{tikzpicture}
 \end{image}
 
 
 
 
-
-\begin{multipleChoice}
-\choice[correct]{graph on the left}
-\choice{graph on the right}
-\end{multipleChoice}
+Now, Let's define a new function based on $T$.
 
 
+
+Define $W$ as $W(g) = T(2g)$ with the induced domain.
+
+
+
+$g$ represents numbers in the the domain of $W$ and $2g$ represents numbers in the domain of $T$.  
+
+The domain of $T$ is $[-8,-2) \cup [0,10)$.
+
+
+If $2g \in [-8,-2) \cup [0,10)$, then $g \in [-4,-1) \cup [0,5)$
+
+It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever you are evaluatinng $W$, you get that value by evaluatinng $T$ at twice the $W$-domain number.
+
+
+
+\begin{example}  Evaluating $W$
 
 \begin{itemize}
-\item $h$ represents the domain of $W$. 
-\item $v$ represents the domain of $T$.  
-\item $v$ = $h+3$
+\item $W(4) = T(8) = -8+3=-5$
+\item $W(-2) = T(-4) = 2$
+\item $W(1) = T(2) = 1$
 \end{itemize}
-
-
-These tell us that $v-3 = h$ and the graph of $W$ is the graph of $T$ shifted left $3$.
-
 
 
 \end{example}
 
 
-The shape of the graph didn't change. It just slide to the left. There are still three pieces. The domain still has a gap of length $2$ in it.  The middle pieces is still horzontal.  The solid and hollow endpoint dots are still the same.
+Except for $0$. $W(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
 
-Shifting doesn't change the shape of the graph.
+
+
+It seems backwards.  We multiplied by $2$ and the resulting domain was a compressed version of the original domain.  That is because this is a backwards view of what happened.
+
+
+
+We multiplied $g$ by $2$, but $g$ is from the domain $W$.  We want to know what happened to the domain of $T$ and $k$ represents the domain of $T$.
+
+In our definition of $W$, we have $k=2g$, which gives us $g=\frac{k}{2}$.  $k$ is cut in half, which is what we see in the domain and in the graph.
+
+
+
+
+\[
+W(g) = 
+\begin{cases}
+  -2(2g)-6    & \text{ if }  -8 \leq 2g < -2 \\
+  -(2g)+3   & \text{ if } 0 \leq 2g < 10
+\end{cases}
+\]
+
+
+
+
+
+\[
+W(g) = 
+\begin{cases}
+  -4g-6    & \text{ if }  -4 \leq g < -1 \\
+  -2g + 3   & \text{ if } 0 \leq g < 5
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+Graph of $z = W(g)$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$g$, ylabel=$z$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-8:-1)] {-4*x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(0:5)] {-2*x+3};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-4,10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(0,3)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,-7)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$T$ and $W$ have the same maximums and minimums.  The height of the points didn't change.  The points to the left of the vertical axis moved to the right. The points to the right of the vertical axis moved to the left as the graph compressed horizontally.
+
+
+
+
+
+
+\section{Negative Coefficients}
+
+
+What if we mulitply by $-2$ rather than $2$?
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now, Let's define a new function based on $T$.
+
+
+
+Define $M$ as $M(r) = T(-2r)$ with the induced domain.
+
+
+
+$r$ represents numbers in the the domain of $M$ and now $-2r$ represents numbers in the domain of $T$.  
+
+The domain of $T$ is $[-8,-2) \cup [0,10)$.
+
+
+If $-2r \in [-8,-2) \cup [0,10)$, then $r \in (-5,0] \cup (1, 4]$
+
+It is like the domain of $T$ is on a rubberband and it shrunk in half and then rotated around the vertical axis.  As $r$ walks through the domain of $M$ from the left, the corresponding walking in the domain of $T$ is from the right.
+
+
+
+\begin{example}  Evaluating $W$
+
+\begin{itemize}
+\item $M(4) = T(-8) = 10$
+\item $M(-2) = T(4) = -1$
+\item $M(0) = T(0) = 3$
+\end{itemize}
+
+
+\end{example}
+
+
+Except for $0$. $M(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  While addition caused shifts and changed the zeros, multiplication does not change the zeros.
+
+
+
+
+
+
+
+
+
+Since the mulitplication was on the inside of the formla, it only affects the domain.  Multiplication by $-1$, reflects the graph across the vertical axis - the domain changed sign. Multiplication by $2$ compresses the graph.
+
+
+
+Graph of $m = M(r)$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$r$, ylabel=$m$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(1:4)] {4*x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(-5:0)] {2*x+3};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(4,10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(0,3)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-5,-7)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -167,7 +310,7 @@ Shifting doesn't change the shape of the graph.
 
 
 
-Graph of $y = sin(\theta)$.
+Graph of $y = sin(2\theta)$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -181,7 +324,7 @@ Graph of $y = sin(\theta)$.
             axis on top
           ]
           
-          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x))};
+          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(2*deg(x))};
 
            
 
@@ -190,28 +333,10 @@ Graph of $y = sin(\theta)$.
 \end{image}
 
 
-
-$sin(\theta)$ is periodic with a period of $2\pi$.  If it is shifted by $2\pi$ or any integer multiple of $2\pi$, then the resulting funciton is again $sin(\theta)$.
-
-
-\[    sin(\theta + 2k\pi) = sin(\theta)   \,   \text{ where }  \,  k \in \textbf{Z}       \]
+The graph is compressed horizontally by a factor of $2$.
 
 
-
-\begin{itemize}
-\item The zeros of $sin(\theta)$ are all integer multiples of $\pi$.
-\item The maximum value is $1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
-\item The minimum value is $-1$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
-\end{itemize}
-
-
-If $sin(\theta)$ is shifted left by $\frac{\pi}{2}$, then we get $cos(\theta)$.
-
-
-\[    sin(\theta + \frac{\pi}{2}) = cos(\theta)   \]
-
-
-Graph of $y = cos(\theta)$.
+Graph of $y = cos\left(\frac{1}{2}\theta\right)$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -225,7 +350,7 @@ Graph of $y = cos(\theta)$.
             axis on top
           ]
           
-          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {cos(deg(x))};
+          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {cos(0.5*deg(x))};
 
            
 
@@ -239,9 +364,11 @@ Graph of $y = cos(\theta)$.
 
 
 
+The graph has been stretched norizontally by a factor of $2$.
 
-This agrees with the unit circle.  As you move along the unit circle, the left coordinate (vertical, sine) has the same value as the right coordinate (horizontal, cosine) back a quarter-circle.
+Multiplication of the domain by a constant doesn't change the shape of the graph.  It might squish it horizontally or stretch it horizontally, but the shape remains.  All of the measurements are relatively the same in each graph. The maximums and minimums are still in relatively the same places.  
 
+You may have to view this in reverse, if the multiplication coefficient was negative, but all of the characteristics and features remain.
 
 
 
@@ -254,7 +381,7 @@ This agrees with the unit circle.  As you move along the unit circle, the left c
 
 
 
-Graph of $y = |x|$.
+Graph of $y = |3x|$.
 
 
 
@@ -268,7 +395,7 @@ Graph of $y = |x|$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-7:7),<->] {abs(x)};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-3:3),<->] {3*abs(x)};
         
 
   \end{axis}
@@ -277,46 +404,7 @@ Graph of $y = |x|$.
 
 
 
-
-
-What does the graph of $z = |t-2|$ look like?
-
-This is a shift from thebasic absolute value graph.  All we really need to know is where is the corner?  
-
-\begin{center}
-The corner occurs when the inside of the absolute value equals $0$.
-\end{center}
-
-
-
-$t-2=0$ when $t=2$.  That is where the new corner sits.
-
-
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$z$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-7:9),<->] {abs(x-2)};
-        
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
+Multiplication by $3$ compresses the graph, because all domain numbers here correspond to $3$ times their values in the domain of $|x|$, therefore the graph is steeper.
 
 
 
@@ -326,15 +414,6 @@ $t-2=0$ when $t=2$.  That is where the new corner sits.
 \end{example}
 
 
-Much of graphing follows this example.  There are important points for the function and you identify the position of those points.  Then, the graph follows a general basic shape.
-
-
-
-
-
-
-For example, $y = ln(t)$ has a vertical asymptote when the inside of the logarithm equals $0$. The zero, and corresponding horizontal intercept, occurs when they inside equals $1$.  
-
 
 
 
@@ -342,7 +421,7 @@ For example, $y = ln(t)$ has a vertical asymptote when the inside of the logarit
 
 \begin{example}
 
-Here is the graph of $y = log_2(t+5)$.
+Here is the graph of $y = log_2(-t)$.
 
 \begin{itemize}
 \item vertical asymptote: $t+5=0$, when $t=-5$
@@ -360,10 +439,10 @@ Here is the graph of $y = log_2(t+5)$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-4.97:9),<->] {ln(x+5)/ln(2)};
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({-5},{x});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8.1:-0.07),<->] {ln(-x)/ln(2)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
 
-          \addplot[color=penColor,only marks,mark=*] coordinates{(-4,0)}; 
+          \addplot[color=penColor,only marks,mark=*] coordinates{(-1,0)}; 
 
            
 
@@ -372,7 +451,7 @@ Here is the graph of $y = log_2(t+5)$.
 \end{image}
 
 
-The graph looks the same as the basic logarithm graph, just slid left $5$.
+The graph looks the same as the basic logarithm graph, just reflected about the vertical axis.
 
 
 
@@ -387,13 +466,17 @@ The graph looks the same as the basic logarithm graph, just slid left $5$.
 
 
 
-\begin{example} Shifting Domains
+\begin{example} Stretching Domains
 
-Let $B(p)$ be a function with a given domain, $D$. \\
-Let $a \in D$ where $B$ has a discontinuity. \\
-Let $T(x)$ be a function defined by $T(x) = B(x-5)$ with the induced domain. \\
+Compared to the graph of the function $y=f(x)$, the graph of $z=g(r)=f(4r)$ looks to be 
 
-$T$ has a discontinuity locate at domain number $x = \answer{a+5}$
+\begin{multipleChoice}
+
+\choice{shifted left by $4$}
+\choice{shifted right by $4$}
+\choice{stretched by a factor of $4$}
+\choice[correct]{compressed by a factor of $4$}
+\end{multipleChoice}
 
 
 \end{example}
