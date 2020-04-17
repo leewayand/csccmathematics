@@ -12,6 +12,121 @@ linear linear linear
 \maketitle
 
 
+The \textbf{composition of two functions}, $F$ and $G$, is a new operation on functions, symbolized by $F \circ G$, which produces a new function.
+
+
+\begin{definition}
+Given $a$ in the domain of $G$, with $G(a)$ in the domain of $F$, $(F \circ G)(a)$ is defined to be  $F(G(a))$.
+
+
+If $Dom_G$ and $Dom_F$ represent the domains of $G$ and $F$ respectively, the induced domain of $F \circ G$ is 
+
+
+
+
+\[  Dom_{F \circ G} = \{  g \in  Dom_G  \,   |   \,   G(g) \in Dom_F                 \}           \]
+
+\end{definition}
+
+
+
+
+
+\section{Linear Composition}
+
+
+
+
+Let $A(x) = a_1 \cdot x + a_0$ be a linear function with \textbf{$R$} as its domain. \\
+Let $B(w) = b_1 \cdot w + b_0$ be a linear function with \textbf{$R$} as its domain. \\
+
+
+Then $A \circ B$ is a new function. What is its formula?
+
+To keep everything separate, let's use $v$ as the variable for the formula of $A \circ B$.
+
+
+If we write $A \circ B(v)$, then people will miss read this to say $B(v)$.  So, let's put parentheses around $A \circ B$: $(A \circ B)(v)$.
+
+
+
+
+
+
+
+\begin{align*}
+(A \circ B)(v) & = A(B(v)) \\
+& = A(b_1 \cdot v + b_0)  \\
+& = a_1 \cdot (b_1 \cdot v + b_0) + a_0  \\
+& = a_1 \cdot b_1 \cdot v + a_1 \cdot b_0 + a_0    \\
+& = (a_1 \cdot b_1 \cdot) v + (a_1 \cdot b_0 + a_0)
+\end{align*}
+
+
+
+
+
+
+The composition of two linear functions is again a linear function.
+
+The rate-of-change of the composition is the product of the rates-of-change of the original linear functions.
+
+
+
+
+
+\begin{example} Linear Composition
+
+Let $G(y) = 4 x + 3$ be a linear function with \textbf{$R$} as its domain. \\
+Let $H(t) = 3 w -5$ be a linear function with \textbf{$R$} as its domain. \\
+
+
+Define two new functions, $U(x)$ and $V(w)$, as compositions by
+
+$U(x) = G(H(x)) = 4 (3 x - 5) + 3 = 12 x -17$ \\
+$V(w) = H(G(w)) = 3 (4 w + 3) - 5 = 12 w + 4$ \\
+
+
+Two different function. Both are linear functions. The constant rate-of-change is $12$ for both. \\
+
+Their graphs would be parallel lines.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example} Linear Composition
+
+Let $k(m) = 2 m + 1$ be a linear function with \textbf{$R$} as its domain. \\
+Let $h(n)$ be a linear function with \textbf{$R$} as its domain. \\
+
+
+Let $r(v) = k(h(v)) = 3 v - 2$ 
+
+Determine a formula for $h(n)$.
+
+
+
+
+\textbf{\scriptsize{\textcolor{purple!50!blue!90!black}{SOLUTION}}}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
 
 
 
