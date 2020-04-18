@@ -89,7 +89,7 @@ $V(w) = H(G(w)) = 3 (4 w + 3) - 5 = 12 w + 4$ \\
 
 Two different function. Both are linear functions. The constant rate-of-change is $12$ for both. \\
 
-Their graphs would be parallel lines.
+Their graphs would be parallel lines. \\
 
 
 \end{example}
@@ -118,6 +118,28 @@ Determine a formula for $h(n)$.
 
 
 
+
+
+
+
+
+
+
+$k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
+
+In that case the rates-of-change would mulitply and $h$ would start off looking like $h(n) = \frac{3}{2} n + n_0$, for some $n_0$.
+
+
+So, far we have 
+
+\[   r(v) = k(h(v)) = 2 (\frac{3}{2} v + n_0) + 1  = 3v + 2 n_0 + 1\]
+
+
+We need $2 n_0 + 1 = -2$.  Therefore, $n_0 = -\frac{3}{2}$.
+
+
+We have $h(n) = \frac{3}{2} n - \frac{3}{2}$
+
 \end{example}
 
 
@@ -127,6 +149,374 @@ Determine a formula for $h(n)$.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Linear Composition
+
+Let $k(m) = 2 m + 1$ be a linear function with \textbf{$R$} as its domain. \\
+Let $h(n)$ be a linear function with \textbf{$R$} as its domain. \\
+
+
+Let $r(v) = h(k(v)) = 3 v - 2$ 
+
+Determine a formula for $h(n)$.
+
+
+
+
+\textbf{\scriptsize{\textcolor{purple!50!blue!90!black}{SOLUTION}}}
+
+
+
+
+
+
+
+
+
+
+$k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
+
+In that case the rates-of-change would mulitply and $h$ would start off looking like $h(n) = \frac{3}{2} n + n_0$, for some $n_0$.
+
+
+So, far we have 
+
+\[   r(v) = h(k(v)) = \frac{3}{2} (2 v + 1) + n_0 =  3 v + \frac{3}{2} + n_0\]
+
+
+We need $\frac{3}{2} + n_0 = -2$.  Therefore, $n_0 = -\frac{7}{2}$.
+
+
+We have $h(n) = \frac{3}{2} n - \frac{7}{2}$
+
+\end{example}
+
+
+
+
+
+
+
+
+\section{Stated Domains}
+
+
+Let's restrict the domain of our linear functions.
+
+
+
+
+
+
+
+
+
+\[  T(v) = -v+3  \, \text{ with domain } \,  [1,7)   \]
+
+
+
+
+
+
+Graph of $y = T(v)$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=T(v)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	%\addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+3};
+	%\addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+	%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\[      g(x) = \frac{7}{4}x-8 \, \text{ with domain } \, (2,8)   \]
+
+
+	
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		%\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+Let's create the composition $T \circ g = T(g)$.
+
+
+This means the range of $g$ needs to be inside the domain of $T$. But as the chart below shows, there are numbers in
+the range of $g$ that are not in the domain of $T$.
+
+
+
+
+
+For instance, $0$ is in the range of $g$, but not in the domain of $T$. \\
+
+We need to remove the numbers in the domain of $g$, whose funciton value is $0$.
+
+
+For instance, $-\frac{32}{7}$ is in the domain of $g$, and $g\left(-\frac{32}{7}\right) = 0$. $-\frac{32}{7}$ has to be removed from the domain of $g$.
+
+
+
+
+
+
+
+
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            %unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	%\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:9)] ({x},{1});
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4.5:6)] ({x},{0.5});
+          	%\node at (axis cs:-7,1) [penColor2] {$[$};
+          	%\node at (axis cs:9,1) [penColor2] {$]$};
+          	\node at (axis cs:-4.5,0.5) [penColor2] {$($};
+          	\node at (axis cs:6,0.5) [penColor2] {$)$};
+          	\node at (axis cs:5,1) [penColor2] {Range of $g$};
+
+
+
+
+          	%\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({x},{-0.5});
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{-0.5});
+          	%\node at (axis cs:-4,-0.5) [penColor] {$($};
+          	%\node at (axis cs:-1,-0.5) [penColor] {$]$};
+          	\node at (axis cs:1,-0.5) [penColor] {$[$};
+          	\node at (axis cs:7,-0.5) [penColor] {$)$};
+          	\node at (axis cs:5,-1) [penColor] {Domain of $T$};
+
+
+
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+What part of the range of $g$ can we use?
+
+
+
+
+
+
+
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            %unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	%\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:9)] ({x},{1});
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4.5:6)] ({x},{0.5});
+          	%\node at (axis cs:-7,1) [penColor2] {$[$};
+          	%\node at (axis cs:9,1) [penColor2] {$]$};
+          	\node at (axis cs:-4.5,0.5) [penColor2] {$($};
+          	\node at (axis cs:6,0.5) [penColor2] {$)$};
+          	\node at (axis cs:5,1) [penColor2] {Range of $g$};
+
+
+
+
+          	%\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({x},{-0.5});
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{-0.5});
+          	%\node at (axis cs:-4,-0.5) [penColor] {$($};
+          	%\node at (axis cs:-1,-0.5) [penColor] {$]$};
+          	\node at (axis cs:1,-0.5) [penColor] {$[$};
+          	\node at (axis cs:7,-0.5) [penColor] {$)$};
+          	\node at (axis cs:5,-1) [penColor] {Domain of $T$};
+
+
+
+
+          	\addplot [line width=1, gray, dashed,smooth,samples=100,domain=(-1:1)] ({1},{x});
+          	\addplot [line width=1, gray, dashed,smooth,samples=100,domain=(-1:1)] ({6},{x});
+
+
+
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+
+
+We need to find the preimages of $6$ and $1$ in the domain of $g$.
+
+
+
+
+\begin{itemize}
+\item $g(x) = \frac{7}{4}x-8 = 6$
+\item $\frac{7}{4}x = 14$
+\item $x = \frac{4}{7} \cdot 14 = 8$
+\end{itemize}
+
+
+\begin{itemize}
+\item $g(x) = \frac{7}{4}x-8 = 1$
+\item $\frac{7}{4}x = 9$
+\item $x = \frac{4}{7} \cdot 9 = \frac{36}{7} \approx 5.14$
+\end{itemize}
+
+
+
+We need to restrict the domain of $g$ to $\left[\frac{36}{7}, 8\right)$
+
+
+With this restricted domain, the range of $g$ will be $[1, 6)$, which is the most of the domain of $T$ as we can get from values of $g$.
+
+We now have a domain for our composition: $Dom_{T \circ g} = \left[\frac{36}{7}, 8\right)$
+
+
+
+\section{Halfway}
+
+
+
+Now we need to take our restricted domain of $T$, $[1, 6)$, and determine the restricted range.
+
+
+
+\begin{itemize}
+\item $T(1) = -1+3 = 2$ - included\\
+\item $T(6) = -6+3 = -3$ - excluded \\
+\end{itemize}
+
+
+
+
+
+
+
+\textbf{What do we have?}
+
+
+We have a composition: $T \circ g$.  We know this is a linear function, because it is the composition of two linear functions. \\
+
+Our composition has a formula, let's use $c$ for its variable. \\
+
+$(T \circ g)(c) = -\left(\frac{7}{4}c - 8\right) + 3 =  -\frac{7}{4}c + 3$ \\
+
+It's domain is $\left[\frac{36}{7}, 8\right)$.
+
+
+
+
+
+
+
+
+
+Graph of $y = T(g(c))$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$c$, ylabel={$y=T(g(c))$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	%\addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+	\addplot [draw=penColor,very thick,smooth,domain=(5.14:8)] {-1.75*x+11};
+	%\addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+	%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(5.14,2)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-3)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
