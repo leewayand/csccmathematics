@@ -14,6 +14,404 @@ characteristics
 
 
 
+The formula template for the basic exponential function looks like
+
+
+
+
+\[  a \, r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  r > 0   \]
+
+
+As we have seen before, the coefficient $a$ controls vertical stretching or compression.
+
+
+
+
+We have four combinations
+
+\begin{itemize}
+\item $a>0$ and $r>1$
+\item $a>0$ and $r<1$
+\item $a<0$ and $r>1$
+\item $a<0$ and $r<1$
+\end{itemize}
+
+
+When $r>0$, then $\lim_{x \to -\infty} a \, r^x = 0$ and $\lim_{x \to \infty} a \, r^x = \pm\infty$.  \\
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a>0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a<0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {-(1.3^x)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+When $r<0$, then $\lim_{x \to -\infty} a \, r^x = \pm\infty$ and $\lim_{x \to \infty} a \, r^x = 0$.  \\
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a>0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9), <->] {1.3^(-x)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a<0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-(1.3^(-x)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+All four graphs share a common structure.
+
+
+\begin{itemize}
+\item All have the horizontal axis as an asymptote.
+\item All are a distance of $1$ from the asymptote, when the exponent equals $0$.
+\end{itemize}
+
+These are the important aspects or characteristics that we will use when shifting and stretching.
+
+
+
+
+
+
+\begin{example}  Exponential Function
+
+
+
+Analyze   $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ \\
+
+
+For the basic exponential function graph, the horizontal axis is the horizontal asymptote.  Here, this has been moved down $7$.
+
+
+
+The "inside", representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$. Together with a base of $2$, the function is increasing and the graph goes up to the right.
+
+At $x=-5$, the basic graph would have a point up a distcance of $1$, but here is is multplied by $\frac{1}{3}$.  Therefore, the point is $\left(-5, -7 + \frac{1}{3}\right)$
+
+
+Graph of $y = f(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
+
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\textbf{\textcolor{red!30!black!70!}{Analysis}} \\
+
+\begin{itemize}
+\item The implied domain of $f$ is $\mathbb{R}$.
+\item $f$ is always increasing.
+\item $f$ has no maximums or minimums.
+\item $\lim_{x \to -\infty} f(x) = -7$
+\item $\lim_{x \to \infty} f(x) = \infty$
+\end{itemize}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Exponential Function
+
+
+
+Analyze   $B(t) = -2 \, \frac{2}{3}^{3-t} + 4$ \\
+
+
+
+This follows the basic exponential function template $\frac{2}{3}^t$.  The graph of this would have been big and positive towards the left and approached the horizontal axis to the right.
+
+
+
+
+By changing the exponent: $\frac{2}{3}^{3-t}$, the exponent gets big and positive to the left.  Now, the graph approaches the horizontal axis to the left and gets big and positive towards the right.
+
+
+
+Changing the the sign of the leading coefficient flips the graph vertically: $-2  \, \frac{2}{3}^{3-t}$.  Now, the graph approaches the horizontal axis to the left and gets big and negative towards the right.
+
+
+Adding $4$ to the outside shifts the graph vertically up $4$.
+
+
+$3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away from the horizontal asymptote, which is now $y=4$.
+
+
+
+
+
+Graph of $y = B(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
+
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {4};
+
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Exponential Function
+
+
+
+Analyze   $B(t) = 3^{5-t} - 5$ \\
+
+
+\begin{question}. 
+
+The exponent gets big and positive when $t$ gets big and \wordChoice{\choice{positive}\choice[correct]{negative}}.
+\end{question}
+\begin{question}. 
+
+The graph will widen to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+\end{question}
+\begin{question}. 
+
+The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
+\end{question}
+\begin{question}. 
+
+Our one anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
+\end{question}
+\begin{question}. 
+
+The graph will open \wordChoice{\choice[correct]{up}\choice{down}}.\\
+\end{question}
+
+
+
+
+Graph of $y = B(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
+
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-5};
+
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
 
 
 
