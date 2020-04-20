@@ -16,6 +16,113 @@ exponents
 
 
 
+An example of a basic exponential funciton is $E(t) = 2^t$.  
+
+Its graph looks like
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+We can evalute this function:
+\begin{itemize}
+\item $E(0) = 2^0 = 2$
+\item $E\left(\frac{1}{2}\right) = 2^{\tfrac{1}{2}} = \sqrt{2}$
+\item $E(-1) = 2^{-1} = \frac{1}{2}$
+\end{itemize}
+
+
+When we evaluate a function, we know the domain number and we seek its range partner. In this case, we know $d$ and we seek the pair $(d, 2^d)$, so that we can pull out $2^d$ as the value of the function.
+
+
+
+
+
+\section{Reverse}
+
+We also think in the reverse.
+\begin{itemize}
+\item $E(t) = 4$
+\item $E(t) = {\tfrac{1}{4}} $
+\item $E(t) = 16 $
+\end{itemize}
+
+
+Here, we know the value of the function.  We seek the domain numbers paired with it. We know $2^d$, we seek the pair $(d, 2^d)$, so that we can pull out $d$ as the solution to the equation.
+
+
+
+
+$\bigstar$ As long as we are giving a positive function value, we can find the associated domain number. \\ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
