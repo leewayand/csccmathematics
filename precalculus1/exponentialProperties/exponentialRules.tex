@@ -15,6 +15,240 @@ rules
 
 
 
+The algebra of exponents are grouped into those with the same base...
+
+
+
+
+$\bigstar$  $A^n \cdot A^m = A^{n+m}$
+
+
+$\bigstar$  $\frac{A^n}{A^m} = A^{n-m}$
+
+
+$\bigstar$  $(A^n)^m = A^{n \cdot m}$ \\
+
+
+...and those with the same exponent. 
+
+
+$\blacksquare$  $A^n \cdot B^n = (A \cdot B)^n$
+
+
+$\blacksquare$  $\frac{A^n}{B^n} = \left(\frac{A}{B}\right)^n$ \\
+
+
+
+
+
+These lead to equalities such as
+
+
+
+
+$\blacklozenge$ $A^0 = 1$
+
+
+$\blacklozenge$ $A^1 = A$
+
+
+$\blacklozenge$ $A^{-n} = \frac{1}{A^n}$
+
+
+
+
+
+We have also seen that exponential functions are \textbf{one-to-one}. One-to-one means that each range number is paired with a unique domain number.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
+
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
+
+   
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Our definition of functions includes a similar rule for domain numbers.  Each domain number is in exactly one pair.  One-to-one puts the same restrictions on range numbers.  Each range number is in exactly one pair.
+
+In other words, each function value occurs exactly once.
+
+
+If you know that $A^r = A^t$, then $r=t$. \\
+
+
+This is an important rule.
+
+
+\begin{fact} Uniqueness
+
+
+\[      A^r = A^t, \,  \text{ then }  \, r=t    \]
+
+
+\end{fact}
+
+
+
+
+\begin{example} Solving Equations
+
+
+Solve $5^m = 25$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+$5^m = 25$
+
+$5^m = 5^2$
+
+$m = 2$
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Solving Equations
+
+
+Solve $2^{2k+1} = 32$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+$2^{2k+1} = 32$
+
+$2^{2k+1} = 2^5$
+
+$2k + 1 = 5$
+
+$k = 2$
+
+\end{example}
+
+
+
+
+
+
+\begin{example} Solving Equations
+
+
+Solve $9^{-x + 2} = 27^{x-1}$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+$9^{-x + 2} = 27^{x-1}$
+
+$(3^2)^{-x + 2} = (3^3)^{x-1}$
+
+$3^{-2x+4} = 3^{3x-3}$
+
+$-2x + 4 = 3x - 3$
+
+$7 = 5x$
+
+
+$\frac{7}{5} = x$
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{e}
+
+
+You know the number $\pi$ (pronounced "pie").  The definition of $\pi$ is kind of weird.  For any circle, $\pi$ is the ratio of the circumference to the diameter.
+
+$\pi$ is approximately $3.1415926$.
+
+
+
+
+
+There is another number that comes up quite frequently when dealing with naturla growth.  This number called "e" and its symbol is $e$.
+
+$e$ is approximately $2.718281828$.
+
+The definition of $e$ is even weirder. \\
+
+
+Consider the function $e(x) = \left(1 + \frac{1}{x}\right)^x$
+
+
+
+\begin{center}
+\desmos{cmurxtv0dc}{400}{300}
+\end{center}
+
+
+This function is an increasing function, but it increases at a smaller and smaller rate.  It starts to level off and approaches a horizontal asymptote.  This asymptote is at a height of $e$.  And that is the definition of $e$
+
+
+\[   e = \lim_{x \to \infty}  \left(1 + \frac{1}{x}\right)^x      \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
