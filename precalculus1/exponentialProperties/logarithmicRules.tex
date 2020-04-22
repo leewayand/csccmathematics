@@ -22,4 +22,510 @@ rules
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Exponents}
+
+Logarithms are exponents. \\
+
+
+$log_a(b)$ is what you raise $a$ to, to get $b$.
+
+\[    a^{log_a(b)}  = b    \, \text{ for } \,  a,b > 0     \]
+
+
+We can read it right to left as well.  Any positive number, $b$, can be written with any base, $a$, like $a^{log_a(b)}  = b$.
+
+
+
+
+
+
+Logarithms are exponents. Therefore, they should follow all of the exponent rules. \\
+
+
+
+$\blacktriangleright$  Let's write the product $M \cdot N$ in two different ways.
+
+
+
+\[   M \cdot N = a^{log_a(M)} \cdot a^{log_a(N)}                    \]
+
+\[   M \cdot N = a^{log_a(M \cdot N)}                  \]
+
+
+Therefore, these must be equal.
+
+
+\[    a^{log_a(M)} \cdot a^{log_a(N)}     =   a^{log_a(M \cdot N)}                \]
+
+
+Apply an exponent rule:
+
+
+\[    a^{log_a(M)+log_a(N)}    =   a^{log_a(M \cdot N)}                \]
+
+
+
+Since exponential functions are one-to-one, we have 
+
+
+\[    log_a(M)+log_a(N)    =   log_a(M \cdot N)               \]
+
+
+
+
+\begin{fact} 
+
+\[    log_a(M)+log_a(N)    =   log_a(M \cdot N)      \, \text{ for } \, M, N > 0        \]
+
+
+\end{fact}
+
+
+
+
+$\blacktriangleright$  Let's write the quotient $\frac{M}{N}$ in two different ways.
+
+
+
+\[   \frac{M}{N} = \frac{a^{log_a(M)}}{a^{log_a(N)}}                    \]
+
+\[   \frac{M}{N} = a^{log_a\left(\frac{M}{N}\right)}                  \]
+
+
+Therefore, these must be equal.
+
+
+\[    \frac{a^{log_a(M)}}{a^{log_a(N)}}    =   a^{log_a\left(\frac{M}{N}\right)}                \]
+
+
+Apply an exponent rule:
+
+
+\[    a^{log_a(M) - log_a(N)}    =   a^{log_a\left(\frac{M}{N}\right)}                \]
+
+
+
+Since exponential functions are one-to-one, we have 
+
+
+\[    log_a(M)-log_a(N)    =   log_a\left(\frac{M}{N}\right)             \]
+
+
+
+
+
+
+
+
+\begin{fact} 
+
+\[    log_a(M)-log_a(N)    =   log_a\left(\frac{M}{N}\right)        \, \text{ for } \, M, N > 0        \]
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$  Let's write $M^N$ in two different ways.
+
+
+
+\[   M^N = a^{log_a(M^N)}                  \]
+
+\[   M^N = (a^{log_a(M)})^N =     (a^{N \cdot log_a(M)})             \]
+
+
+Therefore, these must be equal.
+
+
+\[    a^{log_a(M^N)}      =    (a^{N \cdot log_a(M)})                \]
+
+
+
+
+
+Since exponential functions are one-to-one, we have 
+
+
+\[    log_a(M^N)    =   N \cdot log_a(M)            \]
+
+
+
+
+
+
+
+
+\begin{fact} 
+
+\[    log_a(M^N)    =   N \cdot log_a(M)       \, \text{ for } \, M, N  \, \text{ for } \,  M> 0        \]
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{One-to-One}
+
+
+
+
+
+
+
+
+
+We have also seen that logarithmic functions are \textbf{one-to-one}. One-to-one means that each range number is paired with a unique domain number.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
+			%\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
+
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-3});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+			%\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(-4,-2)};
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Our definition of functions includes a similar rule for domain numbers.  Each domain number is in exactly one pair.  One-to-one puts the same restrictions on range numbers.  Each range number is in exactly one pair.
+
+In other words, each function value occurs exactly once.
+
+
+If you know that $log_a(r) = log_a(t)$, then $r=t$. \\
+
+
+This is an important rule.
+
+
+\begin{fact} Uniqueness
+
+
+\[     \text{If } \,  log_a(r) = log_a(t), \,  \text{ then }  \, r=t    \]
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Solving Equations
+
+
+Solve $log_5(21 + x) = 2$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+$log_5(21 + x) = 2$
+
+$5^{log_5(21 + x)} = 5^2$
+
+$21 + x = 5^2 = 25$
+
+$x = 4$
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Solving Equations
+
+
+Solve $log_2(y) + log_2(y-4) = log_2(y+6)$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+$log_2(y) + log_2(y-4) = log_2(y+6)$
+
+$log_2(y(y-4)) = log_2(y+6)$
+
+$y(y-4) = y+6$
+
+$y^2 - 4y - y - 6 = 0$
+
+$y^2 - 5y - 6 = 0$
+
+$(y-6)(y+1) = 0$
+
+
+Either $y-6 = 0$ or $y+1 = 0$
+
+Either $y = 6$ or $y = -1$
+
+However, $y \ne -1$, since $-1$ is not in the domain of $log_2(y)$.
+
+Therefore, just one solution: $6$.
+
+The solution set is $\{ 6 \}$
+
+\end{example}
+
+
+
+
+
+
+\begin{example} Solving Equations
+
+
+Solve $7^k = 5$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+We are looking for the number that you raise $7$ to, to get $5$.  That number  is $log_7(5)$.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Change of Base}
+
+
+Any positive number can be written as a power of any other positive number.  We can change the base. That is what logarithms do.
+
+
+\[    b = a^{log_a(b)}  \]
+
+
+We can also write any logarithm in terms of any base.
+
+
+
+
+$a$ and $b$ can be written in terms of some third base, $c$.
+
+
+\[    b = c^{log_c(b)} \,   \text{ and } \,      a = c^{log_c(a)}      \]
+
+
+
+Puting these together gives 
+
+
+
+\[   c^{log_c(b)} = \left(c^{log_c(a)}\right)^{log_a(b)}  \]
+
+
+
+\[   c^{log_c(b)} = c^{log_c(a) \cdot log_a(b)}  \]
+
+
+
+\[   log_c(b) = log_c(a) \cdot log_a(b)  \]
+
+
+\[   \frac{log_c(b)}{log_c(a)} =  log_a(b)  \]
+
+
+This is known as the \textbf{Change of Base Formula}.
+
+
+
+
+
+
+
+
+\begin{fact}  Change of Base Formula
+
+\[   log_a(b)  =  \frac{log_c(b)}{log_c(a)}        \, \text{ for } \, a, b, c  > 0        \]
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+If we can write any power in terms of any base, and any logarithm in terms of any base, then let's just pick one base to write everything in.
+
+
+We have such a base: $e$
+
+
+
+
+
+\section{e}
+
+
+
+$e$ was defined in a very weird way.
+
+\[   e = \lim_{x \to \infty}  \left(1 + \frac{1}{x}\right)^x      \]
+
+
+It is weird now.  But as you continue through Calculus, you will see $e$ pop up all over the place.  It seems to have a connection to everything.  So much so that scientists, engineers, and mathematicians have  adopted $e$ as the prefered base for eveything.
+
+
+This means that we encounter $log_e(x)$ a lot.  And, any time something appears a lot in mathematics, it usually gets a shortcut abbreviation.
+
+
+
+
+\begin{definition}  Natural Logarithm
+
+
+\[     ln(x) = log_e(x) \]
+
+
+That is a lowerscase "el" and a lowercase "en".
+
+
+\end{definition}
+
+
+That is not an uppercase "eye".  It is not IN.  It is ln.
+
+
+
+
+
+\begin{example}  base e
+
+
+$log_7(5) = \frac{ln(7)}{ln(5)}$
+
+
+\end{example}
+
+
+
+Calculators usually have a button titled "ln" or "LN".  When approximating values of logarithms with other bases, we convert them to natural logarithms.  Then we can use the calculator.
+
+
+
+
+
+
+
+
 \end{document}
