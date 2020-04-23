@@ -20,6 +20,218 @@ distance
 
 
 
+Given two real numbers, $a$ and $b$, you can measure the distance between them: $|b-a|$.  We use this measurement to decide if things are close.  The smaller $|b-a|$, the closer $a$ and $b$ are.
+
+
+Or, we could think the other way.  Given a real number $a$ and a distance $\delta$, we could describe all of the real numbers closer do $a$ than $\delta$.  They would be the numebrs inside the interval $(a-\delta, a+\delta)$, which we could describe with absolute value.
+
+\[      (a-\delta, a+\delta) = \{ r \in \mathbb{R} \, | \, |r - a| < \delta        \}       \]
+
+
+\textbf{Note:}  $\delta$ is a very popular symbol to represent small distances.
+
+
+
+And, since $(a-\delta, a+\delta)$ is an open interval, we know there is a number in here.  In fact we know there is a number in the left half, $(a-\delta, a)$ and we know htere is a number in the right half, $(a, a+\delta)$.
+
+
+And, it doesn't matter how small $\delta$ is.  There will always be a number in the left half and in the right half, because we have an open interval.
+
+
+
+\section{Image}
+
+
+We could picture $(a-\delta, a+\delta)$ inside the domain of a function, $f$, and then investigate the image of this interval under $f$.  If $I$ represents an interval, then $f(I)$ represents its image under $f$.
+
+
+\[       f(I) = \{   f(a)  \, | \, a \in I            \}             \]
+
+
+
+
+\begin{example} Image
+
+Let $f(x) = 2x + 5$ with the implied domain.
+
+Let  $I = (4-\delta, 4+\delta)$, where $\delta > 0$ is a small real number.
+
+Then $I$ is an interval in the domain of $f$.
+
+
+Its image is $f(I) = \{   f(a)  \, | \, a \in I \}  = \{   2a+5  \, | \, a \in (4-\delta, 4+\delta) \}$  \\
+
+
+
+$f$ will stretch the interval b a factor of $2$ and shift it by $5$.
+
+
+$(2(4-\delta)+5, 2(4+\delta)+5)$
+
+
+$(13-2\delta), 13+2\delta)$
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+What if we had a target for our transformation? \\
+
+A target maybe too difficult to hit exactly.  Maybe a target interval to land inside. \\
+
+
+
+What if, in the previous example, we wanted $f(I) \subset (6-\epsilon, 6+\epsilon)$, where $\epsilon > 0$ is some small distance?  \\
+
+
+What are the possibilities for $I$?  To land near $6$, $x$ would need to be near $\frac{1}{2}$.  \\
+
+$I$ would need to look like $\left( \frac{1}{2} - \delta, \frac{1}{2}+ \delta \right)$  But this isn't going to work if $\delta$ is too big compared to $\epsilon$.  We need to describe $\delta$ in terms of $\epsilon$ to make sure.  And, we are in the business of making sure. \\
+
+
+
+$\delta$ will be mulitplied by $2$ and we need this to be smaller than $\epsilon$.  Therefore, we need $\delta < \frac{\epsilon}{2}$ for the image to land inside our target interval.  Let's pick $\delta < \frac{\epsilon}{3}$.  That makes sure. \\
+
+
+
+$I = \left( \frac{1}{2} - \frac{\epsilon}{3}, \frac{1}{2} + \frac{\epsilon}{3} \right)$
+
+
+
+
+When working backwards through the function, like this, we use the word \textbf{preimage}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Preimage}
+
+
+
+
+The image of a domain interval is the set of function values that occur at those domain numbers.  The \textbf{preimage} is the reverse.  
+
+Given an interval, $I$, in the range (an interval of function values), the preimage is the set of od domain numbers where the function value is a mamber of $I$.
+
+Unfortunately for communication purposes, we reuse some notation for the preimage.
+
+
+\[       f^{-1}(I) = \{   a \in Dom_f  \, | \, f(a) \in I  \}             \]
+
+
+
+\textbf{Note:}  The $-1$ exponent means reverse here.  We also use a $-1$ exponent to mean reciprocal.  When reading mathematics, we need to take into account the context when interpreting the symbols and notation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Preimage
+
+Let $G(t) = -4t - 3$ with the implied domain.  The implied range is $\mathbb{R}$.
+
+Let  $I = (10-\epsilon, 10+\epsilon)$, where $\epsilon > 0$ is a small real number.  
+
+Then $I$ is a small \textbf{neighborhood} of $10$ in the range of $G$.
+
+
+What is the preimage of $I$?
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}} \\
+
+
+
+
+
+$G$ will stretch a domain interval by a factor of $4$.  It will also reflect it and shift it $3$.  
+
+
+First, we need a domain interval whose image will be around $14$.
+
+$-4t-3 = 10$
+
+$-4t = 13$
+
+$t = -\frac{13}{4}$
+
+
+
+The preimage domain interval looks like $\left( -\frac{13}{4} - \delta, -\frac{13}{4} + \delta \right)$.  Rather than just stating that $\delta$ is small, we need to be specific about its smallness by specify $\delta$ in terms of $\epsilon$.
+
+$G$ will stretch $\delta$ by a factor of $4$, therefore,  we need $\delta = \frac{\epsilon}{4}$. 
+
+
+
+
+\[   G^{-1}((10-\epsilon, 10+\epsilon)) = \left( -\frac{13}{4} - \frac{\epsilon}{4}, -\frac{13}{4} + \frac{\epsilon}{4} \right)   \]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}

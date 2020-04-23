@@ -14,6 +14,537 @@ space
 
 
 
+An \textbf{interval} of real numbers, or on the real line, is a whole piece of the real line.
+
+
+\begin{definition}  Open Intervals
+
+\item A \textbf{finite open interval} contains all of the real numbers two real numbers, but excludes the numbers.
+
+We symbolize finite open intervals like $(a, b)$.
+
+
+
+\item An \textbf{infinite open interval} contains either (a) all of the real numbers less than some specific real number, or (2) all of the real numbers greater than some specific real number.
+
+We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$.
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+\begin{definition}  Closed Intervals
+
+\item A \textbf{finite closed interval} contains all of the real numbers two real numbers, including the numbers.
+
+We symbolize finite open intervals like $[a, b]$.
+
+
+
+
+\item An \textbf{infinite closed interval} contains either (a) all of the real numbers less than or equal to some specific real number, or (2) all of the real numbers greater than or equal to some specific real number.
+
+We symbolize infinite open intervals like $(-\infty, b]$ or $[a, \infty)$.
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+Open intervals are weird, which means this is where we learn a lot about real numbers and functions. \\
+
+
+$\blacktriangleright$  Open intervals always contain a real number, namely the average of the two endpoint numbers.
+
+
+
+\[  \frac{a+b}{2}  \in (a,b)    \]
+
+
+
+
+
+$\blacktriangleright$ Open intervals do not contain a maximum real number.
+
+$b$ is not a member of $(a,b)$, so it cannot be the maximum number in the interval.   Any number, $c \in (a,b)$ is a candidate for the maximum real number in the interval, except  $\frac{c+b}{2} \in (a,b)$  and $c < \frac{c+b}{2}$.  $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in the open interval. \\
+
+
+$\blacktriangleright$ Similarly, open intervals do not contain a minimum real number. \\
+
+
+$\blacktriangleright$ We can make similar observations about infinite open intervals. \\
+
+
+
+
+\begin{observation} Space
+
+
+Let $(a,b)$ be an open interval.
+
+Let $c \in (a,b)$ be an open interval.
+
+Then there is an open interval inside $(a,b)$ that also contains $c$.
+
+\textbf{\textcolor{purple!50!blue!90!black}{explanation}} \\
+
+
+
+
+
+
+
+$a < \frac{a+c}{2} < c$ and  $c < \frac{c+b}{2}  < b$
+
+
+
+\[   c \in \left(\frac{a+c}{2} , \frac{c+b}{2} \right) \subset (a,b)              \]
+
+
+\end{observation}
+
+
+There is always space aound any number inside an open interval.  This space will help us study discontinuities.  The space means that an open interval cannot just touch a number, like an endpoint.  Any number that an open interval touches is swallowed up completely by the open interval.
+
+
+We are only talking about intervals here, but there is also a larger notion of an \textbf{open set}, which may not be an interval.  The observation above is the defining characteristic of open sets.  If there is an open interval around every member of the set, then the set is an open set.
+
+
+
+
+
+
+\section{Interval Arithmetic}
+
+
+We have several types of intervals of real numbers.
+
+
+\begin{itemize}
+\item Finite Open:   $(a, b)$
+\item Finite Closed: $[a, b]$
+\item Finite Half-Opened, Half-Closed:  $[a, b)$  or $(a,b]$ \\
+
+\item Infinite Open: $(-\infty, b)$ or $(a, \infty)$
+\item Infinite Closed: $(-\infty, b]$ or $[a, \infty)$
+
+\end{itemize}
+
+
+
+Intervals have an arithmetic. Three of the operations are \textbf{intersection} and \textbf{union} and \textbf{complement}.
+
+
+
+\begin{definition} Interval Operations
+
+
+Given two intervals $S$ and $T$, the \textbf{union} is $S \cup T = \{ r \in \mathbb{R} \, | \, r \in S \, \text{ or } \, r \in T    \}$ \\
+
+Given two intervals $S$ and $T$, the \textbf{intersection} is $S \cap T = \{ r \in \mathbb{R} \, | \, r \in S \, \text{ and } \, r \in T    \}$ \\
+ 
+Given an interval $S$, the \textbf{complement of} is $S'  = \{ r \in \mathbb{R} \, | \, r \not\in S  \}$ 
+
+
+\end{definition}
+
+
+
+
+We can use this arithmetic to connect open and closed sets.
+
+$\blacktriangleright$ The complement of a finite open interval is the union of two closed intervals.
+
+\[    (a,b)'  = (-\infty, a] \cup [b, \infty)          \]
+
+
+
+$\blacktriangleright$ The complement of an infinite open interval is an infinite closed interval.
+
+\[     (-\infty, a)' = [a, \infty)          \]
+
+\[     (a, \infty)' = (-\infty a]          \]
+
+
+
+$\blacktriangleright$ The complement of a finite closed interval is the union of two open intervals.
+
+\[    [a,b]'  = (-\infty, a) \cup (b, \infty)          \]
+
+
+
+$\blacktriangleright$ The complement of an infinite closed interval is an infinite open interval.
+
+\[     (-\infty, a]' = (a, \infty)          \]
+
+\[     [a, \infty)' = (-\infty, a)          \]
+
+
+
+
+
+
+
+
+
+Intervals and their arithmetic are part of a big idea of sets.  Intervals are special sets.  There are other types of sets and they also use this arithmetic.
+
+There are two special sets.
+
+\begin{itemize}
+\item $\mathbb{R}$  is an open set, because any real number, $r$, has an open interval around it - namely $(r-1, r+1) \subset \mathbb{R}$.
+\item The empty set, $\emptyset$, is an open set.  This is true, because it is not false.  You cannot find a number inside $\emptyset$ such that there is no open interval containing it - because there are not numbers in $\emptyset$.  We say that this is \textbf{vacuously true}, because there is nothign to prove it wrong.
+\end{itemize}
+
+
+
+
+
+Sets also follow this idea that complements of open sets are closed and vice versa.
+
+\begin{itemize}
+\item $\mathbb{R} = \emptyset'$, which makes $\mathbb{R}$ a closed set.
+\item $\mathbb{R}' = \emptyset$, which makes $\emptyset$ a closed set.
+\end{itemize}
+
+
+
+
+
+\begin{fact} Open and Closed
+
+$\mathbb{R}$ and $\emptyset$ are both open and closed sets at the same time.
+
+
+\end{fact}
+
+
+
+
+
+
+\begin{observation} Intersections
+
+$(-\infty, 3] \cap  [2, \infty) = [2, 3]$
+
+$(-\infty, 3] \cap  (-\infty, 2] = (-\infty, 2]$
+
+$[6, \infty)  \cap  [4, \infty) = [4, \infty)$
+
+$(-\infty, 3] \cap  [4, \infty) = \emptyset$ \\
+
+
+
+
+
+
+$[1, 7] \cap  [4, 9] = [4, 7]$
+
+$[1, 7] \cap  [2, 6] = [2, 6]$
+
+$[1, 7] \cap  [9, 11] = \emptyset$
+
+
+\end{observation}
+
+
+The observation above gives the idea of why intersections of closed sets are closed sets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Nested Intervals}
+
+
+An interval is \textbf{nested} inside another interval if it is completely contained inside the other interal.
+
+
+
+
+
+\textbf{Nested Closed Intervals}
+
+If $a < b < c < d$, then $[b,c]$ is nested inside $[a,d]$.   $[b,c]$ is a subset of $[a,d]$.  $[b,c] \subset [a,d]$.
+
+
+
+$\blacktriangleright$  The intersection of two nested closed intervals equals the inner closed interval.
+
+$\blacktriangleright$  The intersection of a finite number of nested closed intervals equals the closed inner interval.
+
+$\blacktriangleright$ What about an infinite number of nested closed intervals?
+
+
+
+\begin{example} nested
+
+
+\[ \bigcap_{n=1}^{\infty}   \left[3 - \frac{1}{n}, 5 + \frac{1}{n}\right]     \]
+
+
+
+The intersection would be all real numbers that are in every one of those nested closed intervals.
+
+
+\[ \bigcap_{n=1}^{\infty}   \left[3 - \frac{1}{n}, 5 + \frac{1}{n}\right]  = [3, 5]   \]
+
+
+
+
+
+\end{example} 
+
+
+An infinite intersection of nested closed intervals is again a closed interval. \\
+
+
+
+
+
+
+\begin{example} nested
+
+
+\[ \bigcap_{n=1}^{\infty}   \left[4 - \frac{1}{n}, 4 +  \frac{1}{n}\right]     \]
+
+
+
+The intersection would be all real numbers that are in every one of those nested closed intervals.
+
+
+\[ \bigcap_{n=1}^{\infty}   \left[4 -  \frac{1}{n}, 4 + \frac{1}{n}\right]    = [4, 4] = \{ 4 \}  \]
+
+
+
+
+
+\end{example}
+
+
+An infinite intersection of nested closed intervals is again a closed interval, which might just contain a single number. \\
+
+
+
+
+
+Infinite intersections of open intervals don't always do this.
+
+
+\begin{example} nested
+
+
+\[ \bigcap_{n=1}^{\infty}   \left(3 - \frac{1}{n}, 5 + \frac{1}{n}\right)     \]
+
+
+
+The intersection would be all real numbers that are in every one of those nested closed intervals.
+
+
+\[ \bigcap_{n=1}^{\infty}   \left(3 - \frac{1}{n}, 5 + \frac{1}{n}\right)  = [3, 5]   \]
+
+
+
+
+
+\end{example}
+
+
+An infinite intersection of open intervals can be a closed interval.
+
+
+It could even be a singleton set.
+
+
+
+
+\begin{example} nested
+
+
+\[ \bigcap_{n=1}^{\infty}   \left(4 - \frac{1}{n}, 4 +  \frac{1}{n}\right)     \]
+
+
+
+The intersection would be all real numbers that are in every one of those nested closed intervals.
+
+
+\[ \bigcap_{n=1}^{\infty}   \left(4 -  \frac{1}{n}, 4 + \frac{1}{n}\right)    = [4, 4] = \{ 4 \}   \]
+
+
+
+
+
+\end{example}
+
+
+
+
+
+It coud even be the empty set.
+
+
+
+\begin{example} nested
+
+
+\[ \bigcap_{n=1}^{\infty}   \left(0,  \frac{1}{n}\right)     \]
+
+
+
+The intersection would be all real numbers that are in every one of those nested closed intervals.
+
+
+$0$ is not in any of the nested intervals, so $0$ is not in the intersection.
+
+
+Suppose $r>0$ is some real number.  Then there exists some natural number $N$, such that $\frac{1}{N} < r$.
+
+Then $r$ is not in any of the nested intervals inside $\left(0,  \frac{1}{N}\right)$. So, $r$ is not in the intersection.
+
+
+No real number is in the intersection.
+
+
+\[ \bigcap_{n=1}^{\infty}   = \emptyset    \]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+Open intervals are weird.  Closed intervals are nice.  They are so nice that even an intersection of an infinite number of nonempty closed intervals has to contain something.  It cannot be empty.
+
+
+
+
+\begin{theorem} Intersection Theorem
+
+
+Suppose we have a infinite decreasing, nested, sequence of non-empty closed intervals.
+
+
+\[   I_0 \supset    I_1 \supset  \cdots \supset I_{k}   \supset I_{k+1}  \cdots  \]
+
+
+
+Then 
+
+
+\[   \bigcap_{k=0}^{\infty} \ne \emptyset         \]
+
+
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+This turns out to be extremely important and useful as we will see in Calculus.
+
+
+And, the reason this is true is becasue open intervals must contain space.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
