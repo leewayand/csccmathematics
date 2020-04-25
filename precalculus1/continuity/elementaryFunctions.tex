@@ -14,6 +14,942 @@ inherent breaks
 
 
 
+A \textbf{discontinuity} in a function is first of all a domain number.  The function has a value at this number. Secondly, around this domain number, the function values are not close to the value at the discontinuity. There is space between the functi onvalue at the discontinuity and the rest of the function, no matter how close you get.
+
+
+Let $a$ be a discontiuity of $f$ in the domain of $f$.   Then $f(a)$ is a value in the range of $f$. Since $a$ is a discontinuity, there must be a distance (perhaps really small), which we'll call $\epsilon$, which defines an open interval around $a$ - namely $(f(a)-\epsilon, f(a)+\epsilon)$.  
+
+And, no matter how close you get to $a$, there are domain numbers closer to $a$ where the function value is outside $(f(a)-\epsilon, f(a)+\epsilon)$.
+
+
+No matter how small $\delta>0$ is, there is always a number, $b \in (a-\delta, a+\delta)$ such that $ f(b) \not\in(f(a)-\epsilon, f(a)+\epsilon)$
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+\[
+\text{Let } \, f(x) = 
+\begin{cases}
+  2x-4 & \text{ on } (-2, 5) \\
+  -x + 9  & \text{ on } [5, 9)
+\end{cases}
+\]
+
+
+
+
+
+Graph of $y=f(x)$
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:5),<-] {2*x-4};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(5:9),->] {-x+9};
+
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,4)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,6)};
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$5$ is a disconinuity for $f$. \\
+
+$5$ is in the domain and $f(5)=4$
+
+
+
+Pick a radius of $\epsilon = 1$ and consider the interval $(4-\epsilon , 4+\epsilon) = (4-1 , 4+1) = (3,5)$. \\
+
+
+$\vartriangleright$ Can we select an interval around $5$, small enough, so that all domain numbers inside this interval have their function values inside $(3,5)$?  The answer is yes.
+
+Select $[5, 6)$. \\
+
+
+
+$\vartriangleright$ Can we select an \textbf{open} interval around $5$, small enough, so that all domain numbers inside this interval have their function values inside $(3,5)$?  The answer is no.
+
+
+
+
+Let $0.1 > \delta > 0$ be a number as small as you wish.
+
+Consider the open interval $(5-\delta, 5+\delta)$ around $5$. It doesn't matter how small $\delta$ is.  The number $5 - \frac{\delta}{2}$ is always inside this open interval and the function value there is 
+
+\[  f(5 - \frac{\delta}{2})     = 2(5 - \frac{\delta}{2})-4 = 6 - \delta     \]
+
+
+Since $0.1 > \delta$, we know for sure that $6 - \delta > 5$.  $6 - \delta$ is NEVER inside $(3, 5)$.
+
+There is no open interval around $5$, such that the function values of domain numbers inside this interval are always inside $(3,5)$. \\
+
+
+
+
+We have produced an $\epsilon$, such that there is no open interval around $5$ where the function values of domain numbers inside this interval are always inside $(4-\epsilon , 4+\epsilon)$.
+
+
+That is, algebraically, what is means to be a discontinuity.
+
+
+
+
+\end{example}
+
+
+
+
+\textbf{Continuity} means that you can ALWAYS find an open interval, no matter what $\epsilon$ is choosen. \\
+
+
+
+
+
+
+\[
+\text{Let } \, f(x) = 
+\begin{cases}
+  2x-4 & \text{ on } (-2, 5) \\
+  -x + 9  & \text{ on } [5, 9)
+\end{cases}
+\]
+
+$f$ is continuous at $3$. \\
+$f(3)=2$ \\
+
+Pick ANY open interval around $2$:  $(2 - \epsilon, 2 + \epsilon)$, where $\epsilon > 0 $ is small. 
+
+Then there is a corresponding interval for the domain. Namely choose $\delta = \frac{\epsilon}{4}$.
+
+Let $I = (3 - \delta, 3 + \epsilon) = \left(3 - \frac{\epsilon}{4}, 3 + \frac{\epsilon}{4}\right)$
+
+
+The image of $I$, $f(I) = f\left(\,\left(3 - \frac{\epsilon}{4}, 3 + \frac{\epsilon}{4}\right)\,\right) = \left(2 - \frac{\epsilon}{4}, 2 + \frac{\epsilon}{4}\right)$
+
+And, $\left(2 - \frac{\epsilon}{2}, 2 + \frac{\epsilon}{2}\right) \subset  (2 - \epsilon, 2 + \epsilon) $
+
+
+\textbf{ALL} of the function values land inside the original $(2 - \epsilon, 2 + \epsilon)$ interval.
+
+
+This can be done FOR ANY $\epsilon > 0$. \\
+
+
+The function value NEVER jumps out of this interval.
+
+
+
+
+
+
+
+\begin{example}  Discontinuity
+
+
+\[
+\text{Let } \, T(k) = 
+\begin{cases}
+  0 & \text{ on } \mathbb{R} - \left\{ \frac{1}{n} \, | \, n \in \mathbb{N}     \right\} \\
+  1  & \text{ on } \left\{ \frac{1}{n} \, | \, n \in \mathbb{N}     \right\}
+\end{cases}
+\]
+
+$T(k)$ is $0$ everywhere except the reciprocals of the natural numbers.
+
+The natural numbers are $\{ 1, 2, 3, 4, \cdots \}$.
+
+The reciprocals of the natural numbers are $\left\{ 1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \cdots \right\}$.
+
+On the reciprocals, $f\left(\frac{1}{n}\right) = 1$ \\
+
+
+
+$0$ is in the domain and $f(0) = 0$.
+
+For any small $0.1 > \epsilon > 0$ choosen, the interval $(-\epsilon, \epsilon)$ is an open interval around $f(0) = 0$. \\
+
+
+
+Now, consider any $\delta > 0$ and the interval $(-\delta, \delta)$. No mater how small $\delta$ is, there is an $n_0 \in \mathbb{N}$, such that $0 < \frac{1}{n_0} < \delta$ and $f\left(\frac{1}{n_0}\right) = 1$. outside $(-\epsilon, \epsilon)$. \\
+
+
+
+
+For \textbf{\textcolor{red!50!blue!90!black}{ANY}} choosen $\epsilon$-interval around $f(0)= 0$, there is no corresponding $\delta$ such that \textbf{\textcolor{red!50!blue!90!black}{ALL}} of the function values from  $(-\delta, \delta)$ land inside $(-\epsilon, \epsilon)$.
+
+
+$0$ is a discontinuity of $f$.
+
+
+\end{example}
+
+
+
+
+
+
+In the example above, $T(k)$ didn't have a big space surrounding the function value.  Instead it just had an infinite number of single individual values jump away from the target value.
+
+
+The example demonstrates that functions do just about any and every weird thing you can think of.
+
+But Elementart Functions are not weird.  They are nice.  
+
+
+
+\section{Elementary Functions}
+
+
+
+
+The Element Functions don't do weird things.  They are usually continuous everywhere.  When they do have discontinuities, they are very nice discontinuities with obvious jumps.
+
+
+
+
+
+
+\begin{itemize} 
+
+\item \textbf{Polynomial Function}  Polynomials are continuous everywhere. They have no discontinuities. Constant functions and linear functions are the nicest of the polynomial functions.
+
+
+
+
+
+\item \textbf{Roots and Radicals}
+
+Roots and radical functions are continuous everywhere.  Not everywhere on the real numbers, because their domains are often not $\mathbb{R}$. Everywhere for functions means everywhere on their domain.
+
+
+
+
+
+
+\item \textbf{Exponential Functions}
+
+Exponential functions are continuous everywhere.
+
+
+
+
+
+\item \textbf{Logarithmic Functions}
+
+Logarithmic functions are continuous everywhere (on their domain).
+
+
+
+
+
+
+\item \textbf{Rational Functions}
+
+Rational functions are continuous everywhere (on their domain).  They have singularities and these are represented with vertical asymptotes on their graphs.  But singularities are not in the domain.  The rational function is not defined at a singularity. Rational functions do not have discontinuities.  They are continuous everywhere (on their domain). 
+
+
+
+
+
+\item \textbf{Absolute Value}
+
+The absolute value function is continuous everywhere (on its domain).
+
+
+
+
+
+
+
+\item \textbf{Trigonometric Functions}
+Trigonometric functions are continuous everywhere (on their domain).  They have singularities, like tangent, and these singularities are represented with vertical asymptotes on the graphs.  But singularities are not in the domain.  The trigonometric functions are not defined at singularities. Trigonometric functions do not have discontinuities.  They are continuous everywhere (on their domain). 
+
+
+
+
+
+
+
+
+\end{itemize}
+
+
+
+
+The Elementary Functions are very nice.  They have no discontinuites.  They are continuous everywhere on their domains - or just continuous everywhere.
+
+
+
+
+
+The first example of a simple function with a discontinuity is the Heaviside step (unit step) function.
+
+
+
+
+
+
+\[
+step(x) = 
+\begin{cases}
+  0 & \text{ on } (-\infty, 0) \\
+  \tfrac{1}{2} & \text{ at } 0 \\
+  1 & \text{ on } (0, \infty) 
+\end{cases}
+\]
+
+
+
+
+
+
+We also have the \textbf{Greatest Integer} function - also called the \textbf{floor} function.
+
+
+The only way discontiniities were created was through the use of piecewise defined functions.  We had to break a nice function and just move a piece of it to somewhere else.
+
+
+
+
+
+
+
+
+
+
+
+\section{Forcing Discontinuities}
+
+
+
+Let's make some discontinuities.
+
+We'll take pieces of different elementary functions and glue them together via piecewise defined functions. To begin with, we have three main types of discontinuities and singularities.
+
+
+
+
+
+\begin{example} Jumps
+
+
+
+A jump discontinuity occurs when the function is continuous to the left and right side of the discontinuity, but the two sides do not match up.
+
+
+
+The function must defined for a discontinuity.  The corresponding point could be an endpoint for either side.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:2),<-] {-2*x-3};
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-7)};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:2),<-] {-2*x-3};
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-7)};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-4.5)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+Or,the point could be off on its own.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:2),<-] {-2*x-3};
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,4)};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-7)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A jump singularity doesn't have a point at all. The number is not included in the domain.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:2),<-] {-2*x-3};
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,4)};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-7)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\end{example} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Removeable
+
+
+
+A removeable discontinuity occurs when the function is continuous to the left and right side of the discontinuity, and the two sides do  match up.  However, the point at the discontinuity is moved, leaving a hole
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:2),<-] {-2*x-3};
+          	%\addplot [line width=2, penColor, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-7)};
+
+      		%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+      		%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,1)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{example}
+
+This type of discontinuity can be "removed" simply by redefining the functio0n value at that one number and moving the point back onto the graph to plug the hole.
+
+
+
+For a removeable singularity, the point is removed from the graph and the number from the domain.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:2),<-] {-2*x-3};
+          	%\addplot [line width=2, penColor, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-7)};
+
+      		%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+      		%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,1)};
+      		%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+This type of singularity can be "removed" simply by placing the number back into the domain and defining the function value to plug up the hole in the graph.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Asymptotic
+
+
+The third type of discontinuity and singularity is when the values of funciton become unbounded near a domain number.  Graphically, these are represented with asymptotes.  There are several possible configurations.
+
+
+
+
+
+
+
+
+
+
+Discontinuities and singularities where both sides become unbounded.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(4.1:9),<->] {(x-1)/((x+3)*(x-4))};
+
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,1)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(4.1:9),<->] {(x-1)/((x+3)*(x-4))};
+
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+
+      		%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,1)};
+      		%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Discontinuities and singularities where only one side becomes unbounded.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			%\addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(-8:-3),<-] {x-1};
+			\addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(4.1:9),->] {-x+8};
+
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-4)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,4)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			%\addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(-8:-3),<-] {x-1};
+			\addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
+			\addplot [line width=2, penColor, smooth, domain=(4.1:9),->] {-x+8};
+
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,-4)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,4)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+Those are the types of discontinuities and singularities we will encounter.  Rational functions naturally have asymptotic and removeable singularities.  Other than that, we use piecewise defined functions to create discontiuities and singularities.
+
+Elementary functions are continuous everywhere (in their domain).  That means around a domain number, the function behaves like the value of the function at the domain number.
+
+
+\[      \lim_{x \to a} f(x) = f(a)                   \]
+
+
+
+No matter how small of an open interval you choose around $f(a)$, you can find a corresponding interval around $a$, such that ALL of the function values from this domain interval land inside the chosen interval.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
