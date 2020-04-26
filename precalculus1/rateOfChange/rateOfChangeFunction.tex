@@ -306,4 +306,167 @@ We could graph this slope function.
 
 
 
+
+This function whose values are the rates-of-change of another function is called the \textbf{derivative} of the other function.
+
+
+
+
+$\blacktriangleright$ Let $f$ be a function.  Then the derivative of $f$ is $f'$, the derivative of $f$.
+
+
+
+\begin{definition} The Derivative
+
+Let $f$ be a function.
+
+Then $f'$ represents the \textbf{derivative of $f$}.
+
+
+$f'(a) = $ the slope of the tangent line at $(a, f(a))$, on the graph of $f$.
+
+
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} The Derivative
+
+
+
+
+
+Graph of $y = f(x) = e^{\tfrac{x}{5}}$
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {-0.7*(x+3)-6.4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9),<->] {e^(0.2*x)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The value of $f'(4)$ is
+\begin{multipleChoice}
+\choice[correct]{positive}
+\choice{negative}
+\end{multipleChoice}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Here is a graph of $y = g(x) = sin(x)$ and $g'(x)$.
+
+
+
+
+
+
+\begin{center}
+\desmos{yp5zobfigx}{400}{300}
+\end{center}
+
+
+
+The derivative of $sin(x)$ is
+\begin{multipleChoice}
+\choice[correct]{$cos(x)$}
+\choice{$sin(x)$}
+\choice{$-cos(x)$}
+\choice{$-sin(x)$}
+\end{multipleChoice}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
