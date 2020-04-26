@@ -16,9 +16,293 @@ rate as a relationship
 
 
 
+Consider the function $Q(x) = \frac{(x+7)(x-5)}{5}$
 
 
 
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The rate-of-change over the interval $[-3, 4]$ is 
+\[  \frac{Q(4)-Q(-3)}{4-(-3)} = \frac{4.2}{7} = 0.6      \]
+
+
+This is the slope of the secant line through the points $(-3, Q(-3))$ and $(4, Q(4))$.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {0.6*(x+3)-6.4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+This rate-of-change is the constant rate-of-change that is needed in order to get from one endpoint to the other.  Of course, we can see from the graph that the rate-of-change does indeed change over the interval. 
+
+This interval would not be a good interval to use if you were interested in the rate-of-change near $-3$.
+
+$[-3, -2.5]$ would probably give a better value. 
+
+
+
+
+
+
+The rate-of-change over the interval $[-3, -2.5]$ is 
+\[  \frac{Q(-2.5)-Q(-3)}{-2.5-(-3)} = \frac{-0.35}{0.5} = -0.7      \]
+
+
+This is the slope of the secant line through the points $(-3, Q(-3))$ and $(-2.5, Q(-2.5))$.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {-0.7*(x+3)-6.4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+That is looking more like a tangent line.
+
+If we make this intervla even smaller, we should get an even better approximation for the slope of the tangent line.
+
+
+
+
+The rate-of-change over the interval $[-3, -3+h]$ is 
+\[  \frac{Q(-3+h)-Q(-3)}{(-3+h)-(-3)} = \frac{Q(-3+h)-Q(-3)}{h} =  \frac{\frac{(-3+h+7)(-3+h-5)}{5}+64}{h}   \]
+
+
+This is the slope of the secant line through the points $(-3, Q(-3))$ and $(-3+h, Q(-3+h))$, which is very near the tangent line at $(-3, Q(-3))$.
+
+
+
+By changing the value of $h$, we can get a good estimate of the slope of the tangent line.
+
+
+
+
+
+
+
+
+
+\begin{center}
+\desmos{di7qdhdfnn}{400}{300}
+\end{center}
+
+
+
+
+The slope of the line tangent to the graph at $(-3, -6.4)$ looks to be about $-0.8$.
+
+Let's keep track of these tangent line slopes.
+
+We'll plot the point $(-3,-0.8)$.  This will be a visual encoding of the tangent slope for the domain number $-3$.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {-0.7*(x+3)-6.4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+
+          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-3,-0.8)};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+We could do this for a bunch of domain numbers.
+
+\begin{enumerate}
+\item select a domain number
+\item select a very tiny interval beginning at that domain number
+\item calculate the rate-of-change over the tiny interval
+\item plot a point on the graph.  First coordinate is the domain number.  Second coordinate is the rate-of-change.
+\end{enumerate}
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {-0.7*(x+3)-6.4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+
+          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-5,-1.6)};
+          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-3,-0.8)};
+          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-1,0)};
+          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0.8)};
+          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(3,1.6)};
+          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(5,2.4)};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+If we do this for every domain number, then we will have dreated a number function.  Every domain number will be paired with the slope of the tangent line at the corresponding point.
+
+We could graph this slope function.
+
+
+
+
+
+
+
+\begin{center}
+\desmos{4fe0bvurqv}{400}{300}
+\end{center}
 
 
 
