@@ -15,6 +15,121 @@ limit notation
 
 
 
+We use limit notation to describe end-behavior.
+
+
+\[   \lim_{t \to \infty} \frac{(3t+1)(5t-5)}{(t+3)(2t-4)} = \frac{15}{2}       \]
+
+
+
+\[   \lim_{w \to \infty} \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim    2w -\frac{49}{3}       \]
+
+
+
+
+We have seen limiting or end-behavior of exponential functions.
+
+
+\[   \lim_{x \to -\infty} 1.5^x   = 0      \]
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5.5),<->] {1.5^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+          %\addplot[color=penColor,only marks,mark=*] coordinates{(-4,0)}; 
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We don't have a better description of the end-behavior as $x \to -\infty$, so we just say 
+
+
+\[   \lim_{x \to \infty} 1.5^x   = \infty      \]
+
+
+
+
+
+
+Same with logaarithms.  Sometimes we just don't have any good comparisons and just say the funcito0n in unbounded.
+
+\[   \lim_{t \to \infty} log_2(t+5)   = \infty      \]
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-4.97:9),<->] {ln(x+5)/ln(2)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({-5},{x});
+
+          \addplot[color=penColor,only marks,mark=*] coordinates{(-4,0)}; 
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

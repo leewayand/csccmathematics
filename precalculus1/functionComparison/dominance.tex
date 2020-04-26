@@ -17,6 +17,253 @@ bigger faster
 
 
 
+$\rhd$ Do functions tend to infinity differently?
+
+
+
+
+Both $p(x) = 6x^3 - 5x + 2$ and $w(t) = 2t^2 = 4t - 5$ become unbounded as you move further out in the domain.
+
+
+
+\[    \lim_{x \to \infty} p(x) = \infty  \, \text{ and }  \,       \lim_{t \to \infty} w(t) = \infty                \]
+
+$\blacktriangleright$ Do they approach $\infty$ in the same way? 
+
+$\blacktriangleright$ What do we mean by "same way"?  \\
+
+
+
+
+
+
+By the "same way", our idea is like the graphs of rational functions might have a horizontal asymptote, when the degrees of the polynomials are equal.
+
+
+
+To decide if two functions, $f$ and $g$, approach infinity in the same way, 
+
+\begin{enumerate}
+\item create a quotient: $\frac{f(x)}{g(x)}$ \\
+
+
+\item examine the end-behavior of this quotient: $\lim_{x \to \infty} \frac{f(x)}{g(x)}$ \\
+
+
+\item if this limit equals a nonzero constant, then $f$ and $g$ approach $\infty$ the same
+\end{enumerate}
+
+
+People sometimes say the two functions are asymptotically equivalent. People sometimes use the symbol $\sim$ for asymptotically equivalent. \\
+
+
+
+
+Perhaps more important for future Calculus courses is when this limti is $0$. \\
+
+
+
+\section{Dominance}
+
+
+
+\begin{definition}  Dominance
+
+If the quotient limit equals $0$,
+
+\[  \lim_{x \to \infty} \frac{f(x)}{g(x)}  = 0\]
+
+then we say that $g$ \textbf{dominates} $f$. \\
+
+
+
+Sometimes peopel use a double inequality for domainates:  $f << g$.\\
+
+\end{definition}
+
+
+
+When one function dominates another, then it approaches infinity faster than the other function.  Since the dominate function approaches $0$ faster and it is in the denominator, then it drives the quotient to $0$.
+
+
+Our initial order of dominance looks like this. \\
+
+
+\begin{summary}
+
+
+\[   constants, \, sine \, and \, cosine << logarithmic << polynomial <<  exponential  \]
+
+
+
+and their powers.
+
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Dominance
+
+
+Graph of $y = \frac{ln(x)}{x}$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(0.1:8), <->] {ln(x)/x};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+That was not a good graph for our purposes.  Let's zoom in.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-1:20, ymax=1, xmax=20, ymin=-1, xmin=-1,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, 
+            ytick={1},
+            xtick={2,4,6,8,10,12,14,16,18},
+            xticklabels={$2$,$4$,$6$,$8$,$10$,$12$,$14$,$16$,$18$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(0.1:18), <->] {ln(x)/x};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Here we can see the graph peak and begin to come back down.  Eventually, the graph approaches the x-axis as the function value approaches $0$.
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Powers
+
+
+Graph of $y = \frac{(ln(x))^5}{x}$.
+
+$x$ should dominate any power of $ln(x)$.  Therefore, the graph of this funciton should eventually aproach the the x-axis as the function value approaches $0$. \\
+
+
+If this functio0n approaches $0$, then it must get below and stay below $2$, eventually. How far out in the domain do you need to go before this function eventually dips and stays below $2$.
+
+
+\begin{center}
+\desmos{rksndotdsv}{400}{300}
+\end{center}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
