@@ -14,6 +14,267 @@ critical numbers
 
 
 
+Consider the function $k(t) = t \sqrt{5-t}$.
+
+Here is the graph of $y = k(t)$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-3:5),<-] {x*sqrt(5-x)};
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+We can see that $k(t)$ increases on $(-\infty, c]$ and then decreases on $[c,\infty)$, where $c$ is a real number around $3$.
+
+All of the tangent lines at $(a, k(a))$, where $a \in (-\infty, c)$ have positive slopes, which means $k'(a) > 0$. \\
+
+All of the tangent lines at $(a, k(a))$, where $a \in (-c, \infty)$ have negative slopes, which means $k'(a) < 0$. \\
+
+The highest point on the graph has a horizontal tangent line, which has a slope of $0$. $k'$ will be $0$ at the domain number corresponding to this highest point.
+
+
+(You don't know how to get the formula for the derivative yet.  That is a topic for Calculus.)
+
+
+\[   k'(t) = \sqrt{5-t} + t \cdot \frac{-1}{\sqrt{5-t}}    \]
+
+
+We are looking for a number arounf $3$, such that 
+
+
+\[   k'(t) = \sqrt{5-t} + t \cdot \frac{-1}{\sqrt{5-t}}  = 0  \]
+
+We have a common factor of $5-t$.  The least power is $-\frac{1}{2}$.  We use the distributive property to factor this out.
+
+
+\[  \sqrt{5-t} \left( (5-t) - \frac{t}{2} \right) = 0  \]
+
+
+$5$ is a solution, since it makes the first factor equal to $0$. But, $5$ is not actually in the domain of $k'(t)$. 
+
+We need 
+
+
+\[  \left( (5-t) - \frac{t}{2} \right) = 0  \]
+
+\[  5 - \frac{3t}{2}  = 0  \]
+
+
+$t=\frac{10}{3}$
+
+
+
+
+
+We can see that $k(t)$ increases on $\left(-\infty, \frac{10}{3}\right]$ and then decreases on $\left[\frac{10}{3},\infty\right)$.
+
+
+
+
+
+
+
+
+
+Places in the domain of $f$, where $f' = 0$ are critically important to function analysis. The function switches its type of growth at these numbers.  Thet are called \textbf{critical numbers}.
+
+Functions can also change their growth across other weird places - like spikes and corners and discontinuities.  The graph will not have a tangent line at the corresponding points. And, $f'$ will not have a value.
+
+
+
+
+Therfore, we are collecting all of these types of domain numbers and calling them \textbf{critical numbers}.
+
+
+
+
+
+\section{Critical Numbers}
+
+
+
+
+\begin{definition} 
+
+$c \in Dom_f$ is a \textbf{critical number} if  either $f'(c) = 0$ or $f'(c)$ doesn't exist.
+
+
+\end{definition}
+
+
+\textbf{Note:}  Sometimes these are called \textbf{critical points}, especially when you investigate multi-variate functions.  But, are just getting started.  SO, we are trying to separate \textit{numbers} in the domain from \textit{points} on the graph. \\
+
+
+\textbf{Note:} You will learn how to get formulas for derivatives in Calculus.  In this course, you will be given the derivative formlua, when needed. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Consider the function $H(v) = 0.1(v+6)(v+1)(v-4)$.
+
+Here is the graph of $y = H(v)$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-7:5),<->] {0.1*(x+6)*(x+1)*(x-4)};
+
+
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+We can see that $H(v)$ increases, then decreases, then increases.  
+
+
+The derivative is $H'(v) = 0.3 v^2 + 0.6 v - 2.2$. \\
+
+Let's clean that up a bit, by factoring out $0.1$. $H'(v) = 0.1(3 v^2 + 6 v - 22$. \\
+
+
+
+The critical numbers are when $H'(v) = 0.1(3 v^2 + 6 v - 22 =0$ or when $3 v^2 + 6 v - 22 =0$.  A quadratic.
+
+
+The only factors of $22$ are $\{ 1, 2, 11, 22    \}$.  None of those (or their negatives) are adding up to $6$.  So, we will use the quadratic formula.
+
+
+
+\[  v = \frac{-6 \pm \sqrt{6^2 - 4 \cdot 3 \cdot (-22)}}{2 \cdot 3}  = \frac{-6 \pm \sqrt{300}}{6}    \]
+
+
+\[  v = \frac{-6 \pm 10\sqrt{3}}{6}  =  \frac{-3 \pm 5\sqrt{3}}{3} \]
+
+
+
+We have two solutions
+
+
+\[  v =  \frac{-3 + 5\sqrt{3}}{3}  \approx  1.887 \]
+
+
+\[  v =  \frac{-3 - 5\sqrt{3}}{3} \approx   -3.887 \]
+
+
+
+\begin{itemize}
+\item $H(v)$ increases on $\left(-\infty, \frac{-3 - 5\sqrt{3}}{3}   \right]$.
+\item $H(v)$ decreases on $\left[\frac{-3 - 5\sqrt{3}}{3} , \frac{-3 + 5\sqrt{3}}{3}   \right]$.
+\item $H(v)$ increases on $\left[\frac{-3 + 5\sqrt{3}}{3}, \infty  \right)$.
+\end{itemize}
+
+
+
+\end{example}
+
+
+
+
+
+Isn't $1.887$ good enough?  \textbf{NO!}  
+
+What about $1.886751346$? \textbf{NO!}  
+
+What about $1.886751345948128822545743902509787278238008756350634380093$? \textbf{NO!}  
+
+We want to be exact, when we can be exact.  That is why we are bring our Algebra tools with us.  Otherwise, we would just use graphs all of the time.
+
+$\blacktriangleright$ Our goal is to be precise with our descriptions of functions.
+
+
+We will encounter many functions whose graphs are misleading - because the have no choice but to be inaccurate.
+
+$\blacktriangleright$We want our descriptions to be exact and offer nothing to question.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
