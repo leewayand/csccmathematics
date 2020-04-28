@@ -15,6 +15,275 @@ watching the domain
 
 
 
+Our main strategy for solving equations is guessing and factoring.
+
+
+
+
+If you are willing to be a bit careful, then we have some additional ideas.
+
+The object is to maintain equality.
+
+
+
+\begin{observation}
+
+
+You can replace equal things with equal things and get equal things.
+
+
+If 
+\begin{itemize}
+\item $a=b$, and
+\item $c=a$, and
+\item $d=b$
+\end{itemize}
+then $c=d$.
+
+You can replace $a$ and $b$ with equal things and the equality is maintained.
+
+
+\end{observation}
+
+
+
+
+
+\begin{observation}
+
+
+If you do the same thing to equal things, then you get equal things
+
+
+If $a=b$, then $f(a) = f(b)$, where you are doing $f$ to both.
+
+
+
+\end{observation}
+
+
+
+
+\textbf{Watch Out!} The last rule doesn't go backwards.
+
+
+
+
+\begin{example}  Reverse
+
+$3^2 = (-3)^2$, but that doesn't mean $3=-3$.
+
+
+You can do the same thing to different numbers and get an equality.  But, it doesn't go backwards.  Here we squared both numbers and got an inequality.  But, that doesn't mean the original numbers are equal.
+
+
+\end{example}
+
+
+
+
+
+
+\begin{example} Squaring
+
+
+Solve $\sqrt{x} = -9$
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+Square both sides.
+
+
+$(\sqrt{x})^2 = (-9)^2$
+
+$x = 81$
+
+
+
+The problem here is that  $(\sqrt{x})^2 \ne x$.  For instance, $(\sqrt{-3})^2 \ne -3$.
+
+
+Instead, we need to keep domains and ranges in mind.  The range of $\sqrt{x}$ is $[0, \infty)$. It cannot give the value $-9$.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example} Logarithms
+
+
+Solve $log_2(t-1) - log_2(t) = 4$
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+We can solve simple logarithmic equations - justone logarithm.  Therefore, we will use a logarithm rule to combine thwo logarithms.
+
+
+
+\[
+\begin{array}{rl}
+log_2(t-1) - log_2(t) & = 4   \\
+
+log_2\left(\frac{t-1}{t}\right)  & = 4  \\
+
+\frac{t-1}{t} & = 2^4  \\
+
+ t-1 & = 16t  \\
+
+-1 & = 15t  \\
+
+-\frac{1}{15} & = t
+
+\end{array}
+\]
+
+
+However, the original equation included the function $log_2(t)$ and the domain of $log_2(t)$ does not include $-\frac{1}{15}$
+
+
+
+
+\end{example}
+
+
+What happened?
+
+
+The problem in the above example is that the logarithm rule covered up a domain issue.
+
+If we let $t = -\frac{1}{15}$ in the orginal equation, then it would look like 
+
+
+\[    log_2\left(-\frac{1}{15}-1\right) - log_2\left(-\frac{1}{15}\right)   \]
+
+We can see the domain issue here.  However, when we apply the logarithm rule we get
+
+
+
+\[   log_2\left(\frac{-\frac{1}{15}-1}{-\frac{1}{15}}\right)    = log_2(16)  \]
+
+
+When put together into a fraction the numerator and denominator both became negative and a negative over a neagtive equals a positive - no more problem.
+
+
+
+
+
+\begin{definition} Extraneous Solutions
+
+\textbf{Extraneous solutions} are solutions that appear because of the solving procedure chosen that are not solutions of the original equation.
+
+\end{definition}
+
+
+
+
+
+
+
+
+\begin{example} Extraneous Solutions
+
+
+Solve $\frac{1}{y-2} + \frac{1}{y+2} = \frac{4}{(y-2)(y+2)}$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+
+First combine the fractions on the left, by getting a common denominator.
+
+
+
+\[    \frac{1}{y-2} + \frac{1}{y+2}        \]
+
+\[    \frac{1}{y-2} \cdot \frac{y+2}{y+2} + \frac{1}{y+2}  \cdot \frac{y-2}{y-2}       \]
+
+\[    \frac{y+2}{(y-2)(y+2)} + \frac{y-2}{(y-2)(y+2)}      \]
+
+\[    \frac{2y}{(y-2)(y+2)}     \]
+
+Our equivalent equation is
+
+
+\[    \frac{2y}{(y-2)(y+2)}   = \frac{4}{(y-2)(y+2)}   \]
+
+
+This can only happen if $2y = 4$ or $y = 2$.
+
+But, this is not possible.  $y=2$ would make a denominator in the orginal equaiotn equal to $0$.  Therefore, $2$ is an extraneous solution and this equaiton has no solutions.
+
+
+\end{example}
+
+
+
+
+\begin{example} Extraneous Solutions
+
+Solve $\sqrt{w+4} = w - 2$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+Square both sides:
+
+
+
+$(\sqrt{w+4})^2 = (w - 2)^2$
+
+
+$w + 4 = w^2 - 4w + 4$
+
+
+$0 = w^2 - 5w $
+
+$0 = w(w-5) $
+
+
+Zero product property:  either $w=0$ or $w-5=0$ and $w-5$.
+
+
+
+However, $w$ cannot equal $0$.  If we replace $w$ with $0$ in the original equation, then we get $\sqrt{0+4} = 0 - 2 = -2$.
+
+And, $-2$ is not in the range if the square root function. $-2$ is an extraneous solution.
+
+
+
+\end{example}
+
+
+The problem again is squaring.
+
+$0$ doesn't work, because it gives us $\sqrt{4} = -2$, but squaring hid that fact.  After you square both sides you get $4 = 4$, which is fine.
+
+
+
+
+
+When you do the same thing to both sides, watch out!  You might be hiding domain or range issues.  Check your solutions! \\
+
+
+
+
+All of this is due to the fact that the functions we are applying are not \textbf{one-to-one}.  MOre on that later.
+
+
+
+
+
+
 
 
 
