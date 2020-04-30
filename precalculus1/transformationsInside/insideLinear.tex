@@ -13,6 +13,197 @@ domain
 
 
 
+We have already seen a couple of versions of composition.
+
+$\blacktriangleright$ \textbf{Pointwise} composition was seen via indiviudal numbers: $(F \circ G)(a) = F(G(a))$.
+
+A number, $a$, in the domain of $G$ was connected to its range partner, $G(a)$.  $G$ was evaluated at $a$ and the function value was then viewed as a member of the domain of $F$.  As a member of the domain of $F$, $F$ can be evaluated at $G(a)$ to get $F(G(a))$.
+
+
+
+
+$\blacktriangleright$ \textbf{Linear} composition between twi linear functions produced a whole new function.  Instead of thinking of domain numbers indiviudally, this composition was viewed as an operation on linear functions.
+
+\[    (L_o \circ L_i)(x) = L_o(L_i(x))  \]
+
+There is an outside function, $L_o(x)$, and an inside function $L_i(x)$.  The composition operation, $\circ$, is applied and a new linear funciton is created.  Our symbol for this number funciton is $(L_o \circ L_i)$ or $L_o \circ L_i$.  The parentheses are used to clear up communication.
+
+In our investigations, we have discovered that $(L_o \circ L_i)$ "is" $L_o$, just shifted, stretched, and reflected horizontally.
+
+
+We would like to extend this idea of a function operation beyond linear functions.
+
+
+
+
+
+\section{Composition}
+
+
+
+
+
+\begin{definition} Composition
+
+
+Given two functions, $Outside$ and $Inside$, the composition, $Outside \circ Inside$ is defined by
+
+\[      (Outside \circ Inside)(a) = Outside(Inside(a))        \]
+
+For $ a \in \{  x \in Dom_{Inside} \, | \,    Inside(x) \in Dom_{Outside}  \}$
+
+\end{definition}
+
+
+
+We have to do a little work on the domain.  We need the elements from the domain of the inside function, whose function value lands inside the domain of hte outside function. \\
+
+
+
+
+
+$\star$ \textbf{\textcolor{purple}{Inside = Linear}}
+
+
+In this section, our inside funciton will always be a linear function.
+
+
+
+\[      (Outside \circ L)(a) = Outside(L(a))        \]
+
+
+where $L(x) = a \, x + b$, with $a$ and $b$ real numbers and $a \ne 0$.
+
+
+
+Let's consider a quadratic function: $Q(h) = (h+1)(h-4)$
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=Q(h)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.5:5.5),<->] {(x+1)*(x-4)};
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+We can consider $Q(h)$ as a composition.  The outside function is $Q(h) = (h+1)(h-4)$ and hte inside function is the Identity function: $I(h)=h$.  
+
+The inside function doesn't do much.  It pairs every real number with itself.  Then this is handed to $H$. Not much of a composition, but it will help us illustrate some ideas.
+
+
+
+The domain of $I(h)=h$ is \textbf{$\mathbb{R}$}.  We can think of moving along the real line left to right from $-\infty$ to $\infty$.  Each real number we run across is put into $I(h)$, which just gives it right back and also runs along the real line left to right from $-\infty$ to $\infty$.  This then becomes the domain for the outside function, $Q(h)$.
+
+
+
+$\blacktriangleright$  What happens when we have a different inside function?
+
+
+Suppose $inside(h) = 5h$.
+
+
+$inside(h)$ still runs along the real line left to right from $-\infty$ to $\infty$. What's the difference?
+
+The difference is that the identity function ran across it s domain and the output was running from $-\infty$ to $\infty$ at exactly the same rate - because the input and out were equal - it is the identity function.
+
+
+Now the range is running through the real line left to right from $-\infty$ to $\infty$ - four times as fast as the input. A little movement in the domain results in a lot of movement in the range and this range is the domain for $Q(h)$.
+
+
+$Q(h)$ has a zero at $-1$ and at $4$.  That is a distance of $4$. The domain of $Q(h)$ needs to run this distance of $5$ from $-1$ to $4$ to get from one zero to the other.
+
+
+That means the range of $inside(h)$ must run from  $-1$ to $4$ to get from one zero to the other, since the range of $inside(h)$ is the domain of $Q(h)$.
+
+Which brings us to the domain of $inside(h)$, for our composition. 
+
+It doesn't need to run that distance of $5$, because its movement gets amplified by a factor of $5$ through the $inside$ function.  The domain of $inside$ needs to run from $-\frac{1}{5}$ to $\frac{4}{5}$ - a distance of $1$
+
+
+
+
+\begin{itemize}
+\item $(Q \circ inside)\left(-\frac{1}{5}\right) = Q\left(inside\left(-\frac{1}{5}\right)\right) = Q(-1) = 0$
+\item $(Q \circ inside)\left(\frac{4}{5}\right) = Q\left(inside\left(\frac{4}{5}\right)\right) = Q(4) = 0$
+\end{itemize}
+
+
+In the $(Q \circ inside)$ function, the zeros are at $-\frac{1}{5}$ and $\frac{4}{5}$.  They are a distance of $1$ apart.  The $inside$ function has squeezed them closer together by making its range run faster than it domain - and that range became a new faster running domain for $Q$.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=Q \circ inside$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-0.5:1.1),<->] {(5*x+1)*(5*x-4)};
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+All of the Q values are still there.  The output of $Q \circ inside$ are the same values of $Q$.  They are just connected to faster running domain values then before.
+
+
+
 
 
 

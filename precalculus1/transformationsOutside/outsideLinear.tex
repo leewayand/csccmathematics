@@ -17,6 +17,208 @@ range
 
 
 
+We have already seen a couple of versions of composition.
+
+$\blacktriangleright$ \textbf{Pointwise} composition was seen via indiviudal numbers: $(F \circ G)(a) = F(G(a))$.
+
+A number, $a$, in the domain of $G$ was connected to its range partner, $G(a)$.  $G$ was evaluated at $a$ and the function value was then viewed as a member of the domain of $F$.  As a member of the domain of $F$, $F$ can be evaluated at $G(a)$ to get $F(G(a))$.
+
+
+
+
+$\blacktriangleright$ \textbf{Linear} composition between twi linear functions produced a whole new function.  Instead of thinking of domain numbers indiviudally, this composition was viewed as an operation on linear functions.
+
+\[    (L_o \circ L_i)(x) = L_o(L_i(x))  \]
+
+There is an outside function, $L_o(x)$, and an inside function $L_i(x)$.  The composition operation, $\circ$, is applied and a new linear funciton is created.  Our symbol for this number funciton is $(L_o \circ L_i)$ or $L_o \circ L_i$.  The parentheses are used to clear up communication.
+
+In our investigations, we have discovered that $(L_o \circ L_i)$ "is" $L_i$, just shifted, stretched, and reflected vertically.
+
+
+We would like to extend this idea of a function operation beyond linear functions.
+
+
+
+
+
+\section{Composition}
+
+
+
+
+
+
+
+
+
+
+\begin{definition} Composition
+
+
+Given two functions, $Outside$ and $Inside$, the composition, $Outside \circ Inside$ is defined by
+
+\[      (Outside \circ Inside)(a) = Outside(Inside(a))        \]
+
+For $ a \in \{  x \in Dom_{Inside} \, | \,    Inside(x) \in Dom_{Outside}  \}$
+
+\end{definition}
+
+
+
+We have to do a little work on the domain.  We need the elements from the domain of the inside function, whose function value lands inside the domain of hte outside function. \\
+
+
+
+
+
+$\star$ \textbf{\textcolor{purple}{Outside = Linear}}
+
+
+In this section, our $Outside$ funciton will always be a linear function.
+
+
+
+\[      (L \circ Inside)(a) = L(Inside(a))        \]
+
+
+where $L(x) = a \, x + b$, with $a$ and $b$ real numbers and $a \ne 0$.
+
+
+
+Let's consider a quadratic function: $Q(h) = (h+1)(h-4)$ as the $inside$ function.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=Q(h)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.5:5.5),<->] {(x+1)*(x-4)};
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+From left to right, the range values, or function values, for $Q$ begin very big and positive.  These values decrease to $0$ and continue negative until they reach a value of $-6.25$. Then, increase to $0$ again and continue to very big and positive values.
+
+Now we will transform these function values with a linear function.
+
+
+$L(t) = -0.25 t + 3$
+
+
+\begin{itemize}
+\item $L$ will take a function value from $Inside$ and compress it by a factor of $\frac{1}{4}$. Our parabola will be squished a little. 
+\item Then $L$ will negate the values.  This will vertically reflect the parabola over the horizontal axis.
+\item Then $L$ will add $3$ to all of the values.  This will shift the parabola up by $3$.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel={$y=(L \circ Q)(h)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-6:9),<->] {-0.25*(x+1)*(x-4) + 3};
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The vertical measurements have all been processed linearly, which means the shape doesn't change.  It is still a parabola and all of its features are relatively in the same place.
+
+
+
+The minimum of $Q$ is $-6.25$ and this occurred at $1.5$.  The minimum of the composition is still at $1.5$.  The minimum is $L(-6.25) = 4.5625$.
+
+
+
+
+The zeros of $L \circ Q$ occur when $L(t) = 0$, which is at $t = 12$.  Therefore, the zeros of $L \circ Q$ occur when $Q(h) = 12$.
+
+
+
+
+
+$Q(h) = (h+1)(h-4)$
+
+
+
+\begin{align*}
+Q(h) = (h+1)(h-4)     &  = 12  \\
+h^2 - 3h - 4      & = 12   \\
+h^2 - 3h - 16 = 0  \\
+\end{align*}
+
+This does not factor easily.  We'll use the quadratic formula.
+
+
+\[  h = \frac{-(-3) \pm \sqrt{(-3)^2 - 4 \cdot 1 \cdot (-16)}}{2 \cdot 1}  = \frac{3 \pm \sqrt{73}}{2}     \]
+
+
+We have two zeros: $\frac{3 + \sqrt{73}}{2}  \approx 5.77$ and $\frac{3 - \sqrt{73}}{2} \approx -2.77$, which agrees with our grpah.
+
+
+
+
+
 
 
 
