@@ -16,6 +16,178 @@ putting together
 
 
 
+Let $Out(x) = 2|x-3|+1$ with its implied domain. \\
+Let $In(t) = -(t-1)^2 + 5$.
+
+
+
+
+
+
+
+
+
+Graph of $y = Out(x) =2|x-3|+1$
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(-1:7),<->] {2*abs(x-3)+1};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Graph of $z = In(t) = -(t-1)^2 + 5$
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(-2.5:4.5),<->] {-(x-1)^2 + 5)};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Now to examine the composition. \\
+
+
+
+$\blacktriangleright$  First, the inside function: $In(t) = -(t-1)^2 + 5$ \\
+
+The implied domain of $In(t)$ is the whole real line. As we move from left to right along the real line, the domain numbers increase from $-\infty$ to $\infty$.
+
+The corresponding movement in the range is for the funciton values to increase from $-\infty$ to $5$.  The function value $5$ occurs at $1$ in the domain.  As we keep moving beyond $1$ in the domain, the corresponding movement in the range is for the function values to decrease from $1$ to $-\infty$.
+
+
+This movement in the range of $In(t)$ is the movement in the domain of $Out(x)$. \\
+
+
+$\blacktriangleright$ Movement inside the domain of $Out(x)$.\\
+
+
+
+Inside the implied domain of $Out(x) =2|x-3|+1$. the domain numbers will increase from $-\infty$ to $5$.  Then they will decrease from $5$ back down to $-\infty$. \\
+
+
+
+$\blacktriangleright$ Put those together. \\
+
+The whole composition, $(Out \circ In)$, never sees the inside speeding up, slowing down, turning around, running in circles, or any other swivelling and swirling.  It just sees the normal domain movement left ot right from $-\infty$ to $\infty$.  And, it sees whatever function values from $Out$ that the come out of the process.
+
+We have the input to $Out$ moving from $-\infty$ up to $5$ and then back down to $-\infty$.  What are the corresponding function values for $Out$?
+
+
+
+
+
+\begin{itemize}
+\item As the domain numbers move through $(-\infty, 5]$, The values of $Out$ are decreasing from $\infty$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 1] \cup [1,5]$
+
+	\begin{itemize}[label=$\star$]
+		\item $(-\infty, 1]$
+
+		\item $[1,5]$
+
+	\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
