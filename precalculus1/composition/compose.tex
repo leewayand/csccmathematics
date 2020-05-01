@@ -131,28 +131,29 @@ We have the input to $Out$ moving from $-\infty$ up to $5$ and then back down to
 
 
 \begin{itemize}
-\item As the domain numbers move through $(-\infty, 5]$, The values of $Out$ are decreasing from $\infty$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 1] \cup [1,5]$
+
+\item As the domain numbers move through $(-\infty, 5]$, The values of $Out$ are decreasing from $\infty$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 3] \cup [3,5]$
 
 	\begin{itemize}[label=$\star$]
-		\item $(-\infty, 1]$
+		\item On $(-\infty, 3]$, $Out$ decreases from $-\infty$ to $1$.
 
-		\item $[1,5]$
+		\item On $[3,5]$, $Out$ increases from $1$ to $5$
 
 	\end{itemize}
 
 
+\item The reverse happens as the domain numbers move backwards through $(\infty. 5])$, The values of $Out$ are decreasing from $5$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 3] \cup [3,5]$
 
+	\begin{itemize}[label=$\star$]
+		\item As the domain moves from $5$ to $3$, $Out$ decreases from $5$ to $1$.
 
+		\item As the domain moves from $3$ to $-\infty$, $Out$ increases from $1$ to $\infty$.
 
-
-
-
-
-
-
+	\end{itemize}
 
 \end{itemize}
 
+Since we reverse our travelling direction inside the domain, we hit the corner twice.  Plus, right at our reversal, we will create a hill in the graph made by our own retracing of the domain steps.
 
 
 
@@ -173,10 +174,35 @@ We have the input to $Out$ moving from $-\infty$ up to $5$ and then back down to
 
 
 
+Graph of $w = Out(In(m)) =2|(-(m-1)^2 + 5)-3|+1 = 2|-(m-1)^2 + 2| + 1$
 
 
 
 
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-1.5:3.5),<->] {2*abs(-(x-1)^2 + 2)+1};
+
+   
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
