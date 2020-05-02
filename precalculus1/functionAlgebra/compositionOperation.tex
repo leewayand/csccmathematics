@@ -19,6 +19,97 @@ composition
 
 
 
+Just like numbers, functions have an arithmetic.  They have all of the usual number operations, plus one more.  Functions also have composition as an operation.
+
+Just like number operations have an identiy number, $0$ and $1$, composition has an identiy function - the identity function: $I(x) = x$.
+
+
+\begin{itemize}
+\item Adding $0$ with numbers appears to do nothing.
+\item Multiplying $1$ with numbers appears to do nothing.
+\item Composing the identity function with functions appears to do nothing.
+\end{itemize}
+
+
+
+
+
+
+
+\begin{example} Composition
+
+
+\begin{itemize}
+\item Let $K(u) = \frac{u}{u-1}$ with its implied domain: $(-\infty, 1) \cup (1. \infty)$. \\
+
+\item Let $T(w) = w^2 + 5w + 7$ with its implied domain: \textbf{\mathbb{R}}.
+
+
+
+Form the composition $K \circ T$.
+
+\[        (K \circ T)(w) =     \frac{w^2 + 5w + 7}{(w^2 + 5w + 7)-1}   =    \frac{w^2 + 5w + 7}{w^2 + 5w + 6}  \]
+
+
+$K$ can accept any number, except $1$.  Therefore we need to find out when $T = 1$ and take out the domain numbers where $1$ occurs.
+
+
+
+\begin{align*}
+T(w) & = 1   \\
+w^2 + 5w + 7 & = 1 \\
+w^2 + 5w + 6 & = 0   \\
+(w+2)(w+3) & = 0
+\end{align*}
+
+
+We need to remove $-2$ and $-3$ from the domain of $T$, because $T(-2)=1$ and $T(-3)=1$ and $1$ cannot be an input into $K$.
+
+
+The domain for $K \circ T$ is $(-\infty, -3) \cup (-3, -2) \cup (-2, \infty)$
+
+
+
+
+\[        (K \circ T)(w)  =    \frac{w^2 + 5w + 7}{w^2 + 5w + 6}  =    \frac{w^2 + 5w + 7}{(w+2)(w+3)} \]
+
+
+
+
+
+\end{itemize}
+
+
+
+
+The composition produces a function. \\
+
+
+This is a good reminder that a formula is not a function.  In the case of a composition, we need to restrict the domain of the inner function to avoid inner function values that are not in the domain of the outer function.
+
+
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
