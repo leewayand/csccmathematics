@@ -15,6 +15,448 @@ one-to-one
 
 
 
+Just like numbers, functions have an arithmetic.  They have all of the usual number operations, plus one more.  Functions also have composition as an operation.
+
+Just like number operations have an identiy number, $0$ and $1$, composition has an identiy function - the identity function: $I(x) = x$.
+
+
+\begin{itemize}
+\item Adding $0$ with numbers appears to do nothing.
+\item Multiplying $1$ with numbers appears to do nothing.
+\item Composing the identity funciton with functions appears to do nothing.
+\end{itemize}
+
+
+Around these identity elements, we define inverses.
+
+
+
+
+
+
+\begin{itemize}
+\item The additive inverse of $a$ is the number that when added to $a$ results in $0$.  Our symbol is $-a$.
+\item The multiplicative inverse of $a$ is the number that when multiplied to $a$ results in $1$.  Our symbol is $\frac{1}{a}$ or $a^{-1}$.
+\item The composition inverse of a function $f$ is the function that when composed with $f$ gives the identity function. Our symbol is $f^{-1}$.
+\end{itemize}
+
+
+\textbf{Notation Warning:} We reuse and over use notation in Mathematics.  This is an example.  Sometimes $f^{-1}$ means reciprocal and sometimes $f^{-1}$ means inverse function.  The correct inteerpretation depends on the context in which it used.
+
+
+
+
+
+
+
+
+\section{Inverse Functions}
+
+
+
+
+Composition glues function pairs together.
+
+Let $In$ and $Out$ be two functions and $Out \circ In$ their composition.
+
+
+Pairs in $In$ look like $(a, In(a))$.   The composition then interprets $In(a)$ as a member of the domain of $Out$.  $Out$ connects $In(a)$ to $Out(In(a))$.   The composition, $Out \circ In$ just ignores the middle part.  The composition sees $a$ as a domain number and then $Out(In(a))$ as the range partner.
+
+
+Suppose we are in a situation where $Out(In(a)) = I(a)$.  Suppose the compiositon is the identity function.  That would tell us that $Out$ is the inverse funcitn of $In$
+
+Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside $Out$ looking like $(In(a), a)$.  Then would be reversed. \\
+
+
+$\blacktriangleright$ The inverse function is just the reverse of the original function. \\
+
+
+Then we have an issue.
+
+
+\begin{warning}Inverse Functions
+
+Reversing the pairs of a function does not always produce a function.
+
+
+\end{warning}
+
+
+
+
+\begin{example} Squaring Function
+
+
+The squaring function has the formula $Sq(a) =a^2$ with \textbf{$\mathbb{R}$} as its domain.
+
+It contains the two pairs: $(2, 4)$ and $(-2, 4)$.
+
+
+
+If we reverse these pairs, then the inverse function would contain the pairs: $(4, 2)$ and $(4,-2)$.
+
+This would violate the funciton rule.  We would have a domain number in two pairs.
+
+\end{example}
+
+
+
+Just like with numbers, some functions don't have inverses.  Like, $0$ just doesn't have a multipicative inverse.
+
+
+
+
+
+
+\section{One-to-One}
+
+
+Some functions just don't have an inverse, because they have a range number in two pairs.  This is fine for the function, but when reverse the pairs to obtain the inverse funciton, then that range number turns into a domain number in two pairs.
+
+
+For a function to have an inverse, every range number must be in only one pair.
+
+
+
+\begin{definition} One-to-One
+
+
+A function is said to be \textbf{one-to-one} if each range number is in exactly one pair.
+
+
+\end{definition}
+
+
+
+An equivalent definition:
+
+\begin{definition} One-to-One
+
+
+A function, $f$, is said to be \textbf{one-to-one} if 
+
+
+\[    f(a) = f(b) \rightarrow a = b           \]
+
+
+\end{definition}
+
+
+
+
+
+This definition says that it two function values are equal, then they weren't two different function values.  They came from the same domain number.  So, each function value is in exactly one pair.
+
+
+
+
+
+
+
+
+\begin{example} Linear Functions
+
+If $C$ is a constant funciton, then it is not one-to-one and thus doesn;t have an inverse. \\
+
+
+If $C$ is a nonconstant linear function, then it has a formula like $C(x) = a \cdot x + b$ where $a \ne 0$.
+
+
+Then $C^{-1}(t) = \frac{1}{a} \cdot t - \frac{b}{a}$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+
+
+
+The composition is 
+
+\[  (C \circ C^{-1})(m) = C(C^{-1})(m) =     a \cdot \left(\frac{1}{a} \cdot t - \frac{b}{a}\right) + b  = m \]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example} Square
+
+
+
+he squaring function has the formula $Sq(k) = k^2$ with \textbf{$\mathbb{R}$} as its domain. It doesn't have an inverse.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=Sq(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:3),<->] {x^2};
+
+         
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The graph contains the two points: $(2, 4)$ and $(-2, 4)$.  
+
+They are at the same vertical height, which means they represent the same function value.
+
+
+The two points lie on the same horizontal line.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=Sq(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:3),<->] {x^2};
+
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,4)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,4)};
+            \addplot [line width=1, penColor2, smooth,samples=100,domain=(-6:6),<->] {4};
+
+         
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\end{example}
+
+
+
+
+\begin{definition} Horizontal Line Test
+
+
+A function's graph passes the horizontal line test if there are no horizontal lines that intersect the graph more than once.
+
+
+A function is one-to-one if its graph passes the horizzontal line test.
+
+\end{definition}
+
+
+
+
+
+\section{Salvaging}
+
+
+
+
+We can't fix this situation, but we can salvage pieces. \\
+
+
+
+
+
+
+
+\begin{example} Squaring Function
+
+
+The squaring function has the formula $Sq(k) = k^2$ with \textbf{$\mathbb{R}$} as its domain. It doesn't have an inverse.
+
+However, we can get a partial inverse, by restricting the domain.
+
+The implied domain of $Sq(k) = k^2$ is \textbf{$\mathbb{R}$}.  We will restrict this to just the nonnegative numbers: $[0, \infty)$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=Sq(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(0:3),->] {x^2};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+         
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Now, it has the square root function as an inverse.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=Sq(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(0:3),->] {x^2};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:9),->] {sqrt(x)};
+
+
+
+         
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Since the inverse function has the reverse pairs of the original function, its graph is a reflection across the graph of the identity function: $y = Id(k) = k$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=Sq(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(0:3),->] {x^2};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:9),->] {sqrt(x)};
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] ({x},{x});
+
+
+
+         
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
