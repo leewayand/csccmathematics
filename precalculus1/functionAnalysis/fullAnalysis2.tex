@@ -15,6 +15,126 @@ features
 
 
 
+\begin{example}  Complete Anlaysis
+
+
+Completely analyze   
+
+\[   B(f) = \frac{(f+3)(f-1)}{(f+5)(f-2)^2}        \]
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+
+
+
+The domain is all real numbers except $-5$ and $2$, which make the denominator equal to $0$. These are singularities of $B$.  Otherwise, $B$ is continuous.  There are no discontinuities.
+
+Domain = $(-\infty, -5) \cup (-5, 2) \cup (2, \infty)$
+
+The graph will help us with the domain, so we'll wait on that.
+
+$B$ has zeros at $-3$ and $1$.  These make the numerator equal to $0$. These are represented on the graph with $(-5,0)$ and $(2,0)$
+
+The graph will have vertical asymptotes $f=-5$ and $f=-2$.  $B$ will change signs over $f=-5$, since the multiplicity is odd.  $B$ will not change signs over $f=2$, since the multiplicity is even.
+
+$B$ is a rational function and the derree of the denominator is greater than the degree of the numerator. Therefore, 
+
+
+\[ \lim_{f \to -\infty} B(f) = 0   \, \text{ and }  \,  \lim_{f \to \infty} B(f) = 0    \]
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel={$y=B(f)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-5},{x});
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({2},{x});
+          \addplot [line width=1, gray, dashed, domain=(-10:10)] {0};
+
+
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:-5.03),<->] {((x+3)*(x-1))/((x+5)*(x-2)^2)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-4.97:1.75),<->] {((x+3)*(x-1))/((x+5)*(x-2)^2)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(2.3:9),<->] {((x+3)*(x-1))/((x+5)*(x-2)^2)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Both zeros have odd multipicity, therefore the graph must go below the $f$-axis between them.  There must be a local minimum. From the graph we can estimate that the critical number is approximately $0.5$. $B(0.5) = \frac{14}{99} \approx -0.1414$ is a local minimum. With some Calculus tools, we may be able to get an exact value.
+
+
+$B$ has no global maximum or minimum.
+
+$B$ has no local maximum.
+
+
+\begin{itemize}
+\item $B$ decreases on $(-\infty, -5)$.
+\item $B$ decreases on $(-5, 0.5)$.
+\item $B$ increases on $(0.5 2)$.
+\item $B$ decreases on $(2, \infty)$.
+\end{itemize}
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+With some grap[hing tools, we can get a better approximatiopn of the critical number.
+
+
+
+
+\begin{center}
+\desmos{sumsbfeafr}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

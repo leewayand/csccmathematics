@@ -14,6 +14,251 @@ characteristics
 
 
 
+Analyzing a function means listing all of its features, characteristics, and trends.
+
+
+$\blacktriangleright$ \textbf{Domain and Range}
+First off any function report would supply the domain and range.  Perhaps the domain is already stated with the function definition. Otherwise, the function might be described with a formula. Then, the implied domain can be deduced.  If the graph is defined via a graph, then the implied domain can be deduced visually. \\
+
+If a formula is provided, then the best method of analysis is to concurrently extract information algebraically and graphically.  The algebraic information will help you piece together a sketch.  Even a partial sketch will suggest features and characteristics that will direct your algebraic investigation.
+
+If a graph is the only information presented, then there is an unavoidable air of inaccuracy to work within.  Then nature of drawing, the tools used, and the person drawing make inaccuracy simply a part of graphing.
+
+Even with a formula, piecing the graph together may be the only way to obtain clues to certain function aspects. \\
+
+
+
+
+
+$\blacktriangleright$ \textbf{Graph}
+If a formula is provided, then it will be built from elementary functions.  Begin imaging what the graphs of those pieces look like. You should have all of the important aspects of elementary functions memorized. Begin thinking of important aspects of the function or important graphing points. This will suggest directions the algebraic investigation should take. \\
+
+
+
+
+$\blacktriangleright$ \textbf{Zeros and Singularities}
+Identify zeros and singularities.  This will involve solving equations that you create from your knowledge of the elementary functions. As you identify zeros and singularities, graph their visual representatives on the graph. If the singularity involves an asymptote, then you can describe the function's behavior around in this domain area.\\
+
+
+
+$\blacktriangleright$ \textbf{Continuity}
+The domain and the formula and the graph should begin establishing maximal intervals, discontinuities, and intervals of continuity.  The endpoints or isolation numbers (or points) may require additional scrutiny.  \\
+
+
+$\blacktriangleright$ \textbf{End-Behavior}
+Think in terms of very very very big positive and negative numbers.  How does the function settle down?  Are there limiting values (horizontal asymptotes)?  Are there oblique asymptotes? Add these to the graph. \\
+
+
+$\blacktriangleright$ \textbf{Graph}
+With this information, you should be able to sketch a reasonable shape for a graph.  It may not have the correct heights. However, it should have the basic shape.  It should have important features positioned correctly. It should show ideas of increasing and decreasing. \\
+
+
+$\blacktriangleright$ \textbf{Important Points}
+Our library of elementary function comes with formulas and graphs.  The graphs also list important points that align the graph.  These points points should be correctly positioned on yourgraph.
+
+
+$\blacktriangleright$ \textbf{Critical Numbers and Extreme Values}
+Local maximums and mimimums are going to be difficult without Calculus.  Your graph should have strong suggestions of where these extreme values occur in the domain. YO ucan evaluate the function in this area to get an idea of where the graph should be drawn.  You also should have a good idea how the elementary functions change.
+
+If you have the derivative, then you can get exact values for critical numbers and the function values there.
+
+
+
+$\blacktriangleright$ \textbf{Rate-of-Change}
+With the derivative or with the graph, you can identify intervals where the function increases and decreases.
+
+
+
+
+
+
+
+
+\begin{example} Complete Anlaysis
+
+Completely analyze $p(t) = (t+3)e^{-2t-3}$.
+
+\textbf{\textcolor{purple!50!blue!90!black}{explanation}} \\
+
+
+$p(t)$ is the product of a polynomial and an exponential function. Therefore, its implied domain is all real numbers.
+
+$p(t)$ is in factored form.  The exponential factor, $e^{-2t-3}$, does not have a zero.  The linear factor has a zero occur when $t+3=0$ or $t=-3$.  
+
+The exponential factor, $e^{-2t-3}$, only has positive values.  This exponential factor dominates over the polynomial factor.  The exponential values tend to $0$ when the exponent takes on large negative values.  That would be when $t$ tends to $\infty$. The exponential values tend to $\infty$ when the exponent takes on large positive values.  That would be when $t$ tends to $-\infty$.  
+
+
+Since the exponential factor only has positive values, the sign of $p(t)$ is the same as the sign of $t+3$.  Therefore, $p(t)$ ispositive on $(-3, \infty)$ and negative on $(-\infty, -3)$.  
+
+This tells us that 
+
+\begin{itemize}
+\item $p(t)$ tends to $0$ from the positive side as $t \to \infty$.
+\item $p(t)$ tends to $-\infty$ as $t \to -\infty$.
+\item The graph crosses the horizontal axis at $(-3, 0)$.
+\end{itemize}
+
+
+
+Neither polynomials nor exponentials have discontinuities or singularities.  $p(t)$ is continuous on $(-\infty, \infty)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=p(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(1:9),->] {e^(-x)};
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-7:-4),<-] {-e^(-x-5)};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+The graph suggests that there is a hill between $-4$ and $0$, which means there is a global maximum somewhere on $(-4, 0)$.  Without a derivative, we cannot pin this critical number down.  But we now know enough to make a nice sketch of the function.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=p(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=1, gray, smooth,samples=200,domain=(-9:10),<->] {0};
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-3.25:9),<->] {(x+3) * e^(-2*x-3)};
+            
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+There is no vertical asymptote. Exponential functions do not have singularities and neither do polynomials.  The domain is $(-\infty, \infty)$ and the graph contiues down and to the left.
+
+$y = 0$ is a horizontal asymptote.
+
+From the graph we can estimate the critical number as approximately $-2.5$.
+
+
+
+
+
+\begin{itemize}
+\item $p(t)$ increases on $(-\infty, -2.5]$.
+\item $p(t)$ decreases on $[-2.5, \infty)$.
+\end{itemize}
+
+
+$p(t)$ has a global maximum of approximately $3.7$ at $-2.5$.
+
+
+$\lim_{t \to -\infty} p(t) = -\infty$
+
+
+$\lim_{t \to \infty} p(t) = 0$
+
+
+
+
+
+
+\end{example}
+
+If given the derivative, we could have determined the critical number and maximum value.
+
+
+$p'(t) = -(2t+5) e^{-2t-3}$, which equals $0$ at $-2.5$.  Our estimation was right on target.  
+
+The maximum value is $p(-2.5) = (-2.5+3)e^{-2(-2.5)-3} = 0.5 \, e^{2}$.  This is approximately $3.6945$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
