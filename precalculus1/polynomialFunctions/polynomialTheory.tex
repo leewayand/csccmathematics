@@ -17,6 +17,264 @@ the whole story
 
 
 
+We have investigated polynomial functions from several viewpoints.  Time to collect all of our thoughts and charcterize polynomial functions.
+
+
+
+
+
+\begin{definition} Polynomial Function
+
+
+A \textbf{polynomial function} is a function that can be represented by a formula of the form
+
+
+\[   P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0        \]
+
+where the $a_i$ are real numbers and $a_n \ne 0$.
+
+$n$ is called the \textbf{degree} of the polynomial
+
+
+\end{definition}
+
+
+
+$\blacktriangleright$ \textbf{Domain:} The implied domain of a polynomial function is all real numbers.  However, a particular polynomial function may be defined with a subset of the real numbers.
+
+
+
+
+\begin{formula} Forms
+
+Formulas for polynomial functions have two two forms:
+
+
+
+\begin{itemize}
+\item \textbf{Standard Form:}  The standard form for a quadratic function looks like $a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0$.
+\item \textbf{Factored Form:}  The factored form for a quadratic function looks like $a(x - r_n)(x - r_{n-1}) \cdots (x - r_1)$.
+\end{itemize}
+
+
+\end{formula}
+
+
+A polynomial may have repeated roots.  For this reason, the factored form usually collects like factors:
+
+
+\[   a (x - r_k)^{e_k} (x - r_{k-1})^{e_{k-1}} \cdots (x - r_1)^{e_1}             \]
+
+
+Here, the roots are distinct:  $r_i \ne r_j$ when $i \ne j$.
+
+The exponents are called \textbf{multiplicities} of the roots. 
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Roots and Zeros:}   Zeros of polynomials are also called roots of the polynomials.  A polynomial function behaves in one of two ways around a root.
+
+\begin{itemize}
+\item if the multipicity is odd then the function changes sign over the root.  The graph crosses over the horizontal axis at corresponding intercepts.
+\item if the multipicity is even then the function does not change sign over the root.  The graph does not cross over the horizontal axis at corresponding intercepts. Instead, it bounces back in the direction it came.
+\end{itemize}
+
+
+\textbf{Constant functions} are polynomial functions.  They don't have zeros, unless it is the zero function.  \\
+
+
+\textbf{Linear functions} are polynomial functions. They have one root.  You can solve for this root. \\
+
+
+\textbf{Quadratic functions} are polynomial functions. They have $0$, $1$, or $2$ roots.  You can solve for these roots. \\
+
+
+\textbf{Higher Order Polynomials} are polynomial functions with degree $3$ or greater.  We do not have quick formulas to obtain their roots.  Our usual strategy is to factor, if we can.  
+
+
+
+
+
+$\blacktriangleright$ \textbf{Continuity:}  Polynomials are nice functions.  They are continuous everywhere.  They have no dicontinuities or singularities.
+
+
+
+$\blacktriangleright$ \textbf{Graph:} Graphs of polynomials are nice.  They are smooth.  They do not have corners or spikes or breaks or asymptotes. Once we have the roots, we can plot the intercepts.  Then we can smoothly connect them according to their mulitplicities and have a pretty good sketch of the shape of the graph.
+
+With a basic general shape, we can estimate critical numbers and extrma values.
+
+
+
+
+$\blacktriangleright$ \textbf{Extrema:} If we have a derivative, then we can attempt to locate exact values of critical numbers.  Without the derivative, we turn to technology for some assistance.
+
+
+
+
+$\blacktriangleright$ \textbf{Rate-of-Change:} The critical numbers partition the real line into intervals where the polynomial function increases or decreases.  We can now list these intervals.
+
+
+
+
+
+
+\begin{example} Polynomial
+
+
+Completely analyze $p(w) = -\frac{1}{5}(w+4)(w-3)(w-3)$
+
+First let's collect like factors: $p(w) = -\frac{1}{5}(w+4)(w-3)^2$
+
+We have a polynomila of degree $3$.  It has two roots.
+
+\begin{itemize}
+\item $-4$ is a root of multiplicity $1$.  Since this multipicity is odd, $p$ will change sign through $-4$ and the graph will cross at $(-4,0)$.
+\item $3$ is a root of multiplicity $2$.  Since this multipicity is even, $p$ will not change sign through $3$ and the graph will not cross at $(2,0)$.  The graph will touch and then bounce back.
+\end{itemize}
+
+
+The end-behavior of $p$ is $-\frac{1}{5} w^3$.  Therefore, $\lim_{w \to -\infty}p(w) = \infty$ and $\lim_{w \to \infty}p(w) = -\infty$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel={$y=p(w)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:-7),<-] {-(x+4)};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:-3)] {-(x+4)};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(2:4)] {-(x-3)^2)};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(7:9),->] {-(x-4)};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,0)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The graph is very suggestive that there is a local minimum somewhere around $-1$.  $3$ is a zero and also a critical number, since the function is negative around that zero.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel={$y=p(w)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-4.75:5.25),<->] {-0.2*(x+4)*(x-3)^2};
+
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,0)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+With some technology, we can approximate the other critical number to be $-1.67$ and the local minimum to be $-10.163$.
+
+
+\begin{itemize}
+\item $p$ decreases on $(-\infty, -1.67]$.
+\item $p$ increases on $[-1.67, 3]$.
+\item $p$ decreases on $[3, \infty)$.
+\end{itemize}
+
+
+
+There is no global maximum or minimum.  There is no local maximum.
+
+
+
+\end{example}
+
+
+
+
+If we were also given that $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$.  This is a quadratic.  We can obtain its zeros via the quadratic formula.
+
+
+\[  \frac{4 \pm \sqrt{(-4)^2 - 4 \cdot 3 \cdot (-15)}}{2 \cdot 3} =    \frac{4 \pm \sqrt{196}}{6}  = \frac{4 \pm 14}{6}       \]
+
+We get two real roots: $\frac{4 + 14}{6} = \frac{18}{6} = 3$  and $\frac{4 - 14}{6} = \frac{-10}{6} = \frac{-5}{3} \approx -1.67$
+
+
+
+\begin{itemize}
+\item $p$ decreases on $\left(-\infty, \frac{-5}{3}\right]$.
+\item $p$ increases on $\left[\frac{-5}{3}, 3\right]$.
+\item $p$ decreases on $[3, \infty)$.
+\end{itemize}
+
+
+
+Another approach to obtain the roots of $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$ would be to notice that we already know that $3$ is a root. $w+3$ must be a factor.
+
+
+
+\begin{align*}
+3w^2 - 4w - 15     & = 0        \\
+3w^2 - 4w - 15     & = (w+3)(???)        \\
+3w^2 - 4w - 15     & = (w+3)(3w + ?)        \\
+3w^2 - 4w - 15     & = (w+3)(3w - 5)        
+\end{align*}
+
+
+
+
+
+
+
+
+
 
 
 
