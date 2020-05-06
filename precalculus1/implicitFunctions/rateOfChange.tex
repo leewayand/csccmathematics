@@ -22,4 +22,167 @@ tangents
 
 
 
+
+
+
+
+
+
+
+Define $y(x)$ via $(x+4)^2 + (y-2)^2 = 5^2$ with $x \in [-4, 1]$  and $y \in [-3, 2]$.
+
+
+
+We do not have a formula for $y(x)$.  We are using an equation to describe the relationship between $y$ and $x$.  We say that $y(x)$ is defined \textbf{implicitly}.
+
+
+Here is a graph of $y(x)$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      %\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:9)] {5};
+
+		\addplot [line width=2, penColor, smooth, samples=200, domain=(-1.57:0)] ({5*cos(deg(x)) - 4},{5*sin(deg(x)) + 2});
+		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-3)};
+		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,2)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+With these restrictions, we have a function.
+
+From the equation, we can see that the point $(0, -1)$ is on the graph, which means that $y(0) = -1$.  
+
+There must also be a value for $y'(0)$.  With some Calculus tools, we could get an exact measurement for this.  As it is, we will need to approximate graphically.  $y'(0)$ is the slope of the tangent limne to the curve at $(0, -1)$.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      %\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:9)] {5};
+
+		\addplot [line width=2, penColor, smooth, samples=200, domain=(-1.57:0)] ({5*cos(deg(x)) - 4},{5*sin(deg(x)) + 2});
+		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-3)};
+		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,2)};
+
+		\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0,-1)};
+		\addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:6),<->] {1.33*x - 1};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+Here is the graph will some auxillary lines with slope $1$ and $2$ for comparison.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+		            
+		\addplot [line width=1, gray, dashed,samples=200,domain=(-4:5),<->] {2*x - 1};
+		\addplot [line width=1, gray, dashed,samples=200,domain=(-6:6),<->] {x - 1};
+
+		\addplot [line width=2, penColor, smooth, samples=200, domain=(-1.57:0)] ({5*cos(deg(x)) - 4},{5*sin(deg(x)) + 2});
+		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-3)};
+		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,2)};
+
+		\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0,-1)};
+		\addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:6),<->] {1.33*x - 1};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+It appears that perhaps our tangent line has a slope of $1.3$, $y'(0) = 1.3$.
+
+
+
+
+
+
 \end{document}
