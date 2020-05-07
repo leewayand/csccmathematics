@@ -13,6 +13,172 @@ movement
 
 
 
+A Cartesian equation describes a curve as a whole object.  The equation provides a way to validate a point's membership in the curve. You substitute the point's coordinates into the variables in the equaiton.  If the resulting equation is true, then the point is included in the curve.
+
+You have to provide the point.  The equation will tell you if it is on the curve or not.
+
+$\blacktriangleright$  A parameterization manufactures the points on the curve.  You don't bring a point to the parameterization.  YOu select a value for the parameterization and the point is handed to you.
+
+In this way, the parameterization constructs the curve.  And, it constructs it with a given direction - the direction of the parameter.
+
+
+A parameterization is like highway milemarkers along the curve.
+
+
+
+
+Let's see this in action with our favorite curve: a line.
+
+
+
+
+\begin{example} Parameterizing a Line
+
+
+
+Let $L(x) = x - 3$
+
+
+
+
+Graph of $y = L(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:10),<->] {x-3};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Now for a parameterization.
+
+\begin{itemize}
+\item $x(t) = 4 cos(t)$
+\item $y(t) = 4 cos(t) - 3$ 
+\end{itemize}
+
+
+$x(t)$ and $y(t)$ are related as $y(t) = x(t) - 3$.  $(x(t), y(t))$ will satisfy the equation $y = x - 3$.  Therefore, these points are on the line.  
+
+But where?
+
+
+As $t$ moves from $-\infty$ to $\infty$, $cos(t)$ oscillates between $1$ and $-1$.  Our $x$-coordinate will be oscillating between $4$ and $-4$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:4)] {x-3};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-7)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4, 1)};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The point keeps oscillating back and forth on this line segment.
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\desmos{dxxtmpuvej}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
