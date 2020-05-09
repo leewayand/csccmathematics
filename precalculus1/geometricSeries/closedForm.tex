@@ -91,13 +91,13 @@ The closed form is the same, except subtract off the first two terms.
 need a common denominator
 
 
-\[=     \frac{4}{2(2-t)}  - \frac{2(2-t)}{2(2-t)} - \frac{t(2-t)}{2(2-t)} = \frac{4-2(2-t)-t(2-t)}{2(2-t)}  = \frac{t^2+2t-4}{2-t}   \]
+\[=     \frac{4}{2(2-t)}  - \frac{2(2-t)}{2(2-t)} - \frac{t(2-t)}{2(2-t)} = \frac{4-2(2-t)-t(2-t)}{2(2-t)}  = \frac{t^2}{2(2-t)}   \]
 
 
 
 
 
-\[    K(t) =   \frac{t^2+2t-4}{2-t}    \] on $(-2, 2)$.
+\[    K(t) =   \frac{t^2}{2(2-t)}    \] on $(-2, 2)$.
 
 
 
@@ -107,6 +107,24 @@ need a common denominator
 
 
 
+On the other hand, we could have factored out $\left( \frac{t}{2} \right)$ in order to get the index back to $0$.
+
+
+\[    K(t) =   \sum_{n=2}^{\infty}  \left( \frac{t}{2} \right)^n    =  \left( \frac{t}{2} \right)^2 \sum_{n=0}^{\infty}  \left( \frac{t}{2} \right)^n   \]
+
+
+Then the closed form would be
+
+
+\[    \left( \frac{t}{2} \right)^2  \cdot \frac{1}{1 - \frac{t}{2}}            \]
+
+
+
+\[     \frac{t^2}{2(2 - t)}            \]
+
+
+
+Same formula.
 
 
 
@@ -115,17 +133,6 @@ need a common denominator
 
 
 
-
-
-
-
-
-
-
-
-
-
-partial
 
 
 
