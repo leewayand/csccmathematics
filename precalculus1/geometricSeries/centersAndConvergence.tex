@@ -16,6 +16,203 @@ center
 
 
 
+Let's extend our bridge between infinite series and closed form formulas for Geometric series.
+
+
+
+
+
+\section{Geometric Template}
+
+
+
+The identity function, $Id(x) = x$, is just a function such that $I(0) = 0$.  We could describe $\frac{a}{1-x}$ for $x \in (-1, 1)$ as $\frac{a}{1-Id(x)}$ for $Id(x) \in (-1, 1)$ - a composition.
+
+Or, we could expand this composition idea and think of other functions, $f$, such that $f(0) = 0$.
+
+
+
+\[    \frac{a}{1-f(x)}   \, \text{ where } \, f(0) = 0       \]
+
+
+This would be a valid function as long as $f(x) \ne 1$. 
+
+
+
+
+We could then move this composition over to our Geometric series and allow the zero to shift.
+
+
+
+
+\[   \sum_{n=0}^{\infty} a (f(x))^n =  \frac{a}{1-f(x)}   \, \text{ where } \, f(c) = 0       \]
+
+
+This would be valid up until $f(b)=1$ for some $b$.  Since $c$ is the center of the interval of convergence, we could calculate a radius of convergence and establish and interval of convergence - or a common domain where the series and the closed form formula represent the same function.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Geometric Series
+
+
+
+Create a series equivalent to $g(x)=\frac{3}{7 - 2x}$ centered at $5$.
+
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+
+
+First a quick analysis of $g(x)=\frac{3}{7 - 2x}$.  $\frac{7}{2}$ is a singularity. The domain of our infinite series representation of $g(x)$ cannot contain this singularity.  The domain will be centered at $5$ and come right up to $\frac{7}{2}$.  That is a radius of $\frac{3}{2}$. Therefore the interval of convergence should be $\left( \frac{7}{2}, \frac{13}{2} \right)$.
+
+Now, let's create the series.
+
+We must rewrite $\frac{3}{7 - 2x}$ in the form $\frac{a}{1-something}$ where $something(5) = 0$
+
+
+
+\[      \frac{3}{7 - 2x}  = 3   \cdot \frac{1}{7 - 2x} =    3   \cdot \frac{1}{7 - 2(x-5) - 10} =   3   \cdot \frac{1}{-3 - 2(x-5)}   =   \frac{3}{-3}   \cdot \frac{1}{1 + \frac{2(x-5)}{3}}  = \frac{-1}{1 + \frac{2(x-5)}{3}}  \]
+
+
+
+Almost.  We have $1 + something$ in the denominator. It must be $1 - something$
+
+
+\[    g(x) =   \frac{-1}{1 - \frac{-2(x-5)}{3}}       \]
+
+\[  g(x) =    -1 \cdot \frac{1}{1 - \frac{-2(x-5)}{3}}     =   -   \sum_{n=0}^{\infty}   \left( \frac{-2(x-5)}{3} \right)^n     =   -  \sum_{n=0}^{\infty}   \left( \frac{-2}{3} \right)^n  (x-5)^n\]
+
+
+\[  g(x)     =   -  \sum_{n=0}^{\infty}   (-1)^n \left( \frac{2}{3} \right)^n  (x-5)^n    \]
+
+\[  g(x)     =    \sum_{n=0}^{\infty}   (-1)^{n+1} \left( \frac{2}{3} \right)^n  (x-5)^n    \]
+
+The first few few terms look like
+
+
+\[   -1 + \frac{2}{3} (x-5) - \left( \frac{2}{3} \right)^2 (x-5)^2 +  \left( \frac{2}{3} \right)^3 (x-5)^3 - \left( \frac{2}{3} \right)^4 (x-5)^4    + \cdots   \]
+
+
+This is an exampleof an \textbf{alternating series}, because the signs of the terms alternate. \\
+
+Now, for the radius.  We know the interval of convergence for a Geometric series is $(-1, 1)$.
+
+
+Therefore, solve
+
+
+
+\begin{align*}
+\frac{2(x-5)}{3} & = 1   \\
+2(x-5) & = 3    \\
+x-5 & = \frac{3}{2}    \\
+x & = \frac{3}{2}  + 5 = \frac{13}{2}
+\end{align*}
+
+
+
+
+\begin{align*}
+\frac{2(x-5)}{3} & = -1   \\
+2(x-5) & = -3    \\
+x-5 & = -\frac{3}{2}    \\
+x & = -\frac{3}{2}  + 5 = \frac{7}{2}
+\end{align*}
+
+
+
+
+The intervla of convergence is $\left( \frac{7}{2}, \frac{13}{2}\right)$, ss predicted.
+
+
+
+
+\end{example}
+
+
+We have two different formulas for the same function.
+
+
+
+
+
+
+
+
+
+\section{Polynomial Approximation}
+
+
+We have two different formulas for the same function, at least on $\left( \frac{7}{2}, \frac{13}{2}\right)$.
+
+
+Let's compare their graphs.
+
+Of course, we cannot type in an infinite sum.  We'll approximate the infinite series with just the first few terms.
+
+
+
+
+\begin{center}
+\desmos{ltmxrqjnsz}{400}{300}
+\end{center}
+
+
+Just a fourth degree polynomial is doing a pretty good job approximating $g(x)$ on a subinterval.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
