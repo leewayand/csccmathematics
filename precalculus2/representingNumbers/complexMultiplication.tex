@@ -12,11 +12,201 @@ intervals
 \maketitle
 
 
+Multiplication of complex numbers is weird.
 
 
-We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  Basically, Precalculus 1 is a study of the real numbers.
 
-This means we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers.
+
+
+\begin{definition}
+
+
+\[    (a + b \, i) \dot (c + d \, i) = (ac-bd) + (ad+bc) \, i           \]
+
+\end{definition}
+
+
+It is defined this way to naintain some relationships that we thoght should be valid.
+
+
+
+Division requires a little discussion.
+
+
+
+With real numbers, we have stories the give meaning to division.
+
+
+$10 \div 5$ has two meanings.  This expresion might represent how many groups are needed to split a group of $10$ marbles into groups of size $5$.  That would be $2$ groups.  It could also represent how many marbles would be in each group, if $10$ marbles were split up into $5$ equal groups.  That would be $2$ marbles per group.
+
+
+But, even real numbers stretch this story.  $10 \div \sqrt{2}$ ?  What does it mean to split a pile of marbles into $\sqrt{2}$ piles.
+
+This marble story is going to break with ocmplex numbers.  Fortunately, the real numbers have a different view of division, which we can bring with us over to complex numbers.
+
+
+
+
+
+Just from a strictly algebaic viewpoint, $10 \div 5$ represents the number that you multipliy $5$ by, to get $10$.  In this way, we can think about division in terms of multiplication.  This thought leads to reciprocals and fractions.  Luckily, every real number, except $0$ has an inverse.  What about complex numbers?  Do they have reciprocals?  DOes each complex number have a partner complex number such that their product equals $1$?
+
+
+
+\begin{example} Multiplicative Inverse
+
+
+Can we solve
+
+\[   1 = (2 + 3 \, i) \cdot (a + b \, i)       \]
+
+
+
+\begin{align*}
+1     & = 1 + 0 \, i  \\
+      & =    (2 + 3 \, i) \cdot (a + b \, i)   \\
+      & =    (2a - 3b) + (2b+3a) \, i   
+\end{align*}
+
+
+We need $1 = 2a - 3b$ and $0 = 2b+3a$.
+
+
+The second  equation tells us that $\frac{-3a}{2} = b$.  Substituting this into the first equation tells us that $1 = 2a - 3 \cdot \frac{-3a}{2}$.  Now we can solve for $a$.
+
+
+
+\begin{align*}
+1     & = 2a - 3\frac{-3a}{2}  \\
+      & =   2a + \frac{9a}{2}   \\
+      & =    \frac{13a}{2}   \\
+  \frac{2}{13}    & =  a
+\end{align*}
+
+
+
+
+With that, we can get a value for $b$.   $ b = \frac{-3a}{2} = \frac{2}{13}  \cdot \frac{-3}{2} = -\frac{3}{13}$.
+
+Let's check:
+
+
+
+\[    (2 + 3 \, i) \cdot (\frac{2}{13} - \frac{3}{13} \, i)     =   \left( 2 \cdot  \frac{2}{13} - 3 \cdot \left(- \frac{3}{13}\right)\right)  + \left( 3 \cdot \frac{2}{13} - 2 \cdot \frac{3}{13} \right) \, i = \frac{4+9}{13} + \frac{6-6}{13} \, i = 1  \]
+
+
+
+
+
+
+
+\end{example}
+
+
+Does this process work for all nonzero complex numbers? \\
+
+
+$\blacktriangleright$  We know it works for $r + 0 \, i$ with $r \ne 0$, because these are real numbers.
+
+
+\[   (r + 0 \, i) \cdot \left(\frac{1}{r} + 0 \, i \right) = 1        \]
+
+
+
+
+
+
+
+$\blacktriangleright$  Similarly, it works for $0 + r \, i$ with $r \ne 0$.
+
+
+\[   (0 + r \, i) \cdot \left(0 - \frac{1}{r} \, i \right) = 1        \]
+
+
+
+
+
+$\blacktriangleright$ Now for complex numbers where neither component is $0$
+
+
+Given real numbers $A \ne 0$ and $B \ne 0$, solve the following for $x$ and $y$.
+
+
+\[       1 = (A + B \, i) \cdot (x + y \, i)            \]
+
+
+
+\begin{align*}
+1          & = (A + B \, i) \cdot (x + y \, i)      \\
+           & = (Ax-By) + (Bx+Ay) \, i
+\end{align*}
+
+
+For this to work, we need $A x - B y = 1$ and $B x + A y = 0$.
+
+
+
+The second equaiton tells us that $x = -\frac{A y}{B}$, which is ok, since $B \ne 0$ in this case.
+
+Substituting that into the first equation gives us
+
+
+\[   A \cdot \left(-\frac{A y}{B}\right) - B y = 1     \]
+
+
+\[   -\frac{A^2 y}{B} - B y = 1     \]
+
+\[   -\frac{A^2 y}{B} - \frac{B^2}{B} y = 1     \]
+
+
+\[   -\frac{A^2 + B^2}{B} y = 1     \]
+
+
+\[  y = \frac{-B}{A^2 + B^2}     \]
+
+This is ok, since $A^2 + B^2 \ne 0$, because neither $A$ nor $B$ equals $0$.
+
+
+
+
+$\blacktriangleright$  Every nonzero complex number has a reciprocal.  We will use this to define division as multiplication by the reciprocal.
+
+
+
+
+
+\section{Complex Conjugate}
+
+
+The \textbf{modulus} of a complex number is its distance from the origin or $0$.  The symbol for the conjuagte of a complex number, $z$, is $|z|$.  if $z = a + b \, i$, then
+
+\[    |z| = |a + b \, i| = \sqrt{a^b + b^2}          \]
+
+
+
+Just like with real numbers, complex arithmetic doesn't work very well with absolute value. In complex arithmetic, we have an alternative.
+
+
+
+\[   (a + b \, i) \cdot    (a - b \, i)  = a^2 + b^2   \]
+
+
+
+$\blacktriangleright$  $a - b \, i$ is called the \textbf{complex conjugate} of $a + b \, i$ and it will help us with division.
+
+
+
+
+\[   \frac{1}{a + b \, i} =   \frac{1}{a + b \, i} \cdot 1 = \frac{1}{a + b \, i} \cdot \frac{a - b \, i}{a - b \, i}  =  \frac{a - b \, i}{(a + b \, i)(a - b \, i)} =   \frac{a - b \, i}{a^2 + b^2}  \]
+
+
+\[  \frac{1}{a + b \, i}   =  \frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2} \, i      \]
+
+
+We can use the complex conjugate of the denominator to get us back to multipication.
+
+
+
+
 
 
 
