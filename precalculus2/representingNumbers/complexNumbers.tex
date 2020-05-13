@@ -7,16 +7,226 @@
 \begin{document}
 
 \begin{abstract}
-intervals
+$i$
 \end{abstract}
 \maketitle
 
 
+So, far our 2-dimensional arithmetic has a strong geometric flavor.  In this section, we will introduce a new layer of abbreviations and notation, that will give our new arithmetic a more algebraic feel. 
 
 
-We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  Basically, Precalculus 1 is a study of the real numbers.
+Our vectors are 2-dimensional.
 
-This means we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:7,3);
+ 
+
+            \node at (axis cs:5,5) [penColor] {$\langle a, b \rangle$};
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Our vector notation $\langle a, b \rangle$ wraps together two components, which we could stretch out.
+
+\[    \langle a, b \rangle = a \cdot \langle 1, 0 \rangle + b \cdot \langle 0, 1 \rangle            \]
+
+
+
+These component vectors are the horizontal and vertical components of $\langle a, b \rangle$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:7,3);
+            \draw[black,ultra thick,->] (axis cs:0,0) -- (axis cs:7,0);
+            \draw[black,ultra thick,->] (axis cs:7,0) -- (axis cs:7,3);
+ 
+
+            \node at (axis cs:5,5) [penColor] {$\langle a, b \rangle$};
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\section{Arithmetic Shorthand}
+
+
+
+We have already noted that the real numbers are embedded in our plane as horizontal vectors.
+
+$\blacktriangleright$  As algebraic shorthand notation, let's symbolize $a \cdot \langle 1, 0 \rangle = \langle a, 0 \rangle$ as $a$.  It is a horizontal vector and therefore represents a real number, so let's just represent it with a real number.
+
+
+
+$\blacktriangleright$  As algebraic shorthand notation, the vector $ \langle 1, 0 \rangle $ is historically abbreviated as $i$.  \\
+
+
+
+
+With these abbreviations our 2-dimensional numbers now look like this
+
+
+\begin{align*}
+\langle a, b \rangle & = \langle a, 0 \rangle + \langle 0, b \rangle  \\
+         & = \langle a, 0 \rangle + b \cdot \langle 0, 1 \rangle  \\
+          & = a + b \, i
+\end{align*}
+
+
+
+
+Our 2-dimensional numbers have several representations.  Points and vectors are a geometric view, which will use extensively.
+
+
+When viewed as $a + b \, i$, we refer to these numbers as the \textbf{Complex Numbers}. \\
+
+
+
+
+
+
+\[   \mathbb{C}  = \{  a + b \, i   \, | \, a, b \in \mathbb{R}             \}               \]
+
+
+
+
+The Complex Numbers are our algebraic view of these 2-dimensional numbers.  Although, the line between geometry and algebra is very blurry in this system. It is almost like having double vision.  We hold both views on top of each other simultaneously and use the strength of each to reason.
+
+
+
+
+
+As noted before, multiplication by $i$ rotated vectors counterclockwise $90^{\circ}$. What about twice?
+
+
+\[  1 \cdot i \cdot i = -1    \]
+
+
+
+If you rotate $\langle 1, 0 \rangle$, $90^{\circ}$ counterclockwise, twice, then  you end up with $\langle 0,-1 \rangle = -1$
+
+
+
+
+
+\[   i^2 = -1\]
+
+
+
+\[   i = \sqrt{-1}   \]
+
+
+
+
+We were looking for this number when studying the quadratic formula.  $i$ is the missing piece to the puzzle.
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{History}}
+
+
+Mathematics has been a part of human thought for thousands of years.  Many people in many different countries have thought about mathematics over centuries.  And, unlike today communication was not easy.  Therefore, we have many groups of people inventing different notationand language for the same thing.  We have opinions about what is allowed and what is not.
+
+We have to live with this history.
+
+That means we have names and symbols for stuff that seems silly now, but it was serious business a couple of centuries ago.
+
+For historical reasons the horizontal axis is called the real axis and the vertical axis is called the imaginary axis.  $i$ is an imaginary number - because a couple of centuries ago people thought this was all in our imagination.
+
+
+A complex number, $a + b \, i$, has a real part, $Re(a + b \, i)= a$, and an imaginary part, $Im( a + b \, i)= b$.
+
+That is the langugage we are stuck with.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

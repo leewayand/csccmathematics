@@ -19,26 +19,24 @@ algebraic geometry
 
 
 
+We are in the process of inventing an arithmetic for 2-dimensional numbers.  We began by adopting the arrow explanations of additional subtraction use one the traditional number line. The arrows are now 2-dimensional arrows, but they follow the same rules as before.
+
+The next step is to invent some symbols for the arrows, so that we can think algebraically about the 2-dimensional numbers.
+
+
+$\blacktriangleright$ We have parentheses for describing points, dots, or locations on the plane: $(2, 3)$.
+
+
+$\blacktriangleright$ We will use triangular brackets to describe vectors: $\langle 2, 3 \rangle$.  Rather than a postion, vectors describe a movement - just like the arrows represented in addition on the traditional number line. Vectors have a length or size and a direction.  Many arrows may represent the same vector.
+
+
+The nmbers inside the parenthese for a point are called \textbf{coordinates}.
+
+The numbers inside the triangular brackets for vectors are called \textbf{components}.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The geometry of the arrows has alreayd suggested the algebraic procedures.
 
 
 \begin{example}
@@ -74,7 +72,7 @@ $(4,6) + (2, -10)$
 \end{image}
 
 
-$(4,6) + (2, -10) = (6, -4)$
+$\langle 4, 6 \rangle + \langle 2, 10 \rangle = \langle 6, -4 \rangle$
 
 
 \end{example}
@@ -83,7 +81,22 @@ $(4,6) + (2, -10) = (6, -4)$
 
 
 
-This discussion is very suggestive of a symbolic version of 2-dimensional addition and subtraction.
+Addition and subtraction of vectors will be carried out component-wise.
+
+
+
+\begin{definition} 
+
+Vector Arithmetic
+
+
+\[     \langle A, B \rangle + \langle C, D \rangle = \langle A+C, B+D \rangle       \]
+
+
+\[     \langle A, B \rangle - \langle C, D \rangle = \langle A-C, B-D \rangle       \]
+
+
+\end{definition}
 
 
 
@@ -93,11 +106,240 @@ This discussion is very suggestive of a symbolic version of 2-dimensional additi
 
 
 
-A \textbf{vector} is going to play the part of a number.  We'll represent vectors with arrows. Just like on the 1-dimensional number line, vectors don't have a position.  They have a length and a direction.  Many arrows drawn at different positions on the plane could represent the same vector.
 
-We'll use \textbf{triangular brackets} as algebraic notation for vectors. 
+We also have the idea of stretching or compressing a vector in the same direction.
 
-Example:  $\langle 4, 5 \rangle$
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:1,3);
+            \draw[penColor,ultra thick,->] (axis cs:1,3) -- (axis cs:2,6);
+            \draw[penColor2,ultra thick,->] (axis cs:2,6) -- (axis cs:3,9);
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\begin{definition} 
+
+Scalar Multiplication
+
+
+\[    k \langle A, B \rangle  = \langle k A, k B \rangle       \]
+
+
+
+\end{definition}
+
+
+
+
+
+
+\textbf{Real Numbers}
+
+
+
+We haven't lost our 1-dimensional real numbers. They have just been embedded inside out new algebraic plane.  We can view the horizontal axis as the traditional number line.
+
+Each real number $r$ is now either represented by the point $(r,0)$ or by the horizontal vector, $\langle r, 0 \rangle$.  All of our operations are duplicated with these new representations along the horizontal axis.
+
+
+\begin{itemize}
+\item $1$ is now either $(1,0)$ or $\langle 1, 0 \rangle$.
+\item $-1$ is now either $(-1,0)$ or $\langle -1, 0 \rangle$.
+\item $0$ is now either $(0,0)$ or $\langle 0, 0 \rangle$, a.k.a. the origin.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Multiplication}
+
+
+
+We have definitions for addition and subtraction of vectors.  Next up is multiplication, which is not so straightforward.  Therefore, let's just think about what we want from multiplication and then try to make that happen.
+
+$\blacktriangleright$ Remember $1$ has been encoded into vectors as $\langle 1, 0 \rangle$.  We would like $\langle 1, 0 \rangle$ to act like a multiplicative unit.
+
+\[    \langle a, b \rangle \cdot \langle 1, 0 \rangle    = \langle a, b \rangle            \]
+
+
+For instance, we would like $\langle a, b \rangle \cdot \langle 1, 0 \rangle    = \langle a, b \rangle $.
+
+But, let's read this equation another way.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-4,-2,2,4},
+            xtick={-4,-2,2,4},
+            yticklabels={$-4$,$-2$,$2$,$4$}, 
+            xticklabels={$-4$,$-2$,$2$,$4$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:1,0);
+            \draw[penColor2,ultra thick,->] (axis cs:0,0) -- (axis cs:0,1);
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+Instead of looking at this equation saying that multiplication by $\langle 1, 0 \rangle$ had no effect, let's view it as saying that multplication by $\langle 0, 1 \rangle$ turned $\langle 1, 0 \rangle$ $90^{circ}$ counterclockwise.
+
+
+
+
+$\blacktriangleright$ Multiplication by $\langle 0, 1 \rangle$ turns vectors counterclockwise $90^{circ}$.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:7,3);
+            \draw[penColor2,ultra thick,->] (axis cs:0,0) -- (axis cs:-3,7);
+
+            \node at (axis cs:5,5) [penColor] {$\langle a, b \rangle$};
+            \node at (axis cs:-5,4) [penColor2] {$\langle -b, a \rangle$};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$\star$ Multipication by $\langle 0, 1 \rangle$ turns $\langle a, b \rangle$ into $\langle -b, a \rangle$.
+
+What else should multipication do? \\
+
+
+Addition and mulitplication of vectors should behave like addition and multiplication of real numbers.  Namely, the distributive property should hold.
+
+And, we already have scalare multiplication.
+
+Puting all of this together, we get something like this:
+
+
+
+\begin{align*}
+\langle a, b \rangle  \cdot \langle c, d \rangle & = \langle a, b \rangle  \cdot (  c \cdot \langle 1, 0 \rangle    +  d \cdot \langle 0, 1 \rangle    )    \\
+    & = \langle a, b \rangle \cdot c \cdot \langle 1, 0 \rangle     +      \langle a, b \rangle \cdot d \cdot \langle 0, 1 \rangle      \\
+    & = c \cdot \langle a, b \rangle \cdot  \langle 1, 0 \rangle     +    d \cdot  \langle a, b \rangle \cdot  \langle 0, 1 \rangle      \\
+    & = c \cdot \langle a, b \rangle   + d \cdot  \langle -b, a \rangle \\
+    & =  \langle c a, c b \rangle   +   \langle -b d, a d \rangle \\
+    & =  \langle c a - b d, c b + a d \rangle   
+\end{align*} 
+
+
+
+
+
+
+
+\begin{definition}  Vector Multiplication
+
+
+\[    \langle a, b \rangle  \cdot \langle c, d \rangle =   \langle c a - b d, c b + a d \rangle   \]
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
