@@ -19,7 +19,7 @@ We already have several ways of representing complex numbers and will now add an
 
 
 
-$\blacktriangleright$ We represent complex numberds with points or dots in the Cartesian plane.
+$\blacktriangleright$ We represent complex numbers with points or dots in the Cartesian plane.
 
 
 
@@ -38,7 +38,7 @@ $\blacktriangleright$ We represent complex numberds with points or dots in the C
           ]
           
 
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,8)};
 
 
 
@@ -50,6 +50,116 @@ $\blacktriangleright$ We represent complex numberds with points or dots in the C
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+
+
+$\blacktriangleright$ We represent complex numbers with vectors.  These are illustrated with arrows on the Cartesian plane.  We write vectors using triangular brackets for an algebraic representation.
+
+$\langle 4, 8 \rangle$
+
+Vectors have an arithmetic.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:4,8);
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+$\blacktriangleright$ We represent complex numbers with a 2-dimensional sum: $4 + 8 \, i$.
+
+
+
+The left, first, or horizontal part is called the real part and the right, second, or vertical part is called the imaginary part.
+
+
+
+
+All of these representations share a common structure.  They all describe the complex number with rectangular measurements.  All of the descriptions above give horizontal (left/right) and vertical (up/down) information.
+
+
+There is a different way to describe complex numbers.
+
+
+
+\section{Polar Coordinates}
+
+Instead of rectangular information, we could give circular information.  We could give the angle the vector makes with the positive horizontal axis together with the length or distance. 
+
+In keeping with the circular idea, the vector resembles a radius.  
+
+Our two pieces of information will be $r$ and $\theta$. These are known as \textbf{polar coordinates}
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,8)};
+          \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:4,8);
+          \addplot [textColor,smooth, domain=(0:63),->] ({3*cos(x)},{3*sin(x)});
+          \node at (axis cs:2,1) [anchor=east] {$\theta$};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$r = \sqrt{4^2 + 8^2} = \sqrt{80} = 16\sqrt{5}$ \\
+$\theta = 63.43^{\circ}$ \\
+
+
+
+We, again, wrap the coordinates up with parentheses: $(r, \theta) = (16\sqrt{5}, 63.43^{\circ})$.
+
+Of course, that is how we write rectanguilar coordinates as well.  The context of the situaiton will tell us how to interpret the coordinates.
+
+And, we'll perfer radins over degrees: $(r, \theta) = (16\sqrt{5}, 1.107)$
+
+
+
+
 
 
 

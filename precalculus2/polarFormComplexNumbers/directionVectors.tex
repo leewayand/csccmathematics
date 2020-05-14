@@ -1,0 +1,117 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Direction Vectors}
+
+\begin{document}
+
+\begin{abstract}
+unit vectors
+\end{abstract}
+\maketitle
+
+
+
+
+
+Just adding one dimension has added quite a bit of geometric and algebraic structure to the Cartesian plane and complex numbers over the real line and real numbers.
+
+
+But really, the structure was there.  It was just too simply to see as significant.  We are elevating structure from the real line and expanding it into two dimensions.
+
+
+
+The tick marks on our drawings of the plane axes are an example of this. The tick marks remind us of steps of size $1$ horizontally or vertically.  This again seen in our rectangular vectors.
+
+
+\[ \langle 5, 7 \rangle = 5 \cdot  \langle 1, 0 \rangle + 7 \cdot \langle 0, 1 \rangle  \]
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \draw[black,ultra thick,->] (axis cs:0,0) -- (axis cs:5,7);
+
+          \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:0,1);
+          \draw[penColor,ultra thick,->] (axis cs:0,1) -- (axis cs:0,2);
+          \draw[penColor,ultra thick,->] (axis cs:0,2) -- (axis cs:0,3);
+          \draw[penColor,ultra thick,->] (axis cs:0,3) -- (axis cs:0,4);
+          \draw[penColor,ultra thick,->] (axis cs:0,4) -- (axis cs:0,5);
+          \draw[penColor,ultra thick,->] (axis cs:0,5) -- (axis cs:0,6);
+          \draw[penColor,ultra thick,->] (axis cs:0,6) -- (axis cs:0,7);
+
+
+
+          \draw[penColor2,ultra thick,->] (axis cs:0,0) -- (axis cs:1,0);
+          \draw[penColor2,ultra thick,->] (axis cs:1,0) -- (axis cs:2,0);
+          \draw[penColor2,ultra thick,->] (axis cs:2,0) -- (axis cs:3,0);
+          \draw[penColor2,ultra thick,->] (axis cs:3,0) -- (axis cs:4,0);
+          \draw[penColor2,ultra thick,->] (axis cs:4,0) -- (axis cs:5,0);
+
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+It is seen in our complex number notation.
+
+
+\[   4 + 2 \, i         \]
+
+$i$ represents a step of $1$ in the imaginary direction.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
