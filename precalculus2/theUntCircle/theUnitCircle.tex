@@ -13,12 +13,14 @@ the unit circle
 
 
 
+\begin{itemize}
+\item The position of every point in the Cartesian plane can be described as a scalar times a direction vector.  A direction vector has unit length.
+
+\item Every Complex number can be represented as the product of a real number and a complex number with modulus $1$.
 
 
-
-
-
-
+\item Every Complex number can be represented as the product of a real number and a complex number that sits on the unit circle.
+\end{itemize}
 
 
 
@@ -41,7 +43,7 @@ the unit circle
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
           ]        
-          \addplot [dashed, smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
 
           \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
 
@@ -61,6 +63,109 @@ the unit circle
         \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+If we can understand the unti circle in terms of Complex numbers, then we will have a good understanding of all Complex numbers.
+
+
+
+
+Pretend we have two Complex numbers on the unit circle.
+
+\begin{itemize}
+\item $C_1 = a + b \, i$ with $|C_1| = 1$
+\item $C_2 = c + d \, i$ with $|C_2| = 1$
+\end{itemize}
+
+
+
+We have $a^2 + b^1 = 1$  and $c^2 + d^2 = 1$.
+
+
+
+Now, let's examine their product.
+
+
+
+
+
+
+\begin{align*}
+(a + b \, i) \cdot (c + d \, i)      & = ac + ad \, i + bc \, i - bd   \\
+                & = (ac - bd) + (ad + bd) \, i
+\end{align*}
+
+
+
+What is the modulus of the product?
+
+
+
+
+
+\begin{align*}
+|(a + b \, i) \cdot (c + d \, i)|      & = (ac - bd)^2 + (ad + bd)^2   \\
+                & = a^2c^2 - 2abcd + b^2d^2 + a^2d^2 + 2abcd + b^2c^2  \\
+                & = a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2  \\
+                & = (a^2 + b^2) \cdot (c^2 + d^2)   \\
+                & = 1 \cdot 1 = 1
+\end{align*}
+
+
+
+The product is again on the unit circle.
+
+
+Where?
+
+
+
+
+\section{Polar Perspective}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}[2in]
+    \begin{tikzpicture}
+  \draw[thick,->] (0,0) node [below] {$O$} -- (3,0) node [below] {horizontal axis} ;
+  \filldraw (0,0) circle (1.5pt);
+  \filldraw [rotate=55] (2,0) circle (1.5pt);
+  \draw [thick,rotate=55] (0,0)-- node [rotate=55,pos=.5,above] {$r$} (2,0) node [above] {$(r,\theta)$};
+  \draw [->] (.75,0) arc(0:55:.75); 
+  \draw [rotate=27.5] (1,0) node {$\theta$};
+
+
+  \draw [ultra thick] (0,0) -- (0,3);
+  \draw [ultra thick] (0,0) -- (3,0);
+  \draw [ultra thick] (3,0) -- (3,3);
+  \draw [ultra thick] (0,3) -- (3,3);
+
+  \draw [ultra thick] (0,0) -- (3,1);
+  \draw [ultra thick] (3,1) -- (2,3);
+  \draw [ultra thick] (0,0) -- (2,3);
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
 
 
 
