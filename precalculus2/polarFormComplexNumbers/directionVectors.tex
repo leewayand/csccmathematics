@@ -96,6 +96,98 @@ $i$ represents a step of $1$ in the imaginary direction.
 
 
 
+We can bring this idea to polar descriptions as well.
+
+
+Each complex number can represented by a vector.  This vector can in turn be written as a scalar (number) times a \textbf{unit vector}.  A unit vector is just a vector of length $1$.
+
+
+
+\begin{example}
+
+\[  3 + 4 \, i = \langle 3, 4 \rangle = 5 \cdot \langle \frac{3}{5}, \frac{4}{5} \rangle     \]
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-4,-2,2,4},
+            xtick={-4,-2,2,4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,4)};
+          \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:0.6,0.8);
+          \draw[penColor,ultra thick,->] (axis cs:0.6,0.8) -- (axis cs:1.2,1.6);
+          \draw[penColor,ultra thick,->] (axis cs:1.2,1.6) -- (axis cs:1.8,2.4);
+          \draw[penColor,ultra thick,->] (axis cs:1.8,2.4) -- (axis cs:2.4,3.2);
+          \draw[penColor,ultra thick,->] (axis cs:2.4,3.2) -- (axis cs:3,4);
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Every complex number can be written this way.
+
+
+The unit vector is obtained by dividing the components by the length of the vector.  This length is the scalar out front.
+
+
+
+
+\[     a + b \, i    =  \sqrt{a^2 + b^2}  \left(  \frac{a}{\sqrt{a^2 + b^2}}, \frac{b}{\sqrt{a^2 + b^2}} \, i \right)                      \]
+
+
+
+
+\end{example}
+
+Unit vectors as called \textbf{direction vectors}.
+
+
+
+\begin{center}
+
+\textbf{\Huge{\textcolor{purple!50!blue!90!black}{EVERY COMPLEX NUMBER !}}}
+
+\end{center}
+
+
+
+Therefore, to understand the Complex Numbers, we really need to understand the unit complex numbers - the complex numbers with modulus equal to $1$
+
+
+
+The numbers with modulus equal to $1$ make up the unit circle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
