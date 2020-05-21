@@ -40,6 +40,7 @@ unit circle again
             clip=false,
             unit vector ratio*=1 1 1,
             xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
           ]        
@@ -80,6 +81,501 @@ unit circle again
 
 
 
+To understand the Complex numbers, we just need to understand right triangles.  To understand right triangles, we just need to understand the unit circle.
+
+
+
+
+
+
+
+\section{Right Triangles}
+
+
+
+
+$\blacktriangleright$ \textbf{Similar Triangles} \\
+
+From Geometry, we know that triangles with the same three angles are called \textbf{similar}.  Similar triangles can be of different sizes, but their sides must be proportional.
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Unit Circle} \\
+
+
+
+
+If we pick $\theta$, then we have defined a right triangle via the unit circle.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
+          \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+The hypotenuse is the radius of the circle, which has a length of $1$.
+
+By extending the radius to larger circles we can create many right triangles.  As long as the angle stays the same, then we have similar triangles and all of the sides are proportional.
+
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+
+
+  \draw [ultra thick] (0,0) -- (3,1);
+  \draw [ultra thick] (3,1) -- (2,3);
+  \draw [ultra thick] (0,0) -- (2,3);
+
+  \draw [rotate=0] (0.35,0.25) node {\scriptsize{$\alpha$}};
+  \draw [rotate=0] (2.75,1.1) node {\scriptsize{$\beta$}};
+  \draw [rotate=0] (2,2.7) node {\scriptsize{$\phi$}};
+
+  \draw (-1.4,0) node {\scriptsize{$c$}};
+  \draw (-1,0.7) node {\scriptsize{$a$}};
+  \draw (-1.8,0.6) node {\scriptsize{$b$}};
+
+
+
+
+
+  \draw [ultra thick] (-2,0) -- (-1,0.333);
+  \draw [ultra thick] (-1,0.333) -- (-1.333,1);
+  \draw [ultra thick] (-2,0) -- (-1.333,1);
+
+  \draw [rotate=0] (-1.7,0.25) node {\scriptsize{$\alpha$}};
+  \draw [rotate=0] (-1.2,0.4) node {\scriptsize{$\beta$}};
+  \draw [rotate=0] (-1.35,0.75) node {\scriptsize{$\phi$}};
+
+  \draw (2.9,2) node {\scriptsize{$k \cdot a$}};
+  \draw (0.75,1.75) node {\scriptsize{$k \cdot b$}};
+  \draw (2,0.4) node {\scriptsize{$k \cdot c$}};
+
+
+  \draw [ultra thick,->] (-1.5,2) -- (0.5,2);
+  \draw [rotate=0] (-0.5,2.25) node {\scriptsize{factor of $k$}};
+
+
+
+
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+Since the first right triangle was anchored to the unit circle, its hypotenuse had length $1$.  The hypotenuses of the other similar right triangles have a length, which we'll call $r$.
+
+
+
+
+
+
+
+
+
+
+\section{Right Triangles}
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-5,xmax=5,ymin=-5,ymax=5,
+            axis lines=center,
+            width=4in,
+            xtick={-4,-3,-2,-1,1,2,3,4},
+            ytick={-4,-3,-2,-1,1,2,3,4},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.15,.25) [anchor=west] {\scriptsize{$\theta$}};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\scriptsize{\sin(\theta)}$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+          \addplot [textColor] plot coordinates {(0,0) (1.915,1.607)}; %% 40 degrees
+          \addplot [ultra thick,penColor] plot coordinates {(1.915,0) (1.915,1.607)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (1.915,0)}; %% 40 degrees
+
+          \addplot [textColor] plot coordinates {(0,0) (2.681,2.250)}; %% 40 degrees
+          \addplot [ultra thick,penColor] plot coordinates {(2.681,0) (2.681,2.250)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (2.681,0)}; %% 40 degrees
+          
+          
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-2.1,xmax=2.1,ymin=-2.1,ymax=2.1,
+            axis lines=center,
+            width=4in,
+            xtick={-2,-1,1,2},
+            ytick={-2,-1,1,2},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.15,.1) [anchor=west] {\scriptsize{$\theta$}};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+
+
+
+          \addplot [smooth, domain=(0:360)] ({1.7*cos(x)},{1.7*sin(x)}); 
+
+          \addplot [textColor] plot coordinates {(0,0) (1.3,1.09)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(1.3,0) (1.3,1.09)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (1.3,0)}; %% 40 degrees
+
+          \node[penColor, rotate=-90] at (axis cs:1.45,.5) {$r \sin(\theta)$};
+          \node[penColor2] at (axis cs:.85,0) [anchor=north] {$r \cos(\theta)$};
+
+
+          \node at (axis cs:.8,.9) [anchor=west] {$r$};
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The two right triangles are similar.  
+
+The ratio of corresponding sides are equal.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+
+
+  \draw [ultra thick] (0,0) -- (3,0);
+  \draw [ultra thick] (3,0) -- (3,2);
+  \draw [ultra thick] (0,0) -- (3,2);
+
+  \draw [rotate=0] (0.4,0.13) node {\scriptsize{$\theta$}};
+
+
+  \draw (3.05,1) node  [anchor=west]{\scriptsize{$r \cdot \sin(\theta)$}};
+  \draw (1.2,1) node {\scriptsize{$r$}};
+  \draw (2,-0.2) node {\scriptsize{$r \cdot \cos(\theta)$}};
+
+
+
+
+
+  \draw [ultra thick] (-2,0) -- (-1,0);
+  \draw [ultra thick] (-1,0) -- (-1,0.666);
+  \draw [ultra thick] (-2,0) -- (-1,0.666);
+
+  \draw [rotate=0](-1.6,0.13) node {\scriptsize{$\theta$}};
+
+
+
+
+
+  \draw (-0.5,0.25) node {\scriptsize{$\sin(\theta)$}};
+  \draw (-1.5,-0.2) node {\scriptsize{$\cos(\theta)$}};
+  \draw (-1.6,0.5) node {\scriptsize{$1$}};
+
+
+  \draw [ultra thick,->] (-1.5,2) -- (0.5,2);
+  \draw [rotate=0] (-0.5,2.25) node {\scriptsize{factor of $r$}};
+
+
+
+
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+This has to be true for any right triangle with an angle $\theta$.
+
+If we lable the sides relative to the angle $\theta$, then we obtain descriptive ratios.
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+
+
+  \draw [ultra thick] (0,0) -- (3,0);
+  \draw [ultra thick] (3,0) -- (3,2);
+  \draw [ultra thick] (0,0) -- (3,2);
+
+  \draw [rotate=0] (0.4,0.13) node {\scriptsize{$\theta$}};
+
+
+  \draw (3.05,1) node  [anchor=west]{\scriptsize{opposite}};
+  \draw (0.5,1) node {\scriptsize{hypotenuse}};
+  \draw (2,-0.2) node {\scriptsize{adjacent}};
+
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+The ratios have to be the same as for the unit circle triangle.
+
+
+\[   \sin(\theta) = \frac{opp}{hyp}           \]
+
+
+
+\[   \cos(\theta) = \frac{adj}{hyp}           \]
+
+
+
+
+\[   \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)}    = \frac{opp}{adj}        \]
+
+
+
+
+
+
+
+
+\section{Other Quadrants}
+
+
+Everything holds for larger angles.  We just have to juggle two thoughts.  
+
+
+\begin{itemize}
+\item The coordinates of points might be negative.  
+\item Lengths of sides of triangles are not neagtive.
+\end{itemize}
+
+To help with these two thoughts we will have two angles.  
+
+
+\begin{itemize}
+\item The actual angle roatating from the positive $x$-axis.  
+\item The \textbf{reference angle}, which will sit inside our reference triangle formed with the horizontal axis.
+\end{itemize}
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-2.1,xmax=2.1,ymin=-2.1,ymax=2.1,
+            axis lines=center,
+            width=4in,
+            xtick={-2,1,2},
+            ytick={-2,-1,1,2},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel={Quadrant II},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          %\addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+          %\addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          %\addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:140)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.05,.15) [anchor=west] {\scriptsize{$\theta$}};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+
+
+
+          \addplot [smooth, domain=(0:360)] ({1.7*cos(x)},{1.7*sin(x)}); 
+          \addplot [textColor,smooth, domain=(140:180)] ({.19*cos(x)},{.19*sin(x)});
+          \node at (axis cs:-0.2,.15) [anchor=east] {\scriptsize{$\phi$}};
+
+          \addplot [textColor] plot coordinates {(0,0) (-1.3,1.09)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(-1.3,0) (-1.3,1.09)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (-1.3,0)}; %% 40 degrees
+
+          \node[penColor, rotate=-90] at (axis cs:-1.45,.5) {$r \sin(\phi)$};
+          \node[penColor2] at (axis cs:-.85,0) [anchor=north] {$r \cos(\phi)$};
+
+
+          \node at (axis cs:-0.8,.8) [anchor=west] {$r$};
+
+
+
+           \node[penColor2] at (axis cs:-1.3,1.2) [anchor=east] {$( r \cos(\theta), $};
+           \node[penColor] at (axis cs:-1.3,1.2) [anchor=west] {$r \sin(\theta) ) $};
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -100,3 +596,4 @@ unit circle again
 
 
 \end{document}
+
