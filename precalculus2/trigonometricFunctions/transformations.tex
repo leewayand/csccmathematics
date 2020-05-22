@@ -2,12 +2,12 @@
 
 \input{../../preamble.tex}
 
-\title{Construction}
+\title{transformations}
 
 \begin{document}
 
 \begin{abstract}
-unit circle again
+graphical
 \end{abstract}
 \maketitle
 
@@ -15,11 +15,11 @@ unit circle again
 
 
 
+\begin{example}  Sine
 
 
 
-For every counterclockwise angle, $\theta$, measured from the positive $x$-axis, we have a point on the unit circle. The coordinates of this point are funcitons of $\theta$.  We call them \textbf{cosine} and \textbf{sine}.
-
+Anlayze $s(\theta) = 2 \sin\left(\theta - \frac{\pi}{4}\right) + 2$ \\
 
 
 
@@ -28,38 +28,82 @@ For every counterclockwise angle, $\theta$, measured from the positive $x$-axis,
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
-            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
-            axis lines=center,
-            width=4in,
-            xtick={-1,1},
-            ytick={-1,1},
-            clip=false,
-            unit vector ratio*=1 1 1,
-            xlabel=$x$, ylabel=$y$,
+            domain=-10:10, ymax=4.5, xmax=10, ymin=-4, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-3,-2,-1,1,2,3,4},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$, $\tfrac{-\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$}, 
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]        
-          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
-
-          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
-
-          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
-          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+            axis on top
+          ]
           
-          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
-          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
-          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
-          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
-          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
-          \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
-          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
-          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
-        \end{axis}
+            \addplot [line width=2, penColor, dashed,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {2*sin(deg(x-0.785398))+2};
+
+
+
+  \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+Since $\theta$ is multiplied by $1$, the period is still $2\pi$.
+
+
+\begin{itemize}
+\item period - wave length
+\item frequency
+\end{itemize}
+
+
+
+
+
+$\blacktriangleright$ \textbf{phase}
+
+If you thnk of an oscillating waveform as a signal, like a sound wave, then the magnitude goes up and down as time passes. The magnitude is called the \textbf{phase} of the waveform.
+
+Two waveforms of the same frequency are in phase, if their maximum and minimum magnitudes align perfectly in time.
+
+If one waveform is shifted by half a period, then the waveforms are said to be \textbf{out of phase}.
+
+
+
+
+\begin{center}
+\desmos{fwuxnrac77}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
