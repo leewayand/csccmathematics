@@ -20,20 +20,19 @@ characteristics
 
 
 
-Tangent is the ratio of sine and cosine.
 
-\[   \tan(\theta)  =  \frac{\sin(\theta)}{\cos(\theta)}  \]
+Secant is the reciprocal of cosine. 
+
+\[   \csc(\theta)  =  \frac{1}{\sin(\theta)}  \]
+
 
 
 \begin{itemize}
-\item \textbf{zeros:} $\tan(\theta)$ has a zero everywhere that $\sin(\theta)$ has a zero:  all of the half-$\pi$'s.
-\item \textbf{singluaries:} $\tan(\theta)$ has a singularity everywhere that $\cos(\theta)$ has a zero:  all of the whole-$\pi$'s.
+\item \textbf{zeros:} $\csc(\theta)$ has no zeros, because sine has no singularities.
+\item \textbf{singluaries:} $\csc(\theta)$ has a singularity everywhere that $\sin(\theta)$ has a zero:  all of the whole-$\pi$'s.
 \end{itemize}
 
-This means intercepts at the half-$\pi$'s and vertical asymptotes at the whole-$\pi$'s.
-
-
-
+This means no intercepts and vertical asymptotes at the whole-$\pi$'s.
 
 
 
@@ -43,8 +42,8 @@ This means intercepts at the half-$\pi$'s and vertical asymptotes at the whole-$
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            xtick={-4.9, -1.7, 1.7, 4.9}, 
-            xticklabels={$\frac{-3\pi}{2}$, $\frac{-\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $-2\pi$},
             axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -52,17 +51,18 @@ This means intercepts at the half-$\pi$'s and vertical asymptotes at the whole-$
             axis on top
           ]
           
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-6.18:-3.24), <->] {1/sin(deg(x))};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-3.04:-0.1), <->] {1/sin(deg(x))};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(0.1:3.04), <->] {1/sin(deg(x))};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(3.24:6.18), <->] {1/sin(deg(x))};
 
       \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
 
 
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-6.28},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.14},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({3.14},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({6.28},{x});
 
            
 
@@ -78,9 +78,8 @@ This means intercepts at the half-$\pi$'s and vertical asymptotes at the whole-$
 
 
 
-Sine and cosine come from measurements of the unit circle.  What about tangent?
 
-
+Sine and cosine come from measurements of the unit circle.  What about cosecant?
 
 
 
@@ -99,7 +98,7 @@ Sine and cosine come from measurements of the unit circle.  What about tangent?
             ytick={-1,1},
             clip=false,
             unit vector ratio*=1 1 1,
-            xlabel=$ $, ylabel=$y$,
+            xlabel=$ $, ylabel=$ $,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -108,7 +107,9 @@ Sine and cosine come from measurements of the unit circle.  What about tangent?
 
 
           \draw [ultra thick] (axis cs:0,0) -- (axis cs:1.305,0);
-          \draw [ultra thick] (axis cs:0.766,0.643) -- (axis cs:1.305,0);
+          %\draw [ultra thick] (axis cs:0.766,0.643) -- (axis cs:1.305,0);
+          \draw [ultra thick] (axis cs:0,1.557) -- (axis cs:1.305,0);
+          \draw [ultra thick] (axis cs:0,1.557) -- (axis cs:0,0);
 
 
 
@@ -145,13 +146,18 @@ Sine and cosine come from measurements of the unit circle.  What about tangent?
            \node[penColor] at (axis cs:0.37,0.4) {$1$};
 
 
-          \node at (axis cs:0.815, 0.5) [anchor=north] {$\theta$};
-          \addplot [textColor,smooth, domain=(270:310)] ({0.15*cos(x)+0.766},{0.15*sin(x)+0.643});
+          \node at (axis cs:0.84, 0.5) [anchor=north] {$\theta$};
+          %\addplot [textColor,smooth, domain=(270:310)] ({0.15*cos(x)+0.766},{0.15*sin(x)+0.643});
           \node[textColor] at (axis cs:1.1,0)[anchor=north] {$c$};
-          \node[textColor] at (axis cs:1.05,0.5)[anchor=north] {$h$};
+          %\node[textColor] at (axis cs:1.05,0.5)[anchor=north] {$h$};
+
+          %\node[textColor] at (axis cs:0.4,1.3)[anchor=north] {$k$};
+          \node at (axis cs:0.07,1.4) [anchor=north] {$\theta$};
 
 
-
+          \node[textColor, rotate=-50] at (axis cs:1.05,0.5) {$\tan(\theta)$};
+          \node[textColor, rotate=-50] at (axis cs:0.4,1.3) {$\cot(\theta)$};
+          \node[textColor] at (axis cs:0,0.75)[anchor=east] {$m$};
 
 
 
@@ -163,17 +169,23 @@ Sine and cosine come from measurements of the unit circle.  What about tangent?
 
 
 
-In the diagram above, we know that $a = cos(\theta)$ and $b = sin(\theta)$.
-
-We also know the unit circle right triangles is simialr to the big right triangle, since they both include the angle $\theta$.
-
-Since, they are similar, we know that 
+In the diagram above, we know that $a = \cos(\theta)$ and $b = \sin(\theta)$.
 
 
-\[    \frac{opp}{adj} = \frac{b}{a}  = \frac{\sin(\theta)}{\cos(\theta)}   = \frac{h}{1}          \]
+The vertical line segment is the hypotenuse for a right triangle.  That right triangle similar to the unit circle right triangle.
 
 
-\[         h = \tan(\theta)\]
+
+
+
+\[    \frac{hyp}{opp} = \frac{m}{1}   = \frac{1}{\sin(\theta)}       \]
+
+
+\[         m = \csc(\theta)\]
+
+
+
+
 
 
 
