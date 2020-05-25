@@ -13,13 +13,65 @@ sinh and cosh
 
 
 
+We say that $\sin(\theta)$ and $\cos(\theta)$ are parameterized by angle $\theta$. Given an angle $\theta$, draw a line from the origin at that angle.  The line intersects the unit circle.  $\sin(\theta)$ and $\cos(\theta)$ are defined to be the coordinates of that point.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (0.766,0.643)}; %% 40 degrees
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0.766,0.643)};
+
+          %\addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          %\addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
+          \node[textColor] at (axis cs:0.766,0.7) [anchor=west] {$(\cos(\theta), \sin(\theta))$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
 
 
 
+We could parameterize $\sin(\theta)$ and $\cos(\theta)$ with something besides the angle.
 
+
+
+\section{Arc Length}
+
+
+If you begin at $(1,0)$ and move counterclockwise on the unit circle, then the arc length you have travelled identifies points just as well as an angle does.
+
+
+If you travel an arc distance of $\ell$ on the unit circle, then you arrive at a point and its coordinates depend on $\ell$ insead of $\theta$: $\sin(\ell)$ and $\cos(\ell)$.
 
 
 
@@ -48,19 +100,230 @@ sinh and cosh
 
           \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
 
-          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
-          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          %\addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          %\addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
           
           %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
-          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
           %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
-          \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
-          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node at (axis cs:.15,.07) [anchor=west] {$\theta$};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\ell)$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\ell)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0.766,0.643)};
+          \addplot [textColor,smooth, domain=(0:40),<->] ({1.05*cos(x)},{1.05*sin(x)});
+          \node at (axis cs:1,0.4) [anchor=west] {$\ell$};
+           \node[textColor] at (axis cs:0.766,0.7) [anchor=west] {$(\cos(\ell), \sin(\ell))$};
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Of course, on the unit circle $\theta$ and $\ell$ have the exact same measurement.  The unit circle is $2\pi radians$ around.  The circumference of hte unit circle is $2\pi$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Sector Area}
+
+
+There are other choices for parameter.
+
+If you begin at $(1,0)$ and move counterclockwise on the unit circle, then the arc length you have travelled identifies points just as well as an angle does.
+
+
+If you travel an arc distance of $\ell$ on the unit circle, then you arrive at a point and its coordinates depend on $\ell$ insead of $\theta$: $\sin(\ell)$ and $\cos(\ell)$.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]  
+
+
+
+
+
+			\addplot [draw=none, fill=lightgray,samples=200,domain=0.764:1] {sqrt(1-x^2)} \closedcycle;
+            \addplot [draw=none, fill=lightgray,samples=200,domain=0:0.767] {0.8394*x} \closedcycle;
+
+            %\node[textColor] at (axis cs:0.766,0.7) [anchor=west] {$(\cos(A), \sin(A))$};
+
+			\addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+			\addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+			\node[black] at (axis cs:0.5,0.25) [anchor=west] {\Large \textbf{$A$}};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0.766,0.643)};
+
+          %\addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          %\addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          %\addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          %\node at (axis cs:.15,.07) [anchor=west] {$\theta$};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\ell)$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\ell)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+
+
+          %\addplot [textColor,smooth, domain=(0:40),<->] ({1.05*cos(x)},{1.05*sin(x)});
+          %\node at (axis cs:1,0.4) [anchor=west] {$\ell$};
+
+
+
+
+
+          %\draw [thick,fill opacity=0.25,fill=gray] (axis cs:0,0) -- (axis cs:0,1) arc(90:180:3.1415cm) -- cycle;
+
+
+
+
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Actually, this isn't much different that the other two parameterizations.
+
+If the sector seewps out an angle $\theta$, then the area of the sector is $A = \frac{\theta}{2\pi} \pi 1^2 = \frac{\theta}{2}$
+
+The area is just half the angle.  
+
+Therefore, we can connect this back up to the two other parameterizations, by $\theta = 2 A$.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]  
+
+
+
+
+
+			\addplot [draw=none, fill=lightgray,samples=200,domain=0.764:1] {sqrt(1-x^2)} \closedcycle;
+            \addplot [draw=none, fill=lightgray,samples=200,domain=0:0.767] {0.8394*x} \closedcycle;
+
+            \node[textColor] at (axis cs:0.766,0.7) [anchor=west] {$(\cos(2A), \sin(2A))$};
+
+			\addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+			\addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+			\node[black] at (axis cs:0.5,0.25) [anchor=west] {\Large \textbf{$A$}};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0.766,0.643)};
+
+          %\addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          %\addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          %\addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          %\node at (axis cs:.15,.07) [anchor=west] {$\theta$};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\ell)$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\ell)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+
+
+          %\addplot [textColor,smooth, domain=(0:40),<->] ({1.05*cos(x)},{1.05*sin(x)});
+          %\node at (axis cs:1,0.4) [anchor=west] {$\ell$};
+
+
+
+
+
+          %\draw [thick,fill opacity=0.25,fill=gray] (axis cs:0,0) -- (axis cs:0,1) arc(90:180:3.1415cm) -- cycle;
+
+
+
+
+
+
         \end{axis}
 \end{tikzpicture}
 \end{image}
@@ -71,6 +334,8 @@ sinh and cosh
 
 
 
+
+All of out trigonometric functions are based off of these coordinates of the unit circle.
 
 
 
@@ -143,15 +408,15 @@ sinh and cosh
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
           \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
-          \node[penColor] at (axis cs:0.85,.27) {$b$};
-          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$a$};
+          %\node[penColor] at (axis cs:0.85,.27) {$b$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$a$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
            \node[penColor] at (axis cs:0.37,0.4) {$1$};
 
 
           \node at (axis cs:0.84, 0.5) [anchor=north] {$\theta$};
           %\addplot [textColor,smooth, domain=(270:310)] ({0.15*cos(x)+0.766},{0.15*sin(x)+0.643});
-          \node[textColor] at (axis cs:1.1,0)[anchor=north] {$c$};
+          %\node[textColor] at (axis cs:1.1,0)[anchor=north] {$c$};
           %\node[textColor] at (axis cs:1.05,0.5)[anchor=north] {$h$};
 
           %\node[textColor] at (axis cs:0.4,1.3)[anchor=north] {$k$};
@@ -160,15 +425,237 @@ sinh and cosh
 
           \node[textColor, rotate=-50] at (axis cs:1.05,0.5) {$\tan(\theta)$};
           \node[textColor, rotate=-50] at (axis cs:0.4,1.3) {$\cot(\theta)$};
-          \node[textColor] at (axis cs:0,0.75)[anchor=east] {$m$};
+          %\node[textColor] at (axis cs:0,0.75)[anchor=east] {$m$};
+          \node[penColor, rotate=-90] at (axis cs:-0.09,0.6) {$\csc(\theta)$};
 
 
-
+			\node[penColor, rotate=-90] at (axis cs:0.7,0.15) [anchor=east] {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:0.35,0.07) [anchor=west] {$\cos(\theta)$};
+          \node[textColor] at (axis cs:0.6,-0.07) [anchor=west] {$\sec(\theta)$};
 
 
         \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+All of out trigonometric functions are based off of these curve defined by $x^2 + y^2 = 1$.
+
+
+But, a circle is just one type of \textbf{conic sections}.
+
+
+We could do the same thing with the curve defined by $x^2 - y^2 = 1$ - a \textbf{hyperbola}.
+
+
+
+
+
+
+
+
+
+\section{Hyperbolic Functions}
+
+
+Let's repeat the whole process with $x^2 - y^2 = 1$.
+
+
+
+
+The graph is a unit hyperbola, rather than a circle.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [thick,smooth, domain=(-1:1),<->] ({cosh(x)},{sinh(x)}); %% unit circle
+          \addplot [thick,smooth, domain=(-1:1),<->] ({-cosh(x)},{sinh(x)});
+          \addplot [thin, gray,dashed, domain=(-1.1:1.1),<->] {x};
+          \addplot [thin, gray,dashed, domain=(-1.1:1.1),<->] {-x};
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The points on the parabola have two coordinates and we will call them \textbf{hyperbolic-sine} and \textbf{hyperbolic-cosine}.
+
+
+
+We'll keep $\theta$ for circluar trig functions and adopt $\alpha$ as the hyperbolic angle.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=0,xmax=4,ymin=-4,ymax=4,
+            axis lines=center,
+            width=4in,
+            xtick={2,3,4},
+            ytick={-4,-3,-2,-1,1,2,3,4},
+            clip=false,
+            %unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+
+
+          	\addplot [thick,smooth, domain=(-2:2),<->] ({cosh(x)},{sinh(x)}); %% unit circle
+          	 \addplot [thin, gray,dashed, domain=(0:4),<->] {x};
+          	\addplot [thin, gray,dashed, domain=(0:4),<->] {-x};
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.352,2.129)};
+
+			%\addplot [textColor] plot coordinates {(0,0) (2.352,2.129)}; %% 40 degrees
+
+			\addplot [ultra thick,penColor] plot coordinates {(2.352,0) (2.352,2.129)}; %% 40 degrees
+			\addplot [ultra thick,penColor2] plot coordinates {(0,0) (2.352,0)}; %% 40 degrees
+          
+			%\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+			%\addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+			%\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+			%\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+			%\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+			%\node at (axis cs:0.4,0.25) [anchor=west] {$A$};
+			\node[penColor, rotate=-90] at (axis cs:2.5,1.75) [anchor=west] {$\sinh(\alpha)$};
+			\node[penColor2] at (axis cs:1,0) [anchor=north] {$\cosh(\alpha)$};
+			%\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+We need a way to walk along the hyperbola, like we moved around the unit circle.
+
+
+
+
+
+
+
+The hyperbolic trig functions are parameterized by area.
+
+
+
+We can still think that there is an angle $\alpha$ and $area = A = \frac{\alpha}{2}$.  However, due to the hyperbola configuration, the angle is not the geometric focus.  Instead, the diagrams focus on area.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=0,xmax=4,ymin=-4,ymax=4,
+            axis lines=center,
+            width=4in,
+            xtick={2,3,4},
+            ytick={-4,-3,-2,-1,1,2,3,4},
+            clip=false,
+            %unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+
+			\addplot [draw=none, fill=gray,samples=300,domain=0:2.352] {0.90519*x} \closedcycle;
+			\addplot [draw=none, fill=white,samples=300,domain=0:1.5] ({cosh(x)},{sinh(x)}) \closedcycle;
+
+          	\addplot [thick,smooth, domain=(-2:2),<->] ({cosh(x)},{sinh(x)}); %% unit circle
+          	 \addplot [thin, gray,dashed, domain=(0:4),<->] {x};
+          	\addplot [thin, gray,dashed, domain=(0:4),<->] {-x};
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.352,2.129)};
+
+			\addplot [textColor] plot coordinates {(0,0) (2.352,2.129)}; %% 40 degrees
+
+			\addplot [ultra thick,penColor] plot coordinates {(2.352,0) (2.352,2.129)}; %% 40 degrees
+			\addplot [ultra thick,penColor2] plot coordinates {(0,0) (2.352,0)}; %% 40 degrees
+          
+			%\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+			%\addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+			%\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+			%\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+			%\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+			\node at (axis cs:0.5,0.25) [anchor=west] {$A$};
+			\node[penColor, rotate=-90] at (axis cs:2.5,1.75) [anchor=west] {$\sinh(\alpha)$};
+			\node[penColor2] at (axis cs:1,0) [anchor=north] {$\cosh(\alpha)$};
+			%\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+From this definition we get 
+
+\[     (\cosh(\alpha))^2 - (\sinh(\alpha))^2 = 1       \]
+
+\[     \cosh^2(\alpha) - \sinh^2(\alpha) = 1       \]
+
+Compare this to the relationship for the circular trig functions:
+
+\[     (\cos(\theta))^2 + (\sin(\theta))^2 = 1       \]
+
+\[     \cos^2(\theta) + \sin^2(\theta) = 1       \]
+
+
+
+
+
+
+
+
+
+
+
 
 
 

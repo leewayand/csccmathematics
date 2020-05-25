@@ -1,0 +1,83 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Cosh}
+
+\begin{document}
+
+\begin{abstract}
+Analysis
+\end{abstract}
+\maketitle
+
+
+
+We say that $\sin(\theta)$ and $\cos(\theta)$ are parameterized by angle $\theta$. Given an angle $\theta$, draw a line from the origin at that angle.  The line intersects the unit circle.  $\sin(\theta)$ and $\cos(\theta)$ are defined to be the coordinates of that point.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=0,xmax=4,ymin=-4,ymax=4,
+            axis lines=center,
+            width=4in,
+            xtick={2,3,4},
+            ytick={-4,-3,-2,-1,1,2,3,4},
+            clip=false,
+            %unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+
+			\addplot [draw=none, fill=gray,samples=300,domain=0:2.352] {0.90519*x} \closedcycle;
+			\addplot [draw=none, fill=white,samples=300,domain=0:1.5] ({cosh(x)},{sinh(x)}) \closedcycle;
+
+          	\addplot [thick,smooth, domain=(-2:2),<->] ({cosh(x)},{sinh(x)}); %% unit circle
+          	 \addplot [thin, gray,dashed, domain=(0:4),<->] {x};
+          	\addplot [thin, gray,dashed, domain=(0:4),<->] {-x};
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.352,2.129)};
+
+			\addplot [textColor] plot coordinates {(0,0) (2.352,2.129)}; %% 40 degrees
+
+			\addplot [ultra thick,penColor] plot coordinates {(2.352,0) (2.352,2.129)}; %% 40 degrees
+			\addplot [ultra thick,penColor2] plot coordinates {(0,0) (2.352,0)}; %% 40 degrees
+          
+			%\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+			%\addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+			%\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+			%\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+			%\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+			\node at (axis cs:0.5,0.25) [anchor=west] {$A$};
+			\node[penColor, rotate=-90] at (axis cs:2.5,1.75) [anchor=west] {$\sinh(\alpha)$};
+			\node[penColor2] at (axis cs:1,0) [anchor=north] {$\cosh(\alpha)$};
+			%\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
