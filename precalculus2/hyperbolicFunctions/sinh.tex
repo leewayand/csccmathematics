@@ -70,128 +70,38 @@ Following a story similar to the unit circle, $\sinh(\alpha)$ and $\cosh(\alpha)
 \end{image}
 
 
-From the geometry, we can get formulas for $\sinh(\alpha)$ and $\cosh(\alpha)$ that relate back to our Elementary Functions.
+From the geometry, we found out that
 
 
 
-Let's zoom in on the diagram above. For formula purposes, let's use $b = \cosh(\alpha)$.
 
 
 
+ \[    \cosh(\alpha) = \frac{ e^{\alpha} + e^{-\alpha}}{2}    \]
 
 
+We also know that 
 
 
+\[    (\cosh(\alpha))^2 - (\sinh(\alpha))^2 = 1  \]
 
 
 
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            xmin=0,xmax=3,ymin=0,ymax=3,
-            axis lines=center,
-            width=4in,
-            xtick={1,2,3},
-            ytick={1,2,3},
-            clip=false,
-            %unit vector ratio*=1 1 1,
-            xlabel=$x$, ylabel=$y$,
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]        
+\[    \left(\frac{ e^{\alpha} + e^{-\alpha}}{2}\right)^2    -   (\sinh(\alpha))^2 = 1  \]
 
-      \addplot [draw=none, fill=pink,samples=300,domain=0:2.352] {0.90519*x} \closedcycle;
-      \addplot [draw=none, fill=teal,samples=300,domain=0:1.5] ({cosh(x)},{sinh(x)}) \closedcycle;
 
-            \addplot [thick,smooth, domain=(0:1.7),->] ({cosh(x)},{sinh(x)}); %% unit circle
-             \addplot [thin, gray,dashed, domain=(0:2.5),<->] {x};
-            %\addplot [thin, gray,dashed, domain=(0:4),<->] {-x};
 
+\[    (\sinh(\alpha))^2 =  \left(\frac{ e^{\alpha} + e^{-\alpha}}{2}\right)^2  - 1 \]
 
-      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.352,2.129)};
 
-      \addplot [textColor] plot coordinates {(0,0) (2.352,2.129)}; %% 40 degrees
+\[    (\sinh(\alpha))^2 =    \left(\frac{ e^{2\alpha} + 2 + e^{-2\alpha}}{4}\right)  - \frac{4}{4} \]
 
-      \addplot [ultra thick,penColor] plot coordinates {(2.352,0) (2.352,2.129)}; %% 40 degrees
-      \addplot [ultra thick,penColor2] plot coordinates {(0,0) (2.352,0)}; %% 40 degrees
-          
-      %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
-      %\addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
-      %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
-      %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
-      %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-      \node at (axis cs:0.4,0.25) [anchor=west] {$A = \tfrac{\alpha}{2}$};
-      %\node[penColor, rotate=-90] at (axis cs:2.5,1.75) [anchor=west] {$\sinh(\alpha)$};
-      \node[penColor2] at (axis cs:2.4,0) [anchor=north] {$(b, 0)$};
-      %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
-        \end{axis}
-\end{tikzpicture}
-\end{image}
+\[    (\sinh(\alpha))^2 =    \left(\frac{ e^{2\alpha} - 2 + e^{-2\alpha}}{4}\right)   \]
 
+\[    (\sinh(\alpha))^2 =    \left(\frac{ e^{\alpha} -  e^{-2\alpha}}{2}\right)^2   \]
 
-
-
-
-Calculus tells us that green area equals
-
-
-\[      \int_1^b \sqrt{x^2-1} \, dx = \frac{b \sqrt{b^2 - 1} - \ln(b + \sqrt{b^2 - 1})}{2}           \]
-
-
-The pink area is the area of the right triangle minues the green area.
-
-
-
-\[   A = \frac{b \sqrt{b^2 - 1}}{2} -     \frac{b \sqrt{b^2 - 1} - \ln(b + \sqrt{b^2 - 1})}{2}         \]
-
-
-
-\[    A =    \frac{\ln(b + \sqrt{b^2 - 1})}{2}     \]
-
-
-This gives us 
-
-
-
- \[    \frac{\alpha}{2} =    \frac{\ln(b + \sqrt{b^2 - 1})}{2}     \]
-
-
-
-
- \[    \alpha  =   \ln(b + \sqrt{b^2 - 1})  \]
-
-Now, solve for $b$.
-
-
-
-
- \[    e^{\alpha}  =   b + \sqrt{b^2 - 1}  \]
-
-
- \[    e^{\alpha} - b =   \sqrt{b^2 - 1}  \]
-
-
- \[    e^{2\alpha} - 2 b e^{\alpha}  + b^2   =   b^2 - 1  \]
-
-
- \[    e^{2\alpha} - 2 b e^{\alpha}   =    - 1  \]
-
-
- \[    e^{2\alpha} +1  =   2 b e^{\alpha}     \]
-
-
- \[    \frac{ 1 + e^{2\alpha}}{2 e^{\alpha}}  =   b    \]
-
-
- \[    \frac{ e^{-\alpha} + e^{\alpha}}{2}  =   b    \]
-
-
- \[    b = \frac{ e^{\alpha} + e^{-\alpha}}{2}    \]
-
-
-
+\[    \sinh(\alpha) =    \frac{ e^{2\alpha} -  e^{-2\alpha}}{2}   \]
 
 
 \section{Graph}
@@ -200,19 +110,19 @@ Now, solve for $b$.
 
 
 
-From  $\cosh(\alpha) = \frac{ e^{\alpha} + e^{-\alpha}}{2}$, we can see the function is an even function.  That is, $\cosh(\alpha) = \cosh(-\alpha)$, making the graph symmetric.
+From  $\sinh(\alpha) = \frac{ e^{\alpha} - e^{-\alpha}}{2}$, we can see the function is an odd function.  It graph is symmetric about the origin.
 
 
 
-We can also see that $\lim_{\alpha \to \infty} \cosh(\alpha) = \infty$ $\lim_{\alpha \to -\infty} \cosh(\alpha) = \infty$.
+We can also see that $\lim_{\alpha \to \infty} \sinh(\alpha) = \infty$ $\lim_{\alpha \to -\infty} \sinh(\alpha) = -\infty$.
 
-Finally, $\cosh(0) = 1$
-
-
+Finally, $\sinh(0) = 0$
 
 
 
-Graph of $y = \cosh(\alpha)$.
+
+
+Graph of $y = \sinh(\alpha)$.
 
 
 
@@ -232,7 +142,7 @@ Graph of $y = \cosh(\alpha)$.
           ]
 
 
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.8:2.8),<->] {cosh(x)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.8:2.8),<->] {sinh(x)};
 
 
 
@@ -240,69 +150,6 @@ Graph of $y = \cosh(\alpha)$.
 \end{tikzpicture}
 \end{image}
 
-
-
-
-
-
-
-
-
-The graph isn't a parabola.  Compare the graphs of $\cosh(x)$ and $x^2$.
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-4:4, ymax=10, xmax=4, ymin=0, xmin=-4,
-            axis lines =center, xlabel={$\alpha$}, ylabel=$y$, grid = major, grid style={dashed},
-            ytick={2,4,6,8,10},
-            xtick={-4,-2,2,4},
-            yticklabels={$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-4$,$-2$,$2$,$4$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-
-
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.8:2.8),<->] {cosh(x)};
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-2.8:2.8),<->] {x^2+1};
-
-
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-
-
-
-Instead, the graph is a \textbf{catenary}.
-
-A catenary is what you get when you have a telephone line from one pole to the next or a hanging chain.  The resulting curve has the unique property that the tension forces are all parallel to the curve. The telphone line of chain doesn't move side to side.
-
-Now flip this curve upside down.  It is an arch with no sheer stress.  All of the forces are along the arch.  This makes it very stable. \\
-
-
-
-
-
-
-$\blacktriangleright$ \textbf{End-Behavior}
-
-Since $\cosh(x)$ is exponential, it is going to dominate over $x^2$.
-
-\[     \lim_{x \to \infty}\frac{x^2}{\cosh(x)} = 0     \]
 
 
 
