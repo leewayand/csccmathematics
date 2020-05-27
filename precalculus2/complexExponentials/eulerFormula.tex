@@ -1,0 +1,120 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Euler's Formula}
+
+\begin{document}
+
+\begin{abstract}
+bridge between exponentials and trig
+\end{abstract}
+\maketitle
+
+
+
+
+
+\section{Rates of Change}
+
+We have already seen that the derivative of $\sin(x)$ is $\cos(x)$ and derivative of $\cos(x)$ is $-\sin(x)$.
+
+We need one more derivative.
+
+
+Consider the function $f(t) = e^{r t}$
+
+The average rate of change of $f(t)$ over the interval $[t, t+h]$ is given by 
+
+\[   \frac{f(t+h)-f(t)}{h} = \frac{e^{r(t+h)}-e^{r t}}{h}         \]
+
+
+We get closer to the derivative as $h \to 0$.
+
+
+\begin{center}
+\desmos{igck8p6w15}{400}{300}
+\end{center}
+
+Play with the value for $h$.
+
+The applet makes it believable that the derivative of $f(t) = e^{r t}$  is $f'(t) = r e^{r t}$.
+
+
+
+
+
+\section{Mean Value Theorem}
+
+
+
+In Calculus you will study the \textbf{Mean Value Theorem}. One version follows this race track story.
+
+
+Suposed two horses are racing.  They both line up at the starting line.  During the race, they both run at exactly the same speed at every second of the race.  Then the two horses are at exactly the same place on the track at every second of the race and end the race in a tie.
+
+
+
+
+In function language, the story goes like this:
+
+Suppose 
+
+\begin{itemize}
+\item $f$ and $g$ are two functions,
+\item $f(0) = g(0)$, and
+\item $f'(t) = g'(t)$  for all $t$.
+
+
+Then $f(t)=g(t)$ for all $t$.   $f$ and $g$ are the same function.
+
+
+
+
+
+
+
+All of that was for real numbers, but we are going to extend it to complex numbers.
+
+\section{Euler's Formula}
+
+
+
+Consider two functions.
+
+
+\begin{itemize}
+	\item $f(t) = e^{i t}$
+	\item $g(t) = \cos(t) + i \sin(t)$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
