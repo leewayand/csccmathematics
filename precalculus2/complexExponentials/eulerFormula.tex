@@ -64,19 +64,39 @@ Suppose
 \item $f$ and $g$ are two functions,
 \item $f(0) = g(0)$, and
 \item $f'(t) = g'(t)$  for all $t$.
-
+\end{itemize}
 
 Then $f(t)=g(t)$ for all $t$.   $f$ and $g$ are the same function.
 
 
 
+In particular, if we have a function, $h$, such that $h(0)=0$  and $h'(t)=0$ for all $t$, then $h$ must be the $0$ function.
 
 
 
+
+
+
+$\blacktriangleright$  When you study differential equations, this idea will lead to the fact that a first-order differential equation with an initial condition has only one solution.
+
+Example: $y'(t) = k \cdot y(t)$ with $y(0)=1$
+
+
+There is only one function that could be $y(t)$.
+
+Well, as we shall see, we have two.  And, we can't.  That means the two functions must be the same function.
+
+
+
+
+
+
+
+
+\section{Euler's Formula}
 
 All of that was for real numbers, but we are going to extend it to complex numbers.
 
-\section{Euler's Formula}
 
 
 
@@ -86,32 +106,50 @@ Consider two functions.
 \begin{itemize}
 	\item $f(t) = e^{i t}$
 	\item $g(t) = \cos(t) + i \sin(t)$
+\end{itemize}
+
+
+
+
+$\blacktriangleright$   \textbf{Step 1:}
+
+\begin{itemize}
+	\item $f(0) = e^0 = 1$
+	\item $g(0) = \cos(0) + i \sin(0) = 1$
+\end{itemize}
 
 
 
 
 
+$\blacktriangleright$   \textbf{Step 2:}
+
+
+
+\begin{itemize}
+	\item $f'(t) = i e^{i t} = i f(t)$
+	\item $g'(t) = -\sin(t) + i \cos(t) = i g(t)$
+\end{itemize}
+
+
+
+We have two functions satisfying the same differential equation.  They must, in fact, be the same function.
 
 
 
 
+\begin{theorem} Euler's Formula
+
+
+\[   e^{i t} = \cos(t) + i \sin(t)         \]
+
+
+\end{theorem}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Euler's Formula is a bridge between exponential functions and trigonometric functions.
 
 
 
