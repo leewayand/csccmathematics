@@ -17,11 +17,80 @@ describe everything
 
 
 
+Completely analyze $G(t) = \frac{\sin(t)}{1 + \cos(t)}$
+
+$\blacktriangleright$  The implied domain is all real numbers except those that make the denominator equal to $0$.
+
+
+
+\begin{align*}
+1  + \cos(t) & = 0 \\
+\cos(t) & = -1
+\end{align*}
+
+
+We need to exclude all odd $\pi$.  The domain is $\{  r \in \mathbb{R} \, | \, r \ne (2k+1)\pi \text{ where } k \in \mathbb{N}   \}$
+
+
+
+\textbf{Note:} $G(t+2\pi) = G(t)$.  $G$ is a periodic function with a period of $2\pi$.  Therefore, we only need to analyze one period.  Let's investigate $[0, 2\pi)$.
+
+\begin{itemize}
+\item $G(0) = 0$   Closed point on the graph
+\item $G(2\pi) = 0$  Open point on the graph.
+\end{itemize}
 
 
 
 
-\begin{example} Analysis
+What happens near $\pi$?  Numbers near $\pi$ make the denominator near $0$, but they also make the numerator near $0$, since $\sin(\pi)=0$.
+
+It might be heplful to view the function with a different formula.
+
+
+\[   G(t) = \frac{\sin(t)}{1 + \cos(t)}  = \frac{\sin(t)}{1 + \cos(t)}  \cdot \frac{1-\cos(t)}{1-\cos(t)} = \frac{\sin(t) (1-\cos(t))}{1-\cos^2(t)}    \]
+
+
+
+\[    G(t) = \frac{1-\cos(t)}{\sin(t)}  \]
+
+
+Near $\pi$, $1-\cos(t) \to 2$ and $\sin(t) \to 0$.  $G(t)$ is unbounded near $\pi$.  The graph will have a vertical asymptote at $\pi$.
+
+
+
+
+
+
+
+
+$\blacktriangleright$  Since there is a vertical asymptote at $\pi$ and $\sin(t)$ changes sign over $\pi$, we know that the range is all real numbers.
+
+
+On the left side of $\pi$, $\sin(t) > 0$, which makes $G(t) > 0$.   $\lim_{t \to \pi^{-}}G(t) = \infty$ 
+
+On the right side of $\pi$, $\sin(t) < 0$, which makes $G(t) < 0$.   $\lim_{t \to \pi^{+}}G(t) = -\infty$ 
+
+
+
+
+
+
+
+$\blacktriangleright$ $G$ has a zero at $0$.  
+
+Remember, we are only examining one period.  $G$ has an infinite number of zeros at all even-$\pi$.
+
+
+
+
+
+$\blacktriangleright$ Every odd-$\pi$ is a singularity of $G$.
+
+
+
+
+Our graph of $y=G(t)$ is piecing together.
 
 
 
@@ -31,8 +100,37 @@ describe everything
 
 
 
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-1:8, ymax=10, xmax=8, ymin=-10, xmin=-1,
+            axis lines =center, xlabel={$t$}, ylabel={$y = G(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$, $\tfrac{-\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
 
-\end{example}
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
 
 
 
