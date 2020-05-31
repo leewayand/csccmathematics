@@ -19,46 +19,40 @@ describe everything
 
 Completely analyze $T(r) = \tan(\sin(\pi x)$
 
-$\blacktriangleright$  The implied domain is all real numbers that make the inside function, $v^2+2v+3$, greater than $0$.  So, we need some information on $v^2+2v+3$.   Let's give this funciton the name $in(v) = v^2+2v+3$
-
-$in(v)$ is a quadratic function.  Its leading coeffident is positive, therefore the graph would be a parabola opening up.  That tells us $in(v)$ has an absoute minimum.  The quadratic formula tells us that the minimum occurs at $v=\frac{-b}{2a} = \frac{-2}{2} = -1$.
-
-The minimum value is $in(-1) = 2$.  Therefore, $in(v) > 0$ for all $v$.
-
-Therefore, the implied domain of $K(v)$ is all real numbers.
-
-Since, $\ln(r)$ is an increasing function, $K(-1) = \ln(2)$ is the minimum value.  The graph has a lowest point at $(-1, \ln(2))$ and the graph must go up in both directions from there.
+$\blacktriangleright$  We know that $-1 \leq \sin(\pi x) \leq 1$ and $[-1,1] \subset \left( \frac{-\pi}{2}, \frac{\pi}{2} \right)$.  Therefore $T(r)$ is defined on the whole real line.  This also tells us that $T(r)$ is a continuous function.
 
 
-
+$T(r)$ will be using $[-1,1]$ out of tangent's $\left( \frac{-\pi}{2}, \frac{\pi}{2} \right)$ waveform.
 
 
 
 
 
 \begin{image}
-\begin{tikzpicture}
+\begin{tikzpicture} 
   \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel={$y=K(v)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            domain=-5:5, ymax=10, xmax=5, ymin=-10, xmin=-5,
+            xtick={-4.9, -1.7, 1.7, 4.9}, 
+            xticklabels={$\frac{-3\pi}{2}$, $\frac{-\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            axis lines =center,  xlabel={$r$}, ylabel=$y$,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:8),<->] {ln(x^2 + 2*x + 3)};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-1:1)] {tan(deg(x))};
+            \addplot[color=penColor2,only marks,mark=*] coordinates{(-1,-1.557)}; 
+            \addplot[color=penColor2,only marks,mark=*] coordinates{(1,1.557)}; 
 
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
 
-          %\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
-          %\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+      %\addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
+
+
+
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
 
 
            
@@ -69,34 +63,76 @@ Since, $\ln(r)$ is an increasing function, $K(-1) = \ln(2)$ is the minimum value
 
 
 
-
-
-The range is $[\ln(2), \infty)$.
-
-$K(v)$ decreases on $(\infty, -1]$ and increases on $[-1, \infty)$.
-
-
-$K(v)$ has a global minimum of $\ln(2)$, which occurs at $-1$.  This is also the only local minimum.
-
-$K(v)$ has no global or local maximum.
-
-$-1$ is the only critical number.
+$[-1,1]$ is the output of $\sin(\pi,x)$, which then becomes the input to tangent.  
 
 
 
 
+For this to happen, the input to sine must be $\left[\frac{-\pi}{2}, \frac{\pi}{2}\right]$, which means that $x \in \left[-\frac{1}{2}, \frac{1}{2}\right]$ for a period of $1$.
 
+
+
+To get a full sine waveform, we need the waveform to come back down.  That gives a wave of $\left[-\frac{1}{2}, \frac{3}{2}\right]$ and a period fo $2$.
+
+
+
+As $x$ increases, the sine wave will oscillate between $-1$ and $1$ and this piece of the tangent graph will also oscillate.  
 
 
 
 
 
 
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-5:5, ymax=2, xmax=5, ymin=-2, xmin=-5,
+            xtick={-4.9, -1.7, 1.7, 4.9}, 
+            xticklabels={$\frac{-3\pi}{2}$, $\frac{-\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            axis lines =center,  xlabel={$r$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.9:4.9), <->] {tan(deg(sin(deg(3.1415*x)))};
 
 
-\section{with Calculus}
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
-Calculus will give us the derivative $K'(v) = \frac{2v+2}{x^2+2v+3}$.  We could then solve $K'(v) = 0$ and get $v=-1$ as the only critical number, which we already found.
+
+
+
+$\blacktriangleright$ \textbf{Range/Maximum/Minimum:} The maximum of the waveform occurs at $r = \frac{1}{2}$.
+
+
+\[   \tan\left(\sin\left(\pi \cdot \frac{1}{2}\right)\right)  =   \tan\left(\sin\left(\frac{\pi}{2}\right)\right)  = \tan(1)  \approx 1.557  \]
+
+
+The minimum of $-\tan(10 \approx 1.557)$ occurs at $r = -\frac{1}{2}$.
+
+
+That is just for one period. These maximums and minimums are periodic with a period of $1$.
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Rate-of-Change:}  Just looking at the $\left[ -\frac{1}{2}, \frac{3}{2} \right]$ wave:
+
+$T(r)$ increases on $\left[ -\frac{1}{2}, \frac{1}{2} \right]$ and decreases on $\left[\frac{1}{2}, \frac{3}{2} \right]$.
+
+
+
+
+
+
+
+
 
 
 
