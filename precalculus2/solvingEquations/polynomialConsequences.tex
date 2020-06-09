@@ -14,6 +14,234 @@ consequences
 
 
 
+Polynomial functions are functions that can be described with expressions like
+
+\[   f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0     \]
+
+
+\begin{itemize}
+\item \textbf{over the complex numbers} means that all of the coefficients are complex numbers:   $a_k \in \mathbb{C}$
+\item \textbf{over the real numbers} means that all of the coefficients are real numbers:   $a_k \in \mathbb{R}$
+\item \textbf{over the rationals} means that all of the coefficients are rational numbers:   $a_k \in \mathbb{Q}$
+\item \textbf{over the integers} means that all of the coefficients are integers:   $a_k \in \mathbb{Z}$
+\end{itemize}
+
+
+
+Since integers are real numbers and real numbers are complex numbers, the smallest possible set is usually cited for polynomials.
+
+
+
+\begin{example}  Over
+
+
+\begin{itemize}
+\item $2i x^2 + 4 x - (2 + 7 \,i)$ is a quadratic polynomial over the complex numbers.
+
+\item $4 t^3 + \pi t^2 + 4 t - \sqrt{2}$ is a cubic polynomial over the real numbers.
+
+\item $-3 y^4 +  y^2 + 5$ is a quartic polynomial over the integers.
+
+\item $ y^4 +  \frac{1}{2} y^2 - 3$ is a quartic polynomial over the rationals.
+\end{itemize}
+
+
+
+
+\end{example}
+
+
+
+
+
+
+Polynomials with complex coefficients include every possible polynomial.  The \textbf{Fundamental Theorem of Algebra} tells us that these polynomilas factor completely into a product of linear factors. There are as many linear factors as the degree of the polynomial.
+
+
+
+\[   f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0   =   a_n (x - r_1) (x - r_2) \cdots (x - r_n)  \]
+
+
+The subject of polynomials over the Complex numbers is too general for us.  We are narrowing our focus down to polynomials of the reals.
+
+
+
+
+\section{Polynomials over the Real Numbers}
+
+
+The polynomials we are considering only have real numbers as coefficients.
+
+
+\begin{example} Over the Real Numbers
+
+
+
+\begin{itemize}
+\item $4 x^2 + 2 x -1$
+\item $\frac{3}{4} y^5 - y^2 + \pi y$
+\item $\sqrt{3} f^8 + 4 f^5 - \frac{1}{\sqrt{5}} f^2 + 0.456 f - \frac{1}{e}$
+\item $x^5 + x^4 + x^3 + x^2 + x + 1$
+\end{itemize}
+
+
+
+\end{example}
+
+
+
+
+
+
+All of the coeffiencts are real numbers.
+
+
+
+Polynomials over the real numbers can have complex roots.
+
+\[  x^2 + 1 = (x - i)(x + i)       \]
+
+
+
+We have seen that if a complex number, $z$, is a root of a polynomial over the real numbvers, then so is its complex conjugate, $\bar{z}$.
+
+We have our first sign of structure.
+
+
+
+
+\begin{example} Roots
+
+Let $w(v)$ be a polynomial over the real numbers.
+
+Suppose $w(v)$ has an odd degree.
+
+
+The $w(v)$ factors in an odd number of linear factors over the complex numbers.
+
+Any factor with a complex roots has a partner factor with the complex conjugate roots.  They come in pairs.  If we pair up all of the factors with complex roots and their conjugate, then that is an even number of factors accounted for.  
+
+There must be at least one factor with out a partner.  This factor cannot have a complex root, becasue then it would have been paired already.  Therefore, this factor has to correspond to a real root.
+
+Therefore, $w(v)$ has a real root.
+
+
+\begin{theorem} Odd Degree
+
+A polynomial over the real numbers with an add degree must have a real root.
+
+Its graph must cross the horizontal axis.
+
+\end{theorem}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+$\blacktriangleright$  \textbf{Irreducible Quadratics}
+
+
+Let $w(v)$ be a polynomail of the real numbers.
+
+We know that if a complex number, $a + b \, i$, is a root of $w(v)$, then so is its complex conjugate, $a - b \,i$.
+
+If we pair the associate factors of $w(v)$ together and mulitply out we get a quadratic over the reals.
+
+\[    (v - (a + b \, i)) (v -(a - b \, i))  = v^2 + 2a v + (a^2 + b^2)      \]
+
+
+This quadratice cannot be factored over the real numbers, because it has complex roots.  It is said to be \textbf{irreducible} over the real numbers, meaning it needs complex numbers to factor.
+
+
+
+
+
+
+$\blacktriangleright$  \textbf{Factoring}
+
+
+
+
+Given any polynomial with real coefficients, we can factor it completely over the complex numbers.  Then we can pair up factors with conjugate roots. Multiply thos out to get irreducible quadratics over the real numbers.  The other factors all have real roots.
+
+
+
+
+
+\begin{theorem}  
+
+Every polynomial with real coefficients factors into a product of linear factors and irreducible quadratics with real coefficients.
+
+
+
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
