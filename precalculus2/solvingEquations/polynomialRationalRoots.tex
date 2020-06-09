@@ -54,6 +54,42 @@ That means
 \[    f \left( \frac{N}{D} \right) = a_n \left( \frac{N}{D} \right)^n + a_{n-1} \left( \frac{N}{D} \right)^{n-1} + \cdots + a_2 \left( \frac{N}{D} \right)^2 + a_1 \left( \frac{N}{D} \right) + a_0  = 0       \]
 
 
+Let's factor out $\frac{1}{D^n}$
+
+
+
+
+
+\[   \frac{1}{d^n} (a_n N^n + a_{n-1} N^{n-1} D + \cdots + a_2 N^2 D^{n-2}+ a_1 N D^{n-1} + a_0 D^n)  = 0       \]
+
+
+That tells us
+
+\[   a_n N^n + a_{n-1} N^{n-1} D + \cdots + a_2 N^2 D^{n-2}+ a_1 N D^{n-1} + a_0 D^n  = 0       \]
+
+
+
+\[   a_n N^n  =   -(a_{n-1} N^{n-1} D + \cdots + a_2 N^2 D^{n-2}+ a_1 N D^{n-1} + a_0 D^n)      \]
+
+
+$D$ is a factor of the right side, so $D$ must be a factor of the left side,  But $D$ is not a factor of $N$, because the original rational root was in reduced form.  Therefore $D$ must be a factor of $a_n$.
+
+Similar reasoning tells us that $N$ is a factor  $a_0$.
+
+
+
+
+
+\begin{theorem} Rational Root Theorem
+
+
+Let $ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0 $ be a polynomial with integer coefficients.
+
+Let $\frac{N}{D}$ be a rational root of $f(x)$.
+
+Then $D$ is a factor of $a_n$, the leading coefficient and $N$ is a factor of $a_0$, the constant term.
+
+\end{theorem}
 
 
 
@@ -65,22 +101,59 @@ That means
 
 
 
+\begin{example}  Roots and Factoring
+
+
+Let $T(h) = 2 h^2 - 9h - 5$
 
 
 
+If $T(h)$ has a rational root, $\frac{N}{D}$, then
+
+
+\begin{itemize}
+\item $N$ is a factor of $5$: $-5$, $-1$, $1$, or $5$
+\item $D$ is a factor of $2$: $-2$, $-1$, $1$, or $2$
+\end{itemize}
 
 
 
+Possibilities are 
+
+\[  \frac{5}{2}, \frac{-5}{2}, \frac{5}{1}=5, \frac{-5}{1}=-5, \frac{-1}{-1}=1, \frac{-1}{1}=-1, \frac{1}{2}, \frac{-1}{2}   \]
+
+
+There are only two roots. If they are rational roots, then they are among these.
+
+
+We can try each one.
 
 
 
+\begin{itemize}
+\item $T\left( \frac{5}{2} \right) = -15$
+\item $T\left( \frac{-5}{2} \right) = 30$
+\item $T(5) = 0$   : a root
+\item $T(-5) = 90$
+\item $T(1) = -12$   
+\item $T(-1) = 6$
+\item $T\left( \frac{1}{2} \right) = -9$
+\item $T\left( \frac{-1}{2} \right) = 0$ : a root
+\end{itemize}
+
+We have two roots, which gives us two factors.
+
+
+$T(h) = 2\left(h-\frac{1}{2} \right)(h-5)$
+
+We could also mulitply the $2$ inside the first factor.
+
+
+$T(h) = (2h - 1)(h-5)$
 
 
 
-
-
-
-
+\end{example}
 
 
 
