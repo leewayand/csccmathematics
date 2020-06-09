@@ -13,39 +13,132 @@ complex roots
 
 
 
-quadratic formula square root of -1, i
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{sectionOutcomes}
-In this section, students will 
+We have already seen three methods of solving quadratic equations.
 
 \begin{itemize}
-\item draw.
-\item .
-\item .
-\end{itemize}
-\end{sectionOutcomes}
+	\item Factoring
+	\item Completing the Square
+	\item Quadratic Formula
+	\end{itemize}
+
+
+All three methods rely on first rewriting the equation, so that one side equals $0$.
+
+At the time we investigated quadratic equaitons, we were only interested in real roots or real solutions.  We are now in a position to fill-in the rest of the picture.
+
+
+We can now work with square roots of negative numbers.
+
+
+\begin{example} Complex Solutions
+
+Solve $3t^2 + 2t + 5 = 0$
+
+Using the quadratice formula, we get two solutions
+
+\[  t = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 3 \cdot 5}}{2 \cdot 3}   =  \frac{-2 \pm \sqrt{-56}}{6}  =  \frac{-2 \pm \sqrt{56}\sqrt{-1}}{6}   =  \frac{-2 \pm \sqrt{56} i}{6}  \]
+
+
+
+We can simplify this, if you would like.
+
+
+\[  t = \frac{-2 \pm \sqrt{4 \cdot 14} i}{6}  = \frac{-2 \pm \sqrt{4} \sqrt{14} i}{6} = \frac{-2 \pm 2 \sqrt{14} i}{6} = \frac{2(-1 \pm \sqrt{14} i)}{6}   = \frac{-1 \pm \sqrt{14} i}{3}   \]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Complex Roots
+
+Factor $3 t^2 + 2 t + 5$
+
+
+In the previous example we found the roots of this polynomial to be
+
+
+\[     \frac{-1 + \sqrt{14} i}{3}   \,  \text{ and } \, \frac{-1 - \sqrt{14} i}{3}         \]
+
+Therefore, the factored form of htis polynomial looks like
+
+
+\[     A \left(t - \frac{-1 + \sqrt{14} i}{3} \right) \left(t -  \frac{-1 - \sqrt{14} i}{3} \right)        \]
+
+
+If we were to mulitply out the two factors, we would end up with $1$ as a leading coefficient.  Therefore, $A = 3$.
+
+\[     3 \left(t - \frac{-1 + \sqrt{14} i}{3} \right) \left(t -  \frac{-1 - \sqrt{14} i}{3} \right)        \]
+
+\end{example}
+
+
+
+
+
+Let's multiply out the factorizatrion in the last example and see if it works.
+
+
+
+\[     3 \left(t - \frac{-1 + \sqrt{14} i}{3} \right) \left(t -  \frac{-1 - \sqrt{14} i}{3} \right)        \]
+
+
+\[     3 \left(  t^2 - \left(\frac{-1 + \sqrt{14} i}{3} + \frac{-1 - \sqrt{14} i}{3}\right) t + \left(\frac{-1 + \sqrt{14} i}{3}\right) \left(\frac{-1 - \sqrt{14} i}{3}\right)      \right)       \]
+
+
+
+\[     3 \left(  t^2 - \left(\frac{-2}{3} \right) t + \frac{(-1 + \sqrt{14} i)(-1 - \sqrt{14} i)}{9}\right)     \]
+
+
+
+\[     3 \left(  t^2 - \left(\frac{-2}{3} \right) t + \frac{1 - 14 i^2}{9}\right)     \]
+
+
+\[     3 \left(  t^2 - \left(\frac{-2}{3} \right) t + \frac{15}{9} \right)     \]
+
+
+\[     3 \left(  t^2 - \left(\frac{-2}{3} \right) t + \frac{5}{3}\right)     \]
+
+
+
+\[      t^2 + 2t + 5   \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}

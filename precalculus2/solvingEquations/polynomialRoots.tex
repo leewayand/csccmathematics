@@ -13,43 +13,233 @@ conjugate roots
 
 
 
-quadratic formula square root of -1, i
 
 
 
 
-conjugate
-
-a+b i bar = a - bi
-
-z * conj z = |z|
+Before discussing polynomials, we need some knowledge about complex conjugates.
 
 
 
 
+\begin{definition}
+
+Let $z$ be a complex number.  Therefore, $z = a + b \, i$, where $A$ and $b$ are real numbers.
 
 
 
+The \textbf{complex conjugate of $z$}, denoted by $\bar{z}$, is given by $\bar{z} = a - b \, i$.
 
 
 
-
-
-
+\end{definition}
 
 
 
 
 
 
-\begin{sectionOutcomes}
-In this section, students will 
+$\blacktriangleright$ \textbf{Absolute Value}
+The absolute value of $z = a + b \, i$ is given by $|z| = a^2 + b^2$. The absolute value of $z$ also is the product of $z$ and its conjugate.
 
-\begin{itemize}
-\item draw.
-\item .
-\item .
-\end{itemize}
-\end{sectionOutcomes}
+\[   |z| = z \cdot \bar{z}    \]
+
+
+
+
+
+We have seen that each complex number can be represented in different forms.  $a + b \, i$ is the rectangular form, which corresponds to the Cartesian plane and the vector $\langle a, b\rangle$.  We have also seen a polar form $(r, \theta)$.  This lead us to the idea of a unit vector or direction vector and length factor, $r$.
+
+\[ z = a + b \, i = r (\cos(\theta) + i \sin(\theta))  \]
+
+
+$\cos(\theta) + i \sin(\theta)$ being the rectangular representation of a complex number on the unit circle and $r$ stretching this out to $z$.
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Polar Form}
+
+If $z = r (\cos(\theta) + i \sin(\theta))$, then $\bar{z} = r (\cos(-\theta) + i \sin(-\theta))$, because negating the imaginary part just causes the angle to move in the opposite direction.
+
+$\bar{z} = (r, -\theta)$
+
+
+
+
+$\blacktriangleright$ \textbf{Powers}
+
+
+
+We have seen that in polar form, multiplication of complex numbers follow a nice pattern.
+
+
+\[   (r_1, \theta_1) \cdot (r_2, \theta_2) = (r_1 \cdot r_2, \theta_1 + \theta_2)                \]
+
+
+
+This tells us that 
+
+
+\[   (r, \theta)^2 =  (r, \theta) \cdot (r, \theta) = (r^2, 2\theta)                \]
+
+
+
+We can keep multiplying any for any whole number power to get 
+
+
+\[   z^n = (r, \theta)^n =  (r, \theta) \cdot (r, \theta) \cdots (r, \theta)= (r^n, n\theta)                \]
+
+
+
+
+\[   \bar{z}^n = (r, -\theta)^n =  (r, -\theta) \cdot (r, -\theta) \cdots (r, -\theta)= (r^n, -n\theta)  = \overline{z^n}              \]
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Scalar Multiplication}
+
+
+Let $z = a + b \, i$  and $r \in \mathbb{R}$. \\
+
+Then $r \cdot \bar{z} = r(a - b \, i) = r \cdot a - r \cdot b \, i = \overline{r \cdot z}$
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Addition}
+
+
+Let $z = a + b \, i$ and $w = c + d \, i$.  Then we get
+
+
+\begin{align*}
+\overline{z \cdot w} & = \overline{(a + b \, i) + (c + d \, i)}  \\
+                & = \overline{a \cdot c + b \cdot d \, i}   \\
+                & = a \cdot c - b \cdot d \, i   \\
+                & = (a - b \, i) + (c - d \, i)   \\
+                & = \overline{(a + b \, i)} + \overline{(c + d \, i)}  \\
+                & = \overline{z} + \overline{w}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Complex Conjugate Pairs}
+
+
+
+
+\begin{theorem} Conjugate Roots
+
+
+
+Let $p(x)$ be a polynomial with real coefficients.
+
+$p(x) = a_n x^n + a_{n-a} x^{n-1} + \cdots a_2 x^2 + a_1 x + a_0$   with $a_k \in \mathbb{R}$
+
+Suppose $z \in \mathbb{C}$ is a root of $p(x)$, then $\bar{z}$ is also a root of $p(x)$.
+
+
+\end{theorem}
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Reasoning}
+
+
+
+
+If $z$ is a root of $p(x)$, then $p(z) = 0$.
+
+
+\[    p(z) = a_n z^n + a_{n-a} z^{n-1} + \cdots a_2 z^2 + a_1 z + a_0  = 0   \]
+
+
+Let's start thinking of what $p(\bar{z})$ looks like
+
+
+
+\[    p(\bar{z}) = a_n \bar{z}^n + a_{n-a} \bar{z}^{n-1} + \cdots a_2 \bar{z}^2 + a_1 \bar{z} + a_0    \]
+
+
+By the conjugate powers from above, we get 
+
+
+\[    p(\bar{z}) = a_n \overline{z^n} + a_{n-a} \overline{z^{n-1}} + \cdots a_2 \overline{z^2} + a_1 \overline{z} + a_0    \]
+
+
+
+Since $a_k \in \mathbb{R}$, scalar multiplication gives us
+
+
+
+
+\[    p(\bar{z}) = \overline{a_n z^n} +  \overline{a_{n-a} z^{n-1}} + \cdots  \overline{a_2 z^2} +  \overline{a_1 z} + a_0    \]
+
+
+
+$a_0 \in \mathbb{R}$, which means $a_0 = \overline{a_0}$.
+
+
+
+\[    p(\bar{z}) = \overline{a_n z^n} +  \overline{a_{n-a} z^{n-1}} + \cdots  \overline{a_2 z^2} +  \overline{a_1 z} + \overline{a_0}    \]
+
+
+
+
+
+We have also seen that the conjugate of a sum is the sum of the conjugates
+
+
+\[    p(\bar{z}) = \overline{a_n z^n + a_{n-a} z^{n-1} + \cdots  a_2 z^2 +  a_1 z + a_0}   \]
+
+
+
+But this is $\overline{p(z)}$, and we already know  $p(z) = 0$.
+
+
+
+\[    p(\bar{z}) = \overline{p(z)} = \bar{0} = 0  \]
+
+
+$\bar{z}$ is also a root of $p(x)$.
+
+
+
 
 \end{document}
