@@ -21,6 +21,88 @@ proportionalities
 
 
 
+$\blacktriangleright$  \textbf{Acute Triangle}
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+
+    \draw [thick, dashed, gray] (2,0) -- (2,3);
+    \draw [thin, gray] (2,0.1) -- (2.1,0.1);
+    \draw [thin, gray] (2.1,0) -- (2.1,0.1);
+
+	\draw [ultra thick] (0,0) -- (3,0);
+	\draw [ultra thick] (3,0) -- (2,3);
+	\draw [ultra thick] (0,0) -- (2,3);
+
+ 	
+
+
+	\draw (2.7,1.6) node {\scriptsize{$a$}};
+	\draw (0.75,1.75) node {\scriptsize{$b$}};
+	\draw (1.8,-0.3) node {\scriptsize{$c$}};
+	\draw (1.8,1.5) node {\scriptsize{$h$}};
+
+
+	\draw (-0.2,0) node {\scriptsize{$A$}};
+	\draw (3.2,0) node {\scriptsize{$B$}};
+	\draw (2,3.2) node {\scriptsize{$C$}};
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+\[    \frac{h}{b} = \sin(A)   \, \text{ and } \,    \frac{h}{a} = \sin(B)       \]
+
+
+
+\[    h = b \sin(A)      \, \text{ and } \,    h = a \sin(B)    \]
+
+\[     b \sin(A)  = a \sin(B)    \]
+
+
+\[    \frac{\sin(A)}{a} = \frac{\sin(B)}{b}      \]
+
+
+
+
+The same argument with an altitude from angle $B$ to side $b$ shows a similar relationship with angle $C$, giving us
+
+
+
+
+
+
+
+
+\[    \frac{\sin(A)}{a} = \frac{\sin(B)}{b}  = \frac{\sin(C)}{c}    \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$  \textbf{Obtuse Triangle}
+
+
+
+
+
+
+
 
 
 
@@ -28,24 +110,27 @@ proportionalities
     \begin{tikzpicture}
 
 
+    \draw [thick, dashed, gray] (4,0) -- (4,3);
+    \draw [thick, dashed, gray] (3,0) -- (4,0);
+    \draw [thin, gray] (4,0.1) -- (3.9,0.1);
+    \draw [thin, gray] (3.9,0) -- (3.9,0.1);
 
-  \draw [ultra thick] (0,0) -- (3,0);
-  \draw [ultra thick] (3,0) -- (2,3);
-  \draw [ultra thick] (0,0) -- (2,3);
+	\draw [ultra thick] (0,0) -- (3,0);
+	\draw [ultra thick] (3,0) -- (4,3);
+	\draw [ultra thick] (0,0) -- (4,3);
 
- 
-
-
-  \draw (2.9,2) node {\scriptsize{$k \cdot a$}};
-  \draw (0.75,1.75) node {\scriptsize{$k \cdot b$}};
-  \draw (2,0.4) node {\scriptsize{$k \cdot c$}};
-
+ 	
 
 
+	\draw (3.7,1.6) node {\scriptsize{$a$}};
+	\draw (1.75,1.75) node {\scriptsize{$b$}};
+	\draw (1.8,-0.3) node {\scriptsize{$c$}};
+	\draw (4.2,1.5) node {\scriptsize{$h$}};
 
 
-
-
+	\draw (-0.2,0) node {\scriptsize{$A$}};
+	\draw (2.8,0.2) node {\scriptsize{$B$}};
+	\draw (4,3.2) node {\scriptsize{$C$}};
 
 
     \end{tikzpicture}
@@ -66,6 +151,21 @@ proportionalities
 
 
 
+\[    \frac{h}{b} = \sin(A)   \, \text{ and } \,    \frac{h}{a} = \sin(180^{\circ} - B)  = \sin(B)      \]
+
+
+
+\[    h = b \sin(A)      \, \text{ and } \,    h = a \sin(B)    \]
+
+\[     b \sin(A)  = a \sin(B)    \]
+
+
+\[    \frac{\sin(A)}{a} = \frac{\sin(B)}{b}      \]
+
+
+
+
+The same argument could be made with angle $C$, giving us
 
 
 
@@ -74,19 +174,24 @@ proportionalities
 
 
 
+\[    \frac{\sin(A)}{a} = \frac{\sin(B)}{b}  = \frac{\sin(C)}{c}    \]
 
 
 
 
 
 
+\begin{theorem}  Law of Sines
 
 
 
+For any trinagle with angles $A$, $B$, and $C$, and opposite sides $a$, $b$, and $c$, respectively, 
 
 
+\[    \frac{\sin(A)}{a} = \frac{\sin(B)}{b}  = \frac{\sin(C)}{c}    \]
 
 
+\end{theorem}
 
 
 

@@ -15,9 +15,6 @@ Pythgorean Theorem
 
 
 
-triangles
-
-laws of sine and cosine
 
 
 
@@ -25,18 +22,99 @@ laws of sine and cosine
 
 
 
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+
+    \draw [thick, dashed, gray] (2,0) -- (2,3);
+    \draw [thin, gray] (2,0.1) -- (2.1,0.1);
+    \draw [thin, gray] (2.1,0) -- (2.1,0.1);
+
+	\draw [ultra thick] (0,0) -- (3,0);
+	\draw [ultra thick] (3,0) -- (2,3);
+	\draw [ultra thick] (0,0) -- (2,3);
+
+ 	
+
+
+	\draw (2.7,1.6) node {\scriptsize{$a$}};
+	\draw (0.75,1.75) node {\scriptsize{$b$}};
+	\draw (0.8,-0.3) node {\scriptsize{$c$}};
+	\draw (1.8,1.5) node {\scriptsize{$h$}};
+
+
+	\draw (-0.2,0) node {\scriptsize{$A$}};
+	\draw (3.2,0) node {\scriptsize{$B$}};
+	\draw (2,3.2) node {\scriptsize{$C$}};
+	\draw (2,-0.2) node {\scriptsize{$D$}};
+
+
+    \end{tikzpicture}
+  \end{image}
 
 
 
-\begin{sectionOutcomes}
-In this section, students will 
 
-\begin{itemize}
-\item backwards.
-\item .
-\item .
-\end{itemize}
-\end{sectionOutcomes}
+From the right triangle on the left in the diagram, we can see that $\cos(A) = \frac{\overline{AD}}{b}$ or $\overline{AD} = b \cos(A)$.
+
+
+Subtracting this from $\overline{AB}$, gives us $\overline{DB} = c - b \cos(A)$.
+
+
+From the right triangle on the left in the diagram, we can see that $\sin(A) = \frac{h}{b}$ or $h = b \sin(A)$.
+
+
+
+
+From the right triangle on the left in the diagram, the Pythagorean Theorem gives us $a^2 = (b \sin(A))^2 + (c - b \cos(A))^2$.
+
+
+Multiplying everything out gives
+
+
+\[    a^2 = b^2 \sin^2(A) +  c^2  - 2 b c \cos(A) + b^2 \cos^2(A)  \]
+
+
+\[    a^2 = b^2 \sin^2(A) + b^2 \cos^2(A) +  c^2  - 2 b c \cos(A)   \]
+
+
+\[    a^2 = b^2 (\sin^2(A) + \cos^2(A)) +  c^2  - 2 b c \cos(A)   \]
+
+
+\[    a^2 = b^2  +  c^2  - 2 b c \cos(A)   \]
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{theorem}  Law of Cosines
+
+
+
+For any trinagle with angles $A$, $B$, and $C$, and opposite sides $a$, $b$, and $c$, respectively, 
+
+
+\[    a^2 = b^2  +  c^2  - 2 b c \cos(A)   \]
+
+\[    b^2 = a^2  +  c^2  - 2 a c \cos(B)   \]
+
+\[    c^2 = a^2  +  b^2  - 2 a b \cos(C)   \]
+
+
+\end{theorem}
+
+
+
+
+
+
 
 
 
