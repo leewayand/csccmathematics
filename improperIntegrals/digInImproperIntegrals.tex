@@ -455,12 +455,12 @@ In this example, both integrals converge and therefore the entire integral conve
 \begin{example}	
   Compute:
   \[
-  \int_{-\infty}^\infty \sin(\theta) s\theta
+  \int_{-\infty}^\infty \sin(\theta) d\theta
   \]
   \begin{explanation}
     Write with me:
     \[
-    \int_{-\infty}^\infty \sin(\theta) s\theta = \lim_{a\to -\infty} \int_a^1 \sin(\theta) s\theta + \lim_{b\to\infty}\int_1^b \sin(\theta) s\theta.
+    \int_{-\infty}^\infty \sin(\theta) d\theta = \lim_{a\to -\infty} \int_a^1 \sin(\theta) d\theta + \lim_{b\to\infty}\int_1^b \sin(\theta) d\theta.
     \]
     Let us evaluate these limits one at a time:
     \begin{align*}  
@@ -478,12 +478,12 @@ In this example, both integrals converge and therefore the entire integral conve
 In the last example, what would have happened if we had tried to
 compute the indefinite integral with \textbf{a single limit}?
 \[
-\lim_{c\to \infty}\int_{-c}^c \sin(\theta)s\theta?
+\lim_{c\to \infty}\int_{-c}^c \sin(\theta)d\theta?
 \]
 Since sine is an odd function on any bounded interval $[-c,c]$, we
 would have found this integral to be $0$. However,
 \[
-\int_{-\infty}^\infty \sin(\theta) s\theta \ne \lim_{c\to \infty}\int_{-c}^c \sin(\theta)s\theta.
+\int_{-\infty}^\infty \sin(\theta) d\theta \ne \lim_{c\to \infty}\int_{-c}^c \sin(\theta)d\theta.
 \]
 We must compute \textbf{two limits} to evaluate this
 integral correctly.
