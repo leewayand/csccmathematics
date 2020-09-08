@@ -19,7 +19,7 @@
 Recall that we introduced the definite integral
 
 \[
-\int_a^b f(x) sx,
+\int_a^b f(x) dx,
 \]
 
 as a limit of Riemann sums.  This limit need not always exist, as it depends on the properties of the
@@ -63,7 +63,7 @@ and the Fundamental Theorem of Calculus comes to the rescue and assures us that
 \begin{image}
   \begin{tikzpicture}
         \node at (0,0) {
-          $\underbrace{\int_a^b f(x) sx} = \underbrace{F(b)-F(a),}$};
+          $\underbrace{\int_a^b f(x) dx} = \underbrace{F(b)-F(a),}$};
          \node at (-1.2,-.9)   {\footnotesize{The limit of a}};
         \node at (-1.2,-1.2)  {\footnotesize{Riemann sum}};
         
@@ -100,7 +100,7 @@ It turns out that there are many instances where these limitations are a problem
 
 
 \begin{definition}
-  An integral $\int_a^b f(x) sx $
+  An integral $\int_a^b f(x) dx $
   is called an \textbf{improper integral} if one of, or both, of the conditions hold:
   \begin{itemize}
   \item The interval of integration is infinite.
@@ -111,19 +111,19 @@ It turns out that there are many instances where these limitations are a problem
 \begin{question}
   Which of the following integrals are improper according to the previous definition?
   \begin{selectAll}
-    \choice{$\int_{-1}^{100} \frac{1}{1+x^2} sx$}
-    \choice[correct]{$\int_{1}^{\infty}\frac{1}{1+x^2}sx$}
-    \choice[correct]{$\int_0^1 \ln(x) sx$}
-    \choice{$\int_0^1 \frac{\sin(x)}{x} sx$}
-    \choice[correct]{$\int_{-\infty}^{\infty} \sin(x) sx$}
-    \choice[correct]{$\int_{0}^{\pi} \tan(x) sx$}
+    \choice{$\int_{-1}^{100} \frac{1}{1+x^2} dx$}
+    \choice[correct]{$\int_{1}^{\infty}\frac{1}{1+x^2}dx$}
+    \choice[correct]{$\int_0^1 \ln(x) dx$}
+    \choice{$\int_0^1 \frac{\sin(x)}{x} sdx$}
+    \choice[correct]{$\int_{-\infty}^{\infty} \sin(x) dx$}
+    \choice[correct]{$\int_{0}^{\pi} \tan(x) dx$}
   \end{selectAll}
 
 \begin{feedback}
 \begin{itemize}
 \item Note that $\frac{1}{1+x^2}$ is continuous everywhere, so it is bounded on any finite interval. 
 \item $\lim_{x \to 0^+} \ln(x) = -\infty$, so $\ln(x)$ is unbounded on $[0,1]$.
-\item $\lim_{x \to 0^+} \frac{\sin(x)}{x} = 1$, so even though $\frac{\sin(x)}{x}$ is not continuous at $x=0$, it is bounded on $[0,1]$.  Hence $\int_0^1 \frac{\sin(x)}{x} sx$ is proper.
+\item $\lim_{x \to 0^+} \frac{\sin(x)}{x} = 1$, so even though $\frac{\sin(x)}{x}$ is not continuous at $x=0$, it is bounded on $[0,1]$.  Hence $\int_0^1 \frac{\sin(x)}{x} dx$ is proper.
 \item $\tan(x)$ has a vertical asymptote at $x=\frac{\pi}{2}$, so it is unbounded on $[0,\pi]$.
 \end{itemize}
 \end{feedback}
@@ -138,20 +138,20 @@ It turns out that there are many instances where these limitations are a problem
 
 Consider the expression
 \[ 
-\int_{a}^{\infty} f(x) sx
+\int_{a}^{\infty} f(x) dx
 \]
 What does this expression mean?  Let's consider a particular example and see if we can make sense of it.
 
 \begin{example}
 Evaluate the improper integral
 \[ 
-\int_{1}^{\infty} \frac{1}{x} sx
+\int_{1}^{\infty} \frac{1}{x} dx
 \]
 \begin{explanation}
 
 We interpret definite integrals as giving us the net area underneath the graph of the function over the given interval. If we used this interpretation here, this notation should mean that we want to find the area under $\frac{1}{x}$ from $1$ to $\infty$.  This idea needs to be more precisely defined.  Let's consider the definite integral
 \[
-\int_{1}^{b} \frac{1}{x} sx=\bigg[\ln|x|\bigg]_{1}^{b}=\ln(b)
+\int_{1}^{b} \frac{1}{x} dx=\bigg[\ln|x|\bigg]_{1}^{b}=\ln(b)
 \]
 
 where $b \geq 1$ is some fixed number. 
@@ -188,7 +188,7 @@ get larger and larger and seeing how this affects the area.
 That is, we interpret the integral from 1 to $\infty$ as a limit of a definite integral:
 
 \[
-\int_{1}^{\infty} \frac{1}{x} sx= \lim_{b \to \infty} \int_{1}^{b} \frac{1}{x} sx= \lim_{b \to \infty} \ln(b) = \infty
+\int_{1}^{\infty} \frac{1}{x} dx= \lim_{b \to \infty} \int_{1}^{b} \frac{1}{x} dx= \lim_{b \to \infty} \ln(b) = \infty
 \]
 
 We can interpret this result to mean that the area under $\frac{1}{x}$ from $1$ to $\infty$ is infinite.
@@ -200,7 +200,7 @@ It might seem like we should always get an answer of infinity or negative infini
 \begin{example}
 Compute 
 \[
-\int_{1}^{\infty} \frac{1}{x^2} sx
+\int_{1}^{\infty} \frac{1}{x^2} dx
 \]
 
 \begin{explanation}
@@ -208,12 +208,12 @@ The previous example shows us we should consider this expression to be the limit
 in the following manner:
 
 \[
-\int_{1}^{\infty} \frac{1}{x^2} sx=\lim_{b \to \infty} \int_{1}^{b} \frac{1}{x^2} sx
+\int_{1}^{\infty} \frac{1}{x^2} dx=\lim_{b \to \infty} \int_{1}^{b} \frac{1}{x^2} dx
 \]
 
 We calculate the definite integral 
 \[
-\int_{1}^{b} \frac{1}{x^2} sx= \bigg[\frac{-1}{x}\bigg]_{1}^{b}=1-\frac{1}{b}
+\int_{1}^{b} \frac{1}{x^2} dx= \bigg[\frac{-1}{x}\bigg]_{1}^{b}=1-\frac{1}{b}
 \]
 
 This gives the area under $\frac{1}{x^2}$ on the interval $[1, b]$. 
@@ -245,7 +245,7 @@ This gives the area under $\frac{1}{x^2}$ on the interval $[1, b]$.
 Now we take the limit of this area as $b \to \infty$. 
 
 \[
-\int_{1}^{b} \frac{1}{x^2} sx= \lim_{b \to \infty} 1-\frac{1}{b}=1
+\int_{1}^{b} \frac{1}{x^2} dx= \lim_{b \to \infty} 1-\frac{1}{b}=1
 \]
   
 In this case, when we take the limit, we get a finite number, namely $1$. This suggests that we can consider the 
@@ -260,11 +260,11 @@ area under $1/x^2$ from $1$ to $\infty$ to be equal to $1$ despite the fact that
 
 
 
-%In the previous two examples we have seen we can assign a meaning to expressions like $\int_{a}^{\infty} f(x) sx$
+%In the previous two examples we have seen we can assign a meaning to expressions like $\int_{a}^{\infty} f(x) dx$
 %by interpreting such an expression as shorthand for the following limit.
 
 %\[
-%\int_{a}^{\infty} f(x) sx:=\lim_{N \to \infty} \int_{a}^{N} f(x) sx
+%\int_{a}^{\infty} f(x) dx:=\lim_{N \to \infty} \int_{a}^{N} f(x) dx
 %\]
 %
 %We say that such integrals are \textbf{improper}. We will see other types of improper integrals later. 
@@ -277,7 +277,7 @@ Thus in the two examples we have studied so far we have
 
 
 \[
-\int_{1}^{\infty} \frac{1}{x} sx = \infty
+\int_{1}^{\infty} \frac{1}{x} dx = \infty
 \]
 
 \begin{image}
@@ -305,7 +305,7 @@ Thus in the two examples we have studied so far we have
 and 
 
 \[
-\int_{1}^{\infty} \frac{1}{x^2} sx =1
+\int_{1}^{\infty} \frac{1}{x^2} dx =1
 \]
 
 
@@ -340,20 +340,20 @@ We now give a precise definition for integrals over unbounded regions.
 \begin{itemize}
 \item Let $f$ be a continuous function on $[a,\infty)$.
   \[
-  \int_a^\infty f(x) sx \text{ is defined to be } \lim_{b\to\infty}\int_a^b f(x) sx
+  \int_a^\infty f(x) dx \text{ is defined to be } \lim_{b\to\infty}\int_a^b f(x) dx
   \]
 \item Let $f$ be a continuous function on $(-\infty,b]$.
   \[
-  \int_{-\infty}^b f(x) sx \text{ is defined to be } \lim_{a\to-\infty}\int_a^b f(x) sx
+  \int_{-\infty}^b f(x) dx \text{ is defined to be } \lim_{a\to-\infty}\int_a^b f(x) dx
   \]
 \item Let $f$ be a continuous function on $(-\infty,\infty)$. Let $c$
   be any real number.
   \[
-  \int_{-\infty}^\infty f(x) sx \text{ is defined to be }
+  \int_{-\infty}^\infty f(x) dx \text{ is defined to be }
   \]
   \[
-  \lim_{a\to-\infty}\int_a^c f(x) sx + \lim_{b\to\infty}\int_c^b
-  f(x) sx
+  \lim_{a\to-\infty}\int_a^c f(x) dx + \lim_{b\to\infty}\int_c^b
+  f(x) dx
   \]
 \end{itemize}
 An improper integral is said to \textbf{converge} if its corresponding
@@ -363,15 +363,15 @@ integral is said to \textbf{diverge}.
 \end{definition}
 
 \begin{warning}
-  The improper integral $  \int_{-\infty}^\infty f(x) sx$ converges if and only if \textbf{both}  $ \lim_{a\to-\infty}\int_a^c f(x) sx$
-and $  \lim_{b\to\infty}\int_c^b f(x) sx$
+  The improper integral $  \int_{-\infty}^\infty f(x) dx$ converges if and only if \textbf{both}  $ \lim_{a\to-\infty}\int_a^c f(x) dx$
+and $  \lim_{b\to\infty}\int_c^b f(x) dx$
 independently converge.
 \end{warning}
 
 \begin{example}
 Determine whether the integral
 \[
-\int_{-\infty}^{\infty} \frac{1}{1+x^2} sx 
+\int_{-\infty}^{\infty} \frac{1}{1+x^2} dx 
 \]
 converges or diverges. If it converges, determine the value of the integral. 
 \begin{explanation}
@@ -379,14 +379,14 @@ Here both of the bounds of integration involve $\infty$ so to reinterpret the in
 we must first break up the integral into two pieces.
 
 \begin{align*}
-\int_{-\infty}^{\infty} \frac{1}{1+x^2} sx&= \int_{-\infty}^{0} \frac{1}{1+x^2} sx + \int_{0}^{\infty} \frac{1}{1+x^2} sx \\
-& =\lim_{a \to -\infty} \int_{a}^{0} \frac{1}{1+x^2} sx + \lim_{b \to \infty} \int_{0}^{\infty} \frac{1}{1+x^2} sx 
+\int_{-\infty}^{\infty} \frac{1}{1+x^2} dx&= \int_{-\infty}^{0} \frac{1}{1+x^2} dx + \int_{0}^{\infty} \frac{1}{1+x^2} dx \\
+& =\lim_{a \to -\infty} \int_{a}^{0} \frac{1}{1+x^2} dx + \lim_{b \to \infty} \int_{0}^{\infty} \frac{1}{1+x^2} dx 
 \end{align*}
  
 Now we must look at each integral separately. 
 
 \[
-\int_{0}^{b} \frac{1}{1+x^2} sx =  \answer[given]{\arctan(b)}
+\int_{0}^{b} \frac{1}{1+x^2} dx =  \answer[given]{\arctan(b)}
 \]
 \begin{onlineOnly}
 (your answer should be in terms of $b$)
@@ -394,7 +394,7 @@ Now we must look at each integral separately.
 Similarly we obtain
 
 \[
-\int_{a}^{0} \frac{1}{1+x^2} sx= \answer[given]{-\arctan(a)}
+\int_{a}^{0} \frac{1}{1+x^2} dx= \answer[given]{-\arctan(a)}
 \]
 \begin{onlineOnly}
  (your answer should be in terms of $a$)
@@ -402,7 +402,7 @@ Similarly we obtain
 %\begin{hint}
 %Recall that 
 %  \[
-%  \int \frac{1}{1+x^2} sx = \arctan(x)+C,
+%  \int \frac{1}{1+x^2} dx = \arctan(x)+C,
 %  \]
 %  \end{hint}
 
@@ -425,7 +425,7 @@ Determine the following limits:
 Hence we have
 
 \[
-\int_{-\infty}^{\infty} \frac{1}{1+x^2} sx=\lim_{a \to -\infty} \int_{a}^{0} \frac{1}{1+x^2} sx + \lim_{b \to \infty} \int_{0}^{\infty} \frac{1}{1+x^2} sx =\frac{\pi}{2}+\frac{\pi}{2} = \answer[given]{\pi}\]
+\int_{-\infty}^{\infty} \frac{1}{1+x^2} dx=\lim_{a \to -\infty} \int_{a}^{0} \frac{1}{1+x^2} dx + \lim_{b \to \infty} \int_{0}^{\infty} \frac{1}{1+x^2} dx =\frac{\pi}{2}+\frac{\pi}{2} = \answer[given]{\pi}\]
 In this example, both integrals converge and therefore the entire integral converges to $\pi$. 
 \end{explanation}
 \end{example}
@@ -439,13 +439,13 @@ In this example, both integrals converge and therefore the entire integral conve
 \begin{example}	
   Compute:
   \[
-  \int_{-\infty}^{-1}\frac{-1}{x\sqrt{x^2-1}} sx
+  \int_{-\infty}^{-1}\frac{-1}{x\sqrt{x^2-1}} dx
   \]
   \begin{explanation}
     Write with me,
     \begin{align*}
-      \int_{-\infty}^{-1} \frac{1}{x\sqrt{x^2-1}} sx &= \lim_{a \to -\infty} \int_{a}^{-1} \frac{-1}{x\sqrt{x^2-1}}sx\\
-      &= \lim_{a \to -\infty} \bigg[\answer[given]{arcsec(x)}\bigg]_{a}^{-1} \\
+      \int_{-\infty}^{-1} \frac{1}{x\sqrt{x^2-1}} dx &= \lim_{a \to -\infty} \int_{a}^{-1} \frac{-1}{x\sqrt{x^2-1}}dx\\
+      &= \lim_{a \to -\infty} \bigg[arcsec(x)\bigg]_{a}^{-1} \\
       &= \lim_{a \to -\infty} \left(arcsec(-1) - arcsec(a)\right)\\
       &= \answer[given]{\pi - \frac{\pi}{2}}.
     \end{align*}
@@ -514,17 +514,17 @@ Let's begin with some examples.
 \begin{example}	
   Compute:
   \[
-  \int_{0}^1 \frac{1}{\sqrt{x}} sx
+  \int_{0}^1 \frac{1}{\sqrt{x}} dx
   \]
   \begin{explanation}
-It may not be obvious at first glance that this integral is improper, but it is.  Here the problem is that the function $\frac{1}{\sqrt{x}}$ is unbounded on $[0,1]$ because $\frac{1}{\sqrt{x}}$ gets arbitrarily large as $x$ approaches $0$ from the right That is, there is a vertical asymptote at $x=0$ because $\lim_{x \to 0^+} \frac{1}{\sqrt{x}} sx = \infty$. From now on, we will need to be cautious when evaluating integrals to check whether the integrand is bounded on the region of integration. 
+It may not be obvious at first glance that this integral is improper, but it is.  Here the problem is that the function $\frac{1}{\sqrt{x}}$ is unbounded on $[0,1]$ because $\frac{1}{\sqrt{x}}$ gets arbitrarily large as $x$ approaches $0$ from the right That is, there is a vertical asymptote at $x=0$ because $\lim_{x \to 0^+} \frac{1}{\sqrt{x}} dx = \infty$. From now on, we will need to be cautious when evaluating integrals to check whether the integrand is bounded on the region of integration. 
 
 How then do we work with integrals of unbounded functions?  Can we define this integral in terms of integrals we know how to compute?
 
 Suppose $b$ lies strictly between $0$ and $1$. Then consider the definite integral
 
 \[
-\int_{b}^{1} \frac{1}{\sqrt{x}} sx
+\int_{b}^{1} \frac{1}{\sqrt{x}} dx
 \]
 
 \begin{image}
@@ -552,18 +552,18 @@ Suppose $b$ lies strictly between $0$ and $1$. Then consider the definite integr
 The function is now bounded on this smaller interval. 
 
 \[
-\int_{b}^1 \frac{1}{\sqrt{x}} sx=  \bigg[\answer[given]{2\sqrt{x}}\bigg]_b^1=\answer[given]{2-2\sqrt{b}}
+\int_{b}^1 \frac{1}{\sqrt{x}} dx=  \bigg[\answer[given]{2\sqrt{x}}\bigg]_b^1=\answer[given]{2-2\sqrt{b}}
 \]
 
 Now we can examine what will happen if we let $b$ begin to move towards $0$ from the right. What will happen to the area under the curve? 
 Just as we did in the case of unbounded integrals, we can make sense of this integral by defining it as the limit of a definite integral 
 
 \[
-\int_{0}^{1} \frac{1}{\sqrt{x}} sx=\lim_{b \to 0^{+}} \frac{1}{\sqrt{x}} sx
+\int_{0}^{1} \frac{1}{\sqrt{x}} dx=\lim_{b \to 0^{+}} \frac{1}{\sqrt{x}} dx
 \]
 We can then evaluate our original improper integral: 
     \begin{align*}
-      \int_{0}^1 \frac{1}{\sqrt{x}} sx &= \lim_{\answer[given]{b} \to 0} \int_{b}^1 \frac{1}{\sqrt{x}} sx \\
+      \int_{0}^1 \frac{1}{\sqrt{x}} dx &= \lim_{\answer[given]{b} \to 0} \int_{b}^1 \frac{1}{\sqrt{x}} dx \\
       &=  \lim_{b \to 0}  \bigg[\answer[given]{2\sqrt{x}}\bigg]_b^1 \\
       &=  \lim_{b \to 0} \left(\answer[given]{2-2\sqrt{b}}\right)\\
       &= \answer[given]{2}.
@@ -601,19 +601,19 @@ Now we look at another example:
 \begin{example}	
   Compute:
   \[
-  \int_{-1}^1 \frac{1}{x^2} sx
+  \int_{-1}^1 \frac{1}{x^2} dx
   \]
   \begin{explanation}
     The function $\frac{1}{x^2}$ has a vertical asymptote at $a=0$. Since the problematic point 
 occurs in the middle of the interval we need to break the integral into two pieces.
   We have
 \begin{align*}
-  \int_{-1}^1 \frac{1}{x^2} sx =&= \int_{-1}^{0} \frac{1}{x^2} sx + \int_{0}^{1} \frac{1}{x^2} sx \\
-&= \lim_{a \to 0^+} \int_{a}^1 \frac{1}{x^2} sx  + \lim_{b \to 0^-} \int_{-1}^{b} \frac{1}{x^2} sx.
+  \int_{-1}^1 \frac{1}{x^2} dx =&= \int_{-1}^{0} \frac{1}{x^2} dx + \int_{0}^{1} \frac{1}{x^2} dx \\
+&= \lim_{a \to 0^+} \int_{a}^1 \frac{1}{x^2} dx  + \lim_{b \to 0^-} \int_{-1}^{b} \frac{1}{x^2} dx.
  \end{align*}
   Let us evaluate these limits one at a time.
   \begin{align*}
-    \lim_{a \to 0^+} \int_{a}^1 \frac{1}{x^2} sx  &=  \lim_{\answer[given]{a} \to 0^+} \bigg[\answer[given]{\frac{-1}{x}}\bigg]_a^1 \\
+    \lim_{a \to 0^+} \int_{a}^1 \frac{1}{x^2} dx  &=  \lim_{\answer[given]{a} \to 0^+} \bigg[\answer[given]{\frac{-1}{x}}\bigg]_a^1 \\
     &=  \lim_{a \to 0^+} \frac{1}{a}-1\\
     &= \infty.
   \end{align*}
@@ -625,7 +625,7 @@ occurs in the middle of the interval we need to break the integral into two piec
 \begin{remark}
 We encountered the integral
 \[
-\int_{1}^{\infty} \frac{1}{x^2} sx 
+\int_{1}^{\infty} \frac{1}{x^2} dx 
 \]
 
 earlier and saw that this integral converges. We remarked at the time this was due to how rapidly the function approached $0$ as $x \to \infty$. 
@@ -633,7 +633,7 @@ earlier and saw that this integral converges. We remarked at the time this was d
 However the integral
 
 \[
-\int_{0}^{1} \frac{1}{x^2} sx 
+\int_{0}^{1} \frac{1}{x^2} dx 
 \]
 
 diverges. The issue is that the integral is approaching the vertical asymptote $x=0$ too slowly and thus the area builds up too quickly. This is due to the fact that the manner in which $\frac{1}{x^2}$ approaches the horizontal asymptote $y=0$ is different from the manner in which 
@@ -645,7 +645,7 @@ it approaches the vertical asymptote $x=0$.
 In the previous example,
 
 \[
-\int_{-1}^{1} \frac{1}{x^2} sx
+\int_{-1}^{1} \frac{1}{x^2} dx
 \]
 
  what would have happened if had we \textbf{not
@@ -653,7 +653,7 @@ In the previous example,
 
 We probably would have blindly computed:
 \begin{align*}
-  \int_{-1}^1\frac1{x^2}sx &= \bigg[-\frac{1}{x}\bigg]_{-1}^1\\
+  \int_{-1}^1\frac1{x^2}dx &= \bigg[-\frac{1}{x}\bigg]_{-1}^1\\
   &= -1 - (1)\\
   &=-2
 \end{align*}
@@ -662,7 +662,7 @@ But the integrand is always positive, so this answer of $-2$ is
 complete nonsense! The reason this error occurs is because this expression is not a definite integral. It only has meaning if we
 interpret it as a limit of definite integrals 
 \[
- \int_{-1}^1 \frac{1}{x^2} sx = \lim_{a \to 0^+} \int_{a}^1 \frac{1}{x^2} sx  + \lim_{b \to 0^-} \int_{-1}^{b} \frac{1}{x^2} sx.
+ \int_{-1}^1 \frac{1}{x^2} dx = \lim_{a \to 0^+} \int_{a}^1 \frac{1}{x^2} dx  + \lim_{b \to 0^-} \int_{-1}^{b} \frac{1}{x^2} dx.
 \]
 
 
@@ -677,7 +677,7 @@ improper integrals of unbounded functions.
 Let $f(x)$ be a continuous function on $[a,b]$ except at an $x$-value $c$, with $a\leq
 c\leq b$ and suppose that $f(x)$ has a vertical asymptote at $x=c$. Define
 \[
-\int_a^b f(x)sx = \lim_{M\to c^-}\int_a^M f(x)sx + \lim_{b\to c^+}\int_N^b f(x)sx
+\int_a^b f(x)dx = \lim_{M\to c^-}\int_a^M f(x)dx + \lim_{b\to c^+}\int_N^b f(x)dx
 \]
 \end{definition}
 
@@ -687,13 +687,13 @@ Let's look at a couple more examples.
 \begin{example}
   Compute:
   \[
-  \int_0^1 \ln(x)sx
+  \int_0^1 \ln(x)dx
   \]
   \begin{explanation}
     Since $\lim_{x\to 0^+} \ln(x) = -\infty$, the natural logarithm
     has a vertical asymptote at $x = 0$. Thus, we have
     \begin{align*}
-    \int_0^1 \ln(x) sx &=\lim_{\answer[given]{t}\to 0^+} \int_t^1 \ln(x) sx \\
+    \int_0^1 \ln(x) dx &=\lim_{\answer[given]{t}\to 0^+} \int_t^1 \ln(x) dx \\
     &= \lim_{t\to 0^+} \bigg[\answer[given]{x \ln(x)-x}\bigg]_t^1 \\
     &=\lim_{t \to 0^{+}} ( -1 + t - t\ln(t) ) \\
 &=\answer[given]{ -1} 
@@ -717,7 +717,7 @@ determine the limit.
 \begin{example}
 Determine the integral
 \[
-\int_{1}^{\infty} \frac{5x}{x^2+x-6} sx 
+\int_{1}^{\infty} \frac{5x}{x^2+x-6} dx 
 \]
 
 
@@ -727,15 +727,15 @@ This is clearly an improper integral because one of the bounds is infinite, but 
 Since $2$ lies in the middle of the interval and the upper limit of integration is infinity, we need to break the integral into three pieces.
 
 \begin{align*}
-& \int_{1}^{\infty} \frac{5x}{x^2+x-6} sx \\
-&= \int_{1}^{2} \frac{5x}{(x-2)(x+3)} sx  + \int_{2}^{4} \frac{5x}{(x-2)(x+3)} sx + \int_{4}^{\infty} \frac{5x}{(x-2)(x+3)} sx\\
+& \int_{1}^{\infty} \frac{5x}{x^2+x-6} dx \\
+&= \int_{1}^{2} \frac{5x}{(x-2)(x+3)} dx  + \int_{2}^{4} \frac{5x}{(x-2)(x+3)} dx + \int_{4}^{\infty} \frac{5x}{(x-2)(x+3)} dx\\
 \end{align*}
 
 We chose $4$ for the upper and lower limit of the middle and last integral, respectively, but we could use any number greater than $2$.
 
 \begin{align*}
- & \int_{1}^{\infty} \frac{5x}{x^2+x-6} sx \\
-        &=\lim_{a \to 2^{-}} \int_{1}^a \frac{5x}{(x-2)(x+3)} sx + \lim_{b \to 2^{+}} \int_{b}^{4} \frac{5x}{(x-2)(x+3)} sx +\lim_{c \to \infty} \int_{4}^{c} \frac{5x}{(x-2)(x+3)} sx
+ & \int_{1}^{\infty} \frac{5x}{x^2+x-6} dx \\
+        &=\lim_{a \to 2^{-}} \int_{1}^a \frac{5x}{(x-2)(x+3)} dx + \lim_{b \to 2^{+}} \int_{b}^{4} \frac{5x}{(x-2)(x+3)} dx +\lim_{c \to \infty} \int_{4}^{c} \frac{5x}{(x-2)(x+3)} dx
 \end{align*}
 
 Since the integrand is a rational function, where the denominator is reducible, we could apply partial fractions decomposition to get
@@ -747,7 +747,7 @@ Since the integrand is a rational function, where the denominator is reducible, 
 
 Now we find the antiderivative to get 
 \begin{align*}
-\int \frac{5x}{(x-2)(x+3)} sx&=\int \frac{ 2}{x-2} sx + \int \frac{ 3}{x+3} sx \\
+\int \frac{5x}{(x-2)(x+3)} dx&=\int \frac{ 2}{x-2} dx + \int \frac{ 3}{x+3} dx \\
 =& 2\ln|x-2| + 3\ln|x+3 | + C
 \end{align*}
 
@@ -755,7 +755,7 @@ Now we find the antiderivative to get
 Now we evaluate one integral at a time.  Let's start with
 
 \begin{align*}
-\lim_{b \to 2^{+}} \int_{b}^{4} \frac{5x}{(x-2)(x+3)} sx&= \lim_{b \to 2^{+}} \bigg[ 2\ln|x-2| + 3\ln|x+3 | \bigg]_{b}^{4} \\
+\lim_{b \to 2^{+}} \int_{b}^{4} \frac{5x}{(x-2)(x+3)} dx&= \lim_{b \to 2^{+}} \bigg[ 2\ln|x-2| + 3\ln|x+3 | \bigg]_{b}^{4} \\
 &=\lim_{b \to 2^{+}} (2\ln(2) + 3 \ln(7) - 2\ln|b-2| -3\ln|b+3| ) \\
 &=2\ln(2) +3\ln(7)-3\ln(5) + \infty=\infty
 \end{align*}
@@ -773,11 +773,11 @@ Thus this integral diverges, so the entire integral must diverge.
 
 %Compare our last example to
 %\[
-%\int_{-\infty}^0 e^x sx.
+%\int_{-\infty}^0 e^x dx.
 %\]
 %This is equal to
 %\begin{align*}
-%  \int_{-\infty}^0 e^x sx &= \lim_{a\to -\infty} \int_a^0 e^x sx\\
+%  \int_{-\infty}^0 e^x dx &= \lim_{a\to -\infty} \int_a^0 e^x dx\\
 %  &= \lim_{a\to-\infty}\eval{e^x}_{a}^0 \\
 %  &= \lim_{a\to-\infty}\left(e^0 - e^a\right) \\
 %  &=1.
@@ -787,7 +787,7 @@ Thus this integral diverges, so the entire integral must diverge.
 %\begin{question}
 %  Is it an accident that
 %  \[
-%  \int_{-\infty}^0 e^x sx = \left| \int_0^1 \ln(x)sx \right|?
+%  \int_{-\infty}^0 e^x dx = \left| \int_0^1 \ln(x)dx \right|?
 %  \]
 %  \begin{prompt}
 %  \begin{multipleChoice}
@@ -825,14 +825,14 @@ Thus this integral diverges, so the entire integral must diverge.
 %    problem we are accumulating large forces over infinitesimal
 %    distances. Hence
 %    \begin{align*}
-%      sW &= F sx\\
-%      &= \answer[given]{G\cdot \frac{m\cdot M}{x^2}} sx
+%      sW &= F dx\\
+%      &= \answer[given]{G\cdot \frac{m\cdot M}{x^2}} dx
 %    \end{align*}
 %    We can approximate ``really, really far away'' with ``infinitely
 %    far away''. Write with me,
 %    \begin{align*}
-%      \mathrm{Work} &= \int_1^\infty F sx\\
-%      &= \int_1^\infty G\frac{m\cdot M}{x^2} sx\\
+%      \mathrm{Work} &= \int_1^\infty F dx\\
+%      &= \int_1^\infty G\frac{m\cdot M}{x^2} dx\\
 %      &= G\cdot m\cdot M \lim_{\answer[given]{b} \to \infty} \eval{\answer[given]{-\frac{1}{x}}}_1^b\\
 %      &=G\cdot m\cdot M \lim_{b \to \infty} \left(\answer[given]{1 - \frac{1}{b}}\right)\\
 %      &=\answer[given]{G\cdot m\cdot M}.
