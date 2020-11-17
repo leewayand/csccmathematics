@@ -24,7 +24,7 @@ This means we have a need to communicate about sets of real numbers.  We have se
 The subsets we are interested in are collections of two types of basic building blocks.
 
 \begin{itemize}
-\item Building Block: Individual Numbers
+\item \textbf{Building Block: Individual Numbers}
 
 Our subsets might include one or more individual isolated numbers.  
 	\begin{itemize}
@@ -67,9 +67,9 @@ Our subsets might include one or more individual isolated numbers.
 
 
 
-\item  Building Block: Finite Intervals
+\item  \textbf{Building Block: Finite Intervals}
 
-Our subsets might include whole, unbroken, pieces of the real number line.  These are called \textbf{intervals}.   Intervals  include \textit{ALL} of the real numbers between one specific number and another specific number.  Questions arise over the inclusion or exclusion of the two ends of the interval. Therefore, our communicaiton needs to address them specifically.
+Our subsets might include whole, unbroken, pieces or segments of the real number line.  These are called \textbf{ finite intervals}.   Finite intervals include \textit{ALL} of the real numbers between one specific number and another specific number.  Questions arise over the inclusion or exclusion of the two ends of the interval. Therefore, our communicaiton needs to address them specifically.
 
 	\begin{itemize}
 	\item All of the real numbers between $4$ and $7$ including both $4$ and $7$.  We use square brackets to indicate inclusion.  $[4, 7]$
@@ -207,10 +207,10 @@ Our subsets might include whole, unbroken, pieces of the real number line.  Thes
 
 
 
-\item  Building Block: Infinite Intervals
+\item  \textbf{Building Block: Infinite Intervals}
 
 
-Our subsets might include half of the real number line.  These are called \textbf{infinite intervals}.   Infinite intervals include \textit{ALL} of the real numbers less than a specific real number, or \textit{ALL} of the real numbers greater than a specific real number. 
+Our subsets might include the right or left half of the real number line.  These are called \textbf{infinite intervals}.   Infinite intervals include \textit{ALL} of the real numbers less than a specific real number, or \textit{ALL} of the real numbers greater than a specific real number. 
 
 	\begin{itemize}
 	\item All of the real numbers less than $4$ and including $4$.  When writing, we use negative infinity, -$\infty$, to indicate the interval extends without end, $(-\infty, 4]$.  When drawing, we use a left arrow.
@@ -273,7 +273,7 @@ Our subsets might include half of the real number line.  These are called \textb
 	\end{image}
 
 
-\item All of the real numbers less than $4$ and including $4$.  When writing, we use positive infinity, $\infty$, to indicate the interval extends without end, $[4, \infty)$. When drawing, we use a right arrow.
+\item All of the real numbers greater than $4$ and including $4$.  When writing, we use positive infinity, $\infty$, to indicate the interval extends without end, $[4, \infty)$. When drawing, we use a right arrow.
 	\begin{image}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -303,7 +303,7 @@ Our subsets might include half of the real number line.  These are called \textb
 	\end{image}
 
 
-\item All of the real numbers less than $4$ but not including $4$, $(4, \infty)$.
+\item All of the real numbers greater than $4$ but not including $4$, $(4, \infty)$.
 	\begin{image}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -346,11 +346,11 @@ Our subsets might include half of the real number line.  These are called \textb
 In the examples above, we used \textbf{interval notation} to describe the intervals in writing. Interval notation adheres to a few rules.
 
 \begin{itemize}
-\item Write the two numbers in the order they would occur on the number line, separated by a comma.  These are called \textbf{endpoints}.
+\item For finite intervals, write the two numbers in the order they would occur on the number line, separated by a comma.  These are called \textbf{endpoints}.
 \item Use a square bracket to indicate the endpoint is included in the interval.
 \item Use a parenthesis to indicate the endpoint is excluded from the interval.
-\item Use $-\infty$ to indicate the interval extends without end to the left. $-\infty$ always appears on the left side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number and thus cannot be included in an interval of real numbers.
-\item Use $\infty$ to indicate the interval extends without end to the right. $\infty$ always appears on the right side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number and thus cannot be included in an interval of real numbers. 
+\item For infinite intervals, use $-\infty$ to indicate the interval extends without end to the left. $-\infty$ always appears on the left side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number and thus cannot be included in an interval of real numbers.
+\item Use $\infty$ to indicate the interval extends without end to the right. $\infty$ always appears on the right side. $\infty$ always has a parenthesis around it, because $\infty$ is not a real number and thus cannot be included in an interval of real numbers. 
 \end{itemize}
 
 
@@ -394,6 +394,9 @@ Many people in many countries over many centuries have studied mathematics and i
 On our number line we plot dots to represent numbers and we call these points.  They are points on the number line, because a point identifies a location.  We will soon represent our functions with 2-dimensional drawings. We will still have points and they will still identify a location.  However, describing the location will require two numbers, rather than one.  A point will no longer represent a single number.
 
 Our language will become a little blurred when we talk about points versus numbers.  Just be aware that our langugae is old has been twisted to accommodate our thinking.
+
+
+We will attempt to keep the blur to a miminum in this course by our use of the words \textit{number} and \textit{point}.
 \end{warning}
 
 
@@ -401,7 +404,9 @@ Our language will become a little blurred when we talk about points versus numbe
 
 A second way to represent intervals in writting is with inequalities. However, we cannot simply insert an inequality into our description, because people use inequalities in several contexts.  So, we need some notation that tells people we are describing a set. \textbf{Set builder notation} includes shorthand symbols to represent sentences such as 
 
+\begin{center}
 "The set of all real numbers such that the numbers are greater than or equal to 4 and less than 7."
+\end{center}
 
 We begin with a pair of curly braces $\{  \, \}$ containing a vertical bar:  ${|}$.  The vertical bar separates two areas. The left area is where we describe the types of numbers we are working with (real, integers, rational, etc).  The right area is where we place our inequality.
 
@@ -439,16 +444,34 @@ Select the interval notation that describes the same set as
 
 
 \begin{question}
-Select the interval notation that describes the same set as 
+Complete the interval notation that describes the same set as 
 \[ \{ r \in \mathbb {R} \, | \, -3 \leq r < 7 \} \]
 
 \[
-\left [] \answer{-3} , \answer{7} \right )
+\left [ \answer{-3} , \answer{7} \right )
 \]
 
 
 
 \end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Describing Sets with the Building Blocks}
@@ -660,6 +683,7 @@ Our reduced form will adhere to some rules:
 \end{itemize}
 
 \end{notation}
+Communication!
 
 Our reduced form of interval notation mimics exactly what you would draw on a number line.
 
@@ -667,7 +691,7 @@ Our reduced form of interval notation mimics exactly what you would draw on a nu
 
 
 \begin{question}
-Select all of the unions in reduced form.
+Select all of the unions that are written in reduced form.
   \begin{selectAll}
   \choice [correct]{$(-3, 2) \cup (4, 7)$}
   \choice {$[-3, 4) \cup (2, 7)$}
@@ -684,7 +708,7 @@ Select all of the unions in reduced form.
 
 When a set of real numbers is written in reduced form, then each of the intervals is called a \textbf{maximal interval} of the set.
 \end{definition}
-
+Maximal intervals cannot be made larger inside the set.  
 
 
 \begin{example} Maximal Intervals \\
@@ -700,11 +724,34 @@ $3$ is an isolated number of $S$, \\
 
 $-3$, $2$, $4$, and $7$ are all endpoints of maximal intervals of $S$. \\
 
-$-3$ is the only included endpoint of a maximal interval of $S$
+$-3$ is the only included endpoint of a maximal interval of $S$.
 
 
 
 \end{example}
+Endpoints are usually the focus of maximal intervals.
+
+
+
+
+
+
+
+\begin{example} nonMaximal Intervals \\
+Let $S = [-4, 1) \cup \{ 3, 4 \} \cup (5, 9)$, then
+
+
+$(-3, 1)$ is a not maximal interval of $S$.
+
+We can extend this interval to $[-3, 1)$ and still stay inside $S$.
+
+
+\end{example}
+Or course, we could have extended it to the maximal interval it sits inside, $(-3, 1) \subset [-4, 1)$.
+
+
+
+
 
 
 
