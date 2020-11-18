@@ -16,7 +16,7 @@ connecting reals
 
 \section{Real-Valued Functions}
 
-FOr the most part, our attention in this course is on real-valued functions.
+For the most part, our attention in this course is on real-valued functions.
 
 
 
@@ -26,7 +26,7 @@ FOr the most part, our attention in this course is on real-valued functions.
 A real-valued function is one whose domain and codomain are both sets of real numbers.
 
 \end{definition}
-The values of the funciton are real numbers.
+The values of a real-valued function are real numbers.
 
 
 
@@ -36,12 +36,12 @@ The values of the funciton are real numbers.
 
 \begin{example} Squaring Function \\
 
-Let the function \textit{SQRT} be defined as follows.
+Let the function \textit{SQ} be defined as follows.
 
 
 \begin{itemize}
-\item Domain of \textit{SQRT} is $(-3, 5]$.
-\item Codomain of \textit{SQRT} is $[-30, 30)$.
+\item Domain of \textit{SQ} is $(-3, 5]$.
+\item Codomain of \textit{SQ} is $[-30, 30)$.
 \item \textit{SQRT} pairs a domain number with its square.
 \end{itemize}
 
@@ -49,20 +49,21 @@ Let the function \textit{SQRT} be defined as follows.
 First, this function is well-defined since the square of any number in $(-3, 5]$ will be in $[-30, 30)$ and each domain number has exactly one square.
 
 
-\textbf{Shorthand Notation: } $SQRT: (-3, 5] \rightarrow [-30, 30)$.
+\textbf{Shorthand Notation: } $SQ: (-3, 5] \rightarrow [-30, 30)$.
 
 \begin{question}
 Evaluate the following:
 
 \begin{itemize}
-	\item $SRQT(-2) = \answer{4}$
-	\item $SRQT(0) = \answer{0}$
-	\item $SRQT(1.1) = \answer{1.21}$
-	\item $SRQT\left(\frac{7}{5}\right) = \answer{\frac{49}{25}}$
+	\item $SQ(-2) = \answer{4}$
+	\item $SQ(0) = \answer{0}$
+	\item $SQ(1.1) = \answer{1.21}$
+	\item $SQ\left(\frac{7}{5}\right) = \answer{\frac{49}{25}}$
 \end{itemize}
 
 \end{question}
 
+\end{example}
 
 
 
@@ -74,6 +75,120 @@ Evaluate the following:
 
 
 
+\begin{example} Collatz \\
+
+Let the function \textit{C} be defined as follows.
+
+
+\begin{itemize}
+\item Domain of \textit{C} is the positive integers: $\mathbb{N}$.
+\item Codomain of \textit{C} is the positive integers: $\mathbb{N}$.
+\item \textit{C} pairs a domain number one of two numbers.
+	\begin{itemize}
+			\item If the domain number is even, then $C$ pairs it with half the domain number.
+			\item If the domain number is odd, then $C$ pairs it with one more than three times the domain number.
+	\end{itemize}
+\end{itemize}
+
+
+First, this function is well-defined the calculations can only produce one result.
+
+
+\textbf{Shorthand Notation: } $C: \mathbb{N} \rightarrow \mathbb{N}$.
+
+\begin{question}
+Evaluate the following:
+
+\begin{itemize}
+	\item $C(8) = \answer{4}$
+	\item $C(7) = \answer{22}$
+	\item $C(1) = \answer{4}$
+	\item $C(28) = \answer{14}$
+\end{itemize}
+
+\end{question}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example} Identity \\
+
+Let the function \textit{Id} be defined as follows.
+
+
+\begin{itemize}
+\item Domain of \textit{Id} is all real numbers: $\mathbb{R}$.
+\item Codomain of \textit{Id} is all real numbers: $\mathbb{R}$.
+\item \textit{Id} pairs a domain number with itself.
+\end{itemize}
+
+
+First, this function is well-defined.
+
+
+\textbf{Shorthand Notation: } $Id: \mathbb{R} \rightarrow \mathbb{R}$.
+
+\begin{question}
+Evaluate the following:
+
+\begin{itemize}
+	\item $Id(\pi) = \answer{\pi}$
+	\item $Id(\sqrt{5}) = \answer{\sqrt{5}}$
+	\item $Id\left(\frac{13}{27}\right) = \answer{\frac{13}{27}}$
+	\item $Id(0) = \answer{0}$
+\end{itemize}
+
+\end{question}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Remainder \\
+
+Let the function \textit{Remainder} be defined as follows.
+
+
+\begin{itemize}
+\item Domain of \textit{Remainder} is all natural numbers: $\mathbb{N}$.
+\item Codomain of \textit{Remainder} is $\{ 0, 1, 2, 3, 4 \}$.
+\item \textit{Remainder} pairs a natural number with the remainder when divided by $5$.
+\end{itemize}
+
+
+First, this function is well-defined. It can only have one remainder.
+
+
+\textbf{Shorthand Notation: } $Remainder: \mathbb{N} \rightarrow \{ 0, 1, 2, 3, 4 \}$.
+
+\begin{question}
+Evaluate the following:
+
+\begin{itemize}
+	\item $Remainder(101) = \answer{1}$
+	\item $Remainder(3) = \answer{3}$
+	\item $Remainder(1652435) = \answer{0}$
+	\item $Remainder(9) = \answer{4}$
+\end{itemize}
+
+\end{question}
 
 
 
