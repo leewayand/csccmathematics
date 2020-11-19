@@ -33,6 +33,7 @@ $(4, H(4))$ is a pair in the function $H$.
 If we happen to know that $(4, 9)$ is a pair in the function $H$, then we know $H(4) = 9$.
 
 \end{example}
+Two expressions for the same value.
 
 
 Aside from talking about individual pairs, we might also like to talk about the whole collection at once.  Our first attempt at this is via pictures. We need a way to visually represent a single pair and then convert all pairs to a picture.  With this picture, we can analyze the function as a whole, identify important places in the domain, detect trands in the data, and quickly estimate information about the whole function.
@@ -42,7 +43,7 @@ Aside from talking about individual pairs, we might also like to talk about the 
 
 Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian plane with coordinates $(d,f(d))$.
 
-\[  \large{That's it!!!!}  \]
+\[  \large{That's /, it!!!!}  \]
 
 
 
@@ -55,7 +56,7 @@ Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian pla
 \begin{tikzpicture}
         \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
+            axis lines =center, xlabel=$domain$, ylabel=$codomain$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -67,26 +68,28 @@ Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian pla
         \draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (axis cs:3.05,0)--(axis cs:3.05,2);
         \draw[decoration={brace,raise=.2cm},decorate,thin] (axis cs:0,2.05)--(axis cs:3,2.05);
         \node[anchor=east] at (axis cs:1.85,3) {$d$};
-        \node[anchor=east] at (axis cs:4.6,1) {$f(d)$};
+        \node[anchor=east] at (axis cs:4.7,1) {$f(d)$};
                      
         \node at (axis cs:4,2.7) [penColor] {$(d,f(d))$};
 
         \end{axis}
 \end{tikzpicture}
 \end{image}
+Horizontal and vertical mdistances.
 
+From the origin, we measure horizontally a distance of $d$.  Then we measure a vertical distance of $f(d)$. Plot a dot.
 
 
 
 \begin{example}
 
-The fact that $f(3)=2$ for the function $f$, is encoded with a dot at $(3, 2)$.
+SUppose we have a funciton $f$ and we know that $f(3)=2$. This information is encoded with a dot at $(3, 2)$.
 
 \begin{image}
 \begin{tikzpicture}
 \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
+            axis lines =center, xlabel=$range$, ylabel=$codomain$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
