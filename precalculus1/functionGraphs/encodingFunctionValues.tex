@@ -33,17 +33,31 @@ $(4, H(4))$ is a pair in the function $H$.
 If we happen to know that $(4, 9)$ is a pair in the function $H$, then we know $H(4) = 9$.
 
 \end{example}
-Two expressions for the same value.
+Two expressions for the same value. \\
 
 
 Aside from talking about individual pairs, we might also like to talk about the whole collection at once.  Our first attempt at this is via pictures. We need a way to visually represent a single pair and then convert all pairs to a picture.  With this picture, we can analyze the function as a whole, identify important places in the domain, detect trands in the data, and quickly estimate information about the whole function.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Visually Encoding}
 
 Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian plane with coordinates $(d,f(d))$.
 
-\[  \large{That's /, it!!!!}  \]
+\begin{center}
+\large{That's it!!!!}  
+\end{center}
 
 
 
@@ -56,7 +70,7 @@ Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian pla
 \begin{tikzpicture}
         \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$domain$, ylabel=$codomain$,
+            axis lines =center, xlabel=$\scriptsize{domain}$, ylabel=$\scriptsize{codomain}$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -75,21 +89,21 @@ Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian pla
         \end{axis}
 \end{tikzpicture}
 \end{image}
-Horizontal and vertical mdistances.
 
-From the origin, we measure horizontally a distance of $d$.  Then we measure a vertical distance of $f(d)$. Plot a dot.
+
+From the origin, we measure horizontally a distance of $d$.  Then we measure a vertical distance of $f(d)$. Plot a dot. The horizontal and vertical measurements for a point are called its \textit{coordinates}.
 
 
 
 \begin{example}
 
-SUppose we have a funciton $f$ and we know that $f(3)=2$. This information is encoded with a dot at $(3, 2)$.
+Suppose we have a function $f$ and we know that $f(3)=2$. This information can be encoded visually with a dot plotted at $(3, 2)$.
 
 \begin{image}
 \begin{tikzpicture}
 \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$range$, ylabel=$codomain$,
+            axis lines =center, xlabel=$\scriptsize{range}$, ylabel=$\scriptsize{codomain}$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -149,12 +163,14 @@ Here is a graph of $y=H(t)$. Which point represents $H(-3) = -2$?
 \choice {$D$}
 \end{multipleChoice}
 
+
+\textbf{Note: } The horizontal axis is named $t$, because the function notation, $H(t)$, tells us that $t$ represents the domain numbers.  The vertical axis is named $y$, because the equation $y=H(t)$ tells us that $y$ is representing funciton values in the codomain.
 \end{question}
 
 
 
 \begin{question}
-Suppose $k$ is a funnction with $k(-1)>0$, then which quadrant will its corresponding dot be plotted?
+Suppose $k$ is a funnction with $k(-1)>0$. When we consider the graph of $y=k(t)$, there will be a point corresponding to $k(-1)$. Which quadrant will the corresponding dot be plotted?
 \begin{image}
 \begin{tikzpicture}
 \begin{axis}[
@@ -184,10 +200,10 @@ Suppose $k$ is a funnction with $k(-1)>0$, then which quadrant will its correspo
 \end{multipleChoice}
 
 \end{question}
+FOur quadrants for hte four possible combinations of domain codomain signs. \\
 
 
-
-Graphs of functions are just a collection of a bunch of dots (a curve).  Each dot represents a pair in the function.  Each dot has two coordinates.  The horizontal (first/left) coordinate is the domain number and the vertical (second/right) coordinate is the function value at that domain value.
+Graphs of functions are just a collection of a bunch of dots.  Each dot represents a pair in the function.  Each dot has two coordinates.  The horizontal (first/left) coordinate is the domain number and the vertical (second/right) coordinate is the function value at that domain value.
 
 The functions we are most interested in have millions of billions of trillions of dots.  
 
@@ -299,7 +315,12 @@ Eventually, your eyes play tricks on you.  You think you see a single object.  A
 
 
 
-\[  \large{It isn't!!!!!!}  \]
+\begin{center}
+\large{It isn't!!!!}  
+\end{center}
+
+
+
 
 It is a bunch of individual dots very close together. They are forming a pattern that your eye likes. Your eye glues them together.  
 
@@ -308,7 +329,7 @@ It is a bunch of individual dots very close together. They are forming a pattern
 
 
 \begin{question}
-The domain of the function, $p$, only contains positive numbers.  Which quadrants cannot not contain points on the graph of $p$?
+The domain of the function, $p$, only contains positive numbers.  Which quadrants cannot contain points on the graph of $y=p(k)$?
 
 \begin{selectAll}
 \choice {$I$}
@@ -318,6 +339,23 @@ The domain of the function, $p$, only contains positive numbers.  Which quadrant
 \end{selectAll}
 
 \end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +384,10 @@ Does the graph below tell us that $K(1) = -4$ or $K(1.03) = -4.1$ or $K(0.95) = 
 \end{tikzpicture}
 \end{image}
 
-The answer is yes.  It says all of those, because the dot is too big.  Our graph should consist of points, but points are dimensionless.  We wouldn't be able to see them.  So, we draw dots that we can see and accept the inaccuracy of the graph.
+The answer is yes.  \\
+
+
+It says all of those, because the dot is too big.  Our graph should consist of points, but points are dimensionless.  We wouldn't be able to see them.  So, we draw dots that we can see and accept the inaccuracy of the graph.
 
 Graphs are inherently inaccurate and there is nothing you can do about that.  They are communication tools. We have to keep this in mind when discussing mathematics with other people. Algebra is our tool for exactness.  Graphs give us the overall picture, but at the expense of accuracy.
 
@@ -364,7 +405,7 @@ We want to use both Algebra and graphs.  They each tell us what the other should
 \section{Domain and Range}
 
 
-From our visual encoding plan, we see that the first coordinate of dots will be numbers from the domain of the function and the second coordinate of dots will be numbers from the range of the function.  More specifically, the second coordinate is the function value of the first coordinate.  The horizontal and vertical axis are seen as holding the domain and range.
+From our visual encoding plan, we see that the first coordinate of dots will be numbers from the domain of the function and the second coordinate of dots will be numbers from the range of the function.  More specifically, the second coordinate is the function value at the first coordinate.  The horizontal and vertical axis are seen as holding the domain and range.
 
 \begin{itemize}
 \item \textbf{DOMAIN:} We think of the domain as sitting on the horizontal axis.
@@ -402,7 +443,10 @@ If the graph of $K(v)$ included three dots on the axes...
 \end{itemize}
 
 
-...on the other hand, from all of the dots, we can see that the domain of $K$ includes $\{ -2, -1, 0, 1, 2, 3 \}$. We might want to visualize the domain and the range of the function.  When visualizing the domain and range, we would view the axes as individual number lines.  Rather than thinking of the axes as holding dots with coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
+...on the other hand, from all of the dots, we can see that the domain of $K$ includes $\{ -2, -1, 0, 1, 2, 3 \}$. 
+
+
+What if we want visualize the domain and the range of the function, by themselves?  When visualizing the domain and range, we would view the axes as individual number lines.  Rather than thinking of the axes as holding dots with two coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
 
 We need our brains to jump back and forth between these views.  Dots represent pairs in a function.  We decipher these paies of numbers by the location of the dot.  At the same time, locations on the axes also represent domain and range numbers - depending on the plotted dots.
 
@@ -413,14 +457,14 @@ We need our brains to jump back and forth between these views.  Dots represent p
 \begin{example} 
 
 
-Below is the graph of $h(f)$. We can identify its domain, by collecting all of the first coordinates of all of the dots.   We can identify its range, by collecting all of the second coordinates of all of the dots.  
+Below is the graph of $y=h(f)$. We can identify its domain, by collecting all of the first coordinates of all of the dots.   We can identify its range, by collecting all of the second coordinates of all of the dots.  
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            axis lines =center, xlabel=$\scriptsize{f}$, ylabel={$\scriptsize{y=h(f)}$},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
