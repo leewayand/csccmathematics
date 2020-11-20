@@ -70,7 +70,7 @@ Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian pla
 \begin{tikzpicture}
         \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$\tiny{domain}$, ylabel=$\tiny{codomain}$,
+            axis lines =center, xlabel=$domain$, ylabel=$codomain$,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -104,7 +104,8 @@ Suppose we have a function $f$ and we know that $f(3)=2$. This information can b
 \begin{tikzpicture}
 \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$\tiny{\text{domain}}$, ylabel=$\tiny{\text{codomain}}$,
+            axis lines =center, xlabel=$domain$, ylabel=$codomain$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -136,6 +137,7 @@ Here is a graph of $y=H(t)$. Which point represents $H(-3) = -2$?
 \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -177,6 +179,7 @@ Suppose $k$ is a funnction with $k(-1)>0$. When we consider the graph of $y=k(t)
 \begin{axis}[
             domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -214,7 +217,8 @@ The functions we are most interested in have millions of billions of trillions o
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
-            axis lines =center, xlabel=$\tiny{\text{t}}$, ylabel=$\tiny{\text{y=g(t)}}$,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -236,6 +240,7 @@ As we add more and more dots....
   \begin{axis}[
             domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
             axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
