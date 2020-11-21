@@ -395,9 +395,9 @@ Does the graph below tell us that $K(1) = -4$ or $K(1.03) = -4.1$ or $K(0.95) = 
 The answer is yes.  \\
 
 
-It says all of those, because the dot is too big.  Our graph should consist of points, but points are dimensionless.  We wouldn't be able to see them.  So, we draw dots that we can see and accept the inaccuracy of the graph.
+It says all of those, because the dots are too big.  Our graph should consist of points, but points are dimensionless.  We wouldn't be able to see them.  So, we draw dots that we can see and accept the inaccuracy of the graph.
 
-Graphs are inherently inaccurate and there is nothing you can do about that.  They are communication tools. We have to keep this in mind when discussing mathematics with other people. Algebra is our tool for exactness.  Graphs give us the overall picture, but at the expense of accuracy.
+Graphs are inherently inaccurate and there is nothing you can do about that.  Graphs are communication tools. We have to keep this in mind when discussing mathematics with other people. Algebra is our tool for exactness.  Graphs give us the overall picture, but at the expense of accuracy.
 
 We want to use both Algebra and graphs.  They each tell us what the other should be doing.  We just have to remember what each tool provides us.
 
@@ -413,7 +413,7 @@ We want to use both Algebra and graphs.  They each tell us what the other should
 \section{Domain and Range}
 
 
-From our visual encoding plan, we see that the first coordinate of dots will be numbers from the domain of the function and the second coordinate of dots will be numbers from the range of the function.  More specifically, the second coordinate is the function value at the first coordinate.  The horizontal and vertical axis are seen as holding the domain and range.
+From our visual encoding plan, we see that the first coordinate of each dot will be a number from the domain of the function and the second coordinate of each dot will be a number from the range of the function.  More specifically, the second coordinate is the function value at the first coordinate.  The horizontal and vertical axis are seen as holding the domain and range.
 
 \begin{itemize}
 \item \textbf{DOMAIN:} We think of the domain as sitting on the horizontal axis.
@@ -423,7 +423,7 @@ From our visual encoding plan, we see that the first coordinate of dots will be 
 
 The two axes in our Cartesian plane are performing double duty.  We need double vision to see them correctly. If a dot on the graph happens to land on an axis, then we have function value information.
 
-If the graph of $K(v)$ included three dots on the axes...
+If the graph of $y=K(v)$ included three dots on the axes...
 
 \begin{image}
 \begin{tikzpicture} 
@@ -455,7 +455,7 @@ If the graph of $K(v)$ included three dots on the axes...
 ...on the other hand, from all of the dots, we can see that the domain of $K$ includes $\{ -2, -1, 0, 1, 2, 3 \}$. 
 
 
-What if we want visualize the domain and the range of the function, by themselves?  When visualizing the domain and range, we would view the axes as individual number lines.  Rather than thinking of the axes as holding dots with two coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
+What if we want to visualize the domain and the range of the function, by themselves?  When visualizing the domain and range, we would view the axes as individual number lines.  Rather than thinking of the axes as holding dots with two coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
 
 We need our brains to jump back and forth between these views.  Dots represent pairs in a function.  We decipher these paies of numbers by the location of the dot.  At the same time, locations on the axes also represent domain and range numbers - depending on the plotted dots.
 
@@ -554,6 +554,66 @@ range = [-6.5, -3.5] \cup [1, 4]
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:0)] ({x},{-0.5*x+1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5*x-7});
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-4,3) (0,1) (1,-6.5) (7,-3.5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
 
 
 
