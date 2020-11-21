@@ -324,7 +324,7 @@ Eventually, your eyes play tricks on you.  You think you see a single object.  A
 
 
 
-$\large{It isn't!!!!}$
+\large{It isn't!!!!}
 
 
 
@@ -336,7 +336,7 @@ It is a bunch of individual dots very close together. They are forming a pattern
 
 
 \begin{question}
-The domain of the function, $p$, only contains positive numbers.  Which quadrants cannot contain points on the graph of $y=p(k)$?
+Suppose the domain of the function, $p$, only contains positive numbers.  Which quadrants cannot contain points on the graph of $y=p(k)$?
 
 \begin{selectAll}
 \choice {$I$}
@@ -379,6 +379,7 @@ Does the graph below tell us that $K(1) = -4$ or $K(1.03) = -4.1$ or $K(0.95) = 
   \begin{axis}[
             domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
             axis lines =center, xlabel=$v$, ylabel={$y=K(v)$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -429,6 +430,7 @@ If the graph of $K(v)$ included three dots on the axes...
   \begin{axis}[
             domain=-4:4, ymax=5, xmax=4, ymin=-5, xmin=-4,
             axis lines =center, xlabel=$v$, ylabel={$y=K(v)$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -471,7 +473,8 @@ Below is the graph of $y=h(f)$. We can identify its domain, by collecting all of
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$\scriptsize{f}$, ylabel={$\scriptsize{y=h(f)}$},
+            axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -498,6 +501,7 @@ domain = [-4,0] \cup [1,7]
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -529,6 +533,7 @@ range = [-6.5, -3.5] \cup [1, 4]
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$f$, ylabel={$y=h(f)$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
