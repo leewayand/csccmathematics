@@ -563,9 +563,9 @@ range = [-6.5, -3.5] \cup [1, 4]
 
 
 
+\begin{example}
 
-
-\begin{question}
+Below is the graph of $y=P(k)$.  Use it to answer the following questions.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -578,11 +578,11 @@ range = [-6.5, -3.5] \cup [1, 4]
             axis on top
           ]
           
-          %\addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{-(x+5)*(x-1)});
-          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{(x+5)*(1-x)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x-1});
 
-          %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-1)};
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-2)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
 
 
            
@@ -594,28 +594,48 @@ range = [-6.5, -3.5] \cup [1, 4]
 
 
 
+
+
+
+
+\begin{question}
+
 What is the domain of $P(k)$?
 
 \begin{multipleChoice}
-  \choice {$[-5,0] \cup [1,5]}
-  \choice {$[-5,5]}
-  \choice {$(-5,0] \cup [1,5)}
-  \choice [correct]{$[-5,0) \cup (1,5]}
-  \choice {$[-5,0), (1,5]}
+  \choice {$[-5,0] \cup [1,5]$}
+  \choice {$[-5,5]$}
+  \choice {$(-5,0] \cup [1,5)$}
+  \choice [correct]{$[-5,0) \cup (1,5]$}
+  \choice {$[-5,0), (1,5]$}
 \end{multipleChoice}
 
+\end{question}
 
 
 
 
 
 
+\begin{question}
 
+What is the range of $P(k)$?
 
-
-
+\begin{multipleChoice}
+  \choice {$[-6,9]$}
+  \choice [correct]{$[-6,-2) \cup [0,9]$}
+  \choice {$[-6,-2) \cup [0,5)$}
+  \choice {$[-6,-2), [0,9]$}
+\end{multipleChoice}
 
 \end{question}
+
+
+
+
+
+
+\end{example}
 
 
 
