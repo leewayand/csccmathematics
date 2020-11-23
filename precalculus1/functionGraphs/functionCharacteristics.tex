@@ -26,6 +26,7 @@ We ask questions about the function values, but the answers are in the domain.
 
 
 
+\begin{idea}
 
 
 $\blacktriangleright$ What is the maximum value of the function? 
@@ -38,29 +39,60 @@ $\blacktriangleright$ What is the minimum value of the function?
 Translation: Which domain value results in the minimum value of the function? \\
 
 
-$\blacktriangleright$ where is the function increasing? 
+$\blacktriangleright$ Where is the function increasing? 
 
 Translation: On which set of domain values do the function increase? \\
 
 
-$\blacktriangleright$ where is the function decreasing? 
+$\blacktriangleright$ Where is the function decreasing? 
 
 Translation: On which set of domain values do the function decrease? \\
 
 
+\end{idea}
 
 
 
 
 
-\section{Domain vs. Graph}
 
 
 
 A graph provides a global view of all of the pairs, which reveals many of the patterns, features, and characteristics we seek.   
 
-However, we must separate the graph from the function.  The graph helps us answer the questions, but the graph doesn't hold the answers.  The answers are in the domain. 
+However, we must separate the graph from the function.  The graph helps us answer the questions, but the graph doesn't hold the answers.  The answers are in the domain and range. 
 
+
+
+
+
+\section{Maximum}
+
+
+
+\begin{definition} Maximum
+
+
+Let $f$ be a function defined on the domain $D$.
+
+Then $M$ is the maximum value of $f$ on $D$ if    
+
+
+\begin{itemize}
+\item There exists $d \in D$, such that $f(d) = M$.   $M$ has to be a funciton value \\
+
+\item $f(d) \leq M$ for all $d \in D$. All function values are less than or equal to $M$. Otherwise, $f$ has no maximum value.
+
+\end{itemize}
+
+
+\end{definition}
+\begin{onlineOnly}
+$\square$
+\end{onlineOnly}
+
+
+The maximum value is visually encoded as the highest point on the graph of the function.  The second coordinate is the maximum value and the first coordinate is the domain number where the maximum occurs.
 
 
 
@@ -89,8 +121,9 @@ Below is the graph of $y=f(x)$.  Use it to answer the following questions.
           
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{(x+5)*(1-x)});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
 
-          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-2)};
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-2) (8,0)};
           \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
 
 
@@ -99,6 +132,7 @@ Below is the graph of $y=f(x)$.  Use it to answer the following questions.
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
 
 
 \end{example}
