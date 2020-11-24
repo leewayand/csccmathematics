@@ -2,13 +2,13 @@
 
 \input{../../preamble.tex}
 
-\title{Function Features}
+\title{Function Behavior}
 
 
 \begin{document}
 
 \begin{abstract}
-change
+relative change
 \end{abstract}
 \maketitle
 
@@ -59,30 +59,25 @@ However, we must separate the graph from the function.  The graph helps us answe
 
 
 
-\begin{definition} Maximum
+\begin{definition} Increasing
 
 
-Let $f$ be a function defined on the domain $D$.
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
 
-Then $M$ is the maximum value of $f$ on $D$ if    
-
-
-\begin{itemize}
-\item There exists $d \in D$, such that $f(d) = M$.   i.e., $M$ has to be a function value \\
-
-\item $f(d) \leq M$ for all $d \in D$. i.e., all function values are less than or equal to $M$. 
-
-\end{itemize}
+$f$ is \textbf{increasing} on $S$ provided $f$ possesses this property:  
 
 
-If there is no such $M$, then $F$ has no maximum value.
+\begin{center}
+For every pair $a, b \in S$ with $a \leq b$, then $f(a) \leq f(b)$.
+\begin{center}
 
 \end{definition}
 
 
 
 \begin{observation}
-The maximum value is visually encoded as the highest point on the graph of the function.  The second coordinate is the maximum value and the first coordinate is the domain number where the maximum occurs.
+Visually, increasing results in the points of the graph of $f$ going uphill to the right.
 \end{observation}
 
 
@@ -109,8 +104,8 @@ Below is the graph of $y=f(x)$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{(x+5)*(1-x)});
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{(x+5)*(x-1)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{x-3});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
 
           \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-2) (8,0)};
