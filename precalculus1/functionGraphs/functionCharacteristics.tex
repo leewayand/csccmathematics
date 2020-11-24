@@ -79,21 +79,22 @@ Then $M$ is the maximum value of $f$ on $D$ if
 
 
 \begin{itemize}
-\item There exists $d \in D$, such that $f(d) = M$.   $M$ has to be a funciton value \\
+\item There exists $d \in D$, such that $f(d) = M$.   i.e., $M$ has to be a function value \\
 
-\item $f(d) \leq M$ for all $d \in D$. All function values are less than or equal to $M$. Otherwise, $f$ has no maximum value.
+\item $f(d) \leq M$ for all $d \in D$. i.e., all function values are less than or equal to $M$. 
 
 \end{itemize}
 
 
+If there is no such $M$, then $F$ has no maximum value.
+
 \end{definition}
 
-\vspace{0.5in}
 
 
-
+\begin{observation}
 The maximum value is visually encoded as the highest point on the graph of the function.  The second coordinate is the maximum value and the first coordinate is the domain number where the maximum occurs.
-
+\end{observation}
 
 
 
@@ -106,7 +107,7 @@ The maximum value is visually encoded as the highest point on the graph of the f
 
 \begin{example}
 
-Below is the graph of $y=f(x)$.  Use it to answer the following questions.
+Below is the graph of $y=f(x)$.  
 
 \begin{image}
 \begin{tikzpicture} 
@@ -135,6 +136,79 @@ Below is the graph of $y=f(x)$.  Use it to answer the following questions.
 
 
 
+The highest point on the graph is $(-2, 9)$.  Therefore, the maximum value of $f$ is $9$ and it occurs at $-2$.
+
+
+\begin{question}
+
+The highest point on the graph of $f$ is
+
+
+\begin{multipleChoice}
+\choice {$(-5,0)$}
+\choice [correct]{$(-2,9)$}
+\choice {$(0,5)$}
+\choice {$(-1,-2)$}
+\choice {$(5,-6)$}
+\choice {$(8,0)$}
+\end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+The maximum value of $f$ is $\answer{9}$, which occurs at $\answer{-2}$.
+\end{question}
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Below is the graph of $y=g(t)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-6,5)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(5,-6) (8,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+There is no highest point on the graph.  Therefore, $g$ has no maximum value.
+
 \end{example}
 
 
@@ -147,24 +221,6 @@ Below is the graph of $y=f(x)$.  Use it to answer the following questions.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-\section{Visually Encoding}
-
-Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian plane with coordinates $(d,f(d))$.
-
-\begin{center}
-\large{That's it!!!!}  
-\end{center}
 
 
 
