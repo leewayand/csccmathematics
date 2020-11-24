@@ -70,7 +70,7 @@ $f$ is \textbf{increasing} on $S$ provided $f$ possesses this property:
 
 \begin{center}
 For every pair $a, b \in S$ with $a \leq b$, then $f(a) \leq f(b)$.
-\begin{center}
+\end{center}
 
 \end{definition}
 
@@ -108,7 +108,7 @@ Below is the graph of $y=f(x)$.
           \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{x-3});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
 
-          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-2) (8,0)};
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,-5) (1,-2) (5, 2) (8,0)};
           \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
 
 
@@ -122,31 +122,46 @@ Below is the graph of $y=f(x)$.
 
 \begin{question}
 
-The highest point on the graph of $f$ is
+Select all of the subsets upon which $f$ is increasing.
 
 
-\begin{multipleChoice}
+\begin{selectAll}
 \choice {$(-5,0)$}
-\choice [correct]{$(-2,9)$}
-\choice {$(0,5)$}
-\choice {$(-1,-2)$}
-\choice {$(5,-6)$}
-\choice {$(8,0)$}
-\end{multipleChoice}
+\choice [correct]{$(-2,0)$}
+\choice [correct]{$(-2,0) \cup (1,5)$}
+\choice [correct]{$(1,5)$}
+\choice {$(1,5) \cup (5,8)$}
+\choice [correct]{$(5,8)$}
+\end{selectAll}
 \end{question}
-
-
-\begin{question}
-The maximum value of $f$ is $\answer{9}$, which occurs at $\answer{-2}$.
-\end{question}
-
-
 
 
 
 
 
 \end{example}
+The definition of increasing never mentions breaks in the graph. \\
+
+There is a gap in $(-2,0) \cup (1,5)$.  However, for the domain numbers in this set, the associated funciton values follow the definition of increasing.   
+
+The set $(-2,0) \cup (1,5)$ is another story.
+
+
+We have 
+
+\begin{itemize}
+\item $4 \in (-2,0) \cup (1,5)$  and  $6 \in (-2,0) \cup (1,5)$  with $4 \leq 6$ \\
+
+\item however, $f(4) > f(6)$
+\end{itemize}
+
+
+
+
+
+
+
+
 
 
 
