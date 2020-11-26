@@ -89,17 +89,214 @@ Let $L(x) = 2x-3$ with its domain and range both $(-\infty, \infty)$.
 \end{tikzpicture}
 \end{image}
 
-The arrows indicate that the graph continues with the same pattern - indicating that the implied domain is $(-\infty, \infty)$ as well as the range.
+The arrows indicate that the graph continues with the same pattern - illustrating that the domain is $(-\infty, \infty)$ as well as the range.
+
+
+\end{example}
+Linear functions have a constant growth rate or rate of change as we will see later.  \\
+
+
+
+
+
+
+
+
+
+
+
+
+Linear functions have a constant growth rate while \textbf{exponential functions} have a constant percentage growth rate, as we will see later.  This results in a formula of the form $E(t) = a r^t$, where $a$ is a nonzero real number and $0 < r$.
+
+
+
+\begin{example}
+
+Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$.
+
+
+Since $1.25 > 1$ whenever the domain number, $t$, increases, so does $E(t)$.  $E$ is an increasing function.  Its graph goes uphill to the right.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=E(t))$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-10:7),<->] {2*(1.25^x)};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+In addition, $1.25$ to any power will be positive.  This together with $2>0$ tells us that $E(t) > 0$ for all $t$.
 
 
 \end{example}
 
 
+This all reflects horizontally if $0 < r < 1$.
 
 
 
 
 
+
+
+\begin{example}
+
+Let $X(t) = 2 \cdot 0.8^t$ with a domain consisting of all real numbers, $\mathbb{R}$.
+
+
+Since $0.8 > 1$ whenever the domain number, $t$, increases, $X(t)$ decreases.  $X$ is a decreasing function.  Its graph goes downhill to the right.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=X(t))$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-7:10),<->] {2*(0.8^x)};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\end{example}
+
+The graph of an exponential function attempts to level off at a height of $0$.  This follows the idea that $0.8$ raises to larger and larger powers will result in a smaller and smaller value.
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Zeros}
+
+Real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties.  $0$ also sets itself aside with properties different from the negative and positrive real numbers.
+
+In particular, we have the \textit{Zero Product Property}.  This states that if the product of two real numbers is zero, then one of the numbers must be $0$.
+
+For these reasons we are interested in where functions have zero values.
+
+
+
+
+
+
+\begin{definition}  a Zero
+
+
+A domain number where a function value is $0$ is called a \textbf{zero} of the function.
+
+
+\begin{center}
+If $a$ is a number in the domain of a function $f$ with $f(a) = 0$, then $a$ is called a \textbf{zero} of $f$.
+\end{center}
+
+
+
+
+\end{definition}
+
+
+
+
+
+Zeros of functions correspond to intercepts on the graph.
+
+
+
+$\blacktriangleright$ If $a$ is a zero of the function $f$, then $(a, 0)$ is a point on the graph of $f$. \\
+
+
+$\blacktriangleright$ IIf $(a, 0)$ is a point on the graph of $f$, then $f(a) = 0$ and $a$ is a zero of $f$.
+
+
+\begin{example}
+
+Let $P(w) = w^2 - 2w - 3$ with a domain consisting of all real numbers, $\mathbb{R}$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=X(t))$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-2.5:4.5),<->] {x^2 - 2*x - 3};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+The graph has two intercepts.
+
+It appears that $(-1,0)$ and $(3,0)$ are intercepts of the graph, which suggests that $-1$ and $3$ are zeros of $P$.  We can verify this via the formula.
+
+
+\begin{itemize}
+\item $P(-1) = (-1)^2 -2(-1) - 3 = \answer{0}.$
+\item $P(3) = (3)^2 -2(3) - 3 = \answer{0}.$
+\end{itemize}
+
+
+The arrows on the graph of $P$ let us know that the graph keeps rising to the left and right, which means there are no other intercepts. $P$ has two zeros.
+
+
+\end{example}
 
 
 
