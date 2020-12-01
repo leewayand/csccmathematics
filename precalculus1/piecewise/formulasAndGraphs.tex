@@ -13,7 +13,7 @@ pieces and parts
 
 
 
-Piecewise functions are defined by using pieces of other functions. In other words, we take subsets of set of pairs from different functions and make a new collection of pairs with them.  We have to make sure that we do not duplicate domain numbers, otherwise we will not have a function.  This new collection of pairs will automatically give us a domain by collecting all of the first coordinates.
+Piecewise functions are defined by using pieces of other functions. We begin with several functions with their own defining sets of pairs.  Then we take some pairs from each of those sets and collect them into a new set of pairs defining a new function.  Of course, we have to make sure that we do not duplicate domain numbers, otherwise we will not have a function.  This new collection of pairs will automatically give us a domain by collecting all of the first coordinates.
 
 For example, we could start with two constant functions: $Zero$ and $One$.
 
@@ -90,7 +90,15 @@ step(x) =
 \end{cases}
 \]
 
-The formulas are list in the left column and the domain conditions are listed in the right column.  When evaluating a piecewise defined function, you don't look for the formula first.  First, you decide which domain condition in the right column your domain number satisfies.  Then you choose the corresponding formula and evaluate with your domain number.
+The formulas are listed in the left column and the domain conditions are listed in the right column.  When evaluating a piecewise defined function, you don't look for the formula first.  First, you decide which domain condition in the right column your domain number satisfies.  Then you choose the corresponding formula and evaluate with your domain number.
+
+
+
+
+
+
+
+
 
 
 
@@ -107,10 +115,10 @@ G(t) =
 
 \begin{itemize}
 \item $G(-5) = 2(-5) - 1 = -11$  
-\item $G(-3) = 2(-3) - 1 = -7$ 
+\item $G(-3) = \answer{-7}$ 
 \item $G(-2) = 2^2 = 4$ 
-\item $G(0) = 0^2 = 0$ 
-\item $G(3) = 3^2 = 9$ 
+\item $G(0) = \answer{0}$ 
+\item $G(3) = \answer{9}$ 
 \end{itemize}
 
 
@@ -199,6 +207,95 @@ The line graph for $y = 2v - 1$ is only drawn over the domain interval $(-4, -1]
 The line graph for $y = -v+3$ is only drawn over the domain interval $[1, 7)$. 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Define the function $D(x)$ by the graph below.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$D(x)$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-8:3)] {3*sin(deg(x)) + 2};
+  \addplot [draw=penColor,very thick,smooth,domain=(3:8)] {(1.75^(x-4) - 3};
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-8,-0.968) (3,8) (8,6.378)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,2.423) (3,-2.428)}; 
+  %\addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+  %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The domain of $D$ is
+
+\begin{multipleChoice}
+  \choice {$(-8,3) \cup (3,8)$}
+  \choice {$[-8,3) \cup (3,8]$}
+  \choice [correct]{$[-8,8]$}
+\end{multipleChoice}
+
+
+
+
+
+
+
+The range of $D$ is approximately
+
+\begin{multipleChoice}
+  \choice {$[0.97, 8]$}
+  \choice {$(-2.43, 8]$}
+  \choice {$(-2.43, 6.38) \cup \{ 8 \}$}
+  \choice [correct]{$(-2.43, 6.38] \cup \{ 8 \}$}
+\end{multipleChoice}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
 
 
 
