@@ -15,7 +15,7 @@ examples
 
 We have many famous functions, which are piecewise defined function.  We have already seen the step function.  It acts as a mathematical on/off switch.
 
-Perhaps more famous are the absolute value funciton and greatest integer function.
+Perhaps more famous are the absolute value function and greatest integer function.
 
 
 
@@ -24,6 +24,7 @@ Perhaps more famous are the absolute value funciton and greatest integer functio
 
 
 \begin{example} \textit{Absolute Value Function} \\
+
 The Absolute Value function is made from pieces of two linear functions: $L_1(x) = x$ and $L_2(x) = -x$. 
 
 \begin{itemize}
@@ -66,10 +67,70 @@ Graph of $y = |x|$.
 
 \end{example}
 
+The first step when working algebraically with the absolute value signs is getting rid of the absolute values signs.  They don't work well with algebra. For instance, they do not always distribute over addition of subtraction.
+
+
+\begin{question}
+$| -3 + 4 | = | -3 | + | 4 |$
+  \begin{multipleChoice}
+    \choice {True}
+    \choice [correct] {False}
+  \end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+$| 5 - 7 | = | 5 | - | 7 |$
+  \begin{multipleChoice}
+    \choice {True}
+    \choice [correct] {False}
+  \end{multipleChoice}
+\end{question}
+
+
+Sometimes this works, but not as a general rule.
+
+
+When working algebraically, the first step is to convert the absolute value signs into a piecewise defined function. That means idenitfying zeros.
+
+
+
+\begin{example}
+
+
+Rewrite $G(t) = | 3t - 5 |$ as a piecewise defined function that doesn't include absolute value signs.
+
+
+The first step is to identify where $3t - 5$ is positive and negative, which means identifying this linear function's zeros.
+
+
+
+$3t-5=0$ when $t=\frac{5}{3}$.
+
+
+\begin{itemize}
+\item $3t - 5 < 0$ when $t<\tfrac{5}{3}$, which means $G(t) = -(3t - 5)$ when $t<\tfrac{5}{3}$.
+\item $3t - 5 > 0$ when $t>\tfrac{5}{3}$, which means $G(t) = 3t - 5$ when $t>\tfrac{5}{3}$.
+\end{itemize}
 
 
 
 
+
+\[
+G(t) = 
+\begin{cases}
+  -(3t-5) &\text{on $(-\infty, \tfrac{5}{3})$)} \\
+  3t-5 &\text{on $[\tfrac{5}{3}, \infty)$}
+\end{cases}
+\]
+
+
+
+
+
+
+\end{example}
 
 
 
@@ -83,17 +144,17 @@ Graph of $y = |x|$.
 \begin{example} \textit{Greatest Integer Function} \\
 Also known as the \textit{floor function}, the \textit{Greatest Integer function} (\textit{GIF}) pairs a domain number with the greatest integer less than or equal to the domain number.
 
-If you think of a number line, then you start at the domain on go down (or left) to the next integer.  If you domina number is already an integer, then you don't need to go anywhere.
+If you think of a number line, then you start at the domain number and move down (or left) to the next integer.  If your domain number is already an integer, then you don't need to go anywhere.
 
 
-Like the absolute value function, the greatest integer function has its own symbol:  $GIF(x) = \lfloor x\rfloor$. The little feet remind us to go down to the next integer.
+Like the absolute value function, the greatest integer function has its own symbol:  $GIF(x) = \lfloor x \rfloor$. The little feet on the vertical bars remind us to go down to the next integer.
 
 \begin{itemize}
 \item $GIF(4.5) = 4$
-\item $GIF(2) = 2$
+\item $\lfloor 2 \rfloor = 2$
 \item $GIF(0.5) = 0$
 \item $GIF(0) = 0$
-\item $GIF(-4.5) = -5$
+\item $\lfloor -4.5 \rfloor = -5$
 \item $GIF(-7) = -7$
 \end{itemize}
 
@@ -109,13 +170,13 @@ Let $N$ be any integer. On the interval $[N, N+1)$, we have $GIF(x) = N$.
 
 
 
-Graph of $y = \lfloor x\rfloor$ is below, except the steps keep going up to the right and down to the left.
+Graph of $y = \lfloor x\rfloor$ is below, except the steps keep going up to the right and down to the left.  The extra 3 dots are a graphical symbol that the pattern continues.
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
-            domain=-2:4,
+            domain=-3:5,
             width=6in,
-            height=3in,
+            height=4in,
             axis lines =middle, xlabel=$x$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -142,18 +203,21 @@ Graph of $y = \lfloor x\rfloor$ is below, except the steps keep going up to the 
           \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(2,1)};  %% open hole
           \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(3,2)};  %% open hole
           \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(4,3)};  %% open hole
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3.7,3.5) (3.8,3.6) (3.9,3.7)};  %% 3 dots     
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1.7,-2.5) (-1.8,-2.6) (-1.9,-2.7)};  %% 3 dots     
+
+
         \end{axis}
 \end{tikzpicture}
 \end{image}
-
-
-Notice that we have many domain numbers with the same function value. That is ok. To be a function, we just need that each domain number only has one function value.  The \textit{GIF} passes this test.
 
 
 
 
 \end{example}
 
+Notice that we have many domain numbers with the same function value. That is ok. To be a function, we just need that each domain number only has one function value.  The \textit{GIF} passes this test.
 
 
 
@@ -201,11 +265,10 @@ GIF(x) =
 
 
 
-Notice that both the functions described above pass the so-called \textit{vertical line test}.
+Notice that both the absolute value function and the greatest integer function pass the so-called \textit{vertical line test}.
 
 \begin{theorem} \textit{Vertical Line Test} \\
-The curve $y=f(x)$ represents $y$ as a function of $x$ at $x=a$ if and only if the vertical line $x=a$ intersects the curve $y=f(x)$ at
-exactly one point. This is called the \textbf{vertical line test}.
+The curve $y=f(x)$ represents $y$ as a function of $x$ on a set $S$ if and only if the vertical line $x=a$ intersects the curve $y=f(x)$ at exactly one point for every $a \in S$. This is called the \textbf{vertical line test}.
 \end{theorem}
 
 
