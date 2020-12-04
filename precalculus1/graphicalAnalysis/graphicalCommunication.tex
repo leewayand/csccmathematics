@@ -173,7 +173,7 @@ Horizontal asymptotes give similar information.  The function graphed above gets
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$x$, ylabel=$y=f(x)$,
+                axis lines =center, xlabel=$x$, ylabel=${y=f(x)}$,
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
@@ -198,7 +198,9 @@ Horizontal asymptotes give similar information.  The function graphed above gets
 The values of the function, $f(x)$, gets closer (or approaches) $2$ as we move through the domain, heading to infinity.  Of course, we have algebraic notation to communicate this thought.
 
 
-
+\[
+\lim_{x \to \infty} f(x) = 2
+\]
 
 
 
@@ -212,7 +214,46 @@ The values of the function, $f(x)$, gets closer (or approaches) $2$ as we move t
 \section{Ellipsis}
 
 
-Sometimes an arrow at the end of the curve may give the wrong impression.  If the pattern involves some kind of repeated shape, then ellipses may be used.
+Sometimes an arrow at the end of the curve may give the wrong impression.  
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+            domain=-10:10, ymax=3, xmax=10, ymin=-2, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+    \addplot [draw=penColor,very thick,smooth,domain=(-2:-1)] {x+2};
+    \addplot [draw=penColor,very thick,smooth,domain=(-1:0)] {-x};
+
+    \addplot [draw=penColor,very thick,smooth,domain=(0:1)] {x};
+    \addplot [draw=penColor,very thick,smooth,domain=(1:2)] {-x+2};
+
+    \addplot [draw=penColor,very thick,smooth,domain=(2:3)] {x-2};
+    \addplot [draw=penColor,very thick,smooth,domain=(3:4), ->] {-x+4};
+
+
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+Just an arrow may be interpretted as the line continuing down.
+
+
+
+
+If the pattern involves some kind of repeated shape, then ellipses may be used.
 
 
 
@@ -335,6 +376,19 @@ A graph is a communication tool. We already know that the accuracy has limitatio
 
 
 \section{Missing Symbols}
+
+All of these graphical symbols help the reader understand the graph.  When the symbols are not drawn, then we know the author of the graph does not want us to interpret the graph in that way.
+
+
+\begin{itemize}
+\item is there is no horizontal asymptote, then we should not read that the graph is bounded.
+\item if there are no ellipses, then we should not assume the pattern repeats.
+\end{itemize}
+
+
+
+The auxillary pieces drawn on a graph give us information and their absence gives us information.
+
 
 
 
