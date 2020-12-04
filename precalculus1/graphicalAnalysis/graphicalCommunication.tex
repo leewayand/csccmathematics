@@ -13,7 +13,7 @@ communication
 
 
 
-We can easily define a function via a graph.  However, it is not so easy to decipher information from a graph, especially when the curve is drawn by hand.  Therefore, in addition to the points on the curve, we include other symbols to help people read the graph.  These are communication symbols.  They help the reader understand what is drawn and what is not drawn.
+We can easily define a function via a graph.  However, it is not so easy to decipher exact information from a graph, especially when the curve is drawn by hand.  Therefore, in addition to the points on the curve, we include other symbols to help people read the graph.  These are communication symbols.  They help the reader understand what is drawn and what is not drawn.
 
 
 
@@ -115,7 +115,7 @@ In the graph on the left, it is difficult to decide if the domain is $(-3, 4)$ o
 \end{image}
 
 
-The arrows tell the reader that the curve continues its current pattern of a line indefinitely.  The domain is $(-\infty, \infty)$.
+Here, the arrows tell the reader that the curve continues its current pattern of a line indefinitely.  The domain is $(-\infty, \infty)$.
 
 
 
@@ -130,7 +130,7 @@ The arrows tell the reader that the curve continues its current pattern of a lin
 \section{Asymptotes}
 
 
-Arrows at the ends of curves signal that the curve continues with its current pattern. However, this may not not be enough.  Many functions have curves that continue moving up and to the right, however, their movement to the right has a boundary. We use dashed lines to indicate that a curve is approaching this line pattern - getting closer
+Arrows at the ends of curves signal that the curve continues with its current pattern. However, this may not not be enough.  Many functions have curves that continue moving up and to the right, however, their movement has a boundary. We use dashed lines to indicate that a curve is approaching this line pattern - getting closer.
 
 
 \begin{image}
@@ -159,7 +159,45 @@ Arrows at the ends of curves signal that the curve continues with its current pa
 \end{image}
 
 
-The arrows tell the reader that the curve continues its current pattern, for example the right piece of the curve continues to move up and to the left.  The dashed asymptote tells us that the leftward movement does not go past $3$.  The curve continues to go up indefinitely while getting closer and closer to the asyptte, without hitting the asymptote. 
+The arrows tell the reader that the curve continues its current pattern, for example the right piece of the curve continues to move up and to the left.  The dashed verticl asymptote tells us that the leftward movement does not go past $3$.  The curve continues to go up indefinitely while getting closer and closer to the asymptote, without hitting the asymptote. 
+
+
+
+
+Horizontal asymptotes give similar information.  The function graphed above gets closer to the value of $2$ as the values of $x$ get bigger.   Unlike with vertical asymptotes, the graph of a function can oscillate back-and-forth across a horizontal asymptote.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y=f(x)$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:10), <->] {10*sin(deg(x))/((x+10)^1.2) + e^(-x-5) + 2};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=1, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+The values of the function, $f(x)$, gets closer (or approaches) $2$ as we move through the domain, heading to infinity.  Of course, we have algebraic notation to communicate this thought.
+
+
 
 
 
@@ -286,6 +324,17 @@ A graph is a communication tool. We already know that the accuracy has limitatio
 
 \end{question}
 
+
+
+
+
+
+
+
+
+
+
+\section{Missing Symbols}
 
 
 
