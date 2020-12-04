@@ -13,7 +13,7 @@ repeating
 
 
 
-In addition to gluing together pieces from several functions, we also have functions which just repeat one part over and over and over. These functions are said to be \textbf{periodic}.
+In addition to gluing together pieces from several functions, we also have functions which just repeat one part over and over and over. They glue the same function next to itself over andover and over.  These functions are said to be \textbf{periodic}.
 
 
 
@@ -33,7 +33,7 @@ Graph of $y = Tooth(t)$.
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
-            domain=-10:10, ymax=3, xmax=10, ymin=-2, xmin=-10,
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -54,15 +54,15 @@ Graph of $y = Tooth(t)$.
 
 
 
-Sawtooth functions just repeat this tooth over and over and over.
+The tooth here is $1$ unit high and $2$ units wide and this Sawtooth function below just repeats this tooth over and over and over.
 
 
 
-
+Graph of $y = SawTooth(t)$.
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
-            domain=-10:10, ymax=3, xmax=10, ymin=-2, xmin=-10,
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -96,14 +96,58 @@ Sawtooth functions just repeat this tooth over and over and over.
 \end{image}
 
 
-Different sawtooth functions are made by varying the height and width of the tooth.  The single tooth that was repeated is called the \textbf{wave} of the function.  The width of the wave is called the \textbf{period}. And, the height of the wave is called the \textbf{amplitude}.
 
+\begin{question}
+  \begin{itemize}
+    \item $SawTooth(0) = \answer{0}$
+    \item $SawTooth(1) = \answer{1}$
+    \item $SawTooth(2) = \answer{0}$
+    \item $SawTooth(57) = \answer{1}$
+    \item $SawTooth(102) = \answer{0}$
+  \end{itemize}
+\end{question}
 
 \end{example}
 
 
 
+Different sawtooth functions are made by varying the height and width of the tooth.  The single tooth that was repeated is called the \textbf{wave} of the function.  The width of the wave is called the \textbf{period}. And, the height of the wave is called the \textbf{amplitude}.
+
+
 You can make a periodic function out of any piece of any function, just use that piece as the wave. But we have two very special basic periodic functions in our set of Elementary Functions.
+
+They are piecewsie defined function but the is one piece that just repeats.  We try to express this idea in a formula. We define a formula for the initial piece and then state the period.
+
+
+
+
+\[
+SawTooth(x) = 
+\begin{cases}
+  x &\text{on $[0,1)$,} \\
+  -x+2 &\text{on $[1,2)$} \\ 
+  SawTooth(x) = SawTooth(x+2) & \text{otherwise}
+\end{cases}
+\]
+
+This function gets its name because it looks like moving up and down on the teeth on a saw. Other periodic functions come from similarly moving on different objects. 
+
+Travelling around the unit circle produces two important periodic functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -113,14 +157,14 @@ You can make a periodic function out of any piece of any function, just use that
 \section{The Unit Circle}
 
 
-The unit circle is the circle of radius $1$ centered at the origin. The points on the unit cricle have two coordinates.  
+The unit circle is the circle of radius $1$ centered at the origin in the Cartesian plane. The points on the unit cricle have two coordinates.  
 
 \begin{itemize}
-\item The first coordinate gives the horizontal position of hte point. 
+\item The first coordinate gives the horizontal position of the point. 
 \item The second coordinate gives the vertical position of the point.  
 \end{itemize}
 
-Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle made between the horizontal axis and a chord made by drawing a line from the point on the unit circle to the origin (center of the circle).
+Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle made between the horizontal axis and a chord formed by drawing a line from the point on the unit circle to the origin (center of the circle).
 
 
 \begin{example} \textit{Sine} and \textit{Cosine}  \\
@@ -165,7 +209,7 @@ Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle ma
 
 
 
-As the angle changes, the corresponding point on the unit circle changes position and thus changes coordinates.  In other words, given an angle, there is exactly one corresponding point in the unit circle at that angle.  
+As the angle changes, the corresponding point on the unit circle changes position and thus its coordinates change.  In other words, given an angle, there is exactly one corresponding point in the unit circle at that angle.  
 
 \begin{itemize}
 \item Given an angle there is exactly one corresponding horizontal coordinate.
@@ -179,7 +223,7 @@ Each point on the unit circle has coordinates described as
 
 \[  (cos(\theta), sin(\theta))  \] 
 
-As the angle turns around the unti circle, these coordinates repeat. Sine and cosine are periodic functions.
+As the angle turns around the unit circle, these coordinates repeat. Sine and cosine are periodic functions.
 
 \end{example}
 
@@ -256,13 +300,39 @@ As the angle, $\theta$, rotates counter-clockwise the values of cosine start at 
 
 
 
+It turns out that there are many connections between sine and cosine, but these connections are easier to describe when we measure angles in radians.  Therefore, we will attempt to speak in radians as much as possible.
+
+
+Sine and Cosine are periodic functions with periods of $2\pi$. Therefore, we only need examine the interval $[0, 2\pi)$ and then repeat our findings every $2\pi$.
+
+From the graphs we can see that Sine and Cosine have maximum and minimum values.
+
+
+\begin{itemize}
+
+  \item The sine function has a maximum value of $\answer{1}$.  Inside the interval $[0, 2\pi)$, this maximum value occurs at $\answer{\frac{\pi}{2}}$.
+
+  \item The sine function has a minimum value of $\answer{-1}$.  Inside the interval $[0, 2\pi)$, this minimum value occurs at $\answer{\frac{3\pi}{2}}$.
+
+  \item The sine function has two zeros inside the interval $[0, 2\pi)$. One of these zeros is $0$.  The other zero is $\answer{\pi}$.
+
+
+\end{itemize}
 
 
 
 
 
+\begin{itemize}
+  
+  \item The cosine function has a maximum value of $\answer{1}$.  Inside the interval $[0, 2\pi)$, this maximum value occurs at $\answer{0}$.
+
+  \item The cosine function has a minimum value of $\answer{-1}$.  Inside the interval $[0, 2\pi)$, this minimum value occurs at $\answer{\pi}$.
+
+  \item The cosine function has two zeros inside the interval $[0, 2\pi)$. One of these zeros is $\frac{\pi}{2}$.  The other zero is $\answer{\frac{3\pi}{2}}$.
 
 
+\end{itemize}
 
 
 
