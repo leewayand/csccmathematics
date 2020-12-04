@@ -191,6 +191,24 @@ Let $h(t)$ be a function.  The graph of $y= h(t)$ is displayed below.
 \end{tikzpicture}
 \end{image}
 
+
+
+
+Select all of the discontiuities of $h$.
+\begin{selectAll}
+\choice {$-8$}
+\choice {$-3$}
+\choice {$-1$}
+\choice {$3$}
+\choice {$4$}
+\choice {$8$}
+\choice [correct]{None of the above}
+\end{selectAll}
+
+
+
+
+
 $h(t)$ has no discontinuities.  The idea of a discontinuity is that the value of the function changes abruptly at a number.  The graph jumps vertically.  
 
 In the graph above there is horizontal space between the graphical pieces.  
@@ -237,11 +255,34 @@ Let $K(m)$ be a function.  The graph of $y= K(m)$ is displayed below.
         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,5)};
         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
 
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,-1.5) (4,2)};
+
     \end{axis}
 \end{tikzpicture}
 \end{image}
 
 $K(m)$ has two discontinuities, which occur at the endpoints of two maximal intervals in the domain.
+
+
+
+
+
+
+
+
+Select all of the discontiuities of $K$.
+\begin{selectAll}
+\choice {$-8$}
+\choice {$-3$}
+\choice [correct]{$-1$}
+\choice {$3$}
+\choice [correct]{$4$}
+\choice {$8$}
+\choice {None of the above}
+\end{selectAll}
+
+
+
 
 
 \end{example}
@@ -300,29 +341,29 @@ If $c$ is a discontinuity of $f$, then we say that $f$ is \textbf{discontinuous}
 
 \begin{example} Discontinuity \\
 
-Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below. 
+Let $P(w)$ be a function.  The graph of $y= P(w)$ is displayed below. 
 
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$k$, ylabel=$y$,
+            	axis lines =center, xlabel=$w$, ylabel=$y$,
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
           		]
 
         
-        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3)] {-x};
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-4)] {-(x+8)*(x+5)};
+        \addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {sin(deg(2*x))};
         \addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
 
 
-        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8)};
-        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,0)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-4)};
 
-        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,-1.5)};
-        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,0.5)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,-0.909) (-8,4) (-2,-6)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,-0.279)};
 
         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,2)};
         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
@@ -331,9 +372,28 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
 \end{tikzpicture}
 \end{image}
 
-$h(t)$ has no discontinuities.  The idea of a discontinuity is that the value of the function changes abruptly at a number.  The graph moves vertically.  
 
-In the graph above there is horizontal space between the graphical pieces. The only candidates for discontinuities would be endpoints and they are all attached to their intervals.
+
+
+
+
+
+
+Select all of the discontiuities of $P$.
+\begin{selectAll}
+\choice [correct]{$-8$}
+\choice {$-4$}
+\choice {$-2$}
+\choice {$-1$}
+\choice {$3$}
+\choice {$4$}
+\choice {$8$}
+\choice {None of the above}
+\end{selectAll}
+
+
+
+
 
 \end{example}
 
