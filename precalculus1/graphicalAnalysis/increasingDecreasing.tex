@@ -156,9 +156,10 @@ Let $m(t)$ be a function.  The graph of $y = m(t)$ is displayed below.
 \end{tikzpicture}
 \end{image}
 
+
 \begin{itemize}
-\item $m$ is decreasing on the interval $(-8,-3)$.  
-\item $m$ is decreasing on the interval $[-3,8)$. 
+\item $m$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing} \choice{neither}} on the interval $(-8,-3)$.  
+\item $m$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing} \choice{neither}} on the interval $[-3, 8)$. 
 \end{itemize}
 
 
@@ -173,7 +174,7 @@ However, $m$ is not decreasing on the interval $(-8, 8)$.  To show that a functi
 \end{example}
 
 
-A \textbf{counterexample} is one example where all of the conditions of a stement are met, yet the conclusion is not true.  One single  counterexample shows a statement to be false.
+A \textbf{counterexample} is one example where all of the conditions of a statement are met, yet the conclusion is not true.  One single counterexample shows a statement to be false.
 
 
 
@@ -230,22 +231,20 @@ Let $N(z)$ be a function.  The graph of $y = N(z)$ is displayed below.
 
 
 \begin{question}
-$N$ is decreasing on the interval $(-\infty,-4.5]$
-
+Select all of the correct statements
+\begin{selectAll}
+    \choice [correct]{$N$ is decreasing on the interval $(-3,2)$}
+    \choice [correct]{$N$ is decreasing on the interval $(2,8)$}
+    \choice [correct]{$N$ is decreasing on the interval $(-3,8)$}
+    \choice [correct]{$N$ is decreasing on the interval $[-3,8)$}
+    \choice [correct]{$N$ is decreasing on the interval $(-3,8]$}
+    \choice [correct]{$N$ is decreasing on the interval $[-3,8]$}
+\end{selectAll}
 
 
 
 \end{question}
 
-
-
-
-
-\begin{itemize}
-\item $N$ is decreasing on the interval $(-\infty,-4.5]$.  
-\item $N$ is increasing on the interval $[-4.5,-3]$. 
-\item $N$ is decreasing on the interval $[-3,8]$. 
-\end{itemize}
 
 
 
@@ -283,7 +282,7 @@ $N$ is decreasing on the interval $(-\infty,-4.5]$
 
 
 \section{Measuring Rates}
-Comparing change values is called a \textbf{rate}. Our symbol for a change in an amount is a Greek Delta, $\Delta$.  And, we use fractions to compare changes.
+Comparing how the connected values in the domain and range change is called a \textbf{rate}. Our symbol for a change in an amount is a Greek Delta, $\Delta$.  And, we use fractions to compare the changes.
 
 \[ rate = \frac{\Delta \, pineapples}{\Delta \, price}\]
 
@@ -291,13 +290,13 @@ Comparing change values is called a \textbf{rate}. Our symbol for a change in an
 
 
 \begin{itemize}
-\item If the changes in pineapples and price are both positive (increase), then this rate is positive.
-\item If the changes in pineapples and price are both negative (decrease), then this rate is again positive.
-\item If the changes in pineapples and price are differet one increases while the other secreases, then this rate is negative.
+\item If the changes in pineapples and price are both positive, then this rate is positive.
+\item If the changes in pineapples and price are both negative, then this rate is again positive.
+\item If the changes in pineapples and price are of different sign, one increases while the other decreases, then this rate is negative.
 \end{itemize}
 
 
-Using this, we can compare changes in function values across a domain interval.
+Using this, we can compare and measure changes in function values across a domain interval.
 
 
 \begin{definition}
@@ -308,7 +307,7 @@ The \textbf{rate-of-change} of a function $f$ across $[a, b]$ in the domain is g
 
 \end{definition}
 
-The rate-of-change measures how the function values are change relative to changes in the domain.
+The rate-of-change measures how the function values change relative to changes in the domain.
 
 
 
@@ -320,7 +319,7 @@ The rate-of-change measures how the function values are change relative to chang
 
 \begin{example} Rates \\
 
-Let $V(x)$ be a function.  The graph of $y = V(x))$ is displayed below. 
+Let $V(x)$ be a function.  The graph of $y = V(x)$ is displayed below. 
 
 \begin{image}
 \begin{tikzpicture}
@@ -389,6 +388,97 @@ From the graph, we can estimate that over the interval $[1, 8]$, $V$ had a rate-
 This might sound familiar. You have probably seen this when working with slopes of lines, $\frac{rise}{run}$.  The \textit{rise} is the vertical change (change in the value of the function). The \textit{run} is the horizontal change (change in the domain).
 
 Rate-of-change is a function idea that we will connect up to the geometric idea of slope.
+
+
+
+
+
+The rate of change over an interval is an overall measurement.  It compares the changes occuring over the whole interval. 
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} 
+
+
+
+Let $M(t)$ be a function.  The graph of $y = M(t)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3), <-] {(x+8)*(x+2)+2};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:2)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(2:8)] {0.25*x + 1};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,-3)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,5)};
+       
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,1.5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,-1)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,3)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{question}
+The rate of change of $M$ over the interval $[-5,5]$ is
+    \begin{multipleChoice}
+        \choice [correct]{positive}
+        \choice {negative}
+    \end{multipleChoice}
+\end{question}
+
+
+
+\begin{question}
+The rate of change of $M$ over the interval $[-2,1]$ is
+    \begin{multipleChoice}
+        \choice {positive}
+        \choice [correct]{negative}
+    \end{multipleChoice}
+\end{question}
+
+
+\end{example}
+
+
+
+
+\begin{question}
+If the rate of change of a function is positive over the interval $[a,b]$ then the rate of change over any subinterval is aslo positive.
+    \begin{multipleChoice}
+        \choice {True}
+        \choice [correct]{False}
+    \end{multipleChoice}
+\end{question}
+
+
+
+
+
+
 
 
 
