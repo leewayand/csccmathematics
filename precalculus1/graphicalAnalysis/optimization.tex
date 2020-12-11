@@ -13,7 +13,7 @@ minimum and maximum
 
 
 
-When using functions to analyze situations, we are often interested in the maximum and minimum values that a function takes on. These are often called \textbf{textreme} values. We would like to know the extreme values and where, in the domain, they occur.
+When using functions to analyze situations, we are often interested in the maximum and minimum values that a function takes on. These are often called \textbf{extreme} values. We would like to know the extreme values and where, in the domain, they occur.
 
 
 
@@ -31,9 +31,9 @@ There are two views on extreme values.
 \[  f(c) \text{ is a global minimum if } f(c) \leq f(x) \text{ for all } x \text{ in the domain of } f \]
 \end{itemize}
 
-A function has at most, one maximum value and one minimum value.
+A function has at most, one maximum value and one minimum value, but they can occur at multiple domain numbers.
 
-In contrast to a sinle maximum or minimum value, a function also values which are the greatest value in their own neighborhood.  We see these as tops of hills and bottom of valleys on the graph.  A function may have many of these \textbf{local} or \textbf{relative} extrema.
+In contrast to a single maximum or minimum value, a function also has values which are the greatest value in their own neighborhood.  We see these as tops of hills and bottom of valleys on the graph.  A function may have many of these \textbf{local} or \textbf{relative} extrema.
 
 
 
@@ -43,9 +43,21 @@ In contrast to a sinle maximum or minimum value, a function also values which ar
 
 \textbf{Local Extreme Values} \\
 \begin{itemize}
-\item $f(c)$ is a \textbf{local maximum value} of the function $f$ if there exists an $0 < \epsilon$ such that $f(x) \leq f(c)$ for all $x$ within a distance of $\epsilon$ of $c$.
+\item $f(c)$ is a \textbf{local maximum value} of the function $f$ if there exists an $0 < \epsilon$ such that $f(x) \leq f(c)$ for all domain numbers, $x$, within a distance of $\epsilon$ of $c$. 
 
-\item $f(c)$ is a \textbf{local minimu value} of the function $f$ if there exists an $0 < \epsilon$ such that $f(c) \leq f(x)$ for all $x$ within a distance of $\epsilon$ of $c$.
+\[  f(c) \text{ is a local maximum if } f(x) \leq f(c) \text{ for all } \{ x \in domain \, | \, x \in (c - \epsilon, c + \epsilon) \} \text{ for some } \epsilon > 0 \]
+
+
+
+
+
+
+
+\item $f(c)$ is a \textbf{local minimu value} of the function $f$ if there exists an $0 < \epsilon$ such that $f(c) \leq f(x)$ for all domain numbers, $x$, within a distance of $\epsilon$ of $c$. 
+
+
+
+\[  f(c) \text{ is a local minimum if } f(c) \leq f(x) \text{ for all } \{ x \in domain \, | \, x \in (c - \epsilon, c + \epsilon) \} \text{ for some } \epsilon > 0 \]
 \end{itemize}
 
 
@@ -103,13 +115,13 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
 
 \textit{Local Explanations} \\
 
-Let $0 < \epsilon = 0.5$.  $g(-8) \leq g(k)$ for all $k$ in the domain within a distance of $0.5$ of $-8$, which would be the interval $[-8, -7.5)$.
-
-Let $0 < \epsilon = 0.3$.  $g(0.9) \leq g(k)$ for all $k$ in the domain within a distance of $0.53$ of $0.9$, which would be the interval $(0.6, 1.2)$.
-
-Let $0 < \epsilon = 0.4$.  $g(k) \leq g(-4.9)$ for all $k$ in the domain within a distance of $0.4$ of $-4.9$, which would be the interval $(-5.3, -4.6)$.
 
 
+Let $0 < \epsilon = 0.3$.  $g(0.9) \leq g(k)$ for all $k$ in the domain within a distance of $0.3$ of $0.9$, which would be the interval $(\answer{0.6}, \answer{1.2})$.
+
+Let $0 < \epsilon = 0.4$.  $g(k) \leq g(-4.9)$ for all $k$ in the domain within a distance of $0.4$ of $-4.9$, which would be the interval $(\answer{-5.3}, \answer{-4.6})$.
+
+Let $0 < \epsilon = 0.5$.  $g(-8) \leq g(k)$ for all $k$ in the domain within a distance of $0.5$ of $-8$, which would be the interval $[\answer{-8}, \answer{-7.5})$.
 
 
 \textbf{Note:} As the previous example illustrates, global extrema are also local extrema.
@@ -156,11 +168,11 @@ Let $B(w)$ be a function.  The graph of $y = B(w)$ is displayed below.
 
 \textit{Local Explanations} \\
 
-Let $0 < \epsilon = 0.6$.  $B(1.4) \leq B(w)$ for all $w$ in the domain within a distance of $0.6$ of $1.4$, which would be the interval $(0.8, 2)$.
+Let $0 < \epsilon = 0.6$.  $B(1.4) \leq B(w)$ for all $w$ in the domain within a distance of $\answer{0.6}$ of $\answer{1.4}$, which would be the interval $(0.8, 2)$.
 
-Let $0 < \epsilon = 0.25$.  $B(-5.9) \leq B(w)$ for all $w$ in the domain within a distance of $0.25$ of $-5.9$, which would be the interval $(0.6, 1.2)$.
+Let $0 < \epsilon = 0.25$.  $B(-5.9) \leq B(w)$ for all $w$ in the domain within a distance of $\answer{0.25}$ of $\answer{-5.9}$, which would be the interval $(0.6, 1.2)$.
 
-Let $0 < \epsilon = 0.5$.  $B(w) \leq B(-3)$ for all $w$ in the domain within a distance of $0.5$ of $-3$, which would be the interval $(-3.5, -2.5)$.
+Let $0 < \epsilon = 0.5$.  $B(w) \leq B(-3)$ for all $w$ in the domain within a distance of $\answer{0.5}$ of $\answer{-3}$, which would be the interval $(-3.5, -2.5)$.
 
 
 
@@ -208,8 +220,8 @@ Let $T(p)$ be a function.  The graph of $y=  T(p)$ is displayed below.
 \item $T$ has no global maximum.
 \item $T$ has no global minimum.
 \item $T$ has a local minimum of $-2$, which occurs at $-8$.
-\item $T$ has a local minimum of $-6$, which occurs at $3$.
-\item $T$ has a local maximum of $6$, which occurs at $-1$.
+\item $T$ has a local minimum of $\answer{-6}$, which occurs at $3$.
+\item $T$ has a local maximum of $\answer{6}$, which occurs at $-1$.
 \end{itemize}
 
 \end{example}
@@ -225,11 +237,11 @@ It appears that $8$ would have been the global maximum of $T$, however, the poin
 
 \textit{Local Explanations} \\
 
-Let $0 < \epsilon = 0.5$.  $B(-8) \leq B(w)$ for all $w$ in the domain within a distance of $0.5$ of $-8$, which would be the interval $[-8, -7.5)$.
+Let $0 < \epsilon = \answer{0.5}$.  $B(-8) \leq B(w)$ for all $w$ in the domain within a distance of $0.5$ of $-8$, which would be the interval $[-8, -7.5)$.
 
-Let $0 < \epsilon = 0.4$.  $B(3) \leq B(w)$ for all $w$ in the domain within a distance of $0.4$ of $3$, which would be the interval $(3.4, 2.6)$.
+Let $0 < \epsilon = \answer{0.4}$.  $B(3) \leq B(w)$ for all $w$ in the domain within a distance of $0.4$ of $3$, which would be the interval $(3.4, 2.6)$.
 
-Let $0 < \epsilon = 0.3$.  $B(w) \leq B(-1)$ for all $w$ in the domain within a distance of $0.3$ of $-1$, which would be the interval $(-1.3, -0.7)$.
+Let $0 < \epsilon = \answer{0.3}$.  $B(w) \leq B(-1)$ for all $w$ in the domain within a distance of $0.3$ of $-1$, which would be the interval $(-1.3, -0.7)$.
 
 
 
