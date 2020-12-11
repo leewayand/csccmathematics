@@ -13,7 +13,7 @@ even and odd
 
 
 
-One of the benefits of graphs is that you can see a lot of information simultaneously.  The visual patterns often suggest properties of the functions.  Many times you can see how to move the graph and the graph lands back on itself.  Any time you can do something and it appears that nothing has been done, that is called \textbf{symmetry}.
+One of the benefits of graphs is that you can see a lot of information simultaneously.  The visual patterns often suggest properties of the functions.  Many times you can see how to move the graph so that the graph lands back on itself.  Any time you can do something and it appears that nothing has been done, that is called \textbf{symmetry}.
 
 
 
@@ -29,7 +29,7 @@ A function is an \textbf{even} function if $f(x) = f(-x)$ for all $x$ in the dom
 \end{definition}
 
 
-If you fold the graph along the verticla axis, the graph lands on itself or the graph is a mirror image across the vertical axis.
+If you flip or rotate the graph along the vertical axis, the graph lands on itself - the graph is a mirror image across the vertical axis.
 
 
 
@@ -216,15 +216,13 @@ Sine is an odd function.  The graph of $y= sin(\theta)$ is displayed below.
 
 \begin{definition} \textit{Periodic}
 
-If you shift a periodic function by its wave length, then you get the original function back: $f(\theta + \omega) = f(\theta)$ for all $x$ in the domain, where $\omega$ is the wave length.
+If you shift a periodic function by its wave length (or period), then you get the original function back: $f(\theta + \omega) = f(\theta)$ for all $\theta$ in the domain, where $\omega$ is the wave length.
 
 \end{definition}
 
 
 
-\textit{Sine} and \textit{Cosine} have shift symmetry.  IF you shift them by $2\pi$ radians, then you get back the original functions.
-
-
+\textit{Sine} and \textit{Cosine} have shift symmetry.  If you shift them by $2\pi$ radians, then the graph lands back on itself. YOu cannot tell that the graph has been shifted.
 
 
 
@@ -303,6 +301,76 @@ The graph of $y= sin(\theta + 2\pi)$ is displayed below.
 
 
 
+
+
+
+
+
+
+
+
+
+
+\begin{example} \textit{Even} \\
+
+The graph of $y= sin(\theta + 2\pi)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=3, xmax=10, ymin=-3, xmin=-10,
+                axis lines =center, xlabel={$\theta$}, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-3.7, 3.7), <->] {x};
+        \addplot [draw=penColor, very thick, smooth, domain=(-8.3:8.3), <->] {sin(deg(x)};
+        %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,-3.3)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+This is half of thegraph.  Visualize wht they full graph looks like, then click the arrow.
+
+
+\begin{foldable}
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=3, xmax=10, ymin=-3, xmin=-10,
+                axis lines =center, xlabel={$\theta$}, ylabel=$y$,
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-3.7, 3.7), <->] {x};
+        \addplot [draw=penColor, very thick, smooth, domain=(-8.3:8.3), <->] {sin(deg(x)};
+        %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,-3.3)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{foldable}
+
+\end{example}
 
 
 
