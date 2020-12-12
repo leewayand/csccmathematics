@@ -1,0 +1,67 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Open Sets}
+
+\begin{document}
+
+\begin{abstract}
+always room
+\end{abstract}
+\maketitle
+
+
+
+
+We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  Basically, Precalculus 1 is a study of the real numbers.
+
+This means we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers.
+
+
+\section{Building Blocks}
+
+The subsets we are interested in are collections of two types of basic building blocks.
+
+
+
+
+
+	\begin{image}
+	\begin{tikzpicture}
+		\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-3,2,5},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]     
+
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(-3,0)};
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(5,0)};
+
+          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+        \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
