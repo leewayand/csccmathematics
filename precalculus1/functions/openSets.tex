@@ -14,22 +14,48 @@ always room
 
 
 
-We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  Basically, Precalculus 1 is a study of the real numbers.
 
-This means we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers.
-
-
-\section{Building Blocks}
-
-The subsets we are interested in are collections of two types of basic building blocks.
+Why do we call $(1, 5)$ an \textbf{open interval} on the real line or in the real numbers?
 
 
 
+The reason is that each point in the interval feels like it is out in the open - that there is room around it.  It may be a very small surrounding space around it, but room none-the-less.  
 
 
-	\begin{image}
-	\begin{tikzpicture}
-		\begin{axis}[
+We extend this idea that there is always room "around" each point to \textbf{open sets in $\mathbb{R}$}.
+
+
+
+
+
+
+\section{Open Sets in $\mathbb{R}$}
+
+In an open set in $\mathbb{R}$, each point has room on either side.  
+
+
+
+
+\begin{definition}   \textit{Open Set in $\mathbb{R}$} \\
+
+$S \subset \mathbb{R}$ is an \textbf{open set in $\mathbb{R}$} provided 
+
+\[
+\text{For each } s \in S, \text{ there exists an } \epsilon > 0 \text{ such that }  (s - \epsilon, s + \epsilon) \subset S
+\]
+
+\end{definition}
+
+
+\begin{example}  \textit{Open Intervals in $\mathbb{R}$}
+
+
+The interval $(4,7)$ is an open set in $\mathbb{R}$.
+
+
+\begin{image}
+  \begin{tikzpicture}
+  \begin{axis}[
             %xmin=-25,xmax=25,ymin=-25,ymax=25,
             %width=3in,
             clip=false,
@@ -37,23 +63,159 @@ The subsets we are interested in are collections of two types of basic building 
             %ticks=none,
             unit vector ratio*=1 1 1,
             ymajorticks=false,
-            xtick={-3,2,5},
+            xtick={-5,4, 7},
             %xlabel=$x$, ylabel=$y$,
             %every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]     
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
 
-          	\addplot [color=penColor2,only marks,mark=*] coordinates{(-3,0)};
-          	\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
-          	\addplot [color=penColor2,only marks,mark=*] coordinates{(5,0)};
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
-          	\addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
-        \end{axis}
-	\end{tikzpicture}
-	\end{image}
+            \node at (axis cs:4,0) [penColor2] {$($};
+            \node at (axis cs:7,0) [penColor2] {$)$};
 
+    \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+Reasoning:
+
+Let $c$ be any number in $(4,7)$.  Then the subinterval $\left( c - \frac{4+c}{2}, c + \frac{7+c}{2} \right)$ will always be inside $(4,7)$.
+
+Therefore, for each $c \in (4, 7)$, there exists an open interval inside $(4,7)$, which contains $c$.
+
+Since this is true for all of the numbers in $(4,7)$, then interval is an open set in $\mathbb{R}$.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example}  
+
+
+
+The interval $(4,7]$ is not an open set in $\mathbb{R}$.
+
+
+\begin{image}
+  \begin{tikzpicture}
+  \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$($};
+            \node at (axis cs:7,0) [penColor2] {$]$};
+
+    \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{Reasoning:}} \\
+
+Consider the number $7$.  Any open interval around $7$ would look like $(7 - \epsilon, 7 + \delta)$, with both $\epsilon > 0$  and $\delta > 0$.  However, there is always a real number in the interval $(7, 7 + \delta)$, like $7 + \frac{\delta}{2}$.
+
+Therefore, no matter which open interval you choose around $7$, it will always containing a number outside $(4, 7]$.
+
+$(4, 7]$  is not an open set in $\mathbb{R}$.
+
+
+\end{example}
+
+$\blacktriangleright$ Open intervals cannot contain their endpoints. \\
+
+
+
+
+
+\begin{example}  \textit{Unions of Open Intervals} \\
+
+
+Any union of open intervals is itself an open set.
+
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{Reasoning:}} \\
+
+
+
+
+Let $S$ be a union of open intervals.  \\
+Let $c \in S$. \\
+Then $c$ is in one of the one intervals. \\
+Then there exists an $\epsilon > 0$, such that $(c - \epsilon, c + \epsilon)$ is a subset of this one interval.  This interval is a subset of $S$.  Therefore, $(c - \epsilon, c + \epsilon) \subset S$. \\
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  \textit{The Empty Set} \\
+
+
+The \textbf{empty set}, $\emptyset$, is the set with no element.  The empty set is a subset of the real numbers.  It is the subset containing no real numbers. \\
+
+
+$\emptyset$ is an open set. \\
+
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{Reasoning:}} \\
+
+
+
+The reasoning is sort of reverse thinking.  If $\emptyset$ is not open, then it MUST contain a number, such that there is no tiny open interval around it.  There is no such number.  Therefore, $\emptyset$ is an open set.
+
+
+
+
+
+
+\end{example}
+
+$\blacktriangleright$ These types of statements are oftern said to be \textbf{vacuously true}.  They are true, because the contain nothing that violates the definition - because they don't contain anything at all. 
 
 
 
