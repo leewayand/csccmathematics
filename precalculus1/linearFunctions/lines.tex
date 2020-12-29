@@ -14,7 +14,7 @@ constant slope
 
 Linear functions are those functions with a constant growth rate or rate-of-change.  If you select any two distinct numbers from the domain of a linear function and calculate the rate-of-change, you will get the same number, no matter which two domain numbers you select.
 
-Suppose $L$ is a linear function and $a \ne b$ are two numbers in the domain of $L$. Then, 
+$\blacktriangleright$ Suppose $L$ is a linear function and $a \ne b$ are two numbers in the domain of $L$. Then, 
 
 \[    \frac{L(b) - L(a)}{b - a} = m   \]
 
@@ -22,6 +22,7 @@ for some constant $m$.
 
 
 No matter which two numbers you select from the domain of $L$, the rate-of-change always turns out to be $m$.  Each linear function has its own constant rate-of-change.
+
 
 
 
@@ -53,15 +54,15 @@ Let $L$ be a linear function.  That means it has is own constant rate-of-chnage.
 Let $(a, b)$ be one specific point in the domain of $L$.\\
 
 
-Let $(x, y)$ represent any other pair in the funciton $L$. Then the rate-of-change from $(a,b)$ to $(x, y)$ has to equal $m$.
+Let $(x, y)$ represent any other pair in the function $L$. Then the rate-of-change from $(a,b)$ to $(x, y)$ has to equal $m$.
 
 
-\[  \frac{y - b}{y-a} = m \]
+\[  \frac{y - \answer{b}}{x-\answer{a}} = m \]
 
-However, since $(a, b)$ is a pair in $L$, we know that $b = L(a)$.  And, since $(x, y)$ is a pair in $L$, we know that $y = L(x)$.  Repacing these in the equation for constant slope gives
+Since $(a, b)$ is a pair in $L$, we know that $b = L(a)$.  And, since $(x, y)$ is a pair in $L$, we know that $y = L(x)$.  Replacing these in the equation for constant slope gives
 
 
-\[  \frac{L(x) - L(a)}{y-a} = m \]
+\[  \frac{L(x) - L(a)}{x-a} = m \]
 
 Solving this for $L(x)$ gives
 
@@ -69,7 +70,7 @@ Solving this for $L(x)$ gives
 
 
 
-
+\textbf{Note:} In advanced mathematics, a similar idea called \textit{linear maps} are required to include the pair $(0,0)$.  This would result in $L(0) = 0$  We will not require this for Calculus.
 
 
 
@@ -82,7 +83,7 @@ Suppose $W$ is a linear function with constant rate-of-change equal to $5$ and $
 Then the template: $L(x) = m (x-a) + L(a)$ tell us that a formula for $W$ is 
 
 
-\[  W(x) = 5 (x-3) + (-1)     \]
+\[  W(x) = 5 (x-3) + (\answer{-1})     \]
 
 
 \[  W(x) = 5 (x-3) - 1     \]
@@ -90,7 +91,7 @@ Then the template: $L(x) = m (x-a) + L(a)$ tell us that a formula for $W$ is
 We could multiply this out and collect like terms and obtain the equivalent equation
 
 
-\[  W(x) = 5x - 16   \]
+\[  W(x) = \answer{5}x - \answer{16}   \]
 
 
 Perhaps, we do not like $x$ as the variable for our formula.  Perhaps $v$ suits our situation better.
@@ -116,7 +117,7 @@ Then the template: $L(x) = m (x-a) + L(a)$ will need a rate-of-change
 
 
 
-\[  m = frac{-5 - 6}{-2 - 0} = \frac{-11}{-2} = \frac{11}{2}  \]
+\[  m = \frac{-5 - 6}{\answer{-2} - \answer{0}} = \frac{-11}{-2} = \frac{11}{2}  \]
 
 A formula for $g$ is
 
@@ -163,7 +164,10 @@ Below is the graph of $y=g(k)$.
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$k$, ylabel=$y$,
+            	axis lines =center, xlabel=$k$, ylabel=$y$, grid = major,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -203,7 +207,10 @@ Let $B(t)$ be a linear function.    Below is the graph of $y = B(t)$.
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$t$, ylabel=$y$,
+            	axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
