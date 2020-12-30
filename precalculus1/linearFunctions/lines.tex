@@ -12,7 +12,7 @@ constant slope
 \maketitle
 
 
-Linear functions are those functions with a constant growth rate or rate-of-change.  If you select any two distinct numbers from the domain of a linear function and calculate the rate-of-change, you will get the same number, no matter which two domain numbers you select.
+Linear functions are those functions with a constant growth rate or rate of change.  If you select any two distinct numbers from the domain of a linear function and calculate the rate of change over the associated interval, then you will get the same number - no matter which two domain numbers you select.
 
 $\blacktriangleright$ Suppose $L$ is a linear function and $a \ne b$ are two numbers in the domain of $L$. Then, 
 
@@ -21,12 +21,12 @@ $\blacktriangleright$ Suppose $L$ is a linear function and $a \ne b$ are two num
 for some constant $m$.
 
 
-No matter which two numbers you select from the domain of $L$, the rate-of-change always turns out to be $m$.  Each linear function has its own constant rate-of-change.
+No matter which two numbers you select from the domain of $L$, the rate of change always turns out to be $m$.  Each linear function has its own constant rate of change.
 
 
 
 
-\begin{example} \textit{Constant Rate-of-Change}
+\begin{example} \textit{Constant Rate of Change}
 
 
 Suppose $f$ is a function, which contains the pairs $(3, 7)$, $(5, 17)$, and $(6, 23)$.
@@ -49,12 +49,12 @@ $f$ is a linear function.
 
 \section{A Formula}
 
-Let $L$ be a linear function.  That means it has is own constant rate-of-chnage.  Let's call it $m$. \\
+Let $L$ be a linear function.  That means it has is own constant rate of change.  Let's call it $m$. \\
 
 Let $(a, b)$ be one specific point in the domain of $L$.\\
 
 
-Let $(x, y)$ represent any other pair in the function $L$. Then the rate-of-change from $(a,b)$ to $(x, y)$ has to equal $m$.
+Let $(x, y)$ represent any other pair in the function $L$. Then the rrate of change from $(a,b)$ to $(x, y)$ has to equal $m$.
 
 
 \[  \frac{y - \answer{b}}{x-\answer{a}} = m \]
@@ -78,7 +78,7 @@ Solving this for $L(x)$ gives
 \begin{example} \textit{A pair and a rate-of-change}
 
 
-Suppose $W$ is a linear function with constant rate-of-change equal to $5$ and $(3, -1)$ is one pair in $W$.
+Suppose $W$ is a linear function with constant rate of change equal to $5$ and $(3, -1)$ is one pair in $W$.
 
 Then the template: $L(x) = m (x-a) + L(a)$ tell us that a formula for $W$ is 
 
@@ -113,7 +113,7 @@ Perhaps, we do not like $x$ as the variable for our formula.  Perhaps $v$ suits 
 
 Suppose $g$ is a linear function with $(0, 6)$ and $(-2, -5)$ as two pairs in $W$.
 
-Then the template: $L(x) = m (x-a) + L(a)$ will need a rate-of-change
+Then the template: $L(x) = m (x-a) + L(a)$ will need a rrate of change
 
 
 
@@ -254,6 +254,175 @@ This would give the formula $B(t) = 1.5 (t - 0) - 5 = 1.5 t - 5$
 
 
 
+
+\section{Linear Equations}
+
+
+\begin{definition}
+
+
+A \textbf{linear equation} in $x_1$ and $x_2$ is an equation that is equivalent to 
+
+\[
+a x_1 + b x_2 + c = 0
+\]
+
+
+$x_1$ and $x_2$ are the \textbf{variables}.
+
+$a$, $b$, $c$ are constants called \textbf{coefficients}.
+
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+\begin{definition}
+
+
+A \textbf{solution} to the linear equation  $a x_1 + b x_2 + c = 0$ is an ordered pair of numbers that \textbf{satisfy} the equation.
+
+One of the solution numbers is deignated for $x_1$ and one is designated for $x_2$.  Upon substituting these numbers into the equation for $x_1$ and $x_2$, the resulting statement is a true statement, i.e. the equation is satisfied.
+
+
+
+
+
+
+\end{definition}
+
+
+
+We often write solution pairs as an ordered pair: $(a, b)$.
+
+
+To do so, we first have to choose which variable values will be written in the first or left slot and which wil be written in the second or right slot.
+
+
+With this decision made, each solution pair can be interpreted as coordinates for a point on the Cartesian plane and plotted as a dot.
+
+
+
+
+\begin{example}
+
+
+
+
+
+
+Consider the linear equation  $3 x + 2 y = 12$.
+
+
+Let's select $x$ to be the first variable and $y$ the second variable.
+
+With this agreement, $(4, 0)$ is a solution to the equation.   $(4,0)$ can be viewed as a point and poltted as a dot.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-3:8),<->] {(3/2)*x-5};
+
+         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,0)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+If we plot a dot for each and every solution pair for the equation, then we obtain the graph of the equation.  
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-2:8),<->] {(-1.5)*(x-4)};
+
+         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,0)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The graph of a linear eqaution is a line, which can be drawn using only two points - two solution pairs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{example}
+Except for vertical lines, lines are graphs of functions.
+
+
+If we interpret the first or left variable as the domain variable and the second or right variable as the function, then linear equations describe linear functions.  We can solve the equation for the function variable to obtain a formula.
+
+
+
+In the example above, $3 x + 2 y = 12$ can be rewritten as $y = \tfrac{-3}{2} x + 6$.
+
+To emphasize that we are now thinking in terms of functions, we might write $y(x) = \tfrac{-3}{2} x + 6$.
+
+
+
+
+We could just as easily have chosen $y$ as the domain variable and $x$ as the function variable.  In this case, $3 x + 2 y = 12$ can be rewritten as $x = \tfrac{-2}{3} y + 4$.  We might write this as $x(y) = \tfrac{-2}{3} y + 4$
+
+
+
+
+In either case, the function formula matches the "$y = m x + b$" template.  $m$ is the slope of the line as well as the rate of change of the function.
 
 
 

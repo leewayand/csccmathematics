@@ -13,16 +13,19 @@ constant
 
 
 
-Linear functions have a constant growth rate or rate-of-change and this has the same value as the slope of the function's graph, which is a line.
+Linear functions have a constant growth rate or rate of change and this has the same value as the slope of the function's graph, which is a line.
 
 
-Let $f(x)$ be a linear function.  Then, $f(x)$ has a formulas of the form $f(x) = m(x-a) + f(a)$.  $m$ is called the rate-of-change of $f(x)$.
 
-Suppose we have a Cartesian Plane displaying the graph of $f(x)$ with the vertical axis, $y$, representing $f(x)$.  Then we have $y = f(x)$, which gives us $y = m(x-a) + f(a)$, which is the equation for the plotted curve - a line.
+Let $f(x)$ be a linear function.  Then, $f(x)$ has a formula of the form $f(x) = m(x-a) + f(a)$.  $m$ is called the rate-of-change of $f(x)$.
+
+
+Suppose we have a Cartesian Plane displaying the graph of $f(x)$ with the vertical axis, $y$, representing $f(x)$.  Then we have $y = f(x)$, which gives us $y = m(x-a) + f(a)$, which is a linear equation, which is the equation for the plotted curve - a line.
 
 \begin{itemize}
-\item We have an algebraic object - the function $f(x)$. 
-\item We have a geometric object - the line. 
+\item We have an algebraic object - the equation, which describes the pairs or points. 
+\item We have a geometric object - the line, which is a collection of points. 
+\item We have an algebraic object - the function $f(x)$, which collects all of the pieces in a single package. 
 \end{itemize}
 
 
@@ -37,7 +40,7 @@ This algebraic - geometric connection connects many algebraic characteristics wi
 
 \section{Parallel}
 
-\textbf{Parallel lines} are lines with the same slope.  They are graphs of linear functions with the same rate-of-change.
+\textbf{Parallel lines} are lines with the same slope.  They are graphs of linear functions with the same rate of change.
 
 
 Let $f(x) = \frac{1}{2} x - 4$ and $g(x) = \frac{1}{2} x + 1$.
@@ -52,7 +55,10 @@ Below are the graphs of $y = f(x)$ and $y = g(x)$.
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -71,12 +77,12 @@ Below are the graphs of $y = f(x)$ and $y = g(x)$.
 
 
 
-If two linear functions have the same rate-of-change, then they must differ by only a constant. 
+If two linear functions have the same rate of change, then they must differ by only a constant. 
 
 
-$f(x) - g(x) = -5$ or $f(x) = g(x) - 5$. \\
+In the example above, $f(x) - g(x) = -5$ or $f(x) = g(x) - 5$. \\
 
-Graphically, this means if the top line is shifted down $5$ units, then the lines will be the same line.
+Graphically, this means that either line can be shifted vertically by $5$ units to land on the other.
 
 
 
@@ -89,27 +95,37 @@ Graphically, this means if the top line is shifted down $5$ units, then the line
 
 \section{Perpendicular}
 
-\textbf{Prependicular lines} are lines that form a right angle.   Let's see what that looks like.
+\textbf{Prependicular lines} are lines that form a right angle.   
 
 
-
+Below are the graphs of two lines, $L_1$ and $L_2$, whch intersect at the point $(a,b)$.
 
 
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	axis lines =center, xlabel=$x$, ylabel=$y$, 
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
           		]
 
         
+
+        \addplot [draw=black, thin, smooth, domain=(3:3.5)] {-x+6};
+        \addplot [draw=black, thin, smooth, domain=(2.5:3)] {x};
+
         \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {x-1};
         \addplot [draw=penColor, very thick, smooth, domain=(-5:8),<->] {-x+5};
         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
         \node at (axis cs:3.2,2) [anchor=west] {$(a, b)$};
+
+        \node at (axis cs:-5,7) [anchor=west] {$L_1$};
+        \node at (axis cs:-7,-5) [anchor=west] {$L_2$};
 
 
 
@@ -120,11 +136,16 @@ Graphically, this means if the top line is shifted down $5$ units, then the line
 
 
 
-The equation of one line would be $y = m(x-a) + b$ and the other would have the equation $y = n(x-a) + b$, where $m$ and $n$ are their respective slopes.
+The equation of line $L_1$ would be $y = m(x-a) + b$ and $L_2$ would have the equation $y = n(x-a) + b$, where $m$ and $n$ are their respective slopes.
 
 Let's select another point on each line.
 
+Each line has a point where $x = a + 1$.
 
+
+$\blacktriangleright$  For $L_1$, the y-coordinate would be $y = \answer{m+b}$ \\
+
+$\blacktriangleright$  For $L_2$, the y-coordinate would be $y = \answer{n+b}$
 
 
 
@@ -135,7 +156,10 @@ Let's select another point on each line.
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	axis lines =center, xlabel=$x$, ylabel=$y$, 
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -153,6 +177,9 @@ Let's select another point on each line.
         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,1)};
         \node at (axis cs:0.5,-2) [anchor=west] {$(a+1, n+b)$};
 
+        \node at (axis cs:-5,7) [anchor=west] {$L_1$};
+        \node at (axis cs:-7,-5) [anchor=west] {$L_2$};
+
 
 
 
@@ -164,9 +191,9 @@ Let's select another point on each line.
 Since we have a right angle, these the points are corners of a right triangle.  Therefore, the lengths have to satisfy the Pythagorean Theorem.  The lengths are
 
 \begin{itemize}
-\item $\sqrt{(a + 1 - a)^2 + (n + b) - b)^2} = \sqrt{(1 + n^2}$
-\item $\sqrt{(a + 1 - a)^2 + (m + b) - b)^2} = \sqrt{(1 + m^2}$
-\item $m-n$
+\item side : $\sqrt{(a + 1 - a)^2 + (n + b) - b)^2} = \sqrt{\answer{1 + n^2}}$
+\item side : $\sqrt{(a + 1 - a)^2 + (m + b) - b)^2} = \sqrt{\answer{1 + m^2}}$
+\item hypotenuse : $\answer{m-n}$
 \end{itemize}
 
 
@@ -175,10 +202,10 @@ The Pythagorean Theorem gives us
 
 
 \begin{align*}
-(\sqrt{1 + n^2})^2 + (\sqrt{1 + m^2})^2 & = (\sqrt{(m-n)})^2 \\
+\left(\sqrt{1 + n^2}\right)^2 + \left(\sqrt{1 + m^2}\right)^2 & = \left(\sqrt{(m-n)}\right)^2 \\
 1 + n^2 + 1 + m^2 & = m^2 - 2 m n + n^2  \\
 2 & = -2 m n \\
-1 & = -m n
+1 & = -m n \\
 \frac{1}{-m} & = n
 \end{align*}
 
@@ -205,11 +232,30 @@ The slopes are negative reciprocals of each other.
 \section{Intercepts}
 
 
-ALmost every line intercepts both the horizontal and vertical axes.  These points are called the \textbf{intercepts} of the line.  
+Almost every line intercepts both the horizontal and vertical axes.  These points are called the \textbf{intercepts} of the line.  
 
-The horizontal intercept looks like $(a, 0)$, which means $f(a)=0$ and $a$ is the zero of the corresponding linear function $f(x) = m (x-a)$.
+The horizontal intercept looks like $(a, 0)$, which means $f(a)=0$ and $a$ is the zero of the corresponding linear function $f(x) = m (x-a)$.   $(x - a)$ is a factor of the formula.
 
-The vertical intercept looks like $(0, b)$, where $f(x) = m(x-x_0)+b$.
+
+
+The trio 
+
+\begin{itemize}
+\item horizontal intercepts
+\item factors
+\item zeros
+\end{itemize}
+
+all represent the same idea. \\
+
+
+
+The vertical intercept looks like $(0, b)$, where $f(x) = m(x-0)+b = m x + b$.  This is not as valuable as the horizontal intercepts, which correspond to zeros and factors. \\
+
+
+
+
+
 
 
 
@@ -222,13 +268,22 @@ Horizontal lines have equations of the form $y = y_0$, where the $y$ is the name
 
 
 
-\begin{example}
+\begin{example} Horizontal Line
+
+
+
+
+
+The equation of this line is $w=3$.  
 
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	axis lines =center, xlabel=$y$, ylabel=$w$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -246,11 +301,11 @@ Horizontal lines have equations of the form $y = y_0$, where the $y$ is the name
 \end{tikzpicture}
 \end{image}
 
-The equation of this line is $y=3$.  Every point on this line is of the form $(x, 3)$. It is the graph of the constant function $f(x)=3$.
+Every point on this line is of the form $(t_0, \answer{3})$. It is the graph of the constant function $f(t)=3$.
 
 
 \end{example}
-
+HOrizontal lines are graphs of constant functions.  Constant functions are linear functions with a growth rate of $0$. \\
 
 
 
@@ -264,19 +319,27 @@ The equation of this line is $y=3$.  Every point on this line is of the form $(x
 
 
 \textbf{Vertical Lines} \\
+
+
 Vertical lines have equations of the form $x = x_0$, where the $x$ is the name of the horizontal axis. You can view this equation as $x = 0 \cdot y + x_0$ to see that every point on this line is of the form $(x_0,y)$, making it vertical.
 
 
 
 
 
-\begin{example}
+\begin{example} Vertical Line
+
+
+The equation of this line is $h=4$. 
 
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	axis lines =center, xlabel=$h$, ylabel=$g$, 
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -294,10 +357,12 @@ Vertical lines have equations of the form $x = x_0$, where the $x$ is the name o
 \end{tikzpicture}
 \end{image}
 
-The equation of this line is $x=4$.  Every point on this line is of the form $(4, y)$. This graph corresponds to no linear function, because the single domain number $4$ is paired with more than one codomain number.
+Every point on this line is of the form $(\answer{4}, h_0)$. This graph corresponds to no linear function, because the single domain number $4$ is paired with more than one codomain number.
 
 
 \end{example}
+
+Every line is the graph of a linear function, except vertical lines. \\
 
 
 
@@ -331,7 +396,28 @@ The equation of this line is $x=4$.  Every point on this line is of the form $(4
 \section{Product Form}
 
 
-We have $f(x) = m(x-a) + f(a)$, which is a sum and highlights the vertical intercept. However, with functions we are more interested in their \textbf{zeros}.  Zeros of a function are domain numbers where the function's value is $0$. These much easier to identify if we wil write the formula for the function as a product.
+We have many forms for writing linear equations and formlas for linear functions.
+
+
+
+$\blacktriangleright$ Point-Slope Form
+
+Given a point on a line, $(a, f(a))$, and the slope, $m$, we can write the formula as $f(x) = m(x-a) + f(a)$. This emphasizes the behavior around $a$.
+
+
+
+$\blacktriangleright$ Slope-Intercept Form
+
+If we choose our point to by the intercept $(0, b)$, then the point-slope form looks like $f(x) = m x + f(0)$ or $f(x) = m x + b$.
+
+
+
+These are sums.
+
+
+However, our interest focuses on zeros of the function, which we would like to correspond to factors in our formulas.  We can take our sum and transform it into a product.
+
+
 
 
 \begin{align*}
@@ -342,13 +428,32 @@ f(x) & = m(x-a) + f(a) \\
 
 
 
-$f$ has one zero.  It is $a - \frac{f(a)}{m}$.  It is visually encoded as the horizontal intercept, $\left(a - \frac{f(a)}{m}, 0\right)$.
+Since $f$ is linear, $f$ has one zero.  It is $a - \frac{f(a)}{m}$.  It is visually encoded as the horizontal intercept, $\left(a - \frac{f(a)}{m}, 0\right)$.
+
+
+This zero will always exist as long as $m \ne 0$.
+
+
+
+\begin{example}  Factored Form
+
+
+
+Let $K(t) = 3t - 15$.
+
+
+$5$ is the only root of $L$.  We can rewrite this formula in factored form knowing that $t-5$ has to be a factor.
+
+
+$K(t) = 3(t - 5)$.
 
 
 
 
 
+\end{example}
 
+Since $5$ is the only root of $K(t)$, we know that $(5, 0)$ is the only $t$-intercept of the corresponding line.  In either form, the coefficient of $t$ is $3$, the rate of change of $K$ and the slope of the line.
 
 
 
