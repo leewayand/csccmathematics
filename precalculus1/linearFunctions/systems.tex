@@ -25,7 +25,7 @@ We would also like to compare functions.  For instance, what pairs they have in 
 
 \section{Intersections}
 
-Given two linear functions (1) do they share any pairs?; (2) what are the common pairs?
+Given two linear functions (1) do they share any pairs?, (2) what are the common pairs?
 
 
 
@@ -40,7 +40,10 @@ Two lines can interesect in exactly one point.
 \begin{tikzpicture}
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            	axis lines =center, xlabel=$x$, ylabel=$y$,
+            	axis lines =center, xlabel=$x$, ylabel=$y$, 
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -58,7 +61,7 @@ Two lines can interesect in exactly one point.
 
 \end{example}
 
-One point of intersection is probably theusual expectation.
+One point of intersection is probably the usual expectation.
 
 
 
@@ -80,13 +83,16 @@ Parallel lines would not intersect.
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
                 ]
 
         
-        \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {-x-3};
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:6),<->] {-x-3};
         \addplot [draw=penColor, very thick, smooth, domain=(-6:8),<->] {-x+3};
 
         %\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(16/3,-4/3)};
@@ -97,7 +103,7 @@ Parallel lines would not intersect.
 \end{tikzpicture}
 \end{image}
 
-Distinct linear functions with the same rate-of-chage cannot share any pairs.
+Distinct linear functions with the same rate of chage cannot share any pairs.
 
 \end{example}
 
@@ -112,12 +118,15 @@ Distinct linear functions with the same rate-of-chage cannot share any pairs.
 
 \begin{example} Everywhere 
 
-Two lines that were in fact the same line, would intersect at every point, becasue they are the same line.
+Two lines that were in fact the same line, would intersect at every point, because they are the same line.
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
@@ -134,7 +143,7 @@ Two lines that were in fact the same line, would intersect at every point, becas
 
 While this is completely obvious when examining graphs, it might not be so obvious during an algebraic investigation.
 
-It might be immediate clear that $L(k) = \frac{4}{3}k - \frac{8}{5}$ and $p(h) = \frac{4(5h-6)}{15}$ are in fact the same linear function and share every pair.
+It might not be immediate clear that $L(k) = \frac{4}{3}k - \frac{8}{5}$ and $p(h) = \frac{4(5h-6)}{15}$ are in fact the same linear function and share every pair.
 
 \end{example}
 
@@ -159,10 +168,21 @@ Graphing and geometry are excellent tools for believing, but when you need an ar
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 \begin{explanation} Proof 
 
 
-Let $f(x) = m_1 x + b_1$ and $g(x) = m_2 x + b_2$ be two linear functions with domain $(-\infty, \infty)$. \\
+Let $f(x) = m_1 \, x + b_1$ and $g(x) = m_2 \, x + b_2$ be two linear functions with domains $(-\infty, \infty)$. \\
 Suppose they share a pair. Let's call it $(T, R)$.
 
 Then we have 
@@ -174,37 +194,37 @@ Then we have
 
 If they share this pair, then $f(T) = g(T)$, which gives us
 
-\[     m_1 T + b_1 =  m_2 T + b_2  \]
+\[     m_1 \, T + b_1 =  m_2 \, T + b_2  \]
 
 
-What are all of the possibilities?
+What are all of the possibilities?  For EVERY possibility, either $m_1 \ne m_2$ or $m_1 = m_2$.  These two "cases" account for EVRYTHING.
 
 
-\text{case 1:}  $m_1 \ne m_2$ \\
+\textbf{case 1:}  $m_1 \ne m_2$ \\
 
-If the rates-of-change are different then we can solve for $T$.
+If the rates of change are different then  $m_1 - m_2 \ne 0$.  We can divide by $m_1 - m_2$, which allows us to solve for $T$.
 
-\[     m_1 T - m_2 T =  b_2 -b_1 \]
+\[     m_1 \, T - m_2 \, T =  b_2 -b_1 \]
 
 
 \[     T =  \frac{b_2 -b_1}{m_1 - m_2}  \]
 
-This fraction is valid since the denominator does nto eqaual $0$.  Therefore, $T$ has one value.  We can one pair in commone.  We have one point of intersection for the corresponding lines.
+This fraction is valid since the denominator does not eqaual $0$.  Therefore, $T$ has one value.  $f$ and $g$ have exactly one pair in commone.  The corresponding lines have one point of intersection.
 
 
 
-\text{case 2:}  $m_1 = m_2$ \\
-
-What are all of the possibilities?
-
-So, we have $m_1 = m_2$.  Setting $f(T) = g(T)$ gives us 
+\textbf{case 2:}  $m_1 = m_2$ \\
 
 
 
-\[     m_1 T - m_1 T =  b_2 - b_1 \]
+etting $f(T) = g(T)$ gives us 
 
 
-\[     0 T =  b_2 - b_1 \]
+
+\[     m_1 \, T - m_1 \, T =  b_2 - b_1 \]
+
+
+\[     0 \, T =  b_2 - b_1 \]
 
 
 What values of $T$ make this true?
@@ -213,7 +233,7 @@ What values of $T$ make this true?
 \begin{itemize}
 \item If $b_2 \ne b_1$, then no value of $T$ will make the equation true.  We have parallel lines with no intersection.
 
-\item If $b_2 = b_1$, then we have $0 T =  0$ and every value of $T$ will make the equation true.  In this case, we have $m_1 = m_2$ and $b_1 = b_2$.  We have the same function and the same line.
+\item If $b_2 = b_1$, then we have $0 \, T =  0$ and every value of $T$ will make the equation true.  In this case, we have $m_1 = m_2$ and $b_1 = b_2$.  We have the same function and the same line.
 \end{itemize}
 
 
@@ -239,6 +259,17 @@ And, that is ALL of the possibilities.  That is a proof.
 \end{explanation}
 
 
+As a consequence, if you know you have two linear functions and you know they share two points, then they must share all of their points and they must be the same function.   
+
+This is why we only need two points to draw a line.
+
+
+
+
+
+
+
+
 
 
 
@@ -249,11 +280,26 @@ And, that is ALL of the possibilities.  That is a proof.
 
 \section{Systems of Linear Equations}
 
-The thinking above is part of a larger idea in which there are multiple equations and you are looking for a common solution - a solution they share.
+The thinking above is part of a larger idea.
 
-A group of equations is commonly called a \textbf{system}. They are commonly written together with the equal signs aligned.
 
-The system might include two equations with two variables.
+While we are currently considering two variables, a linear equation can have any number of variables.
+
+
+\[
+a_n \, x_n + a_{n-1} \, x_{n-1} + \cdots + a_2 \, x_2 + a_1 \, x_1 + a_0 = 0
+\]
+
+
+We might collect some linear equations and group them together. This collection is called a \textbf{system of linear equations}. And, as above, we might lok for common solutions.  The process of looking for common solutions is called \textit{solving the system}.
+
+
+
+
+
+Systems are commonly written together with the equal signs aligned.
+
+For example, the system might include two equations with two variables.
 
 \begin{align*}
 2x & = 3y + 5 \\
@@ -262,7 +308,7 @@ The system might include two equations with two variables.
 
 
 
-The system might include two equations with three variables.
+For example, the system might include two equations with three variables.
 
 \begin{align*}
 2x & = 3y - 3z + 5 \\
@@ -272,7 +318,7 @@ The system might include two equations with three variables.
 
 
 
-The system might include three equations with three variables.
+For example, the system might include three equations with three variables.
 
 \begin{align*}
 2x & = 3y - 3z + 5 \\
@@ -281,9 +327,9 @@ x & = y - z + 2
 \end{align*}
 
 
-A systemn of linear equations can have any number of equations with any number of variables.  The study of these types of systems is called \textbf{Linear Algebra}.
+Or, some other combination. A systemn of linear equations can have any number of linear equations with any number of variables.  The study of these types of systems is called \textbf{Linear Algebra}.
 
-For us, solving the system - identifying the common solutions - always uses the same thinking - EQUALS.
+For us, solving the system - identifying the common solutions - always uses the same thinking - EQUALITY.
 
 
 
@@ -305,7 +351,7 @@ You can do the same thing to equal things and get equal things.
 
 
 
-\begin{example} Solve System
+\begin{example} Solving a System
 
 
 Solve the system
@@ -315,7 +361,7 @@ Solve the system
 \end{align*}
 
 
-We have $2x = 3y + 5$, therefore we can multiply both sides by $2$ to get $4x = 6y + 10$
+We have $2x = 3y + 5$, therefore we can multiply both sides by $\answer{2}$ to get $4x = 6y + 10$.  This is an equivalent equation, so we can replace the first equation.
 
 \begin{align*}
 4x & = 6y + 10 \\
@@ -326,9 +372,9 @@ We have $2x = 3y + 5$, therefore we can multiply both sides by $2$ to get $4x = 
 We now have two expressions both equal to $4x$, they must, themselves, be equal.
 
 
-\[   6y + 10 =  7y + 11   \]
+\[   6y + 10 =  \answer{7y + 11}   \]
 
-We can subtract $6y$ from both sides and subtract $11$ from both sides
+We can subtract $6y$ from both sides and subtract $\answer{11}$ from both sides
 
 
 \[   -1 =  y   \]
@@ -343,12 +389,13 @@ We now know that $y=-1$ and we know that $4x = 7y + 11$.  That tell us that
 \[   4x = 4   \]
 
 
-$x = 1$
+\[ x = 1 \]
 
 
 Our common solution to the two original equations is $x = 1$ and $y = -1$.  You you graphed the two lines, then $(1, -1)$ would be the intersection point.
 
 
+\end{example}
 
 
 
@@ -359,9 +406,51 @@ Our common solution to the two original equations is $x = 1$ and $y = -1$.  You 
 
 
 
+
+
+\begin{example} Solving a System
+
+
+Solve the system
+\begin{align*}
+x & = 3y - 1 \\
+4x & = 5y + 3
+\end{align*}
+
+
+We have $x = 3y - 1$, therefore we can replace any $x$ with $3y - 1$.  
+
+\begin{align*}
+x & = 3y - 1 \\
+4(3y - 1) & = 5y + 3
+\end{align*}
+
+
+The second equation tells us that 
+
+
+\[   4(3y - 1) = 5y + 3   \]
+
+\[   12y- 4 = 5y + 3   \]
+
+
+\[ 7y = 7 \]
+
+
+\[ y = 1 \]
+
+
+\[ x = 3y - 1= 3(1) - 1 = 2\]
+
+Our common solution to the two original equations is $x = 2$ and $y = 1$.  You you graphed the two lines, then $(2, 1)$ would be the intersection point.
 
 
 \end{example}
+
+
+
+
+
 
 
 
