@@ -13,176 +13,260 @@ adding rates
 
 
 
-When two quantities vary \textbf{proportionally}, then they are related by a linear function of the form $f(x) = m \, x$.  The ratio of corresponding amounts is a constant: $\frac{f(x)}{x} = m$.   
 
-The graph is a line going through the origin with slope $m$.  This means that the ratio of change is also a constant - the same constant $\frac{\Delta f(x)}{\Delta x} = m$. 
 
-The value of one quantity is always the same multiple of the other quantity. The change in the value of one quantity is always the same multiple as the change in the other quantity.
-
-
-
-
-\begin{example}
-In a simple circuit with a fixed resistor, the flow of current through the resistor, $I$, and the voltage drop across the resistor, $V$, are proportial.
-
-\[   V = R \, I  \]
-
-Here the rate of change is the resistance, $R$.  It is the multiplier.   When the current changes, that change is multiplied by $\answer{R}$ giving the corresponding change in voltage $V$.
-
-
-\end{example}
-
-
-
-
-
-
-
-We can also chain multiple proportions together.
-
-
-
-\begin{example} Chaining Proportions
-
-Water rushes through a turbine, which turns a generator to make electricity. The water posses potential energy, but not all of this energy is transmitted through the turbine.  The turbine has an 86\% efficiency. The energy coming out of the turbine is then processed through the generator at an efficiency of 92\%.
-
-Suppose the generator produces $864 \, gigaJoules$ of energy in the form  of electricity.  What amount of energy did the water originally hold?
-
-
-We have two proportions:
-
-\begin{itemize}
-\item $T = 0.86 W$
-\item $G = 0.92 T$
-\end{itemize} 
-
-Combining these gives 
-\[   G = 0.92 T = 0.92 \cdot 0.86 W   \]
-
-\[   864 \, gigaJoules = 0.92 \cdot 0.86 W    \]
-
-
-\[   1092 \, gigaJoules = W    \]
-
-
-
-The water initially held $1092 \, gigaJoules$ of potential energy.
-
-\end{example}
-
-
-Written in function language, the two proportions would have looked like
-
-\begin{itemize}
-\item $T(W) = 0.86 W$
-\item $G(T) = 0.92 T$
-\end{itemize} 
-
-And, the chaining would have looked like, $G(T(W)) = 0.92 (0.86 W))$.  In the function world, this is known as \textbf{composition}.
-
-
-
-
-
-
-\section{Multiplicative vs Additive thinking}
-
-
-
-
-If the quantities $Q_1$ and $Q_2$ are proportional then there is some constant, $m$, called the \textbf{constant of proportionality}, such that $Q_1 = m \, Q_2$.  To obtain $Q_1$ from $Q_2$, we multiply by $m$. When comparing $Q_1$ and $Q_2$, we examine their quotient, $\frac{Q_1}{Q_2}$, because it should be the same constant.  We call this \textit{mulitplicative thinking}.
-
-
-In contrast are two sistes, Janet and Lisa. Janet is the older sister, by $3$ years. To get Janet's age from Lisa's age, you add $3$.  Their difference is always the same constant.
-
-
-
-
-
-
-$\blacktriangleright$ Linear functions are usually neither mulitplicative nor additive thinking \\
-
-
-
-
-Our template for a linear function formula looks like $L(t) = a \, t + b$. \\
-
-
-
-\begin{itemize}
-
-\item This relates $L$ and $t$ additively when $a = 1$.
-
-\item When $b \ne 0$, then our function does not relate $L$ and $t$ proportionally.  If $b = 0$, then our formula looks like $L(t) = a \, t$ a - a proportion relating $L$ and $t$.
-
-
-\end{itemize}
-
-
-However, we have seen that we can always find an equivalent linear formula that is written as a product.  We can \textit{factor out} the zero.
-
-
-
-
-The zero or root of $L(t) = a \, t + b$ is $\frac{-b}{a}$, which means $\answer{t - \frac{-b}{a}}$ is a factor.
-
-
-
+Suppose you are driving a car at a constant velocity (rate of change) of 20 miles per hour. 20 miles per hour tells us how the miles are changing compared to the change in hours.  Whenever the time changes by 1 hour, the distance travelled changes by 20 miles.
 
 \[
-L(t) = a \, t + b = a \left( t -  \frac{-b}{a} \right) =  a \left( t + \frac{b}{a} \right)
+\text{rate of change} = \text{velocity} = \text{20 miles per hour} = \frac{20 \, miles}{1 \, hour} = \frac{\Delta miles}{\Delta hours}
+\]
+
+
+The graph of velocity would be a horizontal line.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=0, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:8),->] {20};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,20)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+In the velocity story, we know that at any time the car's distance changes by 20 miles every time the time changes by 1 hour.  The reverse of this rate of change story is an accumulation story.
+
+Suppose we let time run for a while, how much total distance does the car travel?
+
+
+
+\section{Accumulation}
+
+
+To get the accumulated distance, we multiply the velocity by the time.
+
+\[
+Distance = Velocity \cdot Time = \frac{\Delta miles}{\Delta hours} \cdot \Delta hours
+\]
+
+
+We can get a geometric interpretation of this in our velocity graph.
+
+
+
+
+In that graph, miles per hour are the vertical units and hours are the horizontal units.  We can represent $\frac{\Delta miles}{\Delta hours} \cdot \Delta hours$ as the area of the rectangle underneath the graph of velocity.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:8),->] {20};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+			\addplot [name path=A,domain=0:3,draw=none] {20};   
+			\addplot [name path=B,domain=0:3,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+			\draw[penColor,thick] (0,10) -- (0,30);
+			\draw[penColor,thick] (30,10) -- (30,30);
+
+			\node at (axis cs:1.5,10) [penColor] {$area$};
+			\node at (axis cs:3,-5) [penColor] {$t$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The area under the graph of $v(t) = 20$ over the interval $(0, t)$ is given by $20 \, t$, which is a linear function.
+
+
+
+
+
+
+The graph of accumulated distance, $D(t) = 20 \, t$ is a line with slope $20$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:4),->] {20*x};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+There is a reverse relationship between rate of change and accumulation.
+
+
+$\blacktriangleright$ The value of $v(t)$ gives the rate of change $D(t)$.
+
+
+$\blacktriangleright$ The value of $D(t)$ gives the area under the graph of $v(t)$, between $0$ and $t$.
+
+
+
+
+
+
+Of course, $v(t) = 50$ is also a linear function. Its rate of change is the constant function $0$.  We can view $v(t)$ as a function with a rate of change or we can view it as the rate of change of some function, $D(t)$. This function, $D(t)$, is given by the area under the graph of $v(t)$.
+
+
+
+We can take this same view of $D(t)$.  That is, $D(t)$ is the rate of change of some function.  That function is the area under the graph of $D(t)$.
+
+
+What is the area under $y = 20 \, t$?
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:4),->] {20*x};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+			\addplot [name path=A,domain=0:3,draw=none] {20*x};   
+			\addplot [name path=B,domain=0:3,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+			\draw[penColor,thick] (0,10) -- (0,30);
+			\draw[penColor,thick] (30,10) -- (30,70);
+
+			\node at (axis cs:1.5,10) [penColor] {$area$};
+			\node at (axis cs:3,-5) [penColor] {$t$};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Geometrically, we can see the area under the graph forms a triangle.
+
+\[
+Area(t) = \frac{1}{2} \, Base \cdot Height = \frac{1}{2}  \, t \cdot (20 \, t) = 10 \, t^2
 \]
 
 
 
-$L$ is proportional to $t -  \frac{-b}{a}$, the change from the zero.
-
-
-For linear functions, the proportionality shows up not with the values of the variables, but in their changes.
 
 
 
 
 
-\section{Rates of Change}
 
 
 
 
-Let $L(x) = a \, x + b$ describe a linear function.   This equation describes the relationship between $L$ and $x$, the range and domain.
 
 
-Let $x_1$ and $x_2$ be two domain numbers.  We use the Greek letter $\Delta$ to represent the change, $\Delta x = x_2 - x_1$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$A$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
 
-
-If $x$ changes by $\Delta x$, then what is the corresponding change in $L$?
-
-
-\begin{itemize}
-\item $L(x_1) = a \, x_1 + b$
-\item $L(x_2) = a \, x_2 + b$
-\end{itemize}
-
-
-\[
-\Delta L = L(x_2) - L(x_1) = a \, x_2 + b - (a \, x_1 + b) = a \, x_2  - a \, x_1  = a \, (x_2  -  \, x_1) = a \, \Delta x
-\]
-
-
-
-\[
-\Delta L =  a \, \Delta x
-\]
-
-
-\[
-\frac{\Delta L}{\Delta x} = a
-\]
+			\addplot [draw=penColor, very thick, smooth, domain=(0:2),->] {20*x^2};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
 
 
 
 
-Some special linear functions describe a proportional relationship between the domain and range.  This all linear functions describe a proportional relationship between the changes in domain and range values. Graphically, this proportion is seen as the slope, while algebraically, we call this proportion the rate of change.
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
 
 
 
