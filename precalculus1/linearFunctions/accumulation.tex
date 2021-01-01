@@ -173,7 +173,7 @@ Of course, $v(t) = 50$ is also a linear function. Its rate of change is the cons
 We can take this same view of $D(t)$.  That is, $D(t)$ is the rate of change of some function.  That function is the area under the graph of $D(t)$.
 
 
-What is the area under $y = 20 \, t$?
+What is the area under $y = D(t) = 20 \, t$?
 
 
 
@@ -225,7 +225,7 @@ What is the area under $y = 20 \, t$?
 Geometrically, we can see the area under the graph forms a triangle.
 
 \[
-Area(t) = \frac{1}{2} \, Base \cdot Height = \frac{1}{2}  \, t \cdot (20 \, t) = 10 \, t^2
+Area(t) = \frac{1}{2} \, Base \cdot Height = \frac{1}{2}  \, \answer{t} \cdot \left(\answer{20 \, t}\right) = 10 \, t^2
 \]
 
 
@@ -278,6 +278,350 @@ Area(t) = \frac{1}{2} \, Base \cdot Height = \frac{1}{2}  \, t \cdot (20 \, t) =
 
 
 
+
+The right half of a parabola.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-4:4, ymax=100, xmax=4, ymin=-10, xmin=-4,
+            axis lines =center, xlabel=$t$, ylabel=$A$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={-4, -2, 0, 2, 4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:2),->] {20*x^2};
+			\addplot [draw=penColor, very thick, dashed, domain=(-2:0),<-] {20*x^2};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Shifting}
+
+
+Suppose the car travelling at 20 mph begins its journey 3 hours late.  When the car begins, our timer already reads 3 hours.
+
+
+
+The graph of velocity would still be a horizontal line, well a ray.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=0, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:8),->] {20};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,20)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The area below the graph stills forms rectangles.  The left side is just at 3 now.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:8),->] {20};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+			\addplot [name path=A,domain=3:5,draw=none] {20};   
+			\addplot [name path=B,domain=3:5,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+			\draw[penColor,thick] (30,10) -- (30,30);
+			\draw[penColor,thick] (50,10) -- (50,30);
+
+			\node at (axis cs:5,-5) [penColor] {$t$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+The area is still $length \cdot height$.
+
+
+
+\begin{itemize}
+\item length = $t - 3$
+\item height = $v(t) = 20$
+	\end{itemize}
+
+
+
+
+\[
+Area = 20(t-3)
+\]
+
+
+
+The area under the velocity graph represents the accumulated distance travelled.
+
+
+
+
+
+
+\[
+D(t) = 20(t-3) \, \text{ for }  \, t \geq 3
+\]
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:7),->] {20*(x-3)};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The area under the graph of $D(t)$ now forms a triangle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:7),->] {20*(x-3)};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+			\addplot [name path=A,domain=3:5,draw=none] {20*(x-3)};   
+			\addplot [name path=B,domain=3:5,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+
+			\draw[penColor,thick] (50,10) -- (50,50);
+
+			\node at (axis cs:5,-5) [penColor] {$t$};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+The area under the graph of $D(t)$ now forms a triangle, with base $t-3$ and height $D(t) = 20(t-3)$.
+
+
+
+We now have a formula for the accumulated area under the graph of $D(t) = 20(t-3)$.
+
+
+\[
+A(t) = \frac{1}{2} (t-3) \cdot 20(t-3) = 20 (t-3)^2   \, \text{ for }  \, t \geq 3
+\]
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$A$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:5),->] {20*(x-3)^2};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Rate of change and accumulation are two directions of the same story.
+
+
+
+There is a reverse relationship between rate of change and accumulation.
+
+
+$\blacktriangleright$ The constant function $20$ gives the rate of change of the linear function $20(t-3)$.
+
+
+$\blacktriangleright$ The linear function $20(t-3)$ is the accumulation function of the constant function $20$.
+
+
+
+
+We have now seen that \\
+
+$\blacktriangleright$ The quadratic function $20(t-3)^2$ is the accumulation function of the linear function $20(t-3)$. \\
+
+
+$\blacktriangleright$ Claim: the linear function $20(t-3)$ gives rate of change of the quadratic function $20(t-3)^2$.
+
+
+
+
+
+Let $A(t) = 20 (t-3)^2$
+
+
+The rate of change of $A(t)$ over the interval $(3, t)$ is given by
+
+
+
+
+\[
+\frac{\Delta A}{\Delta t} = \frac{A(t) - A(3)}{t-3} = \frac{20 (t-3)^2}{t-3} = 20(t-3)
+\]
+
+
+
+
+
+
+
+
+
+
+
+Rate of change and accumulation are two directions of the same story.
 
 
 
