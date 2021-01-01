@@ -32,7 +32,7 @@ Now, pretend this was equal to $0$ in a quadratic equation.
 
 \[ a t^2 + b t + c = 0 \]
 
-\[ a(t + \frac{b}{2 a})^2 + c - \frac{b^2}{4 a^2}  = 0\]
+\[ a\left(t + \frac{b}{2 a}\right)^2 + c - \frac{b^2}{4 a^2}  = 0\]
 
 Solve for $t$.
 
@@ -41,7 +41,29 @@ Solve for $t$.
 
 \[ \left(t + \frac{b}{2 a} \right)^2  = \frac{b^2}{4 a^2} - \frac{c}{a}\]
 
-\[ \left(t + \frac{b}{2 a} \right)^2  = \frac{b^2 - 4 a c}{4 a^2} \]
+\[ \left(t + \frac{b}{2 a} \right)^2  = \frac{\answer{b^2 - 4 a c}}{4 a^2} \]
+
+
+
+Either 
+
+
+\[ t + \frac{b}{2 a}  = \sqrt{\frac{b^2 - 4 a c}{4 a^2}}  = \frac{\sqrt{b^2 - 4 a c}}{| 2a |}   \]
+
+or
+
+
+\[ t + \frac{b}{2 a}  = -\sqrt{\frac{b^2 - 4 a c}{4 a^2}} = -\frac{\sqrt{b^2 - 4 a c}}{| 2a |}    \]
+
+
+
+\begin{itemize}
+\item If $a > 0$, then $| 2a | = 2a$.
+\item If $a < 0$, then $| 2a | = -2a$.
+\end{itemize}
+
+Either way, we still get one negative and one positive fraction.  Therefore, we can drop the absolute value signs.  
+
 
 
 
@@ -56,6 +78,14 @@ or
 \[ t + \frac{b}{2 a}  = -\sqrt{\frac{b^2 - 4 a c}{4 a^2}} = -\frac{\sqrt{b^2 - 4 a c}}{2a}    \]
 
 
+
+
+
+
+
+
+
+
 And, finally \\
 
 
@@ -63,7 +93,7 @@ And, finally \\
 Either 
 
 
-\[ t   = - \frac{b}{2 a} + \frac{\sqrt{b^2 - 4 a c}}{2a}  = \frac{-b + \sqrt{b^2 - 4 a c}}{2a}      \]
+\[ t   = - \frac{b}{2 a} + \frac{\sqrt{b^2 - 4 a c}}{2a}  = \frac{\answer{-b} + \sqrt{b^2 - 4 a c}}{2a}      \]
 
 or
 
@@ -104,9 +134,9 @@ Apply the Quadratic Formula
 
 \[   t = \frac{4 \pm \sqrt{16 + 128}}{8}            \]
 
-\[   t = \frac{4 \pm \sqrt{144}}{8}            \]
+\[   t = \frac{4 \pm \sqrt{\answer{144}}}{8}            \]
 
-\[   t = \frac{4 \pm 12}{8}            \]
+\[   t = \frac{4 \pm \answer{12}}{8}            \]
 
 
 
@@ -115,7 +145,7 @@ Either $t = \frac{4 + 12}{8} $ or $t = \frac{4 - 12}{8} $
 
 Either $t = \frac{16}{8} $ or $t = \frac{-8}{8} $
 
-Either $t = 2$ or $t = -1$
+Either $t = \answer{2}$ or $t = \answer{-1}$
 
 
 
@@ -147,9 +177,9 @@ Apply the Quadratic Formula
 
 
 
-\[   t = \frac{12 \pm \sqrt{(144 - 144}}{4}            \]
+\[   t = \frac{12 \pm \sqrt{144 - 144}}{4}            \]
 
-\[   t = \frac{12 \pm 0}{4}            \]
+\[   t = \frac{12 \pm \answer{0}}{4}            \]
 
 If you add or subtract $0$, you get the same result.
 
@@ -172,23 +202,23 @@ If you add or subtract $0$, you get the same result.
 
 \begin{example} \textit{No Real Solutions}
 
-Solve $2 x^2 - 12x + 21 = 1$ \\
+Solve $2 m^2 - 12m + 21 = 1$ \\
 
 
 First, get everything to one side and $0$ on the other side.
 
 
 
-\[  2 x^2 - 12x + 20 = 0  \]
+\[  2 m^2 - 12m + 20 = 0  \]
 
 Apply the Quadratic Formula
 
 
-\[   t = \frac{-(-12) \pm \sqrt{(-12)^2 - 4 (2) (20)}}{2 (2)}            \]
+\[   m = \frac{-(-12) \pm \sqrt{(-12)^2 - 4 (2) (20)}}{2 (2)}            \]
 
-\[   t = \frac{12 \pm \sqrt{144 - 160}}{4}            \]
+\[   m = \frac{12 \pm \sqrt{144 - 160}}{4}            \]
 
-\[   t = \frac{12 \pm \sqrt{-16}}{4}            \]
+\[   m = \frac{12 \pm \sqrt{\answer{-16}}}{4}            \]
 
 
 
@@ -211,9 +241,9 @@ In each of the examples above the number of solutions was determined by $\sqrt{b
 
 
 \begin{itemize}
-\item If $b^2 - 4 a c > 0$, then there are two distinct real solutions.
-\item If $b^2 - 4 a c = 0$, then there is real solutions.
-\item If $b^2 - 4 a c < 0$, then there are no distinct real solutions.
+\item If $b^2 - 4 a c \wordChoice{\choice[correct]{>}\choice{=}\choice{<}} 0$, then there are two distinct real solutions.
+\item If $b^2 - 4 a c \wordChoice{\choice{>}\choice[correct]{=}\choice{<}} 0$, then there is real solutions.
+\item If $b^2 - 4 a c \wordChoice{\choice{>}\choice{=}\choice[correct]{<}} 0$, then there are no distinct real solutions.
 
 \end{itemize}
 
