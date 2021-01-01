@@ -26,14 +26,14 @@ The quadratic formula gives explicit formulas for these roots.
 
 
 
-We can create another quadratic function with these two zeros.
+We can create another quadratic function from these two zeros.
 
 
 
 \[ f(t) =  \left(t - \frac{-b + \sqrt{b^2 - 4 a c}}{2a}\right)   \left(t -  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}\right)   \]
 
 
-However, if we multiply this out, we get
+If we multiply this out, we get
 
 
 
@@ -48,23 +48,35 @@ However, if we multiply this out, we get
 \[ f(t) = t^2  \, +  \frac{b}{a} + \left(    \frac{c}{a}     \right)        \]
 
 
-This quadratic function has the same two zeros.  If we multiply by $a$, we get 
+This quadratic function has the same two zeros as $Q(t)$.  If we multiply by $a$, we get 
 
 
-\[ f(t) = a t^2 + b t + c \]
+\[ a \, f(t) = a t^2 + b t + c \]
 
 which is $Q(t)$.
 
 
-We have discovered a new expression or formula for our quadratic function.
+We have discovered a new expression or formula or form for our quadratic functions.
 
 
 
 \section{Factored Form}
 
-Every quadratic function can be written as a sum, $Q(t) = a \, t^2 + b \, t + c = 0$, with $a \ne 0$.
+$\blacktriangleright$ Every quadratic function can be written as a sum, $Q(t) = a \, t^2 + b \, t + c$, with $a \ne 0$. \\
 
-Every quadratic function can be written as a product, $Q(t) = (t - r_1)(t - r_2)$, where $r_1$ and $r_2$ are the real zeros, which can be obtained via the quadratic formula - provided the discrimanant is positve.  If the discriminant is $0$, then $r_1 = r_2$ and we can a square.  If the discriminant is negaqitve, then $Q(t)$ doesn't factor with real numbers.  
+
+
+$\blacktriangleright$ Every quadratic function can be written with a square, $Q(t) = a (t - h)^2 + k$, with $a \ne 0$. \\
+
+
+
+$\blacktriangleright$ Every quadratic function can be written as a product, $Q(t) = a (t - r_1)(t - r_2)$, where $r_1$ and $r_2$ are the real zeros and $a \ne 0$. \\
+
+
+
+
+
+The real zeros can be obtained via the quadratic formula - provided the discrimanant is positve.  If the discriminant is $0$, then $r_1 = r_2$ and we get a square.  If the discriminant is negaqitve, then $Q(t)$ doesn't factor with real numbers.  
 
 
 The process of writing the function as a product is called \textbf{factoring}. $(t - r_1)$  and $(t - r_2)$ are the \textbf{factors}.
@@ -93,10 +105,27 @@ The quadratic formula always works.  But, many times it is slow with lots of ste
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Guessing Factors}
 
 
-Let's begin with a quadratic function written as a sum: $g(x) = a \, x^2 + b \, x + c$.  
+Let's begin with a quadratic function written as a sum: $g(x) = a \, x^2 + b \, x + c$, a.k.a \textbf{standard form}.  
 
 
 \textbf{Step 1:} If there are any common factors among the three terms then factor that out.
@@ -108,8 +137,8 @@ for this to happen, we need
 
 \begin{itemize}
 \item $a = A \cdot C $
-\item $c = B \cdot D$
 \item $b = A\cdot D + B \cdot C$
+\item $c = B \cdot D$
 \end{itemize}
 
 Therefore, look for pairs of factors of $a$ and pairs of factors of $c$.
@@ -135,27 +164,48 @@ Therefore, look for pairs of factors of $a$ and pairs of factors of $c$.
 Factor $k(x) = 2 x^2 - 5 x - 12$.
 
 
-$2$ is a prime number, therefore, it's factors are $2 \cdot 1$ or $-2 \cdot -1$.
 
-We already know that our factorization begins as $(2 x + ?) (x + ?)$ or $(-2 x + ?) (-x + ?)$.
+First, the coefficients have no common factors.
 
-$-12$ factors as $-12 \cdot 1$, $12 \cdot -1$, or $-6 \cdot 2$, or  $-6 \cdot 2$, or $-4 \cdot 3$, or or $4 \cdot -3$.  Let's start stepping through our list.
+
+Second, $2$ is a prime number, therefore, it's factors are $2 \cdot 1$ or $-2 \cdot -1$.
+
+From this, we know there are only two possibilities. The factorization looks like $(2 x \, + \, ?) (x \, + \, ?)$ or $(-2 x \, + \, ?) (-x \, + \, ?)$.
+
+
+
+
+
+
+$-12$ factors as 
+\begin{itemize}
+\item $-12 \cdot \answer{1}$
+\item $12 \cdot \answer{-1}$
+\item $-6 \cdot \answer{2}$
+\item $6 \cdot \answer{-2}$
+\item $-4 \cdot \answer{3}$
+\item $4 \cdot \answer{-3}$  
+\end{itemize}
+
+
+
+Let's start stepping through our list.
 
 Since $-5 x$ seems far away from $12$, let's skip $12$ in out list and begin stepping through our list with $-6$ and $2$.
 
 \begin{itemize}
 
-\item $-12 = -6 \cdot 2$ gives $(2 x + (-6)) (x + 2) = 2 x^2 - 2 x - 12$
-\item $-12 = 6 \cdot -2$ gives $(2 x + 6) (x - 2) = 2 x^2 - 2 x -12$
-\item $-12 = -3 \cdot 4$ gives $(2 x + (-3)) (x + 4) = 2 x^2 + 5 x - 12$
-\item $-12 = 3 \cdot -4$ gives $(2 x + 3) (x + (-4)) = 2 x^2 - 5 x -12$
+\item $-12 = -6 \cdot 2$ gives $(2 x + (-6)) (x + 2) = \answer{2 x^2 - 2 x - 12}$
+\item $-12 = 6 \cdot -2$ gives $(2 x + 6) (x - 2) = \answer{2 x^2 - 2 x -12}$
+\item $-12 = -3 \cdot 4$ gives $(2 x + (-3)) (x + 4) = \answer{2 x^2 + 5 x - 12}$
+\item $-12 = 3 \cdot -4$ gives $(2 x + 3) (x + (-4)) = \answer{2 x^2 - 5 x -12}$
 \end{itemize}
 
 $2 x^2 - 5 x - 12$ factors as $(2 x + 3) (x + (-4)) = (2 x + 3)(x - 4)$
 
 \end{example}
 
-
+As you gain more experience, this process becomes a mental process.
 
 
 
@@ -164,13 +214,20 @@ $2 x^2 - 5 x - 12$ factors as $(2 x + 3) (x + (-4)) = (2 x + 3)(x - 4)$
 
 \begin{example} \textit{Factoring}
 
-Factor $p(y) = 3 y^2 - 8 y - 11$.
+Factor $p(y) = 6 y^2 - 16 y - 22$.
+
+
+First, the coefficients have a common factor.  Factor out $2$ to get $p(y) = 2 (3 y^2 - 8 y - 11)$.
+
+
+Now factor $p(y) = 3 y^2 - 8 y - 11$.
+
 
 
 $3$ is a prime number, therefore, it's factors are $3 \cdot 1$ or $-3 \cdot -1$. However, $-3 \cdot -1$ is actually redundant.  If we picked $-3 \cdot -1$, then we could just factor out $-1$ from both and get back to $3 \cdot 1$.
 
 
-$p(y) = 3 y^2 - 8 y - 11 (3y \pm ?) (y \pm ?) $
+$p(y) = 3 y^2 - 8 y - 11 (3y \, \pm \, ?) (y \, \pm \, ?) $
 
 
 $11$ is also a prime number. We only need to think about $11$ and $1$. And, since we need $-11$ in $p(y)$, then we know to pick opposite signs for $11$ and $1$.
@@ -178,7 +235,7 @@ $11$ is also a prime number. We only need to think about $11$ and $1$. And, sinc
 
 
 \begin{itemize}
-\item $(3y + 11) (y - 1) = 3 y^2 + 8 y - 11$
+\item $(3y + 11) (y - 1) = \answer{3 y^2 + 8 y - 11}$
 \end{itemize}
 
 Everything is correct except the sign of $-8$. That tells us we are almost correct. We just need to reverse the signs.
@@ -191,16 +248,6 @@ Everything is correct except the sign of $-8$. That tells us we are almost corre
 
 
 
-
-\begin{itemize}
-
-\item $-12 = -6 \cdot 2$ gives $(2 x + (-6)) (x + 2) = 2 x^2 - 2 x - 12$
-\item $-12 = 6 \cdot -2$ gives $(2 x + 6) (x - 2) = 2 x^2 - 2 x -12$
-\item $-12 = -3 \cdot 4$ gives $(2 x + (-3)) (x + 4) = 2 x^2 + 5 x - 12$
-\item $-12 = 3 \cdot -4$ gives $(2 x + 3) (x + (-4)) = 2 x^2 - 5 x -12$
-\end{itemize}
-
-$2 x^2 - 5 x - 12$ factors as $(2 x + 3) (x + (-4)) = (2 x + 3)(x - 4)$
 
 \end{example}
 
