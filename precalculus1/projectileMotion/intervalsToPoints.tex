@@ -1,0 +1,110 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Tangents}
+
+\begin{document}
+
+\begin{abstract}
+intervals to points
+\end{abstract}
+\maketitle
+
+
+
+
+
+\section{Analysis}
+
+What do we want to know when we analyze functions?
+
+We want to know the 
+
+
+\begin{itemize}
+\item domain
+\item range
+\item zeros
+\item intervals of increasing and decreasing
+\item global maximum and minimum
+\item local maximums and minimums
+\item discontinuities
+\item singularities
+\item symmetry
+\item endbehavior \\
+\item and we would like a nice graph
+\end{itemize}
+
+
+For a quadratic function much of this information is connected to vertex of the graph.
+
+
+
+
+
+
+
+\textbf{Vertex Form} \\
+
+The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula.
+
+Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola would have opened downward and the extreme point would be at the top.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {2*(x-3)^2 - 4};
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
+        
+        \addplot [draw=penColor2, very thick, smooth, domain=(-1:7),<->] {2*(x-3)};
+
+        \node[penColor] at (axis cs:5,-4) {$(h, k)$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
