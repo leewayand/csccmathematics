@@ -12,7 +12,7 @@ separating dimensions
 \maketitle
 
 
-While polynomials and rational functions only deal with positive powers on their terms, we have seen that power functions, by themselves, include any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
+While polynomials and rational functions only include terms with positive integer powers, power functions, by themselves, include any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
 
 
 
@@ -47,6 +47,8 @@ An alternate point-of-view uses radical notation rather than exponents.
 
 where $\sqrt{ }$ is called the \textbf{radical} symbol.
 
+
+$\sqrt[n]{x}$ is called the \textbf{nth root of x}.
 
 \end{definition}
 
@@ -108,6 +110,9 @@ The graph of $y = R(t) = t^{\tfrac{1}{3}} = \sqrt[3]{t}$
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -143,6 +148,9 @@ The graph of $y = R(t) = t^{\tfrac{1}{2}} = \sqrt{t} $
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top

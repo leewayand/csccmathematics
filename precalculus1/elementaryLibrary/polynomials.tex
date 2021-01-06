@@ -12,17 +12,18 @@ power functions
 \maketitle
 
 
-In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers.  
+In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers - you can find a polynomial as close as you want to and function.
+
+\begin{itemize}
+\item Given any real number, no matter what small distance you think up, there is a rational number within that distance of the real number.
+
+\item No matter what continuous function you think of on a closed interval, there is a polynomial within that "distance" of the continuous function.
+\end{itemize}
+
+This makes polynomials extremely interesting and useful. \\
 
 
-Given any real number, no matter what small distance you think of there is a rational number within that distance of the real number.
-
-No matter what continuous function you think of on a closed interval, there is a polynomial within that "distance" of the continuous function.
-
-This makes polynomials extremely interesting.
-
-
-
+$\blacktriangleright$ Polynomials are sums of special power functions, so let's begin there.
 
 
 
@@ -32,22 +33,27 @@ This makes polynomials extremely interesting.
 
 A power function is any function that can be represented with a formula of the form
 
-\[   f(x) = k x^p      \]
+\[   f(x) = k \, x^p      \]
 
 where $k$ and $p$ are real numbers.
 
 $k$ is called the \textbf{coefficient}.
 
+$p$ is called the \textbf{exponent} or the \textbf{power}.
+
 
 \end{definition}
+We don't need all of the power functions for polynomials.  Let's focus our attention on power functions with integer exponents. \\
 
 
 
-When the power, $p$, is positive then we have two types of behavior.
+
+
+When the power, $p$, is a positive integer, then we have two types of behavior.
 
 \begin{enumerate}
-\item When $p$ is even the endbehavior is the same - up or down on the graph depending on the sign of the coeeficient, $k$.
-\item When $p$ is odd the endbehavior is opposite - one side up and one side down on the graph, which switches depending on the sign of the coeeficient, $k$.
+\item When $p$ is even the endbehavior is the same to the right or left - both up or both down on the graph depending on the sign of the coefficient, $k$.
+\item When $p$ is odd the endbehavior is opposite on either side of the graph - one side up and one side down on the graph, which switches depending on the sign of the coefficient, $k$.
 \end{enumerate}
 
 
@@ -55,9 +61,9 @@ When the power, $p$, is positive then we have two types of behavior.
 \begin{tikzpicture}
   	\begin{axis}[name = leftgraph, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, grid = major,
+            axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -70,7 +76,7 @@ When the power, $p$, is positive then we have two types of behavior.
   	\end{axis}
   	\begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -94,7 +100,7 @@ When the power, $p$, is positive then we have two types of behavior.
 
 
 
-When the power, $p$, is negative then we have two types of behavior. around the singularity at $0$. In either case, the endbehavior is to tend toward $0$.
+When the power, $p$, is a negative integer, then we have two types of behavior around the singularity at $0$. In either case, the endbehavior is to tend toward $0$.
 
 \begin{enumerate}
 \item When $p$ is even the behavior around the singularity is the same - up or down on the graph depending on the sign of the coeeficient, $k$.
@@ -106,7 +112,7 @@ When the power, $p$, is negative then we have two types of behavior. around the 
 \begin{tikzpicture}
   	\begin{axis}[name = leftgraph, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, grid = major,
+            axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -122,7 +128,7 @@ When the power, $p$, is negative then we have two types of behavior. around the 
   	\end{axis}
   	\begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -154,18 +160,18 @@ When the power, $p$, is negative then we have two types of behavior. around the 
 
 
 
-In the previous descriptions, we referenced the graphs to describe the behavior around the singularity and the endbehavior.  We also need some algebraic descriptions of this behvavior.
+In the previous descriptions, we referenced the graphs to describe the behavior around the singularity and the endbehavior.  We also want algebraic descriptions of this behvavior.
 
 
 \textbf{Endbehavior}
 
-The domain for a power function is either all the real numbers, \textbf{R}, or all of the real numbers except $0$, $\textbf{R} \setminus 0$.  In either case we can imagine move far off to the left or right on the number line to where the domain is made up of very large positive or very large negative numbers.  When we want the reader to think of moving even further to the right we use the phrase "tending to infinity". When we want the reader to think of moving even further to the left we use the phrase "tending to negative infinity".
+The domain for a power function is either all the real numbers, \textbf{R}, or all of the real numbers except $0$, $\textbf{R} \setminus \{ 0 \}$.  In either case we can imagine moving far off to the left or far off to the right on the number line to where the domain is made up of very large negative or very large positive numbers.  When we want the reader to think of moving even further to the right we use the phrase "tending to infinity". When we want the reader to think of moving even further to the left we use the phrase "tending to negative infinity".
 
-For power functions with a negative power, the function value becomes smaller and smaller as the domain tends to positive or negative infinity.
+For power functions with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
 
 The mathematical word for this "tending" relationship is called \textbf{limit}.
 
-If we name a power functions with a negative power $f(x)$, then we see that as $x$ tends to positive infinity, the value of $f$ tends to $0$.  The algebraic way of writing this looks like
+If we inspect a power function, $f(x)$, with a negative power, then we see that as $x$ tends to positive infinity, the value of $f$ tends to $0$.  The algebraic way of writing this looks like
 
 
 \[    \lim_{x \to \infty} f(x) = 0,        \]
@@ -197,7 +203,7 @@ and
 
 
 
-For a power function with a negative power we have seen that there is a singularity at $0$, where the function value heads to infinity.  THis time we want to specify the direction we are approaching $0$.  
+For a power function with a negative power we have seen that there is a singularity at $0$, where the function value tends to infinity.  This time we want to specify the direction we are approaching, namely, $0$.  
 
 \begin{itemize}
 \item A superscript $+$ means we are approaching from the positive side or the right side.
@@ -225,10 +231,10 @@ and
 
 
 
-\section{Polynomial Function}
+\section{Polynomial Functions}
 
 
-Polynomial function are sums of power functions that do not have negative powers.
+Polynomial functions are sums of power functions with powers that are nonnegative integers.
 
 
 \begin{definition} \textit{Polynomial Functions}
@@ -241,20 +247,22 @@ where the $a_k$ are real numbers and $a_n \ne 0$.
 
 $a_k$ are called \textbf{coefficient}.
 
+$a_k x^k$ are called \textbf{terms}.
+
 
 
 \begin{itemize}
 \item $n$ is called the \textbf{degree} of the polynomial.
-\item $a_n$ is called the \textbf{leading coefficient}.
+\item $a_n$ is called the \textbf{leading coefficients}.
 \item $a_n x^n$ is called the \textbf{leading term}.
 \item $a_1 x^1$ is called the \textbf{linear term}.
-\item $a_0 + x^0$ is called the \textbf{constant term}.
+\item $a_0 x^0$ is called the \textbf{constant term}.
 \item $x$ is called the \textbf{variable}.
 \end{itemize}
 
 
 \end{definition}
-
+We almost never see polynomials written out fully like this.  Usually, we use shorthand notation.\\
 
 
 
@@ -315,7 +323,7 @@ The following shorthand notation is totally voluntary.  You are more than welcom
 
 
 
-The last version is much shorter than the original, but they represent the exact same polynomial.
+The last version is much shorter than the original, but they represent the exact same polynomial. \\
 
 
 
@@ -327,7 +335,7 @@ The last version is much shorter than the original, but they represent the exact
 \section{Products vs. Sums}
 
 
-There are two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytical investigation.  Polynomials are functions for us and we are interested in anlyzing them as functions.  THis means we are interested in their zeros.  F0r this, and other reasons, we prefer to write polynomials in factored form.
+There are two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytical investigation.  Polynomials are functions for us and we are interested in analyzing them as functions.  This means, among other features, we are interested in their zeros.  For this, and other reasons, we prefer to write polynomials in factored form.
 
 
 
@@ -349,14 +357,14 @@ Unfortunately, we will need complex numbers to ALWAYS get a product of linear fa
 
 \begin{theorem} \textit{Fundamental Theorem of Algebra}
 
-When restricted to real coefficients, every polynomial can be factored into a product of linear and irreducible quadratic factors.
+When restricted to real numbers, every polynomial can be factored into a product of linear and irreducible quadratic factors.
 
 \end{theorem}
 
 
 The theorem says that every polynomial does have such a factorization, but it does not tells us how to obtain it.  We are on our own for that, which means we need lots of practice factoring polynomials.
 
-When analyzing polinomial funcitons, our first step is going to be to factor it.
+When analyzing polynomial functions, our first step is going to be to factor it.
 
 
 
@@ -367,7 +375,7 @@ When analyzing polinomial funcitons, our first step is going to be to factor it.
 
 
 
-Polynomials are continuous everywhere (All real numbers).  Therefore, their graphs are smooth, wavy curves.
+Polynomials are continuous everywhere (all real numbers).  Their graphs are smooth, wavy curves with hills and valleys.
 
 
 
@@ -382,6 +390,9 @@ The graph of $y = f(x) = \frac{1}{100} x^3 + \frac{1}{25} x^2 - \frac{31}{100} x
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -415,6 +426,9 @@ The graph of $y = g(t) = \frac{1}{100} (t+7) (t+2) (t-2) (t-4) $
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -431,26 +445,27 @@ The graph of $y = g(t) = \frac{1}{100} (t+7) (t+2) (t-2) (t-4) $
 \end{example}
 
 
-There are no discontinuities or singularities.  Polynomial functions do have local maximums and minimums, however, they do not have global maximums or minimums.
+There are no discontinuities or singularities.  Polynomial functions may have local maximums and minimums. They may have a global maximum or global minimum, but not both.
 
 
 \section{Endbehavior}
 
 
 
-Depending on the sign of the leading coefficient, we have
+Depending on the sign of the leading coefficient, we have endbehavior tending in the same direction
 
 
 
 
 \[    \lim_{t \to -\infty} p(t) =  \infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = \infty      \]
 
+\[    \lim_{t \to -\infty} p(t) =  -\infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = -\infty      \]
 
-or 
+or opposite directions
 
 \[    \lim_{t \to -\infty} p(t) =  -\infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = \infty      \]
 
-
+\[    \lim_{t \to -\infty} p(t) =  \infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = -\infty      \]
 
 
 

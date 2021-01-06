@@ -14,68 +14,73 @@ percentage growth
 
 
 
-The defining characteristic of linear functions is that the have a constant growth rate.
+The defining characteristic of linear functions is that the pairs have a constant growth rate. If you calculate the rate of change between any two pairs, $(a, f(a))$ and $(b, f(b))$, in the funciton, you get the same result, $m$.
 
 
 \[   \frac{f(b)-f(a)}{b-a} = m       \]
 
-This led to the equation or formula for linear functions:  $f(x) = m(x-a) + f(a)$
+This led to the equation or formula for linear functions:  $f(x) = m(x-a) + f(a)$ \\
 
 
 
 
 
-Exponential functions are similar, but it is their percentage growth rate that is constant.  
-
-The growth of $f(x)$ over the interval $[a, b]$ is $f(b)-f(a)$. To get a percentage, we compare this back to $f(a)$: 
-
-\[      \frac{f(b)-f(a)}{f(a)}    \]
-
-And, then to get the percetnage growth rate we average over the interval
+$\blacktriangleright$ Exponential functions are similar, but it is their percentage growth rate that is constant.   \\
 
 
+The growth of the exponential function, $g(t)$ over the interval $[a, b]$ is $g(b)-g(a)$. To get a percentage, we compare this back to the starting value, $g(a)$: 
 
-\[      \frac{\frac{f(b)-f(a)}{f(a)}}{b-a}    \]
+\[      \frac{g(b)-g(a)}{g(a)}    \]
+
+And, then to get the percentage growth rate we average over the interval
 
 
 
-FOr an exponential function, this is constant
-
-
-\[      \frac{\frac{f(b)-f(a)}{f(a)}}{b-a}  = r  \]
+\[      \frac{\frac{g(b)-g(a)}{g(a)}}{b-a}    \]
 
 
 
+For an exponential function, this is constant
 
 
-Let's build such a function up from a given value of $f(0)$. Moving from $0$ to $1$ gives
+\[      \frac{\frac{g(b)-g(a)}{g(a)}}{b-a}  = r  \]
 
-\[      \frac{\frac{f(1)-f(0)}{f(0)}}{1-0}  = r  \]
+or
+
+\[      \frac{g(b)-g(a)}{g(a)(b-a)}  = r  \]
 
 
-\[      f(1)-f(0) = r f(0)  \]
+
+Let's build such a function up from a given value of $g(0)$. 
+
+Moving from $0$ to $1$ gives
+
+\[      \frac{\frac{g(1)-g(0)}{g(0)}}{1-0}  = r  \]
 
 
-\[      f(1) = r f(0) + f(0)  \]
+\[      g(1)-g(0) = r g(0)  \]
 
-\[      f(1) =  f(0) (r + 1)  \]
+
+\[      g(1) = r g(0) + g(0)  \]
+
+\[      g(1) =  g(0) (r + 1)  \]
 
 
 
 Moving from $1$ to $2$ gives
 
-\[      f(2) =  f(0) (r + 1)^2  \]
+\[      g(2) =  g(0) (r + 1)^2  \]
 
 
 Moving from $2$ to $3$ gives
 
-\[      f(3) =  f(0) (r + 1)^3  \]
+\[      g(3) =  g(0) (r + 1)^3  \]
 
 
 In general, exponential functions look like
 
 
-\[      f(x) = f(0) a^x   \]
+\[      g(t) = f(0) a^t   \]
 
 
 
@@ -87,7 +92,7 @@ In general, exponential functions look like
 Exponential functions are those functions that exhibit a constant percentage rate of change.  Their formulas look like
 
 
-\[      f(x) = k a^x   \]
+\[      f(x) = k \, a^x   \]
 
 where $k$ is a nonzero real number, and $a$ is a positive real number.
 
@@ -95,7 +100,7 @@ where $k$ is a nonzero real number, and $a$ is a positive real number.
 \end{definition}
 
 
-There are two types of exponential functions that correspond to $0<a<1$ and $1<a$.
+There are two types of exponential functions corresponding to $0<a<1$ and $1<a$.
 
 
 
@@ -103,13 +108,13 @@ There are two types of exponential functions that correspond to $0<a<1$ and $1<a
 
 
 \begin{itemize}
-\item If $0<a<1$, then greater positive exponents make the value smaller.   A negative exponent essentially gives us the reciprocal of $a$, which would be greater than $1$.  Therefore, greater negative exponents result in greater postive function values.
-\item If $1<a$, then greater positive exponents make the value greater.   A negative exponent essentially gives us the reciprocal of $a$, which would be less than $1$.  Therefore, greater negative exponents result in smaller postive function values.
+\item If $0<a<1$, then greater positive exponents make the function value smaller.   A negative exponent essentially gives us the reciprocal of $a$, which would be greater than $1$.  Therefore, greater negative exponents result in greater postive function values.
+\item If $1<a$, then greater positive exponents make the function value greater.   A negative exponent essentially gives us the reciprocal of $a$, which would be less than $1$.  Therefore, greater negative exponents result in smaller postive function values.
 \end{itemize}
 
 
 
-The graphs of $y = Y(x) = 3 \left(\frac{1}{2}\right)^x$ and $z = W(t) = 3 \cdot 2^t$
+The graphs of $y = Y(x) = 3 \left(\frac{1}{2}\right)^x$ and $z = W(t) = 3 \cdot 2^t$ are shown below.
 
 
 
@@ -193,12 +198,27 @@ Let $T(f) = 4 3^f$.  Evaluate the following.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Backwards}
 
-What if we would like to go in reverse?  What if we have a function value for an exponential function and we would like to know which domain numbers are associated with it.  We would like to solve
+What if we like at this process in reverse?  What if we have a function value for an exponential function and we would like to know which domain numbers are associated with it.  We would like to solve
 
 
-\[    k \cdot a^t  =  t_0     \]
+\[    g(t) = k \cdot a^t  =   g_0    \]
 
 
 How would we solve for $t$?
@@ -210,7 +230,7 @@ How would we solve for $t$?
 
 \begin{example}
 
-Let $T(f) = 4 3^f$.  If the function value "worked well", thenm we could probably guess.
+Let $T(f) = 4 \cdot 3^f$.  If the function value "worked well", then we could probably guess.
 
 
 Solve $T(f) = 36$
@@ -231,7 +251,10 @@ $f = 2$
 
 
 
-Most function values are not going to be so obvious. Solve $ 3^f = 17$.
+Most function values are not going to be so obvious. 
+
+
+For example, solve $ 3^x = 17$.
 
 
 We may not be able to quickly think up this number or even an approximaiton for it.  However, we can still talk about.
@@ -241,7 +264,7 @@ We are looking for the number that you raise $3$ to, to get $17$.
 \end{center}
 
 
-That is a specific number. We can see from the graph that there is only one such number and we could visually approximate is around $2.5$.
+That is a specific number. We can see from the graph that there is only one such number and we could visually approximate it around $2.5$.
 
 
 \begin{example}
@@ -275,6 +298,7 @@ Let $a$ and $b$ be positive real numbers.  The number  you raise $a$ to, to get 
 The symbol for the logarithm base a of b is $log_a(b)$.
 
 
+$log_a(b)$ is  the number you raise $a$ to, to get $b$.
 
 \[     a^{log_a(b)} = b          \]
 
@@ -335,7 +359,7 @@ $9^{-2} = \frac{1}{81}$, therefore  $log_{9}\left(\frac{1}{81}\right) = -2$
 
 
 
-We also now that raising a positve number to any exponent cannot produce a negative number or $0$.  Therefore, the number \textit{inside} the logarithm must be positive
+We also know that raising a positve number to any exponent cannot produce a negative number or $0$.  Therefore, the number \textit{inside} the logarithm must be positive
 
 
 
@@ -370,6 +394,9 @@ Here is the graph of $y = L(x) = log_2(x)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -387,7 +414,7 @@ Here is the graph of $y = L(x) = log_2(x)$.
 
 The intercept is $(1,0)$, because $log_2(1) = 0$, because $2^0 = 1$.
 
-On the interval $(0,1)$, we are looking at $log_2(x)$ for $0<x<1$.  Remember, $log_2(x)$ is the number you raise $2$ to,m to get $x$, but here $0<x<1$.  Therefore, $2$ needs a negative exponent.  And, the smaller (closer to $0$) you want $x$, the bigger negative exponent.
+On the interval $(0,1)$, we are looking at $log_2(x)$ for $0<x<1$.  Remember, $log_2(x)$ is the number you raise $2$ to,mto get $x$, but here $0<x<1$.  Therefore, $2$ needs a negative exponent.  And, the smaller (closer to $0$) you want $x$, the bigger the negative exponent.
 
 
 
@@ -413,6 +440,9 @@ Here is the graph of $y = L(x) = log_{\tfrac{1}{2}}(x)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -430,7 +460,7 @@ Here is the graph of $y = L(x) = log_{\tfrac{1}{2}}(x)$.
 
 The intercept is $(1,0)$, because $log_{\tfrac{1}{2}}(1) = 0$, because $\left(\frac{1}{2}\right)^0 = 1$.
 
-On the interval $(0,1)$, we are looking at $log_{\tfrac{1}{2}}(x)$ for $0<x<1$.  Now we just need large positive exponents of $\frac{1}{2}$ to get small numbers.  On the other hand, to get large positive numbers we need to rais $\frac{1}{2}$ to negaitve powers.
+On the interval $(0,1)$, we are looking at $log_{\tfrac{1}{2}}(x)$ for $0<x<1$.  Now we just need large positive exponents of $\frac{1}{2}$ to get small numbers.  On the other hand, to get large positive numbers we need to rais $\frac{1}{2}$ to negative powers.
 
 
 

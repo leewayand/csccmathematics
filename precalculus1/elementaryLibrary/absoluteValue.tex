@@ -13,7 +13,7 @@ distance
 
 
 
-The absolute value function, $|x|$, gives the distance between a number and $0$.  Since distance cannot be naegative, it appears that the function just "makes numbers positive".
+The absolute value function, $|x|$, gives the distance between a number, $x$, and $0$.  Since distance cannot be naegative, it appears that the function just "makes numbers positive".
 
 
 To do this, the absolute value function just returns nonnegative numbers unharmed, and makes negative numbers turn positive.  Algebraically, this is accomplished through a piecewise defined function.
@@ -32,10 +32,10 @@ To do this, the absolute value function just returns nonnegative numbers unharme
 \]
 
 
-Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The absolute value function nnegatives negative numbers.
+Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The absolute value function negatives negative numbers.
 
 
-\textbf{Note:} just becasue you see a negaitve sign doesn't mean you have a negative number.
+\textbf{Note:} just because you see a negaitve sign doesn't mean you have a negative number.
 
 
 
@@ -64,7 +64,7 @@ Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The absolute value f
 
 \end{itemize}
 \end{example}
-
+There is no arithmetic operation called "make positive".  If a number is negative, then you make it positive by negating it.
 
 
 
@@ -75,9 +75,10 @@ Graph of $y = A(t) = |t|$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, 
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top

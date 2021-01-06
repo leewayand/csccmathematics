@@ -19,7 +19,7 @@ Rational functions are fractions of polynomials
 
 \begin{definition} \textit{Rational Functions}
 
-A rational function is any function that can be represented with a formula of the form
+A rational function is any function that can be represented as a quotient of polynomials 
 
 \[   \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   \]
 
@@ -27,7 +27,7 @@ A rational function is any function that can be represented with a formula of th
 
 where the $a_k$ and $b_k$ are real numbers and $a_n \ne 0$ and $b_m \ne 0$.
 
-$a_k$ are called \textbf{coefficients}.
+
 
 
 
@@ -45,7 +45,7 @@ Again, we prefer polynomials in factored form.  Therefore, usually our first ste
 
 
 
-And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to include only linear and irreducible quadratics.
+And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist of linear and irreducible quadratics.
 
 
 
@@ -67,6 +67,9 @@ The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$w$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -105,6 +108,9 @@ The graph of $y = v(r) = \frac{(r-1)}{(r+3) (r-4)^2} $
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$r$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -132,13 +138,13 @@ The graph of $y = v(r) = \frac{(r-1)}{(r+3) (r-4)^2} $
 
 
 
+While Polynomials only combined those power funcitons with positive integer powers, rational functions include power funcitons with negative integer powers.
 
 
+We can pull $H(w)$ apart to see the power functions.
 
-Rational functions combine all power functions together, whereas polynomials only combined those power funcitons with positive powers.  We can pull $H(w)$ apart to see the power functions.
 
-
-\[    H(w) = \frac{(w-1)}{(w+3) (w-4)}  = \frac{4}{7} \frac{1}{w+3}  + \frac{3}{7} \frac{1}{w-4}    \]
+\[    H(w) = \frac{(w-1)}{(w+3) (w-4)}  = \frac{4}{7} \cdot \frac{1}{w+3}  + \frac{3}{7} \cdot \frac{1}{w-4}    \]
 
 
 Not strictly speaking power functions, but shifted power functions.
@@ -150,7 +156,7 @@ Not strictly speaking power functions, but shifted power functions.
 
 Rational functions are continuous everywhere on their domain.  They have singularities at zeros of their denominators.  
 
-Graphs of rational funcitons have asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  This has to do with the power of the corresponding factor, which we will investigate later.
+Graphs of rational functions have asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  This has to do with the power of the corresponding factor, which we will investigate later.
 
 
 
@@ -175,6 +181,9 @@ The graph of $y = B(c) = \frac{(c-1)(c-5)}{5(c+3)} $
   \begin{axis}[
             domain=-20:20, ymax=20, xmax=20, ymin=-20, xmin=-20,
             axis lines =center, xlabel=$c$, ylabel=$y$,
+            ytick={-20,-16,-12,-8,-4,4,8,12,16,20},
+            xtick={-20,-16,-12,-8,-4,4,8,12,16,20},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -199,7 +208,7 @@ The graph of $y = B(c) = \frac{(c-1)(c-5)}{5(c+3)} $
 
 
 
-In addition to horizontal and vertical asmptotes can have \textbf{oblique} asymptotes, which describe the endbehavior.
+In addition to horizontal and vertical asymptotes, rational functions can have \textbf{oblique} asymptotes, which describe the endbehavior.
 
 
 
