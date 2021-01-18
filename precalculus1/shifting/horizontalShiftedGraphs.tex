@@ -16,23 +16,36 @@ sliding the graph
 
 
 
+$\blacktriangleright$ Graphically, shifting the domain of a function appears to shift the graph horizontally - left or right.  The shape of the graph doesn't change.  The whole graph moves rigidly left or right.  All points move the same distance horizontally. \\
+
+
+\begin{itemize}
+\item Let $F(x)$ be a function with its domain.
+
+\item Let $G(t)$ be a new function defined as $G(t) = F(t+d_0)$ with its induced domain.
+\end{itemize}
 
 
 
-Let $D(y)$ be a function with its domain.
+We begin with the function $F$.  The domain values of $F$ are represented by $x$.  We then define a new function, $G$. The domain values of $G$ are represented by $t$. 
 
-Let $K(r)$ be defined as $K(r) = D(r+7)$ with its induced domain.
+$F$ and $G$ are connected.  To evaluate $G$ at $t$, you evaluate $F$ at $t + d_0$, where $d_0$ is some constant.  Therefore, $t + d_0$ are $x$-values. We have $x = t + d_0$.  This tells us what to do to $t$ to get $x$.  However, that is not how our story is told.  Our story begins with $F$ and then $G$ is defined from $F$.  
 
-
-Then the domain of $K$ is the domain of $D$, but shifted \wordChoice{\choice[correct] {Left} \choice {Right}} by 
-\wordChoice{\choice{5} \choice{6} \choice[correct]{7}}
+We want to know how to get $t$ from $x$.  
 
 
-Then the graph of $K$ is the domain of $D$, but shifted \wordChoice{\choice[correct] {Left} \choice {Right}} by 
-\wordChoice{\choice{5} \choice{6} \choice[correct]{7}}
+\begin{itemize}
+\item $x = t + d_0$
+
+\item $x - d_0 = t$
+\end{itemize}
+
+
+To get corresponding values of $t$ from values of $x$, subtract $d_0$.   
 
 
 
+$\blacktriangleright$  The graph of $G$ is obtained from the graph of $F$ by subtracting $d_0$, which appears to be reverse of the definition, $G(t) = F(t+d_0)$.  That is because the definition tells how to get the old domain for $F$, rather than getting the new domain for $G$.
 
 
 
@@ -48,6 +61,9 @@ Graph of $y = T(v)$.
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$v$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -70,7 +86,9 @@ Graph of $y = T(v)$.
 \end{image}
 
 
-Which is the graph of $z=W(h)=T(h+3)$?
+Define a new function $W$ by $W(h)=T(h+3)$, with the implied domain.
+
+Which is the grapgs below is the graph of $z=W(h)$?
 
 
 
@@ -81,6 +99,9 @@ Which is the graph of $z=W(h)=T(h+3)$?
 	\begin{axis}[name = leftgraph,
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$h$, ylabel=$z$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -102,6 +123,9 @@ Which is the graph of $z=W(h)=T(h+3)$?
 	\begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$h$, ylabel=$z$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -134,6 +158,9 @@ Which is the graph of $z=W(h)=T(h+3)$?
 \choice{graph on the right}
 \end{multipleChoice}
 
+To figure this out, we need to know how to getthe new variable $h$ from the old variable $v$. \\
+
+
 
 
 \begin{itemize}
@@ -150,9 +177,24 @@ These tell us that $v-3 = h$ and the graph of $W$ is the graph of $T$ shifted le
 \end{example}
 
 
-The shape of the graph didn't change. It just slide to the left. There are still three pieces. The domain still has a gap of length $2$ in it.  The middle pieces is still horzontal.  The solid and hollow endpoint dots are still the same.
+The shape of the graph didn't change. It just slide to the left. There are still three pieces. \\
 
-Shifting doesn't change the shape of the graph.
+
+
+
+\begin{itemize}
+\item The domain still has a gap of length $2$ in it.  
+\item The middle pieces is still horzontal.  
+\item The solid and hollow endpoint dots are still in the same positions. 
+\end{itemize}
+
+
+
+
+
+Shifting doesn't change the shape of the graph or any of the relative measurements. It is a rigid movement.
+
+
 
 
 
@@ -176,6 +218,113 @@ Graph of $y = sin(\theta)$.
             xtick={-6.28, -3.14, 3.14, 6.28}, 
             xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
             axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x))};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Let's create a new function called $T$, which is a shifted sine function.
+
+\[  T(t) = sin(t + \tfrac{\pi}{6})  \]
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor2, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x+0.523599))};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+This graph looks the same as the one above, except shifted to the left.
+
+
+$\theta = t + \tfrac{\pi}{6}$   or $\theta - \tfrac{\pi}{6}= t $
+
+
+
+If we label the horizontal axes $\theta$ and $t$, then we can better compare.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$/$t$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x))};
+            \addplot [line width=2, penColor2, smooth,samples=200,domain=(-9:9), <->] {sin(deg(x+0.523599))};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Sine
+
+
+
+Graph of $y = sin(\theta)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -191,7 +340,7 @@ Graph of $y = sin(\theta)$.
 
 
 
-$sin(\theta)$ is periodic with a period of $2\pi$.  If it is shifted by $2\pi$ or any integer multiple of $2\pi$, then the resulting funciton is again $sin(\theta)$.
+$sin(\theta)$ is periodic with a period of $2\pi$.  If it is shifted by $2\pi$ or any integer multiple of $2\pi$, then the resulting function is again $sin(\theta)$.
 
 
 \[    sin(\theta + 2k\pi) = sin(\theta)   \,   \text{ where }  \,  k \in \textbf{Z}       \]
@@ -208,7 +357,7 @@ $sin(\theta)$ is periodic with a period of $2\pi$.  If it is shifted by $2\pi$ o
 If $sin(\theta)$ is shifted left by $\frac{\pi}{2}$, then we get $cos(\theta)$.
 
 
-\[    sin(\theta + \frac{\pi}{2}) = cos(\theta)   \]
+\[    sin\left(\theta + \frac{\pi}{2}\right) = cos(\theta)   \]
 
 
 Graph of $y = cos(\theta)$.
@@ -220,6 +369,7 @@ Graph of $y = cos(\theta)$.
             xtick={-6.28, -3.14, 3.14, 6.28}, 
             xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
             axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -240,7 +390,7 @@ Graph of $y = cos(\theta)$.
 
 
 
-This agrees with the unit circle.  As you move along the unit circle, the left coordinate (vertical, sine) has the same value as the right coordinate (horizontal, cosine) back a quarter-circle.
+This agrees with the unit circle.  As you move along the unit circle, the right/vertical coordinate (sine) has the same value as the left/horizontal coordinate (cosine) back a quarter-circle.
 
 
 
@@ -263,6 +413,9 @@ Graph of $y = |x|$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$r$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -281,7 +434,7 @@ Graph of $y = |x|$.
 
 What does the graph of $z = |t-2|$ look like?
 
-This is a shift from thebasic absolute value graph.  All we really need to know is where is the corner?  
+This is a shift from the basic absolute value graph.  All we really need to know is where is the corner.  
 
 \begin{center}
 The corner occurs when the inside of the absolute value equals $0$.
@@ -304,6 +457,9 @@ $t-2=0$ when $t=2$.  That is where the new corner sits.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$z$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -326,14 +482,17 @@ $t-2=0$ when $t=2$.  That is where the new corner sits.
 \end{example}
 
 
-Much of graphing follows this example.  There are important points for the function and you identify the position of those points.  Then, the graph follows a general basic shape.
+Much of graphing follows this example.  \\
+
+
+There are important points for the function's graph. You identify the position of those points.  Then, the shifted graph follows the basic shape of the original graph.
 
 
 
 
 
 
-For example, $y = ln(t)$ has a vertical asymptote when the inside of the logarithm equals $0$. The zero, and corresponding horizontal intercept, occurs when they inside equals $1$.  
+For example, $y = log_k(t)$ including $y = ln(t)$ has a vertical asymptote when the inside of the logarithm equals $0$. The zero, and corresponding horizontal intercept, occurs when they inside equals $1$.  
 
 
 
@@ -345,8 +504,8 @@ For example, $y = ln(t)$ has a vertical asymptote when the inside of the logarit
 Here is the graph of $y = log_2(t+5)$.
 
 \begin{itemize}
-\item vertical asymptote: $t+5=0$, when $t=-5$
-\item horizontal intercept: $t+5=1$, when $t=-4$
+\item vertical asymptote: $t+5=0$, when $t=\answer{-5}$
+\item horizontal intercept: $t+5=1$, when $t=\answer{-4}$
 \end{itemize}
 
 
@@ -355,6 +514,9 @@ Here is the graph of $y = log_2(t+5)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -389,11 +551,50 @@ The graph looks the same as the basic logarithm graph, just slid left $5$.
 
 \begin{example} Shifting Domains
 
-Let $B(p)$ be a function with a given domain, $D$. \\
-Let $a \in D$ where $B$ has a discontinuity. \\
-Let $T(x)$ be a function defined by $T(x) = B(x-5)$ with the induced domain. \\
 
-$T$ has a discontinuity locate at domain number $x = \answer{a+5}$
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {-7};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+7};
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-7)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,-7)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,6)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
 
 
 \end{example}
