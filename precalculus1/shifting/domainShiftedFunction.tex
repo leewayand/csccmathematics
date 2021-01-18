@@ -18,7 +18,7 @@ same characteristics
 
 
 
-Below is the piecewise defined function, $T(v)$.  $v$ is representing the domain values from $(-4,-1] \cup [1,7)$.
+Below is the piecewise defined function, $T(v)$.  $v$ is representing the domain values from the set $(-4,-1] \cup [1,7)$.
 
 
 
@@ -32,7 +32,7 @@ T(v) =
 \]
 
 
-On the interval $(-4, -1]$, the graph should be a line for $T(v) = 2v-1$. On the interval $[1, 7)$, the graph should be another line for $T(v) = -v+3$
+On the interval $(-4, -1]$, the graph should be a line segment for $T(v) = 2v-1$. On the interval $[1, 7)$, the graph should be another line segment for $T(v) = -v+3$
 
 
 
@@ -42,7 +42,10 @@ Graph of $y = T(v)$.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$y$,
+            axis lines =center, xlabel=$v$, ylabel=${y=T(v)}$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -66,7 +69,7 @@ Graph of $y = T(v)$.
 
 
 
-The domain of $T$ has two maximal intervals:, $(-4,-1]$ and $[1,7)$.  These correspond to two line segments on the graph. The endpoints give us four important points on the graph: 
+The domain of $T$ has two maximal intervals:, $(-4,-1]$ and $[1,7)$.  These correspond to two line segments on the graph. The endpoints give us four strategic points on the graph: 
 
 \begin{itemize}
 
@@ -82,7 +85,7 @@ The domain of $T$ has two maximal intervals:, $(-4,-1]$ and $[1,7)$.  These corr
 
 \section{A New Function}
 
-$B(k)$ is a new function, but its definition is based on $T(v)$.
+$B(k)$ is a new function we are creating, but its definition is based on $T(v)$.
 
 
 $B(k) = T(k+3)$ with the implied domain.
@@ -95,13 +98,13 @@ $k$ is representing the values of the domain of $B$ and $k+3$ is now representin
 \[     k+3 \in      (-4,-1] \cup [1,7)     \]
 
 
-$k$ must be in a simialr set, but shifted tothe left by $3$.
+$k$ must be in a similar set, but shifted to the left by $3$, becasue we need to subtract $3$ from $k+3$ to get $k$.
 
 
-\[     k \in      (-7,-4] \cup [-2,4)     \]
+\[     k \in      (-7,\answer{-4}] \cup [\answer{-2},4)     \]
 
 
-The domain of $B$ is $(-7,-4] \cup [-2,4)$.   It was implied from the domain of $T$ and the definieiotn of $B$, which is using $T$.  The values in the domain of $B$ are real numbers, $k$, such that $k+3$ is in the domain of $T$.
+The domain of $B$ is $(-7,-4] \cup [-2,4)$.   It was implied from the domain of $T$ and the definition of $B$, which is using $T$.  The values in the domain of $B$ are real numbers, $k$, such that $k+3$ is in the domain of $T$.
 
 The domain has shifted. 
 
@@ -112,11 +115,13 @@ But, the structure of the function hasn't changed.  The same formulas are in use
 
 \begin{itemize}
 
-\item When $k \in (-7,-4]$, then $k+3 \in (-4,-1]$.  $v=k+3$, so $v \in (-4,-1]$ and we are using the formula $2v-1$ with $v=k+3$.
-All together, when $k \in (-7,-4]$, then $B(k) = 2(k+3)-1 = 2k+5$.
+\item When $k \in (-7,-4]$, then $k+3 \in \left(\answer{-4},\answer{-1}\right]$.  $v=k+3$, so $v \in \left(\answer{-4},\answer{-1}\right]$ and we are using the formula $2v-1$ with $v=k+3$. 
 
-\item When $k \in [-2,4)$, then $k+3 \in [1,7)$.  $v=k+3$, so $v \in [1,7)$ and we are using the formula $-v+3$ with $v=k+3$.
-All together, when $k \in [-2,4)$, then $B(k) = -(k+3)+3 = -k$.
+All together, when $k \in (-7,-4]$, then $B(k) = 2(k+3)-1 = \answer{2k+5}$.
+
+\item When $k \in [-2,4)$, then $k+3 \in \left[\answer{1},\answer{7}\right)$.  $v=k+3$, so $v \in \left[\answer{1},\answer{7}\right)$ and we are using the formula $-v+3$ with $v=k+3$.
+
+All together, when $k \in [-2,4)$, then $B(k) = -(k+3)+3 = \answer{-k}$.
 
 
 \end{itemize}
@@ -147,7 +152,10 @@ Graph of $z = B(k)$.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$k$, ylabel=$z$,
+            axis lines =center, xlabel=$k$, ylabel=${z=B(k)}$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -170,7 +178,7 @@ Graph of $z = B(k)$.
 
 
 
-When we look at the graphs side-by-side, we can see that the graph has simply shifted left $3$.
+When we look at the graphs side-by-side, we can see that the graph of $T$ has simply shifted left $3$ to become the graph of $B$.
 
 
 
@@ -219,11 +227,50 @@ When we look at the graphs side-by-side, we can see that the graph has simply sh
 
 \end{tikzpicture}
 \end{image}
-
+The structure of the two graphs hasn't changed. \\
 
 
 
 From the definition, $B(k) = T(k+3)$, we can see that $v=k+3$, or $k=v-3$.  All of the $k$-values are $3$ less than the $v$-values.  $B$ is $T$ shifted left $3$.
+
+
+
+
+
+\begin{warning} \textit{Variables}
+
+Notice that four different variables have been used to describe the domain and range values of $T$ and $B$.  If we use the same variable to represent both domains, then we run into problems.
+
+
+$\blacktriangleright$ Suppose we use $x$ to represent values in both domains.  Then $x = 0$ is a possibility for $B$.  $B(0) = 0$.  However, if we write $x = 0$ and $x$ is also representing the domain of $T$, then we are implying that $T(0)$ is a valid number.  However, $0$ is not in the domain of $T$.
+
+We use variables to help us think about structure.  For this reason, we should not use the same variable to represent two different items in the same situation.
+
+
+Simlarly, the two vertical axes have been labelled $y$ and $z$.  If we use $y$ to represent both axes, then we are using $y$ to represent both ranges and that also leads to communication problems.
+
+We will avoid using the same variables or labels for different items.
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -240,15 +287,15 @@ From the definition, $B(k) = T(k+3)$, we can see that $v=k+3$, or $k=v-3$.  All 
 \[
 V(h) = 
 \begin{cases}
-  -2h-3 & \text{ if } [-6, -2]   \\
-  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
-  \frac{7h}{4} - 8 & \text{ if } (4,6)
+  -2h-3 & \text{ on } [-6, -2]   \\
+  -(h+3)(h-3) & \text{ on } (-2, 4]  \\
+  \frac{7h}{4} - 8 & \text{ on } (4,6)
 \end{cases}
 \]
 
 
 
-A graph always helps our thinking. Here is theg raph of $y = V(h)$.
+A graph always helps our thinking. Here is the graph of $y = V(h)$.
 
 
 
@@ -262,6 +309,9 @@ A graph always helps our thinking. Here is theg raph of $y = V(h)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$h$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -298,7 +348,7 @@ Let $f(x) = V(x-1)$ with the induced domain.
 
 The domain of $V$ is $[-6, 6)$.  These values are represented by $x-1$ in this definition, because $x-1$ is the expression inside the parentheses for $V$ and that is where the expression lives for the domain values of $V$.
 
-However, $x$ represents the domain values of $f$.   If $x - 1 \in [-6, 6)$, then $x \in [-5, 7)$.  This is the domain for $f$.  It is shifted up $1$ or to the right $1$.  The individual maximal intervals become $-5, -1]$, $(-1, 5]$, and $(5, 7)$.
+However, $x$ represents the domain values of $f$.   If $x - 1 \in [-6, 6)$, then $x \in \left[\answer{-5}, \answer{7}\right)$.  This is the domain for $f$.  It is shifted up $1$ or to the right $1$ from the domain of $V$.  The individual maximal intervals become $[-5, -1]$, $\left(\answer{-1}, \answer{5}\right]$, and $[5, 7)$.
 
 
 
@@ -307,9 +357,9 @@ However, $x$ represents the domain values of $f$.   If $x - 1 \in [-6, 6)$, then
 \[
 f(x) = V(x-1) = 
 \begin{cases}
-  -2(x-1)-3 & \text{ if } [-5, -1]   \\
-  -((x-1)+3)((x-1)-3) & \text{ if } (-1, 5]  \\
-  \frac{7(x-1)}{4} - 8 & \text{ if } (5, 7)
+  -2(x-1)-3 & \text{ on } [-5, -1]   \\
+  -((x-1)+3)((x-1)-3) & \text{ on } (-1, 5]  \\
+  \frac{7(x-1)}{4} - 8 & \text{ on } (5, 7)
 \end{cases}
 \]
 
@@ -320,9 +370,9 @@ f(x) = V(x-1) =
 \[
 f(x) = 
 \begin{cases}
-  -2x - 1 & \text{ if } [-5, -1]   \\
-  -(x+2)(x-4) & \text{ if } (-1, 5]  \\
-  \frac{7(x-1)}{4} - 8 & \text{ if } (5, 7)
+  -2x - 1 &  [-5, -1]   \\
+  -(x+2)(x-4) &  (-1, 5]  \\
+  \frac{7(x-1)}{4} - 8 &  (5, 7)
 \end{cases}
 \]
 
@@ -347,6 +397,9 @@ f(x) =
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel={$z=f(x)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -378,11 +431,21 @@ f(x) =
 
 
 
-The graph has the same three shapes. The endpoints are hollow or folled as they were in the graph of $y=V(h)$.
+The graph has the same three shapes. The corresponding endpoints are hollow or filled as they were in the graph of $y=V(h)$.
 
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -394,11 +457,16 @@ The graph has the same three shapes. The endpoints are hollow or folled as they 
 
 Let $P(t)$ be a function with domain $[-11, -7) \cup {-6} \cup [-4,3) \cup (4, 7] \cup {8} \cup [9, 10)$.
 
-Let $g(w)$ be defined as a shifted domain version of $p(t)$ with domain $[-7, -3) \cup {-2} \cup [0,7) \cup (8, 11] \cup {12} \cup [13, 14)$.
+Let $g(w)$ be defined as a shifted domain version of $P(t)$.  The domain of $g(w)$ is $[-7, -3) \cup {-2} \cup [0,7) \cup (8, 11] \cup {12} \cup [13, 14)$.
 
-Then  $g(w) = P\left(\answer{w+4}\right)$
+Then,  $w = \answer{t+4}$ \, \text{ and } \, $t = \answer{w-4}$.  \\
 
 
+\begin{itemize}
+\item $g(w) = P\left(\answer{w-4}\right)$ \\
+
+\item $P(t) = g\left(\answer{t+4}\right)$ \\
+\end{itemize}
 
 \end{example}
 
@@ -406,17 +474,39 @@ Then  $g(w) = P\left(\answer{w+4}\right)$
 
 
 
-When a new function is defined as a domain shift of an existing function, then there are two different domains.  It is natural to think "what was done to the old domain to get the new one?"
+
+
+
+
+
+
+
+
+
+When a new function is defined as a domain shift of an existing function, then there are two different domains.  \\
+
+
+It is natural to think "what was done to the old domain to get the new one?"
 
 Suppose $f(t)$ is an existing function with domain $[-3, 5]$.
 
 Define a new function $g(x)$ as $g(x) = f(x-8)$ with the induced domain.
 
-"$t$" represents elements of the old domain of $f(t)$.  "$x$" represents elements of the new domain of $g(x)$.  It is natural to ask "what happens to $t$ to get $x$?"  But that is not how it is presented to us.  We are told that $t=x-8$.  But that is what happens to $x$ to get $t$.  That is backwards of how we naturally think about old and new.  We need to solve for $x$ to see what is done to $t$.
+
+
+\begin{itemize}
+\item "$t$" represents elements of the old domain of $f(t)$.  
+\item "$x$" represents elements of the new domain of $g(x)$.  
+\end{itemize}
+
+
+
+
+It is natural to ask "what happens to $t$ to get $x$?"  But that is not how it is presented to us.  We are told that $t=x-8$.  But that is what happens to $x$ to get $t$.  That is backwards of how we naturally think about old and new.  We need to solve for $x$ to see what is done to $t$.
 
 \[ t+8=x \]
 
-To get the new dmoain number, $x$, add $8$ to the old domain numbers $t$.  This tells us that the graph of $g$ will be shifted to the right by $8$, compared to the position of the graph of $f$.
+To get the new domain number, $x$, add $8$ to the old domain numbers $t$.  This tells us that the graph of $g$ will be shifted to the right by $8$, compared to the position of the graph of $f$.
 
 
 It is reversed from how it was originally defined, $g(x) = f(x-8)$, because the "inside" of $f$ is $x-8$ here.  That is not what is done to $t$.  When we solve $t=x-8$ for $t$, we reverse all of the arithmetic.
@@ -436,7 +526,7 @@ Then the domain of $K$ is the domain of $D$, but shifted \wordChoice{\choice[cor
 \wordChoice{\choice{5} \choice{6} \choice[correct]{7}}
 
 
-Then the graph of $K$ is the domain of $D$, but shifted \wordChoice{\choice[correct] {Left} \choice {Right}} by 
+Then the graph of $K$ is the graph of $D$, but shifted \wordChoice{\choice[correct] {Left} \choice {Right}} by 
 \wordChoice{\choice{5} \choice{6} \choice[correct]{7}}
 
 
@@ -444,6 +534,36 @@ Then the graph of $K$ is the domain of $D$, but shifted \wordChoice{\choice[corr
 
 \end{example}
 
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Shifting Domain
+
+
+Let $f(w)$ be a function with its domain.
+
+Let $g(t)$ be defined as $g(t) = f(t-3)$ with its induced domain.
+
+
+Then the domain of $g$ is the domain of $f$, but shifted \wordChoice{\choice{Left} \choice [correct]{Right}} by 
+\wordChoice{\choice{1} \choice{2} \choice[correct]{3}}
+
+
+Then the graph of $g$ is the graph of $f$, but shifted \wordChoice{\choice{Left} \choice [correct]{Right}} by 
+\wordChoice{\choice{1} \choice{2} \choice[correct]{3}}
+
+
+
+
+\end{example}
 
 
 

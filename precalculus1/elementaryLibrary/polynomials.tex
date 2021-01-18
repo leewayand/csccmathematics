@@ -7,12 +7,12 @@
 \begin{document}
 
 \begin{abstract}
-power functions
+sums of power functions
 \end{abstract}
 \maketitle
 
 
-In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers - you can find a polynomial as close as you want to and function.
+In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers - you can find a polynomial as close as you want to any continuous function.
 
 
 No matter what small distance you think up...
@@ -23,7 +23,7 @@ No matter what small distance you think up...
 \item Given any continuous function on a closed interval, there is a polynomial within that "distance" of the continuous function.
 \end{itemize}
 
-This makes polynomials extremely useful and thus interesting. \\
+This makes polynomials extremely useful and thus very interesting. \\
 
 
 $\blacktriangleright$ Polynomials are sums of special power functions, so let's begin there.
@@ -56,13 +56,16 @@ $p$ is called the \textbf{exponent} or the \textbf{power}.
 
 
 \end{definition}
+
+
+
 We don't need all of the power functions for polynomials.  We only need power functions with integer exponents. \\
 
 
 
 
 
-When the power, $p$, is a positive integer, then power functions have two types of behavior.
+$\blacktriangleright$  When the power, $p$, is a positive integer, then power functions have two types of behavior.
 
 \begin{itemize}
 \item When $p$ is even, the end behavior is the same to the right or left - both up or both down on the graph depending on the sign of the coefficient, $k$.
@@ -113,10 +116,10 @@ When the power, $p$, is a positive integer, then power functions have two types 
 
 
 
-When the power, $p$, is a negative integer, then we have two types of behavior around the singularity at $0$. 
+$\blacktriangleright$  When the power, $p$, is a negative integer, then we have two types of behavior around the singularity at $0$. 
 
 \begin{enumerate}
-\item When $p$ is even the behavior around the singularity is the same - up or down on the graph depending on the sign of the coeeficient, $k$.
+\item When $p$ is even the behavior around the singularity is the same - both up or down on the graph depending on the sign of the coeeficient, $k$.
 \item When $p$ is odd the behavior around the singularity is opposite - one side up and one side down on the graph, which switches depending on the sign of the coeeficient, $k$.
 \end{enumerate}
 
@@ -173,14 +176,14 @@ In either case, the end behavior is to tend toward $0$.
 
 
 
-In the previous descriptions, we referenced the graphs to describe the behavior around the singularity and the end behavior.  We also want algebraic descriptions of this behavior.
+In the previous descriptions, we referenced the graphs when describing the behavior around the singularity and the function's end behavior.  We would also like algebraic descriptions of this behavior.
 
 
 $\blacktriangleright$  \textbf{End Bahavior}
 
 The domain of a power function is either all the real numbers, \textbf{R}, or all of the real numbers except $0$, $\textbf{R} \setminus \{ 0 \}$.  In either case we can imagine moving far off to the left or far off to the right on the number line to where the domain is made up of very large negative or very large positive numbers.  When we want the reader to think of moving even further to the right we use the phrase "tending to infinity". When we want the reader to think of moving even further to the left we use the phrase "tending to negative infinity".
 
-For power functions with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
+For pa ower function with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
 
 The mathematical word for this "tending" relationship is \textbf{limit}.
 
@@ -200,12 +203,9 @@ For power functions with a postive power, we have limits such as
 
 
 
-\[    \lim_{x \to -\infty} k \, x^p =  \infty  \,   \text{ and }  \,     \lim_{x \to \infty} k \, x^p = \infty      \]
+\[    \lim_{x \to -\infty} k \, x^p =  -\infty  \,   \text{ or }  \,  \lim_{x \to -\infty} k \, x^p =  \infty  \,   \text{ or }  \,     \lim_{x \to \infty} k \, x^p = -\infty    \text{ or }  \,     \lim_{x \to \infty} k \, x^p = \infty  \]
 
 
-and 
-
-\[    \lim_{x \to -\infty} k \, x^p =  -\infty  \,   \text{ and }  \,     \lim_{x \to \infty} k \, x^p = \infty      \]
 
 
 It depends on the sign of $k$.
@@ -224,17 +224,13 @@ For a power function, $f(x) = k \, x^p$, with a negative power we have seen that
 \end{itemize}
 
 
-Describing this with limit notation looks like
+Describing the function's behavior around $0$ with limit notation looks like
 
 
 
 
-\[    \lim_{x \to 0^-} k \, x^p =  \infty  \,   \text{ and }  \,     \lim_{x \to 0^+} k \, x^p = \infty      \]
+\[    \lim_{x \to 0^-} k \, x^p =  -\infty  \,   \text{ or }  \,     \lim_{x \to 0^-} k \, x^p = \infty   \,   \text{ or }  \,      \lim_{x \to 0^+} k \, x^p =  -\infty  \,   \text{ or }  \,     \lim_{x \to 0^+} k \, x^p = \infty   \]
 
-
-and 
-
-\[    \lim_{x \to 0^-} k \, x^p =  -\infty  \,   \text{ and }  \,     \lim_{x \to 0^+} k \, x^p = \infty      \]
 
 
 
@@ -250,7 +246,7 @@ It depends on the sign of $k$.
 
 \begin{question}
 
-Evaluate $\lim_{x \to -\infty} 3 \, x^4$
+\[ \text{Evaluate} \lim_{x \to -\infty} 3 \, x^4 \]
 
 \begin{multipleChoice}
 \choice {$-\infty$}
@@ -265,7 +261,7 @@ Evaluate $\lim_{x \to -\infty} 3 \, x^4$
 
 \begin{question}
 
-Evaluate $\lim_{x \to -\infty} -5 \, x^2$
+\[ \text{Evaluate} \lim_{x \to -\infty} -5 \, x^2 \]
 
 \begin{multipleChoice}
 \choice [correct]{$-\infty$}
@@ -279,7 +275,7 @@ Evaluate $\lim_{x \to -\infty} -5 \, x^2$
 
 \begin{question}
 
-Evaluate $\lim_{x \to -\infty} -5 \, x^3$
+\[ \text{Evaluate} \lim_{x \to -\infty} -5 \, x^3 \]
 
 \begin{multipleChoice}
 \choice {$-\infty$}
@@ -297,7 +293,7 @@ Evaluate $\lim_{x \to -\infty} -5 \, x^3$
 
 \begin{question}
 
-Evaluate $\lim_{x \to 0^-} 3 \, x^{-4}$
+\[ \text{Evaluate} \lim_{x \to 0^-} 3 \, x^{-4} \]
 
 \begin{multipleChoice}
 \choice {$-\infty$}
@@ -310,7 +306,7 @@ Evaluate $\lim_{x \to 0^-} 3 \, x^{-4}$
 
 \begin{question}
 
-Evaluate $\lim_{x \to 0^+} 3 \, x^{-4}$
+\[ \text{Evaluate} \lim_{x \to 0^+} 3 \, x^{-4} \]
 
 \begin{multipleChoice}
 \choice {$-\infty$}
@@ -323,7 +319,7 @@ Evaluate $\lim_{x \to 0^+} 3 \, x^{-4}$
 
 \begin{question}
 
-Evaluate $\lim_{x \to 0^+} -3 \, x^{-4}$
+\[ \text{Evaluate} \lim_{x \to 0^+} -3 \, x^{-4} \]
 
 \begin{multipleChoice}
 \choice [correct]{$-\infty$}
@@ -336,7 +332,7 @@ Evaluate $\lim_{x \to 0^+} -3 \, x^{-4}$
 
 \begin{question}
 
-Evaluate $\lim_{x \to 0^-} -3 \, x^{-5}$
+\[ \text{Evaluate} \lim_{x \to 0^-} -3 \, x^{-5} \]
 
 \begin{multipleChoice}
 \choice {$-\infty$}
@@ -394,6 +390,10 @@ $a_k x^k$ are called \textbf{terms}.
 
 
 \end{definition}
+
+
+
+
 We almost never see polynomials written out fully like this.  Usually, we see shorthand notation.   \\
 
 
@@ -540,6 +540,50 @@ When analyzing polynomial functions, our first step is going to be to factor it.
 
 
 
+
+
+\begin{question}
+
+Write $(y - 3)(2y + 1)$ in standard form, i.e. as a sum.
+
+
+
+\begin{multipleChoice}
+\choice {$2y^2 - 3$}
+\choice {$y - 3 + 2y + 1$}
+\choice [correct]{$2y^2-5y-3$}
+\choice {$2y^2 + 3$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section {Graphs}
 
 
@@ -575,6 +619,42 @@ The graph of $y = f(x) = \frac{1}{100} x^3 + \frac{1}{25} x^2 - \frac{31}{100} x
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+\begin{question}
+
+\[   \lim_{x \to -\infty} f(x)  = \infty   \]
+
+
+
+\begin{multipleChoice}
+\choice {True}
+\choice [correct]{False}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+\begin{question}
+
+\[   \lim_{x \to \infty} f(x)  = \infty   \]
+
+
+
+\begin{multipleChoice}
+\choice [correct]{True}
+\choice {False}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
 
 \end{example}
 
@@ -612,6 +692,41 @@ The graph of $y = g(t) = \frac{1}{100} (t+7) (t+2) (t-2) (t-4) $
 \end{tikzpicture}
 \end{image}
 
+
+
+
+
+\begin{question}
+
+\[   \lim_{t \to -\infty} g(t)  = \infty   \]
+
+
+
+\begin{multipleChoice}
+\choice [correct]{True}
+\choice {False}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+\begin{question}
+
+\[   \lim_{t \to \infty} g(t)  = \infty   \]
+
+
+
+\begin{multipleChoice}
+\choice [correct]{True}
+\choice {False}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
 \end{example}
 
 
@@ -620,6 +735,36 @@ Polynomials have no discontinuities or singularities.  Polynomial functions may 
 
 
 
+
+
+
+\begin{question}
+
+In the example above, $g(t)$ has a minimum value.
+
+
+
+\begin{multipleChoice}
+\choice [correct]{True}
+\choice {False}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+\begin{question}
+
+In the example above, $g(t)$ has a maximum value.
+
+
+
+\begin{multipleChoice}
+\choice {True}
+\choice [correct]{False}
+\end{multipleChoice}
+
+\end{question}
 
 
 
@@ -633,21 +778,7 @@ Polynomials have no discontinuities or singularities.  Polynomial functions may 
 \section{End Behavior}
 
 
-
-Depending on the sign of the leading coefficient, we have end behavior dictated by the leading term (a power function).
-
-
-
-
-\[    \lim_{t \to -\infty} p(t) =  \infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = \infty      \]
-
-\[    \lim_{t \to -\infty} p(t) =  -\infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = -\infty      \]
-
-or opposite directions
-
-\[    \lim_{t \to -\infty} p(t) =  -\infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = \infty      \]
-
-\[    \lim_{t \to -\infty} p(t) =  \infty  \,   \text{ and }  \,     \lim_{t \to \infty} p(t) = -\infty      \]
+The end behavior of a polynomial function is the same as the leading term (a power function), which depend on the sign of the leading coefficient.
 
 
 
