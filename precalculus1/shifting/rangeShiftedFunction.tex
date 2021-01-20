@@ -42,7 +42,17 @@ T(v) =
 \]
 
 
-On the interval $(-4, -1]$, the graph should be a line for $T(v) = 2v-1$. On the interval $[1, 7)$, the graph should be another line for $T(v) = -v+3$
+On the interval $(-4, -1]$, the graph should be a line segment for $T(v) = \answer{2v-1}$.   There should be a(n) \wordChoice{\choice[correct]{open} \choice{closed}} dot when $v = -4$.  There should be an \wordChoice{\choice{open} \choice[correct]{closed}} dot when $v = -1$.
+
+
+
+
+
+
+
+
+
+On the interval $[1, 7)$, the graph should be another line segment for $T(v) = \answer{-v+3}$. There should be a(n) \wordChoice{\choice{open} \choice[correct]{closed}} dot when $v = 1$.  There should be an \wordChoice{\choice[correct]{open} \choice{closed}} dot when $v = 7$.
 
 
 
@@ -53,6 +63,9 @@ Graph of $y = T(v)$.
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$v$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -76,7 +89,7 @@ Graph of $y = T(v)$.
 
 
 
-The domain of $T$ has two maximal intervals:, $(-4,-1]$ and $[1,7)$.  These correspond to two line segments on the graph. The endpoints give us four important points on the graph: 
+The domain of $T$ has two maximal intervals:, $(-4,-1]$ and $[1,7)$.  These correspond to two line segments on the graph. The endpoints give us four strategic points on the graph: 
 
 \begin{itemize}
 
@@ -90,8 +103,26 @@ The domain of $T$ has two maximal intervals:, $(-4,-1]$ and $[1,7)$.  These corr
 
 The function $T$ has no minimum values.  It has a global maximum of $2$, which occurs at $1$.  This is also a local maximum.  There is another local maximum value of $-3$, which occurs at $-1$.
 
-The function $T$ is increasing on the interval $(-4,-1]$. \\
-The function $T$ is decreasing on the interval $[-1, 7)$.
+The function $T$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}} on the interval $(-4,-1]$. \\
+The function $T$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing}} on the interval $[-1, 7)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{A New Function}
@@ -99,21 +130,21 @@ The function $T$ is decreasing on the interval $[-1, 7)$.
 $B(k)$ is a new function, but its definition is based on $T(v)$.
 
 
-$B(k) = T(k)+4$ with the implied domain. \\
+$\blacktriangleright$ $B(k) = T(k)+4$ with the implied domain. \\
 
 
 \textbf{First Question:} What is the domain of $B$?
 
-$k$ represents the domain of $B$, which means it comes from $(-4,-1] \cup [1,7)$. $k$ is also representing the domain of $B$.  Therefore, the domain $B$ is also $(-4,-1] \cup [1,7)$.
+In the definition of $B(k)$, we see $T(k)$, which means $k$ represents the domain of $T$, which is $(-4,-1] \cup [1,7)$. $k$ is also representing the domain of $B$.  Therefore, the domain $B$ is also $(-4,-1] \cup [1,7)$.
 
 
-The addition of $4$ is not inside the domain parentheses next to $B$.  It is on the outside of the domain parentheses. $T(k)$ represents range values or values of the function and these are increasing by $4$.
+The addition of $4$ is not inside the domain parentheses next to $B$.  It is on the outside of the domain parentheses. $T(k)$ represents range values or values of the function, $T$, and these are increased by $\answer{4}$ to get the values of $B$.
 
 
 
 
 
-THe formula for $B$ is simnply the formula for $T$ with $4$ added.
+The formula for $B$ is the formula for $T$ with $4$ added.
 
 
 
@@ -139,6 +170,9 @@ Graph of $z = B(k)$.
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$k$, ylabel=$z$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -164,10 +198,18 @@ The
 
 
 
-$B(k)$ has a global maximum of $2+4$, which occurs at $1$.  This is also a local maximum.  There is another local maximum value of $-3+4$, which occurs at $-1$.
+$T$ has a global maximum of $2$, which occurs at $1$.  Therefore, $B(k)$ has a global maximum of $\answer{6}$, which occurs at $1$.  This is also a local maximum.  There is another local maximum value of $-3+4=1$, which occurs at $\answer{-1}$.
 
 The function $B$ is increasing on the interval $(-4,-1]$, just like $T$. \\
 The function $B$ is decreasing on the interval $[-1, 7)$, just like $T$.
+
+
+
+
+
+
+
+
 
 
 
@@ -203,16 +245,15 @@ Define $V(h)$ as
 \[
 V(h) = 
 \begin{cases}
-  -2h-3 & \text{ if } [-6, -2]   \\
-  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
-  \frac{7h}{4} - 8 & \text{ if } (4,6)
+  -2h-3 &  [-6, -2]   \\
+  -(h+3)(h-3) &  (-2, 4]  \\
+  \frac{7h}{4} - 8 &  (4,6)
 \end{cases}
 \]
 
 
 
-A graph always helps our thinking. Here is theg raph of $y = V(h)$.
-
+A graph always helps our thinking. Here is the graph of $y = V(h)$.
 
 
 
@@ -225,6 +266,9 @@ A graph always helps our thinking. Here is theg raph of $y = V(h)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$h$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -258,13 +302,13 @@ A graph always helps our thinking. Here is theg raph of $y = V(h)$.
 \begin{itemize}
 
 \item The domain of $V$ is $[-6,6)$.
-\item $V$ has a global maximum of $9$, which occurs at $0$.
+\item $V$ has a global maximum of $9$, which occurs at $\answer{0}$.
 \item $V$ has a global minimum of $-7$, which occurs at $4$.
 \item $V$ has a jump discontinuity at $-2$.
 \item $V$ has a jump discontinuity at $4$.
 \item $V$ is decreasing on $[-6, -2]$.
 \item $V$ is increasing on $[-2, 0]$.
-\item $V$ is decreasing on $[0, 4]$.
+\item $V$ is decreasing on $\left[\answer{0}, \answer{4}\right]$.
 \item $V$ is increasing on $[4, 6)$.
 
 
@@ -285,7 +329,7 @@ Let's define a new function based on $V$.\\
 
 Let $f(x) = V(x)-2$ with the induced domain.
 
-The domain of $V$ is $[-6, 6)$, same as $V$. The range values or function values $f$ are all $2$ less than the function values of $V$.
+The domain of $f$ is $\left[\answer{-6}, \answer{6}\right)$, same as $V$. The range or function values $f$ are all $\answer{2}$ less than the function values of $V$.
 
 
 
@@ -296,13 +340,11 @@ The domain of $V$ is $[-6, 6)$, same as $V$. The range values or function values
 \[
 f(x) = 
 \begin{cases}
-  -2x-5 & \text{ if } [-6, -2]   \\
-  -(x+3)(x-3)-2 & \text{ if } (-2, 4]  \\
-  \frac{7x}{4} - 10 & \text{ if } (4,6)
+  -2x-5 &  [-6, -2]   \\
+  -(x+3)(x-3)-2 &  (-2, 4]  \\
+  \frac{7x}{4} - 10 &  (4,6)
 \end{cases}
 \]
-
-
 
 
 
@@ -320,6 +362,9 @@ f(x) =
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$h$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -357,13 +402,13 @@ f(x) =
 \begin{itemize}
 
 \item The domain of $f$ is $[-6,6)$.
-\item $f$ has a global maximum of $7$, which occurs at $0$.
+\item $f$ has a global maximum of $7$, which occurs at $\answer{0}$.
 \item $f$ has a global minimum of $-9$, which occurs at $4$.
 \item $f$ has a jump discontinuity at $-2$.
 \item $f$ has a jump discontinuity at $4$.
 \item $f$ is decreasing on $[-6, -2]$.
 \item $f$ is increasing on $[-2, 0]$.
-\item $f$ is decreasing on $[0, 4]$.
+\item $f$ is decreasing on $\left[\answer{0}, \answer{4}\right]$.
 \item $f$ is increasing on $[4, 6)$.
 
 
@@ -379,13 +424,6 @@ The places in the domain where characteristics and features occur have not chang
 
 
 \end{example}
-
-
-
-
-
-
-
 
 
 
