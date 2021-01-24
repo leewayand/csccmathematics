@@ -21,17 +21,17 @@ sliding the graph
 
 
 
-Let $D(y)$ be a function with its domain.
+Let $X(y)$ be a function with its domain.
 
-Let $K(r)$ be defined as $K(r) = D(r)-7$ with its induced domain.
+Let $P(r)$ be defined as $P(r) = X(r)-7$ with its induced domain.
 
 
-Then the domain of $K$ is
+Then the domain of $P$ is
 
 \begin{multipleChoice}
-\choice {the domain of $D$ shifted left $7$}
-\choice {the domain of $D$ shifted right $7$}
-\choice[correct] {the same as for $D$}
+\choice {the domain of $X$ shifted left $7$}
+\choice {the domain of $X$ shifted right $7$}
+\choice[correct] {the same as for $X$}
 \end{multipleChoice}
 
 
@@ -57,7 +57,10 @@ Graph of $y = m(f)$.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -90,24 +93,24 @@ Graph of $y = m(f)$.
 
 \begin{itemize}
 
-\item The domain of $m$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
-\item $m$ has a global (and local) maximum of $6$, which occurs at $1$. 
-\item $m$ has a global (and local) minimum of $-9$, which occurs at $-2$. 
-\item $m$ has a local maximum of $1$, which occurs at $-7$.
+\item The domain of $m$ is $[-7,-4) \cup \left\{\answer{-3}\right\} \cup [-2,7)$.
+\item $m$ has a global (and local) maximum of $6$, which occurs at $\answer{1}$. 
+\item $m$ has a global (and local) minimum of $-9$, which occurs at $\answer{-2}$. 
+\item $m$ has a local maximum of $\answer{1}$, which occurs at $-7$.
 
 \end{itemize}
 
 
-$2$ is both a local maximum and minimum of $m$.  \\
+$\answer{2}$ is both a local maximum and minimum of $m$.  \\
 
-To see this is a maximum, imagine the interval $(-2.9, -3.1)$. For all of the domain elements in this interval, $T(-3)=2$ is the maximum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval..  But, the definition never promised that there would be others.  It simply says that you need to supply an open interval such that $T(-3)$ is greater than or equal to all function values for domain numbers inside the interval. \\
+To see that $2$ is a local maximum, imagine the interval $(-3.1, -2.9)$. For all of the domain elements in this interval, $T(-3)=2$ is the maximum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval.  But, the definition never promised that there would be other domain numbers.  It simply says that you need to supply an open interval around $-3$ such that $T(-3)$ is greater than or equal to all function values for all domain numbers inside the interval. \\
 
-To see this is a minimum, imagine the interval $(-2.9, -3.1)$. For all of the domain elements in this interval, $T(-3)=2$ is the minimum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval..  But, the definition never promised that there would be others.  It simply says that you need to supply an open interval such that $T(-3)$ is less than or equal to all function values for domain numbers inside the interval. \\
-
-
+To see that $2$ is a local minimum, imagine the interval $(-3.1, -2.9)$. For all of the domain elements in this interval, $T(-3)=2$ is the minimum.  This is automatically satisfied, since $3$ is the only domain element of $m$ inside this interval.  But, the definition never promised that there would be other domain numbers.  It simply says that you need to supply an open interval around $-3$ such that $T(-3)$ is less than or equal to all function values for all domain numbers inside the interval. \\
 
 
-Now, we'll shift the range. \\
+
+
+$\blacktriangleright$ Now, we'll shift the range. \\
 
 
 
@@ -117,7 +120,10 @@ Graph of $z = P(t) = m(t)+3$.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$,
+            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -146,10 +152,11 @@ Graph of $z = P(t) = m(t)+3$.
 
 \begin{itemize}
 
-\item The domain of $P$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
-\item $m$ has a global (and local) maximum of $6+3=9$, which occurs at $1$. 
-\item $m$ has a global (and local) minimum of $-9+3=-6$, which occurs at $-2$. 
-\item $m$ has a local maximum of $1+3=4$, which occurs at $-7$.
+\item The domain of $P$ is $[-7,-4) \cup \{-3\} \cup [-2,7)$.
+\item $m$ has a global (and local) maximum of $6+\answer{3}=9$, which occurs at $\answer{1}$. 
+\item $m$ has a global (and local) minimum of $-9+\answer{3}=-6$, which occurs at $\answer{-2}$. 
+\item $m$ has a local maximum of $1+\answer{3}=4$, which occurs at $\answer{-7}$.
+\item $\answer{2}$ is both a local maximum and minimum of $m$ occuring at $-3$. 
 
 \end{itemize}
 
@@ -203,8 +210,8 @@ Graph of $y = sin(\theta)$.
 
 \begin{itemize}
 \item The zeros of $sin(\theta)$ are all integer multiples of $\pi$.
-\item The maximum value is $1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
-\item The minimum value is $-1$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\item The maximum value is $1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\} = \{ \cdots, \frac{-3\pi}{2}, \frac{\pi}{2}, \frac{5\pi}{2}, \cdots \}$
+\item The minimum value is $-1$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\} = \{ \cdots, \frac{-5\pi}{2}, \frac{-\pi}{2}, \frac{3\pi}{2}, \cdots \}$
 \end{itemize}
 
 
@@ -268,6 +275,28 @@ Adding or subtracting a constant from the function, as oposed to the domain, shi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Together}
 
 We can apply horizontal and vertical shifts together as well.
@@ -278,14 +307,20 @@ We can apply horizontal and vertical shifts together as well.
 
 \begin{example}  Shifting
 
-Let $B(r) = |r-3| + 2$.
+Let $B(r) = |r-3| + 2$.  \\
+
+
+We have shifted the absolute value function to the \wordChoice{\choice{left} \choice[correct]{right}} by \wordChoice{\choice{-3} \choice{-2} \choice{2} \choice[correct]{3}} and \wordChoice{\choice[correct]{up} \choice{down}}  by \wordChoice{\choice[correct]{2} \choice{3}}.
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$r$, ylabel=$y$,
+            axis lines =center, xlabel=$r$, ylabel={$y=B(t)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -299,6 +334,27 @@ Let $B(r) = |r-3| + 2$.
 \end{image}
 
 \end{example}
+
+
+The graph of the absolute value function looks like a "V", which is also the shape of the graph of $B$. \\
+
+
+The graph of the absolute value function has a corner at $(0, 0)$.  The corner in the graph of $B$ is now at $(3, 2)$. \\
+
+Another way of saying this is that the absolute value function, $A(t) = |t|$ has a global minimum of $0$ at $0$.  This zero occurs when the inside of the vertical bars equals $0$.
+
+For $B$, this happens when $r-3=0$. $r=\answer{3}$.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
