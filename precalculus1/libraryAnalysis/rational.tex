@@ -18,9 +18,9 @@ features
 
 
 
+\begin{definition}
 
-
-Rational functions are fractions of polynomials
+\textbf{Rational functions} are fractions of polynomials
 
 
 
@@ -32,13 +32,16 @@ Rational functions are fractions of polynomials
 where the $a_k$ and $b_k$ are real numbers and $a_n \ne 0$ and $b_m \ne 0$.
 
 
+\end{definition}
 
 
 
 
 
+Again, we prefer polynomials in factored form.  \\
 
-Again, we prefer polynomials in factored form.  Therefore, usually our first step is to transform the rational function to look like
+
+Therefore, usually our first step is to transform the rational function to look like
 
 
 
@@ -73,19 +76,19 @@ Finally, we would like to clean up the factors and group them together
 Suppose the numerator and denominater share a root, $r_i = s_j$.  Then we can reduce the expression but we must remember that $s_j$ is not in the domain.
 
 
-Otherwise, let's assume that we have reduced and there are no shared roots between the numerator and denominator. \\
+With that reduction in mind, let's assume that we have reduced the rational expression and there are no shared roots between the numerator and denominator. \\
 
 
 
 
 \textbf{No Shared Roots}
 
-In this case, 
+In this case, all of the roots are distinct
 
 \begin{itemize}
-\item $r_i = s_j$ for all possible $i$ and $j$
-\item $r_i = r_j$ for all possible $i$ and $j$
-\item $s_i = s_j$ for all possible $i$ and $j$
+\item $r_i \ne s_j$ for all possible $i$ and $j$
+\item $r_i \ne r_j$ for all possible $i$ and $j$
+\item $s_i \ne s_j$ for all possible $i$ and $j$
 \end{itemize}
 
 
@@ -93,7 +96,7 @@ Now we can analyze our rational function.
 
 
 
-\section{Numerator}
+$\blacktriangleright$ \textbf{Numerator}
 
 
 
@@ -107,13 +110,13 @@ If the multipicity is even, then the graph does not cross the axis at this inter
 
 
 
-\section{Denominator}
+$\blacktriangleright$ \textbf{Denominator}
 
 
-The numerator is a polynomial.  Each factor gives a root or zero of the denominator, which corresponds to a singularity and a vertical asymptote on the graph. \\
+The numerator is a polynomial.  Each factor gives a root or zero of the denominator, which corresponds to a singularity of the rational function and a vertical asymptote on the graph. \\
 
 
-The factors in the denominoatr still affect the sign of the function values.
+The factors in the denominator still affect the sign of the function values.
 
 
 If the multipicity is odd, then the graph changes sign across the singularity and vertical asymptote.  \\
@@ -139,11 +142,17 @@ If the multipicity is even, then the graph does not change sign across the singu
 The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
 
 
+
+
+
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$w$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -164,10 +173,12 @@ The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
 
 
 
-The numerator has the factor $w-1$, which has multiplicity $1$, odd.  Therefore $H$ has $1$ as a root and he graph has $(-1,0)$ as its only intercept, the only place where the graph crosses the horizontal axis.
 
 
-The denominator has two factors $w+3$ and $w-4$.  Both have odd multiplicity, therefore, the function changes sign over these singularities and vertical asymptotes.
+The numerator has the factor $w-1$, which has multiplicity $\answer{1}$, odd.  Therefore $H$ has $\answer{1}$ as a root and the graph has $(1,0)$ as its only intercept, the only place where the graph crosses the horizontal $w$-axis.
+
+
+The denominator has two factors $w+3$ and $w-4$.  Both have \wordChoice{\choice[correct]{odd} \choice {even}}  multiplicity, therefore, the function changes sign over these singularities and vertical asymptotes.
 
 
 The degree of the denominator is larger than the degree of the numerator, therefore the $w$-axis is a horizontal asymptote.
@@ -178,16 +189,31 @@ The endbehavior is
 
 
 
-\[       \lim_{w \to -\infty} H(w) = 0   \, \text{ and } \,    \lim_{w \to \infty} H(w) = 0               \]
+\[       \lim_{w \to -\infty} H(w) = \answer{0}   \, \text{ and } \,    \lim_{w \to \infty} H(w) = \answer{0}               \]
 
 
 
 
 
-\textbf{asymptote $w = -3$}
+$\blacktriangleright$ \textbf{Vertical Asymptotes} 
 
 
-Near $-3$, on either side of $-3$, the factors $w-1$ and $w-4$ do not change sign. $w-1$ is near $-4$.  $w-4$ is near $-7$.  Both factors take on negative values near $-3$.
+
+
+
+The factor $w+3$ corresponds to the vertical asymptote described by $w = -3$.
+
+
+Near $-3$, on either side of $-3$, the factors $w-1$ and $w-4$ do not change sign. 
+
+
+
+\begin{itemize}
+\item The value of $w-1$ is near $-4$ (negative), when $w$ is near $-3$
+\item The value of $w-4$ is near $-7$ (negative), when $w$ is near $-3$.
+\end{itemize}
+
+Both factors take on negative values when $w$ is near $-3$.
 
 The factor $w+3$ does change sign, since its multiplicity is odd.
 
@@ -197,18 +223,18 @@ The factor $w+3$ does change sign, since its multiplicity is odd.
 \end{itemize}
 
 
-On the left side of $-3$, $H(w) = \frac{neg}{neg \cdot neg} = negative$.  Plus, the denominator is approaching $0$ making the whole fraction get bigger and bigger negatively.
+THerefore, on the left side of $-3$, $H(w) = \frac{neg}{neg \cdot neg} = negative$.  Plus, the denominator is approaching $0$ making the whole fraction get bigger and bigger negatively.
 
 We can see this in the graph.  The graph moves down the left side of the $w=-3$ vertical asymptote.
 
 Since this singularity has an odd multiplicity, we also know that $H$ changes sign across this vertical asymptote.
 
 
-We can no walk through the sign changes of $H$.
+We can now walk through the sign changes of $H$.
 
 \begin{itemize}
-\item $w = 1$ is zero with odd multipicity.  The sign changes across this zero. The graph crosses at this intercept.
-\item $w = 4$ is an odd singularity. The sign changes across this singularity.  The graph jumps to the other infinity across the vertical asymptote.
+\item $w = 1$ is a zero of $H$ with odd multipicity.  The sign of $H$ changes across this zero. The graph crosses the $w$-axis at the $(1, 0)$ intercept.
+\item $w = 4$ is an odd singularity. The sign of $H$ changes across this singularity.  The graph jumps to the other infinity across the vertical asymptote.
 \end{itemize}
 
 
@@ -221,18 +247,7 @@ We can now categorize the rate of change for $H$.
 \item $H$ is decreasing on $(4,\infty)$.
 \end{itemize}
 
-$H$ is decreasing everywhere in its domain.
-
-
-
-
-
 $H$ has no global or local maximums or minimums.
-
-
-
-
-
 
 
 \end{example}
@@ -243,9 +258,9 @@ $H$ has no global or local maximums or minimums.
 
 
 
-\section{Sign Chnages}
+\section{Sign Changes}
 
-For rational functions, the sign can change only at a zero or a singularity of odd degree. This is helpful when graphing. These requirements force the graph to go in particular directions.
+For rational functions, the sign can change only at a zero of odd multiplicity or a singularity of odd multiplicity. This is helpful when graphing. These requirements force the graph to go in particular directions.
 
 
 
