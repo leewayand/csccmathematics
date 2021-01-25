@@ -12,20 +12,22 @@ characteristics
 \maketitle
 
 
-Polynomials are functions that can be described by sums power functions
 
 
-\[    a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
+\begin{definition}
+\textbf{Polynomials} are functions that can be described as sums of power functions
+
+
+\[    p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
 
 where the $a_k$ are real numbers and $a_n \ne 0$.
 
 
 \begin{itemize}
-
+\item Each of the summands are called a \textbf{term}.  
 \item $n$ is called the \textbf{degree} of the polynomial.
 \item $a_k$ are called \textbf{coefficients}.
 \item $a_n$ is called the \textbf{leading coefficient}.
-\item Each of the summands are called a \textbf{term}.  
 \item $a_n x^n$ is called the \textbf{leading term}.
 \item $a_2 x^2$ is called the \textbf{quadratic term}.
 \item $a_1 x^1$ is called the \textbf{linear term}, often written as $a_1 x$.
@@ -33,7 +35,7 @@ where the $a_k$ are real numbers and $a_n \ne 0$.
 
 \end{itemize}
 
-
+\end{definition}
 
 
 
@@ -41,7 +43,7 @@ where the $a_k$ are real numbers and $a_n \ne 0$.
 
 For analytical purposes, we would prefer a product
 
-\[   f(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  \]
+\[   p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  \]
 
 
 \begin{itemize}
@@ -66,6 +68,9 @@ The graph of $y = f(x) = \frac{1}{100} x^3 + \frac{1}{25} x^2 - \frac{31}{100} x
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -92,21 +97,21 @@ All of their characteristics and features are nice.
 \end{itemize}
 
 
-Polynomials smoothly alternative between increasing and decreasing and they switch at maximums and minimums.
+Polynomials smoothly alternate between increasing and decreasing, which switched at global and local maximums and minimums.
 
-As you will see later, polynomials have a limit on the number of zeros and extrema they can have.  They cannot have more than the degree of the polynomial. So, what happens outside all of the zeros?  This is known as the \textbf{endbehavior}.  All polynomials continue without bound after the zeros.  Either the tend to infinity or negative infinity.
+As you will see later, polynomials have a limit on the number of zeros and extrema they can have.  They cannot have more than the degree of the polynomial. So, what happens outside all of the wiggling?  This is known as the \textbf{endbehavior}.  All polynomials continue without bound after the zeros and extrema.  Either they tend to infinity or negative infinity.
 
 
 
 \section{Factored Form}
 
 
-$f(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the factored form of a polynomial.  In an effort to be clearer, we clean up the roots, because their could be repeated roots and we would like to point this out.  Therefore the standard factored form looks like
+$p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the factored form of a polynomial.  In an effort to be clearer, we clean up the roots, because there could be repeated roots and we would like to point this out.  Therefore the standard factored form looks like
 
 
 
 
-\[   f(x) = a (x-r_n)^{e_n} (x-r_{n-1})^{e_{n-1}}  \cdots (x-r_2)^{e_2} (x-r_1)^{e_1}  \]
+\[   p(x) = a (x-r_n)^{e_n} (x-r_{n-1})^{e_{n-1}}  \cdots (x-r_2)^{e_2} (x-r_1)^{e_1}  \]
 
 
 
@@ -117,7 +122,7 @@ The $e_k$ are the exponents and tell us how many times a particular root repeats
 
 \textbf{\large Running the Number Line}
 
-If we think of the real numbers as lining up to form the number line, then we could imagine ourselves running over the number line from $-\infty$ to $\infty$, or from left to right.  We would hit every real number once.  We would run through each distinct.  As we ran from the left side to the right side of each root, the sign of the value of the polynomial with either change or stay the same.
+If we think of the real numbers as lining up to form the number line, then we could imagine ourselves running over the number line from $-\infty$ to $\infty$, or from left to right.  We would hit every real number once.  We would run through each distinct root once.  As we ran from the left side to the right side of each root, the sign of the value of the polynomial with either change or stay the same.
 
 At each root. $r_k$, the value of the polynomial is $0$.  But on either side of the root, the polynomial is either positive or negative.
 
@@ -133,14 +138,14 @@ negative & 0 & positive
 \]
 
 
-Either the sign switches or it stays the same.  What in the formula decides this?
+Either the sign switches or it stays the same across the root.  What in the formula dictates this?
 
 
 
 \[   f(x) = a (x-r_n)^{e_n} (x-r_{n-1})^{e_{n-1}}  \cdots (x-r_2)^{e_2} (x-r_1)^{e_1}  \]
 
 
-If we imagine ourselves running through $(x-r_k)^{e_k}$ is the only factor that could possibly change sign.  All of the other factors maintain their same sign when we run through $r_k$.
+If we imagine ourselves running through $r_k$, then $(x-r_k)^{e_k}$ is the only factor that could possibly change sign.  All of the other factors maintain their same sign when we run through $r_k$.
 
 
 When $x<r_k$, then $x-r_k <0$.  When $x>r_k$, then $x-r_k >0$.
@@ -164,12 +169,18 @@ If $e_k$ is odd then it does matter, because, unlike an even power, a negative n
 
 
 
+\begin{itemize}
+\item If $r_k$ is a root of odd multiplicty, then $(x-r_k)^{e_k}$ will change its sign.
+\item If $e_k$ is a root of even multiplicty, then $(x-r_k)^{e_k}$ will not change its sign.
+\end{itemize}
+
+
 
 
 \textbf{\large Graphically}
 
 
-Graphically, the values of the function are measured vertically. Zeroes are represented as dots positioned on the horizontal axis.  The graph either flows from one side of the axis to the other as the function changes sign or the graph rebounds from the intercept and stays on the same side of the axis.  The modality of the zero tells us which.
+Graphically, the values of the function are measured vertically. Zeroes are represented as dots positioned on the horizontal axis.  The graph either flows from one side of the horizontal axis to the other side as the function changes sign or the graph rebounds from the intercept and stays on the same side of the horizontal axis.  The multiplicity of the root tells us which.
 
 
 
@@ -178,7 +189,7 @@ Graphically, the values of the function are measured vertically. Zeroes are repr
 
 \begin{example}
 
-Change the exponent of the $x+2$ factor from odd to even.  The graph will crossover the axis for odd exponents and bounce back for even expoents.  If you change the sign of the leading coefficient, then the crossing and bouncing will jump to the other side of the axis.
+Change the exponent of the $x+2$ factor from odd to even.  The graph will crossover the $x$-axis for odd exponents and bounce back for even expoents.  If you change the sign of the leading coefficient, then the crossing and bouncing will jump to the other side of the $x$-axis.
 
 
 
@@ -193,9 +204,25 @@ Change the exponent of the $x+2$ factor from odd to even.  The graph will crosso
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Extrema}
 
-The best we can do for the maximums and minimums, at this point, is estimate them.
+Unless we have a quadratic polynomial, the best we can do for the maximums and minimums, at this point, is estimate them.
 
 
 
@@ -223,7 +250,29 @@ $f(x)$ has a global minimum value of $\answer[tolerance=0.1]{1.75}$, which occur
 
 
 
-The extrema values occur at numbers in the domain called \textbf{critical numbers}.  Graphically, critical numbers include places where the tangent lines are horizontal.  They are the domain numbers marking flat places in the graph, like tops of hills and bottoms of valleys.
+The extreme values of the function occur at numbers in the domain called \textbf{critical numbers}.  Critical numbers play an important role in function analysis.  
+
+
+We'll start with critical numbers pointing out horizontal tangent lines in the graph.
+
+
+
+
+
+
+
+
+
+\begin{definition}
+
+\textbf{Critical numbers} are domain numbers, which correspond to points on the graph where the tangent line is horizontal.
+
+\end{definition}
+
+
+
+
+Critical numbers are domain numbers marking flat/horizontal places in the graph.  These include tops of hills and bottoms of valleys. Critical numbers include places where extrema value occur.
 
 
 
@@ -245,7 +294,7 @@ The extrema values occur at numbers in the domain called \textbf{critical number
 
 
 
-Polynomials are nice.  They increase and decrease on intervals defined by critical numbers marking local maximums and minimums.
+Polynomials are nice.  They increase and decrease on intervals defined by critical numbers marking places where the graph is horizontal and possible maximums and minimums.
 
 
 
@@ -267,11 +316,11 @@ The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
 
 
-$f$ has two critical numbers: $-2$ and $1.75$. There are two places where the graph is flat or has a horizontal tangent line.
+$f$ has two critical numbers: $-2$ and $1.75$. There are two places where the graph has a horizontal tangent line.
 
 \begin{itemize}
-\item $f$ decreases on $(-\infty, 1.75]$.
-\item $f$ increases on $[1.75, \infty)$.
+\item $f$ decreases on $\left(-\infty, \answer{1.75}\right]$.
+\item $f$ increases on $\left[\answer{1.75}, \infty\right)$.
 \end{itemize}
 
 
@@ -280,7 +329,7 @@ $f$ has two critical numbers: $-2$ and $1.75$. There are two places where the gr
 \end{example}
 
 
-\textbf{Note:} $-2$ is a critical number, because the graph is flat there.  Therefore, $-2$ is a critical number. However, $f$ does not switch its rate of change there, since $f$ does not have an extreme value there.
+\textbf{Note:} $-2$ is a critical number, because the graph is flat there.  However, $f$ the sign of the rate of change does not switch there, since $f$ does not have an extreme value there.
 
 
 
@@ -296,19 +345,24 @@ $f$ has two critical numbers: $-2$ and $1.75$. There are two places where the gr
 
 
 
+$\blacktriangleright$ Polynomial functions are nice.  They allow us to see many connections that we will keep in mind as we investigate other types of functions.
+
+\begin{quote}
 Zeros, Factors, and Intercepts are different things but they all refer to the same idea.
+\end{quote}
+
 
 
 
 \begin{itemize}
 
-\item If $z$ is a zero of the polynomial $p(x)$, then $p(z)=0$.
+\item If $z_0$ is a zero of the polynomial $p(x)$, means $p(z_0)=0$.
 
 
-\item If $(x-z)$ is a factor of the polynomial $p(x)$, then $p(x) = q(x) \cdot (x-z)$ for some polynomial $q(x)$.
+\item If $(x-z_0)$ is a factor of the polynomial $p(x)$, means $p(x) = q(x) \cdot (x-z_0)$ for some polynomial $q(x)$.
 
 
-\item If $(z,0)$ is an intercept of the graph of the polynomial $p(x)$, then $(z,0)$ is on the graph.
+\item If $(z_0,0)$ is an intercept of the graph of the polynomial $p(x)$, means $(z,0)$ is on the graph.
 
 \end{itemize}
 
@@ -322,13 +376,13 @@ However, the existance of any of these implies the other two
 
 \begin{itemize}
 
-\item If $z$ is a zero of the polynomial $p(x)$, then $(z-x)$ is a factor and $(z,0)$ is on the graph.
+\item If $z_0$ is a zero of the polynomial $p(x)$, then $(x-z_0)$ is a factor and $(z_0,0)$ is on the graph.
 
 
-\item If $(x-z)$ is a factor of the polynomial $p(x)$, then $p(z)=0$ and $(z,0)$ is on the graph.
+\item If $(x-z_0)$ is a factor of the polynomial $p(x)$, then $p(z_0)=0$ and $(z_0,0)$ is on the graph.
 
 
-\item If $(z,0)$ is an intercept of the graph of the polynomial $p(x)$, $p(z)=0$ and $(x-z)$ is a factor.
+\item If $(z_0,0)$ is an intercept of the graph of the polynomial $p(x)$, then $p(z_0)=0$ and $(x-z_0)$ is a factor.
 
 \end{itemize}
 
