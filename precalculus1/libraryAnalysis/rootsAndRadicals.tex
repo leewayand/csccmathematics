@@ -14,6 +14,20 @@ aspects
 
 
 
+\begin{definition}
+
+
+Let $s$ be a real number. Let $n$ be a natural number.  Then $r$ is the $n^{th}$-root of $s$ provided
+
+
+\[    r^n = s     \]
+
+
+
+The symbol for the $n^{th}$-root of $s$ uses the \textbf{radical sign}, $\sqrt[n]{s}$.
+
+\end{definition}
+
 
 
 
@@ -43,14 +57,17 @@ Their domains do not include negative numbers: $[0, \infty)$, the \textbf{nonneg
 
 
 
-The graph of $y = Square(x) = \sqrt{x} $
+The graph of $y = SR(x) = \sqrt{x}$
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$w$, ylabel=$y$,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -69,21 +86,24 @@ The graph of $y = Square(x) = \sqrt{x} $
 
 
 
-The square root function begins where the inside of the formula equals $0$.  It then moves in the direction of positive inside.
+The square root function begins where the inside of the radical equals $0$.  It then moves in the direction that keeps the inside positive.
 
 
 
 
 \begin{example} Even Root
 
-The graph of $y = f(v) = \sqrt{v+3} $
+The graph of $y = f(v) = \sqrt{v+3}$
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$y$,
+            axis lines =center, xlabel=$v$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -101,7 +121,7 @@ The graph of $y = f(v) = \sqrt{v+3} $
 \end{image}
 
 
-Here the inside $v+3=0$ equals $0$ when $v=-3$.  That is the start of the domain.  Then the inside is positive $v+3>0$, when $v>-3$, which means the graph moves up to the right.
+Here the inside $v+3=0$ equals $0$ when $v=\answer{-3}$.  That is the start of the domain.  Then the inside is positive $v+3>0$, when $v>-3$, which means the graph moves up to the right.
 
 
 \end{example}
@@ -122,14 +142,17 @@ Here the inside $v+3=0$ equals $0$ when $v=-3$.  That is the start of the domain
 
 \begin{example} Even Root
 
-The graph of $y = T(k) = \sqrt{-k+5} $
+The graph of $y = T(k) = \sqrt{-k+5}$
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$k$, ylabel=$y$,
+            axis lines =center, xlabel=$k$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -147,7 +170,7 @@ The graph of $y = T(k) = \sqrt{-k+5} $
 \end{image}
 
 
-Here the inside $-k+5=0$ equals $0$ when $k=5$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k<5$, which means the graph moves up to the left.  The domain is $(-\infty,5]$.
+Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k \wordChoice{\choice[correct]{<} \choice {>}}  5$, which means the graph moves up to the left.  The domain is $(-\infty,5]$.
 
 
 
@@ -169,7 +192,7 @@ Here the inside $-k+5=0$ equals $0$ when $k=5$.  That is the start of the domain
 
 \section{Odd Roots}
 
-This course is the study of the real numbers. As a result we don't take even roots of negative numbers, we do have odd roots of negative numbers
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers, however we do have odd roots of negative numbers
 
 Odd roots
 
@@ -182,7 +205,7 @@ look a lot like the cube root
 
 
 
-Their domains dall real numbers: $(-\infty, \infty)$.  They increase very slowly over this domain, becoming unbounded.
+Their domains include all real numbers: $(-\infty, \infty)$.  They increase and decrease very slowly over this domain, becoming unbounded.
 
 
 
@@ -190,14 +213,17 @@ Their domains dall real numbers: $(-\infty, \infty)$.  They increase very slowly
 
 
 
-The graph of $y = Cube(x) = \sqrt[3]{x} $
+The graph of $y = CubeRoot(x) = \sqrt[3]{x}$
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$w$, ylabel=$y$,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -217,20 +243,23 @@ The graph of $y = Cube(x) = \sqrt[3]{x} $
 
 
 
-The cube root function has a vertical tangent line where the inside of the formula equals $0$.
+The cube root function has a vertical tangent line where the inside of the radical equals $0$.
 
 
 
 \begin{example} Odd Root
 
-The graph of $y = f(v) = \sqrt[3]{v+3} $
+The graph of $y = f(v) = \sqrt[3]{v+3}$
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$y$,
+            axis lines =center, xlabel=$v$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -248,7 +277,7 @@ The graph of $y = f(v) = \sqrt[3]{v+3} $
 \end{image}
 
 
-Here the inside $v+3=0$ equals $0$ when $v=-3$.  The graph has a vertical tangent line there.  Otherwise, the cube root function is increasing everywhere, but increasing slower and slower and slower.
+Here the inside $v+3=0$ equals $0$ when $v=\answer{-3}$.  The graph has a vertical tangent line there.  Otherwise, the cube root function is increasing everywhere, but increasing slower and slower and slower.
 
 
 \end{example}

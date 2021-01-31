@@ -14,7 +14,7 @@ attributes
 
 \section{Exponential Functions}
 
-Exponential functions are functions whose formulas have the variable in the exponent.
+Exponential functions are functions whose formulas have the variable in the exponent of a constant base.
 
 
 
@@ -27,7 +27,10 @@ Here is the graph of $y = 2^x$.
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -45,7 +48,7 @@ Here is the graph of $y = 2^x$.
 
 The domain of an expoential number is all real numbers, $(-\infty, \infty)$.  When the base is greater than $1$, the the whole function increases.  The function increases unbounded while, on the other side, the horizontal axis is a horizontal asymptote.
 
-\[  \lim_{x \to -\infty} 2^x = 0     \, \text{ and } \,  \lim_{x \to -\infty} 2^x = \infty   \]
+\[  \lim_{x \to -\infty} 2^x = \answer{0}     \, \text{ and } \,  \lim_{x \to \infty} 2^x = \answer{\infty}   \]
 
 
 
@@ -66,7 +69,10 @@ Here is the graph of $y = \left(\frac{1}{3}\right)^x$.
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -82,14 +88,29 @@ Here is the graph of $y = \left(\frac{1}{3}\right)^x$.
 \end{image}
 
 
-When the base is less than $1$, the the whole function decreases.  We still have unbounded from above and approaching $0$ on the other.
+When the base is less than $1$, the the whole function decreases.  We still have unbounded above and approaching $0$ below.
 
-\[  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = \infty     \, \text{ and } \,  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = 0   \]
+\[  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = \answer{\infty}     \, \text{ and } \,  \lim_{x \to \infty} \left(\frac{1}{3}\right)^x = \answer{0}   \]
 
 
 
 
 Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases very quickly and continues to do so.
+
+
+
+$\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponential functions contain the point $(0, 1)$.
+
+
+
+
+
+
+
+
+\section{Shifting}
+
+
 
 
 
