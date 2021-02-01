@@ -15,33 +15,40 @@ traits
 
 
 
-Absolute value makes negative numbers positive and leaves nonnegative numbers alone.  The algebra lokos like
+Absolute value makes negative numbers positive and leaves nonnegative numbers alone.  Of course, there is no algebra called "make positive".  Instead, we need a piecewise defined function.
 
 
 
+
+
+
+\begin{definition}
 \[
-|K| = 
+|k| = 
 \begin{cases}
-  -K & \text{if $K<0$,}\\
-   K & \text{if $K\ge 0$}.
+  -k & \text{if $k<0$,}\\
+   k & \text{if $k\ge 0$}.
 \end{cases}
 \]
+\end{definition}
+
+The symbol for the absolute value function are two vertical bars surrounding the domain value.
 
 
 
 
 
-
-
-
-Graph of $y = |K|$.
+Graph of $y = |k|$.
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$K$, ylabel=$y$,
+            axis lines =center, xlabel=$k$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -59,6 +66,9 @@ Graph of $y = |K|$.
 
 
 
+
+
+
 \begin{example}  Shifting
 
 Graph of $y = P(t) = |t+4|$.
@@ -69,6 +79,9 @@ Graph of $y = P(t) = |t+4|$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -81,18 +94,30 @@ Graph of $y = P(t) = |t+4|$.
 \end{tikzpicture}
 \end{image}
 
-The graph is position by its corner, which occurs when the inside of the absolute value formula equals $0$.  $t+4=0$, when $t=-4$.
+The graph is positioned by its corner, which occurs when the inside of the absolute value formula equals $0$.  $t+4=0$, when $t=-4$.
 
 
-$P$ has a global minimum of $0$, which occurs at $-4$. $P$ has no maximums.
+$P$ has a global minimum of $\answer{0}$, which occurs at $\answer{-4}$. $P$ has no maximums.
 
 $P$ decreases on $(-\infty, -4]$ and increases on $[-4, \infty)$ 
 
 
 
 
+\[
+P(t) = |t+4| = 
+\begin{cases}
+  -(t+4) & \text{if $t<\answer{-4}$,}\\
+   t-4 & \text{if $t\ge \answer{-4}$}.
+\end{cases}
+\]
+
+
+
+
 
 \end{example}
+
 
 
 
@@ -120,6 +145,9 @@ Let $B(r) = |r-3| + 2$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$r$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -134,9 +162,9 @@ Let $B(r) = |r-3| + 2$.
 
 
 
-Solve $B(r) = 5$.
+$\blacktriangleright$ Solve $B(r) = 5$.
 
-We can see from the graph that there are two solutions to this equation. Our first goal in solving this equation is to getthe absolute term by itself.
+We can see from the graph that there are two solutions to this equation. Our first goal in solving this equation is to get the absolute term by itself.
 
 
 $|r-3| + 2 = 5$
@@ -144,7 +172,7 @@ $|r-3| + 2 = 5$
 
 $|r-3| = 3$
 
-There are only two numbers whose absolute value is $3$.  They are $-3$ or $3$.
+There are only two numbers whose absolute value is $3$.  They are $\answer{-3}$ or $\answer{3}$.
 
 We have two possibilities, either the inside of the absolute value, $r-3=-3$ or $r-3=3$.
 
@@ -183,20 +211,41 @@ If $r-3=-3$, then $r=0$. If $r-3=3$, then $r=6$.
 
 
 
+We can also turn to the definition of the absolute value function.
+
+
+The function $|r-3| + 2$ can be written as 
+
+
+
+\[
+|r-3| = 
+\begin{cases}
+  -(r-3) + 2  & \text{if $t<\answer{3}$,}\\
+   r-3 + 2  & \text{if $t\ge \answer{3}$}.
+\end{cases}
+\]
+
+
+We are looking for where $-(r-3) + 2 = 5$ and $ t < 3$  \\
+
+or \\
+
+where $(r-3) + 2 = 5$ and $t \ge 3$.  \\
+
+
+These produce the solutions $r=0$ and $r=6$
+
+
+
+
+
+
+
 
 
 
 \end{example}
-
-
-
-
-
-
-
-
-
-
 
 
 

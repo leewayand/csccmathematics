@@ -14,10 +14,10 @@ facets
 
 
 
-When have made fractions out of polynomials.  We can do the same with trigonometric functions.
+Rational functions were quotients of polynomials.  We can do the same with trigonometric functions.
 
 
-
+\begin{definition}
 \textbf{Tangent} is the quotient of sine and cosine
 
 
@@ -27,18 +27,23 @@ When have made fractions out of polynomials.  We can do the same with trigonomet
 
 Its domain is all real numbers except the zeros of cosine, $\left\{  \frac{(2k+1)\pi}{2}   \, | \,   k \in \textbf{Z}   \right\}$.
 
-At each of these singularities, the graph has a vertical asymptote, where the funciton becomes unbounded.
+\end{definition}
+
+
+At each of these singularities, the graph has a vertical asymptote, where the function becomes unbounded.
 
 
 
 
-Graph of $x = tan(\theta)$.
+Graph of $z = tan(\theta)$.
+
+
 
 
 
 \begin{image}
 \begin{tikzpicture}
-	\begin{axis}[
+  \begin{axis}[
             xmin=-6.75,xmax=6.75,ymin=-5,ymax=5,
             axis lines=center,
             width=6in,
@@ -46,7 +51,8 @@ Graph of $x = tan(\theta)$.
             xtick={-6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28},
             xticklabels={$-2\pi$,$-3\pi/2$,$-\pi$, $-\pi/2$, $0$, $\pi/2$, $\pi$, $3\pi/2$, $2\pi$},       
             unit vector ratio*=1 1 1,
-            xlabel=$\theta$, ylabel=$x$,
+            xlabel=$\theta$, ylabel=$z$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
           ]        
@@ -71,11 +77,11 @@ Graph of $x = tan(\theta)$.
 
 Tangent takes on every value in $\textbf{R}$ exactly once inside the open interval $\left( \frac{-\pi}{2}, \frac{\pi}{2} \right)$.  It is then periodic with a period of $\pi$.
 
-Tangent is always increasing inside its domain.
+Tangent is always \wordChoice{\choice[correct]{increasing} \choice{decreasing}} inside its domain.
 
 Tangent is unbounded and has no global or local maximums or minimums.
 
-Tangent has an infinite number of zeros. They coincide with the zeros of sine: $\{  k \pi    \, | \,   k \in \textbf{Z}        \}$
+Tangent has an infinite number of zeros. They coincide with the zeros of \wordChoice{\choice[correct]{sine} \choice{cosine}} : $\{  k \pi    \, | \,   k \in \textbf{Z}        \}$
 
 
 
