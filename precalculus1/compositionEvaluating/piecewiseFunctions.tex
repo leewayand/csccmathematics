@@ -12,27 +12,10 @@ output $\rightarrow$ input
 \maketitle
 
 
+We are tracining indivual domain numbers through functions as our first look into function composition.
 
 
-
-Below are formulas for $V$ and $T$ and their graphs.  The formulas allow exact values for the evaluations below.
-
-
-
-
-
-\[
-V(h) = 
-\begin{cases}
-  -2h-3 & \text{ if } [-6, -2]   \\
-  -h-3 & \text{ if } (-2, 4]  \\
-  2h - 10 & \text{ if } (4,8)
-\end{cases}
-\]
-
-
-
-ere is the graph of $y = V(h)$.
+The functions $V$ and $T$ are defined graphically via their graphs below.  
 
 
 
@@ -45,7 +28,10 @@ ere is the graph of $y = V(h)$.
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$h$, ylabel=$y$,
+            axis lines =center, xlabel=$h$, ylabel=${y = V(h)}$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -83,27 +69,14 @@ ere is the graph of $y = V(h)$.
 
 
 
-\[
-T(k) = 
-\begin{cases}
-  -2k-6 & \text{ if }  -7 < k < 1 \\
-  -k+3 & \text{ if } 1 \leq k < 7
-\end{cases}
-\]
-
-
-
-
-
-
-Graph of $z = T(k)$.
-
-
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$k$, ylabel=$z$,
+            axis lines =center, xlabel=$k$, ylabel=${z = T(k)}$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -150,6 +123,44 @@ V(-1) = \answer{-2}  & V(V(-1) = \answer{1}   \\
 
 
 
+
+
+
+\section{formulas}
+
+
+
+
+
+
+
+\[
+V(h) = 
+\begin{cases}
+  -2h-3 & \text{ if } [-6, -2]   \\
+  -h-3 & \text{ if } (-2, 4]  \\
+  2h - 10 & \text{ if } (4,8)
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\[
+T(k) = 
+\begin{cases}
+  -2k-6 & \text{ if }  -7 < k < 1 \\
+  -k+3 & \text{ if } 1 \leq k < 7
+\end{cases}
+\]
 
 
 
