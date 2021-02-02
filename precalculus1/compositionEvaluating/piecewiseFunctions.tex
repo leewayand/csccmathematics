@@ -12,7 +12,18 @@ output $\rightarrow$ input
 \maketitle
 
 
-We are tracining indivual domain numbers through functions as our first look into function composition.
+We are tracining individual domain numbers through functions as our first look into function composition.  When there is only one formula, then following the trail requires no decisions.  Now we turn to piecewise defined functions where we need to pick the appropriate formula.
+
+
+
+
+
+
+
+
+\section{Graphically}
+
+
 
 
 The functions $V$ and $T$ are defined graphically via their graphs below.  
@@ -98,20 +109,25 @@ The functions $V$ and $T$ are defined graphically via their graphs below.
 
 
 
+
+
+
+
+
+
 \begin{question} Piecewise Defined Formulas
 
-Use the formulas above to evaluate the follow expressions.
+Use the graphs above to approimate the following expressions.
 
 
 
 \[
 \begin{array}{l|l}
-T(3) = \answer{0}  & V(T(3) = \answer{-3}   \\
-V(5) = \answer{0}  & T(V(5) = \answer{-6}   \\
-T(-5) = \answer{4}  & T(T(-5) = \answer{-1}   \\
-V(1) = \answer{-4}  & V(V(1) = \answer{5}   \\
-T(-5) = \answer{4}  & V(T(-5) = \answer{-7}   \\
-V(-1) = \answer{-2}  & V(V(-1) = \answer{1}   \\
+V(6) = \answer[tolerance=0.1]{2}  & T(V(6) = \answer[tolerance=0.1]{1}   \\
+T(5) = \answer[tolerance=0.1]{-2}  & V(T(5) = \answer[tolerance=0.1]{1}   \\
+V(7) = \answer[tolerance=0.1]{4}  & V(V(7) = \answer[tolerance=0.1]{-7}   \\
+T(1) = \answer[tolerance=0.1]{2}  & T(T(1) = \answer[tolerance=0.1]{1}   \\
+T(-5) = \answer[tolerance=0.1]{4}  & T(T(-5) = \answer[tolerance=0.1]{-1}   \\
 \end{array}
 \]
 
@@ -126,8 +142,10 @@ V(-1) = \answer{-2}  & V(V(-1) = \answer{1}   \\
 
 
 
-\section{formulas}
+\section{Algebraically}
 
+
+The functions $f$ and $g$ are defined via formulas below.
 
 
 
@@ -135,11 +153,11 @@ V(-1) = \answer{-2}  & V(V(-1) = \answer{1}   \\
 
 
 \[
-V(h) = 
+f(y) = 
 \begin{cases}
-  -2h-3 & \text{ if } [-6, -2]   \\
-  -h-3 & \text{ if } (-2, 4]  \\
-  2h - 10 & \text{ if } (4,8)
+  -2y-3 &  [-6, -2]   \\
+  -y-3 &  (-2, 4]  \\
+  2y - 10 & (4,8)
 \end{cases}
 \]
 
@@ -155,12 +173,54 @@ V(h) =
 
 
 \[
-T(k) = 
+g(w) = 
 \begin{cases}
-  -2k-6 & \text{ if }  -7 < k < 1 \\
-  -k+3 & \text{ if } 1 \leq k < 7
+  -2w-6 &   -7 < w < 1 \\
+  -w+3 &  1 \leq w < 7
 \end{cases}
 \]
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Piecewise Defined Formulas
+
+Use the formulas above to evaluate the following expressions.
+
+
+
+\[
+\begin{array}{l|l}
+f(5) = \answer{0}  & g(f(5) = \answer{-6}   \\
+f(7) = \answer{4}  & g(g(7) = \answer{-1}   \\
+
+g(-1) = \answer{-4}  & f(g(-1) = \answer{5}   \\
+g(-3) = \answer{0}  & f(g(-3) = \answer{-3}   \\
+g(-6) = \answer{6}  & f(g(-6) = \answer{2}   \\
+
+f(5) = \answer{0}  & f(f(5) = \answer{-3}   \\
+f(0) = \answer{-3}  & f(f(0) = \answer{3}   \\
+f(4) = \answer{-7}  & f(f(4) = \answer{DNE}   \\
+
+g(6) = \answer{-3}  & g(g(6) = \answer{0}   \\
+g(-6) = \answer{6}  & g(g(-6) = \answer{3}   \\
+g(-1) = \answer{-4}  & g(g(-1) = \answer{2}   \\
+\end{array}
+\]
+
+
+
+\end{question}
+
+
 
 
 
