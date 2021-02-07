@@ -20,19 +20,114 @@ constant percentage
 
 
 
+$\blacktriangleright$ Linear Functions \\
 
+
+\begin{quote}
 The defining characteristic of linear functions is that the have a constant growth rate.
+\end{quote}
+
+
+
 
 
 \[   \frac{f(b)-f(a)}{b-a} = m       \]
 
-This led to the equation or formula for linear functions:  $f(x) = m(x-a) + f(a)$
+This led to the formula for linear functions:  $f(x) = m(x-a) + f(a)$
 
 
-This tells us that no matter where you are in the domain, of $f$, if you move a distance of $1$, the value of $f$ increases by $m$. \\
+This tells us that no matter where you are in the domain, of $f$, if you move the same distance, then the value of $f$ increases by same \textbf{amount}. \\
 
 
 Exponential functions don't do that. \\
+
+
+
+$\blacktriangleright$ Exponential Functions \\
+
+
+
+Suppose we have is a function with this property:  No mater where you are in the domain, if you move the same amount in the domain, then function value changes by the same percent.  Then what does the formula look like?
+
+
+
+\begin{itemize}
+\item Let's call our function $E$.
+\item Let's call our original position in the domain, $a$.
+\item Let's call the distance moved from $a$, $d$.
+\item Let's say the percentage increase is $p \cdot 100\%$. 
+\end{itemize}
+
+
+
+From this infomration, the starting function value is $E(a)$ and the finishing function value is $E(a+d)$.  Therefore, the increase in function value is given by $E(a+d) - E(a)$.
+
+We also know that this increase is equal to $p$ percentage of the original value $E(a)$.
+
+
+
+\[
+E(a+d) - E(a) = p E(a)
+\]
+
+\[
+E(a+d) = E(a) (1+p)
+\]
+
+If we travel another $d$, then we get
+
+
+\[
+E(a + 2d) = E(a)(1+p) \cdot (1+p) = E(a) (1+p)^2
+\]
+
+
+If we travel another $d$, then we get
+
+
+\[
+E(a + 3d) = E(a)(1+p)^2 \cdot (1+p) = E(a) (1+p)^3
+\]
+
+
+
+If we travel "$x$" number of distances, $d$, from $a$, then we get
+
+\[
+E(a + 3x \cdot d) = E(a)(1+p)^x 
+\]
+
+An exponential function.
+
+
+
+\begin{definition}
+\textbf{Exponential functions} are those functions that experience a constant percentage growth rate. \\
+
+
+Their formulas look like
+
+\[
+exp(x) = a \cdot b^x
+\]
+
+
+where $a \ne 0$ and $b > 0$.
+
+$a$ is called the \textbf{coefficient} and $b$ is called the \textbf{base}.
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -41,9 +136,14 @@ Exponential functions don't do that. \\
 
 \begin{fact}  No Constant Growth
 
+
+
+Exponential functions do not have a constant growth rate. \\
+
+
 Let $G(t) = 5 \left(\frac{3}{2}\right)^t$ with domain \textbf{$R$}. 
 
-$G(t) = 5 \left(\frac{3}{2}\right)^t$  does not exhibit a constant growth rate. 
+
 
 
 
@@ -74,7 +174,7 @@ Instead, $G$ has a constant percentage rate-of-change. \\
 No matter where you are in the domain, when you move $1$, the value of $G$ increases by the same percentage (is multiplied by the same factor).
 
 
-Let $a$ be a real numbers.  The percentage rate-of-change of $G$ over the interval $[a,a+1]$ is 
+Let $a$ be a real number.  The percentage rate-of-change of $G$ over the interval $[a,a+1]$ is 
 
 
 
@@ -83,6 +183,8 @@ Let $a$ be a real numbers.  The percentage rate-of-change of $G$ over the interv
 
 \[   \frac{5 \left(\frac{3}{2}\right)^a (\left(\frac{3}{2}\right) - 1) }{5 \left(\frac{3}{2}\right)^a}    \]
 
+
+\[   \left(\frac{3}{2}\right) - 1 = \frac{1}{2}   \]
 
 Every time we move $1$ in the domain, $G$ increases by a factor of $\frac{1}{2}$.  $G$ increases by $50\%$.
 
@@ -100,9 +202,9 @@ The general template for an exponential function is
 
 
 
-Let $H(t) = 3 \, 2^t$ \\
+Let $H(t) = 3 \, \cdot \, 2^t$ \\
 
-$H$ is an exponential funciton, which means it has a constant percentage change. \\
+$H$ is an exponential function, which means it has a constant percentage change. \\
 
 Values of $H$:
 
@@ -163,7 +265,7 @@ Every time $t$ increases by $1$, the value of $H$ gets multiplied by another $2$
 
 
 
-Let $k(x) = 5 \, (3/4)^x$ \\
+Let $k(x) = 5 \, \left(\frac{3}{4}\right)^x$ \\
 
 $k$ is an exponential function, which means it has a constant percentage change. \\
 
@@ -209,6 +311,44 @@ Percentage change in $k$:
 \end{example}
 
 Every time $x$ increases by $1$, the value of $k$ gets multiplied by another $\frac{3}{4}$, which means its value decreases. It loses $\frac{1}{4}$ of its value. It has a negative growth rate. It grows by $-25\%$.
+
+
+
+
+
+
+
+
+\section{A New Number: e}
+
+
+Consider this function 
+
+\[
+e(x) = \left(1 + \frac{1}{x}\right)^x
+\]
+
+
+
+Here is a graph
+
+
+\begin{center}
+\desmos{0tuazdb3kc}{400}{300}
+\end{center}
+
+
+The graph of this function has a horizontal asymptote.  The horizontal asymptote intersects the $y$-axis at a number.  This number is called $e$.   It is a special number and gets its own symbol, much like $\pi$ gets its own symbol.
+
+
+
+\[
+e \approx  2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427
+\]
+
+
+$e$ is an irrational number that has many connections to natural growth.  $e$ its importance will show up in Calculus.
+
 
 
 
