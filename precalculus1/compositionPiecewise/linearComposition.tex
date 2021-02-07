@@ -16,7 +16,7 @@ The \textbf{composition of two functions}, $F$ and $G$, is a new operation on fu
 
 
 \begin{definition}
-Given $a$ in the domain of $G$, with $G(a)$ in the domain of $F$, $(F \circ G)(a)$ is defined to be  $F(G(a))$.
+Given $a$ in the domain of $G$, such that $G(a)$ in the domain of $F$, $(F \circ G)(a)$ is defined to be  $F(G(a))$.
 
 
 If $Dom_G$ and $Dom_F$ represent the domains of $G$ and $F$ respectively, the induced domain of $F \circ G$ is 
@@ -28,20 +28,20 @@ If $Dom_G$ and $Dom_F$ represent the domains of $G$ and $F$ respectively, the in
 
 \end{definition}
 
-
+The order matters.  Generally speaking, $F \circ G \ne G \circ F$
 
 
 
 \section{Linear Composition}
 
+In this section, we will explore the composition of linear functions. \\
 
 
+Let $A(x) = a_1 \cdot x + a_0$ be a linear function with $\mathbb{R}$ as its domain. \\
+Let $B(w) = b_1 \cdot w + b_0$ be a linear function with $\mathbb{R}$ as its domain. \\
 
-Let $A(x) = a_1 \cdot x + a_0$ be a linear function with \textbf{$R$} as its domain. \\
-Let $B(w) = b_1 \cdot w + b_0$ be a linear function with \textbf{$R$} as its domain. \\
 
-
-Then $A \circ B$ is a new function. What is its formula?
+Then $A \circ B$ is a new function. What is its formula? \\
 
 To keep everything separate, let's use $v$ as the variable for the formula of $A \circ B$.
 
@@ -77,17 +77,17 @@ The rate-of-change of the composition is the product of the rates-of-change of t
 
 \begin{example} Linear Composition
 
-Let $G(y) = 4 x + 3$ be a linear function with \textbf{$R$} as its domain. \\
-Let $H(t) = 3 w -5$ be a linear function with \textbf{$R$} as its domain. \\
+Let $G(y) = 4 y + 3$ be a linear function with $\mathbb{R}$ as its domain. \\
+Let $H(t) = 3 t -5$ be a linear function with $\mathbb{R}$ as its domain. \\
 
 
 Define two new functions, $U(x)$ and $V(w)$, as compositions by
 
-$U(x) = G(H(x)) = 4 (3 x - 5) + 3 = 12 x -17$ \\
-$V(w) = H(G(w)) = 3 (4 w + 3) - 5 = 12 w + 4$ \\
+$U(x) = (G \circ H)(x) = G(H(x)) = 4 \left(\answer{3 x - 5}\right) + 3 = 12 x -17$ \\
+$V(w) = (H \circ G)(x) =H(G(w)) = 3 \left(\answer{4 w + 3}\right) - 5 = 12 w + 4$ \\
 
 
-Two different function. Both are linear functions. The constant rate-of-change is $12$ for both. \\
+Two different functions. Both are linear functions. The constant rate-of-change is $12$ for both. \\
 
 Their graphs would be parallel lines. \\
 
@@ -103,20 +103,13 @@ Their graphs would be parallel lines. \\
 
 \begin{example} Linear Composition
 
-Let $k(m) = 2 m + 1$ be a linear function with \textbf{$R$} as its domain. \\
-Let $h(n)$ be a linear function with \textbf{$R$} as its domain. \\
+Let $k(m) = 2 m + 1$ be a linear function with $\mathbb{R}$ as its domain. \\
+Let $h(n)$ be a linear function with $\mathbb{R}$ as its domain. \\
 
 
-Let $r(v) = k(h(v)) = 3 v - 2$ 
+Let $r(v) = (k \circ h)(v) = k(h(v)) = 3 v - 2$ 
 
-Determine a formula for $h(n)$.
-
-
-
-
-\textbf{\scriptsize{\textcolor{purple!50!blue!90!black}{SOLUTION}}}
-
-
+$\blacktriangleright$ Determine a formula for $h(n)$.
 
 
 
@@ -132,10 +125,10 @@ In that case the rates-of-change would mulitply and $h$ would start off looking 
 
 So, far we have 
 
-\[   r(v) = k(h(v)) = 2 (\frac{3}{2} v + n_0) + 1  = 3v + 2 n_0 + 1\]
+\[   r(v) = k(h(v)) = 2 \left(\frac{3}{2} v + n_0\right) + 1  = 3v + 2 n_0 + 1\]
 
 
-We need $2 n_0 + 1 = -2$.  Therefore, $n_0 = -\frac{3}{2}$.
+We need $2 n_0 + 1 = -2$.  Therefore, $n_0 = \answer{-\frac{3}{2}}$.
 
 
 We have $h(n) = \frac{3}{2} n - \frac{3}{2}$
@@ -166,17 +159,9 @@ Let $k(m) = 2 m + 1$ be a linear function with \textbf{$R$} as its domain. \\
 Let $h(n)$ be a linear function with \textbf{$R$} as its domain. \\
 
 
-Let $r(v) = h(k(v)) = 3 v - 2$ 
+Let $r(v) = (h \circ k)(v) = h(k(v)) = 3 v - 2$ 
 
-Determine a formula for $h(n)$.
-
-
-
-
-\textbf{\scriptsize{\textcolor{purple!50!blue!90!black}{SOLUTION}}}
-
-
-
+$\blacktriangleright$  Determine a formula for $h(n)$.
 
 
 
@@ -191,10 +176,10 @@ In that case the rates-of-change would mulitply and $h$ would start off looking 
 
 So, far we have 
 
-\[   r(v) = h(k(v)) = \frac{3}{2} (2 v + 1) + n_0 =  3 v + \frac{3}{2} + n_0\]
+\[   r(v) = h(k(v)) = \frac{3}{2} \left( \answer{2 v + 1} \right) + n_0 =  3 v + \frac{3}{2} + n_0\]
 
 
-We need $\frac{3}{2} + n_0 = -2$.  Therefore, $n_0 = -\frac{7}{2}$.
+We need $\frac{3}{2} + n_0 = -2$.  Therefore, $n_0 = \answer{-\frac{7}{2}}$.
 
 
 We have $h(n) = \frac{3}{2} n - \frac{7}{2}$
@@ -208,7 +193,7 @@ We have $h(n) = \frac{3}{2} n - \frac{7}{2}$
 
 
 
-\section{Stated Domains}
+\section{Restricted Domains}
 
 
 Let's restrict the domain of our linear functions.
@@ -235,7 +220,8 @@ Graph of $y = T(v)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$h$, ylabel={$y=T(v)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -310,10 +296,10 @@ the range of $g$ that are not in the domain of $T$.
 
 For instance, $0$ is in the range of $g$, but not in the domain of $T$. \\
 
-We need to remove the numbers in the domain of $g$, whose funciton value is $0$.
+We need to remove the numbers in the domain of $g$, whose function value is $0$.
 
 
-For instance, $-\frac{32}{7}$ is in the domain of $g$, and $g\left(-\frac{32}{7}\right) = 0$. $-\frac{32}{7}$ has to be removed from the domain of $g$.
+For another instance, $-\frac{32}{7}$ is in the domain of $g$, and $g\left(-\frac{32}{7}\right) = 0$. $-\frac{32}{7}$ has to be removed from the domain of $g$.
 
 
 
@@ -423,18 +409,19 @@ What part of the range of $g$ can we use?
 	\end{tikzpicture}
 	\end{image}
 
+It looks like we can use the interval $\left[ \answer{1}, \answer{6} \right)$.   $6$ i snot included, so we'll have to keep this in mind as we investigate the domain of $g$.
 
 
-
-We need to find the preimages of $6$ and $1$ in the domain of $g$.
+The range of $g$ needs to be restricted to $[1, 6)$.  Therefore we need to restrict the domain of $g$, so that the range is just $[1, 6)$. We need to find the \textbf{preimages} of $6$ and $1$ in the domain of $g$.
 
 
 
 
 \begin{itemize}
 \item $g(x) = \frac{7}{4}x-8 = 6$
-\item $\frac{7}{4}x = 14$
-\item $x = \frac{4}{7} \cdot 14 = 8$
+\item $\frac{7}{4}x = \answer{14}$
+\item $x = \frac{4}{7} \cdot 14 = \answer{8}$
+\item The restriction on $g$ excludes $8$.  However, it is an endpoint of the interval.
 \end{itemize}
 
 
@@ -446,7 +433,7 @@ We need to find the preimages of $6$ and $1$ in the domain of $g$.
 
 
 
-We need to restrict the domain of $g$ to $\left[\frac{36}{7}, 8\right)$
+We need to restrict the domain of $g$ to $\left[ \answer{\frac{36}{7}}, \answer{8} \right)$
 
 
 With this restricted domain, the range of $g$ will be $[1, 6)$, which is the most of the domain of $T$ as we can get from values of $g$.
@@ -481,12 +468,12 @@ We have a composition: $T \circ g$.  We know this is a linear function, because 
 
 Our composition has a formula, let's use $c$ for its variable. \\
 
-$(T \circ g)(c) = -\left(\frac{7}{4}c - 8\right) + 3 =  -\frac{7}{4}c + 3$ \\
+$(T \circ g)(c) = -\left(\frac{7}{4}c - 8\right) + 3 =  -\frac{7}{4}c + 11$ \\
 
-It's domain is $\left[\frac{36}{7}, 8\right)$.
+It's domain is $\left[ \answer{\frac{36}{7}}, \answer{8} \right)$.
 
 
-
+It's range is $\left[ \answer{-3}, \answer{2} \right)$.
 
 
 
