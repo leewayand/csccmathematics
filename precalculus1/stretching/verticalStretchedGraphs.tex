@@ -21,24 +21,37 @@ stretch the range
 
 
 
-Let $D(y)$ be a function with its domain.
+Let $D(y)$ be a function with its domain and range.
 
-Let $K(r)$ be defined as $K(r) = 2 D(r)$ with its induced domain.
+Let $K(r)$ be defined as $K(r) = 2 D(r)$ with its induced domain and range.
 
 
 Then the domain of $K$ is
 
 \begin{multipleChoice}
-\choice {the domain of $D$ shifted left $7$}
-\choice {the domain of $D$ shifted right $7$}
+\choice {the domain of $D$ stretched by $2$}
+\choice {the domain of $D$ compressed by $\tfrac{1}{2}$}
 \choice[correct] {the same as for $D$}
 \end{multipleChoice}
 
+The induced domain of $K$ is equal to the domain of $D$.  The coefficient $2$ is multiplying the function values of $D$.
 
 
 
+\begin{question}
 
 
+Suppose $K(r) = 2 D(r)$ and $D(4) = 6$.  Then which of the following is true?
+
+\begin{multipleChoice}
+\choice {$K(2) = 6$}
+\choice[correct] {$K(4) = 12$}
+\choice {$K(2) = 3$}
+\choice {$K(4) = 3$}
+\end{multipleChoice}
+
+
+\end{question}
 
 
 
@@ -57,7 +70,10 @@ Graph of $y = m(f)$.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -82,7 +98,7 @@ Graph of $y = m(f)$.
 \end{image}
 
 
-$m$ two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. \\
+$m$ two zeros: $-6$ and $\answer{5}$. These are represented by intercepts in the left and right line segments. \\
 $m$ has a global minimum represent by the left endpoint of the middle line segment. \\
 $m$ has a global miaximum represent by the left endpoint of the right line segment.
 
@@ -96,7 +112,10 @@ Graph of $z = P(t) = 2 m(t)$.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -125,8 +144,8 @@ Graph of $z = P(t) = 2 m(t)$.
 
 \begin{itemize}
 
-\item The domain of $P$ is $[-7,-4) \cup \{3\} \cup [-2,7)$, equal to the domain of $m$. $2$ was outside the domain parentheses in the formula for $m$.
-\item $P$ two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. $2 \cdot 0 = 0$. \\
+\item The domain of $P$ is $\left[\answer{-7},\answer{-4}\right) \cup \{3\} \cup [-2,7)$, equal to the domain of $m$. $2$ was outside the domain parentheses in the formula for $m$.
+\item $P$ two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. Because, $2 \cdot 0 = 0$. \\
 \item $P$ has a global minimum represent by the left endpoint of the middle line segment. \\
 \item $P$ has a global miaximum represent by the left endpoint of the right line segment.
 
@@ -136,7 +155,7 @@ Graph of $z = P(t) = 2 m(t)$.
 \end{example}
 
 
-Multiply a function by a positive constant stetches everything.  Since stretching $0$ still gives $0$, the intercepts do no change.  Everythig is stetched from the intercepts.
+Multiply a function by a positive constant stetches the graph vertically.  Since stretching $0$ still gives $0$, the intercepts do not change.  Everythig is stetched from the intercepts. They stay pinned where they are.
 
 
 
@@ -172,7 +191,10 @@ Graph of $y = m(f)$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -211,7 +233,10 @@ Graph of $z = B(h) = -2 m(h)$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$h$, ylabel=$z$,
+            axis lines =center, xlabel=$h$, ylabel=$z$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -241,7 +266,7 @@ The shape has not chnaged.  It has just been flipped over vertically, about the 
 \begin{itemize}
 
 \item The domain of $B$ is $[-7,-4) \cup \{3\} \cup [-2,7)$, equal to the domain of $m$. $-2$ was outside the domain parentheses in the formula for $m$.
-\item $B$ two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. $-2 \cdot 0 = 0$. \\
+\item $B$ two zeros: $\answer{-6}$ and $5$. These are represented by intercepts in the left and right line segments. Because, $-2 \cdot 0 = 0$. \\
 \item $B$ has a global minimum.  It is represented by the flipped highest dot in the graph of $m$.\\
 \item $B$ has a global maximum.  It is represented by the flipped lowest dot in the graph of $m$.
 
@@ -342,7 +367,10 @@ Let $C(w) = \frac{1}{2}|3w|$.
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$w$, ylabel=$y$,
+            axis lines =center, xlabel=$w$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top

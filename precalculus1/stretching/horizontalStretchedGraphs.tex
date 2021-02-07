@@ -15,9 +15,9 @@ stretch the domain
 
 
 
-We have seen that addition (or subtraction) shifts the domain or range and hifts the graph as a rigid object. ALl of the movement is the same for every point.
+We have seen that addition (or subtraction) by constants shifts the domain or range and shifts the graph as a rigid object. All of the movement is the same for every point. \\
 
-Mulitplication behaves differently.
+Multiplication behaves differently.
 
 
 
@@ -56,6 +56,9 @@ Graph of $y = T(k)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$k$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -81,7 +84,7 @@ Now, Let's define a new function based on $T$.
 
 
 
-Define $W$ as $W(g) = T(2g)$ with the induced domain.
+Define $W$ by $W(g) = T(2g)$ with the induced domain.
 
 
 
@@ -92,23 +95,26 @@ The domain of $T$ is $[-8,-2) \cup [0,10)$.
 
 If $2g \in [-8,-2) \cup [0,10)$, then $g \in [-4,-1) \cup [0,5)$
 
-It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever you are evaluatinng $W$, you get that value by evaluatinng $T$ at twice the $W$-domain number.
+It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever you are evaluating $W$, you get that value by evaluatinng $T$ at twice the $W$-domain number.
 
 
 
 \begin{example}  Evaluating $W$
 
 \begin{itemize}
-\item $W(4) = T(8) = -8+3=-5$
-\item $W(-2) = T(-4) = 2$
-\item $W(1) = T(2) = 1$
+\item $W(4) = T\left(\answer{8}\right) = -8+3=-5$
+\item $W(-2) = T\left(\answer{-1}\right) = 2$
+\item $W\left(\answer{1}\right) = T(2) = 1$
 \end{itemize}
 
 
 \end{example}
 
 
-Except for $0$. $W(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
+However, $2 \cdot 2 = 0$. \\
+
+
+$W(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
 
 
 
@@ -116,9 +122,9 @@ It seems backwards.  We multiplied by $2$ and the resulting domain was a compres
 
 
 
-We multiplied $g$ by $2$, but $g$ is from the domain $W$.  We want to know what happened to the domain of $T$ and $k$ represents the domain of $T$.
+We multiplied $g$ by $2$, but $g$ is from the domain $W$.  The domain of $W$ is stretching.  We want to know what happened to the domain of $T$ and $k$ represents the domain of $T$.
 
-In our definition of $W$, we have $k=2g$, which gives us $g=\frac{k}{2}$.  $k$ is cut in half, which is what we see in the domain and in the graph.
+In our definition of $W$, we have $k=2g$, which gives us $g=\frac{k}{2}$.  $k$ is cut in half, which is what we see in the domain and in the graph and in the formula.  $k$ is replaced with $2g$.
 
 
 
@@ -162,6 +168,9 @@ Graph of $z = W(g)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$g$, ylabel=$z$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -210,7 +219,7 @@ Now, Let's define a new function based on $T$.
 
 
 
-Define $M$ as $M(r) = T(-2r)$ with the induced domain.
+Define $M$ by $M(r) = T(-2r)$ with the induced domain.
 
 
 
@@ -221,23 +230,23 @@ The domain of $T$ is $[-8,-2) \cup [0,10)$.
 
 If $-2r \in [-8,-2) \cup [0,10)$, then $r \in (-5,0] \cup (1, 4]$
 
-It is like the domain of $T$ is on a rubberband and it shrunk in half and then rotated around the vertical axis.  As $r$ walks through the domain of $M$ from the left, the corresponding walking in the domain of $T$ is from the right.
+It is like the domain of $T$ is on a rubberband and it shrunk in half and then rotated around the vertical axis.  As $r$ walks through the domain of $M$ from left to right, the corresponding walking in the domain of $T$ is from right to left.
 
 
 
 \begin{example}  Evaluating $W$
 
 \begin{itemize}
-\item $M(4) = T(-8) = 10$
-\item $M(-2) = T(4) = -1$
-\item $M(0) = T(0) = 3$
+\item $M(4) = T\left(\answer{-8}\right) = 10$
+\item $M(-2) = T\left(\answer{4}\right) = -1$
+\item $M(\left(\answer{0}\right)) = T(0) = 3$
 \end{itemize}
 
 
 \end{example}
 
 
-Except for $0$. $M(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  While addition caused shifts and changed the zeros, multiplication does not change the zeros.
+The domain shrinks around $0$. $M(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
 
 
 
@@ -247,7 +256,7 @@ Except for $0$. $M(0) = T(0)$.  The rubberband is pinned at $0$, because any mul
 
 
 
-Since the mulitplication was on the inside of the formla, it only affects the domain.  Multiplication by $-1$, reflects the graph across the vertical axis - the domain changed sign. Multiplication by $2$ compresses the graph.
+Since this mulitplication was on the inside of the function notation, it only affects the domain.  Multiplication by $-1$, reflects the graph across the vertical axis - the domain switches signs. Multiplication by $2$ compresses the graph.
 
 
 
@@ -263,6 +272,9 @@ Graph of $m = M(r)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$r$, ylabel=$m$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -333,7 +345,7 @@ Graph of $y = sin(2\theta)$.
 \end{image}
 
 
-The graph is compressed horizontally by a factor of $2$.
+The graph is compressed horizontally by a factor of $\frac{1}{2}$.
 
 
 Graph of $y = cos\left(\frac{1}{2}\theta\right)$.
@@ -390,6 +402,9 @@ Graph of $y = |3x|$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$r$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -423,10 +438,7 @@ Multiplication by $3$ compresses the graph, because all domain numbers here corr
 
 Here is the graph of $y = log_2(-t)$.
 
-\begin{itemize}
-\item vertical asymptote: $t+5=0$, when $t=-5$
-\item horizontal intercept: $t+5=1$, when $t=-4$
-\end{itemize}
+
 
 
 \begin{image}
@@ -434,6 +446,9 @@ Here is the graph of $y = log_2(-t)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -475,7 +490,7 @@ Compared to the graph of the function $y=f(x)$, the graph of $z=g(r)=f(4r)$ look
 \choice{shifted left by $4$}
 \choice{shifted right by $4$}
 \choice{stretched by a factor of $4$}
-\choice[correct]{compressed by a factor of $4$}
+\choice[correct]{compressed by a factor of $\frac{1}{4}$}
 \end{multipleChoice}
 
 
