@@ -24,12 +24,25 @@ We now have four graphical transformations:
 \end{itemize}
 
 
+
+
+
+
+$\blacktriangleright$  Horizontal - (inside) \\
+
+
 The horizontal transformations are controlled by multiplication and addition inside the domain parentheses in the function's formula.
 
 \[      f(x) \longrightarrow   f(A \cdot x + B)  \]
 
-Multiplication by $A$ results in horizontal stretching or compression. \\
-Addition by $B$ results in horizontal shifting. \\
+Multiplication on the variable results in horizontal stretching or compression. \\
+Addition results in horizontal shifting. \\
+
+
+
+
+
+$\blacktriangleright$  Vertical - outside\\
 
 
 
@@ -37,14 +50,34 @@ The vertical transformations are controlled by multiplication and addition outsi
 
 \[      f(x) \longrightarrow   C \cdot f(x) + D \]
 
-Multiplication by $C$ results in vertical stretching or compression. \\
-Addition by $D$ results in vertical shifting. \\
+Multiplication on the function results in vertical stretching or compression. \\
+Addition results in vertical shifting. \\
 
 
 
 
 
-The effects of $A$ and $B$ are reverse of the arithmetic, because they presences means we are not loger loking at the formulas original variable.  We need to solve for the variable, which reverses all of the arithmetic. The effects of $C$ and $D$ are the same as the arithmetic, because they are applied directly to the original range variable, the function value.
+The visual or graphical horizontal effects of arithmetic performed on the domain are reverse of the arithmetic, because actually there is a new function with its own new variable and the arithmetic is performed on this new variable.
+
+
+For the original function, $f(x)$, we define a new function, $g(k)$.
+\[
+g(k) = f(A \cdot k + B)
+\]
+
+
+\[
+x = A \cdot k + B
+\]
+
+
+
+To see what happens to the original vairbale, $x$, we need to solve for the original variable, which reverses all of the arithmetic. \\
+
+
+
+
+The visual or graphical vertical effects of arithmetic performed on the function are the same as the arithmetic, because they are applied directly to the original range variable, the function value.
 
 
 
@@ -66,7 +99,7 @@ Graph of $y = G(h)$, the original (basic) function.
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-15:15, ymax=15, xmax=15, ymin=-15, xmin=-15, unit vector ratio*=1 1 1,
-            grid = both, 
+            grid = both, grid style={dashed},
             ytick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}, xtick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14},
             yticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$}, xticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$},
             ticklabel style={font=\scriptsize},
@@ -105,8 +138,8 @@ Graph of $y = G(h)$, the original (basic) function.
 
 \item The domain of $G$ is $[-7,-4) \cup \{3\} \cup [-2,7)$.
 \item $G$ has no global maximum
-\item $G$ has a global (and local) minimum of $-9$, which occurs at $-2$. 
-\item $G$ has a local maximum of $1$, which occurs at $-7$.
+\item $G$ has a global (and local) minimum of $\answer{-9}$, which occurs at $\answer{-2}$. 
+\item $G$ has a local maximum of $1$, which occurs at $\answer{-7}$.
 \item $G$ has a both a local minimum and local maximum of $1$, which occurs at $-3$.
 \end{itemize}
 
@@ -114,7 +147,7 @@ Graph of $y = G(h)$, the original (basic) function.
 
 
 
-Now to define a new function based off of $G$.
+$\blacktriangleright$ Now to define a new function based off of $G$.
 
 
 
@@ -124,9 +157,11 @@ Now to define a new function based off of $G$.
 Define  $T(p) = -2G(\frac{1}{2} p - 4) + 1$.
 
 
-Graph of $z = T(p) = -2G\left(\frac{1}{2} p - 4\right) + 1$.
+How do we construct the graph of $z = T(p) = -2G\left(\frac{1}{2} p - 4\right) + 1$?
 
-First, let's map all of the endpoints.
+First, let's map all of the endpoints in the graph of $y = G(h)$.
+
+Remember: If  $h = \frac{1}{2} p + 1$, then $p = \answer{2(h+4)}$.
 
 \begin{itemize}
  \item \textbf{Domain:}  $2 (h+4)$ 
@@ -143,7 +178,7 @@ First, let's map all of the endpoints.
 \end{itemize}
 
 
-
+FIrst, we'll transfor the domain, which is the left coordinate.  Then we'll transform the range, which is the right coordinate.
 
 \[
 \begin{array}{ccccc}
@@ -162,7 +197,7 @@ First, let's map all of the endpoints.
 
 
 
-Graphical mapping of important points from $y=G(h)$ to $t = T(p)$:
+NOw, we'll graphically map the important points from $y=G(h)$ to $t = T(p)$:
 
 
 
@@ -259,11 +294,9 @@ Graphical mapping of important points from $y=G(h)$ to $t = T(p)$:
 
 
 
-The linear transformations cannot change the shape of the graph, and they didn't.  The graph may have flipped vertically, but relatively speaking its shape is the same.
+Linear transformations cannot change the shape of the graph, and they didn't.  The graph may have flipped vertically, but relatively speaking its shape is the same.
 
-The table above shows that the transformations follow the order of operations applied to the original function and graph.  The only thing to keep in mind is that you have to phrase the arithmetic of the transformation as being applied to the orginal function notation.  To accomplish this, we set the new domain inside equal to the original domain variable.  That reverses what we see, but rephrases it back to what happened to the original domain numbers. Then you can just apply the arithmetic to the coordinates of each point - following the order of operations.
-
-
+The table above shows that the transformations follow the order of operations applied to the original function and graph.  The only thing to keep in mind is that you have to phrase the arithmetic of the transformation as being applied to the orginal function notation.  To accomplish this, we set the new domain expression, $h = \frac{1}{2} p + 1$, equal to the original domain variable.  That reverses what we see as it rephrases it back to what happened to the original domain numbers. Then you can just apply the arithmetic to the coordinates of each point - following the order of operations.
 
 
 
@@ -278,6 +311,14 @@ The table above shows that the transformations follow the order of operations ap
 
 
 
+The graph is filled in exactly as it was connected in the original graph.
+
+\begin{itemize}
+\item Line segment between $A$ and $B$.
+\item Line segment between $D$ and $E$.
+\item Line segment between $F$ and $G$.
+\item $C$ is an isolated point.
+\end{itemize}
 
 
 
@@ -328,19 +369,40 @@ The table above shows that the transformations follow the order of operations ap
 
 \textbf{What Happened?} \\
 
+Our new function was defined by 
+
+\[
+T(p) = -2G(\frac{1}{2} p - 4) + 1
+\]
 
 
-On the inside of the domain parentheses, we have $\frac{1}{2} p - 4$.  Remember, $h$ is the variable representing domain numbers. The new function has $h = \frac{1}{2} p - 4$. Solving for $h$, gives us $2(h+4)$.  Now we can read off the arithmetic according to the \textbf{order of operations}.  The parentheses are grouping symbols here.  We perform the arithmitic inside these parentheses first. \\
 
-First, add $4$. The graph should shift ot the right $4$. \\
+
+
+
+On the inside of the domain parentheses, we have $\frac{1}{2} p - 4$.  Remember, $h$ is the variable representing domain numbers of $G$. The new function has $h = \frac{1}{2} p - 4$. Solving for $p$, gives us $p = 2(h+4)$.  Now we can read off the arithmetic according to the \textbf{order of operations}.  The parentheses are grouping symbols here.  We perform the arithmitic inside these parentheses first. \\
+
+First, add $4$. The graph should shift to the \wordChoice{\choice[correct]{right} \choice{left}} $4$. \\
 Second, multiplication by $2$. The graph should stretch horizontally by a factor of $2$.
 
 
 
 
-On the outside of $G(h)$, we have multiplication by $-2$ and then Addition of $1$.  These are applied in the order of operations. \\
+On the outside of $G(h)$, we have multiplication by $-2$ and then addition of $1$.  These are applied in the order of operations. \\
 
-First, multiplication by $-2$. This is negative, so thegraph should flip vertically over the horizontal axis. The graph should also stretch vertically by a factor of $2$.  Adding $1$ shifts the whole graph up $1$.
+First, multiplication by $-2$. This is negative, so the graph should flip vertically over the horizontal axis. 
+
+\begin{itemize}
+\item All positive second coordinates become negative.
+\item All negative second coordinates become positive.
+\item All $\answer{0}$ second coordinates remain $\answer{0}$.
+\end{itemize}
+
+
+
+
+
+The graph should also stretch vertically by a factor of $2$.  Adding $1$ shifts the whole graph \wordChoice{\choice[correct]{up} \choice{down}} $1$.
 
 
 
@@ -434,10 +496,10 @@ Take another look at the functions from the example above.
 
 \begin{enumerate}
 \item On both graphs there are three line segments and one isolated point.
-\item On both graphs the longest line segment has to hollow endpoints
+\item On both graphs the longest line segment has two hollow endpoints
 \item On both graphs there is a short line segment with solid and one hollow endpoint. 
 \item On both graphs the line segments in (a) and (c) are parallel.
-\item On both graphs there is a third line segment, which is perpendicular to the other two.
+\item On both graphs there is a third line segment, which is perpendicular to the other two and it has solid endpoints.
 \end{enumerate}
 
 
@@ -473,19 +535,19 @@ Let $B(r) = \frac{1}{2}|3r-1| + 4$. \\
 \textbf{Thinking Ahead}
 
 
-The basic absolute value function has a formula like $|x|$, with \textbf{R} as its domain. The graph has a corner at $(0,0$) and a "V" shape.  The shape can't change.
+The basic absolute value function has a formula like $|x|$, with \textbf{R} as its domain. The graph has a corner at $(0,0$) and a "V" shape.  The shape can't change from a linear transformation.
 
-The graph of $B$ is also a "V", with a corner. The corner occurs where $3r-1=0$, which is when $r=\frac{1}{3}$.  The corner is at $\left( \frac{1}{3}, 4 \right)$
+The graph of $B$ is also a "V", with a corner. The corner occurs where $\answer{3r-1}=0$, which is when $r=\frac{1}{3}$.  The corner is at $\left( \frac{1}{3}, \answer{4} \right)$
 
 The outside coefficient of the transformation is $\frac{1}{2}$, which is positive.  Therefore the "V" will again open up for the graph of $B$.
 
-The "V" is mad of two line segments and the corner is one point on each line segment.  Therefore, we just need another point on each line segment to plot the graph.
+The "V" is made of two rays emanating from the corner.  Therefore, we just need another point on each ray to plot the graph.
 
 We can randomly choose any numberson either side of $\frac{1}{3}$, like $r=-5$ and $r=5$.
 
-$B(-5) = 12$ and $B(5) = 11$, giving us the points $(-5, 12)$ and $(5, 11)$.
+$B(-5) = 12$ and $B(5) = 11$, giving us the points $\left(\answer{-5}, \answer{12}\right)$ and $\left(\answer{5}, \answer{11}\right)$, respectively.
 
-We can now draw the graph of $B$.
+We can now draw the graph of $y = B(r)$.
 
 
 
@@ -503,7 +565,7 @@ We can now draw the graph of $B$.
             ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
             yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
             ticklabel style={font=\scriptsize},
-            axis lines =center, xlabel=$p$, ylabel=$t$,
+            axis lines =center, xlabel=$r$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -603,7 +665,7 @@ Here is a graph of $y=k(A)$
 \end{tikzpicture}
 \end{image}
 
-This graph (or function) has a shape.
+The graph of $k(A)$ has a shape with important or strategic points.
 
 \begin{itemize}
 
@@ -618,31 +680,43 @@ This graph (or function) has a shape.
 
 \end{itemize}
 
-A transformation will maintain this shape.
+A linear transformation will maintain this shape. \\
 
 
 
-What will the graph of $z = f(m) = -2 k\left(-\frac{1}{2} m + 1\right) - 5$ look like?
+
+
+$\blacktriangleright$  Define $f(m)$ by 
+
+
+\[
+f(m) = -2 k\left(-\frac{1}{2} m + 1\right) - 5
+\]
 
 
 
-$A = -\frac{1}{2} m + 1$  gives us $-2(A-1)$
-Reading the order of operations, horizontally, the graph will shift left $6$, then the graph will reflect about the vertical axis, then the graph will stretch by a factor of $2$.
+What will the graph of $z = f(m) = -2 k\left(-\frac{1}{2} m + 1\right) - 5$ look like? \\
 
 
 
-The order of operations can be read directly on the outside.  Reflect vertically, then stretch by a factor of $2$, then shift down $5$.
+$A = -\frac{1}{2} m + 1$  gives us $m = \answer{-2(A-1)}$. 
 
-The values of $f(m)$ wil become $-2 \cdot 8 - 5 = -21$ and $-2 \cdot 4 - 5 = -13$.  
+Reading the order of operations, horizontally, the graph will shift \wordChoice{\choice[correct]{left} \choice{right}} $\answer{1}$. Then, the graph will reflect about the vertical axis, then the graph will stretch by a factor of $\answer{2}$.
+
+
+
+The order of operations can be read directly on the outside.  Reflect vertically, then stretch by a factor of $2$, then shift down $\answer{5}$.
+
+$k$ only had two values, $8$ and $4$. For $f(m)$, these values will become $-2 \cdot 8 - 5 = \answer{-21}$ and $-2 \cdot 4 - 5 = \answer{-13}$.  
 
 The endpoints of the intervals will become
 
 
 \begin{itemize}
-\item $-2(-9-1) = 20$
-\item $-2(-3-1) = 8$
-\item $-2(3-1) = -4$
-\item $-2(6-1) = -10$
+\item $-2(-9-1) = \answer{20}$
+\item $-2(-3-1) = \answer{8}$
+\item $-2(\answer{3}-1) = -4$
+\item $-2(\answer{6}-1) = -10$
 \end{itemize}
 
 
@@ -685,18 +759,18 @@ The graph of $z = f(m)$.
 
 
 
-The length of the longer interval is $12$.  The length of the shorter interval is $6$.  Twice as long. \\
+The length of the longer interval is $\answer{12}$.  The length of the shorter interval is $\answer{6}$.  Twice as long. \\
 
-The inner endpoints are hollow on the graph. \\
+The inner endpoints are \wordChoice{\choice[correct]{hollow} \choice{solid}} on the graph. \\
 
-The outer endpoints are solid on the graph. \\
-
-
-
-The longer interval is now on the right, because multiplication by $-\frac{1}{2}$ reflected the graph horizontally. \\
+The outer endpoints are \wordChoice{\choice{hollow} \choice[correct]{solid}} on the graph. \\
 
 
-The longer interval is now on the bottom, because multiplication by $-2$ reflected the graph vertically. \\
+
+The longer interval is now on the right, because multiplication by $-\frac{1}{2}$ reflected the graph \wordChoice{\choice[correct]{horizontally} \choice{vertically}}. \\
+
+
+The longer interval is now on the bottom, because multiplication by $-2$ reflected the graph \wordChoice{\choice{horizontally} \choice[correct]{vertically}}. \\
 
 
 \end{example}
