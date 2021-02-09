@@ -16,7 +16,7 @@ exponents
 
 
 
-An example of a basic exponential funciton is $E(t) = 2^t$.  
+An example of a basic exponential function is $E(t) = 2^t$.  
 
 Its graph looks like
 
@@ -69,7 +69,7 @@ We can evalute this function:
 \end{itemize}
 
 
-When we evaluate a function, we know the domain number and we seek its range partner. In this case, we know $d$ and we seek the pair $(d, 2^d)$, so that we can pull out $2^d$ as the value of the function.
+When we evaluate a function, we know the domain number and we seek its range partner. In this case, we know $d$ and we seek the pair $(d, 2^d)$, where $2^d$ is the value of the function at $d$.
 
 
 
@@ -77,7 +77,7 @@ When we evaluate a function, we know the domain number and we seek its range par
 
 \section{Reverse}
 
-We also think in the reverse.
+We can also think in reverse.
 \begin{itemize}
 \item $E(t) = 4$
 \item $E(t) = {\tfrac{1}{4}} $
@@ -85,21 +85,21 @@ We also think in the reverse.
 \end{itemize}
 
 
-Here, we know the value of the function.  We seek the domain numbers paired with it. We know $2^d$, we seek the pair $(d, 2^d)$, so that we can pull out $d$ as the solution to the equation.
+Here, we know the value of the function.  We seek the domain numbers paired with it. We know $2^d$, we seek the pair $(d, 2^d)$, where $d$ is the solution to the equation.
 
 
 
 
-$\bigstar$ As long as we are giving a positive function value, we can find the associated domain number. \\ 
+$\bigstar$ For $E(t) = 2^t$, as long as we give a positive function value, then we can find the associated domain number. \\ 
 
 
 
-$\blacktriangleright$ Every positive function value as \textit{exactly one} associated domain number. \\ 
+$\blacktriangleright$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. That is eeriely backwards of the function rule for pairs in the exponential function.\\ 
 
 
 
 
-Thinking of an exponential function in reverse again sounds like a new function. We call it a \textbf{logarithmic function}.
+Thinking of an exponential function in reverse sounds like a new function. We call it a \textbf{logarithmic function}.
 
 
 
@@ -109,38 +109,78 @@ Thinking of an exponential function in reverse again sounds like a new function.
 \[
 \begin{array}{lcl}
 Exponential Function  &     &  Logarithmic Function  \\
-domain = (-\infty, \infty)  &  \longrightarrow  &  domain = (-\infty, \infty)  \\
-range = (0, \infty)  &  \longrightarrow  &  domain = (0, \infty)  \\
+domain = (-\infty, \infty)  &  \longrightarrow  &  domain = (0, \infty)  \\
+range = (0, \infty)  &  \longrightarrow  &  range = (-\infty, \infty)  \\
 (a, r^a)    &  \longrightarrow  &   (r^a, a)
 \end{array}
 \]
 
 
-The logarithm function just reverses the pairs in the exponential function.  However, it seems werid to write $(2^a, 2a)$, even though it is perfecftly correct.  Instead, this funciton has a very old name, \textbf{logarithm}.  Here, were are working with the base $2$ exponential. So, the reverse is called \textbf{the logarithm base $2$}.
+The logarithm function just reverses the pairs in the exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
+
+
+Therefore, the domains and ranges switch. \\
+
+
+
+
+
+
+
+
+However, it seems weird to write $(2^a, a)$, even though it is perfecftly correct.  Instead, the logarithmic function has a very old name, \textbf{logarithm}, which gets shortened to \textbf{log} for notation purposes.  \\
+
+
+
+In our example here, we are working with the base $2$ exponential, $E(t) = 2^t$. So, the reverse is called \textbf{the logarithm base $2$}.  We tack on a subscript $2$.
 
 
 
 \[   log_2(a)     \]
 
-$log_2(a)$ is the number that you raise $2$ to, to get $a$.  \\
+
+That pairs and points on the graph look like 
+
+
+\[
+(a, log_2(a))
+\]
+
+
+$\blacktriangleright$ \textbf{Remember:} These are the reverse of the exponential pairs : $(b, 2^b)$.  $(a, log_2(a))$ is also $(2^b, b)$ for some $b$. \\
+
+$\blacktriangleright$  $log_2(a)$ is the $b$, so that $2^b = a$ \\
+
+
+$\blacktriangleright$  $log_2(a)$ is the number that you raise $2$ to, to get $a$.  \\
 
 \[   2^{log_2(a)} = a     \]
 
-We have a logarithmic function for every exponential function.
+We have a logarithmic function for every exponential function.  They are designated by their bases.
 
 
 
 
 
 
-\begin{definition}  Logarithm base $b$ : $log_b(x)$
 
 
-$log_b(x)$ is the number you raise $b$ to, to get $x$. \\
 
-Domain is $(0, \infty)$. \\
 
-Range is $(-\infty, \infty)$.
+
+
+
+
+
+
+\begin{definition}  Logarithm base $B$ : $log_B(A)$
+
+
+$log_B(A)$ is the number you raise $B$ to, to get $A$. \\
+
+$A \in 0, \infty)$. \\
+
+$log_B(A) \in (-\infty, \infty)$.
 
 
 \end{definition}
@@ -154,13 +194,13 @@ Since all of the pairs are reversed, the graphs switch axes.
 
 
 
-The horizontal axis is an asymptote for the basic exponential function. Now, the verical axis is an asymptote for the basic logarithmic function.
+The horizontal axis is an asymptote for the basic exponential function. Now, the veritcal axis is an asymptote for the basic logarithmic function.
 
 
 The graph of a basic exponential function has $(0,1)$ as an intercept.  The graph of a basic logarithmix function has $(1,0)$ as an intercept. 
 
 
-Their graphs re mirror images of each other across the diagonal thorugh the I and III quandrants.
+Their graphs are mirror images of each other across the diagonal through the I and III quandrants.
 
 
 
@@ -221,6 +261,13 @@ From this basic logarithmic function and its graph we can anaylze and transforma
 
 
 
+
+
+
+
+
+
+
 \begin{example}  Logarithmic Function
 
 
@@ -232,9 +279,9 @@ $\blacktriangleright$ The inside of the logarithm is $t+3$ and this equals $0$ w
 
 $\blacktriangleright$ The inside of the logarithm is $t+3$, and this is positive for $t>-3$.  The graph must move to the right.
 
-$\blacktriangleright$ The leading coefficient is $1$, which is positive.  Therefore, the graph goes down the asymptote. 
+$\blacktriangleright$ The leading coefficient is $1$, which is positive.  Therefore, the graph hugs the asymptote down the asymptote. 
 
-$\blacktriangleright$ $t+3=1$ when $t=-2$. Therefore, the anchor point $(1,0)$ has moved to $(-2, -4)$.
+$\blacktriangleright$ $t+3=1$ when $t=-2$. Therefore, the anchor point $(1,0)$ has moved to $t = -2$.  $M(-2) = 0$.  This gives us the point $(-2, -4)$.
 
 
 
@@ -278,10 +325,21 @@ Graph of $y = M(t)$.
 
 
 
-\textbf{\textcolor{red!25!blue!75!}{Analysis}} \\
+Out graphical analysis tells us that:
+
+\begin{itemize}
+\item The implied domain of $M$ is $(-3,\infty)$.
+\item The implied range of $M$ is $\mathbb{R}$.
+\item $M$ is always increasing.
+\item $M$ has no maximums or minimums.
+\item $\lim_{t \to -3^+} M(t) = -\infty$
+\item $\lim_{t \to \infty} M(t) = \infty$
+\end{itemize}
 
 
-We can see that the graph will have a horizontal intercept, which means the function has a zero. \\
+
+
+We can also see that the graph will have a horizontal intercept, which means the function has a zero. \\
 
 
 $M(t) = log_2(t+3) - 4 = 0$ \\
@@ -296,21 +354,13 @@ t & = 13
 \end{align*}
 
 
+$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$
 
 
 
 
 
 
-
-\begin{itemize}
-\item The implied domain of $M$ is $(-3,\infty)$.
-\item The implied range of $M$ is $\mathbb{R}$.
-\item $M$ is always increasing.
-\item $M$ has no maximums or minimums.
-\item $\lim_{t \to -3^+} M(t) = -\infty$
-\item $\lim_{t \to \infty} M(t) = \infty$
-\end{itemize}
 
 
 
