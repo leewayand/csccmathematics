@@ -215,7 +215,7 @@ Their graphs are mirror images of each other across the diagonal through the I a
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	ticklabel style={font=\scriptsize},
@@ -370,10 +370,10 @@ $\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you rais
 
 
 
-$M(t)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $M$ look like $(t, M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.
+$M(t)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.
 
 
-We can obtain the formula for this partner exponential funciton by solving the logarithmic formula for $t$.
+We can obtain the formula for this partner exponential function by solving the logarithmic formula for $t$.
 
 
 
@@ -388,6 +388,11 @@ t & = 2^{M+4} - 3
 \end{align*}
 
 
+$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = M+4$.  Therefore, $M+4$ is the thing that you raise $2$ to, to get $t+3$
+
+
+
+
 
 Here is the graph of both the logarithmic and the associated exponential functions.
 
@@ -399,7 +404,7 @@ Here is the graph of both the logarithmic and the associated exponential functio
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -461,7 +466,7 @@ Here is the graph of both the logarithmic and the associated exponential functio
 Analyze   $K(x) = -2 \,log_3(4-x)$ \\
 
 
-$\blacktriangleright$ The inside of the logarithm is $4-x$ and this equals $0$ when $x=4$.  This has to be the verical asymptote.
+$\blacktriangleright$ The inside of the logarithm is $4-x$ and this equals $0$ when $x=4$.  $x=4$ has to be the vertical asymptote.
 
 $\blacktriangleright$ The inside of the logarithm is $4-t$, and this is positive for $t<4$.  The graph must move to the right.
 
@@ -521,8 +526,8 @@ Graph of $y = K(x)$.
 \item The implied range of $K$ is $\mathbb{R}$.
 \item $K$ is always increasing.
 \item $K$ has no maximums or minimums.
-\item $\lim_{x \to 4^-} K(x) = \infty$
-\item $\lim_{x \to -\infty} K(x) = -\infty$
+\item $\lim\limits_{x \to 4^-} K(x) = \infty$
+\item $\lim\limits_{x \to -\infty} K(x) = -\infty$
 \end{itemize}
 
 
@@ -539,11 +544,11 @@ Graph of $y = K(x)$.
 
 
 
-Analyze   $K(x) = -2 \,log_3(4-x)$ \\
+Reversing all of the pairs will give the associated exponential function.  \\
 
 
 
-$K(x)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $K$ look like $(x, K)$. The pairs for the exponential function would look like $(K, x)$.  The roles of $K$ and $x$ would be switched. $K$ would be the variable in the formula. $x$ would be the function value.
+$K(x)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $K$ look like $(x, K)$. The pairs for the exponential function would look like $(K, x)$.  The roles of $K$ and $x$ would be switched. $K$ would be the variable in the exponential formula. $x$ would be the exponential function value.
 
 
 We can obtain the formula for this partner exponential funciton by solving the logarithmic formula for $x$.
@@ -562,6 +567,13 @@ log_3(4-x) & = -\frac{M}{2} \\
 
 
 
+
+$\blacktriangleright$ \textbf{Remember:} $log_3(4-x)$ is the thing that you raise $3$ to, to get $4-x$ and $log_3(4-x) = - \frac{M}{2}$.  Therefore, $- \frac{M}{2}$ is the thing that you raise $3$ to, to get $4-x$
+
+
+
+
+
 Here is the graph of both the logarithmic and the associated exponential functions.
 
 
@@ -572,7 +584,7 @@ Here is the graph of both the logarithmic and the associated exponential functio
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
