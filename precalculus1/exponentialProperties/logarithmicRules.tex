@@ -63,7 +63,12 @@ Logarithms are exponents. Therefore, they should follow all of the exponent rule
 
 
 
-$\blacktriangleright$  Let's write the product $M \cdot N$ in two different ways.
+$\blacktriangleright$  Let $M$ and $N$ be two positive real numbers.
+
+We can write them as $M = a^{log_a(M)}$ and $N = a^{log_a(N)}$
+
+
+This allows us to write the product $M \cdot N$ in two different ways.
 
 
 
@@ -95,7 +100,7 @@ Since exponential functions are one-to-one, we have
 
 \begin{fact} 
 
-\[    log_a(M)+log_a(N)    =   log_a(M \cdot N)      \, \text{ for } \, M, N > 0        \]
+\[    log_a(M)+log_a(N)    =   log_a(M \cdot N)      \, \text{ for } \, a, M, N > 0        \]
 
 
 \end{fact}
@@ -139,7 +144,7 @@ Since exponential functions are one-to-one, we have
 
 \begin{fact} 
 
-\[    log_a(M)-log_a(N)    =   log_a\left(\frac{M}{N}\right)        \, \text{ for } \, M, N > 0        \]
+\[    log_a(M)-log_a(N)    =   log_a\left(\frac{M}{N}\right)        \, \text{ for } \, a, M, N > 0        \]
 
 
 \end{fact}
@@ -195,7 +200,7 @@ Since exponential functions are one-to-one, we have
 
 \begin{fact} 
 
-\[    log_a(M^N)    =   N \cdot log_a(M)       \, \text{ for } \, M, N  \, \text{ for } \,  M> 0        \]
+\[    log_a(M^N)    =   N \cdot log_a(M)       \, \text{ for } \, a M, N  > 0        \]
 
 
 \end{fact}
@@ -269,12 +274,12 @@ We have also seen that logarithmic functions are \textbf{one-to-one}. One-to-one
 \end{image}
 
 
-Our definition of functions includes a similar rule for domain numbers.  Each domain number is in exactly one pair.  One-to-one puts the same restrictions on range numbers.  Each range number is in exactly one pair.
+Our definition of functions includes a similar rule for domain numbers.  Each domain number is in exactly one pair.  One-to-one puts the same restrictions on range numbers.  Each range number is in exactly one pair. Logarithmic functions have this feature.
 
 In other words, each function value occurs exactly once.
 
 
-If you know that $log_a(r) = log_a(t)$, then $r=t$. \\
+If you know that $log_a(r) = log_a(t)$, then $r=t$ follows. \\
 
 
 This is an important rule.
@@ -321,7 +326,7 @@ $log_5(21 + x) = 2$
 
 $5^{log_5(21 + x)} = 5^2$
 
-$21 + x = 5^2 = 25$
+$21 + x = 5^2 = 25$    Since, $log_5(x)$ is a one-to-one function.
 
 $x = 4$
 
@@ -349,20 +354,20 @@ $log_2(y) + log_2(y-4) = log_2(y+6)$
 
 $log_2(y(y-4)) = log_2(y+6)$
 
-$y(y-4) = y+6$
+$y(y-4) = y+6$    Since, $log_2(x)$ is a one-to-one function.
 
 $y^2 - 4y - y - 6 = 0$
 
 $y^2 - 5y - 6 = 0$
 
-$(y-6)(y+1) = 0$
+$(y-6)(\answer{y+1}) = 0$
 
 
 Either $y-6 = 0$ or $y+1 = 0$
 
 Either $y = 6$ or $y = -1$
 
-However, $y \ne -1$, since $-1$ is not in the domain of $log_2(y)$.
+However, $y \ne -1$, since $\answer{-1}$ is not in the domain of $log_2(y)$.
 
 Therefore, just one solution: $6$.
 
@@ -408,22 +413,27 @@ We are looking for the number that you raise $7$ to, to get $5$.  That number  i
 Any positive number can be written as a power of any other positive number.  We can change the base. That is what logarithms do.
 
 
+\begin{quote}
+
+Any positive number, $b$, can be written as a power of $a$, any other positive number.
+
 \[    b = a^{log_a(b)}  \]
 
+\end{quote}
 
-We can also write any logarithm in terms of any base.
+We can also write any logarithm in terms of any base.  We can write $log_a(b)$ in terms of $log_c$.
 
 
 
 
-$a$ and $b$ can be written in terms of some third base, $c$.
+First, $a$ and $b$ can be written in terms of some third base, $c$, using logarithms.
 
 
 \[    b = c^{log_c(b)} \,   \text{ and } \,      a = c^{log_c(a)}      \]
 
 
 
-Puting these together gives 
+Second, substitute these in for $a$ and $b$ bases in $b = a^{log_a(b)}$.
 
 
 
@@ -471,6 +481,42 @@ If we can write any power in terms of any base, and any logarithm in terms of an
 We have such a base: $e$
 
 
+\begin{example}
+
+
+Write $log_3(5)$ in terms of logarithms base $7$.
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+Following the change of base template: $log_a(b)  =  \frac{log_c(b)}{log_c(a)} $ gives
+
+
+
+\[   log_3(5)  =  \frac{log_7(5)}{log_7(3)}         \]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -480,10 +526,10 @@ We have such a base: $e$
 
 $e$ was defined in a very weird way.
 
-\[   e = \lim_{x \to \infty}  \left(1 + \frac{1}{x}\right)^x      \]
+\[   e = \lim_{x \to \infty}  \left(\answer{1 + \frac{1}{x}}\right)^x      \]
 
 
-It is weird now.  But as you continue through Calculus, you will see $e$ pop up all over the place.  It seems to have a connection to everything.  So much so that scientists, engineers, and mathematicians have  adopted $e$ as the prefered base for eveything.
+It is weird now.  But as you continue through Calculus, you will see $e$ pop up all over the place.  It seems to have a connection to everything.  So much so that scientists, engineers, and mathematicians have  adopted $e$ as the prefered base for everything.
 
 
 This means that we encounter $log_e(x)$ a lot.  And, any time something appears a lot in mathematics, it usually gets a shortcut abbreviation.
@@ -512,14 +558,68 @@ That is not an uppercase "eye".  It is not IN.  It is ln.
 \begin{example}  base e
 
 
-$log_7(5) = \frac{ln(7)}{ln(5)}$
+$log_7(5) = \frac{ln(5)}{ln(7)}$
+
+
+\end{example}
+Everything can be written in terms of base $e$.
+
+
+Calculators usually have a button titled "ln" or "LN".  When approximating values of logarithms with other bases, we convert them to natural logarithms.  Then we can use the calculator.
+
+
+
+
+
+
+
+
+
+\begin{example}  
+
+
+Approximate $log_13(61)$
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+Using the LN button on the calculator, we get $log_13(61) = \frac{ln\left(\answer{61}\right)}{ln\left(\answer{13}\right)} \approx 1.602711512$
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example}  
+
+
+Rewrite the expression $3 \cdot 5^{2x + 1}$ in the form $e^{f(x)}$.
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+$3 = e^{\answer{ln(3)}}$ \\
+
+
+$5 = e^{\answer{ln(5)}}$ \\
+
+
+\[   3 \cdot 5^{2x + 1} = e^{ln(3)} \cdot (e^{ln(5)})^{2x + 1}  =  e^{ln(3)} \cdot e^{ln(5) \cdot (2x + 1)}  = e^{ln(3) + ln(5) \cdot (2x + 1)} \]
+
+
 
 
 \end{example}
 
 
 
-Calculators usually have a button titled "ln" or "LN".  When approximating values of logarithms with other bases, we convert them to natural logarithms.  Then we can use the calculator.
+
 
 
 
