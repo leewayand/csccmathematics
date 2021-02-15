@@ -17,7 +17,7 @@ bigger faster
 
 
 
-$\rhd$ Do functions tend to infinity differently?
+$\rhd$ Do functions tend to infinity differently? \\
 
 
 
@@ -37,8 +37,12 @@ $\blacktriangleright$ What do we mean by "same way"?  \\
 
 
 
-By the "same way", our idea is like the graphs of rational functions might have a horizontal asymptote, when the degrees of the polynomials are equal.
+By the "same way", our idea is like the graphs of rational functions might have a horizontal asymptote, when the degrees of the polynomials are equal.   The polynomial in the numerator and the polynomial in the denominator "behave in the same way" as we move far out in the domain.  The two polynomials are somehow "at the same level". \\
 
+
+
+
+\begin{idea}
 
 
 To decide if two functions, $f$ and $g$, approach infinity in the same way, 
@@ -47,19 +51,37 @@ To decide if two functions, $f$ and $g$, approach infinity in the same way,
 \item create a quotient: $\frac{f(x)}{g(x)}$ \\
 
 
-\item examine the end-behavior of this quotient: $\lim_{x \to \infty} \frac{f(x)}{g(x)}$ \\
+\item examine the end-behavior of this quotient: $\lim\limits_{x \to \infty} \frac{f(x)}{g(x)}$ \\
 
 
-\item if this limit equals a nonzero constant, then $f$ and $g$ approach $\infty$ the same
+\item if this limit equals a nonzero constant, then $f$ and $g$ approach $\infty$ the same - neither overshadows the other.
 \end{enumerate}
 
 
 People sometimes say the two functions are asymptotically equivalent. People sometimes use the symbol $\sim$ for asymptotically equivalent. \\
 
+\end{idea}
 
 
 
-Perhaps more important for future Calculus courses is when this limti is $0$. \\
+
+\begin{quote}
+
+Perhaps more important for future Calculus courses is when this limit is $0$. \\
+
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -77,26 +99,26 @@ then we say that $g$ \textbf{dominates} $f$. \\
 
 
 
-Sometimes peopel use a double inequality for domainates:  $f << g$.\\
+Sometimes people use a double inequality for dominates:  $f << g$.\\
 
 \end{definition}
 
 
 
-When one function dominates another, then it approaches infinity faster than the other function.  Since the dominate function approaches $0$ faster and it is in the denominator, then it drives the quotient to $0$.
+When one function dominates another, then it approaches infinity at a faster level than the other function.  Since the dominant function approaches $0$ faster and it is in the denominator, then it drives the quotient to $0$.
 
 
 Our initial order of dominance looks like this. \\
 
 
-\begin{summary}
+\begin{summary} Order of Dominance
 
 
 \[   constants, \, sine \, and \, cosine << logarithmic << polynomial <<  exponential  \]
 
 
 
-and their powers.
+This goes for their powers as well.
 
 
 \end{summary}
@@ -121,10 +143,11 @@ Graph of $y = \frac{ln(x)}{x}$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -145,7 +168,7 @@ Graph of $y = \frac{ln(x)}{x}$.
 
 
 
-That was not a good graph for our purposes.  Let's zoom in.
+That was not a good graph for our purposes.  Let's zoom out.
 
 
 
@@ -184,7 +207,53 @@ That was not a good graph for our purposes.  Let's zoom in.
 
 
 
-Here we can see the graph peak and begin to come back down.  Eventually, the graph approaches the x-axis as the function value approaches $0$.
+Here we can see the graph peak and begin to come back down.   \\
+
+But we are interested in large values of $x$.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-1:1000, ymax=0.75, xmax=1000, ymin=-1, xmin=-1,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, 
+            ytick={0.5},
+            xtick={200,400,600,800},
+            xticklabels={$200$,$400$,$600$,$800$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:950), <->] {ln(x)/x};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+Eventually, the graph approaches the x-axis as the function value approaches $0$. \\
+
+
+The function $d(x) = x$ dominates the funciton $n(x) = ln(x)$.   The values of $ln(x)$ become like $0$ comepared to the values of $x$, when $x$ is very very very large.
 
 
 
@@ -193,6 +262,11 @@ Here we can see the graph peak and begin to come back down.  Eventually, the gra
 
 
 
+
+
+
+
+The level of dominance includes powers.  We can raise the power of $ln(x)$, but they are still overshadowed by values of $x$, when $x$ is very very very large. \\
 
 
 
@@ -215,10 +289,10 @@ Here we can see the graph peak and begin to come back down.  Eventually, the gra
 
 Graph of $y = \frac{(ln(x))^5}{x}$.
 
-$x$ should dominate any power of $ln(x)$.  Therefore, the graph of this funciton should eventually aproach the the x-axis as the function value approaches $0$. \\
+$x$ should dominate any power of $ln(x)$.  Therefore, the graph of this funciton should eventually aproach the the $x$-axis as the function value approaches $0$. \\
 
 
-If this functio0n approaches $0$, then it must get below and stay below $2$, eventually. How far out in the domain do you need to go before this function eventually dips and stays below $2$.
+If this function approaches $0$, then it must get below and stay below $2$, eventually. How far out in the domain do you need to go before this function eventually dips and stays below $2$.
 
 
 \begin{center}
@@ -226,10 +300,53 @@ If this functio0n approaches $0$, then it must get below and stay below $2$, eve
 \end{center}
 
 
+
+
+\textbf{Hint:} Look out around $1,000,000$.
+
 \end{example}
 
 
 
+\begin{question}
+
+\[
+\lim\limits_{t \to \infty} \frac{x^6}{e^x} = \answer{0}
+\]
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+\[
+\lim\limits_{\theta \to \infty} \frac{cos(2 \theta)}{ln(\theta)} = \answer{0}
+\]
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+\[
+\lim\limits_{y \to \infty} \frac{y^{1345}}{2^y} = \answer{0}
+\]
+
+\end{question}
 
 
 
@@ -242,11 +359,13 @@ If this functio0n approaches $0$, then it must get below and stay below $2$, eve
 
 
 
+\begin{question}
 
+\[
+\lim\limits_{w \to \infty} \frac{(ln(w))^{78}}{w} = \answer{0}
+\]
 
-
-
-
+\end{question}
 
 
 

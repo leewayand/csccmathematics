@@ -14,20 +14,32 @@ limit notation
 
 
 
+End-behavior is a simplier description of approximate function values as we move way out in the domain to the very very very large numbers.  Our phrases for this movement in the domain are 
 
-We use limit notation to describe end-behavior.
-
-
-\[   \lim_{t \to \infty} \frac{(3t+1)(5t-5)}{(t+3)(2t-4)} = \frac{15}{2}       \]
-
-
-
-\[   \lim_{w \to \infty} \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim    2w -\frac{49}{3}       \]
+\begin{itemize}
+\item tending to infinity
+\item tending to negative infinity
+\end{itemize}
 
 
+We also refer to this as \textbf{limiting behavior}. \\
 
 
-We have seen limiting or end-behavior of exponential functions.
+Our shorthand notation for " the limiting behavior of" is $\lim\limits_{x \to \infty}$.  This is placed to the left of the function. \\
+
+
+
+
+
+
+We use limit notation to describe end-behavior, when the endbehavior is a constant or unbounded.
+
+
+
+
+
+
+$\blacktriangleright$  We have seen limiting or end-behavior of exponential functions.
 
 
 \[   \lim_{x \to -\infty} 1.5^x   = 0      \]
@@ -38,6 +50,7 @@ We have seen limiting or end-behavior of exponential functions.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -56,7 +69,7 @@ We have seen limiting or end-behavior of exponential functions.
 
 
 
-We don't have a better description of the end-behavior as $x \to -\infty$, so we just say 
+as $x \to \infty$, the function values become unbounded and our notation for that looks like 
 
 
 \[   \lim_{x \to \infty} 1.5^x   = \infty      \]
@@ -66,7 +79,7 @@ We don't have a better description of the end-behavior as $x \to -\infty$, so we
 
 
 
-Same with logaarithms.  Sometimes we just don't have any good comparisons and just say the funcito0n in unbounded.
+$\blacktriangleright$  Same with logaarithms.  
 
 \[   \lim_{t \to \infty} log_2(t+5)   = \infty      \]
 
@@ -75,6 +88,7 @@ Same with logaarithms.  Sometimes we just don't have any good comparisons and ju
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -94,6 +108,174 @@ Same with logaarithms.  Sometimes we just don't have any good comparisons and ju
 
 
 
+$\blacktriangleright$ Some rational functions approach a constant, which we see on their graphs as a horizontal asymptote.
+
+
+
+
+
+
+
+
+graph of $y = f(x) = \frac{2x-4}{x+3}$
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-20:20, ymax=20, xmax=20, ymin=-20, xmin=-20,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major,
+            ytick={-20,-15,-10,-5,5,10,15,20},
+            xtick={-20,-15,-10,-5,5,10,15,20},
+            yticklabels={$-10$,$-15$,$-10$,$-5$,$5$,$10$,$15$,$20$}, 
+            xticklabels={$-10$,$-15$,$-10$,$-5$,$5$,$10$,$15$,$20$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=300, domain=(-19.9:-3.58),<->] {(2*x-4)/(x+3)};
+          \addplot [line width=2, penColor, smooth, samples=300, domain=(-2.53:19.9),<->] {(2*x-4)/(x+3)};
+
+
+          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({-3},{x});
+          \addplot [line width=2, gray, dashed, domain=(-19.9:19.9),<->] {2};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\[   \lim_{x \to -\infty} f(x)   = 2     \]
+
+
+\[   \lim_{x \to \infty} f(x)   = 2     \]
+
+
+
+
+\begin{example} Limits 
+
+
+
+Let $G(m)$ be defined by the following graph. 
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=300, domain=(-9.9:-3.58),<->] {(6*x-4)/(3*(x+3))+3};
+          \addplot [line width=2, penColor, smooth, samples=300, domain=(-2.4:9.9),<->] {(-4*x-4)/(x+3)};
+
+
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+          \addplot [line width=2, gray, dashed, domain=(-9.9:-1),<->] {6};
+          \addplot [line width=2, gray, dashed, domain=(1:9.9),<->] {-4};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\[   \lim_{x \to -\infty} f(x)   = \answer{6}     \]
+
+
+\[   \lim_{x \to \infty} f(x)   = \answer{-4}     \]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Limits 
+
+
+
+Let $T(y)$ be defined by 
+
+
+
+\[
+  T(y) = \frac{2 \sin(3y)}{y} \, \text{ defined on } \, (2, \infty)
+\]
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:20, ymax=2, xmax=20, ymin=-2, xmin=0,
+            axis lines =center, xlabel=$y$, ylabel=$z$, grid = major,
+            ytick={-1,1},
+            xtick={2,4,6,8,10,12,14,16,18},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=300, domain=(2:18.5),->] {2*sin(deg(3*x))/x};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\[   \lim_{y \to \infty} T(y)   = \answer{0}     \]
+
+
+
+
+
+
+\end{example}
 
 
 
@@ -112,19 +294,30 @@ Same with logaarithms.  Sometimes we just don't have any good comparisons and ju
 
 
 
+\begin{example} Limits 
+
+
+
+Let $R(t)$, with its natural domain, be defined by 
+
+
+
+\[
+  R(t) = \frac{(2t+5)(t-3)(3t-7)}{(t-8)(t+1)(2t+9)} \,
+\]
+
+
+
+
+
+\[   \lim_{\answer{t} \to \infty} R(t)   = \answer{3}     \]
 
 
 
 
 
 
-
-
-
-
-
-
-
+\end{example}
 
 
 
