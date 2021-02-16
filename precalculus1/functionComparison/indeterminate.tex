@@ -15,7 +15,7 @@ equally fast
 
 
 
-Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity atthe same rate, then the limit of their quotient equals a number.  The graph of the quotient approaches as horizontal asymptote.
+Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity at the same rate, then the limit of their quotient equals a number.  The graph of the quotient approaches as horizontal asymptote.
 
 
 
@@ -33,7 +33,7 @@ As $t \to \infty$, the exponential functions will dominate the constant function
 
 
 
-As $t \to -\infty$, we have a different story.  $\lim_{t \to -\infty} e^t = 0$  In this case, the constant terms domainate.
+As $t \to -\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$  In this case, the constant terms domainate.
 
 
 \[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{-5}{1} = -5   \]
@@ -46,16 +46,15 @@ The graph has two different horizontal asymptotes.
 
 
 
-
-
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            axis lines =center, xlabel=$t$, ylabel={$y=B(t)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -81,6 +80,7 @@ The graph has two different horizontal asymptotes.
 
 
 
+
 \end{example}
 
 
@@ -93,7 +93,7 @@ The graph has two different horizontal asymptotes.
 \section{Indeterminate Forms}
 
 
-We have been examining functions that approach infinity at the same rate.  The problem is that a fraction of the form $\frac{very big}{very big}$ could equal anything.
+We have been examining functions that approach infinity at the same rate.  The problem is that a fraction of the form $\frac{very \, big}{very \, big}$ could equal anything.
 
 
 
@@ -120,7 +120,69 @@ The same thing happens with values near $0$
 
 
 
-Functions whose values seem like they are approaching $\frac{\infty}{\infty}$ or $\frac{0}{0}$ are called \textbf{indeterminate forms}, because you can't easily determine their values.
+Formulas whose values seem like they are approaching $\frac{\infty}{\infty}$ or $\frac{0}{0}$ are called \textbf{indeterminate forms}, because you can't easily determine their values.
+
+
+
+
+
+
+\begin{example}  Indeterminate Forms
+
+Both the functions $S(t) = \sqrt{2t^3 - 5}$ and $L(t) = t\sqrt{9t+4}$ approach $\infty$ as $t \to \infty$. \\
+
+
+
+$R(t) = \frac{S(t)}{L(t)} = \frac{\sqrt{2t^3 - 5}}{t\sqrt{9t+4}}$ is an indeterminate form. It is approaching the form $\frac{\infty}{\infty}$ \\
+
+
+If we examine the quotient in terms of dominance, then we think like...
+
+\[
+R(t) =  \frac{\sqrt{2t^3 - 5}}{t \sqrt{9t+4}} \sim \frac{\sqrt{2t^3}}{t \sqrt{9t}} = \frac{t \sqrt{2t}}{t \sqrt{9t}} = \frac{\sqrt{2}}{\sqrt{9}}
+\]
+
+
+
+\[
+\lim\limits_{t \to \infty} R(t) = \frac{\sqrt{2}}{3}
+\]
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Calculus}
+
+
+We are introducing the term \textbf{indeterminate form} here in connection to dominance and horizontal asymptotes.  In Calculus, this idea will be expanded significantly to include other targets besides $\infty$.
 
 
 
@@ -132,6 +194,8 @@ Both the functions $S(t) = sin(t)$ and $L(t) = t$ approach $0$ as $t \to 0$. \\
 Do they approach $0$ at the same rate? \\
 
 Let's investigate $R(t) = \frac{sin(t)}{t}$
+
+
 
 
 
@@ -167,6 +231,12 @@ Let's investigate $R(t) = \frac{sin(t)}{t}$
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
 
 $sin(t)$ and $t$ approach $0$ at exactly the same rate.  Their quotient approaches $1$.
 
