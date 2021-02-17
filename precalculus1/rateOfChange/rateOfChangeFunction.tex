@@ -16,6 +16,12 @@ rate as a relationship
 
 
 
+\section{Rate of Change Over an Interval}
+
+
+
+
+
 Consider the function $Q(x) = \frac{(x+7)(x-5)}{5}$
 
 
@@ -29,7 +35,7 @@ Consider the function $Q(x) = \frac{(x+7)(x-5)}{5}$
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel={$y=Q(x)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -77,7 +83,7 @@ This is the slope of the secant line through the points $(-3, Q(-3))$ and $(4, Q
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -105,7 +111,7 @@ This is the slope of the secant line through the points $(-3, Q(-3))$ and $(4, Q
 
 
 
-This rate-of-change is the constant rate-of-change that is needed in order to get from one endpoint to the other.  Of course, we can see from the graph that the rate-of-change does indeed change over the interval. 
+This rate-of-change is the constant rate-of-change that is needed in order to get from one endpoint of the interval to the other.  Of course, we can see from the graph that the rate-of-change does indeed change over the interval. 
 
 This interval would not be a good interval to use if you were interested in the rate-of-change near $-3$.
 
@@ -166,7 +172,28 @@ This is the slope of the secant line through the points $(-3, Q(-3))$ and $(-2.5
 
 That is looking more like a tangent line.
 
-If we make this intervla even smaller, we should get an even better approximation for the slope of the tangent line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Rate of Change Over a Single Number}
+
+
+
+
+
+If we make this interval even smaller, we should get an even better approximation for the slope of the tangent line.
 
 
 
@@ -210,7 +237,7 @@ We'll plot the point $(-3,-0.8)$.  This will be a visual encoding of the tangent
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel={$y=Q(x)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -255,7 +282,7 @@ We could do this for a bunch of domain numbers.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel={$y=Q(x)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -290,7 +317,7 @@ We could do this for a bunch of domain numbers.
 
 
 
-If we do this for every domain number, then we will have dreated a number function.  Every domain number will be paired with the slope of the tangent line at the corresponding point.
+If we do this for every domain number, then we will have created a new function.  Every domain number will be paired with the slope of the tangent line at the corresponding point.
 
 We could graph this slope function.
 
@@ -312,11 +339,11 @@ This function whose values are the rates-of-change of another function is called
 
 
 
-$\blacktriangleright$ Let $f$ be a function.  Then the derivative of $f$ is $f'$, the derivative of $f$.
+$\blacktriangleright$ Let $f$ be a function.  Then the derivative of $f$ is denoted as $f'$.
 
 
 
-\begin{definition} The Derivative
+\begin{definition} The Derivative - The Slope Function
 
 Let $f$ be a function.
 
@@ -335,6 +362,80 @@ $f'(a) = $ the slope of the tangent line at $(a, f(a))$, on the graph of $f$.
 
 
 $\blacktriangleright$ Take another look at the graphs above.  The derivative has a zero at $-1$.  Speculate on why $f'$ has a  zero there.
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+The function $Q(x) = \frac{(x+7)(x-5)}{5}$ is a quadratic and has a parabola for a graph.  The vertex, $(-1, \tfrac{-36}{5})$, of the parabola has a horizontal tangent line, $y=\tfrac{-36}{5}$.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=Q(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {-0.7*(x+3)-6.4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-9:8),<->] {-7.2};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The slope of this tangent line is $0$.  Therefore, $Q(-1) = 0$.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
