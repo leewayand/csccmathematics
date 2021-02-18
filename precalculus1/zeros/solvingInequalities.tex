@@ -123,11 +123,26 @@ The solution to the original inequality is $(-6, \infty)$
 \begin{example}  Common Factor
 
 
-Solve $\frac{x^3 (18x) - 9(x^2-3)(3x^2)}{(x^3)^2} = 0$
+Solve $\frac{x^3 (18x) - 9(x^2-3)(3x^2)}{(x^3)^2} \leq 0$
 
 
 
 \textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+FIrst, let's just note that the domain is $(-\infty, 0) \cup (0, \infty)$. \\
+
+A quick graph shows we might be looking for two infinite intervals.
+
+
+
+\begin{center}
+\desmos{pvtyfcpxgj}{400}{300}
+\end{center}
+
+
+
+
+
 
 
 The numerator is a difference of two terms and $9 x^2$ is a common factor.  We can use the Distributive Property to factor it out.
@@ -146,13 +161,18 @@ This is a fraction, so it equals $0$ when the numerator equals $0$ and the denom
 
 $9 - x^2 = 0$
 
-This has two solutions: $\{ -3, 3  \}$, both of which are in the domain.
+This has two solutions: $\{ -3, 3  \}$, both of which are in the domain. \\
 
 
+The expression or formula is a fraction and the denominator is an even power funciton, therefore the denominator is always positive. So, we need the numerator to be negative to make the whole negative positive.
 
 
+$9 - x^2 > 0$, when $x^2 > 9$, which is on $(-\infty, 3) \cup (3, \infty)$.
+
+We want less than or equal, so we will add in $-3$ and $3$.
 
 
+The solution set is $(-\infty, 3] \cup [3, \infty)$.
 
 
 \end{example}
@@ -176,19 +196,69 @@ This has two solutions: $\{ -3, 3  \}$, both of which are in the domain.
 \begin{example}  Common Factor
 
 
-Solve $12 x^3 - 12 x^2 = 0$
+Here is the graph of $P(t) = 3 t^4 - 4 t^3$.
+
+
+
+\begin{center}
+\desmos{jbc7gedgts}{400}{300}
+\end{center}
+
+
+From the graph we can see that $p$ decreases, flattens out, decreases, turns, and increases.  Therefore its derivative should be negative, $0$, negative, $0$, and positive. \\
+
+
+
+$P'(t) = 12 t^3 - 12 t^2$ \\
+
+
+
+
+\begin{center}
+\desmos{tujz79x16z}{400}{300}
+\end{center}
+
+
+
+To identify the intervals on which $P(t)$ increases and decreases, we need the zeros of $P'(t)$.  It appears there are two roots, one a double root.
+
+
+
+
+
+
+Solve $12 t^3 - 12 t^2 = 0$
 
 
 
 \textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
 
 
-The Distributive Property gives us the product $12 x^2 (x-1)$.
+The Distributive Property gives us the product $12 t^2 (t-1)$.
 
 
 
 
 We have two solutions: $\{ 0, 1  \}$, both of which are in the domain.
+
+
+
+
+\begin{itemize}
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is nonnegative on $[1, \infty)$. $P(t)$ is increasing on $[1, infty)$. \\
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is nonpositive on $(-\infty, 1]$. $P(t)$ is decreasing on $(-\infty, 1]$. \\
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t) = 0$ at $0$ and $1$.
+\end{itemize}
+
+
+
+
+
+\begin{itemize}
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is positive on $(1, \infty)$. $P(t)$ is \textbf{strictly increasing} on $(1, infty)$. \\
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is negative on $(-\infty, 0)$ and $(0, \infty)$. $P(t)$ is \textbf{strictly decreasing} on $(-\infty, 0)$ and $(0, \infty)$. \\
+\end{itemize}
+
 
 
 
@@ -217,7 +287,29 @@ We have two solutions: $\{ 0, 1  \}$, both of which are in the domain.
 \begin{example}  Fractions
 
 
-Solve $2 - \frac{2}{\sqrt[3]{x}} = 0$
+Given that
+
+\begin{itemize}
+\item $R(x) = 2x - 3 x^{\tfrac{2}{3}}$
+\item $R'(x) = 2 - \frac{2}{\sqrt[3]{x}} = 0$
+\end{itemize}
+
+
+The graph of $R(x)$ appears to show that $R$ is decreasing on $[0, 1]$.
+\begin{center}
+\desmos{8jalzxiawn}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+To verify this, we need to solve $R'(x) = 2 - \frac{2}{\sqrt[3]{x}}  \leq 0$
 
 
 
@@ -235,10 +327,18 @@ This has one solution: $\{  1  \}$
 
 
 
+We can also see that $R'(t)$ is undefined at $0$.  This gives us three intervals to consider: $(-\infty, 0)$, $(0, 1)$, $(1, \infty)$.
 
 
 
+\begin{itemize}
+\item On $(-\infty, 0)$, $R'(x) = 2 - \frac{2}{x^{\tfrac{1}{3}}} > 0$, since a big $x$ in the denominator will make the fraction small.
+\item On $(0,1)$, $R'(x) = 2 - \frac{2}{x^{\tfrac{1}{3}}} < 0$, since a small $x$ in the denominator will make the fraction big.
+\item On $(1,\infty)$, $R'(x) = 2 - \frac{2}{x^{\tfrac{1}{3}}} > 0$, since a big $x$ in the denominator will make the fraction small.
+\end{itemize}
 
+
+$R(x)$ is decreasing on $[0,1]$ and strictly decreasing on $(0,1)$.
 
 \end{example}
 
