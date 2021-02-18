@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Solving Inequations}
+\title{Solving Inequalities}
 
 \begin{document}
 
@@ -22,11 +22,53 @@ still break up
 \begin{example}  Common Factor
 
 
-Solve $\sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}} = 0$
+Solve $\sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}} > 0$
 
 
 
 \textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+
+
+
+\begin{observation} Quick Analysis
+
+
+The square root function is never negative.  Therefore, for $x > 0$ each of the terms would be positive.  So, at least this inequality has $(0, \infty)$ in the solution set.  \\
+
+
+The domain of the square root function is nonnegative numbers.  Therefore, the interval $(-\infty, -9)$ is not in the solution set.   \\
+
+
+$x \ne -9$, because the negative exponent means that factor is in the denominator.
+
+\end{observation}
+
+
+
+If we look at the graph of  
+
+\[
+y = f(x) = \sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}} = \sqrt{x+9} + x \cdot \frac{1}{2 \sqrt{x+9}} 
+\]
+
+
+
+
+\begin{center}
+\desmos{lxhyyzdkza}{400}{300}
+\end{center}
+
+
+
+
+It appears that the solution set is something like  $(-6, \infty)$, which would agree with out quick analysis.  We need algebra to get the exact value of the left endpoint (looking at the graph is not enough).
+
+
+This left endpoint of this domain interval is a zero of $f(x)$ \\ 
+
+
+
 
 
 
@@ -56,6 +98,10 @@ $\answer{\frac{3}{2} x + 9} = 0$
 
 
 $x = 6$, which is in the domain of $\sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}}$.
+
+
+
+The solution to the original inequality is $(-6, \infty)$
 
 \end{example}
 
