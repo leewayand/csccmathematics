@@ -129,7 +129,7 @@ Solve $\frac{x^3 (18x) - 9(x^2-3)(3x^2)}{(x^3)^2} \leq 0$
 
 \textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
 
-FIrst, let's just note that the domain is $(-\infty, 0) \cup (0, \infty)$. \\
+First, let's just note that the domain is $(-\infty, 0) \cup (0, \infty)$. \\
 
 A quick graph shows we might be looking for two infinite intervals.
 
@@ -245,27 +245,41 @@ We have two solutions: $\{ 0, 1  \}$, both of which are in the domain.
 
 
 \begin{itemize}
-\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is nonnegative on $[1, \infty)$. $P(t)$ is increasing on $[1, infty)$. \\
-\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is nonpositive on $(-\infty, 1]$. $P(t)$ is decreasing on $(-\infty, 1]$. \\
-\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t) = 0$ at $0$ and $1$.
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is positive on $[1, \infty)$. $P(t)$ is increasing on $(1, \infty)$. \\
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is negative on $(-\infty, 1)$. $P(t)$ is decreasing on $(-\infty, 1)$. \\
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t) = 0$ at $0$ and $1$. \\
 \end{itemize}
-
-
-
-
-
-\begin{itemize}
-\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is positive on $(1, \infty)$. $P(t)$ is \textbf{strictly increasing} on $(1, infty)$. \\
-\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is negative on $(-\infty, 0)$ and $(0, \infty)$. $P(t)$ is \textbf{strictly decreasing} on $(-\infty, 0)$ and $(0, \infty)$. \\
-\end{itemize}
-
-
 
 
 \end{example}
 
+We now find ourselves examining functions from two different viewpoints. \\
 
 
+
+\section{ Points vs. Intervals}
+
+
+
+
+We seem to have two different ideas of increasing and decreasing running alongside each other. \\
+
+
+
+$\blacktriangleright$ We have an algebraic point of view: the function, $f$, is increasing on the set $S$, if whenever $a < b$, then $f(a) < f(b)$.
+
+
+
+$\blacktriangleright$ We have a pointwise view: the function, $f$, is increasing at the number $a$, if $f'(a) > 0$. \\
+
+
+
+They actually fit together. If you remember, when we were inventing the idea of the derivative, we thought of secant lines slowly fading into tangent lines.  This process assumed that everythign was ok with out function around $a$.  That is, there was some sapce around $a$ in which to move - an open interval containing $a$.
+
+If we stick to open intervals, the algebraic and pointwise views are the same.  The difference comes in at endpoints of intervals. \\
+
+
+In the example above, the function $P$ is increasing on the interval $[1, \infty)$.  WHen we are talkign about the interval, we can add on the endpoint, where the derivative was $0$.
 
 
 
@@ -338,7 +352,7 @@ We can also see that $R'(t)$ is undefined at $0$.  This gives us three intervals
 \end{itemize}
 
 
-$R(x)$ is decreasing on $[0,1]$ and strictly decreasing on $(0,1)$.
+$R(x)$ is decreasing on $[0,1]$.
 
 \end{example}
 
