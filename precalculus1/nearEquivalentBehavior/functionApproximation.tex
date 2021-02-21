@@ -20,7 +20,7 @@ tangent lines
 
 What are we supposed to do with a function like this?
 
-\[  C(x) =  \frac{|sin(2x)+2|^x}{5(x^2+1)}       \]
+\[  C(x) =  \frac{(sin(2x)+2)^{|x|}}{5(x^2+1)}       \]
 
 
 
@@ -40,9 +40,17 @@ What are we supposed to do with a function like this?
             axis on top
           ]
           
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:9.5)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
 
-			\addplot [line width=2, penColor, smooth,samples=300,domain=(-10:9.5)] {(abs(sin(deg(2*x))+2)^x)/(5*(x^2+1))};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
 
+          %\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+          %\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
 
   \end{axis}
 \end{tikzpicture}
@@ -56,29 +64,40 @@ What are we supposed to do with a function like this?
 
 
 
+The algebra is beyond us. \\
 
 
 
-The function is too complicated to consider as a whole, so we think of it in pieces.  The formula is also too difficult to manipulate with algebra.  
 
-So, we use a replacement that does a pretty good job of approximating this function over a small interval.
+The formula is too difficult to manipulate with algebra.  So, we concentrate on approximations. \\ 
+
+
+The function is too complicated to consider as a whole. So, we think of it in pieces - small pieces. \\
+
+
+
+
+
+
+If we are only interested in approximating small pieces of the function, then we can use a replacement function that does a pretty good job of approximating this function over a small interval - a replacement that is easier to work with.
 
 And, our favorite functions are linear functions.
 
 
-$C(x)$ appears to be linear-ish on the interval $(6.3, 7.3)$. Our plan is to create a linear function that does a pretty good job of approximating $C(x)$ on the interval. Graphically, that means a tangent line around $6.8$.  We need two data for this.  We need $C(6.8)$ and $C'(6.8)$.
-
-
-
-
-Our linear approximation will be $Lapprox(x) = C'(6.8)(x-6.8) + C(6.8)$.
-
-Of course, it will only be useful on $(6.3, 7.3)$, if that.
+$C(x)$ appears to be linear-ish on the interval $(6.6, 7.0)$. Our plan is to create a linear function that does a pretty good job of approximating $C(x)$ on the interval. Graphically, that means a tangent line around $6.8$.  We need two data for this.  We need $C(6.8)$ and $C'(6.8)$.
 
 
 
 
 
+Out linear approximation will be $approxC(x) = C'(6.8)(x-6.8) + C(6.8)$.
+
+Of course, it will only be useful on $(6.6, 7.0)$, if that. \\
+
+
+
+
+We'll need the derivative:
 
 \[  
 C'(x) = \frac{(sin(2x)+2)^x (ln(sin(2x)+2) + \frac{2 x cos(2x)}{sin(2x)+2})}{5(x^2+1)} - \frac{2x(sin(2x)+2)^x}{5(x^2+1)^2}
@@ -95,7 +114,7 @@ $C'(6.8) = 17.132$
 $C(6.8) = 5.359$
 
 
-That gives $Lapprox(x) = 17.132(x-6.8)+5.359$
+That gives $approxC(x) = 17.132(x-6.8)+5.359$
 
 
 
@@ -118,10 +137,13 @@ That gives $Lapprox(x) = 17.132(x-6.8)+5.359$
             axis on top
           ]
           
-          	
-			\addplot [line width=2, penColor, smooth,samples=300,domain=(-10:9.5)] {(abs(sin(deg(2*x))+2)^x)/(5*(x^2+1))};
-			\addplot [line width=2, penColor2, smooth,samples=100,domain=(6.2:7.2)] {17*(x-6.8)+5.36};
-			\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:9.5)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(6.2:7.2)] {17*(x-6.8)+5.36};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+
+           
 
   \end{axis}
 \end{tikzpicture}
@@ -134,9 +156,85 @@ That gives $Lapprox(x) = 17.132(x-6.8)+5.359$
 
 
 
-That is pretty good on this interval.
 
-Now we can approximate $C(x) \approx Lapprox(x) = 17.132(x-6.8)+5.359$ on $(6.3, 7.3)$.  That would say a lot of time and energy it we needed to work with this function.
+
+
+
+That is pretty good on $(6.6, 7.0)$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=C(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(6.3:7.3)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(6.3:7.3)] {17*(x-6.8)+5.36};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=6.2:7.4, ymax=10, xmax=7.4, ymin=-10, xmin=6.2,
+            axis lines =center, xlabel=$x$, ylabel={$y=C(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={6.3,6.5,6.7,6.9,7.1,7.3},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$6.3$,$6.5$,$6.7$,$6.9$,$7.1$,$7.3$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(6.3:7.3)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(6.3:7.3)] {17*(x-6.8)+5.36};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+Now we can approximate $C(x) \approx approxC(x) = 17.132(x-6.8)+5.359$ on $(6.6, 7.0)$.  That would save a lot of time and energy and not give up too much accuracy - as long as we stay in this interval.
 
 
 
@@ -152,7 +250,7 @@ However, these types of functions are for later courses.  We are just trying to 
 \section{Linear Approximations}
 
 
-Approximating complex functions with linear functions is an important aspect of analysis, even if it is over a smal interval.
+Approximating complex functions with linear functions is an important aspect of analysis, even if it is over a small interval.
 
 
 
@@ -196,7 +294,7 @@ First, graph $y = s(t) = \sqrt{x}$.
 \end{image}
 
 
-
+$4.5$ simply doesn't work well with the square root function.  However, $4$ does and $4$ is near $4.5$.
 
 
 Let's create a linear approximation to $s(t)$ at $4$.
@@ -269,7 +367,7 @@ Compare this to what a calculator gives: $2.121320344$.  Not bad for just a line
 \section{Polygonal Lines}
 
 
-We might evan approximate a function over a wider interval, just use more lines.
+We might even approximate a function over a wider interval, just use more line segments.
 
 
 
@@ -314,9 +412,9 @@ We are given: $p'(k) = -2k$
 
 \begin{itemize}
 \item $p(-2) = 3$ and $p'(-2) = 4$ give $4(x+2)+3$
-\item $p(-1) = 6$ and $p'(-1) = 2$ give $2(x+1)+6$
+\item $p(-1) = 6$ and $p'(-1) = 2$ give $\answer{2(x+1)+6}$
 \item $p(0) = 7$ and $p'(0) = 0$   give $7$
-\item $p(1) = 6$ and $p'(1) = -2$   give  $-2(x-1)+6$
+\item $p(1) = 6$ and $p'(1) = -2$   give  $\answer{-2(x-1)+6}$
 \item $p(2) = 3$ and $p'(2) = -44$   give $-4(x-2)+3$
 \end{itemize}
 
@@ -360,7 +458,60 @@ We are given: $p'(k) = -2k$
 
 
 
-It looks like maybe these will approximate on $(-3, 3)$.
+It looks like maybe these will approximate $p(k)$ on $(-3, 3)$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-4:4, ymax=8, xmax=4, ymin=-6, xmin=-4,
+            axis lines =center, xlabel=$k$, ylabel={$y=p(k)$}, grid = major,
+            ytick={-6,-4,-2,2,4,6,8},
+            xtick={-3,-2,-1,1,2,3},
+            yticklabels={$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$}, 
+            xticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-4:4),<->] {-(x^2)+7};
+      %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:-1),<->] {4*(x+2)+3};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:0),<->] {2*(x+1)+6};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:4),<->] {7};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(0:4),<->] {-2*(x-1)+6};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(1:4),<->] {-4*(x-2)+3};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Now we domains for each piece.  We'll decide the domains by locating the intersections of the lines.
 
@@ -371,9 +522,9 @@ $\blacktriangleright$  Intersection of $4(k+2)+3$ and $2(k+1)+6$.
 
 $4(k+2)+3 = 2(k+1)+6 $
 
-$4k + 8 + 3 = 2k + 2 + 6$
+$4k + 8 + 3 = \answer{2k + 2 + 6}$
 
-$2k = -3$
+$2k = \answer{-3}$
 
 $k=-\frac{3}{2}$
 
@@ -386,7 +537,7 @@ $2(k+1)+6 = 7$
 
 $2k + 2 + 6 = 7$
 
-$2k = -1$
+$2k = \answer{-1}$
 
 $k = -\frac{1}{2}$
 

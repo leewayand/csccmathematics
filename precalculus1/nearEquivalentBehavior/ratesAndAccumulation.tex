@@ -13,7 +13,7 @@ rates over time
 
 
 
-Suppose a car is travelling at $5 \, mph = \frac{5 \, miles}{1 \, hour}$. This meanns every hour it moves another $5 miles$.
+Suppose a car is travelling at $5 \, mph = \frac{5 \, miles}{1 \, hour}$. This means every hour it moves another $5 miles$.
 
 \begin{itemize}
 \item If the car travels for $2 \, hours$, then it moves $5 \, miles + 5 \, miles = 10 \, miles$, or $\frac{5 \, miles}{1 \, hour} \cdot 2 \, hours = 10 \, miles$
@@ -30,7 +30,19 @@ We can model this graphically.
 
 
 
-Our rate is a constant function: $r(t) = 5$. \\
+
+
+
+
+
+
+
+\section{Area}
+
+
+
+
+Our car's rate is a constant function: $r(t) = 5$. \\
 
 
 
@@ -55,7 +67,7 @@ Our rate is a constant function: $r(t) = 5$. \\
           ]
           
           	
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:9)] {5};
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),->] {5};
 			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
 
 
@@ -65,7 +77,7 @@ Our rate is a constant function: $r(t) = 5$. \\
 
 
 
-Simce time is measured by the horizontal axis. our $distance = rate \times time$ calculation can be represented visually as the area under the rate curve.
+Simce time is measured by the horizontal axis. our $distance = rate \times time$ calculation can be represented visually as the rectangular area under the rate curve.
 
 
 
@@ -92,7 +104,7 @@ Simce time is measured by the horizontal axis. our $distance = rate \times time$
           	
 
           	\draw[gray,fill=gray] (axis cs:0,0) -- (axis cs:0,5) -- (axis cs:1,5) -- (axis cs:1,0) -- (axis cs:0,0);
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:9)] {5};
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),->] {5};
 
 			%\addplot [name path=darkerA,domain=0:1,draw=none] {5};
 			%\addplot [name path=darkerB,domain=0:1,draw=none] {0};
@@ -109,7 +121,7 @@ Simce time is measured by the horizontal axis. our $distance = rate \times time$
 \end{image}
 
 
-The area of the rectnagle represents the distance travelled. \\
+The area of the rectangle represents the distance travelled. \\
 
 The height of the rectangle is the height of the graph, which is the value of the rate, $5 \, mph$.
 
@@ -119,9 +131,9 @@ The area is height times width, which gives $area = 5 \, mph \times 1 \, hour = 
 
 
 
-Let $M(t) = $ the accumulated miles travelled after $t \, hours$.
+Let $D(t) = $ the accumulated miles travelled after $t \, hours$.
 
-Graphically, this is the area of the rectangle below the graph.  The formula would be $M(t) = 5 t$.
+Graphically, this is the area of the rectangle below the graph.  The formula would be $D(t) = \answer{5 t}$.
 
 
 
@@ -135,7 +147,7 @@ Graphically, this is the area of the rectangle below the graph.  The formula wou
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=M(t)$}, grid = major, grid style={dashed},
+            axis lines =center, xlabel=$t$, ylabel={$y=D(t)$}, grid = major, grid style={dashed},
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -160,9 +172,9 @@ Graphically, this is the area of the rectangle below the graph.  The formula wou
 
 
 
-$M(t)$ is the accumulated distance travelled in $t \, hours$, which makes $r(t)$ its derivative.
+$D(t)$ is the accumulated distance travelled in $t \, hours$, which makes $r(t)$ its derivative.
 
-\[    M'(t) = r(t)        \]
+\[    D'(t) = r(t)        \]
 
 
 \[    (5 t)' = 5     \]
@@ -177,7 +189,7 @@ $M(t)$ is the accumulated distance travelled in $t \, hours$, which makes $r(t)$
 
 This time our rate function is a linear function: $r(t) = 2 t$. \\
 
-
+Our car goes faster as it goes farther.
 
 
 
@@ -324,9 +336,7 @@ $D(t) = t^2$ is the accumulated distance travelled in $t \, hours$, which makes 
 
 
 
-Graph of $y = p(k) = -k^2 + 7$.
-
-Approximated with
+Below is the graph of $y = p(k) = -k^2 + 7$, approximated with
 
 \[
 L(k) = 
@@ -340,7 +350,7 @@ L(k) =
 \]
 
 
-$L(k)$ is piecewise linear, which means we can calculate area.
+$L(k)$ is a piecewise linear, which means we can calculate area using rectangles and triangles.
 
 
 \begin{image}
@@ -397,7 +407,7 @@ area = triangle + trapezoid + rectangle + trapezoid + triangle
 \[ \text{Area} = 25.25    \]
 
 
-This is the area under $y = L(x)$, so it is the approximate arae under $y = p(k) = -k^2 + 7$.
+This is the area under $y = L(x)$, so it is the approximate area under $y = p(k) = -k^2 + 7$.
 
 
 
