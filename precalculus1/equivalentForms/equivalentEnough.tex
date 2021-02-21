@@ -15,14 +15,14 @@ watching the domain
 
 
 
-Our main strategy for solving equations is guessing and factoring.
+Our main strategy for solving equations is guessing (knowing what the solution looks like) and factoring.
 
 
 
 
 If you are willing to be a bit careful, then we have some additional ideas.
 
-The object is to maintain equality.
+The object is to maintain equality, but change the way things look.
 
 
 
@@ -35,10 +35,10 @@ You can replace equal things with equal things and get equal things.
 If 
 \begin{itemize}
 \item $a=b$, and
-\item $c=a$, and
-\item $d=b$
+\item $c=d$, and
+\item $a=c$
 \end{itemize}
-then $c=d$.
+then you can conclude that $b=d$.
 
 You can replace $a$ and $b$ with equal things and the equality is maintained.
 
@@ -52,10 +52,10 @@ You can replace $a$ and $b$ with equal things and the equality is maintained.
 \begin{observation}
 
 
-If you do the same thing to equal things, then you get equal things
+If you do the equal things to equal things, then you get equal things
 
 
-If $a=b$, then $f(a) = f(b)$, where you are doing $f$ to both.
+If $a=b$, then $f(a) = f(b)$, where you are "doing" $f$ to both.
 
 
 
@@ -69,7 +69,9 @@ If $a=b$, then $f(a) = f(b)$, where you are doing $f$ to both.
 
 
 
-\begin{example}  Reverse
+\begin{example}  Doesn't Reverse
+
+
 
 $3^2 = (-3)^2$, but that doesn't mean $3=-3$.
 
@@ -81,7 +83,7 @@ You can do the same thing to different numbers and get an equality.  But, it doe
 
 
 
-
+Squaring hides signs.
 
 
 \begin{example} Squaring
@@ -125,7 +127,7 @@ Solve $log_2(t-1) - log_2(t) = 4$
 \textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
 
 
-We can solve simple logarithmic equations - justone logarithm.  Therefore, we will use a logarithm rule to combine thwo logarithms.
+We can solve simple logarithmic equations - like, just one logarithm.  Therefore, we will use a logarithm rule to combine thwo logarithms.
 
 
 
@@ -166,7 +168,7 @@ We can see the domain issue here.  However, when we apply the logarithm rule we 
 \[   log_2\left(\frac{-\frac{1}{15}-1}{-\frac{1}{15}}\right)    = log_2(16)  \]
 
 
-When put together into a fraction the numerator and denominator both became negative and a negative over a neagtive equals a positive - no more problem.
+When put the insides together into a fraction the numerator and denominator both became negative and a negative over a neagtive equals a positive - no more problem.
 
 
 
@@ -174,10 +176,11 @@ When put together into a fraction the numerator and denominator both became nega
 
 \begin{definition} Extraneous Solutions
 
-\textbf{Extraneous solutions} are solutions that appear because of the solving procedure chosen that are not solutions of the original equation.
+\textbf{Extraneous solutions} are non-solutions that appear during the solving process, because you didn;t keep track of the domain.
 
 \end{definition}
 
+\textbf{Hence:} Always check your solutions in the original equation!
 
 
 
@@ -215,10 +218,19 @@ Our equivalent equation is
 
 This can only happen if $2y = 4$ or $y = 2$.
 
-But, this is not possible.  $y=2$ would make a denominator in the orginal equaiotn equal to $0$.  Therefore, $2$ is an extraneous solution and this equaiton has no solutions.
+But, this is not possible.  $y=2$ would make a denominator in the orginal equaiotn equal to $0$.  Therefore, $2$ is an extraneous solution and this equation has no solutions.
 
 
 \end{example}
+The solving process presents solution \textbf{candidates}.  These must be checked.
+
+
+
+
+
+
+
+
 
 
 
@@ -237,21 +249,23 @@ Square both sides:
 $(\sqrt{w+4})^2 = (w - 2)^2$
 
 
-$w + 4 = w^2 - 4w + 4$
+$w + 4 = \answer{w^2 - 4w + 4}$
 
 
-$0 = w^2 - 5w $
+$0 = \answer{w^2 - 5w}$
 
 $0 = w(w-5) $
 
 
-Zero product property:  either $w=0$ or $w-5=0$ and $w-5$.
+Zero product property:  either $w=0$ or $w-5=0$ and $w=5$.
 
 
 
 However, $w$ cannot equal $0$.  If we replace $w$ with $0$ in the original equation, then we get $\sqrt{0+4} = 0 - 2 = -2$.
 
 And, $-2$ is not in the range if the square root function. $-2$ is an extraneous solution.
+
+The solution set is $\{ 5 \}$.
 
 
 
@@ -271,7 +285,7 @@ When you do the same thing to both sides, watch out!  You might be hiding domain
 
 
 
-All of this is due to the fact that the functions we are applying are not \textbf{one-to-one}.  MOre on that later.
+All of this is due to the fact that the functions we are applying are not \textbf{one-to-one}.  More on that later.
 
 
 
