@@ -17,7 +17,7 @@ range
 
 
 
-We have already seen a couple of versions of composition.
+We have already seen a couple of versions of composition. \\
 
 $\blacktriangleright$ \textbf{Pointwise} composition was seen via indiviudal numbers: $(F \circ G)(a) = F(G(a))$.
 
@@ -26,11 +26,11 @@ A number, $a$, in the domain of $G$ was connected to its range partner, $G(a)$. 
 
 
 
-$\blacktriangleright$ \textbf{Linear} composition between twi linear functions produced a whole new function.  Instead of thinking of domain numbers indiviudally, this composition was viewed as an operation on linear functions.
+$\blacktriangleright$ \textbf{Linear} composition between two linear functions produced a whole new function.  Instead of thinking of domain numbers individually, this composition was viewed as an operation on linear functions.
 
 \[    (L_o \circ L_i)(x) = L_o(L_i(x))  \]
 
-There is an outside function, $L_o(x)$, and an inside function $L_i(x)$.  The composition operation, $\circ$, is applied and a new linear funciton is created.  Our symbol for this number funciton is $(L_o \circ L_i)$ or $L_o \circ L_i$.  The parentheses are used to clear up communication.
+There is an outside function, $L_o(x)$, and an inside function $L_i(x)$.  The composition operation, $\circ$, is applied and a new linear function is created.  Our symbol for this number function is $(L_o \circ L_i)$ or $L_o \circ L_i$.  The parentheses are used to clear up communication.
 
 In our investigations, we have discovered that $(L_o \circ L_i)$ "is" $L_i$, just shifted, stretched, and reflected vertically.
 
@@ -65,7 +65,24 @@ For $ a \in \{  x \in Dom_{Inside} \, | \,    Inside(x) \in Dom_{Outside}  \}$
 
 
 
-We have to do a little work on the domain.  We need the elements from the domain of the inside function, whose function value lands inside the domain of hte outside function. \\
+We would like to focus on the outside function as a linear function.
+
+
+\begin{quote}
+
+Let $f(x)$ be any function. \\
+Let $L(y)$ be any linear function. \\
+
+
+Form the composition $L(f(z))$. \\
+
+How does $L$ affect $f$?
+
+
+\end{quote}
+
+The main issue here is the range of $f$ intersecting the domain of $L$.  However, since the domain of a linear function is all real numbers, there shouldn't be a problem.\\
+
 
 
 
@@ -74,11 +91,11 @@ We have to do a little work on the domain.  We need the elements from the domain
 $\star$ \textbf{\textcolor{purple}{Outside = Linear}}
 
 
-In this section, our $Outside$ funciton will always be a linear function.
+In this section, our $Outside$ function will always be a linear function.
 
 
 
-\[      (L \circ Inside)(a) = L(Inside(a))        \]
+\[      (L \circ Inside)(z) = L(Inside(z))        \]
 
 
 where $L(x) = a \, x + b$, with $a$ and $b$ real numbers and $a \ne 0$.
@@ -133,11 +150,11 @@ From left to right, the range values, or function values, for $Q$ begin very big
 Now we will transform these function values with a linear function.
 
 
-$L(t) = -0.25 t + 3$
+Let $L(t) = -\frac{1}{4} t + 3$ with domain $\mathbb{R}$.
 
 
 \begin{itemize}
-\item $L$ will take a function value from $Inside$ and compress it by a factor of $\frac{1}{4}$. Our parabola will be squished a little. 
+\item $L$ will take a function value from $Q$ and compress it by a factor of $\frac{1}{4}$. Our parabola will be squished vertically a bit. 
 \item Then $L$ will negate the values.  This will vertically reflect the parabola over the horizontal axis.
 \item Then $L$ will add $3$ to all of the values.  This will shift the parabola up by $3$.
 \end{itemize}
@@ -186,7 +203,7 @@ The vertical measurements have all been processed linearly, which means the shap
 
 
 
-The minimum of $Q$ is $-6.25$ and this occurred at $1.5$.  The minimum of the composition is still at $1.5$.  The minimum is $L(-6.25) = 4.5625$.
+The minimum of $Q$ is $-6.25$ and this occurred at $1.5$. We are flipping vertically, so the maximum of the composition is still at $1.5$. There were no horizontal transformations.  The maximum is $L(-6.25) = 4.5625$.
 
 
 
@@ -213,7 +230,97 @@ This does not factor easily.  We'll use the quadratic formula.
 \[  h = \frac{-(-3) \pm \sqrt{(-3)^2 - 4 \cdot 1 \cdot (-16)}}{2 \cdot 1}  = \frac{3 \pm \sqrt{73}}{2}     \]
 
 
-We have two zeros: $\frac{3 + \sqrt{73}}{2}  \approx 5.77$ and $\frac{3 - \sqrt{73}}{2} \approx -2.77$, which agrees with our grpah.
+We have two zeros: $\frac{3 + \sqrt{73}}{2}  \approx 5.77$ and $\frac{3 - \sqrt{73}}{2} \approx -2.77$, which agrees with our graph.
+
+
+
+\begin{claim} Zeros
+
+
+\[   Q(h) = (h+1)(h-4)   \]
+
+
+\[   L(Q(z)) = -\frac{1}{4} (z+1)(z-4) + 3   \]
+
+
+Let's verify that $\frac{3 + \sqrt{73}}{2}$ is a zero of $L(Q(z))$.
+
+
+
+\[   L \left( Q \left( \frac{3 + \sqrt{73}}{2} \right) \right) = -\frac{1}{4} \left( \frac{3 + \sqrt{73}}{2}+1 \right) \left( \frac{3 + \sqrt{73}}{2}-4 \right) + 3    \]
+
+
+
+\[  = -\frac{1}{4} \left( \frac{9 + 6 \sqrt{73} + 73}{4} - 3 \cdot \frac{3 + \sqrt{73}}{2} - 4 \right) + 3    \]
+
+
+\[  = -\frac{1}{4} \left( \frac{82 + 6 \sqrt{73}}{4} - \frac{9 + 3 \sqrt{73}}{2} - 4 \right) + 3    \]
+
+
+\[  = -\frac{1}{4} \left( \frac{82 + 6 \sqrt{73}}{4} - \frac{18 + 6 \sqrt{73}}{4} - 4 \right) + 3    \]
+
+
+\[  = -\frac{1}{4} \left( \frac{48}{4} \right) + 3    \]
+
+
+\[  = -3 + 3   = 0 \]
+
+
+\end{claim}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{claim} Zeros
+
+
+\[   Q(h) = (h+1)(h-4)   \]
+
+
+\[   L(Q(z)) = -\frac{1}{4} (z+1)(z-4) + 3   \]
+
+
+Let's verify that $\frac{3 + \sqrt{73}}{2}$ is a zero of $L(Q(z))$.
+
+
+
+\[   L \left( Q \left( \frac{3 - \sqrt{73}}{2} \right) \right) = -\frac{1}{4} \left( \frac{3 - \sqrt{73}}{2}+1 \right) \left( \frac{3 + \sqrt{73}}{2}-4 \right) + 3    \]
+
+
+
+\[  = -\frac{1}{4} \left( \frac{\answer{9 - 6 \sqrt{73} + 73}}{4} - 3 \cdot \frac{3 - \sqrt{73}}{2} - 4 \right) + 3    \]
+
+
+\[  = -\frac{1}{4} \left( \frac{82 - 6 \sqrt{73}}{4} - \frac{9 - 3 \sqrt{73}}{2} - 4 \right) + 3    \]
+
+
+\[  = -\frac{1}{4} \left( \frac{82 - 6 \sqrt{73}}{4} - \frac{18 - \answer{6 \sqrt{73}}}{4} - 4 \right) + 3    \]
+
+
+\[  = -\frac{1}{4} \left( \frac{48}{4} \right) + 3    \]
+
+
+\[  = -3 + 3   = 0 \]
+
+
+\end{claim}
+
+
+
+
+
+
+
 
 
 
