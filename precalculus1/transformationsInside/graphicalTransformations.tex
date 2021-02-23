@@ -11,7 +11,15 @@ horizontal
 \end{abstract}
 \maketitle
 
-Composition with a linear function as the inside function results in horizontal transformations.
+
+
+
+
+\begin{quote}
+$\star$ Composition with a linear function as the inside function results in horizontal graphical transformations.
+\end{quote}
+
+
 
 
 
@@ -61,21 +69,40 @@ Let $W(t) = 3 |t-1| - 3$ with domain $[-1, 5)$.
 
 
 
-And, now compose it with $L(x) = -\frac{1}{2}x$ \\
+$\blacktriangleright$ And, now compose it with $L(x) = -\frac{1}{2}x$ \\
 
 
 
-$(W \circ L)(x) = W(L(x))$
+$(W \circ L)(z) = W(L(z))$
 
 
-The implied domain for $L$ is \textbf{$\mathbb{R}$}.  The implied range for $L$ is \textbf{$\mathbb{R}$}. This is too much for the domain of $W$.  The domain of $W$ is only $[1, 5)$. Therefore, we must align those.
 
-But, before doing that, let's just thnk about traversing the real number line. \\
+\begin{explanation}
+
+We have three functions: $W$, $L$, and $W \circ L$.  We would like to keep these separate in our thoughts.  Therefore, we will have three separate variables representing their dmomains.
+
+
+\begin{itemize}
+\item $W(t)$
+\item $L(x)$
+\item $(W \circ L)(z) = W(L(z))$
+\end{itemize}
+
+\end{explanation}
+
+
+
+
+
+
+The implied domain for $L$ is \textbf{$\mathbb{R}$}.  The implied range for $L$ is \textbf{$\mathbb{R}$}. This does not match the domain of $W$.  The domain of $W$ is only $\left[ \answer{1}, \answer{5} \right)$. Therefore, we must align those.
+
+But, before doing that, let's just think about traversing the real number line. \\
 
 We can imagine $x$ moving along the real line left to right from $-\infty$ to $\infty$. These numbers are input into $L$ and the output runs right to left from $\infty$ to $-\infty$.  The direction is reversed because of the $-\frac{1}{2}$ coefficient in $L$.  It is changing the sign of the numbers.
 
 
-Therefore, in the composition, the domain of $W$ is running backwards.  We will first encounter the longer line segment with the excluded endpoint, then a corner at $2$, then the shorter line segment with the included endpoint.
+Therefore, in the composition, the domain of $W$ is running backwards.  From left to right, the composition will first encounter the longer line segment with the excluded endpoint, then a corner, then the shorter line segment with the included endpoint.
 
 The graph is reflected horizontally. \\
 
@@ -83,7 +110,7 @@ The graph is reflected horizontally. \\
 That was due to the negative sign of the coefficient.  Now to figure out the effect of $\frac{1}{2}$, which is less than $1$.
 
 
-The domain of $W$ is $[-1, 5)$.  So, when do the values of $L(x)$ equal $-1$ and $5$.  Since all of the domain numbers of $L$ are multiplied by $-\frac{1}{2}$, these function values of $L$ occur at $2$ and $-10$ in the domain of $L$. \\
+The domain of $W$ is $[-1, 5)$.  So, when do the values of $L(x)$ equal $-1$ and $5$ in the range?  Since all of the domain numbers of $L$ are multiplied by $-\frac{1}{2}$, these function values of $L$ occur at $\answer{2}$ and $\answer{-10}$ in the domain of $L$. \\
 
 
 
@@ -91,24 +118,26 @@ The domain of $W \circ L$ is $(-10, 2]$. \\
 
 
 
-$x$ will move across the interval $(-10, 2]$, from left to right.  \\
+$z$ will move across the interval $(-10, 2]$, from left to right.  \\
 
-The function values of $L$ will move across the interval $[-1, 5)$ from right to left.  These values are going into $W$ backwards from their normal order.
+These domain values will be multiplied by $-\frac{1}{2}$ and the function values of $L$ will move across the interval $[-1, 5)$ from right to left.  These values are going into $W$ backwards from their normal order.
 
-The graph of $W \circ L$ will first encounter the longer line segment with the excluded endpoint, then it will cross the corner.  The corner occurs at $1$ in the domain of $W$, which is the range of $L$, which occurs at $-2$, in the domain of $L$.  Then the graph of $W \circ L$ encounters the shorter line segment with the included endpoint. \\
+The graph of $W \circ L$ will first encounter the longer line segment with the excluded endpoint, then it will cross the corner.  The corner occurs at $ t = \answer{1}$ in the domain of $W$, which is the range of $L$. In $L$, $1$ occurs at $\answer{-2}$, in the domain of $L$.  \\
+
+Then the graph of $W \circ L$ encounters the shorter line segment with the included endpoint. \\
 
 
 
 
 
-Let $(W \circ L)(x) = 3 |-\frac{1}{2}x-1| - 3$ with domain $(-10, 2]$.
+Let $(W \circ L)(z) = 3 |-\frac{1}{2}z-1| - 3$ with domain $(-10, 2]$.
 
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=(W \circ L)(x)$}, grid = major, grid style={dashed},
+            axis lines =center, xlabel=$z$, ylabel={$y=(W \circ L)(z)$}, grid = major, grid style={dashed},
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -141,9 +170,212 @@ The graph has transformed horizontally. \\
 \begin{itemize}
 \item The negative coefficient in $L$ has reflected the graph horizontally.
 \item The $\frac{1}{2}$ coefficient means the domain needs to expand by a factor of $2$, so that the values of $L$ match the normal inputs to $W$.
-\item This agrees with setting the inside of the absolute value equal to $0$:  \\
-$-\frac{1}{2}x-1 = 0$, when $x = -2$.
 \end{itemize}
+
+
+The corner of the graph of an absolute value function occurs when the inside of the absolute value signs equal $\answer{0}$.
+
+
+For $W$, this means $-\frac{1}{2}z-1 = 0$, which occurs when $z = \answer{-2}$. 
+
+The corner on the graph is $\left( \answer{-2}, \answer{-3} \right)$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $F(x) = 5 \sqrt{x + 3} - 6$ with its natural or implied domain.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=F$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-3:7), ->] {5 * (x + 3)^0.5 - 6};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-6)};
+          %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-10,9)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\textbf{Feature Inventory:} 
+
+
+\begin{itemize}
+\item Domain is $\left[ \answer{-3}, \infty \right)$.
+\item Starting point is $\left( -3, \answer{-6} \right)$.
+\item Graph opens to the right.
+\item $F$ is an increasing function.
+\end{itemize}
+
+
+
+Since, $F$ is an increasing function, there should be one zero.
+
+\begin{align*}
+5 \sqrt{x + 3} - 6 &= \answer{0} \\
+5 \sqrt{x + 3}     &= 6 \\
+\sqrt{x + 3}       &= \frac{6}{5} \\
+\answer{x + 3}              &= \frac{36}{25}  \\
+x                  &= \frac{36}{25} - 3 \\
+x                  &= \frac{-39}{25} \approx -1.56
+\end{align*}
+
+
+
+
+$\blacktriangleright$ Composition
+
+
+Let $L(t) = 2t - 3$ with its natural or implied domain. \\
+
+
+Define $C(z) = F(L(z))$ with its natural or implied domain. \\
+
+\[
+C(z) = F(L(z)) = 5 \sqrt{(2z - 3) + 3} - 6 
+\]
+
+
+
+$L$ will be taking real numbers and doing this to them: $2t - 3$.  \textbf{AFTER} it does that, the values will go into $F$ and at this time they need to match up to our inventory list.
+
+Therefore, to locate all of the corresponding places in the domain of $F \circ L$ we must undo $2t - 3$.
+
+\begin{itemize}
+\item add $3$
+\item multiply by $\frac{1}{2}$
+\end{itemize}
+
+The starting point is now $((-3 + 3)\cdot \frac{1}{2}, -6) = \left( \answer{0}, -6 \right)$.
+
+The zero is now at $\left( \frac{-39}{25} + 3 \right) \cdot \frac{1}{2} = \answer{\frac{18}{25}} \approx 0.72$
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$z$, ylabel={$y=(F \circ L)(z)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-3:5), ->] {5 * ((2*x-3) + 3)^0.5 - 6};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,-6)};
+          %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-10,9)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+We also know that the graphs of square root functions begin when the inside equals $0$. 
+
+\[
+C(z) = F(L(z)) = 5 \sqrt{(2z - 3) + 3} - 6 = 5 \sqrt{2z} - 6
+\]
+
+
+Zero at $2z = 0$ or $z = 0$. \\
+
+We can also just solve for the new zero.
+
+
+
+
+\begin{align*}
+5 \sqrt{2z} - 6 &= 0 \\
+5 \sqrt{2z}     &= 6 \\
+\sqrt{2z}       &= \frac{6}{5} \\
+2z            &= \frac{36}{25}  \\
+z                  &= \frac{36}{50} \\
+z                 &= \frac{18}{25} \approx 0.72
+\end{align*}
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

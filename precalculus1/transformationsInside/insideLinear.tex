@@ -13,16 +13,16 @@ domain
 
 
 
-We have already seen a couple of versions of composition.
+We have already seen a couple of versions of composition. \\
 
-$\blacktriangleright$ \textbf{Pointwise} composition was seen via indiviudal numbers: $(F \circ G)(a) = F(G(a))$.
+$\blacktriangleright$ \textbf{Pointwise} composition was seen via individual numbers: $(F \circ G)(a) = F(G(a))$.
 
-A number, $a$, in the domain of $G$ was connected to its range partner, $G(a)$.  $G$ was evaluated at $a$ and the function value was then viewed as a member of the domain of $F$.  As a member of the domain of $F$, $F$ can be evaluated at $G(a)$ to get $F(G(a))$.
-
-
+A number, $a$, in the domain of $G$ was connected to its range partner, $G(a)$.  $G$ was evaluated at $a$ and the function value, $G(a)$, was then viewed as a member of the domain of $F$.  As a member of the domain of $F$, $F$ can be evaluated at $G(a)$ to get $F(G(a))$. \\
 
 
-$\blacktriangleright$ \textbf{Linear} composition between twi linear functions produced a whole new function.  Instead of thinking of domain numbers indiviudally, this composition was viewed as an operation on linear functions.
+
+
+$\blacktriangleright$ \textbf{Linear} composition between two linear functions produced a whole new function - a linear function.  Instead of thinking of domain numbers individually, this composition was viewed as an operation on linear functions.
 
 \[    (L_o \circ L_i)(x) = L_o(L_i(x))  \]
 
@@ -54,9 +54,29 @@ For $ a \in \{  x \in Dom_{Inside} \, | \,    Inside(x) \in Dom_{Outside}  \}$
 
 \end{definition}
 
+We would like to focus on the inside function as linear functions.
 
 
-We have to do a little work on the domain.  We need the elements from the domain of the inside function, whose function value lands inside the domain of hte outside function. \\
+\begin{quote}
+
+Let $f(x)$ be any function. \\
+Let $L(y)$ be any linear function. \\
+
+
+Form the composition $f(L(z))$. \\
+
+How does $L$ affect $f$?
+
+
+\end{quote}
+
+The main issue here is the range of $L$ intersecting the domain of $f$. \\
+
+
+
+
+
+
 
 
 
@@ -65,7 +85,7 @@ We have to do a little work on the domain.  We need the elements from the domain
 $\star$ \textbf{\textcolor{purple}{Inside = Linear}}
 
 
-In this section, our inside funciton will always be a linear function.
+In this section, our inside function will always be a linear function.
 
 
 
@@ -115,17 +135,17 @@ Let's consider a quadratic function: $Q(h) = (h+1)(h-4)$
 \end{image}
 
 
-We can consider $Q(h)$ as a composition.  The outside function is $Q(h) = (h+1)(h-4)$ and hte inside function is the Identity function: $I(h)=h$.  
+We can consider $Q(h)$ as a composition.  The outside function is $Q(h) = (h+1)(h-4)$ and the inside function is the Identity function: $I(h)=h$.  
 
 The inside function doesn't do much.  It pairs every real number with itself.  Then this is handed to $H$. Not much of a composition, but it will help us illustrate some ideas.
 
 
 
-The domain of $I(h)=h$ is \textbf{$\mathbb{R}$}.  We can think of moving along the real line left to right from $-\infty$ to $\infty$.  Each real number we run across is put into $I(h)$, which just gives it right back and also runs along the real line left to right from $-\infty$ to $\infty$.  This then becomes the domain for the outside function, $Q(h)$.
+The domain of $I(h)=h$ is \textbf{$\mathbb{R}$}.  We can think of moving along the real line left to right from $-\infty$ to $\infty$.  Each real number we run across is put into $I(h)$, which just gives it right back.  Thus, the range of $I(h)$ also runs along the real line left to right from $-\infty$ to $\infty$ at the exact same speed as the domain.  The range of $I(h)$ then becomes the domain for the outside function, $Q(h)$. \\
 
 
 
-$\blacktriangleright$  What happens when we have a different inside function?
+$\blacktriangleright$  What happens when we have a different inside function? \\
 
 
 Suppose $inside(h) = 5h$.
@@ -133,16 +153,45 @@ Suppose $inside(h) = 5h$.
 
 $inside(h)$ still runs along the real line left to right from $-\infty$ to $\infty$. What's the difference?
 
-The difference is that the identity function ran across it s domain and the output was running from $-\infty$ to $\infty$ at exactly the same rate - because the input and out were equal - it is the identity function.
+The difference is that the identity function ran across its domain and range from $-\infty$ to $\infty$ at exactly the same rate - because the input and out were equal - it is the identity function.
 
 
-Now the range is running through the real line left to right from $-\infty$ to $\infty$ - four times as fast as the input. A little movement in the domain results in a lot of movement in the range and this range is the domain for $Q(h)$.
+Now the range is running through the real line left to right from $-\infty$ to $\infty$ - five times as fast as the domain. A little movement in the domain results in a lot of movement in the range and this range is the domain for $Q(h)$.
 
 
-$Q(h)$ has a zero at $-1$ and at $4$.  That is a distance of $4$. The domain of $Q(h)$ needs to run this distance of $5$ from $-1$ to $4$ to get from one zero to the other.
 
 
-That means the range of $inside(h)$ must run from  $-1$ to $4$ to get from one zero to the other, since the range of $inside(h)$ is the domain of $Q(h)$.
+
+
+\begin{paradox}
+
+When we graph $Outside \circ Inside$ on the Cartesian plane, we have disconnect the direct connection between the horizontal axis and the vertical axis.
+
+Normally, when graph one function, the horizontal axis represents the domain of the function and the vertical axis represents the range of the same function.
+
+With a composition, the horizontal axis represents the domain of the Inside function and the vertical axis represents the range of the Outside function.  There is a hidden switch occurring.
+
+\end{paradox}
+
+As we run across the horizontal axis, these values are going into $inside(h) = 5h$.  The output values, $5h$ are the new (hidden) horizontal axis for the inputs (domain) into $Outside(h) = Q(h)$.
+
+AS you run across the $h$-axis, those values are not going into $Q$.  $5$ times those values are going into $Q$.
+
+
+
+
+
+\begin{observation}
+
+
+
+
+
+
+$Q(h)$ has a zero at $-1$ and at $4$.  These are separated by a distance of $5$. The domain of $Q(h)$ needs to run this distance of $5$ from $-1$ to $4$ to get from one zero to the other.
+
+
+That means the range of $inside(h)$ must run from  $-1$ to $4$ to get from one zero to the other, because the range of $inside(h)$ is the domain of $Q(h)$.
 
 Which brings us to the domain of $inside(h)$, for our composition. 
 
@@ -157,7 +206,15 @@ It doesn't need to run that distance of $5$, because its movement gets amplified
 \end{itemize}
 
 
-In the $(Q \circ inside)$ function, the zeros are at $-\frac{1}{5}$ and $\frac{4}{5}$.  They are a distance of $1$ apart.  The $inside$ function has squeezed them closer together by making its range run faster than it domain - and that range became a new faster running domain for $Q$.
+In the $(Q \circ inside)$ function, the zeros are at $-\frac{1}{5}$ and $\frac{4}{5}$.  They are a distance of $1$ apart.  The $inside$ function has squeezed them closer together by making its range run faster than its domain - and that range became a new faster running domain for $Q$.
+
+
+
+
+\end{observation}
+
+
+
 
 
 
@@ -201,6 +258,154 @@ In the $(Q \circ inside)$ function, the zeros are at $-\frac{1}{5}$ and $\frac{4
 
 
 All of the Q values are still there.  The output of $Q \circ inside$ are the same values of $Q$.  They are just connected to faster running domain values then before.
+
+
+
+
+
+
+
+
+\begin{example}  Slower
+
+
+How do we slow down $Q$? \\
+
+We feed $Q$ its domain slower. \\
+
+
+
+Let $L(x) = \frac{x}{2}$.  $L$ takes in real numbers and gives half their value.  If we feed these into $Q$, then $Q$ will think it is only getting half the value that that we see on the horizontal axis.
+
+
+
+Graph of $ = (Q \circ L)(x) = Q(L(x))$
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=Q \circ L$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-3:9),<->] {(0.5*x+1)*(0.5*x-4)};
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The graph is wider, because $Q$ thinks it is getting half the value as the $x$-axis. 
+
+
+
+
+\end{example}
+
+The vertical heights haven't changed. The formula $Q(L(x))$ stills say that the values of $Q$ will be the outputs - just not at the same places.
+
+
+
+The minimum value of $Q(h) = (h+1)(h-4)$ is $-\frac{25}{4} = -6.25$, which occurs at $\frac{3}{2}$. \\
+
+The minimum value of $Q \circ L$ is still $-\frac{25}{4} = 6.25$. It now occurs at $\frac{3}{2} \cdot 2 = 3$.  It occurs at $3$, so that when $L$ multiplies by $\frac{1}{2}$, the number $\frac{3}{2}$ is fed into $Q$. \\
+
+
+The vertex on $y = Q$ was $\left (\frac{3}{2}, -\frac{25}{4} \right)$ has moved to $\left (3, -\frac{25}{4} \right)$ for $y = Q \circ L$.
+
+
+The zeros for $Q$ are $-1$ and $4$.  These move to $-2$ and $8$ for $Q \circ L$.  
+
+
+
+
+\begin{question}
+
+
+Let $R(t) = (t+7)(t-2)(t-5)$ \\
+
+Let $L(x) = 3x$ \\
+
+
+$-7$ is a zero of $R$.  The corresponding zero of $R \circ L$ is $\answer{\frac{-7}{3}}$.
+
+$2$ is a zero of $R$.  The corresponding zero of $R \circ L$ is $\answer{\frac{2}{3}}$.
+
+$5$ is a zero of $R$.  The corresponding zero of $R \circ L$ is $\answer{\frac{5}{3}}$.
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+Let $p(x) = (x+6)(x+2)(x+4)$ \\
+
+Let $L(t) = \frac{t}{5}$ \\
+
+
+$-6$ is a zero of $p$.  The corresponding zero of $p \circ L$ is $\answer{-30}$.
+
+$-2$ is a zero of $p$.  The corresponding zero of $p \circ L$ is $\answer{-10}$.
+
+$-4$ is a zero of $p$.  The corresponding zero of $p \circ L$ is $\answer{-20}$.
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+Let $T(y) = \sqrt{y-10}$ \\
+
+Let $L(k) = -2k$ \\
+
+
+The domain of $T$ is $[10, \infty)$.  The domain of $T \circ L$ is $\left( -\infty, \answer{-5} \right]$.
+
+
+\end{question}
+
+
 
 
 
