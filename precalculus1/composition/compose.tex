@@ -16,8 +16,8 @@ putting together
 
 
 
-Let $Out(x) = 2|x-3|+1$ with its implied domain. \\
-Let $In(t) = -(t-1)^2 + 5$.
+Let $Out(x) = 2|x-3|+1$ with its natural or implied domain. \\
+Let $In(t) = -(t-1)^2 + 5$ with its natural or implied domain. \\.
 
 
 
@@ -106,10 +106,10 @@ $\blacktriangleright$  First, the inside function: $In(t) = -(t-1)^2 + 5$ \\
 
 The implied domain of $In(t)$ is the whole real line. As we move from left to right along the real line, the domain numbers increase from $-\infty$ to $\infty$.
 
-The corresponding movement in the range is for the funciton values to increase from $-\infty$ to $5$.  The function value $5$ occurs at $1$ in the domain.  As we keep moving beyond $1$ in the domain, the corresponding movement in the range is for the function values to decrease from $1$ to $-\infty$.
+The corresponding movement in the range has the function values increasing from $-\infty$ to $5$.  The maximum function value $5$ occurs at $1$ in the domain.  As we keep moving beyond $1$ in the domain, the corresponding movement in the range is for the function values to decrease from $1$ to $-\infty$.
 
 
-This movement in the range of $In(t)$ is the movement in the domain of $Out(x)$. \\
+This movement in the range of $In(t)$ becomes the movement in the domain of $Out(x)$. \\
 
 
 $\blacktriangleright$ Movement inside the domain of $Out(x)$.\\
@@ -118,11 +118,13 @@ $\blacktriangleright$ Movement inside the domain of $Out(x)$.\\
 
 Inside the implied domain of $Out(x) =2|x-3|+1$. the domain numbers will increase from $-\infty$ to $5$.  Then they will decrease from $5$ back down to $-\infty$. \\
 
+On our graph of $Out(x)$, we will move from the far left toward the right until we reach $5$.  Then we will turn around and move toward the left.\\
+
 
 
 $\blacktriangleright$ Put those together. \\
 
-The whole composition, $(Out \circ In)$, never sees the inside speeding up, slowing down, turning around, running in circles, or any other swivelling and swirling.  It just sees the normal domain movement left ot right from $-\infty$ to $\infty$.  And, it sees whatever function values from $Out$ that the come out of the process.
+The whole composition, $(Out \circ In)$, never sees the inside speeding up, slowing down, turning around, running in circles, or any other swivelling and swirling.  It just sees the normal domain movement left to right from $-\infty$ to $\infty$.  And, it sees whatever function values from $Out$ that the come out of the process.  We know there is some switching going on in the middle.
 
 We have the input to $Out$ moving from $-\infty$ up to $5$ and then back down to $-\infty$.  What are the corresponding function values for $Out$?
 
@@ -203,6 +205,338 @@ Graph of $w = Out(In(m)) =2|(-(m-1)^2 + 5)-3|+1 = 2|-(m-1)^2 + 2| + 1$
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Composition
+
+
+
+Let $Out(x) = -2|x-3|+2$ with its natural or implied domain. \\
+Let $In(t) = 2 \sin(t)+2$ with its natural or implied domain. \\
+
+
+
+
+
+
+Graph of $y = Out(x) = -2|x-3|+2$
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:9),<->] {-2*abs(x-3)+2};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Graph of $z = In(t) = 2 \sin(t)+2$
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9),<->] {2*sin(deg(x))+2};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The input into $In(t)$ is the whole real line.  We naturally think of moving left to right, from $-\infty$ to $\infty$.  As we do this, the outputs from $In(t)$ oscillate between $0$ and $\answer{4}$.  Therefore, the inputs into $Out(x)$ osciallte back and forth along the interval $\left( \answer{0}, \answer{4} \right)$.
+
+
+
+
+
+The input into $Out(x)$ keep going back and forth acrtoss the interval $(0,4)$. 
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:9),<->] {-2*abs(x-3)+2};
+
+      \addplot [line width=1, penColor2, smooth,samples=300,domain=(-9:9),<->] ({2*sin(deg(x))+2},{0.2*x});
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+Therefore, that part of the graph of $Out$ just keeps repeating. The smooth rounding of the sine curve will round out the corners of the absolute value graph.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9),<->] {-2*abs((2*sin(deg(x))+2)-3)+2};
+
+      %\addplot [line width=1, penColor2, smooth,samples=300,domain=(-9:9),<->] ({2*sin(deg(x))+2},{0.2*x});
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\end{example}
+
+
+Graphically, we have to keep our eyes on several things at once.  We watch the original input into $In$, then we watch the output of $In$ and picture that as the new input into $Out$, then we watch the output coming from $Out$.
+
+Algebraically, we just replace.
+
+
+
+\section{Algebraically}
+
+
+
+
+
+
+
+Let $Out(x) = 3x^3 + \sin(4x) - \frac{3}{2-x}$ with its natural or implied domain. \\
+Let $In(t) = \frac{5t-7}{t^2-8}$ with its natural or implied domain. \\
+
+
+
+Algebraically, composition is accomplished by replacing all occrrences of the variable with the entire formula for the other function.
+
+
+
+
+\[
+(Out \circ In)(k) = Out(In(k)) = 3 {\frac{5t-7}{t^2-8}}^3 + \sin(4 \frac{5t-7}{t^2-8}) - \frac{3}{2-\frac{5t-7}{t^2-8}}
+\]
+
+
+
+
+
+Obviously, parentheses are vital here.
+
+
+
+
+
+\[
+(Out \circ In)(k) = Out(In(k)) = 3 \left( \frac{5t-7}{t^2-8} \right)^3 + \sin\left( 4 \left( \frac{5t-7}{t^2-8} \right) \right) - \frac{3}{2 - \left( \frac{5t-7}{t^2-8} \right)}
+\]
+
+
+
+
+
+
+We can always make two compositions from two functions.
+
+
+
+
+\[
+(In \circ Out)(w) = In(Out(w)) = \frac{5 \left( 3x^3 + \sin(4x) - \frac{3}{2-x} \right)-7}{\left( 3x^3 + \sin(4x) - \frac{3}{2-x} \right)^2-8}
+\]
+
+
+
+
+
+\begin{example} Composition 
+
+
+
+Let $f(x) = 5x^2 - 4x + 2$ with its natural or implied domain. \\
+Let $g(t) = \frac{3}{6-t}$ with its natural or implied domain. \\
+
+
+
+\[
+(f \circ g)(y) = f(g(y)) = 5 \left( \answer{\frac{3}{6-y}} \right)^2 - 4 \left( \answer{\frac{3}{6-y}} \right) + 2
+\]
+
+
+
+
+
+\[
+(g \circ f)(w) = g(f(w)) = \frac{3}{6 - ( \answer{5w^2 - 4w + 2} )}
+\]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Composition 
+
+
+
+Let $f(x) = 3x^2 - x + 5$ with its natural or implied domain. \\
+Let $g(t) = \frac{4}{7-t}$ with its natural or implied domain. \\
+
+
+
+
+
+There are two numbers where $f(x) = 7$.  One of them is $1$, the other is $\answer{\frac{-2}{3}}$.
+
+
+
+
+
+
+\[
+(g \circ f)(w) = g(f(w)) = \frac{4}{7 - (5w^2 - 4w + 2)}
+\]
+
+
+
+In the $g \circ f$ composition, $f$ is no longer allowed to equal $\answer{7}$.
+
+Select all real numbers which cannot be in the domain of $g \circ f$.
+
+\begin{selectAll}
+\choice{$7$}
+\choice{$0$}
+\choice[correct]{$1$}
+\choice{$\frac{2}{3}$}
+\choice{$-1$}
+\choice[correct]{$\frac{-2}{3}$}
+\end{selectAll}
+
+
+\end{example}
+
+
+
+
 
 
 
