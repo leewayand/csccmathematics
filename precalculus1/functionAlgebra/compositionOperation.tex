@@ -15,47 +15,50 @@ composition
 
 
 
-With the caveat that domains need to be aligned, we have many operations on functions that make up an arithmetic on functions.
+{\Huge !} With the caveat that domains need to be aligned, we have many operations on functions that make up an arithmetic on functions.
 
 
 
 
 $\blacktriangleright$ \textbf{Addition} 
 
-The sum of two functions is again a function. The inverse of addition is subtracton. 
+The sum of two functions is again a function. 
 
-The additive identity is $Zero(x) = 0$ for all real numbers.
+The additive identity is the zero function, $Zero(x) = 0$ for all real numbers.
+
+For each function, $f$, there is another function $-f$, such that $f + (-f) = 0$.   $f$ and $-f$ are inverses of each other with respect to addition.
 
 
 
 
 $\blacktriangleright$ \textbf{Mulitplication} 
 
-The product of two functions is again a function. The inverse of mulitplication is division. 
+The product of two functions is again a function.  
 
-The mulitplicative identity is $One(x) = 1$ for all real numbers.
+The multiplicative identity is $One(x) = 1$ for all real numbers.
 
+For each function, $f$, there is another function $\frac{1}{f}$, such that $f \cdot \left( \frac{1}{f} \right) = 0$.   $f$ and $\frac{1}{f}$ are inverses of each other with respect to multiplication.  (If we were talking about numbers, then we might also use exponential notation $\frac{1}{n} = n^{-1}$.
 
 
 $\blacktriangleright$ \textbf{Composition} 
 
 Composition is a new operation on functions.
 
-The composition of two functions again a function. 
+The composition of two functions is again a function. 
 
-The identity function, $I(x) = x$ for all $x$, is the identity element with respect to composition.
+The identity function, $Id(x) = x$ for all $x$, is the identity element with respect to composition.
 
 
 
-\[   f \circ I = f    \, \text{ and } \, I \circ f = f        \]
+\[   f \circ Id = f    \, \text{ and } \, Id \circ f = f        \]
 
 
 
 The inverse of $f$ with respect to composition is another function whose composition with $f$ produces the identity function.
 
-The symbol for the inverse of $f$ is $f^{-1}$.
+Steaing the exponential notation from numbers, the symbol for the inverse of $f$ is $f^{-1}$.
 
-\[   f \circ f^{-1} = I    \, \text{ and } \, f^{-1} \circ f = I       \]
+\[   f \circ f^{-1} = Id    \, \text{ and } \, f^{-1} \circ f = Id       \]
 
 
 
@@ -70,9 +73,9 @@ The symbol for the inverse of $f$ is $f^{-1}$.
 
 
 \begin{itemize}
-\item Let $K(u) = \frac{u}{u-1}$ with its implied domain: $(-\infty, 1) \cup (1. \infty)$. \\
+\item Let $K(u) = \frac{u}{u-1}$ with its natural or implied domain: $(-\infty, 1) \cup (1. \infty)$. \\
 
-\item Let $T(w) = w^2 + 5w + 7$ with its implied domain: \textbf{$\mathbb{R}$}.
+\item Let $T(w) = w^2 + 5w + 7$ with its natural or implied domain: \textbf{$\mathbb{R}$}.
 \end{itemize}
 
 
@@ -89,11 +92,11 @@ $K$ can accept any number, except $1$.  Therefore we need to find out when $T = 
 T(w) & = 1   \\
 w^2 + 5w + 7 & = 1 \\
 w^2 + 5w + 6 & = 0   \\
-(w+2)(w+3) & = 0
+(w+2)\left( \answer{w+3} \right) & = 0
 \end{align*}
 
 
-We need to remove $-2$ and $-3$ from the domain of $T$, because $T(-2)=1$ and $T(-3)=1$ and $1$ cannot be an input into $K$.
+We need to remove $-2$ and $\answer{-3}$ from the domain of $K \circ T$, because $T(-2)=1$ and $T(-3)=1$ and $1$ cannot be an input into $K$.
 
 
 The domain for $K \circ T$ is $(-\infty, -3) \cup (-3, -2) \cup (-2, \infty)$
@@ -112,10 +115,10 @@ The domain for $K \circ T$ is $(-\infty, -3) \cup (-3, -2) \cup (-2, \infty)$
 
 
 
-The composition produces a function. \\
+The composition is a function. \\
 
 
-This is a good reminder that a formula is not a function.  In the case of a composition, we need to restrict the domain of the inner function to avoid inner function values that are not in the domain of the outer function.
+This is a good reminder that a formula is not a function. There are always domain considerations.  In the case of a composition, we need to restrict the domain of the inner function to avoid inner function values that are not in the domain of the outer function.
 
 
 
@@ -127,6 +130,126 @@ This is a good reminder that a formula is not a function.  In the case of a comp
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Composition
+
+
+
+\begin{itemize}
+\item Let $g(x) = \frac{x-3}{x+1}$ with its natural or implied domain: $(-\infty, -1) \cup (-1. \infty)$. \\
+
+\item Let $H(t) = \frac{t+3}{1-t}$ with its natural or implied domain: $(-\infty, 1) \cup (1. \infty)$.
+\end{itemize}
+
+
+
+\[
+(g \circ H)(y) = \frac{\left( \frac{y+3}{1-y} \right) - 3}{\left(  \frac{y+3}{1-y}\right) + 1} = \frac{y+3-3(1-y)}{y+3+(1-y)} = \frac{4y}{y} = y
+\]
+
+
+
+$g$ and $H$ are inverse functions.
+
+
+
+
+\end{example}
+
+Of course, that isn't the whole story.  As we said earlier, formulas are not functions. \\
+
+$(g \circ H)(y) = y$ and so $g \circ H = Id$, the identity function.  But remember our caveat.  There are always domain issues.  In this case $(g \circ H)(y) = y$ for almost all of the real numbers.
+
+Actually, 
+
+
+\[
+(g \circ H)(y) = \frac{\left( \frac{y+3}{1-y} \right) - 3}{\left(  \frac{y+3}{1-y}\right) + 1} 
+\]
+
+
+This equivalent to $y$ for almost all real numbers.
+
+
+In this case, $(g \circ H)(y) = g(H(y))$.  Therefore, $y \ne 1$, since $1$ is not in the domain of $H$.  Secondly, $-1$ is not in the domain of $g$.  We cannot have values of $y$ that make $H(y) = -1$.
+
+
+
+
+\[
+H(r) = \frac{r+3}{1-r} = -1
+\]
+
+\[
+r + 3 = -(1-r) = -1 + r
+\]
+
+
+\[
+3 = -1
+\]
+
+
+There are no such real numbers.
+
+
+
+Therefore, $g$ and $H$ are inverse functions on $(-\infty, 1) \cup (1. \infty)$.
+
+
+
+
+\section{The Other Half of the Story}
+
+
+We would like our function arithmetic to follow our arithmetic for numbers.  For numbers, the inverses are commutative.
+
+\[
+4 + (-4) = (-4) + 4 = 0
+\]
+
+
+\[
+4 \cdot \frac{1}{4} = \frac{1}{4} \cdot 4 = 1
+\]
+
+
+
+In our example, we also want $(H \circ g)(y) = H(g(y)) = y$. It does.
+
+
+\[
+(H \circ g)(y) = \frac{\left( \frac{y-3}{y+1} \right) + 3}{1 - \left(  \frac{y-3}{y+1}\right)} = \frac{y-3 + 3(y+1)}{y+1-(y-3)} = \frac{4y}{4} = y
+\]
+
+
+In this case, we cannot have $y = -1$
+
+
+
+
+
+
+$\blacktriangleright$  Therefore, $g$ and $H$ are inverse functions on $(-\infty, -1) \cup (-1, 1) \cup (1. \infty)$.
+
+
+
+
+
+
+
+
+
+
 
 
 
