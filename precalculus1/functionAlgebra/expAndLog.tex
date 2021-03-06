@@ -13,7 +13,7 @@ exponential and logarithmic
 
 
 
-Exponential and logarithmic funcitons are examples of inverse functions.
+Exponential and logarithmic functions are examples of inverse functions.
 
 
 
@@ -149,11 +149,11 @@ Now, $t$ is the function name and $E$ is the variable.  We can just solve this f
 
 \begin{align*}
 E           & = 0.5 \, e^{-t(E)-3} - 4 \\
-E + 4       & = 0.5 \, e^{-t(E)-3}  \\
+\answer{E + 4}       & = 0.5 \, e^{-t(E)-3}  \\
 2(E + 4)    & =  e^{-t(E)-3}   \\
-ln(2(E+4))  & = -t(E)-3   \\
+ln(2(E+4))  & = \answer{-t(E)-3}   \\
 -(ln(2(E+4)))  & = t(E)+3   \\
--(ln(2(E+4))) - 3   & = t(E)
+\answer{-(ln(2(E+4))) - 3}   & = t(E)
 \end{align*}
 
 
@@ -227,6 +227,122 @@ Since, these are inverses of each other, the pairs of each function are just rev
 
 
 
+
+
+
+\begin{example}
+
+
+
+
+$L(x) = ln(x+5) - 1$ is a one-to-one function, as its graph illustrates.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$z$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-5},{x});
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-4.999:9),<->] {ln(x+5) - 1};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Therefore, it must have an inverse function, $x(L)$.
+
+
+
+We can just solve for $x$.
+
+
+
+
+
+\begin{align*}
+L          & = ln(x+5) - 1    \\
+\answer{L + 1}       & = ln(x+5)  \\
+\answer{e^{L+1}}    & =  x+5   \\
+e^{L+1} - 5  & = x  \\
+e^{L+1} - 5  & = x(L)
+\end{align*}
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$D$, ylabel=$R$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-5},{x});
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-4.999:9),<->] {ln(x+5) - 1};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-1)};
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-5});
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-8:1.6),<->] {e^(x+1)-5};
+            \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-1,-4)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{question}
+
+If the graph of $f$ has a horizontal asymptote, then the graph of $f^{-1}$ also has a horizontal asymptote.
+
+
+\begin{multipleChoice}
+\choice {True}
+\choice[correct] {False}
+\end{multipleChoice}
+
+
+\end{question}
+
+
+
+
+
+\end{example}
 
 
 

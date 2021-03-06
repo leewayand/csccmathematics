@@ -15,9 +15,9 @@ one-to-one
 
 
 
-Just like numbers, functions have an arithmetic.  They have all of the usual number operations, plus one more.  Functions also have composition as an operation.
+Just like numbers, functions have an arithmetic.  They have all of the usual number operations, plus one more.  Functions also have \textbf{composition} as an operation.
 
-Just like number operations have an identiy number, $0$ and $1$, composition has an identiy function - the identity function: $I(x) = x$.
+Just like number operations have identity numbers, $0$ and $1$, composition has an identiyt function - the identity function: $Id(x) = x$.
 
 
 \begin{itemize}
@@ -41,7 +41,10 @@ Around these identity elements, we define inverses.
 \end{itemize}
 
 
-\textbf{Notation Warning:} We reuse and over use notation in Mathematics.  This is an example.  Sometimes $f^{-1}$ means reciprocal and sometimes $f^{-1}$ means inverse function.  The correct inteerpretation depends on the context in which it used.
+\textbf{Notation Warning:} We reuse and overuse notation in Mathematics.  This is an example.  Sometimes $f^{-1}$ means reciprocal and sometimes $f^{-1}$ means inverse function.  The correct inteerpretation depends on the context in which it used.
+
+
+
 
 
 
@@ -55,7 +58,7 @@ Around these identity elements, we define inverses.
 
 
 
-Composition glues function pairs together.
+Composition glues function pairs together producing a third function.
 
 Let $In$ and $Out$ be two functions and $Out \circ In$ their composition.
 
@@ -63,15 +66,15 @@ Let $In$ and $Out$ be two functions and $Out \circ In$ their composition.
 Pairs in $In$ look like $(a, In(a))$.   The composition then interprets $In(a)$ as a member of the domain of $Out$.  $Out$ connects $In(a)$ to $Out(In(a))$.   The composition, $Out \circ In$ just ignores the middle part.  The composition sees $a$ as a domain number and then $Out(In(a))$ as the range partner.
 
 
-Suppose we are in a situation where $Out(In(a)) = I(a)$.  Suppose the compiositon is the identity function.  That would tell us that $Out$ is the inverse funcitn of $In$
+Suppose we are in a situation where $Out(In(a)) = Id(a)$.  Suppose the composition is the identity function.  That would tell us that $Out$ is the inverse function of $In$
 
-Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside $Out$ looking like $(In(a), a)$.  Then would be reversed. \\
+Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside $Out$ looking like $(In(a), a)$.  The inverse function just reverses the order pair. \\
 
 
 $\blacktriangleright$ The inverse function is just the reverse of the original function. \\
 
 
-Then we have an issue.
+This brings up an important issue.
 
 
 \begin{warning}Inverse Functions
@@ -95,7 +98,7 @@ It contains the two pairs: $(2, 4)$ and $(-2, 4)$.
 
 If we reverse these pairs, then the inverse function would contain the pairs: $(4, 2)$ and $(4,-2)$.
 
-This would violate the funciton rule.  We would have a domain number in two pairs.
+This would violate the function rule.  We would have a domain number in two pairs.
 
 \end{example}
 
@@ -111,7 +114,7 @@ Just like with numbers, some functions don't have inverses.  Like, $0$ just does
 \section{One-to-One}
 
 
-Some functions just don't have an inverse, because they have a range number in two pairs.  This is fine for the function, but when reverse the pairs to obtain the inverse funciton, then that range number turns into a domain number in two pairs.
+Some functions just don't have an inverse, because they have a range number in two pairs.  This is fine for the function, but when reversing the pairs to obtain the inverse funciton, then that range number turns into a domain number in two pairs.
 
 
 For a function to have an inverse, every range number must be in only one pair.
@@ -145,7 +148,7 @@ A function, $f$, is said to be \textbf{one-to-one} if
 
 
 
-This definition says that it two function values are equal, then they weren't two different function values.  They came from the same domain number.  So, each function value is in exactly one pair.
+This definition says that it two function values are equal, then they couldn't have come from two different domain numbers.  They came from the same domain number. So, each function value is in exactly one pair.
 
 
 
@@ -156,7 +159,7 @@ This definition says that it two function values are equal, then they weren't tw
 
 \begin{example} Linear Functions
 
-If $C$ is a constant funciton, then it is not one-to-one and thus doesn;t have an inverse. \\
+If $C$ is a constant function, then it is not one-to-one and thus doesn't have an inverse. \\
 
 
 If $C$ is a nonconstant linear function, then it has a formula like $C(x) = a \cdot x + b$ where $a \ne 0$.
@@ -165,16 +168,19 @@ If $C$ is a nonconstant linear function, then it has a formula like $C(x) = a \c
 Then $C^{-1}(t) = \frac{1}{a} \cdot t - \frac{b}{a}$
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+\textbf{\textcolor{purple!50!blue!90!black}{Explanation}}
 
 
 
 The composition is 
 
-\[  (C \circ C^{-1})(m) = C(C^{-1})(m) =     a \cdot \left(\frac{1}{a} \cdot t - \frac{b}{a}\right) + b  = m \]
+\[  (C \circ C^{-1})(x) = C(C^{-1})(x) =     a \cdot \left(\frac{1}{a} \cdot x - \frac{b}{a}\right) + b  = x \]
 
 
+and the other way
 
+
+\[  (C^{-1} \circ C)(y) = C^{-1}(C(y)) =     \frac{1}{a} \cdot (a \cdot y + b) - \frac{b}{a}  = y \]
 
 \end{example}
 
@@ -189,7 +195,7 @@ The composition is
 
 
 
-he squaring function has the formula $Sq(k) = k^2$ with \textbf{$\mathbb{R}$} as its domain. It doesn't have an inverse.
+The squaring function has the formula $Sq(k) = k^2$ with \textbf{$\mathbb{R}$} as its domain. It doesn't have an inverse.
 
 
 
@@ -441,14 +447,14 @@ Since the inverse function has the reverse pairs of the original function, its g
 
 Let $H(t) = 3t - 5$. \\
 
-Then $H^{-1}(x)$ is a function such that $H \circ H^{-1} - I$ \\
+Then $H^{-1}(x)$ is a function such that $H \circ H^{-1} = Id$ \\
 
 
-We are looking for a function, $H^{-1}$, such that $H(H^{-1})(k) = 3 H^{-1}(k) - 5 = k$ \\
+We are looking for a function, $H^{-1}$, such that $(H \circ H^{-1})(k) = H(H^{-1}(k)) = 3 H^{-1}(k) - 5 = k$ \\
 
 
 
-$H$ is linear and $I$ is linear, $H^{-1}$ should be linear.
+$H$ is linear and $Id$ is linear, $H^{-1}$ should be linear.
 
 Let's start building.  $H^{-1}(x)$ should look like $a \cdot x + b$.  The leading coefficient of $H^{-1}$, $a$, should be $\frac{1}{3}$.
 
@@ -456,10 +462,10 @@ Let's start building.  $H^{-1}(x)$ should look like $a \cdot x + b$.  The leadin
 $H^{-1}(x) =\frac{1}{3} x + b$
 
 
-That would gets us $H(H^{-1})(k) = 3 (\frac{1}{3}x + b) - 5 = x + 3b - 5 $
+That would gets us $H(H^{-1}(k)) = 3 (\frac{1}{3}x + b) - 5 = x + 3b - 5 $
 
 
-We need $3b - 5 = 0$ or $b = \frac{5}{3}$.
+We need $3b - 5 = 0$ or $b = \answer{\frac{5}{3}}$.
 
 
 $H^{-1}(x) =\frac{1}{3} x + \frac{5}{3}$
@@ -471,12 +477,20 @@ $H^{-1}(x) =\frac{1}{3} x + \frac{5}{3}$
 
 
 
+\begin{question} Inverse
 
 
+Suppose $T$ is a one-to-one function with $T(4) = 5$. Then which inverse value do we know?
 
 
+\begin{multipleChoice}
+\choice {$(T^{-1}(-4) = -5$}
+\choice {$(T^{-1}\left(\frac{1}{4}\right) = \frac{1}{5}$}
+\choice {$(T^{-1}(-5) = -4$}
+\choice[correct] {$(T^{-1}(5) = 4$}
+\end{multipleChoice}
 
-
+\end{question}
 
 
 
