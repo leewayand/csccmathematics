@@ -15,7 +15,7 @@ features
 
 
 
-\begin{example}  Complete Anlaysis
+\begin{example}  Complete Analysis
 
 
 Completely analyze   
@@ -27,7 +27,7 @@ Completely analyze
 
 
 
-The domain is all real numbers except $-5$ and $2$, which make the denominator equal to $0$. These are singularities of $B$.  Otherwise, $B$ is continuous.  There are no discontinuities.
+The natural domain is all real numbers except $-5$ and $2$, which make the denominator equal to $0$. These are singularities of $B$.  Otherwise, $B$ is continuous.  There are no discontinuities.
 
 Domain = $(-\infty, -5) \cup (-5, 2) \cup (2, \infty)$
 
@@ -37,13 +37,15 @@ $B$ has zeros at $-3$ and $1$.  These make the numerator equal to $0$. These are
 
 The graph will have vertical asymptotes $f=-5$ and $f=-2$.  $B$ will change signs over $f=-5$, since the multiplicity is odd.  $B$ will not change signs over $f=2$, since the multiplicity is even.
 
-$B$ is a rational function and the derree of the denominator is greater than the degree of the numerator. Therefore, 
+$B$ is a rational function and the deree of the denominator is greater than the degree of the numerator. Therefore, 
 
 
 \[ \lim_{f \to -\infty} B(f) = 0   \, \text{ and }  \,  \lim_{f \to \infty} B(f) = 0    \]
 
 
+The graph has a horizontal asymptote at $y=0$. \\
 
+From this, we can sketch a graph of $y = B(t)$. \\
 
 
 
@@ -87,7 +89,7 @@ $B$ is a rational function and the derree of the denominator is greater than the
 \end{image}
 
 
-Both zeros have odd multipicity, therefore the graph must go below the $f$-axis between them.  There must be a local minimum. From the graph we can estimate that the critical number is approximately $0.5$. $B(0.5) = \frac{14}{99} \approx -0.1414$ is a local minimum. With some Calculus tools, we may be able to get an exact value.
+Both zeros have odd multiplicity, therefore the graph must go below the $f$-axis between them.  There must be a local minimum. From the graph we can estimate that the critical number is approximately $0.5$. $B(0.5) = \frac{14}{99} \approx -0.1414$ is a local minimum. With some Calculus tools, we may be able to get an exact value.
 
 
 $B$ has no global maximum or minimum.
@@ -104,7 +106,7 @@ $B$ has no local maximum.
 
 
 
-The graph makes is evident thatthe range is all real numbers.
+The graph makes is evident that the range is all real numbers.
 
 
 \end{example}
@@ -116,7 +118,7 @@ The graph makes is evident thatthe range is all real numbers.
 
 
 
-With some graphing tools, we can get a better approximatiopn of the critical number.
+With some graphing tools, we can get a better approximation of the critical number.
 
 
 
@@ -127,6 +129,7 @@ With some graphing tools, we can get a better approximatiopn of the critical num
 
 
 
+The critical number is approximately $0.181$ and the local minimum value of $B$ is approximately $-1.152$.
 
 
 
@@ -135,6 +138,207 @@ With some graphing tools, we can get a better approximatiopn of the critical num
 
 
 
+
+\begin{example} Analyze
+
+
+Completely analyze $K(w) = w \sqrt{9-w}$.
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+
+
+
+The domain is restricted by the square root to be $(-\infty, \answer{9}]$.
+
+
+The formula is a product, therefore the zeros come from each factor.
+
+$w$ gives a zero of $\answer{0}$.
+
+$\sqrt{9-w}$ gives a zero of $\answer{9}$.
+
+
+Since $\sqrt{9-w}$ is always positive, the sign of $K$ is the same as the sign of $w$.
+
+\begin{itemize}
+\item $K$ is negative on $\left( \answer{-\infty},\answer{0} \right)$
+\item $K$ is positive on $\left( \answer{0}, \answer{\infty} \right)$
+\end{itemize}
+
+
+
+
+From this, we can sketch a graph of $y = K(w)$. \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel={$y=K(w)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.5:0.5)] {x * sqrt(9-x)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(8.8:9)] {x * sqrt(9-x)};
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(9,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Our sketch suggest a global maximum between $0$ and $9$.
+
+
+If we had the derivative, then we could identify this critical number exactly. But we can use a method seen earlier to algebraically discover this critical number.
+
+
+
+
+
+\begin{procedure} Critical Number
+
+
+
+
+
+We think there is a hump in the graph of $K$ and at the highest point, the tangent line would be horizontal.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=13, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel={$y=K(w)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10,12},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$,$12$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.5:8.1),<-] {x * sqrt(9-x)};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(8:9)] {x * sqrt(9-x)};
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-2.5:9),<->] {10.39};
+         
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(9,0)};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6,10.39)};
+
+
+          \node at (axis cs:6,12) [penColor] {$(A, A\sqrt{9-A})$};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Now, create a new function called $F$.
+
+\[
+F(x) = K(x) - K(A) = K(x) - A\sqrt{9-A}
+\]
+
+
+As we saw earlier, since we have a tangent line, the difference of the original function and the linear function has a double root at $A$.  $x-A$ divides in evenly into $F$.  And, the resulting function has $A$ as a root.  
+
+First, factor out $x-A$ from $F$.
+
+
+\[
+x\sqrt{9-x} - A\sqrt{9-A} = \frac{x\sqrt{9-x} - A\sqrt{9-A}}{1} \cdot \frac{x\sqrt{9-x} + A\sqrt{9-A}}{x\sqrt{9-x} + A\sqrt{9-A}}
+\]
+
+\[
+= \frac{x^2 (9-x) - A^2 (9-A)}{x\sqrt{9-x} + A\sqrt{9-A}} = \frac{9x^2 - x^3 - 9A^2 + A^3}{x\sqrt{9-x} + A\sqrt{9-A}}
+\]
+
+
+\[
+= \frac{9(x^2-A^2) - (x^3 - A^3)}{x\sqrt{9-x} + A\sqrt{9-A}} = \frac{(x-A)(9(x+A)-(x^2 + xA + A^2))}{x\sqrt{9-x} + A\sqrt{9-A}}
+\]
+
+
+$x-A$ divides into this evenly leaving
+
+\[
+\frac{9(x+A)-(x^2 + xA + A^2)}{x\sqrt{9-x} + A\sqrt{9-A}}
+\]
+
+$A$ is a root of this, which means $A$ is a root of the numerator.
+
+
+\[
+9(A+A)-(A^2 + A^2 + A^2) = 0
+\]
+
+\[
+18A - 3A^2 = 0
+\]
+
+\[
+3A(6-A) = 0
+\]
+
+
+The zero we are looking for is $6$.
+
+
+\end{procedure}
+
+
+\begin{itemize}
+\item $K$ has a local and global maximum of $6\sqrt{3}$ at $6$.
+\item $K$ has a local minimum of $0$ at $9$.
+\item $K$ has no global minimum.
+\end{itemize}
+
+
+
+
+\begin{itemize}
+\item $K$ is increasing on $(-\infty, 6]$.
+\item $K$ is decreasing on $[6, 9]$.
+\end{itemize}
+
+
+Finally, the range is $(-\infty, 6\sqrt{3}]$. \\
+
+
+The graph has no vertical asymptotes, $\lim\limits_{w \to -\infty} K(w) = -\infty.$
+
+
+\end{example}
 
 
 
