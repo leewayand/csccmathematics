@@ -255,7 +255,7 @@ We can  multiply this out (or use long division) to get the cubic factor or we c
 \item $T(-2) =  \answer{18}$  \\
 \item $T(-1) =  \answer{-10}$  \\
 \item $T(-\tfrac{3}{2}) =  \answer{\tfrac{-33}{4}}$  \\
-\item $T(-\tfrac{1}{2}) =  \answer{0}$  \\
+\item $T(-\tfrac{1}{2}) =  \answer{0}$  
 \end{itemize}
 
 There is only one other factor with a rational root and that is $y+\frac{1}{2}$, which corresponds to the root $-\frac{1}{2}$ \\
@@ -288,7 +288,7 @@ We now know $y-4$ and $y+\frac{1}{2}$ are factors of $T(y)$.  $T(y)$ factors lik
 \end{example}
 
 
-If you are thinking that this is a long process, then you are correct.  We wouldn't do it, except it is so useful to factor polynomials.  But we might have some ways to speed up the process.  \\
+If you are thinking that this is a long process, then you are correct.  We wouldn't bother with it, except it is so useful to factor polynomials.  But we might have some ways to speed up the process.  \\
 
 It took us a lot of calculating to come up with the root $-\frac{1}{2}$.  A graph would help us select candidates.
 
@@ -298,15 +298,154 @@ It took us a lot of calculating to come up with the root $-\frac{1}{2}$.  A grap
 \end{center}
 
 
+From the graph, it appears we should select candidates near $-1.75$, $-1.5$, $1.75$, and $4$.  From our list, it appears we should try $-\frac{3}{2}$ and $4$. This would have significantly shortened our evaluation list.  \\
+
+From the graph, we can see that these are not double roots. The other two rotos must be irrational or complex.  We'll need to begin factoring to figure this out. \\
+
+
+
+$\blacktriangleright$ \textbf{Factoring}
+
+
+
+$T(y)$ factors like $T(y) = (y-4) \left(y+\frac{1}{2}\right) (a \, y^2 + b \, y + c)$. \\
+
+
+It will help our thinking if we don't have fractions in our computations.  Therefore, let's give $T$ a leading coefficient of $2$ to get rid of the $\frac{1}{2}$.
+
+\[
+T(y) = 2 (y-4) \left(y+\frac{1}{2}\right) (a \, y^2 + b \, y + c) = (y-4) (2y+1) (a \, y^2 + b \, y + c)
+\]
+
+
+\[
+T(y) = (2 \, y^2 - 7 \, y - 4) (a \, y^2 + b \, y + c)
+\]
+
+
+
+
+\[
+T(y) = 2 a \, y^4 + (2 b - 7 a) \, y^3 + (2c - 4 a - 7 b) \, y^2 - (4 b + 7 c) \, y - 4 \, c
+\]
+
+
+\[
+2\, y^4 - 7 \, y^3 - 10 \, y^2 + 21 \, y + 12 = 2 a \, y^4 + (2 b - 7 a) \, y^3 + (2 c - 4 a - 7 b) \, y^2 - (4 b + 7 c) \, y - 4 \, c
+\]
+
+
+Equating terms gives us...
+
+
+$2 \, y^4 = 2 a \, y^4$, which tells us that $a = \answer{1}$. \\
+
+$12 = -4 c$, which tells us that $c =  \answer{-3}$. \\
+
+
+
+Let's update our coefficients.
+
+
+\[
+2\, y^4 - 7 \, y^3 - 10 \, y^2 + 21 \, y + 12 = 2 \, y^4 + (\answer{2 b - 7 }) \, y^3 + (\answer{-10 - 7 b}) \, y^2 - (\answer{4 b - 21}) \, y + 12
+\]
+
+
+
+
+Equating terms gives us...
+
+
+$-7 \, y^3 = 2 b - 7 \, y^3$, which tells us that $b = \answer{0}$. \\
+
+
+
+\[
+T(y) = (y-4) \left(y+\frac{1}{2}\right) (y^2  - 3)
+\]
+
+
+From here we can view the quadratic as a difference of two squares and factor. 
+
+
+
+\[
+T(y) = (y-4) \left(y+\frac{1}{2}\right) (y^2 - (\sqrt{3})^2)
+\]
+
+
+
+\[
+T(y) = (y-4) \left(y+\frac{1}{2}\right) (y - \sqrt{3}) (y + \sqrt{3})
+\]
+
+
+The other two roots were irrational real numbers.
+
+
+
+
+If we will keep ourselves organized, we can reduce our writing of this process significantly.
+
+
+
+
+\begin{procedure} Systems of Equations
+
+
+
+From
+
+\[
+2 \, y^4 - 7 \, y^3 - 10 \, y^2 + 21 \, y + 12 = 2 a \, y^4 + (2 b - 7 a) \, y^3 + (2 c - 4 a - 7 b) \, y^2 - (4 b + 7 c) \, y - 4 \, c
+\]
+
+we can see that 
+
+
+
+
+\[
+\begin{cases}
+  2 &= 2 a   \\
+  -7 &= 2 b - 7 a    \\
+  -10 &= 2 c - 4 a - 7 b   \\
+  21 &= -(4 b + 7 c)   \\
+  12 &= -4 c
+\end{cases}
+\]
+
+
+From this system of linear equations, we can see that $a = 1$ and $c = -3$.  If we substitute these values in the system, then the systems becomes.
 
 
 
 
 
 
+\[
+\begin{cases}
+  2 &= 2   \\
+  -7 &= 2 b - 7     \\
+  -10 &= -6 - 4 - 7 b   \\
+  21 &= 4 b + 21   \\
+  12 &= 12
+\end{cases}
+\]
+
+From this system of linear equations, we can see that $b = 0$. \\
 
 
 
+\[
+T(y) = (y-4) \left(y+\frac{1}{2}\right) (y - \sqrt{3}) (y + \sqrt{3})
+\]
+
+
+
+
+\end{procedure}
 
 
 
