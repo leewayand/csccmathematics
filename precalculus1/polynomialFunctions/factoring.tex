@@ -14,61 +14,155 @@ Rational Roots Theorem
 
 
 
+Much of our analysis of polynomial functions relies on zeros or roots. In particular, we locate local maximums and minimums where the derivative equals $0$.  Therefore, factoring is very high on our list of skills. \\
+
+Unfortunately, factoring a random polynomial is almost impossible.  So, we need some help.
 
 
-
-We have investigated polynomial functions from several viewpoints.  Time to collect all of our thoughts and charcterize polynomial functions.
-
-
-
-
-
-
+$\blacktriangleright$ First, we hope the instructor has given us a polynomial which we have a chance of factoring.  Otherwise, we really don't know what to do. \\
 
 
 
 
+$\blacktriangleright$ Second, we need some good guesses. \\
 
-\begin{example} Polynomial
+
+We would like to factor the polynomial in order to identify zeros or roots.  But, if we had an idea of the roots, then we could guess a factor and try to factor it out of the polynomial. \\
+
+\begin{center}
+So, what are good guess for roots of a polynomial?
+\end{center}
 
 
-Completely analyze $p(w) = -\frac{1}{5}(w+4)(w-3)(w-3)$
+Under certin conditions, we can actually get some good guesses for roots of the polynomial and thus factors.
 
-First let's collect like factors: $p(w) = -\frac{1}{5}(w+4)(w-3)^2$
 
-We have a polynomial of degree $3$.  It has two roots.
+
+
+
+
+\begin{theorem} Rational Root Theorem
+
+
+
+Let $p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$ be a polynomial of degree $n$ with integer coefficients, $a_i \in \mathbb{Z}$ for all $i$, such that $a_n, a_0 \ne 0$.
+
+If $p(x)$ has any rational roots, then they come from this set: $\{ \frac{p}{q} \, | \, p is a factor of a_0 and q is a factor of a_n  \}$
+
+
+
+\end{theorem}
+
+
+In this context, "factor" means an integer factor.  \\
+
+This set could have a lot of members, but that is better than an infinite list of possibilities.  A lot better! \\
+
+
+
+
+
+\begin{example} RRT
+
+
+Let $p(x) = 3\, x^3 - 16 \, x^2 + 3 \, x + 10$ \\
+
+
+This is a cubic polynomial with integer coefficients and the constant term is not $0$. It meets the conditions of the RRT.
+
+
+This cubic polynomial has three roots.  Some maybe real numbers and some maybe complex numbers. The real roots might be rational numbers or they might be irrational.
+
+If $p$ has any rational roots then they must come from this list:
+
+
+\[
+\left\{  \frac{10}{1},  \frac{5}{1}, \frac{2}{1}, \frac{1}{1}, \frac{10}{3},  \frac{5}{3}, \frac{2}{3}, \frac{1}{3},   -\frac{10}{1},  -\frac{5}{1}, -\frac{2}{1}, -\frac{1}{1}, -\frac{10}{3},  -\frac{5}{3}, -\frac{2}{3}, -\frac{1}{3}                   \right\}
+\]
+
+
+The factors of $10$ are $\{ 10, 5, 2, 1, -1, -2, -5, -10 \}$ \\
+
+The factors of $3$ are $\{ 3, 1, -1, -3 \}$ \\
+
+
+The fractions were formed from every possible combination of these sets of factors.
+
+
+We have $16$ possibilities for roots of $p$.  We can test them and see which is a root.
+
 
 \begin{itemize}
-\item $-4$ is a root of multiplicity $\answer{1}$.  Since this multipicity is odd, $p$ will \wordChoice{\choice[correct]{change sign} \choice{not change sign}} through $-4$ and the graph will cross at $(-4,0)$.
-\item $3$ is a root of multiplicity $\answer{2}$.  Since this multipicity is even, $p$ will \wordChoice{\choice{change sign} \choice[correct]{not change sign}} sign through $3$ and the graph will not cross at $(2,0)$.  The graph will touch and then bounce back.
+\item $p(10) =  3\, 10^3 - 16 \, 10^2 + 3 \, 10 + 10 = 1440 \ne 0$ \\
+\item $p(5) =  3\, 5^3 - 16 \, 5^2 + 3 \, 5 + 10 = 0 \ne 0$  - root\\
 \end{itemize}
 
 
-The end-behavior of $p$ is $-\frac{1}{5} w^3$.  Therefore, $\lim\limits_{w \to -\infty}p(w) = \infty$ and $\lim\limits_{w \to \infty}p(w) = -\infty$.
-
-
-
-
-
-The graph is very suggestive that there is a local minimum somewhere around $-1$.  $3$ is a zero and also a critical number, since the function is negative around that zero.
+We now know $x-5$ is a factor of $p(x)$.  $p(x)$ factors like $p(x) = (x-5) (a \, x^2 + b \, x + c)$.
 
 
 
 
 
 
-With some technology, we can approximate the other critical number to be $-1.67$ and the local minimum to be $-10.163$.
 
-
-\begin{itemize}
-\item $p$ \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $(-\infty, -1.67]$.
-\item $p$ \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  on $[-1.67, 3]$.
-\item $p$ \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $[3, \infty)$.
-\end{itemize}
+\[
+3\, x^3 - 16 \, x^2 + 3 \, x + 10  = (x-5) (a \, x^2 + b \, x + c) 
+\]
 
 
 
-There is no global maximum or minimum.  There is no local maximum.
+\[
+3\, x^3 - 16 \, x^2 + 3 \, x + 10 = \answer{a} x^3 + \left( \answer{b-5a} \right) x^2 + \left( \answer{c-5b} \right) x - 5c
+\]
+
+
+
+$\blacktriangleright$ Constant Term \\
+
+
+$10 = -5c$, therefore $c = \answer{-2}$ \\
+
+
+
+$\blacktriangleright$ Leading Term \\
+
+
+$3 = a$ \\
+
+
+
+$\blacktriangleright$ Linear Term \\
+
+$3 = \answer{c-5b}$ \\
+
+$3 = -2 - 5b$ \\
+
+$\answer{-1} = b$ \\
+
+
+
+
+
+
+\[
+3\, x^3 - 16 \, x^2 + 3 \, x + 10  = (x - 5) (3 x^2 -  x - 2) 
+\]
+
+
+
+
+\[
+3\, x^3 - 16 \, x^2 + 3 \, x + 10  = (x - 5) \left(\answer{3x + 2} \right) (x - 1) 
+\]
+
+
+The other roots are $-\frac{2}{3}$ and $1$.
+
+
+
+
+
 
 
 
@@ -77,33 +171,136 @@ There is no global maximum or minimum.  There is no local maximum.
 
 
 
-If we were also given that $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$.  This is a quadratic.  We can obtain its zeros via the quadratic formula.
 
 
-\[  \frac{4 \pm \sqrt{(-4)^2 - 4 \cdot 3 \cdot (-15)}}{2 \cdot 3} =    \frac{4 \pm \sqrt{196}}{6}  = \frac{4 \pm 14}{6}       \]
 
-We get two real roots: $\frac{4 + 14}{6} = \frac{18}{6} = 3$  and $\frac{4 - 14}{6} = \frac{-10}{6} = \frac{-5}{3} \approx -1.67$
+
+
+
+
+
+
+
+\begin{example} RRT
+
+
+Let $T(y) = 2\, y^4 - 7 \, y^3 - 10 \, y^2 + 21 \, y + 12$ \\
+
+
+This is a 4th degree polynomial with integer coefficients and the constant term is not $0$. It meets the conditions of the RRT.
+
+
+This 4th degree polynomial has four roots.  Some maybe real numbers and some maybe complex numbers. The real roots might be rational numbers or they might be irrational.
+
+If $p$ has any rational roots then they must come from this list:
+
+
+
+
+\[
+\left\{  \frac{12}{1},  \frac{6}{1}, \frac{4}{1}, \frac{3}{1}, \frac{2}{1}, \frac{1}{1}, \frac{12}{2},  \frac{6}{2}, \frac{4}{2}, \frac{3}{2}, \frac{2}{2}, \frac{1}{2},  -\frac{12}{1},  -\frac{6}{1}, -\frac{4}{1}, -\frac{3}{1}, -\frac{2}{1}, -\frac{1}{1}, -\frac{12}{2},  -\frac{6}{2}, -\frac{4}{2}, -\frac{3}{2}, -\frac{2}{2}, -\frac{1}{2}                 \right\}
+\]
+
+
+The factors of $12$ are $\{ 12, 6, 4, 3, 2, 1, -1, -2, -3, -4, -6, -12 \}$ \\
+
+The factors of $2$ are $\{ 2, 1, -1, -2 \}$ \\
+
+
+The fractions were formed from every possible combination of these sets of factors.
+
+But it might help to clean this list up a bit.
+
+\[
+\left\{  12,  6, 4, 3, 2, 1,  \frac{3}{2},  \frac{1}{2},  -12,  -6, -4, -3, -2, -1,  -\frac{3}{2},  -\frac{1}{2}                 \right\}
+\]
+
+
+
+
+
+We have $16$ possibilities for roots of $T$.  We can test them and see which is a root.
+
+
+
+
+
+
+
 
 
 
 \begin{itemize}
-\item $p$ decreases on $\left(-\infty, \frac{-5}{3}\right]$.
-\item $p$ increases on $\left[\frac{-5}{3}, 3\right]$.
-\item $p$ decreases on $[3, \infty)$.
+\item $T(12) =  2\, 12^4 - 7 \, 12^3 - 10 \, 12^2 + 21 \, 12 + 12 = 28200$ \\
+\item $T(6) =  2\, 6^4 - 7 \, 6^3 - 10 \, 6^2 + 21 \, 6 + 12 = \answer{858}$  \\
+\item $T(4) =  2\, 4^4 - 7 \, 4^3 - 10 \, 4^2 + 21 \, 4 + 12 = \answer{0}$  \\
 \end{itemize}
 
 
+We now know $y-4$ is a factor of $T(y)$.  $T(y)$ factors like $T(y) = (y-4) (a \, y^3 + b \, y^2 + c \, y + d)$. \\
 
-Another approach to obtain the roots of $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$ would be to notice that we already know that $3$ is a root. $w+3$ must be a factor.
+We can  multiply this out (or use long division) to get the cubic factor or we could try more root candidates.
+
+
+\begin{itemize}
+\item $T(3) =  \answer{-42}$  \\
+\item $T(2) =  \answer{-10}$  \\
+\item $T(1) =  \answer{18}$  \\
+\item $T(\tfrac{3}{2}) =  \answer{\tfrac{15}{2}}$  \\
+\item $T(\tfrac{1}{2}) =  \answer{\tfrac{77}{4}}$  \\
+\item $T(-12) =  \answer{51888}$  \\
+\item $T(-6) =  \answer{3630}$  \\
+\item $T(-4) =  \answer{728}$  \\
+\item $T(-3) =  \answer{210}$  \\
+\item $T(-2) =  \answer{18}$  \\
+\item $T(-1) =  \answer{-10}$  \\
+\item $T(-\tfrac{3}{2}) =  \answer{\tfrac{-33}{4}}$  \\
+\item $T(-\tfrac{1}{2}) =  \answer{0}$  \\
+\end{itemize}
+
+There is only one other factor with a rational root and that is $y+\frac{1}{2}$, which corresponds to the root $-\frac{1}{2}$ \\
 
 
 
-\begin{align*}
-3w^2 - 4w - 15     & = 0        \\
-3w^2 - 4w - 15     & = (w+3)(???)        \\
-3w^2 - 4w - 15     & = (w+3)(3w + ?)        \\
-3w^2 - 4w - 15     & = (w+3)(\answer{3w + 5})        
-\end{align*}
+We now know $y-4$ and $y+\frac{1}{2}$ are factors of $T(y)$.  $T(y)$ factors like $T(y) = (y-4) \left(y+\frac{1}{2}\right) (a \, y^2 + b \, y + c)$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{example}
+
+
+If you are thinking that this is a long process, then you are correct.  We wouldn't do it, except it is so useful to factor polynomials.  But we might have some ways to speed up the process.  \\
+
+It took us a lot of calculating to come up with the root $-\frac{1}{2}$.  A graph would help us select candidates.
+
+
+\begin{center}
+\desmos{yxnzawe2si}{400}{300}
+\end{center}
+
+
+
+
+
 
 
 
