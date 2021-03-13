@@ -17,7 +17,7 @@ domain and range
 
 
 
-Suppose we have two quanitities, $A$ and $B$ and in our situation, it is helpful to think of $A$ as dependent on $B$.  So, we would like to think in terms of $A(B)$ and use our knowledge of functions.
+Suppose we have two quanitities, $A$ and $B$ in our situation, and it is helpful to think of $A$ as dependent on $B$.  So, we would like to think in terms of $A(B)$ and use our knowledge of functions.
 
 
 
@@ -61,8 +61,12 @@ This graph is not passing the vertical line test.  We have many domain numbers p
 
 
 
-Pretend, we learn in our situation, that when $B$ is negative, then $A \leq 4$ and when $B \geq 0$, then $A > 4$ 
+Pretend, we learn in our situation, that 
 
+\begin{itemize}
+\item when $B$ is negative, then $A \leq 4$, and 
+\item when $B \geq 0$, then $A > 4$ 
+\end{itemize}
 
 
 
@@ -105,7 +109,7 @@ Pretend, we learn in our situation, that when $B$ is negative, then $A \leq 4$ a
 
 
 
-We now have a function.
+We now have a function, $A(B)$.  The relationship becomes a function upon discarding some of the pairs.  Selecting some of a collection and removing the rest is called \textbf{restricting}.  Restricting is a method of stating the situaiton in terms of functions.
 
 
 
@@ -116,9 +120,9 @@ We now have a function.
 
 
 
-Given a function, $f$, we can greate a graph by plotting the point $(d, f(d))$ for each $d$ in the domain of $f$. We would like to go the other way.  Given a curve, we would like to define a function by interpreting the plotted points as pairs in the function.
+Given a function, $f$, we can greate a graph by plotting the point $(d, f(d))$ for each $d$ in the domain of $f$. We would like to go the other way.  Given a curve (lots of points), we would like to define a function by interpreting the plotted points as pairs in the function.
 
-This works well when the graph passes the vertical line test. However, for other curves, we will need to focus our attention on only pieces of the curve.
+This works well when the graph passes the vertical line test. However, for other curves, we will need to restrict our attention on only pieces of the curve.
 
 
 
@@ -259,7 +263,12 @@ Define $y(x)$ via $(x+4)^2 + (y-2)^2 = 5^2$ with $x \in [-4, 1]$  and $y \in [-3
 Now, we havea function.
 
 
-Since didn't have a formula for $y$, we are just stating the relationship via an equation with appropriate restrictions.  Functions defined this way, without an explicit formula, are said to be defined \textbf{implicitly}.
+Since we didn't have a formula for $y$, we are just stating the relationship via an equation with appropriate restrictions.  Functions defined this way, without an explicit formula, are said to be defined \textbf{implicitly}.
+
+
+
+
+We could have restricted the domain and range in many ways to form functions.  They would all use the same equation, but be different functions.
 
 
 
@@ -270,6 +279,133 @@ Since didn't have a formula for $y$, we are just stating the relationship via an
 
 
 
+
+
+\begin{example} Restrictions
+
+
+
+The following functions all use $(x+4)^2 + (y-2)^2 = 5^2$ to identify pairs.  
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      %\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:9)] {5};
+
+    \addplot [line width=2, penColor, smooth, samples=200, domain=(0:3.14)] ({5*cos(deg(x)) - 4},{5*sin(deg(x)) + 2});
+    \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-9,2)};
+    \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,2)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      %\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:9)] {5};
+
+    \addplot [line width=2, penColor, smooth, samples=200, domain=(3.14:6.28)] ({5*cos(deg(x)) - 4},{5*sin(deg(x)) + 2});
+    \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-9,2)};
+    \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,2)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      %\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:9)] {5};
+
+    \addplot [line width=2, penColor, smooth, samples=200, domain=(0:1.57)] ({5*cos(deg(x)) - 4},{5*sin(deg(x)) + 2});
+     \addplot [line width=2, penColor, smooth, samples=200, domain=(3.14:4.71)] ({5*cos(deg(x)) - 4},{5*sin(deg(x)) + 2});
+
+    \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,2)};
+    \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,7)};
+     \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-9,2)};
+    \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-3)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\end{example}
 
 
 
