@@ -26,7 +26,7 @@ a_1, a_2, a_3 , \ldots
 In the previous section, we found many ways to generate this list.  Regardless of how we obtain it, there are two fundamental questions we can ask.
 \begin{itemize}
 \item[1.] Do the numbers in the list approach a finite value?
-\item[2.] If so, what is the number?
+\item[2.] If so, what is that value?
 \end{itemize}
 
 
@@ -53,14 +53,24 @@ Suppose that $\{a_n\}_{n=n_0}$ is a sequence.  We say that
 $\lim\limits_{n\to \infty}a_n=L$ if for every $\epsilon>0$, there exists an integer $N$, such that $|a_n-L|<\epsilon$ for any $n \geq N$.
 \end{definition}
 
-This precise definition captures the same idea as the intuitive definition but makes it more precise.  The quantity $\epsilon$ measures how close the terms in the sequence are to the limit $L$.  We say that the limit exists and is $L$ if we can choose how far we want the terms to be from $L$ and we know the terms in the sequence eventually become and stay that close to $L$.  
+This precise definition captures the same idea as the intuitive definition but makes it more precise.  The quantity $\epsilon$ measures how close the terms in the sequence are to the limit $L$.  We say that the limit exists and is $L$ if we can choose any distance we want the terms to be from $L$ and we know the terms in the sequence eventually become and stay that close to $L$.  
 
 \begin{remark}
 The precise definition is extremely important to establish the theoretical foundations of sequences and is used frequently in more theoretically-oriented courses.  For our purposes, however, the intuitive definition will be sufficient.
 \end{remark}
 
 \begin{question}
-Suppose that $\{a_n\}_{n=1}$ is a sequence and that $\lim\limits_{n \to \infty} a_n = L$.  Intuitively, what can we say about $\lim\limits_{n \to \infty} a_{n+1}$? \wordChoice{\choice{$\lim\limits_{n \to \infty} a_{n+1}$ exists, but we do not know what its value is.} \choice[correct]{$\lim\limits_{n \to \infty} a_{n+1}$ exists, and $\lim\limits_{n \to \infty} a_{n+1}=L$ exists.} \choice{$\lim\limits_{n \to \infty} a_{n+1}$ may or may not exist.}}
+Suppose that $\{a_n\}_{n=1}$ is a sequence and that $\lim\limits_{n \to \infty} a_n = L$.  Intuitively, what can we say about $\lim\limits_{n \to \infty} a_{n+1}$? 
+
+
+\begin{multipleChoice}
+\choice {$\lim\limits_{n \to \infty} a_{n+1}$ exists, but we do not know what its value is.}
+\choice [correct]{$\lim\limits_{n \to \infty} a_{n+1}$ exists, and $\lim\limits_{n \to \infty} a_{n+1}=L$ exists.}
+\choice {$\lim\limits_{n \to \infty} a_{n+1}$ may or may not exist.}
+\end{multipleChoice}
+
+
+
 
 One way to think about this is by noting that the sequence $\{a_n\}_{n=1}$ is represented by the list
 
@@ -88,6 +98,19 @@ If the first sequence tends to $L$, the second sequence must also tend to $L$.
 \end{warning}
 
 %\youtube{https://www.youtube.com/watch?v=0UCRZAsIkXM}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Connections to real-valued functions}
@@ -161,6 +184,15 @@ What can we conclude from the above example?
 
 This might lead us to believe that we need to develop a whole new arsenal of techniques in order to determine if limits of sequences exist, but there is good news.
 
+
+
+
+
+
+
+
+
+
 \section{Calculating limits of sequences}
 
 \begin{theorem}
@@ -219,29 +251,38 @@ In practice, we use the above theorem to compute limits without explicitly exhib
 
 
 \section{Computing limits of sequences using dominant term analysis}
-The last example shows us that for many sequences, we can employ the same techniques that we used to compute limits previously.  While algebraic techniques and L'Hopital's rule are useful, in many of the following sections, being able to determine limits quickly is an important skill.    
+The last example shows us that for many sequences, we can employ the same techniques that we used to compute end-behavior previously.  
 
 \begin{example}
 Let $a_n = \frac{n^3+4n^2-1}{2-4n^4}$.  Determine if the limit of the sequence $\{a_n\}_{n=1}^{\infty}$ exists.
 
 \begin{explanation}
-The highest degree term in the numerator is $n^3$, while the largest term in the denominator is $-4n^4$.  We can factor out the largest terms from both the numerator and denominator and do a little algebra.
+We can use the idea of functio0n dominance. The highest degree term in the numerator is $n^3$, while the largest term in the denominator is $-4n^4$.  We can factor out the largest terms from both the numerator and denominator and do a little algebra.
 
 \[
 \frac{n^3+4n^2-1}{2-4n^4} = \frac{n^3\left(1+\frac{4}{n}-\frac{1}{n^3}\right)}{-4n^4\left(-\frac{1/2}{n^4}+1\right)} = \frac{n^3}{-4n^4} \cdot  \frac{1+\frac{4}{n}-\frac{1}{n^3}}{-\frac{1/2}{n^4}+1}
 \]
-The second term becomes arbitrarily close to $1$ as $n$ grows larger and larger, so the limit of the sequence is completely determined by the ratio of the highest degree term in the numerator to the highest degree term in the denominator.  In this case, that ratio is $\frac{n^3}{-4n^4} = \frac{1}{-4n}$, so $\lim_{n \to \infty} a_n = 0$.
+The second term becomes arbitrarily close to $1$ as $n$ grows larger and larger, so the limit of the sequence is completely determined by the ratio of the highest degree term in the numerator to the highest degree term in the denominator.  In this case, that ratio is $\frac{n^3}{-4n^4} = \frac{1}{-4n}$, so $\lim\limits_{n \to \infty} a_n = 0$.
 
 \end{explanation}
 \end{example}
 
+
+
+
+
+
+
+
+
+
 In the preceding example, we say that the \emph{dominant term} in the numerator is $n^3$ and that the \emph{dominant term} in the denominator is $-4n^4$ because these terms are the only ones that are relevant when finding the limit.
 
 \begin{remark}
-The reader may notice that the last example is a special case of the Rational Function Theorem.  However, the name given to this result is not as important as the idea it captures.  When finding limits of functions, it is only necessary to consider the dominant term.  When treating quotients of functions, we only need to consider the dominant terms in the numerator and denominator.
+When finding limits of functions, it is only necessary to consider the dominant term.  When treating quotients of functions, we only need to consider the dominant terms in the numerator and denominator.
 \end{remark}
 
-Sometimes, this technique can be used to find limits where L'Hopital's rule or an algebraic approach would be complicated.
+
 
 \begin{example}
 Let $a_n = \frac{n^2(2n+1)(5-3n)}{(1+2n)^4}$.  Determine if the limit of the sequence $\{a_n\}_{n=1}^{\infty}$ exists.
@@ -260,6 +301,17 @@ we find $\lim_{n \to \infty} a_n = \answer{-\frac{6}{16}}$.
 \end{explanation}
 \end{example}
  
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Growth rates}
 The preceding examples illustrate that higher positive powers of $n$ grow more quickly than lower positive powers of $n$.  We can introduce a little notation that captures the rate at which terms in a sequence grow in a succinct way.
 
@@ -267,8 +319,8 @@ The preceding examples illustrate that higher positive powers of $n$ grow more q
   Given two sequences $\{a_n\}$ and $\{b_n\}$, the notation $a_n \ll
   b_n$ means that
   \[
-  \lim_{n\to\infty} \frac{a_n}{b_n} =
-  0\qquad\text{and}\qquad\lim_{n\to\infty} \frac{b_n}{a_n} =\infty.
+  \lim\limits_{n\to\infty} \frac{a_n}{b_n} =
+  0\qquad\text{and}\qquad\lim\limits_{n\to\infty} \frac{b_n}{a_n} =\infty.
   \]
 \end{definition}
 
@@ -276,7 +328,7 @@ In essence, writing $a_n \ll b_n$ says that the sequence $(b_n)$ grows
 much faster than $(a_n)$.
 
 \begin{example}
-Suppose that $a_n = 4n^2+3n$ and $b_n = 5n^{3/2}+2n$.  Then, we can compute $\lim_{n \to \infty} \frac{a_n}{b_n} = \answer{\infty}$ and $\lim_{n \to \infty} \frac{b_n}{a_n} = \answer{0}$.  Using the notation we just introduced, we have that \wordChoice{\choice{$a_n  \ll b_n$}\choice[correct]{$b_n  \ll a_n$}}
+Suppose that $a_n = 4n^2+3n$ and $b_n = 5n^{3/2}+2n$.  Then, we can compute $\lim\limits_{n \to \infty} \frac{a_n}{b_n} = \answer{\infty}$ and $\lim\limits_{n \to \infty} \frac{b_n}{a_n} = \answer{0}$.  Using the notation we just introduced, we have that \wordChoice{\choice{$a_n  \ll b_n$}\choice[correct]{$b_n  \ll a_n$}}
 \end{example}
 
 Many sequences of interest involve terms other than powers of $n$.  It is often useful to understand how different \emph{types} of functions grow relative to each other.
@@ -295,35 +347,56 @@ Many sequences of interest involve terms other than powers of $n$.  It is often 
 The first inequality in this theorem essentially guarantees that \emph{any} power of $\ln(n)$ grows more slowly than \emph{any} power of $n$.  For example: 
 
 \begin{example}
-  Let $a_n  = \frac{\ln^{9}(n)}{n^{1/2}}$.  What is $\lim_{n \to \infty} a_n$?
+  Let $a_n  = \frac{\ln^{9}(n)}{n^{1/2}}$.  What is $\lim\limits_{n \to \infty} a_n$?
   
   \begin{explanation}
-  The notation  $\ln^p(n)\ll n^q$ means that $\lim_{n \to \infty} \frac{\ln^p(n)}{n^q} = 0$ for any positive numbers $p$ and $q$.  In this example, $p=9$ and $q=1/2$, so by the growth rates result, $\lim_{n\to\infty}a_n =\answer[given]{0}$.  
+  The notation  $\ln^p(n)\ll n^q$ means that $\lim\limits_{n \to \infty} \frac{\ln^p(n)}{n^q} = 0$ for any positive numbers $p$ and $q$.  In this example, $p=9$ and $q=1/2$, so by the growth rates result, $\lim\limits_{n\to\infty}a_n =\answer[given]{0}$.  
   
   \end{explanation}
 \end{example}
 
 This allows us to extend the \emph{dominant term} idea to more complicated expressions.
 
+
+
+
+
+
+
+
 \begin{example}
-  Let $a_n  = \frac{n^{100} + n^n}{n!+5^n}$.  What is $\lim_{n \to \infty} a_n$?
+  Let $a_n  = \frac{n^{100} + n^n}{n!+5^n}$.  What is $\lim\limits_{n \to \infty} a_n$?
   
   \begin{explanation}
-  By growth rates, the dominant term in the numerator is $n^n$, and the dominant term in the denominator is $n!$.  We thus will know if $\lim_{n \to \infty} a_n$ exists by considering $\lim_{n \to \infty} \frac{n^n}{n!}$.  By growth rates, this limit is infinite, so $\lim_{n \to \infty} a_n = \infty$.
+  By growth rates, the dominant term in the numerator is $n^n$, and the dominant term in the denominator is $n!$.  We thus will know if $\lim\limits_{n \to \infty} a_n$ exists by considering $\lim\limits_{n \to \infty} \frac{n^n}{n!}$.  By growth rates, this limit is infinite, so $\lim\limits_{n \to \infty} a_n = \infty$.
   
 This can be made more explicit by the following computation, which shows exactly how the growth rates results are used.  As with a previous example, it relies on factoring the dominant term in the numerator and the denominator.  These terms are determined by the growth rates results.
 
 \[
-\lim_{n \to \infty} \frac{n^{100} + n^n}{n!+5^n} = \lim_{n \to \infty} \frac{n^n \left(\frac{n^{100}}{n^n} + 1\right)}{n!\left(1+\frac{5^n}{n!}\right)} 
+\lim\limits_{n \to \infty} \frac{n^{100} + n^n}{n!+5^n} = \lim\limits_{n \to \infty} \frac{n^n \left(\frac{n^{100}}{n^n} + 1\right)}{n!\left(1+\frac{5^n}{n!}\right)} 
 \]
 
-By the growth rates results, $\lim_{n \to \infty} \frac{n^{100}}{n^n} =0$ and  $\lim_{n \to \infty}\frac{5^n}{n!} =0$, so we have: 
+By the growth rates results, $\lim\limits_{n \to \infty} \frac{n^{100}}{n^n} =0$ and  $\lim\limits_{n \to \infty}\frac{5^n}{n!} =0$, so we have: 
   
- \[  \lim_{n \to \infty} \frac{n^n \left(\frac{n^{100}}{n^n} + 1\right)}{n!\left(1+\frac{5^n}{n!}\right)} =   \lim_{n \to \infty} \frac{n^n \left(0 + 1\right)}{n!\left(1+0\right)} = \lim_{n \to \infty} \frac{n^n}{n!}.  \]
+ \[  \lim\limits_{n \to \infty} \frac{n^n \left(\frac{n^{100}}{n^n} + 1\right)}{n!\left(1+\frac{5^n}{n!}\right)} =   \lim\limits_{n \to \infty} \frac{n^n \left(0 + 1\right)}{n!\left(1+0\right)} = \lim\limits_{n \to \infty} \frac{n^n}{n!}.  \]
    
    
   \end{explanation}
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The squeeze theorem}
@@ -342,9 +415,9 @@ tells us one situation where this is possible.
   \]
   for all $n$ greater than some index $N$. If
   \[
-  \lim_{n\to\infty} a_n = L = \lim_{n\to\infty} c_n,
+  \lim\limits_{n\to\infty} a_n = L = \lim\limits_{n\to\infty} c_n,
   \] 
-  then $\lim_{n\to\infty} b_n = L$.
+  then $\lim\limits_{n\to\infty} b_n = L$.
 \end{theorem}
 
 Let's see an example.
@@ -353,7 +426,7 @@ Let's see an example.
   Consider the sequence $(b_n)_{n=1}^{\infty}$ where $b_n =
   \left(\frac{-1}{2}\right)^n$. Compute:
   \[
-  \lim_{n\to\infty}b_n
+  \lim\limits_{n\to\infty}b_n
   \]
   \begin{explanation}
     To compute this limit we will use the squeeze theorem. Write with
@@ -363,13 +436,13 @@ Let's see an example.
     \]
     but we know
     \[
-    \lim_{n\to \infty}\left(-\left(\frac{1}{2}\right)^n\right) = \answer[given]{0}
+    \lim\limits_{n\to \infty}\left(-\left(\frac{1}{2}\right)^n\right) = \answer[given]{0}
     \]
     and
     \[
-    \lim_{n\to \infty}\left(\frac{1}{2}\right)^n =\answer[given]{0}.
+    \lim\limits_{n\to \infty}\left(\frac{1}{2}\right)^n =\answer[given]{0}.
     \]
-    Hence by the squeeze theorem, $\lim_{n\to\infty} b_n = \answer[given]{0}$.
+    Hence by the squeeze theorem, $\lim\limits_{n\to\infty} b_n = \answer[given]{0}$.
   \end{explanation}
 \end{example}
 
@@ -380,7 +453,7 @@ The squeeze theorem is helpful in establishing a more general result about \emph
 \begin{theorem}
   Given a geometric sequence $\{a_n\}_{n=n_0}$ where $a_n = a \cdot r^{n}$,
   \[
-  \lim_{n\to\infty} a_n =
+  \lim\limits_{n\to\infty} a_n =
   \begin{cases}
     0 &\text{if $|r|<1$,}\\
     1 &\text{if $r=1$,}\\
@@ -391,9 +464,20 @@ The squeeze theorem is helpful in establishing a more general result about \emph
 Of course, when $r$ is positive, the squeeze theorem is not necessary, but it is useful when establishing the convergence results for $1<r<0$ as in the preceding example.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
+
+
+
+
+
+
+
+
+
 \section{Existence results for limits}
 
-Perhaps the best way to determine whether the limit of a sequence exists is to compute it.  Even though we've been working with sequences that are generated by an explicit formula in this section thus far, not all sequences are defined this way.  Sometimes, we'll only have a recursive description of a sequence rather than an explicit one, and sometimes we will have neither.  In many of the coming sections, we will only have a recursive description of a sequence, so we want to determine a good approach for determining whether a limit exists without having to compute it directly.  To do this, we introduce some terminology focused on the relationships between the terms of a sequence.
+Perhaps the best way to determine whether the limit of a sequence exists is to compute it.  Even though we've been working with sequences that are generated by an explicit formula in this section thus far, not all sequences are defined this way.  Sometimes, we'll only have a recursive description of a sequence rather than an explicit one, and sometimes we will have neither.  It is common to only have a recursive description of a sequence, so we want to determine a good approach for determining whether a limit exists without having to compute it directly.  To do this, we introduce some terminology focused on the relationships between the terms of a sequence.
 
 \begin{definition}
   A sequence is called
@@ -451,43 +535,16 @@ If $a_n = 2n^2+1$, then $\{a_n\}_{n=1}^{\infty}$ is \wordChoice{\choice[correct]
   \end{feedback}
 \end{question}
 
-%Let's see some examples:
-%\begin{example}
-%  Describe the growth of $a_n = \frac{2^n-1}{2^n}$ for
-%  $n=1,2,3,\dots$.
-%  \begin{explanation}
-%    To do this, check out the difference between two sequential terms,
-%    write with me:
-%    \begin{align*}
-%    a_{n+1} - a_n &= \answer[given]{\frac{2^{n+1}-1}{2^{n+1}}} - \frac{2^n-1}{2^n}\\
-%    &=\frac{2^{n+1}-1 - 2\left(\answer[given]{2^n-1}\right)}{2^{n+1}}\\
-%    &=\frac{2^{n+1}-1 - 2^{n+1}+2}{2^{n+1}}\\
-%    &=\frac{\answer[given]{1}}{2^{n+1}}.
-%    \end{align*}
-%    Since $\frac{1}{2^{n+1}}$ is always
-%    \wordChoice{\choice[correct]{positive}\choice{negative}\choice{zero}},
-%    we see that $(a_n)$ is
-%    \wordChoice{\choice[correct]{increasing}\choice{nondecreasing}\choice{decreasing}\choice{nonincreasing}}, and hence is \wordChoice{\choice[correct]{monotonic}\choice{not monotonic}}.
-%  \end{explanation}
-%\end{example}
-%
-%\begin{example}
-%  Describe the growth of $a_n = \frac{n+1}{n}$ for $n=1,2,3,\dots$.
-%  \begin{explanation}
-%    To do this, check out the difference between two sequential terms.
-%    Write with me.
-%    \begin{align*}
-%    a_{n+1} - a_n &= \answer[given]{\frac{(n+1)+1}{n+1}} - \frac{n+1}{n}\\
-%    &=\frac{n(n+2) - (n+1)(\answer[given]{n+1})}{n+1}\\
-%    &=\frac{n^2+2n - n^2 -2n-1}{n+1}\\
-%    &=\frac{\answer[given]{-1}}{n+1}.
-%    \end{align*}
-%    Since $\frac{-1}{n+1}$ is always
-%    \wordChoice{\choice{positive}\choice[correct]{negative}\choice{zero}} for the values of $n$ we are considering,
-%    we see that $(a_n)$ is
-%    \wordChoice{\choice{increasing}\choice{nondecreasing}\choice[correct]{decreasing}\choice{nonincreasing}}, and hence is \wordChoice{\choice[correct]{monotonic}\choice{not monotonic}}.
-%  \end{explanation}
-%\end{example}
+
+
+
+
+
+
+
+
+
+
 
 Sometimes we want to classify sequences for which the terms do not get too big or too
 small.  
@@ -561,52 +618,18 @@ Think about the following statements and choose the correct option.
 We can now state an important theorem:
 
 \begin{theorem}[Bounded-monotone convergence theorem]
-  If the sequence $a_n$ is bounded and monotonic, then $\lim_{n \to  \infty} a_n $ exists.
+  If the sequence $a_n$ is bounded and monotonic, then $\lim\limits_{n \to  \infty} a_n $ exists.
 \end{theorem}
 
 To think about the statement of the theorem, if we have a sequence that is bounded, the only way it could diverge is if the terms are never eventually monotonic.  However, if we know the sequence is also monotonic, this cannot happen!  Thus, the series cannot diverge, so it must have a limit.
 
-%\begin{question}
-%  Consider the sequence $a_{n}$.  Suppose you know that for all $n >
-%  1$,
-%  \[
-%  -6 \le a_{n} \le 0
-%  \]
-%  and $a_{1} = 2$, and $a_{2} = -1$, and that the sequence is
-%  nonincreasing.  Does the sequence converge?
-%  \begin{hint}
-%    Since the sequence is nonincreasing, the sequence is monotone.
-%  \end{hint}
-%  \begin{hint}
-%    Since for all $n \ge 1$, we have $a_{n} \ge -6$, the sequence is
-%    bounded below.
-%  \end{hint}
-%  \begin{hint}
-%    So by the Monotone Convergence Theorem, the sequence converges to
-%    some value; let us call it $L$.
-%  \end{hint}
-%  \begin{hint}
-%    Now consider the direction in which the sequence is heading.
-%  \end{hint}
-%  \begin{hint}
-%    Since the sequence is nonincreasing, for all $n \ge 2$, we have
-%    $-6 \le a_{n} \le -1$.
-%  \end{hint}
-%  \begin{hint}
-%    The limit $L$ must be in that interval as well.
-%  \end{hint}
-%  \begin{hint}
-%    Therefore the sequence converges to a value $L$ so that $-6 \le L
-%    \le -1$.
-%  \end{hint}
-%  \begin{prompt}
-%  \begin{multipleChoice}
-%    \choice[correct]{Yes, with limit between $-6$ and $-1$.}
-%    \choice{No, the sequence does not converge.}
-%    \choice{Yes, with limit between $-1$ and $0$.}
-%  \end{multipleChoice}
-%  \end{prompt}
-%\end{question}
+
+
+
+
+
+
+
 
 In short, bounded monotonic sequences always converge, though we can't
 necessarily describe the number to which they converge.  Let's try
@@ -621,22 +644,11 @@ some examples.
     \wordChoice{\choice[correct]{monotonic}\choice{not monotonic}}.
     Moreover, all of the elements $a_n = (2^n-1)/2^n$ are less than
     $2$  and greater than zero.   So, the sequence is bounded above by $2$ and below by $0$, so it is bounded.  By the bounded-monotone
-    convergence theorem, $\lim_{n\to\infty} a_n$ must converge to a finite value.
+    convergence theorem, $\lim\limits_{n\to\infty} a_n$ must converge to a finite value.
   \end{explanation}
 \end{example}
 
-%\begin{example}
-%  Given the sequence $a_n=\frac{n+1}{n}$ for $n=1,2,3,\dots$,
-%  explain how you know that $\lim_{n\to\infty} a_n$ converges to a
-%  finite value.
-%  \begin{explanation}
-%    To start, from previous work we know that $a_n$ is
-%    \wordChoice{\choice[correct]{monotonic}\choice{not monotonic}}.
-%    Moreover, all of the elements $a_n = (n+1)/n$ are less than $2$,
-%    and greater than zero. Hence by the bounded-monotone convergence
-%    theorem, $\lim_{n\to\infty} a_n$ converges to a finite value.
-%  \end{explanation}
-%\end{example}
+
 
 \begin{remark}
 We don't actually need to know that a sequence is always monotonic to apply
@@ -646,49 +658,22 @@ some integer $N$ for which the sequence $\{a_n\}_{n=N}$
 is always increasing or always decreasing.
 \end{remark}
 
-%\begin{example}
-%Show that the sequence $(a_n)$ given by $a_n = n^{1/n}$ converges.
-%\begin{explanation}
-%  We might first show that this sequence is decreasing, that is, we show
-%  that for all $n$,
-%  \[
-%  n^{1/n} > (n+1)^{1/(n+1)}.
-%  \]
-%  But this isn't true!  Take a look
-%  \begin{align*}
-%    a_1 &= 1, \\
-%    a_2 &= \sqrt{2} \approx 1.4142, \\
-%    a_3 &= \sqrt[3]{3} \approx 1.4422, \\
-%    a_4 &= \sqrt[4]{4} \approx 1.4142, \\
-%    a_5 &= \sqrt[5]{5} \approx 1.3797, \\
-%    a_6 &= \sqrt[6]{6} \approx 1.3480, \\
-%    a_7 &= \sqrt[7]{7} \approx 1.3205, \\
-%    a_8 &= \sqrt[8]{8} \approx 1.2968, \\
-%    a_9 &= \sqrt[9]{9} \approx 1.2765.
-%  \end{align*}
-%  But it does seem that this sequence perhaps is decreasing after the
-%  first few terms.  Can we justify this?
-%
-%  Yes!  Consider the real function $f(x)=x^{1/x}$ when $x\ge 1$.  We
-%  compute the derivative, perhaps via \index{logarithmic
-%    differentiation}logarithmic differentiation, to find
-%  \[
-%  f'(x)=\answer[given]{\frac{x^{1/x} (1-\ln(x))}{x^2}}.
-%  \]
-%  Note that when $x\ge 3$, the derivative $f'(x)$ is negative.  Since
-%  the function $f$ is decreasing, we can conclude that the sequence is
-%  decreasing---well, at least for $n \geq 3$.
-%
-%  Since all terms of the sequence are positive, the sequence is
-%  decreasing and bounded $0\le a_n \le a_3$ when $n \ge 3$, and so the
-%  sequence converges.
-%\end{explanation}
-%\end{example}
+
+
+
+
+
+
+
+
+
+
+
 
 In the previous examples, we could write down a function $f(x)$ corresponding to each series and apply the theorem from earlier in the section.  However, this is not always possible.
 
 \begin{example}
-Suppose that $a_n = 2 + \sin(n)$, and let $s_n = \sum_{k=1}^{n} a_k$.  Determine whether the sequences $\{a_n\}$ and $\{s_n\}$ are bounded or monotonic, and explain whether either has a limit.
+Suppose that $a_n = 2 + \sin(n)$, and let $s_n = \sum\limits_{k=1}^{n} a_k$.  Determine whether the sequences $\{a_n\}$ and $\{s_n\}$ are bounded or monotonic, and explain whether either has a limit.
 
 \begin{explanation}
 The sequence $a_n$ is certainly not monotonic, but it  is bounded since $1 \geq a_n \geq 3$ for all $n$.  We also can see that $\lim_{n \to \infty} a_n$ does not exist since the terms oscillate.
@@ -697,14 +682,14 @@ For $s_n$, note that since $a_n \geq 1$ for all $n$, each term $a_n$ is positive
 
 However, since $a_n\geq1$ for all $n$, we have the following inequality.
 
-\[s_n = \sum_{k=1}^n a_n \geq \sum_{k=1}^n 1 = n\]
+\[s_n = \sum\limits_{k=1}^n a_n \geq \sum\limits_{k=1}^n 1 = n\]
 
-Hence, $\{s_n\}$ is not bounded and $\lim_{n \to \infty} s_n$ does not exist.
+Hence, $\{s_n\}$ is not bounded and $\lim\limits_{n \to \infty} s_n$ does not exist.
 \end{explanation}
 \end{example}
 
 \begin{remark}
-We had a way to analyze $\{a_n\}$ in the above example because we had an explicit formula for $a_n$, but how would we find such a formula for $s_n$?  As it turned out, we didn't have to do so in order to determine that $\lim_{n \to \infty} s_n$ does not exist.  We will make arguments in the coming sections that allow us to determine whether limits of sequences exist without relying on having explicit formulas for the sequences.  
+We had a way to analyze $\{a_n\}$ in the above example because we had an explicit formula for $a_n$, but how would we find such a formula for $s_n$?  As it turned out, we didn't have to do so in order to determine that $\lim\limits_{n \to \infty} s_n$ does not exist.  We will make arguments in the coming sections that allow us to determine whether limits of sequences exist without relying on having explicit formulas for the sequences.  
 \end{remark}
 
 
