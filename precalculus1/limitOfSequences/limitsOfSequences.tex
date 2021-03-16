@@ -251,13 +251,13 @@ In practice, we use the above theorem to compute limits without explicitly exhib
 
 
 \section{Computing limits of sequences using dominant term analysis}
-The last example shows us that for many sequences, we can employ the same techniques that we used to compute end-behavior previously.  
+The last example shows us that for many sequences, we can employ the same techniques that we used to examine end-behavior.  
 
 \begin{example}
 Let $a_n = \frac{n^3+4n^2-1}{2-4n^4}$.  Determine if the limit of the sequence $\{a_n\}_{n=1}^{\infty}$ exists.
 
 \begin{explanation}
-We can use the idea of functio0n dominance. The highest degree term in the numerator is $n^3$, while the largest term in the denominator is $-4n^4$.  We can factor out the largest terms from both the numerator and denominator and do a little algebra.
+We can use the idea of function dominance. The highest degree term in the numerator is $n^3$, while the largest term in the denominator is $-4n^4$.  We can factor out the largest terms from both the numerator and denominator and do a little algebra.
 
 \[
 \frac{n^3+4n^2-1}{2-4n^4} = \frac{n^3\left(1+\frac{4}{n}-\frac{1}{n^3}\right)}{-4n^4\left(-\frac{1/2}{n^4}+1\right)} = \frac{n^3}{-4n^4} \cdot  \frac{1+\frac{4}{n}-\frac{1}{n^3}}{-\frac{1/2}{n^4}+1}
@@ -399,7 +399,7 @@ By the growth rates results, $\lim\limits_{n \to \infty} \frac{n^{100}}{n^n} =0$
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The squeeze theorem}
+\subsection{The Squeeze Theorem}
 
 %
 %\textbf{A PICTURE IS FORTHCOMING}
@@ -429,12 +429,11 @@ Let's see an example.
   \lim\limits_{n\to\infty}b_n
   \]
   \begin{explanation}
-    To compute this limit we will use the squeeze theorem. Write with
-    me:
+    To compute this limit we will use the squeeze theorem. We know that
     \[
     -\left(\frac{1}{2}\right)^n\le \left(\frac{-1}{2}\right)^n \le \left(\frac{1}{2}\right)^n
     \]
-    but we know
+    but we also know
     \[
     \lim\limits_{n\to \infty}\left(-\left(\frac{1}{2}\right)^n\right) = \answer[given]{0}
     \]
@@ -618,7 +617,7 @@ Think about the following statements and choose the correct option.
 We can now state an important theorem:
 
 \begin{theorem}[Bounded-monotone convergence theorem]
-  If the sequence $a_n$ is bounded and monotonic, then $\lim\limits_{n \to  \infty} a_n $ exists.
+  If the sequence $\{a_n\}_{n=1}^{\infty}$ is bounded and monotonic, then $\lim\limits_{n \to  \infty} a_n $ exists.
 \end{theorem}
 
 To think about the statement of the theorem, if we have a sequence that is bounded, the only way it could diverge is if the terms are never eventually monotonic.  However, if we know the sequence is also monotonic, this cannot happen!  Thus, the series cannot diverge, so it must have a limit.
@@ -637,7 +636,7 @@ some examples.
 
 \begin{example}
   Given the sequence $a_n=\frac{2^n-1}{2^n}$ for $n=1,2,3,\dots$,
-  explain how you know that $\lim_{n\to\infty} a_n$ converges to a
+  explain how you know that $\lim\limits_{n\to\infty} a_n$ converges to a
   finite value without computing its limit.
   \begin{explanation}
     To start, note that $a_n=\frac{2^n-1}{2^n} = \frac{2^n}{2^n} - \frac{1}{2^n} = 1 - \frac{1}{2^n} $.  Thus, $\{a_n\}$ is
@@ -676,7 +675,7 @@ In the previous examples, we could write down a function $f(x)$ corresponding to
 Suppose that $a_n = 2 + \sin(n)$, and let $s_n = \sum\limits_{k=1}^{n} a_k$.  Determine whether the sequences $\{a_n\}$ and $\{s_n\}$ are bounded or monotonic, and explain whether either has a limit.
 
 \begin{explanation}
-The sequence $a_n$ is certainly not monotonic, but it  is bounded since $1 \geq a_n \geq 3$ for all $n$.  We also can see that $\lim_{n \to \infty} a_n$ does not exist since the terms oscillate.
+The sequence $a_n$ is certainly not monotonic, but it  is bounded since $3 \geq a_n \geq 1$ for all $n$.  We also can see that $\lim\limits_{n \to \infty} a_n$ does not exist since the terms oscillate.
 
 For $s_n$, note that since $a_n \geq 1$ for all $n$, each term $a_n$ is positive.  Thus, $s_n$ is increasing and hence monotonic.  
 
