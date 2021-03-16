@@ -1,7 +1,7 @@
 \documentclass{ximera}
 
 \input{../../preamble.tex}
-\author{Jim Talamo}
+\author{Jim Talamo (edited)}
 
 \outcome{Define a series.}
 \outcome{Recognize a geometric series.}
@@ -19,11 +19,11 @@ geometric and telescoping
 \end{abstract}
 \maketitle
 
-Suppose that we have a \emph{series} $\sum_{k=k_0}^{\infty} a_k$ and have to determine whether it converges or diverges.  To answer this question, we define a new \emph{sequence} $\{s_n\}_{n=k_0}$ where $s_n = \sum_{k=k_0}^{n}$ for all $n \geq k_0$.  We saw previously that
+Suppose that we have a \emph{series} $\sum\limits_{k=k_0}^{\infty} a_k$ and have to determine whether it converges or diverges.  To answer this question, we define a new \emph{sequence} $\{s_n\}_{n=k_0}$ where $s_n = \sum\limits_{k=k_0}^{n}$ for all $n \geq k_0$.  We saw previously that
  
  \begin{itemize}
-\item the series $\sum_{k=k_0}^\infty a_k$ \textbf{converges} if and only if $\lim_{n\to\infty} s_n$ exists.  
-\item the series $\sum_{k=k_0}^\infty a_k$ \textbf{diverges} if and only if $\lim_{n\to\infty} s_n$ does not exist.  
+\item the series $\sum\limits_{k=k_0}^\infty a_k$ \textbf{converges} if and only if $\lim\limits_{n\to\infty} s_n$ exists.  
+\item the series $\sum\limits_{k=k_0}^\infty a_k$ \textbf{diverges} if and only if $\lim\limits_{n\to\infty} s_n$ does not exist.  
 \end{itemize}
 
 The definitions above give us a way to determine whether a given series converges.  In fact, to determine whether $\sum_{k=k_0}^{\infty} a_k$ converges, we can do the following.
@@ -32,16 +32,16 @@ The definitions above give us a way to determine whether a given series converge
 \item[1.] Consider the associated sequence $\{s_n\}$ of partial sums.
 \item[2.] Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim_{n \to \infty} s_n$.  
 \begin{itemize}
-\item If the limit exists, $\sum_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim_{n \to \infty} s_n =L$, then $\sum_{k=k_0} a_k=L$.  \item If  $\lim_{n \to \infty} s_n$ does not exist, then $\sum_{k=k_0} a_k$ diverges.
+\item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0} a_k=L$.  \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0} a_k$ diverges.
 \end{itemize}
 \item[3.] If an explicit formula for $s_n$ cannot be found, further analysis is needed.  We'll expound on this in later sections.
 \end{itemize}
 
 
 \section{A recursive formula for $s_n$}
-The most straightforward way to determine whether $\lim_{n \to \infty} s_n$ exists is to have an explicit formula for the $n$-th term $s_n$.  Note that this is not an easy task; for example, can you find a formula for $s_n$ for the series $\sum_{k=1}^{\infty} \frac{1}{k}$? It's not too hard to write out the first several terms in the sequence $\{s_n\}_{n=1}$, but try to find an explicit formula for $s_n$!
+The most straightforward way to determine whether $\lim\limits_{n \to \infty} s_n$ exists is to have an explicit formula for the $n$-th term $s_n$.  Note that this is not an easy task; for example, can you find a formula for $s_n$ for the series $\sum\limits_{k=1}^{\infty} \frac{1}{k}$? It's not too hard to write out the first several terms in the sequence $\{s_n\}_{n=1}$, but try to find an explicit formula for $s_n$!
 
-As it turns out, there is always a recursive formula for $s_n$, and this will play an important role in later sections.  Suppose that we want to consider $\sum_{k=1}^{\infty} a_k$.  Let's write out the formula for $s_n$.
+As it turns out, there is always a recursive formula for $s_n$, and this will play an important role in later sections.  Suppose that we want to consider $\sum\limits_{k=1}^{\infty} a_k$.  Let's write out the formula for $s_n$.
 
 \[
 s_n = a_1+a_2+a_3+\ldots+a_{n-1}+a_n
@@ -69,14 +69,14 @@ We thus have the formula
 s_n = s_{n-1}+a_n.
 \]
 
-If we apply this to the series $\sum_{k=1}^{\infty} \frac{1}{k}$, we have $s_n = \sum_{k=1}^n \frac{1}{k}$ and $a_n = \frac{1}{n}$.  The recursive formula reads 
+If we apply this to the series $\sum\limits_{k=1}^{\infty} \frac{1}{k}$, we have $s_n = \sum\limits_{k=1}^n \frac{1}{k}$ and $a_n = \frac{1}{n}$.  The recursive formula reads 
 
 \begin{align*}
 s_n &= s_{n-1} +a_n\\
 s_n &= s_{n-1} +  \frac{1}{n}.
 \end{align*}
 
-This does not help us analyze whether $\lim_{n \to \infty} s_n$ actually exists.  Sometimes, however, we can find an \emph{explicit} formula for $s_n$, and we study two special types of series for which this is possible.
+This does not help us analyze whether $\lim\limits_{n \to \infty} s_n$ actually exists.  Sometimes, however, we can find an \emph{explicit} formula for $s_n$, and we study two special types of series for which this is possible.
 
 \section{Two special types of series}
 
@@ -109,14 +109,14 @@ and we have a result that characterizes the behavior of this type of sequence, w
 We can now ask when we are able to sum the terms of a geometric sequence.
 
 \begin{definition}
-  A \textbf{geometric series} is a series of the form $\sum_{k=k_0}^\infty ar^k$
+  A \textbf{geometric series} is a series of the form $\sum\limits_{k=k_0}^\infty ar^k$
   for some real numbers $a \ne 0$ and $r$.
 \end{definition}
 
 Before exploring when such a series converges, note that sometimes, some preliminary algebra is necessary to recognize a series as geometric.
 
 \begin{example}
-The series $\sum_{k=4}^\infty \frac{2^{2k+1}}{3^k}$ \wordChoice{\choice[correct]{is}\choice{is not}} geometric since $a_k =\frac{2^{2k+1}}{3^k}$ \wordChoice{\choice[correct]{can}\choice{cannot}} be brought into the form $a \cdot r^k$.  
+The series $\sum\limits_{k=4}^\infty \frac{2^{2k+1}}{3^k}$ \wordChoice{\choice[correct]{is}\choice{is not}} geometric since $a_k =\frac{2^{2k+1}}{3^k}$ \wordChoice{\choice[correct]{can}\choice{cannot}} be brought into the form $a \cdot r^k$.  
 
 Using the laws of exponents shows us:
 
@@ -127,13 +127,13 @@ Indeed, $a= \answer[given]{2}$ and $r = \answer[given]{\frac{4}{3}}$.
 \end{example}
 
 \begin{example}
-The series $\sum_{k=0}^\infty k^2 \left(\frac{1}{2}\right)^k$ \wordChoice{\choice{is}\choice[correct]{is not}} geometric since $a_k = \answer[given]{k^2 \cdot \frac{1}{2}^k}$ \wordChoice{\choice{can}\choice[correct]{cannot}} be brought into the form $a \cdot r^k$.  Indeed, the coefficient, $k^2$, is not the same for each term in the series.
+The series $\sum\limits_{k=0}^\infty k^2 \left(\frac{1}{2}\right)^k$ \wordChoice{\choice{is}\choice[correct]{is not}} geometric since $a_k = \answer[given]{k^2 \cdot \frac{1}{2}^k}$ \wordChoice{\choice{can}\choice[correct]{cannot}} be brought into the form $a \cdot r^k$.  Indeed, the coefficient, $k^2$, is not the same for each term in the series.
 \end{example}
 
-We can now try to determine when adding together the terms in such a series is possible; that is, we can explore for which values of $a$ and $r$ the \emph{series} $\sum_{k=n_0}^{\infty} a_k$ converges.  
+We can now try to determine when adding together the terms in such a series is possible; that is, we can explore for which values of $a$ and $r$ the \emph{series} $\sum\limits_{k=n_0}^{\infty} a_k$ converges.  
 
 \begin{model}
- Let $r \neq 1$ and consider the geometric series $\sum_{k=0}^\infty a r^k$, and let $s_n = \sum_{k=0}^{\infty} a r^k $.  We find an explicit formula for the term $s_n$.
+ Let $r \neq 1$ and consider the geometric series $\sum\limits_{k=0}^\infty a r^k$, and let $s_n = \sum\limits_{k=0}^{\infty} a r^k $.  We find an explicit formula for the term $s_n$.
   
   \begin{explanation}
 First, note that the sum above represents the attempt to add all of the terms in the sequence $\{a_n\}_{n=0}$, where $a_n =  r^n$.  Let's start by writing out $s_n$.  
@@ -168,31 +168,31 @@ Now, we can subtract away the middle terms, which we show (with some slight abus
 From our work above, we see that the $n$-th partial sum of the
 geometric series $a_n = r^n$ is
 \[
-s_n = \sum_{k=0}^{n} r^k= \frac{1 - r^{n+1}}{1-r}.
+s_n = \sum\limits_{k=0}^{n} r^k= \frac{1 - r^{n+1}}{1-r}.
 \]
-We now have an \emph{explicit} formula so we can determine for which values of $r$ the limit $\lim_{n \to \infty} s_n$ exists.  First, note that by using the limit laws, 
+We now have an \emph{explicit} formula so we can determine for which values of $r$ the limit $\lim\limits_{n \to \infty} s_n$ exists.  First, note that by using the limit laws, 
 
 \[
-\lim_{n \to \infty} s_n = \lim_{n \to \infty}  \frac{1 - r^{n+1}}{1-r} =  \frac{1}{1-r}  - \frac{1}{1-r}  \lim_{n \to \infty} r^{n+1}.
+\lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty}  \frac{1 - r^{n+1}}{1-r} =  \frac{1}{1-r}  - \frac{1}{1-r}  \lim\limits_{n \to \infty} r^{n+1}.
 \]
 
-The existence of $\lim_{n \to \infty} s_n $is thus entirely determined by whether $\lim_{n \to \infty} r^{n+1}$ exists, and this limit is the limit of a geometric \emph{sequence}!  In fact, 
+The existence of $\lim\limits_{n \to \infty} s_n $is thus entirely determined by whether $\lim\limits_{n \to \infty} r^{n+1}$ exists, and this limit is the limit of a geometric \emph{sequence}!  In fact, 
 
 \begin{itemize}
-\item if $-1<r<1$, then $\lim_{n \to \infty} r^{n+1}$ \wordChoice{\choice[correct]{exists}\choice{does not exist}}.
-\item if $r>1$ or $r\le -1$, then $\lim_{n \to \infty} r^{n+1}$ \wordChoice{\choice{exists}\choice[correct]{does not exist}}.
+\item if $-1<r<1$, then $\lim\limits_{n \to \infty} r^{n+1}$ \wordChoice{\choice[correct]{exists}\choice{does not exist}}.
+\item if $r>1$ or $r\le -1$, then $\lim\limits_{n \to \infty} r^{n+1}$ \wordChoice{\choice{exists}\choice[correct]{does not exist}}.
 \end{itemize}
 
-The above formula covers every case except when $r= 1$, but notice that  $$\sum_{k=0}^n 1 = n+1,$$ so if $r=1$, $s_n = \answer[given]{n+1}$ and $\lim_{n \to \infty} s_n = \infty$, so $\sum_{k=0}^{\infty} 1$ diverges. 
+The above formula covers every case except when $r= 1$, but notice that  $$\sum\limits_{k=0}^n 1 = n+1,$$ so if $r=1$, $s_n = \answer[given]{n+1}$ and $\lim\limits_{n \to \infty} s_n = \infty$, so $\sum\limits_{k=0}^{\infty} 1$ diverges. 
 
-When $-1<r<1$, note $\lim_{n \to \infty} r^{n+1}=0$, so in this case,     \[
-    \lim_{n\to\infty}\frac{1 - r^{n+1}}{1-r} = \frac{1-\answer[given]{0}}{1-r}.
+When $-1<r<1$, note $\lim\limits_{n \to \infty} r^{n+1}=0$, so in this case,     \[
+    \lim\limits_{n\to\infty}\frac{1 - r^{n+1}}{1-r} = \frac{1-\answer[given]{0}}{1-r}.
     \]
 
-By noting that $\sum_{k=0}^n ar^k = a \sum_{k=0}^n r^k$, we can combine this observation with the above argument and write the result in a theorem.
+By noting that $\sum\limits_{k=0}^n ar^k = a \sum\limits_{k=0}^n r^k$, we can combine this observation with the above argument and write the result in a theorem.
 
 \begin{theorem}
-  The geometric series $\sum_{k= 0}^\infty a \cdot r^k$ 
+  The geometric series $\sum\limits_{k= 0}^\infty a \cdot r^k$ 
   
   \begin{itemize} 
   \item converges to $\frac{a}{1-r}$ when $|r| < 1$.
@@ -203,10 +203,10 @@ By noting that $\sum_{k=0}^n ar^k = a \sum_{k=0}^n r^k$, we can combine this obs
 There is a useful trick that allows us to find the sum of a convergent geometric series when the lower index does not start at $0$.  
 
 \begin{example}
-The series $\sum_{k=3}^{\infty} \left(\frac{2}{3}\right)^k$ is a geometric series with $r=\frac{2}{3}<1$, so it converges.  To find the value to which it converges, notice the following.
+The series $\sum\limits_{k=3}^{\infty} \left(\frac{2}{3}\right)^k$ is a geometric series with $r=\frac{2}{3}<1$, so it converges.  To find the value to which it converges, notice the following.
 
 \begin{align*}
-\sum_{k=3}^{\infty} \left(\frac{2}{3}\right)^k &=  \left(\frac{2}{3}\right)^3+ \left(\frac{2}{3}\right)^4+ \left(\frac{2}{3}\right)^5+\ldots \\
+\sum\limits_{k=3}^{\infty} \left(\frac{2}{3}\right)^k &=  \left(\frac{2}{3}\right)^3+ \left(\frac{2}{3}\right)^4+ \left(\frac{2}{3}\right)^5+\ldots \\
 &= \left(\frac{2}{3}\right)^3 \cdot \left(1+ \frac{2}{3}+ \left(\frac{2}{3}\right)^2+\ldots\right) \\
 &= \frac{8}{27}  \cdot  \sum_{k=0}^{\infty}\left(\frac{2}{3}\right)^k \\
 &= \sum_{k=0}^{\infty} \frac{8}{27}  \cdot \left(\frac{2}{3}\right)^k
@@ -214,7 +214,7 @@ The series $\sum_{k=3}^{\infty} \left(\frac{2}{3}\right)^k$ is a geometric serie
 This is now a geometric series whose lower index is $0$, so we can use the formula to find its value. Noting that $a=\answer[given]{ \frac{8}{27} }$ and $r= \frac{2}{3}$ gives:
 
 \[
-\sum_{k=3}^{\infty} \left(\frac{2}{3}\right)^k = \frac{8/27}{1-2/3} = \frac{8}{9}.
+\sum\limits_{k=3}^{\infty} \left(\frac{2}{3}\right)^k = \frac{8/27}{1-2/3} = \frac{8}{9}.
 \]
 \end{example}
 
@@ -222,7 +222,7 @@ We can easily generalize this example and doing so allows us to write down a mor
 
 \begin{theorem}
 \index{series!geometric}\index{geometric series}\index{geometric series!convergence}\index{geometric series!divergence}
-  The geometric series $\sum_{k= k_0}^\infty a \cdot r^k$ 
+  The geometric series $\sum\limits_{k= k_0}^\infty a \cdot r^k$ 
   
   \begin{itemize} 
   \item converges to $\frac{ar^{k_0}}{1-r}$ when $|r| < 1$.
@@ -231,9 +231,9 @@ We can easily generalize this example and doing so allows us to write down a mor
   \end{theorem}
  
 \begin{example}
-Let's take another look at the series that started off the section, $\sum_{k=1}^{\infty} \left(\frac{1}{2}\right)^k$.  Here, $a=\answer[given]{1}$, $r=\answer[given]{1/2}$ and $k_0 = \answer[given]{1}$.  Since $|r|<1$, the series \wordChoice{\choice[correct]{converges}\choice{diverges}}, and using the formula above, we have that
+Let's take another look at the series that started off the section, $\sum\limits_{k=1}^{\infty} \left(\frac{1}{2}\right)^k$.  Here, $a=\answer[given]{1}$, $r=\answer[given]{1/2}$ and $k_0 = \answer[given]{1}$.  Since $|r|<1$, the series \wordChoice{\choice[correct]{converges}\choice{diverges}}, and using the formula above, we have that
 
-\[ \sum_{k=1}^{\infty} \left(\frac{1}{2}\right)^k = \frac{ar^{k_0}}{1-r} = \frac{1\cdot \frac{1}{2}}{1-1/2} =1.\]
+\[ \sum\limits_{k=1}^{\infty} \left(\frac{1}{2}\right)^k = \frac{ar^{k_0}}{1-r} = \frac{1\cdot \frac{1}{2}}{1-1/2} =1.\]
 
 This matches the earlier result!  
 \end{example}
@@ -253,11 +253,11 @@ Now, try some questions to check your understanding of the above material.
 \begin{question}
   Which of the following series converge?
   \begin{selectAll}
-    \choice{$\sum_{k=0}^\infty \left(\frac{3}{2}\right)^k$}
-    \choice[correct]{$\sum_{k=0}^\infty \left(\frac{-2}{3}\right)^k$}
-    \choice[correct]{$\sum_{k=9}^\infty \left(\frac{1}{7}\right)^k$}
-    \choice{$\sum_{k=1}^\infty (-1)^k$}
-    \choice[correct]{$\sum_{k=-9}^\infty \left(\frac{1}{2}\right)^k$}    
+    \choice{$\sum\limits_{k=0}^\infty \left(\frac{3}{2}\right)^k$}
+    \choice[correct]{$\sum\limits_{k=0}^\infty \left(\frac{-2}{3}\right)^k$}
+    \choice[correct]{$\sum\limits_{k=9}^\infty \left(\frac{1}{7}\right)^k$}
+    \choice{$\sum\limits_{k=1}^\infty (-1)^k$}
+    \choice[correct]{$\sum\limits_{k=-9}^\infty \left(\frac{1}{2}\right)^k$}    
   \end{selectAll}
   \begin{hint}
     The initial index doesn't matter as far as convergence is
@@ -267,7 +267,7 @@ Now, try some questions to check your understanding of the above material.
 \end{question}
 
 \begin{question}
-Determine if the series $\sum_{k=2}^{\infty} 2^{3-2k}$ converges or diverges.  If it converges, give the value to which it converges.
+Determine if the series $\sum\limits_{k=2}^{\infty} 2^{3-2k}$ converges or diverges.  If it converges, give the value to which it converges.
 
 \begin{explanation}
 First, note that the series \wordChoice{\choice[correct]{is}\choice{is not}} geometric since the laws of exponents allow us to write the following.
@@ -276,10 +276,10 @@ First, note that the series \wordChoice{\choice[correct]{is}\choice{is not}} geo
 2^{3-2k} = \frac{2^3}{2^{2k}} = \frac{8}{\left(2^2\right)^k} =  8 \cdot \frac{1}{4^k} =  8 \cdot \frac{1^k}{4^k} =  8 \cdot \left(\frac{1}{4}\right)^k
 \]
 
-The series is geometric with $r = \answer[given]{1/4}$, and using the result $\sum_{k=k_0} ar^k = \frac{ar^{k_0}}{1-r}$ gives:
+The series is geometric with $r = \answer[given]{1/4}$, and using the result $\sum\limits_{k=k_0} ar^k = \frac{ar^{k_0}}{1-r}$ gives:
 
 \[
-\sum_{k=2}^{\infty} 2^{3-2k} =  8 \cdot \left(\frac{1}{4}\right)^k =  \frac{8 \cdot (1/4)^2}{1-1/4}  =  \answer[given]{\frac{2}{3}}.
+\sum\limits_{k=2}^{\infty} 2^{3-2k} =  8 \cdot \left(\frac{1}{4}\right)^k =  \frac{8 \cdot (1/4)^2}{1-1/4}  =  \answer[given]{\frac{2}{3}}.
 \]
 \end{explanation}
 
@@ -293,7 +293,7 @@ A second type of series for which we can find an explicit formula for $s_n$ are 
 \begin{example}
   Evaluate the sum
   \[
-  \sum_{k=1}^\infty\left(\frac{1}{k}-\frac{1}{k+1}\right).
+  \sum\limits_{k=1}^\infty\left(\frac{1}{k}-\frac{1}{k+1}\right).
   \]
   \begin{explanation}
 It will help to write down the first few partial sums for this series.
@@ -309,8 +309,8 @@ It will help to write down the first few partial sums for this series.
 \end{tikzpicture}
 \end{image}
 For $s_2$ and beyond, note how most of the intermediate terms in each partial sum cancel out! In
-general, we can notice from pattern recognition (specifically by looking at the denominator in each expression and comparing it to the index) that $s_n =$ \wordChoice{\choice{$1-\frac{1}{n}$},\choice[correct]{$1-\frac{1}{n+1}$}}. The sequence $\{s_n\}_{n=1}$ thus \wordChoice{\choice[correct]{converges}\choice{diverges}} since $\lim_{n \to \infty} s_n$ \wordChoice{\choice[correct]{exists}\choice{does not exist}}. Furthermore, since $\lim_{n\to\infty}s_n = \lim_{n\to\infty}\left(1-\frac1{n+1}\right) = \answer[given]1$, we conclude
-that $\sum_{n=1}^\infty \left(\frac1n-\frac1{n+1}\right) = 1$.
+general, we can notice from pattern recognition (specifically by looking at the denominator in each expression and comparing it to the index) that $s_n =$ \wordChoice{\choice{$1-\frac{1}{n}$},\choice[correct]{$1-\frac{1}{n+1}$}}. The sequence $\{s_n\}_{n=1}$ thus \wordChoice{\choice[correct]{converges}\choice{diverges}} since $\lim\limits_{n \to \infty} s_n$ \wordChoice{\choice[correct]{exists}\choice{does not exist}}. Furthermore, since $\lim\limits_{n\to\infty}s_n = \lim\limits_{n\to\infty}\left(1-\frac1{n+1}\right) = \answer[given]1$, we conclude
+that $\sum\limits_{n=1}^\infty \left(\frac1n-\frac1{n+1}\right) = 1$.
   \end{explanation}
 \end{example}
 
@@ -400,9 +400,9 @@ At first, it doesn't look like we will have much luck writing this as a telescop
 %&= \ln\left(\frac21\cdot\frac32\cdot\frac43\cdot\frac54\right)\\
 %&= \ln\left(5\right).
 
-We can conclude that $s_n =\answer[given]{\ln (n+1)}$ and analyze $\lim_{n \to \infty} s_n$.  
+We can conclude that $s_n =\answer[given]{\ln (n+1)}$ and analyze $\lim\limits_{n \to \infty} s_n$.  
 
-Since $\lim_{n\to\infty}s_n=\answer[given]{\infty}$, $\sum_{k=1}^\infty \ln\left(\frac{k+1}{k}\right)$ diverges.
+Since $\lim\limits_{n\to\infty}s_n=\answer[given]{\infty}$, $\sum\limits_{k=1}^\infty \ln\left(\frac{k+1}{k}\right)$ diverges.
 \end{explanation}
 \end{example}
 
@@ -415,7 +415,7 @@ Now that we have seen two special types of series for which we can find an expli
 \item[1.] Consider the associated sequence $\{s_n\}$ of partial sums.
 \item[2.] Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim_{n \to \infty s_n}$.  
 \begin{itemize}
-\item If the limit exists, $\sum_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim_{n \to \infty} s_n =L$, then $\sum_{k=k_0} a_k=L$.  \item If  $\lim_{n \to \infty} s_n$ does not exist, then $\sum_{k=k_0} a_k$ diverges.
+\item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0} a_k=L$.  \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0} a_k$ diverges.
 \end{itemize}
 \end{itemize}
 
