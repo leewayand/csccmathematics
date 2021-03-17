@@ -35,7 +35,7 @@ find the closed form formula and the interval of convergence.
 
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+\begin{explanation}
 
 
 This is a Geometric series.  The interval of convergence is $(-2, 2)$, since this is when the inside of the general term is $-1$ and $1$.
@@ -47,7 +47,7 @@ The closed form is
 
 
 
-
+\end{explanation}
 
 
 \end{example}
@@ -55,11 +55,13 @@ The closed form is
 
 
 
+The infinite geometric series will equal $\frac{2}{2-t}$ on $(-2, 2)$.  How many terms of the series to we need for a good approximationon $(-0.75, 0.75)$?
 
 
 
-
-
+\begin{center}
+\desmos{oy88ukjmwc}{400}{300}
+\end{center}
 
 
 
@@ -77,7 +79,7 @@ find the closed form formula and the interval of convergence.
 
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+\begin{explanation}
 
 
 This is the same Geometric series, except missing the first two terms.  The interval of convergence is $(-2, 2)$, since this is when the inside of the general term is $-1$ and $1$.
@@ -85,7 +87,7 @@ This is the same Geometric series, except missing the first two terms.  The inte
 
 The closed form is the same, except subtract off the first two terms.
 
-\[  \frac{1}{1 - \frac{t}{2}}  - 1 - \frac{t}{2}    =     \frac{2}{2-t}  - \frac{2-t}{2-t} - \frac{t}{2}     \]
+\[  \frac{1}{1 - \frac{t}{2}}  - 1 - \frac{t}{2}    =     \frac{2}{2-t}  - 1 - \frac{t}{2}     \]
 
 
 need a common denominator
@@ -100,7 +102,7 @@ need a common denominator
 \[    K(t) =   \frac{t^2}{2(2-t)}    \] on $(-2, 2)$.
 
 
-
+\end{explanation}
 
 \end{example}
 
@@ -134,6 +136,48 @@ Same formula.
 
 
 
+
+
+
+\begin{example} Gemetric Series
+
+
+Given 
+\[    K(t) =   \sum_{n=0}^{\infty}  \left( \frac{t-3}{2} \right)^2\]
+
+find the closed form formula and the interval of convergence.
+
+
+
+
+\begin{explanation}
+
+
+This is a Geometric series.  The interval of convergence is $(1, 5)$, since this is when the inside of the general term is $-1$ and $1$. Our interval is centered at $3$, which is where the terms equal $0$.
+
+
+The closed form is
+
+\[  \frac{1}{1 - \frac{t-3}{2}}  =     \frac{2}{2-(t-3)} =    \frac{2}{5-t}        \]
+
+
+
+\end{explanation}
+
+
+Our closed form formula has a singularity at $5$.  Therefore, our series equivalence cannot go beyond $5$, which it does not.
+
+
+
+
+\begin{center}
+\desmos{c3fj0aetfr}{400}{300}
+\end{center}
+
+
+
+
+\end{example}
 
 
 

@@ -14,20 +14,22 @@ formula and domain
 
 
 
-We have seen that $\sum_{n=0}^{\infty} a x^n = \frac{a}{1-x}$ for $x \in (-1, 1)$ and $a$ a real number.
+We have seen that $\sum\limits_{n=0}^{\infty} a x^n = \frac{a}{1-x}$ for $x \in (-1, 1)$ and $a$ a real number. \\
+
+
 
 
 This is a new kind of function formula called an infinite series.  This type of infinite series is called a \textbf{geometric series} and $(-1, 1)$ is its interval of convergence.  From a function point-of-view $(-1, 1)$  is the domain of this function.
 
 
-On the other hand, this same function can be represented by the formula $\frac{a}{1-x}$.  The implied domain of $\frac{a}{1-x}$ is $(-\infty, 1) \cup (1, \infty)$, but the domain must be restricted to be equivalent to $\sum_{n=0}^{\infty} a x^n$.
+On the other hand, this same function can be represented by the formula $\frac{a}{1-x}$.  The implied domain of $\frac{a}{1-x}$ is $(-\infty, 1) \cup (1, \infty)$, but the domain must be restricted to be equivalent to $\sum\limits_{n=0}^{\infty} a x^n$.   
 
 
 
 
-$\blacktriangleright$ A \textbf{closed form} formula is one like  $\frac{a}{1-x}$.  It involves a finite number of our basic numeric operations.  This is different than our new types of formulas.  Infinite series list an infinite number of basic operations.  We prefer closed form formulas, unfortunately they just don't represent enough functions. Functions describe via infinite series widen our library of functions, considerably.
+$\blacktriangleright$ A \textbf{closed form} formula is one like  $\frac{a}{1-x}$.  It involves a finite number of our basic numeric operations.  This is different than our new type of formulas.  Infinite series list an infinite number of basic operations.  We prefer closed form formulas, unfortunately they just don't represent enough functions. Functions describe via infinite series widen our library of functions, considerably.
 
-But, for right now, we are just investigating the bridge between closed form formulas and infinite series.
+But, for right now, we are just investigating the bridge between closed form formulas and infinite series using geometric series to illustrate.
 
 
 
@@ -36,7 +38,19 @@ But, for right now, we are just investigating the bridge between closed form for
 
 \section{Geometric Template}
 
-The identity function, $Id(x) = x$, is just a function such that $I(0) = 0$.  We could describe $\frac{a}{1-x}$ for $x \in (-1, 1)$ as $\frac{a}{1-Id(x)}$ for $Id(x) \in (-1, 1)$ - a composition.
+
+We have $\sum\limits_{n=0}^{\infty} a x^n = \frac{a}{1-x}$ for $x \in (-1, 1)$, but $x$ is actually a formula for a function, the identity function. \\
+
+
+
+The identity function, $Id(x) = x$, is just a function with $Id(0) = 0$.  We could describe $\frac{a}{1-x}$ for $x \in (-1, 1)$ as $\frac{a}{1-Id(x)}$ for $Id(x) \in (-1, 1)$.
+
+
+
+ A composition! \\
+
+
+
 
 Or, we could expand this composition idea and think of other functions, $f$, such that $f(0) = 0$.
 
@@ -55,10 +69,10 @@ We could then move this composition over to our Geometric series.
 
 
 
-\[   \sum_{n=0}^{\infty} a (f(x))^n =  \frac{a}{1-f(x)}   \, \text{ where } \, f(0) = 0       \]
+\[   \sum_{n=0}^{\infty} a (f(x))^n =  \frac{a}{1-f(x)}   \, \text{ as long as } \, f(0) = 0       \]
 
 
-This would be valid up until $f(b)=1$ for some $b$.  Since $0$ is the center of the interval of convergence, we could calculate a radius of convergence and establish and interval of convergence - or a common domain where the series and the closed form formula represent the same function.
+This would be valid up until $f(b)=-1$ for some $b$ or $f(b)=1$ for some $b$.  Since $0$ is the center of the interval of convergence, we could calculate a radius of convergence and establish and interval of convergence - or a common domain where the series and the closed form formula represent the same function.
 
 
 
@@ -79,14 +93,10 @@ Create a series equivalent to $g(x)=\frac{3}{7 - 2x}$ and find the interval of c
 
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+\begin{explanation}
 
 
-
-
-
-
-We must rewrite $frac{3}{7 - 2x}$ in the form $\frac{a}{1-something} = a \cdot \frac{1}{1-something}$ such that $something(0) = 0$
+We must rewrite $\frac{3}{7 - 2x}$ in the form $\frac{a}{1-something} = a \cdot \frac{1}{1-something}$ such that $something(0) = 0$
 
 
 
@@ -95,16 +105,23 @@ We must rewrite $frac{3}{7 - 2x}$ in the form $\frac{a}{1-something} = a \cdot \
 
 
 
-\[  \frac{3}{7} \cdot \frac{1}{1 - \frac{2x}{7}} =  \frac{3}{7} \sum_{n=0}^{\infty} \left(\frac{2x}{7}\right)^n       \]
+\[  \frac{3}{7} \cdot \frac{1}{1 - \frac{2x}{7}} =  \frac{3}{7} \sum\limits_{n=0}^{\infty} \left(\frac{2x}{7}\right)^n       \]
 
 
 
 
 
-Now, we need the interval of convergence.  The interval is centered at $0$ and cannot go beyond the singularity of $g(x)$, which is $\frac{7}{2}$.  Since $0$ is the center, we have $\left(-\frac{7}{2}, \frac{7}{2} \right)$
+Now, we need the interval of convergence, a.k.a. the domain.  
+
+
+$\blacktriangleright$ One view:  This geometric series converge provided   $\left| \frac{2x}{7} \right| < 1$.  The would be $\left(-\frac{7}{2}, \frac{7}{2} \right)$.
 
 
 
+$\blacktriangleright$ Another view: The interval is centered at $0$ and cannot go beyond the singularity of $g(x)$, which is $\frac{7}{2}$.  Since $0$ is the center, we have $\left(-\frac{7}{2}, \frac{7}{2} \right)$
+
+
+\end{explanation}
 
 
 
@@ -126,6 +143,61 @@ Now, we need the interval of convergence.  The interval is centered at $0$ and c
 
 
 
+
+
+
+
+
+
+
+\begin{example} Geometric Series
+
+
+
+Create a series equivalent to $h(x) = \frac{2}{5 + 3x}$ and find the interval of convergence.
+
+
+
+\begin{explanation}
+
+
+We must rewrite $\frac{2}{5 + 3x}$ in the form $\frac{a}{1-something} = a \cdot \frac{1}{1-something}$ such that $something(0) = 0$
+
+
+
+
+\[     \frac{2}{5 + 3x}  =   \frac{2}{5} \cdot \frac{1}{1 + \frac{3x}{75}}  =   \frac{2}{5} \cdot \frac{1}{1 - \frac{-3x}{75}}  \]
+
+
+
+\[  \frac{2}{5} \cdot \frac{1}{1 - \frac{-3x}{75}}=  \frac{2}{5} \sum\limits_{n=0}^{\infty} \left(\frac{-3x}{5}\right)^n       \]
+
+
+
+
+
+Now, we need the interval of convergence, a.k.a. the domain.  
+
+
+$\blacktriangleright$ One view:  This geometric series converge provided   $\left| \frac{-3x}{5} \right| < 1$.  The would be $\left(-\frac{5}{3}, \frac{5}{3} \right)$.
+
+
+
+$\blacktriangleright$ Another view: The interval is centered at $0$ and cannot go beyond the singularity of $h(x)$, which is $\frac{-5}{3}$.  Since $0$ is the center, we have $\left(-\frac{5}{3}, \frac{5}{3} \right)$
+
+
+\end{explanation}
+
+
+Sometimes people will separate out the $-1$ inside the series.
+
+\[  \frac{2}{5} \sum\limits_{n=0}^{\infty} \left(\frac{-3x}{5}\right)^n    =   \frac{2}{5} \sum\limits_{n=0}^{\infty} (-1)^n \left(\frac{3x}{5}\right)^n   \]
+
+
+Sometimes that is easier to read.
+
+
+\end{example}
 
 
 

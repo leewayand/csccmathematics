@@ -15,7 +15,7 @@
 
 \begin{document}
 \begin{abstract}
-geometric and telescoping
+geometric
 \end{abstract}
 \maketitle
 
@@ -26,7 +26,7 @@ Suppose that we have a \emph{series} $\sum\limits_{k=k_0}^{\infty} a_k$ and have
 \item the series $\sum\limits_{k=k_0}^\infty a_k$ \textbf{diverges} if and only if $\lim\limits_{n\to\infty} s_n$ does not exist.  
 \end{itemize}
 
-The definitions above give us a way to determine whether a given series converges.  In fact, to determine whether $\sum_{k=k_0}^{\infty} a_k$ converges, we can do the following.
+The definitions above give us a way to determine whether a given series converges.  In fact, to determine whether $\sum\limits_{k=k_0}^{\infty} a_k$ converges, we can do the following.
 
 \begin{itemize}
 \item[1.] Consider the associated sequence $\{s_n\}$ of partial sums.
@@ -34,8 +34,15 @@ The definitions above give us a way to determine whether a given series converge
 \begin{itemize}
 \item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0} a_k=L$.  \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0} a_k$ diverges.
 \end{itemize}
-\item[3.] If an explicit formula for $s_n$ cannot be found, further analysis is needed.  We'll expound on this in later sections.
+\item[3.] If an explicit formula for $s_n$ cannot be found, further analysis is needed.  
 \end{itemize}
+
+
+
+
+
+
+
 
 
 \section{A recursive formula for $s_n$}
@@ -76,13 +83,31 @@ s_n &= s_{n-1} +a_n\\
 s_n &= s_{n-1} +  \frac{1}{n}.
 \end{align*}
 
-This does not help us analyze whether $\lim\limits_{n \to \infty} s_n$ actually exists.  Sometimes, however, we can find an \emph{explicit} formula for $s_n$, and we study two special types of series for which this is possible.
-
-\section{Two special types of series}
+This does not help us analyze whether $\lim\limits_{n \to \infty} s_n$ actually exists.  Sometimes, however, we can find an \emph{explicit} formula for $s_n$, and we study a special type of series for which this is possible.
 
 
 
-\section{Geometric series}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{A special types of series : Geometric}
+
+
+
 Recall that a \emph{geometric sequence} is a sequence for which the ratio of successive terms is constant.  If $\{a_n\}_{n=n_0}$ is such a sequence, then there are constants $a \ne 0$ and $r$ for which $a_n = a\cdot r^n$.  
 
 We thus represent this sequence by the ordered list
@@ -100,7 +125,7 @@ and we have a result that characterizes the behavior of this type of sequence, w
   \lim_{n\to\infty} a_n =
   \begin{cases}
     0 &\text{if $|r|<1$,}\\
-    1 &\text{if $r=1$,}\\
+    a &\text{if $r=1$,}\\
     \text{DNE} &\text{if $|r|>1$ or $r=-1$.}
   \end{cases}
   \]
@@ -132,8 +157,17 @@ The series $\sum\limits_{k=0}^\infty k^2 \left(\frac{1}{2}\right)^k$ \wordChoice
 
 We can now try to determine when adding together the terms in such a series is possible; that is, we can explore for which values of $a$ and $r$ the \emph{series} $\sum\limits_{k=n_0}^{\infty} a_k$ converges.  
 
+
+
+
+
+
+
+
+
+
 \begin{model}
- Let $r \neq 1$ and consider the geometric series $\sum\limits_{k=0}^\infty a r^k$, and let $s_n = \sum\limits_{k=0}^{\infty} a r^k $.  We find an explicit formula for the term $s_n$.
+ Let $r \neq 1$ and consider the geometric series $\sum\limits_{k=0}^\infty a r^k$, and let $s_n = \sum\limits_{k=0}^{n} a r^k $.  We find an explicit formula for the term $s_n$.
   
   \begin{explanation}
 First, note that the sum above represents the attempt to add all of the terms in the sequence $\{a_n\}_{n=0}$, where $a_n =  r^n$.  Let's start by writing out $s_n$.  
@@ -165,21 +199,40 @@ Now, we can subtract away the middle terms, which we show (with some slight abus
   \end{explanation}
 \end{model}
 
+
+
+
+
+
+
+
 From our work above, we see that the $n$-th partial sum of the
 geometric series $a_n = r^n$ is
 \[
 s_n = \sum\limits_{k=0}^{n} r^k= \frac{1 - r^{n+1}}{1-r}.
 \]
-We now have an \emph{explicit} formula so we can determine for which values of $r$ the limit $\lim\limits_{n \to \infty} s_n$ exists.  First, note that by using the limit laws, 
+We now have an \emph{explicit} formula so we can determine for which values of $r$ the limit $\lim\limits_{n \to \infty} s_n$ exists.  Let's first do a little algebraic thinking, 
 
 \[
-\lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty}  \frac{1 - r^{n+1}}{1-r} =  \frac{1}{1-r}  - \frac{1}{1-r}  \lim\limits_{n \to \infty} r^{n+1}.
+\lim\limits_{n \to \infty} s_n = \lim\limits_{n \to \infty}  \frac{1 - r^{n+1}}{1-r} =   \lim\limits_{n \to \infty}  \left( \frac{1}{1-r} - \frac{1}{1-r} \cdot r^{n+1} \right) 
 \]
 
-The existence of $\lim\limits_{n \to \infty} s_n $is thus entirely determined by whether $\lim\limits_{n \to \infty} r^{n+1}$ exists, and this limit is the limit of a geometric \emph{sequence}!  In fact, 
+
+$\frac{1}{1-r}$ has nothing to do with $n$.  Therefore, the limit has nothing to do with this fraction.
+
+
+\[
+=  \frac{1}{1-r}  - \frac{1}{1-r}  \lim\limits_{n \to \infty} r^{n+1}.
+\]
+
+
+
+
+
+The existence of $\lim\limits_{n \to \infty} s_n $ is thus entirely determined by whether $\lim\limits_{n \to \infty} r^{n+1}$ exists, and this limit is the limit of a geometric \emph{sequence}!  In fact, 
 
 \begin{itemize}
-\item if $-1<r<1$, then $\lim\limits_{n \to \infty} r^{n+1}$ \wordChoice{\choice[correct]{exists}\choice{does not exist}}.
+\item if $-1<r<1$, then $\lim\limits_{n \to \infty} r^{n+1}$ \wordChoice{\choice[correct]{exists}\choice{does not exist}}. \\
 \item if $r>1$ or $r\le -1$, then $\lim\limits_{n \to \infty} r^{n+1}$ \wordChoice{\choice{exists}\choice[correct]{does not exist}}.
 \end{itemize}
 
@@ -225,7 +278,7 @@ We can easily generalize this example and doing so allows us to write down a mor
   The geometric series $\sum\limits_{k= k_0}^\infty a \cdot r^k$ 
   
   \begin{itemize} 
-  \item converges to $\frac{ar^{k_0}}{1-r}$ when $|r| < 1$.
+  \item converges to $\frac{a \, r^{k_0}}{1-r}$ when $|r| < 1$.
   \item diverges if $|r| \geq 1$.  
   \end{itemize}
   \end{theorem}
@@ -276,7 +329,7 @@ First, note that the series \wordChoice{\choice[correct]{is}\choice{is not}} geo
 2^{3-2k} = \frac{2^3}{2^{2k}} = \frac{8}{\left(2^2\right)^k} =  8 \cdot \frac{1}{4^k} =  8 \cdot \frac{1^k}{4^k} =  8 \cdot \left(\frac{1}{4}\right)^k
 \]
 
-The series is geometric with $r = \answer[given]{1/4}$, and using the result $\sum\limits_{k=k_0} ar^k = \frac{ar^{k_0}}{1-r}$ gives:
+The series is geometric with $r = \answer[given]{1/4}$, and using the result $\sum\limits_{k=k_0} a \cdot r^k = \frac{a \, r^{k_0}}{1-r}$ gives:
 
 \[
 \sum\limits_{k=2}^{\infty} 2^{3-2k} =  8 \cdot \left(\frac{1}{4}\right)^k =  \frac{8 \cdot (1/4)^2}{1-1/4}  =  \answer[given]{\frac{2}{3}}.
@@ -312,11 +365,11 @@ The series is geometric with $r = \answer[given]{1/4}$, and using the result $\s
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
-Now that we have seen two special types of series for which we can find an explicit formula for the $n$-th term in the sequence of partial sums, it helps to summarize the logic that we employed.
+Now that we have seen a special type of series for which we can find an explicit formula for the $n$-th term in the sequence of partial sums, it helps to summarize the logic that we employed.
 
 \begin{itemize}
 \item[1.] Consider the associated sequence $\{s_n\}$ of partial sums.
-\item[2.] Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim_{n \to \infty s_n}$.  
+\item[2.] Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim\limits_{n \to \infty} s_n$.  
 \begin{itemize}
 \item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0} a_k=L$.  \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0} a_k$ diverges.
 \end{itemize}

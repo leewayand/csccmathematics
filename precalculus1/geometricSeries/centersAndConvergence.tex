@@ -26,29 +26,23 @@ Let's extend our bridge between infinite series and closed form formulas for Geo
 
 
 
-The identity function, $Id(x) = x$, is just a function such that $I(0) = 0$.  We could describe $\frac{a}{1-x}$ for $x \in (-1, 1)$ as $\frac{a}{1-Id(x)}$ for $Id(x) \in (-1, 1)$ - a composition.
-
-Or, we could expand this composition idea and think of other functions, $f$, such that $f(0) = 0$.
-
-
-
-\[    \frac{a}{1-f(x)}   \, \text{ where } \, f(0) = 0       \]
-
-
-This would be a valid function as long as $f(x) \ne 1$. 
+CUrrently, we have an equivalence between a geometric series and a rational function.
 
 
 
 
-We could then move this composition over to our Geometric series and allow the zero to shift.
+\[   \sum_{n=0}^{\infty} a (f(x))^n =  \frac{a}{1-f(x)}   \, \text{ where } \, f(0) = 0       \]
 
 
+This equivalence is valid while $|f(x)| < 1$.  This gives us a domain known as the convergence interval of the series.  The domain is centered around $0$. \\
 
 
-\[   \sum_{n=0}^{\infty} a (f(x))^n =  \frac{a}{1-f(x)}   \, \text{ where } \, f(c) = 0       \]
+Another way to view this is that the convergence interval is centered around the zero of $f(x)$, which has been $0$ up to this point.  What is a different domain number is a zero of $f$?
 
 
-This would be valid up until $f(b)=1$ for some $b$.  Since $c$ is the center of the interval of convergence, we could calculate a radius of convergence and establish and interval of convergence - or a common domain where the series and the closed form formula represent the same function.
+Suppose some number, $c$ is the zero of $f$.  Our interval of convergence would be centered at $c$ instead.
+
+
 
 
 
@@ -69,12 +63,12 @@ Create a series equivalent to $g(x)=\frac{3}{7 - 2x}$ centered at $5$.
 
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{explanation}}
+\begin{explanation}
 
 
-First a quick analysis of $g(x)=\frac{3}{7 - 2x}$.  $\frac{7}{2}$ is a singularity. The domain of our infinite series representation of $g(x)$ cannot contain this singularity.  The domain will be centered at $5$ and come right up to $\frac{7}{2}$.  That is a radius of $\frac{3}{2}$. Therefore the interval of convergence should be $\left( \frac{7}{2}, \frac{13}{2} \right)$.
+First a quick analysis of $g(x)=\frac{3}{7 - 2x}$.  We can see that $\frac{7}{2}$ is a singularity. The domain of our infinite series representation of $g(x)$ cannot contain this singularity.  The domain will be centered at $5$ and come right up to $\frac{7}{2}$.  That is an interval radius of $\frac{3}{2}$. Therefore, the interval of convergence should be $\left( \frac{7}{2}, \frac{13}{2} \right)$.
 
-Now, let's create the series.
+Now, let's create the series representation.
 
 We must rewrite $\frac{3}{7 - 2x}$ in the form $\frac{a}{1-something}$ where $something(5) = 0$
 
@@ -84,7 +78,7 @@ We must rewrite $\frac{3}{7 - 2x}$ in the form $\frac{a}{1-something}$ where $so
 
 
 
-Almost.  We have $1 + something$ in the denominator. It must be $1 - something$
+Almost.  We have $1 + something$ in the denominator. It must be $1 - something$ to match our template.
 
 
 \[    g(x) =   \frac{-1}{1 - \frac{-2(x-5)}{3}}       \]
@@ -131,15 +125,29 @@ x & = -\frac{3}{2}  + 5 = \frac{7}{2}
 
 
 
-The intervla of convergence is $\left( \frac{7}{2}, \frac{13}{2}\right)$, ss predicted.
+The intervla of convergence is $\left( \frac{7}{2}, \frac{13}{2}\right)$, as predicted.
 
 
 
+\end{explanation}
 
 \end{example}
 
 
 We have two different formulas for the same function.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -167,7 +175,7 @@ Of course, we cannot type in an infinite sum.  We'll approximate the infinite se
 \end{center}
 
 
-Just a fourth degree polynomial is doing a pretty good job approximating $g(x)$ on a subinterval.
+Just a fourth degree polynomial is doing a pretty good job approximating $g(x)$ on a subinterval of our domain.  More terms may do a better job.
 
 
 
