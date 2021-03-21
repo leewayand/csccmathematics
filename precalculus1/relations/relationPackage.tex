@@ -37,44 +37,75 @@ All of these relationships are different and yet the same.  Some relationships c
 
 
 
-\begin{definition} \textbf{Relation} \\
+\begin{definition} \textbf{\textcolor{green!50!black}{Relation}} \\
 A relation is a package containing three sets or collections. One set is called the \textbf{domain}. One set is called the \textbf{codomain}.  Finally, there is a set of pairings.  Each pairing pairs a member of the domain with a member of the codomain.
 \end{definition}
 
 
-Relations are just about the vaguest, thinnest structure any two sets could possibly have. There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  Fortunately, we don't want to do much with relations.  We are just laying the groundwork for more complex structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets of things in a relation have the names \textit{domain} and \textit{codomain}.
+Relations are just about the vaguest, thinnest structure any two sets could possibly have. \\
+
+
+There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  Fortunately, we don't want to do much with relations.  We are just laying the groundwork for more complex structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets of things in a relation have the names \textit{domain} and \textit{codomain}. \\
 
 
 Because a relation might be encountered as an if-then statement or a cause-and-effect association, we have a natural directional feeling for the information.  The "if" part comes before the "then" part.  The "cause" comes before the "effect".  We would like this feeling reflected in our relation structure.  Therefore, relations come prepackaged with a feeling that the information is connected from the domain to the codomain.
 
 
 
-\textbf{\textcolor{red!50!blue!50!}{Feeling of Direction}}
+\begin{idea}
+If you are holding the ticket numered 23675, then you win the stuffed teddy bear. \\
+
 \begin{itemize}
-\item If you pick items from the domain, then you get items from the codomain.
+    \item Domain: ticket numbers
+    \item Codomain: prizes
+\end{itemize}
+
+\end{idea}
+
+
+
+\begin{idea}
+Due to the artic vortex, tomorrow's high temperature will be $30^{\circ}$. \\
+
+\begin{itemize}
+    \item Domain: weather patterns
+    \item Codomain: temperatires
+\end{itemize}
+
+\end{idea}
+
+
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{Feeling of Direction}}
+\begin{itemize}
+\item You pick items from the domain and then you get items from the codomain.
 \item Items from the domain cause items from the codomain.
 \item Items in the codomain occur because of items in the domain.
-\item Elements of the codomain happen at items of the domain.
+\item Elements of the codomain happen at places of the domain.
 \end{itemize}
 
 
 
-\section{List Representations}
+\subsection{List Representations}
 
 Most of our communication is going to be written in this course, so we need some agreements on how we will represent relations in writing.  We already have several ways of representing sets.  The easiest is to just list the members inside curly braces and separated by commas.
 
 \begin{center} 
-\textbf{\textcolor{red!25!blue!75!}{ domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \} }}
+\textbf{\textcolor{blue!75!black}{ domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \} }}
 \end{center}
 
 \begin{center} 
-\textbf{\textcolor{red!25!blue!75!}{ codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino \} }}
+\textbf{\textcolor{blue!75!black}{ codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino \} }}
 \end{center}
 
-Now we need a way to indicate the pairings.  The traditonal way is to write them as ordered pairs.  The left (or first) item coming from the domain and the right (or second) item from the codomain.  We can list these ordered pairs in a set of ordered pairs. 
+Now we need a way to present the pairings.  The traditonal way is to write them as ordered pairs: the left (or first) item coming from the domain and the right (or second) item from the codomain.  We can list these ordered pairs in a set of ordered pairs. 
 
 \begin{center} 
-\textbf{\textcolor{red!25!blue!75!}{ pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casablanca, Humphrey Bogart), (Lawrence of Arabia, Peter O'Toole), (The Fly, Vincent Price), (The Godfather, Al Pacino) \}  }}
+\textbf{\textcolor{blue!75!black}{ pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casablanca, Humphrey Bogart), (Lawrence of Arabia, Peter O'Toole), (The Fly, Vincent Price), (The Godfather, Al Pacino) \}  }}
 \end{center}
 
 
@@ -84,7 +115,7 @@ These three sets would make up a relation.
 
 \begin{question}
 
-Which item(s) from the codomain is paired with 'The Fly', from the domain?
+Which item(s) from the codomain is(are) paired with 'The Fly', from this domain?
 \begin{multipleChoice}
 	\choice{Marlon Brando}
 	\choice[correct]{Vincent Price}
@@ -100,7 +131,7 @@ Which item(s) from the codomain is paired with 'The Fly', from the domain?
 
 \begin{question}
 
-Which item(s) from the domain is paired with 'Al Pacino', from the codomain?
+Which item(s) from the domain is(are) paired with 'Al Pacino', from this codomain?
 \begin{multipleChoice}
 	\choice{Casablanca}
 	\choice{House of Wax}
@@ -117,10 +148,10 @@ Which item(s) from the domain is paired with 'Al Pacino', from the codomain?
 
 
 
-Of course, we will have many relations, which could get confusing.  Let's help ourselves out with names.  The name of this relation will be \textit{AppearedIn}.
+Of course, we will have many relations, which could get confusing.  Let's help ourselves out with names.  The name of the relation above will be \textit{AppearedIn}.
 
 
-\begin{example} \textit{AppearedIn} \\
+\begin{example} The \textit{AppearedIn} Relation\\
 \begin{itemize}
 \item domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \}  
 \item codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino  \} 
@@ -129,7 +160,9 @@ Of course, we will have many relations, which could get confusing.  Let's help o
 \end{example}
 
 
-A relation is a package.  It is a package of three sets. The domain and codomain are sets of information.  The third set is a set of pairs.  Each pair connects a member of the domain with a memeber of the codomain. 
+A relation is a package.  \\
+
+A relation is a package of three sets. The domain and codomain are sets of information.  The third set is a set of pairs.  Each pair connects a member of the domain with a memeber of the codomain. 
 
 
 \begin{template} Ordered Pairs \\
@@ -167,13 +200,13 @@ There is a domain item written on the left and a codmain item written to the rig
 
 
 
-\section{Table Representations}
+\subsection{Table Representations}
 
 
 
-Lists are good representations of relations when the sets are not very big. The parentheses become difficult to browse through when there are a lot of them. Another representation is via a table. A table visually organizes the pairs much better.
+Lists are good representations of relations when the sets are not very big. The parentheses become difficult to browse through when there are a lot of them. Another representation for a relation comes in the form of a table. A table visually organizes the pairs much better.
 
-\begin{example} \textit{KindergartenIceCream} \\
+\begin{example} The \textit{KindergartenIceCream} Relation\\
 The \textit{KindergartenIceCream} relation pairs kindergarteners with their favorite ice cream flavors.
 
 domain = \{ Kevin, Shay, Linda, Charmain, Charlie \}  \\
@@ -193,7 +226,7 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 
 Each line of the table shows a pairing. From this table, we can tell that the relation \textit{KindergartenIceCream} pairs Kevin with Chocolate.  (Kevin, Chocolate) is a pair in \textit{KindergartenIceCream}.
 
-\textbf{Note} Charlie is not in a pair.  Charlie doesn't like ice cream. Linda is in two pairs.  She has two favorite flavors.  Nobody has Cherry as their favorite flavor.
+We can see that Charlie is not in a pair.  Charlie does not have a favorite flavor of ice cream. Linda is in two pairs.  She has two favorite flavors.  Nobody has Cherry as their favorite flavor.
 
 \end{example} 
 
@@ -207,8 +240,8 @@ Each line of the table shows a pairing. From this table, we can tell that the re
 We have created some mathematical structure for questions. From this structure, we can see that there are basically two kinds of questions.
 
 \begin{itemize}
-\item \textbf{[Type 1]} You know the domain item and want the corresponding codomain items.
-\item \textbf{[Type 2]} You know the codomain item and want the corresponding domain items.
+\item \textbf{[Type 1]} You know the domain item and want the corresponding codomain partners.
+\item \textbf{[Type 2]} You know the codomain item and want the corresponding domain partners.
 \end{itemize}
 
 
@@ -232,7 +265,7 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 
 
 \begin{question}
-\textbf{Question Type 1 :} What are Linda's favorite flavors? 
+\textbf{[Type 1]:} What are Linda's favorite flavors? 
 
 \begin{selectAll}
 \choice{Vanilla}
@@ -244,11 +277,11 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 \end{selectAll}
 \end{question}
 
-We are looking for pairs of the form (Linda, ???).
+We are looking for pairs of the form (Linda, ???) inside the \textit{KindergartenIceCream} relation.
 
 
 \begin{question}
-\textbf{Question Type 2 :} Whose favorite flavor is Chocolate? 
+\textbf{[Type 2]:} Whose favorite flavor is Chocolate? 
 
 \begin{selectAll}
 \choice[correct]{Kevin}
@@ -260,7 +293,7 @@ We are looking for pairs of the form (Linda, ???).
 \end{selectAll}
 \end{question}
 
-We are looking for pairs of the form (???, Chocolate).
+We are looking for pairs of the form (???, Chocolate) inside the \textit{KindergartenIceCream} relation.
 
 
 
@@ -270,10 +303,10 @@ We are looking for pairs of the form (???, Chocolate).
 
 \section{Too Much}
 
-Our examples, so far, have been small.  But what are we going to do when we want to examine the relation between something like movies and actors?  
+Our examples, so far, have been small.  What are we going to do when we want to examine a relation between something like movies and actors?  
 
 
-\begin{example} \textit{ActorsInMovies} \\
+\begin{example} The \textit{ActorsInMovies} Relation\\
 The \textit{ActorsInMovies} relation pairs actors with movies they were in.
 
 domain = All actors \\
@@ -289,15 +322,16 @@ The table would begin like this.
     \text{Peter O'Toole}  &  \text{Lawrence of Arabia} \\
     \text{Vincent Price}  &  \text{The Fly} \\
     \text{Al Pacino} &  \text{The Godfather} \\ 
+    \text{...} &  \text{...} \\ 
 \end{array}
 \]
 
 \end{example} 
 
 
-This table would have many rows. The Internet Movie Database lists over a million movies.  There would be more than 100 rows just for Vincent Price. There is no way we could visually sift through such a table - just to talk about Vincent Price movies.
+This table would have many rows. The Internet Movie Database lists over a million movies.  There would be more than 100 rows just for Vincent Price. There is no way we could visually sift through such a table for a question about Vincent Price movies.
 
-We need to narrow our investigation here, quickly. Otherwise, we will be buried in a mountain of data.
+We need to narrow the scope of our investigation here, quickly. Otherwise, we will be buried in a mountain of data.
 
 Our plan is to investigate only certain types of relations.
 
@@ -308,14 +342,14 @@ Our plan is to investigate only certain types of relations.
 
 
 
-\section{Focusing Our Investigation}
+\section{NArrowing Our Investigation}
 
 
-Our examples, so far, have been small.  But what are we going to do when we want to examine the relation between movies and actors?  That list or table is going to be too big to look at with our eyes.  How would we look through a table with millions of rows and find the ones holding Vincent Price?  The topic of all relations is just too big of an investigation. Let's focus in on a particular type of relation.
+Our examples, so far, have been small.  What are we going to do when we want to examine a relation between atoms and molecules?  That list or table is going to be too big to look at with our eyes.  How would we look through a table with billions of rows and find the ones holding carbon?  The topic of all relations is just too big of an investigation. Let's focus in on a particular type of relation.
 
-Most of our questions really identify a single hypothesis (antecedent) and then want to know about the resulting conclusion (consequent).
+Most of our questions really identify a single hypothesis (antecedent) and then expect a single associated conclusion (consequent).
 
-This would translate into a domain member connected to a single codomain member.
+This would translate into each domain member always connected to a single codomain member.
 
 Let's focus our investigation to these types of relations.  These types of relations are called \textbf{functions}.
 
