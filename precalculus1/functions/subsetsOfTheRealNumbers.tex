@@ -14,9 +14,9 @@ intervals
 
 
 
-We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  Basically, Precalculus 1 is a study of the real numbers.
+We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  Basically, \textbf{Precalculus 1} is a study of the real numbers.
 
-This means we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers.
+This means we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers, both algebraically and graphically.
 
 
 \section{Building Blocks}
@@ -338,6 +338,17 @@ Our subsets might include the right or left half of the real number line.  These
 
 
 
+\textbf{Note:} $-\infty$ and $\infty$ are not real numbers, therefore they are never included in any set of real numbers.  $-\infty$ and $\infty$ are used as communication symbols. They let us know the intervals are \textbf{unbounded}.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +357,7 @@ Our subsets might include the right or left half of the real number line.  These
 In the examples above, we used \textbf{interval notation} to describe the intervals in writing. Interval notation adheres to a few rules.
 
 \begin{itemize}
-\item For finite intervals, write the two numbers in the order they would occur on the number line, separated by a comma.  These are called \textbf{endpoints}.
+\item For finite intervals, write the two numbers in the order they would occur on the number line, separated by a comma.  These are called \textbf{endpoints} of the intervals.
 \item Use a square bracket to indicate the endpoint is included in the interval.
 \item Use a parenthesis to indicate the endpoint is excluded from the interval.
 \item For infinite intervals, use $-\infty$ to indicate the interval extends without end to the left. $-\infty$ always appears on the left side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number and thus cannot be included in an interval of real numbers.
@@ -391,7 +402,7 @@ Select all that have valid interval notation.
 \begin{warning}
 Many people in many countries over many centuries have studied mathematics and invented language to communicate their findings.
 
-On our number line we plot dots to represent numbers and we call these points.  They are points on the number line, because a point identifies a location.  We will soon represent our functions with 2-dimensional drawings. We will still have points and they will still identify a location.  However, describing the location will require two numbers, rather than one.  A point will no longer represent a single number.
+On our number line we plot dots to represent numbers and we call these points.  They are points on the number line, because a point identifies a location.  We will soon represent our functions with 2-dimensional drawings. We will still have points and they will still identify a location.  However, with two dimensions, describing the location will require two numbers, rather than one.  A point will no longer represent a single number.
 
 Our language will become a little blurred when we talk about points versus numbers.  Just be aware that our langugae is old has been twisted to accommodate our thinking.
 
@@ -400,9 +411,49 @@ We will attempt to keep the blur to a miminum in this course by our use of the w
 \end{warning}
 
 
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Open Intervals}}
+
+Intervals of the form $(a, b)$, $(-\infty, b)$, or $(a, \infty)$ are called \textbf{open intervals}.
+
+
+\end{definition}
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Closed Intervals}}
+
+Intervals of the form $[a, b]$, $(-\infty, b]$, or $[a, \infty)$ are called \textbf{closed intervals}.
+
+
+\end{definition}
+
+
+
+
+\begin{warning}
+
+$(-\infty, \infty)$ is both an open interval and a closed interval.
+
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Set Builder Notation}
 
-A second way to represent intervals in writting is with inequalities. However, we cannot simply insert an inequality into our description, because people use inequalities in several contexts.  So, we need some notation that tells people we are describing a set. \textbf{Set builder notation} includes shorthand symbols to represent sentences such as 
+A second way to represent intervals in writing is with inequalities. However, we cannot simply insert an inequality into our description, because people use inequalities in several contexts.  So, we need some notation that tells people we are describing a set. \textbf{Set builder notation} includes shorthand symbols to represent sentences such as 
 
 \begin{center}
 "The set of all real numbers such that the numbers are greater than or equal to 4 and less than 7."
@@ -412,16 +463,23 @@ We begin with a pair of curly braces $\{  \, \}$ containing a vertical bar:  ${|
 
 \begin{example}
 "The set of all real numbers such that the numbers are greater than or equal to 4 and less than 7."
+\[ \{ r \in \mathbb {R} \, | \, (4 \leq r)  \text{ and } (r < 7) \} \]
 \[ \{ r \in \mathbb {R} \, | \, 4 \leq r < 7 \} \]
+
+\begin{explanation}
+\textbf{ALL} real numbers would include numbers such as $5$, $\frac{17}{4}$, $\sqrt{19}$, $6.354987263$, and $211^{\tfrac{1}{\pi}}$.
+\end{explanation}
 \end{example}
 
 
 
 \begin{example}
 "The set of all integers such that the numbers are greater than or equal to 4 and less than 7."
-\[ \{ r \in \mathbb {Z} \, | \, 4 \leq r < 7 \} \]
+\[ \{ n \in \mathbb {Z} \, | \, 4 \leq n < 7 \} \]
 
+\begin{explanation}
 This would be the set $\{ 4, 5, 6 \}$.
+\end{explanation}
 \end{example}
 
 
@@ -429,7 +487,7 @@ This would be the set $\{ 4, 5, 6 \}$.
 
 \begin{question}
 Select the interval notation that describes the same set as 
-\[ \{ r \in \mathbb {R} \, | \, 2 < r \leq 9 \} \]
+\[ \{ t \in \mathbb {R} \, | \, 2 < t \leq 9 \} \]
 	\begin{multipleChoice}
 	\choice {$[9, 2)$}
 	\choice {$[2, 9)$}
@@ -652,6 +710,24 @@ Select the interval notation that describes the same set as the following graph.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Reduced Form}
 
 All of these describe the same set.
@@ -665,7 +741,7 @@ All of these describe the same set.
 \item $[-2, 0) \cup [-1, 1) \cup [1, 2)$
 \end{itemize}
 
-Having such a wide array of descriptions is very valuable as we move through mathematics.  However, for communication purposes, it causes confusion. Therefore, we are establishing an official reduced form for inteval notation.  We will always use the reduced form, unless there is a good reason.  (There are often good reasons.)
+Having such a wide array of descriptions is very valuable as we move through mathematics.  However, for communication purposes, it causes confusion. Therefore, we are establishing an official reduced form for inteval notation.  We will always use the reduced form, unless there is a good reason not to.  (There are often good reasons.)
 
 Our reduced form will adhere to some rules:
 
@@ -676,7 +752,7 @@ Our reduced form will adhere to some rules:
 \begin{notation} Reduced Interval Notation
 
 \begin{itemize}
-\item Do not use overlapping intervals.
+\item Do not use overlapping or intersecting intervals.
 \item Do not list individual numbers that are members of an interval.
 \item Do not list individual numbers that can be used as endpoints of an interval.
 \item Write the intervals and sets of individual numbers in proper numeric order.
@@ -704,7 +780,7 @@ Select all of the unions that are written in reduced form.
 
 
 
-\begin{definition} \textit{Maximal Intervals}
+\begin{definition} \textbf{\textcolor{green!50!black}{Maximal Intervals}}
 
 When a set of real numbers is written in reduced form, then each of the intervals is called a \textbf{maximal interval} of the set.
 \end{definition}
@@ -747,7 +823,7 @@ We can extend this interval to $[-3, 1)$ and still stay inside $S$.
 
 
 \end{example}
-Or course, we could have extended it to the maximal interval it sits inside, $(-3, 1) \subset [-4, 1)$.
+Or course, we could have also extended $(-3, 1)$ to the maximal interval it sits inside, $(-3, 1) \subset [-4, 1)$.
 
 
 

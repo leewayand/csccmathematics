@@ -36,21 +36,32 @@ In an open set in $\mathbb{R}$, each point has room on either side.
 
 
 
-\begin{definition}   \textit{Open Set in $\mathbb{R}$} \\
+\begin{definition}  \textbf{\textcolor{green!50!black}{Open Set in $\mathbb{R}$}}
+
 
 $S \subset \mathbb{R}$ is an \textbf{open set in $\mathbb{R}$} provided 
 
 \[
-\text{For each } s \in S, \text{ there exists an } \epsilon > 0 \text{ such that }  (s - \epsilon, s + \epsilon) \subset S
+\text{For each } a \in S, \text{ there exists an } \epsilon > 0 \text{ such that }  (a - \epsilon, a + \epsilon) \subset S
 \]
 
 \end{definition}
 
 
+
+\begin{idea}
+
+The idea is that inside an open set, every number sits inside an open interval inside the set.  There is space between each number and the endpoint.
+\end{idea}
+
+
+
+
+
 \begin{example}  \textit{Open Intervals in $\mathbb{R}$}
 
 
-The interval $(4,7)$ is an open set in $\mathbb{R}$.
+The open interval $(4,7)$ is an open set in $\mathbb{R}$.
 
 
 \begin{image}
@@ -83,15 +94,15 @@ The interval $(4,7)$ is an open set in $\mathbb{R}$.
   \end{image}
 
 
-Reasoning:
+\begin{explanation}
 
 Let $c$ be any number in $(4,7)$.  Then the subinterval $\left( c - \frac{4+c}{2}, c + \frac{7+c}{2} \right)$ will always be inside $(4,7)$.
 
 Therefore, for each $c \in (4, 7)$, there exists an open interval inside $(4,7)$, which contains $c$.
 
-Since this is true for all of the numbers in $(4,7)$, then interval is an open set in $\mathbb{R}$.
+Since this is true for all of the numbers in $(4,7)$, the interval is an open set in $\mathbb{R}$.
 
-
+\end{explanation}
 \end{example}
 
 
@@ -139,7 +150,7 @@ The interval $(4,7]$ is not an open set in $\mathbb{R}$.
   \end{image}
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{Reasoning:}} \\
+\begin{explanation}
 
 Consider the number $7$.  Any open interval around $7$ would look like $(7 - \epsilon, 7 + \delta)$, with both $\epsilon > 0$  and $\delta > 0$.  However, there is always a real number in the interval $(7, 7 + \delta)$, like $7 + \frac{\delta}{2}$.
 
@@ -147,7 +158,7 @@ Therefore, no matter which open interval you choose around $7$, it will always c
 
 $(4, 7]$  is not an open set in $\mathbb{R}$.
 
-
+\end{explanation}
 \end{example}
 
 $\blacktriangleright$ Open intervals cannot contain their endpoints. \\
@@ -163,18 +174,15 @@ Any union of open intervals is itself an open set.
 
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{Reasoning:}} \\
-
-
-
+\begin{explanation}
 
 Let $S$ be a union of open intervals.  \\
 Let $c \in S$. \\
-Then $c$ is in one of the one intervals. \\
-Then there exists an $\epsilon > 0$, such that $(c - \epsilon, c + \epsilon)$ is a subset of this one interval.  This interval is a subset of $S$.  Therefore, $(c - \epsilon, c + \epsilon) \subset S$. \\
+Then $c$ is in one of the open intervals. \\
+Then there exists an $\epsilon > 0$, such that $(c - \epsilon, c + \epsilon)$ is a subset of this one open interval.  This interval is a subset of $S$.  Therefore, $(c - \epsilon, c + \epsilon) \subset S$. \\
 
 
-
+\end{explanation}
 
 \end{example}
 
@@ -202,16 +210,13 @@ $\emptyset$ is an open set. \\
 
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{Reasoning:}} \\
-
+\begin{explanation}
 
 
 The reasoning is sort of reverse thinking.  If $\emptyset$ is not open, then it MUST contain a number, such that there is no tiny open interval around it.  There is no such number.  Therefore, $\emptyset$ is an open set.
 
 
-
-
-
+\end{explanation}
 
 \end{example}
 
