@@ -1,0 +1,90 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+\begin{question}
+Select the interval notation that describes the same set as the following graph.
+	\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-3,2,4,7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-3:2)] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0)};
+
+
+          	\node at (axis cs:-3,0) [penColor2] {$[$};
+          	\node at (axis cs:2,0) [penColor2] {$)$};
+          	\node at (axis cs:4,0) [penColor2] {$($};
+          	\node at (axis cs:7,0) [penColor2] {$)$};
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+	\begin{multipleChoice}
+	\choice {$\{ -4 \} (-3, 2) \cup (4, 7)$}
+	\choice {$[-4, -3, 2) (4, 7)$}
+	\choice {$(-3, 2] \cup [4, 7]$}
+	\choice [correct]{$\{ -4 \} \cup [-3, 2) \cup (4, 7)$}
+	\choice {$[-3, 2), (4, 7)$}
+	\end{multipleChoice}
+\begin{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
