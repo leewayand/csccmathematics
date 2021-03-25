@@ -5,7 +5,7 @@
 \author{Lee Wayand}
 
 \begin{document}
-\begin{exercise}
+\begin{exercise}  Maximums and Minimums  
 
 
 
@@ -18,7 +18,9 @@ Below is the graph of $k=G(t)$.
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$k$,
+            axis lines =center, xlabel=$t$, ylabel=$k$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -29,8 +31,8 @@ Below is the graph of $k=G(t)$.
           \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x+3});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{-2*x+16});
 
-          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,-5) (1,-2) (5, 2) (8,0)};
-          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,2) (5, -2) (8,0)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,6)};
 
 
            
@@ -38,6 +40,107 @@ Below is the graph of $k=G(t)$.
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+The maximum value of $G$ is $\answer[tolerance=0.1]{9}$. \\
+
+The minimum value of $G$ is $\answer{DNE}$. \\
+
+
+
+
+
+
+
+
+
+
+
+Below is the graph of $y=h(x)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{-(x+5)*(x-1)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x+3});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{-2*x+16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,2) (5, -2) (5,6) (8,0)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-4)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The maximum value of $h$ is $\answer[tolerance=0.1]{9}$. \\
+
+The minimum value of $h$ is $\answer[tolerance=0.1]{-4}$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Below is the graph of $z=T(v)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$z$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{-(x+5)*(x-1)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x+3});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{-2*x+16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,2) (5, -2) (5,6) (8,0) (-2,9)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-4) (-2,-6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The maximum value of $T$ is $\answer{DNE}$. \\
+
+The minimum value of $T$ is $\answer [tolerance=0.1]{-6}$. \\
+
+
+
 
 
 
