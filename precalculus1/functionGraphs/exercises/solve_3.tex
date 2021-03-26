@@ -87,21 +87,9 @@ Below are the graphs of $y=P(w)$ and $z=K(x)$.
 
 
 
-\begin{question} True or False
-
-\item \wordChoice{\choice[correct]{True} \choice{False}}  There is a solution to $K(x) = 4$ \\
-\item \wordChoice{\choice{True} \choice[correct]{False}}  There is a solution to $K(x) = 6$ \\
-\item \wordChoice{\choice[correct]{True} \choice{False}}  There is a solution to $P(w) = -4$ \\
-
-\end{question}
-
-
-
-
-
 \begin{question} Solutions
 
-$P(w) = 4$ has $\answer{2}$ solutions.
+$\answer[tolerance=0.25]{-1.5}$ is an approximation to the only solution to $P(t) = t$.
 
 \end{question}
 
@@ -110,7 +98,7 @@ $P(w) = 4$ has $\answer{2}$ solutions.
 
 \begin{question} Solutions
 
-$K(x) = -4$ has $\answer{2}$ solutions.
+$K(t) = t$ has $\answer{2}$ solutions.
 
 \end{question}
 
@@ -118,11 +106,57 @@ $K(x) = -4$ has $\answer{2}$ solutions.
 
 
 
-\begin{question} True or False
+Here are both graphs.
 
-\item \wordChoice{\choice[correct]{True} \choice{False}}  There is a solution to $K(x) < -4$ \\
-\item \wordChoice{\choice[correct]{True} \choice{False}}  There is a solution to $P(w) > 6$ \\
-\item \wordChoice{\choice[correct]{True} \choice{False}}  There is a solution to $P(w) < 0$ \\
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-5)] ({x},{-3*x-16});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(0:5)] ({x},{2*x-8});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:0)] ({x},{-x-3});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8) (0,-8)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,-1) (5,2) (-3,0) (0,-3)};
+
+
+
+
+
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-5:0)] ({x},{-(x+5)*(x-1)-5});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:5)] ({x},{2*x-4});
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(5:8)] ({x},{-2*x+12});
+
+          \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(0,0) (1,-2) (5, 2) (5,6) (8,-4)};
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(-5,-5) (5,-4)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{question} Solutions
+
+$\answer[tolerance=0.25]{-1.5}$ is an approximation to the only solution to $P(t) = t$.
 
 \end{question}
 

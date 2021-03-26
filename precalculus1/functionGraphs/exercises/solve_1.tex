@@ -18,13 +18,13 @@
 
 
 
-Below is the graph of $y=P(w)$.  
+Below is the graph of $y=M(t)$.  
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$w$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -33,12 +33,12 @@ Below is the graph of $y=P(w)$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-5)] ({x},{-3*x-16});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-3)] ({x},{-3*x-16});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(0:9)] ({x},{0.5*x-8});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:0)] ({x},{-x+1});
 
-          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8) (0,-8)};
-          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,-1) (9,3.5) (-3,4) (0,1)};
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8) (0,-8) (9,-3.5)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-3,-7) (9,4) (-3,4) (0,1)};
 
 
            
@@ -51,14 +51,17 @@ Below is the graph of $y=P(w)$.
 
 
 \begin{question}
-Evaluate the following:
+How many solutions does $P(t) = -4$ have?
 
-\begin{itemize}
-\item $P(-6) = \answer[tolerance=0.1]{2}$ \\
-\item $P(1) = \answer[tolerance=0.1]{-6}$ \\
-\item $P(-7) = \answer[tolerance=0.1]{5}$ \\
-\end{itemize}
+\begin{multipleChoice}
+\choice {0} 
+\choice {1} 
+\choice [correct]{2} 
+\choice {3} 
+\choice {4} 
+\end{multipleChoice}
 \end{question}
+
 
 
 
@@ -66,14 +69,15 @@ Evaluate the following:
 
 
 \begin{question}
-Evaluate the following:
+How many solutions does $P(t) = 0$ have?
 
-\begin{itemize}
-\item $P(-6) + P(4) = \answer[tolerance=0.1]{2}$ \\
-\item $P(-6+4) = \answer[tolerance=0.1]{-1}$ \\
-\item $P(1) + P(2)  = \answer[tolerance=0.1]{-10}$ \\
-\item $P(1+2) = \answer[tolerance=0.1]{-2}$ \\
-\end{itemize}
+\begin{multipleChoice}
+\choice {0} 
+\choice [correct]{1} 
+\choice {2} 
+\choice {3} 
+\choice {4} 
+\end{multipleChoice}
 \end{question}
 
 
@@ -82,7 +86,35 @@ Evaluate the following:
 
 
 
+\begin{question}
+How many solutions does $P(t) = 4$ have?
 
+\begin{multipleChoice}
+\choice {0} 
+\choice {1} 
+\choice {2} 
+\choice [correct]{3} 
+\choice {4} 
+\end{multipleChoice}
+\end{question}
+
+
+
+
+
+
+
+\begin{question}
+How many solutions does $P(t) = -8$ have?
+
+\begin{multipleChoice}
+\choice [correct]{0} 
+\choice {1} 
+\choice {2} 
+\choice {3} 
+\choice {4} 
+\end{multipleChoice}
+\end{question}
 
 
 
