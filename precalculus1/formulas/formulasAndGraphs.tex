@@ -16,10 +16,10 @@ bridge
 
 Our two main tools for investigating functions are formulas and graphs. Not every function has a formula, but when it does there should be a connection between the formula and graph.
 
-\section{Domain}
+\subsection{Domain}
 When a function is described with a formula, then the domain is described in writing - usually some sort of set notation.  Our favorite way is through interval notation.  Set builder notation is also used.  Sometimes the domain is just described with words.
 
-All of these domain numbers are pictured as lying on the horizontal axis in a graph.  They are not plotted as points on the horizontal axis, unless the function value just happens to equal $0$ at the domain number.
+All of these domain numbers are pictured as lying on the horizontal axis in a graph.  They are not plotted as points on the horizontal axis, unless the function value just happens to equal $0$ at a domain number.
 
 During many discussions the horizontal axis is shaded in to highlight some aspect of the domain.
 
@@ -29,7 +29,7 @@ During many discussions the horizontal axis is shaded in to highlight some aspec
 
 
 
-\section{Range}
+\subsection{Range}
 The same idea goes for the range of a function, except these values are imagined along the vertical axis.
 
 
@@ -39,7 +39,7 @@ The same idea goes for the range of a function, except these values are imagined
 
 
 
-\section{Pairs}
+\subsection{Pairs}
 The pairs are the most important part of a function.  They give the connection between the domain and range.  Formulas do not explicitly give pairs. You can assemble an indiviual pair, one-at-a-time, by evaluating the formula at a particular domain number.
 
 Graphs display pairs.  The dots included in the graph are visually encoding the function pairs.  They can be deciphered into a domain number and function value. The domain number is the first coordinate and the function value is the second number.
@@ -57,7 +57,7 @@ Graphs display pairs.  The dots included in the graph are visually encoding the 
 
 \begin{example}
 
-Linear functions are functions that can be described by formulas that look like $L(x) = A x + B$, with $A$ and $B$ both real numbers and $A \ne 0$.  Their graphs are lines.  It takes two points to draw a line. Given a formula, we can evaluate it twice, from which we can create two points, plot them, and draw the line.
+Linear functions are functions that can be described by formulas that look like $L(x) = A \cdot x + B$, with $A$ and $B$ both real numbers and $A \ne 0$.  Their graphs are lines.  It takes two points to draw a line. Given a formula, we can evaluate it twice, from which we can create two points, plot them, and draw the line.
 
 Let $L(x) = 2x-3$ with its domain and range both $(-\infty, \infty)$.
 
@@ -76,6 +76,9 @@ Let $L(x) = 2x-3$ with its domain and range both $(-\infty, \infty)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel={$y=L(x))$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -106,7 +109,7 @@ Linear functions have a constant growth rate or rate of change as we will see la
 
 
 
-Linear functions have a constant growth rate while \textbf{exponential functions} have a constant percentage growth rate, as we will see later.  This results in a formula of the form $E(t) = a r^t$, where $a$ is a nonzero real number and $0 < r$.
+Linear functions have a constant growth rate while \textbf{exponential functions} have a constant percentage growth rate, as we will see later.  This results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$.
 
 
 
@@ -130,6 +133,9 @@ Since $1.25 > 1$ whenever the domain number, $t$, increases, so does $E(t)$.  $E
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel={$y=E(t))$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -166,7 +172,7 @@ This all reflects horizontally if $0 < r < 1$.
 Let $X(t) = 2 \cdot 0.8^t$ with a domain consisting of all real numbers, $\mathbb{R}$.
 
 
-Since $0.8 > 1$ whenever the domain number, $t$, increases, $X(t)$ decreases.  $X$ is a decreasing function.  Its graph goes downhill to the right.
+Since $0.8 < 1$ whenever the domain number, $t$, increases, $X(t)$ decreases.  $X$ is a decreasing function.  Its graph goes downhill to the right.
 
 
 
@@ -181,6 +187,9 @@ Since $0.8 > 1$ whenever the domain number, $t$, increases, $X(t)$ decreases.  $
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel={$y=X(t))$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -201,7 +210,7 @@ Since $0.8 > 1$ whenever the domain number, $t$, increases, $X(t)$ decreases.  $
 
 \end{example}
 
-The graph of an exponential function attempts to level off at a height of $0$.  This follows the idea that $0.8$ raises to larger and larger powers will result in a smaller and smaller value.
+The graph of an exponential function attempts to level off at a height of $0$.  This follows the idea that $0.8$ raised to larger and larger powers will result in a smaller and smaller value.
 
 
 
@@ -214,7 +223,7 @@ The graph of an exponential function attempts to level off at a height of $0$.  
 
 
 
-\section{Zeros}
+\subsection{Zeros}
 
 Real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties.  $0$ also sets itself aside with properties different from the negative and positrive real numbers.
 
@@ -227,7 +236,7 @@ For these reasons we are interested in where functions have zero values.
 
 
 
-\begin{definition}  a Zero
+\begin{definition}  \textbf{\textcolor{green!50!black}{a Zero}} \\
 
 
 A domain number where a function value is $0$ is called a \textbf{zero} of the function.
@@ -253,7 +262,7 @@ Zeros of functions correspond to intercepts on the graph.
 $\blacktriangleright$ If $a$ is a zero of the function $f$, then $(a, 0)$ is a point on the graph of $f$. \\
 
 
-$\blacktriangleright$ IIf $(a, 0)$ is a point on the graph of $f$, then $f(a) = 0$ and $a$ is a zero of $f$.
+$\blacktriangleright$ If $(a, 0)$ is a point on the graph of $f$, then $f(a) = 0$ and $a$ is a zero of $f$.
 
 
 \begin{example}
@@ -269,7 +278,10 @@ Let $P(w) = w^2 - 2w - 3$ with a domain consisting of all real numbers, $\mathbb
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=X(t))$},
+            axis lines =center, xlabel=$w$, ylabel={$y=P(w))$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -329,17 +341,17 @@ The arrows on the graph of $P$ let us know that the graph keeps rising to the le
 We encounter functions in several ways, each affecting the domain of a function.
 
 \begin{enumerate}
-\item  \textbf{stated domain}
-A function may come already equipped with a stated domain.  Graphs communicate the domain - just collect all of the first coordinates from the points. Many times we use inteval notation to state the domain.
+\item  \textbf{stated domain} \\
+A function may come already equipped with a stated domain.  Graphs communicate the domain - just collect all of the first coordinates from the points. Many times we use interval notation to state the domain.
 
 
-\item  \textbf{implied domain}
-Mathematicians like shorthand. The best shorthand is just nothing.  Nothing is used all over the place. If a function is described with a formula and there is no stated domain, then there is an implied domain.  The implied domain is all real numbers that don't cause a problem with the formula.
+\item  \textbf{natural or implied domain} \\
+Mathematicians like shorthand. The best shorthand is just nothing.  Nothing is used all over the place. If a function is described with a formula and there is no stated domain, then there is a natural or implied domain.  The implied domain is all real numbers that don't cause a problem with the formula.
 
-We know of two problems: square (even) roots of negative numbers and fractions with $0$ denominators.  Any real numbers that cause this to happen are removed from the implied domain.
+We know of two problems: square (even) roots of negative numbers and fractions with $0$ denominators.  A third problem will be logarithms of zero or negative numbers (later). Any real numbers that cause this to happen are removed from the implied domain.
 
 
-\item  \textbf{applied domain}
+\item  \textbf{applied domain} \\
 We use functions to model many measuring situations. In this case, we want our model to describe the situation.  Therefore, the domain should not contain numbers that don't fit the situation. An applied domain is a subset of the implied domain.  The applied domain includes all of the real numbers that make sense in the situation.
 
 \end{enumerate}
