@@ -13,14 +13,14 @@ communication
 
 
 
-We can easily define a function via a graph.  However, it is not so easy to decipher exact information from a graph, especially when the curve is drawn by hand.  Therefore, in addition to the points on the curve, we include other symbols to help people read the graph.  These are communication symbols.  They help the reader understand what is drawn and what is not drawn.
+We can easily define a function via a graph.  However, it is not so easy to decipher exact information from a graph, especially when the curve is drawn by hand.  Therefore, in addition to the points on the curve, we include other symbols to help people read the graph and understand the function.  These are communication symbols.  They help the reader understand what is drawn and what is not drawn.
 
 
 
 \section{Endpoints}
 
 
-Points are dimensionless objects.  They are too small to actually see.  When we draw a graph, the thinkness of the pencil or pen is already an exaggeration of the underlying points. But, even with the thickness of the drawing the endpoints are a mystery.  If you leave off the very last point or keep it, how would you tell?  Therefore, we exaggerate even more for the endpoints, so that the reader immediately understands whether or not they are plotted.
+Points are dimensionless objects.  They are too small to actually see.  When we draw a graph, the thinkness of the pencil or pen is already an exaggeration of the underlying points and makes the endpoints a mystery.  How would you tell if the very last point of a curve was included or not? Therefore, we exaggerate even more for the endpoints, so that the reader immediately understands whether or not they are plotted.
 
 We use big solid dots to illustrate an endpoint is a part of the drawing. We use big hollow dots when the actual last point is not plotted. 
 
@@ -63,7 +63,7 @@ In the graph on the left, it is difficult to tell if the endpoints are included 
 \end{image}
 
 
-The big exaggerated dots are just for the single endpoints.  The curve on the right does not include a circle as part of the curve. It is a single hollow dot indicating that the point $(4, 1)$ is not part of the curve.
+The big exaggerated dots are just for the single endpoints.  The curve on the right does not actually include a circle as part of the curve. That circle is an exaggerated single hollow dot indicating that the point $(4, 1)$ is not part of the curve.
 
 
 
@@ -92,6 +92,7 @@ In the graph on the left, it is difficult to decide if the domain is $(-3, 4)$ o
           		]
 
         \addplot [draw=penColor, very thick, smooth, domain=(-3:4)] {0.5*x-1};
+
     \end{axis}
 
 
@@ -106,7 +107,9 @@ In the graph on the left, it is difficult to decide if the domain is $(-3, 4)$ o
             	axis on top,
           		]
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-3:4), <->] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:4), ->] {0.5*x-1};
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-3,-2.5)}; 
+
     \end{axis}
 
 
@@ -115,7 +118,7 @@ In the graph on the left, it is difficult to decide if the domain is $(-3, 4)$ o
 \end{image}
 
 
-Here, the arrows tell the reader that the curve continues its current pattern of a line indefinitely.  The domain is $(-\infty, \infty)$.
+Here, the arrows tell the reader that the curve continues its current linear pattern indefinitely to the right.  The domain is $[-3, \infty)$.
 
 
 
@@ -130,7 +133,7 @@ Here, the arrows tell the reader that the curve continues its current pattern of
 \section{Asymptotes}
 
 
-Arrows at the ends of curves signal that the curve continues with its current pattern. However, this may not not be enough.  Many functions have curves that continue moving up and to the right, however, their movement has a boundary. We use dashed lines to indicate that a curve is approaching this line pattern - getting closer.
+Arrows at the ends of curves signal that the curve continues with its current pattern. However, this may not not be enough.  Many functions have curves that continue moving up and to the right, however, their movement has a boundary. We use dashed lines to indicate that a curve is approaching this line pattern.
 
 
 \begin{image}
@@ -138,6 +141,11 @@ Arrows at the ends of curves signal that the curve continues with its current pa
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$x$, ylabel=$y$,
+                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -147,8 +155,8 @@ Arrows at the ends of curves signal that the curve continues with its current pa
         \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
         \addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
 
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
 
 
     \end{axis}
@@ -159,12 +167,14 @@ Arrows at the ends of curves signal that the curve continues with its current pa
 \end{image}
 
 
-The arrows tell the reader that the curve continues its current pattern, for example the right piece of the curve continues to move up and to the left.  The dashed verticl asymptote tells us that the leftward movement does not go past $3$.  The curve continues to go up indefinitely while getting closer and closer to the asymptote, without hitting the asymptote. 
+The arrows tell the reader that the curve continues its current pattern, for example the right piece of the curve continues to move up and to the left.  The dashed verticl asymptote tells us that the leftward movement does not go past the line $x=3$.  The curve continues to go up indefinitely while getting closer and closer to the asymptote, without hitting the asymptote. 
+
+This tells us that the function becomes unbounded as you get closer to $3$ in the domain. \\
 
 
 
 
-Horizontal asymptotes give similar information.  The function graphed above gets closer to the value of $2$ as the values of $x$ get bigger.   Unlike with vertical asymptotes, the graph of a function can oscillate back-and-forth across a horizontal asymptote.
+Horizontal asymptotes give similar information.  The function graphed above gets closer to the value of $2$ as the values of the domain get bigger.   Unlike with vertical asymptotes, the graph of a function can oscillate back-and-forth across a horizontal asymptote.
 
 
 
@@ -174,6 +184,11 @@ Horizontal asymptotes give similar information.  The function graphed above gets
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$x$, ylabel=${y=f(x)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
@@ -184,7 +199,7 @@ Horizontal asymptotes give similar information.  The function graphed above gets
         %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
 
         %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
-        \addplot [line width=1, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
 
 
     \end{axis}
@@ -195,7 +210,7 @@ Horizontal asymptotes give similar information.  The function graphed above gets
 \end{image}
 
 
-The values of the function, $f(x)$, gets closer (or approaches) $2$ as we move through the domain, heading to infinity.  Of course, we have algebraic notation to communicate this thought.
+The values of the function, $f(x)$, get closer (or approach) $2$ as we move through the domain, heading to infinity.  Of course, we have algebraic notation to communicate this thought.
 
 
 \[
@@ -224,8 +239,13 @@ Sometimes an arrow at the end of the curve may give the wrong impression.
 \begin{image}
 \begin{tikzpicture}
     \begin{axis}[
-            domain=-10:10, ymax=3, xmax=10, ymin=-2, xmin=-10,
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-2,-1,1,2},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-2$,$-1$,$1$,$2$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -253,7 +273,7 @@ Just an arrow may be interpretted as the line continuing down.
 
 
 
-If the pattern involves some kind of repeated shape, then ellipses may be used.
+If the pattern involves some kind of repeated (periodic) shape, then ellipses may be used.
 
 
 
@@ -262,6 +282,11 @@ If the pattern involves some kind of repeated shape, then ellipses may be used.
 	\begin{axis}[
             domain=-10:10, ymax=3, xmax=10, ymin=-2, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-2,-1,1,2},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-2$,$-1$,$1$,$2$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -309,6 +334,11 @@ A graph is a communication tool. We already know that the accuracy has limitatio
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -318,8 +348,8 @@ A graph is a communication tool. We already know that the accuracy has limitatio
         \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
         \addplot [draw=penColor, very thick, smooth, domain=(3:8)] {1/(x-3) + 2};
 
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
 
         \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
         \addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
@@ -381,8 +411,8 @@ All of these graphical symbols help the reader understand the graph.  When the s
 
 
 \begin{itemize}
-\item is there is no horizontal asymptote, then we should not read that the graph is bounded.
-\item if there are no ellipses, then we should not assume the pattern repeats.
+\item If there is no horizontal asymptote, then we should not read that the graph is becoming horizontal.
+\item If there are no ellipses, then we should not assume the pattern repeats.
 \end{itemize}
 
 
