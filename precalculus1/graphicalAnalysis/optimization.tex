@@ -19,29 +19,34 @@ When using functions to analyze situations, we are often interested in the maxim
 
 There are two views on extreme values.
 
-\textbf{Global Extreme Values} 
+\begin{definition} \textbf{\textcolor{green!50!black}{Global Extreme Values}} 
 
 \begin{itemize}
-\item The \textbf{global maximum value} is the greatest value of the function.  This maximum may occur at mulitple domain numbers.  A function can also not have a maximum value.
+\item The \textbf{global maximum value} is the greatest value of the function.  This maximum may occur at multiple domain numbers.  A function can also not have a maximum value.
 
 \[  f(c) \text{ is a global maximum if } f(x) \leq f(c) \text{ for all } x \text{ in the domain of } f \]
 
-\item The \textbf{global minimum value} is the least value of the function.  This mnimum may occur at mulitple domain numbers.  A function can also not have a minimum value.
+\item The \textbf{global minimum value} is the least value of the function.  This minimum may occur at multiple domain numbers.  A function can also not have a minimum value.
 
 \[  f(c) \text{ is a global minimum if } f(c) \leq f(x) \text{ for all } x \text{ in the domain of } f \]
 \end{itemize}
 
 A function has at most, one maximum value and one minimum value, but they can occur at multiple domain numbers.
 
-In contrast to a single maximum or minimum value, a function also has values which are the greatest value in their own neighborhood.  We see these as tops of hills and bottom of valleys on the graph.  A function may have many of these \textbf{local} or \textbf{relative} extrema.
+
+
+\end{definition}
+
+
+
+In contrast to a single maximum or minimum value, a function may also have values which are the greatest value in their own little neighborhood.  We see these as tops of hills and bottom of valleys on the graph.  A function may have many of these \textbf{local} or \textbf{relative} extrema.
 
 
 
 
 
 
-
-\textbf{Local Extreme Values} \\
+\begin{definition} \textbf{\textcolor{green!50!black}{Local Extreme Values}} 
 \begin{itemize}
 \item $f(c)$ is a \textbf{local maximum value} of the function $f$ if there exists an $0 < \epsilon$ such that $f(x) \leq f(c)$ for all domain numbers, $x$, within a distance of $\epsilon$ from $c$. 
 
@@ -60,13 +65,13 @@ In contrast to a single maximum or minimum value, a function also has values whi
 \[  f(c) \text{ is a local minimum if } f(c) \leq f(x) \text{ for all } \{ x \in domain \, | \, x \in (c - \epsilon, c + \epsilon) \} \text{ for some } \epsilon > 0 \]
 \end{itemize}
 
+\end{definition}
 
 
 
 
 
-
-
+By default, all global extrema are automatically local extrema.
 
 
 
@@ -82,6 +87,9 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$k$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -115,16 +123,20 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
 
 \textit{Local Explanations} \\
 
+Let's run through the idea of a local extrema for the previous example. \\
 
 
-Let $0 < \epsilon = 0.3$.  $g(0.9) \leq g(k)$ for all $k$ in the domain within a distance of $0.3$ from $0.9$, which would be the interval $\left(\answer{0.6}, \answer{1.2}\right)$.
+Let $0 < \epsilon = 0.3$.  \\
+$g(0.9) \leq g(k)$ for all $k$ in the domain within a distance of $0.3$ from $0.9$, which would be the interval $\left(\answer{0.6}, \answer{1.2}\right)$.
 
-Let $0 < \epsilon = 0.4$.  $g(k) \leq g(-4.9)$ for all $k$ in the domain within a distance of $0.4$ from $-4.9$, which would be the interval $\left(\answer{-5.3}, \answer{-4.6}\right)$.
+Let $0 < \epsilon = 0.4$.  \\
+$g(k) \leq g(-4.9)$ for all $k$ in the domain within a distance of $0.4$ from $-4.9$, which would be the interval $\left(\answer{-5.3}, \answer{-4.6}\right)$.
 
 Let $0 < \epsilon = 0.5$.  $g(-8) \leq g(k)$ for all $k$ in the domain within a distance of $0.5$ from $-8$, which would be the interval $\left[\answer{-8}, \answer{-7.5}\right)$.
 
 
-\textbf{Note:} As the previous example illustrates, global extrema are also local extrema.
+\textbf{Note:} As the previous example illustrates, global extrema are also local extrema. \\
+\textbf{Note:} We picked $0.3$, $0.4$, and $0.5$ for $\epsilon$, but we could have selected any small, positive numbers.
 
 
 
@@ -137,6 +149,9 @@ Let $B(w)$ be a function.  The graph of $y = B(w)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$w$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -230,7 +245,7 @@ Let $T(p)$ be a function.  The graph of $y=  T(p)$ is displayed below.
 
 
 
-It appears that $8$ would have been the global maximum of $T$, however, the point $(-8, 8)$ is missing from the graph and $8$ is not in the range.  And, there is no real number "just below $8$".  If you choose any real number, $r$, below $8$ to be the possible candidate for global maximum, there is the number $\frac{8+r}{2}$. This number is in the domain and $T(r) < T\left(\frac{8+r}{2}\right)$.
+It appears that $8$ would have been the global maximum of $T$, however, the point $(-8, 8)$ is missing from the graph and $8$ is not in the range.  And, there is no real number "just below $8$".  If you choose any real number, $r$, below $8$ to be the possible candidate for global maximum, there is the number $\frac{8+r}{2}$. This number is in the domain and $T(r) < T\left(\frac{8+r}{2}\right)$.  You cannot identify a specific numbers as the maximum, so there isn't one.
 
 
 

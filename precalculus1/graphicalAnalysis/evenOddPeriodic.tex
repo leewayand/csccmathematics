@@ -13,7 +13,7 @@ even and odd
 
 
 
-One of the benefits of graphs is that you can see a lot of information simultaneously.  The visual patterns often suggest properties of the functions.  Many times you can see how to move the graph so that the graph lands back on itself.  Any time you can do something and it appears that nothing has been done, that is called \textbf{symmetry}.
+One of the benefits of graphs is that you can see a lot of information simultaneously.  The visual patterns often suggest properties of the functions.  Many times you can see how to move the graph so that the graph lands back on itself.  Any time you can do something and it \textit{appears} that nothing has been done, that is called \textbf{symmetry}.
 
 
 
@@ -29,14 +29,16 @@ A function is an \textbf{even} function if $f(x) = f(-x)$ for all $x$ in the dom
 \end{definition}
 
 
-If you flip or rotate the graph along the vertical axis, the graph lands on itself - the graph is a mirror image across the vertical axis.
+If you flip the graph of an even function along the vertical axis, the graph lands on itself - the graph is a mirror image across the vertical axis. \\
+
+You flip and it \textit{appears} that nothing has happened - symmetry. \\
 
 
 
 
 
 
-\begin{example} \textit{Quadratic Functions} \\
+\begin{example} \textbf{\textcolor{green!50!black}{Even Functions}} \\
 
 Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below. 
 
@@ -45,6 +47,9 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$k$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -81,6 +86,9 @@ Cosine is an even function.  The graph of $y= cos(\theta)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=3, xmax=10, ymin=-3, xmin=-10,
             	axis lines =center, xlabel={$\theta$}, ylabel=$y$,
+                ytick={-2,-1,1,2},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -139,6 +147,9 @@ Polynomials with only odd exponents are odd functions.  The graph of $y= 0.1x^3-
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -175,6 +186,9 @@ Sine is an odd function.  The graph of $y= sin(\theta)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=3, xmax=10, ymin=-3, xmin=-10,
             	axis lines =center, xlabel={$\theta$}, ylabel=$y$,
+                ytick={-2,-1,1,2},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -238,6 +252,9 @@ The graph of $y= cos(\theta + 2\pi)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=3, xmax=10, ymin=-3, xmin=-10,
             	axis lines =center, xlabel={$\theta$}, ylabel=$y$,
+                ytick={-2,-1,1,2},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -275,6 +292,9 @@ The graph of $y= sin(\theta + 2\pi)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=3, xmax=10, ymin=-3, xmin=-10,
             	axis lines =center, xlabel={$\theta$}, ylabel=$y$,
+                ytick={-2,-1,1,2},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -322,6 +342,9 @@ Half of the graph of $y = K(t)$ is displayed below.   If $K(t)$ is an even funct
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
@@ -358,6 +381,9 @@ Visualize what the full graph looks like, then click the arrow.
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
@@ -412,6 +438,9 @@ Half of the graph of $y = K(t)$ is displayed below.   If $K(t)$ is an odd functi
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
@@ -448,6 +477,9 @@ Visualize what the full graph looks like, then click the arrow.
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,

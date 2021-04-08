@@ -13,7 +13,7 @@ increasing and decreasing
 
 
 
-We use functions to compare information. One aspect we are interest in is how the information changes compare to each other, relatively. 
+We use functions to compare information(measurements). One aspect we are interest in is how one measurment changes compared to the other. 
 
 
 \begin{itemize}
@@ -35,18 +35,22 @@ Our words for this comparison are \textbf{increase} and \textbf{decrease}.
 
 
 
-\begin{definition} \textit{Increase}
+\begin{definition} \textbf{\textcolor{green!50!black}{Increase}} \\
 
-The function $f$ increases on the set $S$, if for EVERY pair of numbers $a < b$ in $S$ we have  $f(a) < f(b)$.
+The function $f$ increases on the set $S$, if for EVERY pair of numbers $a < b$ in $S$ we have  $f(a) < f(b)$. \\
+
+When the domain values increase, the function values also increase.  The domain and range change the same.
 
 
 \end{definition}
 
 
 
-\begin{definition} \textit{Decrease}
+\begin{definition} \textbf{\textcolor{green!50!black}{Decrease}} \\
 
-The function $f$ decreases on the set $S$, if for EVERY pair of numbers $a < b$ in $S$ we have  $f(a) > f(b)$.
+The function $f$ decreases on the set $S$, if for EVERY pair of numbers $a < b$ in $S$ we have  $f(a) > f(b)$. \\
+
+When the domain values increase, the function values decrease.  The domain and range change oppositely.
 
 
 \end{definition}
@@ -76,6 +80,9 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$k$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -132,6 +139,9 @@ Let $m(t)$ be a function.  The graph of $y = m(t)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -164,7 +174,7 @@ Let $m(t)$ be a function.  The graph of $y = m(t)$ is displayed below.
 
 
 
-However, $m$ is not decreasing on the interval $(-8, 8)$.  To show that a function is not decreasing on an interval, we merely have to give ONE counterexample. That is we need to come up with ONE pair of numbers $a < b$ in the interval where $f(a) \nless f(b)$.  $a = -6$ and $b = 5$ will work.
+However, $m$ is not decreasing on the interval $(-8, 8)$.  To show that a function is not decreasing on an interval, we merely have to give ONE counterexample. That is we need to come up with ONE pair of numbers $a < b$ in the interval where $f(a) \nless f(b)$.  Let's select $a = -6$ and $b = 5$.
 
 \[ -6 < 5    \text{ but, }   f(-6) = 6  \nless f(5) = -2 \]
 
@@ -174,7 +184,6 @@ However, $m$ is not decreasing on the interval $(-8, 8)$.  To show that a functi
 \end{example}
 
 
-A \textbf{counterexample} is one example where all of the conditions of a statement are met, yet the conclusion is not true.  One single counterexample shows a statement to be false.
 
 
 
@@ -182,6 +191,17 @@ A \textbf{counterexample} is one example where all of the conditions of a statem
 
 
 
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Counterexample}} \\
+
+A \textbf{counterexample} is one example where all of the conditions of a statement are met, yet the conclusion is not true.  \\
+
+One single counterexample shows a statement to be false.
+
+
+\end{definition}
 
 
 
@@ -282,7 +302,7 @@ Select all of the correct statements
 
 
 \section{Measuring Rates}
-Comparing how the connected values in the domain and range change is called a \textbf{rate}. Our symbol for a change in an amount is a Greek Delta, $\Delta$.  And, we use fractions to compare the changes.
+Comparing how the connected values in the domain and range change is called a \textbf{rate}. Our symbol for a change in an amount is a Greek Delta, $\Delta$.  And, we use fractions to quantify the changes.
 
 \[ rate = \frac{\Delta \, pineapples}{\Delta \, price}\]
 
@@ -296,7 +316,7 @@ Comparing how the connected values in the domain and range change is called a \t
 \end{itemize}
 
 
-Using this, we can compare and measure changes in function values across a domain interval.
+Using rates, we can compare and measure changes in function values over a domain interval.
 
 
 \begin{definition}
@@ -326,6 +346,9 @@ Let $V(x)$ be a function.  The graph of $y = V(x)$ is displayed below.
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -385,15 +408,15 @@ From the graph, we can estimate that over the interval $[1, 8]$, $V$ had a rate-
 
 
 
-This might sound familiar. You have probably seen this when working with slopes of lines, $\frac{rise}{run}$.  The \textit{rise} is the vertical change (change in the value of the function). The \textit{run} is the horizontal change (change in the domain).
+All of this might sound familiar. You have probably seen this when working with slopes of lines, $\frac{rise}{run}$.  The \textit{rise} is the vertical change (change in the value of the function). The \textit{run} is the horizontal change (change in the domain).
 
-Rate-of-change is a function idea that we will connect up to the geometric idea of slope.
-
-
+$\blacktriangleright$ Rate-of-change is a function idea that we will connect up to the geometric idea of slope.
 
 
 
-The rate of change over an interval is an overall measurement.  It compares the changes occuring over the whole interval. 
+
+
+The rate of change over an interval is an overall measurement.  It compares the changes occuring over the whole interval. It compares final values to initial values. 
 
 
 
@@ -416,6 +439,9 @@ Let $M(t)$ be a function.  The graph of $y = M(t)$ is displayed below.
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
@@ -467,7 +493,7 @@ The rate of change of $M$ over the interval $[-2,1]$ is
 
 
 \begin{question}
-If the rate of change of a function is positive over the interval $[a,b]$ then the rate of change over any subinterval is aslo positive.
+If the rate of change of a function is positive over the interval $[a,b]$ then the rate of change over any subinterval must also be positive.
     \begin{multipleChoice}
         \choice {True}
         \choice [correct]{False}
