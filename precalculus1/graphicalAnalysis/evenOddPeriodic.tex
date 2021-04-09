@@ -22,7 +22,7 @@ One of the benefits of graphs is that you can see a lot of information simultane
 \section{Even Symmetry}
 
 
-\begin{definition} \textit{Even Functions}
+\begin{definition} \textbf{\textcolor{green!50!black}{Even Functions}} \\
 
 A function is an \textbf{even} function if $f(x) = f(-x)$ for all $x$ in the domain.
 
@@ -38,7 +38,7 @@ You flip and it \textit{appears} that nothing has happened - symmetry. \\
 
 
 
-\begin{example} \textbf{\textcolor{green!50!black}{Even Functions}} \\
+\begin{example} Even Functions \\
 
 Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below. 
 
@@ -96,7 +96,7 @@ Cosine is an even function.  The graph of $y= cos(\theta)$ is displayed below.
 
         
         %\addplot [draw=penColor, very thick, smooth, domain=(-3.7, 3.7), <->] {x};
-        \addplot [draw=penColor, very thick, smooth, domain=(-8.3:8.3), <->] {cos(deg(x)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8.3:8.3), <->] {cos(deg(x)};
         %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
 
 
@@ -124,7 +124,7 @@ Cosine is an even function.  The graph of $y= cos(\theta)$ is displayed below.
 \section{Odd Symmetry}
 
 
-\begin{definition} \textit{Odd Functions}
+\begin{definition} \textbf{\textcolor{green!50!black}{Odd Functions}} \\
 
 A function is an \textbf{odd} function if $-f(x) = f(-x)$ for all $x$ in the domain.
 
@@ -196,7 +196,7 @@ Sine is an odd function.  The graph of $y= sin(\theta)$ is displayed below.
 
         
         %\addplot [draw=penColor, very thick, smooth, domain=(-3.7, 3.7), <->] {x};
-        \addplot [draw=penColor, very thick, smooth, domain=(-8.3:8.3), <->] {sin(deg(x)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8.3:8.3), <->] {sin(deg(x)};
         %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
 
 
@@ -228,15 +228,28 @@ Sine is an odd function.  The graph of $y= sin(\theta)$ is displayed below.
 \section{Shift Symmetry}
 
 
-\begin{definition} \textit{Periodic}
+\begin{definition} \textbf{\textcolor{green!50!black}{Periodic Functions}} \\
 
-If you shift a periodic function by its wave length (or period), then you get the original function back: $f(\theta + \omega) = f(\theta)$ for all $\theta$ in the domain, where $\omega$ is the wave length.
+
+A \textbf{periodic} function, is one where the function values repeat at a constant distance in the domain.
+
+
+
+\[ f(\theta + \omega) = f(\theta) \]
+
+
+
+$\omega$ is called the \textbf{period}, also know as the \textbf{wave length}. 
+
+
+
+If you shift the graph of a periodic function by its wave length (or period), then you get the original graph back.  It appears that nothing has ppened - symmetry.
 
 \end{definition}
 
 
 
-\textit{Sine} and \textit{Cosine} have shift symmetry.  If you shift them by $2\pi$ radians, then the graph lands back on itself. YOu cannot tell that the graph has been shifted.
+\textit{Sine} and \textit{Cosine} have shift symmetry.  If you shift them by $2\pi$ radians, then the graph lands back on itself. You cannot tell that the graph has been shifted.
 
 
 
@@ -262,7 +275,7 @@ The graph of $y= cos(\theta + 2\pi)$ is displayed below.
 
         
         %\addplot [draw=penColor, very thick, smooth, domain=(-3.7, 3.7), <->] {x};
-        \addplot [draw=penColor, very thick, smooth, domain=(-8.3:8.3), <->] {cos(deg(x)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8.3:8.3), <->] {cos(deg(x)};
         %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
 
 
@@ -302,7 +315,7 @@ The graph of $y= sin(\theta + 2\pi)$ is displayed below.
 
         
         %\addplot [draw=penColor, very thick, smooth, domain=(-3.7, 3.7), <->] {x};
-        \addplot [draw=penColor, very thick, smooth, domain=(-8.3:8.3), <->] {sin(deg(x)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8.3:8.3), <->] {sin(deg(x)};
         %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
 
 
@@ -341,7 +354,7 @@ Half of the graph of $y = K(t)$ is displayed below.   If $K(t)$ is an even funct
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                axis lines =center, xlabel=$t$, ylabel=${y=K(t)}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
@@ -380,7 +393,7 @@ Visualize what the full graph looks like, then click the arrow.
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                axis lines =center, xlabel=$t$, ylabel=${y=K(t)}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
@@ -429,7 +442,7 @@ Visualize what the full graph looks like, then click the arrow.
 
 \begin{example} \textit{Odd} \\
 
-Half of the graph of $y = K(t)$ is displayed below.   If $K(t)$ is an odd function, then think of what the other half of the graph would look like.
+Half of the graph of $y = M(t)$ is displayed below.   If $M(t)$ is an odd function, then think of what the other half of the graph would look like.
 
 
 
@@ -437,7 +450,7 @@ Half of the graph of $y = K(t)$ is displayed below.   If $K(t)$ is an odd functi
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                axis lines =center, xlabel=$t$, ylabel=${y=M(t)}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
@@ -476,7 +489,7 @@ Visualize what the full graph looks like, then click the arrow.
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$t$, ylabel=${y=g(t)}$,
+                axis lines =center, xlabel=$t$, ylabel=${y=M(t)}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
