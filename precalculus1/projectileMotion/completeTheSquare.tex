@@ -30,12 +30,12 @@ We have seen that the trajectories of projectiles are described by quadratic equ
 \section{Quadratic Functions}
 
 
-\begin{definition}
+\begin{definition} \textbf{\textcolor{green!50!black}{Quadratic Functions}} \\
 \textbf{Quadratic functions} are functions which can be described with a formula of the form
 
 \[  Q(t) = a \, t^2 + b \, t + c  \]
 
-where $a$, $b$, and $c$ are real numbers with $a \ne 0$
+where $a$, $b$, and $c$ (called \textbf{coefficients}) are real numbers with $a \ne 0$
 
 
 
@@ -104,15 +104,16 @@ We want to know the
 \end{itemize}
 
 
-\textbf{Quadratic Domain and Range} \\
+\textbf{\textcolor{blue!75!black}{Quadratic Domain and Range}} \\
 
-The implied domain of a quadratic function is all real numbers.  Of course, any quadratic function could come with a stated domain that restricts the domain.
 
-From the graphs above we can see that the implied range of a quadratic comes in two types.  
+The implied or natural domain of a quadratic function is all real numbers.  Of course, any quadratic function could come with a stated domain that restricts the domain. Or, a quadratic might be a piece of a piecewise defined function and only apply to a stated set.
+
+From the graphs above we can see that the natural range of a quadratic comes in two types.  
 
 \begin{itemize}
-\item The range could be all real numbers greater than or equal to some particular real number.
-\item The range could be all real numbers less than or equal to some particular real number.
+\item The range could be all real numbers greater than or equal to some particular real number (the minimum).
+\item The range could be all real numbers less than or equal to some particular real number (the maximum).
 \end{itemize}
 
 If there is a stated domain, then the range will be restricted accordingly. \\
@@ -120,17 +121,18 @@ If there is a stated domain, then the range will be restricted accordingly. \\
 
 
 
-\textbf{Quadratic Zeros} \\
 
-Zero has a unique property appropriately named as the \textbf{zero product property}.  
+\textbf{\textcolor{blue!75!black}{Quadratic Zeros}} \\
+
+The number $0$ has a unique property appropriately named as the \textbf{Zero Product Property}.  
 
 
 
-\begin{fact} \textit {Zero Product Property}
+\begin{definition}  \textbf{\textcolor{green!50!black}{Zero Product Property}} \\
 
 If $a$ and $b$ are real numbers and $a\cdot b = 0$, then either $a=0$ or $b=0$.
 
-\end{fact}
+\end{definition}
 
 
 Zero is the ONLY number with such an identifiable test, therefore, we use it...A LOT! 
@@ -138,9 +140,9 @@ Zero is the ONLY number with such an identifiable test, therefore, we use it...A
 
 Unless we happen to know something special, when solving equations our general approach is to set everything equal to zero and then convert the expression into a product.  This process is called \textbf{factoring}.  The whole idea is to make our situation look like the zero product property.
 
-WE have already seen that factors correspond to zeros of our funciton. Thus, it comes as no surprise that identifying zeros of functions is a top priority.  Factoring is a top priority. Spotting intercepts in the graph is a top priority.
+We have already seen that factors correspond to zeros of our function. Thus, it comes as no surprise that identifying zeros of functions is a top priority.  Factoring is a top priority. Spotting horizontal intercepts in the graph is a top priority.
 
-As we can see from the graph below, quadratics can have $0$, $1$, or $2$ real zeros.  How do we find them?
+As we can see from their parabolic graphs below, quadratics can have $0$, $1$, or $2$ real zeros.  How do we find them? Factoring is one way.  Completing the Square is another method.
 
 
 
@@ -175,6 +177,19 @@ As we can see from the graph below, quadratics can have $0$, $1$, or $2$ real ze
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Completing the Square}
 
 Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they are to different degrees. They cannot be combined to leave just one occurrence.
@@ -197,11 +212,20 @@ This last line, $A \, t^2 - 2 t A B + A \, B^2 + C$ should turn out to be $a \, 
 
 The only way that is going to happen is if $A = a$. As long as we know $A = a$, then let's start over. \\
 
-\textbf{Step 1}  Factor out the leading coefficent.   In this way we can pretend that we had a \textbf{monic} quadratic from the beginning.  That means we can pretend the leading coefficient was $1$.
+
+
+
+
+
+\textbf{\textcolor{blue!75!black}{Step 1}} \\
+
+ Factor out the leading coefficent.   In this way we can pretend that we had a \textbf{monic} quadratic from the beginning.  That means we can pretend the leading coefficient was $1$.
 
 
 Starting over...starting with a leading coefficient of $1$...
 
+
+\textbf{\textcolor{blue!75!black}{Step 2}} \\
 
 
 We want to complete the square on $t^2 + b \, t + c$.  When the leading coefficent is $1$, then we call this quadratic \textbf{monic}.
@@ -233,7 +257,13 @@ We want this to be $t^2 + b \, t + c$. \\
 leading terms match...check \\
 linear terms match...check \\
 
-Now there is a mess for the constant term.  We have $\left(\frac{b}{-2}\right)^2 + C$, when we just wanted $c$.  Then let's just pick $C$ to be $-\left(\frac{b}{-2}\right)^2 + c = -\left(\frac{b}{2}\right)^2 + c$
+
+\textbf{\textcolor{blue!75!black}{Step 3}} \\
+
+
+Now there is a mess for the constant term.  We have $\left(\frac{b}{-2}\right)^2 + C$, when we just wanted $c$.  \\
+
+Then let's just pick $C$ to be $-\left(\frac{b}{-2}\right)^2 + c = -\left(\frac{b}{2}\right)^2 + c$
 
 
 
@@ -255,16 +285,21 @@ Let's see some examples
 Completing the square for $2 \, t^2 + 4 \, t + 6$.
 
 
-\textbf{Step 1} Factor out the leading coefficent, $2$. \\
+\begin{explanation}
 
-\[     2 \, t^2 + 4 \, t + 6 = 2 (t^2 + 2 \, t + 3)   \] 
+$\blacktriangleright$ Factor out the leading coefficent, $2$.\\
+
+\[     2 \, t^2 + 4 \, t + 6 = 2 \left( \answer{t^2 + 2 \, t + 3} \right)   \] 
 
 
-Now we have a monic to work with inside the parentheses. Let's move inside the parentheses.
+Now we have a monic to work with inside the parentheses. \\
+
+
+$\blacktriangleright$ Let's move inside the parentheses.
 
 \[ t^2 + 2 t + 3 \]
 
-Take half of the linear coefficient, $\frac{2}{2} = 1$, squre that $1^2 = 1$, and add and subtract it, so that we have just added $0$ to the expression and not changed its value.
+Take half of the linear coefficient, $\frac{2}{2} = 1$, square that $1^2 = 1$, and add and subtract it, so that we have just added $0$ to the expression and not changed its value.
 
 
 \[ t^2 + 2 t + 1 - 1 +3 \]
@@ -276,19 +311,24 @@ Now, group.
 
 the grouped part is a square.
 
-\[ (t+1)^2- 1 +3 \]
+\[ \left( \answer{t+1} \right)^2- 1 +3 \]
 
 \[ (t+1)^2 + 2 \]
 
 Remember, this was inside parentheses.
 
-\[     2 \, t^2 + 4 \, t + 6 = 2 (t^2 + 2 \, t + 3)  = 2 ((t+1)^2 + 2) =  2 (t+1)^2 + 4\] 
+\[     2 \, t^2 + 4 \, t + 6 = 2 (t^2 + 2 \, t + 3)  = 2 ((t+1)^2 + 2) =  2 (t+1)^2 + \answer{4}\] 
 
 
 $2 (t+1)^2 + 4$ is the completed square form of $2 \, t^2 + 4 \, t + 6$
 
+\end{explanation}
+
+
 
 \end{procedure}
+
+
 The whole point was to change from an expression with two occurences of the variable to an expression with only one occurence of the variable.
 
 This makes solving much easier.
@@ -299,41 +339,56 @@ This makes solving much easier.
 Solve $4  t^2 - 4 t - 8 = 0$ \\
 
 
+\begin{explanation}
+
 First complete the square.
 
 
 
 \[ 4 t^2 -  4 t - 8 = 0 \]
 
-\[ 4 (t^2 - t - 2) = 0 \]
-
-\[ 4 (t^2 - t + \frac{1}{4} - \frac{1}{4} - 2) = 0 \]
+\[ \answer{4} (t^2 - t - 2) = 0 \]
 
 
-\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right) = 0 \]
+
+Half of the linear coefficient is $\answer{-\frac{1}{2}}$. \\
+
+The square of that is $\answer{\frac{1}{4}}$. \\
+
+We will be adding and subtracting $\answer{\frac{1}{4}}$ inside the parentheses.
 
 
-\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right) = 0 \]
 
-\[ 4 \left(t - \frac{1}{2}\right)^2 - 1 - 8 = 0 \]
 
-\[ 4 \left(t - \frac{1}{2}\right)^2 - 9 = 0 \]
+\[ 4 (t^2 - t + \frac{1}{4} - \frac{1}{4} - 2)  \]
+
+
+\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right)  \]
+
+
+\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right)  \]
+
+\[ 4 \left( \answer{t - \frac{1}{2}} \right)^2 - 1 - 8  \]
+
+\[ 4 \left(t - \frac{1}{2}\right)^2 - 9  \]
 
 
 One occurrence of $t$, good. Now to get $t$ by itself.
 
+\[ 4 \left(t - \frac{1}{2}\right)^2 - 9 = 0  \]
 
 \[ 4 \left(t - \frac{1}{2}\right)^2 = 9  \]
 
-\[  \left(t - \frac{1}{2}\right)^2 = \frac{9}{4}  \]
+\[  \left(t - \frac{1}{2}\right)^2 = \answer{\frac{9}{4}}  \]
 
 We know something special here. The only way this can happen is if \\
 
 
 
-either   $t - \frac{1}{2} = \frac{3}{2}$  or  $t - \frac{1}{2} = -\frac{3}{2}$ \\
+either   $\answer{t - \frac{1}{2}} = \frac{3}{2}$  or  $\answer{t - \frac{1}{2}} = -\frac{3}{2}$ \\
 
 The first choice gives us $t = 2$ and the second choice gives us $t = -1$
+
 
 
 
@@ -348,6 +403,7 @@ Let's check those solutions.
 
 We have already seen that a quadratic equation can have at most two solutions.  So, we must have all of the solutions.
 
+\end{explanation}
 
 
 \end{example}
@@ -364,23 +420,25 @@ We have already seen that a quadratic equation can have at most two solutions.  
 
 Solve $2 x^2 - 12x + 21 = 3$ \\
 
+\begin{explanation}
+
 
 First, get everything to one side and $0$ on the other side.
 
 
 
-\[  2 x^2 - 12x + 18 = 0  \]
+\[  2 x^2 - 12x + \answer{18} = 0  \]
 
-Factor out $a$,
+Factor out $a$, which is $2$ here.
 
-\[  2 (x^2 - 6x + 9) = 0  \]
-
-
-Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  But, $9$ is alrerady there.  This must already be a square.
+\[  2 \left( \answer{x^2 - 6x + 9} \right) = 0  \]
 
 
+Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  But, $9$ is already there.  This must already be a square.
 
-\[  2 (x - 3)^2 = 0  \]
+
+
+\[  2 \left( \answer{x - 3} \right)^2 = 0  \]
 
 
 Now, get $x$ by itself.
@@ -398,9 +456,22 @@ Unlike $\frac{9}{4}$ in the previous example, the only number you can square and
 This equation only has one solution.
 
 
-
+\end{explanation}
 \end{example}
-The graph would be a parabola touching the horizontal axis at only one point (its vertex).
+
+
+
+The graph of $y = 2 x^2 - 12x + 18$ would be a parabola touching the horizontal axis at only one point (its vertex).
+
+
+
+
+\begin{idea} \textbf{\textcolor{red!90!darkgray}{Single Root}}
+
+If the vertex of the parabola is the only intercept, then the corresponding quadratic function has a double root.
+
+
+\end{idea}
 
 
 
@@ -419,7 +490,7 @@ Either $x - 3 = 0$   or $x - 3 = 0$. \\
 
 Either $x = 3$ or $x = 3$.  \\
 
-$3$ is the only solution to the equation, but the equation has this solution twice.
+$3$ is the only solution to the equation, but the equation has this solution twice. \textbf{\textcolor{red!90!darkgray}{A double root}}.
 
 
 The previous two examples illustrated that quadratic equations can have two or one solutions.  The next example illustrates that a quadratic equation can have no real solutions.
@@ -437,6 +508,7 @@ The previous two examples illustrated that quadratic equations can have two or o
 
 Solve $2 x^2 - 12x + 21 = 1$ \\
 
+\begin{explanation}
 
 First, get everything to one side and $0$ on the other side.
 
@@ -444,12 +516,12 @@ First, get everything to one side and $0$ on the other side.
 
 \[  2 x^2 - 12x + 20 = 0  \]
 
-Factor out $a$,
+Factor out the leading coefficient.
 
 \[  2 (x^2 - 6x + 10) = 0  \]
 
 
-Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  Change the $10$ to be $9+1$.
+Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  We could add and subtract $9$ or we can change the $10$ to be $9+1$.  ALl we are trying to do is to see a $9$.
 
 
 
@@ -467,15 +539,15 @@ $2 ((x-3)^2)$ is never negative, since we have a square.  This cannot be added t
 This equation has no real solutions.
 
 
-
+\end{explanation}
 \end{example}
 
 
 
-The above example illustrates that there are numbers missing from teh real numbers.  
+The above example illustrates that there are numbers missing from the real numbers.  
 
 
-$\blacktriangleright$  \textbf{A Peek Ahead}
+$\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{A Peek Ahead}} 
 
 
 
@@ -492,7 +564,12 @@ There are no real numebrs that will do this.  The square of a real number cannot
 We can see that the real numbers are not enough for all of our equations.  Eventually, we will fill in the missing pieces with the \textbf{Complex Numbers}.  They will include $\sqrt{-1}$. 
 
 
-Then our last example will have two complex solutions.  Our first example had two real solutions.  Our second example had two identical solutions.  All quadratics will have two solutions. \\
+Then our last example will have two complex solutions.  Our first example had two real solutions.  Our second example had two identical solutions.  This third example has two distinct complex solutoins. \\
+
+
+$\blacktriangleright$ All quadratics will have two solutions...eventually. \\
+
+We'll fill in the holes in the second course.
 
 
 
@@ -502,13 +579,11 @@ Then our last example will have two complex solutions.  Our first example had tw
 
 
 
-
-
-But, for now, we a staying inside the real numbers.
+For now, we a staying inside the real numbers.
 
 
 
- For now, we note that there are no \textbf{real} solutions.
+ For now, we note that there are no \textbf{real} solutions in the third example.
 
 
 

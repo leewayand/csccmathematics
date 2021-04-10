@@ -13,11 +13,11 @@ intersection
 
 
 
-\section{Common Pairs}
+\subsection{Common Pairs}
 
-Your journey through mathematics has brought you to a major step in your thinking. You have been working wih individual numbers for years and years. Functions brings a totally different viewpoint. Our basic mathematical tool is growing from a number to a function.  Our basic thought is about huge collecitons of pairs of numbers.  Our anlysis is moving from how numbers combine and compare to how functions combine and compare.
+Your journey through mathematics has brought you to a major step in your thinking. You have been working with individual numbers for years and years. NUmbers have been the fundamental object in mathematics. Functions bring a totally different viewpoint. Our new basic mathematical tool is growing from a number to a function.  Our new basic thought is about huge collections of pairs of numbers.  Our new anlysis is moving from how numbers combine and compare to how functions combine and compare.
 
-We are learning how to investigate functions.  Given a function, we would like to know its domain and range; zeros; discontinuities, singularities, where it is increasing or decreasing, and what its graph looks like.
+We are learning how to investigate functions.  Given a function, we would like to know its domain and range; zeros; discontinuities; singularities; where it is increasing or decreasing; what are the maximum and minum values; and what its graph looks like.
 
 We would also like to compare functions.  For instance, what pairs they have in common. Let's try this for linear functions.
 
@@ -25,7 +25,7 @@ We would also like to compare functions.  For instance, what pairs they have in 
 
 \section{Intersections}
 
-Given two linear functions (1) do they share any pairs?, (2) what are the common pairs?
+Given two linear functions (1) do they share any pairs?; (2) what are the common pairs?
 
 
 
@@ -49,9 +49,10 @@ Two lines can interesect in exactly one point.
             	axis on top,
           		]
 
-        \addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(5.333,-1.333)};
+        
         \addplot [draw=penColor, very thick, smooth, domain=(-8:8),<->] {0.5*x-4};
         \addplot [draw=penColor, very thick, smooth, domain=(-6:8),<->] {-x+4};
+        \addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(5.333,-1.333)};
 
 
     \end{axis}
@@ -162,9 +163,9 @@ It might not be immediate clear that $L(k) = \frac{4}{3}k - \frac{8}{5}$ and $p(
 
 Linear functions can share no pairs, exactly $1$ pair, or all of their pairs.  Is that it?  Our intuition tells us that the graph of a line cannot turn around and have a second intersection point.  But, that is far from a convincing argument.  Perhaps the graphs do not show enough and our intuition is wrong.  
 
-How do we convince people that this is true, without say "trust me"?
+How do we convince people that this is true, without saying "trust me"?
 
-Graphing and geometry are excellent tools for believing, but when you need an argument that accounts for EVERYTHIUNG, then you need algebra.  Algebra helps us make sure we have accounted for EVERYTHING.  These types of desciptions, that account for everything, are called \textbf{proofs}.
+Graphing and Geometry are excellent tools for believing, but when you need an argument that accounts for EVERYTHING, then you need Algebra.  Algebra helps us make sure we have accounted for EVERYTHING.  These types of descriptions, that account for everything, are called \textbf{proofs}.
 
 
 
@@ -217,7 +218,7 @@ This fraction is valid since the denominator does not eqaual $0$.  Therefore, $T
 
 
 
-etting $f(T) = g(T)$ gives us 
+Setting $f(T) = g(T)$ gives us 
 
 
 
@@ -291,7 +292,7 @@ a_n \, x_n + a_{n-1} \, x_{n-1} + \cdots + a_2 \, x_2 + a_1 \, x_1 + a_0 = 0
 \]
 
 
-We might collect some linear equations and group them together. This collection is called a \textbf{system of linear equations}. And, as above, we might lok for common solutions.  The process of looking for common solutions is called \textit{solving the system}.
+We might collect some linear equations and group them together. This collection is called a \textbf{system of linear equations}. And, as above, we might look for common solutions.  The process of looking for common solutions is called \textit{solving the system}.
 
 
 
@@ -361,6 +362,9 @@ Solve the system
 \end{align*}
 
 
+
+\begin{explanation}
+
 We have $2x = 3y + 5$, therefore we can multiply both sides by $\answer{2}$ to get $4x = 6y + 10$.  This is an equivalent equation, so we can replace the first equation.
 
 \begin{align*}
@@ -369,12 +373,12 @@ We have $2x = 3y + 5$, therefore we can multiply both sides by $\answer{2}$ to g
 \end{align*}
 
 
-We now have two expressions both equal to $4x$, they must, themselves, be equal.
+We now have two expressions both equal to $4x$, then they must, themselves, be equal.
 
 
 \[   6y + 10 =  \answer{7y + 11}   \]
 
-We can subtract $6y$ from both sides and subtract $\answer{11}$ from both sides
+We can subtract $6y$ from both sides and subtract $\answer{11}$ from both sides to get
 
 
 \[   -1 =  y   \]
@@ -392,9 +396,9 @@ We now know that $y=-1$ and we know that $4x = 7y + 11$.  That tell us that
 \[ x = 1 \]
 
 
-Our common solution to the two original equations is $x = 1$ and $y = -1$.  You you graphed the two lines, then $(1, -1)$ would be the intersection point.
+Our common solution to the two original equations is $x = 1$ and $y = -1$.  If you graph the two lines, then $(1, -1)$ would be the intersection point.
 
-
+\end{explanation}
 \end{example}
 
 
@@ -417,6 +421,7 @@ x & = 3y - 1 \\
 4x & = 5y + 3
 \end{align*}
 
+\begin{explanation}
 
 We have $x = 3y - 1$, therefore we can replace any $x$ with $3y - 1$.  
 
@@ -442,9 +447,9 @@ The second equation tells us that
 
 \[ x = 3y - 1= 3(1) - 1 = 2\]
 
-Our common solution to the two original equations is $x = 2$ and $y = 1$.  You you graphed the two lines, then $(2, 1)$ would be the intersection point.
+Our common solution to the two original equations is $x = 2$ and $y = 1$.  If you graph the two lines, then $(2, 1)$ would be the intersection point.
 
-
+\end{explanation}
 \end{example}
 
 

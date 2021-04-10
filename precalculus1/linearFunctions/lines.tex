@@ -12,16 +12,30 @@ constant slope
 \maketitle
 
 
-Linear functions are those functions with a constant growth rate or rate of change.  If you select any two distinct numbers from the domain of a linear function and calculate the rate of change over the associated interval, then you will get the same number - no matter which two domain numbers you select.
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Linear Functions}} \\
+
+Linear functions are those functions with a constant growth rate or rate of change.  
+
+\end{definition}
+
+
+
+
+
+
+
+
+If you select any two distinct numbers from the domain of a linear function and calculate the rate of change over the associated interval, then you will get the same number - no matter which two domain numbers you select.
 
 $\blacktriangleright$ Suppose $L$ is a linear function and $a \ne b$ are two numbers in the domain of $L$. Then, 
 
-\[    \frac{L(b) - L(a)}{b - a} = m   \]
-
-for some constant $m$.
+\[    \frac{L(b) - L(a)}{b - a} = m  \text{ for some fixed constant } m \]
 
 
-No matter which two numbers you select from the domain of $L$, the rate of change always turns out to be $m$.  Each linear function has its own constant rate of change.
+
+
+No matter which two numbers you select from the domain of $L$, the rate of change always turns out to be $m$.  Each linear function has its own $m$ - its own constant rate of change.
 
 
 
@@ -51,10 +65,10 @@ $f$ is a linear function.
 
 Let $L$ be a linear function.  That means it has is own constant rate of change.  Let's call it $m$. \\
 
-Let $(a, b)$ be one specific point in the domain of $L$.\\
+Let $(a, b)$ be one specific point in $L$.\\
 
 
-Let $(x, y)$ represent any other pair in the function $L$. Then the rrate of change from $(a,b)$ to $(x, y)$ has to equal $m$.
+Let $(x, y)$ represent any other pair in the function $L$. Then the rate of change from $(a,b)$ to $(x, y)$ has to equal $m$.
 
 
 \[  \frac{y - \answer{b}}{x-\answer{a}} = m \]
@@ -78,9 +92,13 @@ Solving this for $L(x)$ gives
 \begin{example} \textit{A pair and a rate-of-change}
 
 
-Suppose $W$ is a linear function with constant rate of change equal to $5$ and $(3, -1)$ is one pair in $W$.
+Suppose $W$ is a linear function with constant rate of change equal to $5$ and $(3, -1)$ is one pair in $W$.  \\
 
-Then the template: $L(x) = m (x-a) + L(a)$ tell us that a formula for $W$ is 
+CReate a formula for $W$.
+
+\begin{explanation}
+
+The template $L(x) = m (x-a) + L(a)$ tell us that a formula for $W$ looks like 
 
 
 \[  W(x) = 5 (x-3) + \left(\answer{-1}\right)     \]
@@ -93,10 +111,24 @@ We could multiply this out and collect like terms and obtain the equivalent equa
 
 \[  W(x) = \answer{5}x - \answer{16}   \]
 
+\end{explanation}
 
 Perhaps, we do not like $x$ as the variable for our formula.  Perhaps $v$ suits our situation better.
 
 \[  W(v) = 5v - 16   \]
+
+
+Or, $k$.
+
+\[  W(k) = 5k - 16   \]
+
+
+Or, $A$.
+
+\[  W(A) = 5A - 16   \]
+
+
+It is always advantageous to select a variable that is a nice reminder of the domain measurement.
 
 \end{example}
 
@@ -111,9 +143,9 @@ Perhaps, we do not like $x$ as the variable for our formula.  Perhaps $v$ suits 
 \begin{example} \textit{Two Pairs}
 
 
-Suppose $g$ is a linear function with $(0, 6)$ and $(-2, -5)$ as two pairs in $W$.
+Suppose $g$ is a linear function with $(0, 6)$ and $(-2, -5)$ as two pairs in $g$.
 
-Then the template: $L(x) = m (x-a) + L(a)$ will need a rrate of change
+Then the template: $L(x) = m (x-a) + L(a)$ will need a rate of change
 
 
 
@@ -145,7 +177,7 @@ A formula for $g$ is
 
 
 
-A linear function has a line as its graph.  The line includes points for every pair in the function.  And, since it is a line, only two points are needed to draw the graph.  Any two points will do.
+A linear function has a line as its graph.  The line includes a point for each pair in the function.  And, since it is a line, only two points are needed to draw the graph.  Any two distinct points will do.
 
 
 
@@ -154,7 +186,11 @@ A linear function has a line as its graph.  The line includes points for every p
 \begin{example} \textit{A Line}
 
 
-Let $g(k) = 0.5k - 4$ be a linear function.  Let's select two random domain numbers: $-4$ and $6$.  The function values at these domain numbers are $g(-4) = -6$ and $g(6) = -1$.  Therefore, the points $(-4, -6)$ and $(6, -1)$ are on the graph, which is a line.  We'll plot the two points and draw a line through them.
+Let $g(k) = 0.5k - 4$ be a linear function with its natural domain.
+
+
+\begin{explanation}
+Let's select two random domain numbers: $-4$ and $6$.  The function values at these domain numbers are $g(-4) = \answer{-6}$ and $g(6) = \answer{-1}$.  Therefore, the points $(-4, -6)$ and $(6, -1)$ are on the graph, which is a line.  We'll plot the two points and draw the line through them.
 
 
 Below is the graph of $y=g(k)$.
@@ -185,6 +221,7 @@ Below is the graph of $y=g(k)$.
 \end{image}
 
 
+\end{explanation}
 
 \end{example}
 
@@ -200,7 +237,7 @@ Below is the graph of $y=g(k)$.
 \begin{example} \textit{A Line}
 
 
-Let $B(t)$ be a linear function.    Below is the graph of $y = B(t)$.
+Let $B(t)$ be a linear function.    Below is the graph of $y = B(t)$. From the graph obtain a formula for $B$.
 
 
 \begin{image}
@@ -227,19 +264,28 @@ Let $B(t)$ be a linear function.    Below is the graph of $y = B(t)$.
 \end{tikzpicture}
 \end{image}
 
-
+\begin{explanation}
 
 From the graph, we can approximate the points $(0, -5)$ and $(3.3, 0)$.  These give a slope of
 
-\[  slope = \frac{0 - (-5)}{3.3 - 0} \approx 1.5     \]
+\[  slope = \frac{0 - \left(\answer{-5}\right)}{\answer{3.3} - 0} = \frac{5}{33} (\approx 1.5)     \]
 
 
-This would give the formula $B(t) = 1.5 (t - 0) - 5 = 1.5 t - 5$
+This would give the formula $B(t) = \frac{5}{33} (t - 0) - 5 = \frac{5}{33} t - 5$
 
+\end{explanation}
 
 \end{example}
 
 
+We used the point $(0, -5)$ to create the equation.  We could also have used $(3.3,0)$.
+
+
+
+$B(t) = \frac{5}{33} (t - 3.3) - 0 = \frac{5}{33} t - \frac{5}{33}\cdot 3.3 = \frac{5}{33} t -  5$ \\
+
+
+Same equation.  You can use any point on the line.
 
 
 
@@ -258,10 +304,10 @@ This would give the formula $B(t) = 1.5 (t - 0) - 5 = 1.5 t - 5$
 \section{Linear Equations}
 
 
-\begin{definition}
+\begin{definition} \textbf{\textcolor{green!50!black}{Linear Equation}} \\
 
 
-A \textbf{linear equation} in $x_1$ and $x_2$ is an equation that is equivalent to 
+A \textbf{linear equation in $x_1$ and $x_2$} is an equation that is equivalent to 
 
 \[
 a \, x_1 + b \, x_2 + c = 0
@@ -285,12 +331,12 @@ $a$, $b$, $c$ are constants called \textbf{coefficients}.
 
 
 
-\begin{definition}
+\begin{definition} \textbf{\textcolor{green!50!black}{Solution}} \\
 
 
 A \textbf{solution} to the linear equation  $a \, x_1 + b \, x_2 + c = 0$ is an ordered pair of numbers that \textbf{satisfy} the equation.
 
-One of the solution numbers is deignated for $x_1$ and one is designated for $x_2$.  Upon substituting these numbers into the equation for $x_1$ and $x_2$, the resulting statement is a true statement, i.e. the equation is satisfied.
+One of the solution numbers is designated for $x_1$ and one is designated for $x_2$.  (That is what order means.) Upon substituting these numbers into the equation for $x_1$ and $x_2$, the resulting statement is a true statement, i.e. the equation is satisfied.
 
 
 
@@ -319,12 +365,12 @@ With this decision made, each solution pair can be interpreted as coordinates fo
 
 
 
-Consider the linear equation  $3 x + 2 y = 12$.
+Consider the linear equation  $3 t + 2 y = 12$.
 
 
-Let's select $x$ to be the first variable and $y$ the second variable.
+Let's select $t$ to be the first variable and $y$ the second variable.
 
-With this agreement, $(4, 0)$ is a solution to the equation.   $(4,0)$ can be viewed as a point and poltted as a dot.
+With this agreement, $(4, 0)$ is a solution to the equation.   $(4,0)$ can be viewed as a point and plotted as a dot on the Cartesian plane.
 
 
 
@@ -410,14 +456,14 @@ If we interpret the first or left variable as the domain variable and the second
 
 
 
-In the example above, $3 x + 2 y = 12$ can be rewritten as $y = \answer{\frac{-3}{2}} x + \answer{6}$.
+In the example above, $3 t + 2 y = 12$ can be rewritten as $y = \answer{\frac{-3}{2}} t + \answer{6}$.
 
-To emphasize that we are now thinking in terms of functions, we might write $y(x) = \tfrac{-3}{2} x + 6$.
-
-
+To emphasize that we are now thinking in terms of functions, we might write $y(t) = \tfrac{-3}{2} t + 6$.
 
 
-We could just as easily have chosen $y$ as the domain variable and $x$ as the function variable.  In this case, $3 x + 2 y = 12$ can be rewritten as $x = \answer{\frac{-2}{3}} y + \answer{4}$.  We might write this as $x(y) = \tfrac{-2}{3} y + 4$
+
+
+We could just as easily have chosen $y$ as the domain variable and $t$ as the function variable.  In this case, $3 t + 2 y = 12$ can be rewritten as $t = \answer{\frac{-2}{3}} y + \answer{4}$.  We might write this as $t(y) = \tfrac{-2}{3} y + 4$
 
 
 
