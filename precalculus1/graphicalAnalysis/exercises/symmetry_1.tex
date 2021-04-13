@@ -1,0 +1,119 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+\outcome{outcome.}
+\outcome{outcome.}
+\outcome{outcome.}
+
+\author{Lee Wayand}
+
+\begin{document}
+
+
+
+
+
+
+
+
+
+
+
+
+Cosine is an even function.  The graph of $y= cos(\theta)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=3, xmax=10, ymin=-3, xmin=-10,
+                axis lines =center, xlabel={$\theta$}, ylabel=$y$,
+                ytick={-2,-1,1,2},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-3.7, 3.7), <->] {x};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8.3:8.3), <->] {cos(deg(x)};
+        %\addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,-3.3)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We can shift the graph of $y = cos(x)$ by adding a constant to the "inside" of the formula.
+
+
+
+\begin{center}
+\desmos{6pgzbsv2px}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+\begin{exercise}  
+
+Which shifting values will return the graph to the graph of $y=cos(x)$?
+
+\begin{selectAll}
+\choice {$\frac{\pi}{3}$}
+\choice {$\frac{\pi}{2}$}
+\choice {$\frac{5\pi}{6}$}
+\choice {$\pi$}
+\choice {$\frac{3\pi}{2}$}
+\choice {$\frac{7\pi}{4}$}
+\choice [correct]{$2\pi$}
+\end{selectAll}
+
+
+\end{exercise}
+
+
+
+
+
+
+
+
+\begin{exercise}  
+
+For which shifting values is $cos(x + p)$ an odd function?
+
+\begin{selectAll}
+\choice {$\frac{\pi}{3}$}
+\choice [correct]{$\frac{\pi}{2}$}
+\choice {$\frac{5\pi}{6}$}
+\choice {$\pi$}
+\choice [correct]{$\frac{3\pi}{2}$}
+\choice {$\frac{7\pi}{4}$}
+\choice {$2\pi$}
+\end{selectAll}
+
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -12,13 +12,34 @@
 
 
 
-Let $T(h)$ be a function.  The graph of $y = T(h)$ is displayed below. 
+
+
+
+
+
+\[
+\text{ Let } \, p(v) = 
+\begin{cases}
+  -v + 0.5        &  [-8,-1] \\
+  \frac{v}{2} + 2 &  (-1,6] \\
+  -2v+12          &  (6,8] 
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+The graph of $y = p(v)$ is displayed below. 
 
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$h$, ylabel=$y$,
+                axis lines =center, xlabel=$v$, ylabel=$y$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
@@ -60,121 +81,16 @@ Let $T(h)$ be a function.  The graph of $y = T(h)$ is displayed below.
 
 \begin{exercise}  
 
-Select the global maximum value of $T(h)$.
 
-\begin{multipleChoice}
-\choice [correct]{$8$}
-\choice {$1.5$}
-\choice {$5$}
-\choice {$0$}
-\choice {$-4$}
-\choice {There is No Maximum Value}
-\end{multipleChoice}
+The rate of change of $p(v)$ over the interval $[-6, -2]$ is $\answer{-1}$. \\
+
+The rate of change of $p(v)$ over the interval $[-4, 4]$ is $\answer{-\frac{1}{16}}$. \\
+
+The rate of change of $p(v)$ over the interval $[2, 6]$ is $\answer{\frac{1}{2}}$. \\
+
+The rate of change of $p(v)$ over the interval $[2, 8]$ is $\answer{-\frac{7}{6}}$. \\
 
 \end{exercise}
-
-
-
-
-\begin{exercise}  
-
-Where does the global maximum value of $T(h)$ occur?
-
-\begin{multipleChoice}
-\choice [correct]{$-8$}
-\choice {$-1$}
-\choice {$6$}
-\choice {$8$}
-\choice {There is No Maximum Value}
-\end{multipleChoice}
-
-\end{exercise}
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{exercise}  
-
-Select the global minimum value of $T(h)$.
-
-\begin{multipleChoice}
-\choice {$8$}
-\choice {$1.5$}
-\choice {$5$}
-\choice {$0$}
-\choice [correct]{$-4$}
-\choice {There is No Maximum Value}
-\end{multipleChoice}
-
-\end{exercise}
-
-
-
-
-\begin{exercise}  
-
-Where does the global minimum value of $T(h)$ occur?
-
-\begin{multipleChoice}
-\choice {$-8$}
-\choice {$-1$}
-\choice {$6$}
-\choice [correct]{$8$}
-\choice {There is No Maximum Value}
-\end{multipleChoice}
-
-\end{exercise}
-
-
-
-
-
-
-\begin{exercise}  
-
-Select all of the local maximum values of $T(h)$.
-
-\begin{selectAll}
-\choice [correct]{$8$}
-\choice {$1.5$}
-\choice [correct]{$5$}
-\choice {$0$}
-\choice {$-4$}
-\choice {There are No Local Maximum Valuea}
-\end{selectAll}
-
-\end{exercise}
-
-
-
-
-\begin{exercise}  
-
-Select all of the local minimum values of $T(h)$.
-
-\begin{selectAll}
-\choice {$8$}
-\choice [correct]{$1.5$}
-\choice [correct]{$5$}
-\choice {$0$}
-\choice [correct]{$-4$}
-\choice {There are No Local Maximum Values}
-\end{selectAll}
-
-\end{exercise}
-
-
-
-
-
 
 
 
