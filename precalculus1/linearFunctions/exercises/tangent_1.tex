@@ -14,7 +14,7 @@
 
 
 
-
+Below is the graph of $m = M(w) = \frac{1}{10} (w+6) (w+1) (w-3)$ with is natural domain.  The tangent line at the point $\left( 2, -\frac{24}{10} \right)$ is also drawn.
 
 
 \begin{image}
@@ -30,8 +30,8 @@
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-7:5),<->] {0.1*(x+6)*(x+1)*(x-3)};
-          \addplot [line width=2, penColor2, smooth, samples=200, domain=(-1:6),<->] {1.3(x-2)-2.4};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-7:4.5),<->] {0.1*(x+6)*(x+1)*(x-3)};
+          \addplot [line width=2, penColor2, smooth, samples=200, domain=(-4:8),<->] {1.3*(x-2)-2.4};
 
 
           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2.4)};
@@ -50,15 +50,15 @@
 
 \begin{exercise} Equation
 
-The line above goes through the points $(-4,-5)$ and $(2,-2)$. \\
+The tangent line above goes through the point $\left( 2, -\frac{24}{10} \right)$ with a slope of $\frac{13}{10}$. \\
 
 
 
 
 
-Create an equation for this line:  $m = \answer{\frac{w}{2}-3}$. \\
+Create an equation for this line:  $m = \answer{\frac{13}{10} w-\frac{50}{10}}$. \\
 
-The $w$-intercept is $\left( \answer{6}, \answer{0} \right)$
+The $w$-intercept of the tangent line is $\left( \answer{\frac{50}{13}}, \answer{0} \right)$
 
 
 \end{exercise}
@@ -70,11 +70,117 @@ The $w$-intercept is $\left( \answer{6}, \answer{0} \right)$
 
 The line above is the graph of a linear function called $H$.  \\
  
-Create a formula for this funciton:  $H(w) = \answer{\frac{w}{2}-3}$. \\
+Create a formula for this function:  $H(w) = \answer{\frac{13}{10} w-\frac{50}{10}}$. \\
 
-The of $H$ is $\answer{6}$
+The of $H$ is $\answer{\frac{50}{13}}$
 
 \end{exercise}
+
+
+
+
+
+
+
+
+
+
+\begin{exercise} Intersection
+
+It appears from the graph that if we extend both graphs to the left, they will intersect at a second intersection point.  This second intersection point is on both graphs, which means that the two functions have the same value at the corresponding domain number.
+
+
+\[
+\frac{1}{10} (w+6) (w+1) (w-3) = \frac{13}{10} (w-2) -\frac{24}{10}
+\]
+
+
+
+\[
+(w+6) (w+1) (w-3) = 13 (w-2) - 24
+\]
+
+
+
+\[
+w^3 + \answer{4} w^2 - \answer{15} w - \answer{18} = 13 w - 50
+\]
+
+
+\[
+w^3 + 4 w^2 - \answer{28} w + \answer{32} = 0
+\]
+
+
+We know that $2$ is a solution to this, because the tangent point is an intersection point where the two functions would be equal.  Therefore, $w-2$ must be a factor.  The other factor must be a quadratic, since together their product is a cubic.
+
+
+
+\[
+w^3 + 4 w^2 - \answer{28} w + \answer{32} = (w - 2) \cdot (A \, w^2 + B \, w + C)
+\]
+
+
+Let's multiply out the left side and equate coefficients.
+
+
+\[
+w^3 + 4 w^2 - \answer{28} w + \answer{32} = (w - 2) \cdot (A \, w^2 + B \, w + C)
+\]
+
+
+\[
+w^3 + 4 w^2 - \answer{28} w + \answer{32} = A \, w^3 + (B - 2A) \, w^2 + (C - 2B) \, w - 2C
+\]
+
+
+From this, we can see that   $A = \answer{1}$ and $C = \answer{-16}$.
+
+Substituting these value in gives us
+
+
+
+\[
+w^3 + 4 w^2 - \answer{28} w + \answer{32} = w^3 + (B - 2) \, w^2 + (-16 - 2B) \, w + 32
+\]
+
+
+Comparing the $w^2$-term, we see that $B = \answer{6}$.
+
+
+
+
+
+
+\[
+w^3 + 4 w^2 - \answer{28} w + \answer{32} = (w - 2) \cdot (w^2 + 6 \, w - 16)
+\]
+
+
+This quadratic factors.
+
+
+
+\[
+w^3 + 4 w^2 - \answer{28} w + \answer{32} = (w - 2) \left( w - \answer{2} \right) \left( w + \answer{8} \right)
+\]
+
+
+
+The solution that corresonds to our second intersection point is $\answer{-8}$. \\
+
+The other intersection point is $\left( -8, -\frac{154}{10} \right)$.
+
+
+
+\end{exercise}
+
+
+\textbf{Note:}  The tangent point corresponded to a double root and a double factor - a factor with a multiplcity (exponent) of $2$.
+
+
+
+
 
 
 
