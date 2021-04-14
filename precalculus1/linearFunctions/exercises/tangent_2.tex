@@ -50,6 +50,54 @@ Below is the graph of $m = M(w) = \frac{1}{10} (w+6) (w+1) (w-3)$ with is natura
 
 
 
+
+
+
+
+
+We could draw tangent lines at lost of points on the curve.
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=$m$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-7:4.5),<->] {0.1*(x+6)*(x+1)*(x-3)};
+          \addplot [line width=2, penColor2, smooth, samples=200, domain=(-4:8),<->] {1.3*(x-2)-2.4};
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2.4)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2)};
+
+           \node at (axis cs:.15,.07) [anchor=west] {$A$};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
 \begin{exercise} Equation
 
 The tangent line above goes through the point $\left( 2, -\frac{24}{10} \right)$ with a slope of $\frac{13}{10}$. \\
