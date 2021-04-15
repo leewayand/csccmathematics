@@ -1,0 +1,92 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+\outcome{outcome.}
+\outcome{outcome.}
+\outcome{outcome.}
+
+\author{Lee Wayand}
+
+\begin{document}
+
+
+
+
+
+\begin{exercise}
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:8),->] {20};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+			\addplot [name path=A,domain=0:3,draw=none] {20};   
+			\addplot [name path=B,domain=0:3,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+			\draw[penColor,thick] (0,10) -- (0,30);
+			\draw[penColor,thick] (30,10) -- (30,30);
+
+			\node at (axis cs:1.5,10) [penColor] {$area$};
+			\node at (axis cs:3,-5) [penColor] {$t$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
