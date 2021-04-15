@@ -152,6 +152,120 @@ In addition, the intercepts represent the zeros of the quadratic function and we
 
 
 
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-9:7),<->] {0.25*(x+6)*(x-4)};
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        
+
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,-6.25)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-6,0)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,0)};
+
+        \node[penColor] at (axis cs:-3,-7.25) {$(h, k)$};
+        \node[penColor] at (axis cs:-4.5,1) {$(r_1, 0)$};
+        \node[penColor] at (axis cs:6,1) {$(r_2, 0)$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   Analyze $f(x) = x^2 + 4x - 5$ \\ 
+
+
+$f$ is a quadratic function and will have a parabola for a graph.
+
+\begin{explanation} Analysis \\
+
+
+We are given $f(x)$ in standard form.  Let's get the other two forms.
+
+Factored form: $f(x) = (x+5)(x-1)$. \\
+
+Vertex form: $f(x) = (x+2)^2 - 9$ \\
+
+
+From any of the three forms, we can see that the leading coefficient is $1$, which is positive.  Thus, our parabola will open up.
+
+
+From the factored for, we can see that $-5$ and $1$ are the zeros of $f(x)$.  These will be represented as the intercepts $(-5, 0)$ and $(1,0)$.
+
+
+From the vertex form, we can see that the lowest point of the parabola will be $(-2, 9)$.  The funciton $f$ has a global minimum value of $-9$, which occurs at $-2$ in the domain.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-9:7),<->] {(x+5)*(x-1)};
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        
+
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-2,-9)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$f$ decreases on $(-\infty, -2]$ and increases on $[-2, \infty)$.
+
+
+
+
+
+
+\end{explanation}
+
+\end{example}
 
 
 
