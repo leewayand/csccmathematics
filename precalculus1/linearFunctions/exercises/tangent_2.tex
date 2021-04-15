@@ -37,7 +37,7 @@ Below is the graph of $m = M(w) = \frac{1}{10} (w+6) (w+1) (w-3)$ with is natura
           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2.4)};
           %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2)};
 
-           \node at (axis cs:.15,.07) [anchor=west] {$A$};
+           
 
 
            
@@ -55,7 +55,7 @@ Below is the graph of $m = M(w) = \frac{1}{10} (w+6) (w+1) (w-3)$ with is natura
 
 
 
-We could draw tangent lines at lost of points on the curve.
+We could draw tangent lines at lots of points on the curve.
 
 
 
@@ -74,13 +74,17 @@ We could draw tangent lines at lost of points on the curve.
           ]
           
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-7:4.5),<->] {0.1*(x+6)*(x+1)*(x-3)};
-          \addplot [line width=2, penColor2, smooth, samples=200, domain=(-4:8),<->] {1.3*(x-2)-2.4};
+          %\addplot [line width=2, penColor2, smooth, samples=200, domain=(-4:8),<->] {1.3*(x-2)-2.4};
 
 
           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2.4)};
-          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,0) (-3,3.6) (0,-1.8) (4,5)};
 
-           \node at (axis cs:.15,.07) [anchor=west] {$A$};
+          \node at (axis cs:-6.2,0.7) [anchor=east] {$A$};
+          \node at (axis cs:-2.7,4) [anchor=south] {$B$};
+          \node at (axis cs:0.5,-1.7) [anchor=south] {$C$};
+          \node at (axis cs:2,-3) [anchor=west] {$D$};
+          \node at (axis cs:4.2,5) [anchor=west] {$E$};
 
 
            
@@ -98,37 +102,24 @@ We could draw tangent lines at lost of points on the curve.
 
 
 
-\begin{exercise} Equation
-
-The tangent line above goes through the point $\left( 2, -\frac{24}{10} \right)$ with a slope of $\frac{13}{10}$. \\
+\begin{exercise} Slopes
 
 
+The tangent line at point A would have a \wordChoice{\choice{negative} \choice{zero} \choice[correct]{positive}} slope. \\
+
+The tangent line at point B would have a \wordChoice{\choice[correct]{negative} \choice{zero} \choice{positive}} slope. \\
+
+The tangent line at point C would have a \wordChoice{\choice[correct]{negative} \choice{zero} \choice{positive}} slope. \\
+
+The tangent line at point D would have a \wordChoice{\choice{negative} \choice{zero} \choice[correct]{positive}} slope. \\
+
+The tangent line at point E would have a \wordChoice{\choice{negative} \choice{zero} \choice[correct]{positive}} slope. \\
 
 
-
-Create an equation for this line:  $m = \answer{\frac{13}{10} w-\frac{50}{10}}$. \\
-
-The $w$-intercept of the tangent line is $\left( \answer{\frac{50}{13}}, \answer{0} \right)$
 
 
 \end{exercise}
-
-
-
-
-\begin{exercise} Function
-
-The line above is the graph of a linear function called $H$.  \\
- 
-Create a formula for this function:  $H(w) = \answer{\frac{13}{10} w-\frac{50}{10}}$. \\
-
-The of $H$ is $\answer{\frac{50}{13}}$
-
-\end{exercise}
-
-
-
-
+\
 
 
 
