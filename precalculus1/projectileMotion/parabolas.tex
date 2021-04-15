@@ -7,39 +7,40 @@
 \begin{document}
 
 \begin{abstract}
-quadratic formula
+quadratic graphs
 \end{abstract}
 \maketitle
 
 
 
+
+
+We have three forms of quadratic functions:
+
+
+
+$\blacktriangleright$ $S(x) = A \, x^2 + B \, x + C$  with $A \ne 0$ : Standard Form. \\
+
+
+$\blacktriangleright$ $F(t) = A \, (t - r_1)(t - r_2)$  with $A \ne 0$ : Factored Form. \\
+
+
+$\blacktriangleright$ $V(d) = A \, (d - h)^2 + k$  with $A \ne 0$ : Vertex Form. \\
+Vertex form comes from completing the square.  It gets its name from the graph of quadratic functions.
+
+
+
+
+
+
+
+
+
 \subsection{Graphs of Quadratic Functions}
 
-We have two types of elementary functions, so far:
-
-\begin{itemize}
-\item Linear functions
-\item Quadratic functions
-\end{itemize}
-
-One of our goals for analysis is to identify zeros of functions. \\
-
-Unless the linear function is actually a constant function (which is a linear function), the linear function has exactly one zero. We can identify this inique zero by setting the formulas equal to $0$ and solving.  This is accomplished by combining like terms and isolating the variable on one side of the equation.
-
-We have seen one approach to identifying zeros of quadratic functions.
-\begin{itemize}
-\item Completing the Square
-\end{itemize}
-
-We have a second approach. \\
 
 
-
-
-
-
-
-
+Quadratic functions all have parabolas for graphs.
 
 
 
@@ -47,24 +48,26 @@ We have a second approach. \\
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
-                domain=-5:10, ymax=10, xmax=10, ymin=-5, xmin=-5,
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-4,-2,2,4,6,8,10},
-                xtick={-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
                 axis on top,
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:7),<->] {0.5*(x-3)^2 + 2};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-7:9),<->] {-0.25*(x+4)*(x-6)};
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
         
 
 
-        \addplot [color=penColor,only marks,mark=*] coordinates{(3,2)};
-        \node[penColor] at (axis cs:4,1.5) {$(h, k)$};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(1,6.25)};
+        \node[penColor] at (axis cs:2,8) {vertex};
+        %\node[penColor] at (axis cs:4,1.5) {$(h, k)$};
         %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
 
 
@@ -79,6 +82,65 @@ We have a second approach. \\
 
 
 
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            	ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-9:7),<->] {0.25*(x+6)*(x-4)};
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        
+
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,-6.25)};
+        \node[penColor] at (axis cs:-3,-7) {vertex};
+        %\node[penColor] at (axis cs:4,1.5) {$(h, k)$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+The extreme point on a parabola is called the \textbf{vertex}.  It is the highest or lowest point on the parabola, depending on whether the parabola opens up or down. 
+
+This can be seen from the vertex form of the formula.
+
+
+
+
+\[
+V(d) = A \, (d - h)^2 + k
+\]
+
+The squared term, $A \, (d - h)^2$ has the same sign as $A$, except when it equals $0$.  That happens at $h$.  When $d = h$, then $V(h) = k$, which is either the minimum or maximum value of $V$.  The vertex is the graphical representation of the the extrem value of the quadratic funciton and where this maximum occurs in the domain.
+
+
+In addition, the intercepts represent the zeros of the quadratic function and we have seen there can be $0$, $1$, or $2$ real zeros for a quadratice function.  Therefore, there can be $0$, $1$, or $2$ intercepts for a parabola.
 
 
 
