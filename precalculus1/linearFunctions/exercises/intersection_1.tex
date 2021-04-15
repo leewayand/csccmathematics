@@ -1,0 +1,142 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+\outcome{outcome.}
+\outcome{outcome.}
+\outcome{outcome.}
+
+\author{Lee Wayand}
+
+\begin{document}
+
+
+
+
+
+\begin{exercise} Intersection Point \\
+
+
+Below are the graphs of 
+
+\begin{itemize}
+  \item $2A - 3B = 8$
+  \item $3A + B = 1$
+\end{itemize}
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(-8:8),->] {1.5*x+4};
+      \addplot [draw=penColor, very thick, smooth, domain=(-8:8),->] {-0.333*x+0.333};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+To identify the intersection point, solve the second equation for $B$ to get $B = \answer{1-3A}$. \\
+
+Substitute this expression in for $B$ in the first equation to get $2A - 3 \answer{1-3A} = 8$. \\
+
+
+
+
+
+\begin{align*}
+2 \, A - 3 (1-3 \, A) &= 8 \\
+2 \, A - 3 + \answer{9} A &= 8 \\
+\answer{11} A  - 3   &= 8 \\
+\answer{11} A    &= \answer{11} \\
+A &= \answer{1}
+\end{align*}
+
+It follows that $B = \answer{-2}$.
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+\begin{exercise} System \\
+
+
+The following two equations are a system of linear equations.
+
+\begin{itemize}
+  \item $3x - 5y = 11$
+  \item $-x + 3y = 4$
+\end{itemize}
+
+
+According to these two equations $3x - 5y - x + 3y = \answer{15}$
+
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{exercise} Proportionality \\
+
+
+Let $2T + 7p = 9$. \\
+
+
+According to this equation $6T + 21p = \answer{27}$.
+
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
