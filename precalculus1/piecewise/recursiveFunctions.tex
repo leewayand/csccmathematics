@@ -1,0 +1,143 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Recursive Functions}
+
+\begin{document}
+
+\begin{abstract}
+formula of formulas
+\end{abstract}
+\maketitle
+
+
+
+So far, our formulas have been arithmetic instructions involving domain numbers.  We can stretch the idea of a formula to include known function values.
+
+
+
+
+
+
+
+
+
+\begin{example}  \textit{Factorial} \\
+
+
+
+Domain is all whole numbers. \\
+Range is all natural numbers. \\
+
+
+
+
+\[
+Factorial(n) = 
+\begin{cases}
+  1 & n = 0 \\
+  1 & n = 1 \\ 
+  n \cdot Factorial(n-1) & 1 < n
+\end{cases}
+\]
+
+The traditional symbol for the factorial function is !.
+
+
+\begin{itemize}
+  \item 0! = 1
+  \item 1! = 1
+  \item n! = n \cdot (n-1) \cdot (n-2) \cdots 3 \cdot 2 \cdot 1
+\end{itemize}
+
+
+
+
+
+\begin{question} Write these factorials in the standard place value notation.
+
+
+\begin{itemize}
+\item $3! = \answer{6}$
+\item $4! = \answer{24}$
+\item $5! = \answer{120}$
+\end{itemize}
+
+
+\end{question}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  \textit{Fibonacci} \\
+
+
+
+
+
+
+\[
+Factorial(n) = 
+\begin{cases}
+  1 & n = 1 \\
+  1 & n = 2 \\ 
+  Fibonacci(n-1) + Fibonacci(n-2) & 2 < n
+\end{cases}
+\]
+
+
+\begin{itemize}
+\item $Fibonacci(2) = Fibonacci(1) + Fibonacci(0) = 1 + 1 = 2$
+\item $Fibonacci(3) = Fibonacci(2) + Fibonacci(1) = 2 + 1 = 3$
+\item $Fibonacci(4) = Fibonacci(3) + Fibonacci(2) = 3 + 2 = 5$
+\end{itemize}
+
+
+
+
+\begin{question} Write these factorials in the standard place value notation.
+
+
+\begin{itemize}
+\item $Fibonacci(5) = \answer{8}$
+\item $Fibonacci(6) = \answer{13}$
+\item $Fibonacci(7) = \answer{21}$
+\end{itemize}
+
+
+\end{question}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
