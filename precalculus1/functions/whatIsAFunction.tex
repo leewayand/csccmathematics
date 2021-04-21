@@ -31,14 +31,14 @@ Functions are special relations. While a relation is just two sets of items and 
 
 
 
-Mathematicians have a funny way of saying \textit{yes} or \textit{no} about a relation possibly being a function. If a supposed function satisfies our one and only rule, then it is said to be a \textbf{well-defined} function.  Otherwise, it is not well-defined.
+Mathematicians have a funny way of saying \textit{yes} or \textit{no} about a relation possibly being a function. If a supposed function satisfies our one and only rule, then it is said to be a \textbf{well-defined} function.  Otherwise, it is not well-defined (meaning, it is not a function).
 
 
 
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Well-Defined}}
 
-A function is said to be \textbf{well-defined} if it satisfies the one and only rule for a function.
+A relation is a function and is said to be \textbf{well-defined} if it satisfies the one and only rule for a function.
 \end{definition}
 
 
@@ -67,7 +67,7 @@ Since a chosen domain number is a rational number, it can be represented as $\tf
  
 This function is not well-defined.  \\
 
-For instance: We know of a rational number that can be represented as $\tfrac{2}{3}$ and thus it would be paired with $5$.  However, the same rational number can also be represented as $\tfrac{4}{6}$ and thus would be paired with $10$.  This violates the only rule we have.  This particular rational number from the domain must be paired with exactly one codomain number, if \textit{RationalAdd} is to be a function.
+For instance: There is a rational number that can be represented as $\tfrac{2}{3}$ and thus it would be paired with $5$.  However, the same rational number can also be represented as $\tfrac{4}{6}$ and thus would be paired with $10$.  This violates the only rule we have.  This particular rational number from the domain must be paired with exactly one codomain number, if \textit{RationalAdd} is to be a function. Therefore, it is not well-defined and not a function.
 
 \begin{warning}
 When function values depend on how you write numbers, that is a pretty good clue that the function is not going to be well-defined.
@@ -103,7 +103,7 @@ We finally found a well-defined function. That one little rule actually narrows 
 
 Now that we are only investigating functions, rather than all relations, we discover some opportunities to help our communication.  It turns out that when you select a domain item in a function, you have automatically selected a codomain item.
 
-Each domain item is paired with \textbf{\textcolor{purple!85!blue}{EXACTLY}} one codomain item.  Not 0. Not 2.  Not 3.  Exactly 1!  Thus, when you pick a domain item, you have automatically selected its partner in the codomain.  We could certainly hunt it down inside the codomain.  But, we can also just talk about 
+\textbf{Our Rule:} Each domain item is paired with \textbf{\textcolor{purple!85!blue}{EXACTLY}} one codomain item.  Not 0. Not 2.  Not 3.  Exactly 1!  Thus, when you pick a domain item, you have automatically selected its partner in the codomain.  We could certainly hunt down this partner inside the codomain.  But, we can also just talk about 
 
 
 \begin{center}
@@ -119,13 +119,13 @@ We have function notation for this thought. \\
 Let \textit{functionName} be the name of a function. \\
 Let \textit{d} represent a domain item of \textit{functionName}.
 
-Then, "\textit{functionName}(d)" represents \textit{d}'s partner in the codomain. \\
+Then, "\textit{functionName}(d)" represents d's partner in the codomain. \\
 
 $(d, functionName(d))$ is a pair in \textit{functionName}. \\
 
 
 \textit{functionName}(d) is called "the value of functionName \textbf{\textcolor{purple!85!blue}{AT}} d". \\
-\textit{functionName}(d) is pronounced as "functionName \textbf{\textcolor{purple!85!blue}{OF}} d".
+\textit{functionName}(d) is \underline{pronounced} as "functionName \textbf{\textcolor{purple!85!blue}{OF}} d".
 \end{notation}
 
 
@@ -149,7 +149,7 @@ The pair (Superbowl 13, \textit{SuperBowlWinner}(Superbowl 13)) is the pair (Sup
 
 \end{example}
 
-\textbf{Note:} The one and only rule for funcitons doesn't refer to the range.
+\textbf{Note:} The one and only rule for functions doesn't refer to the range.
 
 Not every NFL team has won a Superbowl. As of 2020, the Cleveland Browns had not won a Superbowl.  So, there are codomain items that are not partnered with a domain item.  This is not true of the domain.  Every domain item is paired with a codomain item.  That is our one and only function rule.  Every domain item appears in exactly one pair.  But not every codomain item appears in a pair.  This is significant and deserves some language.
 
@@ -257,14 +257,14 @@ Every domain member is in exactly one pair.
 
 \begin{question}
 
-Which codomain items are not in the range of \textit{ActorAgain}?
+Which codomain items are not in the range of \textit{AppearedInAgain}?
 
 \begin{selectAll}
 	\choice{Marlon Brando}
 	\choice{Vincent Price}
 	\choice{Humphrey Bogart}
 	\choice{Peter O'Toole}
-	\choice{Harrison Ford}
+	\choice[correct]{Harrison Ford}
 	\choice[correct]{Al Pacino}
 \end{selectAll}
 

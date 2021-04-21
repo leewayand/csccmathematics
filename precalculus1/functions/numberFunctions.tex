@@ -45,9 +45,9 @@ We compare all of these to each other:
 
 \section{Number Functions}
 
-We make functions connecting just about everything.  In particular, we could make functions where both the domain and codomain are sets of measurements. These are the types of functions we study in Calculus.  Therefore, we are making yet another effort to focus our attention.  And, since, measurements are real numbers accompanied by a unit, we will concentrate on functions that connect sets of real numbers with sets of real numbers. \\
+We make functions connecting just about everything.  In particular, we could make functions where both the domain and codomain are sets of measurements. These are the types of functions we study in Calculus.  These are the types of functions we will study in this course.  And, since, measurements are real numbers accompanied by a unit, we will frequently analyze functions that connect sets of real numbers with sets of real numbers. \\
 
-Technically, our functions will connect sets of measurements with sets of measurements. However, we usually hold the measurement units off to the side, work with the numbers, and then bring back the units when we interpret our results.  Once we arrive at any conclusions, then we will interpret our findings within the context of the situation under investigation and the measurements involved. \\
+In Calclulus, our applied functions will connect sets of measurements with sets of measurements. However, we usually hold the measurement units off to the side, work with the numbers, and then bring back the units when we interpret our results.  Once we arrive at any conclusions, then we will interpret our findings within the context of the situation under investigation and the measurements involved. \\
 
 
 
@@ -135,7 +135,7 @@ We can also have functions that just relate numbers. \\
 
 
 
-\begin{question} \textit{Double} \\
+\begin{example} \textit{Double} \\
 The \textit{Double} function pairs a real number with its double.
 
 domain = all real numbers  \\ 
@@ -150,11 +150,15 @@ codomain = all real numbers
 \item $\textit{Double}(7) = \answer{14}$.
 \end{itemize}
 
-\end{question} 
+\end{example} 
 
 
 
-\begin{question} \textit{Half} \\
+
+
+
+
+\begin{example} \textit{Half} \\
 The \textit{Half} function pairs a real number with its half.
 
 domain = positive real numbers  \\ 
@@ -165,12 +169,15 @@ Solve \textit{Half}(d) = $8$ \\
 
 The solution is $d = \answer{16}$.
 
-\end{question} 
+\end{example} 
 
 
 
 
-\begin{question} \textit{Successor} \\
+
+
+
+\begin{example} \textit{Successor} \\
 The \textit{Successor} function pairs an integer with one more than the integer.
 
 domain = all integers  \\ 
@@ -189,17 +196,17 @@ codomain = all integers
 
 Solve \textit{Successor}(z) = $-1$ \\
 
-The solution is $d = \answer{-2}$.
+The solution is $z = \answer{-2}$.
 
-\end{question} 
-
-
+\end{example} 
 
 
 
 
 
-\begin{question} \textit{Successor} \\
+
+
+\begin{question} 
 Is every integer in the range of \textit{Successor}?
 
 
@@ -210,20 +217,72 @@ Is every integer in the range of \textit{Successor}?
 \begin{feedback}
 Every integer has a previous integer.  
 \end{feedback}
+\end{question} 
 
 
+
+\begin{question} 
 Is \textit{Successor} an onto function?
 \begin{multipleChoice}
 	\choice[correct]{Yes}
 	\choice{No}
 \end{multipleChoice}
+\end{question} 
 
 
+
+\begin{question} 
+Is \textit{Successor} a one-to-one function?
+\begin{multipleChoice}
+	\choice[correct]{Yes}
+	\choice{No}
+\end{multipleChoice}
 \end{question} 
 
 
 
 
+
+
+
+\begin{example} $0 < r < 1$ \\
+Let $0 < r < 1$ be a real number and let $R$ be function, such that
+
+\begin{itemize}
+\item The domain of $R$ is all real numbers between $0$ and $1$.  \\ 
+\item The codomain of $R$ is all real numbers between $0$ and $1$.  \\
+\item $R$ pairs a domain number with its product with $r$.
+\end{itemize}
+
+
+
+
+
+$\blacktriangleright$ $R$ is well-defined.  To show this, we need only recognize that any product of two real numbers can have only one value.  In addition, the product of two numbers between $0$ and $1$ is also between $0$ and $1$.  \\
+
+
+$\blacktriangleright$ $R$ is one-to-one. 
+
+To show this, suppose $x$ and $y$ are two domain numbers and they have the same range partner: $r \cdot x = r \cdot y$.  Since $r \ne 0$, we have that $x = y$. Therefore, if two domain numbers have the same function value, then, in fact, they were not different numbers.  They were the same domain number. \\
+
+
+$\blacktriangleright$ $R$ is not onto.
+
+If $0 < r < 1$, then there exists $h$, such that $0 < r < h < 1$.  \\
+
+Now, suppose that $h$ is a range number, i.e. a function value. That would mean it is partnered with some domain number.  There would be a number $0 < d < 1$, such that  $r \cdot d = h$.  \\
+
+
+But that would mean that $d = \frac{h}{r}$ and $\frac{h}{r} > 1$, since $h > r$.  \\
+
+
+If $h$ is in the range, then its domain partner is not in the domain.  That can't happen, which means $h$ must not be in the range and $R$ is not onto.
+
+
+
+
+
+\end{example} 
 
 
 
