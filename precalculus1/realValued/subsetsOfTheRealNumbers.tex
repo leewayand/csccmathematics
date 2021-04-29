@@ -14,14 +14,14 @@ intervals
 
 
 
-We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  Basically, \textbf{Precalculus 1} is a study of the real numbers.
+We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  When it comes right down to it, \textbf{Precalculus 1} is a study of the real numbers. \\
 
 This means we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers, both algebraically and graphically.
 
 
 \section{Building Blocks}
 
-The subsets we are interested in are collections of two types of basic building blocks.
+The subsets we are interested in are collections of three types of basic building blocks.
 
 \begin{itemize}
 \item \textbf{Building Block: Individual Numbers}
@@ -69,10 +69,10 @@ Our subsets might include one or more individual isolated numbers.
 
 \item  \textbf{Building Block: Finite Intervals}
 
-Our subsets might include whole, unbroken, pieces or segments of the real number line.  These are called \textbf{ finite intervals}.   Finite intervals include \textit{ALL} of the real numbers between one specific number and another specific number.  Questions arise over the inclusion or exclusion of the two ends of the interval. Therefore, our communicaiton needs to address them specifically.
+Our subsets might include whole, unbroken, pieces or segments of the real number line with a finite length.  These are called \textbf{ finite intervals}.   Finite intervals include \textit{ALL} of the real numbers between one specific number and another specific number.  Questions arise over the inclusion or exclusion of the two ends of the interval. Therefore, our communicaiton needs to address them specifically.
 
 	\begin{itemize}
-	\item All of the real numbers between $4$ and $7$ including both $4$ and $7$.  We use square brackets to indicate inclusion.  $[4, 7]$
+	\item All of the real numbers between $4$ and $7$, including both $4$ and $7$.  We use square brackets to indicate inclusion:  $[4, 7]$
 	\begin{image}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -106,7 +106,7 @@ Our subsets might include whole, unbroken, pieces or segments of the real number
 
 
 
-	\item All of the real numbers between $4$ and $7$ including $4$ but not $7$.  We use parenthese to indicate exclusion.  $[4, 7)$
+	\item All of the real numbers between $4$ and $7$, including $4$ but not $7$.  We use parenthese to indicate exclusion:  $[4, 7)$
 	\begin{image}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -139,7 +139,7 @@ Our subsets might include whole, unbroken, pieces or segments of the real number
 
 
 
-	\item All of the real numbers between $4$ and $7$ including $7$ but not $4$.   $(4, 7]$
+	\item All of the real numbers between $4$ and $7$, including $7$ but not $4$:   $(4, 7]$
 	\begin{image}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -172,7 +172,7 @@ Our subsets might include whole, unbroken, pieces or segments of the real number
 
 
 
-	\item All of the real numbers between $4$ and $7$ including neither $4$ nor $7$.    $(4, 7)$
+	\item All of the real numbers between $4$ and $7$, including neither $4$ nor $7$:    $(4, 7)$
 	\begin{image}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -345,7 +345,24 @@ Our subsets might include the right or left half of the real number line.  These
 
 
 
+\begin{definition} \item \textbf{\textcolor{green!50!black}{Bounded and Unbounded}}
 
+\begin{itemize}
+\item The set $S$ is \textbf{bounded from above}, if there is a real number, $B$, such that for all $s \in S$, we have $s \leq B$.  There is a real number greater than all of the numbers in $S$.  \\
+
+\item The set $S$ is \textbf{unbounded from above}, if for any selected real number, $B$, there exists $s \in S$, such that $B < s$. No matter how high the bar is set, $S$ contains a number greater than the bar.  \\
+
+\item The set $S$ is \textbf{bounded from below}, if there is a real number, $B$, such that for all $s \in S$, we have $B \leq s$.  There is a real number less than all of the numbers in $S$.  \\
+
+\item The set $S$ is \textbf{unbounded from below}, if for any selected real number, $B$, there exists $s \in S$, such that $s < B$. No matter how low the bar is set, $S$ contains a number less than the bar.  \\
+
+\item The set $S$ is \textbf{bounded}, if it is both bounded from above and below.  
+
+\item The set $S$ is \textbf{unbounded}, if it is not bounded.  \\
+\end{itemize}
+
+
+\end{definition}
 
 
 
@@ -357,7 +374,7 @@ Our subsets might include the right or left half of the real number line.  These
 In the examples above, we used \textbf{interval notation} to describe the intervals in writing. Interval notation adheres to a few rules.
 
 \begin{itemize}
-\item For finite intervals, write the two numbers in the order they would occur on the number line, separated by a comma.  These are called \textbf{endpoints} of the intervals.
+\item For finite intervals, write the two numbers in the order they would appear on the number line, separated by a comma.  These are called \textbf{endpoints} of the intervals.
 \item Use a square bracket to indicate the endpoint is included in the interval.
 \item Use a parenthesis to indicate the endpoint is excluded from the interval.
 \item For infinite intervals, use $-\infty$ to indicate the interval extends without end to the left. $-\infty$ always appears on the left side. $-\infty$ always has a parenthesis around it, because $-\infty$ is not a real number and thus cannot be included in an interval of real numbers.
@@ -404,7 +421,7 @@ Many people in many countries over many centuries have studied mathematics and i
 
 On our number line we plot dots to represent numbers and we call these points.  They are points on the number line, because a point identifies a location.  We will soon represent our functions with 2-dimensional drawings. We will still have points and they will still identify a location.  However, with two dimensions, describing the location will require two numbers, rather than one.  A point will no longer represent a single number.
 
-Our language will become a little blurred when we talk about points versus numbers.  Just be aware that our langugae is old has been twisted to accommodate our thinking.
+Our language will become a little blurred when we talk about points versus numbers.  Just be aware that our language is old and has been twisted to accommodate our thinking.
 
 
 We will attempt to keep the blur to a miminum in this course by our use of the words \textit{number} and \textit{point}.
@@ -749,7 +766,7 @@ Our reduced form will adhere to some rules:
 
 
 
-\begin{notation} Reduced Interval Notation
+\begin{notation} \textbf{\textcolor{blue!75!black}{Reduced Interval Notation}} \\
 
 \begin{itemize}
 \item Do not use overlapping or intersecting intervals.

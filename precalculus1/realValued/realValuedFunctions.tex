@@ -63,6 +63,19 @@ Evaluate the following:
 
 \end{question}
 
+
+
+
+\begin{question} Range \\
+
+The range of $SQ$ is $\left[ \answer{0}, \answer{25} \right]$.
+
+\end{question}
+
+$SQ$ is not an onto function.  For instance, $-1 \in [-30,30)$, yet $-1$ is not in the range, since squares of real numbers cannot be negative. \\
+
+
+$SQ$ is not a one-to-one function, since $SQ(-1)=SQ(1)$.
 \end{example}
 
 
@@ -85,7 +98,7 @@ Let the function $C$ be defined as follows.
 \item Codomain of $C$ is the positive integers: $\mathbb{N}$.
 \item $C$ pairs a domain number with one of two numbers.
 	\begin{itemize}
-			\item If the domain number is even, then $C$ pairs it with half the domain number.
+			\item If the domain number is even, then $C$ pairs it with half the domain number:
 			\item If the domain number is odd, then $C$ pairs it with one more than three times the domain number.
 	\end{itemize}
 \end{itemize}
@@ -107,6 +120,11 @@ Evaluate the following:
 \end{itemize}
 
 \end{question}
+
+
+
+$C$ is not a one-to-one function since $C(8) = C(1)$.
+
 
 \end{example}
 
@@ -147,6 +165,19 @@ Evaluate the following:
 
 \end{question}
 
+
+
+
+
+The Identity function is an onto function.  If $r \in \mathbb{R}$, the range, then $Id(r) = r$. \\
+
+
+The Identity function is a one-to-one function, since if $Id(r)=Id(s)$, $r = s$.  If two function values are equal, then it was not paired to different domain numbers.
+
+
+
+
+
 \end{example}
 
 
@@ -168,15 +199,15 @@ Let the function $Remainder$ be defined as follows.
 
 \begin{itemize}
 \item Domain of $Remainder$ is all natural numbers: $\mathbb{N}$.
-\item Codomain of $Remainder$ is $\{ 0, 1, 2, 3, 4 \}$.
-\item $Remainder$ pairs a natural number with the remainder when divided by $5$.
+\item Codomain of $Remainder$ is $\{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
+\item $Remainder$ pairs a natural number with the remainder when divided by $10$.
 \end{itemize}
 
 
-First, this function is well-defined. Dividing by $5$ can only have one remainder.
+First, this function is well-defined. Dividing by $10$ can only have one remainder.
 
 
-\textbf{Shorthand Notation: } $Remainder: \mathbb{N} \mapsto \{ 0, 1, 2, 3, 4 \}$.
+\textbf{Shorthand Notation: } $Remainder: \mathbb{N} \mapsto \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
 
 \begin{question}
 Evaluate the following:
@@ -184,8 +215,8 @@ Evaluate the following:
 \begin{itemize}
 	\item $Remainder(101) = \answer{1}$
 	\item $Remainder(3) = \answer{3}$
-	\item $Remainder(1652435) = \answer{0}$
-	\item $Remainder(9) = \answer{4}$
+	\item $Remainder(1652435) = \answer{5}$
+	\item $Remainder(94) = \answer{4}$
 \end{itemize}
 
 \end{question}
@@ -249,12 +280,12 @@ And, we have the reverse direction.
 \begin{definition} \textbf{\textcolor{green!50!black}{Preimage}}
 
 
-Let $f$ be a function with domain $D$ and range $R$.   
+Let $f$ be a function with domain $D$ and range $R$ and codomain $C$.   
 
-\[ f : D \mapsto R   \]
+\[ f : D \mapsto R \subseteq C  \]
 
 
-Let $S \subseteq R$, be a subset of the range, $R$.
+Let $S \subseteq C$, be a subset of the codomain, $C$.
 
 
 The \textbf{preimage} of $S$ is the set
@@ -267,10 +298,12 @@ The preimage of a set consists of the domain members whose function value is ins
 
 \end{definition}
 
-\textbf{Note:} The preimage of the range is the domain.
+\textbf{Note:} The preimage of the range is the domain. \\
+
+Sometimes when the preimage is a single domain member, then we drop the idea of a set and just quote that one domain member. \\
 
 
-Sometimes when the preimage is a single domain member, then we drop the idea of a set and just quote that one domain member.
+\textbf{Note:} The preimage of a codomain number, not in the range, is the empty set, $\emptyset$. \\
 
 
 
