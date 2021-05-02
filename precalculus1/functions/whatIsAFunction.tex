@@ -60,7 +60,7 @@ This function is not well-defined, because there are 9-digit numbers that have n
 
 
 \begin{example} \textit{RationalAdd} \\
-The \textit{RationalAdd} function has a domain consisting of all rational numbers and a codomain consisting of all integers.  \textit{RationalAdd} pairs a rational number in the domain with an integer in the codomain according to the following rule: \\ 
+The \textit{RationalAdd} function has a domain consisting of all rational numbers and a codomain consisting of all integers.  \textit{RationalAdd} pairs a rational number in the domain with an integer in the codomain according to the following procedure: \\ 
 \begin{quote}
 Since a chosen domain number is a rational number, it can be represented as $\tfrac{A}{B}$, where $A$ and $B$ are integers. This domain rational number is paired with $A+B$ in the codomain.
 \end{quote}
@@ -86,7 +86,7 @@ This function is well-defined. Each Superbowl has exactly one winner.
 
 Whew!  
 
-We finally found a well-defined function. That one little rule actually narrows the pool of relations quite a bit.  By focusing our investigation on only functions, this rule will help us study relationships between all kinds of measurements. \\
+We finally found a well-defined function. That one little rule actually narrows the pool of relations quite a bit.  By focusing our investigation on only functions, this rule will help us study relationships between all kinds of measurements (our main goal). \\
 
 
 
@@ -152,7 +152,7 @@ The pair (Superbowl 13, \textit{SuperBowlWinner}(Superbowl 13)) is the pair (Sup
 
 \textbf{Note:} The one and only rule for functions doesn't refer to the range.
 
-Not every NFL team has won a Superbowl. As of 2020, the Cleveland Browns had not won a Superbowl.  So, there are codomain items that are not partnered with a domain item.  This is not true of the domain.  Every domain item is paired with a codomain item.  That is our one and only function rule.  Every domain item appears in exactly one pair.  But not every codomain item appears in a pair.  This is significant and deserves some language.
+Not every NFL team has won a Superbowl. As of 2020, the Cleveland Browns had not won a Superbowl.  So, there are codomain items that are not partnered with a domain item.  This is not true of the domain.  Every domain item is paired with a codomain item.  That is our one and only function rule.  Every domain item appears in exactly one pair.  But not every codomain item must appear in a pair.  This is significant and deserves some language.
 
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Range}} \\
@@ -177,9 +177,9 @@ The range and codomain are separate sets.  The range and codomain could be equal
 
 
 
-\begin{example} \textit{AppearedIn}
+\begin{example} \textit{Starring}
 
-Let's name the following function \textit{AppearedIn}.
+Let's name the following function \textit{Starring}.
 
 domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \}
 
@@ -193,7 +193,7 @@ pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casab
 
 \begin{question}
 
-Is \textit{AppearedIn} well-defined?
+Is \textit{Starring} well-defined?
 
 \begin{multipleChoice}
 	\choice{Yes}
@@ -222,9 +222,9 @@ Toy Story is in the domain and not in any pair.
 
 
 
-\begin{example} \textit{AppearedInAgain}
+\begin{example} \textit{StarringAgain}
 
-Let's name the following function \textit{AppearedInAgain}.
+Let's name the following function \textit{StarringAgain}.
 
 domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, The Fly \}
 
@@ -238,7 +238,7 @@ pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casab
 
 \begin{question}
 
-Is \textit{AppearedInAgain} well-defined?
+Is \textit{StarringAgain} well-defined?
 
 \begin{multipleChoice}
 	\choice[correct]{Yes}
@@ -258,7 +258,7 @@ Every domain member is in exactly one pair.
 
 \begin{question}
 
-Which codomain items are not in the range of \textit{AppearedInAgain}?
+Which codomain items are not in the range of \textit{StarringAgain}?
 
 \begin{selectAll}
 	\choice{Marlon Brando}
@@ -290,18 +290,18 @@ We can extend our idea of value and image and also think of the reverse. \\
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Image}} and \textbf{\textcolor{green!50!black}{Inverse Image}} \\
+\begin{definition} \textbf{\textcolor{green!50!black}{Image}} and \textbf{\textcolor{green!50!black}{Preimage}} \\
 
 
-Let $f$ be a function with domain $D$ and codomain $C$. \\
-Let $S$ be a subset of $D$, $S \subseteq D$ . \\
-Let $T$ be a subset of $C$, $T \subseteq C$ . \\
+Let $f$ be a function with domain $D$, range $R$, and codomain $C$. \\
+Let $S$ be a subset of the domain $D$, $S \subseteq D$ . \\
+Let $T$ be a subset of the codomain $C$, $T \subseteq C$ . \\
 
 
 The \textbf{image} of $S$ under $f$ is the collection of function values at all members of $S$.
 
 \[
-f(S) = \{ f(s) \, | \, s \in S   \} \subseteq R
+f(S) = \{ f(s) \, | \, s \in S   \} \subseteq R \subseteq C
 \]
 
 
@@ -310,11 +310,11 @@ f(S) = \{ f(s) \, | \, s \in S   \} \subseteq R
 The \textbf{preimage} of $T$ under $f$ is the collection of domain members whose value is inside $T$.
 
 \[
-f^{-1}(T) = \{ d \in D \, | \, f(d) \in T  \} \subseteq C
+f^{-1}(T) = \{ d \in D \, | \, f(d) \in T  \} \subseteq R \subseteq C
 \]
 
 
-
+The preimage is also known as the \textbf{inverse image}.
 
 
 
@@ -326,16 +326,16 @@ f^{-1}(T) = \{ d \in D \, | \, f(d) \in T  \} \subseteq C
 
 Mathematics is full of concepts and skills which have a feeling of applying something.
 
-For example, multiplication.  We can think of multiplication by $3$ as "doing" something.  This thought automatically comes with the reverse thought.  We might think of reversing this by multiplying by $\frac{1}{3}$ and we have alternative exponential notation available, $3^{-1}\frac{1}{3}$. \\
+For example, multiplication.  We can think of multiplication by $3$ as "doing" something.  This thought automatically comes with the reverse thought.  We might think of reversing this by multiplying by $\frac{1}{3}$ and we have alternative exponential notation available, $3^{-1} = \frac{1}{3}$. \\
 
 
 With addition, we think of the opposite of $4$ as $-4 = -1 \cdot 4$. \\
 
 
-Mathematics has many ideas that involve reverse, opposite, backwards, undo, inverse, back up, turn around, etc. In one way or another, $-1$ seems to included in notation for this reverse action.  \\
+Mathematics has many ideas that involve reverse, opposite, backwards, undo, inverse, back up, turn around, etc. In one way or another, $-1$ seems to be included in notation for this reverse action.  \\
 
 
-Functions have a feeling of beginning with a domain number and pairinng it with a range number.  And, naturally, we have the reverse idea. \\
+Functions have a feeling of beginning with a domain number and pairing it with a range number.  And, naturally, we have the reverse idea. \\
 
 Our symbol for the reverse of $f$, is $f^{-1}$.  It begins with range items and pairs them with their domain partners.  This reversing of function pairs is a relation, because, well everything is a relation.  Whether or not this reverse action results in a function is a topic for later in the course.
 
@@ -344,7 +344,7 @@ Our symbol for the reverse of $f$, is $f^{-1}$.  It begins with range items and 
 \end{notation}
 
 
-Lastly, we should establish when two funcitons are equal. \\
+Lastly, we should establish when two functions are equal. \\
 
 
 

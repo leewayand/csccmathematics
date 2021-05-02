@@ -326,24 +326,23 @@ $\blacktriangleright$ Endpoints make an exact definition of discontinuity messy.
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Discontinuity}}  \\
 
-A real number, $c$, is said to be a \textbf{discontinuity} of the function $f$, if
+A real number, $c$, is said to be a \textbf{discontinuity} of the function $f$, provided
 
 \begin{itemize}
 \item $c$ is a member of the domain of $f$,
 
 
-\item there is a distance, $d > 0$, such that \textbf{\textcolor{purple!85!blue}{EVERY}} open interval in the real line containing $c$ also contains a different \textbf{\textcolor{purple!85!blue}{DOMAIN}} number, $e$, with $ |f(c) - f(e)| > d $.
+\item there is a distance, $d > 0$, such that \textbf{\textcolor{purple!85!blue}{EVERY}} open interval of real numbers containing $c$ also contains a different \textbf{\textcolor{purple!85!blue}{DOMAIN}} number, $e \ne c$, with $ |f(c) - f(e)| > d $.
 
 \end{itemize}
 
 
 
-
-
-
-
-
 \end{definition}
+
+
+
+
 The last condition says that no matter how close to $c$ you look, there is always another domain number where the function value is wildly different.
 
 No matter how close you look at $c$, the jump is still there.
@@ -486,21 +485,19 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
 First, $4$ is in the domain of $g$. \\
 
 
-Secondly, $4$ is in an open interval inside the domain: $4 \in (3.5, 4.5)$, which is an open interval in the domain of $g$. \\
+For the second condition, let $d = 1$. Any open interval of real numbers containing $c = 4$ must also contain an interval of the form $(4-\epsilon, 4+\epsilon)$, where $0 < \epsilon < 0.1$ is small enough.  Such an interval would ALWAYS contain the number $e = 4-\frac{\epsilon}{2}$.
 
-Thirdly, visually, it appears we have a jump discontinuity and the jump is a distance of about $6$, certainly larger than $5$. For the third condition in our defintion, let $d=0.5$. Any open interval in the domain of $g$ containing $c = 4$ must also contain an interval of the form $(4-\epsilon, 4+\epsilon)$, where $0 < \epsilon < 0.1$ is small.  Such an interval would ALWAYS contain the number $e = 4-\frac{\epsilon}{2}$.
-
-\[ \left| g(4) - g\left(4-\frac{\epsilon}{2}\right) \right| > 5 > d = 0.5 \]
+\[ \left| g(4) - g\left(4-\frac{\epsilon}{2}\right) \right| > d = 1 \]
 
 Therefore, $4$ is a discontinuity of $g$.
 
 
-\item $-2$ is not a discontinuity of $g$, because $-2$ is not a member of an open set of the domain of $g$, neither is $-2$ an included endpoint of a maximal interval of the domain on $g$.
+\item $-2$ is not a discontinuity of $g$, because we can find an open interval of real numbers that does not contain a domain number different from $-2$.  No matter what $d$ you select, the open interval $(-2.01, -1.99)$ does not contain a different domain number, $e \ne -2$, such that $|g(-2) - g(e)| > d$.  Therefore, the second condition for discontinuities does not hold.  $-2$ is not a discontinuity.
 
 
 
 
-\item $8$ is a discontinuity of $g(k)$.  $8$ is the endpoint of a maximal interval. Let $d = 1$. Any nonsingleton interval in the domain of $g$ containing $8$ must also contain an interval of the form $(8-\epsilon, 8]$, where $0 < \epsilon < 0.1$ is small.  Such an interval would ALWAYS contain the number $e = 8-\frac{\epsilon}{2}$.
+\item $8$ is a discontinuity of $g(k)$.  First $8$ is in the domain of $g$. For the second condition, let $d = 1$. Any open interval of real numbers containing $c = 8$ must also contain an interval of the form $(8-\epsilon, 8+\epsilon)$, where $0 < \epsilon < 0.1$ is small enough.   Such an interval would ALWAYS contain the number $e = 8-\frac{\epsilon}{2}$.
 
 \[ \left| g(8) - g\left(8-\frac{\epsilon}{2}\right) \right| > 1 = d \]
 
@@ -570,7 +567,7 @@ Let $T(y)$ be a function.  The graph of $z = T(y)$ is displayed below.
 \begin{itemize}
 \item $7$ is not a discontinuity of $T$, because $7$ is not a member of the domain of $T$. $7$ is a singularity. \\
 
-\item $-6$ is a discontinuity of $T(y)$.  $-6 \in (-6.4, -5.4)$, which is an open interval in the domain of $T$. Let $d=0.5$. Any nonsingleton interval in the domain of $T$ containing $-6$ must also contain an open interval of the form $(-6-\epsilon, -6+\epsilon)$, where $0 < \epsilon < 0.1$ is small.  Such an interval would ALWAYS contain the number $e = -6+\frac{\epsilon}{2}$.
+\item $-6$ is a discontinuity of $T(y)$.  $-6$ is in the domain of $T$. Let $d=0.5$. For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = -6$ must also contain an interval of the form $(-6-\epsilon, -6+\epsilon)$, where $0 < \epsilon < 0.1$ is small enough.   Such an interval would ALWAYS contain the number $e = -6+\frac{\epsilon}{2}$.
 
 \[ \left| T(-6) - T\left(-6+\frac{\epsilon}{2}\right) \right| > 1 > 0.5 = d \]
 
@@ -634,7 +631,7 @@ Let $f(x)$ be a function.  The graph of $y = f(x)$ is displayed below.
 \begin{itemize}
 \item $3$ is not a discontinuity of $f$, because $3$ is not a member of the domain of $f$. $3$ is a singularity. \\
 
-\item $-5$ is a discontinuity of $f(x)$.  $-5 \in (-5.3, -4.7)$, which is an open interval in the domain of $f$. Let $d=0.5$. Any nonsingleton interval in the domain of $f$ containing $-5$ must also contain an open interval of the form $(-5-\epsilon, -5+\epsilon)$, where $0 < \epsilon < 0.000001$ is small.  Such an interval would ALWAYS contain the number $e = -5-\frac{\epsilon}{2}$.
+\item $-5$ is a discontinuity of $f(x)$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = -5$ must also contain an interval of the form $(-5-\epsilon, -5+\epsilon)$, where $0 < \epsilon < 0.000001$ is small enough.    Such an interval would ALWAYS contain the number $e = -5-\frac{\epsilon}{2}$.
 
 \[ \left| f(-5) - f\left(-5-\frac{\epsilon}{2}\right) \right| > 0.5 = d \]
 
@@ -669,14 +666,24 @@ The fact that these numbers are not in the domain is significiant when studying 
 
 \begin{idea} A Singularity 
 
-A real number, $c$, is said to be a \textbf{singularity} of the function $f$, if $c$ is not a member of the domain of $f$, however, the function is behaving like a discontinuity around $c$.
+A real number, $c$, is said to be a \textbf{singularity} of the function $f$, if $c$ is not a member of the domain of $f$, however, the domain surrounds $c$.  \\
 
-If you included $c$ in the domain of $f$, then it would not be an endpoint of a maximal interval and you could define $f(c)$ with a value that made $c$ a discontinuity.
+
+
+$\blacktriangleright$ \textbf{Idea:}  $c$ is not in the domina, however, EVERY open interval containing $c$ does contain a domain number. \\
+
+
+Perhaps the function behaves weirdly around the singularity or not. \\
+
+
+We will extend and sharpen our ideas and definition of singularity in Calculus.
+
+
 
 \end{idea}
 
 
-\textbf{Note:} We are not allowing removeable or jump singularities at endpoints. Endpoints of intervals allows require more attention then other numbers.
+
 
 
 
@@ -786,6 +793,19 @@ Is $-1$ a discontiuity, sigualrity, or neither of $h$.
 
 
 
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Continuity}} \\
+
+
+Let $f$ be a function. \\
+If $c$ is in the domain of $f$ and $c$ is not a discontinuity, then $f$ is said to be \textbf{contiuous} at $c$. \\
+
+
+If $S$ is a subset of the domain and $f$ is continuous at every number in $S$, then $f$ is said to be continuous on the set.
+
+
+\end{definition}
 
 
 

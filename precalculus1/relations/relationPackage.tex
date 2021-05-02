@@ -38,14 +38,14 @@ All of these relationships are different and yet the same.  Some relationships c
 
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Relation}} \\
-A relation is a package containing three sets or collections. One set is called the \textbf{domain}. One set is called the \textbf{codomain}.  Finally, there is a set of pairings.  Each pairing pairs a member of the domain with a member of the codomain.
+A \textbf{relation} is a package containing three sets or collections. One set is called the \textbf{domain}. One set is called the \textbf{codomain}.  Finally, there is a set of pairings.  Each pairing pairs a member of the domain with a member of the codomain.
 \end{definition}
 
 
-Relations are just about the vaguest, thinnest structure any two sets could possibly have. \\
+Relations are just about the vaguest, thinnest structure any two sets could possibly share. \\
 
 
-There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  Fortunately, we don't want to do much with relations.  We are just laying the groundwork for more complex structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets of things in a relation have the names \textit{domain} and \textit{codomain}. \\
+There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  Fortunately, we don't want to do much with relations.  We are just laying the groundwork for richer structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets of things in a relation have the names \textit{domain} and \textit{codomain}. \\
 
 
 Because a relation might be encountered as an if-then statement or a cause-and-effect association, we have a natural directional feeling for the information.  The "if" part comes before the "then" part.  The "cause" comes before the "effect".  We would like this feeling reflected in our relation structure.  Therefore, relations come prepackaged with a feeling that the information is connected from the domain to the codomain.
@@ -92,7 +92,7 @@ Due to the artic vortex, tomorrow's high temperature will be $30^{\circ}$. \\
 
 \subsection{List Representations}
 
-Most of our communication is going to be written in this course, so we need some agreements on how we will represent relations in writing.  We already have several ways of representing sets.  The easiest is to just list the members inside curly braces and separated by commas.
+Most of our communication is going to be written in this course, so we need some agreements on how we will represent relations in writing.  We already have several ways of representing sets.  The easiest is to just list the members inside curly braces and separate them with commas.
 
 \begin{center} 
 \textbf{\textcolor{blue!75!black}{ domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \} }}
@@ -115,15 +115,15 @@ These three sets would make up a relation.
 
 \begin{question}
 
-Which item(s) from the codomain is(are) paired with 'The Fly', from this domain?
-\begin{multipleChoice}
+Which item(s) from this codomain is(are) paired with 'The Fly', from this domain?
+\begin{selectAll}
 	\choice{Marlon Brando}
 	\choice[correct]{Vincent Price}
 	\choice{Humphrey Bogart}
 	\choice{Peter O'Toole}
 	\choice{Harrison Ford}
 	\choice{Al Pacino}
-\end{multipleChoice}
+\end{selectAll}
 
 \end{question}
 
@@ -131,15 +131,15 @@ Which item(s) from the codomain is(are) paired with 'The Fly', from this domain?
 
 \begin{question}
 
-Which item(s) from the domain is(are) paired with 'Al Pacino', from this codomain?
-\begin{multipleChoice}
+Which item(s) from this domain is(are) paired with 'Al Pacino', from this codomain?
+\begin{selectAll}
 	\choice{Casablanca}
 	\choice{House of Wax}
 	\choice[correct]{The Godfather}
 	\choice{Lawrence of Arabia}
 	\choice{Toy Story}
 	\choice{The Fly}
-\end{multipleChoice}
+\end{selectAll}
 
 \end{question}
 
@@ -148,10 +148,10 @@ Which item(s) from the domain is(are) paired with 'Al Pacino', from this codomai
 
 
 
-Of course, we will have many relations, which could get confusing.  Let's help ourselves out with names.  The name of the relation above will be \textit{AppearedIn}.
+Of course, we will have many relations, which could get confusing.  Let's help ourselves out by naming our relations.  The name of the relation above will be \textit{Starring}.
 
 
-\begin{example} The \textit{AppearedIn} Relation\\
+\begin{example} The \textit{Starring} Relation\\
 \begin{itemize}
 \item domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \}  
 \item codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino  \} 
@@ -178,10 +178,10 @@ There is a domain item written on the left and a codmain item written to the rig
 
 \begin{warning} Did You Notice? \\
 \begin{itemize}
-\item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in the domain and in no pair of \textit{AppearedIn}.
-\item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in the codomain and in no pair of \textit{AppearedIn}.
-\item Nobody said domain members could not appear in multiple pairs.  The Godfather appears in two pairs of \textit{AppearedIn}.
-\item Nobody said codomain members could not appear in multiple pairs.  Vincent Price appears in two pairs of \textit{AppearedIn}.
+\item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in the domain and in no pair of \textit{Starring}.
+\item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in the codomain and in no pair of \textit{Starring}.
+\item Nobody said domain members could not appear in multiple pairs.  The Godfather appears in two pairs of \textit{Starring}.
+\item Nobody said codomain members could not appear in multiple pairs.  Vincent Price appears in two pairs of \textit{Starring}.
 \end{itemize}
 \end{warning}
 
@@ -342,7 +342,7 @@ Our plan is to investigate only certain types of relations.
 
 
 
-\section{NArrowing Our Investigation}
+\section{Narrowing Our Investigation}
 
 
 Our examples, so far, have been small.  What are we going to do when we want to examine a relation between atoms and molecules?  That list or table is going to be too big to look at with our eyes.  How would we look through a table with billions of rows and find the ones holding carbon?  The topic of all relations is just too big of an investigation. Let's focus in on a particular type of relation.
