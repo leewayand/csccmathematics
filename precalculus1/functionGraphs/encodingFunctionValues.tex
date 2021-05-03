@@ -95,6 +95,12 @@ Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian pla
 From the origin, we measure horizontally a distance of $d$.  Then we measure a vertical distance of $f(d)$. Plot a dot. The horizontal and vertical measurements for a point are called its \textit{coordinates}.
 
 
+\begin{itemize}
+\item The horizontal coordinate is the domain number.
+\item The vertical coordinate is the function value.
+\end{itemize}
+
+
 
 \begin{example}
 
@@ -452,10 +458,10 @@ If the graph of $y=K(v)$ included three dots on the axes...
 \end{itemize}
 
 
-...on the other hand, from all of the dots, we can see that the domain of $K$ includes $\{ -2, -1, 0, 1, 2, 3 \}$. 
+...on the other hand, from all of the dots, we can see that the domain of $K$ includes $\{ -2, -1, 0, 1, 2, 3 \}$.  This is the collection of all of the first coordinates of all of the dots.
 
 
-What if we want to visualize the domain and the range of the function, by themselves?  When visualizing the domain and range, we would view the axes as individual number lines.  Rather than thinking of the axes as holding dots with two coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
+What if we want to visualize the domain and the range of the function, by themselves?  When visualizing the domain and range, we would view each axes as individual number lines.  Rather than thinking of the axes as holding dots with two coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
 
 We need our brains to jump back and forth between these views.  Dots represent pairs in a function.  We decipher these pairs of numbers by the location of the dot.  At the same time, locations on the axes also represent domain and range numbers - depending on the plotted dots.
 
@@ -483,6 +489,7 @@ Below is the graph of $y=h(f)$. We can identify its domain, by collecting all of
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:0)] ({x},{-0.5*x+1});
           \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5*x-7});
           \addplot [color=penColor,only marks,mark=*] coordinates{(-4,3) (0,1) (1,-6.5) (7,-3.5)};
+           \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(1,-6.5)};
 
 
   \end{axis}
@@ -513,7 +520,8 @@ domain = [-4,0] \cup [1,7]
 
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
-          \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0) (0,0) (1,0) (7,0)};
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0) (0,0) (7,0)};
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(1,0)};
            
 
   \end{axis}
@@ -545,7 +553,8 @@ range = [-6.5, -3.5] \cup [1, 4]
 
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(-6.5:-3.5)] ({0},{x});
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:4)] ({0},{x});
-          \addplot [color=penColor2,only marks,mark=*] coordinates{(0, -6.5) (0,-3.5) (0,1) (0,4)};
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0,-3.5) (0,1) (0,4)};
+           \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,-6.5)};
            
 
   \end{axis}
@@ -557,21 +566,34 @@ range = [-6.5, -3.5] \cup [1, 4]
 
 
 
+This presents a communication issue.  \\
 
 
+When we were drawing intervals on numbers lines, we used square brackets and parentheses to signal the inclusion or exclusion of numbers.  Now we are using filled and hollow dots. \\
 
+This is due to the long history of mathematics.  We must be ready to read and understand both.
+
+
+\begin{itemize}
+\item Filled (or closed) dots and square brackets indicate the inclusion of a number or a point.
+\item Hollow (or open) dots and parentheses indicate the exclusion of a number or a point.
+\end{itemize}
+
+Unfortunately, the term \textbf{endpoint} is used for the end numbers of intervals, when really they are end-numbers. Again, more language we must be aware of.
+
+In this course, we will try to deliberately and appropriately use number and point.  As you discuss mathematics with more people, you will encounter different usage.
 
 
 
 \begin{example}
 
-Below is the graph of $y=P(k)$.  Use it to answer the following questions.
+Below is the graph of $z=P(k)$.  Use it to answer the following questions.
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$k$, ylabel={$y=P(k)$},
+            axis lines =center, xlabel=$k$, ylabel={$z=P(k)$},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
