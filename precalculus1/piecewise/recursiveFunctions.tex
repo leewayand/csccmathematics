@@ -13,7 +13,7 @@ formula of formulas
 
 
 
-So far, our formulas have been arithmetic instructions involving domain numbers.  We can stretch the idea of a formula to include known function values.
+So far, our formulas have been arithmetic instructions involving domain numbers. We have also seen functions defined by repeating values. We can stretch the idea of repeating to recursive values.  That is function values that depend on other function values.
 
 
 
@@ -91,12 +91,13 @@ The traditional symbol for the factorial function is !.
 \begin{example}  \textit{Fibonacci} \\
 
 
-
+Domain is $\mathbb{N}$. \\
+Range is $\mathbb{N}$. \\
 
 
 
 \[
-Factorial(n) = 
+Fibonacci(n) = 
 \begin{cases}
   1 & n = 1 \\
   1 & n = 2 \\ 
@@ -114,7 +115,7 @@ Factorial(n) =
 
 
 
-\begin{question} Write these factorials in the standard place value notation.
+\begin{question} Compute these values.
 
 
 \begin{itemize}
@@ -135,6 +136,17 @@ Factorial(n) =
 
 
 
+Recursively defined functions mimic periodic functions.  Both use "previous" values.  Periodic functions repeat the values, while recursive functions use these "previous" values within more computation. \\
+
+
+Equations such as
+
+\begin{itemize}
+\item $Factorial(n) = n \cdot Factorial(n-1)$
+\item $Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)$
+\end{itemize}
+
+are called \textbf{functional equations}.  They define how function values relate to other function values.
 
 
 
