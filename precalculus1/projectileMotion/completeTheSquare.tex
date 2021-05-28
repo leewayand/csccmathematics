@@ -41,7 +41,7 @@ where $a$, $b$, and $c$ (called \textbf{coefficients}) are real numbers with $a 
 
 \begin{itemize}
 \item $a$ is called the \textbf{leading coefficient} 
-\item $a \, t^2$ is called the \textbf{leading term} 
+\item $a \, t^2$ is called the \textbf{leading or quadratic term} 
 \item $b \, t$ is called the \textbf{linear term} 
 \item $c$ is called the \textbf{constant term} 
 \end{itemize}
@@ -192,9 +192,9 @@ As we can see from their parabolic graphs below, quadratics can have $0$, $1$, o
 
 \section{Completing the Square}
 
-Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they are to different degrees. They cannot be combined to leave just one occurrence.
+Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they are to different degrees. It will take a bit of ALgebra to combine them into just one occurrence.
 
-Therefore, an idea is to rearrange the quadratic expression so that there is only one occurrence of the varible.  This process is called \textbf{completing the square}.
+This process is called \textbf{completing the square}.
 
 The idea is to rearrange  $0 = a \, t^2 + b \, t + c$ to look like $0 = A \, (t-B)^2 + C$.  Then there will only be  one occurrence of the $t$ and we can solve for it.
 
@@ -204,13 +204,15 @@ To accomplish this, we need to investigate $A \, (t-B)^2 + C$. For the moment, l
 
 \begin{align*}
 A \, (t-B)^2 + C & = A \, (t-B)(t-B) + C \\
-& = A \, (t^2 - 2 t B + B^2) + C  \\
-& = A \, t^2 - 2 t A B + A \, B^2 + C
+& = A \, (t^2 - \answer{2 t B} + B^2) + C  \\
+& = A \, t^2 - \answer{2 t A B} + A \, B^2 + C
 \end{align*}
 
 This last line, $A \, t^2 - 2 t A B + A \, B^2 + C$ should turn out to be $a \, t^2 + b \, t + c$, our original quadratic.
 
-The only way that is going to happen is if $A = a$. As long as we know $A = a$, then let's start over. \\
+The only way that is going to happen is if $A = a$. And, as long as we know $A = a$, we can factor it out and work with what is left.
+
+Then, let's pretend our first step is factoring out $A$ or $a$ and let's start over. \\
 
 
 
@@ -234,8 +236,7 @@ We want to complete the square on $t^2 + b \, t + c$.  When the leading coeffice
 
 \begin{align*}
 (t-B)^2 + C & = (t-B)(t-B) + C \\
-& = t^2 - 2 t B + B^2 + C  \\
-& = t^2 - 2 t B +  B^2 + C
+& = t^2 - 2 t B + B^2 + C  
 \end{align*}
 
 
@@ -243,13 +244,13 @@ This last line $t^2 - 2 t B + B^2 + C$ should turn out to be $t^2 + b \, t + c$.
 
 
 
-The leading term is $1$ in both. Now, the linear terms need to be the same: $ - 2 t B = b \, t$.  That tells us that $B = \frac{b}{-2}$.
+The leading term is $1$ in both (since we factored out $A$). Now, the linear terms need to be the same: $ - 2 t B = \answer{b t}$.  That tells us that $B = \answer{\frac{b}{-2}}$.
 
 
 To complete the square with a monic quadratic, we need $B = \frac{b}{-2}$.  Let's put that in.
 
 
-$t^2 - 2 t B + B^2 + C = t^2 - 2 t \frac{b}{-2} + \left(\frac{b}{-2}\right)^2 + C = t^2 + b t + \left(\frac{b}{-2}\right)^2 + C$
+\[ t^2 - 2 t B + B^2 + C = t^2 - 2 t \frac{b}{-2} + \left(\frac{b}{-2}\right)^2 + C = t^2 + b t + \left(\frac{b}{-2}\right)^2 + C \]
 
 
 We want this to be $t^2 + b \, t + c$. \\
@@ -373,7 +374,7 @@ We will be adding and subtracting $\answer{\frac{1}{4}}$ inside the parentheses.
 \[ 4 \left(t - \frac{1}{2}\right)^2 - 9  \]
 
 
-One occurrence of $t$, good. Now to get $t$ by itself.
+One occurrence of $t$, good. Now to get $t$ by itself in our original equation.
 
 \[ 4 \left(t - \frac{1}{2}\right)^2 - 9 = 0  \]
 
@@ -442,6 +443,8 @@ Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  But, $9$ is alrea
 
 
 Now, get $x$ by itself.
+
+\[  2 (x - 3)^2 = 0  \]
 
 \[  (x - 3)^2 = 0  \]
 
@@ -518,10 +521,10 @@ First, get everything to one side and $0$ on the other side.
 
 Factor out the leading coefficient.
 
-\[  2 (x^2 - 6x + 10) = 0  \]
+\[  2 \left( \answer{x^2 - 6x + 10} \right) = 0  \]
 
 
-Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  We could add and subtract $9$ or we can change the $10$ to be $9+1$.  ALl we are trying to do is to see a $9$.
+Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  We could add and subtract $9$ or we can change the $10$ to be $9+1$.  All we are trying to do is to see a $9$.
 
 
 
