@@ -12,15 +12,15 @@ sums of power functions
 \maketitle
 
 
-In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers - you can find a polynomial as close as you want to any continuous function.
+In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers - you can find a polynomial as close as you want to any continuous function. \\
 
 
-No matter what small distance you think up...
+In other words, no matter what small distance you think up...
 
 \begin{itemize}
-\item Given any real number, there is a rational number within that distance of the real number.
+\item Given any real number, there is a rational number within that small distance of the real number.
 
-\item Given any continuous function on a closed interval, there is a polynomial within that "distance" of the continuous function.
+\item Given any continuous function on a closed interval, there is a polynomial within that "small distance" of the continuous function.
 \end{itemize}
 
 This makes polynomials extremely useful and thus very interesting. \\
@@ -42,7 +42,7 @@ $\blacktriangleright$ Polynomials are sums of special power functions, so let's 
 
 \section{Power Functions}
 
-\begin{definition} \textit{Power Functions}
+\begin{definition} \textbf{\textcolor{green!50!black}{Power Functions}}
 
 A power function is any function that can be represented with a formula of the form
 
@@ -59,17 +59,21 @@ $p$ is called the \textbf{exponent} or the \textbf{power}.
 
 
 
-We don't need all of the power functions for polynomials.  We only need power functions with integer exponents. \\
+We don't need all of the power functions for polynomials.  We only need power functions with whole number exponents. But let's just get a fuller picture by examining power functions with integer exponents. We'll start with the global scale.\\
 
 
 
 
 
-$\blacktriangleright$  When the power, $p$, is a positive integer, then power functions have two types of behavior.
+\subsection{Asymptotic and End-Behavior}
+
+
+
+$\blacktriangleright$  When the power, $p$, is a positive integer, then power functions have two types of end-behavior.
 
 \begin{itemize}
-\item When $p$ is even, the end behavior is the same to the right or left - both up or both down on the graph depending on the sign of the coefficient, $k$.
-\item When $p$ is odd, the end behavior is opposite on either side of the graph - one side up and one side down on the graph, which switches depending on the sign of the coefficient, $k$.
+\item When $p$ is even, the end-behavior is the same to the right or left - both up or both down on the graph depending on the sign of the coefficient, $k$.
+\item When $p$ is odd, the end-behavior is opposite on either side of the graph - one side up and one side down on the graph, which switches depending on the sign of the coefficient, $k$.
 \end{itemize}
 
 
@@ -80,6 +84,7 @@ $\blacktriangleright$  When the power, $p$, is a positive integer, then power fu
             axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -95,6 +100,7 @@ $\blacktriangleright$  When the power, $p$, is a positive integer, then power fu
             axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -116,7 +122,7 @@ $\blacktriangleright$  When the power, $p$, is a positive integer, then power fu
 
 
 
-$\blacktriangleright$  When the power, $p$, is a negative integer, then we have two types of behavior around the singularity at $0$. 
+$\blacktriangleright$  When the power, $p$, is a negative integer, then we have two types of unbounded behavior around the singularity at $0$. 
 
 \begin{enumerate}
 \item When $p$ is even the behavior around the singularity is the same - both up or down on the graph depending on the sign of the coeeficient, $k$.
@@ -131,6 +137,7 @@ $\blacktriangleright$  When the power, $p$, is a negative integer, then we have 
             axis lines =center, xlabel=$t$, ylabel={$y=even(t)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -147,6 +154,7 @@ $\blacktriangleright$  When the power, $p$, is a negative integer, then we have 
             axis lines =center, xlabel=$x$, ylabel={$y=odd(x)$}, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -160,7 +168,7 @@ $\blacktriangleright$  When the power, $p$, is a negative integer, then we have 
 \end{tikzpicture}
 \end{image}
 
-In either case, the end behavior is to tend toward $0$.
+In either case, the end-behavior is to tend toward $0$.
 
 
 
@@ -172,18 +180,18 @@ In either case, the end behavior is to tend toward $0$.
 
 
 
-\section{Limit Notation }
+\subsection{Limit Notation }
 
 
 
-In the previous descriptions, we referenced the graphs when describing the behavior around the singularity and the function's end behavior.  We would also like algebraic descriptions of this behavior.
+In the previous descriptions, we referenced the graphs when describing the behavior around the singularity and the function's end-behavior.  We would also like algebraic descriptions of this behavior.
 
 
-$\blacktriangleright$  \textbf{End Bahavior}
+$\blacktriangleright$  \textbf{End-Behavior}
 
 The domain of a power function is either all the real numbers, \textbf{R}, or all of the real numbers except $0$, $\textbf{R} \setminus \{ 0 \}$.  In either case we can imagine moving far off to the left or far off to the right on the number line to where the domain is made up of very large negative or very large positive numbers.  When we want the reader to think of moving even further to the right we use the phrase "tending to infinity". When we want the reader to think of moving even further to the left we use the phrase "tending to negative infinity".
 
-For pa ower function with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
+For power function with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
 
 The mathematical word for this "tending" relationship is \textbf{limit}.
 
@@ -193,10 +201,15 @@ If we inspect a power function, $f(x) = k \, x^p$, with a negative power, then w
 \[    \lim_{x \to \infty} k \, x^p = 0,        \]
 
 
+\textbf{Pronounced:} \textit{The limit as x tends towards infinity of $k \, x^p$ equals zero}.
+
+
 We also have,
 
 \[    \lim_{x \to -\infty} k \, x^p = 0,        \]
 
+
+\textbf{Pronounced:} \textit{The limit as x tends towards negative infinity of $k \, x^p$ equals zero}.
 
 
 For power functions with a postive power, we have limits such as 
@@ -208,7 +221,7 @@ For power functions with a postive power, we have limits such as
 
 
 
-It depends on the sign of $k$.
+It depends on the sign of the coefficient $k$.
 
 
 
@@ -216,7 +229,7 @@ $\blacktriangleright$  \textbf{Singularity}
 
 
 
-For a power function, $f(x) = k \, x^p$, with a negative power we have seen that there is a singularity at $0$, where the function value tends to infinity or negative infinity.  This time we want to specify the direction we are approaching $0$.  
+For a power function, $f(x) = k \, x^p$, with a negative power we have seen that there is a singularity at $0$, where the function value is unbounded and tends to infinity or negative infinity.  This time we want to algebraically specify the direction we are approaching $0$.  
 
 \begin{itemize}
 \item A superscript $+$ means we are approaching from the positive side or the right side.
@@ -234,7 +247,9 @@ Describing the function's behavior around $0$ with limit notation looks like
 
 
 
-It depends on the sign of $k$.
+\textbf{Pronounced:} \textit{The limit as x tends towards zero from the left, of $k \, x^p$ equals negative infinity}.
+
+It depends on the sign of coefficient $k$.
 
 
 
@@ -359,13 +374,13 @@ It depends on the sign of $k$.
 
 
 
-\section{Polynomial Functions}
+\subsection{Polynomial Functions}
 
 
-Polynomial functions are sums of power functions with powers that are nonnegative integers.
+Polynomial functions are sums of power functions with powers that are nonnegative integers (whole numbers).
 
 
-\begin{definition} \textit{Polynomial Functions}
+\begin{definition} \textbf{\textcolor{green!50!black}{GPolynomial Functions}} 
 
 A polynomial function is any function that can be represented with a formula of the form
 
@@ -373,7 +388,9 @@ A polynomial function is any function that can be represented with a formula of 
 
 where the $a_k$ are real numbers and $a_n \ne 0$.
 
-$a_k$ are called \textbf{coefficient}.
+This is called the \textbf{standard form}.
+
+$a_k$ are called \textbf{coefficients}.
 
 $a_k x^k$ are called \textbf{terms}.
 
@@ -381,7 +398,7 @@ $a_k x^k$ are called \textbf{terms}.
 
 \begin{itemize}
 \item $n$ is called the \textbf{degree} of the polynomial.
-\item $a_n$ is called the \textbf{leading coefficients}.
+\item $a_n$ is called the \textbf{leading coefficient}.
 \item $a_n x^n$ is called the \textbf{leading term}.
 \item $a_1 x^1$ is called the \textbf{linear term}.
 \item $a_0 x^0$ is called the \textbf{constant term}.
@@ -404,7 +421,7 @@ $\blacktriangleright$ \textbf{Polynomial Shorthand Notation}
 Let's see some shorthand notation through an example.  We'll begin with this polynomial
 
 
-\[  1 x^7 + 1 x^6 + (-1) x^5 + 0 x^4 + 0 x^3 + 5 x^2 + (-7) x^1 + 8 x^0              \]
+\[  -1 x^7 + 1 x^6 + (-1) x^5 + 0 x^4 + 0 x^3 + 5 x^2 + (-7) x^1 + 8 x^0              \]
 
 
 
@@ -416,36 +433,36 @@ The following shorthand notation is totally voluntary.  You are more than welcom
 \item If the leading coefficient is a $1$, then people usually do not write it. If the leading coefficient is a $-1$, then people usually just write the negative sign, $-$.
 
 
-\[  x^7 + 1 x^6 + (-1) x^5 + 0 x^4 + 0 x^3 + 5 x^2 + (-7) x^1 + 8 x^0              \]
+\[  -x^7 + 1 x^6 + (-1) x^5 + 0 x^4 + 0 x^3 + 5 x^2 + (-7) x^1 + 8 x^0              \]
 
 
 \item If a coefficient is a negative number, then people usually change the notation to subtraction.
 
 
-\[  x^7 + 1 x^6 - 1 x^5 + 0 x^4 + 0 x^3 + 5 x^2 - 7 x^1 + 8 x^0              \]
+\[  -x^7 + 1 x^6 - 1 x^5 + 0 x^4 + 0 x^3 + 5 x^2 - 7 x^1 + 8 x^0              \]
 
 
 
 \item If a coefficient is a $1$, then people usually do not write the $1$.
 
 
-\[  x^7 + x^6 - x^5 + 0 x^4 + 0 x^3 + 5 x^2 - 7 x^1 + 8 x^0              \]
+\[  -x^7 + x^6 - x^5 + 0 x^4 + 0 x^3 + 5 x^2 - 7 x^1 + 8 x^0              \]
 
 
 \item If a coefficient is $0$, then people just remove the whole term.
 
-\[  x^7 + x^6 - x^5 + 5 x^2 - 7 x^1 + 8 x^0              \]
+\[  -x^7 + x^6 - x^5 + 5 x^2 - 7 x^1 + 8 x^0              \]
 
 
 \item People don't write the exponent $1$.
 
-\[  x^7 + x^6 - x^5 + 5 x^2 - 7 x + 8 x^0              \]
+\[  -x^7 + x^6 - x^5 + 5 x^2 - 7 x + 8 x^0              \]
 
 
 
 \item People don't write $x^0$.
 
-\[  x^7 + x^6 - x^5 + 5 x^2 - 7 x + 8             \]
+\[  -x^7 + x^6 - x^5 + 5 x^2 - 7 x + 8             \]
 
 
 
@@ -455,12 +472,31 @@ The following shorthand notation is totally voluntary.  You are more than welcom
 
 
 
-The last version is much shorter than the original, but they represent the exact same polynomial. \\
+The last version is much shorter than the original, but they represent the exact same polynomial. You are free to use any or all of the abbreviations.\\
 
 
 
 
+\begin{warning} Rule of Shortest Expression
 
+Mathematicians don't like to write a lot.  They prefer shorter expressions.  Therefore, we are left to interpret symbols by their positions and font size and context and surrounding symbols.
+
+The general rule is that you interpret the shortest expression that makes sense.
+
+
+\textbf{$7x^5$:} Is the $5$ on $x$ or $7x$?  $x$ is shorter, therefore $7x^5 = 7 (x^5)$.
+
+Of course, our abbreviations and shortest expressions also cause their own confusion.
+
+\textbf{$3+15$:} Is this $(3+1)5$ or $3+(15)$?  $5$ is shorter than $15$, however, $(3+1)5$ doesn't make sense, because there is no operator between $(3+1)$ and $5$.  On the other hand we have a shorthand abbreviation whereby no symbol means multiplication.  But that rule doesn't apply to digits.  Digits are glued together tighter than operations.
+
+Just like with any language, mathematics has its idioms.
+
+If the shortest expression is not what you mean, then you need to use parentheses to group the symbols how you want the interpreted.
+
+If you are unsure, then use parentheses!
+
+\end{warning}
 
 
 
@@ -502,7 +538,7 @@ Write $(-1) x^3 + 0 x^2 + (-3) x^1 + 6 x^0$ in shorthand notation.
 
 
 
-\section{Products vs. Sums}
+\subsection{Products vs. Sums}
 
 
 We engage in two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytical investigation.  Polynomials are functions for us and we are interested in analyzing them as functions.  This means, among other features, we are interested in their zeros.  For this, and other reasons, we prefer to write polynomials in factored form.
@@ -521,15 +557,19 @@ we would prefer a product
 
 
 
-Unfortunately, we will need complex numbers to ALWAYS get a product of linear factors.  We only have the real numbers for this class and the best we can do is linear and quadratic factors.
+Unfortunately, we will need complex numbers to ALWAYS get a product of linear factors.  We only have the real numbers for this class and the best we can do is a mixture of linear and quadratic factors.
 
 
 
-\begin{theorem} \textit{Fundamental Theorem of Algebra}
+\begin{theorem} \textbf{\textcolor{green!50!black}{Fundamental Theorem of Algebra}}
 
 When restricted to real numbers, every polynomial with real coefficients can be factored into a product of linear and irreducible quadratic factors over the real numbers.
 
 \end{theorem}
+
+
+Irreducible quadratics means they need complex numbers to factor. The discriminant in the quadratice formula is negative. \\
+
 
 
 The theorem says that every polynomial does have such a factorization, but it does not tells us how to obtain it.  We are on our own for that, which means we need lots of practice factoring polynomials.
@@ -544,15 +584,15 @@ When analyzing polynomial functions, our first step is going to be to factor it.
 
 \begin{question}
 
-Write $(y - 3)(2y + 1)$ in standard form, i.e. as a sum.
+Write $2y^2-5y-3$ in factored form, i.e. as a product.
 
 
 
 \begin{multipleChoice}
-\choice {$2y^2 - 3$}
-\choice {$y - 3 + 2y + 1$}
-\choice [correct]{$2y^2-5y-3$}
-\choice {$2y^2 + 3$}
+\choice {$(y-3)(2y-1)$}
+\choice {$(y+3)(2y+1)$}
+\choice [correct]{$(y-3)(2y+1)$}
+\choice {$(y+3)(2y-1)$}
 \end{multipleChoice}
 
 \end{question}
@@ -584,12 +624,12 @@ Write $(y - 3)(2y + 1)$ in standard form, i.e. as a sum.
 
 
 
-\section {Graphs}
+\subsection {Graphs}
 
 
 
 
-Polynomials are continuous everywhere (all real numbers).  Their graphs are smooth, wavy curves with hills and valleys.
+Polynomial functions are continuous everywhere (all real numbers).  Their graphs are smooth wavy curves with hills and valleys.
 
 
 
@@ -740,7 +780,7 @@ Polynomials have no discontinuities or singularities.  Polynomial functions may 
 
 \begin{question}
 
-In the example above, $g(t)$ has a minimum value.
+In the example above, $g(t)$ has a global minimum value.
 
 
 
@@ -755,7 +795,7 @@ In the example above, $g(t)$ has a minimum value.
 
 \begin{question}
 
-In the example above, $g(t)$ has a maximum value.
+In the example above, $g(t)$ has a global maximum value.
 
 
 
@@ -775,10 +815,10 @@ In the example above, $g(t)$ has a maximum value.
 
 
 
-\section{End Behavior}
+\subsection{End-Behavior}
 
 
-The end behavior of a polynomial function is the same as the leading term (a power function), which depend on the sign of the leading coefficient.
+The end-behavior of a polynomial function is the same as the leading term (a power function), which depends on the sign of the leading coefficient.
 
 
 
@@ -823,6 +863,36 @@ Evaluate $\lim_{t \to \infty} -4 t^3 - 5 t + 2 t^4  - 3$
 
 
 
+
+
+
+
+
+
+\subsection{Power-Like Functions}
+
+We prefer writing polynomials as products, because we can quickly identify their zeros.  Products will also help us quickly determine behavior of the polynomial.
+
+Inside the factorization
+
+\[   f(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  \]
+
+we may have duplicate factors.
+
+To help our analysis, it will help to gather common factors and make the factorization look like
+
+\[   f(x) = a (x-r_n)^{e_n}(x-r_{n-1})^{e_{n-1}}  \cdots (x-r_2)^{e_2}(x-r_1)^{e_1}  \]
+
+with all of the roots distinct, i.e. $r_k \ne r_j$ when $i \ne j$.
+
+
+
+Analyzing polynomials will mean analyzing expressions like $(x-r_k)^{e_k}$, which looks a lot like a power function - a shifted power functions.
+
+Everything we said about power functions around $0$ holds for these shift power functions around $r_k$. 
+
+
+If we think of $x^k$ as $(x-0)^k$, then $(x-r_k)^{e_k}$ seems just like a power function, just written in terms of $x-r_k$.
 
 
 

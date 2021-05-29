@@ -17,7 +17,7 @@ fractions of polynomials
 Rational functions are fractions of polynomials
 
 
-\begin{definition} \textit{Rational Functions}
+\begin{definition}\textbf{\textcolor{green!50!black}{Rational Functions}}
 
 A rational function is any function that can be represented as a quotient of polynomials 
 
@@ -45,7 +45,7 @@ Again, we prefer polynomials in factored form.  Therefore, usually our first ste
 
 
 
-And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist of linear and irreducible quadratics.
+And, again, we will be able to obtain a product of exclusively linear factors with the addition of complex numbers.  With real numbers we can get these products to consist of a mixture of linear and irreducible quadratics.
 
 
 
@@ -138,25 +138,31 @@ The graph of $y = v(r) = \frac{(r-1)}{(r+3) (r-4)^2} $
 
 
 
-While Polynomials only combined those power funcitons with positive integer powers, rational functions include power funcitons with negative integer powers.
+While polynomials only combined factors with positive integer powers, rational functions include factors with negative integer powers.
 
 
-We can pull $H(w)$ apart to see the power functions.
+We can pull $H(w)$ apart to see these power-like functions.
 
 
 \[    H(w) = \frac{(w-1)}{(w+3) (w-4)}  = \frac{4}{7} \cdot \frac{1}{w+3}  + \frac{3}{7} \cdot \frac{1}{w-4}    \]
 
 
-Not strictly speaking power functions, but shifted power functions.
+Not strictly speaking power functions, but more like shifted power functions.
 
 
 
-\section{Continuity}
+
+
+
+
+
+
+\subsection{Continuity}
 
 
 Rational functions are continuous everywhere on their domain.  They have singularities at zeros of their denominators.  
 
-Graphs of rational functions have asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  This has to do with the power of the corresponding factor, which we will investigate later.
+Graphs of rational functions might have asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  This has to do with the power of the corresponding factor, which we will investigate later.
 
 
 
@@ -213,6 +219,61 @@ In addition to horizontal and vertical asymptotes, rational functions can have \
 
 
 
+
+
+
+
+
+
+
+
+The graph of a rational function need not have an asymptote at a zero of the denominator.
+
+
+\begin{example}
+
+
+The graph of $y = h(t) = \frac{(t-1)(t-5)}{(t-5)(t+3)} $ \\
+
+$5$ is a zero of the polynomial in the denominator.  However, $t=5$ is not an asymptote in the graph.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-20:20, ymax=20, xmax=20, ymin=-20, xmin=-20,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-20,-16,-12,-8,-4,4,8,12,16,20},
+            xtick={-20,-16,-12,-8,-4,4,8,12,16,20},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-19:-3.4),<->] {(x-1)/(x+3)};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.9:19),<->] {(x-1)/(x+3)};
+
+
+          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({-3},{x});
+          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({x},{1});
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,0.5)}; 
+       
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+This is because $5$ is also a zero of the polynomial in the numerator.
+
+
+\[ y = h(t) = \frac{(t-1)(t-5)}{(t-5)(t+3)} = \frac{(t-1)}{(t+3)}  \, \text{ for } \,  t \ne 5  \]
 
 
 
