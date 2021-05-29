@@ -124,7 +124,7 @@ Intervals and secants are algebraic and geometric partners. Secants give a pictu
 
 
 
-What is we push the secant over a little bit until it becomes a tangent line?
+What if we push the secant over a little bit until it becomes a tangent line?
 
 
 
@@ -164,10 +164,21 @@ What is we push the secant over a little bit until it becomes a tangent line?
 \end{tikzpicture}
 \end{image}
 
-Now it is a picture of the rate of change over the interval $[\tfrac{7}{2}, \tfrac{7}{2}]$. \\
+Now it is a picture of the rate of change over the interval $\left[ \tfrac{7}{2}, \tfrac{7}{2} \right]$. \\
 
 
 How should we interpret this? \\
+
+
+What is the rate of change \textbf{\textcolor{red!90!darkgray}{AT}} a point? \\
+
+
+You cannot calculate the rate of change over an interval with $0$ length.  Therefore, we will invent an interpretation for this rate of change at a point, i.e. \textit{instantaneous rate of change}.
+
+
+
+
+
 
 
 
@@ -183,12 +194,12 @@ How should we interpret this? \\
 
 
 
-Tangent lines are secants, just at a point instead of over an interval.  They should still give rate of change of information, just at a point rather than over an interval. We'll call this \textbf{instantaneous rate of change}.
+Tangent lines are degenerate secants. Secant lines need two points.  A tangent line is a secant line where the two points are the same point. Tangent lines span an interval of length $0$.  But, tangent lines are still lines.  They have a constant rate of change. We'll call this the \textbf{instantaneous rate of change} at the domain number corresponding to the tangent point.
+
+We'll being our investigation into the instantaneous with quadratic functions. \\
 
 
-
-
-\begin{definition} Instantaneous Rate of Change
+\begin{definition} \textbf{\textcolor{green!50!black}{Instantaneous Rate of Change}}  
 
 
 Let $f$ be a quadratic function. Let $a$ be a number in the domain of $f$.
@@ -203,7 +214,9 @@ We need a method of obtaining the slope of tangent lines to parabolas.
 
 
 
-Let's consider the graph of $Q(x) = a (x - h)^2 + k$, with $a > 0$. The graph of $y = a (x - h)^2 + k$. And, let's select a domain, $x_0$, number of $Q$, which corresponds to the point $(x_0, y_0)$.
+Let's consider the graph of $Q(x) = a (x - h)^2 + k$, with $a > 0$. We are investigating the graph of $y = a (x - h)^2 + k$. \\
+
+Let's select a domain number, $x_0$, number of $Q$, which corresponds to the point $(x_0, y_0)$.
 
 Let's add to our picture the tangent line at $(x_0, y_0)$.
 
@@ -242,10 +255,14 @@ Let's add to our picture the tangent line at $(x_0, y_0)$.
 \end{tikzpicture}
 \end{image}
 
-The tangent line is the graph of a linear function, $T$.
+The tangent line is the graph of a linear function. Let's call it $T$.
 
 
-The formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  We would like a way to obtain the value of $m$.
+T is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
+
+
+
+$\blacktriangleright$ We would like a way to obtain the value of $m$. \\
 
 
 To do this we need to note something about formulas for quadratic functions.
@@ -269,10 +286,10 @@ Another way of looking at this situation is that the function
 
 also, has $h$ as a root.
 
-This is obvious with the way we have written it here.  However, no matter how we write the formula for oue quadratic function, if we divide by the factor correspoinding to the zero, then the result also has the same root.
+This is obvious with the way we have written it here.  However, no matter how we write the formula for our quadratic function, if we divide by the factor correspoinding to the zero, then the result again has the same root.
 
 
-With this in mind, we can get a formula for $m$, the slope of out tangent line at $(x_0, y_)$.
+With this in mind, we can get a formula for $m$, the slope of out tangent line at $(x_0, y_0)$ and the instanteous rate of change of $Q$ at $x_0$.
 
 
 
@@ -329,7 +346,7 @@ The point of tangency is an intersection point of the two graphs.  In fact, it i
 
 
 
-Let's consider the function $P(x) = Q(x) - T(x)$. \\
+Let's consider a new function $P(x) = Q(x) - T(x)$. \\
 
 
 \[
@@ -347,7 +364,7 @@ P(x) = Q(x) - T(x) = a\, x^2 - 2ah \, x + ah^2 + k - m \, x + m \, x_0 - y_0
 
 
 \[
-P(x) = Q(x) - T(x) = a\, x^2 - (2ah - m) \, x + ah^2 + k  + m \, x_0 - y_0
+P(x) = Q(x) - T(x) = a\, x^2 - (2ah - m) \, x + (ah^2 + k  + m \, x_0 - y_0)
 \]
 
 
@@ -383,7 +400,7 @@ We can use long division to divide $(x - x_0)$ into $P(x)$
 \end{image}
 
 
-If $(x - x_0)$ divides evenly into $P(x)$, then this remained should be $0$.  Let's check.
+If $(x - x_0)$ divides evenly into $P(x)$, which means this remainer should equal $0$.  Let's check.
 
 
 
@@ -399,7 +416,10 @@ a h^2 + k - a x_0^2 + 2 a h x_0 - a h^2 - k + a x_0^2 + m x_0 - 2 a h x_0 - m x_
 \]
 
 
-It is $0$.   $(x - x_0)$ did divide evenly into $P(x)$, like it was supposed to.
+It is $0$.   \\
+
+
+$(x - x_0)$ did divide evenly into $P(x)$, like it was supposed to.
 
 The quotient is 
 
@@ -408,7 +428,7 @@ The quotient is
 a x + (a x_0 - (2 a h + m))
 \]
 
-And, we said $x_0$ must be a root, since $x_0$ was a double root of $P(x)$.  Therefore, if we substitute in $x_0$ in for $x$, the expression must equal $0$.
+And, we said $x_0$ must be a root, since $x_0$ was a double root of $P(x)$.  Therefore, if we substitute $x_0$ in for $x$, the expression must equal $0$.
 
 
 \[
@@ -449,7 +469,7 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 This for any point on the parabola.
 
 
-
+\textbf{Note:} If we look at the vertex $(x_0, y_0) = (h, k)$, then $2 a (x_0 - h) = 2 a (h - h) = 0$ and the slope of the tangent line is $0$, just like we had reasoned before.
 
 
 
@@ -468,13 +488,14 @@ $\blacktriangleright$ We can create a new function from this.
 
 
 
-\begin{definition} iRoC 
+\begin{definition} \textbf{\textcolor{green!50!black}{iRoC}}  
 
 
-Given a quadratic function, $Q(x) = a (x - h)^2 + k$, we define $iRoC(x)$ or $iRoc_Q(x)$ to be the slope of the tangent line on the graph of $y = Q(x)$ at the point $(x, y)$.
+Given a quadratic function, $Q(x) = a (x - h)^2 + k$, we define \textbf{the instantaneous rate of change of Q} to be the slope of the tangent line on the graph of $y = Q(x)$ at the point $(x, y)$.
 
-$iRoC(x)$ is a linear funciton given by 
-\[  iRoC(x) = 2 a (x-h) \]
+$iRoC_Q(x)$ is a linear function given by 
+
+\[  iRoC_Q(x) = 2 a (x-h) \]
 
 \end{definition}
 

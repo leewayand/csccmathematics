@@ -44,7 +44,8 @@ V(h) =
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$h$, ylabel={$y=V(h)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -157,22 +158,22 @@ From the graphs there appear to be three points of intersection.
 
 
 
-\[ -2x-3 =   x+4       \]
+\[ -2x-3 =   \answer{x+4}       \]
 
 
-\[ -3x =  7      \]
+\[ \answer{-3x} =  7      \]
 
-\[ x =  \frac{7}{-3}      \]
+\[ x =  \frac{7}{-3}   =  -\frac{7}{3}      \]
 
 
 Check....
 \begin{itemize}
-\item $V(\tfrac{7}{-3}) = -2 \cdot \tfrac{7}{-3} - 3 = \tfrac{14}{3} - \tfrac{9}{3} = \tfrac{5}{3}$
-\item $K(\tfrac{7}{-3}) =   \tfrac{7}{-3} + 4 =  \tfrac{7}{-3} + \frac{12}{3} = \tfrac{5}{3} $
+\item $V(-\tfrac{7}{3}) = -2 \cdot -\tfrac{7}{3} - 3 = \tfrac{14}{3} - \tfrac{9}{3} = \tfrac{5}{3}$
+\item $K(-\tfrac{7}{3}) =   -\tfrac{7}{3} + 4 =  -\tfrac{7}{3} + \frac{12}{3} = \tfrac{5}{3} $
 \end{itemize}
 
 
-The intersection point is $\left(\frac{7}{-3}, \frac{5}{3}\right)$.
+The intersection point is $\left( -\frac{7}{3}, \frac{5}{3} \right)$.
 
 
 
@@ -192,7 +193,8 @@ The intersection point is $\left(\frac{7}{-3}, \frac{5}{3}\right)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -219,16 +221,34 @@ The intersection point is $\left(\frac{7}{-3}, \frac{5}{3}\right)$.
 \end{image}
 
 
-\[    -(t+3)(t-3) = t^2 - 7 t + 9             \]
+\[    \answer{-(t+3)(t-3)} = t^2 - 7 t + 9             \]
 
 \[    -t^2 + 9 = t^2 - 7 t + 9             \]
 
 \[   = 2 t^2 - 7 t  = t (2t - 7)          \]
 
 
+
+
+
+\begin{align*}
+-(t+3)(t-3) &= t^2 - 7 t + 9  \\
+-t^2 + 9    &= t^2 - 7 t + 9 \\
+0           &= 2 t^2 - 7t \\
+0           &= t(2t - 7)  
+\end{align*}
+
+
+
+
+
+
 This gives two solutions, $0$ and $\frac{7}{2}$.  
 
-However, The formula for $0$ in $K$ is not $m^2 - 7m + 9$.  After considering the domains of $V$ and $H$, the only solution here is $\frac{7}{2}$.
+
+We can see from the graph that the full graphs of $-(t+3)(t-3)$ and $t^2 - 7 t + 9$ would intersect at $t - 0$.  However, our piecewise defined functions do not share these formulas at $0$.  The definitions of the piecewise functions do not allow $0$ as a common solution.
+
+After considering the domains of $V$ and $H$, the only solution here is $\frac{7}{2}$.
 
 
 
@@ -271,7 +291,8 @@ The intersection point is $\left(\tfrac{7}{2}, -\frac{13}{4}\right)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$w$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-        	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -316,6 +337,26 @@ The intersection point is $\left(\tfrac{7}{2}, -\frac{13}{4}\right)$.
 
 
 \[   w = \frac{35 \pm \sqrt{137}}{8}    \]
+
+
+
+
+
+
+
+
+\begin{align*}
+\frac{7w}{4}    &= w^2 - 7 w + 9     \\
+0               &= w^2 - \frac{35w}{4} + 17  \\
+0           &= \frac{-(- \tfrac{35}{4}) \pm  \sqrt{(- \tfrac{35}{4})^2 - 4 \cdot 1 \cdot 17}}{2 \cdot 1} t \\
+0           &= \frac{\tfrac{35}{4} \pm  \sqrt{\tfrac{137}{16}}}{2}  \\
+0           &=   \frac{35}{8} \pm  \frac{\sqrt{137}}{8} \\
+0.          &= \frac{35 \pm \sqrt{137}}{8} 
+\end{align*}
+
+
+
+
 
 
 

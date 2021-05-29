@@ -37,7 +37,7 @@ We want to know the
 \end{itemize}
 
 
-For a quadratic function much of this information is connected to vertex of the graph.
+For a quadratic function much of this information is connected to vertex of the graph, which is why we like the vertex form, which is why we like completing the square.
 
 
 
@@ -82,7 +82,7 @@ Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ a
 
 The vertex visually encodes the  minimum (or maximum) value of the function. 
 
-We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is squared and $a>0$, the value of $f(x)$ is greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That makes the vertex $(k, h)$.
+We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is squared and $a>0$, the value of $f(x)$ is greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$.
 
 
 If $a<0$, then everything is reveresed.
@@ -199,7 +199,7 @@ which we can separate into
 \[ t  =   \frac{b}{2a} \pm \frac{\sqrt{b^2 - 4 a c}}{2a}      \]
 
 
-to see that the zeros are symmetric about $\frac{b}{2a}$ and the intercepts are symmetric about the line $x = \frac{b}{2a}$.
+The $\pm$ shows that the zeros are symmetric about $\frac{b}{2a}$ and the intercepts are symmetric about the line $x = \frac{b}{2a}$.
 
 
 
@@ -326,7 +326,7 @@ We have already seen if we write a quadratic function as $f(x) = a (x - h)^2 + k
         \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
         \addplot [color=penColor,only marks,mark=*] coordinates{(3,-4)};
         
-        \addplot [draw=penColor2, very thick, smooth, domain=(-1:7),<->] {4*(x-3)};
+        \addplot [draw=penColor2, very thick, smooth, domain=(1:5),<->] {4*(x-3)};
 
         \node[penColor] at (axis cs:5,-4) {$(h, k)$};
         %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
@@ -343,10 +343,39 @@ $\blacktriangleright$ When the linear rate of change function $iRoC_f(x) < 0$, t
 
 $\blacktriangleright$ When the linear rate of change function $iRoC_f(x) > 0$, then $f(x)$ is increasing. \\
 
-$\blacktriangleright$ When the linear rate of change function $iRoC_f(x) = 0$, then $f(x)$ is neither increasing nor decreasing and the graph of $y = f(x)$ is flat.
+$\blacktriangleright$ When the linear rate of change function $iRoC_f(x) = 0$, then $f(x)$ is neither increasing nor decreasing and the graph of $y = f(x)$ is flat. \\
+
+
+As we can see, the behavior of our function, $f(x)$, can change drastically where $iRoC_f(x) = 0$.  Such domain numbers deserve a special name.
 
 
 
+\begin{definition} \textbf{\textcolor{green!50!black}{Critical Number}}  
+
+
+Let $f$ be a function. Let $x_0$ be a number in the domain of $f$ such that $iRoC_f(x_0) = 0$.
+
+Then $x_0$ is called a \textbf{critical number}.
+
+
+\end{definition}
+
+
+
+
+\begin{procedure}
+Let $Q$ be a quadratic function.
+
+Then $Q(x) = a (x - h)^2 + k$, for some $a$, $h$, and $k$ with $a \ne 0$. \\
+
+Then, $iRoC_Q(x) = 2 a (x - h)^2 + k$. \\
+
+
+\textbf{Procedure:}. It appears that the $2$ in the exponent has slide down in front of the leading coefficiennt and the constant term $k$ has been removed.
+
+
+
+\end{procedure}
 
 
 
@@ -362,7 +391,7 @@ $\blacktriangleright$ When the linear rate of change function $iRoC_f(x) = 0$, t
 \section{Maximum and Minimum}
 
 
-The maximum and minimum values of a quadratic function are visually encoded in the highest and lowest points on the  graph, which is the vertex here.
+The maximum and minimum values of a quadratic function are visually encoded in the highest and lowest points on the  graph, which is the vertex of the parabola.
 
 Depending on the sign of $a$, the maximum or minimum value of $f(x) = a \, x^2 + b \, x + c$ occurs at $\frac{b}{2a}$. The maximum or minimum value is $f\left( \frac{b}{2a} \right)$
 
