@@ -15,7 +15,7 @@ characteristics
 
 
 \begin{definition}
-\textbf{Polynomials} are functions that can be described as sums of power functions
+\textbf{Polynomials} (over the real numbers) are functions that can be described as sums of power functions
 
 
 \[    p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
@@ -97,7 +97,7 @@ All of their characteristics and features are nice.
 \end{itemize}
 
 
-Polynomials smoothly alternate between increasing and decreasing, which switched at global and local maximums and minimums.
+Polynomials smoothly alternate between increasing and decreasing, which switch at global and local maximums and minimums.
 
 As you will see later, polynomials have a limit on the number of zeros and extrema they can have.  They cannot have more than the degree of the polynomial. So, what happens outside all of the wiggling?  This is known as the \textbf{endbehavior}.  All polynomials continue without bound after the zeros and extrema.  Either they tend to infinity or negative infinity.
 
@@ -116,7 +116,18 @@ $p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the factored form of a p
 
 
 In this version, the $r_k$ are distinct roots.  They are all different. \\
-The $e_k$ are the exponents and tell us how many times a particular root repeats.  The exponents are sometimes referred to as the factor's \textbf{multiplicity}. \\
+The $e_k$ are the exponents and tell us how many times a particular root repeats.  The exponents are sometimes referred to as the factor's \textbf{multiplicity} or the root's multiplicity.\\
+
+As we noted with quadratics, this factorization into linear factors often requires complex numbers.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors.
+
+Irreducible quadratics do not have real roots.  Therefore, for this discussion on roots, we can pretend that we have all rlinear factors.
+
+
+
+
+
+
+
 
 
 
@@ -124,7 +135,7 @@ The $e_k$ are the exponents and tell us how many times a particular root repeats
 
 If we think of the real numbers as lining up to form the number line, then we could imagine ourselves running over the number line from $-\infty$ to $\infty$, or from left to right.  We would hit every real number once.  We would run through each distinct root once.  As we ran from the left side to the right side of each root, the sign of the value of the polynomial with either change or stay the same.
 
-At each root. $r_k$, the value of the polynomial is $0$.  But on either side of the root, the polynomial is either positive or negative.
+At each root. $r_k$, the value of the polynomial is $0$.  But on either side of the root, the polynomial is either positive or negative. There are four possible combinations.
 
 
 \[
@@ -148,9 +159,12 @@ Either the sign switches or it stays the same across the root.  What in the form
 If we imagine ourselves running through $r_k$, then $(x-r_k)^{e_k}$ is the only factor that could possibly change sign.  All of the other factors maintain their same sign when we run through $r_k$.
 
 
-When $x<r_k$, then $x-r_k <0$.  When $x>r_k$, then $x-r_k >0$.
+When $x<r_k$, then $x-r_k <0$.  \\
 
-If $e_k$ is even then it doesn't matter if $x-r_k <0$ or $x-r_k >0$. $(x-r_k)^{e_k}$ will be positve. 
+When $x>r_k$, then $x-r_k >0$. \\
+
+
+If $e_k$ is even then it doesn't matter if $x-r_k <0$ or $x-r_k >0$, $(x-r_k)^{e_k}$ will be positve. 
 
 If $e_k$ is odd then it does matter, because, unlike an even power, a negative number raise to an odd power will remain negative.
 
@@ -242,7 +256,7 @@ The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
 
 
-$f(x)$ has a global minimum value of $\answer[tolerance=0.1]{1.75}$, which occurs at $\answer[tolerance=0.1]{-6.6}$.
+$f(x)$ has an approximate global minimum value of $\answer[tolerance=0.1]{1.75}$, which occurs approximately at $\answer[tolerance=0.1]{-6.6}$.
 
 
 \end{example}
@@ -250,10 +264,10 @@ $f(x)$ has a global minimum value of $\answer[tolerance=0.1]{1.75}$, which occur
 
 
 
-The extreme values of the function occur at numbers in the domain called \textbf{critical numbers}.  Critical numbers play an important role in function analysis.  
+The extreme values of the function occur at numbers in the domain called \textbf{critical numbers}.  Thus, critical numbers play an important role in function analysis.  
 
 
-We'll start with critical numbers pointing out horizontal tangent lines in the graph.
+It will take some analysis to get a full definition of critical numbers. We'll start with critical numbers pointing out horizontal tangent lines in the graph and improve from there.
 
 
 
@@ -275,7 +289,7 @@ We'll start with critical numbers pointing out horizontal tangent lines in the g
 Critical numbers are domain numbers marking flat/horizontal places in the graph.  These include tops of hills and bottoms of valleys. Critical numbers include places where extrema value occur.
 
 
-
+The next example shows that they also include places that are not marking maximums or minimums.
 
 
 
@@ -316,7 +330,7 @@ The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
 
 
-$f$ has two critical numbers: $-2$ and $1.75$. There are two places where the graph has a horizontal tangent line.
+$f$ has two critical numbers: $-2$ and $1.75$. These correspond to the two places where the graph has a horizontal tangent line.
 
 \begin{itemize}
 \item $f$ decreases on $\left(-\infty, \answer{1.75}\right]$.
@@ -329,7 +343,7 @@ $f$ has two critical numbers: $-2$ and $1.75$. There are two places where the gr
 \end{example}
 
 
-\textbf{Note:} $-2$ is a critical number, because the graph is flat there.  However, $f$ the sign of the rate of change does not switch there, since $f$ does not have an extreme value there.
+\textbf{Note:} $-2$ is a critical number, because the graph is flat there.  However, the sign of the rate of change of $f$ does not switch there, since $f$ does not have an extreme value there.
 
 
 
@@ -362,12 +376,12 @@ Zeros, Factors, and Intercepts are different things but they all refer to the sa
 \item If $(x-z_0)$ is a factor of the polynomial $p(x)$, means $p(x) = q(x) \cdot (x-z_0)$ for some polynomial $q(x)$.
 
 
-\item If $(z_0,0)$ is an intercept of the graph of the polynomial $p(x)$, means $(z,0)$ is on the graph.
+\item If $(z_0,0)$ is an intercept of the graph of the polynomial $p(x)$, means $(z_0,0)$ is both on the horizontal axis and on the graph of $p$.
 
 \end{itemize}
 
 
-However, the existance of any of these implies the other two
+However, the existence of any of these implies the other two
 
 
 
