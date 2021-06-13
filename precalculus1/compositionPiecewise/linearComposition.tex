@@ -15,8 +15,8 @@ linear linear linear
 The \textbf{composition of two functions}, $F$ and $G$, is a new operation on functions, symbolized by $F \circ G$, which produces a new function.
 
 
-\begin{definition}
-Given $a$ in the domain of $G$, such that $G(a)$ in the domain of $F$, $(F \circ G)(a)$ is defined to be  $F(G(a))$.
+\begin{definition} \textbf{\textcolor{green!50!black}{Composition}} 
+Given $a$ in the domain of $G$, such that $G(a)$ is in the domain of $F$, $(F \circ G)(a)$ is defined to be  $F(G(a))$.
 
 
 If $Dom_G$ and $Dom_F$ represent the domains of $G$ and $F$ respectively, the induced domain of $F \circ G$ is 
@@ -29,6 +29,21 @@ If $Dom_G$ and $Dom_F$ represent the domains of $G$ and $F$ respectively, the in
 \end{definition}
 
 The order matters.  Generally speaking, $F \circ G \ne G \circ F$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,7 +74,7 @@ If we write $A \circ B(v)$, then people will miss read this to say $B(v)$.  So, 
 & = A(b_1 \cdot v + b_0)  \\
 & = a_1 \cdot (b_1 \cdot v + b_0) + a_0  \\
 & = a_1 \cdot b_1 \cdot v + a_1 \cdot b_0 + a_0    \\
-& = (a_1 \cdot b_1 \cdot) v + (a_1 \cdot b_0 + a_0)
+& = (a_1 \cdot b_1) v + (a_1 \cdot b_0 + a_0)
 \end{align*}
 
 
@@ -69,7 +84,7 @@ If we write $A \circ B(v)$, then people will miss read this to say $B(v)$.  So, 
 
 The composition of two linear functions is again a linear function.
 
-The rate-of-change of the composition is the product of the rates-of-change of the original linear functions.
+The rate-of-change of the composition is the \wordChoice{\choice{sum} \choice{difference} \choice[correct]{product}\choice{quotient}} of the rates-of-change of the original linear functions.
 
 
 
@@ -115,7 +130,7 @@ $\blacktriangleright$ Determine a formula for $h(n)$.
 
 
 
-
+\begin{explanation}
 
 
 $k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
@@ -133,6 +148,8 @@ We need $2 n_0 + 1 = -2$.  Therefore, $n_0 = \answer{-\frac{3}{2}}$.
 
 We have $h(n) = \frac{3}{2} n - \frac{3}{2}$
 
+
+\end{explanation}
 \end{example}
 
 
@@ -166,7 +183,7 @@ $\blacktriangleright$  Determine a formula for $h(n)$.
 
 
 
-
+\begin{explanation}
 
 
 $k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
@@ -184,6 +201,8 @@ We need $\frac{3}{2} + n_0 = -2$.  Therefore, $n_0 = \answer{-\frac{7}{2}}$.
 
 We have $h(n) = \frac{3}{2} n - \frac{7}{2}$
 
+
+\end{explanation}
 \end{example}
 
 
@@ -218,7 +237,7 @@ Graph of $y = T(v)$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$h$, ylabel={$y=T(v)$}, grid = major,
+            axis lines =center, xlabel=$v$, ylabel={$y=T(v)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -299,7 +318,7 @@ For instance, $0$ is in the range of $g$, but not in the domain of $T$. \\
 We need to remove the numbers in the domain of $g$, whose function value is $0$.
 
 
-For another instance, $-\frac{32}{7}$ is in the domain of $g$, and $g\left(-\frac{32}{7}\right) = 0$. $-\frac{32}{7}$ has to be removed from the domain of $g$.
+Again, $-\frac{32}{7}$ is in the domain of $g$, and $g\left(-\frac{32}{7}\right) = 0$. $-\frac{32}{7}$ has to be removed from the domain of $g$.
 
 
 
@@ -409,7 +428,7 @@ What part of the range of $g$ can we use?
 	\end{tikzpicture}
 	\end{image}
 
-It looks like we can use the interval $\left[ \answer{1}, \answer{6} \right)$.   $6$ i snot included, so we'll have to keep this in mind as we investigate the domain of $g$.
+It looks like we can use the interval $\left[ \answer{1}, \answer{6} \right)$.   $6$ is not included, so we'll have to keep this in mind as we investigate the domain of $g$.
 
 
 The range of $g$ needs to be restricted to $[1, 6)$.  Therefore we need to restrict the domain of $g$, so that the range is just $[1, 6)$. We need to find the \textbf{preimages} of $6$ and $1$ in the domain of $g$.
@@ -421,8 +440,10 @@ The range of $g$ needs to be restricted to $[1, 6)$.  Therefore we need to restr
 \item $g(x) = \frac{7}{4}x-8 = 6$
 \item $\frac{7}{4}x = \answer{14}$
 \item $x = \frac{4}{7} \cdot 14 = \answer{8}$
-\item The restriction on $g$ excludes $8$.  However, it is an endpoint of the interval.
 \end{itemize}
+
+
+This restriction on $g$ excludes $8$.  The domain of $g$ is $(2,8)$. $8$ is an endpoint of the interval that is already excluded.
 
 
 \begin{itemize}
@@ -431,18 +452,18 @@ The range of $g$ needs to be restricted to $[1, 6)$.  Therefore we need to restr
 \item $x = \frac{4}{7} \cdot 9 = \frac{36}{7} \approx 5.14$
 \end{itemize}
 
-
+$\frac{36}{7}$ is inside $(2,8)$.
 
 We need to restrict the domain of $g$ to $\left[ \answer{\frac{36}{7}}, \answer{8} \right)$
 
 
-With this restricted domain, the range of $g$ will be $[1, 6)$, which is the most of the domain of $T$ as we can get from values of $g$.
+With this restricted domain, the range of $g$ will be $[1, 6)$, which is the biggest piece of the domain of $T$ that we can get from values of $g$.
 
 We now have a domain for our composition: $Dom_{T \circ g} = \left[\frac{36}{7}, 8\right)$
 
 
 
-\section{Halfway}
+\subsection{Halfway}
 
 
 
@@ -487,7 +508,8 @@ Graph of $y = T(g(c))$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$c$, ylabel={$y=T(g(c))$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top

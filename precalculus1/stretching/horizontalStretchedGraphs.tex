@@ -95,7 +95,7 @@ The domain of $T$ is $[-8,-2) \cup [0,10)$.
 
 If $2g \in [-8,-2) \cup [0,10)$, then $g \in [-4,-1) \cup [0,5)$
 
-It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever you are evaluating $W$, you get that value by evaluatinng $T$ at twice the $W$-domain number.
+It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever you are evaluating $W$, you get the value by evaluating $T$ at twice the $W$ domain number.
 
 
 
@@ -111,18 +111,18 @@ It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever 
 \end{example}
 
 
-However, $2 \cdot 2 = 0$. \\
+The only exception to the stretching idea is $0$.  $2 \cdot 0 = 0$.  When $g = 0$, so does $2g = 0$.  While the domain is being stretched, it is being stretched away from $0$. $0$ gets pinned down where it is.
 
 
 $W(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
 
-
+So, multiplication by $2$ compressed the domain.
 
 It seems backwards.  We multiplied by $2$ and the resulting domain was a compressed version of the original domain.  That is because this is a backwards view of what happened.
 
 
 
-We multiplied $g$ by $2$, but $g$ is from the domain $W$.  The domain of $W$ is stretching.  We want to know what happened to the domain of $T$ and $k$ represents the domain of $T$.
+We multiplied $g$ by $2$, but $g$ is from the domain $W$.  The domain of $W$ is stretching.  We want to know what "happened" to the domain of $T$.  $T$ is the old, original function and $k$ represents the domain of $T$.  What happened to $k$ is the question?
 
 In our definition of $W$, we have $k=2g$, which gives us $g=\frac{k}{2}$.  $k$ is cut in half, which is what we see in the domain and in the graph and in the formula.  $k$ is replaced with $2g$.
 
@@ -230,7 +230,7 @@ The domain of $T$ is $[-8,-2) \cup [0,10)$.
 
 If $-2r \in [-8,-2) \cup [0,10)$, then $r \in (-5,0] \cup (1, 4]$
 
-It is like the domain of $T$ is on a rubberband and it shrunk in half and then rotated around the vertical axis.  As $r$ walks through the domain of $M$ from left to right, the corresponding walking in the domain of $T$ is from right to left.
+It is like the domain of $T$ is on a rubberband and it shrunk in half and then rotated around $0$.  As $r$ walks through the domain of $M$ from left to right, the corresponding walking in the domain of $T$ is from right to left.
 
 
 
@@ -331,6 +331,7 @@ Graph of $y = sin(2\theta)$.
             xtick={-6.28, -3.14, 3.14, 6.28}, 
             xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
             axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -348,6 +349,13 @@ Graph of $y = sin(2\theta)$.
 The graph is compressed horizontally by a factor of $\frac{1}{2}$.
 
 
+\end{example}
+
+
+
+
+\begin{example} Cosine
+
 Graph of $y = cos\left(\frac{1}{2}\theta\right)$.
 
 \begin{image}
@@ -357,6 +365,7 @@ Graph of $y = cos\left(\frac{1}{2}\theta\right)$.
             xtick={-6.28, -3.14, 3.14, 6.28}, 
             xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
             axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -393,7 +402,7 @@ You may have to view this in reverse, if the multiplication coefficient was nega
 
 
 
-Graph of $y = |3x|$.
+Graph of $y = |3r|$.
 
 
 
@@ -445,7 +454,7 @@ Here is the graph of $y = log_2(-t)$.
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},

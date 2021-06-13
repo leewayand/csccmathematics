@@ -57,7 +57,7 @@ Addition results in vertical shifting. \\
 
 
 
-The visual or graphical horizontal effects of arithmetic performed on the domain are reverse of the arithmetic, because actually there is a new function with its own new variable and the arithmetic is performed on this new variable.
+The visual or graphical horizontal effects of arithmetic performed on the domain are reverse of the arithmetic, because  there is a new function with its own new variable and the arithmetic shown to us is performed on this new variable.  The graphical transformations follow the arithmetic on the old/original variable.
 
 
 For the original function, $f(x)$, we define a new function, $g(k)$.
@@ -140,7 +140,7 @@ Graph of $y = G(h)$, the original (basic) function.
 \item $G$ has no global maximum
 \item $G$ has a global (and local) minimum of $\answer{-9}$, which occurs at $\answer{-2}$. 
 \item $G$ has a local maximum of $1$, which occurs at $\answer{-7}$.
-\item $G$ has a both a local minimum and local maximum of $1$, which occurs at $-3$.
+\item $G$ has a both a local minimum and local maximum of $2$, which occurs at $-3$.
 \end{itemize}
 
 
@@ -154,7 +154,7 @@ $\blacktriangleright$ Now to define a new function based off of $G$.
 
 
 
-Define  $T(p) = -2G(\frac{1}{2} p - 4) + 1$.
+Define  $T(p) = -2G\left( \frac{1}{2} p - 4 \right) + 1$.
 
 
 How do we construct the graph of $z = T(p) = -2G\left(\frac{1}{2} p - 4\right) + 1$?
@@ -372,7 +372,7 @@ The graph is filled in exactly as it was connected in the original graph.
 Our new function was defined by 
 
 \[
-T(p) = -2G(\frac{1}{2} p - 4) + 1
+T(p) = -2G\left( \frac{1}{2} p - 4 \right) + 1
 \]
 
 
@@ -431,10 +431,12 @@ Take another look at the functions from the example above.
   \begin{axis}[name = leftgraph,
             domain=-15:15, ymax=15, xmax=15, ymin=-15, xmin=-15, unit vector ratio*=1 1 1,
             grid = both, 
-            ytick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}, xtick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14},
-            yticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$}, xticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$},
+            ytick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14}, 
+            xtick={-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14},
+            yticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$}, 
+            xticklabels={ , $-12$, , $-8$, ,$-4$, , ,$4$, ,$8$, ,$12$},
             ticklabel style={font=\scriptsize},
-            axis lines =center, xlabel=$h$, ylabel=$y$,
+            axis lines =center, xlabel=$h$, ylabel=$G$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -459,10 +461,12 @@ Take another look at the functions from the example above.
   \begin{axis}[at={(leftgraph.outer east)},anchor=outer west,
             domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
             grid = both, 
-            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
-            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, 
+            xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, 
+            xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
             ticklabel style={font=\scriptsize},
-            axis lines =center, xlabel=$p$, ylabel=$t$,
+            axis lines =center, xlabel=$p$, ylabel=$T$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -531,6 +535,7 @@ All of the relative graphical relationships within each graph is also a relation
 
 Let $B(r) = \frac{1}{2}|3r-1| + 4$. \\
 
+$B$ appears to be a linear transformation of the basic absolute value function: $|x|$.
 
 \textbf{Thinking Ahead}
 
@@ -543,7 +548,7 @@ The outside coefficient of the transformation is $\frac{1}{2}$, which is positiv
 
 The "V" is made of two rays emanating from the corner.  Therefore, we just need another point on each ray to plot the graph.
 
-We can randomly choose any numberson either side of $\frac{1}{3}$, like $r=-5$ and $r=5$.
+We can randomly choose any numbers on either side of $\frac{1}{3}$, like $r=-5$ and $r=5$.
 
 $B(-5) = 12$ and $B(5) = 11$, giving us the points $\left(\answer{-5}, \answer{12}\right)$ and $\left(\answer{5}, \answer{11}\right)$, respectively.
 
@@ -562,8 +567,10 @@ We can now draw the graph of $y = B(r)$.
   \begin{axis}[
             domain=-22:22, ymax=22, xmax=22, ymin=-22, xmin=-22, unit vector ratio*=1 1 1,
             grid = both, 
-            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
-            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
+            ytick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22}, 
+            xtick={-22,-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20,22},
+            yticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, }, 
+            xticklabels={ ,$-20$, ,$-16$, ,$-12$, ,$-8$, ,$-4$, , ,$4$, ,$8$, ,$12$, ,$16$, ,$20$, },
             ticklabel style={font=\scriptsize},
             axis lines =center, xlabel=$r$, ylabel=$y$,
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -583,6 +590,34 @@ We can now draw the graph of $y = B(r)$.
 
 
 
+
+
+What are the graphical affects?
+
+
+$\blacktriangleright$ Horizontally
+
+The original inside was just $x$.  This became $3r-1$ in the new function.   
+
+$x = 3r - 1$
+
+But let's rephrase this to show the arithmetic performed on the original variable, $x$.
+
+$\frac{1}{3} (x + 1)$
+
+The order of operations tell is to add $1$ first.  That shifts the graph to the irght by $1$.  Then multiplication by $\frac{1}{3}$ compresses the graph horizontally.
+
+The orginal corner was at $x=0$.  This moved right to $1$ and then was compressed to $\frac{1}{3}$.
+
+
+
+$\blacktriangleright$ Vertically
+
+The original vertical measurements are given by the whole function: $|x|$.  On the outside, we multiplied by $\frac{1}{2}$, which compressed the graph vertically.  Then we added $4$, which sifted the graph vertically by $4$.
+
+The original corner was at a height of $0$.  This was compressed to $0$ and then raised to $4$.
+
+The new corner is at $\left( \frac{1}{3}, 4 \right)$
 
 
 
@@ -690,7 +725,7 @@ $\blacktriangleright$  Define $f(m)$ by
 
 
 \[
-f(m) = -2 k\left(-\frac{1}{2} m + 1\right) - 5
+f(m) = -2 \, k\left(-\frac{1}{2} m + 1\right) - 5
 \]
 
 
@@ -701,7 +736,7 @@ What will the graph of $z = f(m) = -2 k\left(-\frac{1}{2} m + 1\right) - 5$ look
 
 $A = -\frac{1}{2} m + 1$  gives us $m = \answer{-2(A-1)}$. 
 
-Reading the order of operations, horizontally, the graph will shift \wordChoice{\choice[correct]{left} \choice{right}} $\answer{1}$. Then, the graph will reflect about the vertical axis, then the graph will stretch by a factor of $\answer{2}$.
+Reading the order of operations, for $-2(A-1)$, the graph will shift \wordChoice{\choice[correct]{left} \choice{right}} $\answer{1}$. Then, the graph will reflect about the vertical axis, then the graph will stretch horizontally by a factor of $\answer{2}$.
 
 
 
@@ -709,7 +744,7 @@ The order of operations can be read directly on the outside.  Reflect vertically
 
 $k$ only had two values, $8$ and $4$. For $f(m)$, these values will become $-2 \cdot 8 - 5 = \answer{-21}$ and $-2 \cdot 4 - 5 = \answer{-13}$.  
 
-The endpoints of the intervals will become
+The horizontal endpoints of the intervals will become
 
 
 \begin{itemize}
