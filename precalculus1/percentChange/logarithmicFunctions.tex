@@ -41,16 +41,10 @@ Its graph looks like
           
       		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
 
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
-
-
       		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
 
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-
-
-
-           
 
   \end{axis}
 \end{tikzpicture}
@@ -75,6 +69,14 @@ When we evaluate a function, we know the domain number and we seek its range par
 
 
 
+
+
+
+
+
+
+
+
 \section{Reverse}
 
 We can also think in reverse.
@@ -94,7 +96,7 @@ $\bigstar$ For $E(t) = 2^t$, as long as we give a positive function value, then 
 
 
 
-$\blacktriangleright$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. That is eeriely backwards of the function rule for pairs in the exponential function.\\ 
+$\bigstar$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. That is eeriely backwards of the function rule for pairs in the exponential function.\\ 
 
 
 
@@ -109,8 +111,8 @@ Thinking of an exponential function in reverse sounds like a new function. We ca
 \[
 \begin{array}{lcl}
 Exponential Function  &     &  Logarithmic Function  \\
-domain = (-\infty, \infty)  &  \longrightarrow  &  domain = (0, \infty)  \\
-range = (0, \infty)  &  \longrightarrow  &  range = (-\infty, \infty)  \\
+domain = (-\infty, \infty)  &  \searrow  &  domain = (0, \infty)  \\
+range = (0, \infty)  &  \nearrow  &  range = (-\infty, \infty)  \\
 (a, r^a)    &  \longrightarrow  &   (r^a, a)
 \end{array}
 \]
@@ -126,9 +128,23 @@ Therefore, the domains and ranges switch. \\
 
 
 
+\subsection{Logarithm}
+
+However, it seems weird to write $(2^a, a)$, even though it is perfecftly correct.  
+
+Instead, we are used to writing the domain number by a letter, $b$, and then the function value as a formula involving $b$.
+
+We woud prefer our pairs in the logarithm function to look like 
+
+\[ (b, expression)  \]
 
 
-However, it seems weird to write $(2^a, a)$, even though it is perfecftly correct.  Instead, the logarithmic function has a very old name, \textbf{logarithm}, which gets shortened to \textbf{log} for notation purposes.  \\
+
+
+
+
+
+Logarithmic functions come from the study of \textbf{logarithms}, which gets shortened to \textbf{log} for notation purposes.  \\
 
 
 
@@ -136,25 +152,31 @@ In our example here, we are working with the base $2$ exponential, $E(t) = 2^t$.
 
 
 
-\[   log_2(a)     \]
+\[   log_2(b)     \]
 
 
 That pairs and points on the graph look like 
 
 
 \[
-(a, log_2(a))
+(b, log_2(b))
 \]
 
 
-$\blacktriangleright$ \textbf{Remember:} These are the reverse of the exponential pairs : $(b, 2^b)$.  $(a, log_2(a))$ is also $(2^b, b)$ for some $b$. \\
-
-$\blacktriangleright$  $log_2(a)$ is the $b$, so that $2^b = a$ \\
+$log_2(b)$ is just the exponent that $2$ needs to equal $b$.
 
 
-$\blacktriangleright$  $log_2(a)$ is the number that you raise $2$ to, to get $a$.  \\
 
-\[   2^{log_2(a)} = a     \]
+
+
+$\blacktriangleright$ \textbf{Remember:} These are the reverse of the exponential pairs : $(a, 2^a)$.  $(b, log_2(b))$ is also $(2^c, c)$ for some $c$. \\
+
+$\blacktriangleright$  $log_2(b)$ is the $a$, so that $2^a = b$ \\
+
+
+$\blacktriangleright$  $log_2(b)$ is the number that you raise $2$ to, to get $b$.  \\
+
+\[   2^{log_2(b)} = b     \]
 
 We have a logarithmic function for every exponential function.  They are designated by their bases.
 
@@ -173,7 +195,7 @@ We have a logarithmic function for every exponential function.  They are designa
 
 
 
-\begin{definition}  Logarithm base $B$ : $log_B(A)$
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm base $B$ : $log_B(A)$}}
 
 
 $log_B(A)$ is the number you raise $B$ to, to get $A$. \\
@@ -194,7 +216,7 @@ Since all of the pairs are reversed, the graphs switch axes.
 
 
 
-The horizontal axis is an asymptote for the basic exponential function. Now, the veritcal axis is an asymptote for the basic logarithmic function.
+The horizontal axis is an asymptote for the basic exponential function. Now, the vertical axis is an asymptote for the basic logarithmic function.
 
 
 The graph of a basic exponential function has $(0,1)$ as an intercept.  The graph of a basic logarithmix function has $(1,0)$ as an intercept. 
@@ -251,7 +273,7 @@ Their graphs are mirror images of each other across the diagonal through the I a
 
 
 
-From this basic logarithmic function and its graph we can anaylze and transformation.
+From this basic logarithmic function and its graph we can analyze and transform.
 
 
 
@@ -275,13 +297,15 @@ From this basic logarithmic function and its graph we can anaylze and transforma
 Analyze   $M(t) = log_2(t+3) - 4$ \\
 
 
-$\blacktriangleright$ The inside of the logarithm is $t+3$ and this equals $0$ when $t=-3$.  This has to be the verical asymptote.
+\begin{explanation}
+
+$\blacktriangleright$ The inside of the logarithm is $t+3$ and this equals $0$ when $t=-3$.  This has to be the vertical asymptote.
 
 $\blacktriangleright$ The inside of the logarithm is $t+3$, and this is positive for $t>-3$.  The graph must move to the right.
 
 $\blacktriangleright$ The leading coefficient is $1$, which is positive.  Therefore, the graph hugs the asymptote down the asymptote. 
 
-$\blacktriangleright$ $t+3=1$ when $t=-2$. Therefore, the anchor point $(1,0)$ has moved to $t = -2$.  $M(-2) = 0$.  This gives us the point $(-2, -4)$.
+$\blacktriangleright$ $t+3=1$ when $t=-2$. Therefore, the anchor point $(1,0)$ has moved to $t = -2$.  $M(-2) = -4$.  This gives us the point $(-2, -4)$.
 
 
 
@@ -325,7 +349,7 @@ Graph of $y = M(t)$.
 
 
 
-Out graphical analysis tells us that:
+Our analysis tells us that:
 
 \begin{itemize}
 \item The implied domain of $M$ is $(-3,\infty)$.
@@ -354,7 +378,7 @@ t & = 13
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$
+$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$. $t+3$ must be $16$.
 
 
 
@@ -364,7 +388,7 @@ $\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you rais
 
 
 
-
+\end{explanation}
 
 \end{example}
 
@@ -462,6 +486,7 @@ Here is the graph of both the logarithmic and the associated exponential functio
 \begin{example}  Logarithmic Function
 
 
+\begin{explanation}
 
 Analyze   $K(x) = -2 \,log_3(4-x)$ \\
 
@@ -522,7 +547,7 @@ Graph of $y = K(x)$.
 
 
 \begin{itemize}
-\item The implied domain of $K$ is $(-\infty, 4)$.
+\item The natural or implied domain of $K$ is $(-\infty, 4)$.
 \item The implied range of $K$ is $\mathbb{R}$.
 \item $K$ is always increasing.
 \item $K$ has no maximums or minimums.
@@ -533,7 +558,7 @@ Graph of $y = K(x)$.
 
 
 
-
+\end{explanation}
 \end{example}
 
 
@@ -551,7 +576,7 @@ Reversing all of the pairs will give the associated exponential function.  \\
 $K(x)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $K$ look like $(x, K)$. The pairs for the exponential function would look like $(K, x)$.  The roles of $K$ and $x$ would be switched. $K$ would be the variable in the exponential formula. $x$ would be the exponential function value.
 
 
-We can obtain the formula for this partner exponential funciton by solving the logarithmic formula for $x$.
+We can obtain the formula for this partner exponential function by solving the logarithmic formula for $x$.
 
 
 

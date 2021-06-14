@@ -17,7 +17,7 @@ space
 An \textbf{interval} of real numbers, or on the real line, is a whole piece of the real line.
 
 
-\begin{definition}  Open Intervals
+\begin{definition}  \textbf{\textcolor{green!50!black}{Open Intervals}} 
 
 
 
@@ -26,7 +26,8 @@ An \textbf{interval} of real numbers, or on the real line, is a whole piece of t
 
 We symbolize finite open intervals like $(a, b)$. \\
 
-$(a,b)$ includes all real numbers strictly between $a$ and $b$. \\
+$(a,b)$ includes all real numbers strictly between $a$ and $b$. \\ 
+$(a,b)$ includes all real numbers that are simultaneously greater than $a$ and also less than $b$.  \\
 
 
 
@@ -47,7 +48,7 @@ We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$. \\
 
 
 
-\begin{definition}  Closed Intervals
+\begin{definition}  \textbf{\textcolor{green!50!black}{Closed Intervals}} 
 
 
 
@@ -55,6 +56,7 @@ We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$. \\
 \item A \textbf{finite closed interval} contains all of the real numbers between two distinct real numbers, including the two numbers themselves.\\
 
 We symbolize finite open intervals like $[a, b]$. \\
+$[a,b]$ includes all real numbers that are simultaneously greater than or equal $a$ and also less than or equal $b$.  \\
 
 
 
@@ -66,7 +68,7 @@ We symbolize infinite open intervals like $(-\infty, b]$ or $[a, \infty)$.
 
 
 \end{definition}
-
+\textbf{Distinct} means different.
 
 
 
@@ -91,7 +93,16 @@ $\blacktriangleright$  Open intervals always contain a real number, for instance
 
 $\blacktriangleright$ Open intervals do not contain a maximum real number.
 
-$b$ is not a member of $(a,b)$, so it cannot be the maximum number in the interval.   Any number, $c \in (a,b)$ is a candidate for the maximum real number in the interval, except  $\frac{c+b}{2} \in (a,b)$  and $c < \frac{c+b}{2}$.  $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in the open interval. \\
+$b$ is not a member of $(a,b)$, so it cannot be the maximum number in the interval.   
+
+
+$\blacktriangleright$ \textbf{Explanation:} Suppose $(a,b)$ does contain a maximum number. Then the maximum would be some number, $m \in (a,b)$.  Why can't that happen?  
+
+
+Suppose $c \in (a,b)$ is the maximum number in the interval $(a,b)$.  Then, consider the number  $\frac{c+b}{2}$.   $\frac{c+b}{2} \in (a,b)$  and $c < \frac{c+b}{2}$.  
+
+
+If we have the maximum number in the interval, then we can find a greater number also in the interval. $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in the open interval. \\
 
 
 \begin{paradox}
@@ -102,7 +113,7 @@ You assume a fact is true, like $c \in (a,b)$ is the maximum number in the inter
 
 Then you use logic to discover other facts until you discover something that should be also true, but you know is not. \\
 
-Including statements that are both true and false is a contradiction. \\
+Including statements that are both true and false is called a \textbf{contradiction}. \\
 
 The conclusion is that your original assumption must be false, like $c$ is the maximum number in the interval.
 
@@ -134,13 +145,9 @@ Let $(a,b)$ be an open interval.
 
 Let $c \in (a,b)$.
 
-Then there is an open interval inside $(a,b)$ that also contains $c$.
+Then there is an open proper subinterval inside $(a,b)$ that also contains $c$.
 
-\textbf{\textcolor{purple!50!blue!90!black}{Explanation}} \\
-
-
-
-
+\begin{explanation}
 
 
 
@@ -150,14 +157,31 @@ $a < \frac{a+c}{2} < c$ and  $c < \frac{c+b}{2}  < b$
 
 \[   c \in \left(\frac{a+c}{2} , \frac{c+b}{2} \right) \subset (a,b)              \]
 
-
+\end{explanation}
 \end{observation}
 
 
-There is always space aound any number inside an open interval.  This space will help us study discontinuities.  The space means that an open interval cannot just touch a number, like an endpoint.  Any number that an open interval touches is swallowed up completely by the open interval.
+There is always space around any number inside an open interval.  This space will help us study discontinuities.  The space means that an open interval cannot just touch a number, like an endpoint.  Any number that an open interval touches is swallowed up completely by the open interval.
 
 
 We are only talking about intervals here, but there is also a larger notion of an \textbf{open set}, which may not be an interval.  The observation above is the defining characteristic of open sets.  If there is an open interval around every member of the set, then the set is an open set.
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Open Set}} 
+
+
+Let $S$ be a set of real numbers. 
+
+$S$ is an \textbf{open set} provided for each number in $S$ there exists an open interval containing the number and this open interval is totally inside the set $S$.
+
+\begin{center}
+For each $c \in S$, there exists $(a,b) \subset S$ such that $c \in (a,b)$
+\end{center}
+
+\end{definition}
+
 
 
 
@@ -187,14 +211,14 @@ Sets have an arithmetic. Three of the operations are \textbf{intersection} and \
 
 
 
-\begin{definition} Set Operations
+\begin{definition} \textbf{\textcolor{green!50!black}{Set Operations}} 
 
 
 Given two sets $S$ and $T$, the \textbf{union} is $S \cup T = \{ r \in \mathbb{R} \, | \, r \in S \, \text{ or } \, r \in T    \}$ \\
 
 Given two sets $S$ and $T$, the \textbf{intersection} is $S \cap T = \{ r \in \mathbb{R} \, | \, r \in S \, \text{ and } \, r \in T    \}$ \\
  
-Given an sets $S$, the \textbf{complement of} is $S'  = \{ r \in \mathbb{R} \, | \, r \not\in S  \}$ 
+Given a set $S$, the \textbf{complement of} is $S'  = \{ r \in \mathbb{R} \, | \, r \not\in S  \}$ 
 
 
 \end{definition}
@@ -330,8 +354,12 @@ An interval is \textbf{nested} inside another interval if it is completely conta
 
 \textbf{Nested Closed Intervals}
 
-If $a < b < c < d$, then $[b,c]$ is nested inside $[a,d]$.   $[b,c]$ is a subset of $[a,d]$.  $[b,c] \subset [a,d]$.
+If $a < b < c < d$, then $[b,c]$ is nested inside $[a,d]$.   
 
+\begin{itemize}
+\item $[b,c]$ is a subset of $[a,d]$.  
+\item $[b,c] \subset [a,d]$.
+\end{itemize}
 
 
 $\blacktriangleright$  The intersection of two nested closed intervals equals the inner closed interval.
@@ -393,7 +421,7 @@ An infinite intersection of nested closed intervals is again a closed interval, 
 
 
 
-Infinite intersections of open intervals is not neccessarily open, because opem intervals are weird.
+Infinite intersections of open intervals are not neccessarily open, because open intervals are weird.
 
 
 \begin{example} Nested
@@ -415,7 +443,7 @@ The intersection would be all real numbers that are in every one of those nested
 \end{example}
 
 
-An infinite intersection of open intervals can be a closed interval, becasue open intervals are weird.
+An infinite intersection of open intervals can be a closed interval, because open intervals are weird.
 
 
 It could even be a singleton set.
@@ -430,7 +458,7 @@ It could even be a singleton set.
 
 
 
-The intersection would be all real numbers that are in every one of those nested closed intervals.
+The intersection would be all real numbers that are in every one of those nested open intervals.
 
 
 \[ \bigcap_{n=1}^{\infty}   \left(4 -  \frac{1}{n}, 4 + \frac{1}{n}\right)    = [4, 4] = \{ 4 \}   \]
@@ -456,7 +484,7 @@ It could even be the empty set.
 
 
 
-The intersection would be all real numbers that are in every one of those nested closed intervals.
+The intersection would be all real numbers that are in every one of those nested open intervals.
 
 
 $0$ is not in any of the nested intervals, so $0$ is not in the intersection.
@@ -470,7 +498,7 @@ Then $r$ is not in all of the nested intervals inside $\left(0,  \frac{1}{N}\rig
 No real number is in the intersection.
 
 
-\[ \bigcap_{n=1}^{\infty}   = \emptyset    \]
+\[ \bigcap_{n=1}^{\infty}   \left(0,  \frac{1}{n}\right)  = \emptyset    \]
 
 
 
@@ -490,7 +518,7 @@ Open intervals are weird.  Closed intervals are nice.  They are so nice that eve
 
 
 
-\begin{theorem} Intersection Theorem
+\begin{theorem} \textbf{\textcolor{blue!75!black}{Intersection Theorem}}  
 
 
 Suppose we have a infinite decreasing, nested, sequence of non-empty closed intervals.
@@ -503,7 +531,7 @@ Suppose we have a infinite decreasing, nested, sequence of non-empty closed inte
 Then 
 
 
-\[   \bigcap_{k=0}^{\infty} \ne \emptyset         \]
+\[   \bigcap_{k=0}^{\infty} I_{k} \ne \emptyset         \]
 
 
 \end{theorem}

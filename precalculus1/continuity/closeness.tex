@@ -23,6 +23,7 @@ distance
 Given two real numbers, $a$ and $b$, you can measure the distance between them, symbolized by $|b-a|$.  We use this measurement to decide if things are close.  The smaller $|b-a|$, the closer $a$ and $b$ are. \\
 
 
+
 Or, we could think the other way.  Given a real number $a$ and a distance $\delta$, we could describe all of the real numbers closer to $a$ than $\delta$.  They would be the numbers inside the interval $(a-\delta, a+\delta)$, which we could describe with absolute value.
 
 \[      (a-\delta, a+\delta) = \{ r \in \mathbb{R} \, | \, |r - a| < \delta        \}       \]
@@ -38,7 +39,7 @@ And, since $(a-\delta, a+\delta)$ is an open interval, we know there is a number
 And, it doesn't matter how small $\delta$ is.  There will always be a number in the left half and in the right half, because we have an open interval.
 
 
-IN an open interval, we can always get closer.
+In an open interval, we can always get closer.
 
 
 
@@ -67,9 +68,9 @@ We could picture $(a-\delta, a+\delta)$ inside the domain of a function, $f$, an
 
 \begin{example} Image
 
-Let $f(x) = 2x + 5$ with the implied domain.
+Let $f(x) = 2x + 5$ with its natural domain.
 
-Let  $I = (4-\delta, 4+\delta)$, where $\delta > 0$ is a small real number.
+Let  $I = (4-\delta, 4+\delta)$, where $\delta > 0$ is a very small real number.
 
 Then $I$ is an interval in the domain of $f$.
 
@@ -105,7 +106,7 @@ $(13-2\delta, 13+2\delta)$
 
 
 
-What if we had a target in the range for our transformation? \\
+What if we went the other way and started with a target in the range? \\
 
 A target maybe too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. \\
 
@@ -122,13 +123,13 @@ What are the possibilities for $I$?  \\
 
 
 
-To land near $6$, $f(x) = 2x + 5 = 6$.  $x$ would need to be near $\frac{1}{2}$.  \\
+To land near $6$, $f(x) = 2x + 5 = 6$, $x$ would need to be near $\frac{1}{2}$.  \\
 
 $I$ would need to look like $\left( \frac{1}{2} - \delta, \frac{1}{2}+ \delta \right)$  But this isn't going to work if $\delta$ is too big compared to $\epsilon$.  We need to describe $\delta$ in terms of $\epsilon$ to make sure.  And, we are in the business of making sure. \\
 
 
 
-$\delta$ will be mulitplied by $2$ and we need this to be smaller than $\epsilon$.  Therefore, we need $\delta < \frac{\epsilon}{2}$ for the image to land inside our target interval.  Let's pick $\delta < \frac{\epsilon}{3}$.  That makes sure. \\
+$\delta$ will be multiplied by $2$ and we need this to be smaller than $\epsilon$.  Therefore, we need $\delta < \frac{\epsilon}{2}$ for the image to land inside our target interval.  Let's pick $\delta < \frac{\epsilon}{3}$.  That makes sure. \\
 
 
 
@@ -178,7 +179,7 @@ Unfortunately for communication purposes, we reuse some notation for the preimag
 
 
 
-\begin{definition}
+\begin{definition} \textbf{\textcolor{green!50!black}{Preimage}}
 
 
 Let $S \subset Ran_f$ be a subset of the range of $f$.  Then the \textbf{preimage of $S$} is given by
@@ -205,7 +206,7 @@ Let $S \subset Ran_f$ be a subset of the range of $f$.  Then the \textbf{preimag
 
 \begin{example} Preimage
 
-Let $G(t) = -4t - 3$ with the implied domain.  The implied range is $\mathbb{R}$.
+Let $G(t) = -4t - 3$ with its natural domain.  The natural range is $\mathbb{R}$.
 
 Let  $I = (10-\epsilon, 10+\epsilon)$, where $\epsilon > 0$ is a small positive real number.  
 
@@ -214,7 +215,7 @@ Then $I$ is a small \textbf{neighborhood} of $10$ in the range of $G$.
 
 What is the preimage of $I$?
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}} \\
+\begin{explanation}
 
 
 
@@ -223,7 +224,7 @@ What is the preimage of $I$?
 $G$ will stretch a domain interval by a factor of $\answer{4}$.  It will also reflect it and shift it $3$.  
 
 
-First, we need a domain interval whose image will be around $14$.
+First, we need a domain interval whose image will be around $10$.
 
 $-4t-3 = \answer{10}$
 
@@ -243,7 +244,7 @@ $G$ will stretch $\delta$ by a factor of $4$, therefore,  we need $\delta = \fra
 \[   G^{-1}((10-\epsilon, 10+\epsilon)) = \left( -\frac{13}{4} - \frac{\epsilon}{4}, -\frac{13}{4} + \frac{\epsilon}{4} \right)   \]
 
 
-
+\end{explanation}
 \end{example}
 
 
@@ -258,7 +259,7 @@ $G$ will stretch $\delta$ by a factor of $4$, therefore,  we need $\delta = \fra
 
 \begin{example} Preimage
 
-Let $H(k) = 2k - 1$ with the implied domain.  The implied range is $\mathbb{R}$.
+Let $H(k) = 2k - 1$ with its natural domain.  The natural range is $\mathbb{R}$.
 
 Let  $I = (-5-\epsilon, -5+\epsilon)$, where $\epsilon > 0$ is a small positive real number.  
 
@@ -267,7 +268,7 @@ Then $I$ is a small \textbf{neighborhood} of $-5$ in the range of $H$.
 
 Identify an interval, $D$ in the domain of $H$, such that $H(D) \subset I$.
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}} \\
+\begin{explanation}
 
 
 
@@ -302,7 +303,7 @@ Let's pick $\delta = \frac{\epsilon}{5}$.
 
 
 
-
+\end{explanation}
 \end{example}
 
 

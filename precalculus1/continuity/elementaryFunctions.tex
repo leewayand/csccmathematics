@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Discontinuities}
+\title{Discontinuity}
 
 \begin{document}
 
@@ -49,14 +49,14 @@ No matter how small $\delta>0$ is, there is always a number, $b \in (a-\delta, a
 
 
 
-\begin{definition}
+\begin{definition} \textbf{\textcolor{green!50!black}{Discontinuity}}
 
 The real number $a$ is a \textbf{discontinuity} of the function $f$ if
 
 
 \begin{itemize}
 \item $a \in Dom_f$ - $a$ is in the domain of $f$, which means $f(a) \in \mathbb{R}$, i.e. $f(a)$ exists.
-\item There is an $\epsilon > 0$ defining an open interval around $f(a)$, namely $(f(a) - \epsilon, f(a) + \epsilon)$, such that for any $\delta > 0$, the open interval $(a - \delta, a + \delta)$ always contains a domain number $b$, such that $f(b) \not\in(f(a)-\epsilon, f(a)+\epsilon)$.
+\item There is an $\epsilon > 0$ defining an open interval around $f(a)$, namely $I = (f(a) - \epsilon, f(a) + \epsilon)$, such that for any $\delta > 0$, the open interval $(a - \delta, a + \delta)$ always contains a domain number $b$, such that $f(b) \not\in(f(a)-\epsilon, f(a)+\epsilon)$.
 \end{itemize}
 
 
@@ -127,14 +127,78 @@ Graph of $y=f(x)$
 
 $5$ is a disconinuity for $f$. \\
 
-First, $5$ is in the domain and $f(5)=4$
+
+
+\begin{explanation}
+
+
+First, $5$ is in the domain and $f(5)=4$ is in the range.  Our plan is to pick an open interval around $4$ in the range and show that no matter how close you get to $5$ in the domain, there are always domain numbers whose function value is not inside our interval.
 
 
 
-Second, pick a radius of $\epsilon = 1$ and consider the interval $(4-\epsilon , 4+\epsilon) = (4-1 , 4+1) = (3,5)$. \\
+For our selection, pick a radius of $\epsilon = 1$ and consider the interval $(4-\epsilon , 4+\epsilon) = (4-1 , 4+1) = (3,5)$. \\
 
 
-$\vartriangleright$ Can we select an interval CONTAINING $5$, small enough, so that all domain numbers inside this interval have their function values inside $(3,5)$?  The answer is yes.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:5),<-] {2*x-4};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(5:9),->] {-x+9};
+
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+          \addplot[color=red,fill=red,only marks,mark=*] coordinates{(5,4)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,6)};
+
+          \addplot [line width=3, red, smooth,samples=200,domain=(3:5)] ({0},{x});
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\vartriangleright$ Can we select a domain interval CONTAINING $5$, small enough, so that all domain numbers inside this interval have their function values inside $(3,5)$?  The answer is yes.
 
 Select $[5, 6)$. \\
 
@@ -152,9 +216,71 @@ Consider the open interval $(5-\delta, 5+\delta)$ around $5$. It doesn't matter 
 \[  f\left(5 - \frac{\delta}{2}\right)     = 2\left(5 - \frac{\delta}{2}\right)-4 = 6 - \delta     \]
 
 
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:5),<-] {2*x-4};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(5:9),->] {-x+9};
+
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+          \addplot[color=red,fill=red,only marks,mark=*] coordinates{(5,4)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,6)};
+
+          \addplot [line width=3, red, smooth,samples=200,domain=(3:5)] ({0},{x});
+          \addplot [line width=3, green, smooth,samples=200,domain=(4.5:5.5)] ({x},{0});
+
+          \addplot [line width=1, violet, smooth,samples=200,domain=(0:5.5)] ({4.75},{x});
+          \addplot [line width=1, violet, smooth,samples=200,domain=(0:4.75)] ({x},{5.5});
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
 Since $0.1 > \delta$, we know for sure that $6 - \delta > 5$.  $6 - \delta$ is NEVER inside $(3, 5)$, for ANY $\delta$, which means for ANY open interval.
 
-There is no open interval around $5$, such that the function values of domain numbers inside this interval are always inside $(3,5)$. \\
+There is no open interval around $5$, such that all function values of all domain numbers inside this interval are always inside $(3,5)$. \\
 
 
 
@@ -166,7 +292,7 @@ That is, algebraically, what is means to be a discontinuity.
 
 
 
-
+\end{explanation}
 \end{example}
 
 
@@ -243,7 +369,7 @@ Claim: $0$ is a discontinuity of $f$. \\
 
 
 
-
+\begin{explanation}
 
 $T(k)$ is $0$ everywhere except the reciprocals of the natural numbers.
 
@@ -271,6 +397,7 @@ For \textbf{\textcolor{red!50!blue!90!black}{ANY}} choosen $\epsilon$-interval a
 
 $0$ is a discontinuity of $f$.
 
+\end{explanation}
 
 \end{example}
 
@@ -290,7 +417,7 @@ But Elementary Functions are not weird.  They are nice.
 
 
 
-\begin{definition}
+\begin{definition} \textbf{\textcolor{green!50!black}{Singularity}}
 
 For Precalculus, a \textbf{singularity} has the same basic definition as a discontinuity, except the singularity is not in the domain. \\
 
@@ -324,7 +451,10 @@ The Elementary Functions don't do weird things.  They are almost always continuo
 
 \begin{itemize} 
 
-\item \textbf{Polynomial Function}  Polynomials are continuous everywhere. They have no discontinuities or singularities. Constant functions and linear functions are the nicest of the polynomial functions.
+\item \textbf{Polynomial Function}  
+
+Polynomials are continuous everywhere. They have no discontinuities or singularities. Constant functions and linear functions are the nicest of the polynomial functions.
+
 
 
 
@@ -341,7 +471,7 @@ Roots and radical functions are continuous everywhere.  Not everywhere on the re
 
 \item \textbf{Exponential Functions}
 
-Exponential functions are continuous everywhere.
+Exponential functions are continuous everywhere (on their domain).
 
 
 
@@ -358,7 +488,7 @@ Logarithmic functions are continuous everywhere (on their domain).
 
 \item \textbf{Rational Functions}
 
-Rational functions are continuous everywhere (on their domain).  They have singularities and these are represented with vertical asymptotes on their graphs.  But singularities are not in the domain.  Rational functions are not defined at a singularity. Rational functions do not have discontinuities.  They are continuous everywhere (on their domain). 
+Rational functions are continuous everywhere (on their domain).  They have singularities and these are represented with vertical asymptotes and holes on their graphs.  But singularities are not in the domain.  Rational functions are not defined at a singularity. Rational functions do not have discontinuities.  They are continuous everywhere (on their domain). 
 
 
 
@@ -480,7 +610,7 @@ Graph of $y = \lfloor x\rfloor$ is below, except the steps keep going up to the 
 
 
 
-The floor function illustrates a general feeling about elementary functions. The only way discontiniities are created is through the use of piecewise defined functions.  We have to break a nice function and just move a piece of it to somewhere else.
+The floor function illustrates a general feeling about elementary functions. The only way discontiniities are created is through the use of piecewise defined functions.  To create a discontinuity, we have to break a nice function and just move a piece of it to somewhere else.
 
 
 
@@ -784,7 +914,7 @@ This type of discontinuity can be "removed" simply by redefining the function va
 
 
 
-For a removeable singularity, the point is removed from the graph and the number from the domain.
+Just as with a removeable discontinuity, a removeable singularity is created by removing a single point from the graph and the number from the domain.
 
 
 

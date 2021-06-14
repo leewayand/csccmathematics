@@ -26,33 +26,17 @@ rules
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \section{Exponents}
 
 Logarithms are exponents. \\
 
 
-$log_a(b)$ is what you raise $a$ to, to get $b$.
+$log_a(b)$ is what you \textbf{\textcolor{red!90!darkgray}{raise}} $a$ to, to get $b$.
 
 \[    a^{log_a(b)}  = b    \, \text{ for } \,  a,b > 0     \]
 
 
-We can read it right to left as well.  Any positive number, $b$, can be written with any base, $a$, like $a^{log_a(b)}  = b$.
+We can read it right to left as well.  Any positive number, $b$, can be written with any base, $a$, like $b = a^{log_a(b)}$.
 
 
 
@@ -98,12 +82,12 @@ Since exponential functions are one-to-one, we have
 
 
 
-\begin{fact} 
+\begin{template} 
 
 \[    log_a(M)+log_a(N)    =   log_a(M \cdot N)      \, \text{ for } \, a, M, N > 0        \]
 
 
-\end{fact}
+\end{template}
 
 
 
@@ -142,12 +126,12 @@ Since exponential functions are one-to-one, we have
 
 
 
-\begin{fact} 
+\begin{template} 
 
 \[    log_a(M)-log_a(N)    =   log_a\left(\frac{M}{N}\right)        \, \text{ for } \, a, M, N > 0        \]
 
 
-\end{fact}
+\end{template}
 
 
 
@@ -198,12 +182,13 @@ Since exponential functions are one-to-one, we have
 
 
 
-\begin{fact} 
+\begin{template} 
 
 \[    log_a(M^N)    =   N \cdot log_a(M)       \, \text{ for } \, a M, N  > 0        \]
 
 
-\end{fact}
+\end{template}
+
 
 
 
@@ -229,9 +214,7 @@ Since exponential functions are one-to-one, we have
 
 
 
-
-
-We have also seen that logarithmic functions are \textbf{one-to-one}. One-to-one means that each range number is paired with a unique domain number.
+Since exponential functions are one-to-one, and logarithmic functions are just the reverse, logarithmic functions must be \textbf{one-to-one} as well. One-to-one means that each range number is paired with a unique domain number.
 
 
 
@@ -254,13 +237,15 @@ We have also seen that logarithmic functions are \textbf{one-to-one}. One-to-one
 			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
 			%\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
 
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
+
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-3});
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
 			%\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(-4,-2)};
+
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
 
 
 
@@ -274,9 +259,9 @@ We have also seen that logarithmic functions are \textbf{one-to-one}. One-to-one
 \end{image}
 
 
-Our definition of functions includes a similar rule for domain numbers.  Each domain number is in exactly one pair.  One-to-one puts the same restrictions on range numbers.  Each range number is in exactly one pair. Logarithmic functions have this feature.
 
-In other words, each function value occurs exactly once.
+
+In other words, each function value in a basic logarithmic function occurs exactly once.
 
 
 If you know that $log_a(r) = log_a(t)$, then $r=t$ follows. \\
@@ -285,13 +270,13 @@ If you know that $log_a(r) = log_a(t)$, then $r=t$ follows. \\
 This is an important rule.
 
 
-\begin{fact} Uniqueness
+\begin{template} Uniqueness
 
 
 \[     \text{If } \,  log_a(r) = log_a(t), \,  \text{ then }  \, r=t    \]
 
 
-\end{fact}
+\end{template}
 
 
 
@@ -319,17 +304,17 @@ This is an important rule.
 Solve $log_5(21 + x) = 2$
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 
 $log_5(21 + x) = 2$
 
 $5^{log_5(21 + x)} = 5^2$
 
-$21 + x = 5^2 = 25$    Since, $log_5(x)$ is a one-to-one function.
+$21 + x = 5^2 = 25$, using the definition of logarithm.
 
 $x = 4$
-
+\end{explanation}
 \end{example}
 
 
@@ -346,21 +331,20 @@ $x = 4$
 
 Solve $log_2(y) + log_2(y-4) = log_2(y+6)$
 
-
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 
 $log_2(y) + log_2(y-4) = log_2(y+6)$
 
 $log_2(y(y-4)) = log_2(y+6)$
 
-$y(y-4) = y+6$    Since, $log_2(x)$ is a one-to-one function.
+$y(y-4) = y+6$    
 
 $y^2 - 4y - y - 6 = 0$
 
 $y^2 - 5y - 6 = 0$
 
-$(y-6)(\answer{y+1}) = 0$
+$(y-6) \left( \answer{y+1} \right) = 0$
 
 
 Either $y-6 = 0$ or $y+1 = 0$
@@ -372,7 +356,7 @@ However, $y \ne -1$, since $\answer{-1}$ is not in the domain of $log_2(y)$.
 Therefore, just one solution: $6$.
 
 The solution set is $\{ 6 \}$
-
+\end{explanation}
 \end{example}
 
 
@@ -386,11 +370,11 @@ The solution set is $\{ 6 \}$
 Solve $7^k = 5$
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 
 We are looking for the number that you raise $7$ to, to get $5$.  That number  is $log_7(5)$.
-
+\end{explanation}
 \end{example}
 
 
@@ -410,7 +394,8 @@ We are looking for the number that you raise $7$ to, to get $5$.  That number  i
 \section{Change of Base}
 
 
-Any positive number can be written as a power of any other positive number.  We can change the base. That is what logarithms do.
+Logarithms are exponenets.  We use them to write expressions in exponential form.
+
 
 
 \begin{quote}
@@ -421,7 +406,9 @@ Any positive number, $b$, can be written as a power of $a$, any other positive n
 
 \end{quote}
 
-We can also write any logarithm in terms of any base.  We can write $log_a(b)$ in terms of $log_c$.
+For this to be useful, we will need to write multiple expressions with the same base. Therefore, changing the base becomes important.
+
+How do we write $log_a(b)$ in terms of $log_c$?
 
 
 
@@ -433,7 +420,7 @@ First, $a$ and $b$ can be written in terms of some third base, $c$, using logari
 
 
 
-Second, substitute these in for $a$ and $b$ bases in $b = a^{log_a(b)}$.
+Second, substitute these in for the $a$ and $b$ bases in $b = a^{log_a(b)}$.
 
 
 
@@ -460,12 +447,12 @@ This is known as the \textbf{Change of Base Formula}.
 
 
 
-\begin{fact}  Change of Base Formula
+\begin{template}  Change of Base Formula
 
 \[   log_a(b)  =  \frac{log_c(b)}{log_c(a)}        \, \text{ for } \, a, b, c  > 0        \]
 
 
-\end{fact}
+\end{template}
 
 
 
@@ -475,10 +462,6 @@ This is known as the \textbf{Change of Base Formula}.
 
 
 
-If we can write any power in terms of any base, and any logarithm in terms of any base, then let's just pick one base to write everything in.
-
-
-We have such a base: $e$
 
 
 \begin{example}
@@ -487,7 +470,7 @@ We have such a base: $e$
 Write $log_3(5)$ in terms of logarithms base $7$.
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 
 Following the change of base template: $log_a(b)  =  \frac{log_c(b)}{log_c(a)} $ gives
@@ -498,7 +481,7 @@ Following the change of base template: $log_a(b)  =  \frac{log_c(b)}{log_c(a)} $
 
 
 
-
+\end{explanation}
 \end{example}
 
 
@@ -518,6 +501,10 @@ Following the change of base template: $log_a(b)  =  \frac{log_c(b)}{log_c(a)} $
 
 
 
+$\blacktriangleright$ It occured to people: If we can write any power in terms of any base, and any logarithm in terms of any base, then let's just pick one base to write everything in.
+
+
+We have such a base: $e$
 
 
 \section{e}
@@ -537,7 +524,7 @@ This means that we encounter $log_e(x)$ a lot.  And, any time something appears 
 
 
 
-\begin{definition}  Natural Logarithm
+\begin{definition}  \textbf{\textcolor{green!50!black}{Natural Logarithm}} 
 
 
 \[     ln(x) = log_e(x) \]
@@ -549,7 +536,7 @@ That is a lowerscase "el" and a lowercase "en".
 \end{definition}
 
 
-That is not an uppercase "eye".  It is not IN.  It is ln.
+That is not an uppercase "eye".  It is not In.  It is ln.
 
 
 
@@ -578,14 +565,14 @@ Calculators usually have a button titled "ln" or "LN".  When approximating value
 \begin{example}  
 
 
-Approximate $log_13(61)$
+Approximate $log_{13}(61)$
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 
-Using the LN button on the calculator, we get $log_13(61) = \frac{ln\left(\answer{61}\right)}{ln\left(\answer{13}\right)} \approx 1.602711512$
-
+Using the LN button on the calculator, we get $log_{13}(61) = \frac{ln\left(\answer{61}\right)}{ln\left(\answer{13}\right)} \approx 1.602711512$
+\end{explanation}
 \end{example}
 
 
@@ -601,7 +588,7 @@ Using the LN button on the calculator, we get $log_13(61) = \frac{ln\left(\answe
 Rewrite the expression $3 \cdot 5^{2x + 1}$ in the form $e^{f(x)}$.
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 
 $3 = e^{\answer{ln(3)}}$ \\
@@ -613,8 +600,9 @@ $5 = e^{\answer{ln(5)}}$ \\
 \[   3 \cdot 5^{2x + 1} = e^{ln(3)} \cdot (e^{ln(5)})^{2x + 1}  =  e^{ln(3)} \cdot e^{ln(5) \cdot (2x + 1)}  = e^{ln(3) + ln(5) \cdot (2x + 1)} \]
 
 
+\[  e^{ln(3) + ln(5) \cdot (2x + 1)} \] 
 
-
+\end{explanation}
 \end{example}
 
 

@@ -17,7 +17,7 @@ reversed functions
 
 
 
-We have seen that given an exponential function, we can reverse the pairs and get a logarithmic function.  If the pairs of the exponential function look like $(D,R)$, then the pairs of the logarithmic funciton lok like $(R,D)$.  The same numbers are pairded together.  The just swap their roles between domain and range.
+We have seen that given an exponential function, we can reverse the pairs and get a logarithmic function.  If the pairs of the exponential function look like $(D,R)$, then the pairs of the logarithmic function look like $(R,D)$.  The same numbers are paired together.  The just swap their roles between domain and range.
 
 \section{Composition}
 
@@ -33,13 +33,15 @@ We have two partnered exponential and logarithmic functions: $E(x)$ and $L(t)$. 
 
 \begin{enumerate}
 \item Let $d$ be a domain number of $E(x)$.
-\item $d$ is in a pair: $(d, r)$.
-\item The value of $E(d)$ is $r$.
-\item View $r$ as a number in the domain of $L(t)$.
-\item We already know that $(r,d)$ is a pair in $L(x)$, because $E$ and $L$ are partnered.  Their pairs are reversed.
-\item That tell us that $L(r)=d$
+\item $d$ is in a pair: $(d, E(d))$.
+\item View $E(d)$ as a number in the domain of $L(t)$.
+\item We already know that $(E(d),d)$ is a pair in $L(t)$, because $E$ and $L$ are partnered.  Their pairs are reversed.
+\item That tell us that $L(t)=d$
 \end{enumerate}
 
+
+
+$d$ was partnered with $E(d)$.  then we reversed the pair and $E(d)$ is partnered with $d$.
 
 The composition $L \circ E$ pairs $d$ with itself: $(d,d)$ for all of the domain numbers. \\
 
@@ -53,6 +55,11 @@ The composition $L \circ E$ pairs $d$ with itself: $(d,d)$ for all of the domain
 \begin{example}  Composition
 
 We have seen that $E(x) = -2 \,log_3(4-x)$ and $L(t) = 4 - 3^{-\frac{t}{2}}$ are two partnered exponential and logarithmic functions. \\
+
+
+Map out the pairs for the composition, $(L \circ E)(d)$.
+
+\begin{explanation}
 
 
 Let $d$ be in the domain of $E(x)$, then $E(d) = -2 \,log_3(4-d)$. \\
@@ -72,7 +79,7 @@ Now, let's put this number into $L$. \\
 
 \[    (L \circ E)(d)  = d             \]
 
-
+\end{explanation}
 \end{example}
 
 
@@ -94,6 +101,13 @@ Let's try it the other way.
 We have seen that $E(x) = -2 \,log_3(4-x)$ and $L(t) = 4 - 3^{-\frac{t}{2}}$ are two partnered exponential and logarithmic functions. \\
 
 
+
+Map out the pairs for the composition, $(E \circ L)(d)$.
+
+\begin{explanation}
+
+
+
 Let $d$ be in the domain of $L(t)$, then $L(d) = 4 - 3^{-\frac{d}{2}}$. \\
 
 Now, let's put this number into $E$. \\
@@ -111,7 +125,7 @@ Now, let's put this number into $E$. \\
 
 \[    (E \circ L)(d)  = d            \]
 
-
+\end{explanation}
 \end{example}
 
 
