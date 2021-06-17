@@ -14,7 +14,7 @@ limit notation
 
 
 
-End-behavior is a simplier description of approximate function values as we move way out in the domain to the very very very large numbers.  Our phrases for this movement in the domain are 
+End-behavior is a simplier approximate description of function values as we move way out in the domain to the very very very large numbers.  Our phrases for this movement in the domain are 
 
 \begin{itemize}
 \item tending to infinity
@@ -56,8 +56,9 @@ $\blacktriangleright$  We have seen limiting or end-behavior of exponential func
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5.5),<->] {1.5^x};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5.5),<->] {1.5^x};
+         
 
           %\addplot[color=penColor,only marks,mark=*] coordinates{(-4,0)}; 
 
@@ -72,7 +73,7 @@ $\blacktriangleright$  We have seen limiting or end-behavior of exponential func
 as $x \to \infty$, the function values become unbounded and our notation for that looks like 
 
 
-\[   \lim_{x \to \infty} 1.5^x   = \infty      \]
+\[   \lim\limits_{x \to \infty} 1.5^x   = \infty      \]
 
 
 
@@ -81,7 +82,7 @@ as $x \to \infty$, the function values become unbounded and our notation for tha
 
 $\blacktriangleright$  Same with logaarithms.  
 
-\[   \lim_{t \to \infty} log_2(t+5)   = \infty      \]
+\[   \lim\limits_{t \to \infty} log_2(t+5)   = \infty      \]
 
 \begin{image}
 \begin{tikzpicture} 
@@ -94,10 +95,13 @@ $\blacktriangleright$  Same with logaarithms.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-4.97:9),<->] {ln(x+5)/ln(2)};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({-5},{x});
 
           \addplot[color=penColor,only marks,mark=*] coordinates{(-4,0)}; 
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-4.97:9),<->] {ln(x+5)/ln(2)};
+          
+          
 
            
 
@@ -108,7 +112,27 @@ $\blacktriangleright$  Same with logaarithms.
 
 
 
-$\blacktriangleright$ Some rational functions approach a constant, which we see on their graphs as a horizontal asymptote.
+
+\begin{warning}
+
+
+$\infty$ is NOT a real number.  The function does reach $\infty$.  $\lim\limits_{x \to \infty} f(x) = \infty$ is just notation telling us that all of the values of $f(x)$ become unbounded as we move out along the real line.  
+
+That is, for each real number $M$, "eventually" $f(x) > M$ for all values of $f(x)$.
+
+That is, for each real number $M$, there is a real number $m$ such that $f(x) > M$ for all $x > m$.
+
+
+\end{warning}
+
+
+
+
+
+
+
+
+$\blacktriangleright$ Some rational functions approach a constant in their end-behavior, which we see on their graphs as a horizontal asymptote.
 
 
 
@@ -135,16 +159,12 @@ graph of $y = f(x) = \frac{2x-4}{x+3}$
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({-3},{x});
+          \addplot [line width=1, gray, dashed, domain=(-19.9:19.9),<->] {2};
+
           \addplot [line width=2, penColor, smooth, samples=300, domain=(-19.9:-3.58),<->] {(2*x-4)/(x+3)};
           \addplot [line width=2, penColor, smooth, samples=300, domain=(-2.53:19.9),<->] {(2*x-4)/(x+3)};
 
-
-          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({-3},{x});
-          \addplot [line width=2, gray, dashed, domain=(-19.9:19.9),<->] {2};
-
-
-
-           
 
   \end{axis}
 \end{tikzpicture}
@@ -154,10 +174,10 @@ graph of $y = f(x) = \frac{2x-4}{x+3}$
 
 
 
-\[   \lim_{x \to -\infty} f(x)   = 2     \]
+\[   \lim\limits_{x \to -\infty} f(x)   = 2     \]
 
 
-\[   \lim_{x \to \infty} f(x)   = 2     \]
+\[   \lim\limits_{x \to \infty} f(x)   = 2     \]
 
 
 
@@ -181,13 +201,15 @@ Let $G(m)$ be defined by the following graph.
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+          \addplot [line width=1, gray, dashed, domain=(-9.9:-1),<->] {6};
+          \addplot [line width=1, gray, dashed, domain=(1:9.9),<->] {-4};
+
           \addplot [line width=2, penColor, smooth, samples=300, domain=(-9.9:-3.58),<->] {(6*x-4)/(3*(x+3))+3};
           \addplot [line width=2, penColor, smooth, samples=300, domain=(-2.4:9.9),<->] {(-4*x-4)/(x+3)};
 
 
-          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
-          \addplot [line width=2, gray, dashed, domain=(-9.9:-1),<->] {6};
-          \addplot [line width=2, gray, dashed, domain=(1:9.9),<->] {-4};
+        
 
 
 
@@ -253,7 +275,10 @@ Let $T(y)$ be defined by
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed, domain=(1:19),<->] {0};
+
           \addplot [line width=2, penColor, smooth, samples=300, domain=(2:18.5),->] {2*sin(deg(3*x))/x};
+          \addplot[color=penColor,only marks,mark=*] coordinates{(2,-0.28)}; 
 
 
 

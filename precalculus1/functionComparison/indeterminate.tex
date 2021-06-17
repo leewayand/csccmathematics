@@ -15,7 +15,7 @@ equally fast
 
 
 
-Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity at the same rate, then the limit of their quotient equals a number.  The graph of the quotient approaches as horizontal asymptote.
+Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity at the same rate, then the limit of their quotient equals a number.  The graph of the quotient approaches a horizontal asymptote.
 
 
 
@@ -26,14 +26,14 @@ Functions can dominate other functions, or they can approach infinity similarly.
 
 Consider the function $B(t) = \frac{3e^t - 5}{e^t + 1}$. \\
 
-As $t \to \infty$, the exponential functions will dominate the constant functions.  
+As $t \to \infty$, the exponential pieces will dominate the constant pieces.  
 
 \[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{3 e^t}{e^t} = 3   \]
 
 
 
 
-As $t \to -\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$  In this case, the constant terms domainate.
+As $t \to -\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$  In this case, the constant terms dominate.
 
 
 \[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{-5}{1} = -5   \]
@@ -61,16 +61,11 @@ The graph has two different horizontal asymptotes.
             axis on top
           ]
           
-          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-8:8),<->] {(3*(e^x) - 5)/(e^x + 1))};
-
             \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {3};
             \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {-5};
 
-
-
-
-           
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-8:8),<->] {(3*(e^x) - 5)/(e^x + 1))};
+ 
 
   \end{axis}
 \end{tikzpicture}
@@ -93,7 +88,7 @@ The graph has two different horizontal asymptotes.
 \section{Indeterminate Forms}
 
 
-We have been examining functions that approach infinity at the same rate.  The problem is that a fraction of the form $\frac{very \, big}{very \, big}$ could equal anything.
+We have been examining functions that approach infinity at the same rate. When combined into a new quotient funciton, this new funciton might have a contant end-behavior.  The problem is that a fraction of the form $\frac{very \, big}{very \, big}$ could equal anything.
 
 
 
@@ -272,9 +267,9 @@ The base is getting closer to $1$, but they are always greater than $1$.  The po
 
 We are heading to something like $1^{\infty}$.
 
-And we have seen this approaches the value $e$. \\
+And we have seen this function actually approaches the value $e \approx 2.71828$. \\
 
-$e \approx 2.71828. $How far out in the domain do you need to go for the graph to be inside the interval $[2.7, 2.8]$?
+How far out in the domain do you need to go for the graph to be inside the interval $[2.7, 2.8]$?
 
 
 

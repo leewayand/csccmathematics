@@ -88,7 +88,7 @@ Rational functions are quotients of polynomials.  Therefore, their end-behavior 
 
 
 
-graph of $y = f(x) = \frac{x+1}{(x+3)(x-4)}$
+graph of $y = g(x) = \frac{x+1}{(x+3)(x-4)}$
 
 
 \begin{image}
@@ -105,12 +105,14 @@ graph of $y = f(x) = \frac{x+1}{(x+3)(x-4)}$
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+
           \addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
           \addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
           \addplot [line width=2, penColor, smooth, domain=(4.1:9),<->] {(x-1)/((x+3)*(x-4))};
 
-          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
-          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+          
 
 
            
@@ -185,7 +187,7 @@ $\blacktriangleright$   If the degree of the numerator and is one more than the 
 
 
 
-However, since we are experts at linear functions, we might want a little more detail.  We might also want the contstant term of this linear function.  
+However, since we are experts at linear functions, we might want a little more detail.  We might also want the constant term of this linear function.  
 
 For this, we need \textbf{long division}
 
