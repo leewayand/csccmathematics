@@ -40,7 +40,7 @@ If
 \end{itemize}
 then you can conclude that $b=d$.
 
-You can replace $a$ and $b$ with equal things and the equality is maintained.
+You can replace $a$ and $b$ with things equal to $a$ and $b$ and the equality is maintained.
 
 
 \end{observation}
@@ -69,17 +69,17 @@ If $a=b$, then $f(a) = f(b)$, where you are "doing" $f$ to both.
 
 
 
-\begin{example}  Doesn't Reverse
+\begin{warning}  Doesn't Reverse
 
 
 
 $3^2 = (-3)^2$, but that doesn't mean $3=-3$.
 
 
-You can do the same thing to different numbers and get an equality.  But, it doesn't go backwards.  Here we squared both numbers and got an inequality.  But, that doesn't mean the original numbers are equal.
+You can do the same thing to different numbers and get an equality.  But, it doesn't go backwards.  Here we squared both numbers and got an equality.  But, that doesn't mean the original numbers are equal.
 
 
-\end{example}
+\end{warning}
 
 
 
@@ -91,7 +91,7 @@ Squaring hides signs.
 
 Solve $\sqrt{x} = -9$
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 Square both sides.
 
@@ -108,6 +108,10 @@ The problem here is that  $(\sqrt{x})^2 \ne x$.  For instance, $(\sqrt{-3})^2 \n
 Instead, we need to keep domains and ranges in mind.  The range of $\sqrt{x}$ is $[0, \infty)$. It cannot give the value $-9$.
 
 
+There is no solution.
+
+
+\end{explanation}
 
 \end{example}
 
@@ -124,10 +128,11 @@ Instead, we need to keep domains and ranges in mind.  The range of $\sqrt{x}$ is
 
 Solve $log_2(t-1) - log_2(t) = 4$
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+
+\begin{explanation}
 
 
-We can solve simple logarithmic equations - like, just one logarithm.  Therefore, we will use a logarithm rule to combine thwo logarithms.
+We can solve simple logarithmic equations - like, just one logarithm.  Therefore, we will use a logarithm rule to combine the two logarithms into one.
 
 
 
@@ -146,7 +151,9 @@ log_2 \left( \frac{t-1}{t} \right)  & = 4  \\
 However, the original equation included the function $log_2(t)$ and the domain of $log_2(t)$ does not include $-\frac{1}{15}$
 
 
+There is no solution.
 
+\end{explanation}
 
 \end{example}
 
@@ -168,13 +175,13 @@ We can see the domain issue here.  However, when we apply the logarithm rule we 
 \[   log_2\left(\frac{-\frac{1}{15}-1}{-\frac{1}{15}}\right)    = log_2(16)  \]
 
 
-When put the insides together into a fraction the numerator and denominator both became negative and a negative over a neagtive equals a positive - no more problem.
+When the rule combined the insides together into a fraction, the numerator and denominator both became negative, and a negative over a neagtive equals a positive - problem disappears.
 
 
 
 
 
-\begin{definition} Extraneous Solutions
+\begin{definition}  \textbf{\textcolor{green!50!black}{Extraneous Solutions}}
 
 \textbf{Extraneous solutions} are non-solutions that appear during the solving process, because you didn't keep track of the domain.
 
@@ -194,7 +201,7 @@ When put the insides together into a fraction the numerator and denominator both
 Solve $\frac{1}{y-2} + \frac{1}{y+2} = \frac{4}{(y-2)(y+2)}$
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 
 
@@ -218,10 +225,14 @@ Our equivalent equation is
 
 This can only happen if $2y = 4$ or $y = 2$.
 
-But, this is not possible.  $y=2$ would make a denominator in the orginal equaiotn equal to $0$.  Therefore, $2$ is an extraneous solution and this equation has no solutions.
+But, this is not possible.  $y=2$ would make a denominator in the orginal equation equal to $0$.  Therefore, $2$ is an extraneous solution and this equation has no solutions.
 
 
+\end{explanation}
 \end{example}
+
+
+
 The solving process presents solution \textbf{candidates}.  These must be checked.
 
 
@@ -240,7 +251,7 @@ The solving process presents solution \textbf{candidates}.  These must be checke
 Solve $\sqrt{w+4} = w - 2$
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{SOLUTION}}
+\begin{explanation}
 
 Square both sides:
 
@@ -267,14 +278,20 @@ And, $-2$ is not in the range if the square root function. $-2$ is an extraneous
 
 The solution set is $\{ 5 \}$.
 
-
+\end{explanation}
 
 \end{example}
 
 
 The problem again is squaring.
 
-$0$ doesn't work, because it gives us $\sqrt{4} = -2$, but squaring hid that fact.  After you square both sides you get $4 = 4$, which is fine.
+In the example above, $0$ doesn't work, because it gives us $\sqrt{4} = -2$, but squaring hid that fact.  
+
+
+\[ (\sqrt{4})^2 = (-2)^2 \, \text{ gives } \, 4 = 4\]
+
+
+After you square both sides you get $4 = 4$, which is fine.
 
 
 
