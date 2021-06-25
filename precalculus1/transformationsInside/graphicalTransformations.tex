@@ -95,14 +95,14 @@ We have three functions: $W$, $L$, and $W \circ L$.  We would like to keep these
 
 
 
-The implied domain for $L$ is \textbf{$\mathbb{R}$}.  The implied range for $L$ is \textbf{$\mathbb{R}$}. This does not match the domain of $W$.  The domain of $W$ is only $\left[ \answer{1}, \answer{5} \right)$. Therefore, we must align those.
+The implied, natural domain for $L$ is \textbf{$\mathbb{R}$}.  The natural range for $L$ is \textbf{$\mathbb{R}$}. This does not match the domain of $W$.  The domain of $W$ is only $\left[ \answer{1}, \answer{5} \right)$. Therefore, we must align those.
 
 But, before doing that, let's just think about traversing the real number line. \\
 
 We can imagine $x$ moving along the real line left to right from $-\infty$ to $\infty$. These numbers are input into $L$ and the output runs right to left from $\infty$ to $-\infty$.  The direction is reversed because of the $-\frac{1}{2}$ coefficient in $L$.  It is changing the sign of the numbers.
 
 
-Therefore, in the composition, the domain of $W$ is running backwards.  From left to right, the composition will first encounter the longer line segment with the excluded endpoint, then a corner, then the shorter line segment with the included endpoint.
+Therefore, in the composition, the domain of $W$ is running backwards.  From right to left, the composition will first encounter the longer line segment with the excluded endpoint, then a corner, then the shorter line segment with the included endpoint.
 
 The graph is reflected horizontally. \\
 
@@ -314,7 +314,7 @@ The zero is now at $\left( \frac{-39}{25} + 3 \right) \cdot \frac{1}{2} = \answe
           ]
           
             
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-3:5), ->] {5 * ((2*x-3) + 3)^0.5 - 6};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(-3:5), ->] {5 * ((2*x-3) + 3)^0.5 - 6};
 
           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,-6)};
           %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-10,9)};
@@ -339,9 +339,9 @@ C(z) = F(L(z)) = 5 \sqrt{(2z - 3) + 3} - 6 = 5 \sqrt{2z} - 6
 \]
 
 
-Zero at $2z = 0$ or $z = 0$. \\
+Beginning at $2z = 0$ or $z = 0$. \\
 
-We can also just solve for the new zero.
+$C$ has a zero, for which we can just solve.
 
 
 

@@ -15,24 +15,28 @@ range
 
 
 
-
-
 We have already seen a couple of versions of composition. \\
 
-$\blacktriangleright$ \textbf{Pointwise} composition was seen via indiviudal numbers: $(F \circ G)(a) = F(G(a))$.
+$\blacktriangleright$ \textbf{Pointwise} composition was seen via individual numbers: 
 
-A number, $a$, in the domain of $G$ was connected to its range partner, $G(a)$.  $G$ was evaluated at $a$ and the function value was then viewed as a member of the domain of $F$.  As a member of the domain of $F$, $F$ can be evaluated at $G(a)$ to get $F(G(a))$.
+\[ (F \circ G)(a) = F(G(a)) \]
+
+The number, $a$, in the domain of $G$ was connected to its range partner, $G(a)$.  $G$ was evaluated at $a$ and the function value, $G(a)$, was then viewed as a member of the domain of $F$.  As a member of the domain of $F$, $F$ can be evaluated at $G(a)$ to get $F(G(a))$. \\
 
 
 
 
-$\blacktriangleright$ \textbf{Linear} composition between two linear functions produced a whole new function.  Instead of thinking of domain numbers individually, this composition was viewed as an operation on linear functions.
+$\blacktriangleright$ \textbf{Linear} composition between two linear functions produced a whole new function - a linear function.  Instead of thinking of domain numbers individually, this composition was viewed as an operation on linear functions.
 
 \[    (L_o \circ L_i)(x) = L_o(L_i(x))  \]
 
-There is an outside function, $L_o(x)$, and an inside function $L_i(x)$.  The composition operation, $\circ$, is applied and a new linear function is created.  Our symbol for this number function is $(L_o \circ L_i)$ or $L_o \circ L_i$.  The parentheses are used to clear up communication.
+There is an outside function, $L_o(x)$, and an inside function $L_i(x)$.  The composition operation, $\circ$, is applied and a new linear function is created.  
 
-In our investigations, we have discovered that $(L_o \circ L_i)$ "is" $L_i$, just shifted, stretched, and reflected vertically.
+
+
+Our symbol for this function is $(L_o \circ L_i)$ or $L_o \circ L_i$.  The parentheses are used to clear up communication.
+
+In our investigations, we have discovered that $(L_o \circ L_i)$ "is" $L_o$, just shifted, stretched, and reflected horizontally.
 
 
 We would like to extend this idea of a function operation beyond linear functions.
@@ -52,7 +56,7 @@ We would like to extend this idea of a function operation beyond linear function
 
 
 
-\begin{definition} Composition
+\begin{definition} \textbf{\textcolor{green!50!black}{Composition}}  
 
 
 Given two functions, $Outside$ and $Inside$, the composition, $Outside \circ Inside$ is defined by
@@ -65,7 +69,7 @@ For $ a \in \{  x \in Dom_{Inside} \, | \,    Inside(x) \in Dom_{Outside}  \}$
 
 
 
-We would like to focus on the outside function as a linear function.
+This time, we would like to focus on the outside function as a linear function.
 
 
 
@@ -81,7 +85,7 @@ $\blacktriangleright$ How does $L$ affect $f$?
 
 
 
-The main issue here is the range of $f$ intersecting the domain of $L$.  However, since the domain of a linear function is all real numbers, there shouldn't be a problem.\\
+The main issue here is the range of $f$ intersecting the domain of $L$.  However, since the natural domain of a linear function is all real numbers, there shouldn't be a problem.\\
 
 
 
@@ -145,7 +149,7 @@ Let's consider a quadratic function: $Q(h) = (h+1)(h-4)$ as the $inside$ functio
 
 
 
-From left to right, the range values, or function values, for $Q$ begin very big and positive.  These values decrease to $0$ and continue negative until they reach a value of $-6.25$. Then, increase to $0$ again and continue to very big and positive values.
+From left to right, the range values, or function values, for $Q$ begin very big and positive.  These values decrease to $0$ and continue negative until they reach a value of $-6.25$. Then, they increase to $0$ again and continue to very big and positive values.
 
 Now we will transform these function values with a linear function.
 
@@ -203,7 +207,7 @@ The vertical measurements have all been processed linearly, which means the shap
 
 
 
-The minimum of $Q$ is $-6.25$ and this occurred at $1.5$. We are flipping vertically, so the maximum of the composition is still at $1.5$. There were no horizontal transformations.  The maximum is $L(-6.25) = 4.5625$.
+The minimum of $Q$ is $-6.25$ and this occurrs at $1.5$. We are flipping vertically, so the maximum of the composition is still at $1.5$. There were no horizontal transformations.  The maximum is $L(-6.25) = 4.5625$.
 
 
 
@@ -221,7 +225,7 @@ $Q(h) = (h+1)(h-4)$
 \begin{align*}
 Q(h) = (h+1)(h-4)     &  = 12  \\
 h^2 - 3h - 4      & = 12   \\
-h^2 - 3h - 16 = 0  \\
+h^2 - 3h - 16 & = 0  \\
 \end{align*}
 
 This does not factor easily.  We'll use the quadratic formula.
@@ -234,7 +238,7 @@ We have two zeros: $\frac{3 + \sqrt{73}}{2}  \approx 5.77$ and $\frac{3 - \sqrt{
 
 
 
-\begin{claim} Zeros
+\begin{claim} Check These are Zeros
 
 
 \[   Q(h) = (h+1)(h-4)   \]
@@ -281,7 +285,7 @@ Let's verify that $\frac{3 + \sqrt{73}}{2}$ is a zero of $L(Q(z))$.
 
 
 
-\begin{claim} Zeros
+\begin{claim} Check These are Zeros
 
 
 \[   Q(h) = (h+1)(h-4)   \]
