@@ -102,7 +102,7 @@ Now to examine the composition. \\
 
 
 
-$\blacktriangleright$  First, the inside function: $In(t) = -(t-1)^2 + 5$ \\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}   First, the inside function: $In(t) = -(t-1)^2 + 5$ \\
 
 The implied domain of $In(t)$ is the whole real line. As we move from left to right along the real line, the domain numbers increase from $-\infty$ to $\infty$.
 
@@ -112,17 +112,17 @@ The corresponding movement in the range has the function values increasing from 
 This movement in the range of $In(t)$ becomes the movement in the domain of $Out(x)$. \\
 
 
-$\blacktriangleright$ Movement inside the domain of $Out(x)$.\\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  Movement inside the domain of $Out(x)$.\\
 
 
 
 Inside the implied domain of $Out(x) =2|x-3|+1$. the domain numbers will increase from $-\infty$ to $5$.  Then they will decrease from $5$ back down to $-\infty$. \\
 
-On our graph of $Out(x)$, we will move from the far left toward the right until we reach $5$.  Then we will turn around and move toward the left.\\
+Tracing our graph of $Out(x)$, we will move from the far left toward the right until we reach $5$.  Then we will turn around and move toward the left.\\
 
 
 
-$\blacktriangleright$ Put those together. \\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  Put those together. \\
 
 The whole composition, $(Out \circ In)$, never sees the inside speeding up, slowing down, turning around, running in circles, or any other swivelling and swirling.  It just sees the normal domain movement left to right from $-\infty$ to $\infty$.  And, it sees whatever function values from $Out$ that the come out of the process.  We know there is some switching going on in the middle.
 
@@ -134,17 +134,17 @@ We have the input to $Out$ moving from $-\infty$ up to $5$ and then back down to
 
 \begin{itemize}
 
-\item As the domain numbers move through $(-\infty, 5]$, The values of $Out$ are decreasing from $\infty$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 3] \cup [3,5]$
+\item As the domain numbers move through $(-\infty, 5]$, The values of $Out$ are decreasing from $\infty$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 3] \cup (3,5]$
 
 	\begin{itemize}[label=$\star$]
-		\item On $(-\infty, 3]$, $Out$ decreases from $-\infty$ to $1$.
+		\item On $(-\infty, 3]$, $Out$ decreases from $\infty$ to $1$.
 
 		\item On $[3,5]$, $Out$ increases from $1$ to $5$
 
 	\end{itemize}
 
 
-\item The reverse happens as the domain numbers move backwards through $(\infty. 5])$, The values of $Out$ are decreasing from $5$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 3] \cup [3,5]$
+\item The reverse happens as the domain numbers move backwards through $(\infty, 5])$, The values of $Out$ are decreasing from $5$ to $1$.  This is the corner that occurs at $3$.  So, we really should look at $(-\infty, 5]$  as  $(-\infty, 3] \cup (3,5]$
 
 	\begin{itemize}[label=$\star$]
 		\item As the domain moves from $5$ to $3$, $Out$ decreases from $5$ to $1$.
@@ -188,7 +188,7 @@ Graph of $w = Out(In(m)) =2|(-(m-1)^2 + 5)-3|+1 = 2|-(m-1)^2 + 2| + 1$
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$m$, ylabel=$w$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -233,8 +233,10 @@ Let $In(t) = 2 \sin(t)+2$ with its natural or implied domain. \\
 
 
 
+Graph $w = (Out \circ In)(r) = Out(In(r))$
 
 
+\begin{explanation}
 
 Graph of $y = Out(x) = -2|x-3|+2$
 
@@ -306,13 +308,13 @@ Graph of $z = In(t) = 2 \sin(t)+2$
 
 
 
-The input into $In(t)$ is the whole real line.  We naturally think of moving left to right, from $-\infty$ to $\infty$.  As we do this, the outputs from $In(t)$ oscillate between $0$ and $\answer{4}$.  Therefore, the inputs into $Out(x)$ osciallte back and forth along the interval $\left( \answer{0}, \answer{4} \right)$.
+The input into $In(t)$ is the whole real line.  We naturally think of moving left to right, from $-\infty$ to $\infty$.  As we do this, the outputs from $In(t)$ oscillate between $0$ and $\answer{4}$.  Therefore, the inputs into $Out(x)$ oscillate back and forth along the interval $\left( \answer{0}, \answer{4} \right)$.
 
 
 
 
 
-The input into $Out(x)$ keep going back and forth acrtoss the interval $(0,4)$. 
+The input into $Out(x)$ keep going back and forth across the interval $[0,4]$. 
 
 
 
@@ -365,7 +367,7 @@ Therefore, that part of the graph of $Out$ just keeps repeating. The smooth roun
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$r$, ylabel=$w$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -395,7 +397,7 @@ Therefore, that part of the graph of $Out$ just keeps repeating. The smooth roun
 
 
 
-
+\end{explanation}
 
 \end{example}
 
@@ -425,7 +427,7 @@ Algebraically, composition is accomplished by replacing all occrrences of the va
 
 
 \[
-(Out \circ In)(k) = Out(In(k)) = 3 {\frac{5t-7}{t^2-8}}^3 + \sin(4 \frac{5t-7}{t^2-8}) - \frac{3}{2-\frac{5t-7}{t^2-8}}
+(Out \circ In)(k) = Out(In(k)) = 3 {\frac{5k-7}{k^2-8}}^3 + \sin(4 \frac{5k-7}{k^2-8}) - \frac{3}{2-\frac{5t-7}{k^2-8}}
 \]
 
 
@@ -439,7 +441,7 @@ Obviously, parentheses are vital here.
 
 
 \[
-(Out \circ In)(k) = Out(In(k)) = 3 \left( \frac{5t-7}{t^2-8} \right)^3 + \sin\left( 4 \left( \frac{5t-7}{t^2-8} \right) \right) - \frac{3}{2 - \left( \frac{5t-7}{t^2-8} \right)}
+(Out \circ In)(k) = Out(In(k)) = 3 \left( \frac{5k-7}{k^2-8} \right)^3 + \sin\left( 4 \left( \frac{5k-7}{k^2-8} \right) \right) - \frac{3}{2 - \left( \frac{5k-7}{k^2-8} \right)}
 \]
 
 
@@ -453,7 +455,7 @@ We can always make two compositions from two functions.
 
 
 \[
-(In \circ Out)(w) = In(Out(w)) = \frac{5 \left( 3x^3 + \sin(4x) - \frac{3}{2-x} \right)-7}{\left( 3x^3 + \sin(4x) - \frac{3}{2-x} \right)^2-8}
+(In \circ Out)(u) = In(Out(u)) = \frac{5 \left( 3u^3 + \sin(4u) - \frac{3}{2-u} \right)-7}{\left( 3u^3 + \sin(4u) - \frac{3}{2-u} \right)^2-8}
 \]
 
 
