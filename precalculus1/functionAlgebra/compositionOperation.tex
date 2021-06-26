@@ -15,12 +15,12 @@ composition
 
 
 
-{\Huge !} With the caveat that domains need to be aligned, we have many operations on functions that make up an arithmetic on functions.
+{\Huge !} With the caveat that domains need to be aligned, we have many operations on functions that make up an arithmetic on functions. \\
 
 
 
 
-$\blacktriangleright$ \textbf{Addition} 
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Addition}}  
 
 The sum of two functions is again a function. 
 
@@ -31,16 +31,16 @@ For each function, $f$, there is another function $-f$, such that $f + (-f) = 0$
 
 
 
-$\blacktriangleright$ \textbf{Mulitplication} 
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Multiplication}} 
 
 The product of two functions is again a function.  
 
 The multiplicative identity is $One(x) = 1$ for all real numbers.
 
-For each function, $f$, there is another function $\frac{1}{f}$, such that $f \cdot \left( \frac{1}{f} \right) = 0$.   $f$ and $\frac{1}{f}$ are inverses of each other with respect to multiplication.  (If we were talking about numbers, then we might also use exponential notation $\frac{1}{n} = n^{-1}$.
+For each function, $f$, there is another function $\frac{1}{f}$, such that $f \cdot \left( \frac{1}{f} \right) = 1$, again domain restrictions might be needed for problems.   $f$ and $\frac{1}{f}$ are inverses of each other with respect to multiplication.  (If we were talking about numbers, then we might also use exponential notation $\frac{1}{n} = n^{-1}$.
 
 
-$\blacktriangleright$ \textbf{Composition} 
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Composition}} 
 
 Composition is a new operation on functions.
 
@@ -56,7 +56,7 @@ The identity function, $Id(x) = x$ for all $x$, is the identity element with res
 
 The inverse of $f$ with respect to composition is another function whose composition with $f$ produces the identity function.
 
-Steaing the exponential notation from numbers, the symbol for the inverse of $f$ is $f^{-1}$.
+Stealing the exponential notation from numbers, the symbol for the inverse of $f$ is $f^{-1}$.
 
 \[   f \circ f^{-1} = Id    \, \text{ and } \, f^{-1} \circ f = Id       \]
 
@@ -73,7 +73,7 @@ Steaing the exponential notation from numbers, the symbol for the inverse of $f$
 
 
 \begin{itemize}
-\item Let $K(u) = \frac{u}{u-1}$ with its natural or implied domain: $(-\infty, 1) \cup (1. \infty)$. \\
+\item Let $K(u) = \frac{u}{u-1}$ with its natural or implied domain: $(-\infty, 1) \cup (1, \infty)$. \\
 
 \item Let $T(w) = w^2 + 5w + 7$ with its natural or implied domain: \textbf{$\mathbb{R}$}.
 \end{itemize}
@@ -177,10 +177,10 @@ Actually,
 \]
 
 
-This equivalent to $y$ for almost all real numbers.
+This is equivalent to $y$ for almost all real numbers.
 
 
-In this case, $(g \circ H)(y) = g(H(y))$.  Therefore, $y \ne 1$, since $1$ is not in the domain of $H$.  Secondly, $-1$ is not in the domain of $g$.  We cannot have values of $y$ that make $H(y) = -1$.
+In this case, $(g \circ H)(y) = g(H(y))$, which means that $y \ne 1$, since $1$ is not in the domain of $H$.  Secondly, $-1$ is not in the domain of $g$.  We also cannot have values of $y$ that make $H(y) = -1$.
 
 
 
@@ -203,7 +203,23 @@ There are no such real numbers.
 
 
 
-Therefore, $g$ and $H$ are inverse functions on $(-\infty, 1) \cup (1. \infty)$.
+Therefore, $g$ and $H$ are inverse functions on $(-\infty, 1) \cup (1,\infty)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -211,7 +227,7 @@ Therefore, $g$ and $H$ are inverse functions on $(-\infty, 1) \cup (1. \infty)$.
 \section{The Other Half of the Story}
 
 
-We would like our function arithmetic to follow our arithmetic for numbers.  For numbers, the inverses are commutative.
+We would like our function arithmetic to mimic our arithmetic for numbers.  For numbers, the inverses are commutative.
 
 \[
 4 + (-4) = (-4) + 4 = 0
@@ -239,7 +255,7 @@ In this case, we cannot have $y = -1$
 
 
 
-$\blacktriangleright$  Therefore, $g$ and $H$ are inverse functions on $(-\infty, -1) \cup (-1, 1) \cup (1. \infty)$.
+$\blacktriangleright$  Therefore, $g$ and $H$ are inverse functions on $(-\infty, -1) \cup (-1, 1) \cup (1, \infty)$.
 
 
 

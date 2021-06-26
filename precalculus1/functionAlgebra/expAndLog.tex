@@ -13,11 +13,11 @@ exponential and logarithmic
 
 
 
-Exponential and logarithmic functions are examples of inverse functions.
+Exponential and logarithmic functions are examples of inverse functions. \\
 
 
 
-First, let's notice that both types of functions are one-to-one and their graphs pass the hoirizontal line test.
+First, let's notice that both types of functions are one-to-one and their graphs pass the horizontal line test.
 
 
 
@@ -44,7 +44,7 @@ Graph of $y = E(t) = 0.5 \, e^{-t-3} - 4$.
           ]
           
 
-            \addplot [line width=2, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-6.2:9),<->] {0.5* (e^(-x-3)) - 4};
             \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-3.5)};
 
@@ -125,7 +125,7 @@ Graph of $y = E(t) = 0.5 \, e^{-t-3} - 4$.
           
 
 
-            \addplot [line width=2, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-6.2:9),<->] {0.5*(e^(-x-3)) - 4};
             \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-3.5)};
 
@@ -140,7 +140,7 @@ Graph of $y = E(t) = 0.5 \, e^{-t-3} - 4$.
 We have a function called $E(t)$.  Its pairs look like $(a, E(a))$.  The inverse of this function will have pairs of the form $(E(a), a)$. The domain and range just switch roles.
 
 
-In the formula, $E$ is representing the range and $t$ the domain.  They just switch roled for the inverse. Same equation.  Just a different interpretation.
+In the exponential formula and graph, $E$ is representing the range and $t$ the domain.  They just switch roles for the inverse. Same equation.  Just a different interpretation.
 
 \[    E = 0.5 \, e^{-t(E)-3} - 4   \]
 
@@ -183,7 +183,7 @@ Graphs of $y = E(t) = 0.5 \, e^{-t-3} - 4$ and $z = L(x) = -ln(2(x+4)) - 3$.
 			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
 			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
-            \addplot [line width=2, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-6.2:9),<->] {0.5* (e^(-x-3)) - 4};
             \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-3.5)};
 
@@ -200,7 +200,7 @@ Graphs of $y = E(t) = 0.5 \, e^{-t-3} - 4$ and $z = L(x) = -ln(2(x+4)) - 3$.
 
 
 
-Since, these are inverses of each other, the pairs of each function are just reversed and the graphs are mirror images of eaach other over the graph of the idenity function: $\{ (r,r) \, | \, r \in \mathbb{R}   \}$.
+Since, these are inverses of each other, the pairs of each function are just reversed and the graphs are mirror images of each other over the graph of the identity function: $\{ (r,r) \, | \, r \in \mathbb{R}   \}$.
 
 
 \begin{itemize}

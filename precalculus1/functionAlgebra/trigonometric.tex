@@ -136,8 +136,10 @@ The range of arcsine now represents angles, just as the domain of sine does.
 
 Because of this restriction, we must keep track of domains and ranges when sine and arcsine interact.
 
-$\blacktriangleright$  The domain of $\sin(\theta)$ is $(-\infty, \infty)$ and the range is $[-1,1]$.
-$\blacktriangleright$  The domain of $arcsin(y)$ is $[-1,1]$, but the range is $\left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]$.
+$\blacktriangleright$  The domain of $\sin(\theta)$ is $(-\infty, \infty)$, and the range is $[-1,1]$. \\
+
+
+$\blacktriangleright$  The domain of $arcsin(y)$ is $[-1,1]$, and the range is $\left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]$.
 
 
 \begin{example} sin and arcsin
@@ -240,7 +242,7 @@ The cosine function is not one-to-one.  If we want an inverse, then we'll have t
 
 
 
-With this restriction, the inverse of sine is called \textbf{arccosine}, abbreviated \textbf{arccos}.  Of course you can also use the general inverse notation: $cos^{-1}(x)$.
+With this restriction, the inverse of cosine is called \textbf{arccosine}, abbreviated \textbf{arccos}.  Of course you can also use the general inverse notation: $cos^{-1}(x)$.
 
 
 \begin{itemize}
@@ -293,7 +295,9 @@ The range of arccos now represents angles, just as the domain of cosine does.
 
 Because of this restriction, we must keep track of domains and ranges when cosine and arccosine interact.
 
-$\blacktriangleright$  The domain of $\cos(\theta)$ is $(-\infty, \infty)$ and the range is $[-1,1]$.
+$\blacktriangleright$  The domain of $\cos(\theta)$ is $(-\infty, \infty)$ and the range is $[-1,1]$. \\
+
+
 $\blacktriangleright$  The domain of $arccos(y)$ is $[-1,1]$, but the range is $[ 0, \pi ]$.
 
 
@@ -330,7 +334,12 @@ $arccos\left( -\frac{1}{\sqrt{2}} \right) = \frac{3 \pi}{4} $
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
+
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
@@ -338,10 +347,7 @@ $arccos\left( -\frac{1}{\sqrt{2}} \right) = \frac{3 \pi}{4} $
             \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
 
 
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
 
            
 
@@ -370,7 +376,14 @@ Arctangent uses the middle piece on $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
+
+
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
+                 
             \addplot [line width=2, penColor2, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
@@ -378,10 +391,7 @@ Arctangent uses the middle piece on $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right
             \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
 
 
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
 
            
 

@@ -23,7 +23,7 @@ Just like number operations have identity numbers, $0$ and $1$, composition has 
 \begin{itemize}
 \item Adding $0$ with numbers appears to do nothing.
 \item Multiplying $1$ with numbers appears to do nothing.
-\item Composing the identity funciton with functions appears to do nothing.
+\item Composing the identity funcition with functions appears to do nothing.
 \end{itemize}
 
 
@@ -35,13 +35,13 @@ Around these identity elements, we define inverses.
 
 
 \begin{itemize}
-\item The additive inverse of $a$ is the number that when added to $a$ results in $0$.  Our symbol is $-a$.
-\item The multiplicative inverse of $a$ is the number that when multiplied to $a$ results in $1$.  Our symbol is $\frac{1}{a}$ or $a^{-1}$.
-\item The composition inverse of a function $f$ is the function that when composed with $f$ gives the identity function. Our symbol is $f^{-1}$.
+\item The additive inverse of $a$ is the number that when added to $a$ results in $0$.  Our symbol is $-a$, which we call the \textbf{opposite} of $a$.
+\item The multiplicative inverse of $a$ is the number that when multiplied to $a$ results in $1$.  Our symbol is $\frac{1}{a}$ or $a^{-1}$, which we call the \textbf{reciprocal} of $a$.
+\item The composition inverse of a function $f$ is the function that when composed with $f$ gives the identity function. Our symbol is $f^{-1}$, which we call the \textbf{inverse} of $f$.
 \end{itemize}
 
 
-\textbf{Notation Warning:} We reuse and overuse notation in Mathematics.  This is an example.  Sometimes $f^{-1}$ means reciprocal and sometimes $f^{-1}$ means inverse function.  The correct inteerpretation depends on the context in which it used.
+\textbf{Notation Warning:} We reuse and overuse notation in Mathematics.  This is an example.  Sometimes $f^{-1}$ means reciprocal and sometimes $f^{-1}$ means inverse function.  The correct interpretation depends on the context in which it used.
 
 
 
@@ -66,18 +66,18 @@ Let $In$ and $Out$ be two functions and $Out \circ In$ their composition.
 Pairs in $In$ look like $(a, In(a))$.   The composition then interprets $In(a)$ as a member of the domain of $Out$.  $Out$ connects $In(a)$ to $Out(In(a))$.   The composition, $Out \circ In$ just ignores the middle part.  The composition sees $a$ as a domain number and then $Out(In(a))$ as the range partner.
 
 
-Suppose we are in a situation where $Out(In(a)) = Id(a)$.  Suppose the composition is the identity function.  That would tell us that $Out$ is the inverse function of $In$
+Suppose we are in a situation where $Out(In(a)) = a$.  Suppose the composition is the identity function.  That would tell us that $Out$ is the inverse function of $In$
 
 Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside $Out$ looking like $(In(a), a)$.  The inverse function just reverses the order pair. \\
 
 
-$\blacktriangleright$ The inverse function is just the reverse of the original function. \\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  The inverse function is just the reverse of the original function. \\
 
 
 This brings up an important issue.
 
 
-\begin{warning}Inverse Functions
+\begin{warning} Inverse Functions
 
 Reversing the pairs of a function does not always produce a function.
 
@@ -121,7 +121,7 @@ For a function to have an inverse, every range number must be in only one pair.
 
 
 
-\begin{definition} One-to-One
+\begin{definition} \textbf{\textcolor{green!50!black}{One-to-One}}    
 
 
 A function is said to be \textbf{one-to-one} if each range number is in exactly one pair.
@@ -131,9 +131,9 @@ A function is said to be \textbf{one-to-one} if each range number is in exactly 
 
 
 
-An equivalent definition:
+Or, an equivalent definition:
 
-\begin{definition} One-to-One
+\begin{definition} \textbf{\textcolor{green!50!black}{One-to-One}}   
 
 
 A function, $f$, is said to be \textbf{one-to-one} if 
@@ -148,7 +148,7 @@ A function, $f$, is said to be \textbf{one-to-one} if
 
 
 
-This definition says that it two function values are equal, then they couldn't have come from two different domain numbers.  They came from the same domain number. So, each function value is in exactly one pair.
+This definition says that if two function values are equal, then they couldn't have come from two different domain numbers.  They came from the same domain number. So, each function value is in exactly one pair.
 
 
 
@@ -168,19 +168,23 @@ If $C$ is a nonconstant linear function, then it has a formula like $C(x) = a \c
 Then $C^{-1}(t) = \frac{1}{a} \cdot t - \frac{b}{a}$
 
 
-\textbf{\textcolor{purple!50!blue!90!black}{Explanation}}
+\begin{explanation}
 
 
 
 The composition is 
 
-\[  (C \circ C^{-1})(x) = C(C^{-1})(x) =     a \cdot \left(\frac{1}{a} \cdot x - \frac{b}{a}\right) + b  = x \]
+\[  (C \circ C^{-1})(w) = C(C^{-1})(w) =     a \cdot \left(\frac{1}{a} \cdot w - \frac{b}{a}\right) + b  = w \]
 
 
 and the other way
 
 
 \[  (C^{-1} \circ C)(y) = C^{-1}(C(y)) =     \frac{1}{a} \cdot (a \cdot y + b) - \frac{b}{a}  = y \]
+
+
+\end{explanation}
+
 
 \end{example}
 
@@ -277,15 +281,26 @@ The two points lie on the same horizontal line.
 
 
 
-\begin{definition} Horizontal Line Test
+\begin{definition} \textbf{\textcolor{green!50!black}{Horizontal Line Test}}  
 
 
 A function's graph passes the horizontal line test if there are no horizontal lines that intersect the graph more than once.
 
 
-A function is one-to-one if its graph passes the horizzontal line test.
+A function is one-to-one if its graph passes the horizontal line test.
 
 \end{definition}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -294,7 +309,7 @@ A function is one-to-one if its graph passes the horizzontal line test.
 \section{Salvaging}
 
 
-
+FUnctions that are not one-to-one do not have an inverse.
 
 We can't fix this situation, but we can salvage pieces. \\
 
@@ -454,7 +469,7 @@ We are looking for a function, $H^{-1}$, such that $(H \circ H^{-1})(k) = H(H^{-
 
 
 
-$H$ is linear and $Id$ is linear, $H^{-1}$ should be linear.
+$H$ is linear and $Id$ is linear, therefore $H^{-1}$ should be linear.
 
 Let's start building.  $H^{-1}(x)$ should look like $a \cdot x + b$.  The leading coefficient of $H^{-1}$, $a$, should be $\frac{1}{3}$.
 
