@@ -34,7 +34,10 @@ provided by derivatives of the function.
 
 \section{Extrema}
 
-A local \textit{extremum} of a function $f$ is a point $(a,f(a))$ on the graph of  $f$ where the
+A function has a value at each domain number. The set of all function values might have a greatest (maximum) or least(minimum) value. Together these are know as extreme values or extrema.  These correspond to highest and lowest points on the graph.
+
+
+A local \textit{extremum} of a function $f$ corresponds to a point $(a,f(a))$ on the graph of $f$ where the
 $y$-coordinate is larger (or smaller) than all other $y$-coordinates
  of points on the graph whose $x$-coordinates are ``close to''  $a$. 
 
@@ -48,6 +51,8 @@ $y$-coordinate is larger (or smaller) than all other $y$-coordinates
 A \textbf{local extremum}\index{extremum!local} is either a local
 maximum or a local minimum.
 \end{definition}
+
+Local extremum are numbers and they correspond to highest and lowest points on the graph.
 
 %% \begin{question} BADBAD I want this question
 %%   True or false: ``All absolute extrema are also local extrema.''
@@ -113,7 +118,7 @@ f\left(\answer[given]{1}\right)\le f\left(\answer[given]{x}\right).
 \end{explanation}
 \end{example}
 
-Local maximum and minimum points are quite distinctive on the graph of
+Local maximum and minimum values of a function correspond to quite distinctive points on the graph of
 a function, and are, therefore, useful in understanding the shape of the
 graph. Many problems in real world and in different scientific fields turn out to be about
 finding the smallest (or largest) value that a function achieves (for example, we might want
@@ -121,7 +126,7 @@ to find the minimum cost at which some task can be performed).
 
 
 
-\section{Critical points}
+\section{Critical Numbers}
 
 Consider the graph of the function $f$.
 \begin{image}
@@ -151,7 +156,7 @@ Consider the graph of the function $f$.
         \end{axis}
 \end{tikzpicture}
 \end{image}
-The function $f$  has four local extremums: at  $x=-4$, $x=-2$, $x=0$ and $x=4$.
+The function $f$ has three local extremums: $5$, $-1$, and $4.5$  These occur at $x=-4$, $x=0$ and $x=4$.
 Notice that the function $f$ is \textbf{not differentiable} at  $x=-4$ and  $x=-2$.
 Notice that $f'(0)=0$ and $f'(4)=0$.
 
@@ -176,8 +181,8 @@ at $a$, then $f'(a)=0$.
 \end{question}
 
 
-Fermat's Theorem says that the only points at which a function can
-have a local maximum or minimum are points at which the derivative is
+Fermat's Theorem says that the only numbers at which a function can
+have a local maximum or minimum are numbers at which the derivative is
 zero or the derivative is undefined. As an illustration of the first scenario, consider the plots of $f(x) = x^3-4.5x^2+6x$ and $f'(x) =
 3x^2-9x+6$.
 \begin{image}
@@ -209,7 +214,7 @@ zero or the derivative is undefined. As an illustration of the first scenario, c
 \begin{question}
  Make a correct choice that completes the sentence below. \\
  
-  At the point $(1,f(1))$, the  function $f$ has 
+  At the number $1$, the function $f$ has 
 
   \begin{multipleChoice}
     \choice[correct]{a local maximum}
@@ -229,7 +234,7 @@ Select the correct statement.
 \begin{question}
  Make a correct choice that completes the sentence below. \\
  
-  At the point $(1.5,f(1.5))$, the  function $f$ has 
+  At the number $1.5$, the function $f$ has 
 
   \begin{multipleChoice}
     \choice{a local maximum}
@@ -250,7 +255,7 @@ Select the correct statement.
 \begin{question}
  Make a correct choice that completes the sentence below. \\
  
-  At the point $(2,f(2))$, the  function $f$ has 
+  At the number $2$, the  function $f$ has 
 
   \begin{multipleChoice}
     \choice{a local maximum}
@@ -292,7 +297,7 @@ Select the correct statement.
 \begin{question}
  Make a correct choice that completes the sentence below. \\
  
-  At the point $(-2,f(-2))$, the  function $f$ has 
+  At the number $-2$, the function $f$ has 
 
   \begin{multipleChoice}
     \choice{a local maximum}
@@ -312,7 +317,7 @@ Select the correct statement.
 \begin{question}
  Make a correct choice that completes the sentence below. \\
  
-  At the point $(0,0)$, the  function $f$ has 
+  At the number $0$, the function $f$ has 
 
   \begin{multipleChoice}
     \choice{a local maximum}
@@ -332,24 +337,24 @@ Select the correct statement.
 
 This brings us to our next definition.
 
-\begin{definition}\index{critical point}
-  Assume that a function $f$ is defined on an open interval I that contains a point $a$. Then we say that the  function $f$ has a \textbf{critical point} at $x=a$ if 
+\begin{definition}\index{critical number}
+  Assume that a function $f$ is defined on an open interval I that contains a number $a$. Then we say that the  function $f$ has a \textbf{critical number} at $x=a$ if 
   \[
   f'(a) = 0\qquad\text{or}\qquad \text{$f'(a)$ does not exist.}
   \]
- Notice, if a function $f$ has a critical point at $x=a$, then the number $a$ is inside some open interval $I$, and $I$ is in the  domain of $f$. 
+ Notice, if a function $f$ has a critical number at $x=a$, then the number $a$ is inside some open interval $I$, and $I$ is in the  domain of $f$. 
  
 \end{definition}
 
 \begin{warning} 
-When looking for local maximum and minimum points, be careful not to
+When looking for local maximum and minimum numbers, be careful not to
 make two sorts of mistakes: 
 \begin{itemize}
 \item You may forget that a maximum or minimum can occur where the
   derivative does not exist, and so forget to check whether the
   derivative exists everywhere. 
 \item You might assume that any place that the derivative is zero is a
-  local maximum or minimum point, but this is not true, consider the
+  local maximum or minimum number, but this is not true, consider the
   plots of $f(x) = x^3$ and $f'(x) = 3x^2$.
 \begin{image}
 \begin{tikzpicture}
@@ -378,10 +383,10 @@ While $f'(0)=0$, there is neither a maximum nor minimum at $x=0$.
 
 
 Since both local maximum and
-local minimum occur at a critical point, when we locate a critical point, we need to determine which, if either,
+local minimum occur at a critical number, when we locate a critical number, we need to determine which, if either,
 actually occurs. 
 \begin{example}
-Find all local maximum and minimum points for the function 
+Find all local maximum and minimum numbers for the function 
 $f(x)=x^3-x$. 
 \begin{explanation} 
 Write
@@ -393,7 +398,7 @@ We can easily express  $f'(x)$ as a product of its factors
 \frac{d}{dx}
 f(x)=3\left(x+\answer[given]{\frac{\sqrt{3}}{3}}\right)\left(x-\answer[given]{\frac{\sqrt{3}}{3}}\right),
 \] 
-which implies that the function $f$ has only two critical points,
+which implies that the function $f$ has only two critical numbers,
 $x=-\frac{\sqrt{3}}{3}$ and $x=\frac{\sqrt{3}}{3}$. Notice that the
 derivative $f'(x)$ is a polynomial, and polynomials do not change
 signs except possibly at their zeros. This implies that derivative
@@ -414,10 +419,10 @@ $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$.
   \choice{$f'(x)<0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$}
 \end{multipleChoice}
   \end{question}
-  If we know the sign of the derivative on an interval, we also know whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical point  where $x=-\frac{\sqrt{3}}{3}$. \\
+  If we know the sign of the derivative on an interval, we also know whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=-\frac{\sqrt{3}}{3}$. \\
   \begin{question}
 
-At the critical point where $x=-\frac{\sqrt{3}}{3}$, the function $f$ has  \\
+At the critical number where $x=-\frac{\sqrt{3}}{3}$, the function $f$ has  \\
  
   \begin{multipleChoice}
     \choice{no local extremum, because $f$ is increasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
@@ -435,10 +440,10 @@ Select the correct  statement about the sign of $f'(x)$ on the intervals  $\left
          \choice{$f'(x)<0$ on  $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)<0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
   \end{multipleChoice}
   \end{question}
-Again, the sign of the derivative on an interval determines whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical point  where $x=\frac{\sqrt{3}}{3}$. \\
+Again, the sign of the derivative on an interval determines whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=\frac{\sqrt{3}}{3}$. \\
   \begin{question}
 
-At the critical point where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
+At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
  
   \begin{multipleChoice}
     \choice{no local extremum, because $f$ is increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
@@ -488,7 +493,7 @@ At the critical point where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
 \section{The first derivative test}
 
 We will further explore and refine the method of the previous section for deciding whether there is a
-local maximum or minimum at a critical point.
+local maximum or minimum at a critical number.
  Recall that
 \begin{itemize}
 \item If $f'(x) >0$ on an interval, then $f$ is increasing on that interval.
@@ -496,10 +501,10 @@ local maximum or minimum at a critical point.
 \end{itemize}
 
 So how exactly does the derivative tell us whether there is a maximum,
-minimum, or neither at a point? Use the \textit{first derivative test}.
+minimum, or neither at a number? Use the \textit{first derivative test}.
 
 \begin{theorem}[First Derivative Test]\index{first derivative test}\label{T:fdt}
-Suppose that $f$ is continuous on an open interval, and that $f$  has a critical point
+Suppose that $f$ is continuous on an open interval, and that $f$  has a critical number
 at $x=a$, for some value $a$ in that interval.
 \begin{itemize}
 \item If $f'(x)>0$ to the left of $a$ and $f'(x)<0$ to the right of
@@ -536,8 +541,8 @@ f'(x) &= \answer[given]{x^3+x^2-2x} \\
 &=x(\answer[given]{x^2+x-2})\\
 &=x(x+2)(\answer[given]{x-1}).
 \end{align*}
-So the critical points (when $f'(x)=0$) are when $x=-2$, $x=0$, and
-$x=1$. Since the derivative, $f'(x)$, is a polynomial, it does not change the sign on intervals between its zeros, i.e., between the critical points. Now we can check the sign of $f'(x)$ at some points \textbf{between} the critical points to find
+So the critical numbers (when $f'(x)=0$) are when $x=-2$, $x=0$, and
+$x=1$. Since the derivative, $f'(x)$, is a polynomial, it does not change the sign on intervals between its zeros, i.e., between the critical numbers. Now we can check the sign of $f'(x)$ at some numbers \textbf{between} the critical numbers to find
 where $f'(x)$ is positive and where negative:
 \begin{align*}
   f'(-3)&=\answer[given]{-12},\\
@@ -632,10 +637,10 @@ This can be confirmed by checking the graphs of $f(x) =x^4/4 + x^3/3
 \end{example}
 
 
-Hence we have seen that if $f'$ is zero at a point and increasing on an interval containing that  point,
-then $f$ has a local minimum at the point. If $f'$ is zero at a point and
-decreasing on an interval containing that point, then $f$ has a local maximum at the
-point. Thus, we see that we can gain information about $f$ by
+Hence we have seen that if $f'$ is zero at a number and increasing on an interval containing that  number,
+then $f$ has a local minimum at the number. If $f'$ is zero at a number and
+decreasing on an interval containing that number, then $f$ has a local maximum at the
+number. Thus, we see that we can gain information about $f$ by
 studying how $f'$ changes. This leads us to our next section.
 
 
@@ -656,8 +661,8 @@ to a single theorem.
 \begin{theorem}[Test for Concavity]\index{concavity test}
 Suppose that $f''(x)$ exists on an interval.
 \begin{enumerate}
-\item If $f''(x)>0$ on an interval, then $f$ is concave up on that interval.
-\item If $f''(x)<0$ on an interval, then $f$ is concave down on that interval.
+\item If $f''(x)>0$ on an interval, then the graph of $f$ is concave up on that interval.
+\item If $f''(x)<0$ on an interval, then the graph of $f$ is concave down on that interval.
 \end{enumerate}
 \end{theorem}
 
@@ -666,8 +671,8 @@ Of particular interest are points at which the concavity changes from
 up to down or down to up. 
 
 \begin{definition}\index{inflection point}
-If $f$ is continuous at $x=a$ and its concavity changes either from up to down
-or down to up at $x=a$, then $f$ has an \textbf{inflection point} at
+If $f$ is continuous at $x=a$ and its graph's concavity changes either from up to down
+or down to up at $x=a$, then the graph of $f$ has an \textbf{inflection point} at
 $x=a$.
 \end{definition}
 
@@ -724,14 +729,14 @@ It is also instructive to see some nonexamples of inflection points:
 We identify inflection points by first finding $x$ such that $f''(x)$
 is zero or undefined and then checking to see whether $f''(x)$ does in
 fact go from positive to negative or negative to positive at these
-points.
+numbers.
 
 \begin{warning}
 Even if $f''(a) = 0$, the point determined by $x=a$ might \textbf{not}
 be an inflection point.
 \end{warning}
 \begin{example}
-Describe the concavity of $f(x)=x^4$. 
+Describe the concavity of the graph of $f(x)=x^4$. 
 
 \begin{explanation}
 To start, compute the first and second derivative of $f(x)$ with
@@ -746,7 +751,7 @@ concave up for all $x<0$ and  remains concave up for all $x>0$.
 \end{explanation}
 \end{example}
 \begin{example}
-Describe the concavity of $f(x)=x^3-x$. 
+Describe the concavity of the graph of $f(x)=x^3-x$. 
 
 \begin{explanation}
 To start, compute the first and second derivative of $f(x)$ with
@@ -796,21 +801,21 @@ we can then try one of the other tests.
 Recall the first derivative test:
 
 \begin{itemize}
-\item If $f'(x)>0$ for all $x$ that are near and to the left of $a$ and $f'(x)<0$  for all $x$ that are near and to the right of
+\item If $f'(x)>0$ for all $x$ that are near and less than $a$ and $f'(x)<0$  for all $x$ that are near and greater than
   $a$, then $f(a)$ is a local maximum.
-\item If $f'(x)<0$ for all $x$ that are near and  to the left of $a$ and $f'(x)>0$ for all $x$ that are near and  to the right of
+\item If $f'(x)<0$ for all $x$ that are near and  less than $a$ and $f'(x)>0$ for all $x$ that are near and  greater than
   $a$, then $f(a)$ is a local minimum.
 \end{itemize}
 
-Let $a$ be a critical point such that $f'(a)=0$.
+Let $a$ be a critical number such that $f'(a)=0$.
 If $f'$  happens to be decreasing on some interval containing $a$, then it changes from positive to negative at $a$. 
 Therefore, if $f''$ is negative on some interval that contains $a$,
 then $f'$ is definitely decreasing, so there is a local maximum at
-the point in question. On the other hand, if $f'$ is increasing, then it changes from
+the number in question. On the other hand, if $f'$ is increasing, then it changes from
 negative to positive at $a$. Therefore,
 if $f''$ is positive on an interval that contains $a$, then
 $f'$ is definitely increasing, so there is a local minimum at the
-point in question. We summarize this as the \textit{second derivative
+number in question. We summarize this as the \textit{second derivative
   test}.
 
 \begin{theorem}[Second Derivative Test]\index{second derivative test}\label{T:sdt}
@@ -825,8 +830,8 @@ $f'(a)=0$ for some value of $a$ in that interval.
 \end{theorem}
 
 
-The second derivative test is often the easiest way to identify local
-maximum and minimum points. Sometimes the test fails and sometimes
+The second derivative test is often the easiest way to identify where in the domain local
+maximum and minimum occur. Sometimes the test fails and sometimes
 the second derivative is quite difficult to evaluate. In such cases we
 must fall back on one of the previous tests.
 

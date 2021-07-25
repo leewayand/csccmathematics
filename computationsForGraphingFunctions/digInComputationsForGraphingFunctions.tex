@@ -20,18 +20,18 @@ the graph of $y=f(x)$:
 \begin{itemize}
 \item Find the $y$-intercept, this is the point $(0,f(0))$. Place this
   point on your graph.
-\item Find any vertical asymptotes, these are points $x=a$ where
+\item Find any vertical asymptotes, these correspond to numbers $x=a$ where
   $f(x)$ goes to infinity as $x$ goes to $a$ (from the right, left, or
   both).
-  \item If possible, find the $x$-intercepts, the points where $f(x) =
+  \item If possible, find the $x$-intercepts, the points corresponding to where $f(x) =
   0$. Place these points on your graph.
 \item Analyze end behavior:  as $x \to \pm \infty$, what happens to the graph of $f$?  Does it  have horizontal asymptotes, increase or decrease without bound, or have some other kind of behavior?
 \item Compute $f'$ and $f''$.
-\item Find the critical points (the points where $f'(x) = 0$ or
+\item Find the critical numbers (the numbers where $f'(x) = 0$ or
   $f'(x)$ is undefined).
 \item Use either the first or second derivative test to identify local extrema and/or
   find the intervals where your function is increasing/decreasing.
-\item Find the candidates for inflection points, the points where
+\item Find the candidates for inflection points, the points corresponding to where
   $f''(x) = 0$ or $f''(x)$ is undefined.
 \item Identify inflection points and concavity.
 
@@ -75,7 +75,7 @@ Which of the following are vertical asymptotes?  Select all that apply.
 \end{selectAll}
 
 In this case, $f(x) =2x^3-3x^2-12x$, we can find the
-$x$-intercepts.   There are three $x$ intercepts.  Call them $a$, $b$, and $c$, and order them such that $a<b<c$.  Then
+$x$-intercepts.   There are three $x$ intercepts.  Call them $(a,0)$, $(b,0)$, and $(c,0)$, and order them such that $a<b<c$.  Then
 
 \begin{align*}
   a &= \answer[given]{\frac{3-\sqrt{105}}{4}},\\
@@ -111,14 +111,14 @@ On the other hand
   f''(x) &= \answer[given]{12x-6}\\
   &=12\left(\answer[given]{x-\frac{1}{2}}\right).
 \end{align*}
-The critical points are where $f'(x) = 0$, thus we need to solve
+The critical numbers are where $f'(x) = 0$, thus we need to solve
 $6(x+1)(x-2) = 0$ for $x$.  This equation has two solutions.  If we
 call them $a$ and $b$, with $a<b$, then what are $a$ and $b$?
 \[
 a = \answer[given]{-1}\qquad\text{and}\qquad b = \answer[given]{2}.
 \]
 
-Mark the critical points $x=2$ and $x=-1$ on your plot. %%BADBAD either or answer would be nice
+Mark the critical numbers $x=2$ and $x=-1$ on your plot. %%BADBAD either or answer would be nice
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
@@ -155,9 +155,9 @@ $(-1,2)$.
 And, for $x>2$, both factors $(x+1)$ and $(x-2)$ are positive, and,
 therefore, our function is \wordChoice{\choice[correct]{increasing}\choice{decreasing}} on $(2,\infty)$.
   
-Hence $x=-1$, corresponding to the point $(-1,7)$ is a local
+Hence $x=-1$, corresponding to the point $(-1,7)$, is a local
 \wordChoice{\choice[correct]{maximum} \choice{minimum}} and $x=2$,
-corresponding to the point $(2,-20)$ is local
+corresponding to the point $(2,-20)$, is local
 \wordChoice{\choice{maximum} \choice[correct]{minimum}} of
 $f(x)$. Identify this on your plot.
 \begin{image}
@@ -247,7 +247,7 @@ f(x) = \begin{cases} xe^x+2 &\text{if $x<0$} \\
 x^4-x^2+3 &\text{if $x \geq 0$}.
 \end{cases}
 \]
-NOTE: $\lim_{x \to -\infty}xe^x=0$. You will need this limit when answering some questions below.\\
+NOTE: $\lim\limits_{x \to -\infty}xe^x=0$. You will need this limit when answering some questions below.\\
  Try this on your own first, then either check with a friend, a graphing calculator (like \link[Desmos]{http://www.desmos.com}), or check the online version.
 
 
@@ -364,15 +364,15 @@ Which of the following are vertical asymptotes on $(0,\infty)$?  Select all that
 		\]
 		
 
-The critical points are the points where $f'(x) = 0$ or $f'(x)$ does not exist.  $0$ is a
-critical point, since we have already seen it is a point of
+The critical numbers are the numbers in the domain where $f'(x) = 0$ or $f'(x)$ does not exist.  $0$ is a
+critical number, since we have already seen it is a 
 discontinuity for $f$, and thus $f'(0)$ does not exist there.  On the interval
-$(-\infty, 0)$, $f$ has a critical point at $x = \answer[given]{-1}$.
-On the interval $(0,\infty)$, $f$ has a critical point at $x =
-\answer[given]{\frac{1}{\sqrt{2}}}$.  Mark the critical points $x=-1$
+$(-\infty, 0)$, $f$ has a critical number at $x = \answer[given]{-1}$.
+On the interval $(0,\infty)$, $f$ has a critical number at $x =
+\answer[given]{\frac{1}{\sqrt{2}}}$.  Mark the critical numbers $x=-1$
 and $x=\frac{1}{\sqrt{2}}$ on your plot. %%BADBAD either or answer
 
-Does the function $f$ have a critical point at $x=-\frac{1}{\sqrt{2}}$? Explain.
+Does the function $f$ have a critical number at $x=-\frac{1}{\sqrt{2}}$? Explain.
   \begin{multipleChoice}
     \choice{Yes, because $f'\left(-\frac{1}{\sqrt{2}}\right)=0$.}
     \choice[correct]{No, because $f'\left(-\frac{1}{\sqrt{2}}\right)\ne 0$.}
