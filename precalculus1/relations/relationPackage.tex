@@ -12,20 +12,20 @@ information packages
 \maketitle
 
 
-We view the world through relationships. That is, some information is connected to other information for some reason. These associations are how we navigate through our lives.
+We view the world through relationships. That is, some information is connected or related to other information for some reason. These associations are how we navigate through our lives.
 
 \begin{itemize}
-\item Dishes have ingredients.
-\item Movies have actors.
-\item Roads have speed limits.
-\item People have social security numbers.
+\item Dishes include ingredients.
+\item Actors appear in movies.
+\item Roads post speed limits.
+\item People are issued social security numbers.
 \item Kindergarteners like ice cream flavors.
 \item Measurements are quoted in different units.
 \item Authors write books.
-\item Students get course grades.
+\item Students earn course grades.
 \item Mountains have heights.
-\item Family's have trees.
-\item Businesses have open hours.
+\item Families are traced through trees.
+\item Businesses are open during hours.
 \end{itemize}
 
 
@@ -38,14 +38,16 @@ All of these relationships are different and yet the same.  Some relationships c
 
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Relation}} \\
-A \textbf{relation} is a package containing three sets or collections. One set is called the \textbf{domain}. One set is called the \textbf{codomain}.  Finally, there is a set of pairings.  Each pairing pairs a member of the domain with a member of the codomain.
+A \textbf{relation} is a package containing three sets or collections. One set is called the \textbf{domain}. One set is called the \textbf{codomain}.  Finally, there is a third set of pairings.  Each pairing associates a member of the domain with a member of the codomain.
 \end{definition}
 
 
 Relations are just about the vaguest, thinnest structure any two sets could possibly share. \\
 
 
-There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  Fortunately, we don't want to do much with relations.  We are just laying the groundwork for richer structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets of things in a relation have the names \textit{domain} and \textit{codomain}. \\
+There are two sets and then some of their members are associated to one another. In fact, this structure is so thin that we cannot do much with it.  Fortunately, we don't want to do much with relations.  We are just laying the groundwork for richer structures.  Right now, we just want to invent some language and notation, so that we can talk about these types of structures. We have a start already. The two sets of things in a relation have the names \textbf{\textcolor{purple!85!blue}{domain}} and \textbf{\textcolor{purple!85!blue}{codomain}}.
+
+
 
 
 Because a relation might be encountered as an if-then statement or a cause-and-effect association, we have a natural directional feeling for the information.  The "if" part comes before the "then" part.  The "cause" comes before the "effect".  We would like this feeling reflected in our relation structure.  Therefore, relations come prepackaged with a feeling that the information is connected from the domain to the codomain.
@@ -69,7 +71,7 @@ Due to the artic vortex, tomorrow's high temperature will be $30^{\circ}$. \\
 
 \begin{itemize}
     \item Domain: weather patterns
-    \item Codomain: temperatires
+    \item Codomain: temperatures
 \end{itemize}
 
 \end{idea}
@@ -80,10 +82,10 @@ Due to the artic vortex, tomorrow's high temperature will be $30^{\circ}$. \\
 
 
 
-\textbf{\textcolor{red!90!darkgray}{Feeling of Direction}}
+\textbf{\textcolor{red!90!darkgray}{A Feeling of Direction}}
 \begin{itemize}
-\item You pick items from the domain and then you get items from the codomain.
-\item Items from the domain cause items from the codomain.
+\item You pick items from the domain and then you get items in the codomain.
+\item Items from the domain cause items in the codomain.
 \item Items in the codomain occur because of items in the domain.
 \item Elements of the codomain happen at places of the domain.
 \end{itemize}
@@ -115,7 +117,7 @@ These three sets would make up a relation.
 
 \begin{question}
 
-Which item(s) from this codomain is(are) paired with 'The Fly', from this domain?
+Which item(s) from this codomain is(are) paired with 'The Fly', which is in the domain?
 \begin{selectAll}
 	\choice{Marlon Brando}
 	\choice[correct]{Vincent Price}
@@ -131,7 +133,7 @@ Which item(s) from this codomain is(are) paired with 'The Fly', from this domain
 
 \begin{question}
 
-Which item(s) from this domain is(are) paired with 'Al Pacino', from this codomain?
+Which item(s) from this domain is(are) paired with 'Al Pacino', which is in the codomain?
 \begin{selectAll}
 	\choice{Casablanca}
 	\choice{House of Wax}
@@ -178,8 +180,8 @@ There is a domain item written on the left and a codmain item written to the rig
 
 \begin{warning} Did You Notice? \\
 \begin{itemize}
-\item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in the domain and in no pair of \textit{Starring}.
-\item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in the codomain and in no pair of \textit{Starring}.
+\item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in the domain but in no pair of \textit{Starring}.
+\item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in the codomain but in no pair of \textit{Starring}.
 \item Nobody said domain members could not appear in multiple pairs.  The Godfather appears in two pairs of \textit{Starring}.
 \item Nobody said codomain members could not appear in multiple pairs.  Vincent Price appears in two pairs of \textit{Starring}.
 \end{itemize}
@@ -214,7 +216,7 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 
 \[
 \begin{array}{l|l}
-    \text{domain}      & \text{codomain}      \\ \hline
+    \text{domain item}      & \text{codomain item}      \\ \hline
     Kevin   &  Chocolate \\
     Shay   & Strawberry \\
     Linda  &  Chocolate \\
@@ -254,7 +256,7 @@ codomain = \{ Vanilla, Chocolate, Strawberry, Peach, Mango, Cherry \}
 
 \[
 \begin{array}{l|l}
-    domain      & codomain      \\ \hline
+    \text{domain item}      & \text{codomain item}      \\ \hline
     Kevin   &  Chocolate \\
     Shay   & Strawberry \\
     Linda  &  Chocolate \\
@@ -298,6 +300,17 @@ We are looking for pairs of the form (???, Chocolate) inside the \textit{Kinderg
 
 
 \end{example} 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -351,7 +364,7 @@ Most of our questions really identify a single hypothesis (antecedent) and then 
 
 This would translate into each domain member always connected to a single codomain member.
 
-Let's focus our investigation to these types of relations.  These types of relations are called \textbf{functions}.
+Let's focus our investigation to these types of relations.  These types of relations are called \textbf{\textcolor{purple!85!blue}{functions}}.
 
 
 
