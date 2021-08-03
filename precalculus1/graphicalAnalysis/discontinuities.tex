@@ -68,13 +68,13 @@ A quick review of graphs seen so far in this course shows there are three basic 
 \begin{itemize}
 \item \textbf{\textcolor{blue!75!black}{Removeable:}}  The graph above has a very subtle break at $x=-6$. The graph is almost continuous, except one point has been shifted up. This type of break gets the name \textit{removeable}, because you could remove the break by just sliding that point back in place. \\
 
-\item \textbf{\textcolor{blue!75!black}{Asymptotic:}} The break at $x=3$ is not subtle at all.  One side is heading up to infinty and the other side is heading down to negative infinity.  You can't get a bigger break than that. Since this type of unbounded behavior is due to the asymptote. Hence, the break is called an \textit{asymptotic} break. \\
+\item \textbf{\textcolor{blue!75!black}{Asymptotic:}} The break at $x=3$ is not subtle at all.  One side is heading up to infinty and the other side is heading down to negative infinity.  You can't get a bigger break than that. Graphically, the asymptote is communicating this behavior, hence, the break is called an \textit{asymptotic} break. \\
 
 \item \textbf{\textcolor{blue!75!black}{Jump:}} The break at $x=6$ is called a \textit{jump}, because the graph makes a sudden jump from one location to another location.
 \end{itemize}
 
 
-In all three cases, the graph experiences a sudden vertical movement.  This movement does not seem to follow the pattern leading up to the sudden change.
+In all three cases, the graph experiences a sudden vertical movement.  This sudden vertical movement is not predictable from the points leading up to the sudden movement.
 
 
 
@@ -163,15 +163,15 @@ The difference is the underlying function for the graph on the left includes $6$
 While graphs have breaks, functions will have \textbf{discontinuities} and \textbf{singularities}.
 
 \begin{itemize}
-\item If the domain of a function includes the number where the graph is experiencing a break, then we will say the function has a \textbf{discontinuity} at this domain number.
+\item If the domain of a function includes the number where the graph is experiencing a break, then we will say the function has a \textbf{discontinuity} at this number.  
 
-\item If the domain of a function does not include the number where the graph is experiencing a break, then we will say the function has a \textbf{singularity} at this domain number.
+\item If the domain of a function does not include the number where the graph is experiencing a break, then we will say the function has a \textbf{singularity} at this number.
 \end{itemize}
 
 \end{idea}
 
 
-Of course, all of this gets more complicated as we encounter more function.  But this is a good start. \\
+Discontinuities are numbers in the domain of the funciton and singularities are not in the domain. Of course, all of this gets more complicated as we encounter more functions.  But this is a good start. \\
 
 \begin{example} Discontinuities \\
 
@@ -234,7 +234,7 @@ $h(t)$ has no discontinuities.  The idea of a discontinuity is that the value of
 In the graph above, there is horizontal space between the graphical pieces.  \\
 
 
-The intervals in the domain of $h$ are separated by unused intervals of real numbers.  There is no abrupt jump.  There is just an end and then a new beginning further along.
+The intervals in the domain of $h$ are separated by unused intervals of real numbers.  There is no abrupt vertical jump.  There is just an end and then a new beginning further along.
 
 \end{example}
 
@@ -388,17 +388,17 @@ Let $P(w)$ be a function.  The graph of $y = P(w)$ is displayed below.
 
         
         \addplot [draw=penColor, very thick, smooth, domain=(-8:-4)] {-(x+8)*(x+5)};
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {sin(deg(2*x))};
+        \addplot [draw=penColor, very thick, smooth, domain=(-4:4)] {sin(deg(2*x)) + 4};
         \addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
 
 
         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,0)};
         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-4)};
 
-        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,-0.909) (-8,4) (-2,-6)};
-        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,-0.279)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,3.01) (-8,4)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,4.989)};
 
-        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,2)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
 
     \end{axis}
@@ -415,7 +415,7 @@ Let $P(w)$ be a function.  The graph of $y = P(w)$ is displayed below.
 Select all of the discontiuities of $P$.
 \begin{selectAll}
 \choice [correct]{$-8$}
-\choice {$-4$}
+\choice [correct]{$-4$}
 \choice {$-2$}
 \choice {$-1$}
 \choice {$3$}
@@ -664,15 +664,15 @@ The fact that these numbers are not in the domain is significiant when studying 
 
 
 
-\begin{idea} A Singularity 
+\begin{idea} \textbf{\textcolor{green!50!black}{A Singularity}}  
 
-A real number, $c$, is said to be a \textbf{singularity} of the function $f$, if $c$ is not a member of the domain of $f$, however, the domain surrounds $c$.  \\
+A real number, $c$, is said to be a \textbf{singularity} of the function $f$, if $c$ is not a member of the domain of $f$, however, the domain surrounds $c$, and the function has extreme behavior there.  \\
 
 
 
-$\blacktriangleright$ \textbf{Idea:}  $c$ is not in the domain, however, EVERY open interval containing $c$ does contain a domain number and the function is behaving weird there. \\
+$\blacktriangleright$  $c$ is not in the domain, however, EVERY open interval containing $c$ does contain a domain number and the function is behaving weird there. \\
 
-It turns our "weird" includes a lot of behavior.  It will take a while to state a rigorous definition of singularity.  In the mean time, we will keep noting weird behavior and building our feeling or weird.
+It turns our "weird" includes a lot of behavior.  It will take a while to state a rigorous definition of singularity.  In the mean time, we will keep noting weird behavior and building our feeling of weird.
 
 
 We will extend and sharpen our ideas and definition of singularity in Calculus.
