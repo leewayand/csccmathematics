@@ -62,6 +62,9 @@ As we have seen the graph of a quadratic equation is a parabola. The sign of the
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$x$, ylabel=$y$,
+               ytick={-10,-5,5,10},
+               xtick={-10,-5,5,10},
+               ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -155,6 +158,9 @@ As we can see from their parabolic graphs below, quadratics can have $0$, $1$, o
      \begin{axis}[
             	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             	axis lines =center, xlabel=$x$, ylabel=$y$,
+               ytick={-10,-5,5,10},
+               xtick={-10,-5,5,10},
+               ticklabel style={font=\scriptsize},
             	every axis y label/.style={at=(current axis.above origin),anchor=south},
             	every axis x label/.style={at=(current axis.right of origin),anchor=west},
             	axis on top,
@@ -192,9 +198,10 @@ As we can see from their parabolic graphs below, quadratics can have $0$, $1$, o
 
 \section{Completing the Square}
 
-Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they are to different degrees. It will take a bit of ALgebra to combine them into just one occurrence.
+Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they are to different degrees. \\
 
-This process is called \textbf{completing the square}.
+
+It will take a bit of Algebra to combine them into just one occurrence. This process is called \textbf{completing the square}. \\
 
 The idea is to rearrange  $0 = a \, t^2 + b \, t + c$ to look like $0 = A \, (t-B)^2 + C$.  Then there will only be  one occurrence of the $t$ and we can solve for it.
 
@@ -209,6 +216,13 @@ A \, (t-B)^2 + C & = A \, (t-B)(t-B) + C \\
 \end{align*}
 
 This last line, $A \, t^2 - 2 t A B + A \, B^2 + C$ should turn out to be $a \, t^2 + b \, t + c$, our original quadratic.
+
+We want
+
+
+\[ A \, t^2 - 2 t A B + A \, B^2 + C = a \, t^2 + b \, t + c \]
+
+
 
 The only way that is going to happen is if $A = a$. And, as long as we know $A = a$, we can factor it out and work with what is left.
 
@@ -242,6 +256,10 @@ We want to complete the square on $t^2 + b \, t + c$.  When the leading coeffice
 
 This last line $t^2 - 2 t B + B^2 + C$ should turn out to be $t^2 + b \, t + c$.
 
+We want
+
+
+\[   t^2 - 2 t B + B^2 + C = t^2 + b \, t + c   \]
 
 
 The leading term is $1$ in both (since we factored out $A$). Now, the linear terms need to be the same: $ - 2 t B = \answer{b t}$.  That tells us that $B = \answer{\frac{b}{-2}}$.
@@ -250,7 +268,7 @@ The leading term is $1$ in both (since we factored out $A$). Now, the linear ter
 To complete the square with a monic quadratic, we need $B = \frac{b}{-2}$.  Let's put that in.
 
 
-\[ t^2 - 2 t B + B^2 + C = t^2 - 2 t \frac{b}{-2} + \left(\frac{b}{-2}\right)^2 + C = t^2 + b t + \left(\frac{b}{-2}\right)^2 + C \]
+\[ t^2 - 2 t B + B^2 + C = t^2 - 2 t \left( \frac{b}{-2} \right) + \left(\frac{b}{-2}\right)^2 + C = t^2 + b t + \left(\frac{b}{-2}\right)^2 + C \]
 
 
 We want this to be $t^2 + b \, t + c$. \\
@@ -536,7 +554,7 @@ Square half of $b$, $\left(\frac{-6}{2}\right) = (-3)^2 = 9$.  We could add and 
 
 \[  2 (x-3)^2 + 2 = 0  \]
 
-$2 ((x-3)^2)$ is never negative, since we have a square.  This cannot be added to $2$, to get $0$.  \\
+In the real numbers, $2 ((x-3)^2)$ is never negative, since we have a square.  This cannot be added to $2$, to get $0$.  \\
 
 
 This equation has no real solutions.
@@ -564,10 +582,15 @@ There are no real numebrs that will do this.  The square of a real number cannot
 
 
 
-We can see that the real numbers are not enough for all of our equations.  Eventually, we will fill in the missing pieces with the \textbf{Complex Numbers}.  They will include $\sqrt{-1}$. 
+We can see that the real numbers are not enough for all of our equations.  Eventually, we will fill in the missing pieces with the \textbf{Complex Numbers}.  They will include $\sqrt{-1}$.  Then our last example will have two complex solutions.  
 
 
-Then our last example will have two complex solutions.  Our first example had two real solutions.  Our second example had two identical solutions.  This third example has two distinct complex solutoins. \\
+\begin{itemize}
+\item Our first example had two real solutions.  
+\item Our second example had two identical solutions.  
+\item This third example has two distinct complex solutoins. 
+\end{itemize}
+
 
 
 $\blacktriangleright$ All quadratics will have two solutions...eventually. \\
