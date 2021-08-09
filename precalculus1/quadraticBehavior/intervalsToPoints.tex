@@ -191,12 +191,19 @@ You cannot calculate the rate of change over an interval with $0$ length.  There
 
 \section{Tangent Lines}
 
+Suppose $f$ is a function.  The graph of $f$ is the collection of points whose coordinates are pairs in $f$.  That is their coordinates look like $(d, f(d))$.
+
+Suppose $a$ and $b$ are two distinct domain numbers of $f$.  Then the line through $(a, f(a))$ and $(b, f(b))$ is called a secant line.  The slope of this secant line equals the rate of change of $f$ over the interval $[a, b]$.
+
+Tangent lines are degenerate secants. Secant lines need two points on the graph of a function.  A tangent line is a secant line where the two points are the same point. Tangent lines are secant lines created from an interval of length $0$.  But tangent lines are still lines.  They still have a slope.
 
 
+If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
 
-Tangent lines are degenerate secants. Secant lines need two points.  A tangent line is a secant line where the two points are the same point. Tangent lines span an interval of length $0$.  But, tangent lines are still lines.  They have a constant rate of change. We'll call this the \textbf{instantaneous rate of change} at the domain number corresponding to the tangent point.
 
-We'll being our investigation into the instantaneous with quadratic functions. \\
+We'll call this the \textbf{instantaneous rate of change} at the domain number corresponding to the tangent point.
+
+We'll being our investigation into instantaneous rate of change with quadratic functions. \\
 
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Instantaneous Rate of Change}}  
@@ -212,13 +219,17 @@ If the graph of $y = f(x)$ has a non-vertical tangent line at the point $(a, f(a
 We need a method of obtaining the slope of tangent lines to parabolas.
 
 
+$\blacktriangleright$ \textbf{Slope of Tangents Lines}
 
 
-Let's consider the graph of $Q(x) = a (x - h)^2 + k$, with $a > 0$. We are investigating the graph of $y = a (x - h)^2 + k$. \\
 
-Let's select a domain number, $x_0$, number of $Q$, which corresponds to the point $(x_0, y_0)$.
 
-Let's add to our picture the tangent line at $(x_0, y_0)$.
+
+Let's consider the graph of $Q(x) = a (x - h)^2 + k$, with $a > 0$. We are investigating the graph of $y = a (x - h)^2 + k$, which is a parabola whose vertex is $(h, k)$. \\
+
+Let's select a domain number of $Q$, $x_0$.   This corresponds to the point $(x_0, y_0)$ on the grap[h of $Q$.
+
+Let's add a picture of the tangent line at $(x_0, y_0)$ to our graph of $Q$.
 
 
 \begin{image}
@@ -255,25 +266,25 @@ Let's add to our picture the tangent line at $(x_0, y_0)$.
 \end{tikzpicture}
 \end{image}
 
-The tangent line is the graph of a linear function. Let's call it $T$.
+The tangent line is the graph of a linear function. Let's call this linear function $T$.
 
 
-T is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
+T is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  According to our definition, $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
 
 
 
-$\blacktriangleright$ We would like a way to obtain the value of $m$. \\
+$\blacktriangleright$ We would like a way to obtain the exact value of $m$. \\
 
 
 To do this we need to note something about formulas for quadratic functions.
 
 
-$\blacktriangleright$ \textbf{Double Roots}
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Double Roots}} 
 
 Our general formula for a quadratic function looks like  $f(x) = a (x - h)^2 + k$ and the graph is a parabola with vertex at $(h, k)$. If we happen to have $k = 0$, then the vertex of the parabola sits on the horizontal axis and the formula looks like $f(x) = a (x - h)^2$.
 
 
-In this case, $h$ is a double zero or double root of $f(x)$.  $(x - h)$ is a factor, twice.
+In this case, $h$ is a double zero or double root of $f(x)$.  That means $(x - h)$ is a factor, twice.
 
 
 Another way of looking at this situation is that the function
@@ -284,7 +295,7 @@ Another way of looking at this situation is that the function
 \]
 
 
-also, has $h$ as a root.
+also, has $h$ as a root.  If you start with a double root and divide out one of the roots, then you still have one remaining.
 
 This is obvious with the way we have written it here.  However, no matter how we write the formula for our quadratic function, if we divide by the factor correspoinding to the zero, then the result again has the same root.
 
@@ -346,7 +357,7 @@ The point of tangency is an intersection point of the two graphs.  In fact, it i
 
 
 
-Let's consider a new function $P(x) = Q(x) - T(x)$. \\
+Let's consider a new function defined as $P(x) = Q(x) - T(x)$. \\
 
 
 \[
@@ -384,7 +395,7 @@ $P(x)$ is a quadratic function.  And, we know some characteristics of $P(x)$
 $P(x)$ is a quadratic function.  Its graph is a parabola opening up with $(x_0, 0)$ as its vertex. \\
 
 
-$\blacktriangleright$   $x_0$ is a double root of $P(x)$. \\
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  $x_0$ is a double root of $P(x)$. \\
 
 
 $(x - x_0)$ will divide evenly into $P(x)$ and after dividing, the resulting function will also have $x_0$ as a zero.
@@ -400,11 +411,11 @@ We can use long division to divide $(x - x_0)$ into $P(x)$
 \end{image}
 
 
-If $(x - x_0)$ divides evenly into $P(x)$, which means this remainer should equal $0$.  Let's check.
+We know $(x - x_0)$ divides evenly into $P(x)$, because $x_0$ is a root or zero.  That means this remainer should equal $0$.  Let's check.
 
 
 
-We'll substitute $a (x_0 - h)^2 + k$ in for $y_0$.
+We know $(x_0, y_0)$ is a point on the graph of $Q$, therefore, $y_0 = a (x_0 - h)^2 + k$. Let's substitute $a (x_0 - h)^2 + k$ in for $y_0$ in the expression for our remainder. [Remember: we are trying to verify that the remainder equals $0$.]
 
 \[
 a h^2 + k - (a (x_0 - h)^2 + k) + a x_0^2 + m x_0 - x_0 (2 a h + m)
@@ -416,7 +427,7 @@ a h^2 + k - a x_0^2 + 2 a h x_0 - a h^2 - k + a x_0^2 + m x_0 - 2 a h x_0 - m x_
 \]
 
 
-It is $0$.   \\
+It is $0$!   \\
 
 
 $(x - x_0)$ did divide evenly into $P(x)$, like it was supposed to.
@@ -428,7 +439,7 @@ The quotient is
 a x + (a x_0 - (2 a h + m))
 \]
 
-And, we said $x_0$ must be a root, since $x_0$ was a double root of $P(x)$.  Therefore, if we substitute $x_0$ in for $x$, the expression must equal $0$.
+And, we said $x_0$ must be a root of this, since $x_0$ was a double root of $P(x)$.  Therefore, if we substitute $x_0$ in for $x$, the expression must equal $0$.
 
 
 \[
@@ -451,7 +462,7 @@ m = a x_0 + a x_0 - 2 a h = 2 a (x_0 - h)
 
 
 
-\begin{conclusion} Slope of Tangent Line
+\begin{conclusion} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line}} 
 
 
 The graph of $y = a (x - h)^2 + k$ is a parabola.
@@ -484,7 +495,7 @@ Every point, $(x_0, y_0)$, on the graph of $y = Q(x)$ has a tangent line.
 Each tangent line has a slope, which we are calling the instantaneous rate of change of $Q$ at $x_0$.
 
 
-$\blacktriangleright$ We can create a new function from this.
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} We can create a new function from this.
 
 
 
