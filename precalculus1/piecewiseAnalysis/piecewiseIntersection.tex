@@ -99,16 +99,16 @@ K(m) =
             axis on top
           ]
           
-			\addplot [line width=2, penColor, smooth,samples=100,domain=(-7:0)] {x+4};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:0)] {x+4};
+       		\addplot [line width=2, penColor2, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
 
 
 
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-7,-3)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,4)};
+			\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-7,-3)};
+			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(0,4)};
 
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,3)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};
+			\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(1,3)};
+			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(6,3)};
 
        
 
@@ -118,7 +118,7 @@ K(m) =
 
 
 
-Find the points of intersection.
+Find the points of intersection between the graphs of $V$ and $K$.
 
 
 From the graphs there appear to be three points of intersection.
@@ -140,13 +140,13 @@ From the graphs there appear to be three points of intersection.
             axis on top
           ]
           
-			\addplot [line width=2, penColor, smooth,samples=100,domain=(-7:0)] {x+4};
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:0)] {x+4};
        		\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
 
 
 
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-7,-3)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,4)};
+			\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-7,-3)};
+			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(0,4)};
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
 
@@ -202,12 +202,12 @@ The intersection point is $\left( -\frac{7}{3}, \frac{5}{3} \right)$.
           
 
        		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
-			\addplot [line width=2, penColor, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
 
 
 
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,3)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};
+			\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(1,3)};
+			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(6,3)};
 
 			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
@@ -239,7 +239,7 @@ The intersection point is $\left( -\frac{7}{3}, \frac{5}{3} \right)$.
 This gives two solutions, $0$ and $\frac{7}{2}$.  
 
 
-We can see from the graph that the full graphs of $-(t+3)(t-3)$ and $t^2 - 7 t + 9$ would intersect at $t - 0$.  However, our piecewise defined functions do not share these formulas at $0$.  The definitions of the piecewise functions do not allow $0$ as a common solution.
+We can see from the graph that the full graphs of $-(t+3)(t-3)$ and $t^2 - 7 t + 9$ would intersect at $t = 0$ as well.  However, our piecewise defined functions do not share these formulas at $0$.  The definitions of the piecewise functions do not allow $0$ as a common solution.
 
 After considering the domains of $V$ and $H$, the only solution here is $\frac{7}{2}$.
 
@@ -298,12 +298,12 @@ The intersection point is $\left(\tfrac{7}{2}, -\frac{13}{4}\right)$.
 			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
 			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
 
-			\addplot [line width=2, penColor, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(1:6)] {(x-1)*(x-6)+3};
 
 
 
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,3)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,3)};
+			\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(1,3)};
+			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(6,3)};
 
            
 
@@ -331,7 +331,7 @@ The intersection point is $\left(\tfrac{7}{2}, -\frac{13}{4}\right)$.
 
 
 
-The graph shows us that we only have one of these solutions because the line segment doesn't extend further to the left to intercept the parabola twice.
+The graph shows us that we only have one of these solutions because the line segment doesn't extend further to the left to intersect the parabola twice.
 
 
 The only soution here is $w = \frac{35 + \sqrt{137}}{8} $.

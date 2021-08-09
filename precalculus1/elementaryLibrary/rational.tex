@@ -19,7 +19,7 @@ Rational functions are fractions of polynomials
 
 \begin{definition}\textbf{\textcolor{green!50!black}{Rational Functions}}
 
-A rational function is any function that can be represented as a quotient of polynomials 
+A rational function is any function that can be represented as a quotient of two polynomials 
 
 \[   \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   \]
 
@@ -36,7 +36,7 @@ where the $a_k$ and $b_k$ are real numbers and $a_n \ne 0$ and $b_m \ne 0$.
 
 
 
-Again, we prefer polynomials in factored form.  Therefore, usually our first step is to transform the rational function to look like
+Again, we prefer polynomials in factored form.  Therefore, usually, our first step is to transform the formula for the rational function to look like
 
 
 
@@ -74,15 +74,14 @@ The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
-          \addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
-          \addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
-          \addplot [line width=2, penColor, smooth, domain=(4.1:9),<->] {(x-1)/((x+3)*(x-4))};
 
           \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
           \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
 
-           
+          \addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
+          \addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
+          \addplot [line width=2, penColor, smooth, domain=(4.1:9),<->] {(x-1)/((x+3)*(x-4))};
+
 
   \end{axis}
 \end{tikzpicture}
@@ -115,15 +114,14 @@ The graph of $y = v(r) = \frac{(r-1)}{(r+3) (r-4)^2} $
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:-3.02),<->] {(x-1)/((x+3)*(x-4)^2)};
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.98:3.77),<->] {(x-1)/((x+3)*(x-4)^2)};
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(4.25:9),<->] {(x-1)/((x+3)*(x-4)^2)};
 
           \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
           \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
 
-           
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:-3.02),<->] {(x-1)/((x+3)*(x-4)^2)};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.98:3.77),<->] {(x-1)/((x+3)*(x-4)^2)};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(4.25:9),<->] {(x-1)/((x+3)*(x-4)^2)};
+
 
   \end{axis}
 \end{tikzpicture}
@@ -194,16 +192,16 @@ The graph of $y = B(c) = \frac{(c-1)(c-5)}{5(c+3)} $
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-19:-3.4),<->] {((x-1)*(x-5))/(5*(x+3))};
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.9:19),<->] {((x-1)*(x-5))/(5*(x+3))};
 
 
           \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({-3},{x});
           \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] {0.2*x-1.8};
 
 
-           
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-19:-3.4),<->] {((x-1)*(x-5))/(5*(x+3))};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.9:19),<->] {((x-1)*(x-5))/(5*(x+3))};
+
+
 
   \end{axis}
 \end{tikzpicture}
@@ -250,18 +248,16 @@ $5$ is a zero of the polynomial in the denominator.  However, $t=5$ is not an as
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
+ 
+          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({-3},{x});
+          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({x},{1});
+
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-19:-3.4),<->] {(x-1)/(x+3)};
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.9:19),<->] {(x-1)/(x+3)};
 
 
-          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({-3},{x});
-          \addplot [line width=1, gray, dashed, domain=(-19.5:19.5),<->] ({x},{1});
           \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,0.5)}; 
-       
-
-
-           
+                 
 
   \end{axis}
 \end{tikzpicture}

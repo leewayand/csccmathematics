@@ -28,7 +28,7 @@ sine and cosine
 \section{The Unit Circle}
 
 
-The unit circle is the circle of radius $1$ centered at the origin on the Cartesian plane. The points on the unit cricle have two coordinates.  
+The \textbf{unit circle} is the circle of radius $1$ centered at the origin on the Cartesian plane. The points on the unit cricle have two coordinates.  
 
 \begin{itemize}
 \item The first coordinate gives the horizontal position of the point. 
@@ -38,6 +38,10 @@ The unit circle is the circle of radius $1$ centered at the origin on the Cartes
 Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle made between the horizontal axis and the radius running from the point on the unit circle to the origin (center of the circle).
 
 
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  The coordinates are functions of the angle!
+
+We call these functions \textbf{cosine} and \textbf{sine}.
+
 
 
 \begin{image}
@@ -45,6 +49,7 @@ Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle ma
   \begin{axis}[
             domain=-1.5:1.5, ymax=1.5, xmax=1.5, ymin=-1.5, xmin=-1.5,
             axis lines =center, unit vector ratio*=1 1 1, xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -61,7 +66,7 @@ Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle ma
         	%\node[anchor=east] at (axis cs:1.85,3) {$d$};
         	%\node[anchor=east] at (axis cs:4.6,1) {$f(d)$};
                      
-        	\node at (axis cs:0.75,1.2) [penColor2] {$(sin(\theta),cos(\theta))$};
+        	\node at (axis cs:0.75,1.2) [penColor2] {$(cos(\theta),sin(\theta))$};
 
 
           \addplot [line width=1, penColor2, smooth,samples=100,domain=(0:0.5)] ({x},{1.7320*x});
@@ -86,7 +91,10 @@ Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle ma
 
 \section{Cosine}
 
-Cosine is a function of $\theta$. The value of the cosine function is the horizontal coordinate of the point on the unit circle at the given angle, $\theta$. The shorthand for this function looks like $cos(\theta)$. When we graph the cosine function the horizontal axis is measuring the angle $\theta$, since that is the domain of cosine.
+Cosine is a function of $\theta$. The value of the cosine function is the horizontal coordinate of the point on the unit circle at the given angle, $\theta$. The shorthand for this function looks like $cos(\theta)$. 
+
+
+When we graph the cosine function the horizontal axis is measuring the angle $\theta$, since that is the domain of cosine.
 
 \textbf{Note:}  all of our angle measurements are in radians.
 
@@ -117,18 +125,18 @@ Cosine is a function of $\theta$. The value of the cosine function is the horizo
 
 
 
-As $\theta$ rotates counterclockwise, the corresponding point on the unit circle moves counterclockwise and its horizontal coordinate oscillates between $-1$ and $1$.
+As $\theta$ rotates counterclockwise around the unit circle, the corresponding point on the unit circle moves counterclockwise and its horizontal coordinate oscillates between $-1$ and $1$.
 
 \begin{itemize}
 \item At $\theta = 0$, the horizontal coordinate is $1$. The point is on the far right of the unit circle.
 \item At $\theta = \frac{\pi}{2}$, the horizontal coordinate is $0$. The point is on the top of the unit circle.
 \item At $\theta = \pi$, the horizontal coordinate is $-1$. The point is on the far left of the unit circle.
 \item At $\theta = \frac{3\pi}{2}$, the horizontal coordinate is $0$. The point is on the bottom of the unit circle.
-\item At $\theta = 2\pi$, the horizontal coordinate is $0$. The point is again on the far right of the unit circle.
+\item At $\theta = 2\pi$, the horizontal coordinate is $1$. The point is again on the far right of the unit circle.
 \end{itemize}
 
 
-This pattern continues as $\theta \rightarrow \infty$ and as $\theta \rightarrow -\infty$
+This pattern continues as $\theta \rightarrow \infty$ or the reverse, as $\theta \rightarrow -\infty$
 
 The zeros of $cos(\theta)$ occur at angles that place the corresponding point at the top or the bottom of the unit circle.  
 
@@ -165,7 +173,11 @@ $cos(\theta)$ has a minimum value of $-1$, which occurs at every odd $\pi$:
 
 \section{Sine}
 
-Sine is a function of $\theta$. The value of the function is the vertical coordinate of the point on the unit circle at the given angle. The shorthand for this function loks like $sin(\theta)$. When we graph the sine function the horizontal axis is measuring the angle $\theta$, since that is the domain of sine.
+Sine is a function of $\theta$. The value of the function is the vertical coordinate of the point on the unit circle at the given angle. The shorthand for this function loks like $sin(\theta)$. 
+
+
+
+When we graph the sine function the horizontal axis is measuring the angle $\theta$, since that is the domain of sine.
 
 \textbf{Note:}  all of our angle measurements are in radians.
 
@@ -207,7 +219,7 @@ As $\theta$ rotates counterclockwise, the corresponding point on the unit circle
 \end{itemize}
 
 
-This pattern continues as $\theta \rightarrow \infty$ and as $\theta \rightarrow -\infty$
+This pattern continues as $\theta \rightarrow \infty$ or the reverse, as $\theta \rightarrow -\infty$
 
 The zeros of $sin(\theta)$ occur at angles that place the corresponding point at the left and right of the unit circle.  
 
@@ -245,7 +257,7 @@ $sin(\theta)$ has a maximum value of $1$, which occurs at every three-halves $\p
 \section{Tangent}
 
 
-While sine and cosine are the coordinates of points on the unit circle, we have other trigonometric functions, which are build from sine and cosine.
+While sine and cosine are the coordinates of points on the unit circle, we have other trigonometric functions, which are built from sine and cosine.  The tangent function is the quotient of sine and cosine.
 
 
 
@@ -298,24 +310,41 @@ Of course, there is shorthand for infinite unions
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
+ 
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
+
           	\addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
           	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
           	\addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
 
-			\addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
+			      \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
 
 
-          	\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
-          	\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
-          	\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
-          	\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
 
            
 
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -351,7 +380,7 @@ When $\theta = \frac{\pi}{4}$, the the point is halfway between the axes, which 
           %\node[anchor=east] at (axis cs:1.85,3) {$d$};
           %\node[anchor=east] at (axis cs:4.6,1) {$f(d)$};
                      
-          \node at (axis cs:0.8,1) [penColor2] {$(sin(\tfrac{\pi}{4}),cos(\tfrac{\pi}{4}))$};
+          \node at (axis cs:0.8,1) [penColor2] {$(cos(\tfrac{\pi}{4}),sin(\tfrac{\pi}{4}))$};
 
 
           \addplot [line width=1, penColor2, smooth,samples=100,domain=(0:0.707)] {x};

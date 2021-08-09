@@ -18,15 +18,15 @@ In the world of functions, polynomials play a similar role as the integers play 
 In other words, no matter what small distance you think up...
 
 \begin{itemize}
-\item Given any real number, there is a rational number within that small distance of the real number.
+\item [Numbers] Given any real number, there is a rational number within that small distance of the real number.
 
-\item Given any continuous function on a closed interval, there is a polynomial within that "small distance" of the continuous function.
+\item [Functions] Given any continuous function on a closed interval, there is a polynomial within that "small distance" of the continuous function.
 \end{itemize}
 
 This makes polynomials extremely useful and thus very interesting. \\
 
 
-$\blacktriangleright$ Polynomials are sums of special power functions, so let's begin there.
+$\blacktriangleright$ Polynomials are sums of special power functions, so let's begin with power functions.
 
 
 
@@ -125,8 +125,8 @@ $\blacktriangleright$  When the power, $p$, is a positive integer, then power fu
 $\blacktriangleright$  When the power, $p$, is a negative integer, then we have two types of unbounded behavior around the singularity at $0$. 
 
 \begin{enumerate}
-\item When $p$ is even the behavior around the singularity is the same - both up or down on the graph depending on the sign of the coeeficient, $k$.
-\item When $p$ is odd the behavior around the singularity is opposite - one side up and one side down on the graph, which switches depending on the sign of the coeeficient, $k$.
+\item When $p$ is even, the behavior around the singularity is the same - both up or down on the graph depending on the sign of the coeeficient, $k$.
+\item When $p$ is odd, the behavior around the singularity is opposite - one side up and one side down on the graph, which switches depending on the sign of the coeeficient, $k$.
 \end{enumerate}
 
 
@@ -191,7 +191,7 @@ $\blacktriangleright$  \textbf{End-Behavior}
 
 The domain of a power function is either all the real numbers, \textbf{R}, or all of the real numbers except $0$, $\textbf{R} \setminus \{ 0 \}$.  In either case we can imagine moving far off to the left or far off to the right on the number line to where the domain is made up of very large negative or very large positive numbers.  When we want the reader to think of moving even further to the right we use the phrase "tending to infinity". When we want the reader to think of moving even further to the left we use the phrase "tending to negative infinity".
 
-For power function with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
+For power functions with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
 
 The mathematical word for this "tending" relationship is \textbf{limit}.
 
@@ -201,7 +201,7 @@ If we inspect a power function, $f(x) = k \, x^p$, with a negative power, then w
 \[    \lim_{x \to \infty} k \, x^p = 0,        \]
 
 
-\textbf{Pronounced:} \textit{The limit as x tends towards infinity of $k \, x^p$ equals zero}.
+\textbf{Pronounced:} \textit{The limit of $k \, x^p$ as x tends towards infinity equals zero}.
 
 
 We also have,
@@ -209,10 +209,10 @@ We also have,
 \[    \lim_{x \to -\infty} k \, x^p = 0,        \]
 
 
-\textbf{Pronounced:} \textit{The limit as x tends towards negative infinity of $k \, x^p$ equals zero}.
+\textbf{Pronounced:} \textit{The limit of $k \, x^p$ as x tends towards negative infinity equals zero}.
 
 
-For power functions with a postive power, we have limits such as 
+For power functions with a positive power, we have limits such as 
 
 
 
@@ -247,7 +247,7 @@ Describing the function's behavior around $0$ with limit notation looks like
 
 
 
-\textbf{Pronounced:} \textit{The limit as x tends towards zero from the left, of $k \, x^p$ equals negative infinity}.
+\textbf{Pronounced:} \textit{The limit of $k \, x^p$ as x tends towards zero from the left equals negative infinity}.
 
 It depends on the sign of coefficient $k$.
 
@@ -425,7 +425,7 @@ Let's see some shorthand notation through an example.  We'll begin with this pol
 
 
 
-The following shorthand notation is totally voluntary.  You are more than welcome to write this polynomial as it is written. However, people you work with may use the shorthand notation, so you should be familiar with it.
+The following shorthand notation is totally voluntary.  You are more than welcome to write this polynomial as it is written above in its proper form. However, people you work with may use the shorthand notation, so you should be familiar with it.
 
 
 
@@ -477,7 +477,7 @@ The last version is much shorter than the original, but they represent the exact
 
 
 
-\begin{warning} Rule of Shortest Expression
+\begin{warning} \textbf{\textcolor{red!90!darkgray}{Rule of Shortest Expression}} 
 
 Mathematicians don't like to write a lot.  They prefer shorter expressions.  Therefore, we are left to interpret symbols by their positions and font size and context and surrounding symbols.
 
@@ -488,7 +488,7 @@ The general rule is that you interpret the shortest expression that makes sense.
 
 Of course, our abbreviations and shortest expressions also cause their own confusion.
 
-\textbf{$3+15$:} Is this $(3+1)5$ or $3+(15)$?  $5$ is shorter than $15$, however, $(3+1)5$ doesn't make sense, because there is no operator between $(3+1)$ and $5$.  On the other hand we have a shorthand abbreviation whereby no symbol means multiplication.  But that rule doesn't apply to digits.  Digits are glued together tighter than operations.
+\textbf{$3+15$:} Is this $(3+1)5$ or $3+(15)$?  $5$ is shorter than $15$, however, $(3+1)5$ doesn't make sense, because there is no operator between $(3+1)$ and $5$.  On the other hand we have a shorthand abbreviation whereby no symbol means multiplication.  But that rule doesn't apply to digits.  Digits are glued together tighter than operations. $25$ never measn $2 \cdot 5$.
 
 Just like with any language, mathematics has its idioms.
 
@@ -541,7 +541,7 @@ Write $(-1) x^3 + 0 x^2 + (-3) x^1 + 6 x^0$ in shorthand notation.
 \subsection{Products vs. Sums}
 
 
-We engage in two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytical investigation.  Polynomials are functions for us and we are interested in analyzing them as functions.  This means, among other features, we are interested in their zeros.  For this, and other reasons, we prefer to write polynomials in factored form.
+We engage in two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytic investigation.  Polynomials are functions for us and we are interested in analyzing them as functions.  This means, among other features, we are interested in their zeros.  For this, and other reasons, we prefer to write polynomials in factored form.
 
 
 
@@ -568,7 +568,7 @@ When restricted to real numbers, every polynomial with real coefficients can be 
 \end{theorem}
 
 
-Irreducible quadratics means they need complex numbers to factor. The discriminant in the quadratice formula is negative. \\
+Irreducible quadratics means they need complex numbers to factor - the discriminant of the quadratic formula is negative. \\
 
 
 
@@ -832,7 +832,7 @@ The end-behavior of a polynomial function is the same as the leading term (a pow
 
 \begin{question}
 
-Evaluate $\lim_{t \to -\infty} 4 t^3 - 9 t + 3$
+Evaluate $\lim\limits_{t \to -\infty} 4 t^3 - 9 t + 3$
 
 
 \begin{multipleChoice}
@@ -850,7 +850,7 @@ Evaluate $\lim_{t \to -\infty} 4 t^3 - 9 t + 3$
 
 \begin{question}
 
-Evaluate $\lim_{t \to \infty} -4 t^3 - 5 t + 2 t^4  - 3$
+Evaluate $\lim\limits_{t \to \infty} -4 t^3 - 5 t + 2 t^4  - 3$
 
 
 \begin{multipleChoice}
@@ -887,7 +887,7 @@ with all of the roots distinct, i.e. $r_k \ne r_j$ when $i \ne j$.
 
 
 
-Analyzing polynomials will mean analyzing expressions like $(x-r_k)^{e_k}$, which looks a lot like a power function - a shifted power functions.
+Analyzing polynomials will mean analyzing expressions like $(x-r_k)^{e_k}$, which looks a lot like a power function - a shifted power function.
 
 Everything we said about power functions around $0$ holds for these shift power functions around $r_k$. 
 
