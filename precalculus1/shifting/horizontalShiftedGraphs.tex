@@ -22,7 +22,7 @@ $\blacktriangleright$ Graphically, shifting the domain of a function appears to 
 \begin{itemize}
 \item Let $F(x)$ be a function with its domain.
 
-\item Let $G(t)$ be a new function defined as $G(t) = F(t+d_0)$ with its induced domain.
+\item Let $G(t)$ be a new function defined as $G(t) = F(t+d_0)$ with its induced domain, where $d_0$ is a fixed constant.
 \end{itemize}
 
 
@@ -45,7 +45,7 @@ To get corresponding values of $t$ from values of $x$, subtract $d_0$.
 
 
 
-$\blacktriangleright$  The graph of $G$ is obtained from the graph of $F$ by subtracting $d_0$, which appears to be reverse of the definition, $G(t) = F(t+d_0)$.  That is because the definition tells how to get the old domain for $F$, rather than getting the new domain for $G$.
+$\blacktriangleright$  The graph of $G$ is obtained from the graph of $F$ by subtracting $d_0$ from domain values of $F$, which appears to be reverse of the definition, $G(t) = F(t+d_0)$.  That is because the definition tells how to get the old domain for $F$, rather than getting the new domain for $G$.
 
 
 
@@ -88,7 +88,7 @@ Graph of $y = T(v)$.
 
 Define a new function $W$ by $W(h)=T(h+3)$, with the implied domain.
 
-Which is the graphs below is the graph of $z=W(h)$?
+Which graph below is the graph of $z=W(h)$?
 
 
 
@@ -246,7 +246,7 @@ Let's create a new function called $T$, which is a shifted sine function.
             domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
             xtick={-6.28, -3.14, 3.14, 6.28}, 
             xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
-            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            axis lines =center,  xlabel={$t$}, ylabel=$y$,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -267,7 +267,7 @@ $\theta = t + \tfrac{\pi}{6}$   or $\theta - \tfrac{\pi}{6}= t $
 
 
 
-If we label the horizontal axes $\theta$ and $t$, then we can better compare.
+Labelling the horizontal axes $\theta$ and $t$ makes it easier to compare.
 
 \end{example}
 
@@ -412,7 +412,7 @@ Graph of $y = |x|$.
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$r$, ylabel=$y$,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -485,14 +485,14 @@ $t-2=0$ when $t=2$.  That is where the new corner sits.
 Much of graphing follows this example.  \\
 
 
-There are important points for the function's graph. You identify the position of those points.  Then, the shifted graph follows the basic shape of the original graph.
+There are important/strategic points for the function's graph. You identify the position of those points.  Then, the shifted graph follows the basic shape of the original graph.
 
 
 
 
 
 
-For example, $y = log_k(t)$ including $y = ln(t)$ has a vertical asymptote when the inside of the logarithm equals $0$. The zero, and corresponding horizontal intercept, occurs when the inside equals $1$.  
+For example, $y = log_k(t)$ [ including $y = ln(t)$ ] has a vertical asymptote when the inside of the logarithm equals $0$. The zero, and corresponding horizontal intercept, occurs when the inside equals $1$.  
 
 
 
