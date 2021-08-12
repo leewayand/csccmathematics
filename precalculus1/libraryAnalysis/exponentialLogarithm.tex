@@ -46,7 +46,7 @@ Here is the graph of $y = 2^x$.
 \end{image}
 
 
-The domain of an expoential number is all real numbers, $(-\infty, \infty)$.  When the base is greater than $1$, the the whole function increases.  The function increases unbounded while, on the other side, the horizontal axis is a horizontal asymptote.
+The domain of an expoential number is all real numbers, $(-\infty, \infty)$.  When the base is greater than $1$, then the whole function increases.  The function increases unbounded while, on the other side, the horizontal axis is a horizontal asymptote.
 
 \[  \lim_{x \to -\infty} 2^x = \answer{0}     \, \text{ and } \,  \lim_{x \to \infty} 2^x = \answer{\infty}   \]
 
@@ -88,7 +88,7 @@ Here is the graph of $y = \left(\frac{1}{3}\right)^x$.
 \end{image}
 
 
-When the base is less than $1$, the the whole function decreases.  We still have unbounded above and approaching $0$ below.
+When the base is less than $1$, then the whole function decreases.  We still have unbounded above and approaching $0$ below.
 
 \[  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = \answer{\infty}     \, \text{ and } \,  \lim_{x \to \infty} \left(\frac{1}{3}\right)^x = \answer{0}   \]
 
@@ -108,9 +108,50 @@ $\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponen
 
 
 
-\section{Shifting}
 
 
+
+
+
+\begin{example} Shifted Exponential Function
+
+
+
+Here is the graph of $y = \left(\frac{1}{3}\right)^x + 2$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{2});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-1.8:9),<->] {(0.333)^x};
+          
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The inside of the logarithm here is $5-x$ and this equals $0$ when $x=5$.  Therefore, the vertical asymptote in the graph is $x=5$.  The domain is $(-\infty, 5)$, since these are the numbers that make the inside of the logarithm formula positive.
+
+
+
+
+
+\end{example}
 
 
 
@@ -178,7 +219,7 @@ Here is the graph of $y = L(x) = log_2(x)$.
 
 
 
-The basic logarithmic function has a vertical axis where the inside of the formula equals $0$.  The domain includes only numebrs that make the inside of hte formula positive. The function increases over its domain and is unbounded.
+The basic logarithmic function has a vertical axis where the inside of the formula equals $0$.  The domain includes only numbers that make the inside of the formula positive. The function increases over its domain and is unbounded.
 
 
 
@@ -208,8 +249,9 @@ Here is the graph of $y = L(x) = log_2(5-x)$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5),<->] {ln((5-x)/ln(2)};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({5},{x});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5),<->] {ln((5-x)/ln(2)};
+          
 
            
 
