@@ -281,17 +281,145 @@ First, let's map the domain of $T$ back to the range of $g$. We need to see what
 The intersection is $(-4, 1] \cup [1, 6)$.
 
 
-Focusing on the interval endpoints (included or excluded), we get the preimages of $-4$, $-1$, $1$, and $6$ in the $g$ function.  \\
+Focusing on the interval endpoints (included or excluded) of this intersection, we need the preimages of $-4$, $-1$, $1$, and $6$ in the domain of $g$.  \\
 
 
 $g$ has two pieces. 
 
-\begin{itemize}
-\item The interval $(-4, 1]$ has a preimage on both pieces. \\
+
+
+
+
+
+
+
+
+$\blacktriangleright$ The interval $(-4, 1]$ has a preimage on both pieces. \\
 All four endpoint numbers have preimages through $g(x) = \frac{7}{4}x-8$. 
-\item The interval $[1, 6)$ has a preimage on one piece. \\
-Only $-4$ and $-1$ have preimages through $g(x) = -2x-3$.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-1.5:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-1.5,0)};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({0},{x});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({0},{x});
+          \node at (axis cs:0,-4) [rotate=90, penColor] {$($};
+            \node at (axis cs:0,-1) [rotate=90, penColor] {$]$};
+            \node at (axis cs:0,1) [rotate=90, penColor] {$[$};
+            \node at (axis cs:0,7) [rotate=90, penColor] {$)$};
+
+           \addplot [line width=1, purple, smooth,samples=10,domain=(-1:0)] ({x},{-1});
+           \addplot [line width=1, purple, smooth,samples=50,domain=(-1:0)] ({-1},{x});
+
+
+           \addplot [line width=1, green, smooth,samples=10,domain=(0:0.5)] ({x},{-4});
+           \addplot [line width=1, green, smooth,samples=50,domain=(-4:0)] ({0.5},{x});
+
+
+            %\draw[very thick, black] (axis cs:0,0) -- (axis cs:3,5.2) node [pos=.36, above, rotate=60, black] {$\theta=\pi/3$};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{itemize}
+\item $g(x) = -2x-3 = -4$
+\begin{itemize}
+\item $-2x = -1$
+\item $x = \frac{1}{2}$
 \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item $g(x) = -2x-3 = -1$
+\begin{itemize}
+\item $-2x = 2$
+\item $x = -1$
+\end{itemize}
+\end{itemize}
+
+
+We get the interval $\left[ -1, \frac{1}{2} \right)$.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-1.5:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-1.5,0)};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({0},{x});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({0},{x});
+          \node at (axis cs:0,-4) [rotate=90, penColor] {$($};
+            \node at (axis cs:0,-1) [rotate=90, penColor] {$]$};
+            \node at (axis cs:0,1) [rotate=90, penColor] {$[$};
+            \node at (axis cs:0,7) [rotate=90, penColor] {$)$};
+
+           \addplot [line width=1, purple, smooth,samples=10,domain=(0:4)] ({x},{-1});
+           \addplot [line width=1, purple, smooth,samples=50,domain=(-1:0)] ({4},{x});
+
+
+           \addplot [line width=1, green, smooth,samples=10,domain=(0:2.3)] ({x},{-4});
+           \addplot [line width=1, green, smooth,samples=50,domain=(-4:0)] ({2.3},{x});
+
+
+            %\draw[very thick, black] (axis cs:0,0) -- (axis cs:3,5.2) node [pos=.36, above, rotate=60, black] {$\theta=\pi/3$};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
 
 
 
@@ -318,6 +446,78 @@ Only $-4$ and $-1$ have preimages through $g(x) = -2x-3$.
 \end{itemize}
 \end{itemize}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ The interval $[1, 6)$ has a preimage on one piece. \\
+Only $-4$ and $-1$ have preimages through $g(x) = -2x-3$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-1.5:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-1.5,0)};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({0},{x});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({0},{x});
+          \node at (axis cs:0,-4) [rotate=90, penColor] {$($};
+            \node at (axis cs:0,-1) [rotate=90, penColor] {$]$};
+            \node at (axis cs:0,1) [rotate=90, penColor] {$[$};
+            \node at (axis cs:0,7) [rotate=90, penColor] {$)$};
+
+           \addplot [line width=1, purple, smooth,samples=10,domain=(0:5.1)] ({x},{1});
+           \addplot [line width=1, purple, smooth,samples=50,domain=(1:0)] ({5.1},{x});
+
+
+           \addplot [line width=1, green, smooth,samples=10,domain=(0:8)] ({x},{6});
+           \addplot [line width=1, green, smooth,samples=50,domain=(0:6)] ({8},{x});
+
+
+            %\draw[very thick, black] (axis cs:0,0) -- (axis cs:3,5.2) node [pos=.36, above, rotate=60, black] {$\theta=\pi/3$};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
 \begin{itemize}
 \item $g(x) = \frac{7}{4}x -8 = 1$
 \begin{itemize}
@@ -338,21 +538,7 @@ Only $-4$ and $-1$ have preimages through $g(x) = -2x-3$.
 
 
 
-\begin{itemize}
-\item $g(x) = -2x-3 = -4$
-\begin{itemize}
-\item $-2x = -1$
-\item $x = \frac{1}{2}$
-\end{itemize}
-\end{itemize}
 
-\begin{itemize}
-\item $g(x) = -2x-3 = -1$
-\begin{itemize}
-\item $-2x = 2$
-\item $x = -1$
-\end{itemize}
-\end{itemize}
 
 
 
