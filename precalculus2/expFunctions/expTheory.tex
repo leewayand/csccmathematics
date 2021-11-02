@@ -7,10 +7,543 @@
 \begin{document}
 
 \begin{abstract}
-the exp story
+the exponential story
 \end{abstract}
 \maketitle
 
+
+
+
+
+
+
+
+
+
+The formula template for the basic exponential function looks like
+
+
+
+
+\[  a \, r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  r > 0   \]
+
+
+As we have seen before, the coefficient $a$ controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values. $r$ dictates a growing or decaying function.
+
+
+
+
+We have four combinations
+
+\begin{itemize}
+\item $a>0$ and $r>1$
+\item $a>0$ and $r<1$
+\item $a<0$ and $r>1$
+\item $a<0$ and $r<1$
+\end{itemize}
+
+
+For graphs of basic exponential functions, the horizontal axis is a horizontal asymptote in one direction or the other.
+
+
+When $r > 1$ we have a growing function.
+
+\[  \lim_{x \to -\infty} a \, r^x = 0 \, \text{ and } \, \lim_{x \to \infty} a \, r^x = \pm\infty \]
+
+
+The sign of $a$ dictates if the unbounded growth is positive or negative.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a>0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a<0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {-(1.3^x)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+When $r<1$, the horizontal axis is still a horizontal asymptote, just in the other direction. The function now decays.
+
+
+\[ \lim_{x \to -\infty} a \, r^x = \pm\infty \, \text{ and } \, \lim_{x \to \infty} a \, r^x = 0 \]
+
+
+
+The sign of $a$ dictates if the function decays through positive or negative values.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a>0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9), <->] {1.3^(-x)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$a<0$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-(1.3^(-x)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+All four graphs share a common structure.
+
+
+\begin{itemize}
+\item All have the horizontal axis as an asymptote.
+\item All are a distance of $1$ from the asymptote, when the exponent equals $0$.
+\end{itemize}
+
+These are the important aspects or characteristics that we use when shifting and stretching graphs of exponential functions.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{observation} \textbf{\textcolor{blue!75!black}{Exponential Behavior}}
+
+
+Basic exponential functions, $a \cdot r^x$, are either increasing functions or decreasing functions.
+
+
+$\blacktriangleright$  Base Greater than $1$: $r > 1$
+
+
+\begin{itemize}
+\item greater positive exponents mean multiplying by the base more, which results in larger values.  
+\item greater negative exponents mean multiplying by the reciprocal of the base more, which results in smaller values.  
+\end{itemize}
+
+
+The coefficient in front, $a$, tells us if this larger/smaller value is larger positively or negatively.
+
+
+\begin{itemize}
+\item $a > 0$ and $r > 1$ : increasing function
+\item $a < 0$ and $r > 1$ : decreasing function  
+\end{itemize}
+
+
+
+
+
+
+$\blacktriangleright$  Base Less than $1$: $r < 1$
+
+
+\begin{itemize} 
+\item greater positive exponents mean multiplying by the base more, which results in smaller values.  
+\item greater negative exponents mean multiplying by the reciprocal of the base more, which results in larger values.  
+\end{itemize}
+
+
+The coefficient in front, $a$, tells us if this larger/smaller value is larger positively or negatively.
+
+
+\begin{itemize}
+\item $a > 0$ and $r < 1$ : decreasing function
+\item $a < 0$ and $r < 1$ : increasing function  
+\end{itemize}
+
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Exponential Function
+
+
+
+Analyze   $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ \\
+
+
+\begin{explanation}
+
+For the basic exponential function graph, the horizontal axis is the horizontal asymptote.  Here, this has been moved down $7$.
+
+
+
+The "inside", representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, since the base is $2 > 1$, this is the direction of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the coefficient, $\frac{1}{3} > 0$, the unbounded growth is positive.
+
+At $x=-5$, we have our one anchor point for the graph.  The point is $\left(-5, \frac{1}{3} - 7 \right)$, which is $\frac{1}{3}$ above the horizontal asymptote, $y = -7$.
+
+
+Graph of $y = f(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
+
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
+
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Our graphical agrees with our analysis.
+
+\begin{itemize}
+\item The natural or implied domain of $f$ is $\mathbb{R}$.
+\item $f$ is always increasing.
+\item $f$ has no maximums or minimums.
+\item $\lim\limits_{x \to -\infty} f(x) = -7$
+\item $\lim\limits_{x \to \infty} f(x) = \infty$
+\end{itemize}
+
+
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Exponential Function
+
+
+
+Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
+
+
+\begin{explanation}
+
+
+
+$\blacktriangleright$  First, observe that $\frac{2}{3} < \answer{1}$.
+
+\begin{model}
+
+This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t}$.  
+
+
+
+When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and $B(t)$ is becoming smaller, approaching $0$.  
+
+
+
+
+
+\[ \lim\limits_{t \to -\infty} B(t) = 0 \]
+
+
+
+When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative}$ and $B(t)$ is becoming larger.  
+
+
+
+\[ \lim\limits_{t \to \infty} B(t) = \infty \]
+
+
+
+
+
+
+
+
+\end{model}
+
+
+Since $a = -2 < 0$ these smaller/larger values of $B(t)$ are smaller/larger negative values.
+
+
+
+We also have two shifts:
+
+
+$\blacktriangleright$ Horizontal Shift
+
+The model's exponent is $-t$.  Our exponent is $3 - t = -t + 3$.  In the model, the function has a value of $1$ when the exponent equals $0$.
+
+
+
+
+$3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away from the horizontal asymptote, which is now $y=4$.
+
+
+
+
+$\blacktriangleright$ Vertical Shift
+
+Adding $4$ to the outside shifts the graph vertically up $4$.  The asymptote is $y = 4$ and 
+
+\[ \lim\limits_{t \to -\infty} B(t) = 4 \]
+
+
+
+
+
+Graph of $y = B(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
+
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {4};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Our graphical analysis tells us that 
+
+\begin{itemize}
+\item The natural or implied domain of $B$ is $\mathbb{R}$.
+\item $B$ is always decreasing.
+\item $B$ has no maximums or minimums.
+\item $\lim\limits_{t \to -\infty} B(t) = 4$
+\item $\lim\limits_{t \to \infty} B(t) = -\infty$
+\end{itemize}
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Exponential Function
+
+
+
+Analyze   $K(f) = 3^{5-f} - 5$ \\
+
+
+\begin{question}. 
+
+The exponent gets big and positive when $f$ gets big and \wordChoice{\choice{positive}\choice[correct]{negative}}.
+\end{question}
+\begin{question}. 
+
+The graph will grow to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+\end{question}
+\begin{question}. 
+
+The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
+\end{question}
+\begin{question}. 
+
+Our one anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
+\end{question}
+\begin{question}. 
+
+The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.\\
+\end{question}
+
+
+
+
+Graph of $y = K(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
+
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-5};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Our graphical analysis tells us that
+
+\begin{itemize}
+\item The natural or implied domain of $K$ is $\mathbb{R}$.
+\item $K$ is always decreasing.
+\item $K$ has no maximums or minimums.
+\item $\lim\limits_{f \to -\infty} K(f) = \infty$
+\item $\lim\limits_{f \to \infty} K(f) = -5$
+\end{itemize}
+
+
+\end{example}
 
 
 
