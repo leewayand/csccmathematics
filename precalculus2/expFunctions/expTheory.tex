@@ -20,20 +20,20 @@ the exponential story
 
 
 
-The formula template for the basic exponential function looks like
+The template for the formula of the basic exponential function looks like
 
 
 
 
-\[  a \, r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  r > 0   \]
+\[  a \, r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  a \ne 0, \, r > 0   \]
 
 
-As we have seen before, the coefficient $a$ controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values. $r$ dictates a growing or decaying function.
+As we have seen before, graphically, the coefficient $a$ controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values, which can be seen graphically as vertical reflection. $r$ dictates a growing or decaying function.
 
 
 
 
-We have four combinations
+We have four combinations of our coefficient and base parameters.
 
 \begin{itemize}
 \item $a>0$ and $r>1$
@@ -43,7 +43,9 @@ We have four combinations
 \end{itemize}
 
 
-For graphs of basic exponential functions, the horizontal axis is a horizontal asymptote in one direction or the other.
+Graphs of the basic exponential functions have the horizontal axis is a horizontal asymptote in one direction or the other.
+
+\begin{explanation}
 
 
 When $r > 1$ we have a growing function.
@@ -66,13 +68,11 @@ The sign of $a$ dictates if the unbounded growth is positive or negative.
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
           \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
-          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
 
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
            
 
   \end{axis}
@@ -84,13 +84,11 @@ The sign of $a$ dictates if the unbounded growth is positive or negative.
             axis on top
           ]
           
-        \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {-(1.3^x)};
-        \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
-          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {-(1.3^x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+
            
 
   \end{axis}
@@ -98,8 +96,15 @@ The sign of $a$ dictates if the unbounded growth is positive or negative.
 \end{image}
 
 
+Graphs of exponential functions have one strategic point, whcih occurs when the exponent equals zero. For the basic exponential function, this point is $(0, a)$.
+
+\end{explanation}
 
 
+
+
+
+\begin{explanation}
 
 
 
@@ -124,12 +129,10 @@ The sign of $a$ dictates if the function decays through positive or negative val
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9), <->] {1.3^(-x)};
-          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
-          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9), <->] {1.3^(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
            
 
   \end{axis}
@@ -141,13 +144,10 @@ The sign of $a$ dictates if the function decays through positive or negative val
             axis on top
           ]
           
-        \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-(1.3^(-x)};
-        \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
-          %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
-          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-(1.3^(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
            
 
   \end{axis}
@@ -155,12 +155,24 @@ The sign of $a$ dictates if the function decays through positive or negative val
 \end{image}
 
 
-All four graphs share a common structure.
+
+Graphs of exponential functions have one strategic point, whcih occurs when the exponent equals zero. For the basic exponential function, this point is $(0, a)$.
+
+
+
+\end{explanation}
+
+
+
+
+
+
+All four basic exponential graphs share a common structure.
 
 
 \begin{itemize}
 \item All have the horizontal axis as an asymptote.
-\item All are a distance of $1$ from the asymptote, when the exponent equals $0$.
+\item All are a distance of $a$ from the asymptote, when the exponent equals $0$.
 \end{itemize}
 
 These are the important aspects or characteristics that we use when shifting and stretching graphs of exponential functions.
@@ -182,7 +194,7 @@ These are the important aspects or characteristics that we use when shifting and
 Basic exponential functions, $a \cdot r^x$, are either increasing functions or decreasing functions.
 
 
-$\blacktriangleright$  Base Greater than $1$: $r > 1$
+$\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Greater than $1$: $r > 1$}} 
 
 
 \begin{itemize}
@@ -195,8 +207,8 @@ The coefficient in front, $a$, tells us if this larger/smaller value is larger p
 
 
 \begin{itemize}
-\item $a > 0$ and $r > 1$ : increasing function
-\item $a < 0$ and $r > 1$ : decreasing function  
+\item $a > 0$ and $r > 1$ : increasing (positive) function
+\item $a < 0$ and $r > 1$ : decreasing (negative) function  
 \end{itemize}
 
 
@@ -204,7 +216,7 @@ The coefficient in front, $a$, tells us if this larger/smaller value is larger p
 
 
 
-$\blacktriangleright$  Base Less than $1$: $r < 1$
+$\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Less than $1$: $r < 1$}}  
 
 
 \begin{itemize} 
@@ -217,8 +229,8 @@ The coefficient in front, $a$, tells us if this larger/smaller value is larger p
 
 
 \begin{itemize}
-\item $a > 0$ and $r < 1$ : decreasing function
-\item $a < 0$ and $r < 1$ : increasing function  
+\item $a > 0$ and $r < 1$ : decreasing (positive) function
+\item $a < 0$ and $r < 1$ : increasing (negative) function  
 \end{itemize}
 
 
@@ -228,6 +240,14 @@ The coefficient in front, $a$, tells us if this larger/smaller value is larger p
 
 
 
+As we see, exponential functions can be
+
+\begin{itemize}
+\item positive and increasing
+\item positive and decreasing
+\item negative and increasing
+\item negative and decreasing
+\end{itemize}
 
 
 
@@ -236,12 +256,16 @@ The coefficient in front, $a$, tells us if this larger/smaller value is larger p
 
 
 
+\subsection{General Exponential Functions}
+
+
+General exponential functions are shifts of basic exponential functions.  They maintain the same general characteristics and features as basic exponential functions, just in different locations.
 
 
 
 
 
-\begin{example}  Exponential Function
+\begin{example}  General Exponential Function
 
 
 
@@ -308,8 +332,17 @@ Our graphical agrees with our analysis.
 \end{example}
 
 
+The shape of the graph looks like that of the basic exponential graph. \\
 
 
+\begin{itemize}
+\item The horizontal asymptote moved.
+\item The strategic point moved.
+\end{itemize}
+
+
+
+$\blacktriangleright$ \textbf{What happened to stretching?}
 
 
 
