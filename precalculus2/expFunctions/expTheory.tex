@@ -366,7 +366,7 @@ Exponential functions swallow up stretching and compressing in the leading coeff
 \item If we multiply on the outside, by $b$, for a vertical stretch, then we have
 
 \[
-b \dot (a \dot r^x) = (a \dot b) r^x
+b \cdot (a \cdot r^x) = (a \cdot b) r^x
 \]
 
 We obtain a new leading coefficient, which tells us about the growth of the function. \\
@@ -379,7 +379,7 @@ We obtain a new leading coefficient, which tells us about the growth of the func
 \item If we multiply on the inside, by $b$, for a horizontal stretch, then our exponential rules give us
 
 \[
-a \dot r^{b \dot x} = a \dot e^b \dot r^x = (a \dot e^b) \dot r^x
+a \cdot r^{b \cdot x} = a \cdot e^b \cdot r^x = (a \cdot e^b) \cdot r^x
 \]
 
 We obtain a new leading coefficient, which tells us about the growth of the function.
@@ -437,7 +437,7 @@ When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative}$ 
 
 
 
-
+Exponential growth to the right and decay to the left.
 
 
 
@@ -451,23 +451,29 @@ Since $a = -2 < 0$ these smaller/larger values of $B(t)$ are smaller/larger nega
 We also have two shifts:
 
 
-$\blacktriangleright$ Horizontal Shift
-
-The model's exponent is $-t$.  Our exponent is $3 - t = -t + 3$.  In the model, the function has a value of $1$ when the exponent equals $0$.
 
 
+$\blacktriangleright$ \textbf{Vertical Shift}
 
-
-$3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away from the horizontal asymptote, which is now $y=4$.
-
-
-
-
-$\blacktriangleright$ Vertical Shift
 
 Adding $4$ to the outside shifts the graph vertically up $4$.  The asymptote is $y = 4$ and 
 
 \[ \lim\limits_{t \to -\infty} B(t) = 4 \]
+
+
+
+$\blacktriangleright$ \textbf{Horizontal Shift}
+
+
+The basic model's exponent is $-t$.  Our exponent is $3 - t = -t + 3$.  In the model, the model function has a value of $1$ when the exponent equals $0$.
+
+
+
+
+Our function's exponent is zero, $3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away(below) from the horizontal asymptote, which is now $y=4$.  Our anchor point is $(3, 2)$.
+
+
+
 
 
 
@@ -488,11 +494,13 @@ Graph of $y = B(t)$.
             axis on top
           ]
           
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
-
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
-
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {4};
+
+      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
+
+      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
+
+          
 
 
   \end{axis}
@@ -502,7 +510,7 @@ Graph of $y = B(t)$.
 
 
 
-Our graphical analysis tells us that 
+Our analysis tells us that 
 
 \begin{itemize}
 \item The natural or implied domain of $B$ is $\mathbb{R}$.
@@ -537,7 +545,7 @@ Our graphical analysis tells us that
 
 
 
-\begin{example}  Exponential Function
+\begin{example}  General Exponential Function
 
 
 
@@ -558,7 +566,7 @@ The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}
 \end{question}
 \begin{question}. 
 
-Our one anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
+Our one strategic anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
 \end{question}
 \begin{question}. 
 
@@ -583,15 +591,13 @@ Graph of $y = K(f)$.
             axis on top
           ]
           
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
-
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
-
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-5};
 
+      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
 
+      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
 
-           
+ 
 
   \end{axis}
 \end{tikzpicture}
@@ -601,7 +607,7 @@ Graph of $y = K(f)$.
 
 
 
-Our graphical analysis tells us that
+Our analysis tells us that
 
 \begin{itemize}
 \item The natural or implied domain of $K$ is $\mathbb{R}$.
