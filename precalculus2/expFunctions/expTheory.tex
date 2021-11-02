@@ -298,11 +298,13 @@ Graph of $y = f(x)$.
             axis on top
           ]
           
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
-
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
-
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
+
+      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+
+      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
+
+          
 
 
  
@@ -314,7 +316,7 @@ Graph of $y = f(x)$.
 
 
 
-Our graphical agrees with our analysis.
+Our graph agrees with our analysis.
 
 \begin{itemize}
 \item The natural or implied domain of $f$ is $\mathbb{R}$.
@@ -342,9 +344,48 @@ The shape of the graph looks like that of the basic exponential graph. \\
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 $\blacktriangleright$ \textbf{What happened to stretching?}
 
 
+Exponential functions swallow up stretching and compressing in the leading coefficient.
+
+
+\begin{itemize}
+\item If we multiply on the outside, by $b$, for a vertical stretch, then we have
+
+\[
+b \dot (a \dot r^x) = (a \dot b) r^x
+\]
+
+We obtain a new leading coefficient, which tells us about the growth of the function. \\
+
+
+
+
+
+
+\item If we multiply on the inside, by $b$, for a horizontal stretch, then our exponential rules give us
+
+\[
+a \dot r^{b \dot x} = a \dot e^b \dot r^x = (a \dot e^b) \dot r^x
+\]
+
+We obtain a new leading coefficient, which tells us about the growth of the function.
+
+
+\end{itemize}
 
 
 
@@ -358,12 +399,7 @@ $\blacktriangleright$ \textbf{What happened to stretching?}
 
 
 
-
-
-
-
-
-\begin{example}  Exponential Function
+\begin{example}  General Exponential Function
 
 
 
