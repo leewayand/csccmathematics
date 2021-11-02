@@ -27,6 +27,646 @@ the log story
 
 
 
+An example of a basic exponential function is $E(t) = 2^t$.  
+
+Its graph looks like
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+We can evalute this function:
+\begin{itemize}
+\item $E(0) = 2^0 = 2$
+\item $E\left(\frac{1}{2}\right) = 2^{\tfrac{1}{2}} = \sqrt{2}$
+\item $E(-1) = 2^{-1} = \frac{1}{2}$
+\end{itemize}
+
+
+When we evaluate a function, we know the domain number and we seek its range partner. In this case, we know $d$ and we seek the pair $(d, 2^d)$, where $2^d$ is the value of the function at $d$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Reverse}
+
+We can also think in reverse.
+\begin{itemize}
+\item $E(t) = 4$
+\item $E(t) = {\tfrac{1}{4}} $
+\item $E(t) = 16 $
+\end{itemize}
+
+
+Here, we know the value of the function.  We seek the domain numbers paired with it. We know $2^d$, we seek the pair $(d, 2^d)$, where $d$ is the solution to the equation.
+
+
+
+
+$\bigstar$ For $E(t) = 2^t$, as long as we give a positive function value, then we can find the associated domain number. \\ 
+
+
+
+$\bigstar$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. That is eeriely backwards of the function rule for pairs in the exponential function.\\ 
+
+
+
+
+Thinking of an exponential function in reverse sounds like a new function. We call it a \textbf{logarithmic function}.
+
+
+
+
+
+
+\[
+\begin{array}{lcl}
+Exponential Function  &     &  Logarithmic Function  \\
+domain = (-\infty, \infty)  &  \searrow  &  domain = (0, \infty)  \\
+range = (0, \infty)  &  \nearrow  &  range = (-\infty, \infty)  \\
+(a, r^a)    &  \longrightarrow  &   (r^a, a)
+\end{array}
+\]
+
+
+The logarithm function just reverses the pairs in the exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
+
+
+Therefore, the domains and ranges switch. \\
+
+
+
+
+
+
+\subsection{Logarithm}
+
+However, it seems weird to write $(2^a, a)$, even though it is perfecftly correct.  
+
+Instead, we are used to writing the domain number by a letter, $b$, and then the function value as a formula involving $b$.
+
+We woud prefer our pairs in the logarithm function to look like 
+
+\[ (b, expression)  \]
+
+
+
+
+
+
+
+Logarithmic functions come from the study of \textbf{logarithms}, which gets shortened to \textbf{log} for notation purposes.  \\
+
+
+
+In our example here, we are working with the base $2$ exponential, $E(t) = 2^t$. So, the reverse is called \textbf{the logarithm base $2$}.  We tack on a subscript $2$.
+
+
+
+\[   log_2(b)     \]
+
+
+That pairs and points on the graph look like 
+
+
+\[
+(b, log_2(b))
+\]
+
+
+$log_2(b)$ is just the exponent that $2$ needs to equal $b$.
+
+
+
+
+
+$\blacktriangleright$ \textbf{Remember:} These are the reverse of the exponential pairs : $(a, 2^a)$.  $(b, log_2(b))$ is also $(2^c, c)$ for some $c$. \\
+
+$\blacktriangleright$  $log_2(b)$ is the $a$, so that $2^a = b$ \\
+
+
+$\blacktriangleright$  $log_2(b)$ is the number that you raise $2$ to, to get $b$.  \\
+
+\[   2^{log_2(b)} = b     \]
+
+We have a logarithmic function for every exponential function.  They are designated by their bases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm base $B$ : $log_B(A)$}}
+
+
+$log_B(A)$ is the number you raise $B$ to, to get $A$. \\
+
+$A \in 0, \infty)$. \\
+
+$log_B(A) \in (-\infty, \infty)$.
+
+
+\end{definition}
+
+
+
+
+
+
+Since all of the pairs are reversed, the graphs switch axes.
+
+
+
+The horizontal axis is an asymptote for the basic exponential function. Now, the vertical axis is an asymptote for the basic logarithmic function.
+
+
+The graph of a basic exponential function has $(0,1)$ as an intercept.  The graph of a basic logarithmix function has $(1,0)$ as an intercept. 
+
+
+Their graphs are mirror images of each other across the diagonal through the I and III quandrants.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+      		\addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
+
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+      		\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+
+      		\node[penColor] at (axis cs:1,8) {$2^x$};
+      		\node[penColor2] at (axis cs:7,1) {$log_2(x)$};
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+From this basic logarithmic function and its graph we can analyze and transform.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Logarithmic Function
+
+
+
+Analyze   $M(t) = log_2(t+3) - 4$ \\
+
+
+\begin{explanation}
+
+$\blacktriangleright$ The inside of the logarithm is $t+3$ and this equals $0$ when $t=-3$.  This has to be the vertical asymptote.
+
+$\blacktriangleright$ The inside of the logarithm is $t+3$, and this is positive for $t>-3$.  The graph must move to the right.
+
+$\blacktriangleright$ The leading coefficient is $1$, which is positive.  Therefore, the graph hugs the asymptote down the asymptote. 
+
+$\blacktriangleright$ $t+3=1$ when $t=-2$. Therefore, the anchor point $(1,0)$ has moved to $t = -2$.  $M(-2) = -4$.  This gives us the point $(-2, -4)$.
+
+
+
+
+
+Graph of $y = M(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
+
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Our analysis tells us that:
+
+\begin{itemize}
+\item The implied domain of $M$ is $(-3,\infty)$.
+\item The implied range of $M$ is $\mathbb{R}$.
+\item $M$ is always increasing.
+\item $M$ has no maximums or minimums.
+\item $\lim\limits_{t \to -3^+} M(t) = -\infty$
+\item $\lim\limits_{t \to \infty} M(t) = \infty$
+\end{itemize}
+
+
+
+
+We can also see that the graph will have a horizontal intercept, which means the function has a zero. \\
+
+
+$M(t) = log_2(t+3) - 4 = 0$ \\
+
+
+\begin{align*}
+log_2(t+3) - 4 & = 0 \\
+log_2(t+3) & = 4 \\
+2^{log_2(t+3)} & = 2^4 \\
+t+3 & = 16 \\
+t & = 13
+\end{align*}
+
+
+$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$. $t+3$ must be $16$.
+
+
+
+
+
+
+
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+$M(t)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.
+
+
+We can obtain the formula for this partner exponential function by solving the logarithmic formula for $t$.
+
+
+
+
+
+\begin{align*}
+log_2(t+3) - 4 & = M \\
+log_2(t+3) & = M + 4 \\
+2^{log_2(t+3)} & = 2^{M+4} \\
+t+3 & = 2^{M+4} \\
+t & = 2^{M+4} - 3
+\end{align*}
+
+
+$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = M+4$.  Therefore, $M+4$ is the thing that you raise $2$ to, to get $t+3$
+
+
+
+
+
+Here is the graph of both the logarithmic and the associated exponential functions.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
+
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-3});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(-4,-2)};
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Logarithmic Function
+
+
+\begin{explanation}
+
+Analyze   $K(x) = -2 \,log_3(4-x)$ \\
+
+
+$\blacktriangleright$ The inside of the logarithm is $4-x$ and this equals $0$ when $x=4$.  $x=4$ has to be the vertical asymptote.
+
+$\blacktriangleright$ The inside of the logarithm is $4-t$, and this is positive for $t<4$.  The graph must move to the right.
+
+$\blacktriangleright$ The leading coefficient is $-2$, which is negative.  Therefore, the graph is flipped vertically from the basic graph. It goes up the asymptote. 
+
+$\blacktriangleright$ $4-x=1$ when $x=3$. Therefore, the anchor point $(1,0)$ has moved to $(3, 0)$.
+
+
+
+
+
+Graph of $y = K(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+\begin{itemize}
+\item The natural or implied domain of $K$ is $(-\infty, 4)$.
+\item The implied range of $K$ is $\mathbb{R}$.
+\item $K$ is always increasing.
+\item $K$ has no maximums or minimums.
+\item $\lim\limits_{x \to 4^-} K(x) = \infty$
+\item $\lim\limits_{x \to -\infty} K(x) = -\infty$
+\end{itemize}
+
+
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+Reversing all of the pairs will give the associated exponential function.  \\
+
+
+
+$K(x)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $K$ look like $(x, K)$. The pairs for the exponential function would look like $(K, x)$.  The roles of $K$ and $x$ would be switched. $K$ would be the variable in the exponential formula. $x$ would be the exponential function value.
+
+
+We can obtain the formula for this partner exponential function by solving the logarithmic formula for $x$.
+
+
+
+
+
+\begin{align*}
+-2 \,log_3(4-x) & = M \\
+log_3(4-x) & = -\frac{M}{2} \\
+3^{log_3(4-x)} & = 3^{-\frac{M}{2}} \\
+4 - x & = 3^{-\frac{M}{2}} \\
+4 - 3^{-\frac{M}{2}} & = x \\
+\end{align*}
+
+
+
+
+$\blacktriangleright$ \textbf{Remember:} $log_3(4-x)$ is the thing that you raise $3$ to, to get $4-x$ and $log_3(4-x) = - \frac{M}{2}$.  Therefore, $- \frac{M}{2}$ is the thing that you raise $3$ to, to get $4-x$
+
+
+
+
+
+Here is the graph of both the logarithmic and the associated exponential functions.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
+
+
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-4.627:9),<->] {4-3^(-x/2)};
+
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{4});
+
+			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(0,3)};
+
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
