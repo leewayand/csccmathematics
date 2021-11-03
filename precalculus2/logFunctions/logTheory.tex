@@ -50,11 +50,13 @@ Its graph looks like
             axis on top
           ]
           
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
       		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
 
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
 
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+          
 
 
   \end{axis}
@@ -103,17 +105,22 @@ Here, we know the value of the function.  We seek the domain numbers paired with
 
 
 
-$\bigstar$ For $E(t) = 2^t$, as long as we give a positive function value, then we can find the associated domain number. \\ 
+$\bigstar$ Since $E(t) = 2^t > 0$ for any $t$, thinking backwards only works if we provide positive function values. $2^t$ cannot equal a negative value. \\ 
 
 
 
-$\bigstar$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. That is eeriely backwards of the function rule for pairs in the exponential function.\\ 
+$\bigstar$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. (That is eeriely similar to the function rule for pairs in the exponential function.) \\ 
 
 
 
 
-Thinking of an exponential function in reverse sounds like a new function. We call it a \textbf{logarithmic function}.
+Thinking of an exponential function in reverse sounds like a new function. We call it a \textbf{logarithmic function}. \\
 
+
+\begin{itemize}
+\item In reverse, the range of an exponential function becomes the domain of a logarithmic function.
+\item In reverse, the domain of an exponential function becomes the range of a logarithmic function.
+\end{itemize}
 
 
 
@@ -122,9 +129,9 @@ Thinking of an exponential function in reverse sounds like a new function. We ca
 \[
 \begin{array}{lcl}
 Exponential Function  &     &  Logarithmic Function  \\
-domain = (-\infty, \infty)  &  \searrow  &  domain = (0, \infty)  \\
-range = (0, \infty)  &  \nearrow  &  range = (-\infty, \infty)  \\
-(a, r^a)    &  \longrightarrow  &   (r^a, a)
+domain = (-\infty, \infty)  &  \   &  domain = (0, \infty)  \\
+range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
+(a, r^a)    &    &   (r^a, a)
 \end{array}
 \]
 
@@ -141,9 +148,9 @@ Therefore, the domains and ranges switch. \\
 
 \subsection{Logarithm}
 
-However, it seems weird to write $(2^a, a)$, even though it is perfecftly correct.  
+It seems weird to write $(2^a, a)$, even though it is perfectly correct.  
 
-Instead, we are used to writing the domain number by a letter, $b$, and then the function value as a formula involving $b$.
+Instead, we are used to writing the domain number by a letter, like $b$, and then the function value as a formula involving $b$. That's what we are used.
 
 We woud prefer our pairs in the logarithm function to look like 
 
@@ -155,18 +162,18 @@ We woud prefer our pairs in the logarithm function to look like
 
 
 
-Logarithmic functions come from the study of \textbf{logarithms}, which gets shortened to \textbf{log} for notation purposes.  \\
+Logarithmic functions come from the study of \textbf{logarithms}, which is the study of the exponents, just like we are talking about. This gets shortened to \textbf{log} for notation purposes.  \\
 
 
 
-In our example here, we are working with the base $2$ exponential, $E(t) = 2^t$. So, the reverse is called \textbf{the logarithm base $2$}.  We tack on a subscript $2$.
+In our example here, we are working with the base $2$ exponential function, $E(t) = 2^t$. So, the reverse is called \textbf{the logarithm base $2$}.  We tack on a subscript $2$ to the log to remind us of the base.
 
 
 
 \[   log_2(b)     \]
 
 
-That pairs and points on the graph look like 
+With this new symbol, we can describe pairs in the function and points on the graph like 
 
 
 \[
@@ -182,7 +189,7 @@ $log_2(b)$ is just the exponent that $2$ needs to equal $b$.
 
 $\blacktriangleright$ \textbf{Remember:} These are the reverse of the exponential pairs : $(a, 2^a)$.  $(b, log_2(b))$ is also $(2^c, c)$ for some $c$. \\
 
-$\blacktriangleright$  $log_2(b)$ is the $a$, so that $2^a = b$ \\
+$\blacktriangleright$  $log_2(b)$ is the exponent, so that $2^a = b$ \\
 
 
 $\blacktriangleright$  $log_2(b)$ is the number that you raise $2$ to, to get $b$.  \\
@@ -206,12 +213,12 @@ We have a logarithmic function for every exponential function.  They are designa
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm base $B$ : $log_B(A)$}}
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm base $A$ : $log_A(B)$}}
 
 
-$log_B(A)$ is the number you raise $B$ to, to get $A$. \\
+$log_A(B)$ is the number you raise $A$ to, to get $B$. \\
 
-$A \in 0, \infty)$. \\
+$B \in (0, \infty)$. \\
 
 $log_B(A) \in (-\infty, \infty)$.
 
@@ -257,18 +264,20 @@ Their graphs are mirror images of each other across the diagonal through the I a
             axis on top
           ]
           
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
-      		\addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
-
           	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
           	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
           	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+      		\addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
+
+          	
+
 
       		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
-      		\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+      		\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};
 
-      		\node[penColor] at (axis cs:1,8) {$2^x$};
+      		\node[penColor] at (axis cs:1.5,8) {$2^x$};
       		\node[penColor2] at (axis cs:7,1) {$log_2(x)$};
 
 
@@ -337,21 +346,13 @@ Graph of $y = M(t)$.
             axis on top
           ]
           
-
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
-
 			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
-            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
 
 
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
 
 
-
-
-
-
-           
 
   \end{axis}
 \end{tikzpicture}
@@ -363,9 +364,9 @@ Graph of $y = M(t)$.
 Our analysis tells us that:
 
 \begin{itemize}
-\item The implied domain of $M$ is $(-3,\infty)$.
+\item The implied domain of $M$ is $\left( \answer{-3} ,\infty \right)$.
 \item The implied range of $M$ is $\mathbb{R}$.
-\item $M$ is always increasing.
+\item $M$ is always \wordChoice{\choice[correct]{increasing} \choice{decreasing}} .
 \item $M$ has no maximums or minimums.
 \item $\lim\limits_{t \to -3^+} M(t) = -\infty$
 \item $\lim\limits_{t \to \infty} M(t) = \infty$
@@ -383,7 +384,7 @@ $M(t) = log_2(t+3) - 4 = 0$ \\
 \begin{align*}
 log_2(t+3) - 4 & = 0 \\
 log_2(t+3) & = 4 \\
-2^{log_2(t+3)} & = 2^4 \\
+2^{log_2(t+3)} & = \answer{2^4} \\
 t+3 & = 16 \\
 t & = 13
 \end{align*}
@@ -405,10 +406,13 @@ $\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you rais
 
 
 
-$M(t)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.
+$M(t)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.\\
 
 
-We can obtain the formula for this partner exponential function by solving the logarithmic formula for $t$.
+$M = log_2(t+3) - 4$ is an equation describing the exponential function $t(M)$.  We just are used to having the function name by itself on one side of the equal sign. \\
+
+
+We can obtain such a formula for this partner exponential function by solving the logarithmic formula for $t$.
 
 
 
@@ -448,17 +452,16 @@ Here is the graph of both the logarithmic and the associated exponential functio
             axis on top
           ]
           
-
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
-			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
-
 			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
             \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-3});
             \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
+
 
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
-			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(-4,-2)};
+			\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-4,-2)};
 
 
 
@@ -587,7 +590,7 @@ Reversing all of the pairs will give the associated exponential function.  \\
 $K(x)$ is a logarithmic function, so it must have a partner exponential function.  The pairs for $K$ look like $(x, K)$. The pairs for the exponential function would look like $(K, x)$.  The roles of $K$ and $x$ would be switched. $K$ would be the variable in the exponential formula. $x$ would be the exponential function value.
 
 
-We can obtain the formula for this partner exponential function by solving the logarithmic formula for $x$.
+We can obtain a nice formula for this partner exponential function by solving the logarithmic formula for $x$.
 
 
 
@@ -629,22 +632,18 @@ Here is the graph of both the logarithmic and the associated exponential functio
             axis on top
           ]
           
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{4});
+          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
 
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
 
-
 			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-4.627:9),<->] {4-3^(-x/2)};
 
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{4});
-
-			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(0,3)};
-
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
-
-
+			\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0,3)};
 
            
 
