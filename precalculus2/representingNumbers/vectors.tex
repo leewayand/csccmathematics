@@ -16,27 +16,29 @@ algebraic geometry
 
 
 
+Since our real line is full and we still need some new numbers, we are attempting to juggle two copies of the real numbers. Visually, we are organizing the two copies as two number lines drawn at right angles to each other.  This is reminding us of the Cartesian plane.  Therefore, we are using our ideas of the Cartesian plane to help us think about a new number system.  
+
+In the Cartesian plane, the two axis give rise to a 2-dimensional plane full of points.  We are adopting the same idea for our new number system.  It will be full of 2-dimensional numbers.
 
 
+We are in the process of inventing an arithmetic for our 2-dimensional numbers.  We began by adopting the arrow explanations of addition and subtraction that we used on the traditional number line. The arrows are now 2-dimensional arrows called \textbf{vectors}, but they follow the same rules as before.
 
-We are in the process of inventing an arithmetic for 2-dimensional numbers.  We began by adopting the arrow explanations of additional subtraction use one the traditional number line. The arrows are now 2-dimensional arrows, but they follow the same rules as before.
-
-The next step is to invent some symbols for the arrows, so that we can think algebraically about the 2-dimensional numbers.
+The next step is to invent some algebraic symbols for the vectors, so that we can think algebraically about the 2-dimensional numbers.
 
 
-$\blacktriangleright$ We have parentheses for describing points, dots, or locations on the plane: $(2, 3)$.
+$\blacktriangleright$ We alreaady use parentheses for describing points, dots, or locations on the plane: $(2, 3)$.
 
 
 $\blacktriangleright$ We will use triangular brackets to describe vectors: $\langle 2, 3 \rangle$.  Rather than a postion, vectors describe a movement - just like the arrows represented in addition on the traditional number line. Vectors have a length or size and a direction.  Many arrows may represent the same vector.
 
 
-The nmbers inside the parenthese for a point are called \textbf{coordinates}.
+The numbers inside the parenthese for a point are called \textbf{coordinates}.
 
 The numbers inside the triangular brackets for vectors are called \textbf{components}.
 
 
 
-The geometry of the arrows has alreayd suggested the algebraic procedures.
+The geometry of the arrows has already suggested the algebraic procedures.
 
 
 \begin{example}
@@ -85,9 +87,9 @@ Addition and subtraction of vectors will be carried out component-wise.
 
 
 
-\begin{definition} 
+\begin{definition}  \textbf{\textcolor{green!50!black}{Vector Arithmetic}}  \\
 
-Vector Arithmetic
+
 
 
 \[     \langle A, B \rangle + \langle C, D \rangle = \langle A+C, B+D \rangle       \]
@@ -107,7 +109,7 @@ Vector Arithmetic
 
 
 
-We also have the idea of stretching or compressing a vector in the same direction.
+We also have the idea of stretching or compressing a vector in the same direction.  That is multiplying a vector by a real number.
 
 
 
@@ -141,12 +143,12 @@ We also have the idea of stretching or compressing a vector in the same directio
 
 
 
-\begin{definition} 
-
-Scalar Multiplication
+\begin{definition}  \textbf{\textcolor{green!50!black}{Scalar Multiplication}}  \\
 
 
-\[    k \langle A, B \rangle  = \langle k A, k B \rangle       \]
+
+
+\[    k \langle A, B \rangle  = \langle k A, k B \rangle   \text{ where }  k \in \mathbb{R}   \]
 
 
 
@@ -161,7 +163,7 @@ Scalar Multiplication
 
 
 
-We haven't lost our 1-dimensional real numbers. They have just been embedded inside out new algebraic plane.  We can view the horizontal axis as the traditional number line.
+We haven't lost our 1-dimensional real numbers. Now, they are just embedded inside our new algebraic plane.  We can view the horizontal axis as the traditional number line.
 
 Each real number $r$ is now either represented by the point $(r,0)$ or by the horizontal vector, $\langle r, 0 \rangle$.  All of our operations are duplicated with these new representations along the horizontal axis.
 
@@ -191,14 +193,18 @@ Each real number $r$ is now either represented by the point $(r,0)$ or by the ho
 
 We have definitions for addition and subtraction of vectors.  Next up is multiplication, which is not so straightforward.  Therefore, let's just think about what we want from multiplication and then try to make that happen.
 
-$\blacktriangleright$ Remember $1$ has been encoded into vectors as $\langle 1, 0 \rangle$.  We would like $\langle 1, 0 \rangle$ to act like a multiplicative unit.
+$\blacktriangleright$ Remember, $1$ has been encoded into vectors as $\langle 1, 0 \rangle$.  We would like $\langle 1, 0 \rangle$ to act like a multiplicative unit.
 
 \[    \langle a, b \rangle \cdot \langle 1, 0 \rangle    = \langle a, b \rangle            \]
 
 
-For instance, we would like $\langle a, b \rangle \cdot \langle 1, 0 \rangle    = \langle a, b \rangle $.
+As an example, we would like $\langle 0, 1 \rangle \cdot \langle 1, 0 \rangle    = \langle 0, 1 \rangle $.
 
-But, let's read this equation another way.
+We can view this equation as $\langle 1, 0 \rangle$ is the acting operand and it has no effect on $\langle 0, 1 \rangle$.  However, we want multiplication to be commutative.  So, we could view this as 
+
+\[    \langle 1, 0 \rangle \cdot \langle 0, 1 \rangle    = \langle 0, 1 \rangle            \]
+
+We start with $\langle 1, 0 \rangle$.  When we multiply this by $\langle 0, 1 \rangle$, it changes $\langle 1, 0 \rangle$ into $\langle 0, 1 \rangle$.
 
 
 
@@ -238,12 +244,12 @@ But, let's read this equation another way.
 
 
 
-Instead of looking at this equation saying that multiplication by $\langle 1, 0 \rangle$ had no effect, let's view it as saying that multplication by $\langle 0, 1 \rangle$ turned $\langle 1, 0 \rangle$ $90^{circ}$ counterclockwise.
+Instead of looking at this equation saying that multiplication by $\langle 1, 0 \rangle$ had no effect, let's view it as saying that multplication by $\langle 0, 1 \rangle$ turned $\langle 1, 0 \rangle$ $90^{\circ}$ counterclockwise.
 
 
 
 
-$\blacktriangleright$ Multiplication by $\langle 0, 1 \rangle$ turns vectors counterclockwise $90^{circ}$.
+$\blacktriangleright$ Multiplication by $\langle 0, 1 \rangle$ turns vectors counterclockwise $90^{\circ}$.
 
 
 
@@ -287,7 +293,14 @@ $\blacktriangleright$ Multiplication by $\langle 0, 1 \rangle$ turns vectors cou
 
 
 
-$\star$ Multipication by $\langle 0, 1 \rangle$ turns $\langle a, b \rangle$ into $\langle -b, a \rangle$.
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Multiplication by $\langle 0, 1 \rangle$ turns $\langle a, b \rangle$ into $\langle -b, a \rangle$.}}
+\end{center}
+
+
+
 
 What else should multipication do? \\
 
