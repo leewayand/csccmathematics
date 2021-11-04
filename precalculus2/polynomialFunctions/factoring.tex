@@ -30,24 +30,25 @@ $\blacktriangleright$ Second, we need some good guesses. \\
 We would like to factor the polynomial in order to identify zeros or roots.  But, if we had an idea of the roots, then we could guess a factor and try to factor it out of the polynomial. \\
 
 \begin{center}
-So, what are good guess for roots of a polynomial?
+\textbf{\textcolor{red!80!black}{So, what are good guess for roots of a polynomial?}}
 \end{center}
 
 
-Under certin conditions, we can actually get some good guesses for roots of the polynomial and thus factors.
+Under certain conditions, we can actually get some good guesses for roots of the polynomial and thus factors.
 
 
 
 
 
 
-\begin{theorem} Rational Root Theorem
+\begin{theorem} \textbf{\textcolor{green!50!black}{Rational Root Theorem}} 
 
 
 
 Let $p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$ be a polynomial of degree $n$ with integer coefficients, $a_i \in \mathbb{Z}$ for all $i$, such that $a_n, a_0 \ne 0$.
 
-If $p(x)$ has any rational roots, then they come from this set: $\{ \frac{p}{q} \, | \, p is a factor of a_0 and q is a factor of a_n  \}$
+If $p(x)$ has any \textbf{rational roots}, then they come from this set: 
+$\{ \frac{p}{q} \, | \, p \text{is a factor of} a_0 \text{and} q \text{is a factor of} a_n  \}$
 
 
 
@@ -93,12 +94,12 @@ We have $16$ possibilities for roots of $p$.  We can test them and see which is 
 
 
 \begin{itemize}
-\item $p(10) =  3\, 10^3 - 16 \, 10^2 + 3 \, 10 + 10 = 1440 \ne 0$ \\
-\item $p(5) =  3\, 5^3 - 16 \, 5^2 + 3 \, 5 + 10 = 0 \ne 0$  - root\\
+\item $p(10) =  3 \cdot 10^3 - 16 \cdot 10^2 + 3 \cdot 10 + 10 = 1440 \ne 0$ \\
+\item $p(5) =  3 \cdot 5^3 - 16 \cdot 5^2 + 3 \cdot 5 + 10 = 0$  $5$ is a root\\
 \end{itemize}
 
 
-We now know $x-5$ is a factor of $p(x)$.  $p(x)$ factors like $p(x) = (x-5) (a \, x^2 + b \, x + c)$.
+We now know $x-5$ is a factor of $p(x)$.  Therefore, $p(x)$ factors like $p(x) = (x-5) (a \, x^2 + b \, x + c)$.
 
 
 
@@ -118,21 +119,21 @@ We now know $x-5$ is a factor of $p(x)$.  $p(x)$ factors like $p(x) = (x-5) (a \
 
 
 
-$\blacktriangleright$ Constant Term \\
+$\blacktriangleright$ Matching Constant Terms \\
 
 
 $10 = -5c$, therefore $c = \answer{-2}$ \\
 
 
 
-$\blacktriangleright$ Leading Term \\
+$\blacktriangleright$ Matching Leading Terms \\
 
 
 $3 = a$ \\
 
 
 
-$\blacktriangleright$ Linear Term \\
+$\blacktriangleright$ Matching Linear Terms \\
 
 $3 = \answer{c-5b}$ \\
 
@@ -231,15 +232,15 @@ We have $16$ possibilities for roots of $T$.  We can test them and see which is 
 
 
 \begin{itemize}
-\item $T(12) =  2\, 12^4 - 7 \, 12^3 - 10 \, 12^2 + 21 \, 12 + 12 = 28200$ \\
-\item $T(6) =  2\, 6^4 - 7 \, 6^3 - 10 \, 6^2 + 21 \, 6 + 12 = \answer{858}$  \\
-\item $T(4) =  2\, 4^4 - 7 \, 4^3 - 10 \, 4^2 + 21 \, 4 + 12 = \answer{0}$  \\
+\item $T(12) =  2 \cdot 12^4 - 7 \cdot 12^3 - 10 \cdot 12^2 + 21 \cdot 12 + 12 = 28200$ \\
+\item $T(6) =  2 \cdot 6^4 - 7 \cdot 6^3 - 10 \cdot 6^2 + 21 \cdot 6 + 12 = \answer{858}$  \\
+\item $T(4) =  2 \cdot 4^4 - 7 \cdot 4^3 - 10 \cdot 4^2 + 21 \cdot 4 + 12 = \answer{0}$  \\
 \end{itemize}
 
 
 We now know $y-4$ is a factor of $T(y)$.  $T(y)$ factors like $T(y) = (y-4) (a \, y^3 + b \, y^2 + c \, y + d)$. \\
 
-We can  multiply this out (or use long division) to get the cubic factor or we could try more root candidates.
+We can  multiply this out (or use long division) to get the cubic factor or we could try more root candidates from our list.
 
 
 \begin{itemize}
@@ -300,11 +301,14 @@ It took us a lot of calculating to come up with the root $-\frac{1}{2}$.  A grap
 
 From the graph, it appears we should select candidates near $-1.75$, $-1.5$, $1.75$, and $4$.  From our list, it appears we should try $-\frac{3}{2}$ and $4$. This would have significantly shortened our evaluation list.  \\
 
-From the graph, we can see that these are not double roots. The other two rotos must be irrational or complex.  We'll need to begin factoring to figure this out. \\
+From the graph, we can see that these are not double roots. The other two roots must be irrational.  We'll need to begin factoring to figure this out. \\
 
 
 
 $\blacktriangleright$ \textbf{Factoring}
+
+
+\begin{explanation}
 
 
 
@@ -344,11 +348,11 @@ $12 = -4 c$, which tells us that $c =  \answer{-3}$. \\
 
 
 
-Let's update our coefficients.
+Now that we know $a = 1$ and $c = -3$, let's update our coefficients.
 
 
 \[
-2\, y^4 - 7 \, y^3 - 10 \, y^2 + 21 \, y + 12 = 2 \, y^4 + (\answer{2 b - 7 }) \, y^3 + (\answer{-10 - 7 b}) \, y^2 - (\answer{4 b - 21}) \, y + 12
+2\, y^4 - 7 \, y^3 - 10 \, y^2 + 21 \, y + 12 = 2 \, y^4 + \left( \answer{2 b - 7 } \right) \, y^3 + \left( \answer{-10 - 7 b} \right) \, y^2 - \left( \answer{4 b - 21} \right) \, y + 12
 \]
 
 
@@ -357,7 +361,7 @@ Let's update our coefficients.
 Equating terms gives us...
 
 
-$-7 \, y^3 = 2 b - 7 \, y^3$, which tells us that $b = \answer{0}$. \\
+$-7 \, y^3 = (2 b - 7) \, y^3$, which tells us that $b = \answer{0}$. \\
 
 
 
@@ -384,14 +388,14 @@ T(y) = (y-4) \left(y+\frac{1}{2}\right) (y - \sqrt{3}) (y + \sqrt{3})
 The other two roots were irrational real numbers.
 
 
-
+\end{explanation}
 
 If we will keep ourselves organized, we can reduce our writing of this process significantly.
 
 
 
 
-\begin{procedure} Systems of Equations
+\begin{procedure} \textbf{\textcolor{purple!85!blue}{Systems of Equations}} 
 
 
 
