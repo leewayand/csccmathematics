@@ -14,9 +14,72 @@ division
 
 
 
-Fractions
+Complex numbers look like $a + b /, i$ where $a, b \in \mathbb{R}$.
 
 
+$a$ and $b$ can be any real numbers:
+
+
+
+\begin{itemize}
+	\item $2 + 3 \, i$
+	\item $\frac{2}{3} - 5 \, i$
+	\item $\pi + \sqrt{7} \, i$
+	\item $\frac{\sqrt{5}}{7} - \frac{\pi}{\sqrt{3}} \, i$
+\end{itemize}
+
+
+
+This makes division by a real number straight forward.
+
+
+
+
+\[
+\frac{a + b \, i}{c} = \frac{a}{c} + \frac{b}{c} \, i
+\]
+
+
+
+
+
+We will use this fact along with complex conjugates to give us a rule for division.
+
+
+
+In Calculus, we don't really divide very much.  Instead this is all rephrased in terms of multiplication by the reciprocal.  We encounter division in terms of quotients.
+
+
+The quotient of two Complex numbers should be a Complex number.
+
+\[
+\frac{a + b \, i}{c + d \, i}  = A + B \, i  \text{ for some real numbers } A \text{ and } B
+\]
+
+
+Our plan is to convert the denominator to a real number and then separate the pieces.
+
+
+
+\[
+\frac{a + b \, i}{c + d \, i} = \frac{a + b \, i}{c + d \, i}  \cdot 1 
+\]
+
+\[
+= \frac{a + b \, i}{c + d \, i} \cdot \frac{c - d \, i}{c - d \, i} 
+\]
+
+\[
+= \frac{(a + b \, i)(c + d \, i)}{c^2 + d^2} 
+\]
+
+\[
+= \frac{(ac - bd) + (ad + bc) \, i}{c^2 + d^2} 
+\]
+
+\[
+= \frac{(ac - bd)}{c^2 + d^2}  + \frac{(ad + bc)}{c^2 + d^2} \, i
+\]
 
 
 
