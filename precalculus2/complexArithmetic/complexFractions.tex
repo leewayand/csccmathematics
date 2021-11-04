@@ -14,7 +14,7 @@ division
 
 
 
-Complex numbers look like $a + b /, i$ where $a, b \in \mathbb{R}$.
+Complex numbers look like $a + b \, i$ where $a, b \in \mathbb{R}$.
 
 
 $a$ and $b$ can be any real numbers:
@@ -80,6 +80,114 @@ Our plan is to convert the denominator to a real number and then separate the pi
 \[
 = \frac{(ac - bd)}{c^2 + d^2}  + \frac{(ad + bc)}{c^2 + d^2} \, i
 \]
+
+
+
+
+
+
+
+\begin{procedure}
+
+
+How do we convert a complex fraction, $\frac{a + b \, i}{c + d \, i}$ into standard form, $A + B \, i$?
+
+
+
+$\blacktriangleright$ \textbf{Step 1:}   Get the complex conjugate of the denominator, $c - d \, i$.
+
+
+$\blacktriangleright$ \textbf{Step 2:} Mulitply by $1$ in the form $\frac{c - d \, i}{c - d \, i}$.
+
+
+$\blacktriangleright$ \textbf{Step 3:}  The denominator will become a real number:  
+
+\[ (c + d \, i) \cdot (c - d \, i) = c^2 + d^2 \]
+
+
+
+$\blacktriangleright$ \textbf{Step 4:}  Expand the numerator and collect real and imaginary parts: 
+
+\[ (a + b \, i) \cdot (c - d \, i) = (ac-bd) + (ad + bc) \, i \]
+
+
+$\blacktriangleright$ \textbf{Step 5:} Separate the real and imaginary parts: 
+
+\[
+\frac{(ac-bd) + (ad + bc) \, i}{c^2 + d^2} = \frac{ac - bd}{c^2 + d^2} + \frac{ad + bc}{c^2 + d^2} \, i
+\] 
+
+
+
+\end{procedure}
+
+
+
+
+
+\begin{example}
+
+
+
+
+Write $\frac{2 + 2 \, i}{5 - i}$ as $A + B \, i$
+
+
+\begin{explanation}
+
+\[
+\frac{2 + 2 \, i}{5 - i} = \frac{2 + 2 \, i}{5 - i} \cdot \frac{5 + i}{5 + i} = \frac{(2 + 2 \, i)(5 + i)}{5^2 + 1^2} = \frac{8 + 12 \, i}{5^2 + 1^2} = \frac{8}{26} + \frac{12}{26} \, i
+\]
+
+
+\end{explanation}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+Write $\frac{1 + 2 \, i}{3 - 2i}$ as $A + B \, i$
+
+
+\[
+\frac{1 + 2 \, i}{3 - 2i} = \answer{\frac{-1}{13}} + \answer{\frac{8}{13}} \, i
+\]
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
