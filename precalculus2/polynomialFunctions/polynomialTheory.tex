@@ -17,13 +17,13 @@ the polynomial story
 
 
 
-We have investigated polynomial functions from several viewpoints.  Time to collect all of our thoughts and charcterize polynomial functions.
+We have investigated polynomial functions from several viewpoints.  Time to collect all of our thoughts and characterize all polynomial functions.
 
 
 
 
 
-\begin{definition} Polynomial Function
+\begin{definition} \textbf{\textcolor{green!50!black}{Polynomial Functions}} 
 
 
 A \textbf{polynomial function} is a function that can be represented by a formula of the form
@@ -41,35 +41,35 @@ $n$ is called the \textbf{degree} of the polynomial
 
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Domain:}} \\ 
-The implied domain of a polynomial function is all real numbers.  However, a particular polynomial function may be defined with a restricted domain..
+The natural or implied domain of a polynomial function is all real numbers.  Of course, a particular polynomial function may be defined with a restricted domain..
 
 
 
 
-\begin{formula} Forms
+\begin{formula} \textbf{\textcolor{purple!85!blue}{Forms}}
 
 Formulas for polynomial functions have two two forms:
 
 
 
 \begin{itemize}
-\item \textbf{Standard Form:}  The standard form for a quadratic function looks like $a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0$.
-\item \textbf{Factored Form:}  The factored form for a quadratic function looks like $a(x - r_n)(x - r_{n-1}) \cdots (x - r_1)$.
+\item \textbf{Standard Form:}  The standard form for a polynomial function is a sum. It looks like $a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0$.
+\item \textbf{Factored Form:}  The factored form for a polynomial function is a product. It looks like $a(x - r_n)(x - r_{n-1}) \cdots (x - r_1)$.
 \end{itemize}
 
 
 \end{formula}
 
 
-A polynomial may have repeated roots.  For this reason, the factored form usually collects like factors:
+A polynomial may have repeated zeros.  For this reason, the factored form usually collects like factors:
 
 
 \[   a (x - r_k)^{e_k} (x - r_{k-1})^{e_{k-1}} \cdots (x - r_1)^{e_1}             \]
 
 
-Here, the roots are distinct:  $r_i \ne r_j$ when $i \ne j$.
+Here, the zeros are distinct:  $r_i \ne r_j$ when $i \ne j$.
 
-The exponents are called \textbf{multiplicities} of the roots. 
+The exponents are called \textbf{multiplicities} of the zeros. 
 
 
 
@@ -80,8 +80,8 @@ $\blacktriangleright$   \textbf{\textcolor{red!10!blue!90!}{Roots and Zeros:}} \
 Zeros of polynomials are also called roots of the polynomials.  A polynomial function behaves in one of two ways around a root.
 
 \begin{itemize}
-\item If the multipicity is odd then the function changes sign over the root.  The graph crosses over the horizontal axis at corresponding intercepts.
-\item If the multipicity is even then the function does not change sign over the root.  The graph does not cross over the horizontal axis at corresponding intercepts. Instead, it bounces back in the direction from which it came.
+\item If the multipicity is odd then the function changes sign over the root.  The graph crosses over the horizontal axis at corresponding intercept.
+\item If the multipicity is even then the function does not change sign over the root.  The graph does not cross over the horizontal axis at corresponding intercept. Instead, it bounces back in the direction from which it came.
 \end{itemize}
 
 
@@ -106,9 +106,9 @@ Polynomials are nice functions.  They are continuous everywhere.  They have no d
 
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Graphs:}} \\ 
-Graphs of polynomials are nice.  They are smooth.  They do not have corners or spikes or breaks or asymptotes. Once we have the roots, we can plot the intercepts.  Then we can smoothly connect them according to their mulitplicities and have a pretty good sketch of the shape of the graph.
+Graphs of polynomials are nice.  They are smooth.  They do not have corners or spikes or breaks or asymptotes. Once we have the roots, we can plot the intercepts.  Then we can smoothly connect them according to their multiplicities and have a pretty good sketch of the shape of the graph.
 
-With a basic general shape, we can estimate critical numbers and extrema values.
+With a basic general shape, we can estimate critical numbers and types of extrema values.
 
 
 
@@ -132,7 +132,14 @@ The critical numbers partition the real line into intervals where the polynomial
 
 Completely analyze $p(w) = -\frac{1}{5}(w+4)(w-3)(w-3)$
 
-First let's collect like factors: $p(w) = -\frac{1}{5}(w+4)(w-3)^2$
+
+
+
+\begin{explanation}
+
+
+
+First, let's collect like factors: $p(w) = -\frac{1}{5}(w+4)(w-3)^2$
 
 We have a polynomial of degree $3$.  It has two roots.
 
@@ -186,7 +193,10 @@ The end-behavior of $p$ is $-\frac{1}{5} w^3$.  Therefore, $\lim\limits_{w \to -
 
 
 
-The graph is very suggestive that there is a local minimum somewhere around $-1$.  $3$ is a zero and also a critical number, since the function is negative around that zero.
+The graph is very suggestive that there is a local minimum somewhere around $-1$ and a local maximum at $3$.  \\
+
+
+$3$ is a zero, $p(3) = 0$. In addition, $p$ is negative around $3$.  That makes $p(3) = 0$ a local maximum.  That makes $3$ a critical number as well.
 
 
 
@@ -236,9 +246,10 @@ With some technology, we can approximate the other critical number to be $-1.67$
 
 
 
-There is no global maximum or minimum.  There is no local maximum.
+There is no global maximum or minimum, because  $\lim\limits{w \to -\infty}p(w) = \infty$ and $\lim\limits{w \to \infty}p(w) = -\infty$. 
 
 
+\end{explanation}
 
 \end{example}
 
@@ -262,15 +273,15 @@ We get two real roots: $\frac{4 + 14}{6} = \frac{18}{6} = 3$  and $\frac{4 - 14}
 
 
 
-Another approach to obtain the roots of $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$ would be to notice that we already know that $3$ is a root. $w+3$ must be a factor.
+Another approach to obtaining the roots of $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$ would be to notice that we already know that $3$ is a root. $w+3$ must be a factor.
 
 
 
 \begin{align*}
 3w^2 - 4w - 15     & = 0        \\
-3w^2 - 4w - 15     & = (w+3)(???)        \\
-3w^2 - 4w - 15     & = (w+3)(3w + ?)        \\
-3w^2 - 4w - 15     & = (w+3)(\answer{3w + 5})        
+3w^2 - 4w - 15     & = (w+3) (???)        \\
+3w^2 - 4w - 15     & = (w+3) (3w + ?)        \\
+3w^2 - 4w - 15     & = (w+3) \left( \answer{3w + 5} \right)        
 \end{align*}
 
 
