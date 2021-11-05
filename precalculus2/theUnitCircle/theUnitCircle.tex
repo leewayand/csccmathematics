@@ -13,13 +13,19 @@ circles and triangles
 
 
 
+
+
+\textbf{\textcolor{red!80!black}{All}}, \textbf{\textcolor{red!80!black}{Every}}, \textbf{\textcolor{red!80!black}{None}} - These are the words of mathematics. 
+
+
+
 \begin{itemize}
-\item The position of every point in the Cartesian plane can be described as a scalar times a direction vector.  A direction vector has unit length.
+\item The position of \textbf{\textcolor{red!80!black}{every}} point in the Cartesian plane can be described as a scalar times a direction vector.  
 
-\item Every Complex number can be represented as the product of a real number and a complex number with modulus $1$.
+\item \textbf{\textcolor{red!80!black}{Every}} Complex number can be represented as the product of a real number and a complex number with modulus $1$.
 
 
-\item Every Complex number can be represented as the product of a real number and a complex number that sits on the unit circle.
+\item \textbf{\textcolor{red!80!black}{Every}} Complex number can be represented as the product of a real number and a complex number that sits on the unit circle.
 \end{itemize}
 
 
@@ -45,21 +51,25 @@ circles and triangles
           ]        
           \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
 
-          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+          \addplot [textColor] plot coordinates {(0,0) (0.766,0.643)}; %% 40 degrees
 
-          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
-          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          \addplot [ultra thick,penColor] plot coordinates {(0.766,0) (0.766,0.643)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (0.766,0)}; %% 40 degrees
           
           %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
-          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          \addplot [textColor,smooth, domain=(0:40)] ({0.15*cos(x)},{0.15*sin(x)});
           %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
-          \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
-          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          \node at (axis cs:0.15,0.07) [anchor=west] {$\theta$};
+          \node[penColor, rotate=-90] at (axis cs:0.84,0.322) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:0.383,0) [anchor=north] {$\cos(\theta)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.766,0.643)};
+
+
         \end{axis}
 \end{tikzpicture}
 \end{image}
@@ -117,7 +127,7 @@ What is the modulus of the product?
 The product is again on the unit circle.
 
 
-Where?
+\textbf{Question:} Where is the product on the unit circle?
 
 
 
@@ -126,7 +136,7 @@ Where?
 
 
 
-The Complex number $a + b \, i$, has a polar form $(r_1, \theta)$.  If  $a + b \, i$ is on the unit circle, then $r_1 = 1$.
+The Complex number $a + b \, i$, is positioned at an angle $\theta$ from teh positive $x$-axis and a distance $r_1$ from the origin. Therefore, it has the polar form $(r_1, \theta)$.  If  $a + b \, i$ is on the unit circle, then $r_1 = 1$ and the polar form is $(1, \theta)$.
 
 
 
@@ -185,7 +195,15 @@ Let's focus on this triangle.
 
 
 
-The Complex number $c + d \, i$, has a polar form $(r_2, \phi)$.  We are going to add this angle onto $\theta$, and begin making a right triangle for   $c + d \, i$.
+The Complex number $c + d \, i$, has a polar form $(r_2, \phi)$, which similarly is $(1, \phi)$.  Normally, we would plot a point for this complex number by rotating counterclockwise and angle from the positive $x$-axis.  Instead, we are going to tack on this angle to $\theta$.
+
+So, we are sort of pretending that the radius for the first complex number, $a + b \, i$ is acting like an $x$-axis and we are going to roatate counterclockwise an angle $\phi$ from that radius.
+
+
+
+
+
+And, we begin making a right triangle for   $c + d \, i$.
 
 
 
@@ -236,12 +254,12 @@ The Complex number $c + d \, i$, has a polar form $(r_2, \phi)$.  We are going t
 
 
 
-Eventually, the sides meet to make a right triangle.  We will form a rectangle at that height.
+Eventually, the sides meet to make a right triangle.  Let's enclose the whole diagram with a rectangle at that height.
 
 
 
 
-
+The problem is that this second right triangle is too big. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were suppose to be $c$ and $d$.  But, in our diagram, the bottom side has length $1$.  However, it is a right triangle with angle $\phi$.  That means it is similar to the right triangle for $c + d \, i$.  The sides are porportional to the sides of the $c-d-1$ right triangle for $c + d \, i$.  We can use this proportionality.
 
 
 
@@ -294,6 +312,18 @@ Eventually, the sides meet to make a right triangle.  We will form a rectangle a
 Looking at this second right triangle for $c + d \, i$, it's sides are not $c$ and $d$.  It is a similar triangle with $c$ resized to $1$.  That makes the maginification factor $\frac{1}{c}$.  The other side is scaled by that factor as well.  The other leg has length $\frac{d}{c}$
 
 
+
+We can also tell something about another angle in this diagram.
+
+\begin{itemize}
+  \item The bottom right triangle as a right angle, the angle $\theta$, and then a third angle.
+  \item The right side of the rectanghle forms a straight angle and it is cut up into three angles: a right angle, $\theta$ on one side, and then this same third angle.
+\end{itemize}
+
+
+The sum of the angles of the right triangle is $180^{\circ}$ and the angles forming the straight angle sum to $180^{\circ}$.  Plus, both sums contain that same third angle inside the bottom right triangle.  That means, the top angle 
+
+
 We can also see that the angle next to the right angle must also measure $\theta$.
 
 
@@ -331,7 +361,7 @@ We can also see that the angle next to the right angle must also measure $\theta
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
 
-  \draw (2.9,1.5) node {\scriptsize{$\theta$}};
+  %\draw (2.9,1.5) node {\scriptsize{$\theta$}};
   \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
 
 
@@ -341,6 +371,97 @@ We can also see that the angle next to the right angle must also measure $\theta
 
     \end{tikzpicture}
   \end{image}
+
+
+
+
+
+
+
+
+We can also tell something about another angle in this diagram. We can get the measurement for angle $A$.
+
+\begin{itemize}
+  \item The bottom right triangle as a right angle, the angle $\theta$, and angle $B$.
+  \item The right side of the rectangle forms a straight angle and it is cut up into three angles: a right angle, $B$ on one side, and $A$ on the other side.
+\end{itemize}
+
+
+The sum of the angles of the right triangle is $\theta + B + 90^{\circ} = 180^{\circ}$ and the angles forming the straight angle sum to $\theta + A + 90^{\circ} = 180^{\circ}$.  
+
+
+
+
+\[
+\theta + B + 90^{\circ}   =   B + A + 90^{\circ}
+\]
+
+
+
+\[  A = \theta   \]
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+  \draw [ultra thick] (0,0) -- (0,3);
+  \draw [ultra thick] (0,0) -- (3,0);
+  \draw [ultra thick] (3,0) -- (3,3);
+  \draw [ultra thick] (0,3) -- (3,3);
+
+  \draw [ultra thick] (0,0) -- (3,1);
+  \draw [ultra thick] (3,1) -- (2,3);
+  \draw [ultra thick] (0,0) -- (2,3);
+
+  \draw [thin] (2.9,0) -- (2.9,0.1);
+  \draw [thin] (2.9,0.1) -- (3,0.1);
+
+  \draw [thin] (2.9,0.97) -- (2.85,1.06);
+  \draw [thin] (2.85,1.06) -- (2.95,1.10);
+
+
+
+
+  \draw [->] (.75,0) arc(0:18.4:.75); 
+  \draw [rotate=9] (1,0) node {\scriptsize{$\theta$}};
+  \draw [->] (.75,0) arc(0:55:.75); 
+  \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
+
+
+  \draw (1.5,-0.25) node {\scriptsize{$a$}};
+  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,0.75) node {\scriptsize{$1$}};
+
+
+  \draw (2.9,1.5) node {\scriptsize{$A$}};
+  \draw (2.9,0.75) node {\scriptsize{$B$}};
+  \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
 
 
 
