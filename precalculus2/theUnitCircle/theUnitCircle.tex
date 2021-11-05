@@ -90,7 +90,7 @@ Pretend we have two Complex numbers on the unit circle.
 
 
 
-We have $a^2 + b^1 = 1$  and $c^2 + d^2 = 1$.
+We have $a^2 + b^2 = 1$  and $c^2 + d^2 = 1$.
 
 
 
@@ -115,7 +115,8 @@ What is the modulus of the product?
 
 
 \begin{align*}
-|(a + b \, i) \cdot (c + d \, i)|      & = (ac - bd)^2 + (ad + bd)^2   \\
+|(a + b \, i) \cdot (c + d \, i)|      & = | (ac - bd) + (ad + bd) \, i | \\
+                & = (ac - bd)^2 + (ad + bd)^2   \\
                 & = a^2c^2 - 2abcd + b^2d^2 + a^2d^2 + 2abcd + b^2c^2  \\
                 & = a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2  \\
                 & = (a^2 + b^2) \cdot (c^2 + d^2)   \\
@@ -136,7 +137,7 @@ The product is again on the unit circle.
 
 
 
-The Complex number $a + b \, i$, is positioned at an angle $\theta$ from teh positive $x$-axis and a distance $r_1$ from the origin. Therefore, it has the polar form $(r_1, \theta)$.  If  $a + b \, i$ is on the unit circle, then $r_1 = 1$ and the polar form is $(1, \theta)$.
+The Complex number $a + b \, i$, is positioned at an angle $\theta$ from the positive $x$-axis and a distance $r_1$ from the origin. Therefore, it has the polar form $(r_1, \theta)$.  If  $a + b \, i$ is on the unit circle, then $r_1 = 1$ and the polar form is $(1, \theta)$.
 
 
 
@@ -190,14 +191,14 @@ This point defines a right triangle with base $a$ and height $b$ and angle $\the
 
 
 
-Let's focus on this triangle.
+Let's focus on this right triangle.
 
 
 
 
-The Complex number $c + d \, i$, has a polar form $(r_2, \phi)$, which similarly is $(1, \phi)$.  Normally, we would plot a point for this complex number by rotating counterclockwise and angle from the positive $x$-axis.  Instead, we are going to tack on this angle to $\theta$.
+The Complex number $c + d \, i$, has a polar form $(r_2, \phi)$, which similarly is $(1, \phi)$.  Normally, we would plot a point for this complex number by rotating counterclockwise an angle $\phi$ from the positive $x$-axis.  Instead, we are going to tack on this angle to $\theta$.
 
-So, we are sort of pretending that the radius for the first complex number, $a + b \, i$ is acting like an $x$-axis and we are going to roatate counterclockwise an angle $\phi$ from that radius.
+So, we are sort of pretending that the radius for the first complex number, $a + b \, i$ is acting like an $x$-axis and we are going to rotate counterclockwise an angle $\phi$ from that radius.
 
 
 
@@ -368,7 +369,7 @@ Looking at this second right triangle for $c + d \, i$, it's sides are not $c$ a
 
 
 
-We can also tell something about another angle in this diagram. We can get the measurement for the bottom angle in the right triangle for $\tfrac{d}{c}$. We'll call this angle $A$ in the digram below.
+We can also tell something about another angle in this diagram. We can get the measurement for the bottom angle in the top right triangle for $\tfrac{d}{c}$. We'll call this angle $A$ in the digram below.
 
 \begin{itemize}
   \item The bottom right triangle has a right angle, the angle $\theta$, and angle $B$.
@@ -412,7 +413,7 @@ We can also tell something about another angle in this diagram. We can get the m
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
 
-  \draw (2.9,1.6) node {\scriptsize{$A$}};
+  \draw (2.8,1.6) node {\scriptsize{$A$}};
   \draw (2.85,0.75) node {\scriptsize{$B$}};
   \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
 
@@ -589,9 +590,9 @@ We can now deduce the lengths of the other two pieces of the rectangle in terms 
 
 Let's focus our attention on the right triangle formed in the upper-left corner of the rectangle.
 
-The bottom angle is the sum of $\theta$ and $\phi$.
+The bottom exterior angle is the sum of $\theta$ and $\phi$.
 
-The upper angle must measure $\theta + \phi$ also since it is an alternate interior angle.
+The upper angle must measure $\theta + \phi$ also since it is an alternate angle.
 
 
 
@@ -685,7 +686,7 @@ Finally, let's resize this triangle by a factor of $c$.
 
 
 
-It is upsidedown, but this is the right trinagle defined on the unit circle by the product
+It is upsidedown, but this is the right triangle defined on the unit circle by the product
 
 \[  (a + b \, i) \cdot (c + d \, i) = (ac-bd) + (ad+bc) \, i    \]
 
