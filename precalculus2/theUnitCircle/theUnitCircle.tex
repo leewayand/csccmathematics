@@ -313,18 +313,7 @@ Looking at this second right triangle for $c + d \, i$, it's sides are not $c$ a
 
 
 
-We can also tell something about another angle in this diagram.
 
-\begin{itemize}
-  \item The bottom right triangle as a right angle, the angle $\theta$, and then a third angle.
-  \item The right side of the rectanghle forms a straight angle and it is cut up into three angles: a right angle, $\theta$ on one side, and then this same third angle.
-\end{itemize}
-
-
-The sum of the angles of the right triangle is $180^{\circ}$ and the angles forming the straight angle sum to $180^{\circ}$.  Plus, both sums contain that same third angle inside the bottom right triangle.  That means, the top angle 
-
-
-We can also see that the angle next to the right angle must also measure $\theta$.
 
 
 
@@ -379,32 +368,12 @@ We can also see that the angle next to the right angle must also measure $\theta
 
 
 
-We can also tell something about another angle in this diagram. We can get the measurement for angle $A$.
+We can also tell something about another angle in this diagram. We can get the measurement for the bottom angle in the right triangle for $\tfrac{d}{c}$. We'll call this angle $A$ in the digram below.
 
 \begin{itemize}
-  \item The bottom right triangle as a right angle, the angle $\theta$, and angle $B$.
+  \item The bottom right triangle has a right angle, the angle $\theta$, and angle $B$.
   \item The right side of the rectangle forms a straight angle and it is cut up into three angles: a right angle, $B$ on one side, and $A$ on the other side.
 \end{itemize}
-
-
-The sum of the angles of the right triangle is $\theta + B + 90^{\circ} = 180^{\circ}$ and the angles forming the straight angle sum to $\theta + A + 90^{\circ} = 180^{\circ}$.  
-
-
-
-
-\[
-\theta + B + 90^{\circ}   =   B + A + 90^{\circ}
-\]
-
-
-
-\[  A = \theta   \]
-
-
-
-
-
-
 
 
 
@@ -443,8 +412,8 @@ The sum of the angles of the right triangle is $\theta + B + 90^{\circ} = 180^{\
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
 
-  \draw (2.9,1.5) node {\scriptsize{$A$}};
-  \draw (2.9,0.75) node {\scriptsize{$B$}};
+  \draw (2.9,1.6) node {\scriptsize{$A$}};
+  \draw (2.85,0.75) node {\scriptsize{$B$}};
   \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
 
 
@@ -454,6 +423,31 @@ The sum of the angles of the right triangle is $\theta + B + 90^{\circ} = 180^{\
 
     \end{tikzpicture}
   \end{image}
+
+
+
+
+The sum of the angles of the right triangle is $\theta + B + 90^{\circ} = 180^{\circ}$ and the angles forming the straight angle sum to $\theta + A + 90^{\circ} = 180^{\circ}$.  
+
+
+
+
+\[
+\theta + B + 90^{\circ}   =   B + A + 90^{\circ}
+\]
+
+
+
+\[  \theta = A  \]
+
+
+
+
+
+
+
+
+
 
 
 
@@ -468,7 +462,7 @@ The sum of the angles of the right triangle is $\theta + B + 90^{\circ} = 180^{\
 
 We now have a pair of similar right triangles.  The bottom right triangle representing $a+b \, i$ and the triangle formed in the upper-right corner of the rectangle.
 
-The hypotenuse has been scaled by a factor of $\frac{d}{c}$. Therefore, the other sides must also be resized proportionally.
+Comparing the hypotnueses, we that the scaling factor is $\frac{d}{c}$. Therefore, the other sides must also be resized proportionally.
 
 
 
@@ -595,7 +589,9 @@ We can now deduce the lengths of the other two pieces of the rectangle in terms 
 
 Let's focus our attention on the right triangle formed in the upper-left corner of the rectangle.
 
-The upper angle must measure $\theta + \phi$ since it is an alternate angle.
+The bottom angle is the sum of $\theta$ and $\phi$.
+
+The upper angle must measure $\theta + \phi$ also since it is an alternate interior angle.
 
 
 
@@ -689,20 +685,22 @@ Finally, let's resize this triangle by a factor of $c$.
 
 
 
-It is upsidedown, but this is the right trinagle defined on teh unit circle by the product
+It is upsidedown, but this is the right trinagle defined on the unit circle by the product
 
 \[  (a + b \, i) \cdot (c + d \, i) = (ac-bd) + (ad+bc) \, i    \]
 
 
 
 
-$\blacktriangleright$ When multiplying Complex numbers on the unit circle, just add their angles.
+ 
 
-$\blacktriangleright$ When multiplying any Complex numbers, multiply their moduli and add their angles.
+\textcolor{red!80!black}{$\blacktriangleright$} When multiplying Complex numbers on the unit circle, just add their angles.
+
+\textcolor{red!80!black}{$\blacktriangleright$} When multiplying any Complex numbers, multiply their moduli and add their angles.
 
 
 
-\begin{theorem} Complex multiplication
+\begin{theorem}  \textbf{\textcolor{green!50!black}{Complex Multiplication (Polar)}}
 
 \[  (r_1, \theta_1) \cdot (r_2, \theta_2) = (r_1 \cdot r_2, \theta_1 + \theta_2)              \]
 
