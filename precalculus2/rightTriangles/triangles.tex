@@ -14,12 +14,12 @@ unit circle again
 
 
 \begin{itemize}
-\item The position of every point in the Cartesian plane can be described as a scalar times a direction vector.  A direction vector has unit length.
+\item The position of \textbf{every} point in the Cartesian plane can be described as a scalar times a direction vector.  A direction vector has unit length.
 
-\item Every Complex number can be represented as the product of a real number and a complex number with modulus $1$.
+\item \textbf{Every} Complex number can be represented as the product of a real number and a complex number with modulus $1$.
 
 
-\item Every Complex number can be represented as the product of a real number and a complex number that sits on the unit circle.
+\item \textbf{Every} Complex number can be represented as the product of a real number and a complex number that sits on the unit circle.
 \end{itemize}
 
 
@@ -61,6 +61,9 @@ unit circle again
           \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
           \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.766,0.643)}; 
+
         \end{axis}
 \end{tikzpicture}
 \end{image}
@@ -71,7 +74,7 @@ unit circle again
 
 
 
-\begin{theorem} Complex multiplication
+\begin{theorem} \textbf{\textcolor{green!50!black}{Complex Multiplication (Polar Form)}}  
 
 \[  (r_1, \theta_1) \cdot (r_2, \theta_2) = (r_1 \cdot r_2, \theta_1 + \theta_2)              \]
 
@@ -81,7 +84,7 @@ unit circle again
 
 
 
-To understand the Complex numbers, we just need to understand right triangles.  To understand right triangles, we just need to understand the unit circle.
+To understand the Complex numbers, we just need to understand the unit circle.  To understand the unit circle, we just need to understand right triangles.
 
 
 
@@ -151,6 +154,9 @@ If we pick $\theta$, then we have defined a right triangle via the unit circle.
           \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
           \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.766,0.643)}; 
+
         \end{axis}
 \end{tikzpicture}
 \end{image}
@@ -217,7 +223,7 @@ By extending the radius to larger circles we can create many right triangles.  A
 
 
 
-Since the first right triangle was anchored to the unit circle, its hypotenuse had length $1$.  The hypotenuses of the other similar right triangles have a length, which we'll call $r$.
+Since our initial right triangle was anchored to the unit circle, its hypotenuse has length $1$.  The hypotenuses of the other similar right triangles have a length, which we'll call $r$.
 
 
 
@@ -338,6 +344,8 @@ Since the first right triangle was anchored to the unit circle, its hypotenuse h
 
           \node at (axis cs:.8,.9) [anchor=west] {$r$};
 
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.766,0.643)}; 
+
 
         \end{axis}
 \end{tikzpicture}
@@ -419,7 +427,7 @@ The ratio of corresponding sides are equal.
 
 This has to be true for any right triangle with an angle $\theta$.
 
-If we lable the sides relative to the angle $\theta$, then we obtain descriptive ratios.
+If we label the sides relative to the angle $\theta$, then we obtain descriptive ratios.
 
 
 \begin{image}[3in]
@@ -472,15 +480,15 @@ The ratios have to be the same as for the unit circle triangle.
 \section{Other Quadrants}
 
 
-Everything holds for larger angles.  We just have to juggle two thoughts.  
+Everything holds for larger angles.  We just have to bridge two thoughts.  
 
 
 \begin{itemize}
 \item The coordinates of points might be negative.  
-\item Lengths of sides of triangles are not neagtive.
+\item Lengths of sides of triangles are not negative.
 \end{itemize}
 
-To help with these two thoughts we will have two angles.  
+To help bridge these two thoughts we will have two angles.  
 
 
 \begin{itemize}
@@ -547,6 +555,8 @@ To help with these two thoughts we will have two angles.
 
            \node[penColor2] at (axis cs:-1.3,1.2) [anchor=east] {$( r \cos(\theta), $};
            \node[penColor] at (axis cs:-1.3,1.2) [anchor=west] {$r \sin(\theta) ) $};
+
+           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(-1.3,1.09)}; 
 
 
         \end{axis}
