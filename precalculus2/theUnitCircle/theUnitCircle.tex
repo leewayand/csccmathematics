@@ -49,25 +49,28 @@ circles and triangles
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
           ]        
+
+          
+
           \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
 
-          \addplot [textColor] plot coordinates {(0,0) (0.766,0.643)}; %% 40 degrees
+          \addplot [textColor] plot coordinates {(0,0) (0.906,0.423)}; %% 40 degrees
 
-          \addplot [ultra thick,penColor] plot coordinates {(0.766,0) (0.766,0.643)}; %% 40 degrees
-          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (0.766,0)}; %% 40 degrees
+          \addplot [ultra thick,penColor] plot coordinates {(0.906,0) (0.906,0.423)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (0.906,0)}; %% 40 degrees
           
           %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
-          \addplot [textColor,smooth, domain=(0:40)] ({0.15*cos(x)},{0.15*sin(x)});
+          \addplot [textColor,smooth, domain=(0:25)] ({0.15*cos(x)},{0.15*sin(x)});
           %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-          \node at (axis cs:0.15,0.07) [anchor=west] {$\theta$};
-          \node[penColor, rotate=-90] at (axis cs:0.84,0.322) {$\sin(\theta)$};
-          \node[penColor2] at (axis cs:0.383,0) [anchor=north] {$\cos(\theta)$};
+          \node at (axis cs:0.17,0.06) [anchor=west] {$\theta$};
+          \node[penColor, rotate=-90] at (axis cs:0.83,0.17) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:0.5,0) [anchor=north] {$\cos(\theta)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
 
-          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.766,0.643)};
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.906,0.423)};
 
 
         \end{axis}
@@ -166,23 +169,30 @@ This point defines a right triangle with base $a$ and height $b$ and angle $\the
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
           ]        
+
           \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
 
-          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+          \addplot [textColor] plot coordinates {(0,0) (0.906,0.423)}; %% 40 degrees
 
-          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
-          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          \addplot [ultra thick,penColor] plot coordinates {(0.906,0) (0.906,0.423)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (0.906,0)}; %% 40 degrees
           
           %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
-          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          \addplot [textColor,smooth, domain=(0:25)] ({0.15*cos(x)},{0.15*sin(x)});
           %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
-          \node[penColor] at (axis cs:.84,.322) {$b$};
-          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$a$};
+          \node at (axis cs:0.17,0.06) [anchor=west] {$\theta$};
+          \node[penColor, rotate=-90] at (axis cs:0.83,0.17) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:0.5,0) [anchor=north] {$\cos(\theta)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+
+          \node at (axis cs:0.906,0.423) [anchor=west] {$a + bi$};
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.906,0.423)};
+
         \end{axis}
 \end{tikzpicture}
 \end{image}
@@ -204,7 +214,7 @@ So, we are sort of pretending that the radius for the first complex number, $a +
 
 
 
-And, we begin making a right triangle for   $c + d \, i$.
+We begin making a right triangle for   $c + d \, i$ with an angle $\phi$.
 
 
 
@@ -213,14 +223,19 @@ And, we begin making a right triangle for   $c + d \, i$.
 \begin{image}[3in]
     \begin{tikzpicture}
 
+
+  \draw [gray,thin,dashed] (3.2,0) arc (0:120:1in); 
+  \draw [black,fill=black] (0,0) circle (0.05cm);
+
   %\draw [ultra thick] (0,0) -- (0,3);
-  \draw [ultra thick] (0,0) -- (3,0);
-  \draw [ultra thick,->] (3,0) -- (3,3);
+  \draw [penColor2,ultra thick] (0,0) -- (3,0);
+  \draw [penColor,ultra thick] (3,0) -- (3,1);
+  %\draw [ultra thick,->] (1,0) -- (3,3);
   %\draw [ultra thick] (0,3) -- (3,3);
 
   \draw [ultra thick] (0,0) -- (3,1);
-  \draw [ultra thick,->] (3,1) -- (2.5,2);
-  \draw [ultra thick,->] (0,0) -- (1.6,2.4);
+  \draw [penColor3,ultra thick,->] (3,1) -- (2.5,2);
+  \draw [penColor3,ultra thick,->] (0,0) -- (1.46,2.2);
 
   \draw [thin] (2.9,0) -- (2.9,0.1);
   \draw [thin] (2.9,0.1) -- (3,0.1);
@@ -229,7 +244,7 @@ And, we begin making a right triangle for   $c + d \, i$.
   \draw [thin] (2.85,1.06) -- (2.95,1.10);
 
 
-
+ 
 
   \draw [->] (.75,0) arc(0:18.4:.75); 
   \draw [rotate=9] (1,0) node {\scriptsize{$\theta$}};
@@ -260,7 +275,6 @@ Eventually, the sides meet to make a right triangle.  Let's enclose the whole di
 
 
 
-The problem is that this second right triangle is too big. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were suppose to be $c$ and $d$.  But, in our diagram, the bottom side has length $1$.  However, it is a right triangle with angle $\phi$.  That means it is similar to the right triangle for $c + d \, i$.  The sides are porportional to the sides of the $c-d-1$ right triangle for $c + d \, i$.  We can use this proportionality.
 
 
 
@@ -269,14 +283,18 @@ The problem is that this second right triangle is too big. It is supposed to be 
 \begin{image}[3in]
     \begin{tikzpicture}
 
+  \draw [gray,thin,dashed] (3.2,0) arc (0:120:1in); 
+  \draw [black,fill=black] (0,0) circle (0.05cm);
+
   \draw [ultra thick] (0,0) -- (0,3);
-  \draw [ultra thick] (0,0) -- (3,0);
-  \draw [ultra thick] (3,0) -- (3,3);
+  \draw [penColor2,ultra thick] (0,0) -- (3,0);
+  \draw [ultra thick] (3,1) -- (3,3);
+  \draw [penColor,ultra thick] (3,0) -- (3,1);
   \draw [ultra thick] (0,3) -- (3,3);
 
-  \draw [ultra thick] (0,0) -- (3,1);
-  \draw [ultra thick] (3,1) -- (2,3);
-  \draw [ultra thick] (0,0) -- (2,3);
+  \draw [penColor3,ultra thick] (0,0) -- (3,1);
+  \draw [penColor3,ultra thick] (3,1) -- (2,3);
+  \draw [penColor3,ultra thick] (0,0) -- (2,3);
 
   \draw [thin] (2.9,0) -- (2.9,0.1);
   \draw [thin] (2.9,0.1) -- (3,0.1);
@@ -310,7 +328,19 @@ The problem is that this second right triangle is too big. It is supposed to be 
 
 
 
-Looking at this second right triangle for $c + d \, i$, it's sides are not $c$ and $d$.  It is a similar triangle with $c$ resized to $1$.  That makes the maginification factor $\frac{1}{c}$.  The other side is scaled by that factor as well.  The other leg has length $\frac{d}{c}$
+
+
+
+
+
+The problem is that this second right triangle is too big. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were suppose to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$.  
+
+
+ The good news is that the new triangle we created is a right triangle with angle $\phi$.  That means it is similar to the right triangle for $c + d \, i$.  The sides must be porportional to the sides of the $c-d-1$ right triangle for $c + d \, i$.  We can use this proportionality.
+
+
+
+
 
 
 
@@ -322,14 +352,99 @@ Looking at this second right triangle for $c + d \, i$, it's sides are not $c$ a
 \begin{image}[3in]
     \begin{tikzpicture}
 
+
+
+  \draw [,thin] (2.9,0.966) -- (2.84,1.1);
+  \draw [thin] (2.95,1.14) -- (2.84,1.1);
+
+
+  \draw [thin] (-1.1,0.2997) -- (-1.15,0.3997);
+  \draw [thin] (-1.15,0.3997) -- (-1.05,0.433);
+
+
+  \draw [penColor3,ultra thick] (0,0) -- (3,1);
+  \draw [penColor3,ultra thick] (3,1) -- (2,3);
+  \draw [penColor3,ultra thick] (0,0) -- (2,3);
+
+  \draw [rotate=0] (0.35,0.25) node {\scriptsize{$\phi$}};
+  %\draw [rotate=0] (2.75,1.1) node {\scriptsize{$\beta$}};
+  %\draw [rotate=0] (2,2.7) node {\scriptsize{$\phi$}};
+
+  \draw (-1.4,0) node {\scriptsize{$c$}};
+  \draw (-1,0.7) node {\scriptsize{$d$}};
+  \draw (-1.8,0.6) node {\scriptsize{$1$}};
+
+
+
+
+
+  \draw [ultra thick] (-2,0) -- (-1,0.333);
+  \draw [ultra thick] (-1,0.333) -- (-1.333,1);
+  \draw [ultra thick] (-2,0) -- (-1.333,1);
+
+  \draw [rotate=0] (-1.7,0.25) node {\scriptsize{$\phi$}};
+  %\draw [rotate=0] (-1.2,0.4) node {\scriptsize{$\beta$}};
+  %\draw [rotate=0] (-1.35,0.75) node {\scriptsize{$\phi$}};
+
+  \draw (2.8,2) node {\scriptsize{$k$}};
+  \draw (0.85,1.75) node {\scriptsize{$h$}};
+  \draw (2,0.4) node {\scriptsize{$1$}};
+
+
+  %\draw [ultra thick,->] (-1.5,2) -- (0.5,2);
+  %\draw [rotate=0] (-0.5,2.25) node {\scriptsize{factor of $k$}};
+
+
+
+
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+These right triangles are similar.
+
+
+\[
+\frac{h}{1} = \frac{k}{c} = \frac{1}{d}
+\]
+
+\[
+k = \frac{c}{d}
+\]
+
+
+
+The other leg of our right triangle has length $\frac{d}{c}$.
+
+
+
+
+
+
+
+
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+  \draw [gray,thin,dashed] (3.2,0) arc (0:120:1in); 
+  \draw [black,fill=black] (0,0) circle (0.05cm);
+
   \draw [ultra thick] (0,0) -- (0,3);
-  \draw [ultra thick] (0,0) -- (3,0);
-  \draw [ultra thick] (3,0) -- (3,3);
+  \draw [penColor2,ultra thick] (0,0) -- (3,0);
+  \draw [ultra thick] (3,1) -- (3,3);
+  \draw [penColor,ultra thick] (3,0) -- (3,1);
   \draw [ultra thick] (0,3) -- (3,3);
 
-  \draw [ultra thick] (0,0) -- (3,1);
-  \draw [ultra thick] (3,1) -- (2,3);
-  \draw [ultra thick] (0,0) -- (2,3);
+  \draw [penColor3,ultra thick] (0,0) -- (3,1);
+  \draw [penColor3,ultra thick] (3,1) -- (2,3);
+  \draw [penColor3,ultra thick] (0,0) -- (2,3);
 
   \draw [thin] (2.9,0) -- (2.9,0.1);
   \draw [thin] (2.9,0.1) -- (3,0.1);
@@ -350,11 +465,12 @@ Looking at this second right triangle for $c + d \, i$, it's sides are not $c$ a
   \draw (3.25,0.5) node {\scriptsize{$b$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
-
-  %\draw (2.9,1.5) node {\scriptsize{$\theta$}};
   \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
 
 
+  %\draw (2.9,1.5) node {\scriptsize{$\theta$}};
+
+
 
 
 
@@ -369,11 +485,19 @@ Looking at this second right triangle for $c + d \, i$, it's sides are not $c$ a
 
 
 
-We can also tell something about another angle in this diagram. We can get the measurement for the bottom angle in the top right triangle for $\tfrac{d}{c}$. We'll call this angle $A$ in the digram below.
+
+
+We can also deduce some information about the top-right right triangle in this diagram. 
+
+
+If we label the angles $\alpha$ and $\beta$ in the diagram below, then
+
+
+
 
 \begin{itemize}
-  \item The bottom right triangle has a right angle, the angle $\theta$, and angle $B$.
-  \item The right side of the rectangle forms a straight angle and it is cut up into three angles: a right angle, $B$ on one side, and $A$ on the other side.
+  \item Our original right triangle for $a + b \, i$  has non-right angles, $\theta$, and angle $\beta$.
+  \item The right side of the encompassing rectangle forms a straight angle and it is cut up into three angles: a right angle, $\beta$ on one side, and $\alpha$ on the other side.
 \end{itemize}
 
 
@@ -381,16 +505,30 @@ We can also tell something about another angle in this diagram. We can get the m
 
 
 
+
+
+
+
+
+
+
+
+
 \begin{image}[3in]
     \begin{tikzpicture}
 
+  \draw [gray,thin,dashed] (3.2,0) arc (0:120:1in); 
+  \draw [black,fill=black] (0,0) circle (0.05cm);
+
   \draw [ultra thick] (0,0) -- (0,3);
-  \draw [ultra thick] (0,0) -- (3,0);
-  \draw [ultra thick] (3,0) -- (3,3);
-  \draw [ultra thick] (0,3) -- (3,3);
+  \draw [penColor2,ultra thick] (0,0) -- (3,0);
+  \draw [penColor5,ultra thick] (3,1) -- (3,3);
+  \draw [penColor,ultra thick] (3,0) -- (3,1);
+  \draw [ultra thick] (0,3) -- (2,3);
+  \draw [penColor5,ultra thick] (2,3) -- (3,3);
 
   \draw [ultra thick] (0,0) -- (3,1);
-  \draw [ultra thick] (3,1) -- (2,3);
+  \draw [penColor5, ultra thick] (3,1) -- (2,3);
   \draw [ultra thick] (0,0) -- (2,3);
 
   \draw [thin] (2.9,0) -- (2.9,0.1);
@@ -412,10 +550,11 @@ We can also tell something about another angle in this diagram. We can get the m
   \draw (3.25,0.5) node {\scriptsize{$b$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
-
-  \draw (2.8,1.6) node {\scriptsize{$A$}};
-  \draw (2.85,0.75) node {\scriptsize{$B$}};
   \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+
+
+  \draw (2.85,1.55) node {\scriptsize{$\alpha$}};
+  \draw (2.85,0.75) node {\scriptsize{$\beta$}};
 
 
 
@@ -428,43 +567,31 @@ We can also tell something about another angle in this diagram. We can get the m
 
 
 
-The sum of the angles of the right triangle is $\theta + B + 90^{\circ} = 180^{\circ}$ and the angles forming the straight angle sum to $\theta + A + 90^{\circ} = 180^{\circ}$.  
+
+
+
+The sum of the angles of the bottom right triangle is $\theta + \beta + 90^{\circ} = 180^{\circ}$ and the angles forming the straight angle sum to $\theta + \alpha + 90^{\circ} = 180^{\circ}$.  
 
 
 
 
 \[
-\theta + B + 90^{\circ}   =   B + A + 90^{\circ}
+\theta + \beta + 90^{\circ}   =   \beta + \alpha + 90^{\circ}
 \]
 
 
 
-\[  \theta = A  \]
+\[  \theta = \alpha  \]
 
 
 
 
 
 
+The angles in the top-right right triangle are $\theta$ and $\beta$. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-We now have a pair of similar right triangles.  The bottom right triangle representing $a+b \, i$ and the triangle formed in the upper-right corner of the rectangle.
-
-Comparing the hypotnueses, we that the scaling factor is $\frac{d}{c}$. Therefore, the other sides must also be resized proportionally.
-
+The bottom right triangle representing $a + b \, i$ and the triangle formed in the upper-right corner of the rectangle are similar triangles.  We can get the lengths of the legs of the top right triangle.
 
 
 
@@ -477,13 +604,18 @@ Comparing the hypotnueses, we that the scaling factor is $\frac{d}{c}$. Therefor
 \begin{image}[3in]
     \begin{tikzpicture}
 
+  \draw [gray,thin,dashed] (3.2,0) arc (0:120:1in); 
+  \draw [black,fill=black] (0,0) circle (0.05cm);
+
   \draw [ultra thick] (0,0) -- (0,3);
-  \draw [ultra thick] (0,0) -- (3,0);
-  \draw [ultra thick] (3,0) -- (3,3);
-  \draw [ultra thick] (0,3) -- (3,3);
+  \draw [penColor2,ultra thick] (0,0) -- (3,0);
+  \draw [penColor5,ultra thick] (3,1) -- (3,3);
+  \draw [penColor,ultra thick] (3,0) -- (3,1);
+  \draw [ultra thick] (0,3) -- (2,3);
+  \draw [penColor5,ultra thick] (2,3) -- (3,3);
 
   \draw [ultra thick] (0,0) -- (3,1);
-  \draw [ultra thick] (3,1) -- (2,3);
+  \draw [penColor5, ultra thick] (3,1) -- (2,3);
   \draw [ultra thick] (0,0) -- (2,3);
 
   \draw [thin] (2.9,0) -- (2.9,0.1);
@@ -505,15 +637,91 @@ Comparing the hypotnueses, we that the scaling factor is $\frac{d}{c}$. Therefor
   \draw (3.25,0.5) node {\scriptsize{$b$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
-
-  \draw (2.9,1.5) node {\scriptsize{$\theta$}};
   \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+
+   \draw (2.6,3.25) node {\scriptsize{$x$}};
+  \draw (3.25,2.2) node {\scriptsize{$y$}};
+
+
+  \draw (2.85,1.55) node {\scriptsize{$\theta$}};
+  \draw (2.85,0.75) node {\scriptsize{$\beta$}};
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+Simliar triangles gives us
+
+
+\[
+\frac{\tfrac{d}{c}}{1} = \frac{y}{a} = \frac{x}{b}
+\]
+
+
+\[
+y = \frac{d a}{c} \, \text{ and } \,  x = \frac{d b}{c}
+\]
+
+
+
+
+
+
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+  \draw [gray,thin,dashed] (3.2,0) arc (0:120:1in); 
+  \draw [black,fill=black] (0,0) circle (0.05cm);
+
+  \draw [ultra thick] (0,0) -- (0,3);
+  \draw [penColor2,ultra thick] (0,0) -- (3,0);
+  \draw [penColor5,ultra thick] (3,1) -- (3,3);
+  \draw [penColor,ultra thick] (3,0) -- (3,1);
+  \draw [ultra thick] (0,3) -- (2,3);
+  \draw [penColor5,ultra thick] (2,3) -- (3,3);
+
+  \draw [ultra thick] (0,0) -- (3,1);
+  \draw [penColor5, ultra thick] (3,1) -- (2,3);
+  \draw [ultra thick] (0,0) -- (2,3);
+
+  \draw [thin] (2.9,0) -- (2.9,0.1);
+  \draw [thin] (2.9,0.1) -- (3,0.1);
+
+  \draw [thin] (2.9,0.97) -- (2.85,1.06);
+  \draw [thin] (2.85,1.06) -- (2.95,1.10);
+
+
+
+
+  \draw [->] (.75,0) arc(0:18.4:.75); 
+  \draw [rotate=9] (1,0) node {\scriptsize{$\theta$}};
+  \draw [->] (.75,0) arc(0:55:.75); 
+  \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
+
+
+  \draw (1.5,-0.25) node {\scriptsize{$a$}};
+  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,0.75) node {\scriptsize{$1$}};
+
+  \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+
+
+  \draw (2.85,1.55) node {\scriptsize{$\theta$}};
+  \draw (2.85,0.75) node {\scriptsize{$\beta$}};
+
 
   \draw (3.25,2.2) node {\tiny{$\tfrac{da}{c}$}};
   \draw (2.6,3.2) node {\tiny{$\tfrac{db}{c}$}};
-
-
-
 
 
 
@@ -526,6 +734,9 @@ Comparing the hypotnueses, we that the scaling factor is $\frac{d}{c}$. Therefor
 
 
 We can now deduce the lengths of the other two pieces of the rectangle in terms of $a$, $b$, $c$, and $d$.
+
+
+
 
 
 
@@ -583,16 +794,18 @@ We can now deduce the lengths of the other two pieces of the rectangle in terms 
   \end{image}
 
 
+We almost have every aspect of this diagram figured out.  We have two angles left.
 
 
 
 
 
-Let's focus our attention on the right triangle formed in the upper-left corner of the rectangle.
 
-The bottom exterior angle is the sum of $\theta$ and $\phi$.
+Let's turn our attention to the right triangle formed in the upper-left corner of the rectangle.
 
-The upper angle must measure $\theta + \phi$ also since it is an alternate angle.
+The bottom exterior angle is the sum of $\theta$ and $\phi$.  It just our two original angles glued together.
+
+
 
 
 
@@ -632,6 +845,65 @@ The upper angle must measure $\theta + \phi$ also since it is an alternate angle
 
     \end{tikzpicture}
   \end{image}
+
+
+
+If we view the slanted line as the diagonal of a rectangle, then we can see that the upper angle must also measure $\theta + \phi$.
+
+
+
+
+
+
+
+
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+  \draw [ultra thick] (0,0) -- (0,3);
+  \draw [ultra thick] (0,0) -- (3,0);
+  \draw [ultra thick] (0,3) -- (3,3);
+
+
+
+  
+  \draw [ultra thick] (0,0) -- (2,3);
+
+ 
+  \draw [gray,dashed] (2,0) -- (2,3);
+
+
+
+
+  \draw [->] (.75,0) arc(0:55:.75); 
+  \draw [rotate=18] (1.1,0) node {\tiny{$\theta + \phi$}};
+  \draw (1.25,2.75) node {\tiny{$\theta + \phi$}};
+
+
+
+
+  \draw (-0.5,1.5) node {\tiny{b+$\tfrac{da}{c}$}};
+  \draw (1,3.2) node {\tiny{$a-\tfrac{db}{c}$}};
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -671,8 +943,8 @@ Finally, let's resize this triangle by a factor of $c$.
 
 
 
-  \draw (-0.5,1.5) node {\tiny{$ac-bd$}};
-  \draw (1,3.2) node {\tiny{$ad+bc$}};
+  \draw (-0.5,1.5) node {\tiny{$bc+ad$}};
+  \draw (1,3.2) node {\tiny{$ac-db$}};
 
 
 
@@ -689,6 +961,55 @@ Finally, let's resize this triangle by a factor of $c$.
 It is upsidedown, but this is the right triangle defined on the unit circle by the product
 
 \[  (a + b \, i) \cdot (c + d \, i) = (ac-bd) + (ad+bc) \, i    \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}[3in]
+    \begin{tikzpicture}
+
+  \draw [ultra thick] (0,0) -- (2,3);
+  \draw [ultra thick] (0,0) -- (2,0);
+  \draw [ultra thick] (2,0) -- (2,3);
+
+
+  \draw [thin] (1.9,0) -- (1.9,0.1);
+  \draw [thin] (1.9,0.1) -- (2,0.1);
+
+
+  \draw [->] (.75,0) arc(0:55:.75); 
+  \draw [rotate=18] (1.1,0) node {\tiny{$\theta + \phi$}};
+
+
+
+
+
+  \draw (2.5,1.5) node {\tiny{$ad+bc$}};
+  \draw (1,-0.2) node {\tiny{$ac-bd$}};
+
+
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
 
 
 
