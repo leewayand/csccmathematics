@@ -1,11 +1,7 @@
 \documentclass{ximera}
 
 \input{../../preamble.tex}
-\outcome{Convert between polar and Cartesian coordinates.}
-\outcome{Convert between the Cartesian and polar reprentation of a curve.}
-\outcome{Determine whether different polar representations represent the same point in the $(x,y)$-plane} 
-\outcome{Use the Cartesian to polar method to plot polar graphs.}
-\outcome{Understand the difference between a curve and the choice of coordinates used to describe the curve}
+
 
 \title{Graphing}
 
@@ -15,29 +11,14 @@ polar coordinates
 \end{abstract}
 \maketitle
 
-\section{polar axes}
+\section{Polar Axes}
 
-%Now we focus on a special type of parametric equations, those of the
-%form:
-%\begin{align*} 
-%  x(\theta) &= r(\theta) \cdot \cos(\theta)\\
-%  y(\theta) &= r(\theta) \cdot \sin(\theta)
-%\end{align*}
-%where $r(\theta)$ is a function of $\theta$.  When working with
-%parametric equations of this form, it is common to notate
-%\[
-%(r \cdot \cos(\theta), r\cdot \sin(\theta)) \text{ as } (r,\theta)
-%\]
-%and state that we are working in \textit{polar coordinates}.
 
-\begin{definition}
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Polar Coordinates}} \\
   An ordered pair consisting of a radius and an angle $(r,\theta)$
-  can be graphed as
-  \begin{align*}
-    x &= r\cdot \cos(\theta)\\
-    y &= r\cdot \sin(\theta)
-  \end{align*}
-  meaning:
+  can be plotted as
+
   \begin{image}[2in]
     \begin{tikzpicture}
 	\draw[thick,->] (0,0) node [below] {$O$} -- (3,0) node [below] {horizontal axis} ;
@@ -51,9 +32,89 @@ polar coordinates
   Coordinates of this type are called \textbf{polar coordinates}.
 \end{definition}
 
+
+
+If we view this point on a circle of radius $r$, then we can connect polar coordinates up to rectangular coordintes and our trigonometric functions.
+
+
+
+
+
+
+
+\begin{image}[2in]
+    \begin{tikzpicture}
+  \draw[thick,->] (0,0) -- (3,0) node [below] {horizontal axis} ;
+  %\draw[thick,->] (0,0) node [below] {$O$} -- (3,0) node [below] {horizontal axis} ;
+  \filldraw (0,0) circle (1.5pt);
+  \filldraw [rotate=55] (2,0) circle (1.5pt);
+  \draw [thick,rotate=55] (0,0)-- node [rotate=55,pos=.5,above] {$r$} (2,0) node [above] {$(r,\theta)$};
+  \draw [->] (.75,0) arc(0:55:.75); 
+  \draw [rotate=27.5] (1,0) node {$\theta$};
+
+
+
+
+  \draw [thick] (1.17,0)--(1.17,1.6);
+  \draw  (2,1) node {$r \cdot sin(\theta)$};
+  \draw  (0.8,0) node [below] {$r \cdot cos(\theta)$};
+
+
+
+
+    \end{tikzpicture}
+  \end{image}
+
+Bridge between polar and rectangular coordinates:
+\begin{align*}
+    x &= r\cdot \cos(\theta)\\
+    y &= r\cdot \sin(\theta)
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Polar coordinates are great for certain situations. However, there is
 a price to pay. Every point in the plane has more than one of
 description in polar coordinates.
+
+
+
+
+
+\begin{question}
+  Which of the following represent the point, $(3,0)$, in
+  $(x,y)$-coordinates?
+  \begin{selectAll}
+    \choice[correct]{$(3,0)$}
+    \choice[correct]{$(3,2\pi)$}
+    \choice{$(3,3\pi)$}
+    \choice[correct]{$(3,-2\pi)$}
+    \choice[correct]{$(3,4\pi)$}
+  \end{selectAll}
+  \begin{feedback}
+    Any integer multiple of $2\pi$ will point towards the positive $x$-axis.
+  \end{feedback}
+\end{question}
+
+
+
+
 
 \begin{question}
   Which of the following represent the origin, $(0,0)$, in
@@ -61,6 +122,8 @@ description in polar coordinates.
   \begin{selectAll}
     \choice[correct]{$(0,0)$}
     \choice[correct]{$(0,\pi)$}
+    \choice[correct]{$(0,\frac{\pi}{6})$}
+    \choice[correct]{$(0,2\pi)$}
     \choice[correct]{$(0,-\pi)$}
   \end{selectAll}
   \begin{feedback}
@@ -70,10 +133,23 @@ description in polar coordinates.
 \end{question}
 
 
+
+How should we interpret a negative radius? 
+
+$(-2,\pi)$ will mean to point in the $\pi$ direction and then move backwards $2$.  It describes the same point as $(2, 2\pi)$.
+
+
+
+
+
+
+
+
+
 \begin{example}
-Plot the following points in polar coordinates:
+Plot the following points described by the following polar coordinates:
 \[
-A =(1,\pi/4)\quad B=(1.5,\pi)\quad C = (2,-\pi/3)\quad D = (-1,\pi/4)
+A =\left(1,\frac{\pi}{4}\right)\quad B=(1.5,\pi)\quad C = \left(2,-\frac{\pi}{3}\right)\quad D = \left(-1,\frac{\pi}{4}\right)
 \]
 \begin{explanation}
   It helps to use a ``polar grid'' to plot these points:
@@ -126,10 +202,27 @@ A =(1,\pi/4)\quad B=(1.5,\pi)\quad C = (2,-\pi/3)\quad D = (-1,\pi/4)
 \end{example}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 It is useful to recognize both the rectangular (or, Cartesian)
 coordinates of a point in the plane and its polar coordinates.
 
-\begin{theorem}
+\begin{theorem}  \textbf{\textcolor{green!50!black}{Cartesian - Polar Bridge}} \\
+
 Given a point $P=(r,\theta)$ in polar coordinates, rectangular
 coordinates are given by
 \[
@@ -142,12 +235,16 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 \]
 \end{theorem}
 
+
+
+
+
 \begin{question}
   Let $P=(2,2\pi/3)$ be a point in polar coordinates. Describe $P$ in
   rectangular coordinates.
   \begin{prompt}
     \[
-    P = (\answer{2\cos (2\pi/3)}, \answer{2\sin (2\pi/3)})
+    P = \left( \answer{2\cos (2\pi/3)}, \answer{2\sin (2\pi/3)} \right)
     \]
   \end{prompt}
   \begin{question}
@@ -155,7 +252,7 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
   rectangular coordinates.
   \begin{prompt}
     \[
-    Q = (\answer{-1\cos (5\pi/4)}, \answer{-1\sin (5\pi/4)})
+    Q = \left( \answer{-1\cos (5\pi/4)}, \answer{-1\sin (5\pi/4)} \right)
     \]
   \end{prompt}
 \end{question}
@@ -166,7 +263,7 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
   polar coordinates.
   \begin{prompt}
     \[
-    P = (\answer{\sqrt{5}}, \answer{\arctan(2)})
+    P = \left( \answer{\sqrt{5}}, \answer{\arctan(2)} \right)
     \]
   \end{prompt}
   \begin{question}
@@ -174,7 +271,7 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
   polar coordinates.
   \begin{prompt}
     \[
-    Q = (\answer{-\sqrt{2}}, \arctan(-1))
+    Q = \left( \answer{-\sqrt{2}}, \arctan(-1) \right)
     \]
     \begin{hint}
       We'll tell you the angle, you think about the radius.
@@ -183,26 +280,87 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 \end{question}
 \end{question}
 
-\section{Polar graphs}
 
-Let's talk about how to plot polar functions. A polar function
-$r(\theta)$ corresponds to the parametric function:
-\begin{align*} 
-  x(\theta) &= r(\theta) \cdot \cos(\theta)\\
-  y(\theta) &= r(\theta) \cdot \sin(\theta)
-\end{align*}
-However, if you are sketching a polar function by hand, there are some
-tricks that can help. If you want to sketch $r(\theta)$, it is often
-useful to first set $\theta = x$, and plot $y=r(x)$ in rectangular
-coordinates. Let's just work examples. It is my belief that ``doing
-things'' is better than ``describing.''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Polar Graphs}
+
+Let's talk about how to plot polar functions.  \\
+
+
+We can plot points on rectangular axes thinking $y = r(\theta)$. 
+
+
+
+
 
 \begin{example}
-  Sketch the polar function $r=1+\cos \theta$ on $[0,2\pi]$.
-  \begin{explanation}
-    While one could make a table of values and plot them in polar
-    coordinates, it is often more useful to first set $\theta=x$ and
-    then plot $y=r(x)$. This is what we'll do, starting with $x = \pi/4$:
+  Sketch the polar function $r=1+\cos(\theta)$ on $[0,2\pi]$.
+
+    \begin{image}%% 45
+      \begin{tikzpicture}
+  \begin{axis}[
+            domain=0:2*pi,
+            xmin=-.3,xmax=6.32,ymin=-.3,ymax=2.3,
+            axis lines =middle, xlabel=$\theta$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={0,.785,...,6.28},
+            xticklabels={$0$,$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\frac{3\pi}{4}$,$\pi$,$\frac{5\pi}{4}$,$\frac{3\pi}{2}$,$\frac{7\pi}{4}$,$2\pi$},
+            ytick={0,1,2},
+          ]
+          %\addplot [dashed, smooth,] {1+cos(deg(x)};
+          \addplot [very thick, penColor, smooth,domain=0:6.28] {1+cos(deg(x))};
+        \end{axis}
+      \end{tikzpicture}
+      \end{image}
+\end{example}
+
+
+Another graphing option is a polar coordinate system.  Instead of measuring $\theta$ horizontally, we measure it as a counterclockwise turn.  Instead of measuring $r$ vertically, we measure it away from the origin in the direction $\theta$.
+
+In the Cartesian graph, $r$ begins at a height of $2$ and then moves down as $\theta$ moves to the right.
+
+In the Polar graph, we turn counterclockwise to an angle of $\theta$ and then move in that direction to a radial measurement of $r$. So, we turn to $0$ radians with a distance of $2$.  As $\theta$ grows, we turn counterclockwise and the radial measurement shortens,
+
+\begin{image}
+\begin{tikzpicture}
+          \begin{polaraxis}[
+              xtick={0,45,...,360},
+              xticklabels={$0$,$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\frac{3\pi}{4}$,$\pi$,$\frac{5\pi}{4}$,$\frac{3\pi}{2}$,$\frac{7\pi}{4}$,$2\pi$},
+              ytick={.5,1,...,2},
+            ]
+            \addplot+[very thick, mark=none,penColor,domain=0:45,samples=100,smooth] {1+cos(x)};
+          \end{polaraxis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Then you continue turning counterclockwise and moving the radial measurement in and out until you get around the whole circle.
+
+
+\begin{example}
+  Sketch the polar function $r=1+\cos(\theta)$ on $[0,2\pi]$.
+  \begin{explanation} 
+
+Begin at $0$ radians and work your way counterclockwise easy angles moving $r$ closer to the origin or further way.
+
+    
     \begin{image}%% 45
       \begin{tikzpicture}
 	\begin{axis}[
@@ -449,9 +607,7 @@ things'' is better than ``describing.''
 \begin{example}
   Sketch the polar function $r=\cos(2 \theta)$ on $[0,2\pi]$.
   \begin{explanation}
-    While one could make a table of values and plot them in polar
-    coordinates, it is often more useful to first set $\theta=x$ and
-    then plot $y=r(x)$. This is what we'll do, starting with $x = \pi/4$:
+   Begin at $0^{\circ}$, move counterclockwise to easy angles, plot radius.  Then sketch in the graph..
     \begin{image}%% 45
       \begin{tikzpicture}
 	\begin{axis}[
@@ -684,6 +840,23 @@ things'' is better than ``describing.''
        \end{image}
   \end{explanation}
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Converting to and from polar coordinates}
