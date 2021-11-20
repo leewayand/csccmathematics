@@ -74,7 +74,7 @@ From the geometry, we can get formulas for $\sinh(\alpha)$ and $\cosh(\alpha)$ t
 
 
 
-Let's zoom in on the diagram above. For formula purposes, let's use $b = \cosh(\alpha)$.
+Let's zoom in on the diagram above. For formula purposes, let's use $b = \cosh(\alpha)$. Therefore, the corner of our right triangle is $(cosh(\alpha), 0) = (b, 0)$.
 
 
 
@@ -134,13 +134,13 @@ Let's zoom in on the diagram above. For formula purposes, let's use $b = \cosh(\
 
 
 
-Calculus tells us that green area equals
+Taking a little jump of faith, Calculus tells us that green area equals
 
 
 \[      \int_1^b \sqrt{x^2-1} \, dx = \frac{b \sqrt{b^2 - 1} - \ln(b + \sqrt{b^2 - 1})}{2}           \]
 
 
-The pink area is the area of the right triangle minues the green area.
+The pink area is the area of the right triangle minus the green area.
 
 
 
@@ -194,7 +194,7 @@ Now, solve for $b$.
 
 
 
-\section{Graph}
+\subsection{Graph}
 
 
 
@@ -204,7 +204,7 @@ From  $\cosh(\alpha) = \frac{ e^{\alpha} + e^{-\alpha}}{2}$, we can see the func
 
 
 
-We can also see that $\lim_{\alpha \to \infty} \cosh(\alpha) = \infty$ $\lim_{\alpha \to -\infty} \cosh(\alpha) = \infty$.
+We can also see that $\lim\limits_{\alpha \to \infty} \cosh(\alpha) = \infty$ $\lim\limits_{\alpha \to -\infty} \cosh(\alpha) = \infty$.
 
 Finally, $\cosh(0) = 1$
 
@@ -258,7 +258,7 @@ The graph isn't a parabola.  Compare the graphs of $\cosh(x)$ and $x^2$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-4:4, ymax=10, xmax=4, ymin=0, xmin=-4,
-            axis lines =center, xlabel={$\alpha$}, ylabel=$y$, grid = major, grid style={dashed},
+            axis lines =center, xlabel={$x$}, ylabel=$y$, grid = major, grid style={dashed},
             ytick={2,4,6,8,10},
             xtick={-4,-2,2,4},
             yticklabels={$2$,$4$,$6$,$8$,$10$}, 
@@ -289,7 +289,7 @@ The graph isn't a parabola.  Compare the graphs of $\cosh(x)$ and $x^2$.
 
 Instead, the graph is a \textbf{catenary}.
 
-A catenary is what you get when you have a telephone line from one pole to the next or a hanging chain.  The resulting curve has the unique property that the tension forces are all parallel to the curve. The telphone line of chain doesn't move side to side.
+A catenary is what you get when you hang a telephone line from one pole to the next.  The resulting curve has the unique property that the tension forces are all parallel to the curve. This minimizes its movements.
 
 Now flip this curve upside down.  It is an arch with no sheer stress.  All of the forces are along the arch.  This makes it very stable. \\
 
@@ -300,7 +300,7 @@ Now flip this curve upside down.  It is an arch with no sheer stress.  All of th
 
 $\blacktriangleright$ \textbf{End-Behavior}
 
-Since $\cosh(x)$ is exponential, it is going to dominate over $x^2$.
+Since $\cosh(x)$ is exponential, it is going to dominate over power funcitons, like $x^2$.
 
 \[     \lim_{x \to \infty}\frac{x^2}{\cosh(x)} = 0     \]
 

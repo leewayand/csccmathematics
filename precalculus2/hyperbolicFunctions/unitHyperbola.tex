@@ -13,6 +13,24 @@ definitions
 
 
 
+
+
+
+We have defined the values of sine and cosine as coordinates of points on the unit circle. These have been tied to values of the rotating angle about the origin. Finding a domain relationship for desired function values is called \textbf{parameterizing}.  In this case, we have the function values of sine and cosine and then we establish the angle as the parameter.
+
+We have the same situation when defining the hyperbolic trigonometric functions.  The unit hyperbola gives the function values. However, obtaining the domain parameter is not so straightforward.  Rotating angles will not work, because the unit hyperbola does not go around the origin.
+
+Instead, area is the domain parameter.
+
+Let's parameterize sine and cosine by area and then duplicate this process for the unit hyperbola.
+
+
+
+
+\subsection{Area Parameterization}
+
+
+
 We say that $\sin(\theta)$ and $\cos(\theta)$ are parameterized by angle $\theta$. Given an angle $\theta$, draw a line from the origin at that angle.  The line intersects the unit circle.  $\sin(\theta)$ and $\cos(\theta)$ are defined to be the coordinates of that point.
 
 
@@ -65,7 +83,7 @@ We could parameterize $\sin(\theta)$ and $\cos(\theta)$ with something besides t
 
 
 
-\section{Arc Length}
+\subsection{Arc Length}
 
 
 If you begin at $(1,0)$ and move counterclockwise on the unit circle, then the arc length you have travelled identifies points just as well as an angle does.
@@ -129,7 +147,7 @@ If you travel an arc distance of $\ell$ on the unit circle, then you arrive at a
 
 
 
-Of course, on the unit circle $\theta$ and $\ell$ have the exact same measurement.  The unit circle is $2\pi radians$ around.  The circumference of hte unit circle is $2\pi$.
+Of course, on the unit circle $\theta$ and $\ell$ have the exact same measurement.  The unit circle is $2\pi$ radians around.  The circumference of the unit circle is $2\pi$. Numerically, the angle and the arc length mark the same points on the unit circle. 
 
 
 
@@ -158,15 +176,15 @@ Of course, on the unit circle $\theta$ and $\ell$ have the exact same measuremen
 
 
 
-\section{Sector Area}
+\subsection{Sector Area}
 
 
-There are other choices for parameter.
+There are other choices for parameter in addition to angle and arc length.
 
-If you begin at $(1,0)$ and move counterclockwise on the unit circle, then the arc length you have travelled identifies points just as well as an angle does.
+If you begin at $(1,0)$ and move counterclockwise on the unit circle, then you sweep out a sector area - only one area.
 
 
-If you travel an arc distance of $\ell$ on the unit circle, then you arrive at a point and its coordinates depend on $\ell$ insead of $\theta$: $\sin(\ell)$ and $\cos(\ell)$.
+Or, thinking the other way, if you sweep out a particular sector area, then you arrive at a point and its coordinates depend on $A$ insead of $\theta$: $\sin(A)$ and $\cos(A)$.
 
 
 
@@ -247,7 +265,7 @@ If you travel an arc distance of $\ell$ on the unit circle, then you arrive at a
 
 Actually, this isn't much different that the other two parameterizations.
 
-If the sector seewps out an angle $\theta$, then the area of the sector is $A = \frac{\theta}{2\pi} \pi 1^2 = \frac{\theta}{2}$
+If the sector sweeps out an angle $\theta$, then the area of the sector is $A = \frac{\theta}{2\pi} \pi 1^2 = \frac{\theta}{2}$
 
 The area is just half the angle.  
 
@@ -335,7 +353,7 @@ Therefore, we can connect this back up to the two other parameterizations, by $\
 
 
 
-All of out trigonometric functions are based off of these coordinates of the unit circle.
+All of our trigonometric functions are based off of these coordinates of the unit circle.
 
 
 
@@ -443,13 +461,13 @@ All of out trigonometric functions are based off of these coordinates of the uni
 
 
 
-All of out trigonometric functions are based off of these curve defined by $x^2 + y^2 = 1$.
+All of our trigonometric functions are based off of this curve defined by $x^2 + y^2 = 1$.
 
 
-But, a circle is just one type of \textbf{conic sections}.
+But, a circle is just one type of \textbf{conic section}.
 
 
-We could do the same thing with the curve defined by $x^2 - y^2 = 1$ - a \textbf{hyperbola}.
+We could do the same thing with the curve defined by $x^2 - y^2 = 1$ - a \textbf{unit hyperbola}.
 
 
 
@@ -502,7 +520,7 @@ The points on the parabola have two coordinates and we will call them \textbf{hy
 
 
 
-We'll keep $\theta$ for circluar trig functions and adopt $\alpha$ as the hyperbolic angle.
+We'll keep $\theta$ for circular trig functions and adopt $\alpha$ as the hyperbolic angle.
 
 
 
@@ -561,7 +579,7 @@ We need a way to walk along the hyperbola, like we moved around the unit circle.
 
 
 
-The hyperbolic trig functions are parameterized by area.
+Since the unit hyperbola doesn't wrap around the origin, it is easier for the hyperbolic trig functions to be parameterized by area.
 
 
 
@@ -631,6 +649,9 @@ We can still think that there is an angle $\alpha$ and $area = A = \frac{\alpha}
         \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+Geometrically, we see the area that defines the point.  But, we are used to parameterizing with an angle.  So, we'll use $\alpha$ for domain purposes.  It the back or our heads, we know that $A$ comes from the drawing and $\alpha = 2 A$.  That way our trigonometric and hyperbolic trigonometric relations will look alike.
 
 
 
