@@ -14,16 +14,173 @@ vs. verifying
 
 
 
-vector drawing
 
-\begin{sectionOutcomes}
-In this section, students will 
 
-\begin{itemize}
-\item draw.
-\item .
-\item .
-\end{itemize}
-\end{sectionOutcomes}
+The polar equation $r(\theta) = 1 + \cos(\theta)$ describes a curve.
+
+
+
+    \begin{image}%% 45
+       \begin{tikzpicture}
+          \begin{polaraxis}[
+              xtick={0,45,...,360},
+              xticklabels={$0$,$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\frac{3\pi}{4}$,$\pi$,$\frac{5\pi}{4}$,$\frac{3\pi}{2}$,$\frac{7\pi}{4}$,$2\pi$},
+              ytick={.5,1,...,2},
+            ]
+            \addplot+[very thick, mark=none,penColor,domain=0:360,samples=100,smooth] {1+cos(x)};
+          \end{polaraxis}
+         \end{tikzpicture}
+    \end{image}
+
+
+
+We can use the conversion equations to convert this into a parametric description.
+
+
+Using    $x = r \cdot \cos(\theta)$  and  $y = r \cdot \sin(\theta)$ we get
+
+
+\[
+x(\theta) = (1 + \cos(\theta) \cos(\theta) \, \text{ and } \,  y(\theta) = (1 + \cos(\theta) \sin(\theta)
+\]
+
+
+
+Now, our curve is described as the points 
+
+\[
+( (1 + \cos(\theta) \cos(\theta) ,   (1 + \cos(\theta) \sin(\theta) )
+\]
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Conic Sections}
+
+
+
+
+We have already parametrized the unit circle:   $( \cos(\theta), \sin(\theta) )$.
+
+
+We could also give each coordinate its own radius:  $( 4 \cos(\theta), 7 \sin(\theta) )$.  This parameterization is called an ellipse.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-10,xmax=10,ymin=-10,ymax=10,
+            axis lines=center,
+            width=4in,
+            xtick={-8,-6,-4,-2,0,2,4,6,8},
+            ytick={-8,-6,-4,-2,0,2,4,6,8},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+
+          
+
+          \addplot [very thick, penColor,smooth, domain=(0:360)] ({4*cos(x)},{7*sin(x)}); %% unit circle
+
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+We can use any two functions as coordinate functions.  The relationship between the coordinate funcitons will determine the shape of the curve.
+
+
+
+\begin{example}
+
+A linear relationsship.
+
+
+
+$x(t) = t^2$   and  $y(t) = t^2 + 3$ have a linear relationship:  $y = x + 3$.  The curve will be a line, except that both $x(t)$ and $y(t)$ cannot be negative.  Therefore, we will get a ray.
+
+
+
+
+\[
+( t^2, t^2 + 3    )
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-10,xmax=10,ymin=-10,ymax=10,
+            axis lines=center,
+            width=4in,
+            xtick={-8,-6,-4,-2,0,2,4,6,8},
+            ytick={-8,-6,-4,-2,0,2,4,6,8},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+
+          
+
+          \addplot [very thick, penColor,smooth, domain=(0:3)] ({x^2},{x^2 + 3}); %% unit circle
+
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
