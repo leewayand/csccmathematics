@@ -61,6 +61,11 @@ This means intercepts at the whol-$\pi$'s and vertical asymptotes at the half-$\
             axis on top
           ]
           
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-6.28},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.14},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({3.14},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({6.28},{x});
+
             \addplot [line width=2, penColor, smooth,samples=300,domain=(-6.18:-3.24), <->] {cot(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=300,domain=(-3.04:-0.1), <->] {cot(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=300,domain=(0.1:3.04), <->] {cot(deg(x))};
@@ -68,11 +73,6 @@ This means intercepts at the whol-$\pi$'s and vertical asymptotes at the half-$\
 
       \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
 
-
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-6.28},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.14},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({3.14},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({6.28},{x});
 
            
 
@@ -178,10 +178,10 @@ Sine, cosine, and tangent come from measurements of the unit circle.  What about
 
 
 
-In the diagram above, we know that $a = \cos(\theta)$ and $b = \sin(\theta)$ $h = \tan(\theta)$.
+In the diagram above, we know that $a = \cos(\theta)$ and $b = \sin(\theta)$ and $h = \tan(\theta)$.
 
 
-The outer line is the hypotenuse for a large right triangle.  That right triangle is cut into two right triangles by the radius of the unit circle.  These two right triangles are similar.
+The outer tangent line is the hypotenuse for a large right triangle.  That right triangle is cut into two right triangles by the radius of the unit circle.  These two right triangles are similar.
 
 
 

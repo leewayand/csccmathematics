@@ -53,17 +53,16 @@ This means no intercepts and vertical asymptotes at the half-$\pi$'s.
             axis on top
           ]
           
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {sec(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {sec(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {sec(deg(x))};
 
       \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
-
-
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
 
            
 
@@ -173,7 +172,7 @@ Sine, cosine, and tangent come from measurements of the unit circle.  What about
 In the diagram above, we know that $a = \cos(\theta)$ and $b = \sin(\theta)$.
 
 
-$a+c$ is the hypotenuse of a right triangel that is simialr to the unit circle right triangle.
+$a+c$ is the hypotenuse of a right triangle that is similar to the unit circle right triangle.
 
 
 

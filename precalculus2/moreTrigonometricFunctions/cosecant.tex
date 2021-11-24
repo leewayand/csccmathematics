@@ -21,7 +21,7 @@ attributes
 
 
 
-Secant is the reciprocal of cosine. 
+Cosecant is the reciprocal of sine. 
 
 \[   \csc(\theta)  =  \frac{1}{\sin(\theta)}  \]
 
@@ -51,6 +51,11 @@ This means no intercepts and vertical asymptotes at the whole-$\pi$'s.
             axis on top
           ]
           
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-6.28},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.14},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({3.14},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({6.28},{x});
+
             \addplot [line width=2, penColor, smooth,samples=300,domain=(-6.18:-3.24), <->] {1/sin(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=300,domain=(-3.04:-0.1), <->] {1/sin(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=300,domain=(0.1:3.04), <->] {1/sin(deg(x))};
@@ -58,11 +63,6 @@ This means no intercepts and vertical asymptotes at the whole-$\pi$'s.
 
       \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
 
-
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-6.28},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.14},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({3.14},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({6.28},{x});
 
            
 
