@@ -33,17 +33,16 @@ The tangent function is not one-to-one.
             axis on top
           ]
           
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
             \addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
 
       \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
-
-
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
 
            
 
@@ -79,13 +78,10 @@ The usual choice is $\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$.
             axis on top
           ]
           
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
-
-
             \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
             \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
 
-
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
            
 
   \end{axis}
@@ -142,8 +138,8 @@ The usual choice is $\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$.
 
 
 \begin{itemize}
-  \item $\lim_{x \to -\infty} \arctan(x) = -\frac{\pi}{2}$
-  \item $\lim_{x \to \infty} \arctan(x) = \frac{\pi}{2}$
+  \item $\lim\limits_{x \to -\infty} \arctan(x) = -\frac{\pi}{2}$
+  \item $\lim\limits_{x \to \infty} \arctan(x) = \frac{\pi}{2}$
 \end{itemize}
 
 
