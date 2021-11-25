@@ -1,0 +1,245 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+\author{Bart Snapp and Jim Talamo (edited)}
+
+\title{Dominant Terms}
+
+\begin{document}
+\begin{abstract}
+evaluating limits
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+\section{Computing limits of sequences using dominant term analysis}
+The last example shows us that for many sequences, we can employ the same techniques that we used to examine end-behavior.  
+
+\begin{example}
+Let $a_n = \frac{n^3+4n^2-1}{2-4n^4}$.  Determine if the limit of the sequence $\{a_n\}_{n=1}^{\infty}$ exists.
+
+\begin{explanation}
+We can use the idea of function dominance. 
+
+The highest degree term in the numerator is $n^3$, while the largest term in the denominator is $-4n^4$.  We can factor out the largest terms from both the numerator and denominator and do a little algebra.
+
+\[
+\frac{n^3+4n^2-1}{2-4n^4} = \frac{n^3\left(1+\frac{4}{n}-\frac{1}{n^3}\right)}{-4n^4\left(-\frac{1/2}{n^4}+1\right)} = \frac{n^3}{-4n^4} \cdot  \frac{1+\frac{4}{n}-\frac{1}{n^3}}{-\frac{1/2}{n^4}+1}
+\]
+The second term becomes arbitrarily close to $1$ as $n$ grows larger and larger, so the limit of the sequence is completely determined by the ratio of the highest degree term in the numerator to the highest degree term in the denominator.  In this case, that ratio is $\frac{n^3}{-4n^4} = \frac{1}{-4n}$, so $\lim\limits_{n \to \infty} a_n = 0$.
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+In the preceding example, we say that the \emph{dominant term} in the numerator is $n^3$ and that the \emph{dominant term} in the denominator is $-4n^4$ because these terms are the only ones that are relevant when finding the limit.
+
+\begin{remark}
+When finding limits of functions, it is only necessary to consider the dominant term.  When treating quotients of functions, we only need to consider the dominant terms in the numerator and denominator.
+\end{remark}
+
+
+
+\begin{example}
+Let $a_n = \frac{n^2(2n+1)(5-3n)}{(1+2n)^4}$.  Determine if the limit of the sequence $\{a_n\}_{n=1}^{\infty}$ exists.
+
+\begin{explanation}
+While we could perform the multiplication in both the numerator and denominator explicitly, we can spot the dominant term more efficiently.  
+\begin{itemize}
+\item The highest degree term in the numerator is $n^2 \cdot 2n \cdot (-3n) = \answer{-6n^4}$.
+\item The dominant term in the denominator is $(2n)^4 = \answer{16}n^4$.  
+\end{itemize}
+
+By noting that 
+
+\[ \lim_{n \to \infty} \frac{n^2(2n+1)(5-3n)}{(1+2n)^4} = \lim_{n \to \infty} \frac{-6n^4}{16n^4} = \answer{-\frac{6}{16}}, \]
+we find $\lim\limits_{n \to \infty} a_n = \answer{-\frac{6}{16}}$.
+\end{explanation}
+\end{example}
+ 
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Growth rates}
+The preceding examples illustrate that higher positive powers of $n$ grow more quickly than lower positive powers of $n$.  We can introduce a little notation that captures the rate at which terms in a sequence grow in a succinct way.
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Dominance}} 
+
+  Given two sequences $\{a_n\}$ and $\{b_n\}$, the notation $a_n \ll
+  b_n$ means that
+  \[
+  \lim\limits_{n\to\infty} \frac{a_n}{b_n} =
+  0\qquad\text{and}\qquad\lim\limits_{n\to\infty} \frac{b_n}{a_n} =\infty.
+  \]
+\end{definition}
+
+In essence, writing $a_n \ll b_n$ says that the sequence $(b_n)$ grows
+much faster than $(a_n)$.
+
+\begin{example}
+Suppose that $a_n = 4n^2+3n$ and $b_n = 5n^{3/2}+2n$.  Then, we can compute $\lim\limits_{n \to \infty} \frac{a_n}{b_n} = \answer{\infty}$ and $\lim\limits_{n \to \infty} \frac{b_n}{a_n} = \answer{0}$.  Using the notation we just introduced, we have that \wordChoice{\choice{$a_n  \ll b_n$}\choice[correct]{$b_n  \ll a_n$}}
+\end{example}
+
+Many sequences of interest involve terms other than powers of $n$.  It is often useful to understand how different \emph{types} of functions grow relative to each other.
+
+\begin{theorem}[Growth rates of sequences]
+  Let $p,q$ be positive real numbers, and let $b> 1$. We have the
+  following relationships.
+  \[
+  \ln^p(n)\ll n^q \ll b^n \ll n! \ll n^n
+  \]
+\end{theorem}
+
+
+%\textbf{PICTURES TO FOLLOW}
+
+The first inequality in this theorem essentially guarantees that \emph{any} power of $\ln(n)$ grows more slowly than \emph{any} power of $n$.  For example: 
+
+\begin{example}
+  Let $a_n  = \frac{\ln^{9}(n)}{n^{1/2}}$.  What is $\lim\limits_{n \to \infty} a_n$?
+  
+  \begin{explanation}
+  The notation  $\ln^p(n)\ll n^q$ means that $\lim\limits_{n \to \infty} \frac{\ln^p(n)}{n^q} = 0$ for any positive numbers $p$ and $q$.  In this example, $p=9$ and $q=1/2$, so by the growth rates result, $\lim\limits_{n\to\infty}a_n =\answer[given]{0}$.  
+  
+  \end{explanation}
+\end{example}
+
+This allows us to extend the \emph{dominant term} idea to more complicated expressions.
+
+
+
+
+
+
+
+
+\begin{example}
+  Let $a_n  = \frac{n^{100} + n^n}{n!+5^n}$.  What is $\lim\limits_{n \to \infty} a_n$?
+  
+  \begin{explanation}
+  By growth rates, the dominant term in the numerator is $n^n$, and the dominant term in the denominator is $n!$.  We thus will know if $\lim\limits_{n \to \infty} a_n$ exists by considering $\lim\limits_{n \to \infty} \frac{n^n}{n!}$.  By growth rates, this limit is infinite, so $\lim\limits_{n \to \infty} a_n = \infty$.
+  
+This can be made more explicit by the following computation, which shows exactly how the growth rates results are used.  As with a previous example, it relies on factoring the dominant term in the numerator and the denominator.  These terms are determined by the growth rates results.
+
+\[
+\lim\limits_{n \to \infty} \frac{n^{100} + n^n}{n!+5^n} = \lim\limits_{n \to \infty} \frac{n^n \left(\frac{n^{100}}{n^n} + 1\right)}{n!\left(1+\frac{5^n}{n!}\right)} 
+\]
+
+By the growth rates results, $\lim\limits_{n \to \infty} \frac{n^{100}}{n^n} =0$ and  $\lim\limits_{n \to \infty}\frac{5^n}{n!} =0$, so we have: 
+  
+ \[  \lim\limits_{n \to \infty} \frac{n^n \left(\frac{n^{100}}{n^n} + 1\right)}{n!\left(1+\frac{5^n}{n!}\right)} =   \lim\limits_{n \to \infty} \frac{n^n \left(0 + 1\right)}{n!\left(1+0\right)} = \lim\limits_{n \to \infty} \frac{n^n}{n!}.  \]
+   
+   
+  \end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Squeeze Theorem}
+
+%
+%\textbf{A PICTURE IS FORTHCOMING}
+
+Previously, when considering limits, one of our techniques was to replace 
+complicated functions by simpler functions. The \textit{Squeeze Theorem}
+tells us one situation where this is possible.
+
+\begin{theorem}[Squeeze Theorem]\index{Squeeze Theorem}
+  Suppose that $(a_n)$, $(b_n)$, and $(c_n)$ are sequences with
+  \[
+  a_n \le b_n \le c_n
+  \]
+  for all $n$ greater than some index $N$. If
+  \[
+  \lim\limits_{n\to\infty} a_n = L = \lim\limits_{n\to\infty} c_n,
+  \] 
+  then $\lim\limits_{n\to\infty} b_n = L$.
+\end{theorem}
+
+Let's see an example.
+
+\begin{example}
+  Consider the sequence $(b_n)_{n=1}^{\infty}$ where $b_n =
+  \left(\frac{-1}{2}\right)^n$. Compute:
+  \[
+  \lim\limits_{n\to\infty}b_n
+  \]
+  \begin{explanation}
+    To compute this limit we will use the squeeze theorem. We know that
+    \[
+    -\left(\frac{1}{2}\right)^n\le \left(\frac{-1}{2}\right)^n \le \left(\frac{1}{2}\right)^n
+    \]
+    but we also know
+    \[
+    \lim\limits_{n\to \infty}\left(-\left(\frac{1}{2}\right)^n\right) = \answer[given]{0}
+    \]
+    and
+    \[
+    \lim\limits_{n\to \infty}\left(\frac{1}{2}\right)^n =\answer[given]{0}.
+    \]
+    Hence by the squeeze theorem, $\lim\limits_{n\to\infty} b_n = \answer[given]{0}$.
+  \end{explanation}
+\end{example}
+
+%
+%\textbf{WHAT DO WE WANT TO DO HERE?  ADD MORE PICTURES AS EVIDENCE?}
+
+The squeeze theorem is helpful in establishing a more general result about \emph{geometric} sequences.
+\begin{theorem}
+  Given a geometric sequence $\{a_n\}_{n=n_0}$ where $a_n = a \cdot r^{n}$,
+  \[
+  \lim\limits_{n\to\infty} a_n =
+  \begin{cases}
+    0 &\text{if $|r|<1$,}\\
+    1 &\text{if $r=1$,}\\
+    \text{DNE} &\text{if $|r|>1$ or $r=-1$.}
+  \end{cases}
+  \]
+\end{theorem}
+Of course, when $r$ is positive, the squeeze theorem is not necessary, but it is useful when establishing the convergence results for $1<r<0$ as in the preceding example.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
