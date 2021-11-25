@@ -13,7 +13,7 @@
 
 \begin{document}
 \begin{abstract}
-lists
+list functions
 \end{abstract}
 \maketitle
 
@@ -31,6 +31,15 @@ While these scenarios may seem unrelated on the surface, they have something in 
 
 We start with some formality before discussing more practical matters involving sequences.
 
+
+
+
+
+
+
+
+
+
 \section{The definition of a sequence}
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Sequence}} 
@@ -47,6 +56,17 @@ f : \{n_0,n_{0+1},n_{0+2}, \ldots\} & \to \mathbb R \\
 where the first line indicates the domain and range and the second line gives the rule that defines the terms in the sequence.
 \end{definition}
 
+
+
+\textbf{Note:}  The domain could be a finite interval of the whole numbers.  However, our interest is in an infinite interval of whole numbers. \\
+
+
+
+
+
+
+
+
 \begin{example}
 Suppose that the domain of a sequence is the set of natural numbers $\{1,2,3,\ldots\}$, which we denote by $\mathbb N$ and the sequence maps each natural number to two times itself.  We would write
 
@@ -58,7 +78,7 @@ f : \mathbb N & \to \mathbb R \\
 We can denote this more succinctly using the formula $f(n)=2n$.
 \end{example}
 
-Most of the time, we take $n_0=0$ or $n_0=1$; that is, our domain will either be $\{0,1,2,\ldots\}$, or $\{1,2,3,\ldots\}$, respectively.  We also take the domain of a sequence to be an infinite interval, but other texts might consider sequences whose domain is finite. In this text, we generally consider sequences whose domain is an infinite subset of the natural numbers, and unless otherwise specified, the domain of a sequence will have a smallest element and include all larger natural numbers.
+Most of the time, we take $n_0=0$ or $n_0=1$; that is, our domain will either be $\{0,1,2,\ldots\}$ (the whole numbers), or $\{1,2,3,\ldots\}$ (the natural numbers), respectively.  We also take the domain of a sequence to be an infinite interval, but other texts might consider sequences whose domain is finite. In this text, we generally consider sequences whose domain is an infinite subset of the natural numbers, and unless otherwise specified, the domain of a sequence will have a smallest element and include all larger natural numbers.  We often called a number from the domain as \textbf{index}.  The domain is the set of \textbf{indices}.
 
 Thus, we can represent sequences of interest as an ordered list of real numbers, where there is an assumed smallest starting index.  For instance, returning to the question posed by Fibonacci, we can keep track of the number of rabbits present at the start of the $n$-th month in a table.
 
@@ -81,7 +101,13 @@ We can more succinctly denote this by arranging the number of rabbits in the ord
 
 where it is understood that the first number in the list is the number of rabbits at the start of month $1$, the second number in the list is the number of rabbits at the start of month $2$, and so on.  The dots ``\ldots'' signify that the list keeps going forever.  We often want to refer to a specific term in this list, so we introduce some standard notation.
 
-\begin{notation} Sequence
+
+
+
+
+
+
+\begin{notation} \textbf{\textcolor{blue!75!black}{Sequence}} 
 
 
 The notation $\left\{a_n\right\}_{n=n_0}$ will be used to denote the infinite ordered list of numbers below.
@@ -91,6 +117,22 @@ a_{n_0}, a_{n_0+1},  a_{n_0+2}, \ldots
 \]
 
 \end{notation}
+
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!80!black}{Ellipsis}} 
+
+
+The notation $\ldots$ is called an \textbf{ellipses} and we do not like it.  The ellipsis means that the sequence continues in the \textit{obvious} way.  This places the interpretation on the shoulders of the reader and that is not good.  We want to be explicit when we describe a sequence.  Therefore, we will slowly move away from using an ellipsis when describing sequences.
+
+\end{warning}
+
+
+
+
+
 
 The subscript in the above notation is called the \emph{index} and describes how we reference the first term.  In many instances, we index sequences starting at $n_0=0$ or $n_0=1$.  When $n_0=0$, the list looks like this:
 
@@ -128,7 +170,7 @@ f_2 : \{1,2,3, \ldots \} & \to \mathbb R \qquad \textrm{ where } f_2(n) =2n \\
 \end{array}
 \]
 
-both can be represented by the ordered list $2, 4, 6, 8, 10, \ldots$, but since the domains of $f_1$ and $f_2$ are different, they are not the same sequence even though they model the same phenomenon. 
+both can represent the ordered list $2, 4, 6, 8, 10, \ldots$, but since the domains of $f_1$ and $f_2$ are different, they are not the same sequence even though they model the same phenomenon. 
 
 Let's now briefly summarize what has been discussed so far.
 
@@ -154,6 +196,8 @@ Which number comes next? \wordChoice{\choice{$32$}    \choice{$31$}    \choice{$
 
 While there seems to be a pattern, without giving a rule that defines the successive terms, it's impossible to establish what the next one is. 
 
+
+This is why we do not like the $\dots$.
 \end{question}
 
 To explore further, here are two different sequences whose first five terms are the same as the example above.
@@ -299,6 +343,18 @@ want to define a sequence by specifying something that will allow us to
 write down any term that we want.  
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Two common methods of representing the terms of a sequence}
 
 Consider the examples presented at the beginning of the section.  While it doesn't seem likely that we can find a good pattern to describe the concentration of methane present in the atmosphere over time, there are actual patterns that can be found that predict future terms in the financial scenario as well as Fibonacci's example.
@@ -377,9 +433,9 @@ a_5 = a_4+a_3 &= 3+2 = 5 \\
 When we have an equality that relates the next term in a sequence to the previous ones, we say that we have a \emph{recursive formula} for the sequence.  Let's see another example.
 
 \begin{example}
- Suppose that $\{a_n\}_{n=1}$ is a sequence defined by the formula $a_{n+1} = a_n+2$, where $a_1 = 5$.  Write down $a_2$, $a_3$, $a_4$, and $a_5$.  
+ Suppose that $\{a_n\}_{n=1}$ is a sequence defined by the formula $a_{n+1} = a_n+2$, with $a_1 = 5$.  Write down $a_2$, $a_3$, $a_4$, and $a_5$.  
  
- \begin{explanation}
+\begin{explanation}
  Substituting in $n=2$ gives the following.
  
  \[
@@ -390,7 +446,7 @@ When we have an equality that relates the next term in a sequence to the previou
  a_3 = a_{2}+2 = \answer[given]{7}+2 = \answer[given]{9}
  \]
  Continuing, we find $a_4 = \answer[given]{11}$ and $a_5 = \answer[given]{13}$.
- 
+
 \end{explanation}
 
 Note here that the rule $a_{n+1} = a_n+2, n \geq 1$ generates the ordered list below.
