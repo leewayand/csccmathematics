@@ -19,15 +19,22 @@ We have seen that $\sum\limits_{n=0}^{\infty} a \, x^n = \frac{a}{1-x}$ for $x \
 
 
 
-This is a new kind of function formula called an infinite series.  This type of infinite series is called a \textbf{geometric series} and $(-1, 1)$ is its interval of convergence.  From a function point-of-view $(-1, 1)$  is the domain of this function.
+This is a new kind of function formula called an \textbf{infinite series}.  This type of infinite series is called a \textbf{geometric series} and $(-1, 1)$ is its interval of convergence.  From a function point-of-view $(-1, 1)$  is the domain of this function.
 
 
-On the other hand, this same function can be represented by the formula $\frac{a}{1-x}$.  The implied domain of $\frac{a}{1-x}$ is $(-\infty, 1) \cup (1, \infty)$, but the domain must be restricted to be equivalent to $\sum\limits_{n=0}^{\infty} a \, x^n$.   
+On the other hand, this same function can be represented by the formula $\frac{a}{1-x}$.  The implied domain of $\frac{a}{1-x}$ is $(-\infty, 1) \cup (1, \infty)$. \\ 
+
+
+If we restrict the domain then we have equivalent representations of the same function 
+
+
+\[
+\sum\limits_{n=0}^{\infty} a \, x^n   =    \frac{a}{1-x}    \, \text{ on } (-1, 1)
+\]
 
 
 
-
-$\blacktriangleright$ A \textbf{closed form} formula is one like  $\frac{a}{1-x}$.  It involves a finite number of our basic numeric operations.  This is different than our new type of formulas.  Infinite series list an infinite number of basic operations.  We prefer closed form formulas, unfortunately they just don't represent enough functions. Functions described via infinite series widen our library of functions, considerably.
+$\blacktriangleright$ A \textbf{closed form} formula is one like  $\frac{a}{1-x}$.  It involves a finite number of our basic numeric operations.  This is different than our new type of formula.  Infinite series list an infinite number of basic operations.  We prefer closed form formulas, unfortunately they just don't represent enough functions. Functions described via infinite series widen our library of functions, considerably.
 
 But, for right now, we are just investigating the bridge between closed form formulas and infinite series using geometric series to illustrate.
 
@@ -39,11 +46,12 @@ But, for right now, we are just investigating the bridge between closed form for
 \section{Geometric Template}
 
 
-We have $\sum\limits_{n=0}^{\infty} a \, x^n = \frac{a}{1-x}$ for $x \in (-1, 1)$, but $x$ is actually a formula for a function, the identity function. \\
+We have $\sum\limits_{n=0}^{\infty} a \, x^n = \frac{a}{1-x}$ for $x \in (-1, 1)$ \\
+
+Of course, $x$ is actually a formula for a function, the identity function, $Id(x) = x$. \\
 
 
-
-The identity function, $Id(x) = x$, is just a function with $Id(0) = 0$.  We could describe $\frac{a}{1-x}$ for $x \in (-1, 1)$ as $\frac{a}{1-Id(x)}$ for $Id(x) \in (-1, 1)$.
+We could describe $\frac{a}{1-x}$ for $x \in (-1, 1)$ as $\frac{a}{1-Id(x)}$ for $Id(x) \in (-1, 1)$.
 
 
 
@@ -52,7 +60,7 @@ The identity function, $Id(x) = x$, is just a function with $Id(0) = 0$.  We cou
 
 
 
-Or, we could expand this composition idea and think of other functions, $f$, such that $f(0) = 0$.
+Or, we could expand this composition idea and think of other functions, $f$, with $f(0) = 0$, like $Id(x)$.
 
 
 
@@ -72,7 +80,7 @@ We could then move this composition over to our Geometric series.
 \[   \sum_{n=0}^{\infty} a (f(x))^n =  \frac{a}{1-f(x)}   \, \text{ as long as } \, f(0) = 0       \]
 
 
-This would be valid up until $f(b)=-1$ for some $b$ or $f(b)=1$ for some $b$.  Since $0$ is the center of the interval of convergence, we could calculate a radius of convergence and establish and interval of convergence - or a common domain where the series and the closed form formula represent the same function.
+This would be valid up until $f(b)=-1$ for some $b$ or $f(b)=1$ for some $b$.  Since $0$ is the center of the interval of convergence, we could calculate a radius of convergence and establish an interval of convergence - or a common domain where the series and the closed form formula represent the same function.
 
 
 
@@ -85,11 +93,11 @@ This would be valid up until $f(b)=-1$ for some $b$ or $f(b)=1$ for some $b$.  S
 
 
 
-\begin{example} Geometric Series
+\begin{example} Geometric Series as Rational Functions
 
 
 
-Create a series equivalent to $g(x)=\frac{3}{7 - 2x}$ and find the interval of convergence.
+Create an infinite series equivalent to $g(x)=\frac{3}{7 - 2x}$ and find the interval of convergence.
 
 
 
@@ -166,11 +174,11 @@ We must rewrite $\frac{2}{5 + 3x}$ in the form $\frac{a}{1-something} = a \cdot 
 
 
 
-\[     \frac{2}{5 + 3x}  =   \frac{2}{5} \cdot \frac{1}{1 + \frac{3x}{75}}  =   \frac{2}{5} \cdot \frac{1}{1 - \frac{-3x}{75}}  \]
+\[     \frac{2}{5 + 3x}  =   \frac{2}{5} \cdot \frac{1}{1 + \frac{3x}{5}}  =   \frac{2}{5} \cdot \frac{1}{1 - \frac{-3x}{5}}  \]
 
 
 
-\[  \frac{2}{5} \cdot \frac{1}{1 - \frac{-3x}{75}}=  \frac{2}{5} \sum\limits_{n=0}^{\infty} \left(\frac{-3x}{5}\right)^n       \]
+\[  \frac{2}{5} \cdot \frac{1}{1 - \frac{-3x}{5}}=  \frac{2}{5} \sum\limits_{n=0}^{\infty} \left(\frac{-3x}{5}\right)^n       \]
 
 
 

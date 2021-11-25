@@ -32,7 +32,8 @@ The definitions above give us a way to determine whether a given series converge
 \item[1.] Consider the associated sequence $\{s_n\}$ of partial sums.
 \item[2.] Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim\limits_{n \to \infty} s_n$.  
 \begin{itemize}
-\item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0} a_k=L$.  \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0} a_k$ diverges.
+\item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0}^{\infty} a_k=L$.  
+\item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0}^{\infty} a_k$ diverges.
 \end{itemize}
 \item[3.] If an explicit formula for $s_n$ cannot be found, further analysis is needed.  
 \end{itemize}
@@ -255,7 +256,7 @@ By noting that $\sum\limits_{k=0}^n ar^k = a \sum\limits_{k=0}^n r^k$, we can co
   \end{itemize}
   \end{theorem}
 
-There is a useful trick that allows us to find the sum of a convergent geometric series when the lower index does not start at $0$.  
+A little algebra allows us to find the sum of a convergent geometric series when the lower index does not start at $0$.  
 
 \begin{example}
 The series $\sum\limits_{k=3}^{\infty} \left(\frac{2}{3}\right)^k$ is a geometric series with $r=\frac{2}{3}<1$, so it converges.  To find the value to which it converges, notice the following.
@@ -370,7 +371,7 @@ The series is geometric with $r = \answer[given]{1/4}$, and using the result $\s
 Now that we have seen a special type of series for which we can find an explicit formula for the $n$-th term in the sequence of partial sums, it helps to summarize the logic that we employed.
 
 \begin{itemize}
-\item[1.] Consider the associated sequence $\{s_n\}$ of partial sums.
+\item[1.] Consider the associated sequence $(s_n)$ of partial sums.
 \item[2.] Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim\limits_{n \to \infty} s_n$.  
 \begin{itemize}
 \item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0} a_k=L$.  \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0} a_k$ diverges.
