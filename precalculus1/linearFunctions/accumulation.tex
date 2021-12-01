@@ -15,12 +15,13 @@ adding rates
 
 
 
-Suppose you are driving a car at a constant velocity (rate of change) of 20 miles per hour. 20 miles per hour tells us how the miles are changing compared to the change in hours.  Whenever the time changes by 1 hour, the distance travelled changes by 20 miles.
+Suppose you are driving a car at a constant velocity (rate of change) of 20 miles per hour. 20 miles per hour tells us how the miles are changing compared to the change in hours.  Whenever the time \textbf{\textcolor{purple!85!blue}{changes}} by $1$ hour, the distance travelled \textbf{\textcolor{purple!85!blue}{changes}} by $20$ miles.
 
 \[
 \text{rate of change} = \text{velocity} = \text{20 miles per hour} = \frac{20 \, miles}{1 \, hour} = \frac{\Delta miles}{\Delta hours}
 \]
 
+\textbf{Note:} Our symbol for "the change in" is the uppercse Greek letter delta, $\Delta$. \\
 
 The graph of velocity would be a horizontal line.
 
@@ -51,7 +52,7 @@ The graph of velocity would be a horizontal line.
 
 In the velocity story, we know that at any time the car's distance changes by 20 miles every time the time changes by 1 hour.  The reverse of this rate of change story is an accumulation story.
 
-Suppose we let time run for a while, how much total distance does the car travel?
+Suppose we let time run for a while, how far does the car travel?  How much distance is accumulated?
 
 
 
@@ -112,6 +113,10 @@ In that graph, miles per hour are the vertical units and hours are the horizonta
 \end{image}
 
 
+\[
+\text{Area } = \frac{\Delta \text{miles}}{\Delta \text{hours}} \cdot \Delta \text{hours} = \Delta \text{miles}
+\]
+
 
 The area under the graph of $v(t) = 20$ over the interval $(0, t)$ is given by $20 \, t$, which is a linear function.
 
@@ -129,7 +134,7 @@ The graph of accumulated distance, $D(t) = 20 \, t$ is a line with slope $20$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
-            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
             ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
             xtick={0, 2, 4, 6, 8, 10},
             ticklabel style={font=\scriptsize},
@@ -166,11 +171,14 @@ $\blacktriangleright$ The value of $D(t)$ gives the area under the graph of $v(t
 
 
 
-Of course, the constant function $v(t) = 50$ is also a linear function. Its rate of change is the constant function $0$.  We can view $v(t)$ as a function with a rate of change or we can view it as the rate of change of some function, $D(t)$. This function, $D(t)$, is given by the area under the graph of $v(t)$.
+Of course, the constant function $v(t) = 20$ is also a linear function. Its rate of change is the constant function $0$.  We can view $v(t)$ as a function with a rate of change of $0$ or we can view it as the rate of change of some function, $D(t)$. This function, $D(t)$, is represented graphically by the area under the graph of $v(t)$.
 
 
 
-We can repeat this same story with $D(t)$.  That is, $D(t)$ is the rate of change of some function.  That function is the area under the graph of $D(t)$.
+$\blacktriangleright$  We can repeat this same story with $D(t)$.  \\
+
+
+That is, we could view $D(t) = 20t$ as the rate of change of some function, $Q(t)$.  The function, $Q(t)$, would measure the area under the graph of $y = D(t)$.
 
 
 What is the area under $y = D(t) = 20 \, t$?
@@ -187,7 +195,7 @@ What is the area under $y = D(t) = 20 \, t$?
 \begin{tikzpicture}
   \begin{axis}[
             domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
-            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
             ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
             xtick={0, 2, 4, 6, 8, 10},
             ticklabel style={font=\scriptsize},
@@ -222,12 +230,14 @@ What is the area under $y = D(t) = 20 \, t$?
 
 
 
-Geometrically, we can see the area under the graph forms a triangle.
+Geometrically, we can see the region under the graph forms a triangle.
 
+
+\begin{formula}
 \[
 Area(t) = \frac{1}{2} \, Base \cdot Height = \frac{1}{2}  \, \answer{t} \cdot \left(\answer{20 \, t}\right) = 10 \, t^2
 \]
-
+\end{formula}
 
 
 
@@ -366,7 +376,7 @@ The graph of velocity would still be a horizontal line, well a ray.
 
 
 
-The area below the graph stills forms rectangles.  The left side is just at 3 now.
+The regions below the graph stills forms rectangles.  The left side is just at $3$ now.
 
 
 
@@ -449,7 +459,7 @@ D(t) = 20(t-3) \, \text{ for }  \, t \geq 3
 \begin{tikzpicture}
   \begin{axis}[
             domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
-            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
             ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
             xtick={0, 2, 4, 6, 8, 10},
             ticklabel style={font=\scriptsize},
@@ -474,7 +484,7 @@ D(t) = 20(t-3) \, \text{ for }  \, t \geq 3
 \end{tikzpicture}
 \end{image}
 
-The area under the graph of $D(t)$ now forms a triangle.
+The region under the graph of $D(t)$ now forms a triangle.
 
 
 
@@ -493,7 +503,7 @@ The area under the graph of $D(t)$ now forms a triangle.
 \begin{tikzpicture}
   \begin{axis}[
             domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
-            axis lines =center, xlabel=$t$, ylabel=$d$, 
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
             ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
             xtick={0, 2, 4, 6, 8, 10},
             ticklabel style={font=\scriptsize},
@@ -537,7 +547,7 @@ We now have a formula for the accumulated area under the graph of $D(t) = 20(t-3
 
 
 \[
-A(t) = \frac{1}{2} (t-3) \cdot 20(t-3) = 20 (t-3)^2   \, \text{ for }  \, t \geq 3
+A(t) = \frac{1}{2} (t-3) \cdot 20(t-3) = 10 (t-3)^2   \, \text{ for }  \, t \geq 3
 \]
 
 
@@ -590,16 +600,23 @@ $\blacktriangleright$ The linear function $20(t-3)$ is the accumulation function
 
 We have now seen that \\
 
-$\blacktriangleright$ The quadratic function $20(t-3)^2$ is the accumulation function of the linear function $20(t-3)$. \\
-
-
-$\blacktriangleright$ Claim: the linear function $20(t-3)$ gives rate of change of the quadratic function $20(t-3)^2$.
+$\blacktriangleright$ The quadratic function $10(t-3)^2$ is the accumulation function of the linear function $20(t-3)$. \\
 
 
 
 
 
-Let $A(t) = 20 (t-3)^2$
+\begin{claim}
+
+
+The linear function $20(t-3)$ gives the rate of change of the quadratic function $10(t-3)^2$.
+
+
+
+\begin{idea}
+
+
+Let $A(t) = 10 (t-3)^2$
 
 
 The rate of change of $A(t)$ over the interval $(3, t)$ is given by
@@ -608,10 +625,15 @@ The rate of change of $A(t)$ over the interval $(3, t)$ is given by
 
 
 \[
-\frac{\Delta A}{\Delta t} = \frac{A(t) - A(3)}{t-3} = \frac{20 (t-3)^2}{t-3} = 20(t-3)
+\frac{\Delta A}{\Delta t} = \frac{A(t) - A(3)}{t-3} = \frac{10 (t-3)^2}{t-3} = 10(t-3)
 \]
 
 
+Not Quite!  But, close.  It is off by a factor of $2$.  
+
+\end{idea}
+
+\end{claim}
 
 
 
@@ -621,8 +643,14 @@ The rate of change of $A(t)$ over the interval $(3, t)$ is given by
 
 
 
-Rate of change and accumulation are two directions of the same story.
 
+
+
+
+
+The story is off a little bit. We need a new perspective on rate of change.  A slight adjustment will align rate of change and accumulation as different directions of the same story. \\
+
+Stay tuned!
 
 
 
