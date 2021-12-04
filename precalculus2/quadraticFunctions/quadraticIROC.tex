@@ -1,0 +1,564 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Theory}
+
+\begin{document}
+
+\begin{abstract}
+holes in the story
+\end{abstract}
+\maketitle
+
+
+
+
+We have investigated quadratic functions from several viewpoints.  Time to collect all of our thoughts and charcterize quadratic functions.
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Quadratic Functions}} 
+
+
+A \textbf{quadratic function} is a function that can be represented by a formula of the form
+
+
+\[   Q(t) = a \, t^2 + b \, t + c         \]
+
+where $a$, $b$, $c$ are real numbers and $a \ne 0$.
+
+
+\end{definition}
+
+
+
+$\blacktriangleright$ \textbf{Domain:} The implied domain of a quadratic function is all real numbers.  However, a particular quadratic function may be defined with a subset of the real numbers.  We may refer to these as \textbf{restricted} quadratic functions.
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{purple!85!blue}{Forms}}
+
+Formulas for quadratic functions have three basic forms:
+
+
+
+\begin{itemize}
+\item \textbf{\textcolor{purple!85!blue}{Standard Form:}}  The standard form for a quadratic function looks like 
+\[ a \, t^2 + b \, t + c \]
+\item \textbf{\textcolor{purple!85!blue}{Factored Form:}}  The factored form for a quadratic function looks like 
+\[ a(t - r_1)(t - r_2) \]
+\item \textbf{\textcolor{purple!85!blue}{Vertex Form:}}  The vertex form for a quadratic function looks like 
+\[ a(t - h)^2 + k \]
+\end{itemize}
+
+
+
+Each form serves a different purpose.  For analysis purposes, the factored form reveals the zeros of the quadratic function and the vertex form reveals the extreme values of the function.
+
+
+\end{formula}
+
+\textbf{Note:} So far, we have restricted our investigation to quadratics with real roots (or zeros).  Therefore, we encounter quadratics that do not factor for us with real numbers. We call these irreducible quadratics.  In this course, we will bring in complex numbers and complete our characterization of quadratic functions. Complex numbers will allow us to factor all quadratics.
+
+
+
+
+\begin{notation} 
+
+In the standard form $Q(t) = a \, t^2 + b \, t + c  $,
+
+
+\begin{itemize}
+\item $a \, t^2$ is called the \textbf{leading term}
+\item $a$ is called the \textbf{leading coefficient}
+\item $b \, t$ is called the \textbf{linear term}
+\item $b$ is called the \textbf{linear coefficient}
+\item $c$ is called the \textbf{constant term}
+\end{itemize}
+
+
+
+
+
+\end{notation}
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Graph}} \\ 
+
+The graph of a quadratic function is a parabola, which opens up or down.  The direction depends on the sign of the leading coefficient, $a$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[name = leftgraph,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-8.5:-3.25),<->] {(x+6)^2+3};
+            \addplot [line width=2, penColor2, smooth,samples=200,domain=(-5:1.1),<->] {(x+2)^2};
+            \addplot [line width=2, penColor3, smooth,samples=200,domain=(0:8),<->] {(x-4)^2-6};
+
+
+
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-8.5:-3.25),<->] {-(x+6)^2-3};
+            \addplot [line width=2, penColor2, smooth,samples=200,domain=(-5:1.1),<->] {-(x+2)^2};
+            \addplot [line width=2, penColor3, smooth,samples=200,domain=(0:8),<->] {-(x-4)^2+6};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Zeros (1)}} \\
+Quadratic functions always have two roots.  However, these roots can be complex numbers, which we will encounter in this course.  Restricting ourselves to only real numbers means that our quadratics have had $0$, $1$, or $2$ real roots.  These correspond to  $0$, $1$, or $2$ intercepts on the graph, which correspond to $0$, $1$, or $2$ distinct factors over the real numbers. 
+
+Quadratics are a type of polynomial and zeros of polynomials are also called \textbf{roots}.
+
+\begin{itemize}
+\item The two roots can be different (distinct) numbers corresponding to two different factors and intercepts on the graph.  
+\item The two roots can be the same number.  In this case, the factorization is a square: $Q(t) = a(t-r)^2$.  The root has an even multiplicity and the vertex of the parabola is the single intercept.
+\end{itemize}
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Range}} \\
+From the graphs, we can see that the there are two types of ranges: 
+\begin{itemize}
+\item $(-\infty, k]$ if the leading coefficient is negative and the parabola opens down.
+\item $[k, \infty)$ if the leading coefficient is positive and the parabola opens up.
+\end{itemize}
+
+$k$ is the constant term in the vector form.
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{red!10!blue!90!}{Extrema}} \\
+From the graphs, we can see that there are two situations:
+\begin{itemize}
+\item The function has a single maximum value of $k$, if the leading coefficient is negative. The parabola opens down.
+\item The function has a single minimum value of $k$, if the leading coefficient is positive. The parabola opens up.
+\end{itemize}
+
+$k$ is the constant term in the vector form.
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Rate-of-Change}} \\
+\begin{itemize}
+\item If the leading coefficient is negative and the parabola opens down, then the function increases on $(-\infty, h]$ and decreases on $[h, \infty)$, where $h$ is from the vertex form.
+\item If the leading coefficient is positive and the parabola opens up, then the function decreases on $(-\infty, h]$ and increases on $[h, \infty)$, where $h$ is from the vertex form.
+\end{itemize}
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Axis of Symmetry}} \\ 
+The vector form, $a(t-h)^2 + k$ shows us that the graph is symmetric about the vertical line, $t=h$.  This is the line of symmetry or the axis of symmetry.  This should be drawn on the graph.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=Q(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(0:8),<->] {(x-4)^2 - 6};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.551,0)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.449,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Zeros (2)}} \\ 
+Our quadratic functions have $0$, $1$, or $2$ real roots or zeros.  These can be obtained from any of the three forms.
+
+
+\begin{itemize}
+
+\item \textbf{\textcolor{purple!85!blue}{Standard Form:}}  Given the standard form, $Q(t) = a \, t^2 + b \, t + c$, we can use the \textbf{Qudratic Formula}.
+
+The zeros of $Q(t) = a \, t^2 + b \, t + c$ are
+
+\[   \frac{-b + \sqrt{b^2 - 4 \, a \, c}}{2a}      \, \text{ and } \,       \frac{-b - \sqrt{b^2 - 4 \, a \, c}}{2a}    \]
+
+
+
+$b^2 - 4 \, a \, c < 0$ is known as the \textbf{discriminant}. If $b^2 - 4 \, a \, c < 0$, then there are no real zeros.  They will be complex numbers.
+
+
+\item \textbf{\textcolor{purple!85!blue}{Factored Form:}} \\ 
+Given the factored form, $Q(t) = a (t - r_1)(t - r_2)$, we can read off the roots or zeros as $r_1$ and $r_2$. Mnay times the leading coefficient, $a$, is not factored out.  Then we can use the zero product property and set each factor equals to $0$ and solve.
+
+
+
+
+
+
+\item  \textbf{\textcolor{purple!85!blue}{Vertex Form:}} \\
+Given the vertex form, $Q(t) = a (t - h)^2 + k$, we can set equal to $0$ and solve.
+
+
+
+\begin{align*}
+a (t - h)^2 + k    & = 0  \\
+a (t - h)^2        & = -k  \\
+(t - h)^2        & = -\frac{k}{a}  \\
+t - h        & = \pm \sqrt{-\frac{k}{a}}  \\
+t        & = \pm \sqrt{-\frac{k}{a}}  + h
+\end{align*}
+
+From $a (t - h)^2 + k  = 0$, we can see that if $a$ and $k$ have the same sign, then there are no real solutions.  The zeros are complex numbers.
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\begin{example}  Quadratic Analysis
+
+
+
+Analyze $M(t) = -\frac{1}{2} (t-3)^2 + 5$ \\
+
+
+\begin{explanation}
+
+$M$ is a quadratic function, which means its graph is a parabola.  The leading coefficient is negative, which means the parabola is opening down.  The highest point on the parabola is $(3, 5)$. From this, we know there are two intercepts, which means two roots and two factors.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=M(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:8),<->] {-0.5*(x-3)^2 + 5};
+          %\addplot [line width=2, penColor, smooth,samples=200,domain=(-7:-4),<-] {-e^(-x-5)};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,5)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-0.162,0)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.162,0)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The domain is $(-\infty, \infty)$ and the range is $(-\infty, 5]$.
+
+The global maximum is $5$, which ocurrs at $3$.  There is no global minimum.  $5$ is also a local maximum and there are no local minimums.
+
+
+
+
+$\blacktriangleright$ Behavior: \\
+
+
+$M$ increases on $(-\infty, 3]$. $M$ decreases on $[3, \infty)$.
+
+
+
+$\blacktriangleright$ Zeros: \\
+
+
+
+
+
+\begin{align*}
+-\frac{1}{2} (t-3)^2 + 5 & = 0  \\
+(t-3)^2     &= \answer{10)} 
+\end{align*}
+
+Either $t - 3 = -\sqrt{10}$ or $t - 3 = \answer{\sqrt{10}}$
+
+EIther $t = 3 - \sqrt{10}$ or $t = \answer{3 - \sqrt{10}}$
+
+
+
+
+
+
+We have two roots or zeros: $t = 3 - \sqrt{10}$ and $t = \answer{3 + \sqrt{10}}$. \\
+
+
+We have two intercepts: $(3 - \sqrt{10}, 0)$ and $\left( \answer{3 + \sqrt{10}}, 0 \right)$. \\
+
+
+We have two factors: $t - (3 - \sqrt{10})$ and $\answer{t - (3 - \sqrt{10})}$. \\
+
+
+$M(t) = -\frac{1}{2} (t - (3 - \sqrt{10})) (t - (3 + \sqrt{10}))$ \\
+
+$M(t) =  -\frac{1}{2} t^2 + 3x + \frac{1}{2}$
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{iRoC}
+
+
+The instantaneous rate of change (a.k.a the derivative) gives us a formula for the slopes of tangent lines, which are rates of change.
+
+
+
+For the general quadratic, $f(x) = a \, x^2 + b \, x + c$, we have $iRoC_f(x) = f'(x) = 2a \, x + b$. \\
+
+
+
+
+
+
+\begin{explanation}
+
+For the example above, $iRoC_M(t) = -t + 3$.
+
+
+
+
+
+
+
+The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1, 3)$ is $iRoC(1) = -1 + 3 = 2$.  Therfore, the equation of the tangent line is $y - 3 = 2(t-1)$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:8),<->] {-0.5*(x-3)^2 + 5};
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:4),<->] {2*(x-1)+3};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,3)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-0.162,0)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.162,0)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The $iRoC$ or derivative is itself a function.  We could plot its graph. For a quadratic function, the derivative is a linear function whose graph is a line.
+
+In our case here, $y - 3 = 2(t-1)$ tells us that $iRoC_M(t) = 2(t-1)+3$.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:8),<->] {-x+3};
+          %\addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:4),<->] {2*(x-1)+3};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,3)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-0.162,0)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.162,0)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The derivative is positive on $(-\infty, 3)$, which tells us that the tangent lines to the parabola in the example have positive slopes for the left half of the parabola. This tells us that $M$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  on $(-\infty, 3)$. \\
+
+The derivative is negative on $(3, \infty)$, which tells us that the tangent lines to the parabola in the example have negative slopes for the right half of the parabola. This tells us that $M$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $(3, \infty)$. \\
+
+
+
+
+\end{explanation}
+
+
+
+
+
+
+
+
+\end{document}
