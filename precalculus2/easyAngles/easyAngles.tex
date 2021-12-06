@@ -1,0 +1,369 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Easy Angles}
+
+\begin{document}
+
+\begin{abstract}
+$30^{\circ}$, $60^{\circ}$, $90^{\circ}$
+\end{abstract}
+\maketitle
+
+
+Sine and cosine are \textbf{transcendental functions}.  They transcend Algebra. They are beyond our algebraic tools.  That makes equations difficult when they involve sine and cosine.
+
+
+This is true unless you work with angles that just happen to have nice values for sine and cosine.  We have two: $30^{\circ}$ and $60^{\circ}$.
+
+
+
+
+\begin{itemize}
+\item $\sin(30^{\circ}) = \frac{1}{2}$
+\item $\cos(30^{\circ}) = \frac{\sqrt{3}}{2}$
+\end{itemize}
+
+
+And, since $30^{\circ}$ and $60^{\circ}$ make up a right triangle, we have 
+
+
+\begin{itemize}
+\item $\sin(60^{\circ}) = \frac{\sqrt{3}}{2}$
+\item $\cos(60^{\circ}) = \frac{1}{2}$
+\end{itemize}
+
+
+
+And, then we can walk this around the unit circle.
+
+
+
+
+
+
+  \begin{image}
+    \begin{tikzpicture}[scale=5.3,cap=round,>=latex]
+        % draw the coordinates
+        \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
+        \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
+
+        % draw the unit circle
+        \draw[thick] (0cm,0cm) circle(1cm);
+
+        \foreach \x in {0,30,...,360} {
+                % lines from center to point
+                \draw[gray] (0cm,0cm) -- (\x:1cm);
+                % dots at each point
+                \filldraw[black] (\x:1cm) circle(0.4pt);
+                % draw each angle in degrees
+                \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
+        }
+
+        % draw each angle in radians
+        \foreach \x/\xtext in {
+            30/\frac{\pi}{6},
+            45/\frac{\pi}{4},
+            60/\frac{\pi}{3},
+            90/\frac{\pi}{2},
+            120/\frac{2\pi}{3},
+            135/\frac{3\pi}{4},
+            150/\frac{5\pi}{6},
+            180/\pi,
+            210/\frac{7\pi}{6},
+            225/\frac{5\pi}{4},
+            240/\frac{4\pi}{3},
+            270/\frac{3\pi}{2},
+            300/\frac{5\pi}{3},
+            315/\frac{7\pi}{4},
+            330/\frac{11\pi}{6},
+            360/2\pi}
+                \draw (\x:0.85cm) node[fill=white] {$\xtext$};
+
+        \foreach \x/\xtext/\y in {
+            % the coordinates for the first quadrant
+            30/\frac{\sqrt{3}}{2}/\frac{1}{2},
+            45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+            60/\frac{1}{2}/\frac{\sqrt{3}}{2},
+            % the coordinates for the second quadrant
+            150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
+            135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+            120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
+            % the coordinates for the third quadrant
+            210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
+            225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+            240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
+            % the coordinates for the fourth quadrant
+            330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
+            315/\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+            300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
+                \draw (\x:1.25cm) node[fill=white] {$\left(\xtext,\y\right)$};
+
+        % draw the horizontal and vertical coordinates
+        % the placement is better this way
+        \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
+              (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
+              (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
+              (0cm,1.25cm)  node[fill=white] {$(0,1)$};
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Analyze $f(t) = 3 sin(2t - \pi) - 2$
+
+
+
+\begin{explanation}
+
+
+$\blacktriangleright$ \textbf{One period} \\
+
+
+Start:  $2t - \pi = 0$, which occurs at $t = \frac{\pi}{2}$where $f = 3 \cdot 0 - 2 = -2$  \\
+
+
+Finish:  $2t - \pi = 2 \pi$, which occurs at $t = \frac{3 \pi}{2}$, where $f = 3 \cdot 0 - 2 = -2$ \\
+
+
+Period = $\frac{3 \pi}{2} - \frac{\pi}{2} = \pi$
+
+
+Halfway is $\pi$.  $sin(2t - \pi)$ equals $0$ at $\pi$, where $f = 3 \cdot 0 - 2 = -2$.
+
+
+A quarter of the way is $\frac{3 \pi}{4}$, , where $f = 3 \cdot 1 - 2 = 1$
+
+
+The three-quarter mark is $\frac{5 \pi}{4}$, , where $f = 3 \cdot -1 - 2 = -5$
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$\blacktriangleright$ \textbf{Then, extend periodically} 
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(0.2:6.5),<->] {3*sin(deg(2*x-3.14)) -2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+We can calculate some additional exact values at the easy angles. \\
+
+
+
+Our principle interval was $\left[ \frac{\pi}{2}, \frac{3\pi}{2}   \right]$, which has a length of $\pi$. \\
+
+
+
+
+
+$\blacktriangleright$ $30^{\circ} = \frac{\pi}{6}$ is $\frac{1}{12}$ of the normal basic interval $[0, 2\pi]$.  $\frac{1}{12}$ of our period here would be $\frac{1}{12} \cdot \pi = \frac{\pi}{12}$.
+
+Therefore, if we move in $\frac{\pi}{12}$ from $\frac{\pi}{2}$, then we should be at the angle where we get $sin(\frac{\pi}{6}) = \frac{1}{2}$.
+
+
+$\frac{\pi}{12}$ from $\frac{\pi}{2} = \frac{7\pi}{12}$.
+
+Let's evaluate $f\left( \frac{7\pi}{12} \right)$
+
+\[
+f\left( \frac{7\pi}{12} \right) = 3 sin\left(2 \left(\frac{7\pi}{12} \right) - \pi \right) - 2 = 3 sin\left( \frac{2\pi}{12} \right) - 2  = 3 sin\left( \frac{\pi}{6} \right) - 2 = 3 \cdot \frac{1}{2} - 2 = -\frac{1}{2}
+\]
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.833,-0.5)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ $60^{\circ} = \frac{\pi}{3}$ is $\frac{1}{6}$ of the normal basic interval $[0, 2\pi]$.  $\frac{1}{6}$ of our period here would be $\frac{1}{6} \cdot \pi = \frac{\pi}{6}$.
+
+Therefore, if we move in $\frac{\pi}{6}$ from $\frac{\pi}{2}$, then we should be at the angle where we get $sin(\frac{\pi}{3}) = \frac{\sqrt{3}}{2}$.
+
+
+$\frac{\pi}{6}$ from $\frac{\pi}{2} = \frac{4\pi}{6} =  \frac{2\pi}{3}$.
+
+Let's evaluate $f\left( \frac{2\pi}{3} \right)$
+
+\[
+f\left( \frac{2\pi}{3} \right) = 3 sin\left(2 \left(\frac{2\pi}{3} \right) - \pi \right) - 2 = 3 sin\left( \frac{\pi}{3} \right) - 2  =  3 \cdot \frac{\sqrt{3}}{2} - 2 = \frac{3\sqrt{3}-4}{2} \approx 0.5980762114
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.833,-0.5)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.094,0.59)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\end{explanation}
+
+
+\end{example}
+
+
+
+
+
+
+
+\end{document}
