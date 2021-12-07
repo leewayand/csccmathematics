@@ -1,0 +1,186 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Complex Powers}
+
+\begin{document}
+
+\begin{abstract}
+$i^i$
+\end{abstract}
+\maketitle
+
+
+
+
+
+We know that every nonzero Complex number can be wirtten as the product of a positive real number (a scalar) and a COmplex number on the unit circle.  Euler's Formula tells us how each Complex number on the unit circle can be written as a Complex exponential.
+
+
+$\blacktriangleright$ \textbf{Euler's Formula}
+
+
+\[   e^{i \theta} = \cos(\theta) + i \sin(\theta)         \]
+
+
+And, we already know how to write and real number in exponential form: $r = e^{ln(r)}$.  
+
+Combining these together, we get that every nonzero Complex number can be written in the form  $e^{ln(r)} \cdot e^{i t} = e^{\ln(r) + i \theta}$
+
+
+
+
+If $z = a + b \, i$, then $r = \sqrt{a^2 + b^2}$ and $\theta = $ angle from positive $x$-axis to $z$.
+
+
+
+
+
+
+
+\begin{example} Complex Logarithm
+
+
+Let $z = -3 - 3 \, i$.
+
+
+$|z| = \sqrt{(-3)^2 + (-3)^2} =  \sqrt{18} = 3 \sqrt{2}$
+
+
+$ArcTan\left(\frac{-3}{-3}\right) = \frac{\pi}{4}$.  This reference angle gives us $\theta = \frac{5 \pi}{4}$
+
+
+
+
+$z = -3 - 3 \, i =  e^{\ln(3 \sqrt{2}) + (\tfrac{5 \pi}{4} \pm 2 k \pi) \, i}     \, \text{ where } \, k \in \mathbb{N}  $
+
+\end{example}
+
+
+
+
+There are an infinite number of Complex logarithms for each Complex number.
+
+
+Following our range restrictions for ArcSine and ArcCosine, we pick a \textbf{principal value} for the Complex logarithm. Since we would like to keep the positive real axis as clean as possible, we chooose the interval $(-\pi, \pi]$ for the principal value of the Complex logarithm.
+
+This interval is known as the \textbf{principal branch} of the Complex logarithm.  The negative real axis is called a \textbf{branch cut} for the Complex logarithm.
+
+
+
+
+
+\begin{definition}
+
+If $z = a + b \, i$, then 
+
+\[   \ln(z) = \ln(\sqrt{a^2 + b^2}) + \theta \, i       \]
+
+
+
+where $\theta \in (-\pi, \pi]$ and is the counterclockwise angle from the positive real axis to $z$.
+
+
+
+This $\theta$ is often referred to as $Arg(z)$.
+
+
+
+\end{definition}
+
+
+
+
+Since $Arg(r) = 0$ for any positive real number, our Complex logarithm will agree with our real logarithm.
+
+
+
+
+
+
+
+
+\begin{example} Some Logarithms
+
+
+\begin{itemize}
+\item $\ln(5) = \ln(5) + 0 \, i = \ln(5)$
+
+\item $\ln(2i) = \ln(2) + \frac{\pi}{2} \, i$
+
+\item $\ln(-5 + 5 \, i) = \ln(5 \sqrt{2}) + \frac{3\pi}{4}\, i$
+
+\item $ln(-1) = \pi \, i$
+
+
+
+\end{itemize}
+
+
+
+
+\end{example}
+
+
+
+
+This gives us a famous equation.
+
+
+
+\begin{theorem} Euler's Identity
+
+\[  e^{\pi \, i} + 1 = 0       \]
+
+\end{theorem}
+
+
+
+
+
+
+
+
+
+\begin{example}  $i^i$
+
+
+\[    i^i =  e^{ln(i^i)} = e^{i \cdot ln(i)} = e^{ i \cdot \tfrac{\pi}{2} \, i}   = e^{-\tfrac{\pi}{2}} \approx  0.2078795764\]
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
