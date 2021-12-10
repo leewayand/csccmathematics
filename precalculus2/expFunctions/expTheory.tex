@@ -509,10 +509,10 @@ Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
 \begin{explanation}
 
 
-Basic formula dissection: //
+\textbf{\textcolor{purple!85!blue}{Basic formula dissection:}}  \\
 
 
-$\blacktriangleright$  the base: \\
+$\blacktriangleright$  the base: $\frac{2}{3} < 1$\\
 $\blacktriangleright$  the exponent: $3-t$ is positive for large negative $t$. \\
 $\blacktriangleright$  the exponent: $3-t$ is negative for large positive $t$. \\
 $\blacktriangleright$  the leading coefficient is negative. \\
@@ -522,25 +522,25 @@ Together, these tell us that $B(t)$ settles down for large negative $t$ and that
 
 
 
-This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t}$.  
+This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t} = \frac{3}{2}^t$.  
 
 
 
-When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and $B(t)$ is becoming smaller, approaching $0$.  
+When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and the basic exponential portion is becoming smaller, approaching $0$.  
 
 
 
 
 
-\[ \lim\limits_{t \to -\infty} B(t) = 0 \]
+\[ \lim\limits_{t \to -\infty} \frac{2}{3}^{-t} = 0 \]
 
 
 
-When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative}$ and $B(t)$ is becoming larger.  
+When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative} = \left( \frac{3}{2} \right)^{positive}$ and $B(t)$ is becoming unbounded.  
 
 
 
-\[ \lim\limits_{t \to \infty} B(t) = \infty \]
+\[ \lim\limits_{t \to \infty} \frac{2}{3}^{-t} = \lim\limits_{t \to \infty} \frac{3}{2}^t = \infty \]
 
 
 
@@ -552,7 +552,7 @@ Exponential growth to the right and decay to the left.
 
 
 
-Since $a = -2 < 0$ these smaller/larger values of $B(t)$ are smaller/larger negative values.
+Since $a = -2 < 0$ these smaller/larger values of $-2 \, \frac{2}{3}^{-t}$ are smaller/larger negative values.
 
 
 
@@ -616,7 +616,7 @@ Our analysis tells us that
 
 \begin{itemize}
 \item The natural or implied domain of $B$ is $\mathbb{R}$.
-\item $B$ is always \wordChoice{\choice{increasing} \choice[correct]{decreasing}} .
+\item $B$ is always decreasing.
 \item $B$ has no maximums or minimums.
 \item $\lim\limits_{t \to -\infty} B(t) = 4$
 \item $\lim\limits_{t \to \infty} B(t) = -\infty$
@@ -653,15 +653,24 @@ Our analysis tells us that
 
 Analyze   $K(f) = 3^{5-f} - 5$ \\
 
+\begin{question}. 
 
+The base is \wordChoice{\choice{less than}\choice[correct]{greater than}} $1$.
+\end{question}
 \begin{question}. 
 
 The exponent gets big and positive when $f$ gets big and \wordChoice{\choice{positive}\choice[correct]{negative}}.
 \end{question}
 \begin{question}. 
 
-The graph will grow to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+The graph will become unbounded to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
 \end{question}
+
+\begin{question}. 
+
+The horizontal asymptote is $y = \answer{-5}$.
+\end{question}
+
 \begin{question}. 
 
 The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
