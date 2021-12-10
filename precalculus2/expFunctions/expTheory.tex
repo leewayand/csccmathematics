@@ -15,9 +15,68 @@ the exponential story
 
 
 
+We have two levels of exponential formulas: the basic template and then the general template, which includes shifts and stretches.  All of these are based on our original idea of \textbf{\textcolor{purple!85!blue}{constant percentage growth}}.
+
+
+Constant percentage growth means that our function grows by equal percentage over equal equal size intervals in the domain.
 
 
 
+For example, let $f$ be a function that grows by $30\%$ over every domain interval of length $1$. \\
+
+
+\begin{itemize}
+\item If $f(0) = 1$, then $f(1) = 1.3 \cdot 1 = 1.3$
+\item If $f(5) = 21$, then $f(6) = 1.3 \cdot 21 = 27.3$
+\item If $f(\pi) = \sqrt{3}$, then $f(\pi + 1) = 1.3 \cdot \sqrt{3} = 1.3 \sqrt{3}$
+\end{itemize}
+
+Every time the domain interval changes by $1$, then the function is multiplied by $1.3$ (an increase of $30\%$).
+
+
+
+
+There are many functions that possess this characteristic.  We call $f(0)$ the \textbf{\textcolor{purple!85!blue}{initial value}}.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {2 * (1.3^x)};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {3 * (1.3^x)};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {5 * (1.3^x)};
+           \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {0.3 * (1.3^x)};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+All of these are described by a similar formula we call the basic exponential formula.
+
+
+
+
+\subsection{The Basic Exponential Formula}
 
 
 The template for the formula of the basic exponential function looks like
@@ -28,7 +87,7 @@ The template for the formula of the basic exponential function looks like
 \[  a \, r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  a \ne 0, \, r > 0   \]
 
 
-As we have seen before, graphically, the coefficient $a$ controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values, which is illustrated graphically as a vertical reflection. $r$ dictates a growing or decaying function.
+As we have seen before, graphically, \textbf{\textcolor{purple!85!blue}{the coefficient}} $a$ controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values, which is illustrated graphically as a vertical reflection. \textbf{\textcolor{purple!85!blue}{the base}} $r$ dictates a growing or decaying function.
 
 
 
@@ -48,12 +107,12 @@ Graphs of the basic exponential functions have the horizontal axis as a horizont
 \begin{explanation}
 
 
-When $r$ \wordChoice{\choice{$<$} \choice[correct]{$>$}} $1$ we have a growing function.
+When $r$ \wordChoice{\choice{$<$} \choice[correct]{$>$}} $1$ we have a growing function. It could be growing positively or negatively, depending on the sign of $a$.
 
 \[  \lim_{x \to -\infty} a \, r^x = 0 \, \text{ and } \, \lim_{x \to \infty} a \, r^x = \pm\infty \]
 
 
-The sign of $a$ dictates if the unbounded growth is positive or negative.
+The sign of $a$ dictates if the unbounded growth is positive or negative, since $r^x > 0$.
 
 
 
@@ -96,7 +155,7 @@ The sign of $a$ dictates if the unbounded growth is positive or negative.
 \end{image}
 
 
-Graphs of exponential functions have one strategic point, whcih occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, a \right)$.
+Graphs of exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, a \right)$.
 
 \end{explanation}
 
@@ -108,14 +167,14 @@ Graphs of exponential functions have one strategic point, whcih occurs when the 
 
 
 
-When $r$ \wordChoice{\choice[correct]{$<$} \choice{$>$}} $1$, the horizontal axis is still a horizontal asymptote, just iin the direction where $x$ is large and positive. The function now decays.
+When $r$ \wordChoice{\choice[correct]{$<$} \choice{$>$}} $1$, the horizontal axis is still a horizontal asymptote, just in the direction where $x$ is large and positive. The function now decays. It could be decay positively or negatively, depending on the sign of $a$.
 
 
 \[ \lim_{x \to -\infty} a \, r^x = \pm\infty \, \text{ and } \, \lim_{x \to \infty} a \, r^x = 0 \]
 
 
  
-The sign of $a$ dictates if the function decays through positive or negative values.
+The sign of $a$ dictates if the function decays through positive or negative values, because $r^x > 0$.
 
 
 
@@ -171,7 +230,8 @@ All four basic exponential graphs share a common structure.
 
 
 \begin{itemize}
-\item All have the horizontal axis as an asymptote.
+\item All have the horizontal axis as an asymptote in one direction.
+\item In the other direction, they grow unbounded.
 \item All are a distance of $a$ from the asymptote, when the exponent equals $0$.
 \end{itemize}
 
@@ -203,7 +263,7 @@ $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Greater than $1$:
 \end{itemize}
 
 
-The coefficient in front, $a$, tells us if this larger/smaller value is larger positively or negatively.
+The coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
 
 
 \begin{itemize}
@@ -225,7 +285,7 @@ $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Less than $1$: $r
 \end{itemize}
 
 
-The coefficient in front, $a$, tells us if this larger/smaller value is larger positively or negatively.
+The coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
 
 
 \begin{itemize}
@@ -256,16 +316,37 @@ As we see, exponential functions can be
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{General Exponential Functions}
 
 
-General exponential functions are shifts of basic exponential functions.  They maintain the same general characteristics and features as basic exponential functions, just in different locations.
+General exponential functions are shifts and stretches of basic exponential functions.  
+
+
+\[
+f(x) = a \, r^{b \, x + c} + d
+\]
+
+
+
+They maintain the same general characteristics and features as basic exponential functions, just in different locations.
 
 
 
 
 
-\begin{example}  General Exponential Function
+\begin{example}  General Exponential Function \\
 
 
 
@@ -278,7 +359,7 @@ For the basic exponential function graph, the horizontal axis is the horizontal 
 
 
 
-The ``insid'', representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, because the base is $2 > 1$, this is the direction of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
+The ``inside'', representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
 
 At $x=-5$, we have our one anchor point for the graph.  The point is $\left(-5, \frac{1}{3} - 7 \right)$, which is $\frac{1}{3}$ above the horizontal asymptote, $y = -7$.
 
@@ -328,6 +409,10 @@ Our graph agrees with our analysis.
 
 
 
+For this function, when the domain number changes by $1$, the height above the horizontal asymptote changes by $100\%$, because it is multiplied by another $2$.
+
+
+
 
 \end{explanation}
 
@@ -356,10 +441,11 @@ The shape of the graph looks like that of the basic exponential graph. \\
 
 
 
-$\blacktriangleright$ \textbf{What happened to stretching?}
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{What happened to stretching?}} \\
 
 
-Exponential functions swallow up stretching and compressing in the leading coefficient.
+
+Exponential functions swallow up stretching and compressing in the leading coefficient and base.
 
 
 \begin{itemize}
@@ -379,17 +465,31 @@ We obtain a new leading coefficient, which tells us about the growth of the func
 \item If we multiply on the inside, by $b$, for a horizontal stretch, then our exponential rules give us
 
 \[
-a \cdot r^{b \cdot x} = a \cdot e^b \cdot r^x = (a \cdot e^b) \cdot r^x
+a \cdot r^{b \cdot x} = a \cdot (r^b)^x = a \cdot R^x
 \]
 
-We obtain a new leading coefficient, which tells us about the growth of the function.
+We obtain a new base, which tells us about the growth of the function.
 
 
 \end{itemize}
 
 
 
+\begin{observation}
 
+
+
+When multipliying on the inside for a horizontal stretch or compression, 
+
+
+if $1 < b$, then we are compressing horizontally.  This works out in the algebra. When $1 < b$, then $r < r^b$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. \\
+
+
+
+if $0 < b < 1$, then we are stretching horizontally.  This works out in the algebra. When $0 < b < 1$, then $r^b < r$. The base becomes smaller, which means the function grows slower, which means the graph goes up slower, which means the graph has been stretched horizontally.
+
+
+\end{observation}
 
 
 
@@ -409,8 +509,15 @@ Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
 \begin{explanation}
 
 
+Basic formula dissection:
 
-$\blacktriangleright$  First, observe that $\frac{2}{3} < \answer{1}$.
+\begin{observation}
+$\blacktriangleright$  the base: $\frac{2}{3} < \answer{1}$. \\
+$\blacktriangleright$  the exponent: $3-t$ is positive for large negative $t$. \\
+$\blacktriangleright$  the exponent: $3-t$ is negative for large positive $t$. \\
+$\blacktriangleright$  the leading coefficient is negative. \\
+\end{observation}
+Together, these tell us that $B(t)$ settles down for large negative $t$ and that $B(t)$ becomes unbounded when $t$ is large and positive.
 
 \begin{model}
 
