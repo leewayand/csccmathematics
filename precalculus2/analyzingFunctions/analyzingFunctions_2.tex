@@ -17,26 +17,37 @@ describe everything
 
 
 
-\textbf{Completely analyze $L(x) = \frac{5}{1+3 e^{-\tfrac{x}{2}}}$} \\
+\textbf{Completely analyze $L(x) = \frac{5}{1 + 3 \, e^{-\tfrac{x}{2}}}$} \\
 
 
 
 
 
 
-$\blacktriangleright$  \textbf{Domain:} $x$ is a real number and the range of the exponential function does not include negative numbers. Therefore, the denominator of $L(x)$ cannot be $0$.  That makes the natural or implied domain all real numbers.
+$\blacktriangleright$  \textbf{Domain:} The range of the exponential function does not include negative numbers. Therefore, the denominator of $L(x)$ cannot be $0$.  That makes the natural or implied domain all real numbers.
 
 
-$\blacktriangleright$ \textbf{Zeros:} $L$ is a quotient, therefore the zeros of $L$ would be the zeros of the numerator.  However, the numerator is a constant funciton.  It has no zeros. $L$ has no zeros.
-
-
-
-$\blacktriangleright$ \textbf{Continuity:} The denominator is a shifted exponential funciton, so it is continuous everywhere. The numberator is a constant funciton, so it is continuopus everywhere.  $L$ is the quotient of two continuous functions.  Therefore, it is continuous except where the denominator is $0$.  The denominator is never $0$. $L$ is continuous everywhere.  No discontinuities or singularities.
+$\blacktriangleright$ \textbf{Zeros:} $L$ is a quotient, therefore the zeros of $L$ would be the zeros of the numerator.  However, the numerator is a constant funciton.  It has no zeros. Therefore, $L$ has no zeros.
 
 
 
+$\blacktriangleright$ \textbf{Continuity:} The denominator is a shifted exponential function, so it is continuous everywhere. The numberator is a constant function, so it is continuopus everywhere.  $L$ is the quotient of two continuous functions.  Therefore, it is continuous except where the denominator is $0$.  The denominator is never $0$. $L$ is continuous everywhere.  No discontinuities or singularities.
 
-$\blacktriangleright$ \textbf{Range:} S$L$ is a continuous function and is never negative. We need to determine the endbehavior to understand the range.
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Rate-of-Change:}    Since $e^{-\tfrac{x}{2}}$ is a strictly decreasing function, the denominator is decreasing to $1$. The numerator is a constant function. A fraction with a constant numerator and decreasing denominator gets larger. $L(x)$ is a strictly increasing function.
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Range:} $L$ is a continuous function, never negative, and increasing. We need to determine the endbehavior to understand the range.
 
 
 First, $e^{-\tfrac{x}{2}}$ has a limiting value of $0$ as $x \to \infty$.
@@ -46,7 +57,7 @@ First, $e^{-\tfrac{x}{2}}$ has a limiting value of $0$ as $x \to \infty$.
 
 
 
-Second, $e^{-\tfrac{x}{2}}$ is unbounded as $x \to -\infty$ and domaintes $1$ in the denominator.
+Second, $e^{-\tfrac{x}{2}}$ is unbounded as $x \to -\infty$ and dominates $1$ in the denominator.
 
 \[   \lim_{x \to -\infty} \frac{5}{1+3 e^{-\tfrac{x}{2}}} =   \lim_{x \to -\infty} \frac{5}{3 e^{-\tfrac{x}{2}}}   = 0 \]
 
@@ -106,19 +117,15 @@ The graph has horizontal asymptotes.
 
 
 
-
-$\blacktriangleright$ \textbf{Rate-of-Change:}    Since $e^{-\tfrac{x}{2}}$ is a strictly decreasing function, the denominator is decreasing to $1$. The numerator is a constant function. A fraction with a constant numerator and decreasing denominator gets larger. $L(x)$ is a strictly increasing function.
-
-
-
-
-
 $\blacktriangleright$ \textbf{Extrema:}  $L(x)$ has no global maximums or minimums, since it is a strictly increasing function.  
 
 
-But, it could wiggle slightly in the middle. The might be a bump in the graph that we cannot see at our magnification.
+Could it wiggle slightly in the middle and cause a bump in the graph? Perhaps there is a bump in the graph that we cannot see at our magnification.
 
-Right now, with our technology, it appears that $L$ has no local maximums or minimums. 
+If there was a bump in the graph, then there would be a top point.  On either side of the top point the other points would be lower on the graph.  That would be the graph moves downhill on the right side of the top point, which would say the funciton is decreasing there.  But, we know $L$ is strictly increasing.  So, there can be no bumps.  $L$ has no local extrema.
+
+
+This is not the end of the story. There could be a flat point, like on the graph of $y = x^3$. So, there could be a critical number still.  It doesn't look like it from the graph. But, perhaps the magnification provided by our graph is just too small to see it.
 
 
 
