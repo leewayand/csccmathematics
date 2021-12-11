@@ -17,27 +17,36 @@ describe everything
 
 
 
-Completely analyze $L(x) = \frac{5}{1+3 e^{-\tfrac{x}{2}}}$
+\textbf{Completely analyze $L(x) = \frac{5}{1+3 e^{-\tfrac{x}{2}}}$} \\
 
 
 
 
 
 
-$\blacktriangleright$  \textbf{Domain:} $x$ is a real number and the range of the exponential function does not include negative numbers. Therefore, the denominator of $L(x)$ cannot be $0$.  That makes the implied domain all real numbers.
+$\blacktriangleright$  \textbf{Domain:} $x$ is a real number and the range of the exponential function does not include negative numbers. Therefore, the denominator of $L(x)$ cannot be $0$.  That makes the natural or implied domain all real numbers.
+
+
+$\blacktriangleright$ \textbf{Zeros:} $L$ is a quotient, therefore the zeros of $L$ would be the zeros of the numerator.  However, the numerator is a constant funciton.  It has no zeros. $L$ has no zeros.
+
+
+
+$\blacktriangleright$ \textbf{Continuity:} The denominator is a shifted exponential funciton, so it is continuous everywhere. The numberator is a constant funciton, so it is continuopus everywhere.  $L$ is the quotient of two continuous functions.  Therefore, it is continuous except where the denominator is $0$.  The denominator is never $0$. $L$ is continuous everywhere.  No discontinuities or singularities.
 
 
 
 
+$\blacktriangleright$ \textbf{Range:} S$L$ is a continuous function and is never negative. We need to determine the endbehavior to understand the range.
 
 
-$\blacktriangleright$ \textbf{Range:} For the range, we need to determine the endbehavior.
+First, $e^{-\tfrac{x}{2}}$ has a limiting value of $0$ as $x \to \infty$.
+
+
+\[   \lim_{x \to \infty} \frac{5}{1+3 e^{-\tfrac{x}{2}}} =   \frac{5}{1 + 0}   = 5 \]
 
 
 
-\[   \lim_{x \to \infty} \frac{5}{1+3 e^{-\tfrac{x}{2}}} =   \lim_{x \to \infty} \frac{5}{1 + 0}   = 5 \]
-
-
+Second, $e^{-\tfrac{x}{2}}$ is unbounded as $x \to -\infty$ and domaintes $1$ in the denominator.
 
 \[   \lim_{x \to -\infty} \frac{5}{1+3 e^{-\tfrac{x}{2}}} =   \lim_{x \to -\infty} \frac{5}{3 e^{-\tfrac{x}{2}}}   = 0 \]
 
@@ -72,12 +81,13 @@ The graph has horizontal asymptotes.
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10),<->] {5};
+          \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10),<->] {0};
 
             %\addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9)] {5/(1 + 3 * e^(-x/2))};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9),<->] {5/(1 + 3 * 2.7182^(-x/2))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9),<->] {5/(1 + 3 * 2.7182^(-x/2))};
 
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10),<->] {5};
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10),<->] {0};
+           
 
 
 
@@ -97,13 +107,18 @@ The graph has horizontal asymptotes.
 
 
 
-$\blacktriangleright$ \textbf{Rate-of-Change:}    Since $e^{-\tfrac{x}{2}}$ is a strictly decreasing function, and it is in the denminator of $L(x)$, we know that $L(x)$ will be a strictly increasing function.
+$\blacktriangleright$ \textbf{Rate-of-Change:}    Since $e^{-\tfrac{x}{2}}$ is a strictly decreasing function, the denominator is decreasing to $1$. The numerator is a constant function. A fraction with a constant numerator and decreasing denominator gets larger. $L(x)$ is a strictly increasing function.
 
 
 
 
 
-$\blacktriangleright$ \textbf{Extrema:} $L(x)$ has no global or local maximums or minimums and so no crtical numbers
+$\blacktriangleright$ \textbf{Extrema:}  $L(x)$ has no global maximums or minimums, since it is a strictly increasing function.  
+
+
+But, it could wiggle slightly in the middle. The might be a bump in the graph that we cannot see at our magnification.
+
+Right now, with our technology, it appears that $L$ has no local maximums or minimums. 
 
 
 
@@ -112,7 +127,7 @@ $\blacktriangleright$ \textbf{Extrema:} $L(x)$ has no global or local maximums o
 
 Calculus will give us a formula for the derivative.
 
-\[    \frac{-15}{2} \cdot \frac{e^{-\tfrac{x}{2}}}{\left(1+3 e^{-\tfrac{x}{2}}\right)^2}    \]
+\[  L'(x) =   \frac{-15}{2} \cdot \frac{e^{-\tfrac{x}{2}}}{\left(1+3 e^{-\tfrac{x}{2}}\right)^2}    \]
 
 
 This function has no zeros, which tells us that $L(x)$ has no critical numbers.
