@@ -13,9 +13,13 @@ addition and subtraction
 
 
 
-Complex Numbers are 2-dimensional numbers, which we represent as $a + b \, i$, where $i = \sqrt{-1}$.
+Complex Numbers are 2-dimensional numbers, which we represent as $a + b \, i$, where $i = \sqrt{-1}$. \\
 
-On one hand, $\sqrt{-1}$ is a little weird.  On the other hand, we have worked with expressions like $5 + 3 \sqrt{2}$ and $3 - 4 \sqrt{7}$ many times.  In this respect, $5 + 3 \sqrt{-1}$ is no different.  $i = \sqrt{-1}$ is simply the number you square to get $-1$.  That's all.
+
+
+
+
+On one hand, $\sqrt{-1}$ feels a little weird.  We are used to squaring real numbers and getting positive values. On the other hand, we have worked with expressions like $5 + 3 \sqrt{2}$ and $3 - 4 \sqrt{7}$ many times.  In this respect, $5 + 3 \sqrt{-1}$ is no different.  $i = \sqrt{-1}$ is simply the number you square to get $-1$.  That's all.
 
 
 
@@ -27,8 +31,10 @@ We have plenty of shorthand notations.
 
 \begin{itemize}
 \item $3 + 1 \, i = 3 + i$
+\item $7 + (-2) \, i = 7 - 2 \, i$
 \item $4 + 0 \, i = 4$
 \item $0 + 5 \, i = 5 \, i$
+\item $0 + (-6) \, i = -6 \, i$
 \end{itemize}
 
 
@@ -58,6 +64,28 @@ Subtract the real parts. Subtract the imaginary parts. \\
 
 Multiplication is a little more involved, because we want the Distributive Property.
 
+\[
+(a + b \, i) \cdot (c + d \, i) 
+\]
+
+\[
+= a \cdot c + b \, i \cdot c + a \cdot d \, i + b \, i \cdot d \, i
+\]
+
+\[
+a c  + (a d) \, i + (b c) \, i + (b d) \, i^2
+\]
+
+
+\[
+a c  + (a d) \, i + (b c) \, i + (b d) \, (-1)
+\]
+
+
+\[
+(a c - b d) + (a d + b c) \, i 
+\]
+
 
 
 \begin{itemize}
@@ -65,7 +93,13 @@ Multiplication is a little more involved, because we want the Distributive Prope
 \end{itemize}
 
 
-\textbf{Note:}  All of this gives us our usual equivalencies, like $a + (-b) \, i = a - b \, i$
+
+
+
+
+
+
+
 
 \begin{question}
 
@@ -178,9 +212,56 @@ Multiplication is a little more involved, because we want the Distributive Prope
 
 
 
+\begin{question}
+
+
+\item   $(b \, i) \cdot  (-b \, i) = \answer{b^2}$
+
+
+\end{question}
 
 
 
+
+
+
+We can see that our usual operations on real numbers still hold.
+
+\begin{itemize}
+\item $(r + 0 \, i) + (t + 0 \, i) = (r + t) + 0 \, i = r + t$ \\ 
+\item $(r + 0 \, i) - (t + 0 \, i) = (r - t) + 0 \, i = r - t$ \\ 
+\item $(r + 0 \, i) \cdot (t + 0 \, i) = (r \cdot t - 0 \cdot 0) + (r \cdot 0 + t \cdot 0) \, i = r t$ \\ 
+\end{itemize}
+
+
+Real numbers combine to still give real numbers.  It is also possible for complex numbers to combine to give real numbers. \\
+
+
+One way is to add complex numbers with opposite imaginary parts:
+
+\[
+(a + b \, i) + (a - b \, i) = 2a
+\]
+
+
+
+Another way is to multiply imaginary numbers:
+
+\[
+(b \, i) \cdot (-b \, i) = b^2
+\]
+
+
+
+This is what we have been experiencing with quadratic functions, but just couldn't see it.  We have had numbers outside the real numbers combining and the result landing inside the numbers.
+
+
+
+
+This relation negative imaginary parts is proving to be very important.  It deserves a name.
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $z = a + b \, i$ is a Complex Number, then $\bar{z} = \bar{a + b \, i} = a - b \, i$ is called the \textbf{\textcolor{purple!85!blue}{complex conjugate}} of $z = a + b \, i$.
 
 
 
