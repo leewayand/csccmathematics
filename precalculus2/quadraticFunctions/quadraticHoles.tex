@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Holes}
+\title{Missing Numbers}
 
 \begin{document}
 
@@ -14,116 +14,27 @@ need more numbers
 
 
 
-We have investigated quadratic functions from several viewpoints.  Time to collect all of our thoughts and charcterize quadratic functions.
+We have a complete characterization of quadratic functions as far as real numbers go.  But, the story is unbalanced.  A quadratic can have $0$, $1$, or $2$ real zeros or roots.  On the other hand, we have a feeling that polynomials of degree $2$ should have two factors and two roots.  The problem is that the real numbers don't contain the numbers we need.  The real numbers are missing numbers.
 
 
-
-Complex Numbers
-
-
-
-
-\begin{example}  Quadratic Analysis
-
-
-
-Analyze $M(t) = -\frac{1}{2} (t-3)^2 + 5$ \\
-
-
-\begin{explanation}
-
-$M$ is a quadratic function, which means its graph is a parabola.  The leading coefficient is negative, which means the parabola is opening down.  The highest point on the parabola is $(3, 5)$. From this, we know there are two intercepts, which means two roots and two factors.
+According to the quadratic formula, the quadratic function $Q(x) = x^2 + 1$ should have $\sqrt{-1}$ as a zero.  But, $\sqrt{-1}$ is not in the real numbers. 
 
 
 
 
+\begin{example}  
+   
+  
+Let $f(x) = x^2 + x + 5$
 
 
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=M(t)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:8),<->] {-0.5*(x-3)^2 + 5};
-          %\addplot [line width=2, penColor, smooth,samples=200,domain=(-7:-4),<-] {-e^(-x-5)};
-
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
-
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,5)};
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-0.162,0)};
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.162,0)};
+The Quadratic Formula says the zeros are 
 
 
+\[
+\frac{-1 \pm \sqrt{1^2 - 4 \cdot 1 \cdot 5}}{2 \cdot 1} = \frac{-1 \pm \sqrt{-19}}{2}
+\]
 
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-The domain is $(-\infty, \infty)$ and the range is $(-\infty, 5]$.
-
-The global maximum is $5$, which ocurrs at $3$.  There is no global minimum.  $5$ is also a local maximum and there are no local minimums.
-
-
-
-
-$\blacktriangleright$ Behavior: \\
-
-
-$M$ increases on $(-\infty, 3]$. $M$ decreases on $[3, \infty)$.
-
-
-
-$\blacktriangleright$ Zeros: \\
-
-
-
-
-
-\begin{align*}
--\frac{1}{2} (t-3)^2 + 5 & = 0  \\
-(t-3)^2     &= \answer{10)} 
-\end{align*}
-
-Either $t - 3 = -\sqrt{10}$ or $t - 3 = \answer{\sqrt{10}}$
-
-EIther $t = 3 - \sqrt{10}$ or $t = \answer{3 - \sqrt{10}}$
-
-
-
-
-
-
-We have two roots or zeros: $t = 3 - \sqrt{10}$ and $t = \answer{3 + \sqrt{10}}$. \\
-
-
-We have two intercepts: $(3 - \sqrt{10}, 0)$ and $\left( \answer{3 + \sqrt{10}}, 0 \right)$. \\
-
-
-We have two factors: $t - (3 - \sqrt{10})$ and $\answer{t - (3 - \sqrt{10})}$. \\
-
-
-$M(t) = -\frac{1}{2} (t - (3 - \sqrt{10})) (t - (3 + \sqrt{10}))$ \\
-
-$M(t) =  -\frac{1}{2} t^2 + 3x + \frac{1}{2}$
-
-
-\end{explanation}
 
 \end{example}
 
@@ -132,10 +43,60 @@ $M(t) =  -\frac{1}{2} t^2 + 3x + \frac{1}{2}$
 
 
 
+\begin{example}  
+   
+  
+Let $H(t) = 2t^2 - 3t + 7$
+
+
+The Quadratic Formula says the zeros are 
+
+
+\[
+\frac{3 \pm \sqrt{(-3)^2 - 4 \cdot 2 \cdot 7}}{2 \cdot 2} = \frac{3 \pm \sqrt{-47}}{4}
+\]
+
+
+\end{example}
+
+
+
+We need numbers like $\sqrt{-19}$ and $\sqrt{-47}$. \\
 
 
 
 
+
+
+
+
+
+\begin{example}  
+   
+  
+Let $m(k) = k^2 + \pi $
+
+
+The Quadratic Formula says the zeros are 
+
+
+\[
+\sqrt{-\pi} \, \text{ and } \, \sqrt{\pi}
+\]
+
+
+\end{example}
+
+
+
+
+This example suggests we need $\sqrt{-r}$ for every real number, $r$. \\
+
+
+
+
+
+It looks like it isn't holes that need to be filled in the real numbers, but an entire new copy of the real numbers that is needed.
 
 
 

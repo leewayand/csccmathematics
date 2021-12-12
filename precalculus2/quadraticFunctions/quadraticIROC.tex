@@ -14,7 +14,55 @@ rate of change
 
 
 
-We have investigated quadratic functions from several viewpoints.  Time to collect all of our thoughts and charcterize quadratic functions.
+By function \textbf{behavior}, we mean the rate of change, which we title \textbf{increasing} and \textbf{decreasing}.
+
+
+We have two flavors of this.
+
+
+
+
+\begin{fact} Over an Interval \\
+
+
+The rate of change of the function $f$ over the interval $[a, b]$ is given by $\frac{f(b) - f(a)}{b - a}$.
+
+
+\end{fact}
+
+
+
+
+
+
+\begin{fact} At a Domain Number \\
+
+
+The rate of change of the function $f$ at the domain number $a$ is given by the slope of the tangent line at the point $(a, f(a))$ on the graph. \\
+
+
+This rate of change is known as the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change of f at a}} or the \textbf{\textcolor{purple!85!blue}{derivative of f at a}}.
+
+
+Notation: \textbf{\textcolor{purple!85!blue}{$iRoC_f(x)$}} or \textbf{\textcolor{purple!85!blue}{$f'(x)$}}.
+
+
+\end{fact}
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$ Algebraic Increasing}} \\
+
+
+
+The function, $f$, is \textbf{\textcolor{purple!85!blue}{increasing on the interval}} $[a, b]$ if
+
+
+\[
+f(c) \geq f(d) \, \text{ whenever } \, c < d
+\]
 
 
 
@@ -24,6 +72,21 @@ We have investigated quadratic functions from several viewpoints.  Time to colle
 
 
 
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$ Calculus Increasing}} \\
+
+
+
+The function, $f$, is \textbf{\textcolor{purple!85!blue}{increasing at a}} if
+
+
+\[
+iRoC_f(a) > 0 \, \text{ or } \, f'(a) > 0
+\]
+
+
+
+
+The instantaneous rate of change can have a value at each domain number, which makes it into a function.
 
 
 
@@ -37,24 +100,45 @@ The instantaneous rate of change (a.k.a the derivative) gives us a formula for t
 
 
 
-For the general quadratic, $f(x) = a \, x^2 + b \, x + c$, we have $iRoC_f(x) = f'(x) = 2a \, x + b$. \\
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} From vertex form, $f(x) = a (x -h)^2 + k$, we have $iRoC_f(x) = f'(x) = 2 a \, (x-h)$. \\
 
 
 
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} From standard form, $f(x) = a \, x^2 + b \, x + c$, we have $iRoC_f(x) = f'(x) = 2 a \, x + b$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $M(t) = -\frac{1}{2} (3 - t)^2 + 5$ \\
+
+What is the instantaneous rate of change? \\
 
 
 
 \begin{explanation}
 
-For the example above, $iRoC_M(t) = -t + 3$.
+From the vertex form, we have $iRoC_M(t) = 3 - t$ or $M'(t) = 3 - t$.
 
 
 
 
 
+\textbf{For Example:}
 
-
-The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1, 3)$ is $iRoC(1) = -1 + 3 = 2$.  Therfore, the equation of the tangent line is $y - 3 = 2(t-1)$.
+The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1, 3)$ is $iRoC(1) = 3 - 1 = 2$.  Therfeore, the equation of the tangent line is $y - 3 = 2(t-1)$.
 
 
 
@@ -98,10 +182,10 @@ The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1
 
 The $iRoC$ or derivative is itself a function.  We could plot its graph. For a quadratic function, the derivative is a linear function whose graph is a line.
 
-In our case here, $y - 3 = 2(t-1)$ tells us that $iRoC_M(t) = 2(t-1)+3$.
 
 
 
+Graph of $y = iRoF_M(t) = M'(t) = 3 - t$
 
 
 
@@ -144,14 +228,14 @@ In our case here, $y - 3 = 2(t-1)$ tells us that $iRoC_M(t) = 2(t-1)+3$.
 \end{image}
 
 
-The derivative is positive on $(-\infty, 3)$, which tells us that the tangent lines to the parabola in the example have positive slopes for the left half of the parabola. This tells us that $M$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  on $(-\infty, 3)$. \\
+The derivative is positive on $(-\infty, 3)$, which tells us that the tangent lines to the parabola have positive slopes for the left half of the parabola. This tells us that $M$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  on $(-\infty, 3)$. \\
 
-The derivative is negative on $(3, \infty)$, which tells us that the tangent lines to the parabola in the example have negative slopes for the right half of the parabola. This tells us that $M$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $(3, \infty)$. \\
-
-
+The derivative is negative on $(3, \infty)$, which tells us that the tangent lines to the parabola have negative slopes for the right half of the parabola. This tells us that $M$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $(3, \infty)$. \\
 
 
 \end{explanation}
+
+\end{example}
 
 
 
