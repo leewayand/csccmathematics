@@ -16,12 +16,14 @@ algebraic geometry
 
 
 
-Since our real line is full and we still need some new numbers, we are attempting to juggle two copies of the real numbers. Visually, we are organizing the two copies as two number lines drawn at right angles to each other.  This is reminding us of the Cartesian plane.  Therefore, we are using our ideas of the Cartesian plane to help us think about a new number system.  
+Our real line is full, but quadratic functions have shown us that we still need some new numbers. To accomodate our need for new zeros, we are attempting to juggle two copies of the real numbers. Visually, we are organizing the two copies as two number lines drawn at right angles to each other.  This is reminding us of the Cartesian plane.  Therefore, we are using our ideas of the Cartesian plane to help us think about a new number system.  \\
+
+
 
 In the Cartesian plane, the two axis give rise to a 2-dimensional plane full of points.  We are adopting the same idea for our new number system.  It will be full of 2-dimensional numbers.
 
 
-We are in the process of inventing an arithmetic for our 2-dimensional numbers.  We began by adopting the arrow explanations of addition and subtraction that we used on the traditional number line. The arrows are now 2-dimensional arrows called \textbf{vectors}, but they follow the same rules as before.
+We are in the process of inventing an arithmetic for our 2-dimensional numbers.  We begin by adopting the arrow explanations of addition and subtraction that we used on the traditional number line. The arrows are now 2-dimensional arrows called \textbf{vectors}, but they follow the same rules as before.
 
 The next step is to invent some algebraic symbols for the vectors, so that we can think algebraically about the 2-dimensional numbers.
 
@@ -29,7 +31,7 @@ The next step is to invent some algebraic symbols for the vectors, so that we ca
 $\blacktriangleright$ We alreaady use parentheses for describing points, dots, or locations on the plane: $(2, 3)$.
 
 
-$\blacktriangleright$ We will use triangular brackets to describe vectors: $\langle 2, 3 \rangle$.  Rather than a postion, vectors describe a movement - just like the arrows represented in addition on the traditional number line. Vectors have a length or size and a direction.  Many arrows may represent the same vector.
+$\blacktriangleright$ We will use triangular brackets to describe vectors: $\langle 2, 3 \rangle$.  Rather than a postion, vectors describe numbers through length and direction - just like arrows on the traditional number line. Many arrows may represent the same vector.  Their placement in the Cartesian plane will represent operations.
 
 
 The numbers inside the parenthese for a point are called \textbf{coordinates}.
@@ -163,9 +165,9 @@ We also have the idea of stretching or compressing a vector in the same directio
 
 
 
-We haven't lost our 1-dimensional real numbers. Now, they are just embedded inside our new algebraic plane.  We can view the horizontal axis as the traditional number line.
+We haven't lost our 1-dimensional real numbers. Now, they are just embedded inside our new algebraic plane.  We can view the horizontal axis as the traditional real number line.
 
-Each real number $r$ is now either represented by the point $(r,0)$ or by the horizontal vector, $\langle r, 0 \rangle$.  All of our operations are duplicated with these new representations along the horizontal axis.
+Each real number $r$ is now either represented by the point $(r,0)$ or by the horizontal vector, $\langle r, 0 \rangle$.  All of our operations are duplicated with these new visual tools along the horizontal axis.
 
 
 \begin{itemize}
@@ -193,9 +195,11 @@ Each real number $r$ is now either represented by the point $(r,0)$ or by the ho
 
 We have definitions for addition and subtraction of vectors.  Next up is multiplication, which is not so straightforward.  Therefore, let's just think about what we want from multiplication and then try to make that happen.
 
-$\blacktriangleright$ Remember, $1$ has been encoded into vectors as $\langle 1, 0 \rangle$.  We would like $\langle 1, 0 \rangle$ to act like a multiplicative unit.
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Remember, $1$ has been encoded into vectors as $\langle 1, 0 \rangle$.  We would like $\langle 1, 0 \rangle$ to act like a multiplicative unit.
 
 \[    \langle a, b \rangle \cdot \langle 1, 0 \rangle    = \langle a, b \rangle            \]
+
+\[    \langle 1, 0 \rangle \cdot \langle a, b \rangle    = \langle a, b \rangle            \]
 
 
 As an example, we would like $\langle 0, 1 \rangle \cdot \langle 1, 0 \rangle    = \langle 0, 1 \rangle $.
@@ -218,7 +222,7 @@ We start with $\langle 1, 0 \rangle$.  When we multiply this by $\langle 0, 1 \r
 \begin{tikzpicture}
   \begin{axis}[
             domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
             ytick={-4,-2,2,4},
             xtick={-4,-2,2,4},
             yticklabels={$-4$,$-2$,$2$,$4$}, 
@@ -244,12 +248,12 @@ We start with $\langle 1, 0 \rangle$.  When we multiply this by $\langle 0, 1 \r
 
 
 
-Instead of looking at this equation saying that multiplication by $\langle 1, 0 \rangle$ had no effect, let's view it as saying that multplication by $\langle 0, 1 \rangle$ turned $\langle 1, 0 \rangle$ $90^{\circ}$ counterclockwise.
+Instead of looking at this equation saying that multiplication by $\langle 1, 0 \rangle$ had no effect, let's view it as saying that multplication by $\langle 0, 1 \rangle$ turned $\langle 1, 0 \rangle$ by $90^{\circ}$ counterclockwise.
 
 
 
 
-$\blacktriangleright$ Multiplication by $\langle 0, 1 \rangle$ turns vectors counterclockwise $90^{\circ}$.
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Multiplication by $\langle 0, 1 \rangle$ turns vectors counterclockwise $90^{\circ}$.
 
 
 
@@ -343,6 +347,19 @@ Puting all of this together, we get something like this:
 
 
 
+\begin{example} Vector Multiplication
+
+Compute  $\langle 3, -1 \rangle  \cdot \langle 2, 4 \rangle$
+
+\begin{explanation}
+
+
+\[
+\langle 3, -1 \rangle  \cdot \langle 2, 4 \rangle = \langle 2 \cdot 3 - (-1) \cdot 4, 2 \cdot (-1) + 3 \cdot 4 \rangle = \langle 10, 10 \rangle 
+\]
+\end{explanation}
+
+\end{example}
 
 
 
@@ -354,9 +371,31 @@ Puting all of this together, we get something like this:
 
 
 
+\begin{example} Real Number Multiplication
+
+Compute  $\langle 3, 0 \rangle  \cdot \langle 2, 0 \rangle$
+
+\begin{explanation}
+
+
+\[
+\langle 3, 0 \rangle  \cdot \langle 2, 0 \rangle = \langle 2 \cdot 3 - 0 \cdot 0, 2 \cdot 0 + 3 \cdot 0 \rangle = \langle 6, 0 \rangle 
+\]
+\end{explanation}
+
+\end{example}
 
 
 
+
+\begin{question} .
+
+
+Compute  $\langle 1, 2 \rangle  \cdot \langle -2, 3 \rangle = \left\langle \answer{4}, \answer{-1} \right\rangle $
+
+
+
+\end{question}
 
 
 
