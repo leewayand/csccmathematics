@@ -22,6 +22,25 @@ Our investigation of the real numbers quickly expanded in many directions. We in
 
 If we think of our history with numbers, we have encountered this idea of missing numbers many times.  We began with whole numbers, then expanded to include integers, then expanded to include rational numbers, and then expanded to include irrational numbers.  Each time, our picture was that the real line had unused spots and we were just filling in the picture.  However, the real line is full at these point. Whatever numbers we are missing are not real numbers.  There is no place for them on the real line.  Where are these new numbers coming from? More importantly, how are we going to represent these new numbers and keep track of which are new and which are the existing numbers?
 
+
+\begin{idea} \textbf{\textcolor{green!50!black}{$\sqrt{-1}$}} \\
+
+
+If we add $\sqrt{-1}$ to the real numbers, then we still want everything to work like it has been working.  We want our rules to continue working.
+
+
+$\blacktriangleright$ We want addition to work : $\sqrt{-1} + \sqrt{-1} = 2\sqrt{-1}$ \\
+
+$\blacktriangleright$ We want multiplication to work : $\sqrt{3} /cdot \sqrt{-1} = \sqrt{-3}$ \\
+
+
+\end{idea}
+
+
+If we throw $\sqrt{-1}$ in with $\mathbb{R}$ and let the rules tell us what else will be included, then it looks like $r\sqrt{-1}$ and $\sqrt{-r}$ will be included fo every real number, $r$.  Our rules dictate that if we insert $\sqrt{-1}$, then we are forced to add in a whole new copy of $\mathbb{R}$.
+
+
+
 If is feeling like there are two types of numbers. Maybe we just need two versions of the real numbers: the old real numbers and the new additonal real numbers.
 
 
@@ -33,7 +52,7 @@ An immediate idea is to just use two copies of the real numbers.
 \end{center}
 
 
-In fact, we have been using two copies of the real numbers all along. Our graphs and curves on the Cartesian plane use two copies of the real numbers.  Each axis is a copy of the real numbers. We have been using the Cartesian plane to visually encode numbers as distances in an effort to illustrate the pairs in a function. Maybe we can repurpose the Cartesian plane to also have an algebraic structure - hopefully in a manner similar to how we use the real number. \\
+In fact, we have been using two copies of the real numbers all along, just in a different context. Our graphs and curves on the Cartesian plane use two copies of the real numbers.  Each axis is a copy of the real numbers. We have been using the Cartesian plane to visually encode numbers as distances in an effort to illustrate the pairs in a function. Maybe we can repurpose the Cartesian plane to also have an algebraic structure - hopefully in a manner similar to how we use the real number. \\
 
 
 
@@ -48,11 +67,16 @@ We have a couple of tools we use to describe real numbers and our operations on 
 $\blacktriangleright$  We use written symbols to represent numbers and operations.  A string of valid symbols is called an expression and two expressions representing the same numbers are called equivalent. Accompanying these symbols are a list of manipulation rules and operations dictating how these symbols can be rearranged and replaced and yet still represent the same number.  
 
 
-$\blacktriangleright$  We also have diagrams that use space, direction, and size to visually represent numbers and operations. The basic diagram has a line representing an ordering of the real numbers. Dots on the number line are one option for representing numbers, while arrows are often used to describe operations.
+$\blacktriangleright$  We also have diagrams that use space, direction, and size to visually represent numbers and operations. We call this diagram the real line. Our line diagram has a line representing an ordering of the real numbers. Dots on the number line are one option for representing numbers, while arrows are often used to describe operations.
 
 
-We would like to extend this system from one copy of \textbf{$\mathbb{R}$} to two copies of \textbf{$\mathbb{R}$}.
+We would like to extend this system from one copy of \textbf{$\mathbb{R}$} to two copies of \textbf{$\mathbb{R}$}. \\
 
+
+
+\begin{center}
+\textbf{\textcolor{red!90!darkgray}{We would like to expand this system from 1-dimension to 2-dimesions.}}
+\end{center}
 
 
 
@@ -66,7 +90,7 @@ We would like to extend this system from one copy of \textbf{$\mathbb{R}$} to tw
 
 
 
-Generally speaking we draw the real line with the negative numbers growing to the left and positive numbers growing to the right. Somewhere in the middle we draw a tick mark for $0$. Our first use it to plot dots (points) on the real line at distances from $0$ that encode the value of the number.
+Generally speaking we draw the real line horizontally with the negative numbers growing to the left and positive numbers growing to the right. Somewhere in the middle we draw a tick mark for $0$. We plot dots (points) on the real line at distances from $0$ that visually encode the value of the number.
 
 
 
@@ -542,7 +566,7 @@ The story of $-2-(-5)=3$ as told through vectors is a picture story.  First, an 
           ]     
 
 
-            \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:0),<-] ({x},{0.5});
+            \addplot [line width=2, penColor2, smooth,samples=200,domain=(-2:0),<-] ({x},{0.5});
             \addplot [line width=2, penColor2, smooth,samples=200,domain=(-5:0),<-] ({x},{0.75});
 
             \addplot [line width=2, penColor, smooth,samples=200,domain=(-5:-2),->] ({x},{-0.5});
@@ -558,7 +582,7 @@ From these diagrams we can see that
 
 \begin{itemize}
 \item Addition is commutative.  The head-to-head alignment results in the same arrow regardless of which arrow comes first.
-\item Subtraction is not commutattive. The tail-to-tail alignmenbt will reverse the resulting arrow if the order is reversed.
+\item Subtraction is not commutative. The tail-to-tail alignment will reverse the resulting arrow if the order is reversed.
 \end{itemize}
 
 
@@ -616,7 +640,7 @@ $\mathbb{R}^2$ is just the collection of ordered pairs of real numbers.
 \[  \mathbb{R}^2 = \{  (r_1, r_2)    \, | \,  r_1, r_2 \in \mathbb{R}  \}      \]
 
 
-The Cartesian plane is our geometric, visual representation of these ordered pairs. We plot points or dots to represent a 2-dimensional number.
+The Cartesian plane is our geometric, visual representation of these ordered pairs. We can plot points or dots to represent a 2-dimensional number.
 
 
 
@@ -671,9 +695,6 @@ $\blacktriangleright$ \textbf{Addition:}  Draw the first arrow with its tail at 
 
 
 
-$\blacktriangleright$ \textbf{Subtraction:}  Draw the first arrow with its tail at the origin.  Draw the second arrow with its tail at the origin. The resulting arrow is drawn from the head of the second arrow to the head of the first arrow.  This resulting arrow represents the difference of the two.
-
-
 
 \begin{example}
 
@@ -712,6 +733,66 @@ $(4,6) + (2, -10) = (6, -4)$
 
 
 \end{example}
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Subtraction:}  Draw the first arrow with its tail at the origin.  Draw the second arrow with its tail at the origin. The resulting arrow is drawn from the head of the second arrow to the head of the first arrow.  This resulting arrow represents the difference of the two.
+
+
+
+
+
+
+\begin{example}
+
+
+$(4,6) - (2, -10)$
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:4,6);
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:2,-10);
+            \draw[penColor2,ultra thick,->] (axis cs:2,-10) -- (axis cs:4,6);
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$(4,6) - (2, -10) = (2, 16)$
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
 
 
 
