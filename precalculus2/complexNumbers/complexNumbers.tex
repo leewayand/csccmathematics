@@ -2,12 +2,12 @@
 
 \input{../../preamble.tex}
 
-\title{Complex Numbers}
+\title{Notation}
 
 \begin{document}
 
 \begin{abstract}
-$i$
+$a + b \, i$
 \end{abstract}
 \maketitle
 
@@ -21,7 +21,7 @@ Our vectors are 2-dimensional.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -67,7 +67,7 @@ These component vectors are the horizontal and vertical components of $\langle a
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -112,7 +112,7 @@ $\blacktriangleright$  As algebraic shorthand notation, the vector $ \langle 1, 
 
 
 
-With these abbreviations our 2-dimensional numbers now look like this
+With these abbreviations, our 2-dimensional numbers now look like this
 
 
 \begin{align*}
@@ -127,7 +127,7 @@ With these abbreviations our 2-dimensional numbers now look like this
 Our 2-dimensional numbers have several representations.  Points and vectors are a geometric view, which will use extensively.
 
 
-When viewed as $a + b \, i$, we refer to these numbers as the \textbf{Complex Numbers}. \\
+ $a + b \, i$, is our algebraic representation of the \textbf{Complex Numbers}. \\
 
 
 
@@ -155,22 +155,22 @@ When viewed as $a + b \, i$, we refer to these numbers as the \textbf{Complex Nu
 
 
 
-The Complex Numbers are our algebraic view of these 2-dimensional numbers.  In our story, the line between geometry and algebra is very blurry. It is almost like having double vision.  
+The Complex Numbers are our algebraic view of our new 2-dimensional numbers.  In our story, the line between geometry and algebra is very blurry. It is almost like having double vision.  
 
 
 \begin{itemize}
 \item We have a geometric plane mapped out with points and coordinates.
 \item We have a geometric plane in which we move about by vectors.
 \item We have a 2-dimensional number system, where numbers are represented by points and vectors.
-\item We have a algebraic shorthand symbols where $i$ represents $\langle 0, 1 \rangle$.
-\item We have our old real numbers, which are embedded in the new system sa horizontal vectors or points on the horizontal axis. $1$ is represented by $\langle 1, 0 \rangle$ and is written as $1 + 0 \, i$.
+\item We have algebraic shorthand symbols where $i$ represents $\langle 0, 1 \rangle$.
+\item We have our old real numbers, which are embedded in the new system as horizontal vectors or points on the horizontal axis. $1$ is represented by $\langle 1, 0 \rangle$ and is can be written as $1 + 0 \, i$ or just $1$.
 \end{itemize}
 
 
 
 
 
-We hold all of these views on top of each other simultaneously and use the strength of each to reason.
+We hold all of these views on top of each other simultaneously and use the strength of each in our reasoning.
 
 
 
@@ -198,10 +198,12 @@ If you rotate $1 = \langle 1, 0 \rangle$, $90^{\circ}$ counterclockwise, twice, 
 
 
 
-We were looking for this number when studying the quadratic formula.  $i$ is the missing piece to the puzzle!
+We were looking for this number when studying the quadratic formula.  
 
 
-
+\begin{center}
+\textbf{\textcolor{red!80!black}{$i$ is the missing piece to the puzzle!}}
+\end{center}
 
 
 
@@ -276,6 +278,19 @@ That is the langugage we are stuck with.
 
 
 
+
+\begin{itemize}
+\item $Re(3+7i) = 3$
+\item $Im(3+7i) = 7$
+\end{itemize}
+
+
+\begin{itemize}
+\item $Re(-6-2i) = -6$
+\item $Im(-6-2i) = -2$
+\end{itemize}
+
+
 \end{example}
 
 
@@ -288,12 +303,12 @@ That is the langugage we are stuck with.
 
 
 
-If we represented these numbers with vectors, then each vector would have a \textbf{length}.  Inside the algebraic viewpoint $a + b \, i$ has a \textbf{modulus}.  The symbol for the modulus looks exactly like the absolute value symbol.
+If we represented these numbers with vectors, then each vector would have a \textbf{length}.  Inside our algebraic viewpoint, $a + b \, i$ doesn't have alength. It has a \textbf{modulus}.  The symbol for the modulus looks exactly like the absolute value symbol.
 
 \[      |a + b \, i|    = \sqrt{a^2 + b^2}   \]
 
 
-The length of $\langle a, b \rangle$ equals the modulus of $\sqrt{a + b \, i}$
+The length of $\langle a, b \rangle$ equals the modulus of $a + b \, i$, which is $\sqrt{a + b \, i}$
 
 
 
@@ -415,14 +430,38 @@ The Unit Circle consists of all complex numbers of the form $cos(\theta) + sin(\
 
 
 
+\begin{question}. \\
+
+Compute   $(4 + 2 \, i) \cdot (-1 + i) = \answer{-6} + \answer{2} \, i$
+
+\end{question}
 
 
 
 
 
+\begin{question}. \\
+
+\begin{itemize}
+\item Compute   $i^2 = i \cdot i = \answer{-1} + \answer{0} \, i$
+\item Compute   $i^3 =  \answer{0} + \answer{-1} \, i$
+\item Compute   $i^4 =  \answer{1} + \answer{0} \, i$
+\item Compute   $i^5 =  \answer{0} + \answer{1} \, i$
+\item Compute   $i^6 =  \answer{-1} + \answer{0} \, i$
+\item Compute   $i^7 =  \answer{0} + \answer{-1} \, i$
+\item Compute   $i^8 =  \answer{1} + \answer{0} \, i$
+\end{itemize}
+
+\end{question}
 
 
 
+
+\begin{question}. \\
+
+$\sqrt{-9} = \sqrt{9} \cdot \sqrt{-1} =  \answer{3} \, i$
+
+\end{question}
 
 
 
