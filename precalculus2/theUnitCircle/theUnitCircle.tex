@@ -24,8 +24,9 @@ circles and triangles
 
 \item \textbf{\textcolor{red!80!black}{Every}} Complex number can be represented as the product of a real number and a complex number with modulus $1$.
 
-
 \item \textbf{\textcolor{red!80!black}{Every}} Complex number can be represented as the product of a real number and a complex number that sits on the unit circle.
+
+\item \textbf{\textcolor{red!80!black}{Every}} Complex number can be represented in the form $r (cos(\theta) + i \, sin(\theta))$.
 \end{itemize}
 
 
@@ -84,6 +85,11 @@ If we can understand the unit circle in terms of Complex numbers, then we will h
 
 
 
+
+
+$\blacktriangleright$ \textbf{Multiplication} \\
+
+
 Pretend we have two Complex numbers on the unit circle.
 
 \begin{itemize}
@@ -128,10 +134,13 @@ What is the modulus of the product?
 
 
 
-The product is again on the unit circle.
+\textbf{\textcolor{purple!85!blue}{The product is again on the unit circle!}}
 
 
-\textbf{Question:} Where is the product on the unit circle?
+
+
+
+\textbf{Question:} Where is this product on the unit circle?
 
 
 
@@ -201,14 +210,14 @@ This point defines a right triangle with base $a$ and height $b$ and angle $\the
 
 
 
-Let's focus on this right triangle.
+That is the right triangle for $a + b \, i = (1, \theta)$. \\
 
 
 
 
 The Complex number $c + d \, i$, has a polar form $(r_2, \phi)$, which similarly is $(1, \phi)$.  Normally, we would plot a point for this complex number by rotating counterclockwise an angle $\phi$ from the positive $x$-axis.  Instead, we are going to tack on this angle to $\theta$.
 
-So, we are sort of pretending that the radius for the first complex number, $a + b \, i$ is acting like an $x$-axis and we are going to rotate counterclockwise an angle $\phi$ from that radius.
+So, we are sort of pretending that the radius for the first complex number, $a + b \, i$, is acting like an $x$-axis and we are going to rotate counterclockwise an angle $\phi$ from that radius.
 
 
 
@@ -333,7 +342,9 @@ Eventually, the sides meet to make a right triangle.  Let's enclose the whole di
 
 
 
-The problem is that this second right triangle is too big. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were suppose to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$.  
+The problem is that this second right triangle is too big. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were suppose to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$. That is too much.  But, we can still get the lengths of this triangle.  
+
+So, our new right triangle is not the right triangle for $c + d \, i$. \\
 
 
  The good news is that the new triangle we created is a right triangle with angle $\phi$.  That means it is similar to the right triangle for $c + d \, i$.  The sides must be porportional to the sides of the $c-d-1$ right triangle for $c + d \, i$.  We can use this proportionality.
@@ -497,7 +508,7 @@ If we label the angles $\alpha$ and $\beta$ in the diagram below, then
 
 \begin{itemize}
   \item Our original right triangle for $a + b \, i$  has non-right angles, $\theta$, and angle $\beta$.
-  \item The right side of the encompassing rectangle forms a straight angle and it is cut up into three angles: a right angle, $\beta$ on one side, and $\alpha$ on the other side.
+  \item The right side of the big encompassing rectangle forms a straight angle and it is cut up into three angles: a right angle, $\beta$ on one side, and $\alpha$ on the other side. The sum must be $180^{\circ}$.
 \end{itemize}
 
 
@@ -588,10 +599,10 @@ The sum of the angles of the bottom right triangle is $\theta + \beta + 90^{\cir
 
 
 
-The angles in the top-right right triangle are $\theta$ and $\beta$. 
+The angles in the top-right right triangle are also $\theta$ and $\beta$. 
 
 
-The bottom right triangle representing $a + b \, i$ and the triangle formed in the upper-right corner of the rectangle are similar triangles.  We can get the lengths of the legs of the top right triangle.
+The bottom right triangle representing $a + b \, i$ and the triangle formed in the upper-right corner of the rectangle are similar triangles.  We can get the lengths of the legs of the top right triangle. Let's call these lengths $x$ and $y$ in the diagram.
 
 
 
@@ -830,7 +841,7 @@ The bottom exterior angle is the sum of $\theta$ and $\phi$.  It just our two or
 
   \draw [->] (.75,0) arc(0:55:.75); 
   \draw [rotate=18] (1.1,0) node {\tiny{$\theta + \phi$}};
-  \draw (1.25,2.75) node {\tiny{$\theta + \phi$}};
+  %\draw (1.25,2.75) node {\tiny{$\theta + \phi$}};
 
 
 
@@ -1016,7 +1027,18 @@ It is upsidedown, but this is the right triangle defined on the unit circle by t
 
  
 
-\textcolor{red!80!black}{$\blacktriangleright$} When multiplying Complex numbers on the unit circle, just add their angles.
+\textcolor{red!80!black}{$\blacktriangleright$} When multiplying Complex numbers on the unit circle, just add their angles. \\
+
+
+
+
+The product of two complex numbers on the unit circle is again on the unit circle. Its location is given by adding the angles of the two factors.
+
+
+We can now extend this to all Compelx numbers by bringing back in their distance from the origin - their modulus. \\
+
+
+
 
 \textcolor{red!80!black}{$\blacktriangleright$} When multiplying any Complex numbers, multiply their moduli and add their angles.
 
@@ -1032,12 +1054,45 @@ It is upsidedown, but this is the right triangle defined on the unit circle by t
 
 
 
+\begin{example}  Squaring \\
+
+
+The two Complex numbers could be the same number. $\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i = \left(1, \frac{\pi}{2} \right)$
+
+
+\[
+\left( \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \right)^2 = \left(1, \frac{\pi}{2} \right) \cdot \left(1, \frac{\pi}{2} \right)
+\]
+
+\[
+= \left(1, \frac{\pi}{2} + \frac{\pi}{2} \right) = (1, \pi) = i
+\]
+
+
+
+
+$\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i$ is a square root of $i$.
+
+
+\end{example}
 
 
 
 
 
 
+
+\begin{example}  Fourth Root \\
+
+
+We can work the angles backwards as well.  \\
+
+To get a fourth root of $-1$, we would need an angle such that $4$ times the angle is $\pi$.    \\
+
+$\frac{\pi}{4}$ will work.  We need the complex number on the unit circle at an angle of $\frac{\pi}{4}$.  That is $\frac{1}{\sqrt{2}} = \frac{1}{\sqrt{2}} \, i$.
+
+
+\end{example}
 
 
 
