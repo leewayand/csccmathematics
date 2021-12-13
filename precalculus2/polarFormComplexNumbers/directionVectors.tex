@@ -13,16 +13,25 @@ unit vectors
 
 
 
+$\blacktriangleright$ \textbf{Rectangular Directions}
+
+Just adding this one additional dimension has added quite a bit of geometric and algebraic structure to the Cartesian plane.  \\  
 
 
-Just adding this one additional dimension has added quite a bit of geometric and algebraic structure to the Cartesian plane.
-
-
-But really, the structure was also there with the real numbers.  It was just too simply to see as significant.  We are taking structure from the one dimensional real line and expanding the ideas into two dimensions.
+But really, the structure was also there with the real numbers.  It was just too simple to see as significant.  The real line only had two directions. We are taking structure from the one dimensional real line and expanding the ideas into two dimensions. \\ 
 
 
 
-The tick marks on our drawings of the plane axes are an example of this. The tick marks remind us of steps of size $1$ horizontally or vertically, like on our drawings of the real line.  We can then translate this tick mark information into vectors.  We can view our vectors as constructed from perpendicular pieces of size $1$.
+The tick marks on our drawings of the plane axes are an example of this. The tick marks remind us of steps of size $1$ horizontally or vertically. The tick marks on our drawings of the real line provided the same information.  We then translated this direction and distance information into a number. Same here, just with a pair.\\
+
+
+We have two directions now, so two sets of tick markes on two lines.  The left/right tick marks are marking off multiples of $\langle 1, 0 \rangle$. The up/down tick marks are marking off multiples of $\langle 0, 1 \rangle$.
+
+
+
+
+
+We can translate this tick mark information into vectors.  We can view our vectors as constructed from perpendicular pieces of size $1$.
 
 
 \[ \langle 5, 7 \rangle = 5 \cdot  \langle 1, 0 \rangle + 7 \cdot \langle 0, 1 \rangle  \]
@@ -99,13 +108,19 @@ $i$ represents a step of $1$ in the imaginary direction.
 We can bring this idea to polar descriptions as well.
 
 
-Each complex number can represented by a vector.  This vector can in turn be written as a scalar (number) times a \textbf{unit vector}.  A unit vector is just a vector of length $1$.
+
+
+$\blacktriangleright$ \textbf{Circular Directions}
+
+
+
+Each complex number can be represented by a vector.  This vector can in turn be written as a scalar (number) times a \textbf{unit vector}.  A unit vector is just a vector of length $1$.
 
 
 
 \begin{example}
 
-\[  3 + 4 \, i = \langle 3, 4 \rangle = 5 \cdot \langle \frac{3}{5}, \frac{4}{5} \rangle     \]
+\[  3 + 4 \, i = \langle 3, 4 \rangle = 5 \cdot \left\langle \frac{3}{5}, \frac{4}{5} \right\rangle     \]
 
 \begin{image}
 \begin{tikzpicture}
@@ -137,7 +152,41 @@ Each complex number can represented by a vector.  This vector can in turn be wri
 \end{image}
 
 
-Every complex number can be written this way.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Direction Vectors}}   \\
+
+A \textbf{direction vector}, also called a \textbf{unit vector} is a vector of length $1$.
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+
+\textbf{\Huge{\textcolor{purple!50!blue!90!black}{EVERY COMPLEX NUMBER CAN BE DESCRIBED THIS WAY !}}}
+
+\end{center}
+
+
 
 
 The unit vector is obtained by dividing the components by the length of the vector.  This length is the scalar out front.
@@ -148,19 +197,14 @@ The unit vector is obtained by dividing the components by the length of the vect
 \[     a + b \, i    =  \sqrt{a^2 + b^2}  \left(  \frac{a}{\sqrt{a^2 + b^2}}, \frac{b}{\sqrt{a^2 + b^2}} \, i \right)                      \]
 
 
-We have factored $a + b \, i $ in a product of a real number times a unit vector (a vector of length $1$).
-
-\end{example}
-
-Unit vectors as also called \textbf{direction vectors}.
+We have factored $a + b \, i $ in a product of a real number times a unit vector (a vector of length $1$). \\
 
 
 
-\begin{center}
 
-\textbf{\Huge{\textcolor{purple!50!blue!90!black}{EVERY COMPLEX NUMBER CAN BE DESCRIBED THIS WAY !}}}
 
-\end{center}
+
+
 
 
 

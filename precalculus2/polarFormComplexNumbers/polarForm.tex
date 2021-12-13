@@ -22,13 +22,13 @@ We already have several ways of representing complex numbers. \\
 $\blacktriangleright$ We represent complex numbers visually with points or dots on the Cartesian plane.
 
 
-
+$(4, 8)$
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -41,11 +41,6 @@ $\blacktriangleright$ We represent complex numbers visually with points or dots 
           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,8)};
 
 
-
-
-
-
-           
 
   \end{axis}
 \end{tikzpicture}
@@ -69,7 +64,7 @@ $\langle 4, 8 \rangle$
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -81,12 +76,6 @@ $\langle 4, 8 \rangle$
 
           \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:4,8);
 
-
-
-
-
-
-           
 
   \end{axis}
 \end{tikzpicture}
@@ -111,6 +100,37 @@ The left, first, or horizontal part is called the real part and the right, secon
 
 
 
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$Re$, ylabel=$Im$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,8)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
 All of these representations share a common structure.  They all describe complex numbers with rectangular measurements.  All of the descriptions above give horizontal (left/right) and vertical (up/down) information.
 
 
@@ -130,7 +150,7 @@ Our two pieces of information will be $r$ and $\theta$. These are known as \text
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -152,18 +172,16 @@ Our two pieces of information will be $r$ and $\theta$. These are known as \text
 \end{image}
 
 
-$r = \sqrt{4^2 + 8^2} = \sqrt{80} = 16\sqrt{5}$ \\
+$r = \sqrt{4^2 + 8^2} = \sqrt{80} = 16\sqrt{5}$ (the modulus of $4 + 8 \, i$) \\
 $\theta = 63.43^{\circ}$ \\
 
 
 
 We, again, wrap the coordinates up with parentheses: $(r, \theta) = (16\sqrt{5}, 63.43^{\circ})$.
 
-Of course, that is how we write rectangular coordinates as well.  The context of the situaiton will tell us how to interpret the coordinates.
+Of course, that is how we write rectangular coordinates as well.  The context of the situation will tell us how to interpret the coordinates.
 
-And, we'll perfer radins over degrees: $(r, \theta) = (16\sqrt{5}, 1.107)$
-
-
+And, we'll prefer radians over degrees: $(r, \theta) = (16\sqrt{5}, 1.107)$
 
 
 
@@ -174,12 +192,49 @@ And, we'll perfer radins over degrees: $(r, \theta) = (16\sqrt{5}, 1.107)$
 
 
 
+\begin{warning}
+
+
+Unlike with rectangular coordinates, different polar coordinates can describe the same complex number.
+
+\[
+ \cdots = (r, \theta - 2\pi) = (r, \theta) = (r, \theta + 2\pi) = (r, \theta + 4\pi) = \cdots
+\]
+
+\end{warning}
 
 
 
 
 
 
+\begin{warning}
+
+
+The $r$ in $(r, \theta)$ is the distance to move in the $\theta$-direction.  However, $r$ can be negative. IN this case, the interpretation is to move in the opposite direction from $\theta$.
+
+\[
+ (r, \theta) = (-r, \theta + \pi) = (-r, \theta - \pi)
+\]
+
+\end{warning}
+
+
+
+
+
+
+
+\begin{question}
+Which of the following polar coordinates represent the same complex number?
+\begin{selectAll}
+\choice[correct]{$\left( 5, \frac{\pi}{4} \right)$}
+\choice[correct]{$\left( 5, \frac{9\pi}{4} \right)$}
+\choice{$\left( 5, \frac{3\pi}{4} \right)$}
+\choice[correct]{$\left( -5, \frac{5\pi}{4} \right)$}
+\choice{$\left( -5, \frac{7\pi}{4} \right)$}
+\end{selectAll}
+\end{question}
 
 
 
