@@ -18,7 +18,7 @@ the exponential story
 We have two levels of exponential formulas: the basic template and then the general template, which includes shifts and stretches.  All of these are based on our original idea of \textbf{\textcolor{purple!85!blue}{constant percentage growth}}.
 
 
-Constant percentage growth means that our function grows by equal percentage over equal equal size intervals in the domain.
+Constant percentage growth means that the value  of our function grows by equal percentage over equal size intervals in the domain.
 
 
 
@@ -155,7 +155,7 @@ The sign of $a$ dictates if the unbounded growth is positive or negative, since 
 \end{image}
 
 
-Graphs of exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, a \right)$.
+Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, a \right)$.
 
 \end{explanation}
 
@@ -215,7 +215,7 @@ The sign of $a$ dictates if the function decays through positive or negative val
 
 
 
-Graphs of exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $(0, a)$.
+Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $(0, a)$.
 
 
 
@@ -230,7 +230,7 @@ All four basic exponential graphs share a common structure.
 
 
 \begin{itemize}
-\item All have the horizontal axis as an asymptote in one direction.
+\item All have the horizontal axis as an asymptote in one direction, and
 \item In the other direction, they grow unbounded.
 \item All are a distance of $a$ from the asymptote, when the exponent equals $0$.
 \end{itemize}
@@ -445,7 +445,7 @@ $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{What happened to stretch
 
 
 
-Exponential functions swallow up stretching and compressing in the leading coefficient and base.
+Basic exponential functions swallow up stretching and compressing in the leading coefficient and base.
 
 
 \begin{itemize}
@@ -455,7 +455,7 @@ Exponential functions swallow up stretching and compressing in the leading coeff
 b \cdot (a \cdot r^x) = (a \cdot b) \cdot r^x
 \]
 
-We obtain a new leading coefficient, which tells us about the growth of the function. \\
+We obtain a new leading coefficient, which tells us about the sign of the function values. \\
 
 
 
@@ -475,7 +475,80 @@ We obtain a new base, which tells us about the growth of the function.
 
 
 
-\begin{observation} For $r > 1$ \\
+
+
+Similarly, horizontal stretching can also be absorbed by the leading coefficent.
+
+ \[
+ a \cdot r^{x+c} = a \cdot r^x \cdot r^c = (a \cdot r^c) \cdot r^x
+\]
+
+
+\begin{example} Another View
+
+
+
+$f(x) = \frac{1}{3} \, 2^{x+5} - 7$ is the funciton in the last example.  We could take advantage of exponential algebra to simplify the formula.   \\
+
+\[ 
+f(x) = \frac{1}{3} \, 2^{x+5} - 7 = \frac{1}{3} \, 2^x \cdot 2^5 - 7 = \frac{32}{3} \, 2^x  - 7
+\]
+
+
+By doing this, we change our strategic point to $\left( 0, \frac{32}{3} - 7 \right) = \left( 0, \frac{11}{3} \right)$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,3.66)};
+
+          
+
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{observation} \textbf{\textcolor{blue!55!black}{For $r > 1$}}     \\
 
 
 
@@ -522,7 +595,7 @@ Together, these tell us that $B(t)$ settles down for large negative $t$ and that
 
 
 
-This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t} = \frac{3}{2}^t$.  
+This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t} = \left( \frac{3}{2} \right)^t$.  
 
 
 
@@ -532,7 +605,7 @@ When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ 
 
 
 
-\[ \lim\limits_{t \to -\infty} \left( \frac{2}{3}^{-t} \right) = 0 \]
+\[ \lim\limits_{t \to -\infty} \left( \frac{2}{3} \right)^{-t}  = 0 \]
 
 
 
@@ -540,7 +613,7 @@ When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative} =
 
 
 
-\[ \lim\limits_{t \to \infty} \left( \frac{2}{3}^{-t} \right) = \lim\limits_{t \to \infty} \left( \frac{3}{2}^t \right) = \infty \]
+\[ \lim\limits_{t \to \infty} \left( \frac{2}{3} \right)^{-t}  = \lim\limits_{t \to \infty} \left( \frac{3}{2} \right)^t  = \infty \]
 
 
 
@@ -552,11 +625,11 @@ Exponential growth to the right and decay to the left.
 
 
 
-Since $a = -2 < 0$ these smaller/larger values of $-2 \, \left( \frac{2}{3}^{-t} \right)$ are smaller/larger negative values.
+Since $a = -2 < 0$ these smaller/larger values of $-2 \, \left( \frac{2}{3} \right)^{-t}$ are smaller/larger negative values.
 
 
 
-We also have two shifts:
+We also have two shifts from the $3$ in the exponent and the constant term, $4$:
 
 
 
@@ -663,7 +736,7 @@ We could have further transferred the negative sign in the exponent to the base 
 
 
 
-Algebra provides many tools for modifying the representation. \\
+Algebra provides many tools for modifying the representing formula. \\
 
 
 
