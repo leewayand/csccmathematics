@@ -82,8 +82,8 @@ $\blacktriangleright$   \textbf{\textcolor{red!10!blue!90!}{Roots and Zeros:}} \
 \textbf{Zeros} of polynomials are also called \textbf{roots} of the polynomials.  A polynomial function behaves in one of two ways around a root.
 
 \begin{itemize}
-\item If the multipicity is odd then the function changes sign over the root.  The graph crosses over the horizontal axis at the corresponding intercept.
-\item If the multipicity is even then the function does not change sign over the root.  The graph does not cross over the horizontal axis at the corresponding intercept. Instead, it bounces back in the direction from which it came.
+\item If the multiplicity is odd then the function changes sign over the root.  The graph crosses over the horizontal axis at the corresponding intercept.
+\item If the multiplicity is even then the function does not change sign over the root.  The graph does not cross over the horizontal axis at the corresponding intercept. Instead, it bounces back in the direction from which it came.
 \end{itemize}
 
 
@@ -151,11 +151,11 @@ We have a polynomial of degree $3$.  It has two roots.
 \end{itemize}
 
 
-The end-behavior of $p$ is dictated $-\frac{1}{5} w^3$.  Therefore, $\lim\limits_{w \to -\infty}p(w) = \infty$ and $\lim\limits_{w \to \infty}p(w) = -\infty$.
+The end-behavior of $p$ is dictated by the leading term, $-\frac{1}{5} w^3$.  Therefore, $\lim\limits_{w \to -\infty}p(w) = \infty$ and $\lim\limits_{w \to \infty}p(w) = -\infty$.
 
 
 
-
+Let's collect our ideas graphically.
 
 
 \begin{image}
@@ -256,14 +256,35 @@ There is no global maximum or minimum, because  $\lim\limits_{w \to -\infty}p(w)
 \end{example}
 
 
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{with some Calculus...}} \\
 
 
-If we were also given that $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$.  This is a quadratic.  We can obtain its zeros via the quadratic formula.
+With some Calculus, we could get the exact values of the critical numbers. \\
+
+
+
+If we were also given that $p'(w) = -\frac{1}{5}(3w^2 - 4w - 15)$, then its zeros would be critical numbers.  This is a quadratic.  We can obtain its zeros via the quadratic formula.
 
 
 \[  \frac{4 \pm \sqrt{(-4)^2 - 4 \cdot 3 \cdot (-15)}}{2 \cdot 3} =    \frac{4 \pm \sqrt{196}}{6}  = \frac{4 \pm 14}{6}       \]
 
 We get two real roots: $\frac{4 + 14}{6} = \frac{18}{6} = 3$  and $\frac{4 - 14}{6} = \frac{-10}{6} = \frac{-5}{3} \approx -1.67$
+
+
+
+
+This allows us to factor the derivative
+
+\[
+p'(w) = -\frac{3}{5}(w - 3) \left( w + \frac{5}{3} \right)
+\]
+
+Each of these roots or factors has a multiplicy if $1$, which means $p'(w)$ changes signs over $-\frac{5}{3}$ and $3$. \\
+
+
+$p'(w)$ is certainly negative for very large negative values of $w$.  Then it changes sign over $-\frac{5}{3}$.  So, $p'(w)$ is positive between $-\frac{5}{3}$ and $3$.  Then, it changes sign to negative at $3$.
+
+
 
 
 
