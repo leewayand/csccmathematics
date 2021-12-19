@@ -14,8 +14,12 @@ the logarithmic story
 
 
 
+\begin{center}
+\textbf{\textcolor{red!80!black}{$log_A(B)$ is the thing you raise $A$ to, to get $B$.}}
+\end{center}
 
-Logarithmis are exponents.  They are the things we raise bases to, to get targeted outputs. Therefore, to understand logarithms, we should investigate the exponents in exponential functions. \\
+
+Logarithms are exponents.  They are the things we raise bases to, to get targeted outputs. Therefore, to understand logarithms, we should investigate the exponents in exponential functions. \\
 
 
 
@@ -41,7 +45,7 @@ Its graph looks like
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	ticklabel style={font=\scriptsize},
@@ -80,7 +84,7 @@ When we evaluate a function, we know the domain number and we seek its range par
 
 
 
-Here we are supplying an exponent and then obtaining a function value.  We can look at this process in reverse.  We know the function value and we are in search of an exponent that will produce the desired output.
+Here we are supplying an exponent and then obtaining a function value.  We can look at this process in reverse: we know the function value and we are in search of an exponent that will produce the desired output.
 
 
 
@@ -100,12 +104,12 @@ We can think about $E(t) = 2^t$ in reverse.
 \end{itemize}
 
 
-Here, we know the value of the function.  We seek the domain numbers paired with it. We know $2^d$, we seek the pair $(d, 2^d)$, where $d$ is the solution to the equation.
+Here, we know the value of the function.  We seek the domain numbers paired with it. We seek the exponent. We know $2^d$, we seek the pair $(d, 2^d)$, where $d$ is the solution to the equation.
 
 
 
 
-$\bigstar$ Since $E(t) = 2^t > 0$ for any $t$, thinking backwards only works if we provide positive function values. $2^t$ cannot equal a negative value. \\ 
+$\bigstar$ Since $E(t) = 2^t > 0$ for any $t$, thinking backwards only works if we provide positive function values. $2^t$ cannot equal a negative value. $2^t$ cannot equal $0$.   \\ 
 
 
 
@@ -128,7 +132,7 @@ Thinking of an exponential function in reverse sounds like a new function. We ca
 
 \[
 \begin{array}{lcl}
-Exponential Function  &     &  Logarithmic Function  \\
+\text{Exponential Function}  &     &  \text{Logarithmic Function}  \\
 domain = (-\infty, \infty)  &  \   &  domain = (0, \infty)  \\
 range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
 (a, r^a)    &    &   (r^a, a)
@@ -422,7 +426,7 @@ t & = 13
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$. $t+3$ must be $16$.
+$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is also the thing that you raise $2$ to, to get $t+3$. $t+3$ must be $16$.
 
 
 
@@ -441,7 +445,7 @@ $\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you rais
 $M(t)$ is a logarithmic function, so it must have an inverse partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.\\
 
 
-$M = log_2(t+3) - 4$ is an equation describing the exponential function $t(M)$.  We just are used to having the function name by itself on one side of the equal sign. \\
+$M = log_2(t+3) - 4$ is an equation describing both the logarithmic function, $M(t)$, and the exponential function $t(M)$.  We just are used to having the function name by itself on one side of the equal sign. \\
 
 
 We can obtain such a formula for this partner exponential function by solving the logarithmic formula for $t$.
@@ -564,10 +568,10 @@ Graph of $y = K(x)$.
             axis on top
           ]
           
-
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
 			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
 
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+		
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
