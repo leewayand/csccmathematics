@@ -23,7 +23,7 @@ Our investigation of the real numbers quickly expanded in many directions. We in
 If we think of our history with numbers, we have encountered this idea of missing numbers many times.  We began with whole numbers, then expanded to include integers, then expanded to include rational numbers, and then expanded to include irrational numbers.  Each time, our picture was that the real line had unused spots and we were just filling in the picture.  However, the real line is full at these point. Whatever numbers we are missing are not real numbers.  There is no place for them on the real line.  Where are these new numbers coming from? More importantly, how are we going to represent these new numbers and keep track of which are new and which are the existing numbers?
 
 
-\begin{idea} \textbf{\textcolor{green!50!black}{$\sqrt{-1}$}} \\
+\begin{idea} \textbf{\textcolor{purple!85!blue}{$\sqrt{-1}$}} \\
 
 
 If we add $\sqrt{-1}$ to the real numbers, then we still want everything to work like it has been working.  We want our rules to continue working.
@@ -37,18 +37,18 @@ $\blacktriangleright$ We want multiplication to work : $\sqrt{3} \cdot \sqrt{-1}
 \end{idea}
 
 
-If we throw $\sqrt{-1}$ in with $\mathbb{R}$ and let the rules tell us what else will be included, then it looks like $r\sqrt{-1}$ and $\sqrt{-r}$ will be included for every real number, $r$.  Our rules dictate that if we insert $\sqrt{-1}$, then we are forced to add in a whole new copy of $\mathbb{R}$.
+If we throw $\sqrt{-1}$ in with $\mathbb{R}$ and let the rules tell us what else must be included, then it looks like $r\sqrt{-1}$ and $\sqrt{-r}$ will be included for every real number, $r$.  Our rules dictate that if we insert $\sqrt{-1}$, then we are forced to add in a whole new copy of $\mathbb{R}$.
 
 
 
-If is feeling like there are two versions of real numbers. Maybe we just need two versions of the real numbers: the old real numbers and the new addtional real numbers.
+It is feeling like we need two versions of real numbers. Maybe that is the answer. We just need two versions of the real numbers: the old real numbers and the new addtional real numbers.
 
 
 
 
 
 \begin{center}
-An immediate idea is to just use two copies of the real numbers.
+\textbf{\textcolor{purple!85!blue}{An immediate idea is to just use two copies of the real numbers.}}
 \end{center}
 
 
@@ -64,10 +64,10 @@ In fact, we have been using two copies of the real numbers all along, just in a 
 We have a couple of tools we use to describe real numbers and our operations on them.
 
 
-$\blacktriangleright$  We use written symbols to represent numbers and operations.  A string of valid symbols is called an expression and two expressions representing the same numbers are called equivalent. Accompanying these symbols are a list of manipulation rules and operations dictating how these symbols can be rearranged and replaced and yet still represent the same number.  We call this kind of communicaiton Algebra.
+$\blacktriangleright$  We use written symbols to represent numbers and operations.  A string of valid symbols is called an expression and two expressions representing the same numbers are called equivalent. Accompanying these symbols are a list of manipulation rules and operations dictating how these symbols can be rearranged and replaced and yet still represent the same number.  We call this kind of communication Algebra.
 
 
-$\blacktriangleright$  We also have diagrams that use space, direction, and size to visually represent numbers and operations. We call this diagram the real line. Our line diagram has a line representing an ordering of the real numbers. Dots on the number line are one option for representing numbers, while arrows are often used to describe operations.
+$\blacktriangleright$  We also have diagrams that use space, direction, and size to visually represent numbers and operations. We call this diagram the real number line. Our line diagram has a line representing an ordering of the real numbers. Dots on the number line are one option for representing numbers, while arrows are often used to describe operations.
 
 
 We would like to extend this system from one copy of \textbf{$\mathbb{R}$} to two copies of \textbf{$\mathbb{R}$}. \\
@@ -75,7 +75,7 @@ We would like to extend this system from one copy of \textbf{$\mathbb{R}$} to tw
 
 
 \begin{center}
-\textbf{\textcolor{red!90!darkgray}{We would like to expand this number system from 1-dimension to 2-dimesions.}}
+\textbf{\textcolor{red!90!darkgray}{We would like to expand this number system from 1-dimension to 2-dimensions.}}
 \end{center}
 
 
@@ -633,7 +633,9 @@ We want to carry this arrow or vector idea for operations over from 1-dimensiona
 
 
 
-We would like to extend this picture system from one copy of \textbf{$\mathbb{R}$} to two copies of \textbf{$\mathbb{R}$}. \textbf{$\mathbb{R} \times \mathbb{R}$} is shorthand notation for two copies of the real line forming the Cartesian plane.  \textbf{$\mathbb{R}^2$} is even shorter shorthand notation.
+We would like to extend this picture system from one copy of \textbf{$\mathbb{R}$} to two copies of \textbf{$\mathbb{R}$}. \\
+
+\textbf{$\mathbb{R} \times \mathbb{R}$} is shorthand notation for two copies of the real line forming the Cartesian plane.  \textbf{$\mathbb{R}^2$} is even shorter shorthand notation.
 
 $\mathbb{R}^2$ is just the collection of ordered pairs of real numbers.
 
@@ -651,6 +653,7 @@ Plotting dots for the numbers $(-4,7)$, $(3,5)$, $(5,-6)$, and $(-7,-3)$.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -707,6 +710,7 @@ $(4,6) + (2, -10)$
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -758,6 +762,7 @@ $(4,6) - (2, -10)$
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -825,6 +830,7 @@ Except, we are already using the parentheses to represent points or dots.
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 

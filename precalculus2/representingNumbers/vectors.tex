@@ -16,7 +16,9 @@ algebraic geometry
 
 
 
-Our real line is full, but quadratic functions have shown us that we still need some new numbers. To accomodate our need for new zeros, we are attempting to juggle two copies of the real numbers. Visually, we are organizing the two copies as two number lines drawn at right angles to each other.  This is reminding us of the Cartesian plane.  Therefore, we are using our ideas of the Cartesian plane to help us think about a new number system.  \\
+Our real line is full, but quadratic functions have shown us that we still need some new numbers.  \\
+
+To accomodate our need for new zeros, we are attempting to juggle two copies of the real numbers. Visually, we are organizing the two copies as two number lines drawn at right angles to each other.  This is reminding us of the Cartesian plane.  Therefore, we are using our ideas of the Cartesian plane to help us think about a new number system.  \\
 
 
 
@@ -31,12 +33,14 @@ The next step is to invent some algebraic symbols for the vectors, so that we ca
 $\blacktriangleright$ We alreaady use parentheses for describing points, dots, or locations on the plane: $(2, 3)$.
 
 
-$\blacktriangleright$ We will use triangular brackets to describe vectors: $\langle 2, 3 \rangle$.  Rather than a postion, vectors describe numbers through length and direction - just like arrows on the traditional number line. Many arrows may represent the same vector.  Their placement in the Cartesian plane will represent operations.
+$\blacktriangleright$ We will use triangular brackets to describe vectors: $\langle 2, 3 \rangle$.  
+
+Rather than a position, vectors describe numbers through length and direction - just like arrows on the traditional number line. Many arrows may represent the same vector.  Their placement in the Cartesian plane will represent operations.
 
 
-The numbers inside the parenthese for a point are called \textbf{coordinates}.
+The numbers inside the parentheses for a point are called \textbf{\textcolor{purple!85!blue}{coordinates}}  
 
-The numbers inside the triangular brackets for vectors are called \textbf{components}.
+The numbers inside the triangular brackets for vectors are called \textbf{\textcolor{purple!85!blue}{components}}  
 
 
 
@@ -46,7 +50,7 @@ The geometry of the arrows has already suggested the algebraic procedures.
 \begin{example}
 
 
-$(4,6) + (2, -10)$
+$\langle 4, 6 \rangle + \langle 2, 10 \rangle$
 
 
 \begin{image}
@@ -54,6 +58,7 @@ $(4,6) + (2, -10)$
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -120,6 +125,7 @@ We also have the idea of stretching or compressing a vector in the same directio
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -145,18 +151,26 @@ We also have the idea of stretching or compressing a vector in the same directio
 
 
 
-\begin{definition}  \textbf{\textcolor{green!50!black}{Scalar Multiplication}}  \\
 
 
 
+\begin{definition}  \textbf{\textcolor{green!50!black}{Scalars}}  \\
 
-\[    k \langle A, B \rangle  = \langle k A, k B \rangle   \text{ where }  k \in \mathbb{R}   \]
-
-
+A \textbf{scalar} is the new name for our old real numbers. 
 
 \end{definition}
 
 
+We use scalars to describe multiple copies of the same vector or stretching vectors.
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Scalar Multiplication}}  \\
+
+\[    k \langle A, B \rangle  = \langle k A, k B \rangle   \text{ where }  k \in \mathbb{R}   \]
+
+\end{definition}
+
+Of course, scalars are also numbers in our new system.  They must also have a vector form. \\
 
 
 
@@ -223,6 +237,7 @@ We start with $\langle 1, 0 \rangle$.  When we multiply this by $\langle 0, 1 \r
   \begin{axis}[
             domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-4,-2,2,4},
             xtick={-4,-2,2,4},
             yticklabels={$-4$,$-2$,$2$,$4$}, 
@@ -271,6 +286,7 @@ Instead of looking at this equation saying that multiplication by $\langle 1, 0 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
