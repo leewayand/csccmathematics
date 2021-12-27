@@ -13,19 +13,32 @@ unit vectors
 
 
 
-$\blacktriangleright$ \textbf{Rectangular Directions}
+
+On the real number line, we drew ``tick'' marks to mark off distances of $1$ from $0$.  The same idea applies to our 2D numbers in the plane. 
+
+On the real number line we had two direction vectors: $-1$ and $1$.  They established a unit length in each direction.
+
+We have the same idea in the plane.  Unit vectors establish a unit length and a direction. \\
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Rectangular Directions} \\
 
 Just adding this one additional dimension has added quite a bit of geometric and algebraic structure to the Cartesian plane.  \\  
 
 
-But really, the structure was also there with the real numbers.  It was just too simple to see as significant.  The real line only had two directions. We are taking structure from the one dimensional real line and expanding the ideas into two dimensions. \\ 
+But really, the structure was also there with the real numbers.  It was just too simple to see as significant.  The real line only had two directions. We are taking structure from the one dimensional real line and extending the ideas into two dimensions. \\ 
 
 
 
 The tick marks on our drawings of the plane axes are an example of this. The tick marks remind us of steps of size $1$ horizontally or vertically. The tick marks on our drawings of the real line provided the same information.  We then translated this direction and distance information into a number. Same here, just with a pair.\\
 
 
-We have two directions now, so two sets of tick markes on two lines.  The left/right tick marks are marking off multiples of $\langle 1, 0 \rangle$. The up/down tick marks are marking off multiples of $\langle 0, 1 \rangle$.
+We have two directions now, so two sets of tick marks on two lines.  The left/right tick marks are marking off multiples of $\langle 1, 0 \rangle$. The up/down tick marks are marking off multiples of $\langle 0, 1 \rangle$.
 
 
 
@@ -48,7 +61,8 @@ We can translate this tick mark information into vectors.  We can view our vecto
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major, grid style={dashed},
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -127,6 +141,7 @@ Each complex number can be represented by a vector.  This vector can in turn be 
   \begin{axis}[
             domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
             axis lines =center, xlabel=$t$, ylabel=$y$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
             ytick={-4,-2,2,4},
             xtick={-4,-2,2,4},
             ticklabel style={font=\scriptsize},
