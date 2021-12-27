@@ -230,7 +230,7 @@ We begin making a right triangle for   $c + d \, i$ with an angle $\phi$.
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
   \draw [gray,thin,dashed] (3.2,0) arc (0:120:1in); 
@@ -255,7 +255,7 @@ We begin making a right triangle for   $c + d \, i$ with an angle $\phi$.
 
  
 
-  \draw [line cap=round,->] (.75,0) arc(0:18.4:.75); 
+  \draw [->] (.75,0) arc(0:18.4:.75); 
   \draw [rotate=9] (1,0) node {\scriptsize{$\theta$}};
   \draw [->] (.75,0) arc(0:55:.75); 
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
