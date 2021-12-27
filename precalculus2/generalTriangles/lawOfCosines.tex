@@ -23,7 +23,7 @@ extending Pythagorus
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
     \draw [thick, dashed, gray] (2,0) -- (2,3);
@@ -55,10 +55,23 @@ extending Pythagorus
 
 
 
-From the right triangle on the left in the diagram, we can see that $\cos(A) = \frac{\overline{AD}}{b}$ or $\overline{AD} = b \cos(A)$.
+\begin{notation} Points, Line Segments, and Lengths \\
+
+If $A$ and $B$ are two points, then 
+
+\begin{itemize}
+\item the line segment connecting $A$ and $B$ is denoted as $\overline{AD}$. 
+\item the length of this line segment is denoted as $m(\overline{AD})$
+\end{itemize}
+\end{notation}
 
 
-Subtracting this from $\overline{AB}$, gives us $\overline{DB} = c - b \cos(A)$.
+
+
+From the right triangle on the left in the diagram, we can see that $\cos(A) = \frac{m(\overline{AD})}{b}$ or $m(\overline{AD}) = b \cos(A)$.
+
+
+Subtracting this from $m(\overline{AB})$, gives us $m(\overline{DB}) = c - b \cos(A)$.
 
 
 From the right triangle on the left in the diagram, we can see that $\sin(A) = \frac{h}{b}$ or $h = b \sin(A)$.
@@ -94,7 +107,7 @@ Multiplying everything out gives
 
 
 
-\begin{theorem}  Law of Cosines
+\begin{theorem}  \textbf{\textcolor{green!50!black}{Law of Cosines}}  \\
 
 
 
@@ -115,6 +128,26 @@ For any trinagle with angles $A$, $B$, and $C$, and opposite sides $a$, $b$, and
 
 
 
+
+
+
+
+\begin{example} Triangle \\
+
+Suppose we have a triangle with $a=6$, $b=9$, and $c=11$. Approximate the measurement of angle $A$.
+
+\[    6^2 = 9^2  +  11^2  - 2 \cdot 9 \cdot 11 \cos(A)   \]
+
+
+\[    \frac{36 - 18 - 121}{- 2 \cdot 9 \cdot 11} =    \cos(A)   \]
+
+\[  0.520202020 \approx \cos(A)  \]
+
+
+\[ A \approx COS^{-1}(0.520202020)  \approx 58.654^{\circ}   \]
+
+
+\end{example}
 
 
 
