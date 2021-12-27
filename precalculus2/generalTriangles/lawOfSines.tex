@@ -21,11 +21,13 @@ proportionalities
 
 
 
-$\blacktriangleright$  \textbf{Acute Triangle}
+$\blacktriangleright$  \textbf{Acute Triangle} 
+
+An acute triangle is one where all three angles measure less than $90^{\circ}$.
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
     \draw [thick, dashed, gray] (2,0) -- (2,3);
@@ -97,7 +99,9 @@ The same argument with an altitude from angle $B$ to side $b$ shows a similar re
 
 $\blacktriangleright$  \textbf{Obtuse Triangle}
 
+An obtuse triangle is one with one angle greater than $90^{\circ}$. \\
 
+We can establish the same relationship with an altitude on the outside.
 
 
 
@@ -107,7 +111,7 @@ $\blacktriangleright$  \textbf{Obtuse Triangle}
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
     \draw [thick, dashed, gray] (4,0) -- (4,3);
@@ -181,11 +185,11 @@ The same argument could be made with angle $C$, giving us
 
 
 
-\begin{theorem}  Law of Sines
+\begin{theorem}  \textbf{\textcolor{green!50!black}{Law of Sines}} 
 
 
 
-For any trinagle with angles $A$, $B$, and $C$, and opposite sides $a$, $b$, and $c$, respectively, 
+For any triangle with angles $A$, $B$, and $C$, and opposite sides $a$, $b$, and $c$, respectively, 
 
 
 \[    \frac{\sin(A)}{a} = \frac{\sin(B)}{b}  = \frac{\sin(C)}{c}    \]
@@ -194,6 +198,110 @@ For any trinagle with angles $A$, $B$, and $C$, and opposite sides $a$, $b$, and
 \end{theorem}
 
 
+
+
+
+\begin{example}  General Triangles \\
+
+Suppose we have a triangle with $A=46^{\circ}$, $B=65^{\circ}$, and $a=14$.
+
+Figure out the other three measurements.
+
+
+\begin{explanation}
+
+$A + B + C = 46^{\circ} + 65^{\circ} + C = 180$ \\
+
+$C = 69^{\circ}$
+
+
+$\frac{\sin(46^{\circ})}{14} = \frac{\sin(65^{\circ})}{b}$
+
+$b = \frac{14 \sin(65^{\circ})}{\sin(46^{\circ})} \approx 17.63882523$
+
+$\frac{\sin(46^{\circ})}{14} = \frac{\sin(69^{\circ})}{c}$
+
+$c = \frac{14 \sin(69^{\circ})}{\sin(46^{\circ})} \approx 18.16961325$
+
+\end{explanation}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  No Triangle \\
+
+Suppose we have a triangle with $C=55^{\circ}$, $a=4$, and $c=2$.
+
+Figure out the other three measurements.
+
+
+\begin{explanation}
+
+
+$\frac{\sin(55^{\circ})}{2} = \frac{\sin(A)}{4}$
+
+$\sin(A) = \frac{4 \sin(55^{\circ})}{2} \approx 1.638304086$
+
+This is greater than $1$. $\sin(A)$ cannot be greater than $1$.
+
+Therefore, there is no triangle with $C=55^{\circ}$, $a=4$, and $c=2$. 
+
+\end{explanation}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Two Triangles \\
+
+Suppose we have a triangle with $A=37^{\circ}$, $a=12$, and $b=16$.
+
+Figure out the other three measurements.
+
+
+\begin{explanation}
+
+
+$\frac{\sin(37^{\circ})}{12} = \frac{\sin(B)}{16}$
+
+$\sin(B) = \frac{16 \sin(37^{\circ}}{12} \approx 0.8024200309$
+
+There are two angles whose sine is $0.8024200309$. One in the first quadrant and one in the second quadrant. \\
+
+Therefore, there are two triangles with $A=37^{\circ}$, $a=12$, and $b=16$. 
+
+Using the calculator, the two angles are
+
+\begin{itemize}
+\item $B \approx SIN^{-1}(0.8024200309) \approx 53.36^{\circ}$
+\item $B \approx 180^{\circ} - 53.36^{\circ} = 126.64^{\circ}$
+\end{itemize}
+
+\end{explanation}
+
+
+\end{example}
 
 
 
