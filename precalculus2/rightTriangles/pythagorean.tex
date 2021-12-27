@@ -64,7 +64,20 @@ We could describe these points with the Complex Number equation $| z | = 1$.
 \end{image}
 
 
-We can describe these points with the Cartesian equation $x^2 + y^2 = 1$, the equation for a circle of radius $1$. Also, know as the \textbf{Pythagorean Theorem}.\\
+We can describe these points with the Cartesian equation $x^2 + y^2 = 1$, the equation for a circle of radius $1$. Also, known as the \textbf{Pythagorean Theorem}.\\
+
+
+
+\begin{theorem}   \textbf{\textcolor{green!50!black}{Pythagorean Theorem}} \\
+
+Let $a$ and $b$ be the lengths of the legs of a right triangle. Let $c$ be the length of the hypotenuse. These three numbers satisfy the following equation
+
+\[
+a^2 + b^2 = c^2
+\]
+
+\end{theorem}
+
 
 
 
@@ -75,7 +88,7 @@ Each point on the Unit Circle sits at the end of a radius and that radius makes 
 
 We have defined the functions sine and cosine as the coordinates of the points on the Unit Circle and the values of these functions depend on the angle $\theta$.
 
-\[    ( sin(\theta), cos(\theta) ) \]
+\[    ( \sin(\theta), \cos(\theta) ) \]
 
 
 
@@ -108,7 +121,7 @@ Determine the length of the side $a$.
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
 
@@ -187,7 +200,7 @@ Determine the length of the side $c$.
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
 
@@ -264,14 +277,14 @@ Since sides of triangles have a positive length, $c = \sqrt{41}$.
 
 We have defined the functions sine and cosine as the coordinates of the points on the Unit Circle and the values of these functions depend on the angle $\theta$.
 
-\[    ( sin(\theta), cos(\theta) ) \]
+\[    ( \sin(\theta), \cos(\theta) ) \]
 
 
 These coordinates must satisfy the equation for the Unit Circle. 
 
 
 
-\[    ( sin(\theta) )^2 + ( cos(\theta) )^2 = 1 \]
+\[    ( \sin(\theta) )^2 + ( \cos(\theta) )^2 = 1 \]
 
 
 
@@ -283,11 +296,11 @@ From this, we get a list of identities:
 
 
 \begin{itemize}
-\item $( sin(\theta) )^2 + ( cos(\theta) )^2 = 1$
-\item $( sin(\theta) )^2 =  1 - ( cos(\theta) )^2$
-\item $( cos(\theta) )^2 =  1 - ( sin(\theta) )^2$
-\item $( sin(\theta) )^2 =  1 - ( cos(\theta) )^2 = (1 + cos(\theta))(1 - cos(\theta))$
-\item $( cos(\theta) )^2 =  1 - ( sin(\theta) )^2 = (1 + sin(\theta))(1 - sin(\theta))$
+\item $( \sin(\theta) )^2 + ( \cos(\theta) )^2 = 1$
+\item $( \sin(\theta) )^2 =  1 - ( \cos(\theta) )^2$
+\item $( \cos(\theta) )^2 =  1 - ( \sin(\theta) )^2$
+\item $( \sin(\theta) )^2 =  1 - ( \cos(\theta) )^2 = (1 + \cos(\theta))(1 - \cos(\theta))$
+\item $( \cos(\theta) )^2 =  1 - ( \sin(\theta) )^2 = (1 + \sin(\theta))(1 - \sin(\theta))$
 \end{itemize}
 
 
@@ -308,18 +321,18 @@ From this, we get a list of identities:
 \begin{example} Alternate Forms
 
 
-Transform $\frac{cos(t)}{1 - sin(t)}$ into $\frac{1 + sin(t)}{cos(t)}$
+Transform $\frac{\cos(t)}{1 - \sin(t)}$ into $\frac{1 + \sin(t)}{\cos(t)}$
 
 
 
 \begin{explanation}
 
 \begin{align*}
-\frac{cos(t)}{1 - sin(t)}  &  = &  \frac{cos(t)}{1 - sin(t)}  \cdot \frac{1 + sin(t)}{1 + sin(t)}  \\
-                           &  = &  \frac{cos(t)(1 + sin(t))}{1 - sin(t)(1 + sin(t))}  \\
-                           &  = &  \frac{cos(t)(1 + sin(t))}{1 - (sin(t))^2}  \\
-                           &  = &  \frac{cos(t)(1 + sin(t))}{(cos(t))^2}  \\
-                           &  = &  \frac{(1 + sin(t))}{cos(t)}  
+\frac{\cos(t)}{1 - \sin(t)}  &  = &  \frac{\cos(t)}{1 - \sin(t)}  \cdot \frac{1 + \sin(t)}{1 + \sin(t)}  \\
+                           &  = &  \frac{\cos(t)(1 + \sin(t))}{1 - \sin(t)(1 + \sin(t))}  \\
+                           &  = &  \frac{\cos(t)(1 + \sin(t))}{1 - (\sin(t))^2}  \\
+                           &  = &  \frac{\cos(t)(1 + \sin(t))}{(\cos(t))^2}  \\
+                           &  = &  \frac{(1 + \sin(t))}{\cos(t)}  
 \end{align*}
 
 

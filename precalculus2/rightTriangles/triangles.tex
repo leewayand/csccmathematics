@@ -99,7 +99,7 @@ To understand the Complex numbers, we just need to understand the unit circle.  
 
 $\blacktriangleright$ \textbf{Similar Triangles} \\
 
-From Geometry, we know that triangles with the same three angles are called \textbf{similar}.  Similar triangles can be of different sizes, but their sides must be proportional.
+From Geometry, we know that triangles with the same three angles are called \textbf{similar}.  Similar triangles can be of different sizes, but their sides are always proportional.
 
 
 
@@ -172,7 +172,7 @@ By extending the radius to larger circles we can create many right triangles.  A
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
 
@@ -221,9 +221,7 @@ By extending the radius to larger circles we can create many right triangles.  A
   \end{image}
 
 
-
-
-Since our initial right triangle was anchored to the unit circle, its hypotenuse has length $1$.  The hypotenuses of the other similar right triangles have a length, which we'll call $r$.
+We can use this to extend our right triangles on the unit circle outward into the Complex Plane. \\
 
 
 
@@ -235,6 +233,10 @@ Since our initial right triangle was anchored to the unit circle, its hypotenuse
 
 
 \section{Right Triangles}
+
+
+
+Since our initial right triangle was anchored to the unit circle, its hypotenuse has length $1$.  The hypotenuses of the other similar right triangles have a length, which we'll call $r$.
 
 
 
@@ -368,7 +370,7 @@ The ratio of corresponding sides are equal.
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
 
@@ -431,7 +433,7 @@ If we label the sides relative to the angle $\theta$, then we obtain descriptive
 
 
 \begin{image}[3in]
-    \begin{tikzpicture}
+    \begin{tikzpicture}[line cap=round]
 
 
 
@@ -488,12 +490,12 @@ Everything holds for larger angles.  We just have to bridge two thoughts.
 \item Lengths of sides of triangles are not negative.
 \end{itemize}
 
-To help bridge these two thoughts we will have two angles.  
+To help bridge these two thoughts we will have two angles and two triangles.  
 
 
 \begin{itemize}
-\item The actual angle roatating from the positive $x$-axis.  
-\item The \textbf{reference angle}, which will sit inside our reference triangle formed with the horizontal axis.
+\item The actual angle, $\theta$, roatating from the positive $x$-axis.  
+\item The \textbf{reference angle}, $\phi$, which will sit inside our reference triangle formed with the horizontal axis.
 \end{itemize}
 
 
@@ -566,6 +568,100 @@ To help bridge these two thoughts we will have two angles.
 
 
 
+Once we rotate out of the first quadrant, then we need to switch our visual right triangle. \\
+
+
+If $\theta$ is in the second quadrant, then we use a new right triangle formed with the $x$-axis. $\theta$ sweeps out to our hypotenuse, however, $\theta$ is no longer inside our reference right triangle.  Instead we have the angle $\phi = \pi - \theta$.  
+
+The point at the end of our hypotenuse has coordinates, $(\cos(\theta), \sin(\theta))$.  In the second quadrant, these coordinates are negative and positive: $\cos(\theta) < 0$ and $\sin(\theta) > 0$.
+
+However, practically speaking, we use the reference angle and reference triangle to calculate values.  After calculating the lengths of the sides of the reference triangle, we must remember to change their signs appropriately. 
+
+
+\begin{example} Quadrant II \\
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-2.1,xmax=2.1,ymin=-2.1,ymax=2.1,
+            axis lines=center,
+            width=4in,
+            xtick={-2,1,2},
+            ytick={-2,-1,1,2},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel={Quadrant II},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          %\addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+          %\addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          %\addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:140)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.05,.15) [anchor=west] {\scriptsize{$\tfrac{3 \pi}{4}$}};
+          %\node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
+          %\node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+
+
+
+          \addplot [smooth, domain=(0:360)] ({1.7*cos(x)},{1.7*sin(x)}); 
+          \addplot [textColor,smooth, domain=(140:180)] ({.19*cos(x)},{.19*sin(x)});
+          \node at (axis cs:-0.2,.15) [anchor=east] {\scriptsize{$\tfrac{\pi}{4}$}};
+
+          \addplot [textColor] plot coordinates {(0,0) (-1.3,1.09)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(-1.3,0) (-1.3,1.09)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (-1.3,0)}; %% 40 degrees
+
+          \node[penColor, rotate=-90] at (axis cs:-1.45,.5) {$r \sin(\tfrac{\pi}{4})$};
+          \node[penColor2] at (axis cs:-.85,0) [anchor=north] {$r \cos(\tfrac{\pi}{4})$};
+
+
+          \node at (axis cs:-0.8,.8) [anchor=west] {$r$};
+
+
+
+           \node[penColor2] at (axis cs:-1.3,1.2) [anchor=east] {$( r \cos(\tfrac{3 \pi}{4}), $};
+           \node[penColor] at (axis cs:-1.3,1.2) [anchor=west] {$r \sin(\tfrac{3 \pi}{4}) ) $};
+
+           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(-1.3,1.09)}; 
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+We know that $\cos(\tfrac{\pi}{4}) = \frac{1}{\sqrt{2}}$ and $\sin(\tfrac{\pi}{4}) = \frac{1}{\sqrt{2}}$. \\
+
+
+We just need to change the sign of cosine for the $\frac{3 \pi}{4}$ angle.
+
+
+
+\begin{itemize}
+\item $\cos\left( \frac{3 \pi}{4} \right) = -\cos\left( \frac{\pi}{4} \right) = -\frac{1}{\sqrt{2}}$
+\item $\sin\left( \frac{3 \pi}{4} \right) = \sin\left( \frac{\pi}{4} \right) = \frac{1}{\sqrt{2}}$
+\end{itemize}
+
+\end{example}
+
+
+We can easily extend this example to quadrants III and IV. \\
 
 
 
@@ -573,6 +669,18 @@ To help bridge these two thoughts we will have two angles.
 
 
 
+
+\begin{itemize}
+\item $\cos\left( \frac{5 \pi}{4} \right) = -\cos\left( \frac{\pi}{4} \right) = -\frac{1}{\sqrt{2}}$
+\item $\sin\left( \frac{5 \pi}{4} \right) = -\sin\left( \frac{\pi}{4} \right) = -\frac{1}{\sqrt{2}}$
+\end{itemize}
+
+
+
+\begin{itemize}
+\item $\cos\left( \frac{7 \pi}{4} \right) = \cos\left( \frac{\pi}{4} \right) = \frac{1}{\sqrt{2}}$
+\item $\sin\left( \frac{7 \pi}{4} \right) = -\sin\left( \frac{\pi}{4} \right) = -\frac{1}{\sqrt{2}}$
+\end{itemize}
 
 
 
