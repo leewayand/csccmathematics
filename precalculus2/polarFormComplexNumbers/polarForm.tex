@@ -24,10 +24,6 @@ We already have several ways of representing complex numbers. \\
 
 
 
-When viewing the plane in this context, we call it the \textbf{\textcolor{purple!85!blue}{Complex Plane}}.
-
-
-
 
 \begin{image}
 \begin{tikzpicture}
@@ -88,9 +84,9 @@ When viewing the plane in this context, we call it the \textbf{\textcolor{purple
 \end{tikzpicture}
 \end{image}
 
-Vectors have a visual arithmetic, where we arrange the vectors tail-to-head or tail-to-tail and then create a resultant vector from the arrangement.
+Vectors have a visual arithmetic, where we arrange the vectors tail-to-head or tail-to-tail and then create a resultant vector from the arrangement. These resultant vectors represent the sum or difference of two Complex numbers.
 
-Vectors have a symbolic arithmetic
+Vectors have a symbolic arithmetic as well, which agrees with the geometric operations:
 
 \[
 \langle a, b \rangle + \langle c, d \rangle = \langle a+c, b+d \rangle
@@ -102,11 +98,11 @@ Vectors have a symbolic arithmetic
 
 
 
-The left, first, or horizontal part is called the real part and the right, second, or vertical part is called the imaginary part.
+The left, first, or horizontal part is called the \textbf{\textcolor{purple!85!blue}{real part}} and the right, second, or vertical part is called the \textbf{\textcolor{purple!85!blue}{imaginary part}}.
 
 
 
-
+When viewing the plane in this context, we call it the \textbf{\textcolor{purple!85!blue}{Complex Plane}}.
 
 
 
@@ -146,9 +142,25 @@ There is a different way to describe complex numbers.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Polar Coordinates}
 
-Instead of rectangular information, we could give circular information.  We could give the angle the vector makes with the positive horizontal axis together with the length or distance. 
+Instead of rectangular information, we could give circular information.  We could give the angle the vector makes with the positive horizontal axis together with the length or distance from the origin. 
 
 In keeping with the circular idea, the vector resembles a radius.  
 
@@ -168,8 +180,11 @@ $\theta$ is measured counterclockwise from the positive real axis. \\
 \end{definition}
 
 
+Of course, that is how we write rectangular coordinates as well.  The context of the situation will tell us how to interpret the coordinates.
 
 
+
+\begin{example}
 
 \begin{image}
 \begin{tikzpicture}
@@ -206,9 +221,13 @@ $\theta = 63.43^{\circ}$ \\
 
 We, again, wrap the coordinates up with parentheses: $(r, \theta) = (16\sqrt{5}, 63.43^{\circ})$.
 
-Of course, that is how we write rectangular coordinates as well.  The context of the situation will tell us how to interpret the coordinates.
 
-And, we'll prefer radians over degrees: $(r, \theta) = (16\sqrt{5}, 1.107)$
+And, we need to work equally well with radians and degrees: $(r, \theta) = (16\sqrt{5}, 1.107)$
+
+
+\end{example}
+
+
 
 
 

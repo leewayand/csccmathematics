@@ -14,11 +14,9 @@ unit vectors
 
 
 
-On the real number line, we drew ``tick'' marks to mark off distances of $1$ from $0$.  The same idea applies to our 2D numbers in the plane. 
+On the real number line, we drew ``tick'' marks to mark off distances of $1$ to the left and right of $0$. On the real number line, we had two direction vectors: $-1$ and $1$.  They established a unit length in each direction. Every real number was a positive scalar multiple of one of these.
 
-On the real number line we had two direction vectors: $-1$ and $1$.  They established a unit length in each direction.
-
-We have the same idea in the plane.  Unit vectors establish a unit length and a direction. \\
+Can we do the same thing for the Complex numbers? \\
 
 
 
@@ -26,25 +24,67 @@ We have the same idea in the plane.  Unit vectors establish a unit length and a 
 
 
 
-$\blacktriangleright$ \textbf{Rectangular Directions} \\
-
-Just adding this one additional dimension has added quite a bit of geometric and algebraic structure to the Cartesian plane.  \\  
 
 
-But really, the structure was also there with the real numbers.  It was just too simple to see as significant.  The real line only had two directions. We are taking structure from the one dimensional real line and extending the ideas into two dimensions. \\ 
+\begin{definition}  \textbf{\textcolor{green!50!black}{Direction Vectors}}   \\
 
+A \textbf{direction vector}, also called a \textbf{unit vector} is a vector of length $1$.
 
-
-The tick marks on our drawings of the plane axes are an example of this. The tick marks remind us of steps of size $1$ horizontally or vertically. The tick marks on our drawings of the real line provided the same information.  We then translated this direction and distance information into a number. Same here, just with a pair.\\
-
-
-We have two directions now, so two sets of tick marks on two lines.  The left/right tick marks are marking off multiples of $\langle 1, 0 \rangle$. The up/down tick marks are marking off multiples of $\langle 0, 1 \rangle$.
+\end{definition}
 
 
 
 
 
-We can translate this tick mark information into vectors.  We can view our vectors as constructed from perpendicular pieces of size $1$.
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Polar(Circular) Coordinates}}  \\
+
+
+Of course, this is easy with polar coordinates.  Unit vectors look like $(1, \theta)$. \\
+
+Every complex number can be described as a positive scalar multiple of a polar unit vector:  
+
+
+\[
+r \cdot (1, \theta) = (r, 0) \cdot (1, \theta) = (r, \theta)
+\]
+
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{How do we do this with rectangular coordinates?}}
+\end{center}
+
+
+
+Can we describe each complex number as a scalar multiple of a unit vector in rectangular coordinates? \\
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Rectangular Coordinates}}  
+
+
+Currently, we can describe every complex number as a sum of two scalar multiples of two direction vectors: 
+
+\[ \hat{x} = \langle 1, 0 \rangle  \, \text{ and }  \, \hat{y} = \langle 0, 1 \rangle      \]
+
+
+The Cartesian plane has two axes, so two sets of tick marks on two lines.  The left/right tick marks are marking off multiples of $\langle 1, 0 \rangle$ on the real axis. The up/down tick marks are marking off multiples of $\langle 0, 1 \rangle$ on the imaginary axis.
+
+
+
+
+We can view our vectors as constructed as a sum of perpendicular pieces, each of size $1$.
+
+
+
+\begin{example}
 
 
 \[ \langle 5, 7 \rangle = 5 \cdot  \langle 1, 0 \rangle + 7 \cdot \langle 0, 1 \rangle  \]
@@ -103,32 +143,16 @@ We can translate this tick mark information into vectors.  We can view our vecto
 \end{image}
 
 
+\end{example}
 
 
 
-We can see all of this again in our complex number notation.
+But, we want just a single vector, not a combination of two vectors. \\
+
+Our idea is to take the vector representing a complex number and factor out its length. The resulting vector is a unit vector. We will have a unit vector pointing in the right direction (a direction vector) and a positive scalar, which is the length of the vector.
 
 
-\[   4 + 2 \, i         \]
-
-$i$ represents a step of $1$ in the imaginary direction.
-
-
-
-
-
-
-
-We can bring this idea to polar descriptions as well.
-
-
-
-
-$\blacktriangleright$ \textbf{Circular Directions}
-
-
-
-Each complex number can be represented by a vector.  This vector can in turn be written as a scalar (number) times a \textbf{unit vector}.  A unit vector is just a vector of length $1$.
+Each complex number can be represented by a vector.  This vector can then be written as a scalar (number) times a \textbf{unit vector}.  
 
 
 
@@ -177,18 +201,7 @@ Each complex number can be represented by a vector.  This vector can in turn be 
 
 
 
-
-
-
-\begin{definition}  \textbf{\textcolor{green!50!black}{Direction Vectors}}   \\
-
-A \textbf{direction vector}, also called a \textbf{unit vector} is a vector of length $1$.
-
-\end{definition}
-
-
-
-
+Substitute ``modulus'' for ``length'' and we can do the same for complex numbers in standard form. \\ 
 
 
 
@@ -197,39 +210,55 @@ A \textbf{direction vector}, also called a \textbf{unit vector} is a vector of l
 
 \begin{center}
 
-\textbf{\Huge{\textcolor{purple!50!blue!90!black}{EVERY COMPLEX NUMBER CAN BE DESCRIBED THIS WAY !}}}
+\textbf{\textcolor{purple!50!blue!90!black}{EVERY COMPLEX NUMBER}}
+
+\textbf{\textcolor{purple!50!blue!90!black}{CAN BE DESCRIBED THIS WAY}}
 
 \end{center}
 
 
 
 
-The unit vector is obtained by dividing the components by the length of the vector.  This length is the scalar out front.
+Any complex number can be factored by dividing the real and imaginary parts by the modulus of the complex number.  This modulus is the scalar out front.
 
 
 
 
-\[     a + b \, i    =  \sqrt{a^2 + b^2}  \left(  \frac{a}{\sqrt{a^2 + b^2}}, \frac{b}{\sqrt{a^2 + b^2}} \, i \right)                      \]
+\[     a + b \, i    =  \sqrt{a^2 + b^2}  \cdot \left(  \frac{a}{\sqrt{a^2 + b^2}}, \frac{b}{\sqrt{a^2 + b^2}} \, i \right)                      \]
 
 
-We have factored $a + b \, i $ in a product of a real number times a unit vector (a vector of length $1$). \\
-
-
-
-
-
+We have factored $a + b \, i $ in a product of a positive real number times a unit. \\
 
 
 
 
 
-Therefore, to understand the Complex Numbers, we really need to understand the unit complex numbers - the complex numbers with modulus equal to $1$
 
+
+
+
+
+
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{red!80!black}{All, Every, Each}}  \\
+
+Every Complex number can be written as a product of a real number times a unit.
+
+
+To understand the Complex numbers, we really need to understand the unit complex numbers - the Complex numbers with modulus equal to $1$
 
 
 The numbers with modulus equal to $1$ make up the unit circle.
 
 
+$\blacktriangleright$ \textbf{We need to understand the unit circle.}
+
+\end{summary}
 
 
 
