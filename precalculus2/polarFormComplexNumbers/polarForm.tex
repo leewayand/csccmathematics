@@ -13,22 +13,28 @@ locating numbers
 
 
 
-
+\section{Representing Complex Numbers}
 
 We already have several ways of representing complex numbers. \\
 
 
 
-$\blacktriangleright$ We represent complex numbers visually with points or dots on the Cartesian plane.
+\textbf{\textcolor{red!80!black}{$\blacktriangleright (4, 8)$}}: We represent complex numbers visually with points or dots on the Cartesian plane.  \\
 
 
-$(4, 8)$
+
+
+When viewing the plane in this context, we call it the \textbf{\textcolor{purple!85!blue}{Complex Plane}}.
+
+
+
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major,
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -53,9 +59,9 @@ $(4, 8)$
 
 
 
-$\blacktriangleright$ We represent complex numbers with vectors.  These are illustrated with arrows on the Cartesian plane.  Algebraically, we write vectors using triangular brackets for an algebraic representation.
+\textbf{\textcolor{red!80!black}{$\blacktriangleright \langle 4, 8 \rangle$}}: We represent complex numbers with vectors.  These are illustrated with arrows on the Cartesian plane.  Algebraically, we write vectors using triangular brackets for an algebraic representation.
 
-$\langle 4, 8 \rangle$
+
 
 
 
@@ -65,6 +71,7 @@ $\langle 4, 8 \rangle$
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major,
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -91,7 +98,7 @@ Vectors have a symbolic arithmetic
 
 
 
-$\blacktriangleright$ We represent complex numbers with a 2-dimensional sum: $4 + 8 \, i$.
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright 4 + 8 \, i$}}: We represent complex numbers with a 2-dimensional sum.
 
 
 
@@ -110,6 +117,7 @@ The left, first, or horizontal part is called the real part and the right, secon
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$Re$, ylabel=$Im$, grid = major,
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -146,11 +154,29 @@ In keeping with the circular idea, the vector resembles a radius.
 
 Our two pieces of information will be $r$ and $\theta$. These are known as \textbf{polar coordinates}
 
+
+
+
+\begin{definition}   \textbf{\textcolor{green!50!black}{Polar Coordinates}} \\
+
+Each Complex number can be described by $(r, \theta)$, where $r$ is a real number and $\theta$ is an angle measurement.  \\
+
+
+$r$ can be positive or negative. \\
+$\theta$ is measured counterclockwise from the positive real axis. \\
+
+\end{definition}
+
+
+
+
+
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major,
+            unit vector ratio*=1 1 1,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -163,6 +189,7 @@ Our two pieces of information will be $r$ and $\theta$. These are known as \text
           \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:4,8);
           \addplot [textColor,smooth, domain=(0:63),->] ({3*cos(x)},{3*sin(x)});
           \node at (axis cs:2,1) [anchor=east] {$\theta$};
+          \node at (axis cs:2.5,5) [anchor=east] {$r$};
 
 
            
