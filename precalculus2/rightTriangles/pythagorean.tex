@@ -7,14 +7,14 @@
 \begin{document}
 
 \begin{abstract}
-pythagorean theorem
+Pythagorean theorem
 \end{abstract}
 \maketitle
 
 
 
 
-The \textbf{Unit Circle} is the circle on the Cartesian plane, centered at the origin of radius $1$.
+The \textbf{Unit Circle} is the circle on the Cartesian plane of radius $1$ and centered at the origin.
 
 
 It is the set of points whose distance from the origin is $1$.
@@ -25,7 +25,7 @@ We could describe these points with the Complex Number equation $| z | = 1$.
 
 
 \begin{image}
-\begin{tikzpicture}
+\begin{tikzpicture}[line cap=round]
   \begin{axis}[
             xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
             axis lines=center,
@@ -96,7 +96,7 @@ We have defined the functions sine and cosine as the coordinates of the points o
 And, we know that any right triangle is similar to one of these right triangles defined on the Unit Circle.
 
 
-This allows us to describe the sides of every right triangle.
+This gives us some tools for deducing the lengths of the sides of any right triangle.
 
 
 
@@ -347,6 +347,105 @@ Transform $\frac{\cos(t)}{1 - \sin(t)}$ into $\frac{1 + \sin(t)}{\cos(t)}$
 
 
 
+
+
+
+
+
+
+\section{Easy Angles}
+
+
+From Geometry, we know that an equilateral triangle has equal sides and equal angles.  That makes all of the angles $\frac{\pi}{3}$.  
+
+Let's consider the equilateral triangle below.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}[line cap=round]
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (0.866,0.5)}; %% 30 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(0.866,0) (0.866,0.5)}; %% 30 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (0.866,0)}; %% 30 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 30 degrees          
+
+          \addplot [textColor,smooth, domain=(0:30)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.15,.07) [anchor=west] {$\tfrac{\pi}{6}$};
+          \node[penColor, rotate=-90] at (axis cs:.94,.222) {$\sin(\tfrac{\pi}{6})$};
+          \node[penColor2] at (axis cs:.5,0) [anchor=north] {$\cos(\tfrac{\pi}{6})$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.866,0.5)}; 
+
+
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.866,-0.5)}; 
+          \addplot [ultra thick,penColor] plot coordinates {(0.866,0) (0.866,-0.5)};
+          \addplot [textColor] plot coordinates {(0,0) (0.866,-0.5)}; 
+
+
+
+
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+All three sides of the eqilateral triangle have a length of $1$.  That tells us that 
+
+\[  \sin\left( \frac{\pi}{6} \right) = \frac{1}{2} \]
+
+
+The Pythagorean Theorem now tells us that 
+
+\[  1^2 = \left( \sin\left( \frac{\pi}{6} \right) \right)^2 + \left( \cos\left( \frac{\pi}{6} \right) \right)^2  \]
+
+
+\[  1 = \left( \frac{1}{2} \right)^2 + \left( \cos\left( \frac{\pi}{6} \right) \right)^2  \]
+
+
+\[  \frac{3}{4} = \left( \cos\left( \frac{\pi}{6} \right) \right)^2  \]
+
+
+
+\[  \frac{\sqrt{3}}{2} = \cos\left( \frac{\pi}{6} \right)   \]
+
+
+
+And, by similarity:
+
+
+\[  \cos\left( \frac{\pi}{3} \right) = \frac{1}{2}   \, \text{ and } \,   \sin\left( \frac{\pi}{3} \right)  = \frac{\sqrt{3}}{2} \]  
 
 
 
