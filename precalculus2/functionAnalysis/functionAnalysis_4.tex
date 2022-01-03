@@ -17,23 +17,26 @@ describe everything
 
 
 
-Completely analyze $T(r) = \tan(\sin(\pi x)$
-
-$\blacktriangleright$  We know that $-1 \leq \sin(\pi x) \leq 1$ and $[-1,1] \subset \left( \frac{-\pi}{2}, \frac{\pi}{2} \right)$.  Therefore $T(r)$ is defined on the whole real line.  This also tells us that $T(r)$ is a continuous function.
-
-
-$T(r)$ will be using $[-1,1]$ out of tangent's $\left( \frac{-\pi}{2}, \frac{\pi}{2} \right)$ waveform.
+Completely analyze $T(r) = \tan(\sin(\pi r))$ \\
 
 
 
 
+$\blacktriangleright$  We know that $-1 \leq \sin(\pi r) \leq 1$ and $[-1,1] \subset \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$ and $\tan(x)$ is continuous on $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$.  Therefore $T(r)$ is defined for all $r$.  And, since both $\tan(x)$ and $\sin(x)$ are continuous, $T$ is the composition of two continuous functions. This also tells us that $T(r)$ is a continuous function.
+
+
+$T(r)$ will be using $[-1,1]$ out of tangent's $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$ waveform.
+
+
+
+Graph of $y = T(r)$.
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-5:5, ymax=10, xmax=5, ymin=-10, xmin=-5,
             xtick={-4.9, -1.7, 1.7, 4.9}, 
-            xticklabels={$\frac{-3\pi}{2}$, $\frac{-\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            xticklabels={$-\frac{3\pi}{2}$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
             axis lines =center,  xlabel={$r$}, ylabel=$y$,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -63,20 +66,28 @@ $T(r)$ will be using $[-1,1]$ out of tangent's $\left( \frac{-\pi}{2}, \frac{\pi
 
 
 
-$[-1,1]$ is the output of $\sin(\pi,x)$, which then becomes the input to tangent.  
+$[-1,1]$ is the output of $\sin(\pi r)$, which then becomes the input to tangent.  
 
 
 
 
-For this to happen, the input to sine must be $\left[\frac{-\pi}{2}, \frac{\pi}{2}\right]$, which means that $x \in \left[-\frac{1}{2}, \frac{1}{2}\right]$ for a period of $1$.
+For this to happen, the input to sine must be $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$, which means that $r \in \left[-\frac{1}{2}, \frac{1}{2}\right]$.
+
+
+But that is only have the story. \\
+
+
+As $r$ moves from $-\frac{1}{2}$ to $\frac{1}{2}$, $\sin(\pi r)$ moves from $-1$ to $1$.  As $r$ continues, it moves from $\frac{1}{2}$ to $\frac{3}{2}$ and $\sin(\pi r)$ moves from $1$ back down to $-1$.  Then the whole thing repeats.
+
+Now we have a full period. \\
 
 
 
-To get a full sine waveform, we need the waveform to come back down.  That gives a wave of $\left[-\frac{1}{2}, \frac{3}{2}\right]$ and a period fo $2$.
+That gives a full wave over the interval $\left[-\frac{1}{2}, \frac{3}{2}\right]$ and a period of $2$.
 
 
 
-As $x$ increases, the sine wave will oscillate between $-1$ and $1$ and this piece of the tangent graph will also oscillate.  
+As $r$ increases, the sine wave will oscillate between $-1$ and $1$ and this piece of the tangent graph will also oscillate.  
 
 
 
@@ -88,7 +99,7 @@ As $x$ increases, the sine wave will oscillate between $-1$ and $1$ and this pie
   \begin{axis}[
             domain=-5:5, ymax=2, xmax=5, ymin=-2, xmin=-5,
             xtick={-4.9, -1.7, 1.7, 4.9}, 
-            xticklabels={$\frac{-3\pi}{2}$, $\frac{-\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            xticklabels={$-\frac{3\pi}{2}$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
             axis lines =center,  xlabel={$r$}, ylabel=$y$,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -112,10 +123,10 @@ $\blacktriangleright$ \textbf{Range/Maximum/Minimum:} The maximum of the wavefor
 \[   \tan\left(\sin\left(\pi \cdot \frac{1}{2}\right)\right)  =   \tan\left(\sin\left(\frac{\pi}{2}\right)\right)  = \tan(1)  \approx 1.557  \]
 
 
-The minimum of $-\tan(10 \approx 1.557)$ occurs at $r = -\frac{1}{2}$.
+The minimum of $-\tan(1) \approx -1.557$ occurs at $r = -\frac{1}{2}$.
 
 
-That is just for one period. These maximums and minimums are periodic with a period of $1$.
+That is just for one period. These maximums and minimums are periodic with a period of $2$.
 
 
 
