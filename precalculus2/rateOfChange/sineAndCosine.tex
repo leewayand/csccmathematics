@@ -37,7 +37,7 @@ As you move long the $\sin(\theta)$ curve, the slope of the tangent line follows
 
 
 
-$\cos(\theta)$ is the derivative of $\sin(\theta)$.  Its values measure the instantaneous rate of change of $\sin(\theta)$.
+$\cos(\theta)$ is the derivative of $\sin(\theta)$.  The values of $\cos(\theta)$ measure the instantaneous rate of change of $\sin(\theta)$.
 
 
 
@@ -76,6 +76,140 @@ As you move long the $\cos(\theta)$ curve, the slope of the tangent line follows
 
 
 $-\sin(\theta)$ is the derivative of $\cos(\theta)$.  Its values measure the instantaneous rate of change of $\cos(\theta)$.
+
+
+
+
+
+
+
+
+
+This is our algebraic reasoning for the behavior of $\sin(\theta)$ and $\cos(\theta)$.
+
+
+
+
+
+
+$f(t) = \sin(t)$ is decreasing at $t=\frac{2\pi}{3}$, because $\cos\left( \frac{2\pi}{3} \right) < 0$ \\
+
+
+$g(t) = \cos(t)$ is decreasing at $t=\frac{\pi}{4}$, because $-\sin\left( \frac{\pi}{4} \right) < 0$
+
+
+
+\subsection{Shifts}
+
+
+
+
+If the graph $y = \sin(t)$ is vertically shifted to $y = \sin(t)+C$, then the shape of the graph does not change. Therefore, the slopes of the tangent lines at the shifted points don't change.
+
+
+
+\begin{observation} Vertical Shifts \\
+
+$\blacktriangleright$ The derivative of $\sin(t)+C$ is $\cos(t)$. \\
+
+$\blacktriangleright$ The derivative of $\cos(t)+C$ is $-\sin(t)$. \\
+
+\end{observation}
+
+
+
+
+If the graph $y = \sin(t)$ is horizontally shifted to $y = \sin(t - B)$, then the shape of the graph does not change. Therefore, the slopes of the tangent lines at the shifted points don't change.
+
+
+
+\begin{observation} Horizontal Shifts \\
+
+$\blacktriangleright$ The derivative of $\sin(t - B)$ is $\cos(t - B)$. \\
+
+$\blacktriangleright$ The derivative of $\cos(t - B)$ is $-\sin(t - B)$. \\
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Stretching}
+
+
+Suppose you have a line $L$ with slope $m$. \\
+
+Let $(x_1, y_1)$ and $(x_2, y_2)$ be any two points on $L_1$. \\
+
+Then, we have
+
+
+\[
+m = \frac{y_2 - y_1}{x_2 - x_1}
+\]
+
+
+
+
+
+
+Now, suppose we stretch the line vertically by a factor of $k$.  That means that all of the points change from $(a, b)$ to $(a, 2b)$
+
+Then, the new slope, $M$, is 
+
+
+
+\[
+M = \frac{k \cdot y_2 - k \cdot y_1}{x_2 - x_1} = \frac{k \cdot (y_2 - y_1)}{x_2 - x_1} = =k \cdot \frac{y_2 - y_1}{x_2 - x_1} = k \cdot m
+\]
+
+
+
+
+
+\begin{observation} Vertical Stretch \\
+
+$\blacktriangleright$ The derivative of $k \cdot \sin(t)$ is $k \cdot \cos(t)$. \\
+
+$\blacktriangleright$ The derivative of $k \cdot \cos(t)$ is $-k \cdot \sin(t)$. \\
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+
+\begin{theorem} \textbf{\textcolor{green!50!black}{Derivatives}}  \\
+
+$\blacktriangleright$ The derivative of $A \, \sin(t - h) + k$ is $A \, \cos(t - h) + k$. \\
+
+$\blacktriangleright$ The derivative of $A \, \cos(t - h) + k$ is $-A \, \sin(t - h) + k$. \\
+
+\end{theorem}
+
+
+
+
+
+
+
 
 
 

@@ -168,19 +168,19 @@ A =\left(1,\frac{\pi}{4}\right)\quad B=(1.5,\pi)\quad C = \left(2,-\frac{\pi}{3}
   To place the point $A$, go out $1$ unit along the horizontal axis
   (putting you on the inner circle shown on the grid), then rotate
   \wordChoice{\choice{clockwise}\choice[correct]{counterclockwise}}
-  $\pi/4$ radians (or $45^\circ$).
+  $\frac{\pi}{4}$ radians (or $45^\circ$).
   
   To plot $B$, go out $1.5$ units along the horizontal axis and rotate
   $\pi$ radians ($180^\circ$).
   
   To plot $C$, go out 2 units along the initial ray then rotate
   \wordChoice{\choice[correct]{clockwise}\choice{counterclockwise}}
-  $\pi/3$ radians, as the angle given is negative.
+  $\frac{\pi}{3}$ radians, as the angle given is negative.
 
   To plot $D$, move along the initial ray ``$-1$'' units, in other
   words, ``back up'' $1$ unit, then rotate
   \wordChoice{\choice{clockwise}\choice[correct]{counterclockwise}} by
-  $\pi/4$.
+  $\frac{\pi}{4}$.
   \begin{hint}
     \begin{image}
       \begin{tikzpicture}
@@ -218,7 +218,7 @@ A =\left(1,\frac{\pi}{4}\right)\quad B=(1.5,\pi)\quad C = \left(2,-\frac{\pi}{3}
 
 
 
-It is useful to recognize both the rectangular (or, Cartesian)
+It is useful to recognize both the rectangular (Cartesian)
 coordinates of a point in the plane and its polar coordinates.
 
 \begin{theorem}  \textbf{\textcolor{green!50!black}{Cartesian - Polar Bridge}} \\
@@ -226,12 +226,12 @@ coordinates of a point in the plane and its polar coordinates.
 Given a point $P=(r,\theta)$ in polar coordinates, rectangular
 coordinates are given by
 \[
-x=r\cos \theta\qquad y=r\sin \theta.
+x=r\cos(\theta)\qquad y=r\sin(\theta).
 \]
 Given a point $Q=(x,y)$ in rectangular coordinates, polar coordinates
 are given by
 \[
-r^2=x^2+y^2\qquad \tan \theta = \frac yx.
+r^2=x^2+y^2\qquad \tan(\theta) = \frac{y}{x}.
 \]
 \end{theorem}
 
@@ -240,19 +240,19 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 
 
 \begin{question}
-  Let $P=(2,2\pi/3)$ be a point in polar coordinates. Describe $P$ in
+  Let $P=\left( 2,\frac{2\pi}{3} \right)$ be a point in polar coordinates. Describe $P$ in
   rectangular coordinates.
   \begin{prompt}
     \[
-    P = \left( \answer{2\cos (2\pi/3)}, \answer{2\sin (2\pi/3)} \right)
+    P = \left( \answer{2\cos(\frac{2\pi}{3})}, \answer{2\sin(\frac{2\pi}{3})} \right)
     \]
   \end{prompt}
   \begin{question}
-  Let $Q=(-1,5\pi/4)$ be a point in polar coordinates. Describe $Q$ in
+  Let $Q=(-1,\frac{5\pi}{4})$ be a point in polar coordinates. Describe $Q$ in
   rectangular coordinates.
   \begin{prompt}
     \[
-    Q = \left( \answer{-1\cos (5\pi/4)}, \answer{-1\sin (5\pi/4)} \right)
+    Q = \left( \answer{-1\cos(\frac{5\pi}{4})}, \answer{-1\sin(\frac{5\pi}{4})} \right)
     \]
   \end{prompt}
 \end{question}
@@ -895,7 +895,7 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 	r\sin(\theta) &= \answer[given]{r^2\cos^2(\theta)}\\
 	\answer[given]{\frac{\sin(\theta)}{\cos^2(\theta)}}  &= r.
       \end{align*}
-      We have found that $r=\sin\theta/\cos^2\theta = \tan\theta\sec\theta$. 
+      We have found that $r=\frac{\sin(\theta)}{\cos^2(\theta)} = \tan(\theta)\sec(\theta)$. 
 
       The domain of this polar function is $\left[ \answer[given]{-\pi/2},\answer[given]{\pi/2} \right]$. 
 
@@ -912,9 +912,9 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
     work to solve for $r$:
     \begin{align*}
 	xy &= 1 \\
-	\answer[given]{r\cos\theta\cdot r\sin\theta} & = 1\\
-	r^2 & = \frac{1}{\cos\theta\sin\theta}\\
-	r & = \frac{1}{\sqrt{\cos\theta\sin\theta}}\\
+	\answer[given]{r\cos(\theta)\cdot r\sin(\theta)} & = 1\\
+	r^2 & = \frac{1}{\cos(\theta)\sin(\theta)}\\
+	r & = \frac{1}{\sqrt{\cos(\theta)\sin(\theta)}}\\
     \end{align*}
     This function is valid only when the product of
     $\cos\theta\sin\theta$ is positive. This occurs in the first and
@@ -927,37 +927,37 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 \end{example}
 
 \begin{example}
-   Convert $r=\frac{2}{\sin \theta-\cos\theta}$ from polar coordinates
+   Convert $r=\frac{2}{\sin(\theta)-\cos(\theta)}$ from polar coordinates
    to rectangular coordinates.
    \begin{explanation}
      There is no set way to convert from polar to rectangular; in
-     general, we look to form the products $r\cos \theta$ and
-     $r\sin\theta$, and then replace these with $x$ and $y$,
+     general, we look to form the products $r\cos(\theta)$ and
+     $r\sin(\theta)$, and then replace these with $x$ and $y$,
      respectively. We start in this problem by multiplying both sides
-     by $\sin\theta-\cos\theta$:
+     by $\sin(\theta)-\cos(\theta)$:
      \begin{align*}
-       r &= \frac{2}{\sin\theta-\cos\theta} \\
-       r(\sin\theta-\cos\theta) &= 2\\
-       \answer[given]{r\sin\theta}-r\cos\theta &= 2. \qquad \text{Now replace with $y$ and $x$:}\\
+       r &= \frac{2}{\sin(\theta)-\cos(\theta)} \\
+       r(\sin(\theta)-\cos(\theta)) &= 2\\
+       \answer[given]{r\sin(\theta)}-r\cos(\theta) &= 2. \qquad \text{Now replace with $y$ and $x$:}\\
        y-x &= 2\\
 	  y &= x+2.
      \end{align*}
-     The original polar equation, $r=\frac{2}{(\sin\theta-\cos\theta)}$ does
+     The original polar equation, $r=\frac{2}{(\sin(\theta)-\cos(\theta))}$ does
      not easily reveal that its graph is simply a line. However, our
      conversion shows that it is.
    \end{explanation}
 \end{example}
 
 \begin{example}
-   Convert $r =2\cos \theta$ from polar coordinates to rectangular
+   Convert $r =2\cos(\theta)$ from polar coordinates to rectangular
    coordinates.        	
    \begin{explanation}
      By multiplying both sides by $r$, we obtain both an $r^2$ term
-     and an $r\cos\theta$ term, which we replace with $x^2+y^2$ and
+     and an $r\cos(\theta)$ term, which we replace with $x^2+y^2$ and
      $x$, respectively.
      \begin{align*}
-       r &=2\cos\theta \\
-       r^2 &= 2r\cos\theta \\
+       r &=2\cos(\theta) \\
+       r^2 &= 2r\cos(\theta) \\
        \answer[given]{x^2+y^2} &= \answer[given]{2x}. 
      \end{align*}
      We recognize this as a circle. By completing the square we can
