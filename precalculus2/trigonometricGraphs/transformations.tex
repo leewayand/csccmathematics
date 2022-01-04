@@ -40,7 +40,7 @@ Analyze $s(\theta) = 2 \sin\left(\theta - \frac{\pi}{4}\right) + 2$ \\
             axis lines =center, xlabel={$\theta$}, ylabel=$y$, grid = major, grid style={dashed},
             ytick={-3,-2,-1,1,2,3,4},
             xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
-            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$, $\tfrac{-\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
             yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$}, 
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -156,6 +156,84 @@ If one of these waveforms is shifted by half a period, then the waveforms are sa
 \[
 \sin(\theta) + \sin(\theta + \pi) = 0
 \]
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Phase Shift}}
+
+The \textbf{phase shift} is the horizontal shift.
+
+\end{definition}
+
+
+
+
+\begin{example} Phase Shift \\
+
+
+What is the phase shift for $T(\theta) = 3 \sin\left( \frac{\theta}{2}+3 \right)-2$ ?
+
+
+\begin{explanation}
+
+To find the phase shift or horizontal shift, we need to locate the beginning of the waveform.
+
+
+\begin{align*}
+\frac{\theta}{2}+3 &= 0 \\
+\frac{\theta}{2}   &= -3 \\
+\theta             &=  -6
+\end{align*}
+The phase shift is $-6$.  We can see this in the graph.  The beginning of the waveform has moved left to $\theta=-6$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=3, xmax=10, ymin=-6, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,1,2,3,4},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            %\addplot [line width=2, penColor, dashed,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {3*sin(deg(x/2 + 3))-2};
+
+            \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-6,-2)};
+            \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0.283,-2)};
+            \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.566,-2)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\end{explanation}
+
+
+
+\end{example}
+
+
+
+
+
 
 
 
