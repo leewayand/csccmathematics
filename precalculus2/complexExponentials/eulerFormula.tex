@@ -26,7 +26,7 @@ We need one more derivative.
 \subsection{Derivatives} 
 
 
-\textbf{\textcolor{purple!85!blue}{Step 1)}}
+\textbf{\textcolor{purple!85!blue}{Step A)}}
 
 $\blacktriangleright$ We would like the derivative of $f(x) = e^{r x}$. \\
 
@@ -48,9 +48,9 @@ $f'(a)$ would be the slope of the tangent line at the point $(a, e^{r a})$. \\
             domain=-1:0.5, ymax=3, xmax=0.5, ymin=-0.5, xmin=-1,
             axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major, grid style={dashed},
             ytick={-0.5,0,0.5,1,1.5,2,2.5,3},
-            xtick={-1,-0.5,0,0.5},
+            xtick={-1,-0.5,-0.2,0,0.5},
             yticklabels={$-0.5$,$0$,$0.5$,$1$,$1.5$,$2$,$2.5$,$3$}, 
-            xticklabels={$-1$,$-0.5$,$0$,$0.5$},
+            xticklabels={$-1$,$-0.5$,$a$,$0$,$0.5$},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -71,7 +71,7 @@ $f'(a)$ would be the slope of the tangent line at the point $(a, e^{r a})$. \\
 \end{image}
 
 
-That's what we want.  However, we don't know the derivative of $e^{3 x}$, so we can't get the slope of the derivative. \\
+That's what we want.  However, we don't know the derivative of $e^{3 x}$, so we can't get the slope of the tangent line. \\
 
 So, let's approximate. \\
 
@@ -135,7 +135,7 @@ It is not a far jump to believe that
 
 
 \[
-\text{The derivative of } \, f(x) = e^{r x} \, \text{ is } \, f'(x) = r e^{r x}
+\text{The derivative of } \, f(x) = e^{r x} \, \text{ is } \, f'(x) = r \, e^{r x}
 \]
 
 
@@ -145,7 +145,7 @@ It is not a far jump to believe that
 
 
 
-That was \textbf{\textcolor{purple!85!blue}{Step 1)}}. \\
+That was \textbf{\textcolor{purple!85!blue}{Step A)}}. \\
 
 
 
@@ -153,12 +153,12 @@ That was \textbf{\textcolor{purple!85!blue}{Step 1)}}. \\
 
 \section{Mean Value Theorem}
 
+\textbf{\textcolor{purple!85!blue}{Step B)}} \\
+
+In Calculus you will study the \textbf{Mean Value Theorem}. One version follows this race track story:
 
 
-In Calculus you will study the \textbf{Mean Value Theorem}. One version follows this race track story.
-
-
-Suppose two horses are racing.  They both line up at the starting line.  During the race, they both run at exactly the same speed at every second of the race.  Then the two horses are at exactly the same place on the track at every second of the race and end the race in a tie.
+Suppose two horses are racing.  They both line up at the starting line.  During the race, they both run at exactly the same speed at every second of the race.  Under these circumstances, the two horses are at exactly the same place on the track at every second of the race and end the race in a tie.
 
 
 
@@ -194,7 +194,14 @@ Example: $y'(t) = k \cdot y(t)$ with $y(0)=1$
 
 There is only one function that could be $y(t)$.
 
-Well, as we shall see, we have two.  And, we can't.  That means our two functions must be the same function. \\
+Let's apply this to our situation. \\
+
+
+
+
+
+
+
 
 
 
@@ -205,12 +212,16 @@ Well, as we shall see, we have two.  And, we can't.  That means our two function
 
 \section{Euler's Formula}
 
-All of that was for real numbers, but we are going to take a slight leap of faith and extend it to complex numbers.
+
+\textbf{\textcolor{purple!85!blue}{Step C)}} \\
+
+
+That Mean Value Theorem horse story was for real numbers, but we are going to take a slight leap of faith and extend it to complex numbers.
 
 
 
 
-Consider two functions.
+Consider our two functions:
 
 
 \begin{itemize}
@@ -221,7 +232,7 @@ Consider two functions.
 
 
 
-$\blacktriangleright$   \textbf{Step 1:} Two functions have the same initial value.
+$\blacktriangleright$   \textbf{Step 1:} Our functions have the same initial value.
 
 \begin{itemize}
 	\item $f(0) = e^0 = 1$
@@ -232,13 +243,13 @@ $\blacktriangleright$   \textbf{Step 1:} Two functions have the same initial val
 
 
 
-$\blacktriangleright$   \textbf{Step 2:} Two functions satisfy our differential equation: $y'(t) = i \cdot y(t)$
+$\blacktriangleright$   \textbf{Step 2:} Our functions satisfy the same differential equation: $y'(t) = i \cdot y(t)$
 
 
 
 \begin{itemize}
-	\item $f'(t) = i e^{i t} = i f(t)$
-	\item $g'(t) = -\sin(t) + i \cos(t) = i g(t)$
+	\item $f'(t) = i \, e^{i t} = i \, f(t)$
+	\item $g'(t) = -\sin(t) + i \cos(t) = i \, g(t)$
 \end{itemize}
 
 
@@ -248,10 +259,10 @@ We have two functions satisfying the same differential equation withthe same ini
 
 
 
-\begin{theorem} Euler's Formula
+\begin{theorem} \textbf{\textcolor{green!50!black}{Euler's Formula}}   
 
 
-\[   e^{i t} = \cos(t) + i \sin(t)         \]
+\[   e^{i \, t} = \cos(t) + i \sin(t)         \]
 
 
 \end{theorem}
@@ -259,7 +270,24 @@ We have two functions satisfying the same differential equation withthe same ini
 
 
 
-Euler's Formula is a bridge between exponential functions and trigonometric functions.
+Euler's Formula is a bridge between exponential functions and trigonometric functions. \\
+
+
+
+
+Complex Numbers are described by polar coordinates, which are connected to right triangles, which are similar to right triangles on the unit circle, which are built from sine and cosine, which are now connected to complex exponentials.
+
+
+
+
+\begin{center}
+
+
+\[
+a + b \, i =  r \cdot (\cos(\theta) + i \, \sin(\theta)) = r \cdot e^{i \cdot \theta}
+\]
+
+\end{center}
 
 
 
