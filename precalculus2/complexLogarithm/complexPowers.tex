@@ -15,157 +15,176 @@ $i^i$
 
 
 
-We know that every nonzero Complex number can be wirtten as the product of a positive real number (a scalar) and a COmplex number on the unit circle.  Euler's Formula tells us how each Complex number on the unit circle can be written as a Complex exponential.
+
+We know that every nonzero Complex number can be written as the product of a positive real number (a scalar) and a Complex number on the unit circle.  Euler's Formula tells us how each Complex number on the unit circle can be written as a Complex exponential.
 
 
-$\blacktriangleright$ \textbf{Euler's Formula}
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Euler's Formula}}   
+
+
+Every complex number on the unit circle can be written in the form
 
 
 \[   e^{i \theta} = \cos(\theta) + i \sin(\theta)         \]
 
 
-And, we already know how to write and real number in exponential form: $r = e^{ln(r)}$.  
+And, we already know how to write any real number in exponential form: $r = e^{ln(r)}$.  
 
-Combining these together, we get that every nonzero Complex number can be written in the form  $e^{ln(r)} \cdot e^{i t} = e^{\ln(r) + i \theta}$
 
 
 
 
-If $z = a + b \, i$, then $r = \sqrt{a^2 + b^2}$ and $\theta = $ angle from positive $x$-axis to $z$.
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Complex Numbers}}   
 
 
 
 
+Combining these together, we get that every nonzero complex number can be written in the form  
+\[
+r \cdot (\cos(\theta) + i \sin(\theta))  = e^{ln(r)} \cdot e^{i \, \theta} = e^{\ln(r) + i \, \theta}
+\]
 
 
 
-\begin{example} Complex Logarithm
+If $z = a + b \, i$, then $r = \sqrt{a^2 + b^2}$ and $\theta$ is the counterclockwise angle from the positive real-axis to $z$.
 
 
-Let $z = -3 - 3 \, i$.
 
 
-$|z| = \sqrt{(-3)^2 + (-3)^2} =  \sqrt{18} = 3 \sqrt{2}$
+\begin{center}
 
+\textbf{\textcolor{red!80!black}{EVERY complex number can be written in the form $e^{\ln(r) + i \, \theta}$}}
 
-$ArcTan\left(\frac{-3}{-3}\right) = \frac{\pi}{4}$.  This reference angle gives us $\theta = \frac{5 \pi}{4}$
+\end{center}
 
 
 
 
-$z = -3 - 3 \, i =  e^{\ln(3 \sqrt{2}) + (\tfrac{5 \pi}{4} \pm 2 k \pi) \, i}     \, \text{ where } \, k \in \mathbb{N}  $
 
-\end{example}
 
 
 
 
-There are an infinite number of Complex logarithms for each Complex number.
+\begin{procedure} Complex Powers
 
 
-Following our range restrictions for ArcSine and ArcCosine, we pick a \textbf{principal value} for the Complex logarithm. Since we would like to keep the positive real axis as clean as possible, we chooose the interval $(-\pi, \pi]$ for the principal value of the Complex logarithm.
+When raising a complex number to a complex power, we first rewrite in exponential form, then take advantage of some logarithm and exponential rules.
 
-This interval is known as the \textbf{principal branch} of the Complex logarithm.  The negative real axis is called a \textbf{branch cut} for the Complex logarithm.
 
+$\blacktriangleright$ \textbf{Example:}  
+\[  (2+2i)^{1+\sqrt{3} \, i}    \]
 
 
+\textbf{\textcolor{blue!75!black}{Step 1)}}  Rewrite in exponential form 
 
 
-\begin{definition}
 
-If $z = a + b \, i$, then 
 
-\[   \ln(z) = \ln(\sqrt{a^2 + b^2}) + \theta \, i       \]
+\[  (2+2i)^{1+\sqrt{3} \, i}   =        e^{\ln\left( (2+2i)^{1+\sqrt{3} \, i} \right)} \]
 
 
 
-where $\theta \in (-\pi, \pi]$ and is the counterclockwise angle from the positive real axis to $z$.
 
+\textbf{\textcolor{blue!75!black}{Step 2)}}  Log Rule : $\ln(a^b) = b \ln(a)$ 
 
 
-This $\theta$ is often referred to as $Arg(z)$.
+\[   =        e^{(1+\sqrt{3} \, i) \ln(2+2i)} \]
 
 
 
-\end{definition}
 
+\textbf{\textcolor{blue!75!black}{Step 3)}}  Complex Logarithm 
 
 
+\[   \ln(2+2i) = \ln(2\sqrt{2}) + \frac{\pi}{4} \, i \]
 
-Since $Arg(r) = 0$ for any positive real number, our Complex logarithm will agree with our real logarithm.
 
 
+\[   (2+2i)^{1+\sqrt{3} \, i}   =       e^{(1+\sqrt{3} \, i) \cdot (\ln(2\sqrt{2}) + \frac{\pi}{4} \, i)} \]
 
 
 
 
 
 
-\begin{example} Some Logarithms
+\textbf{\textcolor{blue!75!black}{Step 4)}}  Multiply 
 
 
-\begin{itemize}
-\item $\ln(5) = \ln(5) + 0 \, i = \ln(5)$
 
-\item $\ln(2i) = \ln(2) + \frac{\pi}{2} \, i$
+\[
+=    e^{   \ln(2\sqrt{2}) +   \frac{\pi}{4} \, i     +  \sqrt{3} \ln(2\sqrt{2}) \, i - \sqrt{3}  \frac{\pi}{4} (-1) }
+\]
 
-\item $\ln(-5 + 5 \, i) = \ln(5 \sqrt{2}) + \frac{3\pi}{4}\, i$
 
-\item $ln(-1) = \pi \, i$
 
+\textbf{\textcolor{blue!75!black}{Step 5)}}  Collect Real and Imaginary parts 
 
 
-\end{itemize}
 
+\[
+=   e^{   \ln(2\sqrt{2}) + \frac{\sqrt{3}\pi}{4} +  (\frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) )  \, i   }
+\]
 
 
 
-\end{example}
 
+\textbf{\textcolor{blue!75!black}{Step 6)}}  Separate 
 
 
+\[
+=   e^{   \ln(2\sqrt{2}) + \frac{\sqrt{3}\pi}{4}} \cdot  e^{(\frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) )  \, i}
+\]
 
-This gives us a famous equation.
 
 
 
-\begin{theorem} Euler's Identity
 
-\[  e^{\pi \, i} + 1 = 0       \]
+\[
+=   (2\sqrt{2})  e^{\frac{\sqrt{3}\pi}{4}} \cdot  e^{(\frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) )  \, i}
+\]
 
-\end{theorem}
 
 
 
+\textbf{\textcolor{blue!75!black}{Step 6)}}  $r$ and $\theta$ 
 
 
 
+\[ r =  2\sqrt{2}  e^{\frac{\sqrt{3}\pi}{4}} \]
 
+\[ \theta =  \frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) \]
 
 
-\begin{example}  $i^i$
+\textbf{\textcolor{blue!75!black}{Step 6)}}  $a + b \, i$ form
 
 
-\[    i^i =  e^{ln(i^i)} = e^{i \cdot ln(i)} = e^{ i \cdot \tfrac{\pi}{2} \, i}   = e^{-\tfrac{\pi}{2}} \approx  0.2078795764\]
+\[
+ (2+2i)^{1+\sqrt{3} \, i}   = 2\sqrt{2}  e^{\frac{\sqrt{3}\pi}{4}} \cdot \left( \cos\left( \frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) \right) + i \, \sin\left( \frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) \right) \right)
+\]
 
 
 
 
+\[
+   = 2\sqrt{2}  e^{\frac{\sqrt{3}\pi}{4}} \cdot  \cos\left( \frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) \right) + 2\sqrt{2}  e^{\frac{\sqrt{3}\pi}{4}} \sin\left( \frac{\pi}{4} + \sqrt{3} \ln(2\sqrt{2}) \right) \, i
+\]
 
+\end{procedure}
 
-\end{example}
 
 
+We put everything into an exponent of $e$, so that we can use a logarithm rule and bring the power down and outside the logarithm.  Then we use the definition of the complex logarithm to change the complex logarithm in the $a + b \, i$ form. Then we multiply everything out and gather back into the $a + b \, i$ form. 
 
+Then we separate into two exponentials, because the first will be real and the second will be imaginary. The second exponential is of the form $e^{i \, \theta}$.  Then we can reaad off $\theta$ and replace the exponential with $cos(\theta) + i \, sin(\theta)$.  Now, we are back to $a + b \, i$ form.
 
 
 
 
+\subsection{Calculus}
 
+That may seem like a lot of steps at first, but the over all idea is to target the exponent and make it not an exponent. By pushing the logarithm into an exponent, we can change it to a product.  Once it is a product, then we have lots of algebra to help us.
 
-
-
-
+This mimics exactly how we will differentiate functions with formulas involving exponents:  $\frac{d}{dx} f(x)^{g(x)}$
 
 
 

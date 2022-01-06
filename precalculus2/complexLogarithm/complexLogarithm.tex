@@ -2,12 +2,12 @@
 
 \input{../../preamble.tex}
 
-\title{Complex Logarithm}
+\title{Exponential Inverse}
 
 \begin{document}
 
 \begin{abstract}
-exponential inverse
+many directions again
 \end{abstract}
 \maketitle
 
@@ -15,26 +15,46 @@ exponential inverse
 
 
 
-We know that every nonzero Complex number can be wirtten as the product of a positive real number (a scalar) and a COmplex number on the unit circle.  Euler's Formula tells us how each Complex number on the unit circle can be written as a Complex exponential.
+We know that every nonzero Complex number can be written as the product of a positive real number (a scalar) and a Complex number on the unit circle.  Euler's Formula tells us how each Complex number on the unit circle can be written as a Complex exponential.
 
 
-$\blacktriangleright$ \textbf{Euler's Formula}
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Euler's Formula}}   
+
+
+Every complex number on the unit circle can be written in the form
 
 
 \[   e^{i \theta} = \cos(\theta) + i \sin(\theta)         \]
 
 
-And, we already know how to write and real number in exponential form: $r = e^{ln(r)}$.  
-
-Combining these together, we get that every nonzero Complex number can be written in the form  $e^{ln(r)} \cdot e^{i t} = e^{\ln(r) + i \theta}$
+And, we already know how to write any real number in exponential form: $r = e^{ln(r)}$.  
 
 
 
 
-If $z = a + b \, i$, then $r = \sqrt{a^2 + b^2}$ and $\theta = $ angle from positive $x$-axis to $z$.
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Complex Numbers}}   
 
 
 
+
+Combining these together, we get that every nonzero complex number can be written in the form  
+\[
+r \cdot (\cos(\theta) + i \sin(\theta))  = e^{ln(r)} \cdot e^{i \, \theta} = e^{\ln(r) + i \, \theta}
+\]
+
+
+
+If $z = a + b \, i$, then $r = \sqrt{a^2 + b^2}$ and $\theta$ is the counterclockwise angle from the positive real-axis to $z$.
+
+
+
+
+\begin{center}
+
+\textbf{\textcolor{red!80!black}{EVERY complex number can be written in the form $e^{\ln(r) + i \, \theta}$}}
+
+\end{center}
 
 
 
@@ -48,31 +68,36 @@ Let $z = -3 - 3 \, i$.
 $|z| = \sqrt{(-3)^2 + (-3)^2} =  \sqrt{18} = 3 \sqrt{2}$
 
 
-$ArcTan\left(\frac{-3}{-3}\right) = \frac{\pi}{4}$.  This reference angle gives us $\theta = \frac{5 \pi}{4}$
+$Arctan\left(\frac{-3}{-3}\right) = \frac{\pi}{4}$.  This reference angle gives us $\theta = \frac{5 \pi}{4}$
 
 
 
 
-$z = -3 - 3 \, i =  e^{\ln(3 \sqrt{2}) + (\tfrac{5 \pi}{4} \pm 2 k \pi) \, i}     \, \text{ where } \, k \in \mathbb{N}  $
+$z = -3 - 3 \, i =  e^{\ln(3 \sqrt{2}) + \left( \tfrac{5 \pi}{4} \pm 2 k \pi \right) \, i}     \, \text{ where } \, k \in \mathbb{N}  $
+
+
+There are many complex logarithms for $-3 - 3 \, i$. One for each turn around the unit circle.
+
+
 
 \end{example}
 
 
 
 
-There are an infinite number of Complex logarithms for each Complex number.
+There are an infinite number of complex logarithms for each complex number.
 
 
-Following our range restrictions for ArcSine and ArcCosine, we pick a \textbf{principal value} for the Complex logarithm. Since we would like to keep the positive real axis as clean as possible, we chooose the interval $(-\pi, \pi]$ for the principal value of the Complex logarithm.
+Following our range restrictions for Arcsine and Arccosine, we pick a \textbf{principal value} for the complex logarithm. Since we would like to keep the positive real axis as clean as possible, we chooose the interval $(-\pi, \pi]$ for the principal value of the complex logarithm.
 
-This interval is known as the \textbf{principal branch} of the Complex logarithm.  The negative real axis is called a \textbf{branch cut} for the Complex logarithm.
-
-
+This interval is known as the \textbf{principal branch} of the complex logarithm.  The negative real axis is called a \textbf{branch cut} for the complex logarithm. It is a cut, because the angle changes abruptly from $\pi$ to $-\pi$.
 
 
 
-\begin{definition}
 
+
+\begin{definition}   \textbf{\textcolor{green!50!black}{Complex Logarithm}}
+ 
 If $z = a + b \, i$, then 
 
 \[   \ln(z) = \ln(\sqrt{a^2 + b^2}) + \theta \, i       \]
@@ -83,7 +108,7 @@ where $\theta \in (-\pi, \pi]$ and is the counterclockwise angle from the positi
 
 
 
-This $\theta$ is often referred to as $Arg(z)$.
+This $\theta$ is often referred to as the \textbf{argument} of $z$, $Arg(z)$.
 
 
 
@@ -92,7 +117,7 @@ This $\theta$ is often referred to as $Arg(z)$.
 
 
 
-Since $Arg(r) = 0$ for any positive real number, our Complex logarithm will agree with our real logarithm.
+Since $Arg(r) = 0$ for any positive real number, our complex logarithm will agree with our real logarithm.
 
 
 
@@ -129,7 +154,7 @@ This gives us a famous equation.
 
 
 
-\begin{theorem} Euler's Identity
+\begin{theorem} \textbf{\textcolor{green!50!black}{Euler's Identity}} 
 
 \[  e^{\pi \, i} + 1 = 0       \]
 
@@ -150,7 +175,10 @@ This gives us a famous equation.
 
 
 
+\begin{center}
 
+$i^i$ is a real number!
+\end{center}
 
 
 \end{example}
