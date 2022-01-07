@@ -78,21 +78,21 @@ the cylinder that minimizes the cost of making the containers.
 Since we have expressed the cost as a function of a single variable, the problem becomes a``calculus problem": Find the minimum of the function $C$ on the interval 
 $(0,\infty)$.
 
- Although the function $C$ is continuous on its domain, its domain is an open, unbounded interval and the Extreme Value Theorem does not apply; there is no guarantee that the minimum even exists. But we don't give up! Our strategy will be to search for a critical point and check if the minimum is attained there. By solving the equation
+ Although the function $C$ is continuous on its domain, its domain is an open, unbounded interval and the Extreme Value Theorem does not apply; there is no guarantee that the minimum even exists. But we don't give up! Our strategy will be to search for a critical number and check if the minimum is attained there. By solving the equation
 \[
 C'(r)=-2cV/r^2+4Nc\pi \answer[given]{r} =0
 \]
-we find that the point where $r=\sqrt[3]{V/(2N\pi)}$ is the only critical point of $C$.  Since $C''(r)=4cV/r^3+4Nc\pi$ is
+we find that the point where $r=\sqrt[3]{V/(2N\pi)}$ is the only critical number of $C$.  Since $C''(r)=4cV/r^3+4Nc\pi$ is
 positive when $r$ is positive, there is a local minimum at the
-critical point, and hence a global minimum since there is only one
-critical point.
+critical number, and hence a global minimum since there is only one
+critical number.
 
 Another way to reach this conclusion is to examine the sign of the derivative $C'(r)$ on the interval $(0,\infty)$:
 \[
 C'(r)=-2cV/r^2+4Nc\pi r=\frac{4Nc\pi (r^3-\frac{V}{2N\pi})}{r^2}. 
 \]
 From this factorization it is clear that $C'(r)<0$ on $(0,\sqrt[3]{V/(2N\pi)})$, and $C'(r)>0$ on $(\sqrt[3]{V/(2N\pi)}, \infty)$.
-This means that  the function $C$ is decreasing on $(0,\sqrt[3]{V/(2N\pi)})$ and increasing on $(\sqrt[3]{V/(2N\pi)}, \infty)$, and, therefore, has a global minimum at the critical point.
+This means that  the function $C$ is decreasing on $(0,\sqrt[3]{V/(2N\pi)})$ and increasing on $(\sqrt[3]{V/(2N\pi)}, \infty)$, and, therefore, has a global minimum at the critical number.
 
 Finally, since $h=V/(\pi r^2)$, 
 \begin{align*}
@@ -144,7 +144,7 @@ P(x) &= r(x) - c(x)\\
 \end{align*}
 We want to know the maximum value of the function $P$ on the interval $[0,1.5]$.
 The Extreme Value Theorem now guarantees that the maximum is attained, since the function $P$ is continuous on the closed interval, $[0,1.5]$. 
-We have to find the critical points:
+We have to find the critical numbers:
 \[
 P'(x)=0,
 \]
@@ -152,17 +152,17 @@ or
 \[
 -20000x+25000=0,
 \]
-which implies that the only critical point occurs at $x=1.25$.
-Now we have to evaluate the function at the critical point and both endpoints, and compare the values:
+which implies that the only critical number occurs at $x=1.25$.
+Now we have to evaluate the function at the critical number and both endpoints, and compare the values:
 
 $P(0)=-12000$, $P(1.25)=3625$, and $P(1.5)=3000$.
  Note that
 $P(1.25)$ is the maximum of these. Thus the maximum profit is
 \$$3625$, attained when we set the price at \$$1.25$ and sell $7500$ items.
 
-Alternately, we could apply the Second Derivative Test at the critical point and conclude that
+Alternately, we could apply the Second Derivative Test at the critical number and conclude that
 there must be a
-local maximum there, since $P''(x)=-20000<0$. Since this is the only critical point,
+local maximum there, since $P''(x)=-20000<0$. Since this is the only critical number,
 it must be a global maximum as well. 
 \begin{onlineOnly} 
    We can confirm our results by looking at the graph of $y=P(x)$:
@@ -257,12 +257,12 @@ By simplifying, we were able to express the volume of the cone as a function of 
  \]
 
 We want to maximize the function $V_{\text{c}}$ on the interval $[0,2R]$.
-Since this is a continuous function on a closed interval, the maximum is attained either at a critical point or an end point.
+Since this is a continuous function on a closed interval, the maximum is attained either at a critical number or an end point.
 By solving the equation 
 \[
 V_{\text{c}}'(h)=-\pi h^2+(4/3)\pi h R=0,
 \] 
-we find that the function has at $h=4R/3$ its only critical point, since $h=0$ is an end point.  We evaluate the function at all the critical and end points,
+we find that the function has at $h=4R/3$ its only critical number, since $h=0$ is an end point.  We evaluate the function at all the critical numbers and end points,
 \[
 V_{\text{c}}(0)=V_{\text{c}}(2R)=0,
 \]
@@ -386,7 +386,7 @@ R^3$, the fraction of the sphere occupied by the cone is
     \[
     c(0) = 380000 \quad\quad c(5000) \approx 662873.
     \]
-    We now find the critical points of $c(x)$. We compute $c'(x)$ as
+    We now find the critical numbers of $c(x)$. We compute $c'(x)$ as
     \[
     c'(x) = -50+\frac{\answer[given]{130x}}{\sqrt{x^2+1000^2}}.
     \]
@@ -500,7 +500,7 @@ If it is, we can use the second derivative to test it:
 T''(x) = \answer[given]{\frac{b^2}{(x^2+b^2)^{3/2}w}}.
 \]
 Since this is always positive there is a local minimum at the critical
-point, and so it is a global minimum as well.
+number, and so it is a global minimum as well.
 
 If the critical value is not in $[0,a]$ it is larger than $a$. In this
 case the minimum must occur at one of the endpoints. We can compute
