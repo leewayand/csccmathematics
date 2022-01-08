@@ -16,7 +16,7 @@ Fundamental Theory of Algebra
 
 
 
-TALl of our examples are very suggestive that polynomials factor into a product of linear factors.  And, there are as many linear factors as the degree of the polynomial, if you count multiplicities. \\
+So far, our examples are very suggestive that polynomials factor into a product of linear factors.  And, there are as many linear factors as the degree of the polynomial, if you count multiplicities. \\
 
 
 
@@ -86,6 +86,7 @@ For now, we can get halfway there. We can say that there is no more linear facto
 deg(p(x)) = deg(p_1(x)) + deg(p_2(x)) + \cdots + deg(p_k(x))
 \]
 
+If all of these factors were linear, then 
 
 \[
  p(x) = a (x - r_n) (x - r_{n-1}) \cdots (x - r_2)  (x - r_1) 
@@ -104,7 +105,11 @@ would be $1 + 1 + 1 + \cdots + 1 = n$.
 
 
 
-Therefore, if a polynomial is written as a factorization with only linear terms, then there can't be more factors than the degree of the polynomial
+Therefore, if a polynomial is written as a factorization with only linear terms, then there can't be more factors than the degree of the polynomial. \\
+
+
+
+To get ``equals'' we need the other half.  We need that there are indeed $n$ or more linear factors.  This will need some thinking to prove.
 
 \end{idea}
 
@@ -140,13 +145,13 @@ This is also a helpful idea for the Fundamental Theorem of Algebra. \\
 
 
 
-\begin{idea} \textbf{Intercepts Correspond to Factors} \\
+\begin{idea} \textbf{\textcolor{blue!55!black}{Intercepts Correspond to Factors}}   \\
 
 
 
 We have seen that if the graph has an intercept, then this corresponds to a zero of a function.  This would be a root of a polynomial function. \\
 
-Let $(r, 0)$ be an intercept on the graph of $y = p(x)$, then 
+Let $p$ be a polynomila and $(r, 0)$ be an intercept on the graph of $y = p(x)$, then 
 
 \[
 p(x) = (x-r) \cdot q(x), \, \text{ where } \, q(x) \, \text{ is a polynomial. }

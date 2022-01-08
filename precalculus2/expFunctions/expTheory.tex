@@ -18,7 +18,7 @@ the exponential story
 We have two levels of exponential formulas: the basic template and then the general template, which includes shifts and stretches.  All of these are based on our original idea of \textbf{\textcolor{purple!85!blue}{constant percentage growth}}.
 
 
-Constant percentage growth means that the value  of our function grows by equal percentage over equal size intervals in the domain.
+Constant percentage growth means that the value  of our function grows by an equal percentage over equal size intervals in the domain.
 
 
 
@@ -31,12 +31,12 @@ For example, let $f$ be a function that grows by $30\%$ over every domain interv
 \item If $f(\pi) = \sqrt{3}$, then $f(\pi + 1) = 1.3 \cdot \sqrt{3} = 1.3 \sqrt{3}$
 \end{itemize}
 
-Every time the domain interval changes by $1$, then the function is multiplied by $1.3$ (an increase of $30\%$).
+Every time the domain interval changes by $1$, then the function value is multiplied by $1.3$ (an increase of $30\%$).
 
 
 
 
-There are many functions that possess this characteristic.  We call $f(0)$ the \textbf{\textcolor{purple!85!blue}{initial value}}.
+There are many basic exponential functions that possess this characteristic. They all can be written in the form \textbf{\textcolor{blue!55!black}{$f(x) = a \cdot r^x$}}. We call \textbf{\textcolor{purple!85!blue}{$a=f(0)$}} the \textbf{\textcolor{purple!85!blue}{initial value}}.
 
 
 
@@ -57,13 +57,14 @@ There are many functions that possess this characteristic.  We call $f(0)$ the \
           
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
-          \addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
 
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {2 * (1.3^x)};
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {3 * (1.3^x)};
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {5 * (1.3^x)};
-           \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {0.3 * (1.3^x)};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8)] {0.3 * (1.3^x)};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
 
   \end{axis}
 \end{tikzpicture}
@@ -112,7 +113,7 @@ When $r$ \wordChoice{\choice{$<$} \choice[correct]{$>$}} $1$ we have a growing f
 \[  \lim_{x \to -\infty} a \, r^x = 0 \, \text{ and } \, \lim_{x \to \infty} a \, r^x = \pm\infty \]
 
 
-The sign of $a$ dictates if the unbounded growth is positive or negative, since $r^x > 0$.
+Since $r^x$ is always positive, it is the sign of $a$ that dictates if the unbounded growth is positive or negative.
 
 
 
@@ -215,7 +216,7 @@ The sign of $a$ dictates if the function decays through positive or negative val
 
 
 
-Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $(0, a)$.
+Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $(0, a)$, which is now below the horizontal asymptote, because $a < 0$.
 
 
 
@@ -235,7 +236,7 @@ All four basic exponential graphs share a common structure.
 \item All are a distance of $a$ from the asymptote, when the exponent equals $0$.
 \end{itemize}
 
-These are the important aspects or characteristics that we use when shifting and stretching graphs of exponential functions.
+These are the important aspects or characteristics that we watch when shifting and stretching graphs of exponential functions.
 
 
 
@@ -300,7 +301,7 @@ The coefficient in front, $a$, tells us if this larger/smaller value is positive
 
 
 
-As we see, exponential functions can be
+As we see, basic exponential functions can be
 
 \begin{itemize}
 \item positive and increasing
@@ -355,11 +356,11 @@ Analyze   $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ \\
 
 \begin{explanation}
 
-For the basic exponential function graph, the horizontal axis is the horizontal asymptote.  Here, this has been moved down $\answer{7}$.
+Compared to a basic exponential function graph, where the horizontal axis is the horizontal asymptote, here, the horizontal asymptote has been moved down $\answer{7}$ units.
 
 
 
-The ``inside'', representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
+The ``inside'' of $f(x)$, representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
 
 At $x=-5$, we have our one anchor point for the graph.  The point is $\left(-5, \frac{1}{3} - 7 \right)$, which is $\frac{1}{3}$ above the horizontal asymptote, $y = -7$.
 
@@ -484,6 +485,29 @@ Similarly, horizontal stretching can also be absorbed by the leading coefficent.
 \]
 
 
+
+
+We have a choice.  For a general exponential functions, we can think about stretching or we can apply a little algebra and return to a basic exponential function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{example} Another View
 
 
@@ -493,6 +517,12 @@ $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ is the function in the last example.  We cou
 \[ 
 f(x) = \frac{1}{3} \, 2^{x+5} - 7 = \frac{1}{3} \, 2^x \cdot 2^5 - 7 = \frac{32}{3} \, 2^x  - 7
 \]
+
+
+We now have a basic exponential function shifted down $7$.  The new base is still $2$ and the new leading coefficient is $\frac{32}{3}$.
+
+
+
 
 
 By doing this, we change our strategic point to $\left( 0, \frac{32}{3} - 7 \right) = \left( 0, \frac{11}{3} \right)$.
@@ -538,6 +568,58 @@ By doing this, we change our strategic point to $\left( 0, \frac{32}{3} - 7 \rig
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Altering Algebraicaaly
+
+
+
+$G(t) = 4 \, 3^{2t-1} - 5$.  
+
+We could take advantage of exponential algebra to simplify the formula.   \\
+
+\[ 
+G(t) = 4 \, 3^{2t-1} - 5 = 4 \, 3^{2t} \cdot \frac{1}{3} - 5 = \frac{4}{3} \, (3^2)^t - 5  = \frac{4}{3} \, 9^t - 5
+\]
+
+
+We now have a basic exponential function shifted down $5$.  The new base is $9$ and the new leading coefficient is $\frac{4}{3}$.
+
+
+
+
+The leading coefficient is $\frac{4}{3} > 0$ and the base is $9 > 1$. Therefore, $G(t)$ is an increasing function.  The function values will be positive, once they overcome the drop of $5$ to the horizontal asymptote.
+
+
+Since the new base $9$ is greater than the old base of $3$, the funciton grows faster.  The graph goes up to the right faster and steeper.  This means the graph is compressed horizontally, which is the result of multiplying by $2$ in the exponent.
+
+
+
+
+
+End-Behavior:
+\[
+\lim\limits^{t \to -\infty}G(t) = -5 \, \text{ and } \, \lim\limits^{t \to \infty}G(t) = \infty
+\]
+
+
+
+
+\end{example}
 
 
 
@@ -704,7 +786,7 @@ Our analysis tells us that
 
 
 
-In the example above, could have algebraically moved the horizontal shift to the leading coefficient.
+In the example above, we could have algebraically moved the horizontal shift to the leading coefficient.
 
 
 
@@ -728,7 +810,7 @@ In the example above, could have algebraically moved the horizontal shift to the
 \]
 
 
-We could have further transferred the negative sign in the exponent to the base by reciprocating the base.
+We could have further transfered the negative sign in the exponent to the base by reciprocating the base.
 
 \[
 \left( \frac{-16}{27} \right)  \cdot \left( \frac{3}{2} \right)^t+ 4
