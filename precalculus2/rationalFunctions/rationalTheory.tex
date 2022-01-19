@@ -58,7 +58,7 @@ $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Domain:}}  The natural
 
 
 
-Of course, any particular rational function may be defined with a stated subset of the real numbers, in which case we  say that it is a \textbf{restricted} rational function.
+Of course, any particular rational function may be defined with a stated subset of the real numbers as the domain, in which case we  say that it is a \textbf{restricted} rational function.
 
 
 
@@ -73,7 +73,7 @@ Following our analysis of polynomials, we would like to factor, collect common f
 \[  R(x)  = \frac{a (x - r_k)^{e_k} (x - r_{k-1})^{e_{k-1}} \cdots (x - r_1)^{e_1} }{b (x - s_h)^{f_h} (x - s_{h-1})^{f_{h-1}} \cdots (x - s_1)^{f_1}}            \]
 
 
-Here, the roots are distinct, which means that  $r_i \ne r_j$ when $i \ne j$, and $s_i \ne s_j$ when $i \ne j$.
+Here, the roots are distinct, which means that  $r_i \ne r_j$ when $i \ne j$, and $s_i \ne s_j$ when $i \ne j$, and $r_i \ne s_j$ for all $i$ and $j$.
 
 
 
@@ -188,7 +188,7 @@ $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Roots and Zeros:}} \\
 
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Singularities:}} \\
-Singularities of a rational function are the zeros of the denominator polynomial.  Vertical asymptotes represent these types of singularities graphically.
+Singularities of a rational function are the zeros of the denominator polynomial.  Vertical asymptotes usually represent these types of singularities graphically.
 
 \begin{itemize}
 \item If the multiplicity is odd then the function changes sign over the singularity.  The graph moves to the other end of the corresponding vertical asymptote.
@@ -199,11 +199,33 @@ Singularities of a rational function are the zeros of the denominator polynomial
 
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Hole:}} \\
-If a common factor between the numerator and denominator have the same multiplicity, then they will be completely removed from the formula upon simplification.  In this case, we do not have a root and we do not have a singularity.  Instead, we have a hole.  The new, simplified formula has a value for the missing factors.  However, we cannot use it, because the factors were initially there, thus removing the zero from the domain.  Therefore, we end up with a hole in the graph. \\
+Another type of singularity for rational functions is a hole. If a common factor between the numerator and denominator have the same multiplicity, then they will be completely removed from the formula upon simplification.  In this case, the rational function behaves nicely, except that particular number is removed from the domain..  We have a hole in the graph.  The new, simplified formula has a value for the missing factors.  However, we cannot use it, because the factors were initially there, thus removing the zero from the domain.  Therefore, we end up with a hole in the graph. \\
 
 
 
 \textbf{Note:} Remember, the original formula dictates the domain. The simplified form might have a factor in the numerator, indicating a zero. However, if the original formula also had a matching denominator factor, then there will be a hole in the graph rather than an intercept. 
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Removeable Discontinuity}}
+
+If a function can be redefined at a single domain number to remove a discontinuity, then that discontiuity is said to be \textbf{removeable}.
+
+\end{definition}
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Removeable Singularity}}
+
+If a function can be defined at a single nondomain number to remove a singularity, then that singularity is said to be \textbf{removeable}.
+
+\end{definition}
+
+
+
 
 
 
@@ -220,7 +242,7 @@ It appears that $R(x)$ has $5$ as a root and $(5,0)$ as an intercept for the gra
 
 
 
-
+We could define $R(5)=0$ and then the hole would disappear from the graph.  The singularity would disappear from the function. Therefore, $5$ is a removeable singularity of $R$.
 
 
 \end{example}
