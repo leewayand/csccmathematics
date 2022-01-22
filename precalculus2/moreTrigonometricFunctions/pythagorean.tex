@@ -2,12 +2,12 @@
 
 \input{../../preamble.tex}
 
-\title{Cosecant}
+\title{Identities}
 
 \begin{document}
 
 \begin{abstract}
-attributes
+Pythagorean Theorem
 \end{abstract}
 \maketitle
 
@@ -71,30 +71,25 @@ Here is our current diagram for our trigonometric functions.
           %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
           \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
-          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
-          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
-          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+
           \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
-          \node[penColor] at (axis cs:0.85,.27) {$b$};
-          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$a$};
-          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+          \node[penColor] at (axis cs:0.85,.27) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+
            \node[penColor] at (axis cs:0.37,0.4) {$1$};
 
 
           \node at (axis cs:0.84, 0.5) [anchor=north] {$\theta$};
-          %\addplot [textColor,smooth, domain=(270:310)] ({0.15*cos(x)+0.766},{0.15*sin(x)+0.643});
-          %\node[textColor] at (axis cs:1.1,0)[anchor=north] {$c$};
 
-          \node[textColor] at (axis cs:1.1,0)[anchor=north] {$\sec(\theta)$};
-          %\node[textColor] at (axis cs:1.05,0.5)[anchor=north] {$h$};
 
-          %\node[textColor] at (axis cs:0.4,1.3)[anchor=north] {$k$};
+          \node[textColor] at (axis cs:0.766,-0.15)[anchor=north] {$\sec(\theta)$};
+
           \node at (axis cs:0.07,1.4) [anchor=north] {$\theta$};
 
 
           \node[textColor, rotate=-50] at (axis cs:1.05,0.5) {$\tan(\theta)$};
           \node[textColor, rotate=-50] at (axis cs:0.4,1.3) {$\cot(\theta)$};
-          \node[textColor] at (axis cs:0,0.75)[anchor=east] {$m$};
+          \node[textColor] at (axis cs:0,0.75)[anchor=east] {$\csc(\theta)$};
 
 
 
@@ -106,15 +101,46 @@ Here is our current diagram for our trigonometric functions.
 
 
 
+There are many right triangles and we know that the Pythagorean Theorem is a right triangle relationship.
+
+
+\begin{theorem} \textbf{\textcolor{green!50!black}{Pythagorean Theorem}}
+
+
+The sum of the squares of the lengths of the legs of a right triangle equals the square of thelength of the hypotenuse.
+
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{$\text{leg}^2 + \text{leg}^2 = \text{hypotenuse}^2$}}
+\end{center} 
 
 
 
 
 
+\end{theorem}
+
+
+
+From our diagram, the Pythagorean Theorem tells us 
 
 
 
 
+\[
+\sin(\theta)^2 + \cos(\theta)^2 = 1
+\]
+
+
+\[
+1 + \tan(\theta)^2 = \sec(\theta)^2
+\]
+
+
+\[
+1 + \cot(\theta)^2 = \csc(\theta)^2
+\]
 
 
 
