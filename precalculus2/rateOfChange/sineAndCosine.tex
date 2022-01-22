@@ -37,10 +37,17 @@ As you move long the $\sin(\theta)$ curve, the slope of the tangent line follows
 
 
 
-$\cos(\theta)$ is the derivative of $\sin(\theta)$.  The values of $\cos(\theta)$ measure the instantaneous rate of change of $\sin(\theta)$.
+The values of $\cos(\theta)$ measure the instantaneous rate of change of $\sin(\theta)$.
 
 
 
+\begin{theorem}  \textbf{\textcolor{green!50!black}{Derivative of $\sin(\theta)$}}
+
+\begin{center}
+$\cos(\theta)$ is the derivative of $\sin(\theta)$.  
+\end{center}
+
+\end{theorem}
 
 
 
@@ -75,7 +82,17 @@ As you move long the $\cos(\theta)$ curve, the slope of the tangent line follows
 
 
 
-$-\sin(\theta)$ is the derivative of $\cos(\theta)$.  Its values measure the instantaneous rate of change of $\cos(\theta)$.
+The values of $-\sin(\theta)$ measure the instantaneous rate of change of $\cos(\theta)$.
+
+
+
+\begin{theorem}  \textbf{\textcolor{green!50!black}{Derivative of $\cos(\theta)$}}
+
+\begin{center}
+$-\sin(\theta)$ is the derivative of $\cos(\theta)$. 
+\end{center}
+
+\end{theorem}
 
 
 
@@ -83,12 +100,12 @@ $-\sin(\theta)$ is the derivative of $\cos(\theta)$.  Its values measure the ins
 
 
 
+We use these two facts as our algebraic reasoning for the behavior of $\sin(\theta)$ and $\cos(\theta)$.
 
 
-This is our algebraic reasoning for the behavior of $\sin(\theta)$ and $\cos(\theta)$.
 
 
-
+\begin{example}
 
 
 
@@ -97,6 +114,22 @@ $f(t) = \sin(t)$ is decreasing at $t=\frac{2\pi}{3}$, because $\cos\left( \frac{
 
 $g(t) = \cos(t)$ is decreasing at $t=\frac{\pi}{4}$, because $-\sin\left( \frac{\pi}{4} \right) < 0$
 
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \subsection{Shifts}
@@ -104,11 +137,15 @@ $g(t) = \cos(t)$ is decreasing at $t=\frac{\pi}{4}$, because $-\sin\left( \frac{
 
 
 
-If the graph $y = \sin(t)$ is vertically shifted to $y = \sin(t)+C$, then the shape of the graph does not change. Therefore, the slopes of the tangent lines at the shifted points don't change.
+If the graph $y = \sin(t)$ is vertically shifted to $y = \sin(t)+C$, then the shape of the graph does not change. The graph just rigidly moves up. Therefore, the slopes of the tangent lines at the shifted points are the same as for $y = \sin(t)$ .
 
 
 
-\begin{observation} Vertical Shifts \\
+\begin{observation} \textbf{\textcolor{purple!85!blue}{Vertical Shifts}}  \\
+
+SHifting a graph vertically doesn;t change the shape.  It just repositions the graph.  Therefore, all of the slopes of the tangents lines stay the same. \\
+
+
 
 $\blacktriangleright$ The derivative of $\sin(t)+C$ is $\cos(t)$. \\
 
@@ -119,11 +156,11 @@ $\blacktriangleright$ The derivative of $\cos(t)+C$ is $-\sin(t)$. \\
 
 
 
-If the graph $y = \sin(t)$ is horizontally shifted to $y = \sin(t - B)$, then the shape of the graph does not change. Therefore, the slopes of the tangent lines at the shifted points don't change.
+If the graph $y = \sin(t)$ is horizontally shifted to $y = \sin(t - B)$, then the shape of the graph does not change. The whole graph is just picked up and set down at a new location. Therefore, the slopes of the tangent lines at the shifted points don't change.
 
 
 
-\begin{observation} Horizontal Shifts \\
+\begin{observation} \textbf{\textcolor{purple!85!blue}{Horizontal Shifts}} \\
 
 $\blacktriangleright$ The derivative of $\sin(t - B)$ is $\cos(t - B)$. \\
 
@@ -175,10 +212,10 @@ M = \frac{k \cdot y_2 - k \cdot y_1}{x_2 - x_1} = \frac{k \cdot (y_2 - y_1)}{x_2
 \]
 
 
+If you stretch the graph of a funciton vertically by a factor of $k$, then you also stretch all of the tangent lines by the same factor.
 
 
-
-\begin{observation} Vertical Stretch \\
+\begin{observation} \textbf{\textcolor{purple!85!blue}{Vertical Stretching}}   \\
 
 $\blacktriangleright$ The derivative of $k \cdot \sin(t)$ is $k \cdot \cos(t)$. \\
 
@@ -188,7 +225,7 @@ $\blacktriangleright$ The derivative of $k \cdot \cos(t)$ is $-k \cdot \sin(t)$.
 
 
 
-
+Let's put all of this together.
 
 
 
@@ -198,15 +235,226 @@ $\blacktriangleright$ The derivative of $k \cdot \cos(t)$ is $-k \cdot \sin(t)$.
 
 \begin{theorem} \textbf{\textcolor{green!50!black}{Derivatives}}  \\
 
-$\blacktriangleright$ The derivative of $A \, \sin(t - h) + k$ is $A \, \cos(t - h) + k$. \\
+$\blacktriangleright$ The derivative of \textbf{\textcolor{purple!85!blue}{$A \, \sin(t - h) + k$}} is \textbf{\textcolor{blue!55!black}{$A \, \cos(t - h)$}}. \\
 
-$\blacktriangleright$ The derivative of $A \, \cos(t - h) + k$ is $-A \, \sin(t - h) + k$. \\
+$\blacktriangleright$ The derivative of \textbf{\textcolor{purple!85!blue}{$A \, \cos(t - h) + k$}} is \textbf{\textcolor{blue!55!black}{$-A \, \sin(t - h)$}}. \\
 
 \end{theorem}
 
 
 
 
+\begin{example}
+
+
+What is the slope of the tangent line to the graph of $y = -2 \sin\left( t - \frac{\pi}{6} \right) + 3$ at $\left( \frac{5 \pi}{6}, 3-\sqrt{3} \right)$?
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=6.5, xmax=10, ymin=-1.5, xmin=-10,
+            axis lines =center, xlabel={$t$}, ylabel={$y = \sin(t)$}, grid = major, grid style={dashed},
+            ytick={-1,1,2,3,4,5,6},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-1$,$1$,$2$,$3$,$4$,$5$,$6$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {-2 * sin(deg(x - 0.523)) + 3};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+			\addplot [line width=2, penColor2, smooth,samples=300,domain=(1.5:5),<->] { (x-2.618) + 1.268};
+
+            \addplot [color=penColor,only marks,mark=*] coordinates{(2.618,1.2679)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\begin{explanation}
+
+
+
+The derivative of $f(t) = -2 \sin\left( t - \frac{\pi}{6} \right) + 3$ is $f'(t) = -2 \cos\left( t - \frac{\pi}{6} \right)$.
+
+
+
+\[ f'\left( \frac{5 \pi}{6} \right) = -2 \cos\left( \frac{5 \pi}{6} - \frac{\pi}{6} \right) = -2 \cos\left( \frac{2 \pi}{3} \right)  = -2 \cdot -\frac{1}{2} = 1\]
+
+
+The slope of the tangent line is $1$.
+
+\end{explanation}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $G(x) = 3 \cos\left( x +\frac{\pi}{4} \right) - 1$.
+
+Where does the graph of $y = G(x)$ have horizontal tangent lines?
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=4.5, xmax=10, ymin=-5.5, xmin=-10,
+            axis lines =center, xlabel={$t$}, ylabel={$y = \sin(t)$}, grid = major, grid style={dashed},
+            ytick={-3,-2,-1,1,2,3,4,5},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$,$5$,$6$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {3 * cos(deg(x + 0.785)) - 1};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+			%\addplot [line width=2, penColor2, smooth,samples=300,domain=(1.5:5),<->] { (x-2.618) + 1.268};
+
+            %\addplot [color=penColor,only marks,mark=*] coordinates{(2.618,1.2679)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We two approaches:
+
+\begin{explanation} Maximums and Minimums \\
+
+The horizontal tangent lines occur at points which correspond to maximums and minimums of cosine.  
+
+
+$\blacktriangleright$ Maximums of cosine functions occur when the inside of the function equals $2 k \pi$ where $k \in \mathbb{Z}$.
+
+
+\[
+x + \frac{\pi}{4} = 2 k \pi
+\]
+
+\[
+x = 2 k \pi - \frac{\pi}{4} = \frac{8 k \pi}{4} - \frac{\pi}{4} = \frac{(8k - 1)\pi}{4}
+\]
+
+
+
+
+$\blacktriangleright$ Minimums of cosine functions occur when the inside of the function equals $(2 k + 1) \pi$ where $k \in \mathbb{Z}$.
+
+
+\[
+x + \frac{\pi}{4} = (2 k + 1) \pi
+\]
+
+\[
+x = (2 k + 1) \pi - \frac{\pi}{4} = \frac{4(2 k + 1) \pi}{4} - \frac{\pi}{4} = \frac{(8k + 3)\pi}{4}
+\]
+
+
+\end{explanation}
+
+
+
+
+
+
+
+
+\begin{explanation} Critical Numbers \\
+
+
+The horizontal tangent lines occur at points which correspond to where the derivative equal $0$.  
+
+
+
+
+
+
+The derivative of $G(x) = 3 \cos\left( x + \frac{\pi}{4} \right) - 1$ is $G'(x) = 3 \sin\left( x + \frac{\pi}{4} \right)$.
+
+
+The sine function equals $0$ and $k \pi$ where $k \in \mathbb{Z}$.
+
+
+
+\[
+x + \frac{\pi}{4} =  k \pi
+\]
+
+
+\[
+x  =    k \pi - \frac{\pi}{4} =  \frac{4 k \pi}{4} - \frac{\pi}{4} = \frac{(4k - 1)\pi}{4}
+\]
+
+
+
+
+
+
+
+
+
+\end{explanation}
+
+
+
+Did these two methods give the same set of domain numbers? \\
+
+
+
+\[
+\frac{(8k - 1)\pi}{4} :  \cdots \frac{-17\pi}{4}, \frac{-9\pi}{4}, \frac{-\pi}{4}, \frac{7\pi}{4} \cdots
+\]
+
+\[
+\frac{(8k + 3)\pi}{4} :  \cdots \frac{-13\pi}{4}, \frac{-5\pi}{4}, \frac{3\pi}{4}, \frac{11\pi}{4} \cdots
+\]
+
+
+\[
+\frac{(4k - 1)\pi}{4} :  \cdots \frac{-9\pi}{4}, \frac{-5\pi}{4}, \frac{-\pi}{4}, \frac{3\pi}{4} \cdots
+\]
+
+
+
+Yep.  They are generating the same list.
+
+
+\end{example}
 
 
 
