@@ -21,7 +21,7 @@ We have a new family of Trigonometric functions. And, to complete the picture, w
 
 
 
-\section{ArcSine}
+\section{Arcsine}
 
 
 The sine function is not one-to-one.
@@ -153,9 +153,33 @@ We can now reverse all of the pairs and obtain the inverse function known as \te
 
 
 
-$Arcsine$ only returns angles between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$.  It is an inverse function for these angles.
+$Arcsine$ only returns angles between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$. These are the fourth and first quadrants. Arcsine is an inverse function for sine for these angles.
 
 
+
+\begin{example}
+
+
+
+$\sin\left(\frac{\pi}{6}\right) = \frac{1}{2}$
+
+$\arcsin\left(\frac{1}{2}\right) = \frac{\pi}{6}$
+
+
+$\arcsin\left(\sin\left(\frac{\pi}{6}\right)\right) = \frac{\pi}{6}$
+
+
+\end{example}
+
+
+
+
+When angles are outside $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$, then the Arcsine brings them back into this interval.
+
+
+
+
+\begin{example}
 
 
 
@@ -169,6 +193,117 @@ $\arcsin\left(\sin\left(\frac{5\pi}{6}\right)\right) = \frac{\pi}{6}$
 
 
 
+We begin with the angle $\frac{5\pi}{6}$ whose sine is $\frac{1}{2}$.  Then Arcsine looks for an angle whose sine is $\frac{1}{2}$.  But Arcsine only looks in quadrants I and IV.  So, it finds $\frac{\pi}{6}$.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\subsection{\textbf{\textcolor{purple!85!blue}{Characteristics}}} 
+
+We can deduce many characteristics about arcsine from sine.
+
+
+$\blacktriangleright$ The domain is  $[-1, 1]$.
+
+
+$\blacktriangleright$ The range is $\left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]$
+
+
+$\blacktriangleright$ Arcsin has one zero and that is $0$.
+
+
+$\blacktriangleright$ Arcsin is an increasing function.
+
+$\blacktriangleright$ Arcsin is a continuous function.
+
+$\blacktriangleright$ Arcsin has a maximum of $\frac{\pi}{2}$, which occurs at $1$.
+
+$\blacktriangleright$ Arcsin has a minimum of $-\frac{\pi}{2}$, which occurs at $-$.
+
+
+
+\begin{question}
+
+
+If $0 < \theta < \frac{\pi}{2}$, then $\arcsin(\sin(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice[correct] {I}
+\choice {II}
+\choice {III}
+\choice {IV}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{\pi}{2} < \theta < \pi$, then $\arcsin(\sin(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice[correct] {I}
+\choice {II}
+\choice {III}
+\choice {IV}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $\pi < \theta < \frac{3\pi}{2}$, then $\arcsin(\sin(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice {I}
+\choice {II}
+\choice {III}
+\choice[correct] {IV}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{3\pi}{2} < \theta < 2\pi$, then $\arcsin(\sin(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice {I}
+\choice {II}
+\choice {III}
+\choice[correct] {IV}
+\end{multipleChoice}
+
+\end{question}
 
 
 
@@ -184,7 +319,107 @@ $\arcsin\left(\sin\left(\frac{5\pi}{6}\right)\right) = \frac{\pi}{6}$
 
 
 
-\section{ArcCosine}
+
+
+
+\begin{question}
+
+
+If $0 < \theta < \frac{\pi}{2}$, then $\arcsin(\sin(\theta))$ equals
+
+\begin{multipleChoice}
+\choice[correct] {$\theta$}
+\choice {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice {$\theta - 2\pi$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{\pi}{2} < \theta < \pi$, then $\arcsin(\sin(\theta))$ equals
+
+\begin{multipleChoice}
+\choice {$\theta$}
+\choice[correct] {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice {$\theta - 2\pi$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+\begin{question}
+
+
+If $\pi < \theta < \frac{3\pi}{2}$, then $\arcsin(\sin(\theta))$ equals
+
+\begin{multipleChoice}
+\choice {$\theta$}
+\choice[correct] {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice {$\theta - 2\pi$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{3\pi}{2} < \theta < 2\pi$, then $\arcsin(\sin(\theta))$ equals
+
+\begin{multipleChoice}
+\choice {$\theta$}
+\choice {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice[correct] {$\theta - 2\pi$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Arccosine}
 
 
 
@@ -337,16 +572,249 @@ $Arccosine$ only returns angles between $0$ and $\pi$.  It is an inverse functio
 
 
 
-$\cos\left(-\frac{\pi}{6}\right) = \frac{1}{2}$
-
-$\arccos\left(\frac{1}{2}\right) = \frac{\pi}{6}$
-
-
-$\arccos\left(\cos\left(-\frac{\pi}{6}\right)\right) = \frac{\pi}{6}$
+\begin{example}
 
 
 
+$\cos\left(\frac{2\pi}{3}\right) = -\frac{1}{2}$
 
+$\arccos\left(-\frac{1}{2}\right) = \frac{2\pi}{3}$
+
+
+$\arccos\left( \cos\left( \frac{2\pi}{3} \right) \right) = \frac{2\pi}{3}$
+
+
+\end{example}
+
+
+
+
+When angles are outside $\left[ 0,\pi \right]$, then the Arcsine brings them back into this interval.
+
+
+
+
+\begin{example}
+
+
+
+$\cos\left(\frac{7\pi}{6}\right) = -\frac{\sqrt{3}}{2}$
+
+$\arccos\left(\frac{-\sqrt{3}}{2}\right) = \frac{5\pi}{6}$
+
+
+$\arccos\left(\cos\left(\frac{7\pi}{6}\right)\right) = \frac{5\pi}{6}$
+
+
+
+
+We begin with the angle $\frac{5\pi}{6}$ whose cosine is $-\frac{\sqrt{3}}{2}$.  Then Arccosine looks for an angle whose cosine is $-\frac{\sqrt{3}}{2}$.  But Arccosine only looks in quadrants I and II.  So, it finds $\frac{5\pi}{6}$.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+\subsection{\textbf{\textcolor{purple!85!blue}{Characteristics}}} 
+
+We can deduce many characteristics about arccosine from cosine.
+
+
+$\blacktriangleright$ The domain is  $[-1, 1]$.
+
+
+$\blacktriangleright$ The range is $[0, \pi]$
+
+
+$\blacktriangleright$ Arcsin has one zero and that is $1$.
+
+
+$\blacktriangleright$ Arcsin is an decreasing function.
+
+$\blacktriangleright$ Arcsin is a continuous function.
+
+$\blacktriangleright$ Arcsin has a maximum of $\pi$, which occurs at $-1$.
+
+$\blacktriangleright$ Arcsin has a minimum of $0$, which occurs at $1$.
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $0 < \theta < \frac{\pi}{2}$, then $\arccos(\cos(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice[correct] {I}
+\choice {II}
+\choice {III}
+\choice {IV}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{\pi}{2} < \theta < \pi$, then $\arccos(\cos(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice {I}
+\choice[correct] {II}
+\choice {III}
+\choice {IV}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $\pi < \theta < \frac{3\pi}{2}$, then $\arccos(\cos(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice {I}
+\choice[correct] {II}
+\choice {III}
+\choice {IV}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{3\pi}{2} < \theta < 2\pi$, then $\arccos(\cos(\theta))$ is in quadrant
+
+\begin{multipleChoice}
+\choice[correct] {I}
+\choice {II}
+\choice {III}
+\choice {IV}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $0 < \theta < \frac{\pi}{2}$, then $\arccos(\cos(\theta))$ equals
+
+\begin{multipleChoice}
+\choice[correct] {$\theta$}
+\choice {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice {$2\pi - \theta$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{\pi}{2} < \theta < \pi$, then $\arccos(\cos(\theta))$ equals
+
+\begin{multipleChoice}
+\choice[correct] {$\theta$}
+\choice {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice {$2\pi - \theta$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+\begin{question}
+
+
+If $\pi < \theta < \frac{3\pi}{2}$, then $\arccos(\cos(\theta))$ equals
+
+\begin{multipleChoice}
+\choice {$\theta$}
+\choice {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice[correct] {$2\pi - \theta$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+\begin{question}
+
+
+If $\frac{3\pi}{2} < \theta < 2\pi$, then $\arccos(\cos(\theta))$ equals
+
+\begin{multipleChoice}
+\choice {$\theta$}
+\choice {$\pi - \theta$}
+\choice {$\pi + \theta$}
+\choice[correct] {$2\pi - \theta$}
+\end{multipleChoice}
+
+\end{question}
 
 
 
