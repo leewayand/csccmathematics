@@ -1,0 +1,216 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{newArcTangent}
+
+\begin{document}
+
+\begin{abstract}
+useful
+\end{abstract}
+\maketitle
+
+
+
+top
+
+The tangent function is not a one-to-one function.
+
+middle
+
+
+
+
+
+bottom
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            xtick={-4.71, -1.57, 1.57, 4.71}, 
+            xticklabels={$-\frac{3\pi}{2}$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-4.71},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
+
+      \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The usual choice for restricting the domain is $\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$.  
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-4.75:4.75, ymax=10, xmax=4.75, ymin=-10, xmin=-4.75,
+            xtick={-4.71, -1.57, 1.57, 4.71}, 
+            xticklabels={$-\frac{3\pi}{2}$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+We then revolve the graph around the $y=\theta$ diagonal.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-20:20, ymax=1.7, xmax=20, ymin=-1.7, xmin=-20,
+            axis lines =center, xlabel={$x$}, ylabel={$y = \arctan(x)$}, grid = major, grid style={dashed},
+            ytick={-1.57,-0.785,0.785,1.57},
+            xtick={-20,-15,-10,-5,5,10,15,20},
+            xticklabels={$-20$,$-15$,$-10$,$-5$,$5$,$10$,$15$,$20$},
+            yticklabels={$-\tfrac{\pi}{2}$, $-\tfrac{\pi}{4}$,$\tfrac{\pi}{4}$, $\tfrac{\pi}{2}$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-1.52:1.52),<->] ({tan(deg(x))},{x});
+            \addplot [line width=1, gray, dashed,samples=300,domain=(-20:20),<->] {-1.57};
+            \addplot [line width=1, gray, dashed,samples=300,domain=(-20:20),<->] {1.57};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The vertical asymptotes become horizontal asymptote and represent end-behavior. \\
+
+
+
+
+
+
+
+
+
+\subsection{\textbf{\textcolor{purple!85!blue}{Characteristics}}} 
+
+We can deduce many characteristics about arctangent from tangent.
+
+
+$\blacktriangleright$ The domain is all real numbers, $(-\infty, \infty)$.
+
+
+$\blacktriangleright$ The range is $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$
+
+
+$\blacktriangleright$ Arctan has one zero and that is $0$.
+
+
+$\blacktriangleright$ Arctan is an increasing function.
+
+$\blacktriangleright$ Arctan is a continuous function.
+
+$\blacktriangleright$ Arctan has no maximums or minimums.
+
+
+$\blacktriangleright$ End-Behavior
+
+
+
+
+
+\begin{itemize}
+  \item $\lim\limits_{x \to -\infty} \arctan(x) = -\frac{\pi}{2}$
+  \item $\lim\limits_{x \to \infty} \arctan(x) = \frac{\pi}{2}$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\subsection{\textbf{\textcolor{purple!85!blue}{Coordinates}}} 
+
+Given a point described with Cartesian (rectangular) coordinates, $(x, y)$, we can obtain polar coordinates via the equations
+
+
+\begin{itemize}
+\item $r^2 = x^2 + y^2$
+\item $\theta = \arctan\left( \frac{y}{x} \right)$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\end{document}
+
