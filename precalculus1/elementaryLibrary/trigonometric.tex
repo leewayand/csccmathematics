@@ -66,7 +66,7 @@ We call these functions \textbf{cosine} and \textbf{sine}.
         	%\node[anchor=east] at (axis cs:1.85,3) {$d$};
         	%\node[anchor=east] at (axis cs:4.6,1) {$f(d)$};
                      
-        	\node at (axis cs:0.75,1.2) [penColor2] {$(cos(\theta),sin(\theta))$};
+        	\node at (axis cs:0.75,1.2) [penColor2] {$(\cos(\theta),\sin(\theta))$};
 
 
           \addplot [line width=1, penColor2, smooth,samples=100,domain=(0:0.5)] ({x},{1.7320*x});
@@ -91,7 +91,7 @@ We call these functions \textbf{cosine} and \textbf{sine}.
 
 \section{Cosine}
 
-Cosine is a function of $\theta$. The value of the cosine function is the horizontal coordinate of the point on the unit circle at the given angle, $\theta$. The shorthand for this function looks like $cos(\theta)$. 
+Cosine is a function of $\theta$. The value of the cosine function is the horizontal coordinate of the point on the unit circle at the given angle, $\theta$. The shorthand for this function looks like $\cos(\theta)$. 
 
 
 When we graph the cosine function the horizontal axis is measuring the angle $\theta$, since that is the domain of cosine.
@@ -138,7 +138,7 @@ As $\theta$ rotates counterclockwise around the unit circle, the corresponding p
 
 This pattern continues as $\theta \rightarrow \infty$ or the reverse, as $\theta \rightarrow -\infty$
 
-The zeros of $cos(\theta)$ occur at angles that place the corresponding point at the top or the bottom of the unit circle.  
+The zeros of $\cos(\theta)$ occur at angles that place the corresponding point at the top or the bottom of the unit circle.  
 
 
 \[     \cdots -\frac{5\pi}{2},  -\frac{3\pi}{2},  -\frac{\pi}{2},  \frac{\pi}{2},  \frac{3\pi}{2},  -\frac{\pi}{2} \cdots \]
@@ -153,12 +153,12 @@ There are an infinite number of zeros for cosine.  We can describe this set as f
 
 
 
-$cos(\theta)$ has a maximum value of $1$, which occurs at every even $\pi$:  
+$\cos(\theta)$ has a maximum value of $1$, which occurs at every even $\pi$:  
 \[ \{  2 \, k \, \pi \, | \, k \in \textbf{Z}\} \]
 
 
 
-$cos(\theta)$ has a minimum value of $-1$, which occurs at every odd $\pi$:  
+$\cos(\theta)$ has a minimum value of $-1$, which occurs at every odd $\pi$:  
 \[ \{  (2k+1) \, \pi \, | \, k \in \textbf{Z}\} \]
 
 
@@ -173,7 +173,7 @@ $cos(\theta)$ has a minimum value of $-1$, which occurs at every odd $\pi$:
 
 \section{Sine}
 
-Sine is a function of $\theta$. The value of the function is the vertical coordinate of the point on the unit circle at the given angle. The shorthand for this function loks like $sin(\theta)$. 
+Sine is a function of $\theta$. The value of the function is the vertical coordinate of the point on the unit circle at the given angle. The shorthand for this function loks like $\sin(\theta)$. 
 
 
 
@@ -221,7 +221,7 @@ As $\theta$ rotates counterclockwise, the corresponding point on the unit circle
 
 This pattern continues as $\theta \rightarrow \infty$ or the reverse, as $\theta \rightarrow -\infty$
 
-The zeros of $sin(\theta)$ occur at angles that place the corresponding point at the left and right of the unit circle.  
+The zeros of $\sin(\theta)$ occur at angles that place the corresponding point at the left and right of the unit circle.  
 
 
 \[     \cdots -2\pi, -\pi, 0, \pi, -2\pi \cdots \]
@@ -236,12 +236,12 @@ There are an infinite number of zeros for sine.  We can describe this set as fol
 
 
 
-$sin(\theta)$ has a maximum value of $1$, which occurs at every half $\pi$:  
+$\sin(\theta)$ has a maximum value of $1$, which occurs at every half $\pi$:  
 \[ \left\{  \frac{(2k+1)\pi}{2} \, | \, k \in \textbf{Z}\right\} \]
 
 
 
-$sin(\theta)$ has a maximum value of $1$, which occurs at every three-halves $\pi$:  
+$\sin(\theta)$ has a maximum value of $1$, which occurs at every three-halves $\pi$:  
 \[ \left\{  \frac{(2k+3)\pi}{2} \, | \, k \in \textbf{Z}\right\} \]
 
 
@@ -262,15 +262,15 @@ While sine and cosine are the coordinates of points on the unit circle, we have 
 
 
 
-\[ tan(\theta) = \frac{sin(\theta)}{cos(\theta)} \]
+\[ \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} \]
 
 
-Everywhere that $sin(\theta)$ has a zero, so does $tan(\theta)$
+Everywhere that $\sin(\theta)$ has a zero, so does $\tan(\theta)$
 
-Everywhere that $cos(\theta)$ has a zero, $tan(\theta)$ has a singularity.
+Everywhere that $\cos(\theta)$ has a zero, $\tan(\theta)$ has a singularity.
 
 
-Therefore the domain of $tan(\theta)$ is the union of every interval between the zeros of $cos(\theta)$.
+Therefore the domain of $\tan(\theta)$ is the union of every interval between the zeros of $\cos(\theta)$.
 
 
 \[      \cdots   \cup  \left(\frac{-3\pi}{2}, \frac{-\pi}{2}\right) \cup \left(\frac{-\pi}{2}, \frac{\pi}{2}\right) \cup \left(\frac{\pi}{2} , \frac{3\pi}{2}\right) \cup \cdots              \]
@@ -284,7 +284,7 @@ Of course, there is shorthand for infinite unions
 
 
 
-\[    \bigcup^\infty_{k=1} \left(\frac{(2k-1)\pi}{2}, \frac{(2k+1)\pi}{2}\right)   \]
+\[    \bigcup^\infty_{k=-\infty} \left(\frac{(2k-1)\pi}{2}, \frac{(2k+1)\pi}{2}\right)   \]
 
 
 
@@ -380,7 +380,7 @@ When $\theta = \frac{\pi}{4}$, the the point is halfway between the axes, which 
           %\node[anchor=east] at (axis cs:1.85,3) {$d$};
           %\node[anchor=east] at (axis cs:4.6,1) {$f(d)$};
                      
-          \node at (axis cs:0.8,1) [penColor2] {$(cos(\tfrac{\pi}{4}),sin(\tfrac{\pi}{4}))$};
+          \node at (axis cs:0.8,1) [penColor2] {$(\cos(\tfrac{\pi}{4}),\sin(\tfrac{\pi}{4}))$};
 
 
           \addplot [line width=1, penColor2, smooth,samples=100,domain=(0:0.707)] {x};
@@ -416,8 +416,8 @@ Since, we are in the first quadrant, our point is $\left(\frac{1}{\sqrt{2}}, \fr
 
 
 \begin{itemize}
-\item $cos\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}}$ \\
-\item $sin\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}}$
+\item $\cos\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}}$ \\
+\item $\sin\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}}$
 \end{itemize}
 
 
@@ -433,8 +433,8 @@ By the symmetry of the unit circle, we can get the values for several other angl
 
 
 \begin{itemize}
-\item $cos\left(\frac{3\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$ \\
-\item $sin\left(\frac{3\pi}{4}\right) = \answer{\frac{1}{\sqrt{2}}}$
+\item $\cos\left(\frac{3\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$ \\
+\item $\sin\left(\frac{3\pi}{4}\right) = \answer{\frac{1}{\sqrt{2}}}$
 \end{itemize}
 
 
@@ -450,8 +450,8 @@ By the symmetry of the unit circle, we can get the values for several other angl
 
 
 \begin{itemize}
-\item $cos\left(\frac{5\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$ \\
-\item $sin\left(\frac{5\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$
+\item $\cos\left(\frac{5\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$ \\
+\item $\sin\left(\frac{5\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$
 \end{itemize}
 
 
@@ -467,8 +467,8 @@ By the symmetry of the unit circle, we can get the values for several other angl
 
 
 \begin{itemize}
-\item $cos\left(\frac{7\pi}{4}\right) = \answer{\frac{1}{\sqrt{2}}}$ \\
-\item $sin\left(\frac{7\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$
+\item $\cos\left(\frac{7\pi}{4}\right) = \answer{\frac{1}{\sqrt{2}}}$ \\
+\item $\sin\left(\frac{7\pi}{4}\right) = \answer{-\frac{1}{\sqrt{2}}}$
 \end{itemize}
 
 
@@ -490,10 +490,10 @@ From these, we can get the corresponding values of tangent.
 
 
 \begin{itemize}
-\item $tan\left(\frac{\pi}{4}\right) = \answer{1}$ \\
-\item $tan\left(\frac{3\pi}{4}\right) = \answer{-1}$ \\
-\item $tan\left(\frac{5\pi}{4}\right) = \answer{1}$ \\
-\item $tan\left(\frac{7\pi}{4}\right) = \answer{-1}$ \\
+\item $\tan\left(\frac{\pi}{4}\right) = \answer{1}$ \\
+\item $\tan\left(\frac{3\pi}{4}\right) = \answer{-1}$ \\
+\item $\tan\left(\frac{5\pi}{4}\right) = \answer{1}$ \\
+\item $\tan\left(\frac{7\pi}{4}\right) = \answer{-1}$ \\
 \end{itemize}
 
 
