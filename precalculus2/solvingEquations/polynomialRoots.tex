@@ -22,9 +22,9 @@ Before discussing polynomials, we need some knowledge about complex conjugates.
 
 
 
-\begin{definition}
+\begin{definition} \textbf{\textcolor{green!50!black}{Complex Conjugate}} \\
 
-Let $z$ be a complex number.  Therefore, $z = a + b \, i$, where $A$ and $b$ are real numbers.
+Let $z$ be a complex number.  Therefore, $z = a + b \, i$, where $a$ and $b$ are real numbers.
 
 
 
@@ -39,10 +39,47 @@ The \textbf{complex conjugate of $z$}, denoted by $\bar{z}$, is given by $\bar{z
 
 
 
-$\blacktriangleright$ \textbf{Absolute Value}
-The absolute value of $z = a + b \, i$ is given by $|z| = a^2 + b^2$. The absolute value of $z$ also is the product of $z$ and its conjugate.
 
-\[   |z| = z \cdot \bar{z}    \]
+
+\begin{definition}   \textbf{\textcolor{green!50!black}{Absolute Value}} \\
+
+The absolute value of $z = a + b \, i$ is given by $|z| = a^2 + b^2$. 
+
+
+\end{definition}
+
+
+
+
+$\blacktriangleright$ \textbf{Absolute Value}  \\
+
+The absolute value of $z$ is also the product of $z$ and its conjugate.
+
+
+\begin{align*}
+z \cdot \bar{z} &= (a + b \, i) \cdot (a - b \, i) \\
+                &= a^2 + ab \, i - ab \, i - b^2 \, i^2 \\
+                &= a^2 - b^2 (-1) \\
+                &= a^2 + b^2  \\
+                &= |z|  
+\end{align*}
+
+
+
+
+\begin{explanation}
+
+\begin{align*}
+z \cdot \bar{z} &= (a + b \, i) \cdot (a - b \, i) \\
+                &= a^2 + ab \, i - ab \, i - b^2 \, i^2 \\
+                &= a^2 - b^2 (-1) \\
+                &= a^2 + b^2  \\
+                &= |z|  
+\end{align*}
+
+
+\end{explanation}
+
 
 
 
@@ -87,7 +124,7 @@ This tells us that
 
 
 
-We can keep multiplying any for any whole number power to get 
+We can keep multiplying for any whole number power to get 
 
 
 \[   z^n = (r, \theta)^n =  (r, \theta) \cdot (r, \theta) \cdots (r, \theta)= (r^n, n\theta)                \]
@@ -95,7 +132,7 @@ We can keep multiplying any for any whole number power to get
 
 
 
-\[   \bar{z}^n = (r, -\theta)^n =  (r, -\theta) \cdot (r, -\theta) \cdots (r, -\theta)= (r^n, -n\theta)  = \overline{z^n}              \]
+\[   (\bar{z})^n = (r, -\theta)^n =  (r, -\theta) \cdot (r, -\theta) \cdots (r, -\theta)= (r^n, -n\theta)  = \overline{z^n}              \]
 
 
 
@@ -125,9 +162,9 @@ Let $z = a + b \, i$ and $w = c + d \, i$.  Then we get
 
 
 \begin{align*}
-\overline{z \cdot w} & = \overline{(a + b \, i) + (c + d \, i)}  \\
-                & = \overline{a \cdot c + b \cdot d \, i}   \\
-                & = a \cdot c - b \cdot d \, i   \\
+\overline{z + w} & = \overline{(a + b \, i) + (c + d \, i)}  \\
+                & = \overline{(a + c) + (b + d) \, i}   \\
+                & = (a + c) - (b + d) \, i  \\
                 & = (a - b \, i) + (c - d \, i)   \\
                 & = \overline{(a + b \, i)} + \overline{(c + d \, i)}  \\
                 & = \overline{z} + \overline{w}
@@ -160,7 +197,7 @@ Let $z = a + b \, i$ and $w = c + d \, i$.  Then we get
 
 
 
-\begin{theorem} Conjugate Roots
+\begin{theorem} \textbf{\textcolor{blue!55!black}{Conjugate Roots}}   \\
 
 
 
@@ -168,7 +205,7 @@ Let $p(x)$ be a polynomial with real coefficients.
 
 $p(x) = a_n x^n + a_{n-a} x^{n-1} + \cdots a_2 x^2 + a_1 x + a_0$   with $a_k \in \mathbb{R}$
 
-Suppose $z \in \mathbb{C}$ is a root of $p(x)$, then $\bar{z}$ is also a root of $p(x)$.
+Suppose $z \in \mathbb{C}$ is a complex root of $p(x)$, then $\bar{z}$ is also a complex root of $p(x)$.
 
 
 \end{theorem}
