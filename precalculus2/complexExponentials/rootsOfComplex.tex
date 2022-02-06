@@ -14,28 +14,51 @@ roots of complex
 
 
 
+$\blacktriangleright$ \textbf{Different Stories}
 
-Roots of any complex number.  Or real
+In the real numbers, we have been following an off-balanced story for roots.
+
+Let $r$ be a real number.
+
+Sometimes, there are two square roots of $r$ and sometimes there are none.  It depends on the sign of $r$. The Complex Numbers have repaired this story.  There are always two solutions to the equation $z^2 = r$.  Even $0$ works when we bring in multiplicites.
+
+The Complex Numbers have settled the issue for all roots. 
+
+Let $r$ be a real number.
+Let $n$ be a natural number.
+
+There are always $n$ $n^{th}$ roots of $r$ in the Complex Numbers. \\
+
+
+In the real numbers, we can express every positive number in terms of $e$: $r = e^{ln(r)}$ \\
+
+
+And, we can express the whole story off roots in terms of $e$.
+
+\[
+\sqrt[n]{r} r^{\tfrac{1}{n}}= e^{\tfrac{1}{n} ln(r)}
+\]
 
 
 
 
 
 
+We want to do the same for the complex story. \\
 
 
 Euler's Formula tells us that $e^{i \theta} = \cos(\theta) + i \, \sin(i \theta)$, which describes all of the points on the unit circle.
 
-We also know that every nonzero Complex number is a scalar (positive real number) times a number on the unit circle:  $r e^{i \theta}$.
+We also know that every nonzero complex number is a scalar (positive real number) times a number on the unit circle:  $r e^{i \theta}$.
 
 We also know that every positive real number can be written as an exponential: $r = e^{ln(r)}$.
 
-Therefore, every Complex number can be written as a complex exponential: $ e^{ln(r) + i \theta}$
+Therefore, every complex number can be written as a complex exponential: $ e^{ln(r) + i \theta}$
 
 
 \[   a + b \, i =    e^{ln(r) + i \theta}   \]
 
-\[   \text{ where } \,   r = |a + b \, i| = \sqrt{a^2 + b^2}   \, \text{ and } \,   \theta = ArcTan\left (\frac{b}{a} \right) \pm 2k\pi\]
+\[   \text{ where } \,   r = |a + b \, i| = \sqrt{a^2 + b^2}   \, \text{ and } \,   \theta = arctan\left (\frac{b}{a} \right) \pm 2k\pi\]
 
 
 
@@ -44,10 +67,10 @@ Therefore, every Complex number can be written as a complex exponential: $ e^{ln
 \section{$n^{th}$ roots of Unity}
 
 
-Focusing on the Complex numbers on the unit circle, they can be written in the form $e^{i \theta}$.
+Focusing on the complex numbers on the unit circle, they can be written in the form $e^{i \theta}$.
 
 
-This would include all of the solutions to $z^n = 1$, with $n$ a Natural number - the roots of unity.
+This would include all of the solutions to $z^n = 1$, with $n$ a natural number - the roots of unity.
 
 
 
@@ -55,7 +78,17 @@ This would include all of the solutions to $z^n = 1$, with $n$ a Natural number 
 If we are looking for solutions to $(e^{i \theta})^n = 1$, then we need $n \cdot \theta = 2k\pi$, for some $k \in \mathbb{N}$.
 
 
-Therefore, the $n^{th}$ roots of $1$ are equally spaced on the unit circle.  Begin with $1$, then go $\frac{1}{n^{th}}$ around the circle, then another, then another, until you get back to the beginning.
+Therefore, the $n^{th}$ roots of $1$ are equally spaced on the unit circle.  
+
+
+
+\[
+1=e^{\tfrac{0\cdot2\pi}{n}\,i}, e^{\tfrac{1\cdot2\pi}{n}\,i}, e^{\tfrac{2\cdot2\pi}{n}\,i}, e^{\tfrac{3\cdot2\pi}{n}\,i}, \cdots, e^{\tfrac{(n-1)\cdot2\pi}{n}\,i}, e^{\tfrac{n\cdot2\pi}{n}\,i}=1
+\]
+
+
+
+Begin with $1$, then go $\frac{1}{n^{th}}$ around the circle, then another, then another, until you get back to the beginning.
 
 
 
@@ -95,11 +128,11 @@ There are $4$ fourth roots of unity.
 
 $1$ is the first.
 
-A quarter circle gets you to $i$. 
+A quarter circle gets you to $e^{\tfrac{\pi}{2}} = i$. 
 
-Another quarter circle gets you to $-1$. 
+Another quarter circle gets you to $e^{\pi} = -1$. 
 
-Another quarter circle gets you to $-i$. 
+Another quarter circle gets you to $e^{\tfrac{3\pi}{2}} = -i$. 
 
 Another quarter circle gets you back to $1$.
 
@@ -111,7 +144,33 @@ Another quarter circle gets you back to $1$.
 
 
 
+Our ideas of numbers have grown as we have used them. \\
 
+When we were counting, we used the whole numbers.
+
+The whole numbers were not enough when we started spliting things apart.  We filled in the gaps with rational numbers, fractions.
+
+The rational numbers were not enough when we started measureing lengths. We filled in the gaps with irrational numbers.
+
+Now that we are thinking of solutions to equations, we are discovering that the real numbers are missing numbers.  We have filled in the gaps with the Complex Numbers.
+
+The difference here is that filling in the gaps before maintained the 1-dimensional number line.  Filling in the gaps to equations has revealed that our numbers are really 2-dimensional.  IT is a plane of numbers rather than a line of numbers.
+
+This is added A LOT of geometry to our number descriptions.
+
+We are now blurrying the distinction between geometry and arithmetic.
+
+\begin{itemize}
+\item We think of complex numbers as dots in the Cartesian plane:  $(a, b)$
+\item We think of complex numbers as vectors in the Cartesian plane:  $\langle a, b \rangle$
+\item We think of complex numbers as sums of rectangular directions:  $a + b \, i$
+\item We think of complex numbers as a circular (polar) directions:  $(r, \theta)$
+\item We think of complex numbers as a extensions of numbers on the unit circle:  $r(\cos(\theta)+i \, \sin(\theta))$
+\item We think of complex numbers as a complex exponentials:  $r\cdot e^{i\, \theta} = e^{ln(r)+i\, \theta}$
+\end{itemize}
+
+
+It turns out that the Complex Numbers have all of the solutions to all of the equations they can make.  The Complex NUmbers are ``complete''.  That means we can work confidently now knowing that we are not longer missing any numbers that we need.
 
 
 
