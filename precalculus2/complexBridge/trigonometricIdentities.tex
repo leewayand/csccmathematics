@@ -22,7 +22,7 @@ double and half
 \[   \sin(2t) = \frac{e^{i 2t} - e^{-i 2t}}{2 i}      \]
 
 
-A difference of two squares.  It factors.
+This is a difference of two squares.  It factors.
 
 
 
@@ -37,7 +37,8 @@ A difference of two squares.  It factors.
 
 \[   \sin(2t) = 2 \sin(t)   \cos(t)      \]
 
-This is the double angle formla for sine.
+This is the double angle formla for sine.  How about cosine?
+Let's begin with $\cos^2(t) - \sin^2(t)$ and rearrange it.
 
 
 
@@ -68,6 +69,7 @@ This is the double angle formla for sine.
 \[      \cos^2(t) - \sin^2(t)  = \cos(2t)    \]
 
 
+This is the double angle formula for cosine. \\
 
 Additionally, we have 
 
@@ -127,10 +129,75 @@ and
 
 
 
-and
+and we know that $\cos^2(t) = 1- \sin^2(t)$. Applying this to the formula above gives us
 
-\[  \frac{1 -  \cos(2t)}{2}  =  \sin(t)     \]
+\[  \frac{1 -  \cos(2t)}{2}  =  \sin^2(t)     \]
 
+
+
+These are half-angle formulas.  We can see the half better by replacing $t$ with $\frac{x}{2}$
+
+
+
+\[   \frac{1 + \cos(x)}{2}  =   \cos^2\left( \tfrac{x}{2} \right)  \]
+
+
+
+\[   \frac{1 - \cos(x)}{2}  =   \sin^2\left( \tfrac{x}{2} \right)  \]
+
+
+
+
+
+
+
+\begin{example}
+
+Calculate $\cos\left(  \frac{\pi}{8}  \right)$.
+Let $t = \frac{\pi}{8}$ in the equation above.
+
+
+
+\begin{explanation}
+
+$\frac{\pi}{8}$ is half of $\frac{\pi}{4}$
+
+
+
+
+\[   \frac{1 + \cos( \frac{\pi}{4} )}{2}  =   \cos^2\left( \frac{\pi}{8} \right)  \]
+
+
+\[   \frac{1 + \frac{1}{\sqrt{2}}}{2}  =   \cos^2\left( \frac{\pi}{8} \right)  \]
+
+
+
+$\frac{\pi}{8}$ is in quadrant I, therefore cosine is positive.
+
+
+
+
+\[   \sqrt{ \frac{1 + \frac{1}{\sqrt{2}}}{2} }  =   \cos\left( \frac{\pi}{8} \right)  \]
+
+
+
+
+
+\end{explanation}
+
+\end{example}
+
+
+The double angle formulas help you reduce the argument inside the trigonometric function. \\
+
+
+You replace $\sin(2 \theta)$ with $2 \sin(\theta) \cos(\theta)$.  You end up with more functions, but they are easier to work with. \\
+
+
+The half angle formulas get rid of squaring.
+
+
+$\sin^2\left( \tfrac{x}{2} \right)$ is replaced with $\frac{1 - \cos(x)}{2}$.  Much easier to work with.
 
 
 
