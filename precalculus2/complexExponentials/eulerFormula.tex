@@ -71,9 +71,9 @@ $f'(a)$ would be the slope of the tangent line at the point $(a, e^{r a})$. \\
 \end{image}
 
 
-That's what we want.  However, we don't know the derivative of $e^{3 x}$, so we can't get the slope of the tangent line. \\
+That's what we want.  However, we don't know the derivative of $e^{r x}$, so we can't get the slope of the tangent line. \\
 
-So, let's approximate. \\
+So, let's approximate the slope by using some close chords. \\
 
 
 
@@ -92,10 +92,15 @@ The slope of the line through these two point is
 
 
 
+\begin{example}  $f(x) = e^{3 x}$
 
 \begin{center}
 \desmos{3ohrxje6e7}{400}{300}
 \end{center}
+
+\end{example}
+
+
 
 
 
@@ -109,11 +114,9 @@ The smaller the value of $h$, the closer it is. \\
 \]
 
 
-You could move the tangent point along by varying $a$.  If we collect these slopes for a lot of $a$'s, then we could plot each of the slope values.
+You could move the tangent point along the curve by varying $a$.  If we collect these slopes for a lot of $a$'s, then we could plot each of the slope values.
 
-Let's compare this to the graph of $3 e^{3 x}$
-
-
+Let's compare the plot of tangent slopes to the graph of $3 e^{3 x}$
 
 
 
@@ -121,10 +124,19 @@ Let's compare this to the graph of $3 e^{3 x}$
 
 
 
+
+\begin{example}  $f(x) = e^{3 x}$
 
 \begin{center}
 \desmos{5rjkc2evu0}{400}{300}
 \end{center}
+
+\end{example}
+
+
+
+
+
 
 
 
@@ -155,7 +167,7 @@ That was \textbf{\textcolor{purple!85!blue}{Step A)}}. \\
 
 \textbf{\textcolor{purple!85!blue}{Step B)}} \\
 
-In Calculus you will study the \textbf{Mean Value Theorem}. One version follows this race track story:
+In Calculus, you will study the \textbf{Mean Value Theorem}. One version follows this race track story:
 
 
 Suppose two horses are racing.  They both line up at the starting line.  During the race, they both run at exactly the same speed at every second of the race.  Under these circumstances, the two horses are at exactly the same place on the track at every second of the race and end the race in a tie.
@@ -189,7 +201,7 @@ If two functions start with the same value and then they have the exact same der
 
 $\blacktriangleright$  When you study differential equations, this idea will lead to the fact that a first-order differential equation with an initial condition has only one solution. \\
 
-Example: $y'(t) = k \cdot y(t)$ with $y(0)=1$
+Example: If $y'(t) = k \cdot y(t)$ with $y(0)=1$
 
 
 There is only one function that could be $y(t)$.
@@ -221,7 +233,7 @@ That Mean Value Theorem horse story was for real numbers, but we are going to ta
 
 
 
-Consider our two functions:
+Consider these two functions:
 
 
 \begin{itemize}
@@ -265,6 +277,9 @@ We have two functions satisfying the same differential equation with the same in
 \[   e^{i \, t} = \cos(t) + i \sin(t)         \]
 
 
+
+$t$ is called the \textbf{argument}, often shortened to $arg$.  
+
 \end{theorem}
 
 
@@ -288,6 +303,33 @@ a + b \, i =  r \cdot (\cos(\theta) + i \, \sin(\theta)) = r \cdot e^{i \cdot \t
 \]
 
 \end{center}
+
+
+
+
+
+
+\begin{example}
+
+
+Let $z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i$
+
+The absolute value of $z$ is $\answer{5}$ 
+
+$arc(z) = \answer{\frac{\pi}{3}}$
+
+
+$z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}}$
+
+\end{example}
+
+
+
+
+Of course, we can also write $5$ as $e^{\ln(5)}$.
+
+
+$z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}} = e^{\ln(5)} \, e^{i \tfrac{\pi}{3}} = e^{ln(5) + i \tfrac{\pi}{3}}$
 
 
 
