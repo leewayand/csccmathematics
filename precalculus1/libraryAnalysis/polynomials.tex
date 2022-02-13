@@ -180,25 +180,32 @@ Either the sign switches or it stays the same across the root.  What in the form
 \[   f(x) = a (x-r_n)^{e_n} (x-r_{n-1})^{e_{n-1}}  \cdots (x-r_2)^{e_2} (x-r_1)^{e_1}  \]
 
 
-If we imagine ourselves running through $r_k$, then $(x-r_k)^{e_k}$ is the only factor that could possibly change sign.  All of the other factors maintain their same sign when we run through $r_k$.
+If we imagine ourselves running through $r_k$ in the domain, then $(x-r_k)^{e_k}$ is the only factor that could possibly change sign.  All of the other factors maintain their same sign when $x$ runs through $r_k$.
 
 
-When $x<r_k$, then $x-r_k <0$.  \\
 
-When $x>r_k$, then $x-r_k >0$. \\
+Let's examine the factor $(x-r_k)^{e_k}$:
+
+As $x$ runs from less than $r_k$ to greater than $r_k$, the base of this factor changes from negative to positive:
+
+\begin{itemize}
+\item when $x<r_k$, then $x-r_k <0$.  \\
+
+\item when $x>r_k$, then $x-r_k >0$. \\
+\end{itemize}
 
 
-If $e_k$ is even then it doesn't matter if $x-r_k <0$ or $x-r_k >0$, $(x-r_k)^{e_k}$ will be positve. 
+If the exponent, $e_k$, is even, then the sign of $x-r_k$ doesn't matter. The sign of the whole factor $(x-r_k)^{e_k}$ will be positve regardless of the sign of the base.
 
-If $e_k$ is odd then it does matter, because, unlike an even power, a negative number raise to an odd power will remain negative.
+However, if $e_k$ is odd then the sign of the base does matter, because, unlike an even power, a negative number raise to an odd power will remain negative.
 
 
 
 
 
 \begin{itemize}
-\item If $e_k$ is odd, then $(x-r_k)^{e_k}$ will change its sign.
-\item If $e_k$ is even, then $(x-r_k)^{e_k}$ will not change its sign.
+\item If $e_k$ is odd, then $(x-r_k)^{e_k}$ will change sign.
+\item If $e_k$ is even, then $(x-r_k)^{e_k}$ will not change sign.
 \end{itemize}
 
 
@@ -208,9 +215,300 @@ If $e_k$ is odd then it does matter, because, unlike an even power, a negative n
 
 
 \begin{itemize}
-\item If $r_k$ is a root of odd multiplicty, then $(x-r_k)^{e_k}$ will change its sign.
-\item If $e_k$ is a root of even multiplicty, then $(x-r_k)^{e_k}$ will not change its sign.
+\item If $r_k$ is a root of odd multiplicty, then $(x-r_k)^{e_k}$ will change sign as $x$ runs through $r_k$ in the domain.
+\item If $e_k$ is a root of even multiplicty, then $(x-r_k)^{e_k}$ will not change sign as $x$ runs through $r_k$ in the domain.
 \end{itemize}
+
+
+
+
+
+
+\begin{example}
+
+
+Let $p(x) = 3(x+4) (x-1)^2 (x-3)$.
+
+$p$ has four different factors: $3$, $x+4$, $x-1$, and $x-3$.  The factor $3$ is always positive, but the other three factors might change signs over their corresponding zeros, which are $-4$, $1$, and $3$.
+
+
+$\blacktriangleright$ \textbf{The $x+4$ factor:}
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-4},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]     
+
+            \addplot [color=black,only marks,mark=*] coordinates{(-4,0)};
+
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \node at (axis cs:-7,0.5) [penColor2] {negative};
+            \node at (axis cs:-1,0.5) [penColor] {positive};
+
+
+
+        \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{The $x-1$ factor:}
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={1},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]     
+
+            \addplot [color=black,only marks,mark=*] coordinates{(1,0)};
+
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \node at (axis cs:-2,0.5) [penColor2] {negative};
+            \node at (axis cs:4,0.5) [penColor] {positive};
+
+
+
+        \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+Except, this factor actually has an even exponent, which means the factors will not change signs over $1$.
+
+
+
+
+
+$\blacktriangleright$ \textbf{The $(x-1)^2$ factor:}
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={1},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]     
+
+            \addplot [color=black,only marks,mark=*] coordinates{(1,0)};
+
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \node at (axis cs:-2,0.5) [penColor] {positive};
+            \node at (axis cs:4,0.5) [penColor] {positive};
+
+
+
+        \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{The $x-3$ factor:}
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={3},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]     
+
+            \addplot [color=black,only marks,mark=*] coordinates{(3,0)};
+
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \node at (axis cs:0,0.5) [penColor2] {negative};
+            \node at (axis cs:6,0.5) [penColor] {positive};
+
+
+
+        \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+The polynomial function has three zeros: $-4$, $1$, and $3$. \\
+
+In between these zeros, the values of the polynomial function has a positive or negative sign. \\
+
+The sign of the whole polynomial depends on the \textbf{\textcolor{purple!85!blue}{product}} of the signs of the individual factors.
+
+
+
+\begin{itemize}
+\item For $x < -4$, 
+\begin{itemize}
+  \item $3 > 0$
+  \item $x+4 < 0$
+  \item $(x-1)^2 > 0$
+  \item $x-3 < 0$ 
+\end{itemize}
+The whole polynomial is positive. We also know this because $p$ is a fourth degree polynomial and the leading coefficient is positive.
+
+
+\item For $-4 < x < 1$, 
+\begin{itemize}
+  \item $3 > 0$
+  \item $x+4 > 0$
+  \item $(x-1)^2 > 0$
+  \item $x-3 < 0$ 
+\end{itemize}
+The whole polynomial is negative. The also agrees with the fact that $p$ was positive and MUST change signs over $1$, since we have an odd multiplicity.
+
+
+\item For $1 < x < 3$, 
+\begin{itemize}
+  \item $3 > 0$
+  \item $x+4 > 0$
+  \item $(x-1)^2 > 0$
+  \item $x-3 < 0$ 
+\end{itemize}
+The whole polynomial is negative. The also agrees with the fact that $p$ was negative and DOES NOT change signs over $1$, since we have an even multiplicity.
+
+
+\item For $3 < x$, 
+\begin{itemize}
+  \item $3 > 0$
+  \item $x+4 > 0$
+  \item $(x-1)^2 > 0$
+  \item $x-3 > 0$ 
+\end{itemize}
+The whole polynomial is positive. The also agrees with the fact that $p$ was negative and MUST change signs over $3$, since we have an odd multiplicity.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{The whole polynomial $3(x+4)(x-1)^2(x-3)$}
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-4,1,3},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]     
+
+            \addplot [color=black,only marks,mark=*] coordinates{(-4,0)};
+            \addplot [color=black,only marks,mark=*] coordinates{(1,0)};
+            \addplot [color=black,only marks,mark=*] coordinates{(3,0)};
+
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            
+            \node at (axis cs:-7,0.5) [penColor] {positive};
+            \node at (axis cs:-1.5,0.5) [penColor2] {negative};
+            \node at (axis cs:2,1.0) [penColor2] {negative};
+            \node at (axis cs:6,0.5) [penColor] {positive};
+
+
+
+        \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+
+
+All of the information about the sign of the polynomial is encoded in the exponents. \\
+
+
+A fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $-\infty$.  Then, this polynomial must change signs at $-4$. Then, this polynomial cannot change signs at $1$.  Then, this polynomial must change signs at $3$.  Finally, a fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $\infty$.
+ 
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -280,7 +578,7 @@ The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
 
 
-$f(x)$ has an approximate global minimum value of $\answer[tolerance=0.1]{1.75}$, which occurs approximately at $\answer[tolerance=0.1]{-6.6}$.
+$f(x)$ has an approximate global minimum value of $\answer[tolerance=0.1]{-6.6}$, which occurs approximately at $\answer[tolerance=0.1]{1.75}$.
 
 
 \end{example}
