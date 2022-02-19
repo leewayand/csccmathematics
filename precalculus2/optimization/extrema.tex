@@ -1,0 +1,486 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Extrema}
+
+  
+\begin{document}
+\begin{abstract}
+maximums and minimums
+\end{abstract}
+\maketitle
+
+
+Whether we are interested in a function as a purely mathematical
+object or in connection with some application to the real world, it is
+often useful to know what the graph of the function looks like. We can
+obtain a good picture of the graph using certain crucial information
+provided by derivatives of the function.
+
+\section{Extrema}
+
+A function has a value at each domain number. The set of all function values might have a greatest (maximum) or least(minimum) value. Together these are know as extreme values or extrema.  These correspond to highest and lowest points on the graph.
+
+
+A local \textit{extremum} of a function $f$ corresponds to a point $(a,f(a))$ on the graph of $f$ where the
+$y$-coordinate is larger (or smaller) than all other $y$-coordinates
+ of points on the graph whose $x$-coordinates are ``close to''  $a$. 
+
+\begin{definition}\hfil\index{maximum/minimum!local}
+\begin{enumerate}
+\item A function $f$ has a \textbf{local maximum} at $x=a$, if $f(a)\ge
+  f(x)$ for every $x$ in some open interval I containing $a$.
+\item A function $f$ has a \textbf{local minimum} at $x=a$, if $f(a)\le
+  f(x)$ for every $x$  in some open interval I containing $a$.
+\end{enumerate}
+A \textbf{local extremum}\index{extremum!local} is either a local
+maximum or a local minimum.
+\end{definition}
+
+Local extremum are numbers and they correspond to highest and lowest points on the graph.
+
+%% \begin{question} BADBAD I want this question
+%%   True or false: ``All absolute extrema are also local extrema.''
+%%   \begin{multipleChoice}
+%%     \choice[correct]{true}
+%%     \choice{false}
+%%   \end{multipleChoice}
+%%   \begin{feedback}
+%%     All global extrema are local extrema.
+%%   \end{feedback}
+%% \end{question}
+In our next example, we clarify the definition of a local minimum.
+\begin{example}
+Consider the graph of a function $f$:
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-3:2,
+            ymax=1,
+            ymin=-5.5,
+            %samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+          \addplot [dashed, penColor2, smooth] plot coordinates {(1,0) (1,-5)}; %% {.451};
+          \addplot [dashed, textColor, smooth] plot coordinates {(0.85,-0.6) (0.85,-4.75)}; %% axis{2.215};
+           \addplot [dashed, textColor, smooth] plot coordinates {(0.85,0) (0.85,-0.21)}; %% axis{2.215};
+       \addplot [ very thick, penColor, smooth] plot coordinates {(0.75,0) (1.25,0)}; 
+          \addplot [very thick, penColor, smooth] {-2*x^3+9*x^2-12*x};
+          \node at (axis cs:2.2,5/2) [anchor=west] {\color{penColor}$f$};  
+              \node at (axis cs:0.6,-3) [anchor=west] {\color{penColor}$f(x)$};  
+                \node at (axis cs:1,-3) [anchor=west] {\color{penColor2}$f(1)$};  
+     \node at (axis cs:0.78,-0.35) [anchor=west] {\color{penColor}$x$}; 
+       \node at (axis cs:0.9,0.6) [anchor=west] {\color{penColor}$I$};  
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};  %% closed hole
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0.85,0)};  %% closed hole
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(1,-5)};  %% closed hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0.85,-4.9)};  %% closed hole
+              \addplot [color=penColor,fill=fill1,only marks,mark=*] coordinates{(0.75,0)};  %% open hole   
+                 \addplot [color=penColor,fill=fill1,only marks,mark=*] coordinates{(1.25,0)};  %% open hole  
+        \end{axis}
+     
+\end{tikzpicture}
+%% \caption{A plot of $f(x) = x^3-4x^2+3x$ and $f'(x) = 3x^2-8x+3$.}
+%% \label{figure:x^3-4x^2+3x}
+\end{image}
+Identify the local extrema of $f$ and give an explanation.
+\begin{explanation}
+In the figure above the function $f$ has a local minimum at,
+\[
+a=\answer[given]{1},
+\]
+because we can find an \textbf{open} interval $I$ (marked in the
+figure) that contains the number
+\[
+a=\answer[given]{1},
+\]
+and for all numbers $x$ in $I$ the following statement is true:
+ \[
+f\left(\answer[given]{1}\right)\le f\left(\answer[given]{x}\right).
+\]
+\end{explanation}
+\end{example}
+
+Local maximum and minimum values of a function correspond to quite distinctive points on the graph of
+a function, and are, therefore, useful in understanding the shape of the
+graph. Many problems in real world and in different scientific fields turn out to be about
+finding the smallest (or largest) value that a function achieves (for example, we might want
+to find the minimum cost at which some task can be performed).
+
+
+
+\section{Critical Numbers}
+
+Consider the graph of the function $f$.
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-6:6, xmin=-6, xmax=6, ymin=-2,ymax=7,    
+            unit vector ratio*=1 1 1,
+         axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={-6,...,6}, ytick={-3,...,10},
+            xticklabels={-6,,-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
+            grid=major,width=4in,
+            grid style={dashed, gridColor},
+          ]
+          \addplot [very thick, penColor, smooth, domain=(-6:-4)] {x+9};
+	  \addplot [very thick, penColor, smooth, domain=(-4:-2)] {1-x};
+	  \addplot [very thick, penColor, smooth, domain=(-2:3)] {0.5*x^2-1};
+          \addplot [very thick, penColor, smooth, domain=(3:4)] {(x-4)^3+4.5};
+           \addplot [very thick, penColor, smooth, domain=(4:6)] {-(x-4)^2+4.5};
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,3)};  %% open hole
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,1)};  %% open hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,6)};  %% closed hole
+              \addplot [ very thick, penColor2, smooth] plot coordinates {(3.2,4.5) (4.8,4.5)}; 
+                 \addplot [ very thick, penColor2, smooth] plot coordinates {(-0.75,-1) (0.75,-1)}; 
+                   \node at (axis cs:1,6) [anchor=west] {\color{penColor}$y=f(x)$};  
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+The function $f$ has three local extremums: $5$, $-1$, and $4.5$  These occur at $x=-4$, $x=0$ and $x=4$.
+Notice that the function $f$ is \textbf{not differentiable} at  $x=-4$ and  $x=-2$.
+Notice that $f'(0)=0$ and $f'(4)=0$.
+
+After this example, the following theorem should not come as a surprise. 
+
+
+\begin{theorem}[Fermat's Theorem]\index{Fermat's Theorem}\label{theorem:fermat}
+If $f$ has a local extremum at $x=a$ and $f$ is differentiable
+at $a$, then $f'(a)=0$.
+\end{theorem}
+\begin{question}
+  Does Fermat's Theorem say that if $f'(a) = 0$, then $f$ has a local
+  extrema at $x=a$?
+  \begin{multipleChoice}
+    \choice{yes}
+    \choice[correct]{no}
+  \end{multipleChoice}
+  \begin{feedback}
+    Consider $f(x) = x^3$, $f'(0) = 0$, but $f$ does not have a local
+    maximum or minimum at $x=0$.
+  \end{feedback}
+\end{question}
+
+
+Fermat's Theorem says that the only numbers at which a function can
+have a local maximum or minimum are numbers at which the derivative is
+zero or the derivative is undefined. As an illustration of the first scenario, consider the plots of $f(x) = x^3-4.5x^2+6x$ and $f'(x) =
+3x^2-9x+6$.
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-3:3,
+            ymax=3,
+            ymin=-3,
+            %samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+          \addplot [dashed, textColor, smooth] plot coordinates {(1,0) (1,5/2)}; %% {.451};
+          \addplot [dashed, textColor, smooth] plot coordinates {(2,0) (2,2)}; %% axis{2.215};
+          \addplot [very thick, penColor2, smooth] {3*x^2-9*x+6};
+          \addplot [very thick, penColor, smooth] {x^3-(9/2)*x^2+6*x};
+          \node at (axis cs:2.2,5/2) [anchor=west] {\color{penColor}$f$};  
+          \node at (axis cs:0.18,5/2) [anchor=west] {\color{penColor2}$f'$};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};  %% closed hole
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(2,0)};  %% closed hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,2.5)};  %% closed hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,2)};  %% closed hole
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x) = x^3-4x^2+3x$ and $f'(x) = 3x^2-8x+3$.}
+%% \label{figure:x^3-4x^2+3x}
+\end{image}
+\begin{question}
+ Make a correct choice that completes the sentence below. \\
+ 
+  At the number $1$, the function $f$ has 
+
+  \begin{multipleChoice}
+    \choice[correct]{a local maximum}
+    \choice{a local minimum}
+    \choice{no local extremum}
+  \end{multipleChoice}
+  \end{question}
+  \begin{question}
+Select the correct statement.
+  \begin{multipleChoice}
+    \choice{$f'(1)$ is undefined}
+    \choice{$f'(1)>0$}
+    \choice[correct]{$f'(1)=0$}
+     \choice{$f'(1)<0$}
+  \end{multipleChoice}
+\end{question}
+\begin{question}
+ Make a correct choice that completes the sentence below. \\
+ 
+  At the number $1.5$, the function $f$ has 
+
+  \begin{multipleChoice}
+    \choice{a local maximum}
+    \choice{a local minimum}
+    \choice[correct]{no local extremum}
+  \end{multipleChoice}
+  \end{question}
+  \begin{question}
+Select the correct statement.
+  \begin{multipleChoice}
+    \choice{$f'(1.5)$ is undefined}
+    \choice{$f'(1.5)>0$}
+    \choice{$f'(1.5)=0$}
+     \choice[correct]{$f'(1.5)<0$}
+  \end{multipleChoice}
+\end{question}
+
+\begin{question}
+ Make a correct choice that completes the sentence below. \\
+ 
+  At the number $2$, the  function $f$ has 
+
+  \begin{multipleChoice}
+    \choice{a local maximum}
+    \choice[correct]{a local minimum}
+    \choice{no local extremum}
+  \end{multipleChoice}
+  \end{question}
+  \begin{question}
+Select the correct statement.
+  \begin{multipleChoice}
+    \choice{$f'(2)$ is undefined}
+    \choice{$f'(2)>0$}
+    \choice[correct]{$f'(2)=0$}
+     \choice{$f'(2)<0$}
+  \end{multipleChoice}
+\end{question}
+ As an illustration of the second scenario, consider the plots of $f(x) = x^{2/3}$ and $f'(x) = \frac{2}{3x^{1/3}}$:
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-3:3,
+            ymax=2,
+            ymin=-2,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+          \addplot [very thick, penColor2, samples=100, smooth,domain=(-3:-.01)] {-(2/3)*abs(x)^(-1/3)};
+          \addplot [very thick, penColor2, samples=100, smooth,domain=(.01:3)] {(2/3)*abs(x)^(-1/3)};
+          \addplot [very thick, penColor, smooth,domain=(-3:-0.001)] {(abs(x))^(2/3)}; 
+           \addplot [very thick, penColor, smooth,domain=(0.0015:3)] {x^(2/3)};         
+          \node at (axis cs:-2,1.7) [anchor=west] {\color{penColor}$f$};  
+          \node at (axis cs:2,.7) [anchor=west] {\color{penColor2}$f'$};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x) = x^{2/3}$ and $f'(x) = \frac{2}{3x^{1/3}}$.}
+%% \label{figure:x^{2/3}}
+\end{image}
+\begin{question}
+ Make a correct choice that completes the sentence below. \\
+ 
+  At the number $-2$, the function $f$ has 
+
+  \begin{multipleChoice}
+    \choice{a local maximum}
+    \choice{a local minimum}
+    \choice[correct]{no local extremum}
+  \end{multipleChoice}
+  \end{question}
+  \begin{question}
+Select the correct statement.
+  \begin{multipleChoice}
+    \choice{$f'(-2)$ is undefined}
+    \choice{$f'(-2)>0$}
+    \choice{$f'(-2)=0$}
+     \choice[correct]{$f'(-2)<0$}
+  \end{multipleChoice}
+\end{question}
+\begin{question}
+ Make a correct choice that completes the sentence below. \\
+ 
+  At the number $0$, the function $f$ has 
+
+  \begin{multipleChoice}
+    \choice{a local maximum}
+    \choice[correct]{a local minimum}
+    \choice{no local extremum}
+  \end{multipleChoice}
+  \end{question}
+  \begin{question}
+Select the correct statement.
+  \begin{multipleChoice}
+    \choice[correct]{$f'(0)$ is undefined}
+    \choice{$f'(0)>0$}
+    \choice{$f'(0)=0$}
+     \choice{$f'(0)<0$}
+  \end{multipleChoice}
+\end{question}
+
+This brings us to our next definition.
+
+
+
+
+
+
+
+
+
+
+\begin{definition}\index{critical number}
+  Assume that a function $f$ is defined on an open interval I that contains a number $a$. Then we say that the  function $f$ has a \textbf{critical number} at $x=a$ if 
+  \[
+  f'(a) = 0\qquad\text{or}\qquad \text{$f'(a)$ does not exist.}
+  \]
+ Notice, if a function $f$ has a critical number at $x=a$, then the number $a$ is inside some open interval $I$, and $I$ is in the  domain of $f$. 
+ 
+\end{definition}
+
+\begin{warning} 
+When looking for local maximum and minimum numbers, be careful not to
+make two sorts of mistakes: 
+\begin{itemize}
+\item You may forget that a maximum or minimum can occur where the
+  derivative does not exist, and so forget to check whether the
+  derivative exists everywhere. 
+\item You might assume that any place that the derivative is zero is a
+  local maximum or minimum number, but this is not true, consider the
+  plots of $f(x) = x^3$ and $f'(x) = 3x^2$.
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-3:3,
+            ymax=3,
+            ymin=-3,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+          \addplot [very thick, penColor2, smooth] {3*x^2};
+          \addplot [very thick, penColor, smooth] {x^3};         
+          \node at (axis cs:1,.9) [anchor=west] {\color{penColor}$f$};  
+          \node at (axis cs:-.5,1) [anchor=west] {\color{penColor2}$f'$};
+        \end{axis}
+\end{tikzpicture}
+%% \caption{A plot of $f(x) = x^3$ and $f'(x) = 3x^2$. While $f'(0)=0$,
+%%   there is neither a maximum nor minimum at $(0,f(0))$.}
+%% \label{figure:x^3}
+\end{image}
+While $f'(0)=0$, there is neither a maximum nor minimum at $x=0$.
+\end{itemize}
+\end{warning}
+
+
+
+Since both local maximum and
+local minimum occur at a critical number, when we locate a critical number, we need to determine which, if either,
+actually occurs. 
+\begin{example}
+Find all local maximum and minimum numbers for the function 
+$f(x)=x^3-x$. 
+\begin{explanation} 
+Write
+\[
+\frac{d}{dx} f(x)=\answer[given]{3x^2-1}.
+\] 
+We can easily express  $f'(x)$ as a product of its factors
+\[
+\frac{d}{dx}
+f(x)=3\left(x+\answer[given]{\frac{\sqrt{3}}{3}}\right)\left(x-\answer[given]{\frac{\sqrt{3}}{3}}\right),
+\] 
+which implies that the function $f$ has only two critical numbers,
+$x=-\frac{\sqrt{3}}{3}$ and $x=\frac{\sqrt{3}}{3}$. Notice that the
+derivative $f'(x)$ is a polynomial, and polynomials do not change
+signs except possibly at their zeros. This implies that derivative
+$f'(x)$ \textbf{does not change the sign} on the intervals
+$\left(-\infty,-\frac{\sqrt{3}}{3}\right)$,
+$\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$, and
+$\left(\frac{\sqrt{3}}{3},\infty\right)$, because these intervals do not contain
+any zeros of $f'(x)$.
+ 
+\begin{question}
+Select the correct statement about the sign of $f'(x)$ on the
+intervals $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and
+$\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. 
+\begin{multipleChoice}
+  \choice{$f'(x)>0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+  \choice[correct]{$f'(x)>0$ on $x$ in $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+  \choice{$f'(x)<0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+  \choice{$f'(x)<0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$}
+\end{multipleChoice}
+  \end{question}
+  If we know the sign of the derivative on an interval, we also know whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=-\frac{\sqrt{3}}{3}$. \\
+  \begin{question}
+
+At the critical number where $x=-\frac{\sqrt{3}}{3}$, the function $f$ has  \\
+ 
+  \begin{multipleChoice}
+    \choice{no local extremum, because $f$ is increasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+      \choice[correct]{a local maximum, because $f$ is increasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+      \choice{a local minimum, because $f$ is decreasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+         \choice{no local extremum, because $f$ is decreasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }  \end{multipleChoice}
+  \end{question}
+  \begin{question}
+Select the correct  statement about the sign of $f'(x)$ on the intervals  $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and  $\left(\frac{\sqrt{3}}{3},\infty\right)$. \\
+ 
+  \begin{multipleChoice}
+    \choice{$f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)>0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
+    \choice{$f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
+       \choice[correct]{$f'(x)<0$ on   $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)>0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
+         \choice{$f'(x)<0$ on  $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)<0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
+  \end{multipleChoice}
+  \end{question}
+Again, the sign of the derivative on an interval determines whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=\frac{\sqrt{3}}{3}$. \\
+  \begin{question}
+
+At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
+ 
+  \begin{multipleChoice}
+    \choice{no local extremum, because $f$ is increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
+       \choice{a local maximum, because $f$ is increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
+      \choice[correct]{a local minimum, because $f$ is decreasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
+        \choice{no local extremum, because $f$ is decreasing on$\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
+      \end{multipleChoice}
+  \end{question}
+ Do your answers agree with the graphs of $f$ and $f'$ given in the picture below?
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-2:2,
+            ymax=2,
+            ymin=-2,
+            %samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+          \addplot [dashed, textColor, smooth] plot coordinates {(-.577,0) (-.577,.385)}; %% {.451};
+          \addplot [dashed, textColor, smooth] plot coordinates {(.577,-.385) (.577,0)}; %% axis{2.215};
+
+          \addplot [very thick, penColor2, smooth] {3*x^2-1};
+          \addplot [very thick, penColor, smooth] {x^3-x};
+
+          \node at (axis cs:1.2,.3) [anchor=west] {\color{penColor}$f$};  
+          \node at (axis cs:-.75,1) [anchor=west] {\color{penColor2}$f'$};
+
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-.577,0)};  %% closed hole
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(.577,0)};  %% closed hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-.577,.385)};  %% closed hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(.577,-.385)};  %% closed hole
+        \end{axis}
+\end{tikzpicture}
+%%\caption{A plot of $f(x) = x^3-x$ and $f'(x) = 3x^2-1$.}
+%%\label{figure:x^3-x}
+\end{image}
+\end{explanation}
+\end{example}
+
+
+
+
+\end{document}
