@@ -1,0 +1,185 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{C{\&}M Trucking}
+
+\begin{document}
+
+\begin{abstract}
+least cost
+\end{abstract}
+\maketitle
+
+
+[From Calculus\&\textit{Mathematica}]
+
+
+
+
+You are the chief dispatcher for the C{\&}M Trucking Company, which sends Mack trucks on the straight shot between Chicago and New Orleans on Interstate 57.  You know that:
+
+
+
+\begin{itemize}
+\item The run between the two cities is $750$ miles.
+\item Running at a steady $50$ miles per hour, the Mack gets $4$ miles per gallon.
+\item For each mile per hour increase in speed, the big Mack loses $\frac{1}{10}$ of a mile per gallong in its mileage.
+\item The driver team gets $27$ dollars per hour.
+\item Keeping the truck on the road costs an extra $12$ dollars per hour over and above the cost of the fuel.
+\item Diesel fule for the Mack costs $\$1.19$ per gallon. 
+\end{itemize}
+
+Approximately, what steady speed should you tell your drivers to hold in order to make the run at least cost? \\
+
+
+
+
+
+\begin{question} \boxdot
+
+Which of the following are components of the total cost for the Chicago to New Orleans run?
+
+\begin{selectAll}
+\choice[correct] {Fuel}
+\choice {Food}
+\choice[correct] {Driving Team}
+\choice[correct] {Truck Maintanence} 
+\choice {Tolls}
+\end{selectAll}
+\end{question}
+
+
+\begin{question} \boxdot
+If the truck travels at a steady speed of $v$, then how long with it take to complete the trip? \\
+
+time = $\answer{\frac{750}{v}}$ hours.
+\end{question}
+
+
+
+
+\begin{question} \boxdot
+If the truck travels at a steady speed of $v$, then what will be the cost of the driving team \\
+
+Driving Team Cost = $\answer{\frac{27*750}{v}}$ dollars.
+\end{question}
+
+
+
+
+\begin{question} \boxdot
+If the truck travels at a steady speed of $v$, then what will be the cost of maintaining the truck? \\
+
+Truck Maintanence Cost = $\answer{\frac{12*750}{v}}$ dollars.
+\end{question}
+
+
+
+The final cost to calculate is for fuel.
+
+Fuel cost $\$3.09$ per gallon, therefore we need to know how many gallons the trip will take. To calculate galons, we need the mileage for the truck.
+
+
+\begin{explanation}
+
+If the truck travels at a steady speed of $v$, then it is $\answer{v-50}$ miles per hours over $50$. For each mile per hour over $50$, the truck loses $\frac{1}{10}$ of a mile per gallon from $4$ miles per gallon..
+
+Therefore, it will lose $\answer{(v-50)/10}$ miles per gallon when it is traveling at $v$ miles per hour.
+
+That gives a mileage of $\answer{4-(v-50)/10} \frac{miles}{gallon}$.
+
+\end{explanation}
+
+
+The truck is travelling $750$ miles and gets $\frac{4-(v-50)}{10} \frac{miles}{gallon}$. From this we can calculate the total number of gallons needed, which will then give us the cost of fuel.
+
+
+
+
+
+
+\begin{question} \boxdot
+If the truck travels at a steady speed of $v$, then what will be the cost of fuel? \\
+
+Fuel Cost = $ 3.09 \cdot \answer{\frac{750}{4-(v-50)/10}}$ dollars.
+\end{question}
+
+
+
+That gives a total cost based on speed
+
+\[
+Cost(v) = \frac{27 \cdot 750}{v} + \frac{12 \cdot 750}{v} + \frac{3.09 \cdot 750}{4-(v-50)/10}
+\]
+
+
+
+
+
+\begin{center}
+\desmos{byvuwohbqw}{400}{300}
+\end{center}
+
+
+
+From the graph, we can see that there is a minimum cost of \$1161 when the truck is travelling at a speed of approximately $47.62$ miles per hour.
+
+
+
+
+However, we would like an exact speed. \\
+
+
+
+
+
+Calculus tells us that the derivative of $Cost(v)$ is
+
+
+\[
+Cost'(v) = \frac{23175}{(90-v)^2} - \frac{29250}{v^2}
+\]
+
+
+
+We can obtain the critical number by setting $Cost'(v)$ equal to $0$ and solving.
+
+
+
+By clearing denominators, we get
+
+\[
+\answer{23175} \, v^2 - \answer{29250} \, \answer{(90-v)^2}
+\]
+
+
+We can multiply this out and gather like terms to get the quadratic equation
+
+\[
+\answer{6075} \, v^2 - \answer{5265000} \, v + 236925000 = 0
+\]
+
+
+
+There are two solutions, but only one is near $47.62$.
+
+
+\[
+v = \frac{10}{3} \cdot (\answer{130} - \sqrt{13390}) \approx 47.62
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
