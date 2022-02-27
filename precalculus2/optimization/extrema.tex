@@ -23,15 +23,15 @@ provided by derivatives of the function.
 A function has a value at each domain number. The set of all function values might have a greatest (maximum) or least(minimum) value. Together these are know as extreme values or extrema.  These correspond to highest and lowest points on the graph.
 
 
-A local \textit{extremum} of a function $f$ corresponds to a point $(a,f(a))$ on the graph of $f$ where the
-$y$-coordinate is larger (or smaller) than all other $y$-coordinates
- of points on the graph whose $x$-coordinates are ``close to''  $a$. 
+A local \textit{extremum} of a function $f$ is a number, a function value, $f(a)$. It occurs at a domain number, $a$. These correspond to a point $(a,f(a))$ on the graph of $f$ where the
+$vertical$-coordinate is larger (or smaller) than all other $vertical$-coordinates
+ of points on the graph whose $horizontal$-coordinates are ``close to''  $a$. 
 
 \begin{definition}\hfil\index{maximum/minimum!local}
 \begin{enumerate}
-\item A function $f$ has a \textbf{local maximum} at $x=a$, if $f(a)\ge
+\item A function $f(x)$ has a \textbf{local maximum} at $x=a$, if $f(a)\ge
   f(x)$ for every $x$ in some open interval I containing $a$.
-\item A function $f$ has a \textbf{local minimum} at $x=a$, if $f(a)\le
+\item A function $f(x)$ has a \textbf{local minimum} at $x=a$, if $f(a)\le
   f(x)$ for every $x$  in some open interval I containing $a$.
 \end{enumerate}
 A \textbf{local extremum}\index{extremum!local} is either a local
@@ -40,16 +40,9 @@ maximum or a local minimum.
 
 Local extremum are numbers and they correspond to highest and lowest points on the graph.
 
-%% \begin{question} BADBAD I want this question
-%%   True or false: ``All absolute extrema are also local extrema.''
-%%   \begin{multipleChoice}
-%%     \choice[correct]{true}
-%%     \choice{false}
-%%   \end{multipleChoice}
-%%   \begin{feedback}
-%%     All global extrema are local extrema.
-%%   \end{feedback}
-%% \end{question}
+
+
+
 In our next example, we clarify the definition of a local minimum.
 \begin{example}
 Consider the graph of a function $f$:
@@ -112,6 +105,17 @@ to find the minimum cost at which some task can be performed).
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 \section{Critical Numbers}
 
 Consider the graph of the function $f$.
@@ -120,7 +124,8 @@ Consider the graph of the function $f$.
 	\begin{axis}[
             domain=-6:6, xmin=-6, xmax=6, ymin=-2,ymax=7,    
             unit vector ratio*=1 1 1,
-         axis lines =center, xlabel=$x$, ylabel=$y$,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             xtick={-6,...,6}, ytick={-3,...,10},
@@ -128,31 +133,58 @@ Consider the graph of the function $f$.
             grid=major,width=4in,
             grid style={dashed, gridColor},
           ]
-          \addplot [very thick, penColor, smooth, domain=(-6:-4)] {x+9};
-	  \addplot [very thick, penColor, smooth, domain=(-4:-2)] {1-x};
-	  \addplot [very thick, penColor, smooth, domain=(-2:3)] {0.5*x^2-1};
-          \addplot [very thick, penColor, smooth, domain=(3:4)] {(x-4)^3+4.5};
-           \addplot [very thick, penColor, smooth, domain=(4:6)] {-(x-4)^2+4.5};
-          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,3)};  %% open hole
-          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,1)};  %% open hole
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,6)};  %% closed hole
-              \addplot [ very thick, penColor2, smooth] plot coordinates {(3.2,4.5) (4.8,4.5)}; 
-                 \addplot [ very thick, penColor2, smooth] plot coordinates {(-0.75,-1) (0.75,-1)}; 
-                   \node at (axis cs:1,6) [anchor=west] {\color{penColor}$y=f(x)$};  
+            \addplot [very thick, penColor, smooth, domain=(-6:-4)] {x+9};
+            \addplot [very thick, penColor, smooth, domain=(-4:-2)] {1-x};
+            \addplot [very thick, penColor, smooth, domain=(-2:3)] {0.5*x^2-1};
+            \addplot [very thick, penColor, smooth, domain=(3:4)] {(x-4)^3+4.5};
+            \addplot [very thick, penColor, smooth, domain=(4:6)] {-(x-4)^2+4.5};
+            \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,3)};  %% open hole
+            \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,1)};  %% open hole
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,6)};  %% closed hole
+            \addplot [ very thick, penColor2, smooth] plot coordinates {(3.2,4.5) (4.8,4.5)}; 
+            \addplot [ very thick, penColor2, smooth] plot coordinates {(-0.75,-1) (0.75,-1)}; 
+            \node at (axis cs:1,6) [anchor=west] {\color{penColor}$y=f(x)$};  
         \end{axis}
 \end{tikzpicture}
 \end{image}
-The function $f$ has three local extremums: $5$, $-1$, and $4.5$  These occur at $x=-4$, $x=0$ and $x=4$.
-Notice that the function $f$ is \textbf{not differentiable} at  $x=-4$ and  $x=-2$.
+The function $f$ has three local extremums: $5$, $6$, $-1$, and $4.5$  These occur at $x=-4$, $x=-2$, $x=0$ and $x=4$.
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Differentiable}}
+
+Let $f$ be a function and $a$ a member of its domain.
+
+We say that $f$ is \textbf{differentiable} at $a$ if there is a tangent line to graph at $(a, f(a))$ and this tangent line has a slope.
+
+
+i.e. differentiable means has a derivative value.
+
+\end{definition}
+Can a tangent line not have a slope?  Yes. We'll see an example later. \\
+
+
+
+
+
+
+Notice that the function $f$ above is \textbf{not differentiable} at  $x=-4$ and  $x=-2$. \\
+
 Notice that $f'(0)=0$ and $f'(4)=0$.
 
 After this example, the following theorem should not come as a surprise. 
 
 
 \begin{theorem}[Fermat's Theorem]\index{Fermat's Theorem}\label{theorem:fermat}
-If $f$ has a local extremum at $x=a$ and $f$ is differentiable
-at $a$, then $f'(a)=0$.
+If $f$ has a local extremum at $x=a$ and $f$ is differentiable at $a$, then $f'(a)=0$.
 \end{theorem}
+
+
+
+
+
 \begin{question}
   Does Fermat's Theorem say that if $f'(a) = 0$, then $f$ has a local
   extrema at $x=a$?
@@ -380,13 +412,19 @@ While $f'(0)=0$, there is neither a maximum nor minimum at $x=0$.
 Since both local maximum and
 local minimum occur at a critical number, when we locate a critical number, we need to determine which, if either,
 actually occurs. 
+
+
+Critical numbers are \textbf{candidates} for locations of extrema.
+
+
+
 \begin{example}
 Find all local maximum and minimum numbers for the function 
 $f(x)=x^3-x$. 
 \begin{explanation} 
-Write
+The derivative of $f$ is given by
 \[
-\frac{d}{dx} f(x)=\answer[given]{3x^2-1}.
+3x^2 - 1
 \] 
 We can easily express  $f'(x)$ as a product of its factors
 \[
@@ -396,7 +434,7 @@ f(x)=3\left(x+\answer[given]{\frac{\sqrt{3}}{3}}\right)\left(x-\answer[given]{\f
 which implies that the function $f$ has only two critical numbers,
 $x=-\frac{\sqrt{3}}{3}$ and $x=\frac{\sqrt{3}}{3}$. Notice that the
 derivative $f'(x)$ is a polynomial, and polynomials do not change
-signs except possibly at their zeros. This implies that derivative
+signs except possibly at their zeros. This implies that the derivative
 $f'(x)$ \textbf{does not change the sign} on the intervals
 $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$,
 $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$, and
@@ -479,6 +517,67 @@ At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
 \end{image}
 \end{explanation}
 \end{example}
+
+
+
+
+
+
+\begin{example}
+
+
+Consider the function $f(x) = $6 (x-2)^{\frac{1}{2}}.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-6:6, xmin=-6, xmax=6, ymin=-2,ymax=10,    
+            unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={-6,...,6}, ytick={-3,...,10},
+            xticklabels={-6,,-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
+            grid=major,width=4in,
+            grid style={dashed, gridColor},
+          ]
+            \addplot [very thick, penColor, smooth, domain=(-6:-4)] {6 * (x-2)^0.66666};
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
