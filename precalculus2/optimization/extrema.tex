@@ -526,7 +526,7 @@ At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
 \begin{example}
 
 
-Consider the function $f(x) = 6 (x-2)^{\frac{1}{2}}$.
+Consider the function $f(x) = 6 (x-2)^{\frac{2}{3}}$.
 
 
 
@@ -546,7 +546,7 @@ Consider the function $f(x) = 6 (x-2)^{\frac{1}{2}}$.
             grid=major,width=4in,
             grid style={dashed, gridColor},
           ]
-            \addplot [very thick, penColor, smooth, domain=(-6:-4)] {6 * (x-2)^0.66666};
+            \addplot [very thick, penColor, smooth, domain=(0:4)] {6 * (x-2)^{0.66666}};
 
         \end{axis}
 \end{tikzpicture}
@@ -584,7 +584,7 @@ The two pieces of the graph do, in fact, become parallel as you approach the cus
             grid=major,width=4in,
             grid style={dashed, gridColor},
           ]
-            \addplot [very thick, penColor, smooth, domain=(-6:-4)] {6 * (x-2)^0.66666};
+            \addplot [very thick, penColor, smooth, domain=(0:4)] {6 * (x-2)^{0.66666}};
             \addplot [line width=1, penColor2, smooth,samples=100,domain=(-1:6)] ({x},{2});
 
         \end{axis}
