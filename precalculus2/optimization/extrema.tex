@@ -557,6 +557,51 @@ Consider the function $f(x) = 6 (x-2)^{\frac{1}{2}}$.
 
 
 
+The graph has a ``cusp''.  It isn't a corner.   \\
+
+
+The two pieces of the graph do, in fact, become parallel as you approach the cusp. And, ther eis a tangent line.  IT is a vertical tangent line.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-6:6, xmin=-6, xmax=6, ymin=-2,ymax=10,    
+            unit vector ratio*=1 1 1,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            xtick={-6,...,6}, ytick={-3,...,10},
+            xticklabels={-6,,-4,,-2,,0,,2,,4,,6}, yticklabels={,-2,,0,,2,,4,,6,,8,,10},
+            grid=major,width=4in,
+            grid style={dashed, gridColor},
+          ]
+            \addplot [very thick, penColor, smooth, domain=(-6:-4)] {6 * (x-2)^0.66666};
+            \addplot [line width=1, penColor2, smooth,samples=100,domain=(-1:6)] ({x},{2});
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+So, we have a tangent line.  \\
+
+
+However, the tangent line has no slope, because it is vertical.
+
+
+
+Hence, differentiable means there is a tangent line and that tangent line has a slope, a number.
+
 
 \end{example}
 
