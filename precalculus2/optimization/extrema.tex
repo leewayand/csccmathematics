@@ -547,6 +547,7 @@ Consider the function $f(x) = 6 (x-2)^{\frac{2}{3}}$.
             grid style={dashed, gridColor},
           ]
             \addplot [very thick, penColor, smooth, samples=300, domain=(0:4)] {6*(abs(x-2))^(0.66666)};
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(0:0.5)] ({2},{x});
 
 
         \end{axis}
@@ -561,7 +562,7 @@ Consider the function $f(x) = 6 (x-2)^{\frac{2}{3}}$.
 The graph has a ``cusp''.  It isn't a corner.   \\
 
 
-The two pieces of the graph do, in fact, become parallel as you approach the cusp. And, ther eis a tangent line.  IT is a vertical tangent line.
+The two pieces of the graph do, in fact, become parallel as you approach the cusp. And, there is a tangent line.  It is a vertical tangent line.
 
 
 
@@ -586,6 +587,7 @@ The two pieces of the graph do, in fact, become parallel as you approach the cus
             grid style={dashed, gridColor},
           ]
             \addplot [very thick, penColor, smooth, samples=300, domain=(0:4)] {6*(abs(x-2))^(0.66666)};
+            \addplot [line width=1, penColor, smooth,samples=100,domain=(0:0.5)] ({2},{x});
             \addplot [line width=1, penColor2, smooth,samples=100,domain=(-1:6)] ({2},{x});
 
         \end{axis}

@@ -88,7 +88,7 @@ Graph of $y = m(f)$.
 	\addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
 	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
 	\addplot[color=penColor,only marks,mark=*] coordinates{(-2,-5)}; 
-	\addplot[color=penColor,only marks,mark=*] coordinates{(1,-2)}; 
+	\addplot[color=penColor,fill=white, only marks,mark=*] coordinates{(1,-2)}; 
 	\addplot[color=penColor,only marks,mark=*] coordinates{(1,4)}; 
 	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-2)}; 
 
@@ -106,13 +106,13 @@ $m$ has a global miaximum represent by the left endpoint of the right line segme
 
 
 
-Graph of $z = P(t) = 2 m(t)$.
+Graph of $z = P(t) = 2 \, m(t)$.
 
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major, grid style={dashed},
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -130,7 +130,7 @@ Graph of $z = P(t) = 2 m(t)$.
   \addplot[color=penColor,only marks,mark=*] coordinates{(-7,2)}; 
   \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-4)}; 
   \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-10)}; 
-  \addplot[color=penColor,only marks,mark=*] coordinates{(1,-4)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-4)}; 
   \addplot[color=penColor,only marks,mark=*] coordinates{(1,8)}; 
   \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
 
@@ -155,7 +155,7 @@ Graph of $z = P(t) = 2 m(t)$.
 \end{example}
 
 
-Multiply a function by a positive constant stetches the graph vertically.  Since stretching $0$ still gives $0$, the intercepts do not change.  Everything is stetched from the intercepts. The intercepts stay pinned where they are.
+Multiply a function by a positive constant greater than $1$ stetches the graph vertically.  Since stretching $0$ still gives $0$, the intercepts do not change.  Everything is stetched from the intercepts. The intercepts stay pinned where they are.
 
 
 
@@ -174,7 +174,7 @@ Multiply a function by a positive constant stetches the graph vertically.  Since
 
 
 
-Multiplying by a negative constant does the same thing, but also reflects the graph about the horizontal axis.
+Multiplying by a negative constant less than $-1$ does the same thing, but also reflects the graph about the horizontal axis.
 
 
 
@@ -209,7 +209,7 @@ Graph of $y = m(f)$.
   \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
   \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
   \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-5)}; 
-  \addplot[color=penColor,only marks,mark=*] coordinates{(1,-2)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-2)}; 
   \addplot[color=penColor,only marks,mark=*] coordinates{(1,4)}; 
   \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-2)}; 
 
@@ -227,7 +227,7 @@ $m$ has a global maximum represent by the left endpoint of the right line segmen
 
 
 
-Graph of $z = B(h) = -2 m(h)$.
+Graph of $z = B(h) = -2 \, m(h)$.
 
 \begin{image}
 \begin{tikzpicture}
@@ -251,7 +251,7 @@ Graph of $z = B(h) = -2 m(h)$.
   \addplot[color=penColor,only marks,mark=*] coordinates{(-7,-2)}; 
   \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,4)}; 
   \addplot[color=penColor,only marks,mark=*] coordinates{(-2,10)}; 
-  \addplot[color=penColor,only marks,mark=*] coordinates{(1,4)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,4)}; 
   \addplot[color=penColor,only marks,mark=*] coordinates{(1,-8)}; 
   \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,4)}; 
 
@@ -289,12 +289,138 @@ The shape has not changed.  It has just been flipped over vertically, about the 
 
 
 
+Multiplying by a number smaller than $1$, squeezes the graph vertically.  Our word for this is ``compress''.  Multiplying a function by a number between $-1$ and $1$ compresses the graph vertically.
+
+
+
+
+\begin{example} Compressing Vertically
+
+
+
+
+Graph of $y = m(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-3};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+5};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,2)}; 
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-5)}; 
+  \addplot[color=penColor,fill=white, only marks,mark=*] coordinates{(1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,4)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-2)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$m$ has two zeros: $-6$ and $\answer{5}$. These are represented by intercepts in the left and right line segments. \\
+$m$ has a global minimum represent by the left endpoint of the middle line segment. \\
+$m$ has a global miaximum represent by the left endpoint of the right line segment.
+
+
+
+
+
+Graph of $z = P(t) = \frac{1}{2} \, m(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-0.5*(x+6)};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {0.5*(x-3)};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-0.5*(x-5)};
+
+  
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,0.5)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-1)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,1)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-2.5)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-1)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-1)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{itemize}
+
+\item The domain of $P$ is $\left[\answer{-7},\answer{-4}\right) \cup \{3\} \cup [-2,7)$, equal to the domain of $m$. The domain remains the same, since the $\frac{1}{2}$ was outside the domain parentheses in the formula for $m$. The $\frac{1}{2}$ is multiplying the function values.
+\item $P$ has two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. (Because, $\frac{1}{2} \cdot 0 = 0$.) \\
+\item $P$ has a global minimum represented by the left endpoint of the middle line segment. \\
+\item $P$ has a global miaximum represented by the left endpoint of the right line segment.
+
+\end{itemize}
+
+
+\end{example}
+
+
+Multiply a function by a positive constant less than $1$ compresses the graph vertically.  Since compressing $0$ still gives $0$, the intercepts do not change.  Everything is compressed from the intercepts. The intercepts stay pinned where they are.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{example} Sine
 
 
 
-Graph of $y = 3 sin(\theta)$.
+Graph of $y = 3 \sin(\theta)$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -320,7 +446,7 @@ Graph of $y = 3 sin(\theta)$.
 The location of zeros, maximums, and minimums inside the domain have not changed.  The function values have been multiplied by $3$. Therefore, the maximum and minimum values of the function have changed. But their positions have not.
 
 \begin{itemize}
-\item The zeros of $sin(\theta)$ are all integer multiples of $\pi$.
+\item The zeros of $\sin(\theta)$ are all integer multiples of $\pi$.
 \item The maximum value is $1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
 \item The minimum value is $-1$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
 \end{itemize}
@@ -385,7 +511,7 @@ Let $C(w) = \frac{1}{2}|3w|$.
 
 \end{example}
 
-The graph of $|w|$ has been compressed horizontally by a facotr of $\frac{1}{3}$ and compressed vertically by a factor of $\frac{1}{2}$.
+The graph of $|w|$ has been compressed horizontally by a factor of $\frac{1}{3}$ and compressed vertically by a factor of $\frac{1}{2}$.
 
 
 
