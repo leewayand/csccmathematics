@@ -20,7 +20,7 @@ constant percentage
 
 
 
-$\blacktriangleright$ Linear Functions \\
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Linear Functions}}   \\
 
 
 \begin{quote}
@@ -36,33 +36,39 @@ The defining characteristic of linear functions is that the have a constant grow
 This led to the formula for linear functions:  $f(x) = m(x-a) + f(a)$
 
 
-This tells us that no matter where you are in the domain, of $f$, if you move the same distance, then the value of $f$ increases by the same \textbf{amount}. \\
+This tells us that no matter where you are in the domain, of $f$, if you move the same distance inside the domain, then the value of $f$ changes by the same \textbf{\textcolor{purple!85!blue}{amount}}. \\
 
 
 Exponential functions have a similar growth, but with percentages. \\
 
 
 
-$\blacktriangleright$ Exponential Functions \\
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Exponential Functions}} \\
 
 
 
-Suppose we have a function with this property:  No mater where you are in the domain, if you move the same amount in the domain, then the function value changes by the same percent.  Then what does the formula look like?
+Suppose we have a function with this property:  No mater where you are in the domain, if you move the same amount in the domain, then the function value changes by the same \textbf{\textcolor{purple!85!blue}{percent}}.  Then what does the formula look like?
 
 
+
+\begin{observation}
 
 \begin{itemize}
 \item Let's call our function $E$.
 \item Let's call our original position in the domain, $a$.
-\item Let's call $d$ the distance moved from $a$.
-\item Let's say the percentage increase is $p \cdot 100\%$. 
+\item Let's call $d$ the distance moved from $a$, inside the domain.
+\item Let's say the percentage change is $p \cdot 100\%$. (Think of $p$ as a decimal number.)
 \end{itemize}
 
 
 
-From this information, the starting function value is $E(a)$ and the finishing function value is $E(a+d)$.  Therefore, the increase in the function value is given by $E(a+d) - E(a)$.
+Inside the domain we are moving from $a$ to $a+d$, a change of $d$.  How does $E$ change?
 
-We also know that this increase is equal to percentage $p$ of the original value $E(a)$.
+
+
+In this story, the starting function value is $E(a)$ and the finishing function value is $E(a+d)$.  Therefore, the change in the function value is given by $E(a+d) - E(a)$.
+
+The supposed property tells us that this change is equal to percentage $p$ of the original value $E(a)$.
 
 
 
@@ -71,18 +77,49 @@ E(a+d) - E(a) = p \, E(a)
 \]
 
 \[
-E(a+d) = E(a) (1+p)
+E(a+d) = E(a) + p \, E(a)
 \]
-
-If we travel another $d$, then we get another $p$ percent of our starting value, $E(a)(1+p)$.
 
 
 \[
-E(a + 2d) = E(a)(1+p) \cdot (1+p) = E(a) (1+p)^2
+E(a+d) = E(a) (1+p)
 \]
 
 
-If we travel another $d$, then we get another $p$ percent of our starting value, $E(a)(1+p)^2$.
+
+To get the value of $E(a+d)$, we multiply $E(a)$ by $1+p$. \\
+
+
+
+
+
+
+
+
+
+If we travel another $d$, then we move from $a+d$ to $a+2d$, inside the domain. \\
+
+We have travelled another distance of $d$. Our supposed property says that we should get another $p$ percent.
+
+
+
+THis time our starting value is $E(a+d) = E(a) (1+p)$ and we would like to calculate the value of $E(a+2d)$. \\
+
+
+
+
+\[
+E(a + 2d) = E(a+d)(1+p)  = E(a) (1+p) \cdot (1+p)
+\]
+
+
+
+\[
+E(a + 2d) =  E(a) (1+p)^2
+\]
+
+
+If we travel another $d$, then we get another $p$ percent of our original starting value, $E(a)(1+p)^2$.
 
 
 \[
@@ -91,13 +128,23 @@ E(a + 3d) = E(a)(1+p)^2 \cdot (1+p) = E(a) (1+p)^3
 
 
 
-If we travel "$x$" number of distances, $d$, from $a$, then we get
+If we travel "$x$" number of these $d$ distances from $a$, then we get
 
 \[
 E(a + x \cdot d) = E(a)(1+p)^x 
 \]
 
 An exponential function.
+
+\end{observation}
+
+
+
+
+
+
+
+
 
 
 
@@ -136,7 +183,7 @@ $a$ is called the \textbf{coefficient} and $b$ is called the \textbf{base}.
 
 
 
-\begin{fact}  No Constant Growth
+\begin{fact}  Not Constant Growth
 
 
 
@@ -175,7 +222,7 @@ $ \frac{5}{2}  \ne  \frac{15}{4} $, therefore $G(t)$ does not have a constant ra
 
 
 
-Instead, $G$ has a constant percentage rate-of-change. \\
+This example function, $G$, has a constant percentage rate-of-change. \\
 
 No matter where you are in the domain, when you move $1$, the value of $G$ increases by the same percentage (is multiplied by the same factor).
 
@@ -229,7 +276,7 @@ Change in $H$:
 \begin{itemize}
 \item $H(1) - H(0) = \answer{3}$
 
-\item $H(2) - H(1) = \answer{12}$
+\item $H(2) - H(1) = \answer{6}$
 
 \end{itemize}
 
