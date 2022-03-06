@@ -353,15 +353,15 @@ Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
 First, observe that $\frac{2}{3} < \answer{1}$.
 
 
-Our base is less than $1$.  Therefore, as its exponent gets large and positive, we multiply by more $\frac{2}{3}$'s and the values gret smaller.
+Our base is less than $1$.  Therefore, as its exponent gets large and positive, we multiply by more $\frac{2}{3}$'s and the overall values get smaller.
 
 
-However, the variable, $t$, in the exponent is multiplied by $-1$.  Therefore, we need $t$ to get large and negative in order for the exponent to get large and positve.
+Except, the variable, $t$, in the exponent is multiplied by $-1$.  Therefore, we need $t$ to get large and negative in order for the exponent to get large and positve.
 
 
 \begin{itemize}
-\item $\left( \frac{2}{3} \right)^{3-t}$ grows when $t$ becomes more negative.
-\item $\left( \frac{2}{3} \right)^{3-t}$ decays when $t$ becomes more positive.
+\item $\left( \frac{2}{3} \right)^{3-t}$ decays when $t$ becomes more negative.
+\item $\left( \frac{2}{3} \right)^{3-t}$ grows when $t$ becomes more positive.
 \end{itemize}
 
 
@@ -379,25 +379,25 @@ However, the variable, $t$, in the exponent is multiplied by $-1$.  Therefore, w
 
 \begin{model}
 
-This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t}$.  
+The exponential stem of $B(t)$ is $\left( \frac{2}{3} \right)^{-t}$, which is a transformed version of the basic exponential function model $M(t) = \left( \frac{2}{3} \right)^{t}$.  
 
 
 
-When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and $B(t)$ is becoming smaller, approaching $0$.  
+When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{-t} = \left( \frac{2}{3} \right)^{positive}$ and the stem is becoming smaller, approaching $0$.  
 
 
 
 
 
-\[ \lim\limits_{t \to -\infty} B(t) = 0 \]
+\[ \lim\limits_{t \to -\infty} \left( \frac{2}{3} \right)^{-t} = 0 \]
 
 
 
-When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative}$ and $B(t)$ is becoming larger.  
+When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{-t} = \left( \frac{2}{3} \right)^{negative}$ and the stem is becoming larger.  
 
 
 
-\[ \lim\limits_{t \to \infty} B(t) = \infty \]
+\[ \lim\limits_{t \to \infty} \left( \frac{2}{3} \right)^{-t} = \infty \]
 
 
 
@@ -408,18 +408,28 @@ When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative}$ 
 
 \end{model}
 
+Next, we have a negative leading coefficient. \\
 
-Since $a = -2 < 0$, these smaller/larger values of $B(t)$ are smaller/larger negative values.
-
-
-
-We also have two shifts:
+Since $-2 < 0$, the values of $-2 \, \left( \frac{2}{3} \right)^{power}$ are always negative.
 
 
-$\blacktriangleright$ Horizontal Shift
 
-The model's exponent is $-t$.  Our exponent is $3 - t = -t + 3$.  In the model, the function has a value of $1$ when the exponent equals $0$.
+Finally, we also have two shifts:
 
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Vertical Shift}} 
+
+Adding $4$ to the outside shifts the graph vertically up $4$.  The asymptote is $y = 4$ and 
+
+\[ \lim\limits_{t \to -\infty} B(t) = 4 \]
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Horizontal Shift}} 
+
+Our exponent is $3 - t = -t + 3$.  Our anchor point for graphing is associated with the exponent equalling $0$.
 
 
 
@@ -428,11 +438,7 @@ $3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by 
 
 
 
-$\blacktriangleright$ Vertical Shift
 
-Adding $4$ to the outside shifts the graph vertically up $4$.  The asymptote is $y = 4$ and 
-
-\[ \lim\limits_{t \to -\infty} B(t) = 4 \]
 
 
 
@@ -453,11 +459,13 @@ Graph of $y = B(t)$.
             axis on top
           ]
           
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
+      		\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {4};
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
 
       		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
 
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {4};
+          
 
 
   \end{axis}
