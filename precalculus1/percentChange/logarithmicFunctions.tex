@@ -39,11 +39,13 @@ Its graph looks like
             axis on top
           ]
           
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+      		\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
 
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+
+          
 
 
   \end{axis}
@@ -96,12 +98,29 @@ $\bigstar$ For $E(t) = 2^t$, as long as we give a positive function value, then 
 
 
 
-$\bigstar$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. That is eeriely backwards of the function rule for pairs in the exponential function.\\ 
+$\bigstar$ For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number. That is eeriely backwards of the function rule.\\ 
 
 
 
+\begin{observation}  \textbf{\textcolor{red!80!black}{Backwards}}
 
-Thinking of an exponential function in reverse sounds like a new function. We call it a \textbf{logarithmic function}.
+\textbf{Remember:}  Each domain number in a function is paired with exactly one range number.  In other words, a function can have only one value at each domain number. 
+
+
+We just said a similar sentence for the range numbers of an exponential function.
+
+
+We just said that each range number for an exponential function is paired with exactly one domain number.
+
+That's not a requirement to be a function.  It is an extra characteristics of exponential functions.
+
+
+
+\end{observation}
+
+
+
+Thinking of an exponential function in reverse sounds like a new function. It is. We call it a \textbf{logarithmic function}.
 
 
 
@@ -121,7 +140,7 @@ range = (0, \infty)  &  \nearrow  &  range = (-\infty, \infty)  \\
 The logarithm function just reverses the pairs in the exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
 
 
-Therefore, the domains and ranges switch. \\
+Therefore, the domain and range switch. \\
 
 
 
@@ -130,15 +149,16 @@ Therefore, the domains and ranges switch. \\
 
 \subsection{Logarithm}
 
-However, it seems weird to write $(2^a, a)$, even though it is perfecftly correct.  
+It seems weird to write $(2^a, a)$, even though it is perfecftly correct.  
 
-Instead, we are used to writing the domain number by a letter, $b$, and then the function value as a formula involving $b$.
+We are used to representing the domain number by a letter, $b$, and then the function value as a formula involving $b$.
 
 We woud prefer our pairs in the logarithm function to look like 
 
 \[ (b, expression)  \]
 
 
+What's the expression? \\
 
 
 
@@ -148,35 +168,48 @@ Logarithmic functions come from the study of \textbf{logarithms}, which gets sho
 
 
 
-In our example here, we are working with the base $2$ exponential, $E(t) = 2^t$. So, the reverse is called \textbf{the logarithm base $2$}.  We tack on a subscript $2$.
+In our example here, we are working with the base $2$ exponential, $E(t) = 2^t$. So, the reverse is called \textbf{the logarithm base $2$}.  We tack on a subscript $2$ to complete the name of our new function.
 
 
 
-\[   log_2(b)     \]
+\[   \log_2(b)     \]
 
 
-That pairs and points on the graph look like 
+That pairs in the logarithmic base $2$ funciton look like 
 
 
 \[
-(b, log_2(b))
+(b, \log_2(b))
 \]
 
 
-$log_2(b)$ is just the exponent that $2$ needs to equal $b$.
+The coordinates of the points on the graph look like
+
+
+
+\[
+(b, \log_2(b))
+\]
+
+
+
+
+$\log_2(b)$ is just the exponent that $2$ needs to equal $b$.
 
 
 
 
 
-$\blacktriangleright$ \textbf{Remember:} These are the reverse of the exponential pairs : $(a, 2^a)$.  $(b, log_2(b))$ is also $(2^c, c)$ for some $c$. \\
+$\blacktriangleright$ \textbf{Remember:} $(b, \log_2(b))$ are the reverse of the exponential pairs : $(a, 2^a)$.  \\
 
-$\blacktriangleright$  $log_2(b)$ is the $a$, so that $2^a = b$ \\
+$(b, \log_2(b))$ is also $(2^c, c)$ for some $c$. \\
+
+$\blacktriangleright$  $\log_2(b)$ is the exponent, $a$, so that $2^a = b$ \\
 
 
-$\blacktriangleright$  $log_2(b)$ is the number that you raise $2$ to, to get $b$.  \\
+$\blacktriangleright$  $\log_2(b)$ is the number that you raise $2$ to, to get $b$.  \\
 
-\[   2^{log_2(b)} = b     \]
+\[   2^{\log_2(b)} = b     \]
 
 We have a logarithmic function for every exponential function.  They are designated by their bases.
 
@@ -195,14 +228,14 @@ We have a logarithmic function for every exponential function.  They are designa
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm base $B$ : $log_B(A)$}}
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Function base $B$ : $log_B(t)$}}
 
 
-$log_B(A)$ is the number you raise $B$ to, to get $A$. \\
+$log_B(t)$ is the number you raise $B$ to, to get $t$. \\
 
-$A \in 0, \infty)$. \\
+$t \in (0, \infty)$. \\
 
-$log_B(A) \in (-\infty, \infty)$.
+$log_B(t) \in (-\infty, \infty)$.
 
 
 \end{definition}
@@ -219,7 +252,7 @@ Since all of the pairs are reversed, the graphs switch axes.
 The horizontal axis is an asymptote for the basic exponential function. Now, the vertical axis is an asymptote for the basic logarithmic function.
 
 
-The graph of a basic exponential function has $(0,1)$ as an intercept.  The graph of a basic logarithmix function has $(1,0)$ as an intercept. 
+The graph of a basic exponential function has $(0,1)$ as an intercept.  The graph of a basic logarithmic function has $(1,0)$ as an intercept. 
 
 
 Their graphs are mirror images of each other across the diagonal through the I and III quandrants.
@@ -247,18 +280,18 @@ Their graphs are mirror images of each other across the diagonal through the I a
           ]
           
       		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
-      		\addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
+      		%\addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
 
           	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
+          	%\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
           	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
       		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
-      		\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(1,0)};
+      		%\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(1,0)};
 
       		\node[penColor] at (axis cs:1,8) {$2^x$};
-      		\node[penColor2] at (axis cs:7,1) {$log_2(x)$};
+      		%\node[penColor2] at (axis cs:7,1) {$log_2(x)$};
 
 
 
@@ -273,7 +306,60 @@ Their graphs are mirror images of each other across the diagonal through the I a
 
 
 
-From this basic logarithmic function and its graph we can analyze and transform.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
+
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};
+
+          %\node[penColor] at (axis cs:1,8) {$2^x$};
+          \node[penColor2] at (axis cs:7,1) {$\log_2(t)$};
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+From this basic logarithmic function and its graph we can analyze and transform for more general logarithmic functions.
 
 
 
@@ -294,7 +380,7 @@ From this basic logarithmic function and its graph we can analyze and transform.
 
 
 
-Analyze   $M(t) = log_2(t+3) - 4$ \\
+Analyze   $M(t) = \log_2(t+3) - 4$ \\
 
 
 \begin{explanation}
@@ -366,19 +452,19 @@ Our analysis tells us that:
 We can also see that the graph will have a horizontal intercept, which means the function has a zero. \\
 
 
-$M(t) = log_2(t+3) - 4 = 0$ \\
+$M(t) = \log_2(t+3) - 4 = 0$ \\
 
 
 \begin{align*}
-log_2(t+3) - 4 & = 0 \\
-log_2(t+3) & = 4 \\
-2^{log_2(t+3)} & = 2^4 \\
+\log_2(t+3) - 4 & = 0 \\
+\log_2(t+3) & = 4 \\
+2^{\log_2(t+3)} & = 2^4 \\
 t+3 & = 16 \\
 t & = 13
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$. $t+3$ must be $16$.
+$\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = 4$.  Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$. $t+3$ must be $16$.
 
 
 
@@ -404,15 +490,15 @@ We can obtain the formula for this partner exponential function by solving the l
 
 
 \begin{align*}
-log_2(t+3) - 4 & = M \\
-log_2(t+3) & = M + 4 \\
-2^{log_2(t+3)} & = 2^{M+4} \\
+\log_2(t+3) - 4 & = M \\
+\log_2(t+3) & = M + 4 \\
+2^{\log_2(t+3)} & = 2^{M+4} \\
 t+3 & = 2^{M+4} \\
 t & = 2^{M+4} - 3
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = M+4$.  Therefore, $M+4$ is the thing that you raise $2$ to, to get $t+3$
+$\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = M+4$.  Therefore, $M+4$ is the thing that you raise $2$ to, to get $t+3$
 
 
 
@@ -438,16 +524,63 @@ Here is the graph of both the logarithmic and the associated exponential functio
           ]
           
 
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
+			%\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
 			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
 
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
+			%\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
             \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-3});
             \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
-			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(-4,-2)};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+			\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-4,-2)};
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
+      %\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
+
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-3});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+      %\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(-4,-2)};
 
 
 
@@ -483,12 +616,33 @@ Here is the graph of both the logarithmic and the associated exponential functio
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{example}  Logarithmic Function
 
 
 \begin{explanation}
 
-Analyze   $K(x) = -2 \,log_3(4-x)$ \\
+Analyze   $K(x) = -2 \, \log_3(4-x)$ \\
 
 
 $\blacktriangleright$ The inside of the logarithm is $4-x$ and this equals $0$ when $x=4$.  $x=4$ has to be the vertical asymptote.
@@ -519,9 +673,11 @@ Graph of $y = K(x)$.
           ]
           
 
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
-
 			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+
+			
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
@@ -599,7 +755,7 @@ $\blacktriangleright$ \textbf{Remember:} $log_3(4-x)$ is the thing that you rais
 
 
 
-Here is the graph of both the logarithmic and the associated exponential functions.
+Here is the graphs of both the logarithmic and the associated exponential functions.
 
 
 
@@ -618,20 +774,18 @@ Here is the graph of both the logarithmic and the associated exponential functio
             axis on top
           ]
           
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
-
 			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+
+			
 
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
 
 
-			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-4.627:9),<->] {4-3^(-x/2)};
-
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{4});
-
-			\addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(0,3)};
-
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+			
 
 
 
@@ -655,6 +809,43 @@ Here is the graph of both the logarithmic and the associated exponential functio
 
 
 
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      
+
+
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{4});
+
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4.627:9),<->] {4-3^(-x/2)};
+
+      
+
+      \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0,3)};
+
+      
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
