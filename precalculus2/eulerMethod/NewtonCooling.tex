@@ -1,0 +1,120 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+
+
+\title{Cooling}
+
+\begin{document}
+\begin{abstract}
+  revisiting Newton's Law
+\end{abstract}
+\maketitle
+
+
+
+
+Newton's Law of Cooling states
+
+
+
+
+
+In modern notation, we have
+
+\[
+\frac{dT}{dt} = r \, (T_{env} - T(t))
+\]
+
+where $r$ is the coefficient of heat transfer.\\
+
+
+
+
+
+The derivative (rate of change) of temperature is proportional to the difference betweent the current temperature and the currounding temperature.
+
+
+
+
+
+We can do better in our example from the last section, by using smaller intervals and reusing the differential equaiton to give us an updated rate.
+
+
+
+
+
+
+\begin{example} Law of Cooling 
+
+
+
+We can do better. \\
+
+
+
+A freshly brewed pot of tea is removed from the stove at $200^{\circ}$.  It is set on the table where the room temperature is $72^{\circ}$ and the heat transfer coefficient is $0.025$. \\
+
+
+Newton's Law of Cooling says
+
+\[
+\frac{dT}{dt} = 0.025 \, (72 - T(t))
+\]
+
+
+where $t$ is measured in minutes.
+
+
+$\blacktriangleright$ \textbf{Frrst Minute} \\
+
+The tea has an initial temperature of $200^{\circ}$, which means the temperature is changing approximately at a rate of 
+
+
+\[
+\frac{dT}{dt} = 0.025 \, (72 - 200) = 3.2 \, \text{degrees per minute}
+\]
+
+
+After $30$ seconds or $0.5$ minute the tea is at approximately $200^{\circ} - 3.2 \frac{\text{degrees}}{\text{min}} \cdot 0.5 \text{min} = $.
+
+
+The new rate of cooling at the $30$ second mark is
+
+
+\[
+\frac{dT}{dt} = 0.025 \, (72 - 198.4) = 3.16 \, \, \text{degrees per minute}
+\]
+
+
+
+After another $30$ seconds or now $1$ minute from teh beginning, the tea is at approximately $198.4^{\circ} - 3.16 \frac{\text{degrees}}{\text{min}} \cdot 0.5 \text{min} = 196.82^{\circ}$.
+
+
+In the previous section we arrived at $196.8^{\circ}$.
+
+\end{example}
+
+
+
+
+
+\begin{observation}
+
+Our revised calcualtion is higher than the previous.  That is because the rate decreases over time.  In the example in the previous section we used a higher rate over a longer time interval.
+
+This time we revised our rate and it was lower during the second $30$ second period.  Thus, the tea did not cool as much as before.
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

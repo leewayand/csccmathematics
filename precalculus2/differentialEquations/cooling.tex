@@ -1,0 +1,152 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+
+
+\title{Cooling}
+
+\begin{document}
+\begin{abstract}
+  Newton's Law
+\end{abstract}
+\maketitle
+
+
+
+
+Newton's Law of Cooling states
+
+
+
+\begin{quote}
+
+
+The rate of heat loss of a body is directly proportional to the difference in the temperatures between the body and its environment. 
+\end{quote}
+
+
+
+Newton formulated this relation as 
+
+\[
+\dot{Q} = h \, A \, (T(t) - T_{env})
+\]
+
+
+where
+
+
+\begin{itemize}
+\item $\dot{Q}$ is the rate of heat transfer out of the body.
+\item $h$ is the  heat transfer coefficient.
+\item $A$ is the heat transfer surface area.
+\item $T$ is the temperature of the object's surface.
+\item $T_{env}$ is the temperature of the environment.
+\end{itemize}
+
+
+
+In modern notation, we have
+
+\[
+\frac{dT}{dt} = r \, (T_{env} - T(t))
+\]
+
+where $r$ is the coefficient of heat transfer.\\
+
+
+
+
+
+The derivative (rate of change) of temperature is proportional to the difference betweent the current temperature and the currounding temperature.
+
+
+\begin{observation}
+
+
+Our story is a cooling story, therefore the temperature of the body is higher than the surrounding temperature.  That makes $T_{env} - T(t) < 0$, which means our derivatie is negative, which means the temperature is decreasing, i.e. cooling.
+\end{observation}
+
+
+
+\begin{observation}
+
+
+As the body cools, $T$ becomes closer to $T_{env}$, which means  $T_{env} - T(t)$ gets closer to $0$.  Therefore, $\frac{dT}{dt}$ gets closer to $0$.  The body cools slower as it cools.
+\end{observation}
+
+
+
+\begin{observation}
+
+
+The body cools, however, it can't cool below the surrounding temperature. Therefore, we have
+
+\[
+\lim\limits_{t \to \infty} T(t) = T_{env}
+\]
+
+\end{observation}
+
+
+
+
+
+
+
+
+\begin{example} Law of Cooling 
+
+
+
+A freshly brewed pot of tea is removed from the stove at $200^{\circ}$.  It is set on the table where the room temperature is $72^{\circ}$ and the heat transfer coefficient is $0.025$. \\
+
+
+Newton's Law of Cooling says
+
+\[
+\frac{dT}{dt} = 0.025 \, (72 - T(t))
+\]
+
+
+where $t$ is measured in minutes.
+
+
+$\blacktriangleright$ \textbf{Frrst Minute} \\
+
+The tea has an initial temperature of $200^{\circ}$, which means the temperature is changing approximately at a rate of 
+
+
+\[
+\frac{dT}{dt} = 0.025 \, (72 - 200) = 3.2 \, \text{degrees per minute}
+\]
+
+
+After $1$ minute the tea is at approximately $196.8^{\circ}$.
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
