@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Missing Values}
+\title{Broken Values}
 
 \begin{document}
 
@@ -16,7 +16,63 @@
 
 
 
-What function values should be.
+While examining a function and its values, we see patterns and trends and naturally extend these in our minds to arrive at expected values. We anticipate what might happen.  This gets us into unending trouble, especialy with graphs.
+
+
+
+
+Consider the function $f(x) = \frac{(x-2)(x+3)}{(x-2)}$. \\
+
+We know that $2$ is not in the domain, since $f(2)$ is not defined.  However, there is no way to discover this from the graph.
+
+
+Zoom in as much as you want around $2$. You will never see a hole in the graph.  
+
+\begin{center}
+\desmos{igck8p6w15}{400}{300}
+\end{center}
+
+The graph hides the fact that $2$ is not in the domain.  Without the algebra, we would never know.
+
+To compensate for the graph's fuzzy communication, we add auxillary graphing features to communicate the situation better.
+
+
+
+Graph of $y = f(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$x$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:5),<->] {x+3};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+We use little open and closed circles to emphasize missing points or endpoints.  It is just a communication issue. \\
+
+
+
+
+But DESMOS and our intution have a shared expectations. There ``should'' be a point there and $f(2)$ ``should'' equal $5$.  This expectation comes from looking at the surrounding pattern and completeing the pattern.
+
+
+
+There are several situations where are expectations are not met.
 
 
 
@@ -26,10 +82,206 @@ What function values should be.
 
 
 
+Graph of $y = h(r)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:5),<->] {x+3};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
 
+
+Graph of $y = G(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$t$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(2:7),->] {-x+3};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,5)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We now have two expectations for the same domain number. The left side of our brain is expecting $G(2)=5$ and that expectation is satisfied.  The right side of our brain is expecting $G(2)=1$ and that expectation is lost. \\
+
+
+
+These examples illustrate that our internal intuition for function behavior is not always met. 
+
+
+
+
+The previous examples just feel different than the following exampless. 
+
+
+
+
+
+
+Graph of $y = K(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+      		%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+In the first two examples, the domain was a nice single interval.  Then, right in the middle of the interval, the function suddenly jumped away from its nice pattern. \\
+
+In this example, the domain is again a single interval, but the domain interval itself stops.  The domain interval doesn't include the endpoint, which makes it natural for the graph not to include the endpoint and for the function not to have a point there.
+
+
+
+Graph of $y = G(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$t$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-9:-4),<-] {x+7};
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(2:7),->] {-x+3};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,3)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+In this example, the domain consists of two intervals, with space between them. One endpoint is include and the other is not.  The space makes all the difference.  \\
+
+
+
+
+
+
+
+On the other hand, a jump at an endpoint is noticeable.
+
+
+
+
+Graph of $y = K(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,3)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+There is something about a sudden change in a function's value at a single point right in the middle (or end) of a domain interval.\\
+
+We would like to describe this type of function behavior. \\
+
+
+
+\begin{idea}  \textbf{\textcolor{purple!85!blue}{What's catching our eye?}}
+
+
+Our expectations of the paaterns we see are disrupted when close domain numbers don't have close function values.
+
+
+\end{idea}
+
+
+
+We need a way of describing ``close'', algebraically.  \\
+
+
+Another issue lurking in the shadows is that we always have the goal of \textbf{\textcolor{red!80!black}{all}}. Whenever we get ready to say something about this type of function behvior, we want our statement to apply to \textbf{\textcolor{red!80!black}{all}} of these situations. \\
+
+Since we want to talk about domain numbers ``around'' the single domain number under observation, we need to ensure that there is some space ``around'' our domain number.
 
 
 
