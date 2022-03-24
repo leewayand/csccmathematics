@@ -90,6 +90,9 @@ Here, $h(2)$ does not exist.   However, the pattern ``around'' $2$ suggests that
 
 
 
+
+
+
 Graph of $y = G(t)$.
 
 \begin{image}
@@ -167,13 +170,6 @@ This one feels a little better, because we are expecting unboundedness.  But, th
 
 
 
-
-
-
-
-
-
-
 These examples illustrate that our internal intuition for function behavior is not always met.  But, that, in and of itself, is interesting.  Perhaps we can describe our expectations and compare those to the actual function.
 
 
@@ -189,7 +185,7 @@ Of course, not every open dot on the graph contradicts our expectations. Or, pos
 
 
 
-Graph of $y = K(x)$.
+Graph of $y = p(r)$.
 
 \begin{image}
 \begin{tikzpicture}
@@ -217,7 +213,11 @@ Graph of $y = K(x)$.
 
 
 
-In the first three examples, right in the middle of the domain interval, the function suddenly vanished away from its nice pattern. 
+
+
+
+
+In the first three examples, right in the middle of the domain interval, the function suddenly vanishes away from its nice pattern. 
 
 In this example, the domain is again a single interval, but the domain interval itself stops. The domain interval doesn’t include the endpoint, which makes it natural for the graph not to include the endpoint and for the function not to have a point there.
 
@@ -246,8 +246,8 @@ Graph of $y = G(t)$.
             axis on top
           ]
            
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:-4),&lt;-] {x+7};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(2:7),-&gt;] {-x+3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:-4),<-] {x+7};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(2:7),->] {-x+3};
  
             \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,3)};
             \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,1)};
@@ -262,9 +262,24 @@ Graph of $y = G(t)$.
  
  
 In this example, the domain consists of two intervals, with space between them. One endpoint is include and the other is not.  The space makes all the difference.  \\
- 
- 
- 
+
+
+
+We base many or our expectations on space.  Where is there space?  Where is the no space? \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -292,7 +307,7 @@ Our expectations from the patterns we see are disrupted when close domain number
 
 \end{idea}
 
-This time there isn't a different value than we expected.  There is no value where we expected one.
+This time there isn't a different value than we expected.  Instead, there is no value where we expected one.
 
 
 \begin{quote}
