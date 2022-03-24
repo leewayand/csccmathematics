@@ -14,6 +14,39 @@ space
 
 
 
+As we study functions we have expectations of their values or feelings about ``nice'' behavior and sometimes functions just don't follow our ideas of ``niceness''.  We have two types of situations where this appears.
+
+\begin{itemize}
+\item There is a domain number. The function has a value at this domain number. When other domain numbers are close to this domain number, their function values are not close to this function value.
+\item There is a real number, which is not in the domain number. So, the function has no value at this real number. When  domain numbers are close to this real number, their function values are not close to each other.
+\end{itemize}
+
+
+We have two concepts we need to get control over. We need algebraic language that allows us to describe exactly the concepts of ``around'' and ``close''.  These ideas are vital to Calculus and the study of functions.  And we will never get anywhere with vague and contradictory language.
+
+
+First up is ``\textbf{\textcolor{purple!85!blue}{around}}''.
+
+
+
+We want an exact notion of ``around'', because the function values surrounding our target are generating our expectations.  Their values are making the target function value suspicious.
+
+So, we need precise algebraic language for ``around'' and \textbf{open intervals} will provide it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 An \textbf{interval} of real numbers, or on the real line, is a whole piece of the real line.
 
 
@@ -22,18 +55,23 @@ An \textbf{interval} of real numbers, or on the real line, is a whole piece of t
 
 
 \begin{itemize}
-\item A \textbf{finite open interval} contains all of the real numbers between two distinct real numbers, but excludes the two numbers themselves.\\
+\item A \textbf{finite open interval} contains all of the real numbers between two distinct real numbers, but excludes the two distince numbers themselves.\\
 
 We symbolize finite open intervals like $(a, b)$. \\
 
 $(a,b)$ includes all real numbers strictly between $a$ and $b$. \\ 
 $(a,b)$ includes all real numbers that are simultaneously greater than $a$ and also less than $b$.  \\
+$(a,b)$ includes all real numbers, $r$, such that $a < r < b$.
 
 
 
 \item An \textbf{infinite open interval} contains either (1) all of the real numbers less than some specific real number, or (2) all of the real numbers greater than some specific real number. \\
 
 We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$. \\
+
+$(-\infty, b) = \{ r \in \mathbb{R} \, | \,  r < b     \}$
+
+$(a, \infty) = \{ r \in \mathbb{R} \, | \,  a < r     \}$
 
 \end{itemize}
 
@@ -53,22 +91,28 @@ We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$. \\
 
 
 \begin{itemize}
-\item A \textbf{finite closed interval} contains all of the real numbers between two distinct real numbers, including the two numbers themselves.\\
+\item A \textbf{finite closed interval} contains all of the real numbers between two distinct real numbers, including the two distinct numbers themselves.\\
 
 We symbolize finite open intervals like $[a, b]$. \\
 $[a,b]$ includes all real numbers that are simultaneously greater than or equal $a$ and also less than or equal $b$.  \\
-
+$[a,b]$ includes all real numbers, $r$, such that $a \leq r \leq b$.
 
 
 
 \item An \textbf{infinite closed interval} contains either (1) all of the real numbers less than or equal to some specific real number, or (2) all of the real numbers greater than or equal to some specific real number.
 
 We symbolize infinite open intervals like $(-\infty, b]$ or $[a, \infty)$.
+
+
+$(-\infty, b] = \{ r \in \mathbb{R} \, | \,  r \leq b     \}$
+
+$[a, \infty) = \{ r \in \mathbb{R} \, | \,  a \leq r     \}$
+
 \end{itemize}
 
 
 \end{definition}
-\textbf{Distinct} means different.
+\textbf{Distinct} means different or not equal. \\
 
 
 
@@ -96,13 +140,15 @@ $\blacktriangleright$ Open intervals do not contain a maximum real number.
 $b$ is not a member of $(a,b)$, so it cannot be the maximum number in the interval.   
 
 
-$\blacktriangleright$ \textbf{Explanation:} Suppose $(a,b)$ does contain a maximum number. Then the maximum would be some number, $m \in (a,b)$.  Why can't that happen?  
+$\blacktriangleright$ \textbf{Explanation:} Suppose $(a,b)$ does contain a maximum number. Then the maximum would be some number, $c \in (a,b)$.  Why can't that happen?  
 
 
 Suppose $c \in (a,b)$ is the maximum number in the interval $(a,b)$.  Then, consider the number  $\frac{c+b}{2}$.   $\frac{c+b}{2} \in (a,b)$  and $c < \frac{c+b}{2}$.  
 
 
-If we have the maximum number in the interval, then we can find a greater number also in the interval. $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in the open interval. \\
+If we have the maximum number in the interval, then we can find a greater number also in the interval. Therefore, $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in an open interval. \\
+
+Similarly, there is no minimum nuber in an open interval. \\
 
 
 \begin{paradox}
@@ -111,11 +157,13 @@ This type of argument is called a \textbf{proof by contradiction}.   \\
 
 You assume a fact is true, like $c \in (a,b)$ is the maximum number in the interval.  \\
 
-Then you use logic to discover other facts until you discover something that should be also true, but you know is not. \\
+Then you use logic to discover other facts that also must be true based on the truth of your assumed fact.  YOu do this until you discover something that would also be true, but you know is not. \\
+
+At this point, you know that your original asummption cannot be true. \\
 
 Including statements that are both true and false is called a \textbf{contradiction}. \\
 
-The conclusion is that your original assumption must be false, like $c$ is the maximum number in the interval.
+The conclusion is that your original assumption must be false, because your assumption has generated a contradiction, like $c$ is the maximum number in the interval.
 
 
 \end{paradox}
@@ -150,6 +198,7 @@ Then there is an open proper subinterval inside $(a,b)$ that also contains $c$.
 \begin{explanation}
 
 
+Consider $\frac{a+c}{2}$ and  $\frac{c+b}{2}$ \\
 
 $a < \frac{a+c}{2} < c$ and  $c < \frac{c+b}{2}  < b$
 
@@ -161,7 +210,7 @@ $a < \frac{a+c}{2} < c$ and  $c < \frac{c+b}{2}  < b$
 \end{observation}
 
 
-There is always space around any number inside an open interval.  This space will help us study discontinuities.  The space means that an open interval cannot just touch a number, like an endpoint.  Any number that an open interval touches is swallowed up completely by the open interval.
+There is always space around any number inside an open interval.  This space will help us describe our expectations.  The space means that an open interval cannot just touch a number, like an endpoint.  Any number that an open interval touches is swallowed up completely by the open interval.
 
 
 We are only talking about intervals here, but there is also a larger notion of an \textbf{open set}, which may not be an interval.  The observation above is the defining characteristic of open sets.  If there is an open interval around every member of the set, then the set is an open set.
@@ -354,7 +403,7 @@ An interval is \textbf{nested} inside another interval if it is completely conta
 
 \textbf{Nested Closed Intervals}
 
-If $a < b < c < d$, then $[b,c]$ is nested inside $[a,d]$.   
+If $a \leq b < c \leq d$, then $[b,c]$ is \textbf{\textcolor{purple!85!blue}{nested}} inside $[a,d]$.   
 
 \begin{itemize}
 \item $[b,c]$ is a subset of $[a,d]$.  
