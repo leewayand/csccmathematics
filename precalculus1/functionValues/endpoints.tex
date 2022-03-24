@@ -2,12 +2,12 @@
 
 \input{../../preamble.tex}
 
-\title{Closeness}
+\title{Endpoints}
 
 \begin{document}
 
 \begin{abstract}
-distance
+intersection
 \end{abstract}
 \maketitle
 
@@ -34,6 +34,45 @@ We need moving algebra and it must take into account any and all levels of close
 In our case, we are concerned with a single domain number where the function suddenly has a different value than we were expecting from the surrounding values.  We need our closeness to go right up against the domain number. We need a distance of $0$.  Except, the distance can't really be $0$, because that would be the number itself and not surrounding numbers.
 
 \textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  How do you talk about surrounding numbers within a distance of $0$, except not $0$?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Endpoints}
+
+
+If our domain contains intervals with endpoints, then we have a bit of a technicality.
+
+Let $B$ be a function with domain $(-9, -7] \cup (-2, 1) \cup [6, 10)$ \\
+
+Then there is no open interval inside the domain surrounding $6$.  This is because the numbers immediately less than $6$ are not included in the domain.
+
+
+This is easily fixed.
+
+
+We'll just relax our demand that our open intervals be completely inside the domain or the range.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
