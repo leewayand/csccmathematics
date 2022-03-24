@@ -2,12 +2,12 @@
 
 \input{../../preamble.tex}
 
-\title{Broken Values}
+\title{Missing Values}
 
 \begin{document}
 
 \begin{abstract}
-``should'' be values
+holes
 \end{abstract}
 \maketitle
 
@@ -16,16 +16,16 @@
 
 
 
-While examining a function and its values, we see patterns and trends and naturally extend these in our minds to arrive at expected values. We anticipate what might happen.  This gets us into unending trouble, especialy with graphs.
+While examining a function and its values, we see patterns and trends and naturally extend these in our minds to arrive at expected values. We anticipate what might happen.  This gets us into unending trouble, especially with graphs.
 
 
 
-\subsection{Graphical COmmunication}
+\subsection{Graphical Communication}
 
 
 Consider the function $f(x) = \frac{(x-2)(x+3)}{(x-2)}$. \\
 
-We know that $2$ is not in the domain, since $f(2)$ is not defined.  However, there is no way to discover this from the graph.
+We know that $2$ is not in the domain, since $f(2)$ is not defined  by the formula.  However, there is no way to discover this from the graph.
 
 
 Zoom in as much as you want around $2$. You will never see a hole in the graph.  
@@ -36,7 +36,7 @@ Zoom in as much as you want around $2$. You will never see a hole in the graph.
 
 The graph hides the fact that $2$ is not in the domain.  Without the algebra, we would never know.
 
-To compensate for the graph's fuzzy communication, we add auxillary graphing features to communicate the situation better.
+To compensate for this graphcal fuzzy communication, we add auxillary graphing features to communicate the situation more clearly.
 
 
 
@@ -48,16 +48,16 @@ Graph of $y = f(x)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel={$x$}, ylabel={$y$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:5),<->] {x+3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:5),<->] {x+3};
 
-      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
 
 
   \end{axis}
@@ -70,7 +70,18 @@ We use little open and closed circles to emphasize missing points or endpoints. 
 
 
 
-DESMOS and our intution have a shared expectations. There ``should'' be a point there and $f(2)$ ``should'' equal $5$.  This expectation comes from looking at the surrounding pattern and completing the pattern in our heads.
+DESMOS is just drawing what it can draw.  It is not drawing what it cannot draw. We draw what we cannot draw to make the communication clearer. Our communication says there ``should'' be a point there and it is missing. $f(2)$ ``should'' equal $5$.  This expectation comes from looking at the surrounding pattern and completing the pattern in our heads. \\
+
+
+
+
+
+
+
+
+
+
+
 
 
 
