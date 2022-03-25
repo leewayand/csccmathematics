@@ -17,23 +17,121 @@ intersection
 
 
 
-As we study functions we have expectations of their values or feelings about ``nice'' behavior and sometimes functions just don't follow our ideas of ``niceness''.  We have two types of situations where this appears.
+We have one slight hiccup in our open interval version of closeness and that is endpoints in the interval.
+
+
+
+
+
+
+
+
+Graph of $y = K(r)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-3)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+If we want to examine the domain number $2$ and its weird function value $-3$, then our open interval is in trouble.  There is no space tothe left of $2$ in teh domain where we could carve out an open interval.\\
+
+
+Actually, we don't need it. \\
+
+
+We just need the domain numbers that are close to $2$.
+
+
+\begin{quote}
+We need all of the \textbf{\textcolor{purple!85!blue}{domain numbers}} that are close to our domain number under observation.
+\end{quote}
+
+
+\begin{quote}
+We need all of the \textbf{\textcolor{purple!85!blue}{real numbers}} that are close to our domain number under observation.
+\end{quote}
+
+
+
+\subsection{Slight Modification}
+
+
+\textbf{Remember}, we are after some language that works ALL of the time, even for endpoints.   \\
+
+
+
+``Space'' will refer to domain space that exists ``around'' our domain number under observation. \\
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Language:}}   \\
+
+\begin{center}
+\textbf{All of the domain numbers inside a $\delta$-interval around $a$} 
+\end{center}
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Notation:}}   \\
+
+\begin{center}
+$(a - \delta$, a + \delta) \cap Domain
+\end{center}
+
+
+
+The intersection picks out the numbers that are both in the $\delta$-interval and in the domain. \\
+
+
+
+
+
+$\blacktriangleright$ This actually fixes a hidden problem.  If our expectations are disrupted by a missing domain number, then we shouldn't be including that number in our $\delta$-interval.  However, if we stipulate that we are only looking at domain numbers inside the $\delta$-interval, then everything works. \\
+
+
+
+
+\subsection}Tools
+
+
+We have our tools ready.
 
 \begin{itemize}
-\item There is a domain number. The function has a value at this domain number. When other domain numbers are close to this domain number, their function values are not close to this function value.
-\item There is a real number, which is not in the domain number. So, the function has no value at this real number. When  domain numbers are close to this real number, their function values are not close to each other.
+\item Open intervals for space.
+\item $\delta$-intervals for closeness
 \end{itemize}
 
 
+We are ready to begin our algebraic description of interrupted expectations in function values. 
 
-``\textbf{\textcolor{purple!85!blue}{Close}}'' is a realtive term.  It doesn't have an exact value.  It depends on the context and the other measurements involved.  Therefore, we cannot really talk about close as a single concept.  It is a moving target.  How are we going to describe a moving target algebraically?
 
-We need moving algebra and it must take into account any and all levels of closeness.
 
 
-In our case, we are concerned with a single domain number where the function suddenly has a different value than we were expecting from the surrounding values.  We need our closeness to go right up against the domain number. We need a distance of $0$.  Except, the distance can't really be $0$, because that would be the number itself and not surrounding numbers.
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  How do you talk about surrounding numbers within a distance of $0$, except not $0$?
 
 
 
@@ -42,513 +140,6 @@ In our case, we are concerned with a single domain number where the function sud
 
 
 
-
-
-
-
-
-
-\section{Endpoints}
-
-
-If our domain contains intervals with endpoints, then we have a bit of a technicality.
-
-Let $B$ be a function with domain $(-9, -7] \cup (-2, 1) \cup [6, 10)$ \\
-
-Then there is no open interval inside the domain surrounding $6$.  This is because the numbers immediately less than $6$ are not included in the domain.
-
-
-This is easily fixed.
-
-
-We'll just relax our demand that our open intervals be completely inside the domain or the range.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Let's contemplate $0$ for a moment. \\
-
-\begin{fact}
-
-
-\textbf{Fact:} $0$ is the only nonnegative number that is less than every positive numbers.
-
-
-\end{fact}
-
-This is a way to talk about $0$ by only talking about positive numbers. \\
-
-
-
-If $r$ is a nonnegative real number and $r < x$, where $x$ is any positive real number, then $r = 0$.
-
-
-
-
-
-
-
-\begin{idea}
-
-
-The kind of ``close'' we are interested in is the kind that works for any positive real number.
-
-
-\end{idea}
-
-
-
-
-
-
-In this way, we can begin to bring ``close'' under the Algebra umbrella and still be a moving target.
-
-
-Let $f$ be a function. Let $d$ be a domain number.
-
-Let $\delta$ be any (usually small) positive number.
-
-Now consider ALL of the intervals described by $(d - \delta, d + \delta)$.
-
-
-\begin{itemize}
-\item There are an infinite number of these intervals.
-\item They are all open intervals.
-\item They all provide space around $d$.
-\item They get as small as anyone might wish for their level of ``closeness''.
-\end{itemize}
-
-These $\delta$-intervals handle all of the closeness situations.
-
-
-
-
-
-
-
-
-
-
-\subsection{$\delta$-Intervals}
-
-
-
-Given two real numbers, $a$ and $b$, you can measure the distance between them, symbolized by $|b-a|$.  We use this measurement to decide if things are close.  The smaller $|b-a|$, the closer $a$ and $b$ are. \\
-
-
-
-Or, we could think the other way.  Given a real number $a$ and a distance $\delta$, we could describe all of the real numbers closer to $a$ than a distance of $\delta$.  They would be the numbers inside the interval $(a-\delta, a+\delta)$, which we could describe with absolute value.
-
-\[      (a-\delta, a+\delta) = \{ r \in \mathbb{R} \, | \, |r - a| < \delta        \}       \]
-
-
-\textbf{Note:}  $\delta$ is a very popular symbol to represent small distances.  So, is $\epsilon$.
-
-
-
-And, since $(a-\delta, a+\delta)$ is an open interval, we know there is a number in here.  In fact we know there is a number in the left half, $(a-\delta, a)$ and we know there is a number in the right half, $(a, a+\delta)$.
-
-
-And, it doesn't matter how small $\delta$ is.  There will always be a number in the left half and in the right half, because we have an open interval.
-
-
-In an open interval, there is always space ``around''.  No matter what positive number $\delta$ represents, the interval $(a-\delta, a+\delta)$ surrounds $a$.  There is space on both sides of $a$. This is important for comparing our expectations and actual function values.
-
-
-
-
-
-This is not true for closed intervals.
-
-
-For example, consider the number $5$ and the interval $[5, 7]$.  $5$ doesn't have space ``around'' it. Of course, we could choose the interval $[4,7]$, which has space ``around'' $5$.  However, there would now be the open interval $(4.5, 7)$ to use.  So, why take the chance on a closed interval?  If we are interested in our analysis working \textbf{\textcolor{red!80!black}{all}} of the time, then let's just stick with open intervals.  They \textbf{must} provide space ``around'' \textbf{\textcolor{red!80!black}{all}} of the numbers they contain.
-
-
-
-
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The situation we are contemplating is our expectations from patterns ``around'' a domain number not matching up with the actual funciton at the domain number.
-
-Therefore, we need some language to help us jump back and forth between the domain and range or function values.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Image}
-
-
-We could picture $(a-\delta, a+\delta)$ inside the domain of a function, $f$, and then investigate the image of this interval under $f$.  
-
-
-
-
-
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Image}}
-
-Let $f$ be a function with domain $Dom_f$ and range $Ran_f$. \\
-Let $T \subset Dom_f$ be a subset of the domain of $f$.  Then the \textbf{image of $T$} is given by
-
-\[       f(T) = \{   f(a)  \, | \, a \in T            \}             \]
-
-
-The \textbf{image} of $T$ is the collection of all of the funciton values from domain numbers inside $T$.
-
-
-\end{definition}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} Image
-
-Let $f(x) = 2x + 5$ with its natural domain.
-
-Let  $I = (4-\delta, 4+\delta)$, where $\delta > 0$ is a very small real number.
-
-Then $I$ is an interval in the domain of $f$.
-
-
-Its image is $f(I) = \{   f(a)  \, | \, a \in I \}  = \{   2a+5  \, | \, a \in (4-\delta, 4+\delta) \}$  \\
-
-
-
-$f$ will stretch the interval by a factor of $2$ and shift it by $5$.
-
-
-$(2(4-\delta)+5, 2(4+\delta)+5)$
-
-
-$(13-2\delta, 13+2\delta)$
-
-
-
-
-
-
-\end{example}
-
-
-
-
-
-
-
-
-
-
-
-
-
-What if we went the other way and started with a target in the range? \\
-
-A target maybe too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. \\
-
-
-
-What if, in the previous example, we wanted $f(I) \subset (6-\epsilon, 6+\epsilon)$, where $\epsilon > 0$ is some small distance?  \\
-
-
-What are the possibilities for $I$?  \\
-
-
-
-
-
-
-
-To land near $6$ with $f(x) = 2x + 5 = 6$, $x$ would need to be near $\frac{1}{2}$.  \\
-
-$I$ would need to look like $\left( \frac{1}{2} - \delta, \frac{1}{2}+ \delta \right)$  But this isn't going to work if $\delta$ is too big compared to $\epsilon$.  We need to describe $\delta$ in terms of $\epsilon$ to make sure.  And, we are in the business of making sure. \\
-
-
-
-$\delta$ will be multiplied by $2$ and we need this to be smaller than $\epsilon$.  (Remember: closeness is relative.) Therefore, we need $\delta < \frac{\epsilon}{2}$ for the image to land inside our target interval.  Let's pick $\delta < \frac{\epsilon}{3}$.  That makes sure. \\
-
-
-
-$I = \left( \frac{1}{2} - \frac{\epsilon}{3}, \frac{1}{2} + \frac{\epsilon}{3} \right)$
-
-
-
-
-When working backwards through the function, like this, we use the word \textbf{preimage}.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Preimage}
-
-
-
-
-The image of a domain interval is the set of function values that occur at those domain numbers.  The \textbf{preimage} is the reverse.  
-
-Given an interval, $I$, in the range (an interval of function values), the preimage is the set of of domain numbers where the function value is a member of $I$.
-
-Unfortunately for communication purposes, we reuse some notation for the preimage.
-
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Preimage}}
-
-Let $f$ be a function with domain $Dom_f$ and range $Ran_f$. \\
-Let $S \subset Ran_f$ be a subset of the range of $f$.  Then the \textbf{preimage of $S$} is given by
-
-\[       f^{-1}(S) = \{   a \in Dom_f  \, | \, f(a) \in S  \}             \]
-
-
-
-The \textbf{preimage} of $S$ is the set of all domain umbers whose function value is inside $S$.
-
-
-\textbf{Note:}  The $-1$ exponent means reverse here. The reverse of $f$.  We also use a $-1$ exponent to mean reciprocal (which is the reverse of multipication).  When reading mathematics, we need to take into account the context when interpreting the symbols and notation.
-
-
-\end{definition}
-
-
-
-\textbf{Note:}  The range is the collection of all function values. Therefore, every number in $S$ does have a corresponding domain number, possibly many.
-
-Therefore, $f(f^{-1}(S)) = S$.
-
-
-\textbf{Note:}  The other direction doesn't work out so well. $f^{-1}(f(T))$ could be a larger set in the domain than $T$.
-
-
-
-
-
-
-
-\begin{example} Preimage
-
-Let $G(t) = -4t - 3$ with its natural domain.  The natural range is $\mathbb{R}$.
-
-Let  $I = (10-\epsilon, 10+\epsilon)$, where $\epsilon > 0$ is a small positive real number.  
-
-Then $I$ is a small \textbf{neighborhood} of $10$ in the range of $G$.
-
-
-What is the preimage of $I$?
-
-\begin{explanation}
-
-
-
-
-
-$G$ will stretch a domain interval by a factor of $\answer{4}$.  It will also reflect it and shift it $3$.  
-
-
-First, we need a domain interval whose image will be around $10$.
-
-$-4t-3 = \answer{10}$
-
-$-4t = 13$
-
-$t = -\frac{13}{4}$
-
-
-
-The preimage domain interval looks like $\left( -\frac{13}{4} - \delta, -\frac{13}{4} + \delta \right)$.  Rather than just stating that $\delta$ is small, we need to be specific about its smallness compared to $\epsilon$, by specify $\delta$ in terms of $\epsilon$. (Remember, closeness is relative.)
-
-$G$ will stretch $\delta$ by a factor of $4$, therefore,  we need $\delta = \frac{\epsilon}{4}$. 
-
-
-
-
-\[   G^{-1}((10-\epsilon, 10+\epsilon)) = \left( -\frac{13}{4} - \frac{\epsilon}{4}, -\frac{13}{4} + \frac{\epsilon}{4} \right)   \]
-
-
-\end{explanation}
-
-
-
-If we are just interested in landing inside $I$, rather than covering it exactly, then we could have used something smaller than $\frac{\epsilon}{4}$.
-
-
-
-\[    
-G\left( -\frac{13}{4} - \frac{\epsilon}{5}, -\frac{13}{4} + \frac{\epsilon}{5} \right) \subseteq (10-\epsilon, 10+\epsilon)
-\]
-
-
-\[    
-G\left( -\frac{13}{4} - \frac{\epsilon}{11}, -\frac{13}{4} + \frac{\epsilon}{11} \right) \subseteq (10-\epsilon, 10+\epsilon)
-\]
-
-\[    
-G\left( -\frac{13}{4} - \frac{\epsilon}{32}, -\frac{13}{4} + \frac{\epsilon}{32} \right) \subseteq (10-\epsilon, 10+\epsilon)
-\]
-
-
-
-
-
-
-
-
-
-
-
-
-\end{example}
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} Inside Preimage
-
-Let $H(k) = 2k - 1$ with its natural domain.  The natural range is $\mathbb{R}$.
-
-Let  $I = (-5-\epsilon, -5+\epsilon)$, where $\epsilon > 0$ is a small positive real number.  
-
-Then $I$ is a small \textbf{neighborhood} of $-5$ in the range of $H$.
-
-
-Identify an interval, $D$ in the domain of $H$, such that $H(D) \subset I$.
-
-\begin{explanation}
-
-
-
-
-
-$H$ will stretch a domain interval by a factor of $\answer{2}$.  It will also shift it $1$.  
-
-
-First, we need a domain interval whose image will be around $-5$.
-
-$2k - 1 = \answer{-5}$
-
-$2k = -4$
-
-$k = -2$
-
-
-
-The preimage domain interval looks like $\left( -2 - \delta, -2 + \delta \right)$.  Rather than just stating that $\delta$ is small, we need to be specific about its smallness compared to $\epsilon$, by specify $\delta$ in terms of $\epsilon$. (Remember, closeness is relative.)
-
-$H$ will stretch $\delta$ by a factor of $\answer{2}$, therefore,  we need $\delta \leq \frac{\epsilon}{2}$.   
-
-Let's pick $\delta = \frac{\epsilon}{5}$. 
-
-
-
-
-\[   H \left( \left( -2 - \frac{\epsilon}{5}, -2 + \frac{\epsilon}{5} \right) \right)  = \left( 2\left(-2 - \frac{\epsilon}{5}\right) - 1, 2\left(-2 + \frac{\epsilon}{5}\right) - 1  \right)\]
-
-
-\[    = \left( -5 - \frac{2 \epsilon}{5} , -5 + \frac{2 \epsilon}{5} \right) \subset \left( -5 - \frac{2 \epsilon}{2} , -5 + \frac{2 \epsilon}{2} \right)  = (-5-\epsilon, -5+\epsilon) \]
-
-
-
-\end{explanation}
-\end{example}
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Endpoints}
-
-
-If our domain contains intervals with endpoints, then we have a bit of a technicality.
-
-Let $B$ be a function with domain $(-9, -7] \cup (-2, 1) \cup [6, 10)$ \\
-
-Then there is no open interval inside the domain surrounding $6$.  This is because the numbers immediately less than $6$ are not included in the domain.
-
-
-This is easily fixed.
-
-
-We'll just relax our demand that our open intervals be completely inside the domain or the range.
 
 
 

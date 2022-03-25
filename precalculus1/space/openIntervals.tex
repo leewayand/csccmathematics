@@ -7,7 +7,7 @@
 \begin{document}
 
 \begin{abstract}
-space
+always space
 \end{abstract}
 \maketitle
 
@@ -22,10 +22,10 @@ As we study functions we have expectations of their values or feelings about ``n
 \end{itemize}
 
 
-We have two concepts we need to get control over. We need algebraic language that allows us to describe exactly the concepts of ``around'' and ``close''.  These ideas are vital to Calculus and the study of functions.  And we will never get anywhere with vague and contradictory language.
+We have two concepts we need to get control over. We need algebraic language that allows us to describe exactly the concepts of ``around'' and ``close''.  These ideas are vital to Calculus and the study of functions.  And we will never get anywhere with vague or graphical language.
 
 
-First up is ``\textbf{\textcolor{purple!85!blue}{around}}''.
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} First up is ``\textbf{\textcolor{purple!85!blue}{around}}''.
 
 
 
@@ -55,7 +55,7 @@ An \textbf{interval} of real numbers, or on the real line, is a whole piece of t
 
 
 \begin{itemize}
-\item A \textbf{finite open interval} contains all of the real numbers between two distinct real numbers, but excludes the two distince numbers themselves.\\
+\item A \textbf{finite open interval} contains all of the real numbers between two distinct real numbers, but excludes the two distinct numbers themselves.\\
 
 We symbolize finite open intervals like $(a, b)$. \\
 
@@ -69,9 +69,9 @@ $(a,b)$ includes all real numbers, $r$, such that $a < r < b$.
 
 We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$. \\
 
-$(-\infty, b) = \{ r \in \mathbb{R} \, | \,  r < b     \}$
+$(-\infty, b) = \{ \, r \in \mathbb{R} \, | \,  r < b   \,  \}$
 
-$(a, \infty) = \{ r \in \mathbb{R} \, | \,  a < r     \}$
+$(a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a < r   \,  \}$
 
 \end{itemize}
 
@@ -104,9 +104,9 @@ $[a,b]$ includes all real numbers, $r$, such that $a \leq r \leq b$.
 We symbolize infinite open intervals like $(-\infty, b]$ or $[a, \infty)$.
 
 
-$(-\infty, b] = \{ r \in \mathbb{R} \, | \,  r \leq b     \}$
+$(-\infty, b] = \{ \, r \in \mathbb{R} \, | \,  r \leq b  \,   \}$
 
-$[a, \infty) = \{ r \in \mathbb{R} \, | \,  a \leq r     \}$
+$[a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a \leq r   \,  \}$
 
 \end{itemize}
 
@@ -122,7 +122,7 @@ $[a, \infty) = \{ r \in \mathbb{R} \, | \,  a \leq r     \}$
 
 
 
-Open intervals are weird, which means this is where we learn a lot about real numbers and functions. \\
+You cannot tell from the definitions, but open intervals are weird, which means this is where we learn a lot about real numbers and functions. \\
 
 
 $\blacktriangleright$  Open intervals always contain a real number, for instance the average of the two endpoint numbers.
@@ -137,33 +137,42 @@ $\blacktriangleright$  Open intervals always contain a real number, for instance
 
 $\blacktriangleright$ Open intervals do not contain a maximum real number.
 
-$b$ is not a member of $(a,b)$, so it cannot be the maximum number in the interval.   
+\textbf{Note:} $b$ is not a member of $(a,b)$, so it cannot be the maximum number in the interval.   
 
 
-$\blacktriangleright$ \textbf{Explanation:} Suppose $(a,b)$ does contain a maximum number. Then the maximum would be some number, $c \in (a,b)$.  Why can't that happen?  
+\begin{explanation}
+
+Suppose $(a,b)$ does contain a maximum number. Then the maximum would be some number, $c \in (a,b)$.  Why can't that happen?  
 
 
-Suppose $c \in (a,b)$ is the maximum number in the interval $(a,b)$.  Then, consider the number  $\frac{c+b}{2}$.   $\frac{c+b}{2} \in (a,b)$  and $c < \frac{c+b}{2}$.  
+Suppose $c \in (a,b)$ is the maximum number in the interval $(a,b)$.  Then, consider the number  $\frac{c+b}{2}$.   
+
+\[  \frac{c+b}{2} \in (a,b)  \, \text{ and } \,  c < \frac{c+b}{2} \]  
 
 
-If we have the maximum number in the interval, then we can find a greater number also in the interval. Therefore, $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in an open interval. \\
+If we have the maximum number in the interval, $c$, then we can find a greater number also in the interval. Therefore, $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in an open interval. \\
 
-Similarly, there is no minimum nuber in an open interval. \\
+
+\end{explanation}
+
+
+
+
 
 
 \begin{paradox}
 
 This type of argument is called a \textbf{proof by contradiction}.   \\
 
-You assume a fact is true, like $c \in (a,b)$ is the maximum number in the interval.  \\
+You assume a fact is true, like $c \in (a,b)$ is the maximum number in the open interval.  \\
 
-Then you use logic to discover other facts that also must be true based on the truth of your assumed fact.  YOu do this until you discover something that would also be true, but you know is not. \\
+Then you use logic to discover other facts that also must be true based on the truth of your assumed fact.  You do this until you discover something that must also be true, but you know it is not. \\
 
 At this point, you know that your original asummption cannot be true. \\
 
 Including statements that are both true and false is called a \textbf{contradiction}. \\
 
-The conclusion is that your original assumption must be false, because your assumption has generated a contradiction, like $c$ is the maximum number in the interval.
+The conclusion is that your original assumption must be false, because your assumption has generated a contradiction, like a number greater than the maximum value in an interval.
 
 
 \end{paradox}
@@ -263,11 +272,11 @@ Sets have an arithmetic. Three of the operations are \textbf{intersection} and \
 \begin{definition} \textbf{\textcolor{green!50!black}{Set Operations}} 
 
 
-Given two sets $S$ and $T$, the \textbf{union} is $S \cup T = \{ r \in \mathbb{R} \, | \, r \in S \, \text{ or } \, r \in T    \}$ \\
+Given two sets $S$ and $T$, the \textbf{union} is $S \cup T = \{ \, r \in \mathbb{R} \, | \, r \in S \, \text{ or } \, r \in T  \,   \}$ \\
 
-Given two sets $S$ and $T$, the \textbf{intersection} is $S \cap T = \{ r \in \mathbb{R} \, | \, r \in S \, \text{ and } \, r \in T    \}$ \\
+Given two sets $S$ and $T$, the \textbf{intersection} is $S \cap T = \{ \, r \in \mathbb{R} \, | \, r \in S \, \text{ and } \, r \in T  \,   \}$ \\
  
-Given a set $S$, the \textbf{complement of} is $S'  = \{ r \in \mathbb{R} \, | \, r \not\in S  \}$ 
+Given a set $S$, the \textbf{complement of} is $S^{c}  = \{ \, r \in \mathbb{R} \, | \, r \not\in S \,  \}$ 
 
 
 \end{definition}
@@ -282,29 +291,29 @@ We can use this arithmetic to connect open and closed sets.
 
 $\blacktriangleright$ The complement of a finite open interval is the union of two closed infinite intervals.
 
-\[    (a,b)'  = (-\infty, a] \cup [b, \infty)          \]
+\[    (a,b)^{c}  = (-\infty, a] \cup [b, \infty)          \]
 
 
 
 $\blacktriangleright$ The complement of an infinite open interval is an infinite closed interval.
 
-\[     (-\infty, a)' = [a, \infty)          \]
+\[     (-\infty, a)^{c} = [a, \infty)          \]
 
-\[     (a, \infty)' = (-\infty, a]          \]
+\[     (a, \infty)^{c} = (-\infty, a]          \]
 
 
 
 $\blacktriangleright$ The complement of a finite closed interval is the union of two open intervals.
 
-\[    [a,b]'  = (-\infty, a) \cup (b, \infty)          \]
+\[    [a,b]^{c}  = (-\infty, a) \cup (b, \infty)          \]
 
 
 
 $\blacktriangleright$ The complement of an infinite closed interval is an infinite open interval.
 
-\[     (-\infty, a]' = (a, \infty)          \]
+\[     (-\infty, a]^{c} = (a, \infty)          \]
 
-\[     [a, \infty)' = (-\infty, a)          \]
+\[     [a, \infty)^{c} = (-\infty, a)          \]
 
 
 
@@ -406,8 +415,7 @@ An interval is \textbf{nested} inside another interval if it is completely conta
 If $a \leq b < c \leq d$, then $[b,c]$ is \textbf{\textcolor{purple!85!blue}{nested}} inside $[a,d]$.   
 
 \begin{itemize}
-\item $[b,c]$ is a subset of $[a,d]$.  
-\item $[b,c] \subset [a,d]$.
+\item $[b,c]$ is a subset of $[a,d]$, i.e. $[b,c] \subseteq [a,d]$.
 \end{itemize}
 
 

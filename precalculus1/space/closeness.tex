@@ -1,3 +1,4 @@
+
 \documentclass{ximera}
 
 \input{../../preamble.tex}
@@ -7,7 +8,7 @@
 \begin{document}
 
 \begin{abstract}
-distance
+relative distance
 \end{abstract}
 \maketitle
 
@@ -70,7 +71,7 @@ If $r$ is a nonnegative real number and $r < x$, where $x$ is any positive real 
 \begin{idea}
 
 
-The kind of ``close'' we are interested in is the kind that works for any positive real number.
+The kind of ``close'' we are interested in is the kind that works for \textbf{\textcolor{purple!85!blue}{any}} positive real number.
 
 
 \end{idea}
@@ -85,9 +86,9 @@ In this way, we can begin to bring ``close'' under the Algebra umbrella and stil
 
 Let $f$ be a function. Let $d$ be a domain number.
 
-Let $\delta$ be any (usually small) positive number.
+Let $\delta$ be any small positive number.
 
-Now consider ALL of the intervals described by $(d - \delta, d + \delta)$.
+Now consider \textbf{\textcolor{red!80!black}{ALL}} of the intervals described by $(d - \delta, d + \delta)$.
 
 
 \begin{itemize}
@@ -97,7 +98,11 @@ Now consider ALL of the intervals described by $(d - \delta, d + \delta)$.
 \item They get as small as anyone might wish for their level of ``closeness''.
 \end{itemize}
 
-These $\delta$-intervals handle all of the closeness situations.
+These $\delta$-intervals handle all of the closeness situations.  If someone wants a particular closeness, then there is a $\delta$-interval that matches their closeness.
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{More Importantly:}} If we are not sure of the level of closeness, then we can talk about \textbf{\textcolor{red!80!black}{ALL}} of the $\delta$-intervals and have \textbf{\textcolor{red!80!black}{ALL}} of the bases covered at once.
 
 
 
@@ -131,7 +136,7 @@ And, since $(a-\delta, a+\delta)$ is an open interval, we know there is a number
 And, it doesn't matter how small $\delta$ is.  There will always be a number in the left half and in the right half, because we have an open interval.
 
 
-In an open interval, there is always space ``around''.  No matter what positive number $\delta$ represents, the interval $(a-\delta, a+\delta)$ surrounds $a$.  There is space on both sides of $a$. This is important for comparing our expectations and actual function values.
+In an open interval, there is always space ``\textbf{\textcolor{purple!85!blue}{around}}''.  No matter what positive number $\delta$ represents, the interval $(a-\delta, a+\delta)$ surrounds $a$.  There is space on both sides of $a$. This is important for comparing our expectations and actual function values.
 
 
 
@@ -140,7 +145,7 @@ In an open interval, there is always space ``around''.  No matter what positive 
 This is not true for closed intervals.
 
 
-For example, consider the number $5$ and the interval $[5, 7]$.  $5$ doesn't have space ``around'' it. Of course, we could choose the interval $[4,7]$, which has space ``around'' $5$.  However, there would now be the open interval $(4.5, 7)$ to use.  So, why take the chance on a closed interval?  If we are interested in our analysis working \textbf{\textcolor{red!80!black}{all}} of the time, then let's just stick with open intervals.  They \textbf{must} provide space ``around'' \textbf{\textcolor{red!80!black}{all}} of the numbers they contain.
+For example, consider the number $5$ and the interval $[5, 7]$.  $5$ doesn't have space ``around'' it in this interval. Of course, we could choose the interval $[4,7]$, which has space ``around'' $5$.  However, there would now be the open interval $(4.5, 7)$ to use.  So, why take the chance on a closed interval?  If we are interested in our analysis working \textbf{\textcolor{red!80!black}{all}} of the time, then let's just stick with open intervals.  They \textbf{must} provide space ``around'' \textbf{\textcolor{red!80!black}{all}} of the numbers they contain.
 
 
 
@@ -189,7 +194,7 @@ Let $T \subset Dom_f$ be a subset of the domain of $f$.  Then the \textbf{image 
 \[       f(T) = \{   f(a)  \, | \, a \in T            \}             \]
 
 
-The \textbf{image} of $T$ is the collection of all of the funciton values from domain numbers inside $T$.
+The \textbf{image} of $T$ is the collection of all of the function values from the domain numbers inside $T$.
 
 
 \end{definition}
@@ -249,7 +254,7 @@ $(13-2\delta, 13+2\delta)$
 
 What if we went the other way and started with a target in the range? \\
 
-A target maybe too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. \\
+Actually, a range target is often too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. \\
 
 
 
@@ -316,7 +321,7 @@ The image of a domain interval is the set of function values that occur at those
 
 Given an interval, $I$, in the range (an interval of function values), the preimage is the set of of domain numbers where the function value is a member of $I$.
 
-Unfortunately for communication purposes, we reuse some notation for the preimage.
+
 
 
 
@@ -337,7 +342,7 @@ The \textbf{preimage} of $S$ is the set of all domain umbers whose function valu
 
 \end{definition}
 
-
+\textbf{A Second Note:} That is \textbf{NOT} a negative one power.  It is a signal that we are working backwards.
 
 \textbf{Note:}  The range is the collection of all function values. Therefore, every number in $S$ does have a corresponding domain number, possibly many.
 
@@ -348,7 +353,23 @@ Therefore, $f(f^{-1}(S)) = S$.
 
 
 
+\begin{example} Primage of Images can be Bigger
 
+
+Let $h(y) = (y-3)(y-5)$ with is natural domain. \\
+
+The set $T = \{ \, 3 \, \}$ is a subset of the domain.  Its image is $h(T) = \{ \, h(3) \, \} = \{ \, 0 \, \}$.
+
+However, if we get the preimage of this we get
+
+
+\[
+h^{-1}(\{ 0 \}) = \{ \,  3, 5 \,\}
+\]
+
+Which is bigger than the original set with which we began.
+
+\end{example}
 
 
 
