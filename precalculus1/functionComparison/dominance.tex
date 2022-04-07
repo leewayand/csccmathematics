@@ -112,7 +112,7 @@ When one function dominates another, then it approaches infinity at a faster lev
 Our initial order of dominance looks like this. \\
 
 
-\begin{summary} \textbf{\textcolor[rgb]{0.266,0.466,0.666}{Order of Dominance}} 
+\begin{summary} \textbf{\textcolor{purple!85!blue}{Order of Dominance}}
 
 
 \[   bounded functions (constants, \, sine \, cosine) << logarithmic << polynomial <<  exponential  \]
@@ -137,7 +137,9 @@ This goes for their powers as well.
 \begin{example} Dominance
 
 
-Graph of $y = \frac{ln(x)}{x}$.
+Graph of $y = \frac{\ln(x)}{x}$.
+
+According to our order of dominance, the denominator is a linear function and should dominate the numberator function, which is a logarithm.  Therefore, as $x$ approach infinity, this whole fraction should approach $0$.
 
 
 \begin{image}
@@ -210,7 +212,10 @@ Let's zoom in.
 
 Here we can see the graph peak and begin to come back down.   \\
 
-BThat was not a good graph for our purposes.  We are interested in large values of $x$.
+
+However, we are now investigating \textbf{end-behavior}.  We are interested in the values of$g(x)$ when $x$ is very very large. \\  
+
+That was not a good graph for our purposes.  We are interested in large values of $x$.
 
 
 
@@ -254,7 +259,7 @@ BThat was not a good graph for our purposes.  We are interested in large values 
 Eventually, the graph approaches the x-axis as the function value approaches $0$. \\
 
 
-The function $den(x) = x$ dominates the function $num(x) = ln(x)$.   The values of $ln(x)$ become like $0$ comepared to the values of $x$, when $x$ is very very very large.
+The denominator function $den(x) = x$ dominates the numeratorfunction $num(x) = \ln(x)$.   The values of $\ln(x)$ become like $0$ compared to the values of $x$, when $x$ is very very very large. Not when $x$ takes on small values.  Not when $x$ has medium values.  Dominance is a statement when $x$ takes on very very very large values.
 
 
 
@@ -267,7 +272,7 @@ The function $den(x) = x$ dominates the function $num(x) = ln(x)$.   The values 
 
 
 
-The level of dominance includes powers.  We can raise the power of $ln(x)$, but they are still overshadowed by values of $x$, when $x$ is very very very large. \\
+The level of dominance includes powers.  We can raise the power of $\ln(x)$, but they are still overshadowed by values of $x$, when $x$ is very very very large. \\
 
 
 
@@ -288,9 +293,9 @@ The level of dominance includes powers.  We can raise the power of $ln(x)$, but 
 \begin{example} Powers
 
 
-Graph of $y = \frac{(ln(x))^5}{x}$.
+Graph of $y = \frac{(\ln(x))^5}{x}$.
 
-$x$ should dominate any power of $ln(x)$.  Therefore, the graph of this function should eventually aproach the the $x$-axis as the function value approaches $0$. \\
+$x$ should dominate any power of $\ln(x)$.  Therefore, the graph of this function should eventually aproach the the $x$-axis as the function value approaches $0$. \\
 
 
 If this function approaches $0$, then it must get below and stay below $2$, eventually. How far out in the domain do you need to go before this function eventually dips and stays below $2$.
@@ -308,6 +313,12 @@ If this function approaches $0$, then it must get below and stay below $2$, even
 \end{example}
 
 
+
+
+
+
+
+For the following limits, refer to our order of dominance.
 
 \begin{question}
 
@@ -328,7 +339,7 @@ If this function approaches $0$, then it must get below and stay below $2$, even
 \begin{question}
 
 \[
-\lim\limits_{\theta \to \infty} \frac{cos(2 \theta)}{ln(\theta)} = \answer{0}
+\lim\limits_{\theta \to \infty} \frac{\cos(2 \theta)}{\ln(\theta)} = \answer{0}
 \]
 
 \end{question}
