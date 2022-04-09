@@ -94,7 +94,7 @@ The function is continuous. Therefore, the function either changes sign across e
 
 We can follow the sign of $A$ through its factors.
 
-\[   A(\theta)   &  = \sin(\theta) (1 - 2\cos(\theta))   \]
+\[   A(\theta) = \sin(\theta) (1 - 2\cos(\theta))   \]
 
 
 $\blacktriangleright$  Across $0$, $\sin(\theta)$ changes sign. It goes from negative to positive. On the other hand $1 - 2\cos(2\theta)$ stays negative on either side of $0$.  Therefore, $A(\theta)$ changes sign.  It goes from positive to negative and the graph crosses the axis at $(0, 0)$.
@@ -113,7 +113,55 @@ The behavior at $2\pi$ is the same as the behavior at $0$, since $A$ is periodic
 
 
 
-We now know that $A(t)$ is negative when $t$ is slightly positive and that $A$ changes signs at each zero. We can sketch a rough idea of the graph.
+We now know that $A(t)$ is negative when $t$ is slightly positive and that $A$ changes signs at each zero. We can sketch a rough idea of how the graph moves.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-1:8, ymax=3, xmax=8, ymin=-3, xmin=-1,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y = A(\theta)$}, grid = major, grid style={dashed},
+            ytick={-3,-2,-1,1,2,3},
+            xtick={1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+
+
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.047,0)};
+             \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3.14,0)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5.236,0)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.28,0)};
+
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(0:1.047)] {1.355*(x)*(x-1.047)};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.047:3.141)] {-0.284*(x-1.047)*(x-3.141)};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(3.141:5.236)] {0.284*(x-3.141)*(x-5.236)};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(5.236:6.28)] {-1.355*(x-5.236)*(x-6.28)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
@@ -139,15 +187,23 @@ We now know that $A(t)$ is negative when $t$ is slightly positive and that $A$ c
 
 
 
-$\blacktriangleright$  The range is difficult to determine from here.  It depends on how high and low the maximum and minimum are.  But we can say that $\sin(\theta)$ can't get greater than $1$.  
-
-
-
-Our graph of $y=A(\theta))$ is piecing together. $1 -2\cos(2\theta)$ can't get greater than $3$.  So, the range must be inside $[-3, 3]$.
 
 
 
 
+
+
+
+
+$\blacktriangleright$  The range is difficult to determine from here.  It depends on how high and low the maximum and minimum are.  
+
+We do know that $\sin(\theta)$ can't get greater than $1$ or less than $-1$.  That tells us that $1 -2\cos(2\theta)$ can't get greater than $3$.   So, the range must be inside $[-3, 3]$.
+
+
+
+
+
+This is confirmed with a better graph.
 
 
 
@@ -217,7 +273,7 @@ Our graph of $y=A(\theta))$ is piecing together. $1 -2\cos(2\theta)$ can't get g
 
 
 
-The graph tells us a lot.
+The graph suggests a lot to us (which is why we like graphs).  The graphs suggests that there are critical numbers in between the zeros.
 
 
 
@@ -317,7 +373,7 @@ $\blacktriangleright$ Rate-of-Change
 
 \section{with Calculus}
 
-Calculus will give us the tools to discover a formula for the derivative of $G$.
+Calculus will give us the tools to discover a formula for the derivative of $A$.
 
 
 \[   A'(\theta) = \cos(\theta)-2 \cos(2\theta)    \]
@@ -545,9 +601,9 @@ There is a fourth angle in the third quadrant where cosine is $\frac{1 - \sqrt{3
 
 
 
-We want exact answers, when possible.
+We want exact answers, when possible, and we have exact answers with Calculus.
 
-In this case, without the derivative and algebra, we could approximate the critical numbers from a graph.
+For us, without the derivative, we could approximate the critical numbers from a graph as well as the extreme values of $A$.
 
 
 
