@@ -19,21 +19,23 @@ describe everything
 
 Completely analyze $A(\theta) = \sin(\theta) - \sin(2\theta)$
 
-$\blacktriangleright$  The implied domain is all real numbers.
+$\blacktriangleright$  The implied domain of the sine function is all real numbers.
 
-$\blacktriangleright$  There are no discontinuities or singularities.
+$\blacktriangleright$ The sine function is continuous on the whole real line.
 
-$\blacktriangleright$ The function is continuous on the whole real line.
-
-
-$\blacktriangleright$ The function is periodic with a period of $2\pi$.  Therefore, we can just examine one wave.  Let's examine $[0,2\pi)$.
+$\blacktriangleright$  Therefore, there are no discontinuities or singularities.
 
 
+$\sin(\theta)$ is periodic with a period of $2\pi$. $\sin(2\theta)$ is periodic with a period of $\pi$. 
+
+$\blacktriangleright$ Thus, $A$ is periodic with a period of $2\pi$.  Therefore, we can just examine one wave.  Let's examine $[0,2\pi)$.
 
 
 
 
-$\blacktriangleright$ To locate zeros, we will need to factor the formula.  
+
+
+$\blacktriangleright$ To locate zeros, we will factor the formula via the double angle sine rule.  
 
 
 
@@ -46,10 +48,10 @@ A(\theta)   &  = \sin(\theta) (1 - 2\cos(\theta))   \\
 
 
 
-Either $sin(\theta) = 0$, which happens when $\theta = k\pi$ with $k \in \mathbb{Z}$.
+Either $sin(\theta) = 0$, which happens when $\theta = k\pi$ with $k \in \mathbb{Z}$. \\
 Or, $1 - 2\cos(\theta) = 0$, which happens when $\theta = \frac{\pi}{3} \pm 2k\pi$ or when $\theta = \frac{5\pi}{3} \pm 2k\pi$ with $k \in \mathbb{Z}$.
 
-In our sample period, we have zeros at $0$ and $\pi$. These will get solid dots on the  graph.  There is a zero at $2\pi$, but this is not in our sample period.  However, we should include a solid dot, because that makes the description clearer.  We also have zeros at $\frac{\pi}{3}$and $\frac{5\pi}{3}$.  These will get solid dots on the graph.
+In our sample period, we have zeros at $0$ and $\pi$. These will get solid dots on intercepts the graph.  There is a (repeat) zero at $2\pi$, but this is not in our sample period.  However, we should include a solid dot, because that makes the description clearer.  We also have zeros at $\frac{\pi}{3}$and $\frac{5\pi}{3}$.  These will get solid dots as intercepts on the graph.
 
 
 
@@ -87,14 +89,49 @@ In our sample period, we have zeros at $0$ and $\pi$. These will get solid dots 
 
 
 
-The function is continuous. Therefore, the graph either crosses the axis at the intercepts or the graph bounces back and maintains its sign.
+The function is continuous. Therefore, the function either changes sign across each zero or it maintains its sign. The graph either crosses the axis at the intercepts or the graph bounces back and maintains its sign.
 
 
-For example: At $\pi$, $\sin(\theta)$ changes sign. Other other hand $1 -2\cos(2\theta)$ stays positive on either side of $\pi$.  Therefore, $A(\theta)$ changes sign and the graph crosses the axis at $(\pi, 0)$.
+We can follow the sign of $A$ through its factors.
 
-A similar analysis will show that the graph crosses at all of the intercepts.  We just need a starting direction.
+\[   A(\theta)   &  = \sin(\theta) (1 - 2\cos(\theta))   \]
 
-When $\theta$ is a little bit greater than $0$, $\sin(\theta)$ is positive and $1-2\cos(\theta)$ is negative, making $G(t)$ negative.
+
+$\blacktriangleright$  Across $0$, $\sin(\theta)$ changes sign. It goes from negative to positive. On the other hand $1 - 2\cos(2\theta)$ stays negative on either side of $0$.  Therefore, $A(\theta)$ changes sign.  It goes from positive to negative and the graph crosses the axis at $(0, 0)$.
+
+$\blacktriangleright$  Across $\frac{\pi}{3}$, $\sin(\theta)$ remains positive. However, $1 - 2\cos(2\theta)$ changes sign.  It goes from negative to positive. Therefore, $A(\theta)$ changes sign. It changes from negative to positive and the graph crosses the axis at $\left( \frac{\pi}{3}, 0 \right)$.
+
+
+$\blacktriangleright$  Across $\pi$, $\sin(\theta)$ changes sign, from positive to negative.  $1 - 2\cos(2\theta)$ stays positive on either side of $\pi$.  Therefore, $A(\theta)$ changes sign from positive to negative and the graph crosses the axis at $(\pi, 0)$.
+
+
+$\blacktriangleright$  Across $\frac{5\pi}{3}$, $\sin(\theta)$ remains negative. However, $1 - 2\cos(2\theta)$ changes sign.  It goes from positive to negative. Therefore, $A(\theta)$ changes sign. It changes from negative to positive and the graph crosses the axis at $\left( \frac{5\pi}{3}, 0 \right)$.
+
+The behavior at $2\pi$ is the same as the behavior at $0$, since $A$ is periodic. \\
+
+
+
+
+
+We now know that $A(t)$ is negative when $t$ is slightly positive and that $A$ changes signs at each zero. We can sketch a rough idea of the graph.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
