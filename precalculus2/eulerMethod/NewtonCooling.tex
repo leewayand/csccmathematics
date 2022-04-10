@@ -15,13 +15,8 @@
 
 
 
-Newton's Law of Cooling states
+In modern notation, Newton's Law of Cooling states
 
-
-
-
-
-In modern notation, we have
 
 \[
 \frac{dT}{dt} = r \, (T_{env} - T(t))
@@ -38,8 +33,38 @@ The derivative (rate of change) of temperature is proportional to the difference
 
 
 
+If we have an initial temperature, then we can calculate a value for the derivative, which means we can approximate close values of the temperature function.  In this way, we can piece together an approximation of the temperature function.
 
-We can do better in our example from the last section, by using smaller intervals and reusing the differential equaiton to give us an updated rate.
+
+\begin{procedure}  \textbf{\textcolor{blue!55!black}{Euler's Method}} \\
+
+Given a differential equation of the form
+\begin{center}
+$f^{\prime}(x) =$ formula invovling $f$ and $x$.
+\end{center}
+
+and an intial value of $f$, $f(0) = c$. \\
+
+
+Decide on an increment for $x$, $\Delta x$.
+
+\begin{enumerate}[label=(\arabic*)]
+\item $f(0) = c$
+\item Using $f(0) = c$, get a value for $f^{\prime}(0)$
+\item Using $f(0) = c$ and $f^{\prime}(0)$ approximate a value for $f(\Delta x)$
+\item Using your value for $f(\Delta x)$, get a value for $f^{\prime}(\Delta x)$
+\item Using $f(\Delta x)$ and $f^{\prime}(\Delta x)$ approximate a value for $f(2 \Delta x)$
+\item Similarly get an approximation for $f(3 \Delta x)$, then approximate $f(4 \Delta x)$, etc
+\end{enumerate}
+
+This is slowly develop a table of approximate values for $f$.
+
+\end{procedure}
+
+We did one step of this procedure in the last section. \\
+
+
+However, we can do better in our example from the last section, by using smaller increments and reusing the differential equation to give us an updated rate.
 
 
 
@@ -102,9 +127,9 @@ In the previous section we arrived at $196.8^{\circ}$.
 
 \begin{observation}
 
-Our revised calcualtion is higher than the previous.  That is because the rate decreases over time.  In the example in the previous section we used a higher rate over a longer time interval.
+Our revised calculation is higher than the previous.  That is because the rate decreases over time.  In the example in the previous section, we used a higher rate over a longer time interval.
 
-This time we revised our rate and it was lower during the second $30$ second period.  Thus, the tea did not cool as much as before.
+This time we revised our rate and it was lower during the second $30$-second period.  Thus, the tea did not cool as much as before.
 \end{observation}
 
 

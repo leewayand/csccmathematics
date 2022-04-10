@@ -14,27 +14,92 @@
 
 
 
-derivatives are funcitons.  They have derivatives
-
-derivatives of derivatives
 
 
-sine and cosine
-
-exp?
+We have investigated formulas for derivative in a couple of situations.
 
 
-quadratic - linear - constant.
+We began with the value of the derivative as the slope of the tangent line.
+
+The constant function $f(x) = c$ has a horizontal line as its graph and every tangent line is also a horizontal tangent line with slope $0$.
+
+
+\[
+\text{If } \, f(x) = c, \, \text{ then } \, f'(x) = 0
+\]
+
+
+
+The linear function $g(t) = a \, t + b$ has a line as its graph and every tangent line is also that same line with slope $a$.
+
+
+
+\[
+\text{If } \, g(t) = a \, x + b, \, \text{ then } \, g'(t) = a
+\]
 
 
 
 
-notation:   $\frac{d}{dx} \frac{d}{dx} \frac{d}{dx}  = f^{(3)}$
+The quadratic function $q(r) = a \, r^2 + b \, r + c$ has the linear function $2a \, r + b$ as its derivative.
 
 
-not mulitplication
 
-of or applied to
+
+
+Looking at this in reverse, we might notice that a quadrtic function has a derivative, which is a linear function, which has a derivative, which is a constant function, which has a derivative, which is the $0$ function.
+
+
+
+Capturing this sequence of derivatives is the idea behing \textbf{higher order derivatives}.
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Higher Order Derivatives}} \\
+
+
+Let $f(x)$ be a function. \\
+
+
+Its derivative is also known as the \textbf{first derivative of $f(x)$} and is symbolize by \textbf{$f^{\prime}(x)$} or \textbf{$\frac{df}{dx}$}.
+
+This first derivative of $f(x)$ is a function and has a derivative known as the \textbf{second derivative of $f(x)$} and is symbolize by \textbf{$f^{\prime\prime}(x)$} or \textbf{$\frac{d^2f}{dx^2}$} or \textbf{$f^{(2)}(x)$}.
+
+
+This second derivative of $f(x)$ is a function and has a derivative known as the \textbf{third derivative of $f(x)$} and is symbolize by \textbf{$f^{\prime\prime\prime}(x)$} or \textbf{$\frac{d^3f}{dx^3}$} or \textbf{$f^{(3)}(x)$}.
+
+
+In general, the \textbf{$n^{th}$ derivative} is s symbolize by \textbf{$\frac{d^{n}f}{dx^n}$} or \textbf{$f^{(n)}(x)$}.
+
+
+\end{definition}
+
+
+
+
+\begin{example}
+
+
+Let $G(t) = 4 \sin(t)$. Then,\\
+
+$G^{\prime}(t) = 4 \cos(t)$ \\
+
+$\frac{d^{2}G}{dt^{2}} = -4 \sin(t)$ \\
+
+$\frac{d^{3}G}{dt^{3}} = -4 \cos(t)$ \\
+
+$\frac{d^{4}G}{dt^{4}} = 4 \sin(t)$ \\
+
+Back to $G(t)$.
+
+\end{example}
+
 
 
 
