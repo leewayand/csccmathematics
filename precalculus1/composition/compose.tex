@@ -12,7 +12,7 @@ putting together
 \maketitle
 
 
-TOP
+
 
 
 
@@ -33,7 +33,7 @@ Graph of $y = Out(x) =2|x-3|+1$
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$x$, ylabel=$y=Out(x)$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -57,6 +57,12 @@ Graph of $y = Out(x) =2|x-3|+1$
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+The graph of $Out$ has a "V"-shape, opening up, with a corner at $(3,1)$. \\
+This illustrates that $Out$ decreases on $(-\infty, 3]$ and increases on $[3, \infty)$.  $Out$ has a minimum value of $1$, which occurs at $3$. \\
+
+If we think of tracing the domain from left to right on the graph, the values of $Out$ decrease from $\infty$ down to $1$, then reverse direction and increase from $1$ back to $\infty$.
+
 
 
 Graph of $z = In(t) = -(t-1)^2 + 5$
@@ -93,12 +99,19 @@ Graph of $z = In(t) = -(t-1)^2 + 5$
   \end{axis}
 \end{tikzpicture}
 \end{image}
+Since $In$ is a quadratic function, its graph has the shape of a parabola, opening down.  $In$ increases on $(-\infty, 1]$ and decreases on $[1, \infty)$. $In$ has a maximum value of $5$, which occurs at $1$.
+
+If we think of tracing the domain from left to right on the graph, the values of $In$ increase from $-\infty$ up to $5$, then reverse direction and decrease from $5$ back to $-\infty$.
+
+
+The output from the function $In$ will become the input to $Out$.  Therefore, in the composition, the new input to $Out$ will be the interval $(-\infty, 5]$.  The values going into $Out$ will begin at $-\infty$, go up to $5$, then turn around and go back down to $-\infty$. The values of $Out$ will similarly repeat themselves in reverse.\\
 
 
 
 
 
-Now to examine the composition. \\
+
+\textbf{\textcolor{purple!85!blue}{Now to examine the composition:}} \\
 
 
 
@@ -110,6 +123,37 @@ The corresponding movement in the range has the function values increasing from 
 
 
 This movement in the range of $In(t)$ becomes the movement in the domain of $Out(x)$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  Movement inside the domain of $Out(x)$.\\
