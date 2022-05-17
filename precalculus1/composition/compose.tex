@@ -355,10 +355,9 @@ Since we reverse our travelling direction inside the domain, we hit the corner t
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.5:1),<-] {2*abs(-(x-1)^2 + 2)+1};
-            \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:3.5),->] {2*abs(-(x-1)^2 + 2)+1};
-
-   
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.5:-0.414),<-] {2*abs(-(x-1)^2 + 2)+1};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-0.414:2.414)] {2*abs(-(x-1)^2 + 2)+1};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(2.414:3.5),->] {2*abs(-(x-1)^2 + 2)+1};
 
   \end{axis}
 \end{tikzpicture}
@@ -377,8 +376,7 @@ Since we reverse our travelling direction inside the domain, we hit the corner t
 
 
 
-
-All together now...\\
+\textbf{\textcolor{blue!55!black}{All together now...}}   \\
 
 
 Graph of $w = Out(In(m)) =2 \, |(-(m-1)^2 + 5)-3|+1 = 2 \, |-(m-1)^2 + 2| + 1$
