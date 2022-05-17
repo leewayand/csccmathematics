@@ -131,56 +131,6 @@ This movement in the range of $In(t)$ becomes the movement in the domain of $Out
 
 
 
-\begin{image}
-\begin{tikzpicture}
-    \begin{axis}[name = input,
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y=Out(x)$, grid = major,
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-      \addplot [line width=2, penColor, smooth,samples=100,domain=(-1:7),<->] {2*abs(x-3)+1};
-
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
-
-
-
-           
-
-    \end{axis}
-    \begin{axis}[at={(input.outer east)},anchor=outer west,
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major,
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-      \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.5:4.5),<->] {-(x-1)^2 + 5)};
-
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
 
 
 
