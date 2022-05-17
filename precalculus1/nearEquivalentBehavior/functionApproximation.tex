@@ -20,7 +20,7 @@ tangent lines
 
 What are we supposed to do with a function like this?
 
-\[  C(x) =  \frac{(sin(2x)+2)^{|x|}}{5(x^2+1)}       \]
+\[  C(x) =  \frac{(\sin(2x)+2)^{|x|}}{5(x^2+1)}       \]
 
 
 
@@ -98,23 +98,24 @@ Of course, it will only be useful on $(6.6, 7.0)$, if that. \\
 
 
 We'll need the derivative:
+\textbf{Note:} On the interval $(6.6, 7.0)$, $| x | = x$.
 
 \[  
-C'(x) = \frac{(sin(2x)+2)^x (ln(sin(2x)+2) + \frac{2 x cos(2x)}{sin(2x)+2})}{5(x^2+1)} - \frac{2x(sin(2x)+2)^x}{5(x^2+1)^2}
+C'(x) = \frac{(\sin(2x)+2)^x (\ln(\sin(2x)+2) + \frac{2 x \cos(2x)}{\sin(2x)+2})}{5(x^2+1)} - \frac{2x(\sin(2x)+2)^x}{5(x^2+1)^2}
 \]
 
 
 
 
-That's terrible.  But we only need it for $6.8$.
+That's terrible.  But we only need it for $6.8$ and we are approximating, for which decimal numbers are handy.
 
-$C'(6.8) = 17.132$
-
-
-$C(6.8) = 5.359$
+$C'(6.8) \approx 17.132$
 
 
-That gives $approxC(x) = 17.132(x-6.8)+5.359$
+$C(6.8) \approx 5.359$
+
+
+That gives $approxC(x) \approx 17.132(x-6.8)+5.359$
 
 
 
@@ -234,7 +235,7 @@ That is pretty good on $(6.6, 7.0)$.
 
 
 
-Now we can approximate $C(x) \approx approxC(x) = 17.132(x-6.8)+5.359$ on $(6.6, 7.0)$.  That would save a lot of time and energy and not give up too much accuracy - as long as we stay in this interval.
+Now we can approximate $C(x) \approx approxC(x) \approx 17.132(x-6.8)+5.359$ on $(6.6, 7.0)$.  That would save a lot of time and energy and not give up too much accuracy - as long as we stay in this interval.
 
 
 
@@ -346,7 +347,7 @@ The linear approximation is $L(t) = \frac{1}{4}(t-4)+2$
 \end{tikzpicture}
 \end{image}
 
-Now we'll use our linear approximation to get an estimate to $\sqrt{4.5}$.
+Now we'll use our linear approximation to get an estimate to $\sqrt{4.5} = s(4.5)$.
 
 
 
@@ -410,17 +411,20 @@ Graph of $y = p(k) = -k^2 + 7$.
 
 Let's approximate $p(k) = -k^2+7$ with five linear functions, corresponding to five tangent lines tangent where $k=-2, -1, 0, 1, 2$.
 
-$p(k)$ is a quadratic function, therefore, we know that $p'(k) = -2k$.  This will get us rate of change or slope.  Together with the point of tangency, we can get a linear approximation of $p(k)$.
+$p(k)$ is a quadratic function, therefore, we know that $p'(k) = -2k$.  This will get us rate of change or slope.  Together with the point of tangency, we can get a linear model of $p(k)$.
 
+
+\begin{model}
 
 \begin{itemize}
 \item $p(-2) = 3$ and $p'(-2) = 4$ give $p(k) \approx 4(k+2)+3$
-\item $p(-1) = 6$ and $p'(-1) = 2$ give $p(k) \approx \answer{2(x+1)+6}$
+\item $p(-1) = 6$ and $p'(-1) = 2$ give $p(k) \approx \answer{2(k+1)+6}$
 \item $p(0) = 7$ and $p'(0) = 0$   give $p(k) \approx \answer{7}$
 \item $p(1) = 6$ and $p'(1) = -2$   give  $ p(k) \approx \answer{-2(k-1)+6}$
 \item $p(2) = 3$ and $p'(2) = -44$   give $p(k) \approx -4(k-2)+3$
 \end{itemize}
 
+\end{model}
 
 
 
@@ -523,6 +527,8 @@ Now we need domains for each piece.  We'll decide the domains by locating the in
 
 $\blacktriangleright$  Intersection of $4(k+2)+3$ and $2(k+1)+6$.
 
+\begin{procedure}
+
 $4(k+2)+3 = 2(k+1)+6 $
 
 $4k + 8 + 3 = \answer{2k + 2 + 6}$
@@ -531,10 +537,12 @@ $2k = \answer{-3}$
 
 $k=-\frac{3}{2}$
 
+\end{procedure}
 
 
 $\blacktriangleright$  Intersection of $2(k+1)+6$ and $7$.
 
+\begin{procedure}
 
 $2(k+1)+6 = 7$
 
@@ -543,6 +551,10 @@ $2k + 2 + 6 = 7$
 $2k = \answer{-1}$
 
 $k = -\frac{1}{2}$
+
+\end{procedure}
+
+
 
 
 $\blacktriangleright$  By symmetry we can see that the other two intersections happen when $k = \frac{1}{2}$  and $k = \frac{3}{2}$.
