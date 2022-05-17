@@ -17,6 +17,7 @@ putting together
 
 
 Let $Out(x) = 2|x-3|+1$ with its natural or implied domain. \\
+
 Let $In(t) = -(t-1)^2 + 5$ with its natural or implied domain. \\
 
 
@@ -57,11 +58,12 @@ Graph of $y = Out(x) =2|x-3|+1$
   \end{axis}
 \end{tikzpicture}
 \end{image}
+The natural domain of $Out$ is $\mathbb{R}$. \\
 
 The graph of $Out$ has a "V"-shape, opening up, with a corner at $(3,1)$. \\
 This illustrates that $Out$ decreases on $(-\infty, 3]$ and increases on $[3, \infty)$.  $Out$ has a minimum value of $1$, which occurs at $3$. \\
 
-If we think of tracing the domain from left to right on the graph, the values of $Out$ decrease from $\infty$ down to $1$, then reverse direction and increase from $1$ back to $\infty$.
+If we think of tracing the domain from left to right on the graph, the corresponding values of $Out$ decrease from $\infty$ down to $1$, then reverse direction and increase from $1$ back to $\infty$. \\
 
 
 
@@ -99,12 +101,15 @@ Graph of $z = In(t) = -(t-1)^2 + 5$
   \end{axis}
 \end{tikzpicture}
 \end{image}
-Since $In$ is a quadratic function, its graph has the shape of a parabola, opening down.  $In$ increases on $(-\infty, 1]$ and decreases on $[1, \infty)$. $In$ has a maximum value of $5$, which occurs at $1$.
+The natural domain of $In$ is $\mathbb{R}$. \\
+
+
+Since $In$ is a quadratic function, its graph has the shape of a parabola, opening down.  $In$ increases on $(-\infty, 1]$ and decreases on $[1, \infty)$. $In$ has a maximum value of $5$, which occurs at $1$. \\
 
 If we think of tracing the domain from left to right on the graph, the values of $In$ increase from $-\infty$ up to $5$, then reverse direction and decrease from $5$ back to $-\infty$.
 
 
-The output from the function $In$ will become the input to $Out$.  Therefore, in the composition, the new input to $Out$ will be the interval $(-\infty, 5]$.  The values going into $Out$ will begin at $-\infty$, go up to $5$, then turn around and go back down to $-\infty$. The values of $Out$ will similarly repeat themselves in reverse.\\
+The output from the function $In$ will become the input to $Out$.  Therefore, in the composition, the new input to $Out$ will be the interval $(-\infty, 5]$, which is the output of $In$. This interval is traced twice. The values going into $Out$ will begin at $-\infty$, go up to $5$, then turn around and go back down to $-\infty$. The values of $Out$ will similarly repeat themselves in reverse.\\
 
 
 
@@ -135,6 +140,48 @@ This movement in the range of $In(t)$ becomes the movement in the domain of $Out
 
 
 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, width=3in, height=3in,
+                  axis lines =center, xlabel=$x$, ylabel={$y=In(x)$}, grid = major,
+                  ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                  xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                  ticklabel style={font=\scriptsize},
+                  every axis y label/.style={at=(current axis.above origin),anchor=south},
+                  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                  axis on top]
+        \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.5:4.5),<->] {-(x-1)^2 + 5)};
+
+        \addplot [line width=1, penColor2, smooth, domain=(-9.5:5)] ({-0.75},{x});
+        \addplot [line width=1, penColor2, smooth, domain=(-9.5:5),<-] ({-0.25},{x});
+        \addplot [line width=1, penColor2, smooth, domain=(0:3.14)] ({0.25*cos(deg(x))-0.5},{0.25*sin(deg(x))+5});
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, 
+                  width=3in, height=3in,
+                  axis lines =center, xlabel=$t$, ylabel={$z=Out(t)$}, grid = major,
+                  ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                  xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                  ticklabel style={font=\scriptsize},
+                  every axis y label/.style={at=(current axis.above origin),anchor=south},
+                  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                  axis on top]
+        \addplot [line width=2, penColor, smooth,samples=100,domain=(-1:7),<->] {2*abs(x-3)+1};
+
+        \addplot [line width=1, penColor2, smooth, domain=(-9.5:5)] ({x},{-0.25});
+        \addplot [line width=1, penColor2, smooth, domain=(-9.5:5),<-] ({x},{-0.75});
+        \addplot [line width=1, penColor2, smooth, domain=(-1.57:1.57)] ({0.25*cos(deg(x))+5},{0.25*sin(deg(x))-0.5});
+
+    \end{axis}
+
+
+\end{tikzpicture}
+\end{image}
 
 
 
