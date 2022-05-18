@@ -427,6 +427,17 @@ Graph of $w = Out(In(m)) =2 \, |(-(m-1)^2 + 5)-3|+1 = 2 \, |-(m-1)^2 + 2| + 1$
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 \begin{example}  Composition
 
 
@@ -447,7 +458,7 @@ Graph of $y = Out(x) = -2|x-3|+2$
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$x$, ylabel={$y=Out(x)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -471,6 +482,16 @@ Graph of $y = Out(x) = -2|x-3|+2$
   \end{axis}
 \end{tikzpicture}
 \end{image}
+The natural domain of $Out$ is $\mathbb{R}$. \\
+
+If we think of moving through the domain from $-\infty$ to $\infty$, then the graph illustrates that $Out$ will increase on $(-\infty, 3]$ and decrease on $[3, \infty)$.  The function $Out$ has a maximum value of $2$, which occurs at $3$. \\
+
+
+However, the output from $In$ is not $\mathbb{R}$, so we will not get the full output of $Out$. In addition, the output of $In$ will oscillate, which means the input values coming into $Out$ will osciallate.  This will make the output of $Out$ oscillate. \\
+
+
+
+
 
 
 Graph of $z = In(t) = 2 \sin(t)+2$
@@ -552,6 +573,34 @@ The input into $Out(x)$ keep going back and forth across the interval $[0,4]$.
 \end{tikzpicture}
 \end{image}
 
+The only part of the graph of $Out$ that is used is on the interval $[0, 4]$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(0:4),<->] {-2*abs(x-3)+2};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
@@ -645,7 +694,7 @@ Let $In(t) = \frac{5t-7}{t^2-8}$ with its natural or implied domain. \\
 
 
 
-Algebraically, composition is accomplished by replacing all occrrences of the variable with the entire formula for the other function.
+Algebraically, composition is accomplished by replacing all occurences of the variable with the entire formula for the other function.
 
 
 
