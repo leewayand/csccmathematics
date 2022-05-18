@@ -415,9 +415,100 @@ Graph of $w = Out(In(m)) =2 \, |(-(m-1)^2 + 5)-3|+1 = 2 \, |-(m-1)^2 + 2| + 1$
 
 
 
+\textbf{\textcolor{red!80!black}{Notice:}} 
 
 
 
+$\blacktriangleright$ The function values of $Out \circ In$ are all inside the interval $[1, \infty)$, which was the range of $Out$.  Thus, the composition has no zeros, because $Out$ has no zeros.\\
+
+
+$\blacktriangleright$ The graph of $Out \circ In$ has two corners, because the corner of the graph of $Out$ was included twice.
+
+The corner in the graph of $Out$ occurs when the input to $Out$ is $3$.  When is the output of $In$ equal to $3$?
+
+
+
+
+
+\begin{align*}
+-(t-1)^2 + 5   &= 1 \\
+(t-1)^2        &= 2 \\
+t-1            &= \pm \sqrt{2} \\
+t              &= 1 \pm \sqrt{2} 
+\end{align*}
+
+
+
+There is a corner at $1 - \sqrt{2} \appox -0.414$ and one at $1 - \sqrt{2} \approx 2.414$. \\
+
+
+
+
+
+$\blacktriangleright$ The graph of $In$ has a hill at $1$, the funciton values reverse themselves.  Therefore, the composition also has its values reversing at $1$.
+
+
+
+$\blacktriangleright$ $m=1$ is an axis of symmetry, because the input to $Out$ (which is the output of $In$) reverses itself.
+
+
+
+
+$\blacktriangleright$ The formula for the composition looks like
+
+
+\[
+(Out \circ In)(m) = Out(In(m))  = 2 \, |-(m-1)^2 + 2| + 1
+\]
+
+This is includes an absolute value.  We can remove the absolute value symbol by using a piecewise defined formula. \\
+
+
+We need to know where the inside equals $0$.
+
+
+\begin{align*}
+-(m-1)^2 + 2   &= 0 \\
+(m-1)^2        &= 2 \\
+m-1            &= \pm \sqrt{2} \\
+m              &= 1 \pm \sqrt{2} 
+\end{align*}
+
+These are the same places as the corners in the graph.
+
+
+The inside is negative on $(-\infty, 1 - \sqrt{2}]$ and on $[1 + \sqrt{2}, \infty)$.  On these intervals, the formula will be 
+
+\[
+2 \, |-(m-1)^2 + 2| + 1 = 2 \, (-1)(-(m-1)^2 + 2) + 1 = 2 \, ((m-1)^2 - 2) + 1 = 2 \, (m-1)^2 - 3
+\]
+
+
+On the interval $(1 - \sqrt{2}, 1 + \sqrt{2})$, the formula is 
+
+
+\[
+2 \, |-(m-1)^2 + 2| + 1 = 2 \, (-(m-1)^2 + 2) + 1 =  -2 \, (m-1)^2 + 5
+\]
+
+
+
+
+
+
+
+\[
+Out(In(m)) = 
+\begin{cases}
+  2 \, (m-1)^2 -3      &   \text{ on } \, (-\infty, 1 - \sqrt{2}]  \\
+  -2 \, (m-1)^2 + 5    &   \text{ on } \, (1 - \sqrt{2}, 1 + \sqrt{2})   \\
+  2 \, (m-1)^2 -3      &   \text{ on } \, [1 + \sqrt{2}, \infty)
+\end{cases}
+\]
+
+
+
+The middle piece is a quadratic with a negative leading coefficient.  Its graph would be a parabola opening down, which is what we see in the graph.
 
 
 
