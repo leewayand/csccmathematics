@@ -1,0 +1,195 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Algebraically}
+
+\begin{document}
+
+\begin{abstract}
+replacing
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+Algebraically, we just replace.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Algebraically}
+
+
+
+
+
+
+
+Let $Out(x) = 3x^3 + \sin(4x) - \frac{3}{2-x}$ with its natural or implied domain. \\
+Let $In(t) = \frac{5t-7}{t^2-8}$ with its natural or implied domain. \\
+
+
+
+Algebraically, composition is accomplished by replacing all occurences of the variable with the entire formula for the other function.
+
+
+
+
+\[
+(Out \circ In)(k) = Out(In(k)) = 3 {\frac{5k-7}{k^2-8}}^3 + \sin(4 \frac{5k-7}{k^2-8}) - \frac{3}{2-\frac{5t-7}{k^2-8}}
+\]
+
+
+
+
+
+Obviously, parentheses are vital here.
+
+
+
+
+
+\[
+(Out \circ In)(k) = Out(In(k)) = 3 \left( \frac{5k-7}{k^2-8} \right)^3 + \sin\left( 4 \left( \frac{5k-7}{k^2-8} \right) \right) - \frac{3}{2 - \left( \frac{5k-7}{k^2-8} \right)}
+\]
+
+
+
+
+
+
+We can always make two compositions from two functions.
+
+
+
+
+\[
+(In \circ Out)(u) = In(Out(u)) = \frac{5 \left( 3u^3 + \sin(4u) - \frac{3}{2-u} \right)-7}{\left( 3u^3 + \sin(4u) - \frac{3}{2-u} \right)^2-8}
+\]
+
+
+
+
+
+\begin{example} Composition 
+
+
+
+Let $f(x) = 5x^2 - 4x + 2$ with its natural or implied domain. \\
+Let $g(t) = \frac{3}{6-t}$ with its natural or implied domain. \\
+
+
+
+\[
+(f \circ g)(y) = f(g(y)) = 5 \left( \answer{\frac{3}{6-y}} \right)^2 - 4 \left( \answer{\frac{3}{6-y}} \right) + 2
+\]
+
+
+
+
+
+\[
+(g \circ f)(w) = g(f(w)) = \frac{3}{6 - \left( \answer{5w^2 - 4w + 2} \right)}
+\]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Composition 
+
+
+
+Let $f(x) = 3x^2 - x + 5$ with its natural or implied domain. \\
+Let $g(t) = \frac{4}{7-t}$ with its natural or implied domain. \\
+
+
+
+
+
+There are two numbers where $f(x) = 7$.  One of them is $1$, the other is $\answer{\frac{-2}{3}}$.
+
+
+
+
+
+
+\[
+(g \circ f)(w) = g(f(w)) = \frac{4}{7 - (5w^2 - 4w + 2)}
+\]
+
+
+
+In the $g \circ f$ composition, $f$ is no longer allowed to equal $\answer{7}$.
+
+Select all real numbers which cannot be in the domain of $g \circ f$.
+
+\begin{selectAll}
+\choice{$7$}
+\choice{$0$}
+\choice[correct]{$1$}
+\choice{$\frac{2}{3}$}
+\choice{$-1$}
+\choice[correct]{$\frac{-2}{3}$}
+\end{selectAll}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
