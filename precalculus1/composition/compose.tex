@@ -439,13 +439,13 @@ t              &= 1 \pm \sqrt{2}
 
 
 
-There is a corner at $1 - \sqrt{2} \approx -0.414$ and one at $1 - \sqrt{2} \approx 2.414$. \\
+There is a corner at $1 - \sqrt{2} \approx -0.414$ and one at $1 + \sqrt{2} \approx 2.414$. \\
 
 
 
 
 
-$\blacktriangleright$ The graph of $In$ has a hill at $1$, the funciton values reverse themselves.  Therefore, the composition also has its values reversing at $1$.
+$\blacktriangleright$ The graph of $In$ has a hill at $1$, the function values reverse themselves.  Therefore, the composition also has its values reversing at $1$.
 
 
 
@@ -579,7 +579,7 @@ Graph of $y = Out(x) = -2|x-3|+2$
 \end{image}
 The natural domain of $Out$ is $\mathbb{R}$. \\
 
-If we think of moving through the domain from $-\infty$ to $\infty$, then the graph illustrates that $Out$ will increase on $(-\infty, 3]$ and decrease on $[3, \infty)$.  The function $Out$ has a maximum value of $2$, which occurs at $3$. \\
+If we think of moving through the domain from $-\infty$ to $\infty$, then the graph illustrates that $Out$ will increase on $(-\infty, 3]$ and decrease on $[3, \infty)$.  The function $Out$ has a maximum value of $\answer{2}$, which occurs at $\answer{3}$. \\
 
 
 However, the output from $In$ is not $\mathbb{R}$, so we will not get the full output of $Out$. In addition, the output of $In$ will oscillate, which means the input values coming into $Out$ will osciallate.  This will make the output of $Out$ oscillate. \\
@@ -627,13 +627,62 @@ Graph of $z = In(t) = 2 \sin(t)+2$
 
 
 
-The input into $In(t)$ is the whole real line.  We naturally think of moving left to right, from $-\infty$ to $\infty$.  As we do this, the outputs from $In(t)$ oscillate between $0$ and $\answer{4}$.  Therefore, the inputs into $Out(x)$ oscillate back and forth along the interval $\left[ \answer{0}, \answer{4} \right]$.
+The input into $In(t)$ is the whole real line.  We naturally think of moving left to right, from $-\infty$ to $\infty$.  As we do this, the outputs from $In(t)$ oscillate between $0$ and $\answer{4}$.  Therefore, the inputs into $Out(x)$ oscillate back and forth inside the interval $\left[ \answer{0}, \answer{4} \right]$.
 
 
 
 
 
-The input into $Out(x)$ keep going back and forth across the interval $[0,4]$. 
+The output of $In(x)$ keep going back and forth across the interval $[0,4]$. 
+
+This becomes the input into $Out$.
+
+Therefore, the input into $Out(x)$ keep going back and forth across the interval $[0,4]$. 
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, width=3in, height=3in,
+                  axis lines =center, xlabel=$x$, ylabel={$y=In(x)$}, grid = major,
+                  ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                  xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                  ticklabel style={font=\scriptsize},
+                  every axis y label/.style={at=(current axis.above origin),anchor=south},
+                  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                  axis on top]
+         \addplot [line width=1, penColor2, smooth,samples=300,domain=(-9:9),<->] ({0.2*x}, {2*sin(deg(x))+2});
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10, 
+                  width=3in, height=3in,
+                  axis lines =center, xlabel=$t$, ylabel={$z=Out(t)$}, grid = major,
+                  ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                  yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                  xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                  ticklabel style={font=\scriptsize},
+                  every axis y label/.style={at=(current axis.above origin),anchor=south},
+                  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                  axis on top]
+         \addplot [line width=1, penColor2, smooth,samples=300,domain=(-9:9),<->] ({2*sin(deg(x))+2},{0.2*x});
+
+    \end{axis}
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+What part of the graph of $Out$ does this oscillation run across?
 
 
 
@@ -691,7 +740,7 @@ The only part of the graph of $Out$ that is used is on the interval $[0, 4]$.
           ]
           
           %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-      \addplot [line width=2, penColor, smooth,samples=100,domain=(0:4),<->] {-2*abs(x-3)+2};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(0:4)] {-2*abs(x-3)+2};
 
   \end{axis}
 \end{tikzpicture}
@@ -702,7 +751,48 @@ The only part of the graph of $Out$ that is used is on the interval $[0, 4]$.
 
 
 
-Therefore, that part of the graph of $Out$ just keeps repeating. The smooth rounding of the sine curve will round out the corners of the absolute value graph.
+Therefore, that part of the graph of $Out$ just keeps repeating back and forth. 
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-4)] {-2*abs(x+8-3)+2};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:0)] {-2*abs(x+3)+2};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(0:4)] {-2*abs(x-3)+2};
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {-2*abs(x-8+3)+2};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Except, the $+2$ in $In(t) = 2 \sin(t) + 2$ will become the input for $Out$.  This will cause a horizontal shift for $Out$. 
+
+
+
+
+
+
+The smooth rounding of the sine curve will round out the corners of the absolute value graph and the $2\pi$ period of $\sin(t)$ will force the same period for the composition.
 
 
 
@@ -747,6 +837,47 @@ Therefore, that part of the graph of $Out$ just keeps repeating. The smooth roun
 \end{explanation}
 
 \end{example}
+
+
+
+textbf{\textcolor{red!80!black}{Notice:}} 
+
+
+
+We are repeating the piece of $Out$ on the interval $[0,4]$.  \\
+
+
+
+$\blacktriangleright$ The minimum value of $Out$ occurs at $0$.  When does the oputput of $In$ equal $0$?
+
+
+
+$In(t) = 2 \sin(t)+2 = 0$ when $sin(t) = -1$, which is when $t = -\frac{\pi}{2} + 2k\pi$ where $k \in \mathbb{N}$. We can see this as the lower valleys in the graph of the composition.
+
+
+
+
+
+$\blacktriangleright$ The maximum value of $Out$ occurs at $3$.  When does the oputput of $In$ equal $3$?
+
+
+
+$In(t) = 2 \sin(t)+2 = 3$ when $sin(t) = \frac{1}{2}$, which is when $t = \frac{\pi}{6} + 2k\pi$ and $t = \frac{5\pi}{6} + 2k\pi$ where $k \in \mathbb{N}$. We can see this as the two peaks in the graph of the composition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Graphically, we have to keep our eyes on several things at once.  We watch the original input into $In$, then we watch the output of $In$ and picture that as the new input into $Out$, then we watch the output coming from $Out$.
