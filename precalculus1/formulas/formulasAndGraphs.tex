@@ -59,7 +59,7 @@ Graphs display pairs.  The dots included in the graph are visually encoding the 
 
 \begin{explanation} \textbf{Video: Formulas and Graphs}
 
-[Click on the arrow to the right to expand the video.]
+[ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
 
 \begin{center}
@@ -77,7 +77,7 @@ Graphs display pairs.  The dots included in the graph are visually encoding the 
 
 \begin{example}
 
-Linear functions are functions that can be described by formulas that look like $L(x) = A \cdot x + B$, with $A$ and $B$ both real numbers and $A \ne 0$.  Their graphs are lines.  It takes two points to draw a line. Given a formula, we can evaluate it twice, from which we can create two points, plot them, and draw the line.
+Linear functions are functions that can be described by formulas that look like $L(x) = A \cdot x + B$, with $A$ and $B$ both real numbers. ( When $A = 0$ ), the linear function is called a \textbf{constant function}.  Their graphs are lines.  It takes two points to draw a line. Given a formula, we can evaluate it twice, from which we can create two points, plot them, and draw the line.
 
 Let $L(x) = 2x-3$ with its domain and range both $(-\infty, \infty)$.
 
@@ -116,7 +116,6 @@ The arrows indicate that the graph continues with the same pattern - illustratin
 
 
 \end{example}
-Linear functions have a constant growth rate or rate of change as we will see later.  \\
 
 
 
@@ -125,17 +124,20 @@ Linear functions have a constant growth rate or rate of change as we will see la
 
 
 
+\subsection{Preview: Rate of Change}
+Much of this course will be spent investigating rate of change. \\
 
+Linear functions have a constant growth rate or rate of change.  Whenever the domain changes by a given amount, then the function changes by a constant amount. \\
 
-
-
-Linear functions have a constant growth rate while \textbf{exponential functions} have a constant percentage growth rate, as we will see later.  A constant percentage growth rate results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$.
+Linear functions have a constant growth rate while \textbf{exponential functions} have a constant percentage growth rate.  Whenever the domain changes by a given amount, then the function changes by a constant percentage. A constant percentage growth rate results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$.
 
 
 
 \begin{example}
 
-Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$.
+Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
+
+Whenever $t$ changes by $1$, $E$ grows by $25\%$, because the function value is multiplied by another $1.25 = 1 + 0.25$.
 
 
 Since $1.25 > 1$, whenever the domain number, $t$, increases, so does $E(t)$.  $E$ is an increasing function.  Its graph goes uphill to the right.
@@ -179,7 +181,7 @@ In addition, $1.25$ to any power will be positive.  This together with $2>0$ tel
 \end{example}
 
 
-\textbf{Note:} If we change $r$ to be $0 < r < 1$, the exponential function becomes a decreasing function and its graph is reflected horizontally.
+\textbf{Note:} If we change $r$ to be $0 < r < 1$, the exponential function, $E(t) = a \cdot r^t$, becomes a decreasing function and its graph is reflected horizontally.
 
 
 
@@ -189,7 +191,10 @@ In addition, $1.25$ to any power will be positive.  This together with $2>0$ tel
 
 \begin{example}
 
-Let $X(t) = 2 \cdot 0.8^t$ with a domain consisting of all real numbers, $\mathbb{R}$.
+Let $X(t) = 2 \cdot 0.8^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
+
+Whenever $t$ changes by $1$, $X$ decays by $20\%$, because the function value is multiplied by another $0.8 = 1 - 0.2$.
+
 
 
 Since $0.8 < 1$, whenever the domain number, $t$, increases, $X(t)$ decreases.  $X$ is a decreasing function.  Its graph goes downhill to the right.
@@ -226,6 +231,7 @@ Since $0.8 < 1$, whenever the domain number, $t$, increases, $X(t)$ decreases.  
 
 
 
+Still, $0.8$ to any power will be positive.  This together with $2>0$ tells us that $X(t) > 0$ for all $t$.
 
 
 \end{example}
@@ -247,7 +253,7 @@ The graph of an exponential function attempts to level off at a height of $0$.  
 
 The real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties.  $0$ also sets itself aside with properties different from both the negative and positive real numbers.
 
-In particular, we have the \textit{Zero Product Property}.  This states that if the product of two real numbers is zero, then one of the numbers must be $0$.
+In particular, we have the \textit{Zero Product Property}.  This states that the only way a product of two real numbers is zero is if one of the numbers is $0$.
 
 For these reasons we are interested in where functions have zero values.
 
@@ -296,7 +302,7 @@ $\blacktriangleright$ If $(a, 0)$ is a point on the graph of $f$, then $f(a) = 0
 
 \begin{explanation} \textbf{Video: Function Zeros}
 
-[Click on the arrow to the right to expand the video.]
+[ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
 
 \begin{center}
@@ -391,7 +397,7 @@ We encounter functions in several ways, each affecting the domain of a function.
 
 \begin{enumerate}
 \item  \textbf{\textcolor{green!50!black}{stated domain}}   \\
-A function may come already equipped with a stated domain.  Graphs communicate the domain - just collect all of the first coordinates from the points. Many times we use interval notation to state the domain.
+A function may come already equipped with a stated domain.  Graphs communicate a stated domain - just collect all of the first coordinates from the points. Many times we use interval notation to describe a stated the domain.
 
 
 \item  \textbf{\textcolor{green!50!black}{natural or implied domain}}   \\
@@ -405,7 +411,7 @@ We use functions to model many measuring situations. In this case, we want our m
 
 
 \item \textbf{\textcolor{green!50!black}{induced domain}}  \\
-We often create new functions from old functions. We have a laundry list of ways to accomplish this.  One method is to keep the function structure the same and simply move the domain to another location. We'll study these types of definitions extensively. For the moment, an example will give the idea. \\
+We often create new functions from old functions. We have a laundry list of ways to accomplish this.  One method is to keep the function structure the same and simply move the domain to another location. We'll study these types of transformations extensively. For the moment, an example will give the idea. \\
 
 
 
@@ -431,7 +437,7 @@ The domain of $g$ is $[-6, 1]$ and it was induced (forced) from the domain of $f
 
 \begin{explanation} \textbf{Video: Domain Types}
 
-[Click on the arrow to the right to expand the video.]
+[ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
 
 \begin{center}

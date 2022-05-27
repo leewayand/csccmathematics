@@ -59,6 +59,8 @@ In addition to talking about individual pairs, we might also like to talk about 
 
 \section{Visually Encoding}
 
+Let $f$ be a function and $d$ a domain number of $f$. \\
+
 Our plan is to visually encode the pair $(d,f(d))$ as a dot in the Cartesian plane with coordinates $(d,f(d))$.
 
 \begin{center}
@@ -112,7 +114,7 @@ From the origin, we measure horizontally a distance of $d$.  Then we measure a v
 
 \begin{explanation} \textbf{Video: Visually Encoding Function Pairs}
 
-[Click on the arrow to the right to expand the video.]
+[ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
 
 \begin{center}
@@ -166,7 +168,7 @@ Suppose we have a function $M$ and we know that $M(3)=2$. This information can b
 
 
 \begin{question}
-Here is a graph of $y=H(t)$. Which point represents $H(-3) = -2$?
+Suppose we have a graph of $y=H(t)$ and one of the following four points is on this graph. Which point would be on the graph if $H(-3) = -2$?
 \begin{image}
 \begin{tikzpicture}
 \begin{axis}[
@@ -208,7 +210,7 @@ Here is a graph of $y=H(t)$. Which point represents $H(-3) = -2$?
 
 
 \begin{question}
-Suppose $k$ is a function with $k(-1)>0$. When we consider the graph of $y=k(t)$, there will be a point corresponding to $k(-1)$. Which quadrant will the corresponding dot be plotted?
+Suppose $k$ is a function with $k(-1)>0$. When we consider the graph of $y=k(t)$, there will be a point corresponding to $k(-1)$. In which quadrant will the corresponding dot be plotted?
 \begin{image}
 \begin{tikzpicture}
 \begin{axis}[
@@ -364,7 +366,7 @@ Eventually, your eyes play tricks on you.  You think you see a single object.  A
 
 
 
-It is a bunch of individual dots very close together. They are forming a pattern that your eye likes. Your eye glues them together.  
+It is a bunch of individual dots very close together. They are forming a pattern that your eye likes. Your eye glues them together.  Much of this course is about these eye-pleasing patterns that functions create.
 
 
 
@@ -443,7 +445,7 @@ We want to use both Algebra and graphs.  They each tell us what the other should
 
 \begin{explanation} \textbf{Video: Graphs are Inherently Inaccurate}
 
-[Click on the arrow to the right to expand the video.]
+[ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
 
 \begin{center}
@@ -501,7 +503,7 @@ If the graph of $y=K(v)$ included three dots on the axes...
 ...on the other hand, from all of the dots, we can see that the domain of $K$ includes $\{ -2, -1, 0, 1, 2, 3 \}$.  This is the collection of all of the first coordinates of all of the dots.
 
 
-What if we want to visualize the domain and the range of the function, by themselves?  When visualizing the domain and range, we would view each axes as individual number lines.  Rather than thinking of the axes as holding dots with two coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
+What if we want to visualize the domain and the range of the function, by themselves?  When visualizing the domain and range, we would view each axes as an individual number line.  Rather than thinking of the axes as holding dots with two coordinates, we would think that the axes are number lines, holding numbers, and we would color in the intervals and numbers, like on a number line.
 
 We need our brains to jump back and forth between these views.  Dots represent pairs in a function.  We decipher these pairs of numbers by the location of the dot.  At the same time, locations on the axes also represent domain and range numbers - depending on the plotted dots.
 
@@ -511,7 +513,7 @@ We need our brains to jump back and forth between these views.  Dots represent p
 
 \begin{explanation} \textbf{Video: Double Duty}
 
-[Click on the arrow to the right to expand the video.]
+[ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
 
 \begin{center}
@@ -582,7 +584,7 @@ domain = [-4,0] \cup (1,7]
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
           \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0) (0,0) (7,0)};
-          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(1,0)};
+          \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(1,0)};
            
 
   \end{axis}
@@ -616,7 +618,7 @@ range = (-6.5, -3.5] \cup [1, 4]
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(-6.5:-3.5)] ({0},{x});
           \addplot [line width=2, penColor2, smooth,samples=100,domain=(1:4)] ({0},{x});
           \addplot [color=penColor2,only marks,mark=*] coordinates{(0,-3.5) (0,1) (0,4)};
-           \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,-6.5)};
+           \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(0,-6.5)};
            
 
   \end{axis}
