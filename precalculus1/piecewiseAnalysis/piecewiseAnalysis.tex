@@ -29,6 +29,19 @@ V(h) =
 
 
 
+
+\begin{idea}
+
+When evaluating $V(d)$, 
+
+\begin{itemize}
+  \item if $-6 \leq d \leq -2$, then use the formula $V(h) = -2h - 3$
+  \item if $-2 < d \leq 4$, then use the formula $V(h) = -(h+3)(h-3)$
+  \item if $4 < d < 6$, then use the formula $V(h) = -2h - 3$
+\end{itemize}
+
+\end{idea}
+
 A graph always helps our thinking. Here is the graph of $y = V(h)$.
 
 
@@ -53,7 +66,7 @@ A graph always helps our thinking. Here is the graph of $y = V(h)$.
           
 			\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
        		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {1.75*x-8};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:6)] {1.75*x-8};
 
 
 
@@ -65,7 +78,7 @@ A graph always helps our thinking. Here is the graph of $y = V(h)$.
 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
 
 			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,2.5)};
 
 
            
@@ -87,7 +100,9 @@ From the definition of $V(h)$, we can see the domain is $[-6, -2] \cup (-2, 4] \
 
 We can see from the graph that the component pieces of $V$ would total four intercepts and zeros. One each from the linear pieces and two from the quadratic piece.  However, the domain restrictions only admit two of them.  The greater zero from the quadratic piece and the zero from the right piece of the graph.
 
-From the graph, we might estimate these to be around $3$ and $4.5$.
+The left line would have an intercept, except the domain does not include it.  The middle parabola has a left intercept, except the domain does not include it. 
+
+From the graph, we might estimate these zeros to be around $3$ and $4.5$.  What are the exact values?
 
 
 
@@ -101,7 +116,7 @@ $\blacktriangleright$ The middle piece.
 \begin{explanation}
 We are solving $-(h+3)(h-3) = 0$.  Since this is in factored form, we can quickly see the candidates are $-3$ and $3$.  $\answer{-3}$ is not in the domain for this piece of $V$.
 
-Therefore, $V$ has $\answer{3}$ as its only zero.
+Therefore, $V$ has $\answer{3}$ as its only zero contributed from the quadratic piece.
 \end{explanation}
 
 
@@ -125,8 +140,11 @@ We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V
 \begin{itemize}
 \item \textbf{$-2h-3$} is a linear function.  Its constant rate of change is $-2$.  This tells us it is a decreasing function.  $V$ is decreasing on $[-6, -2]$.
 
-\item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$. The vertex on the graph occurs at the midpoint of the zeros of the quadratic, which are $-3$ and $3$.  Therefore, $0$ is where the function switches behavior.  On $(-2, 0]$, $V$ is increasing.  On $[0,2]$, $V$ is decreasing.
+\item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$. The vertex on the graph occurs at the midpoint of the zeros of the quadratic, which are $-3$ and $3$.  Therefore, $0$ is where the function switches behavior.  On $(-2, 0]$, $V$ is increasing.  On $[0,4]$, $V$ is decreasing.
 \end{itemize}
+
+
+\textbf{Technically:} $V$ is increasing on $[-2, 4]$, since the dot at $-2$ is lower than the left side of the included parabola.
 
 
 \begin{question}
@@ -135,7 +153,7 @@ We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V
 \end{itemize}
 \end{question}
 
-
+\textbf{Technically:} $V$ is increasing on $[4, 6]$, since the dot at $4$ is lower than the left side of the included line segment.
 
 
 The intervals where $V$ is monotonic are
@@ -158,7 +176,7 @@ The intervals where $V$ is monotonic are
 \subsection{Extreme Values} 
 
 
-We have three pieces to our function and the graph will help our algebra. We'll gather infomraiotn about the pieces indiviudally and then combine them for $V$.
+We have three pieces to our function and the graph will help our algebra. We'll gather information about the pieces indiviudally and then combine them for $V$.
 
 \begin{itemize}
   \item \textbf{$-2h-3$} is a decreasing linear function on $[-6, -2]$.  Its maximum would occur at the left endpoint, which is included. Therefore, the maximum is $-2(-6)-3 = 9$. Its minimum would be at the right endpoint, which is included. Therefore, the minimum is $-2(-2)-3 = 1$.
@@ -181,7 +199,7 @@ The middle piece of $V$ is a quadratic, therefore, the vertex form $-(h-0)^2 + 9
 Lastly, \\
 
 
-  \item \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $(4, 6)$.  Its maximum would be at the left endpoint, which is excluded. Its maximum would be at the right endpoint, which is excluded. This piece is contributing no extreme values to $V$.
+  \item \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $[4, 6)$.  Its maximum would be encoded in the left endpoint, which is excluded. Its maximum would be encoded in the right endpoint, which is excluded. This piece is contributing no extreme values to $V$.
 \end{itemize}
 
 
@@ -205,8 +223,27 @@ Consider the open interval $(2 - 0.1, 2 + 0.1)$. $V$ is a decreasing function on
 
 
 
+\subsection{Critical Numbers} 
 
 
+$\blacktriangleright$ We know that the instantaneous rate of change of the middle quadratic is $iRoC_V(h) = -2h$ 
+
+$\blacktriangleright$ We know that the instantaneous rate of change of the left linear is $iRoC_V(h) = -2$
+
+$\blacktriangleright$ We know that the instantaneous rate of change of the right linear is $iRoC_V(h) = \frac{7}{4}$
+
+
+
+The only place where the $iRoC_V(h) = 0$ is at $0$, therefore, $0$ is a critical number.
+
+
+We also include domain numbers where the $iRoC_V$ does not exist.  That would be domain numbers where there is no corresponding tangent line.  That would include $-6$, $-2$, and $4$.
+
+
+
+The set of critical numbers is $\{ -6, -2, 0, 4 \}$.
+
+These are exactly the places we have been investigating for possible maximums and minimums.
 
 
 
@@ -215,7 +252,10 @@ Consider the open interval $(2 - 0.1, 2 + 0.1)$. $V$ is a decreasing function on
 
 \subsection{Range} 
 
-From our analysis of extrema and the graph, we deduce that the range is $[-7, -9]$.
+From our analysis of extrema and the graph, we deduce that the range is $[-7, -9]$. \\
+
+
+Algebraically, $V$ is continuous on $[-2, 4]$.  Therefore, $V$ assumes all of the values between $V(-2)$ and $V(4)$, which tells us algebraically, that the range is $[-7, -9]$. \\
 
 
 
@@ -264,6 +304,11 @@ This tells us that there is a discontinuity at $4$.
 
 
 
+\begin{notation}
+
+
+Graphs are inherently inaccurate.  We cannot be exact with them.  They hide stuff all of the time. We need better ways, algebraic ways, of talking about types of discontinuities: ``jump'', ``removeable'', and ``asymptotic''.
+\end{notation}
 
 
 
@@ -283,6 +328,14 @@ This tells us that there is a discontinuity at $4$.
 
 
 
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Piecewise-Defined Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/piecewiseAnalysis/examples/exampleList}
+
+\end{center}
 
 
 
