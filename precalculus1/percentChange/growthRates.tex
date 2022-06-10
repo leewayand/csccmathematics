@@ -31,12 +31,12 @@ The defining characteristic of linear functions is that the have a constant grow
 
 
 
-\[   \frac{f(b)-f(a)}{b-a} = m       \]
+\[   \frac{L(b)-L(a)}{b-a} = m       \]
 
-This led to the formula for linear functions:  $f(x) = m(x-a) + f(a)$
+This led to the formula for linear functions:  $L(x) = m(x-a) + L(a)$
 
 
-This tells us that no matter where you are in the domain, of $f$, if you move the same distance inside the domain, then the value of $f$ changes by the same \textbf{\textcolor{purple!85!blue}{amount}}. \\
+This tells us that no matter where you are in the domain, of $L$, if you move the same distance inside the domain, then the value of $L$ changes by the same \textbf{\textcolor{purple!85!blue}{amount}}. \\
 
 
 Exponential functions have a similar growth, but with percentages. \\
@@ -55,83 +55,83 @@ Suppose we have a function with this property:  No mater where you are in the do
 
 \begin{itemize}
 \item Let's call our function $E$.
-\item Let's call our original position in the domain, $a$.
-\item Let's call $d$ the distance moved from $a$, inside the domain.
+\item Let's call our original position in the domain, $d$.
+\item Let's call $D$ the distance moved from $d$, inside the domain.
 \item Let's say the percentage change is $p \cdot 100\%$. (Think of $p$ as a decimal number.)
 \end{itemize}
 
 
 
-Inside the domain we are moving from $a$ to $a+d$, a change of $d$.  How does $E$ change?
+Inside the domain we are moving from $D$ to $d + D$, a change of $D$.  How does $E$ change?
 
 
 
-In this story, the starting function value is $E(a)$ and the finishing function value is $E(a+d)$.  Therefore, the change in the function value is given by $E(a+d) - E(a)$.
+In this story, the starting function value is $E(d)$ and the finishing function value is $E(d+D)$.  Therefore, the change in the function value is given by $E(d+D) - E(d)$.
 
-The supposed property tells us that this change is equal to percentage $p$ of the original value $E(a)$.
+The supposed property tells us that this change is equal to percentage $p$ of the original value $E(d)$.
 
 
 
 \[
-E(a+d) - E(a) = p \, E(a)
+E(d+D) - E(d) = p \, E(d)
 \]
 
 \[
-E(a+d) = E(a) + p \, E(a)
+E(d+D) = E(d) + p \, E(d)
 \]
 
 
 \[
-E(a+d) = E(a) (1+p)
-\]
-
-
-
-To get the value of $E(a+d)$, we multiply $E(a)$ by $1+p$. \\
-
-
-
-
-
-
-
-
-
-If we travel another $d$, then we move from $a+d$ to $a+2d$, inside the domain. \\
-
-We have travelled another distance of $d$. Our supposed property says that we should get another $p$ percent.
-
-
-
-THis time our starting value is $E(a+d) = E(a) (1+p)$ and we would like to calculate the value of $E(a+2d)$. \\
-
-
-
-
-\[
-E(a + 2d) = E(a+d)(1+p)  = E(a) (1+p) \cdot (1+p)
+E(d+D) = E(d) (1+p)
 \]
 
 
 
+To get the value of $E(d+D)$, we multiply $E(d)$ by $1+p$. \\
+
+
+
+
+
+
+
+
+
+If we travel another $D$, then we move from $d+D$ to $d+2D$, inside the domain. \\
+
+We have travelled another distance of $D$. Our supposed property says that we should get another $p$ percent.
+
+
+
+This time our starting value is $E(d+D) = E(d) (1+p)$ and we would like to calculate the value of $E(d+2D)$. \\
+
+
+
+
 \[
-E(a + 2d) =  E(a) (1+p)^2
+E(d + 2D) = E(d+D)(1+p)  = E(d) (1+p) \cdot (1+p)
 \]
 
 
-If we travel another $d$, then we get another $p$ percent of our original starting value, $E(a)(1+p)^2$.
+
+\[
+E(d + 2D) =  E(d) (1+p)^2
+\]
+
+
+If we travel another $D$, then we get another $p$ percent of our original starting value, $E(d)(1+p)^2$.
 
 
 \[
-E(a + 3d) = E(a)(1+p)^2 \cdot (1+p) = E(a) (1+p)^3
+E(d + 3D) = E(d)(1+p)^2 \cdot (1+p) = E(d) (1+p)^3
 \]
 
 
 
-If we travel "$x$" number of these $d$ distances from $a$, then we get
+If we travel "$x$" number of these $D$ distances from $d$, then we get
 
 \[
-E(a + x \cdot d) = E(a)(1+p)^x 
+E(d + x \cdot D) = E(d)(1+p)^x 
 \]
 
 An exponential function.
@@ -239,7 +239,7 @@ Let $a$ be a real number.  The percentage rate-of-change of $G$ over the interva
 
 \[   \left(\frac{3}{2}\right) - 1 = \frac{1}{2}   \]
 
-Every time we move $1$ in the domain, $G$ increases by a factor of $\frac{1}{2}$.  $G$ increases by $50\%$.
+Every time we move $1$ in the domain, $G$ \textbf{\textcolor{blue!55!black}{increases}} by a factor of $\frac{1}{2}$.  $G$ \textbf{\textcolor{blue!55!black}{increases}} by $50\%$.  Therefore, we multiply by $1 + \frac{1}{2} = \frac{3}{2}$, which is the base.
 
 
 
@@ -538,6 +538,18 @@ Percentage change in $R$:
 
 
 
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Percent Change]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/percentChange/examples/exampleList}
+
+\end{center}
 
 
 
