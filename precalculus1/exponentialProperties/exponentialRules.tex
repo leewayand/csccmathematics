@@ -91,7 +91,7 @@ In other words, each function value occurs exactly once in an exponential functi
 If you know that $A^r = A^t$, then $r=t$ follows. \\
 
 
-$\blacktriangleright$ This is an important rule.
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}   This is an important and useful rule.
 
 
 \begin{fact} \textbf{\textcolor{blue!75!black}{Uniqueness}} 
@@ -191,6 +191,8 @@ $\frac{7}{5} = x$
 \section{e}
 
 
+We were introduced to $e$ earlier. \\
+
 You know the number $\pi$ (pronounced "pie").  The definition of $\pi$ is kind of weird.  For any circle, $\pi$ is the ratio of the circumference to the diameter.
 
 $\pi$ is approximately $3.1415926$.
@@ -199,7 +201,7 @@ $\pi$ is approximately $3.1415926$.
 
 
 
-There is another number that comes up quite frequently when dealing with natural growth.  This number called "e" and its symbol is $e$.
+There is another number that comes up quite frequently when dealing with natural growth.  This number called ``e'' and its symbol is $e$.
 
 $e$ is approximately $2.718281828$.
 
@@ -219,6 +221,95 @@ This function is an increasing function, but it increases at a smaller and small
 
 
 \[   e = \lim_{x \to \infty}  \left(1 + \frac{1}{x}\right)^x      \]
+
+
+
+
+
+
+
+
+
+
+
+$e^x$ is an exponetial function, which means it is a one-to-one function.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {2.718^x};
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+
+   
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$e^x$ is an exponetial function, which means it is a one-to-one function, which means that it reaches every positive number, exactly once. \\
+
+
+\begin{observation}
+
+
+Given any positive real number, called it $r$. \\
+
+There is exactly one real number in the domain of $e^x$ that is paired with $r$. \\
+
+
+That is, $r$ can be written in the form $e^x$ for exactly one real number $x$.  \\
+
+
+When you select $r$, you have automatically also selected $x$.
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+\begin{conclusion}
+
+
+Consider the exponential function $b^x$. \\
+
+$b$ is a positive number.  Therefore, there is a real number, $\ell$, such that $b = e^{\ell}$. \\
+
+
+But, then, $b^x = \left( e^{\ell} \right)^x = b^{\ell x}$.
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Every exponential function can be written in terms of $e$}}
+\end{center}
+
+
+
+If you understand $e^x$, then you understand every exponential function.
+
+\end{conclusion}
 
 
 
@@ -266,6 +357,15 @@ $-\frac{4}{5} = x$
 
 
 
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Properties]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/exponentialProperties/examples/exampleList}
+
+\end{center}
 
 
 \end{document}
