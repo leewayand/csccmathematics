@@ -64,10 +64,10 @@ The function has a value at this number. $f(5) = 4$, in the function above.
 
 
 
-Secondly, around this domain number, the function values are not close to the value at the discontinuity. There is space between the function value at the discontinuity and \textbf{\textcolor{purple!85!blue}{some}} of the surrounding function values, no matter how close you get to the discontinuity in the domain. \\
+Secondly, around this domain number, the function values are not \textbf{\textcolor{purple!85!blue}{all}} close to the value at the discontinuity. There is empty space between the function value at the discontinuity and \textbf{\textcolor{purple!85!blue}{some}} of the surrounding function values - no matter how close you get to the discontinuity in the domain. \\
 
 
-In the function above, no matter how close you get to $5$ in the domain, there are domain numbers less than $5$ where $f$ has values around $6$, not $4$.
+In the function above, no matter how close you get to $5$ in the domain, there are still domain numbers less than $5$ where $f$ has values around $6$, not $4$. You cannot get close enough to $5$ in the domain to get away from function values around $6$.
 
 
 
@@ -81,7 +81,7 @@ Our plan is to use $\epsilon$-intervals around function values and $\delta$-inte
 
 $\blacktriangleright$ \textbf{First Draft:}
 
-Let $a$ be a discontinuity of the function $f$.  First, $a$ is in the domain of $f$. $f(a)$ exists.  $f(a)$ is a value in the range of $f$. Since $a$ is a discontinuity, there must be a distance (perhaps really small), which we'll call $\epsilon$, which defines an open interval around $f(a)$ - namely $(f(a)-\epsilon, f(a)+\epsilon)$.  \\
+Let $a$ be a discontinuity of the function $f$.  First, $a$ is in the domain of $f$. $f(a)$ exists.  $f(a)$ is a value in the range of $f$. Since $a$ is a discontinuity, there must be a distance (perhaps really small), which we'll call $\epsilon$, which defines an open interval in the codomain around $f(a)$ - namely $(f(a)-\epsilon, f(a)+\epsilon)$.  \\
 
 
 And, no matter how close you get to $a$, there are domain numbers closer to $a$ where the function value is outside $(f(a)-\epsilon, f(a)+\epsilon)$. \\
@@ -89,6 +89,39 @@ And, no matter how close you get to $a$, there are domain numbers closer to $a$ 
 
 
 No matter how small $\delta>0$ is, there is always a domain number, $b \in (a-\delta, a+\delta)$ such that $ f(b) \not\in(f(a)-\epsilon, f(a)+\epsilon)$ \\
+
+
+
+
+
+\begin{observation}
+
+For the function $f$ above, $5$ is a discontinuity. \\
+
+
+$f(5) = 4$ and we can select the open interval $(3.5, 4.5)$ around $4$.   This would correspond to $\epsilon = 0.5$.
+
+\[   (3.5, 4.5) = (f(5) - \epsilon, f(5) + \epsilon)    \]
+
+
+No matter how close you get to $5$.  No matter how small you select $\delta$, the open interval $(5 - \delta, 5 + \delta)$ contains the domain number $\frac{(5 - \delta) + 5}{2}$, where the function $f$ has a value outside $(3.5, 4.5)$.
+
+
+No matter how close you get to $5$ in the domain, you cannot get \textbf{\textcolor{blue!55!black}{all}} of the function values to be close to $f(5)$.
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,6 +143,7 @@ There is an open interval $I$ around $f(a)$, such that \textbf{\textcolor{purple
 \end{definition}
 
 
+\textbf{Discontinuity:}  When domain numbers are close, the function values are not ALL close. \\
 
 
 
@@ -161,7 +195,7 @@ $5$ is a disconinuity for $f$. \\
 \begin{explanation}
 
 
-First, $5$ is in the domain and $f(5)=4$ is in the range.  Our plan is to pick an open interval around $4$ and show that no matter how close you get to $5$ in the domain, there is always a domain number whose function value is not inside our interval.
+First, $5$ is in the domain and $f(5)=4$ is in the range.  Our plan is to pick an open $\epsilon$-interval around $4$ and show that no matter how close you get to $5$ in the domain, there is always a domain number whose function value is not inside our $\epsilon$-interval.
 
 
 
@@ -957,7 +991,7 @@ A removeable discontinuity occurs when the function is continuous to the left an
 
 \end{example}
 
-This type of discontinuity can be "removed" simply by redefining the function value at that one number and moving the point back onto the graph to plug the hole.
+This type of discontinuity can be ``removed'' simply by redefining the function value at that one number and moving the point back onto the graph to plug the hole.
 
 
 

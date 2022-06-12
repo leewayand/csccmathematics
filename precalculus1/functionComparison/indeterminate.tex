@@ -15,7 +15,7 @@ equally fast
 
 
 
-Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity at the same rate, then the limit of their quotient equals a number.  The graph of the quotient approaches a horizontal asymptote.
+Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity similarly, then the limit of their quotient equals a number.  The graph of the quotient approaches a horizontal asymptote.
 
 
 
@@ -33,7 +33,7 @@ As $t \to \infty$, the exponential pieces will dominate the constant pieces.
 
 
 
-As $t \to -\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$  In this case, the constant terms dominate.
+As $t \to -\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$. Therefore, in this case, the constant terms dominate.
 
 
 \[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{-5}{1} = -5   \]
@@ -60,12 +60,11 @@ The graph has two different horizontal asymptotes.
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
-          
-            \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {3};
-            \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {-5};
 
             \addplot [line width=2, penColor2, smooth,samples=100,domain=(-8:8),<->] {(3*(e^x) - 5)/(e^x + 1))};
  
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {3};
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {-5};
 
   \end{axis}
 \end{tikzpicture}
@@ -298,6 +297,19 @@ How far out in the domain do you need to go for the graph to be inside the inter
 
 
 
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Dominance]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionComparison/examples/exampleList}
+
+\end{center}
 
 
 

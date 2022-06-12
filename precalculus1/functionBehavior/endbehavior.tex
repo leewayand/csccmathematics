@@ -17,11 +17,11 @@ approaching infinity
 
 
 
-Eventually, outside some interval, the function doesn't do anything.  It settles down into a simple pattern.  We call this eventual pattern the \textbf{end-behavior}.
+Eventually, outside some interval, the function doesn't do anything surprising.  It settles down into a simple pattern.  We call this eventual pattern the \textbf{\textcolor{purple!85!blue}{end-behavior}}.
 
 
 
-What are the simple patterns on $(-\infty, a) \cup (a, \infty)$?  Where $a$ is "big enough".  What does "big enough" mean?
+What are the simple patterns on $(-\infty, a) \cup (a, \infty)$?  Where $a$ is ``big enough''.  What does ``big enough'' mean?
 
 
 
@@ -154,7 +154,7 @@ The graph of $y = h(t) = \frac{(3t+1)(5t-5)}{(t+3)(2t-4)} $ has a horizontal asy
 $\blacktriangleright$   If the degree of the numerator and is one more than the degree of the denominator, then the end-behavior is a linear function.
 
 
-\[ \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim   \frac{6w^3 + 11w^2}{3w^2 + w} \sim 2w  \]
+\[ \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim   \frac{6w^3 + 11w^2}{3w^2 + w} \sim 2w +3 \]
 
 
 
@@ -189,17 +189,40 @@ $\blacktriangleright$   If the degree of the numerator and is one more than the 
 
 However, since we are experts at linear functions, we might want a little more detail.  We might also want the constant term of this linear function.  
 
-For this, we need \textbf{long division}
+We are looking for a linear function, $A \cdot w + B$, such that 
 
 
 
 
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=  insert something for Long Division =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-
 
 
 
-\[ \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim    2w + \frac{23}{3}  \]
+
+
+\[ \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim    A \cdot w + B  \]
+
+
+
+
+We are looking for 
+
+
+
+\[ (w+8)(2w-7)(3w-1)   \sim   (3w-5)(w+2) \cdot  (A \cdot w + B)  \]
+
+
+
+If we multiply these out and compare...
+
+
+\[
+6 w^3 + 25 w^2 - 177 w + 56 = 3A w^2 + (A + 3B) w^2 + \cdots
+\]
+
+
+This tells us that $A = 2$ and $B = \frac{23}{3}$
+
 
 
 
@@ -225,6 +248,17 @@ This line is called an \textbf{oblique} asymptote.
 
 
 
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionBehavior/examples/exampleList}
+
+\end{center}
 
 
 
