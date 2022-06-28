@@ -15,7 +15,7 @@ composition
 
 
 
-{\Huge !} With the caveat that domains need to be aligned, we have many operations on functions that make up an arithmetic on functions. \\
+With the caveat that domains need to be aligned, we have many operations on functions that make up an arithmetic on functions... \\
 
 
 
@@ -37,7 +37,7 @@ The product of two functions is again a function.
 
 The multiplicative identity is $One(x) = 1$ for all real numbers.
 
-For each function, $f$, there is another function $\frac{1}{f}$, such that $f \cdot \left( \frac{1}{f} \right) = 1$, again domain restrictions might be needed for problems.   $f$ and $\frac{1}{f}$ are inverses of each other with respect to multiplication.  (If we were talking about numbers, then we might also use exponential notation $\frac{1}{n} = n^{-1}$.
+For each function, $f$, there is another function $\frac{1}{f}$, such that $f \cdot \left( \frac{1}{f} \right) = 1$, again domain restrictions might be needed to avoid problems.   $f$ and $\frac{1}{f}$ are inverses of each other with respect to multiplication.  (If we were talking about numbers, then we might also use exponential notation $\frac{1}{n} = n^{-1}$.
 
 
 $\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Composition}} 
@@ -63,7 +63,7 @@ Stealing the exponential notation from numbers, the symbol for the inverse of $f
 
 
 
-
+If we write a compopsition in function notation, $(f \circ g)(x) = f(g(x))$, then we see that the algebra of composition is replacement.
 
 
 
@@ -104,7 +104,7 @@ The domain for $K \circ T$ is $(-\infty, -3) \cup (-3, -2) \cup (-2, \infty)$
 
 
 
-\[        (K \circ T)(w)  =    \frac{w^2 + 5w + 7}{w^2 + 5w + 6}  =    \frac{w^2 + 5w + 7}{(w+2)(w+3)} \]
+\[        (K \circ T)(w)  =  K(T(w))  = \frac{w^2 + 5w + 7}{w^2 + 5w + 6}  =    \frac{w^2 + 5w + 7}{(w+2)(w+3)} \]
 
 
 
@@ -153,7 +153,7 @@ This is a good reminder that a formula is not a function. There are always domai
 
 
 \[
-(g \circ H)(y) = \frac{\left( \frac{y+3}{1-y} \right) - 3}{\left(  \frac{y+3}{1-y}\right) + 1} = \frac{y+3-3(1-y)}{y+3+(1-y)} = \frac{4y}{y} = y
+(g \circ H)(y) = g(H(y)) = \frac{\left( \frac{y+3}{1-y} \right) - 3}{\left(  \frac{y+3}{1-y}\right) + 1} = \frac{y+3-3(1-y)}{y+3+(1-y)} = \frac{4y}{y} = y
 \]
 
 
@@ -167,20 +167,20 @@ $g$ and $H$ are inverse functions.
 
 Of course, that isn't the whole story.  As we said earlier, formulas are not functions. \\
 
-$(g \circ H)(y) = y$ and so $g \circ H = Id$, the identity function.  But remember our caveat.  There are always domain issues.  In this case $(g \circ H)(y) = y$ for almost all of the real numbers.
+$(g \circ H)(r) = r$ and so $g \circ H = Id$, the identity function.  But remember our caveat.  There are always domain issues.  In this case $(g \circ H)(r) = r$ for almost all of the real numbers.
 
-Actually, 
+We know that, 
 
 
 \[
-(g \circ H)(y) = \frac{\left( \frac{y+3}{1-y} \right) - 3}{\left(  \frac{y+3}{1-y}\right) + 1} 
+(g \circ H)(r) = \frac{\left( \frac{r+3}{1-r} \right) - 3}{\left(  \frac{r+3}{1-r}\right) + 1} 
 \]
 
 
-This is equivalent to $y$ for almost all real numbers.
+This is equivalent to $r$ for almost all real numbers.
 
 
-In this case, $(g \circ H)(y) = g(H(y))$, which means that $y \ne 1$, since $1$ is not in the domain of $H$.  Secondly, $-1$ is not in the domain of $g$.  We also cannot have values of $y$ that make $H(y) = -1$.
+In this case, $(g \circ H)(r) = g(H(r))$, which means that $r \ne 1$, since $1$ is not in the domain of $H$.  Secondly, $-1$ is not in the domain of $g$.  We also cannot have values of $r$ that make $H(r) = -1$.
 
 
 
@@ -202,8 +202,42 @@ r + 3 = -(1-r) = -1 + r
 There are no such real numbers.
 
 
+Wait.  There is more to this story. We would like the other way as well: $(H \circ g)(z) = z$ and so $H \circ g = Id$.
 
-Therefore, $g$ and $H$ are inverse functions on $(-\infty, 1) \cup (1,\infty)$.
+
+Thus, $z \ne -1$.  We must also avoid $g(z) = 1$, because $1$ is not in the domain of $H$.
+
+
+
+\[
+g(z) = \frac{z-3}{z+1} = 1
+\]
+
+\[
+z - 3 = z + 1 
+\]
+
+
+\[
+-3 = 1
+\]
+
+
+There are no such real numbers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ Therefore, $g$ and $H$ are inverse functions on $(-\infty, 1) \cup (-1, 1) \cup (1,\infty)$.
 
 
 
@@ -240,15 +274,15 @@ We would like our function arithmetic to mimic our arithmetic for numbers.  For 
 
 
 
-In our example, we also want $(H \circ g)(y) = H(g(y)) = y$. It does.
+In our example, we also want $(H \circ g)(z) = H(g(z)) = z$. It does.
 
 
 \[
-(H \circ g)(y) = \frac{\left( \frac{y-3}{y+1} \right) + 3}{1 - \left(  \frac{y-3}{y+1}\right)} = \frac{y-3 + 3(y+1)}{y+1-(y-3)} = \frac{4y}{4} = y
+(H \circ g)(z) = \frac{\left( \frac{z-3}{z+1} \right) + 3}{1 - \left(  \frac{z-3}{z+1}\right)} = \frac{z-3 + 3(z+1)}{z+1-(z-3)} = \frac{4z}{4} = z
 \]
 
 
-In this case, we cannot have $y = -1$
+In this case, we cannot have $z = -1$
 
 
 
@@ -272,6 +306,20 @@ $\blacktriangleright$  Therefore, $g$ and $H$ are inverse functions on $(-\infty
 
 
 
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Algebra]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionAlgebra/examples/exampleList}
+
+\end{center}
 
 
 

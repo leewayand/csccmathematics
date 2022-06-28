@@ -15,16 +15,11 @@ one-to-one
 
 
 
-Just like numbers, functions have an arithmetic.  They have all of the usual number operations, plus one more.  Functions also have \textbf{composition} as an operation.
+Just like numbers, functions have an arithmetic.  They have all of the usual number operations, plus one more.  Functions also have \textbf{\textcolor{purple!85!blue}{composition}} as an operation.
 
-Just like number operations have identity numbers, $0$ and $1$, composition has an identiyt function - the identity function: $Id(x) = x$.
+Just like number operations have identity numbers, $0$ and $1$, composition has an identity function - the identity function: $Id(x) = x$.
 
 
-\begin{itemize}
-\item Adding $0$ with numbers appears to do nothing.
-\item Multiplying $1$ with numbers appears to do nothing.
-\item Composing the identity funcition with functions appears to do nothing.
-\end{itemize}
 
 
 Around these identity elements, we define inverses.
@@ -35,9 +30,9 @@ Around these identity elements, we define inverses.
 
 
 \begin{itemize}
-\item The additive inverse of $a$ is the number that when added to $a$ results in $0$.  Our symbol is $-a$, which we call the \textbf{opposite} of $a$.
-\item The multiplicative inverse of $a$ is the number that when multiplied to $a$ results in $1$.  Our symbol is $\frac{1}{a}$ or $a^{-1}$, which we call the \textbf{reciprocal} of $a$.
-\item The composition inverse of a function $f$ is the function that when composed with $f$ gives the identity function. Our symbol is $f^{-1}$, which we call the \textbf{inverse} of $f$.
+\item The additive inverse of $a$ is the number that when added to $a$ results in $0$.  Our symbol is $-a$, which we call the \textbf{\textcolor{blue!55!black}{opposite}} of $a$.
+\item The multiplicative inverse of $a$ is the number that when multiplied to $a$ results in $1$.  Our symbol is $\frac{1}{a}$ or $a^{-1}$, which we call the \textbf{\textcolor{blue!55!black}{reciprocal}} of $a$.
+\item The composition inverse of a function $f$ is the function that when composed with $f$ gives the identity function. Our symbol is $f^{-1}$, which we call the \textbf{\textcolor{blue!55!black}{inverse}} of $f$.
 \end{itemize}
 
 
@@ -47,7 +42,7 @@ Around these identity elements, we define inverses.
 \begin{definition} \textbf{\textcolor{green!50!black}{The Inverse of a Function}} 
 
 
-let $f$ be a one-to-one function with domain $D$, range $R$, and pairs $(d, f(d))$.
+Let $f$ be a one-to-one function with domain $D$, range $R$, and pairs $(d, f(d))$.
 
 Then the inverse function of $f$ is a function with domain $R$, range $D$, and pairs $(f(d), d)$.
 
@@ -88,9 +83,9 @@ Let $In$ and $Out$ be two functions and $Out \circ In$ their composition.
 Pairs in $In$ look like $(a, In(a))$.   The composition then interprets $In(a)$ as a member of the domain of $Out$.  $Out$ connects $In(a)$ to $Out(In(a))$.   The composition, $Out \circ In$ just ignores the middle part.  The composition sees $a$ as a domain number and then $Out(In(a))$ as the range partner.
 
 
-Suppose we are in a situation where $Out(In(a)) = a$.  Suppose the composition is the identity function.  That would tell us that $Out$ is the inverse function of $In$
+Suppose we are in a situation where $Out(In(a)) = a$, which means the composition is the identity function.  That would tell us that $Out$ is the inverse function of $In$.  $Out = In^{-1}$.
 
-Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside $Out$ looking like $(In(a), a)$.  The inverse function just reverses the order pair. \\
+Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside $In^{-1}$ looking like $(In(a), a)$.  The inverse function just reverses the order pair. \\
 
 
 \textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  The inverse function is just the reverse of the original function. \\
@@ -99,7 +94,7 @@ Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside 
 This brings up an important issue.
 
 
-\begin{warning} Inverse Functions
+\begin{warning} \textbf{\textcolor{red!80!black}{Inverse Functions}} 
 
 Reversing the pairs of a function does not always produce a function.
 
@@ -126,7 +121,7 @@ This would violate the function rule.  We would have a domain number in two pair
 
 
 
-Just like with numbers, some functions don't have inverses.  Like, $0$ just doesn't have a multipicative inverse.
+Just like with numbers, some functions don't have inverses.  Like, $0$ just doesn't have a multiplicative inverse.
 
 
 
@@ -331,7 +326,7 @@ A function is one-to-one if its graph passes the horizontal line test.
 \section{Salvaging}
 
 
-FUnctions that are not one-to-one do not have an inverse.
+Functions that are not one-to-one do not have an inverse.
 
 We can't fix this situation, but we can salvage pieces. \\
 
@@ -521,10 +516,10 @@ Suppose $T$ is a one-to-one function with $T(4) = 5$. Then which inverse value d
 
 
 \begin{multipleChoice}
-\choice {$(T^{-1}(-4) = -5$}
-\choice {$(T^{-1}\left(\frac{1}{4}\right) = \frac{1}{5}$}
-\choice {$(T^{-1}(-5) = -4$}
-\choice[correct] {$(T^{-1}(5) = 4$}
+\choice {$T^{-1}(-4) = -5$}
+\choice {$T^{-1}\left(\frac{1}{4}\right) = \frac{1}{5}$}
+\choice {$T^{-1}(-5) = -4$}
+\choice[correct] {$T^{-1}(5) = 4$}
 \end{multipleChoice}
 
 \end{question}
@@ -546,7 +541,7 @@ Suppose $T$ is a one-to-one function with $T(4) = 5$. Then which inverse value d
 
 
 
-
+foot
 
 
 
