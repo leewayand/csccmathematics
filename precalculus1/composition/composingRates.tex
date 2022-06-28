@@ -394,7 +394,7 @@ These values of $G(x)$, which are decreasing, are going into $F$.  Therefore, th
 
 
 \begin{fact}
-$increasing \circ decreasing = increasing$
+$decreasing \circ decreasing = increasing$
 
 
 Let $F$ be a decreasing function. \\
@@ -469,19 +469,224 @@ Then $F(G(a)) < F(G(b))$, because $F$ is a decreasing function.
 Let $F(x) = (x+7)(x-1)$ \\
 
 
-Let $Gx) = (x+4)(x-3)$ \\
+Let $G(k) = (k+4)(k-3)$ \\
 
 
 
 Where is the composition, $F \circ G$, increasing and decreasing?
 
 
-$\vartriangleright$  $(F \circ G)(x) = x^4 +2 x^3 -17 x^2 - 18 x + 65$
+$\vartriangleright$   $(F \circ G)(t) = t^4 +2 t^3 -17 t^2 - 18 t + 65$
+
+
+
+
+
+We can approximate the critical numbers from the graph.
+
+
+
+\begin{center}
+\desmos{4uzzkkj7co}{400}{300}
+\end{center}
+
+
+The critical numbers are approximately $-3.541$, $-0.5$, and $2.541$.
+
+
+\textbf{\textcolor{red!80!black}{Algebraically}}
+
+
+Now, let's obtain the critical numbers algebraically. \\
+
+
+We have a composition of two quadratic functions.  We need to know where they individually increase and decrease.
+
+Both $F$ and $G$ have a positive leading coefficient.  Therefore, they both decrease and the increase. The derivative will reveal the specifics.
+
+
+
+$\blacktriangleright$  $F'(x) = 2x + 6$
+
+This tells us that the critical number is $-3$.  $F$ decreases on $(-\infty, -3)$ and increases on $(-3, \infty)$.
+
+$\blacktriangleright$  $G'(k) = 2k + 1$
+
+This tells us that the critical number is $-\frac{1}{2}$.  $F$ decreases on $(-\infty, -\frac{1}{2})$ and increases on $(-\frac{1}{2}, \infty)$.
+
+
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{Overlaping Intervals}}  \\
+
+
+
+We need to know when the output from $G$ crosses $-3$, which is where $F$ changes its behavior.
+
+
+
+
+
+\begin{align*}
+(k+4)(k-3) & = -3 \\
+ k^2 + k - 12           & = -3  \\
+ k^2 + k - 9         & = 0
+\end{align*}
+
+
+\[
+k = \frac{-1 \pm \sqrt{1^2 - 4 (1) (-9)}}{2} = \frac{-1 \pm \sqrt{37}}{2} 
+\]
+
+
+We are feeling good, because $\frac{-1 - \sqrt{37}}{2} \approx -3.541$ and $\frac{-1 + \sqrt{37}}{2} \approx 2.541$, which are the approximations from the graph.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (-\infty, \frac{-1 - \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item The range of $G$ on this interval is $(-3, \infty)$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 + \sqrt{37}}{2}, \infty)$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G > -3$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+We now know that 
+
+\begin{itemize}
+\item $F \circ G$ decreases on $(-\infty, \frac{-1 - \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$ \\
+\item $F \circ G$ decreases on $(\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 + \sqrt{37}}{2}, \infty)$
+\end{itemize}
+
+
+
+
+At $\frac{-1 - \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right)$ \\
+
+
+At $-\frac{1}{2}$ there is a local maximum of $(F \circ G)\left( -\frac{1}{2} \right)$ \\
+
+
+At $\frac{-1 + \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 + \sqrt{37}}{2} \right)$ \\
 
 
 
 
 \end{example}
+
+
+
+How do these compare with our graph information? \
+
+
+
+
+\[
+(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right) = -16
+\]
+
+That is what the graph says! \\
+
+
+
+
+
+
+\[
+(F \circ G)\left( -\frac{1}{2} \right) = \frac{1113}{16} \approx 69.5625
+\]
+
+That is what the graph says! \\
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Wonderful !!!}}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
