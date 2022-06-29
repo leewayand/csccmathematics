@@ -94,11 +94,11 @@ Suppose that $a_n = \frac{(-1)^n}{n}$.  We cannot set $f(x) = \frac{(-1)^x}{x}$ 
 
 \[
 \begin{array}{c | c | c| c | c | c | c }
-n & 1 & 2 & 3 & 4 & 5 & \ldots \\
+n & 1 & 2 & 3 & 4 & 5 & \cdots \\
 \hline 
-\cos(n \pi) & -1 & 1 & -1 & 1 & -1 &  \ldots \\
+\cos(n \pi) & -1 & 1 & -1 & 1 & -1 &  \cdots \\
 \hline
-(-1)^n & -1 & 1 & -1 & 1 & -1 & \ldots
+(-1)^n & -1 & 1 & -1 & 1 & -1 & \cdots
 \end{array} 
 \]
 \end{example}
@@ -193,7 +193,7 @@ The first type of sequence we examine is an \textbf{\textcolor{purple!85!blue}{a
     \node (a3) [right of=a2] {$3$,};
     \node (a4) [right of=a3] {$7$,};
     \node (a5) [right of=a4] {$11$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
 
     \path[->] (a1) edge [bend left=20] node[above]{$+4$} (a2);
     \path[->] (a2) edge [bend left=20] node[above]{$+4$} (a3);
@@ -255,7 +255,7 @@ analogues of lines.  Consider the earlier example.
     \node (a3) [right of=a2] {$3$,};
     \node (a4) [right of=a3] {$7$,};
     \node (a5) [right of=a4] {$11$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
     
     \path[->] (a1) edge [bend left=20] node[above]{$+4$} (a2);
     \path[->] (a2) edge [bend left=20] node[above]{$+4$} (a3);
@@ -331,7 +331,7 @@ Here is an arithmetic sequence that decreases as its index increases.
     \node (a3) [right of=a2] {$13$,};
     \node (a4) [right of=a3] {$11$,};
     \node (a5) [right of=a4] {$9$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
 
     \path[->] (a1) edge [bend left=20] node[above]{$-2$} (a2);
     \path[->] (a2) edge [bend left=20] node[above]{$-2$} (a3);
@@ -434,7 +434,7 @@ A second very important family of sequences we consider are geometric sequences.
     \node (a3) [right of=a2] {$90$,};
     \node (a4) [right of=a3] {$270$,};
     \node (a5) [right of=a4] {$810$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
 
     \path[->] (a1) edge [bend left=20] node[above] {$\times 3$} (a2);
     \path[->] (a2) edge [bend left=20] node[above] {$\times 3$} (a3);
@@ -459,7 +459,7 @@ A geometric sequence can also decrease as it progresses.
     \node (a3) [right of=a2] {$\frac{7}{20}$,};
     \node (a4) [right of=a3] {$\frac{7}{40}$,};
     \node (a5) [right of=a4] {$\frac{7}{80}$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
 
     \path[->] (a1) edge [bend left=20] node[above] {$\times\frac{1}{2}$} (a2);
     \path[->] (a2) edge [bend left=20] node[above] {$\times\frac{1}{2}$} (a3);
@@ -510,7 +510,7 @@ Consider the previously illustrated example below.
     \node (a3) [right of=a2] {$90$,};
     \node (a4) [right of=a3] {$270$,};
     \node (a5) [right of=a4] {$810$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
 
     \path[->] (a1) edge [bend left=20] node[above] {$\times 3$} (a2);
     \path[->] (a2) edge [bend left=20] node[above] {$\times 3$} (a3);
@@ -584,7 +584,7 @@ Now let's consider the second example of a geometric sequence from before, which
     \node (a3) [right of=a2] {$\frac{7}{20}$,};
     \node (a4) [right of=a3] {$\frac{7}{40}$,};
     \node (a5) [right of=a4] {$\frac{7}{80}$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
     
     \path[->] (a1) edge [bend left=20] node[above] {$\times\frac{1}{2}$} (a2);
     \path[->] (a2) edge [bend left=20] node[above] {$\times\frac{1}{2}$} (a3);
@@ -640,7 +640,7 @@ Can all geometric sequences be modeled using an exponential?  A third example ex
     \node (a3) [right of=a2] {$\frac{48}{125}$,};
     \node (a4) [right of=a3] {$\frac{-192}{625}$,};L
     \node (a5) [right of=a4] {$\frac{768}{3125}$,};
-    \node (a6) [right of=a5] {$\ldots$};
+    \node (a6) [right of=a5] {$\cdots$};
     
     \path[->] (a1) edge [bend left=20] node[above] {$\times\frac{-4}{5}$} (a2);
     \path[->] (a2) edge [bend left=20] node[above] {$\times\frac{-4}{5}$} (a3);

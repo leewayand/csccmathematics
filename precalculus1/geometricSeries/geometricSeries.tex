@@ -19,7 +19,7 @@ We have seen that $\sum\limits_{n=0}^{\infty} a \, x^n = \frac{a}{1-x}$ for $x \
 
 
 
-This is a new kind of function formula called an \textbf{infinite series}.  This type of infinite series is called a \textbf{geometric series} and $(-1, 1)$ is its interval of convergence.  From a function point-of-view $(-1, 1)$  is the domain of this function.
+This is a new kind of function formula called an \textbf{\textcolor{purple!85!blue}{infinite series}}.  This particular infinite series above is called a \textbf{\textcolor{purple!85!blue}{geometric series}} and $(-1, 1)$ is its \textbf{\textcolor{purple!85!blue}{interval of convergence}}.  From a function point-of-view, $(-1, 1)$  is the domain of this function.
 
 
 On the other hand, this same function can be represented by the formula $\frac{a}{1-x}$.  The implied domain of $\frac{a}{1-x}$ is $(-\infty, 1) \cup (1, \infty)$. \\ 
@@ -34,9 +34,85 @@ If we restrict the domain then we have equivalent representations of the same fu
 
 
 
-$\blacktriangleright$ A \textbf{closed form} formula is one like  $\frac{a}{1-x}$.  It involves a finite number of our basic numeric operations.  This is different than our new type of formula.  Infinite series list an infinite number of basic operations.  We prefer closed form formulas, unfortunately they just don't represent enough functions. Functions described via infinite series widen our library of functions, considerably.
+$\blacktriangleright$ $\frac{a}{1-x}$ is called a \textbf{closed form} formula.  It involves a finite number of our basic numeric operations.  This is different than our new type of formula.  Infinite series list an infinite number of basic operations.  We prefer closed form formulas, unfortunately they just don't represent enough functions. Functions described via infinite series widen our library of functions, considerably.
 
 But, for right now, we are just investigating the bridge between closed form formulas and infinite series using geometric series to illustrate.
+
+
+
+
+
+\begin{example}
+
+
+Let $f(x) = \sum\limits_{n=0}^{\infty} 4 \, x^n$. \\ 
+
+
+
+Then, 
+
+
+\[ f\left( \frac{1}{2} \right) = \sum\limits_{n=0}^{\infty} 4 \, \left( \frac {1}{2} \right)^n = \frac{4}{1-\frac{1}{2}} = 8
+\]
+
+\end{example}
+
+
+
+
+
+
+\begin{example}
+
+
+Let $G(x) = \sum\limits_{n=3}^{\infty} 4 \, x^n$. \\ 
+
+
+
+Then, 
+\[ G\left( \frac{1}{2} \right) = \sum\limits_{n=3}^{\infty} 4 \, \left( \frac {1}{2} \right)^n \]
+
+
+\[ = \sum\limits_{n=0}^{\infty} 4 \, \left( \frac {1}{2} \right)^n  - 4 - 4 \left( \frac{1}{2} \right)  - 4 \left( \frac{1}{2} \right)^2    \]
+
+
+
+\[
+= \frac{4}{1-\frac{1}{2}} - 4 - 2 - 1 = 1
+\]
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $G(x) = \sum\limits_{n=3}^{\infty} 4 \, x^n$. \\ 
+
+
+
+Then, 
+\[ G\left( \frac{1}{2} \right) = \sum\limits_{n=3}^{\infty} 4 \, \left( \frac {1}{2} \right)^n \]
+
+
+\[ = \left( \frac{1}{2} \right)^3 \sum\limits_{n=0}^{\infty} 4 \, \left( \frac {1}{2} \right)^n \]
+
+\[ =  \frac{1}{8} \cdot  \frac{4}{1-\frac{1}{2}} = 1 \]
+
+\end{example}
+
+
+
+
+
+
 
 
 
@@ -223,6 +299,17 @@ Sometimes that is easier to read.
 
 
 
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Geometric Series]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/geometricSeries/examples/exampleList}
+
+\end{center}
 
 
 

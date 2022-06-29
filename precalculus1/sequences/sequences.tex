@@ -38,12 +38,12 @@ We start with some formality before discussing more practical matters involving 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Sequence}} 
 
 
-A real-valued \textbf{sequence} is a function whose domain is an interval of integers $\{n_0,n_{0+1},n_{0+2}, \ldots\}$ and whose range is a subset of the real numbers.  
+A real-valued \textbf{sequence} is a function whose domain is an interval of integers $\{n_0,n_{0+1},n_{0+2}, \cdots\}$ and whose range is a subset of the real numbers.  
 
 We denote a sequence by 
 
 \begin{align*}
-f : \{n_0,n_{0+1},n_{0+2}, \ldots\} & \to \mathbb R \\
+f : \{n_0,n_{0+1},n_{0+2}, \cdots\} & \to \mathbb R \\
     n &\mapsto f(n)
 \end{align*}
 where the first line indicates the domain and range and the second line gives the rule that defines the terms in the sequence.
@@ -61,7 +61,7 @@ where the first line indicates the domain and range and the second line gives th
 
 
 \begin{example}
-Suppose that the domain of a sequence is the set of natural numbers $\{1,2,3,\ldots\}$, which we denote by $\mathbb N$ and the sequence maps each natural number to two times itself.  We would write
+Suppose that the domain of a sequence is the set of natural numbers $\{1,2,3,\cdots\}$, which we denote by $\mathbb N$ and the sequence maps each natural number to two times itself.  We would write
 
 \begin{align*}
 f : \mathbb N & \to \mathbb R \\
@@ -71,7 +71,7 @@ f : \mathbb N & \to \mathbb R \\
 We can denote this more succinctly using the formula $f(n)=2n$.
 \end{example}
 
-Most of the time, we take $n_0=0$ or $n_0=1$; that is, our domain will either be $\{0,1,2,\ldots\}$ (the whole numbers), or $\{1,2,3,\ldots\}$ (the natural numbers), respectively.  We also take the domain of a sequence to be an infinite interval, but other texts might consider sequences whose domain is finite. In this text, we generally consider sequences whose domain is an infinite subset of the natural numbers, and unless otherwise specified, the domain of a sequence will have a smallest element and include all larger natural numbers.  We often refer to a number from the domain as an \textbf{index} of the sequence.  The domain is the set of \textbf{indices}.
+Most of the time, we take $n_0=0$ or $n_0=1$; that is, our domain will either be $\{0,1,2,\cdots\}$ (the whole numbers), or $\{1,2,3,\cdots\}$ (the natural numbers), respectively.  We also take the domain of a sequence to be an infinite interval, but other texts might consider sequences whose domain is finite. In this text, we generally consider sequences whose domain is an infinite subset of the natural numbers, and unless otherwise specified, the domain of a sequence will have a smallest element and include all larger natural numbers.  We often refer to a number from the domain as an \textbf{index} of the sequence.  The domain is the set of \textbf{indices}.
 
 Thus, we can represent sequences of interest as an ordered list of real numbers, where there is an assumed smallest starting index.  For instance, returning to the question posed by Fibonacci, we can keep track of the number of rabbits present at the start of the $n$-th month in a table.
 
@@ -89,10 +89,10 @@ We can more succinctly denote this by arranging the number of rabbits in the ord
 
 
 \[
-1,1,2,3,5,8,13,21, \ldots 
+1,1,2,3,5,8,13,21, \cdots 
 \]
 
-where it is understood that the first number in the list is the number of rabbits at the start of month $1$, the second number in the list is the number of rabbits at the start of month $2$, and so on.  The dots ``\ldots'' signify that the list keeps going forever.  We often want to refer to a specific term in this list, so we introduce some standard notation.
+where it is understood that the first number in the list is the number of rabbits at the start of month $1$, the second number in the list is the number of rabbits at the start of month $2$, and so on.  The dots ``\cdots'' signify that the list keeps going forever.  We often want to refer to a specific term in this list, so we introduce some standard notation.
 
 
 
@@ -106,7 +106,7 @@ where it is understood that the first number in the list is the number of rabbit
 The notation $\left\{a_n\right\}_{n=n_0}$ will be used to denote the infinite ordered list of numbers below.
 
 \[
-a_{n_0}, a_{n_0+1},  a_{n_0+2}, \ldots
+a_{n_0}, a_{n_0+1},  a_{n_0+2}, \cdots
 \]
 
 \end{notation}
@@ -130,13 +130,13 @@ The notation $\cdots$ is called an \textbf{ellipses} and we do not like it.  The
 The subscript in the above notation is called the \emph{index} and describes how we reference the first term.  In many instances, we index sequences starting at $n_0=0$ or $n_0=1$.  When $n_0=0$, the list looks like this:
 
 \[
-a_0,a_1,a_2, \ldots ,
+a_0,a_1,a_2, \cdots ,
 \]
 
 and when $n_0=1$, the list is denoted below.
 
 \[
-a_1,a_2,a_3, \ldots 
+a_1,a_2,a_3, \cdots 
 \]
 
 
@@ -150,6 +150,8 @@ Many authors denote sequences using other notation.  Some other common ones you 
 \[   a_n = f(n), \, n \geq 1   \]
 
 \[  \left\{a_n\right\}_{n=1}^\infty  \]
+
+\[  \left\(a_n\right\)_{n=1}^\infty  \]
 
 \[   \left(f(n)\right)_{n=1}^\infty   \]
 
@@ -621,7 +623,7 @@ s_n = \sum_{k=1}^n a_k .
 \]
 Write out the first five terms in this new sequence.
 
-$\blacktriangleright$ \textbf{Note:} The notation $\sum\limits_{k=1}^n a_k$ is shorthand notation used to represent the sum $a_1+a_2+\ldots +a_n$.
+$\blacktriangleright$ \textbf{Note:} The notation $\sum\limits_{k=1}^n a_k$ is shorthand notation used to represent the sum $a_1+a_2+\cdots +a_n$.
 
 
 
@@ -659,7 +661,7 @@ Of course, there is a more general observation.
 \begin{image}
   \begin{tikzpicture}
         \node at (0,0) {
-          $s_n = \underbrace{a_1+\ldots+a_{n-1}} + a_n = s_{n-1} + a_n$
+          $s_n = \underbrace{a_1+\cdots+a_{n-1}} + a_n = s_{n-1} + a_n$
         };
         \node at (-.8,-.5) {\small{this is $s_{n-1}$}};
       \end{tikzpicture}

@@ -3,12 +3,6 @@
 \input{../../preamble.tex}
 \author{Jim Talamo (edited)}
 
-\outcome{Define a series.}
-\outcome{Recognize a geometric series.}
-\outcome{Recognize a telescoping series.}
-\outcome{Compute the sum of a geometric series.}
-\outcome{Compute the sum of a telescoping series.}
-
 \title{Special Series}
 
 
@@ -29,13 +23,13 @@ Suppose that we have a \emph{series} $\sum\limits_{k=k_0}^{\infty} a_k$ and have
 The definitions above give us a way to determine whether a given series converges.  In fact, to determine whether $\sum\limits_{k=k_0}^{\infty} a_k$ converges, we can do the following.
 
 \begin{itemize}
-\item[1.] Consider the associated sequence $\{s_n\}$ of partial sums.
-\item[2.] Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim\limits_{n \to \infty} s_n$.  
+\item Consider the associated sequence $\{s_n\}$ of partial sums.
+\item Try to find an explicit formula for the term $s_n$.  If you can find such a formula, analyze $\lim\limits_{n \to \infty} s_n$.  
 \begin{itemize}
-\item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0}^{\infty} a_k=L$.  
+\item If $\lim\limits_{n \to \infty} s_n$ exists, then $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0}^{\infty} a_k=L$.  
 \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0}^{\infty} a_k$ diverges.
 \end{itemize}
-\item[3.] If an explicit formula for $s_n$ cannot be found, further analysis is needed.  
+\item  If an explicit formula for $s_n$ cannot be found, further analysis is needed.  
 \end{itemize}
 
 
@@ -114,7 +108,7 @@ Recall that a \emph{geometric sequence} is a sequence for which the ratio of suc
 We thus represent this sequence by the ordered list
 
 \[
-ar^{n_0} , ar^{n_0+1}, ar^{n_0+2}, \ldots
+a \, r^{n_0} , a \, r^{n_0+1}, a \, r^{n_0+2}, \ldots
 \]
 
 and we have a result that characterizes the behavior of this type of sequence, which we recall now.
@@ -132,12 +126,12 @@ and we have a result that characterizes the behavior of this type of sequence, w
   \]
 \end{theorem}
 
-We can now ask when we are able to sum the terms of a geometric sequence.
+We can now ask when we are able to \textbf{\textcolor{purple!85!blue}{sum}} the terms of a geometric sequence.
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Geometric Series}} 
 
 
-  A \textbf{geometric series} is a series of the form $\sum\limits_{k=k_0}^\infty ar^k$
+  A \textbf{geometric series} is a series of the form $\sum\limits_{k=k_0}^\infty a \, r^k$
   for some real numbers $a \ne 0$ and $r$.
 \end{definition}
 
@@ -158,7 +152,7 @@ Indeed, $a= \answer[given]{2}$ and $r = \answer[given]{\frac{4}{3}}$.
 The series $\sum\limits_{k=0}^\infty k^2 \left(\frac{1}{2}\right)^k$ \wordChoice{\choice{is}\choice[correct]{is not}} geometric since $a_k = \answer[given]{k^2 \cdot \frac{1}{2}^k}$ \wordChoice{\choice{can}\choice[correct]{cannot}} be brought into the form $a \cdot r^k$.  Indeed, the coefficient, $k^2$, is not the same for each term in the series.
 \end{example}
 
-We can now try to determine when adding together the terms in such a series is possible; that is, we can explore for which values of $a$ and $r$ the \emph{series} $\sum\limits_{k=n_0}^{\infty} a_k$ converges.  
+We can now try to determine when adding together the terms in such a series is possible; that is, we can explore for which values of $a$ and $r$ the \emph{series} $\sum\limits_{k=n_0}^{\infty} a \, r^k$ converges.  
 
 
 
@@ -170,7 +164,7 @@ We can now try to determine when adding together the terms in such a series is p
 
 
 \begin{model}
- Let $r \neq 1$ and consider the geometric series $\sum\limits_{k=0}^\infty a r^k$, and let $s_n = \sum\limits_{k=0}^{n} a r^k $.  We find an explicit formula for the term $s_n$.
+ Let $r \neq 1$ and consider the geometric series $\sum\limits_{k=0}^\infty a \, r^k$, and let $s_n = \sum\limits_{k=0}^{n} a \, r^k $.  We find an explicit formula for the term $s_n$.
   
   \begin{explanation}
 First, note that the sum above represents the attempt to add all of the terms in the sequence $\{a_n\}_{n=0}$, where $a_n =  r^n$.  Let's start by writing out $s_n$.  
@@ -245,7 +239,7 @@ When $-1<r<1$, note $\lim\limits_{n \to \infty} r^{n+1}=0$, so in this case,    
     \lim\limits_{n\to\infty}\frac{1 - r^{n+1}}{1-r} = \frac{1-\answer[given]{0}}{1-r}.
     \]
 
-By noting that $\sum\limits_{k=0}^n ar^k = a \sum\limits_{k=0}^n r^k$, we can combine this observation with the above argument and write the result in a theorem.
+By noting that $\sum\limits_{k=0}^n a \, r^k = a \sum\limits_{k=0}^n r^k$, we can combine this observation with the above argument and write the result in a theorem.
 
 \begin{theorem}
   The geometric series $\sum\limits_{k= 0}^\infty a \cdot r^k$ 
@@ -289,7 +283,7 @@ We can easily generalize this example and doing so allows us to write down a mor
 \begin{example}
 Let's take another look at the series that started off the section, $\sum\limits_{k=1}^{\infty} \left(\frac{1}{2}\right)^k$.  Here, $a=\answer[given]{1}$, $r=\answer[given]{1/2}$ and $k_0 = \answer[given]{1}$.  Since $|r|<1$, the series \wordChoice{\choice[correct]{converges}\choice{diverges}}, and using the formula above, we have that
 
-\[ \sum\limits_{k=1}^{\infty} \left(\frac{1}{2}\right)^k = \frac{ar^{k_0}}{1-r} = \frac{1\cdot \frac{1}{2}}{1-1/2} =1.\]
+\[ \sum\limits_{k=1}^{\infty} \left(\frac{1}{2}\right)^k = \frac{a \, r^{k_0}}{1-r} = \frac{1\cdot \frac{1}{2}}{1-1/2} =1.\]
 
 This matches the earlier result!  
 \end{example}
@@ -368,7 +362,7 @@ The series is geometric with $r = \answer[given]{1/4}$, and using the result $\s
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
-Now that we have seen a special type of series for which we can find an explicit formula for the $n$-th term in the sequence of partial sums, it helps to summarize the logic that we employed.
+Now that we have seen a special type of series for which we can find an explicit formula for the $n$-th term of the sequence of partial sums, it helps to summarize the logic that we employed.
 
 \begin{itemize}
 \item[1.] Consider the associated sequence $(s_n)$ of partial sums.
@@ -377,6 +371,32 @@ Now that we have seen a special type of series for which we can find an explicit
 \item If the limit exists, $\sum\limits_{k=k_0}^{\infty} a_k$ converges, and if we can determine that $\lim\limits_{n \to \infty} s_n =L$, then $\sum\limits_{k=k_0} a_k=L$.  \item If  $\lim\limits_{n \to \infty} s_n$ does not exist, then $\sum\limits_{k=k_0} a_k$ diverges.
 \end{itemize}
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of SUms of Sequences]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/sumsOfSequences/examples/exampleList}
+
+\end{center}
+
+
+
+
 
 
 \end{document}

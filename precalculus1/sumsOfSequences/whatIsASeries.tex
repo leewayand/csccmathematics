@@ -3,12 +3,6 @@
 \input{../../preamble.tex}
 \author{Jim Talamo (edited)}
 
-\outcome{Define a series.}
-\outcome{Recognize a geometric series.}
-\outcome{Recognize a telescoping series.}
-\outcome{Compute the sum of a geometric series.}
-\outcome{Compute the sum of a telescoping series.}
-
 \title{What is a series}
 
  
@@ -23,10 +17,14 @@ adding a sequence
 In the previous sections, we've seen several examples of sequences.  If we have a sequence $\{a_n\}_{n=1}$, then we can ask two important questions about it.
 
 \begin{itemize}
-\item [1] Do the numbers in the list approach a finite value?
-\item [2] If so, what is the value?
+\item \textbf{\textcolor{purple!85!blue}{Do the numbers in the list approach a finite value?}} 
+\item \textbf{\textcolor{purple!85!blue}{If so, what is the value?}} 
 \end{itemize}
 
+
+The first question is called an \textbf{\textcolor{purple!85!blue}{existence}} question.  Does the limit exist?  This is a yes or no question.
+
+If the answer is yes (the limit exists), then we come to the second question. \\
 
 
 In this section, we propose a different view of a sequence of numbers.  We can view them as terms in a partial summation, where we keep adding on more terms, like digits in a decimal expansion.
@@ -95,13 +93,13 @@ Define a new sequence $(s_n)_{n=1}$ as
 
 
 \begin{align*}
-b_1 & = 3 \\
-b_2 & = 3 + 6 & = 9 \\
-b_3 & = 3 + 6 + 2 & = 11 \\
-b_4 & = 3 + 6 + 2 + 1 & = 12 \\
-b_5 & = 3 + 6 + 2 + 1 + 0 & = 12 \\
-b_6 & = 3 + 6 + 2 + 1 + 0 + 4 & = 16 \\
-b_7 & = 
+s_1 & = 3 \\
+s_2 & = 3 + 6 & = 9 \\
+s_3 & = 3 + 6 + 2 & = 11 \\
+s_4 & = 3 + 6 + 2 + 1 & = 12 \\
+s_5 & = 3 + 6 + 2 + 1 + 0 & = 12 \\
+s_6 & = 3 + 6 + 2 + 1 + 0 + 4 & = 16 \\
+s_7 & = 
 \end{align*}
 
 
@@ -117,14 +115,17 @@ The sequence $(s_n)_{n=1}$ is a a sequence of partial sums of $(a_k)_{k=1}$. \\
 We can ask an important question about a sequence of partial sums.
 
 \begin{itemize}
-\item Can we sum all of the numbers in the list and obtain a finite result?
+\item Can we sum all of the numbers in the first list and obtain a finite result?
 \end{itemize}
 
 
 
+Another existence question. \\
+
+Does \emph{limit} $\lim\limits_{n \to \infty} s_n$ exists ? \\
 
 
-The first question is really whether the \emph{limit} $\lim\limits_{n \to \infty} s_n$ exists and we studied several ways to determine this previously.  As it turns out, the summation question is closely related to this existence question.  We motivate this through an example.
+On one hand, this is a question about the convergence or the sequence $(s_n)_{n=1}$.  On the other hand, this is a weird question about adding up an infinite number of terms from the original sequence. \\
 
 
 
@@ -281,7 +282,7 @@ We can also let $S_n$ denote the total shaded area after the $n$-th step.  Analy
 Looking at the pictures drawn so far, notice that the only unshaded area after the $n$-th step is a rectangle of area $A_n$, so we can write a formula for $S_n$.   
 
 \[
-S_n = \left<\textrm{area of the square}\right>-A_n = 1-\left(\frac{1}{2}\right)^n
+S_n = \left<\textrm{area of the whole square}\right>-A_n = 1-\left(\frac{1}{2}\right)^n
 \]
 
 We can now evaluate the limit and find that $\lim\limits_{n \to \infty} S_n =\answer[given]{1}$.
@@ -355,7 +356,7 @@ Let $\{a_n\}_{n=n_0}$ be a sequence.  Let $s_n = \sum\limits_{k=k_0}^n a_k$; the
 The above definition really states that the symbols $\sum\limits_{k=k_0}^{\infty} a_k$ and $\lim\limits_{n \to \infty} s_n$ represent exactly the samething! It makes the content of the previous example more precise.  This is quite important since we have techniques to determine whether limits of \emph{sequences} exist.  We are now able to recast the new question ``Can I sum all of the terms in a sequence?'' into the old question ``Does the associated sequence of partial sums have a limit?".  To attack the latter, we can utilize all of our previous techniques for studying the limit of the sequence of partial sums.
 
 \begin{remark}
-Some people define the $n$-th term in the sequence of partial sums is found by summing the first $n$ terms in the original sequence.  With our convention, the lower index for both the original sequence and the sequence of partial sums will always be the same; that is, both sequences share a common domain.  In the case when the lower index is $k_0=1$, both conventions are equivalent.
+Some people define the $n$-th term in the sequence of partial sums by summing the first $n$ terms in the original sequence.  With our convention, the lower index for both the original sequence and the sequence of partial sums will always be the same; that is, both sequences share a common domain.  In the case when the lower index is $k_0=1$, both conventions are equivalent.
 \end{remark}
 
 
