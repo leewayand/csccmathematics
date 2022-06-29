@@ -2,10 +2,6 @@
 \author{Jim Talamo \and Bart Snapp}
 \input{../../preamble.tex}
 
-\outcome{Represent a sequence by graphing its terms.}
-\outcome{Explore the relationship between functions of real-valued variables and sequences.}
-\outcome{Introduce arithmetic and geometric sequences.}
-
 \title{Visualize}
 
 \begin{document}
@@ -83,7 +79,7 @@ A useful first attempt to associate a function of a real variable to a sequence 
 
 \begin{question}
   Using the convention above, which function corresponds to the sequence given by the explicit formula
-  $a_n = -\frac{n}{2}+3$ for $n=1,2,3,\dots$?
+  $a_n = -\frac{n}{2}+3$ for $n=1,2,3,\cdots$?
   \begin{prompt}
     \[
     f(x) = \answer[given]{-x/2 + 3}
@@ -173,7 +169,7 @@ While there are many examples of sequences, there are two important types of seq
 
 \subsection{Arithmetic sequences}
 
-The first type of sequence we examine is an \emph{arithmetic sequence}.  
+The first type of sequence we examine is an \textbf{\textcolor{purple!85!blue}{arithmetic sequence}}.  
 %{Mathematically, the word \dfn{family}
 %  does not have an entirely precise definition; a family of things is
 %  a \dfn{collection} or a \dfn{set} of things, but family
@@ -219,7 +215,7 @@ The first type of sequence we examine is an \emph{arithmetic sequence}.
 \end{question}
 
 
-  By requiring that the starting index be $n_0=0$, the sequence $\{a_n\}_{n=0}$, the terms in the sequence are given explicitly by the formula $a_n=\answer[given]{4n-5}$,
+  By requiring that the starting index be $n_0=0$ for the sequence $\{a_n\}_{n=0}$, the terms in the sequence are given explicitly by the formula $a_n=\answer[given]{4n-5}$,
   or recursively by the rule $a_0 = \answer[given]{-5}$ and $a_{n+1} = a_n
   + \answer[given]{4}$. 
 
@@ -269,7 +265,7 @@ analogues of lines.  Consider the earlier example.
   \end{tikzpicture}
 \end{image}
 
-By requiring that the lower index of the sequence be $n_0=1$, we can check out a graph of the sequence.
+By requiring that the lower index of the sequence be $n_0=0$, we can check out a graph of the sequence.
 
 \begin{image}
 \begin{tikzpicture}
@@ -371,7 +367,7 @@ We can graph the terms.
 \end{tikzpicture}
 \end{image}
 
-By setting $n=0$, we can find an explicit formula for the $n$-th term in the sequence; indeed $a_n = \answer[given]{-2n+17}$.  As such, we can easily find a function of a real variable $f(x)$ that coincides with the sequence on their common domains by replacing $n$ with $x$ to obtain $f(x) = \answer[given]{-2x+17}$.
+By setting $n_0=0$, we can find an explicit formula for the $n$-th term in the sequence; indeed $a_n = \answer[given]{-2n+17}$.  As such, we can easily find a function of a real variable $f(x)$ that coincides with the sequence on their common domains by replacing $n$ with $x$ to obtain $f(x) = \answer[given]{-2x+17}$.
 
 We can graph both of these on the same set of axes.
 
@@ -690,5 +686,34 @@ Geometric sequences play an important role in the coming sections, so it is usef
 \begin{quote}
 ``Obvious" is the most dangerous word in mathematics" -E.T. Bell
 \end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Sequences]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/sequences/examples/exampleList}
+
+\end{center}
+
+
+
+
+
 
 \end{document}

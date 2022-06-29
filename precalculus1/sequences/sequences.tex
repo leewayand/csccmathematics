@@ -2,13 +2,6 @@
 \author{Jim Talamo \and Bart Snapp \and Lee Wayand}
 \input{../../preamble.tex}
 
-\outcome{Define a sequence.}
-\outcome{Write the first several terms of a sequence using an explicit formula.}
-\outcome{Write the first several terms of a sequence using a recurrence relation.}
-\outcome{Find an explicit formula for a sequence given recursively.}
-\outcome{Find a recurrence relation for a sequence given explicitly.}
-\outcome{Use a given sequence to create new sequences.}
-
 \title{Sequences}
 
 \begin{document}
@@ -78,7 +71,7 @@ f : \mathbb N & \to \mathbb R \\
 We can denote this more succinctly using the formula $f(n)=2n$.
 \end{example}
 
-Most of the time, we take $n_0=0$ or $n_0=1$; that is, our domain will either be $\{0,1,2,\ldots\}$ (the whole numbers), or $\{1,2,3,\ldots\}$ (the natural numbers), respectively.  We also take the domain of a sequence to be an infinite interval, but other texts might consider sequences whose domain is finite. In this text, we generally consider sequences whose domain is an infinite subset of the natural numbers, and unless otherwise specified, the domain of a sequence will have a smallest element and include all larger natural numbers.  We often called a number from the domain as \textbf{index}.  The domain is the set of \textbf{indices}.
+Most of the time, we take $n_0=0$ or $n_0=1$; that is, our domain will either be $\{0,1,2,\ldots\}$ (the whole numbers), or $\{1,2,3,\ldots\}$ (the natural numbers), respectively.  We also take the domain of a sequence to be an infinite interval, but other texts might consider sequences whose domain is finite. In this text, we generally consider sequences whose domain is an infinite subset of the natural numbers, and unless otherwise specified, the domain of a sequence will have a smallest element and include all larger natural numbers.  We often refer to a number from the domain as an \textbf{index} of the sequence.  The domain is the set of \textbf{indices}.
 
 Thus, we can represent sequences of interest as an ordered list of real numbers, where there is an assumed smallest starting index.  For instance, returning to the question posed by Fibonacci, we can keep track of the number of rabbits present at the start of the $n$-th month in a table.
 
@@ -125,7 +118,7 @@ a_{n_0}, a_{n_0+1},  a_{n_0+2}, \ldots
 \begin{warning} \textbf{\textcolor{red!80!black}{Ellipsis}} 
 
 
-The notation $\ldots$ is called an \textbf{ellipses} and we do not like it.  The ellipsis means that the sequence continues in the \textit{obvious} way.  This places the interpretation on the shoulders of the reader and that is not good.  We want to be explicit when we describe a sequence.  Therefore, we will slowly move away from using an ellipsis when describing sequences.
+The notation $\cdots$ is called an \textbf{ellipses} and we do not like it.  The ellipsis means that the sequence continues in the \textit{obvious} way.  This places the interpretation on the shoulders of the reader and that is not good.  We want to be explicit when we describe a sequence.  Therefore, we will slowly move away from using an ellipsis when describing sequences.
 
 \end{warning}
 
@@ -152,12 +145,17 @@ While we usually prefer our starting index to be $0$ or $1$, we would like to ha
 \begin{remark}
 Many authors denote sequences using other notation.  Some other common ones you may see are listed here. 
 
-\begin{align*}
-  &a_n = f(n), n \geq 1   \\
-  & \left\{a_n\right\}_{n=1}^\infty, \\
-  & \left(f(n)\right)_{n=1}^\infty \\
-\end{align*}
-In this text, we will use $\left\{a_n\right\}_{n=n_0}$ to refer to the sequence and the notation $a_n$ to refer to a specific term in the sequence.
+
+
+\[   a_n = f(n), \, n \geq 1   \]
+
+\[  \left\{a_n\right\}_{n=1}^\infty  \]
+
+\[   \left(f(n)\right)_{n=1}^\infty   \]
+
+
+
+In this text, we will use $\left\{a_n\right\}_{n=n_0}$ to refer to the sequence and the notation $a_n$ to refer to a specific term in the $n^{th}$ position in the sequence.
 
 \end{remark}
 
@@ -165,12 +163,12 @@ In this text, we will use $\left\{a_n\right\}_{n=n_0}$ to refer to the sequence 
 An important, yet subtle note, two different sequences can be represented by the same ordered list of numbers.  For example, the sequences $f_1$ and $f_2$ below
 
 \[ \begin{array}{rl}
-f_1 : \{0,1,2,\ldots \} & \to \mathbb R \qquad \textrm{ where } f_1(n) =2(n+1) \\
-f_2 : \{1,2,3, \ldots \} & \to \mathbb R \qquad \textrm{ where } f_2(n) =2n \\
+f_1 : \{0,1,2,\cdots \} & \to \mathbb R \qquad \textrm{ where } f_1(n) =2(n+1) \\
+f_2 : \{1,2,3, \cdots \} & \to \mathbb R \qquad \textrm{ where } f_2(n) =2n \\
 \end{array}
 \]
 
-both can represent the ordered list $2, 4, 6, 8, 10, \ldots$, but since the domains of $f_1$ and $f_2$ are different, they are not the same sequence even though they model the same phenomenon. 
+both can represent the ordered list $2, 4, 6, 8, 10, \cdots$, but since the domains of $f_1$ and $f_2$ are different, they are not the same sequence even though they model the same phenomenon. 
 
 Let's now briefly summarize what has been discussed so far.
 
@@ -180,9 +178,25 @@ A sequence is a function that can be represented by an ordered list.  The notati
 In the instance where $n_0=1$, we denote the sequence by $\{a_n\}_{n=1}$ and can represent the sequence by the ordered list of numbers below.
 
 \[
-a_1, a_2, a_3, \ldots
+a_1, a_2, a_3, \cdots
 \]
 \end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Exploring sequences}
 We now explore an interesting scenario that highlights an important idea while working with sequences.
@@ -190,14 +204,14 @@ We now explore an interesting scenario that highlights an important idea while w
 \begin{question}
   Consider the sequence represented by the list of numbers below.
   \[
-  1, 2, 4, 8, 16, \dots.
+  1, 2, 4, 8, 16, \cdots.
   \]
 Which number comes next? \wordChoice{\choice{$32$}    \choice{$31$}    \choice{$18$}    \choice[correct]{There is no way to know.}}
 
-While there seems to be a pattern, without giving a rule that defines the successive terms, it's impossible to establish what the next one is. 
+While there seems to be a pattern, without giving a rule that defines the successive terms, it's impossible to establish what the next number is. 
 
 
-This is why we do not like the $\dots$.
+This is why we do not like the $\cdots$.
 \end{question}
 
 To explore further, here are two different sequences whose first five terms are the same as the example above.
@@ -362,7 +376,7 @@ Consider the examples presented at the beginning of the section.  While it doesn
 
 \subsection{Explicit formulas}
 
-Just as real-valued functions were usually expressed by a formula $f(x)$, we often encounter sequences that can be expressed by a formula $f(n)$.  When all terms $a_n$ in a sequence are described by a formula that only involves $n$ (the index), we say the sequence is defined by an \emph{explicit formula}. It is fairly easy to work with explicit formulas.
+Just as real-valued functions were usually expressed by a formula $f(x)$, we often encounter sequences that can be expressed by a formula $f(n)$.  When all terms $a_n$ in a sequence are described by a formula that only involves $n$ (the index), we say the sequence is defined by an \textbf{\textcolor{purple!85!blue}{explicit formula}}. It is fairly easy to work with explicit formulas.
 
 \begin{example}
 Suppose $\{a_n\}_{n=1}$ is a sequence defined by the explicit formula $a_n = 2n+3$.  Write down $a_1$, $a_2$, $a_3$, $a_4$, and $a_5$, then find $a_{500}$.
@@ -391,13 +405,11 @@ and there is certainly a suggested pattern. Now that we have an actual rule that
   
 \end{example}
 
-%\begin{warning}
-%  A common misconception is to confuse the sequence, which is the
-%  actual ordered list of numbers, with the rule that generates it.
-%  The sequences $\{a_n\}$ and $\{b_n\}$ given by the rules $a_n =
-%  (-1)^n$ and $b_n = \cos (\pi \cdot n)$ are different rules which give rise to the \textit{same} sequence (write
-%  out a few terms to see for yourself).  
-%  \end{warning}
+\begin{warning}
+A common misconception is to confuse the sequence, which is the
+actual ordered list of numbers, with the rule that generates it.
+The sequences $\{a_n\}$ and $\{b_n\}$ given by the rules $a_n = (-1)^n$ and $b_n = \cos (\pi \cdot n)$ are different rules which give rise to the \textit{same} sequence (write out a few terms to see for yourself).  
+\end{warning}
 
 
 
@@ -431,7 +443,7 @@ a_4 = a_3+a_2 &= 2+1 = 3 \\
 a_5 = a_4+a_3 &= 3+2 = 5 \\
 \end{align*}
 
-When we have an equality that relates the next term in a sequence to the previous ones, we say that we have a \emph{recursive formula} for the sequence.  Let's see another example.
+When we have an equality that relates the next term in a sequence to the previous ones, we say that we have a \textbf{\textcolor{purple!85!blue}{recursive formula}} for the sequence.  Let's see another example.
 
 \begin{example}
  Suppose that $\{a_n\}_{n=1}$ is a sequence defined by the formula $a_{n+1} = a_n+2$, with $a_1 = 5$.  Write down $a_2$, $a_3$, $a_4$, and $a_5$.  
@@ -483,7 +495,7 @@ Note that the explicit formula $a_{n} = 2n + 3, n \geq 1$ also generates the ord
 
 
 
-Note that both the explicit formula and recursive formula in the previous examples seem to generate the same list of numbers.  While writing out more and more terms suggests this is the case, \textbf{\textcolor{red!80!black}{it is not a sufficient argument}} to conclude that both rules generate the same sequence.  
+Note that both the explicit formula and recursive formula in the previous examples seem to generate the same list of numbers.  While writing out more and more terms suggests this is the case, \textbf{\textcolor{red!80!black}{this is not a sufficient argument}} to conclude that both rules generate the same sequence.  
 
 In order to verify that \emph{any} term $a_n$ in the sequence whose terms are given by the formula $a_n = 2n+3$ is equal to the term $a_n$ obtained from the recursive relationship $a_{n+1}=a_n+2, a_1=5$, we first note that the first term in both sequences, $a_1$ is the same. Now, we proceed as follows.
 
@@ -496,7 +508,7 @@ Let's get started!
 
 \begin{itemize}
 \item[1.] Since $a_n=2n+3$, we have that $a_{n+1} = 2\left(\answer[given]{n+1}\right)+3$.
-\item[2.] Notice that $a_n = 2n+3$, so we want to try to simplify the expression above and isolate $2n+3$, becasue then we can replace $2n+3$ with $a_n$. 
+\item[2.] Notice that $a_n = 2n+3$, so we want to try to simplify the expression above and isolate $2n+3$, because then we can replace $2n+3$ with $a_n$. 
 \end{itemize}
 
 
@@ -581,8 +593,7 @@ Continuing in the same way, we find:
 \begin{question}
 
 Since none of the terms in the original sequence $\{a_n\}$ were
-negative, we define another new sequence $\{c_n\}_{n=1}$ by the rule
-define another new sequence $\{c_n\}_{n=1}$ by the rule below.
+negative, we define another new sequence $\{c_n\}_{n=1}$ by the rule below.
 \[
 c_n = \sqrt[n]{a_n} .
 \]
