@@ -14,7 +14,7 @@
 
 
 
-Precalculus is largely about the structure of the Elementary Functions and how we reason about them.  This includes power; radical and root functions; linear, quadratic, and other polynomial functions; rational functions; exponential functions; logarithmic functions; and a library of trigonometric functions (which are introduced in this course).
+Precalculus is largely about the structure of the Elementary Functions and how we reason about them.  This includes power functions; radical and root functions; linear, quadratic, and other polynomial functions; rational functions; exponential functions; logarithmic functions; and a library of trigonometric functions (which are introduced in this course).
 
 As a segue from the first half of Precalculus, let's quickly review our growing library of Elementary Functions. We'll begin with the exponential functions.   \\
 
@@ -36,19 +36,25 @@ The template for the basic exponential function looks like \textbf{\textcolor{bl
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{General Exponential Functions}}   
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Shifted Exponential Functions}}   
 
-The template for the general exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = a \cdot r^{b \, x + c} + d$}}  or just \textbf{\textcolor{blue!55!black}{$a \cdot r^x + d$}}. 
+The template for a shifted exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = a \cdot r^{b \, x + c} + d$}}  or just \textbf{\textcolor{blue!55!black}{$a \cdot r^x + d$}}. 
 
 \begin{itemize}
-\item $c$ determines the \textbf{\textcolor{purple!85!blue}{shift}} in the domain from the basic exponential function.  
-\item $d$ determines the \textbf{\textcolor{purple!85!blue}{shift}} in the function value from the basic exponential function. 
-\item Both $b$ and $c$ can be absorbed into the base.
+\item $b$ and $c$ describe a \textbf{\textcolor{purple!85!blue}{shift}} in the domain from the basic exponential function.  
+\item $d$ describes a \textbf{\textcolor{purple!85!blue}{shift}} in the function value from the basic exponential function. 
 \end{itemize}
 
+The first terms in our shifted exponential function is still an exponential function:
+
+\[
+a \cdot r^{b \, x + c} = a \cdot r^{b \, x} \cdot  r^c = (a \cdot r^c) \cdot r^{b \, x} = (a \cdot r^c) \cdot (r^b)^x 
+\]
+
+It CAN be written in the form $A \cdot R^x$.
 
 
-
+However, the second term, the "= d" cannot be absorbed into the exponential form.  However, shifting functions is a very common operation and so, we'll include $a \cdot r^{b \, x + c} + d$ in our general ideas of exponential functions.
 
 
 
@@ -61,8 +67,34 @@ The template for the general exponential function looks like \textbf{\textcolor{
 In this section, students will 
 
 \begin{itemize}
-\item describe the full picture of general exponential functions and their graphs.
+\item describe the full picture of all exponential functions and their graphs.
 \end{itemize}
 \end{sectionOutcomes}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Exponential Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/expFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
 
 \end{document}
