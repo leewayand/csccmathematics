@@ -71,11 +71,11 @@ Its graph looks like
 \end{tikzpicture}
 \end{image}
 
-If we select a greater exponent in the domain, then we get a greater funciton value.  
+$E(t)$ is an increasing function, which means when we select a greater exponent in the domain, then we get a greater function value.  
 
 
 
-We can evalute our exponential function:
+We can evalutae our exponential function:
 \begin{itemize}
 \item $E(0) = 2^0 = 2$
 \item $E\left(\frac{1}{2}\right) = 2^{\tfrac{1}{2}} = \sqrt{2}$
@@ -107,7 +107,7 @@ We can think about $E(t) = 2^t$ in reverse.
 \end{itemize}
 
 
-Here, we know the value of the function.  We seek the domain numbers paired with it. We seek the exponent. We know $2^d$, we seek the pair $(d, 2^d)$, where $d$ is the solution to the equation.
+Here, we know the value of the function.  We seek the domain numbers paired with it. We seek the exponent. We know $2^d$, we seek the pair $(d, 2^d)$, where $d$ is the solution to the equation $E(t) = d$.
 
 
 
@@ -143,7 +143,7 @@ range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
 \]
 
 
-The logarithm function just reverses the pairs in the exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
+The logarithmic function just reverses the pairs in the exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
 
 
 Therefore, the domains and ranges switch. \\
@@ -157,7 +157,7 @@ Therefore, the domains and ranges switch. \\
 
 It seems weird to write $(2^a, a)$, even though it is perfectly correct.  We are supplying values of an exponential function, which look like $2^a$ and then the value of the logarithmic function is the needed exponent.
 
-Instead, we are used to writing the domain number by a letter, like $b$, and then the function value as a formula involving $b$. That's what we are used.
+Instead, we are used to writing the domain number by a letter, like $b$, and then the function value as a formula involving $b$. That's what we are used to.
 
 We would prefer our pairs in the logarithm function to look like 
 
@@ -194,7 +194,7 @@ $log_2(b)$ is just the exponent that $2$ needs to equal $b$.
 
 
 
-$\blacktriangleright$ \textbf{Remember:} These are the reverse of the exponential pairs : $(a, 2^a)$.  Therefore, $(b, log_2(b))$ is also $(2^c, c)$ for some $c$. \\
+$\blacktriangleright$ \textbf{Remember:} These pairs are the reverse of the exponential pairs : $(a, 2^a)$.  Therefore, $(b, log_2(b))$ is also $(2^c, c)$ for some $c$. \\
 
 $\blacktriangleright$  $log_2(b)$ is the exponent, so that $2^? = b$ \\
 
@@ -360,7 +360,7 @@ Analyze   $M(t) = log_2(t+3) - 4$ \\
 
 $\blacktriangleright$ The inside of the logarithm is $t+3$ and this equals $0$ when $t=-3$.  This must be the vertical asymptote.
 
-$\blacktriangleright$ The inside of the logarithm is $t+3$, and this is positive for $t>-3$.  The graph be on the right side of the vertical asymptote.
+$\blacktriangleright$ The inside of the logarithm is $t+3$, and this is positive for $t>-3$.  The graph must be on the right side of the vertical asymptote.
 
 $\blacktriangleright$ The leading coefficient is $1$, which is positive.  Therefore, the graph hugs the asymptote down the asymptote. 
 
@@ -545,7 +545,7 @@ Analyze   $K(x) = -2 \,log_3(4-x)$ \\
 \begin{explanation}
 
 
-$\blacktriangleright$ The inside of the logarithm is $4-x$ and this equals $0$ when $x=4$.  $x=4$ has to be the vertical asymptote.
+$\blacktriangleright$ The inside of the logarithm is $4-x$, and this equals $0$ when $x=4$.  THerefore, $x=4$ has to be the vertical asymptote.
 
 $\blacktriangleright$ The inside of the logarithm is $4-x$, and this is positive for $x<4$.  The graph must be on the left side of the vertical asymptote.
 
@@ -572,8 +572,9 @@ Graph of $y = K(x)$.
             axis on top
           ]
           
-      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+      
 			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
 
 		
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
@@ -733,10 +734,29 @@ Evaluate the following.
 
 \textbf{\textcolor{blue!55!black}{Remember:}} The function $\left( 1 + \frac{1}{x}  \right)^{x}$ has a limiting value.  Its end-behavior is a constant.  Its graph has a horizontal asymptote.  $e$ is this limiting value.
 
-It might seem strange to select that number as the base for a logarithm and give it special notation.  However, it turns out the exponential functions with this base are intricately connected to natural growth in the universe.
+It might seem strange to select that number as the base for a logarithm and give it special notation.  However, it turns out that exponential functions with this base, $e$, are intricately connected to natural growth in the universe.
 
 It is use A LOT!
 \end{remark}
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Logarithmic Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/logFunctions/examples/exampleList}
+
+\end{center}
+
+
+
 
 
 
