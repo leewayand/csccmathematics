@@ -52,7 +52,7 @@ It seems weird to define polynomials and then quickly annouce that we don't like
 
 \begin{formula} \textbf{\textcolor{purple!85!blue}{Forms}}
 
-Formulas for polynomial functions have three forms:
+Formulas for polynomial functions have two forms:
 
 
 
@@ -61,9 +61,6 @@ Formulas for polynomial functions have three forms:
 \[ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0 \]
 \item \textbf{\textcolor{purple!85!blue}{Factored Form:}}  The factored form for a polynomial function is a \textbf{\textcolor{purple!85!blue}{product}}. It looks like 
 \[ a(x - r_n)(x - r_{n-1}) \cdots (x - r_1) \]
-\item \textbf{\textcolor{purple!85!blue}{Vertex Form:}}  The vertex form for a polynomial function involves a \textbf{\textcolor{purple!85!blue}{square}}. It looks like 
-\[ a(x - h) + k \]
-This is also called the \textbf{\textcolor{purple!85!blue}{Completed Square Form}}.
 \end{itemize}
 
 
@@ -150,7 +147,7 @@ Completely analyze $p(w) = -\frac{1}{5}(w+4)(w-3)(w-3)$
 
 First, let's collect like factors: $p(w) = -\frac{1}{5}(w+4)(w-3)^2$
 
-We have a polynomial of degree $3$.  It has two roots.
+We have a polynomial of degree $3$.  It has two roots.  Since $p(w)$ is a polynomial, these roots (zeros) are the only candidates for where $p(w)$ might change signs.  The multiplicity will tell us if $p(w)$ changes sign at each root. If we can determine the sign of $p(w)$ anywhere, then we'll know the sign of $p(w)$ everywhere.\\
 
 \begin{itemize}
 \item $-4$ is a root of multiplicity $\answer{1}$.  Since this multiplicity is odd, $p$ will \wordChoice{\choice[correct]{change sign} \choice{not change sign}} through $-4$ and the graph will cross at $(-4,0)$.
@@ -181,10 +178,16 @@ Let's collect our ideas graphically.
           ]
           
           %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:-7),<-] {-(x+4)};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:-3)] {-(x+4)};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(2:4)] {-(x-3)^2)};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(7:9),->] {-(x-4)};
+
+
+          %\addplot [<-, line width=10, penColor!10!background] plot coordinates {(-2,-25) (-1,7)}; 
+
+
+
+            \addplot [line width=10, enColor!10!background, smooth,samples=100,domain=(-9:-7),<-] {-(x+4)};
+            \addplot [line width=10, enColor!10!background, smooth,samples=100,domain=(-5:-3)] {-(x+4)};
+            \addplot [line width=10, enColor!10!background, smooth,samples=100,domain=(2:4)] {-(x-3)^2)};
+            \addplot [line width=10, enColor!10!background, smooth,samples=100,domain=(7:9),->] {-(x-4)};
 
           %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
           %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
@@ -248,9 +251,9 @@ With some technology, we can approximate the other critical number to be $-1.67$
 
 
 \begin{itemize}
-\item $p$ \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $(-\infty, -1.67]$.
-\item $p$ \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  on $[-1.67, 3]$.
-\item $p$ \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $[3, \infty)$.
+\item $p$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $(-\infty, -1.67]$.
+\item $p$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  on $[-1.67, 3]$.
+\item $p$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $[3, \infty)$.
 \end{itemize}
 
 
