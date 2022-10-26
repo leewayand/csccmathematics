@@ -13,13 +13,13 @@ the logarithmic story
 
 
 
-$log_A(B)$ is pronounced ``the logarithm base $A$ of $B$'' or ``the log base $A$ of $B$'' or ``the logarithm of $B$ base $A$''. \\
+$\log_A(B)$ is pronounced ``the logarithm base $A$ of $B$'' or ``the log base $A$ of $B$'' or ``the logarithm of $B$ base $A$''. \\
 
 
 
 
 \begin{center}
-\textbf{\textcolor{red!80!black}{$log_A(B)$ is the thing you raise $A$ to, to get $B$.}}
+\textbf{\textcolor{red!80!black}{$\log_A(B)$ is the thing you raise $A$ to, to get $B$.}}
 \end{center}
 
 
@@ -143,7 +143,7 @@ range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
 \]
 
 
-The logarithmic function just reverses the pairs in the exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
+The basic logarithmic function just reverses the pairs in the basic exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
 
 
 Therefore, the domains and ranges switch. \\
@@ -177,31 +177,31 @@ In our example here, we are working with the base $2$ exponential function, $E(t
 
 
 
-\[   log_2(b)     \]
+\[   \log_2(b)     \]
 
 
 With this new symbol, we can describe pairs in the logarithmic function and points on its graph like 
 
 
 \[
-(b, log_2(b))
+(b, \log_2(b))
 \]
 
 
-$log_2(b)$ is just the exponent that $2$ needs to equal $b$.
+$\log_2(b)$ is just the exponent that $2$ needs to equal $b$.
 
 
 
 
 
-$\blacktriangleright$ \textbf{Remember:} These pairs, $(b, log_2(b))$, are the reverse of the exponential pairs : $(a, 2^a)$.  Therefore, $(b, log_2(b))$ is also $(2^c, c)$ for some $c$. \\
+$\blacktriangleright$ \textbf{Remember:} These pairs, $(b, \log_2(b))$, are the reverse of the exponential pairs : $(a, 2^a)$.  Therefore, $(b, \log_2(b))$ is also $(2^c, c)$ for some $c$. \\
 
-$\blacktriangleright$  $log_2(b)$ is the exponent, so that $2^? = b$ \\
+$\blacktriangleright$  $\log_2(b)$ is the exponent, so that $2^? = b$ \\
 
 
-$\blacktriangleright$  $log_2(b)$ is the number that you raise $2$ to, to get $b$.  \\
+$\blacktriangleright$  $\log_2(b)$ is the number that you raise $2$ to, to get $b$.  \\
 
-\[   2^{log_2(b)} = b     \]
+\[   2^{\log_2(b)} = b     \]
 
 We have a logarithmic function for every exponential function.  They are designated by their bases.
 
@@ -218,33 +218,10 @@ We have a logarithmic function for every exponential function.  They are designa
 
 
 
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Base $A$ Function : $\log_A(x)$}}
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Base $A$ : $log_A(B)$}}
-
-
-$log_A(B)$ is the number you raise $A$ to, to get $B$. \\
-
-$B \in (0, \infty)$. \\
-
-$log_B(A) \in (-\infty, \infty)$.
-
-
-\end{definition}
-
-
-
-
-
-
-
-
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Base $A$ Function : $log_A(x)$}}
-
-
-$log_A(x)$ is the number you raise $A$ to, to get $x$. \\
+$\log_A(x)$ is the number you raise $A$ to, to get $x$. \\
 
 The domain is $(0, \infty)$. \\
 
@@ -259,10 +236,10 @@ The range is $(-\infty, \infty)$.
 \begin{conclusion}
 
 \begin{itemize}
-\item $log_A(1)$ is the thing you raise $A$ to, to get $1$. Therefore, $log_A(1) = 0$, since $A^0 = 1$
-\item $log_A(A)$ is the thing you raise $A$ to, to get $A$. Therefore, $log_A(A) = 1$, since $A^1 = A$
-\item $log_A(\tfrac{1}{A})$ is the thing you raise $A$ to, to get $\tfrac{1}{A}$. Therefore, $log_A(\tfrac{1}{A}) = -1$, since $A^{-1} = \tfrac{1}{A}$
-\item $log_A(A^n)$ is the thing you raise $A$ to, to get $A^n$. Therefore, $log_A(A^n) = n$, since $A^n = A^n$
+\item $\log_A(1)$ is the thing you raise $A$ to, to get $1$. Therefore, $\log_A(1) = 0$, since $A^0 = 1$
+\item $\log_A(A)$ is the thing you raise $A$ to, to get $A$. Therefore, $\log_A(A) = 1$, since $A^1 = A$
+\item $\log_A(\tfrac{1}{A})$ is the thing you raise $A$ to, to get $\tfrac{1}{A}$. Therefore, $\log_A(\tfrac{1}{A}) = -1$, since $A^{-1} = \tfrac{1}{A}$
+\item $\log_A(A^n)$ is the thing you raise $A$ to, to get $A^n$. Therefore, $\log_A(A^n) = n$, since $A^n = A^n$
 \end{itemize}
 
 \end{conclusion}
@@ -321,7 +298,7 @@ Their graphs are mirror images of each other across the diagonal through quandra
       		\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};
 
       		\node[penColor] at (axis cs:1.5,8) {$2^d$};
-      		\node[penColor2] at (axis cs:7,1) {$log_2(d)$};
+      		\node[penColor2] at (axis cs:7,1) {$\log_2(d)$};
 
 
 
@@ -357,7 +334,7 @@ From this basic logarithmic function and its graph we can transform and analyze 
 
 
 
-Analyze   $M(t) = log_2(t+3) - 4$ \\
+Analyze   $M(t) = \log_2(t+3) - 4$ \\
 
 
 \begin{explanation}
@@ -421,19 +398,19 @@ Our analysis tells us that:
 We can also see that the graph will have a horizontal intercept, which means the function has a zero. \\
 
 
-$M(t) = log_2(t+3) - 4 = 0$ \\
+$M(t) = \log_2(t+3) - 4 = 0$ \\
 
 
 \begin{align*}
-log_2(t+3) - 4 & = 0 \\
-log_2(t+3) & = 4 \\
-2^{log_2(t+3)} & = \answer{2^4} \\
+\log_2(t+3) - 4 & = 0 \\
+\log_2(t+3) & = 4 \\
+2^{\log_2(t+3)} & = \answer{2^4} \\
 \answer{t+3} & = 16 \\
 t & = 13
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = 4$.  Therefore, $4$ is also the thing that you raise $2$ to, to get $t+3$. Therefore, $t+3$ must be $16$.
+$\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = 4$.  Therefore, $4$ is also the thing that you raise $2$ to, to get $t+3$. Therefore, $t+3$ must be $16$.
 
 
 
@@ -452,7 +429,7 @@ $\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you rais
 In the example, $M(t)$ is a logarithmic function, so it must have an inverse partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.\\
 
 
-$M = log_2(t+3) - 4$ is an equation describing both the logarithmic function, $M(t)$, and the exponential function $t(M)$.  We just are used to having the function name by itself on one side of the equal sign. \\
+$M = \log_2(t+3) - 4$ is an equation describing both the logarithmic function, $M(t)$, and the exponential function $t(M)$.  We just are used to having the function name by itself on one side of the equal sign. \\
 
 
 We can obtain such a formula for this partner exponential function by solving the logarithmic equation for $t$.
@@ -462,15 +439,15 @@ We can obtain such a formula for this partner exponential function by solving th
 
 
 \begin{align*}
-log_2(t+3) - 4 & = M \\
-log_2(t+3) & = M + 4 \\
-2^{log_2(t+3)} & = 2^{M+4} \\
+\log_2(t+3) - 4 & = M \\
+\log_2(t+3) & = M + 4 \\
+2^{\log_2(t+3)} & = 2^{M+4} \\
 t+3 & = 2^{M+4} \\
 t & = 2^{M+4} - 3
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $log_2(t+3) = M+4$.  Therefore, $M+4$ is the thing that you raise $2$ to, to get $t+3$
+$\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = M+4$.  Therefore, $M+4$ is the thing that you raise $2$ to, to get $t+3$
 
 
 
@@ -543,7 +520,7 @@ Here is the graph of both the logarithmic and the associated exponential functio
 \begin{example}  Logarithmic Function
 
 
-Analyze   $K(x) = -2 \,log_3(4-x)$ \\
+Analyze   $K(x) = -2 \, \log_3(4-x)$ \\
 
 
 \begin{explanation}
@@ -642,9 +619,9 @@ We can obtain a nice formula for this partner exponential function by solving th
 
 
 \begin{align*}
--2 \,log_3(4-x) & = M \\
-log_3(4-x) & = -\frac{M}{2} \\
-3^{log_3(4-x)} & = 3^{-\frac{M}{2}} \\
+-2 \, \log_3(4-x) & = M \\
+\log_3(4-x) & = -\frac{M}{2} \\
+3^{\log_3(4-x)} & = 3^{-\frac{M}{2}} \\
 4 - x & = 3^{-\frac{M}{2}} \\
 4 - 3^{-\frac{M}{2}} & = x \\
 \end{align*}
@@ -652,7 +629,7 @@ log_3(4-x) & = -\frac{M}{2} \\
 
 
 
-$\blacktriangleright$ \textbf{Remember:} $log_3(4-x)$ is the thing that you raise $3$ to, to get $4-x$ and $log_3(4-x) = - \frac{M}{2}$.  Therefore, $- \frac{M}{2}$ is the thing that you raise $3$ to, to get $4-x$
+$\blacktriangleright$ \textbf{Remember:} $\log_3(4-x)$ is the thing that you raise $3$ to, to get $4-x$ and $\log_3(4-x) = - \frac{M}{2}$.  Therefore, $- \frac{M}{2}$ is the thing that you raise $3$ to, to get $4-x$
 
 
 
@@ -711,7 +688,7 @@ The \textbf{natural logarithm} is the logarithm base $e$.  \\
 It has special notation.
 
 \[
-log_e(x) = ln(x)
+\log_e(x) = \ln(x)
 \]
 
 \end{definition}
@@ -723,9 +700,9 @@ log_e(x) = ln(x)
 Evaluate the following.
 
 \begin{itemize}
-\item $e^{ln(4)} = \answer{4}$ 
-\item $ln(e^7) = \answer{7}$
-\item $ln\left( \frac{1}{e} \right) = \answer{-1}$
+\item $e^{\ln(4)} = \answer{4}$ 
+\item $\ln(e^7) = \answer{7}$
+\item $\ln\left( \frac{1}{e} \right) = \answer{-1}$
 \end{itemize}
 
 
