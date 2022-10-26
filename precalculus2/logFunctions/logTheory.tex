@@ -685,7 +685,8 @@ Here is the graph of both the logarithmic and exponential functions.  They are r
 
 \begin{image}
 \begin{tikzpicture}
-  \begin{axis}[
+
+  \begin{axis}[name=invexp3,
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
@@ -696,22 +697,39 @@ Here is the graph of both the logarithmic and exponential functions.  They are r
             axis on top
           ]
           
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+
           	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{4});
           	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+			      \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
 
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
+			      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
 
-			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-4.627:9),<->] {4-3^(-x/2)};
-
-			\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0,3)};
-
-           
 
   \end{axis}
+  \begin{axis}[at={(invexp3.outer east)},anchor=outer west,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+            \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4.627:9),<->] {4-3^(-x/2)};
+
+            \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(0,3)};
+
+  \end{axis}
+
 \end{tikzpicture}
 \end{image}
 
@@ -737,7 +755,8 @@ It has special notation.
 
 
 
-\begin{question}$\boxdot$
+\begin{question}
+
 
 Evaluate the following.
 
@@ -759,7 +778,7 @@ Evaluate the following.
 
 It might seem strange to select that number as the base for a logarithm and give it special notation.  However, it turns out that exponential functions with this base, $e$, are intricately connected to natural growth in the universe.
 
-It is use A LOT!
+It is used A LOT!
 \end{remark}
 
 
