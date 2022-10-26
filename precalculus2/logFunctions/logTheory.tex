@@ -273,7 +273,10 @@ Their graphs are mirror images of each other across the diagonal through quandra
 
 \begin{image}
 \begin{tikzpicture}
-  \begin{axis}[
+
+
+
+  \begin{axis}[name=invexp,
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
@@ -299,14 +302,38 @@ Their graphs are mirror images of each other across the diagonal through quandra
 
       		\node[penColor] at (axis cs:1.5,8) {$2^d$};
       		\node[penColor2] at (axis cs:7,1) {$\log_2(d)$};
-
-
-
-
-
-           
-
   \end{axis}
+  \begin{axis}[at={(invexp.outer east)},anchor=outer west,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
+
+            
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};
+
+          \node[penColor] at (axis cs:1.5,8) {$2^d$};
+          \node[penColor2] at (axis cs:7,1) {$\log_2(d)$};
+    \end{axis}
+
+
+
+
 \end{tikzpicture}
 \end{image}
 
