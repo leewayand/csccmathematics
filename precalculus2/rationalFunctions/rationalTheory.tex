@@ -101,12 +101,19 @@ Let $R$ be defined as follows.
 \[   R(x) = \frac{(x-3)(x-1)}{x-1}            \]
 
 
-We would simplify this to $R(x) = x-3$
+Just thinking algebraically, we might simplify this to $R(x) = x-3$. However, thinking functionally, these two formulas have different natural or implied domains.
 
 
-But the domain is still $\left( -\infty, \answer{1} \right) \cup \left( \answer{1},\infty \right)$.
+We have to remember that that the domain of $R$ is still $\left( -\infty, \answer{1} \right) \cup \left( \answer{1},\infty \right)$ no mater what algebraic modifications have been made.
 
-The graph is a line with a hole in it at $\left( 1, \answer{-2} \right)$.
+$R(x)$ and $p(x) = x-3$ are different functions, since they have different natural domains. $R(x) = x - 3$, provided we note that $x \ne 1$.
+
+
+The graphs of $R(x)$ and $p(x) = x-3$ are the same, except at $x=1$.  The graph of $p(x) = x-3$ includes the point $(1, -2)$, while the graph of $R(x)$ omits this point.
+
+
+
+The graph of $p(x) = x-3$ is a line, while the graph is the same line with a hole in it at $\left( 1, \answer{-2} \right)$.
 
 
 
@@ -151,7 +158,9 @@ Graph of $y = R(x)$.
 
 
 
-$1$ does not cause a problem for $x-3$, but that isn't the formula for $R$. $\frac{(3-x)(x-1)}{(x-1)}$ is equal to $x-3$, provided $x \ne 1$.  We cannot reinsert $1$ after simplifying.
+$1$ does not cause a problem for $x-3$, but that isn't the formula for $R$. \\
+
+$R(x) = \frac{(3-x)(x-1)}{(x-1)}$ is equal to $x-3$, provided $x \ne 1$.  We cannot reinsert $1$ after simplifying.
 
 
 
@@ -208,14 +217,6 @@ Another type of singularity for rational functions is a hole. If a common factor
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Removeable Discontinuity}}
-
-If a function can be redefined at a single domain number to remove a discontinuity, then that discontiuity is said to be \textbf{removeable}.
-
-\end{definition}
-
-
-
 
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Removeable Singularity}}
@@ -223,6 +224,26 @@ If a function can be redefined at a single domain number to remove a discontinui
 If a function can be defined at a single nondomain number to remove a singularity, then that singularity is said to be \textbf{removeable}.
 
 \end{definition}
+
+\textbf{Note:} Removeable singularities show up as holes in the graph.  There is no domain number corresponding to the point that has been removed. The hole can be filled by inderting a single point.  The singularity can be removed by defining the function at a single number.  This would ``remove'' the singularity. \\
+
+Of course ``fixing'' the hole of singularity creates a new and different function.  This new and different function is exactly the same as the original function, except for one single pair.
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Removeable Discontinuity}}
+
+If a function can be redefined at a single domain number to remove a discontinuity, then that discontiuity is said to be \textbf{removeable}.
+
+\end{definition}
+
+\textbf{Note:} Removeable discontintinuities are just like removeable singlularities, except there is a point on the graph.  It is just somewhere else besides filling in the hole.  The hole or discontinuity can be ``removed'' by re-defining the function at that one domain number to fill in the hole.\\
+
+Of course moving the dot and ``filling in'' the hole of discontinuity creates a new and different function.  This new and different function is exactly the same as the original function, except for one single pair.
 
 
 
@@ -254,7 +275,69 @@ We must always remember the original formula when it comes to the domain.  Simpl
 
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Continuity:}} \\
-Rational functions are relatively nice functions.  They are continuous everywhere in their domain.  They have no discontinuities.  The singularities correspond to vertical asymptotes or removeable singularities, both of which we understand.  
+For the most part, rational functions are relatively nice functions.  They are continuous everywhere in their domain.  They have no discontinuities.  The singularities correspond to vertical asymptotes or removeable singularities, both of which we understand.  \\
+
+Of course, we are always on the lookout for common factors, which are represented with holes in the graph.
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{End-Behavior:}} \\
+In addition to identifying zeros, roots, dicontinuities, singularities, maximums, and minimums, we would also like to describe any pattern the function takes on as the domain heads to infinity or negative infinity.  These patterns we call the ``end-behavior'' of the function.  \\
+
+In the case of a rational function there are three types of end-behavior, which can be ascertained by comparing the leading terms of the polynomials in the n umerator and denominator.
+
+
+\begin{itemize}
+\item If the degrees of the leading terms are equal then the end-behavior is the quotient of the leading coefficients.
+
+
+\[   \lim\limits_{x \to \infty} R(x) = \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0}{b_n x^n + b_{n-1} x^{n-1} + \cdots + b_2 x^2 + b_1 x + b_0}  = \frac{a_n}{b_n}      \]
+
+
+\[   \lim\limits_{x \to -\infty} R(x) = \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0}{b_n x^n + b_{n-1} x^{n-1} + \cdots + b_2 x^2 + b_1 x + b_0}  = \frac{a_n}{b_n}      \]
+
+
+
+\item If the degree of numerator polynomial is greater than the degree of the denominator polynomial, then the rational function becomes unbounded.
+
+If $n > m$, then 
+
+\[   \lim\limits_{x \to \infty} R(x) = \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_2 x^2 + b_1 x + b_0} = \pm\infty       \]
+
+
+\[   \lim\limits_{x \to \infty} R(x) = \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_2 x^2 + b_1 x + b_0} = \pm\infty       \]
+
+The sign depends on the signs of tyhe leading coefficients and the degrees of the polynomials.
+
+
+\item If the degree of denominator polynomial is greater than the degree of the numerator polynomial, then the rational function tends to $0$.
+
+If $n < m$, then 
+
+\[   \lim\limits_{x \to \infty} R(x) = \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_2 x^2 + b_1 x + b_0} = 0      \]
+
+
+\[   \lim\limits_{x \to \infty} R(x) = \frac{a_n x^n + a_{n-1} x^{n-1} + \cdots + a_2 x^2 + a_1 x + a_0}{b_m x^m + b_{m-1} x^{m-1} + \cdots + b_2 x^2 + b_1 x + b_0} = 0      \]
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -264,7 +347,9 @@ Graphs of rational functions are nice.  They are smooth.  They do not have corne
 
 Once we have the roots of the numerator and denominator polynomials, then we can plot the intercepts and asymptotes.  Then we can smoothly connect everything according to their multiplicities and have a pretty good sketch of the shape of the graph.
 
-With a basic general shape, we can estimate critical numbers and identify the type of extrema values. \\
+With a basic general shape, we can estimate critical numbers and identify the type of extrema values. 
+
+Of course, we are always on the lookout for common factors, which are represented with holes in the graph. \\
 
 
 
