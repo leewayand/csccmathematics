@@ -30,7 +30,7 @@ We are in the process of inventing an arithmetic for our 2-dimensional numbers. 
 The next step is to invent some algebraic symbols for the vectors, so that we can think algebraically about the 2-dimensional numbers.
 
 
-$\blacktriangleright$ We alreaady use parentheses for describing points, dots, or locations on the plane: $(2, 3)$.
+$\blacktriangleright$ We already use parentheses for describing points, dots, or locations on the plane: $(2, 3)$.
 
 
 $\blacktriangleright$ We will use triangular brackets to describe vectors: $\langle 2, 3 \rangle$.  
@@ -39,7 +39,7 @@ Rather than a position, vectors describe numbers through length and direction - 
 
 
 
-\begin{notation}  \text{Vectors} \\
+\begin{notation}  \textbf{\textcolor{blue!55!black}{Vectors}} \\
 
 
 When giving vectors a name, we often put an arrow over the name, $\vec{v}$, to let people know we are representing a vector. \\
@@ -64,7 +64,47 @@ Then, $|| \vec{v} || = || \langle 2, 3 \rangle || = \sqrt{2^2 + 3^2} = \sqrt{13}
 
 
 
-Many arrows may represent the same vector.  Their placement in the Cartesian plane will represent operations.
+
+
+
+\begin{question} 
+
+
+The length of  $\langle 3, 4 \rangle$ is $\answer{5}$.
+
+
+
+\end{question}
+
+
+
+
+
+
+\begin{question} 
+
+
+The length of  $\langle -3, 4 \rangle$ is $\answer{5}$.
+
+
+
+\end{question}
+
+
+
+\begin{question} 
+
+
+The length of  $\langle 2, 3 \rangle$ is $\answer{\sqrt{13}}$.
+
+
+
+\end{question}
+
+
+
+
+Vectors are the mental concept and we represent these visually with arrows. Many arrows may represent the same vector.  Their placement in the Cartesian plane will represent operations.
 
 
 The numbers inside the parentheses for a point are called \textbf{\textcolor{purple!85!blue}{coordinates}}  
@@ -79,7 +119,7 @@ The geometry of the arrows has already suggested the algebraic procedures.
 \begin{example}
 
 
-$\langle 4, 6 \rangle + \langle 2, 10 \rangle$
+$\langle 4, 6 \rangle + \langle 2, -10 \rangle$
 
 
 \begin{image}
@@ -110,7 +150,7 @@ $\langle 4, 6 \rangle + \langle 2, 10 \rangle$
 \end{image}
 
 
-$\langle 4, 6 \rangle + \langle 2, 10 \rangle = \langle 6, -4 \rangle$
+$\langle 4, 6 \rangle + \langle 2, 10 \rangle = \langle 4+2, 6+(-10) \rangle = \langle 6, -4 \rangle$
 
 
 \end{example}
@@ -119,7 +159,7 @@ $\langle 4, 6 \rangle + \langle 2, 10 \rangle = \langle 6, -4 \rangle$
 
 
 
-Addition and subtraction of vectors will be carried out component-wise.
+Algebraically, addition and subtraction of vectors will be carried out component-wise.
 
 
 
@@ -135,6 +175,24 @@ Addition and subtraction of vectors will be carried out component-wise.
 
 
 \end{definition}
+
+
+
+
+
+
+
+\begin{question} 
+
+
+$\langle 3, 4 \rangle + \langle -2, 5 \rangle = \left\langle \answer{1}, \answer{9} \right\rlange$.
+
+
+
+\end{question}
+
+
+
 
 
 
@@ -190,16 +248,56 @@ A \textbf{scalar} is the new name for our old real numbers.
 \end{definition}
 
 
-We use scalars to describe multiple copies of the same vector or stretching vectors.
+We use scalars to describe stretching or compressing or reversing vectors.
 
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Scalar Multiplication}}  \\
 
-\[    k \langle A, B \rangle  = \langle k A, k B \rangle   \text{ where }  k \in \mathbb{R}   \]
+\[    k \, \langle A, B \rangle  = \langle k \, A, k \, B \rangle   \text{ where }  k \in \mathbb{R}   \]
 
 \end{definition}
 
-Of course, scalars are also numbers in our new system.  They must also have a vector form. \\
+
+
+
+
+
+
+
+
+\begin{question} 
+
+
+$5 \, \langle 3, -4 \rangle  = \left\langle \answer{15}, \answer{-20} \right\rlange$.
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question} 
+
+
+$-3 \, \langle -2, 7 \rangle  = \left\langle \answer{6}, \answer{-21} \right\rlange$.
+
+
+
+\end{question}
+
+
+
+
+
+
+
+Of course, scalars (our old real numbers) are also numbers in our new system.  They must also have a vector form. \\
 
 
 
@@ -247,9 +345,13 @@ We have definitions for addition and subtraction of vectors.  Next up is multipl
 
 As an example, we would like $\langle 0, 1 \rangle \cdot \langle 1, 0 \rangle    = \langle 0, 1 \rangle $.
 
-We can view this equation as $\langle 1, 0 \rangle$ is the acting operand and it has no effect on $\langle 0, 1 \rangle$.  However, we want multiplication to be commutative.  So, we could view this as 
+We can view this equation as beginning with $\langle 0, 1 \rangle$ and then $\langle 1, 0 \rangle$ is the acting operand and it has no effect on $\langle 0, 1 \rangle$.  We begin with the first vector and then multiply it with the second vector and then end up with the first vector, because $\langle 1, 0 \rangle$ is supposed to act as a multiplicative identity. However, we want multiplication to be commutative.  So, we could view this as 
 
 \[    \langle 1, 0 \rangle \cdot \langle 0, 1 \rangle    = \langle 0, 1 \rangle            \]
+
+
+We begin with the first vector, \langle 1, 0 \rangle, and then act upon it with the second vector, \langle 0, 1 \rangle, and wind up with \langle 0, 1 \rangle. \\
+
 
 We start with $\langle 1, 0 \rangle$.  When we multiply this by $\langle 0, 1 \rangle$, it changes $\langle 1, 0 \rangle$ into $\langle 0, 1 \rangle$.
 
@@ -435,7 +537,7 @@ Compute  $3 \cdot 2 = \langle 3, 0 \rangle  \cdot \langle 2, 0 \rangle$
 
 
 
-\begin{question} .
+\begin{question} 
 
 
 Compute  $\langle 1, 2 \rangle  \cdot \langle -2, 3 \rangle = \left\langle \answer{4}, \answer{-1} \right\rangle $
@@ -444,6 +546,22 @@ Compute  $\langle 1, 2 \rangle  \cdot \langle -2, 3 \rangle = \left\langle \answ
 
 \end{question}
 
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Representing Numbers]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/representingNumbers/examples/exampleList}
+
+\end{center}
 
 
 
