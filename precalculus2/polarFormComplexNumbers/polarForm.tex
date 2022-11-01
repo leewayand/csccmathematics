@@ -55,7 +55,7 @@ We already have several ways of representing complex numbers. \\
 
 
 
-\textbf{\textcolor{red!80!black}{$\blacktriangleright \langle 4, 8 \rangle$}}: We represent complex numbers with vectors.  These are illustrated with arrows on the Cartesian plane.  Algebraically, we write vectors using triangular brackets for an algebraic representation.
+\textbf{\textcolor{red!80!black}{$\blacktriangleright \langle 4, 8 \rangle$}}: We represent complex numbers with vectors.  These are illustrated with arrows on the Cartesian plane.  Algebraically, we write vectors using triangular brackets.
 
 
 
@@ -186,6 +186,12 @@ Of course, that is how we write rectangular coordinates as well.  The context of
 
 \begin{example}
 
+
+
+Write $4 + 8i$ in polar form.
+
+
+
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
@@ -238,7 +244,7 @@ And, we need to work equally well with radians and degrees: $(r, \theta) = (16\s
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!80!black}{Multiple Polar Coordinates}}
 
 
 Unlike with rectangular coordinates, different polar coordinates can describe the same complex number.
@@ -254,7 +260,7 @@ Unlike with rectangular coordinates, different polar coordinates can describe th
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!80!black}{Negative ``Distance''}}
 
 
 The $r$ in $(r, \theta)$ is the distance to move in the $\theta$-direction.  However, $r$ can be negative. In this case, the interpretation is to move in the opposite direction from $\theta$.
@@ -264,6 +270,80 @@ The $r$ in $(r, \theta)$ is the distance to move in the $\theta$-direction.  How
 \]
 
 \end{warning}
+
+
+
+
+
+
+
+
+  \begin{image}
+    \begin{tikzpicture}[scale=5.3,cap=round,>=latex]
+        % draw the coordinates
+        \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
+        \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
+
+        % draw the unit circle
+        \draw[thick] (0cm,0cm) circle(1cm);
+
+        \foreach \x in {0,30,...,360} {
+                % lines from center to point
+                \draw[gray] (0cm,0cm) -- (\x:1cm);
+                % dots at each point
+                \filldraw[black] (\x:1cm) circle(0.4pt);
+                % draw each angle in degrees
+                \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
+        }
+
+        % draw each angle in radians
+        \foreach \x/\xtext in {
+            30/\frac{\pi}{6},
+            45/\frac{\pi}{4},
+            60/\frac{\pi}{3},
+            90/\frac{\pi}{2},
+            120/\frac{2\pi}{3},
+            135/\frac{3\pi}{4},
+            150/\frac{5\pi}{6},
+            180/\pi,
+            210/\frac{7\pi}{6},
+            225/\frac{5\pi}{4},
+            240/\frac{4\pi}{3},
+            270/\frac{3\pi}{2},
+            300/\frac{5\pi}{3},
+            315/\frac{7\pi}{4},
+            330/\frac{11\pi}{6},
+            360/2\pi}
+                \draw (\x:0.85cm) node[fill=white] {$\xtext$};
+
+        \foreach \x/\xtext/\y in {
+            % the coordinates for the first quadrant
+            30/\frac{\sqrt{3}}{2}/\frac{1}{2},
+            45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+            60/\frac{1}{2}/\frac{\sqrt{3}}{2},
+            % the coordinates for the second quadrant
+            150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
+            135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+            120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
+            % the coordinates for the third quadrant
+            210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
+            225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+            240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
+            % the coordinates for the fourth quadrant
+            330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
+            315/\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+            300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
+                \draw (\x:1.25cm) node[fill=white] {$\left(\xtext,\y\right)$};
+
+        % draw the horizontal and vertical coordinates
+        % the placement is better this way
+        \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
+              (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
+              (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
+              (0cm,1.25cm)  node[fill=white] {$(0,1)$};
+    \end{tikzpicture}
+  \end{image}
+
 
 
 
@@ -291,6 +371,15 @@ Which of the following polar coordinates represent the same complex number?
 
 
 
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Polar Form of Complex Numbers]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/polarFormComplexNumbers/examples/exampleList}
+
+\end{center}
 
 
 \end{document}
