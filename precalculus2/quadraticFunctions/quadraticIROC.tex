@@ -25,7 +25,10 @@ We have two flavors of this.
 \begin{fact} \textbf{\textcolor{blue!55!black}{Over an Interval}}    \\
 
 
-The rate of change of the function $f$ over the interval $[a, b]$ is given by $\frac{f(b) - f(a)}{b - a}$.
+The rate of change of the function $f$ over the interval $[a, b]$ is given by $\frac{f(b) - f(a)}{b - a}$. \\
+
+
+This is our algebraic version of rate of change. This is also referred to as the \textit{average rate of change} over the interval $[a, b]$.
 
 
 \end{fact}
@@ -41,19 +44,41 @@ The rate of change of the function $f$ over the interval $[a, b]$ is given by $\
 The rate of change of the function $f$ at the domain number $a$ is given by the slope of the tangent line at the point $(a, f(a))$ on the graph. \\
 
 
-This rate of change is known as the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change of f at a}} or the \textbf{\textcolor{purple!85!blue}{derivative of f at a}}.
+This rate of change is known as the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change of f at a}} and is measured by the \textbf{\textcolor{blue!55!black}{derivative of f at a}}. 
 
 
-Notation: \textbf{\textcolor{purple!85!blue}{$iRoC_f(a)$}} or \textbf{\textcolor{purple!85!blue}{$f'(a)$}}.
+This is our Calculus version of rate of change.
 
 
 \end{fact}
+
+
+Each is a different measurement of the change in a function's value compared to changes in the domain. \\
+
+
+
+
+\begin{notation} the \textbf{\textcolor{blue!55!black}{derivative of f at a}}
+
+
+\textbf{\textcolor{blue!55!black}{$iRoC_f(a)$}} or \textbf{\textcolor{blue!55!black}{$f'(a)$}}.
+
+\end{notation}
+
+
+
+
+
+
+
+
+
 Algebra describes the change from one domain number to another. It describes function change over an interval. Calculus takes an extreme viewpoint on this.  Calculus asks about the interval $[a,a]$. Algebra doesn't know what to do with this type of interval. The rate of change of a function at one domain number,$a$, makes no sense, algebraically. Calculus makes sense of it as the slope of a tangent line at $(a, f(a))$. \\
 
 This gives us two types of interpretations for increasing and decreasing. \\
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$ Algebraic Increasing}} \\
+\textbf{\textcolor{red!80!black}{$\blacktriangleright$ Algebraic Increasing}} \\
 
 
 
@@ -72,7 +97,7 @@ f(c) \leq f(d) \, \text{ whenever } \, c \leq d \, \text{ for all } \, c, d \in 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$ Calculus Increasing}} \\
+\textbf{\textcolor{red!80!black}{$\blacktriangleright$ Calculus Increasing}} \\
 
 
 
@@ -92,7 +117,7 @@ iRoC_f(a) > 0 \, \text{ or } \, f'(a) > 0
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$ Algebraic Decreasing}} \\
+\textbf{\textcolor{red!80!black}{$\blacktriangleright$ Algebraic Decreasing}} \\
 
 
 
@@ -111,7 +136,7 @@ f(c) \geq f(d) \, \text{ whenever } \, c \leq d \, \text{ for all } \, c, d \in 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$ Calculus Decreasing}} \\
+\textbf{\textcolor{red!80!black}{$\blacktriangleright$ Calculus Decreasing}} \\
 
 
 
@@ -162,27 +187,25 @@ The instantaneous rate of change (a.k.a the derivative) gives us a formula for t
 
 
 
+
+
+
+
+
 \begin{example}
 
 
 Let $M(t) = -\frac{1}{2} (t - 3)^2 + 5$ \\
 
-What is the derivative, $M'(t)$? \\
+What is the maximum value of $M(t)$? \\
 
 
 
 \begin{explanation}
 
-From the vertex form, we have $iRoC_M(t) = -(t - 3)$ or $M'(t) = -(t - 3) = -t + 3 = 3 - t$.
+From the vertex form, we can see a negative leading coefficient, which tells us the parabola will open down, that $M$ increases and then decreases, and that there is a maximum value. \\
 
-
-
-
-
-\textbf{For Instance:}
-
-The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1, 3)$ is $M'(1) = 3 - 1 = 2$.  Therefore, the equation of the tangent line is $y - 3 = 2(t-1)$.
-
+From the vertex form, we can tell that the highest point on the graph is $(3, 5)$, which tells us that the maximum value of $M$ is $5$ and it occurs at $3$.
 
 
 
@@ -203,12 +226,12 @@ The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1
           
           %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
           \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:8),<->] {-0.5*(x-3)^2 + 5};
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:4),<->] {2*(x-1)+3};
+          %\addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:4),<->] {2*(x-1)+3};
 
           %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
           %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
 
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,3)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,5)};
           %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-0.162,0)};
           %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.162,0)};
 
@@ -220,6 +243,39 @@ The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1
 \end{tikzpicture}
 \end{image}
 
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $M(t) = -\frac{1}{2} (t - 3)^2 + 5$ \\
+
+What is the maximum value of $M(t)$? \\
+
+
+
+\begin{explanation}
+
+From the vertex form, we have $iRoC_M(t) = -(t - 3)$ or $M'(t) = -(t - 3) = -t + 3 = 3 - t$. \\
 
 
 
@@ -276,9 +332,84 @@ The derivative is positive on $(-\infty, 3)$, which tells us that the tangent li
 The derivative is negative on $(3, \infty)$, which tells us that the tangent lines to the parabola have negative slopes for the right half of the parabola. This tells us that $M$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  on $(3, \infty)$. \\
 
 
+When the derivative equals $0$, we have a critical number. 
+
+$3 - t = 0$ when $t=3$
+
+
+Since, $M$ increases and then decreases, we know this critical number marks the location of a maximum value of $M$.  To get this maximum value, we evaluate $M$ at the critical number: $M(3) = 5$.
+
+
+$M$ has a maximum value of $5$, which occurs at $3$.
+
+
 \end{explanation}
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FOr our example, $M'(t) = -(t - 3) = -t + 3 = 3 - t$ is a function.  The values of this function give the slopes of the tangent lines to the graph of $M$. \\
+
+
+
+
+
+\textbf{For Instance:}
+
+The point $(1, 3)$ is on the graph of $M$.  The slope of the tangent line at $(1, 3)$ is $M'(1) = 3 - 1 = 2$.  Therefore, the equation of the tangent line is $y - 3 = 2(t-1)$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:8),<->] {-0.5*(x-3)^2 + 5};
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:4),<->] {2*(x-1)+3};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,3)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-0.162,0)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6.162,0)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
 
 
 
