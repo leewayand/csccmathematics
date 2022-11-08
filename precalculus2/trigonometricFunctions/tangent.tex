@@ -17,17 +17,17 @@ quotient
 
 
 
-Tangent is the ratio of sine and cosine.
+Tangent is the quotient of sine and cosine.
 
 \[   \tan(\theta)  =  \frac{\sin(\theta)}{\cos(\theta)}  \]
 
 
 \begin{itemize}
-\item \textbf{zeros:} $\tan(\theta)$ has a zero everywhere that $\sin(\theta)$ has a zero:  all of the half-$\pi$'s.
-\item \textbf{singluaries:} $\tan(\theta)$ has a singularity everywhere that $\cos(\theta)$ has a zero:  all of the whole-$\pi$'s.
+\item \textbf{zeros:} $\tan(\theta)$ has a zero everywhere that $\sin(\theta)$ has a zero:  all of the whole-$\pi$'s.
+\item \textbf{singluaries:} $\tan(\theta)$ has a singularity everywhere that $\cos(\theta)$ has a zero:  all of the half-$\pi$'s.
 \end{itemize}
 
-This means intercepts at the half-$\pi$'s and vertical asymptotes at the whole-$\pi$'s.
+This means intercepts at the whole-$\pi$'s and vertical asymptotes at the half-$\pi$'s.
 
 
 
@@ -72,6 +72,12 @@ This means intercepts at the half-$\pi$'s and vertical asymptotes at the whole-$
 
 
 
+\begin{itemize}
+\item Tangent is always increasing.
+\item Tangent has no maximums or minimum, since it is unbounded near the half-$\pi$'s.
+\item The period for tangent is $\pi$.
+\end{itemize}
+
 
 
 
@@ -88,13 +94,13 @@ Analyze  $K(t) = -\tan(\frac{t}{2} + \pi)$
 \begin{explanation}
 
 
-The usual interval people look at for tangent is $\left[  \frac{-\pi}{2}, \frac{\pi}{2} \right]$.  That's what we need the inside of our function to equal.
+The usual interval people look at tangent is $\left[  \frac{-\pi}{2}, \frac{\pi}{2} \right]$.  This interval has singularities on both ends, which signal vertical asymptotes on the graph. $\frac{-\pi}{2}$ and $\frac{\pi}{2}$ are what we need the inside of our function to equal.
 
 
 \begin{align*}
 \frac{t}{2} + \pi   & = \frac{-\pi}{2}   \\
 \frac{t}{2}   & = \frac{-3\pi}{2}   \\
-t             & = -3 \pi
+t             & = \answer{-3 \pi}
 \end{align*}
 
 
@@ -104,13 +110,13 @@ t             & = -3 \pi
 \begin{align*}
 \frac{t}{2} + \pi   & = \frac{\pi}{2}   \\
 \frac{t}{2}   & = \frac{-\pi}{2}   \\
-t             & = -\pi
+t             & = \answer{-\pi}
 \end{align*}
 
 
 
 
-The period is $2 \pi$.
+The period is $\answer{2 \pi}$.  One of the arms of this tangent function sits on the interval $[ -3 \pi, - \pi ]$.
 
 
 
@@ -134,9 +140,9 @@ Then the $-1$ coefficient flips the graph upside-down.
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            xtick={-4.9, -1.7, 1.7, 4.9}, 
-            xticklabels={$\frac{-3\pi}{2}$, $\frac{-\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            domain=-15:15, ymax=10, xmax=15, ymin=-10, xmin=-15,
+            xtick={-9.4, -3.1, 3.1, 9.4}, 
+            xticklabels={$-3\pi$, $-\pi$, $\pi$, $3\pi$},
             axis lines =center,  xlabel={$t$}, ylabel=$y$,
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -148,11 +154,11 @@ Then the $-1$ coefficient flips the graph upside-down.
             %\addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
             %\addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
 
-      \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
+      \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-14,5) (-13,5) (-12,5) (12,5) (13,5) (14,5)};
 
 
             \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.14},{x});
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({3.14},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-9.4},{x});
             %\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
             %\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
 
@@ -182,7 +188,12 @@ The zeros are $\{  2 k \pi \, | \, k \in \mathbb{Z}    \}$
 
 
 \end{explanation}
+\textbf{Notes:} \\
 
+
+$\blacktriangleright$ Comparing $K(t)$ to $\tan(t)$, the inside has been multiplied by $\frac{1}{2}$.  This would indicate the perioid is doubled from $\pi$ to $2\pi$, which has happened.  
+
+$\blacktriangleright$ Additionally, an $\pi$ hs been added to the inside.  This would indicate a horizontal shift left, which has happened.
 
 
 \end{example}
@@ -225,7 +236,7 @@ The zeros are $\{  2 k \pi \, | \, k \in \mathbb{Z}    \}$
 Sine and cosine come from measurements of the unit circle.  What about tangent?
 
 
-Draw our usual right triangle for sine and cosine on the unit circle.  Draw a tangent line at the point on the circle and use this to draw a second right triangle.  The two right triangles have an angle $\theta$, which means all three angles are equal, which means the triangles are similar.
+Draw our usual right triangle for sine and cosine on the unit circle.  Draw a tangent line at the point on the circle.  Extend this line to the horizontal axis and use this to draw a second right triangle.  The two right triangles have an angle $\theta$, which means all three angles are equal, which means the triangles are similar.
 
 
 
@@ -508,7 +519,7 @@ Since, they are similar, we know that
 
 
 
-$tan(\theta)$ can be represented as the length of the tangent side, from the tangent point to the $x$-axis.
+$tan(\theta)$ can be represented as the length of the tangent line segment, from the tangent point to the $x$-axis.
 
 
 
@@ -593,6 +604,20 @@ $tan(\theta)$ can be represented as the length of the tangent side, from the tan
 Is this important?  Not really.  But, it is nice to collect all of our Trigonometric functions together on the unit circle.  It explains their names.
 
 
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/trigonometricFunctions/examples/exampleList}
+
+\end{center}
 
 
 
