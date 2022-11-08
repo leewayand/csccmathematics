@@ -51,6 +51,7 @@ If $\vec{v} = \langle a, b \rangle$, then $|| \vec{v} || = || \langle a, b \rang
 \end{notation}
 
 
+\textbf{Note:} Vector length is an application of the Pythagorean Theorem.  The legs of the right triangle are the vector components.  The arrow representing the vector is the hypotenuse of the right trangle.
 
 
 \begin{example} Name and Length \\
@@ -198,14 +199,21 @@ $\langle 3, 4 \rangle + \langle -2, 5 \rangle = \left\langle \answer{1}, \answer
 
 
 
+\subsection{Scalars}
+
+We also have several ideas about manipulating a single vector. \\
 
 
 
+\begin{itemize}
+\item We can think of add a vector to itself several times.
+\item We can thnink of stretching or compressing a vector.
+\item We can think of reversing a vector.
+\end{itemize}
 
 
-We also have the idea of stretching or compressing a vector in the same direction.  That is multiplying a vector by a real number.
 
-
+$\blacktriangleright$  Adding three copies of the same vector.
 
 \begin{image}
 \begin{tikzpicture}
@@ -226,7 +234,41 @@ We also have the idea of stretching or compressing a vector in the same directio
 
             \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:1,3);
             \draw[penColor,ultra thick,->] (axis cs:1,3) -- (axis cs:2,6);
-            \draw[penColor2,ultra thick,->] (axis cs:2,6) -- (axis cs:3,9);
+            \draw[penColor,ultra thick,->] (axis cs:2,6) -- (axis cs:3,9);
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+$\blacktriangleright$  Compressing a vector to half its length.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:3,9);
+            \draw[penColor2,ultra thick,->] (axis cs:0,0) -- (axis cs:1.5,4.5);
+
 
 
 
@@ -241,6 +283,42 @@ We also have the idea of stretching or compressing a vector in the same directio
 
 
 
+
+
+$\blacktriangleright$  Reversing the direction of a vector.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:2,6);
+            \draw[penColor2,ultra thick,->] (axis cs:0,0) -- (axis cs:-2,-6);
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+To describe these operations, we use \textbf{scalars}.
+
+
 \begin{definition}  \textbf{\textcolor{green!50!black}{Scalars}}  \\
 
 A \textbf{scalar} is the new name for our old real numbers. 
@@ -248,7 +326,7 @@ A \textbf{scalar} is the new name for our old real numbers.
 \end{definition}
 
 
-We use scalars to describe stretching or compressing or reversing vectors.
+Scalar multiplicationis how we describe adding copies, stretching or compressing, or reversing the direction of vectors.
 
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Scalar Multiplication}}  \\
@@ -330,7 +408,7 @@ Each real number $r$ is now either represented by the point $(r,0)$ or by the ho
 
 
 
-\section{Multiplication}
+\subsection{Multiplication}
 
 
 
@@ -540,7 +618,7 @@ Compute  $3 \cdot 2 = \langle 3, 0 \rangle  \cdot \langle 2, 0 \rangle$
 \begin{question} 
 
 
-Compute  $\langle 1, 2 \rangle  \cdot \langle -2, 3 \rangle = \left\langle \answer{4}, \answer{-1} \right\rangle $
+Compute  $\langle 1, 2 \rangle  \cdot \langle -2, 3 \rangle = \left\langle \answer{-8}, \answer{-1} \right\rangle $
 
 
 
