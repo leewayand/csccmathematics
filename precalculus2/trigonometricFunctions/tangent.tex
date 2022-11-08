@@ -150,15 +150,15 @@ Then the $-1$ coefficient flips the graph upside-down.
             axis on top
           ]
           
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.95:2.95), <->] {-tan(deg(0.5*x+3.14))};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9.4:3.1), <->] {-tan(deg(0.5*x+3.14))};
             %\addplot [line width=2, penColor, smooth,samples=100,domain=(-4.61:-1.67), <->] {tan(deg(x))};
             %\addplot [line width=2, penColor, smooth,samples=100,domain=(1.67:4.61), <->] {tan(deg(x))};
 
       \addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-14,5) (-13,5) (-12,5) (12,5) (13,5) (14,5)};
 
 
-            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.14},{x});
             \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-9.4},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-3.1},{x});
             %\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
             %\addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({4.71},{x});
 
