@@ -34,7 +34,7 @@ polar coordinates
 
 
 
-If we view this point on a circle of radius $r$, then we can connect polar coordinates up to rectangular coordintes and our trigonometric functions.
+If we view this point on a circle of radius $r$, then we can connect polar coordinates up to rectangular coordintes via our trigonometric functions.
 
 
 
@@ -90,7 +90,7 @@ Bridge between polar and rectangular coordinates:
 
 
 Polar coordinates are great for certain situations. However, there is
-a price to pay. Every point in the plane has more than one of
+a price to pay. Every point in the plane has more than one
 description in polar coordinates.
 
 
@@ -134,7 +134,7 @@ description in polar coordinates.
 
 
 
-How should we interpret a negative radius? 
+What about a negative radius? How should we interpret a negative radius? 
 
 $(-2,\pi)$ will mean to point in the $\pi$ direction and then move backwards $2$.  It describes the same point as $(2, 2\pi)$.
 
@@ -219,7 +219,7 @@ A =\left(1,\frac{\pi}{4}\right)\quad B=(1.5,\pi)\quad C = \left(2,-\frac{\pi}{3}
 
 
 It is useful to recognize both the rectangular (Cartesian)
-coordinates of a point in the plane and its polar coordinates.
+coordinates of a point in the plane and the polar coordinates.
 
 \begin{theorem}  \textbf{\textcolor{green!50!black}{Cartesian - Polar Bridge}} \\
 
@@ -299,7 +299,7 @@ r^2=x^2+y^2\qquad \tan(\theta) = \frac{y}{x}.
 
 \section{Polar Graphs}
 
-Let's talk about how to plot polar functions.  \\
+Let's talk about how to plot polar functions in the two coordinate systems.  \\
 
 
 We can plot points on rectangular axes thinking $y = r(\theta)$. 
@@ -309,7 +309,10 @@ We can plot points on rectangular axes thinking $y = r(\theta)$.
 
 
 \begin{example}
-  Sketch the polar function $r=1+\cos(\theta)$ on $[0,2\pi]$.
+  Sketch the polar function $r=1+\cos(\theta)$ on $[0,2\pi]$ with rectangular coordinates.  \\
+
+
+  $\theta$ will be measured along the horzontal axis and $r$ will be measured along the vertical axis.
 
     \begin{image}%% 45
       \begin{tikzpicture}
@@ -351,7 +354,7 @@ In the Polar graph, we turn counterclockwise to an angle of $\theta$ and then mo
 
 
 
-Then you continue turning counterclockwise and moving the radial measurement in and out until you get around the whole circle.
+Then we continue turning counterclockwise and moving the radial measurement in and out until you get around the whole circle.
 
 
 \begin{example}
@@ -859,12 +862,12 @@ Begin at $0$ radians and work your way counterclockwise easy angles moving $r$ c
 
 
 
-\section{Converting to and from polar coordinates}
+\section{Converting to and from Polar Coordinates}
 
 
 It is sometimes desirable to refer to a graph via a polar equation,
 and other times by a rectangular equation.  Therefore it is necessary
-to be able to convert between polar and rectangular functions.  Here
+to be able to convert between polar and rectangular coordinates.  Here
 is the basic idea:
 
 Given a function $y=f(x)$ in rectangular coordinates, polar coordinates
@@ -895,9 +898,9 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 	r\sin(\theta) &= \answer[given]{r^2\cos^2(\theta)}\\
 	\answer[given]{\frac{\sin(\theta)}{\cos^2(\theta)}}  &= r.
       \end{align*}
-      We have found that $r=\frac{\sin(\theta)}{\cos^2(\theta)} = \tan(\theta)\sec(\theta)$. 
+      We have found that $r=\frac{\sin(\theta)}{\cos^2(\theta)}$. 
 
-      The domain of this polar function is $\left[ \answer[given]{-\pi/2},\answer[given]{\pi/2} \right]$. 
+      One connected pieces of the domain of this polar function is $\left( \frac{-\pi}{2}, \frac{\pi}{2} \right)$. This will trace out the entire graph.
 
       Plot a few
       points to see how the familiar parabola is traced out by the
@@ -917,7 +920,7 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 	r & = \frac{1}{\sqrt{\cos(\theta)\sin(\theta)}}\\
     \end{align*}
     This function is valid only when the product of
-    $\cos\theta\sin\theta$ is positive. This occurs in the first and
+    $\cos(\theta) \sin(\theta)$ is positive. This occurs in the first and
     third quadrants, meaning the domain of this polar function is
     $(0,\tfrac{\pi}{2})$ with $(\pi,\tfrac{3\pi}{2})$.
       
@@ -926,6 +929,10 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
   \end{explanation}
 \end{example}
 
+
+
+
+
 \begin{example}
    Convert $r=\frac{2}{\sin(\theta)-\cos(\theta)}$ from polar coordinates
    to rectangular coordinates.
@@ -933,7 +940,7 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
      There is no set way to convert from polar to rectangular; in
      general, we look to form the products $r\cos(\theta)$ and
      $r\sin(\theta)$, and then replace these with $x$ and $y$,
-     respectively. We start in this problem by multiplying both sides
+     respectively. We start in this situation by multiplying both sides
      by $\sin(\theta)-\cos(\theta)$:
      \begin{align*}
        r &= \frac{2}{\sin(\theta)-\cos(\theta)} \\
@@ -969,4 +976,31 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
      The circle is centered at $(1,0)$ and has radius $1$.
    \end{explanation}
  \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Polar Graphs]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/polarGraphing/examples/exampleList}
+
+\end{center}
+
+
+
+
+
 \end{document}
