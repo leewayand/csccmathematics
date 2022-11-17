@@ -22,7 +22,33 @@ Completely analyze $T(r) = \tan(\sin(\pi r))$ \\
 
 
 
-$\blacktriangleright$  We know that $-1 \leq \sin(\pi r) \leq 1$ and $[-1,1] \subset \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$ and $\tan(x)$ is continuous on $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$.  Therefore $T(r)$ is defined for all $r$.  And, since both $\tan(x)$ and $\sin(x)$ are continuous, $T$ is the composition of two continuous functions. This also tells us that $T(r)$ is a continuous function.
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Domain: }}
+
+
+We know that $-1 \leq \sin(\pi r) \leq 1$ and $[-1,1] \subset \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$ and $\tan(x)$ is continuous on $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$.  Therefore $T(r)$ is defined for all $r$.  
+
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Continuity: }}
+
+
+
+
+Since both $\tan(x)$ and $\sin(x)$ are continuous, $T$ is the composition of two continuous functions. This also tells us that $T(r)$ is a continuous function.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 $T(r)$ will be using $[-1,1]$ out of tangent's $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$ waveform.
@@ -74,7 +100,7 @@ $[-1,1]$ is the output of $\sin(\pi r)$, which then becomes the input to tangent
 For this to happen, the input to sine must be $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$, which means that $r \in \left[-\frac{1}{2}, \frac{1}{2}\right]$.
 
 
-But that is only have the story. \\
+But that is only half the story. \\
 
 
 As $r$ moves from $-\frac{1}{2}$ to $\frac{1}{2}$, $\sin(\pi r)$ moves from $-1$ to $1$.  As $r$ continues, it moves from $\frac{1}{2}$ to $\frac{3}{2}$ and $\sin(\pi r)$ moves from $1$ back down to $-1$.  Then the whole thing repeats.
@@ -117,7 +143,16 @@ As $r$ increases, the sine wave will oscillate between $-1$ and $1$ and this pie
 
 
 
-$\blacktriangleright$ \textbf{Range/Maximum/Minimum:} The maximum of the waveform occurs at $r = \frac{1}{2}$.
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Maximums and Minimums: }}
+
+
+
+The maximum of sine is $1$ and it occurs at $\frac{\pi}{2}$.\\
+
+Tangent is an increasing function, so the maximum of $T(r)$ is also going to occur at $\frac{\pi}{2}$. However, in $T(r)$, the inside of sine is $\pi r$.\\
+
+
+The maximum of the waveform occurs at $r = \frac{1}{2}$.
 
 
 \[   \tan\left(\sin\left(\pi \cdot \frac{1}{2}\right)\right)  =   \tan\left(\sin\left(\frac{\pi}{2}\right)\right)  = \tan(1)  \approx 1.557  \]
@@ -129,17 +164,23 @@ The minimum of $-\tan(1) \approx -1.557$ occurs at $r = -\frac{1}{2}$.
 That is just for one period. These maximums and minimums are periodic with a period of $2$.
 
 
+We have also discovered that the critical numbers for $T$ are $\left\{ \frac{1}{2} + 2k \, | \, k \in \mathbb{Z} \right\}$ and $\left\{ -\frac{1}{2} + 2k \, | \, k \in \mathbb{Z} \right\}$
 
 
 
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Rate-of-Change: }} 
 
-$\blacktriangleright$ \textbf{Rate-of-Change:}  Just looking at the $\left[ -\frac{1}{2}, \frac{3}{2} \right]$ wave:
+
+$\tan(t)$ is an increasing function.  Therefore, $T(r) = \tan(\sin(\pi r))$ will increase and decreases with $\sin(\pi r)$, which we know everything about.
+
+
+
 
 $T(r)$ increases on $\left[ -\frac{1}{2}, \frac{1}{2} \right]$ and decreases on $\left[\frac{1}{2}, \frac{3}{2} \right]$.
 
 
 
-
+And, this agrees with out graph.
 
 
 
