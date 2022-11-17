@@ -63,7 +63,7 @@ The modulus of $z = a + b \, i$ is given by $\sqrt{|z|} = \sqrt{a^2 + b^2}$.
 
 \end{definition}
 
-The modulus gives the distance between the complex number and the origin on the Cartesian plane. \\
+The modulus gives the distance between the complex number and the origin on the Cartesian plane.   The absolute value is the square of the modulus.\\
 
 
 
@@ -90,7 +90,7 @@ z \cdot \bar{z} &= (a + b \, i) \cdot (a - b \, i) \\
 
 
 
-We have seen that each complex number can be represented in different forms.  $a + b \, i$ is the rectangular form, which corresponds to the Cartesian plane and the vector $\langle a, b\rangle$.  We have also seen a polar form $(r, \theta)$.  This lead us to the idea of a unit vector or direction vector and length factor, $r$.
+We have seen that each complex number can be represented in different forms.  $a + b \, i$ is the rectangular form, which corresponds to the point $(a, b)$ and the vector $\langle a, b\rangle$ on the Cartesan plane.  We have also seen a polar form $(r, \theta)$.  This lead us to the idea of a unit vector or direction vector and the length factor, $r$.
 
 \[ z = a + b \, i = r (\cos(\theta) + i \sin(\theta))  \]
 
@@ -104,9 +104,12 @@ $\cos(\theta) + i \sin(\theta)$ being the rectangular representation of a comple
 
 $\blacktriangleright$ \textbf{Polar Form}
 
-If $z = r (\cos(\theta) + i \sin(\theta))$, then $\bar{z} = r (\cos(-\theta) + i \sin(-\theta))$, because negating the imaginary part just causes the angle to move in the opposite direction.
+If $z = r (\cos(\theta) + i \sin(\theta))$, then $\bar{z} = r (\cos(\theta) - i \sin(\theta))$
 
-$\bar{z} = (r, -\theta)$
+And, since, $\cos(\theta) = \cos(-\theta)$ and $-\sin(\theta) = \sin(-\theta)$, we have $\bar{z} = r (\cos(-\theta) + i \sin(-\theta))$ .
+
+
+\[   \bar{z} = (r, -\theta) \]
 
 
 
@@ -115,7 +118,7 @@ $\blacktriangleright$ \textbf{Powers}
 
 
 
-We have seen that in polar form, multiplication of complex numbers follow a nice pattern.
+We have seen that in polar form, multiplication of complex numbers follows a nice pattern.
 
 
 \[   (r_1, \theta_1) \cdot (r_2, \theta_2) = (r_1 \cdot r_2, \theta_1 + \theta_2)                \]
@@ -135,7 +138,7 @@ We can keep multiplying for any whole number power to get
 \[   z^n = (r, \theta)^n =  (r, \theta) \cdot (r, \theta) \cdots (r, \theta)= (r^n, n\theta)                \]
 
 
-
+This gives a nice pattern for complex conjugates.
 
 \[   (\bar{z})^n = (r, -\theta)^n =  (r, -\theta) \cdot (r, -\theta) \cdots (r, -\theta)= (r^n, -n\theta)  = \overline{z^n}              \]
 
@@ -179,7 +182,7 @@ Let $z = a + b \, i$ and $w = c + d \, i$.  Then we get
 
 
 
-
+Complex conjugates follow nice patterns. 
 
 
 
@@ -206,7 +209,7 @@ Let $z = a + b \, i$ and $w = c + d \, i$.  Then we get
 
 
 
-Let $p(x)$ be a polynomial with real coefficients.
+Let $p(x)$ be a polynomial with real coefficients:
 
 $p(x) = a_n x^n + a_{n-a} x^{n-1} + \cdots a_2 x^2 + a_1 x + a_0$   with $a_k \in \mathbb{R}$
 
@@ -279,7 +282,41 @@ But this is $\overline{p(z)}$, and we already know  $p(z) = 0$.
 \[    p(\bar{z}) = \overline{p(z)} = \bar{0} = 0  \]
 
 
-$\bar{z}$ is also a root of $p(x)$.
+$\bar{z}$ is also a root of $p(x)$. \\
+
+
+
+
+
+Anytime $z$ is a complex root of a polynomial over the real numbers, then $\bar{z}$ is also a root. \\\
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}   If $p(x)$ is a polynomial with real coefficients and $z$ is a complex zero, then $p$ must factor like
+
+
+\[ p(x) = (x-z) (x-\bar{z}) q(x)    \]
+
+Where $q(x)$ is another polynomila with real coefficients.
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Zeros]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/solvingEquations/examples/exampleList}
+
+\end{center}
+
 
 
 

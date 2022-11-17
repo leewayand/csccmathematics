@@ -13,9 +13,10 @@ complex roots
 
 
 
+\textbf{\textcolor{blue!55!black}{Zeros of Quadratic Functions}}
 
 
-We have already seen three methods of solving quadratic equations.
+To obtain the zeros of a quadratic function, we solve quadratic equations and we have already seen three methods of solving quadratic equations.
 
 \begin{itemize}
 	\item Factoring
@@ -26,17 +27,14 @@ We have already seen three methods of solving quadratic equations.
 
 All three methods rely on first rewriting the equation, so that one side equals $0$.
 
-At the time we investigated quadratic equations, we were only interested in real roots or real solutions.  We are now in a position to fill-in the rest of the picture.
-
-
-We can now work with square roots of negative numbers.
+When we first investigated quadratic equations, we were only interested in real roots or real solutions.  We are now in a position to fill-in the rest of the picture, because we can now work with square roots of negative numbers.
 
 
 \begin{example} Complex Solutions
 
 Solve $3t^2 + 2t + 5 = 0$
 
-Using the quadratice formula, we get two solutions
+Using the quadratic formula, we get two solutions
 
 \[  t = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 3 \cdot 5}}{2 \cdot 3}   =  \frac{-2 \pm \sqrt{-56}}{6}  =  \frac{-2 \pm \sqrt{56}\sqrt{-1}}{6}   =  \frac{-2 \pm \sqrt{56} \, i}{6}  \]
 
@@ -73,7 +71,7 @@ In the previous example we found the roots of this polynomial to be
 
 \[     \frac{-1 + \sqrt{14} \, i}{3}   \,  \text{ and } \, \frac{-1 - \sqrt{14} \, i}{3}         \]
 
-Therefore, the factored form of htis polynomial looks like
+Therefore, the factored form of this polynomial looks like
 
 
 \[     A \left(t - \frac{-1 + \sqrt{14} \, i}{3} \right) \left(t -  \frac{-1 - \sqrt{14} \, i}{3} \right)        \]
@@ -123,6 +121,88 @@ Let's multiply out the factorization in the last example and see if it works.
 
 
 
+\begin{example}  Analyze   $g(k) = \frac{1}{10} (k+6)(k+2)(k-4)$
+
+
+
+
+A DESMOS graph suggests that there are two critical numbers.  DESMOS approximates these to be around $-4.239$ and $1.573$.
+
+\textbf{Note: } These are not the middle points between the zeros.
+
+
+These critical numbers are the locations of a local maximum and minimum.  And, a graph is about the best we can do for reasoning on local extrema.
+
+
+
+
+
+\begin{center}
+\desmos{zqgjgiermr}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+Calculus will give us a derivative:
+
+\[  g'(k) = \frac{3}{10} k^2 + \frac{4}{5} x - 2  \]
+
+
+
+The critical numbers of $g(k)$ are the zeros of the derivative, which is a quadratic function. We can use the quadratic formula.
+
+
+
+
+To make things a little eaier to write and read, let's factor out $\frac{1}{10}$.
+
+
+\[    g'(k) = \frac{3}{10} k^2 + \frac{4}{5} x - 2  =  \frac{1}{10} ( 3 k^2 + 8 k - 20 )   \]
+
+
+The zeros of $g'(k)$ are the zeros of $3 k^2 + 8 k - 20$.
+
+We need to solve $3 k^2 + 8 k - 20 = 0$
+
+
+\[  k = \frac{-8 \pm \sqrt{64 + 4 \cdot 3 \cdot 20}}{6}  = \frac{-8 \pm \sqrt{304}}{6} \]
+
+
+\[   = \frac{-8 \pm 4 \sqrt{19}}{6}   = \frac{-4 \pm 2 \sqrt{19}}{3}      \]
+
+
+
+\[   \frac{-4 - 2 \sqrt{19}}{3}  \approx   1.573    \]
+
+
+\[   \frac{-4 + 2 \sqrt{19}}{3}  \approx   -4.239   \]
+
+
+And, that agrees with our graph.
+
+
+
+
+\begin{itemize}
+\item  $g$ increases on $\left( -\infty, \frac{-4 - 2 \sqrt{19}}{3} \right)$ 
+\item  $g$ decreases on $\left( \frac{-4 - 2 \sqrt{19}}{3}, \frac{-4 + 2 \sqrt{19}}{3}  \right)$ 
+\item  $g$ increases on $\left( \frac{-4 + 2 \sqrt{19}}{3}, \infty \right)$ 
+\end{itemize}
+
+
+
+
+$\blacktriangleright$ $g\left( \frac{-4 - 2 \sqrt{19}}{3} \right)\right)$ is a local maximum of $g$ occuring at $\frac{-4 - 2 \sqrt{19}}{3} \right)$
+
+$\blacktriangleright$ $g\left( \frac{-4 + 2 \sqrt{19}}{3} \right)\right)$ is a local minimum of $g$ occuring at $\frac{-4 + 2 \sqrt{19}}{3} \right)$
+
+
+\end{example}
 
 
 
@@ -137,6 +217,15 @@ Let's multiply out the factorization in the last example and see if it works.
 
 
 
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Zeros]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/solvingEquations/examples/exampleList}
+
+\end{center}
 
 
 

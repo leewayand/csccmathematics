@@ -29,7 +29,7 @@ Then we could get a common denominator of all of the coefficients and factor tha
 \[   f(x) = \frac{1}{d}(c_n x^n + c_{n-1} x^{n-1} + \cdots + c_2 x^2 + c_1 x + c_0)    \]
 
 
-These are the same polynomial, so they have the same roots and factorization.
+These are the same polynomial function, so they have the same roots and factorization.
 
 
 So, when we are investigating zeros and roots and factors, we can always assume that a polynomial with rational coefficients just has integer coefficents.
@@ -74,7 +74,20 @@ That tells us
 
 $D$ is a factor of the right side, so $D$ must be a factor of the left side,  But $D$ is not a factor of $N$, because the original rational root was in reduced form.  Therefore $D$ must be a factor of $a_n$.
 
-Similar reasoning tells us that $N$ is a factor  $a_0$.
+
+
+
+Similarly, 
+
+\[   -(a_n N^n + a_{n-1} N^{n-1} D + \cdots + a_2 N^2 D^{n-2}+ a_1 N D^{n-1}) =  a_0 D^n        \]
+
+
+$N$ is a factor of the left side, so $N$ must be a factor of the right side,  But $N$ is not a factor of $D$, because the original rational root was in reduced form.  Therefore $N$ must be a factor of $a_0$.
+
+
+
+
+This is very helpful when factoring polynomials.
 
 
 
@@ -146,7 +159,7 @@ We have two roots, which gives us two factors.
 
 $T(h) = 2\left(h-\frac{1}{2} \right)(h-5)$
 
-We could also mulitply the $2$ inside the first factor.
+We could also multiply the $2$ inside the first factor.
 
 
 $T(h) = (2h - 1)(h-5)$
@@ -160,5 +173,15 @@ $T(h) = (2h - 1)(h-5)$
 
 
 
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Zeros]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/solvingEquations/examples/exampleList}
+
+\end{center}
 
 \end{document}
