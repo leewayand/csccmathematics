@@ -13,7 +13,7 @@ restricting the domain
 
 
 
-We have a new family of Trigonometric functions. And, to complete the picture, we need some inverse functions.  Since none of our Trigonometric functions are one-to-one functions, we will restrict their domains for the purposes of obtaining inverse functions.
+To complete the picture on our family of Trigonometric functions, we need some inverse functions.  Since none of our Trigonometric functions are one-to-one functions, we will restrict their domains for the purposes of obtaining inverse functions.
 
 
 
@@ -63,9 +63,9 @@ The sine function is not one-to-one.
 
 This function doesn't have an inverse.
 
-We can't even restrict our domain to one period, because of the hills and valleys in the graph.
+We can't even restrict our domain to one period, because each hill and valley in the graph would still show us that a single funciton value comes from multiple domain numbers.
 
-Therefore, our plan is to restrict the domain to half of one period of sine.  We can select any interval of length $\pi$.  The usual choice is $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$.  
+Therefore, our plan is to restrict the domain to half of one period of sine.  We need a strategic interval of length $\pi$.  The usual choice is $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$.  
 
 
 
@@ -109,7 +109,7 @@ Therefore, our plan is to restrict the domain to half of one period of sine.  We
 
 
 
-It is only half a period, but it does cover the whole range of sine.
+It is only half a period, but it does cover the whole range of sine. And, more importantly, it covers every funciton value exactly once.
 
 We can now reverse all of the pairs and obtain the inverse function known as \textbf{arcsine}.
 
@@ -151,7 +151,7 @@ We can now reverse all of the pairs and obtain the inverse function known as \te
 
 
 
-$Arcsine$ only returns angles between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$. These are the fourth and first quadrants. Arcsine is an inverse function for sine for these angles.
+$Arcsine$ only returns angles between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$. These are in the fourth and first quadrants. Arcsine is an inverse function for sine for these angles.
 
 
 
@@ -215,16 +215,16 @@ $\blacktriangleright$ The domain is  $[-1, 1]$.
 $\blacktriangleright$ The range is $\left[ -\frac{\pi}{2}, \frac{\pi}{2} \right]$
 
 
-$\blacktriangleright$ Arcsin has one zero and that is $0$.
+$\blacktriangleright$ Arcsine has one zero and that is $0$.
 
 
-$\blacktriangleright$ Arcsin is an increasing function.
+$\blacktriangleright$ Arcsine is an increasing function.
 
-$\blacktriangleright$ Arcsin is a continuous function.
+$\blacktriangleright$ Arcsine is a continuous function.
 
-$\blacktriangleright$ Arcsin has a maximum of $\frac{\pi}{2}$, which occurs at $1$.
+$\blacktriangleright$ Arcsine has a maximum of $\frac{\pi}{2}$, which occurs at $1$.
 
-$\blacktriangleright$ Arcsin has a minimum of $-\frac{\pi}{2}$, which occurs at $-1$.
+$\blacktriangleright$ Arcsine has a minimum of $-\frac{\pi}{2}$, which occurs at $-1$.
 
 
 
@@ -472,7 +472,7 @@ This function doesn't have an inverse.
 
 We can't even restrict our domain to one period, because of the hills and valleys in the graph.
 
-Therefore, our plan is to restrict the domain to half of one period of cosine.  We can select any interval of length $\pi$.  The usual choice is $[0,\pi]$.  
+Therefore, our plan is to restrict the domain to half of one period of cosine.  We need a strategic interval of length $\pi$.  The usual choice is $[0,\pi]$.  
 
 
 
@@ -545,8 +545,8 @@ We can now reverse all of the pairs and obtain the inverse function known as \te
           ]
           
 
-            \addplot [line width=2, penColor, smooth,samples=300,domain=(0:3.14)] ({cos(deg(x)},{x});
-            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,3.14)};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(0:3.141)] ({cos(deg(x)},{x});
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,3.141)};
             \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
             %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
 
@@ -632,16 +632,16 @@ $\blacktriangleright$ The domain is  $[-1, 1]$.
 $\blacktriangleright$ The range is $[0, \pi]$
 
 
-$\blacktriangleright$ Arcsin has one zero and that is $1$.
+$\blacktriangleright$ Arccosine has one zero and that is $1$.
 
 
-$\blacktriangleright$ Arcsin is an decreasing function.
+$\blacktriangleright$ Arccosine is an decreasing function.
 
-$\blacktriangleright$ Arcsin is a continuous function.
+$\blacktriangleright$ Arccosine is a continuous function.
 
-$\blacktriangleright$ Arcsin has a maximum of $\pi$, which occurs at $-1$.
+$\blacktriangleright$ Arccosine has a maximum of $\pi$, which occurs at $-1$.
 
-$\blacktriangleright$ Arcsin has a minimum of $0$, which occurs at $1$.
+$\blacktriangleright$ Arccosine has a minimum of $0$, which occurs at $1$.
 
 
 
@@ -817,6 +817,18 @@ If $\frac{3\pi}{2} < \theta < 2\pi$, then $\arccos(\cos(\theta))$ equals
 
 
 
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Inverse Trig Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/inverseTrigFunctions/examples/exampleList}
+
+\end{center}
 
 
 
