@@ -14,7 +14,7 @@ unit circle
 
 
 
-We have seen that every Complex number can be written as $r \cdot (\cos(\theta) + i \, \sin(\theta))$ - a scalar times a Complex number on the unit circle.
+We have seen that every Complex number can be written as $r \cdot (\cos(\theta) + i \, \sin(\theta))$.  This is a scalar times a Complex number on the unit circle.
 
 We have also seen that if $z = r \cdot (\cos(\theta) + i \, \sin(\theta))$, then $z^n = r^n \cdot (\cos(n\theta) + i \, \sin(n\theta))$. Raising complex numbers to powers is accomplished by raising the modulus to the power and then multiplying the angle.
 
@@ -44,7 +44,7 @@ $n^{th}$ roots of unity all look like $\cos(\theta) + i \, \sin(\theta)$.  They 
 
 
 
-In addition, if $\cos(n\theta) + i \, \sin(n\theta) = 1$, then $n \theta = 2 k \pi$ - a mulitple of $2 \pi$, because $1$ is on the positive real axis, which means the complex part must equal $0$.
+In addition, if $\cos(n\theta) + i \, \sin(n\theta) = 1$, then $n \theta = 2 k \pi$ (a mulitple of $2 \pi$), because $1$ is on the positive real axis.
 
 
 Therefore, $\theta = \frac{2 k \pi}{n}$  
@@ -133,9 +133,10 @@ The fourth roots of unity are:
 
 
 
-\begin{question} $\boxdot$
+\begin{question} 
 
-$\cos\left( \frac{\pi}{6} \right)$ is which root of unity?
+
+$\cos\left( \frac{\pi}{6} \right) + i \, \sin\left( \frac{\pi}{6} \right)$ is which root of unity?
 
 \begin{multipleChoice}
 \choice {sixth}
@@ -157,11 +158,11 @@ $\cos\left( \frac{\pi}{6} \right)$ is which root of unity?
 
 Using the quadratic formula, we know that $\frac{-3 + \sqrt{11} \, i}{2}$ is a root of $x^2 + 3x + 5$. \\
 
-We know that $\frac{-3 + \sqrt{11} \, i}{2}$ can be written in the form $r (cos(\theta) + i \, sin(\theta))$.
+We know that $\frac{-3 + \sqrt{11} \, i}{2}$ can be written in the form $r (\cos(\theta) + i \, \sin(\theta))$.
 
-$r$ is the asolute value of $\frac{-3 + \sqrt{11} \, i}{2}$.
+$r$ is the modulus of $\frac{-3 + \sqrt{11} \, i}{2}$.
 
-$r = \answer{5}$ 
+$r = \answer{\sqrt{5}}$ 
 
 The angle for $\frac{-3 + \sqrt{11} \, i}{2}$ is in which quadrant?
 
@@ -174,17 +175,48 @@ The angle for $\frac{-3 + \sqrt{11} \, i}{2}$ is in which quadrant?
 \end{multipleChoice}
 
 
-$\arctan\left( -\frac{\sqrt{11}}{2} \right)$ gives the angle, but in quadrant IV.  What must be added to $\arctan\left( -\frac{\sqrt{11}}{2} \right)$ to get $\theta$?
+$\arctan\left( -\frac{\sqrt{11}}{3} \right)$ gives the angle, but in quadrant IV.    What must be added to $\arctan\left( -\frac{\sqrt{11}}{3} \right)$ to get $\theta$?
 
 Add $\answer{\pi}$
 
 
-
+\[   \frac{-3 + \sqrt{11} \, i}{2} = \sqrt{5} \left( \cos\left( \arctan\left( -\frac{\sqrt{11}}{3} \right) + \pi \right) + i \, \sin\left( \arctan\left( -\frac{\sqrt{11}}{3} \right) +\pi  \right) \right)     \]
 
 
 \end{example}
 
 
+As long as we are here...\\
+
+
+\begin{observation}
+
+In the example above, $x^2 + 3x + 5$ is a polynomial with real coefficients.  Therefore, if $\frac{-3 + \sqrt{11} \, i}{2}$ is a root, then so is $\frac{-3 - \sqrt{11} \, i}{2}$.
+
+
+
+Therefore, $x^2 + 3x + 5$ factors as
+
+
+
+\[ \left( x - \frac{-3 - \sqrt{11} \, i}{2} \right)  \left( x - \frac{-3 + \sqrt{11} \, i}{2} \right)    \]
+
+
+The constant terms have to be equal, which tells us that 
+
+
+\[    \left( \frac{-3 - \sqrt{11} \, i}{2} \right)  \left( \frac{-3 + \sqrt{11} \, i}{2} \right)  = 5    \]
+
+
+
+
+The constant term of the polynomial is the product of the roots, which are conjugates.  The constant term is the absolute value of either root.
+
+
+
+
+
+\end{observation}
 
 
 
@@ -195,6 +227,15 @@ Add $\answer{\pi}$
 
 
 
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Complex Exponentials]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/complexExponentials/examples/exampleList}
+
+\end{center}
 
 
 

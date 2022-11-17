@@ -14,6 +14,11 @@ complex exponentials
 
 
 
+One of the biggest surprises in mathematics is the fact that trigonometric functions and exponential functions are the same building blocks, provide we use Complex numbers. \\
+
+To see this, we need another piece of information. \\
+
+
 
 
 
@@ -73,7 +78,7 @@ $f'(a)$ would be the slope of the tangent line at the point $(a, e^{r a})$. \\
 
 That's what we want.  However, we don't know the derivative of $e^{r x}$, so we can't get the slope of the tangent line. \\
 
-So, let's approximate the slope by using some close chords. \\
+So, let's approximate the slope by using some close chords on the graph. \\
 
 
 
@@ -106,7 +111,7 @@ The slope of the line through these two point is
 
 The slope of the secant line is really close to the slope of the tangent line. \\
 
-The smaller the value of $h$, the closer it is. \\
+The smaller the value of $h$, the closer the slopes are. \\
 
 
 \[
@@ -116,12 +121,15 @@ The smaller the value of $h$, the closer it is. \\
 
 You could move the tangent point along the curve by varying $a$.  If we collect these slopes for a lot of $a$'s, then we could plot each of the slope values.
 
+
+
+Let's do this for $a = 3$.
+
+\begin{example}
+
+
+
 Let's compare the plot of tangent slopes to the graph of $3 e^{3 x}$
-
-
-
-
-
 
 
 
@@ -137,14 +145,22 @@ Let's compare the plot of tangent slopes to the graph of $3 e^{3 x}$
 
 
 
-
-
-
 This is very suggestive that the derivative of $f(x) = e^{3 x}$ is $f'(x) = 3 e^{3 x}$.
+
+
+
+\end{example}
+
+
+
+
 
 It is not a far jump to believe that 
 
 
+
+
+\begin{idea}
 
 \[
 \text{The derivative of } \, f(x) = e^{r x} \, \text{ is } \, f'(x) = r \, e^{r x}
@@ -155,7 +171,7 @@ It is not a far jump to believe that
 \frac{d}{dx} e^{r x}  = r \, e^{r x}
 \]
 
-
+\end{idea}
 
 
 
@@ -203,7 +219,7 @@ If two functions start with the same value and then they have the exact same der
 
 $\blacktriangleright$  When you study differential equations, this idea will lead to the fact that a first-order differential equation with an initial condition has only one solution. \\
 
-Example: If $y'(t) = k \cdot y(t)$ with $y(0)=1$
+\textbf{\textcolor{blue!55!black}{Example: }} If $y'(t) = k \cdot y(t)$ with $y(0)=1$
 
 
 There is only one function that could be $y(t)$.
@@ -307,7 +323,7 @@ a + b \, i =  r \cdot (\cos(\theta) + i \, \sin(\theta)) = r \cdot e^{i \cdot \t
 \end{center}
 
 
-
+Complex numbers can be written in exponential form, just like real numbers can.  They just need complex exponents.
 
 
 
@@ -316,7 +332,7 @@ a + b \, i =  r \cdot (\cos(\theta) + i \, \sin(\theta)) = r \cdot e^{i \cdot \t
 
 Let $z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i$
 
-The absolute value of $z$ is $\answer{5}$ 
+The modulus of $z$ is $\answer{5}$ 
 
 $arc(z) = \answer{\frac{\pi}{3}}$
 
@@ -332,6 +348,26 @@ Of course, we can also write $5$ as $e^{\ln(5)}$.
 
 
 $z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}} = e^{\ln(5)} \, e^{i \tfrac{\pi}{3}} = e^{ln(5) + i \tfrac{\pi}{3}}$
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Complex Exponentials]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/complexExponentials/examples/exampleList}
+
+\end{center}
+
+
 
 
 
