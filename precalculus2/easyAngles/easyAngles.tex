@@ -15,7 +15,7 @@ $30^{\circ}$, $45^{\circ}$, $60^{\circ}$, $90^{\circ}$
 Sine and cosine are \textbf{transcendental functions}.  They transcend Algebra. They are beyond our algebraic tools.  That makes equations difficult when they involve sine and cosine.
 
 
-This is true unless you work with angles that just happen to have nice values for sine and cosine.  We have two: $30^{\circ}$ and $60^{\circ}$.
+This is true unless you work with angles that just happen to have nice values for sine and cosine.  We have several: $30^{\circ}$, $45^{\circ}$, and $60^{\circ}$.
 
 
 
@@ -33,6 +33,17 @@ And, since $30^{\circ}$ and $60^{\circ}$ make up a right triangle, we have
 \item $\sin(60^{\circ}) = \frac{\sqrt{3}}{2}$
 \item $\cos(60^{\circ}) = \frac{1}{2}$
 \end{itemize}
+
+
+
+
+$45^{\circ}$ cuts the quadrant in half making sine and cosine equal.
+
+\begin{itemize}
+\item $\sin(45^{\circ}) = \frac{1}{\sqrt{2}}$
+\item $\cos(45^{\circ}) = \frac{1}{\sqrt{2}}$
+\end{itemize}
+
 
 
 Add these to $0^{\circ}$, $90^{\circ}$, $180^{\circ}$, and $270^{\circ}$ and we can walk around the unit circle.
@@ -143,13 +154,16 @@ Finish:  $2t - \pi = 2 \pi$, which occurs at $t = \frac{3 \pi}{2}$, where $f = 3
 Period = $\frac{3 \pi}{2} - \frac{\pi}{2} = \pi$
 
 
-Halfway is $\pi$.  $\sin(2t - \pi)$ equals $0$ at $\pi$, where $f = 3 \cdot 0 - 2 = -2$.
+Halfway between $\frac{\pi}{2}$ and $\frac{3\pi}{2}$ is $\pi$.  \\
 
 
-A quarter of the way is $\frac{3 \pi}{4}$, , where $f = 3 \cdot 1 - 2 = 1$
+$\sin(2t - \pi)$ equals $0$ at $\pi$, where $f = 3 \cdot 0 - 2 = -2$.
 
 
-The three-quarter mark is $\frac{5 \pi}{4}$, , where $f = 3 \cdot -1 - 2 = -5$
+A quarter of the way from Start to Finish is $\frac{3 \pi}{4}$, , where $f = 3 \cdot 1 - 2 = 1$
+
+
+The three-quarter mark is $\frac{5 \pi}{4}$, where $f = 3 \cdot -1 - 2 = -5$
 
 
 
@@ -159,7 +173,7 @@ The three-quarter mark is $\frac{5 \pi}{4}$, , where $f = 3 \cdot -1 - 2 = -5$
 \begin{tikzpicture}
   \begin{axis}[
             domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
-            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            axis lines =center, xlabel={t}, ylabel={$y$}, grid = major, grid style={dashed},
             ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
             xtick={0, 1.57, 3.142, 4.71, 6.28},
             xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
@@ -199,7 +213,7 @@ $\blacktriangleright$ \textbf{Then, extend periodically}
 \begin{tikzpicture}
   \begin{axis}[
             domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
-            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            axis lines =center, xlabel={t}, ylabel={$y$}, grid = major, grid style={dashed},
             ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
             xtick={0, 1.57, 3.142, 4.71, 6.28},
             xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
@@ -237,14 +251,17 @@ Our principle interval was $\left[ \frac{\pi}{2}, \frac{3\pi}{2}   \right]$, whi
 
 
 
-$\blacktriangleright$ $30^{\circ} = \frac{\pi}{6}$ is $\frac{1}{12}$ of the normal basic interval $[0, 2\pi]$.  $\frac{1}{12}$ of our period here would be $\frac{1}{12} \cdot \pi = \frac{\pi}{12}$.
-
-Therefore, if we move in $\frac{\pi}{12}$ from $\frac{\pi}{2}$, then we should be at the angle where we get $\sin(\frac{\pi}{6}) = \frac{1}{2}$.
+$\blacktriangleright$ $30^{\circ} = \frac{\pi}{6}$ is $\frac{1}{12}$ of the normal basic interval $[0, 2\pi]$.  \\
 
 
-$\frac{\pi}{12}$ from $\frac{\pi}{2} = \frac{7\pi}{12}$.
+$\frac{1}{12}$ of our period here would be $\frac{1}{12} \cdot \pi = \frac{\pi}{12}$.
 
-Let's evaluate $f\left( \frac{7\pi}{12} \right)$
+Therefore, if we move $\frac{\pi}{12}$ from $\frac{\pi}{2}$, then we should be at the angle where we normally get $\sin(\frac{\pi}{6}) = \frac{1}{2}$.
+
+
+$\frac{\pi}{2} + \frac{\pi}{12}  = \frac{7\pi}{12}$.
+
+Let's evaluate $f\left( \frac{7\pi}{12} \right)$ and see if we get $\frac{\pi}{6}$ inside the sine function.
 
 \[
 f\left( \frac{7\pi}{12} \right) = 3 \sin\left(2 \left(\frac{7\pi}{12} \right) - \pi \right) - 2 = 3 \sin\left( \frac{2\pi}{12} \right) - 2  = 3 \sin\left( \frac{\pi}{6} \right) - 2 = 3 \cdot \frac{1}{2} - 2 = -\frac{1}{2}
@@ -294,14 +311,16 @@ f\left( \frac{7\pi}{12} \right) = 3 \sin\left(2 \left(\frac{7\pi}{12} \right) - 
 
 
 
-$\blacktriangleright$ $60^{\circ} = \frac{\pi}{3}$ is $\frac{1}{6}$ of the normal basic interval $[0, 2\pi]$.  $\frac{1}{6}$ of our period here would be $\frac{1}{6} \cdot \pi = \frac{\pi}{6}$.
+$\blacktriangleright$ $60^{\circ} = \frac{\pi}{3}$ is $\frac{1}{6}$ of the normal basic interval $[0, 2\pi]$.  \\
 
-Therefore, if we move in $\frac{\pi}{6}$ from $\frac{\pi}{2}$, then we should be at the angle where we get $\sin(\frac{\pi}{3}) = \frac{\sqrt{3}}{2}$.
+$\frac{1}{6}$ of our period here would be $\frac{1}{6} \cdot \pi = \frac{\pi}{6}$.
+
+Therefore, if we move $\frac{\pi}{6}$ from $\frac{\pi}{2}$, then we should be at the angle where we get $\sin(\frac{\pi}{3}) = \frac{\sqrt{3}}{2}$.
 
 
-$\frac{\pi}{6}$ from $\frac{\pi}{2} = \frac{4\pi}{6} =  \frac{2\pi}{3}$.
+$\frac{\pi}{2} + \frac{\pi}{6} = \frac{4\pi}{6} =  \frac{2\pi}{3}$.
 
-Let's evaluate $f\left( \frac{2\pi}{3} \right)$
+Let's evaluate $f\left( \frac{2\pi}{3} \right)$ and see if we get $\frac{\pi}{3}$ inside the sine. \\
 
 \[
 f\left( \frac{2\pi}{3} \right) = 3 \sin\left(2 \left(\frac{2\pi}{3} \right) - \pi \right) - 2 = 3 \sin\left( \frac{\pi}{3} \right) - 2  =  3 \cdot \frac{\sqrt{3}}{2} - 2 = \frac{3\sqrt{3}-4}{2} \approx 0.5980762114
@@ -320,7 +339,7 @@ f\left( \frac{2\pi}{3} \right) = 3 \sin\left(2 \left(\frac{2\pi}{3} \right) - \p
 \begin{tikzpicture}
   \begin{axis}[
             domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
-            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            axis lines =center, xlabel={t}, ylabel={$y$}, grid = major, grid style={dashed},
             ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
             xtick={0, 1.57, 3.142, 4.71, 6.28},
             xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
@@ -378,9 +397,9 @@ When one has maximum or minimum, the other has a zero. \\
 \end{summary}
 
 
-When we analyze sine and cosine functions, we usually start by locating when the inside is $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, or $2\pi$.  This tells us whne the function is experiencing a maximum, minimum, or zero.
+When we analyze sine and cosine functions, we usually start by locating when the inside is $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, or $2\pi$.  This tells us when the function is experiencing a maximum, minimum, or zero.
 
-Then we move to the easy angles ($\frac{\pi}{6}$ and $\frac{\pi}{3}$) to round out the shape. \\
+Then we move to the easy angles ($\frac{\pi}{6}$, $\frac{\pi}{4}$, and $\frac{\pi}{3}$) to round out the shape. \\
 
 
 
