@@ -204,8 +204,8 @@ $a+c$ is the hypotenuse of a right triangle that is similar to the unit circle r
           
 
 
-          \draw [ultra thick, textColor2] (axis cs:0,0) -- (axis cs:1.305,0);
-          \draw [ultra thick, textColor2] (axis cs:0.766,0.643) -- (axis cs:1.305,0);
+          \draw [ultra thick, textColor] (axis cs:0,0) -- (axis cs:1.305,0);
+          \draw [ultra thick, textColor] (axis cs:0.766,0.643) -- (axis cs:1.305,0);
           %\draw [ultra thick] (axis cs:0,1.557) -- (axis cs:1.305,0);
           %\draw [ultra thick] (axis cs:0,1.557) -- (axis cs:0,0);
 
@@ -226,7 +226,7 @@ $a+c$ is the hypotenuse of a right triangle that is similar to the unit circle r
 
           \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
 
-          \addplot [textColor2] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
 
           \addplot [ultra thick,textColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
           \addplot [ultra thick,textColor] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
@@ -250,7 +250,7 @@ $a+c$ is the hypotenuse of a right triangle that is similar to the unit circle r
           %\node[textColor] at (axis cs:1.05,0.5)[anchor=north] {$h$};
 
           %\node[textColor] at (axis cs:0.4,1.3)[anchor=north] {$k$};
-          \node at (axis cs:0.07,1.4) [anchor=north] {$\theta$};
+          %\node at (axis cs:0.07,1.4) [anchor=north] {$\theta$};
 
 
           %\node[textColor, rotate=-50] at (axis cs:1.05,0.5) {$\tan(\theta)$};
