@@ -14,7 +14,7 @@ no formula
 
 
 
-The function $y(x)$ is described by $x^3 + y^3 - 3 x y = 0$, except it isn't a function.
+Let the function $y(x)$ is described by $x^3 + y^3 - 3 x y = 0$, except it isn't a function.
 
 
 
@@ -36,7 +36,7 @@ However, with suitable domain and range restrictions, $y(x)$ can be a function. 
 Once we have refocused our attention to just a piece of the curve and we have a working function, we can talk about its instantaneous rate of change.  The idea is the same as before.  The value of the derivative at a domain number is the slope of the associated tangent line.
 
 
-At this point we are approximating with our graoup via technology, because our algebra is unable to break this cubic apart.
+At this point we are approximating with our graph via technology, because our algebra is unable to break this cubic apart.
 
 
 
@@ -54,13 +54,30 @@ Let's consider $y(1)$.  There are three scenarios for our function $y$.
 \desmos{83u6jqgicu}{400}{300}
 \end{center}
 
-Each scenario has its own restricted range, which then identifies one of the three points on the curve.
+Each scenario has its own restricted range, which then surrounds one of the three points on the curve. What are the coordinates of these points?
 
 
 
-With $x=1$, our equation becomes $y^3 - 3 y + 1 = 0$ and we find ourselves, once again, looking for zeros of a function. From the graph, it appears that these zeros are approximately $-1.9$, $0.35$, and $1.5$.
+With $x=1$, our equation becomes $y^3 - 3 y + 1 = 0$ and we would like to solve this equation. From the graph, it appears that the solutions are approximately $-1.9$, $0.35$, and $1.5$.
 
-How might we obtain better approximations?
+How might we obtain better approximations to these solutions?
+
+
+
+
+
+Let's switch how we are viewing $y^3 - 3 y + 1 = 0$.  Instead of thinking of solving the equation, which is an algebraic viewpoint, let's think in terms of functions.
+
+Let's make a new function called, $f$, with $f(y) = y^3 - 3 y + 1$.  Now we are thinking of function zeros. \\
+
+
+
+
+
+
+
+
+\subsection{a Function Viewpoint}
 
 
 Well, how well does $1.5$ do as a zero of the function $f(y) = y^3 - 3 y + 1$ ?
@@ -69,33 +86,45 @@ Well, how well does $1.5$ do as a zero of the function $f(y) = y^3 - 3 y + 1$ ?
 \[  f(1.5) = 1.5^3 - 3 \cdot 1.5 + 1 = -0.125 \]
 
 
-How should we change $1.5$ to obtain a better approximation to the actual zero? \\
+How should we change $1.5$ to obtain a better approximation to the actual zero of $f$? \\
 
 
-We notice that $f(1.5)$ is is negative - too low.  We need to increase $f$ a little bit.  How do we do this?  Well, it depends on the rate of change of $f$ around $1.5$.  We need a derivative.
+We notice that $f(1.5)$ is negative - too low.  We need to increase $f$ a little bit.  How do we do this?  Well, it depends on the rate of change of $f$ around $1.5$.  If $f'(1.5) > 0$, then $f$ is increasing at $1.5$, so move to the right a little bit. If $f'(1.5) < 0$, then $f$ is decreasing at $1.5$, so move to the left a little bit. 
+
+
+
+We need a derivative.
 
 And, now we are in Calculus.
 
 
-Well, it turns out in Calculus, we can get a FORMULA for the derivative.
 
 
 
-The good news is that $f(y) = y^3 - 3 y + 1$ is a polynomial and there is a nice procedure to get derivatives of polynomials.
+The good news is that $f(y) = y^3 - 3 y + 1$ is a polynomial and Calculus will present a nice procedure to get derivatives of polynomials.
 
 
 \[
-f'(x) = 3 y^2 - 3
+f'(y) = 3 y^2 - 3
 \]
 
 
-We are in a loop. We looking for the value of $y'(1)$, so that we can get a better approximation to $y(1)$. However, to get $y'(1)$, we need $y(1)$.
+
+
+\textbf{Recap: } Remember we are examing $y(x)$, where $x^3 + y^3 - 3xy = 0$.  We have narrowed our attention to $x=1$, which presented three choices. We have selected the corresponding value near $1.5$.  We have $y(1) \approx 1.5$. We would like a better approximation.  To do this, we have changed our viewpoint, from algebraic to functional.  We have invented a new function $f(y) = y^3 - 3 y + 1$ and we would like its zero near $1.5$.
+
+Whoa!  We were looking for function values of $y$ and now $y$ is a variable.  What is going on?
+
+This is the whole point of implicitly defined functions.  They are described via equations, where there is really no obvious choice for independent and dependent variable.  It just depends on how you want to look at it.
+
+
+
 
 While we do not have the algebra tools to solve for these values exactly, Calculus allows us to inch closer.
 
 
 
-\begin{example} Approximating
+\begin{explanation} Approximating
 
 
 Remember, we are examining $y$ near $x = 1$.   More specifically, we are restrict our range to a small interval around $y = 1.5$.  
@@ -139,16 +168,18 @@ Our point should be close to $\left(1, \frac{23}{15} \right) \approx (1, 1.53333
 
 The derivative allows us to inch our way closer and closer and closer to values our algebra cannot reach.
 
-\end{example}
+\end{explanation}
 
 
 
-Whew!  That was quite the tangent to get a good approximation to our point.
+Whew!  That was quite the journey to get a good approximation to our point.
 
 \[ y(1) \approx 1.53333   \]
 
 
-What about $y'(1)$?
+We made a new function, $f$, and used that to help with $y$.  Why not skip $f$ and just jump to $y'(x)$  Then, we can just get $y'(1)$?
+
+The reason is that we cannot get a formula for $y(x)$, so that we can get a formula for $y'(x)$. Or, is there a way around this problem?
 
 
 
@@ -182,7 +213,7 @@ y = 0.394737(x-1) + 1.53333
 \]
 
 
-
+Now we can move a little bit around $x=1$ and watch the values of $y$.
 
 
 
@@ -246,7 +277,7 @@ It appears that $y(1) \approx 1.532$.
 
 
 
-We can zoom in untilk the graph itself looks like a tangent line.
+We can zoom in until the graph itself looks like a tangent line.
 
 
 
@@ -270,9 +301,19 @@ Pretty good!
 
 
 
+We can think analytically with technology, but we are approximating.  Calculus will give us algebraic tools to think analytically in an exact way.
 
 
 
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Implicit Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/implicitFunctions/examples/exampleList}
+
+\end{center}
 
 
 
