@@ -204,8 +204,8 @@ $a+c$ is the hypotenuse of a right triangle that is similar to the unit circle r
           
 
 
-          \draw [ultra thick] (axis cs:0,0) -- (axis cs:1.305,0);
-          %\draw [ultra thick] (axis cs:0.766,0.643) -- (axis cs:1.305,0);
+          \draw [ultra thick, textColor2] (axis cs:0,0) -- (axis cs:1.305,0);
+          \draw [ultra thick, textColor2] (axis cs:0.766,0.643) -- (axis cs:1.305,0);
           %\draw [ultra thick] (axis cs:0,1.557) -- (axis cs:1.305,0);
           %\draw [ultra thick] (axis cs:0,1.557) -- (axis cs:0,0);
 
@@ -226,10 +226,10 @@ $a+c$ is the hypotenuse of a right triangle that is similar to the unit circle r
 
           \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
 
-          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+          \addplot [textColor2] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
 
-          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
-          \addplot [ultra thick,penColor] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          \addplot [ultra thick,textColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          \addplot [ultra thick,textColor] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
           
           %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
@@ -238,10 +238,10 @@ $a+c$ is the hypotenuse of a right triangle that is similar to the unit circle r
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
           \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
-          \node[penColor] at (axis cs:0.85,.27) {$b$};
-          \node[penColor] at (axis cs:.383,0) [anchor=north] {$a$};
+          \node[textColor] at (axis cs:0.85,.27) {$b$};
+          \node[textColor] at (axis cs:.383,0) [anchor=north] {$a$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
-           \node[penColor] at (axis cs:0.37,0.4) {$1$};
+           \node[textColor] at (axis cs:0.37,0.4) {$1$};
 
 
           \node at (axis cs:0.84, 0.5) [anchor=north] {$\theta$};
