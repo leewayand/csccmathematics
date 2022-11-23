@@ -28,7 +28,10 @@ local maximum or minimum at a critical number.
 So how exactly does the derivative tell us whether there is a maximum,
 minimum, or neither at a number? Use the \textit{first derivative test}.
 
-\begin{theorem}[First Derivative Test]\index{first derivative test}\label{T:fdt}
+\begin{theorem}  \textbf{\textcolor{purple!85!blue}{First Derivative Test}} \index{first derivative test}\label{T:fdt}
+
+
+
 Suppose that $f$ is continuous on an open interval, and that $f$  has a critical number
 at $x=a$, for some value $a$ in that interval.
 \begin{itemize}
@@ -41,7 +44,17 @@ at $x=a$, for some value $a$ in that interval.
 \end{itemize}
 \end{theorem}
 
-\begin{example}\label{E:localextrema}
+
+
+
+
+
+
+
+
+\begin{example}
+
+
 Consider the function 
 \[
 f(x) = \frac{x^4}{4}+\frac{x^3}{3}-x^2
@@ -51,16 +64,16 @@ identify the local extrema of $f$.
 
 
 \begin{explanation}
-Start by computing
+In Calculus, we will be able to calculate the derivative:
 \[
-\frac{d}{dx} f(x) = \answer[given]{x^3+x^2-2x}.
+\frac{d}{dx} f(x) = x^3+x^2-2x.
 \]
 Now we need to find on what intervals is $f'$ positive and what intervals it is
 negative. To do this, solve 
 \[
 f'(x) = \answer[given]{x^3+x^2-2x} =0.
 \]
-Factor $f'(x)$
+Let's factor $f'(x)$
 \begin{align*}
 f'(x) &= \answer[given]{x^3+x^2-2x} \\
 &=x(\answer[given]{x^2+x-2})\\
@@ -68,12 +81,32 @@ f'(x) &= \answer[given]{x^3+x^2-2x} \\
 \end{align*}
 So the critical numbers (when $f'(x)=0$) are when $x=-2$, $x=0$, and
 $x=1$. Since the derivative, $f'(x)$, is a polynomial, it does not change the sign on intervals between its zeros, i.e., between the critical numbers. Now we can check the sign of $f'(x)$ at some numbers \textbf{between} the critical numbers to find
-where $f'(x)$ is positive and where negative:
+where $f'(x)$ is positive and where negative.
+
+
+
+
+\textbf{Sampling: } 
+
+
+Since we know that ploynomials do not change sign between their zeros, we can take a single sample of the funciton values between the zeros and know what the sign of the function is between the zeros. \\
+
+
+
+\begin{itemize}
+\item We'll sample $f$ at $-3$ in the interval $(-\infty, -2)$. \\
+\item We'll sample $f$ at $-1$ in the interval $(-2, 0)$. \\
+\item We'll sample $f$ at $\frac{1}{2}$ in the interval $(0, 1)$. \\
+\item We'll sample $f$ at $2$ in the interval $(1, \infty)$. \\
+\end{itemize}
+
+
+
 \begin{align*}
-  f'(-3)&=\answer[given]{-12},\\
-  f'(.5)&=\answer[given]{-0.625},\\
-  f'(-1)&=\answer[given]{2},\\
-  f'(2)&=\answer[given]{8}.
+  f'(-3)&=\answer[given]{-12} &< 0,\\
+  f'(-1)&=\answer[given]{2} &> 0,\\
+  f'(.5)&=\answer[given]{-0.625} &< 0,\\
+  f'(2)&=\answer[given]{8} &> 0.
 \end{align*}
 From this we can make a sign table:
 
@@ -128,7 +161,7 @@ decreasing on $(-\infty,-2)$ and $(0,1)$. Moreover, from the first
 derivative test, the local maximum is at $x=0$ while the local minimums
 are at $x=-2$ and $x=1$.
 
-This can be confirmed by checking the graphs of $f(x) =x^4/4 + x^3/3
+This can be confirmed by checking the graphs of $f(x) = \frac{x^4}{4} + \frac{x^3}{3}
 -x^2$ and $f'(x) = x^3 + x^2 -2x$.
 \begin{image}
 \begin{tikzpicture}
@@ -166,10 +199,23 @@ Hence we have seen that if $f'$ is zero at a number and increasing on an interva
 then $f$ has a local minimum at the number. If $f'$ is zero at a number and
 decreasing on an interval containing that number, then $f$ has a local maximum at the
 number. Thus, we see that we can gain information about $f$ by
-studying how $f'$ changes. This leads us to our next section.
+studying how $f'$ changes. This leads to questions about the derivative of the derivative, $f''(x)$, which we'll leave for Calculus.
 
 
 
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Optimization]{https://ximera.osu.edu/csccmathematics/precalculus2/optimization/logFunctions/examples/exampleList}
+
+\end{center}
 
 
 

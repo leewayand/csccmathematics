@@ -30,9 +30,9 @@ $vertical$-coordinate is larger (or smaller) than all other $vertical$-coordinat
 \begin{definition}\hfil\index{maximum/minimum!local}
 \begin{enumerate}
 \item A function $f(x)$ has a \textbf{local maximum} at $x=a$, if $f(a)\ge
-  f(x)$ for every $x$ in some open interval I containing $a$.
+  f(x)$ for every domain number, $x$, in some open interval I containing $a$.
 \item A function $f(x)$ has a \textbf{local minimum} at $x=a$, if $f(a)\le
-  f(x)$ for every $x$  in some open interval I containing $a$.
+  f(x)$ for every domain number, $x$,  in some open interval I containing $a$.
 \end{enumerate}
 A \textbf{local extremum}\index{extremum!local} is either a local
 maximum or a local minimum.
@@ -90,7 +90,7 @@ figure) that contains the number
 \[
 a=\answer[given]{1},
 \]
-and for all numbers $x$ in $I$ the following statement is true:
+and for all domain numbers $x$ in $I$ the following statement is true:
  \[
 f\left(\answer[given]{1}\right)\le f\left(\answer[given]{x}\right).
 \]
@@ -133,11 +133,11 @@ Consider the graph of the function $f$.
             grid=major,width=4in,
             grid style={dashed, gridColor},
           ]
-            \addplot [very thick, penColor, smooth, domain=(-6:-4)] {x+9};
+            \addplot [very thick, penColor, smooth, domain=(-6:-4),<-] {x+9};
             \addplot [very thick, penColor, smooth, domain=(-4:-2)] {1-x};
             \addplot [very thick, penColor, smooth, domain=(-2:3)] {0.5*x^2-1};
             \addplot [very thick, penColor, smooth, domain=(3:4)] {(x-4)^3+4.5};
-            \addplot [very thick, penColor, smooth, domain=(4:6)] {-(x-4)^2+4.5};
+            \addplot [very thick, penColor, smooth, domain=(4:6),->] {-(x-4)^2+4.5};
             \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,3)};  %% open hole
             \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-2,1)};  %% open hole
             \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,6)};  %% closed hole
@@ -147,7 +147,7 @@ Consider the graph of the function $f$.
         \end{axis}
 \end{tikzpicture}
 \end{image}
-The function $f$ has three local extremums: $5$, $6$, $-1$, and $4.5$  These occur at $x=-4$, $x=-2$, $x=0$ and $x=4$.
+The function $f$ has five local extrema: $5$, $6$, $-1$, and $4.5$  These occur at $x=-4$, $x=-2$, $x=0$, and $x=4$.
 
 
 
@@ -364,24 +364,23 @@ This brings us to our next definition.
 
 
 
-\begin{definition}\index{critical number}
-  Assume that a function $f$ is defined on an open interval I that contains a number $a$. Then we say that the  function $f$ has a \textbf{critical number} at $x=a$ if 
+\begin{definition}\index{critical number} \textbf{\textcolor{green!50!black}{Critical NUmber}}
+  Let $f$ be a function defined on an open interval, I, that contains a number $a$. Then we say that the function $f$ has a \textbf{critical number} at $x=a$ if 
   \[
   f'(a) = 0\qquad\text{or}\qquad \text{$f'(a)$ does not exist.}
   \]
- Notice, if a function $f$ has a critical number at $x=a$, then the number $a$ is inside some open interval $I$, and $I$ is in the  domain of $f$. 
+ Notice, if a function $f$ has a critical number at $x=a$, then the number $a$ is inside some open interval $I$, and $I$ is in the domain of $f$. 
  
 \end{definition}
 
 \begin{warning} 
 When looking for local maximum and minimum numbers, be careful not to
-make two sorts of mistakes: 
+make two common mistakes: 
 \begin{itemize}
 \item You may forget that a maximum or minimum can occur where the
-  derivative does not exist, and so forget to check whether the
-  derivative exists everywhere. 
+  derivative does not exist, and only check where the derivative is $0$. 
 \item You might assume that any place that the derivative is zero is a
-  local maximum or minimum number, but this is not true, consider the
+  local maximum or minimum number, but this is not true. Consider the
   plots of $f(x) = x^3$ and $f'(x) = 3x^2$.
 \begin{image}
 \begin{tikzpicture}
@@ -403,7 +402,7 @@ make two sorts of mistakes:
 %%   there is neither a maximum nor minimum at $(0,f(0))$.}
 %% \label{figure:x^3}
 \end{image}
-While $f'(0)=0$, there is neither a maximum nor minimum at $x=0$.
+While $f'(0)=0$, there is neither a maximum nor minimum of $f$ at $x=0$.
 \end{itemize}
 \end{warning}
 
@@ -439,7 +438,7 @@ $f'(x)$ \textbf{does not change the sign} on the intervals
 $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$,
 $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$, and
 $\left(\frac{\sqrt{3}}{3},\infty\right)$, because these intervals do not contain
-any zeros of $f'(x)$.
+any zeros of $f'(x)$. \\
  
 \begin{question}
 Select the correct statement about the sign of $f'(x)$ on the
@@ -452,6 +451,14 @@ $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$.
   \choice{$f'(x)<0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$}
 \end{multipleChoice}
   \end{question}
+
+
+
+
+
+
+
+
   If we know the sign of the derivative on an interval, we also know whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=-\frac{\sqrt{3}}{3}$. \\
   \begin{question}
 
@@ -473,6 +480,15 @@ Select the correct  statement about the sign of $f'(x)$ on the intervals  $\left
          \choice{$f'(x)<0$ on  $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)<0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
   \end{multipleChoice}
   \end{question}
+
+
+
+
+
+
+
+
+
 Again, the sign of the derivative on an interval determines whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=\frac{\sqrt{3}}{3}$. \\
   \begin{question}
 
@@ -485,6 +501,11 @@ At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
         \choice{no local extremum, because $f$ is decreasing on$\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
       \end{multipleChoice}
   \end{question}
+
+
+
+
+
  Do your answers agree with the graphs of $f$ and $f'$ given in the picture below?
 \begin{image}
 \begin{tikzpicture}
@@ -517,6 +538,20 @@ At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
 \end{image}
 \end{explanation}
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -625,6 +660,16 @@ Hence, differentiable means there is a tangent line and that tangent line has a 
 
 
 
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Optimization]{https://ximera.osu.edu/csccmathematics/precalculus2/optimization/logFunctions/examples/exampleList}
+
+\end{center}
 
 
 
