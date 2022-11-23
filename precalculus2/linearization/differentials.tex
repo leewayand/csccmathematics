@@ -115,10 +115,26 @@ Based on  the figure and the expression for $L(x)$, select all the correct expre
       \end{selectAll}
   \end{question}
   
- So, we can write $df=f'(a)dx$ and call it a \textbf{differential} of $f$ at $a$. Notice that we can define a differential at any number $x$ of the domain of $f$, provided that $f'(x)$ exists.
+ So, we can write $df=f'(a)dx$ and call it a \textbf{differential} of $f$ at $a$. Notice that we can define a differential at any number $x$ of the domain of $f$, provided that $f'(x)$ exists. \\
+
+
 We will  do that in our next definition.
-\begin{definition}
-Let $f$ be a differentiable function, let $x$ be a number in the domain of $f$, and let  $dx$ be some quantity, called a \textbf{differential of $x$}.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{differentials}}
+
+
+Let $f$ be a differentiable function, let $x$ be a number in the domain of $f$, and let $dx$ be some quantity, called a \textbf{differential of $x$}.
 We define  $df$, a differential of $f$,  at a number $x$ by 
 \[
 df=f'(x)\cdot dx
@@ -159,7 +175,7 @@ df=f'(x)\cdot dx
 %\end{marginfigure}
 \end{image}
 
-Note, it is now the case (by definition!) that 
+\textbf{Note: } It is now the case (by definition!) that 
 \[
  f'(x)=\frac{df}{dx}.
 \]
@@ -181,31 +197,13 @@ We should not be surprised, since the slope of the tangent line in the figure is
 
 
 Essentially, differentials allow us to solve the problems presented in
-the previous examples from a slightly different point of view. Recall,
-when $h$ is near but not equal zero,
-\[
-f'(x) \approx \frac{f(x+h)-f(x)}{h}.
-\]
-Hence, 
-\[
-f'(x)h \approx f(x+h)-f(x).
-\]
-We can replace a quantity $h$ with a quantity $dx$ to write
-\begin{align*}
-f'(x)\cdot dx &\approx f(x+dx)-f(x)\\
-df &\approx f(x+dx)-f(x).
-\end{align*}
-Adding $f(x)$ to both sides we see
-\[
-f(x) + df\approx f(x+dx)
-\]
-or, equivalently
-\[
-f(x+dx)\approx f(x) + df .
-\]
-There
-are contexts where the language of differentials is common. Here is
-the basic strategy:
+the previous examples from a slightly different point of view. 
+
+
+
+
+
+Here is the basic strategy:
 \begin{image}
   \begin{tikzpicture}
     \node at (0,0) {

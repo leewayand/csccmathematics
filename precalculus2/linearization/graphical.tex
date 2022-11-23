@@ -144,9 +144,9 @@ One thought is that $\sqrt[3]{50}$ is a zero of the function $f(x) = x^3 - 50$. 
           %\addplot [textColor,dashed] plot coordinates {(0,4) (64,4)};
           %\addplot [textColor,dashed] plot coordinates {(50,0) (50,3.68)};
 
-          \node at (axis cs:2,-30) [penColor] {$f$};
-          \node at (axis cs:2.8,-10) [penColor2] {$L_{3}$};
-          \node at (axis cs:4,20) [penColor2] {$L_{4}$};
+          \node at (axis cs:2.25,-30) [penColor] {$f$};
+          \node at (axis cs:4.5,7) [penColor2] {$L_{3}$};
+          \node at (axis cs:4.25,15) [penColor2] {$L_{4}$};
 
           \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(4,14)};  %% closed hole    
           \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(3,-23)};  %% closed hole    
@@ -158,10 +158,50 @@ One thought is that $\sqrt[3]{50}$ is a zero of the function $f(x) = x^3 - 50$. 
 \end{image}
 
 
+with a little Calculus, we would geta formula for the derivative, $f'(x) = 3x^2$. \\
+
+From this we can getthe slopes of our tangent lines: $f'(3)=27$ and $f'(4) = 48$. \\
+
+
+And, our linear functions:
+
+
+\begin{itemize}
+\item $L_{3}(x) = 27(x-3)-23$ \\
+\item $L_{4}(x) = 48(x-4)+14$ \\
+\end{itemize}
+
+
+Their zeros are much easier to obtain.
+
+\begin{align*}
+0  &= 27(x-3)-23 \\
+23 &= 27x - 81 \\
+\frac{104}{27}   &= x
+\end{align*}
 
 
 
 
+\begin{align*}
+0  &= 48(x-4)+14 \\
+-14 &= 48x - 192 \\
+\frac{178}{48}   &= x
+\end{align*}
+
+
+These should be approximately $\sqrt[3]{50}$
+
+
+
+\begin{itemize}
+\item $\sqrt[3]{50} \approx 3.684031499$
+\item $\frac{104}{27} \approx 3.85185185$
+\item $\frac{178}{48} \approx 3.70833333$
+\end{itemize}
+
+
+The curvature of the curve might have told us which one would be closer.
 
 \end{example}
 
@@ -176,7 +216,7 @@ One thought is that $\sqrt[3]{50}$ is a zero of the function $f(x) = x^3 - 50$. 
 
 
 
-
+Or, with a little Calculus, we could have directly approximated $\sqrt[3]{50}$. \\
 
 
 
@@ -196,7 +236,7 @@ f(x) =\sqrt[3]{x}.
 Approximate $\sqrt[3]{50}$, using $L$,  a linear approximation to the function $f$ at $a=64$.
 
 \begin{explanation}
-To start, write
+To start, Calculus will give us procedures for obtaining derivatives:
 \[
 \frac{d}{dx} f(x) = \frac{d}{dx} x^{1/3} = \frac{1}{3x^{\answer[given]{2/3}}}.
 \]
@@ -304,11 +344,11 @@ accuracy.
 Use a linear approximation of $f(x) =\sin(x)$ at $a=0$ to approximate
 $\sin(0.3)$.
 \begin{explanation}
-To start, write
+To start, we know the derivative of $\sin(x)$
 \[
 \frac{d}{dx} f(x) = \answer[given]{\cos(x)},
 \]
-so our linear approximation is
+so our linear approximation at $a=0$is
 \begin{align*}
 L(x) &= 0+\answer[given]{\cos(0)}\cdot(x-0)\\
 &= x.
