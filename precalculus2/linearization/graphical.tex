@@ -127,7 +127,7 @@ One thought is that $\sqrt[3]{50}$ is a zero of the function $f(x) = x^3 - 50$. 
 
 \begin{tikzpicture}
   \begin{axis}[
-            xmin=0,xmax=6,ymin=-50,ymax=220,
+            xmin=0,xmax=5,ymin=-55,ymax=100,
             axis lines=center,
             ytick={-50, 0, 20, 40, 50, 64, 80, 90, 100},
             yticklabels={-50, 0, 20, 40, 50, 64, 80, 90, 100},
@@ -135,20 +135,21 @@ One thought is that $\sqrt[3]{50}$ is a zero of the function $f(x) = x^3 - 50$. 
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
           ]        
-          \addplot [very thick, penColor, samples=150,smooth,domain=(0:6)] {x^3 - 50};
+          \addplot [very thick, penColor, samples=150,smooth,domain=(0:5)] {x^3 - 50};
 
-          \addplot [very thick, penColor2, domain=(0:5)] {27*(x-3)+77};
-          \addplot [very thick, penColor2, domain=(0:5)] {48*(x-4)+114};
+          \addplot [very thick, penColor2, domain=(0:5)] {27*(x-3)-23};
+          \addplot [very thick, penColor2, domain=(0:5)] {48*(x-4)+14};
 
           %\addplot [textColor,dashed] plot coordinates {(64,0) (64,4)};
           %\addplot [textColor,dashed] plot coordinates {(0,4) (64,4)};
           %\addplot [textColor,dashed] plot coordinates {(50,0) (50,3.68)};
 
-          \node at (axis cs:2,58.3) [penColor] {$f$};
-          \node at (axis cs:2,40.3) [penColor2] {$L$};
+          \node at (axis cs:2,-30) [penColor] {$f$};
+          \node at (axis cs:2,40.3) [penColor2] {$L_{3}$};
+          \node at (axis cs:2,45.3) [penColor2] {$L_{4}$};
 
-          \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(4,114)};  %% closed hole    
-          \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(3,77)};  %% closed hole    
+          \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(4,14)};  %% closed hole    
+          \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(3,-23)};  %% closed hole    
           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3.68,0)};  %% closed hole  
                   
         \end{axis}
