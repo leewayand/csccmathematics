@@ -83,7 +83,7 @@ they are (usually small) changes in $x$. However, $\Delta y$ and $dy$ are very d
 
 
 \begin{image}
-%\begin{marginfigure}[0in]
+
 \begin{tikzpicture}
   \begin{axis}[
             xmin=1, xmax=2, range=0:6,ymax=6,ymin=0,
@@ -110,16 +110,16 @@ they are (usually small) changes in $x$. However, $\Delta y$ and $dy$ are very d
           \node at (axis cs:1.15,1.85) [below] {$f$};
           \node at (axis cs:1.05,0.55) [right] {$L$};
           \node at (axis cs:1.24,2.0) [right] {$(x,f(x))$};
-          \node at (axis cs:1.26,3.8) [right] {$(x+\Delta x,f(x+\Delta x))$};
+          \node at (axis cs:1.26,4.0) [right] {$(x+\Delta x,f(x+\Delta x))$};
           \node at (axis cs:1.26,3.6) [right] {$(x+dx,f(x+dx))$};
+
+          \node at (axis cs:1.4,0.25) [below] {$x$};
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(0:0.25)] ({1.4},{x});
+
           
         \end{axis}
 \end{tikzpicture}
-%\caption{While $dy$ and $\d x$ are both variables, $dy$ depends on $\d x$,
-  %and approximates how much a function grows after a change of size
-  %$\d x$ from a given point.}
-%\label{figure:differentials}
-%\end{marginfigure}
+
 \end{image}
 
 
