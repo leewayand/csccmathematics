@@ -57,11 +57,11 @@ they are (usually small) changes in $x$. However, $\Delta y$ and $dy$ are very d
 
 \begin{itemize}
 \item $\Delta y=f(x+\Delta x)-f(x)$; it  is the change in $y=f(x)$ associated to $\Delta x$.
-\item $dy=L(x+dx)-L(x)$, it is the change in $y=L(x)$ associated to $\Delta x=dx$.
+\item $dy=L(x+dx)-L(x)$, it is the change in $y=L(x)$ associated to $dx$, which equals $\Delta x$: $\Delta x=dx$.
   \[
   dy =f'(x)dx
   \]
-  Note: $ L(x+dx)= f(x)+f'(x)dx$.
+  Note: $ L(x+dx)= f(x)+df$ or $ L(x+dx)= f(x)+f'(x)dx$.
    
   So, the change
   \begin{align*}
@@ -101,15 +101,16 @@ they are (usually small) changes in $x$. However, $\Delta y$ and $dy$ are very d
           \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(1.7,10/6 +.3/.36)};  %% closed hole  
           \addplot[color=penColor3,fill=penColor3,only marks,mark=*] coordinates{(1.4,10/6)};  %% closed hole   
 
-          \addplot [draw=black,dashed,->,>=stealth'] plot coordinates {(1.8,10/6) (1.8,3.6)};
+          \addplot [draw=black,dashed,->,>=stealth'] plot coordinates {(1.8,10/6) (1.8,3.4)};
 
 
           \node at (axis cs:1.55,1.67) [below] {$dx = \Delta x$};
-          \node at (axis cs:1.8,3) [right] {$\Delta y$};
-          \node at (axis cs:1.7,2.08) [right] {$df$};
+          \node at (axis cs:1.8,3.1) [right] {$\Delta y$};
+          \node at (axis cs:1.7,2.08) [right] {$df=dy$};
           \node at (axis cs:1.15,1.85) [below] {$f$};
           \node at (axis cs:1.05,0.55) [right] {$L$};
           \node at (axis cs:1.24,2.0) [right] {$(x,f(x))$};
+          \node at (axis cs:1.26,3.8) [right] {$(x+\Delta x,f(x+\Delta x))$};
           \node at (axis cs:1.26,3.6) [right] {$(x+dx,f(x+dx))$};
           
         \end{axis}
