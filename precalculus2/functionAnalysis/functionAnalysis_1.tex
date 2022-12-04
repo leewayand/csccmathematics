@@ -31,11 +31,28 @@ First, $G$ has been described with a formula.  Therefore, we are seeking a natur
 \end{align*}
 
 
-We need to exclude all odd $\pi$.  The natural domain is $\{  r \in \mathbb{R} \, | \, r \ne (2k+1)\pi \text{ where } k \in \mathbb{Z}   \}$
+We need to exclude all odd multiples of $\pi$.  The natural domain is $\{  r \in \mathbb{R} \, | \, r \ne (2k+1)\pi \text{ where } k \in \mathbb{Z}   \}$
 
 
 
-\textbf{Note:} $G(t+2\pi) = G(t)$.  $G$ is a periodic function with a period of $2\pi$.  Therefore, we only need to analyze one period.  Let's investigate $[0, 2\pi) - \{ \pi \}$.
+\begin{observation}  
+
+Since both $\sin(t)$ and $\cos(t)$, we have that $G$ is also a periodic function with a period of $2\pi$. \\
+
+We know that
+\begin{itemize}
+  \item $\sin(t + 2\pi) = \sin(t)$
+  \item $\cos(t + 2\pi) = \cos(t)$
+\end{itemize}
+
+\[    G(t + 2\pi) = \frac{\sin(t+2\pi)}{1 + \cos(t+2\pi)} == \frac{\sin(t)}{1 + \cos(t)} = G(t)   \]
+
+
+
+\end{observation}
+
+
+Therefore, we only need to analyze one period.  Let's investigate $[0, 2\pi) - \{ \pi \}$.
 
 \begin{itemize}
 \item $G(0) = 0$   Closed point on the graph
@@ -135,10 +152,10 @@ On the right side of $\pi$, $\sin(t) < 0$, which makes $G(t) < 0$.   $\lim\limit
 
 
 
-very odd-$\pi$ is a singularity of $G$.\\
+Every odd-$\pi$ is a singularity of $G$.\\
 
 
-The graph contains the vertical asymptote $t=\pi$ and then vertical asymptotes at all all-$\pi$'s. \\
+The graph contains the vertical asymptote $t=\pi$ and then vertical asymptotes at all odd multiples of $\pi$'s. \\
 
 
 
@@ -254,11 +271,11 @@ On $\left( \frac{\pi}{2}, \pi \right)$, we know that both the numerator and deno
 Calculus will give us a procedure to obtain the derivative of $G$.
 
 
-\[ G'(\theta)  = \frac{1}{1 + \cos(\theta)}    \]
+\[ G'(t)  = \frac{1}{1 + \cos(t)}    \]
 
 
 
-$G'(\theta)$ is positive, telling us that $G$ is increasing.  Calculus will be tremendously helpful in analyzing functions.
+$G'(t)$ is positive, telling us that $G$ is increasing.  Calculus will be tremendously helpful in analyzing functions.
 
 \end{remark}
 
@@ -369,7 +386,7 @@ That gives a better idea of what is going on.  Remember, this is just one period
 
 \subsection{Summary}
 
-$\blacktriangleright$ $G$ is a continusou function and has no discontinuities.  
+$\blacktriangleright$ $G$ is a continuous function and has no discontinuities.  
 
 $\blacktriangleright$ All of the odd-$\pi$'s are asymptotic singularities.  The graph has vertical asymptotes.
 
@@ -383,14 +400,21 @@ $\blacktriangleright$ All of the odd-$\pi$'s are asymptotic singularities.  The 
 
 $\blacktriangleright$ This tells us that $G$ has no global maximums or minimums.  
 
-$\blacktriangleright$ TSince $G$ is continuous, this also tells us that the range is $(-\infty, \infty)$.  
+$\blacktriangleright$ Since $G$ is continuous, this also tells us that the range is $(-\infty, \infty)$.  
 
 
 
 
-$\blacktriangleright$ $G$ is an increasing function. (At this point, we may need to rely a bit on what the graph is showing, because our algebra is not quite ready for trigonometric functions.)
+$\blacktriangleright$ $G$ is an increasing function on any interval in the domain. 
 
-$\blacktriangleright$ Since $G$ is increasing, there are no critical numbers or local maximums or minimums.
+
+$\blacktriangleright$ $G$ is not an increasing function on its domain. Pick any pair in one interval, there is a ``lower'' pair in the next interval.
+
+
+$\blacktriangleright$ $G$ is a strictly increasing function on any interval in the domain. 
+
+
+$\blacktriangleright$ Since $G$ is strictly increasing, there are no local maximums or minimums.
 
 
 
@@ -436,6 +460,11 @@ Or, maybe it looks better like,
 
 
 
+
+The graph is very suggestive.  Can our algebra verify this? \\
+
+
+It can.  However, we'll need some more information about sine and cosine.  So, we'll revisit this later.
 
 
 

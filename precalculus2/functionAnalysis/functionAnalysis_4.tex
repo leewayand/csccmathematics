@@ -143,7 +143,54 @@ As $r$ increases, the sine wave will oscillate between $-1$ and $1$ and this pie
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Maximums and Minimums: }}
+
+
+Since our period is $\left[-\frac{1}{2}, \frac{3}{2}\right]$, let's regraph with integer tick marks.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-5:5, ymax=2, xmax=5, ymin=-2, xmin=-5,
+            xtick={-4,-3,-2,-1,0,1,2,3,4}, 
+            xticklabels={-4,-3,-2,-1,0,1,2,3,4},
+            axis lines =center,  xlabel={$r$}, ylabel=$y$, grid = major,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.9:4.9), <->] {tan(deg(sin(deg(3.1415*x)))};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Maximums: }}
 
 
 
@@ -152,7 +199,7 @@ The maximum of sine is $1$ and it occurs at $\frac{\pi}{2}$.\\
 Tangent is an increasing function, so the maximum of $T(r)$ is also going to occur at $\frac{\pi}{2}$. However, in $T(r)$, the inside of sine is $\pi r$.\\
 
 
-The maximum of the waveform occurs at $r = \frac{1}{2}$.
+The maximum of the sine waveform occurs at $r = \frac{1}{2}$.
 
 
 \[   \tan\left(\sin\left(\pi \cdot \frac{1}{2}\right)\right)  =   \tan\left(\sin\left(\frac{\pi}{2}\right)\right)  = \tan(1)  \approx 1.557  \]
@@ -164,14 +211,51 @@ The minimum of $-\tan(1) \approx -1.557$ occurs at $r = -\frac{1}{2}$.
 That is just for one period. These maximums and minimums are periodic with a period of $2$.
 
 
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Minimums: }}
+
+
+
+The minimum of sine is $-1$ and it occurs at $-\frac{\pi}{2}$.\\
+
+Tangent is an increasing function, so the minimum of $T(r)$ is also going to occur at $-\frac{\pi}{2}$. However, in $T(r)$, the inside of sine is $\pi r$.\\
+
+
+The minimum of the sine waveform occurs at $r = -\frac{1}{2}$.
+
+
+\[   \tan\left(\sin\left(-\pi \cdot \frac{1}{2}\right)\right)  =   \tan\left(\sin\left(-\frac{\pi}{2}\right)\right)  = \tan(-1)  \approx -1.557  \]
+
+
+
+
+That is just for one period. These maximums and minimums are periodic with a period of $2$.
+
+
+
+
+
+
+
 We have also discovered that the critical numbers for $T$ are $\left\{ \frac{1}{2} + 2k \, | \, k \in \mathbb{Z} \right\}$ and $\left\{ -\frac{1}{2} + 2k \, | \, k \in \mathbb{Z} \right\}$
+
+
+
+
+
+
+
 
 
 
 $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Rate-of-Change: }} 
 
 
-$\tan(t)$ is an increasing function.  Therefore, $T(r) = \tan(\sin(\pi r))$ will increase and decreases with $\sin(\pi r)$, which we know everything about.
+$\tan(t)$ increases on any interval in its domain.  Therefore, $T(r) = \tan(\sin(\pi r))$ will increase and decrease with $\sin(\pi r)$, which we know everything about.
 
 
 
@@ -181,6 +265,50 @@ $T(r)$ increases on $\left[ -\frac{1}{2}, \frac{1}{2} \right]$ and decreases on 
 
 
 And, this agrees with our graph.
+
+
+
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!80!black}{Increasing}}
+
+
+
+We have two versions of \textbf{increasing} and we are beginning to notice.
+
+
+
+First, we have a Algebra version of increasing.  The Algebra version occurs over an interval.  
+
+$f(x)$ increases on the interval $[a,b]$, provided whenever $c < d$, then $f(c) < f(d)$. \\
+
+We often attach the work \textbf{average} to the Algebra version.\\
+
+
+
+
+
+
+
+Separate from that is a Calculus version of increasing. The Calculus version occurs at a domain number.
+
+$f(x)$ increases at $x=d$, provided $f'(d) > 0$. \\
+
+We often attach the work \textbf{instantaneous} to the Calculus version.\\
+
+
+
+
+These are different.  A function can be increasing at every domain number and yet not be an increasing function over the whole domain.  We'll want to keep these ideas separate.
+
+
+
+
+
+\end{warning}
+
 
 
 
