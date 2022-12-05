@@ -36,14 +36,14 @@ Solve $3t^2 + 2t + 5 = 0$
 
 Using the quadratic formula, we get two solutions
 
-\[  t = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 3 \cdot 5}}{2 \cdot 3}   =  \frac{-2 \pm \sqrt{-56}}{6}  =  \frac{-2 \pm \sqrt{56}\sqrt{-1}}{6}   =  \frac{-2 \pm \sqrt{56} \, i}{6}  \]
+\[  t = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 3 \cdot 5}}{2 \cdot 3}   =  \frac{-2 \pm \sqrt{-56}}{6}  =  \frac{-2 \pm \sqrt{56}\sqrt{-1}}{6}   =  \frac{-2 \pm \sqrt{56} \, i}{6}  =  \frac{-2 \pm i \,\sqrt{56}}{6}   \]
 
 
 
 We can simplify this, if you would like.
 
 
-\[  t = \frac{-2 \pm \sqrt{4 \cdot 14} \, i}{6}  = \frac{-2 \pm \sqrt{4} \sqrt{14} \, i}{6} = \frac{-2 \pm 2 \sqrt{14} \, i}{6} = \frac{2(-1 \pm \sqrt{14} \, i)}{6}   = \frac{-1 \pm \sqrt{14} \, i}{3}   \]
+\[  t = \frac{-2 \pm \sqrt{4 \cdot 14} \, i}{6}  = \\frac{-2 \pm i \, \sqrt{4 \cdot 14}}{6}  =  frac{-2 \pm i \,\sqrt{4} \sqrt{14}}{6} = \frac{-2 \pm 2 i \, \sqrt{14}}{6} = \frac{2(-1 \pm i \,\sqrt{14} \, i)}{6}   = \frac{-1 \pm i \,\sqrt{14}}{3}   \]
 
 
 
@@ -124,6 +124,32 @@ Let's multiply out the factorization in the last example and see if it works.
 \begin{example}  Analyze   $g(k) = \frac{1}{10} (k+6)(k+2)(k-4)$
 
 
+\textbf{Domain: } This is a polynomial funciton, so its domain is all real numbers. \\
+
+
+
+\textbf{Zeros: } $g$ is given in factored form and the zeros of $g$ are the zeros of these factors: $-$, $-2$, and $4$.\\
+
+
+
+\textbf{Continuity: } This is a polynomial function, so it is continuous on its domain. There are not discontinuities or singularities.\\
+
+
+
+\textbf{End-Behavior: }  This is a polynomial function of odd degree with a positive leading coefficient.
+
+
+\[  \limlimits_{x \to -\infty} g(k) = -\infty  \,   \text{ and }     \,   \limlimits_{x \to \infty} g(k) = \infty    \]
+
+
+
+\textbf{Range: } This also tells us that the range is $(-\infty, \infty)$.
+
+\textbf{Behavior: }
+
+
+Algebra really has no way of finding the critical numbers of $g$ and obtaining exact intervals where $g$ increases and decreases.  Caluclus will provide a method of obtaining the derivative, which will help with this problem. 
+
 
 
 A DESMOS graph suggests that there are two critical numbers.  DESMOS approximates these to be around $-4.239$ and $1.573$.
@@ -131,7 +157,7 @@ A DESMOS graph suggests that there are two critical numbers.  DESMOS approximate
 \textbf{Note: } These are not the middle points between the zeros.
 
 
-These critical numbers are the locations of a local maximum and minimum.  And, a graph is about the best we can do for reasoning on local extrema.
+These critical numbers are the locations of a local maximum and minimum for our polynomial function.  And, a graph is about the best we can do for reasoning on local extrema.
 
 
 
@@ -148,7 +174,7 @@ These critical numbers are the locations of a local maximum and minimum.  And, a
 
 
 
-Calculus will give us a derivative:
+Calculus will show us how to get the derivative:
 
 \[  g'(k) = \frac{3}{10} k^2 + \frac{4}{5} x - 2  \]
 
@@ -197,9 +223,19 @@ And, that agrees with our graph.
 
 
 
+\textbf{Extrema: (Maximums and minimums) }
+
+
 $\blacktriangleright$ $g\left( \frac{-4 - 2 \sqrt{19}}{3} \right)$ is a local maximum of $g$ occuring at $\frac{-4 - 2 \sqrt{19}}{3}$
 
 $\blacktriangleright$ $g\left( \frac{-4 + 2 \sqrt{19}}{3} \right)$ is a local minimum of $g$ occuring at $\frac{-4 + 2 \sqrt{19}}{3}$
+
+
+
+
+
+The end-behavior of $g$ tells us that there is no global maximum or minimum.
+
 
 
 \end{example}
