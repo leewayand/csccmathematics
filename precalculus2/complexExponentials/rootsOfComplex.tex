@@ -13,8 +13,7 @@ roots of complex
 
 
 
-
-$\blacktriangleright$ \textbf{Different Stories}
+\textbf{Balancing Stories}
 
 In the real numbers, we have been following an off-balanced story for roots.
 
@@ -31,7 +30,9 @@ The Complex Numbers have balanced the story for square roots.
 
 
 
-If $r$ is a positive number, then we can at least establish that there is a root of any order. One.
+If $r$ is a positive real number, then we can at least establish that there is \textbf{\textcolor{red!80!black}{a}} root of any order. Like, one.
+
+\begin{idea}
 
 
 Let $r$ be a positive real number.
@@ -48,6 +49,11 @@ And, we can express the whole story of roots in terms of $e$.
 \sqrt[n]{r} = r^{\tfrac{1}{n}}= e^{\tfrac{1}{n} \ln(r)}
 \]
 
+\end{idea}
+
+
+
+
 
 $\blacktriangleright$ Each positive real number has at least one $n^{th}$ root for any natural number $n$.
 
@@ -62,7 +68,7 @@ The expression $e^{\tfrac{1}{n} \ln(r)}$ doesn't care if $n$ is a natural number
 $\blacktriangleright$ Each positive real number has at least one $n^{th}$ root for any positive real number $n$.
 
 
-The expression $e^{\tfrac{1}{n} \ln(r)}$ doesn't care if $n$ is opsitive or negative.
+The expression $e^{\tfrac{1}{n} \ln(r)}$ doesn't care if $n$ is positive or negative.
 
 
 
@@ -71,9 +77,9 @@ $\blacktriangleright$ Each positive real number has at least one $n^{th}$ root f
 
 
 
-We are stuck now.  Our logarithm function doe snot have a domain that includes negative real numbers.
+We are stuck now.  Our logarithm function does not have a domain that includes negative real numbers.
 
-But, negative real numbers are Complex numbers.  Maybe there is an extension of this story into the Complex Numbers.
+But, negative real numbers are Complex numbers.  Maybe we can balance this story inside the Complex Numbers. \\
 
 
 
@@ -93,7 +99,7 @@ But, negative real numbers are Complex numbers.  Maybe there is an extension of 
 
 
 
-We want to do the same reason of roots for Complex Numbers. \\
+We want to do the same reasoning of roots for Complex Numbers. \\
 
 
 Euler's Formula tells us that $e^{i \theta} = \cos(\theta) + i \, \sin(\theta)$, which describes all of the points on the unit circle.
@@ -201,6 +207,124 @@ Another quarter circle gets you back to $1$.
 
 
 
+
+
+
+
+
+\begin{example}  Fifth roots of Unity
+
+There are $5$ fifth roots of unity.
+
+$1$ is the first.
+
+
+
+A fifth of a circle gets you to $e^{\tfrac{2\pi}{5}} = \cos(\tfrac{2\pi}{5}) + i \, \sin(\tfrac{2\pi}{5})$. 
+
+Another fifth of a circle gets you to $e^{\tfrac{4\pi}{5}} = \cos(\tfrac{4\pi}{5}) + i \, \sin(\tfrac{4\pi}{5})$.
+
+Another fifth of a circle gets you to $e^{\tfrac{6\pi}{5}} = \cos(\tfrac{6\pi}{5}) + i \, \sin(\tfrac{6\pi}{5})$.
+
+Another fifth of a circle gets you to $e^{\tfrac{8\pi}{5}} = \cos(\tfrac{8\pi}{5}) + i \, \sin(\tfrac{8\pi}{5})$.
+
+Another fifth of a circle gets you back to $e^{\tfrac{10\pi}{5}} = \cos(\tfrac{10\pi}{5}) + i \, \sin(\tfrac{10\pi}{5}) = 1$.
+
+
+\end{example}
+
+
+
+
+\begin{claim} \textbf{\textcolor{purple!85!blue}{A Peek Ahead....}}
+
+Can we write those fifth roots of unity with traditional square roots rather than trigonometric function values? \\
+
+
+\textbf{\textcolor{purple!85!blue}{We need to peek ahead a few days....}} \\
+
+We'll need a double angle formula. \\
+
+
+Let $a = \cos\left(\frac{\pi}{5}\right)$
+
+
+Let $b = \cos\left(\frac{2\pi}{5}\right)$
+
+
+
+$\frac{\pi}{5}$ is in the first quadrant and $\frac{4\pi}{5}$ is a supplementary angle in the second quadrant.  This tells us that
+
+
+\[  \cos\left(\frac{4\pi}{5}\right) = -\cos\left(\frac{\pi}{5}\right)$ = -a  \]
+
+
+The double angle formula says $\cos(2x) = 2\cos(x) - 1$.  Applying this twice gives us
+
+
+\begin{itemize}
+\item $b = 2a^2 - 1$ 
+\item $-a 2b^2 - 1$
+\end{itemize}
+
+
+Subtracting gives   $a + b = 2 (a^2 - b^2) = 2 (a+b)(a-b)$
+
+
+$\frac{\pi}{5}$ and $\frac{2\pi}{5}$ are both in the first quadrant, therefore both $a$ and $b$ are both positive.
+
+
+Therefore, $a+b \ne 0$.
+
+Therefore, $a - b = \frac{1}{2}$ or $b = a - \frac{1}{2}$
+
+
+All of that tells us that 
+
+\[       a - \frac{1}{2} = 2a^2 - 1      \]
+
+
+or,
+
+
+\[             4a^2 - 2 a - 1 =0\]
+
+
+
+
+We can now use the quadratic formula.  We need the postive solution.
+
+
+
+\[  a =   \cos\left(\frac{\pi}{5}\right) =  \frac{\sqrt{5} + 1}{4}   \]
+
+
+\[  b =   \cos\left(\frac{2\pi}{5}\right) = a - \frac{1}{2} =  \frac{\sqrt{5} - 1}{4}   \]
+
+
+
+We can then use $(\cos(\theta))^2 +  (\sin(\theta))^2 = 1$ to get 
+
+
+\[   \sin\left(\frac{2\pi}{5}\right)  =  \frac{\sqrt{10 - 2 \sqrt{5}}}{4}  \]
+
+
+
+
+Which finally gives us
+
+
+
+\[   e^{\tfrac{2\pi}{5}} = \cos(\tfrac{2\pi}{5}) + i \, \sin(\tfrac{2\pi}{5}) =  \frac{\sqrt{5} + 1}{4} +   \frac{i \sqrt{10 - 2 \sqrt{5}}}{4}     \]
+
+\end{claim}
+
+
+
+
+
+
+
 Our ideas of numbers have grown as we have used them. \\
 
 When we were counting, we used the whole numbers.
@@ -213,9 +337,9 @@ Now that we are thinking of solutions to equations, we are discovering that the 
 
 The difference here is that filling in the gaps before maintained the 1-dimensional number line.  Filling in the gaps to equations has revealed that our numbers are really 2-dimensional.  It is a plane of numbers rather than a line of numbers.
 
-This is added A LOT of geometry to our number descriptions.
+This has added A LOT of geometry to our number descriptions.
 
-We are now blurrying the distinction between geometry and arithmetic.
+We are now blurring the distinction between geometry and arithmetic.
 
 \begin{itemize}
 \item We think of complex numbers as dots in the Cartesian plane:  $(a, b)$
@@ -223,11 +347,11 @@ We are now blurrying the distinction between geometry and arithmetic.
 \item We think of complex numbers as sums of rectangular directions:  $a + b \, i$
 \item We think of complex numbers as a circular (polar) directions:  $(r, \theta)$
 \item We think of complex numbers as a extensions of numbers on the unit circle:  $r(\cos(\theta)+i \, \sin(\theta))$
-\item We think of complex numbers as a complex exponentials:  $r\cdot e^{i\, \theta} = e^{ln(r)+i\, \theta}$
+\item We think of complex numbers as a complex exponentials:  $r\cdot e^{i\, \theta} = e^{\ln(r)+i\, \theta}$
 \end{itemize}
 
 
-It turns out that the Complex Numbers have all of the solutions to all of the equations they can make.  The Complex Numbers are ``complete''.  That means we can work confidently now knowing that we are not longer missing any numbers that we need.
+It turns out that the Complex Numbers have all of the solutions to all of the equations they can make.  The Complex Numbers are ``complete''.  That means we can work confidently now knowing that we are no longer missing any numbers that we need.
 
 
 
