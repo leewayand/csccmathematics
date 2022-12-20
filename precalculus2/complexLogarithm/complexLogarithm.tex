@@ -29,7 +29,7 @@ Every complex number on the unit circle can be written in the form
 \[   e^{i \theta} = \cos(\theta) + i \sin(\theta)         \]
 
 
-And, we already know how to write any real number in exponential form: $r = e^{ln(r)}$.  
+And, we already know how to write any real number in exponential form: $r = e^{\ln(r)}$.  
 
 
 
@@ -42,7 +42,7 @@ $\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Complex Numbers}}
 
 Combining these together, we get that every nonzero complex number can be written in the form  
 \[
-r \cdot (\cos(\theta) + i \sin(\theta))  = e^{ln(r)} \cdot e^{i \, \theta} = e^{\ln(r) + i \, \theta}
+r \cdot (\cos(\theta) + i \sin(\theta))  = e^{\ln(r)} \cdot e^{i \, \theta} = e^{\ln(r) + i \, \theta}
 \]
 
 
@@ -90,7 +90,16 @@ There are many complex logarithms for $-3 - 3 \, i$. One for each turn around th
 There are an infinite number of complex logarithms for each complex number.
 
 
-Following our range restrictions for $\arcsin$ and $\arccos$, we pick a \textbf{principal value} for the complex logarithm. Since we would like to keep the positive real axis as clean as possible, we chooose the interval $(-\pi, \pi]$ for the principal value of the complex logarithm.
+
+\textbf{\textcolor{red!80!black}{Whoops: }}   Just like when we were creating the inverse trigonometric functions, this Complex logarithm is not following our one and only rule for functions.  
+
+We will fix this in the same waythat we fixed $\arcsin$ and $\arccos$.  We'll pick a range. \\
+
+
+
+
+
+Following the idea behind our range restrictions for $\arcsin$ and $\arccos$, we pick a \textbf{principal value} for the complex logarithm. Since we would like to keep the positive real axis as clean as possible, we chooose the interval $(-\pi, \pi]$ for the principal value of the complex logarithm.
 
 This interval is known as the \textbf{principal branch} of the complex logarithm.  The negative real axis is called a \textbf{branch cut} for the complex logarithm. It is a cut, because the angle changes abruptly from $\pi$ to $-\pi$.
 
@@ -138,7 +147,7 @@ Since $Arg(r) = 0$ for any positive real number, our complex logarithm will agre
 
 \item $\ln(-5 + 5 \, i) = \ln(5 \sqrt{2}) + \frac{3\pi}{4}\, i$
 
-\item $ln(-1) = \pi \, i$
+\item $\ln(-1) = \pi \, i$
 
 
 
@@ -162,7 +171,7 @@ We are bringing over all of our exponent arithmetic.
 \begin{example}  $i^i$
 
 
-\[    i^i =  e^{ln(i^i)} = e^{i \cdot ln(i)} = e^{ i \cdot \tfrac{\pi}{2} \, i}   = e^{-\tfrac{\pi}{2}} \approx  0.2078795764\]
+\[    i^i =  e^{\ln(i^i)} = e^{i \cdot \ln(i)} = e^{ i \cdot \tfrac{\pi}{2} \, i}   = e^{-\tfrac{\pi}{2}} \approx  0.2078795764\]
 
 
 

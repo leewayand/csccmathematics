@@ -19,14 +19,14 @@ describe everything
 
 Completely analyze $A(\theta) = \sin(\theta) - \sin(2\theta)$
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Domain: }} The implied domain of the sine function is all real numbers.
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Domain: }} $A$ is the difference of two sine functions.  Each of those we know to be continuous. Therefore, the implied domain of the sine function is all real numbers.
 
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Continuity: }}  The sine function is continuous on the whole real line.
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Continuity: }}  The sine function is continuous on the whole real line and $A$ is the difference of two sine functions.
 
 $\blacktriangleright$  Therefore, there are no discontinuities or singularities.
 
 
-$\sin(\theta)$ is periodic with a period of $2\pi$. $\sin(2\theta)$ is periodic with a period of $\pi$. 
+$\sin(\theta)$ is periodic with a period of $2\pi$. $\sin(2\theta)$ is periodic with a period of $\pi$. Therefore, both functions repeat every $2\pi$.
 
 $\blacktriangleright$ Thus, $A$ is periodic with a period of $2\pi$.  Therefore, we can just examine one wave.  Let's examine $[0,2\pi)$.
 
@@ -100,15 +100,15 @@ We can follow the sign of $A$ through its factors.
 
 \begin{explanation}
 
-$\blacktriangleright$  Across $0$, $\sin(\theta)$ changes sign. It goes from negative to positive. On the other hand $1 - 2\cos(2\theta)$ stays negative on either side of $0$.  Therefore, $A(\theta)$ changes sign.  It goes from positive to negative and the graph crosses the axis at $(0, 0)$.
+$\blacktriangleright$  Across $0$, $\sin(\theta)$ changes sign. It goes from negative to positive. On the other hand $1 - 2\cos(\theta)$ stays negative on either side of $0$.  Therefore, $A(\theta)$ changes sign.  It goes from positive to negative and the graph crosses the axis at $(0, 0)$.
 
-$\blacktriangleright$  Across $\frac{\pi}{3}$, $\sin(\theta)$ remains positive. However, $1 - 2\cos(2\theta)$ changes sign.  It goes from negative to positive. Therefore, $A(\theta)$ changes sign. It changes from negative to positive and the graph crosses the axis at $\left( \frac{\pi}{3}, 0 \right)$.
-
-
-$\blacktriangleright$  Across $\pi$, $\sin(\theta)$ changes sign, from positive to negative.  $1 - 2\cos(2\theta)$ stays positive on either side of $\pi$.  Therefore, $A(\theta)$ changes sign from positive to negative and the graph crosses the axis at $(\pi, 0)$.
+$\blacktriangleright$  Across $\frac{\pi}{3}$, $\sin(\theta)$ remains positive. However, $1 - 2\cos(\theta)$ changes sign.  It goes from negative to positive. Therefore, $A(\theta)$ changes sign. It changes from negative to positive and the graph crosses the axis at $\left( \frac{\pi}{3}, 0 \right)$.
 
 
-$\blacktriangleright$  Across $\frac{5\pi}{3}$, $\sin(\theta)$ remains negative. However, $1 - 2\cos(2\theta)$ changes sign.  It goes from positive to negative. Therefore, $A(\theta)$ changes sign. It changes from negative to positive and the graph crosses the axis at $\left( \frac{5\pi}{3}, 0 \right)$.
+$\blacktriangleright$  Across $\pi$, $\sin(\theta)$ changes sign, from positive to negative.  $1 - 2\cos(\theta)$ stays positive on either side of $\pi$.  Therefore, $A(\theta)$ changes sign from positive to negative and the graph crosses the axis at $(\pi, 0)$.
+
+
+$\blacktriangleright$  Across $\frac{5\pi}{3}$, $\sin(\theta)$ remains negative. However, $1 - 2\cos(\theta)$ changes sign.  It goes from positive to negative. Therefore, $A(\theta)$ changes sign. It changes from negative to positive and the graph crosses the axis at $\left( \frac{5\pi}{3}, 0 \right)$.
 
 
 
@@ -209,13 +209,13 @@ We now know that $A(t)$ is negative when $t$ is slightly positive and that $A$ c
 
 $\blacktriangleright$  The range is difficult to determine from here.  It depends on how high and low the maximum and minimum are.  
 
-We do know that $\sin(\theta)$ can't get greater than $1$ or less than $-1$.  That tells us that $1 -2\cos(2\theta)$ can't get greater than $3$.   So, the range must be inside $[-3, 3]$.
+We do know that $\sin(\theta)$ and $\cos(\theta)$ can't get greater than $1$ or less than $-1$.  That tells us that $1 -2\cos(\theta)$ can't get greater than $3$.   So, the range must be inside $[-3, 3]$.
 
 
 
 
 
-This is confirmed with a better graph.
+A better graph seems to agree with this reasoning.
 
 
 
@@ -258,6 +258,7 @@ This is confirmed with a better graph.
 
 
 
+The graph suggests a lot to us (which is why we like graphs).  The graph gives us reason to believe that the range is inside the interval $[-2, 2]$.  However, we'll need Calculus to get exact values for the maximum and minimum values.
 
 
 
@@ -284,8 +285,7 @@ This is confirmed with a better graph.
 
 
 
-
-The graph suggests a lot to us (which is why we like graphs).  The graphs suggests that there are critical numbers in between the zeros.  
+The graph suggests a lot to us (which is why we like graphs).  The graph also suggests that there are critical numbers in between the zeros.  
 
 
 
@@ -712,6 +712,26 @@ at $c_4 = 2\pi - \arccos\left(\frac{1 + \sqrt{33}}{8}\right) \approx 5.715$.   \
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ Rate-of-Change
+
+\begin{itemize}
+\item $A$ is decreasing on approximately $[0, 0.568]$.
+\item $A$ is increasing on approximately $[0.568, 2.206]$.
+\item $A$ is decreasing on approximately $[2.206, 4.078]$.
+\item $A$ is increasing on approximately $[4.078, 5.715]$.
+\item $A$ is decreasing on approximately $[5.715, 2\pi]$.
+\end{itemize}
 
 
 
