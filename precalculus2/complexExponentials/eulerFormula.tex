@@ -14,9 +14,55 @@ complex exponentials
 
 
 
-One of the biggest surprises in mathematics is the fact that trigonometric functions and exponential functions are the same building blocks, provide we use Complex numbers. \\
 
-To see this, we need another piece of information. \\
+
+\subsection{An Adventure}
+
+
+
+
+One of the biggest surprises in mathematics is the fact that trigonometric functions and exponential functions are the same building blocks, provided we use Complex numbers. \\
+
+
+Euler's Formula is the bridge:
+
+
+
+\[    e^{i \, t} = \cos(t) + i \sin(t)    \]
+
+
+
+This is very weird.  It claims that exponential functions are trigonometric functions are two perspectives on the same thing.  Our previous mathematcis courses have never even hinted at such a connection.  That is because the bridge  travels through the Complex Numbers.
+
+
+
+With this bridge, we now have direct connections between
+
+
+\begin{itemize}
+\item percentage growth
+\item exponential functions
+\item trigonometric functions
+\item triangles
+\item circles
+\end{itemize}
+
+This would also connect inverse trigonometric functions and logarithms and soon hyperbolas and hyperbolic trigonometric functions.  This is crazy!
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Everything is Connected!!!}}
+\end{center}
+
+
+
+
+
+
+It would be nice to show that Euler's Formula is true.  However, we will need Calculus to dot our i's and cross our t's and leave no doubt.   But, we can understand the basic idea. 
+
+
+To see that Euler's Formula is true, we need several pieces of information. \\
 
 
 
@@ -103,6 +149,10 @@ The slope of the line through these two point is
 \desmos{3ohrxje6e7}{400}{300}
 \end{center}
 
+
+
+Slide the value of $h$ closer to $0$.  Watch what happens to the secant line.
+
 \end{example}
 
 
@@ -119,11 +169,14 @@ The smaller the value of $h$, the closer the slopes are. \\
 \]
 
 
-You could move the tangent point along the curve by varying $a$.  If we collect these slopes for a lot of $a$'s, then we could plot each of the slope values.
+Move the tangent point along the curve by varying $a$.  Everytime you reposition $a$, you can slide the value of $h$ closer to $0$ and watch what happens with the sectant line.  It gets closer to the tangent line.  The slope of the secant line gets closer to the slope of the tangent line.
+
+If we reposition $a$ a lot and we collect these slopes for a lot of $a$'s, then we could plot each of the slope values forming another graph.
+\[   (a, f'(a)) \]
 
 
 
-Let's do this for $a = 3$.
+Let's do this for $r = 3$.
 
 \begin{example}
 
@@ -132,6 +185,9 @@ Let's do this for $a = 3$.
 Let's compare the plot of tangent slopes to the graph of $3 e^{3 x}$
 
 
+The dashed curve is for $3 e^{3 x}$.
+
+The plotted dot is $(a, f'(a))$.
 
 \begin{example}  $f(x) = e^{3 x}$
 
@@ -222,7 +278,7 @@ $\blacktriangleright$  When you study differential equations, this idea will lea
 \textbf{\textcolor{blue!55!black}{Example: }} If $y'(t) = k \cdot y(t)$ with $y(0)=1$
 
 
-There is only one function that could be $y(t)$.
+There is only one function that could be $y(t)$.  $y(t) = e^{k t}$
 
 Let's apply this to our situation. \\
 
@@ -296,7 +352,7 @@ We have two functions satisfying the same differential equation with the same in
 
 
 
-$t$ is called the \textbf{argument}, often shortened to $arg$.  
+$t$ is called the \textbf{argument}, often shortened to \textbf{\textcolor{green!50!black}{$arg$}}.  
 
 \end{theorem}
 
@@ -334,7 +390,7 @@ Let $z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i$
 
 The modulus of $z$ is $\answer{5}$ 
 
-$arc(z) = \answer{\frac{\pi}{3}}$
+$arg(z) = \answer{\frac{\pi}{3}}$
 
 
 $z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}}$
@@ -347,7 +403,7 @@ $z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}}$
 Of course, we can also write $5$ as $e^{\ln(5)}$.
 
 
-$z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}} = e^{\ln(5)} \, e^{i \tfrac{\pi}{3}} = e^{ln(5) + i \tfrac{\pi}{3}}$
+$z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}} = e^{\ln(5)} \, e^{i \tfrac{\pi}{3}} = e^{\ln(5) + i \tfrac{\pi}{3}}$
 
 
 
