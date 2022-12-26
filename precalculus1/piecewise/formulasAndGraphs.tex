@@ -18,7 +18,16 @@ pieces and parts
 
 \section{Piecewise-Defined Functions}
 
-Piecewise defined functions are defined by using pieces of other functions. We begin with several functions with their own defining sets of pairs.  Then we take some pairs from each of those sets and collect them into a new set of pairs defining a new function.  Of course, we have to make sure that we do not duplicate domain numbers, otherwise we will not have a function.  This new collection of pairs will automatically give us a domain by collecting all of the first coordinates.
+Piecewise defined functions are defined by using pieces of other functions. 
+
+
+\begin{procedure}
+We begin with several functions with their own defining sets of domain-range pairs.  \\
+Select some pairs from each of those sets. \\
+Collect them into a new set of pairs defining a new function.  
+\end{procedure}
+
+Of course, we have to make sure that we do not duplicate domain numbers, otherwise we will not have a function.  This new collection of pairs will automatically give us a domain by collecting all of the first coordinates.
 
 For example, we could start with two constant functions: $Zero$ and $One$.
 
@@ -33,7 +42,7 @@ We can create a new function called \textit{step}, by selecting some pairs from 
 \item From $One$ we'll take pairs with nonnegative domain values. This is another \textit{piece.}
 \end{itemize}
 
-\textbf{*} Nonnegative means positive or 0.
+\textbf{Note: } Nonnegative means positive or 0.
 
 
 
@@ -85,7 +94,15 @@ Graph of $y = step(x)$.
 
 
 
-The step function uses two formulas, but only one at a time.  $step(x) = 0$, if $x < 0$. $step(x) = 1$, if $x \geq 0$.  Either you use the formula $0$ or your use the formula $1$.  The domain number at which you are evaluating $step$ tells you which formula to use.
+The step function uses two formulas, but only one at a time.  
+
+\begin{itemize}
+\item $step(x) = 0$, if $x < 0$ 
+\item $step(x) = 1$, if $x \geq 0$
+\end{itemize}  
+
+
+Either you use the formula $0$ or your use the formula $1$.  The domain number at which you are evaluating $step$ tells you which formula to use.
 
 
 The traditional way to write this formula looks like
@@ -130,8 +147,8 @@ G(t) =
 \end{itemize}
 
 
-$-5$ and $-3$ satisfy $t \leq -3$, therefore we use $2t-1$ as their formula. \\
-$-2$ and $0$ and $3$ satisfy $t > -3$, therefore we use $t^2$ as their formula. \\
+$-5$ and $-3$ satisfy $t \leq -3$, therefore we use $\answer{2t-1}$ as their formula. \\
+$-2$ and $0$ and $3$ satisfy $t > -3$, therefore we use $\answer{t^2}$ as their formula. \\
 
 \end{example}
 
@@ -332,7 +349,56 @@ The function $D$ has no maximum value
 
 
 
+\begin{example}
 
+
+The graph of a piecewise defined function may not seem like pieces.
+
+
+
+\[
+f(x) = 
+\begin{cases}
+  \frac{1}{2} (x+8)^2 - \frac{21}{4} & \text{ if }  x \le -7 \\
+  x + \frac{9}{4} & \text{ if }  -7 \geq x \leq \frac{5}{2} \\
+  -(x+3)^2 + 5   & \text{ if } \frac{5}{2} \le v 
+\end{cases}
+\]
+
+
+
+
+
+
+Graph of $y = f(x)$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+        \addplot [draw=penColor,very thick,smooth,domain=(-9:-7),<-] {0.5*(x+8)^2 - 5.25};
+        \addplot [draw=penColor,very thick,smooth,domain=(-7:2.5)] {x+8.25};
+        \addplot [draw=penColor,very thick,smooth,domain=(2.5:6),->] {-(x-3)^2 + 5};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\end{example}
 
 
 
