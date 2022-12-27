@@ -84,7 +84,7 @@ In all three cases, the graph experiences a sudden vertical movement.  This sudd
 
 
 \section{Discontinuities}
-One of the strongest purposes of mathematics is simply description and communication.  We like mathematics to be explicit and exact, which requires the support of lots of specific language and notation. We call this rigor. As we investigate breaks in the graphs of functions, we want language that is explicit, so that we can clearly communicate about the underlying function behavior.
+One of the strongest purposes of mathematics is simply description and communication.  We like mathematics to be explicit and exact, which requires the support of lots of specific language and notation. We call this \textbf{\textcolor{purple!85!blue}{rigor}}. As we investigate breaks in the graphs of functions, we want language that is explicit, so that we can clearly communicate about the underlying function behavior.
 
 With this in mind, let's compare the following two graphs.
 
@@ -159,16 +159,33 @@ These two graphs (and the underlying functions) are almost identical. They have 
 The difference is the underlying function for the graph on the left includes $6$ in its domain and not $3$. The underlying function for the graph on the right reverses this. In the world of functions, this is significant.  We want our language to note the differences. Therefore, we are going to adopt some language to separate these ideas.
 
 
-\begin{idea} Language \\
-While graphs have breaks, functions will have \textbf{discontinuities} and \textbf{singularities}.
+\begin{idea} Language 
+
+
+While graphs have breaks, functions will have \textbf{\textcolor{green!50!black}{discontinuities}} and \textbf{\textcolor{green!50!black}{singularities}}.
 
 \begin{itemize}
-\item If the domain of a function includes the number where the graph is experiencing a break, then we will say the function has a \textbf{discontinuity} at this number.  
+\item If the domain of a function includes the number where the graph is experiencing a break, then we will say the function has a \textbf{\textcolor{green!50!black}{discontinuity}} at this domain number.  
 
-\item If the domain of a function does not include the number where the graph is experiencing a break, then we will say the function has a \textbf{singularity} at this number.
+\item If the domain of a function does not include the number where the graph is experiencing a break, then we will say the function has a \textbf{\textcolor{green!50!black}{singularity}} at this non-domain number.
 \end{itemize}
 
+
+
+
+\begin{idea} Language 
+
+
+Endpoints on graphs may or may not illustrate a discontinuity. A discontiuity looks like a vertical jump on the graph. \\
+
+
+There cannot be a vertical jump at an endpoint, which is marked by a hollow dot, because there is no jump. \\
+
+
+Discontinuities and singularities are created by the surrounding function values and how they behave.
+
 \end{idea}
+
 
 
 Discontinuities are numbers in the domain of the function and singularities are not in the domain. Of course, all of this gets more complicated as we encounter more functions.  But this is a good start. \\
@@ -316,7 +333,7 @@ Select all of the discontiuities of $K$.
 \end{example}
 
 
-$\blacktriangleright$ Endpoints make an exact definition of discontinuity messy, because we want to say there are numbers on both sides of the discontinuity.
+$\blacktriangleright$ Endpoints make an exact definition of discontinuity messy, because we want to say there are domain numbers on one or both sides of the discontinuity and these domain numbers have no space between them.  There is no \textit{open interval} between domain numbers.
 
 
 
@@ -489,10 +506,10 @@ For the second condition, let $d = 1$. Any open interval of real numbers contain
 
 \[ \left| g(4) - g\left(4-\frac{\epsilon}{2}\right) \right| > d = 1 \]
 
-Therefore, $4$ is a discontinuity of $g$.
+Therefore, $4$ is a discontinuity of $g$. \\
 
 
-\item $-2$ is not a discontinuity of $g$, because we can find an open interval of real numbers that does not contain a domain number different from $-2$.  No matter what $d$ you select, the open interval $(-2.01, -1.99)$ does not contain a different domain number, $e \ne -2$, such that $|g(-2) - g(e)| > d$.  Therefore, the second condition for discontinuities does not hold.  $-2$ is not a discontinuity.
+\item $-2$ is not a discontinuity of $g$, because we can find an open interval of real numbers that does not contain a domain number different from $-2$.  No matter what $d$ you select, the open interval $(-2.01, -1.99)$ does not contain a different domain number, $e \ne -2$, such that $|g(-2) - g(e)| > d$.  Therefore, the second condition for discontinuities does not hold.  $-2$ is not a discontinuity. \\
 
 
 
@@ -509,7 +526,7 @@ Therefore, $8$ is a discontinuity of $g$.
 
 \end{example}
 
-This is the type of exactness we want in our discussions.  This is rigor. We want to talk algebraically about ``always'', ``close enough'', and ``small enough''.  Fluency in the notational language will take some time.  But we have some time until Calculus.
+This is the type of exactness we want in our discussions.  This is \textbf{\textcolor{purple!85!blue}{rigor}}. We want to talk algebraically about ``always'', ``close enough'', and ``small enough''.  Fluency in the notational language will take some time.  But we have some time until Calculus.
 
 
 
@@ -565,13 +582,20 @@ Let $T(y)$ be a function.  The graph of $z = T(y)$ is displayed below.
 \end{image}
 
 \begin{itemize}
-\item $7$ is not a discontinuity of $T$, because $7$ is not a member of the domain of $T$. $7$ is a singularity. \\
+\item $7$ is not a discontinuity of $T$, because $7$ is not a member of the domain of $T$. ($7$ is a singularity.) \\
 
 \item $-6$ is a discontinuity of $T(y)$.  $-6$ is in the domain of $T$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = -6$ must also contain an interval of the form $(-6-\epsilon, -6+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would ALWAYS contain the domain number $e = -6+\frac{\epsilon}{2}$.
 
 \[ \left| T(-6) - T\left(-6+\frac{\epsilon}{2}\right) \right| > 1 > 0.5 = d \]
 
-Therefore, $-6$ is a discontinuity of $T$.
+Therefore, $-6$ is a discontinuity of $T$. \\
+
+
+\item $4$ is a discontiuity of $T(y)$.   $4$ is in the domain of $T$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = 4$ must also contain an interval of the form $(4-\epsilon, 4+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would ALWAYS contain the domain number $e = 4-\frac{\epsilon}{2}$.
+
+\[ \left| T(4) - T\left(4-\frac{\epsilon}{2}\right) \right| > 1 > 0.5 = d \]
+
+Therefore, $4$ is a discontinuity of $T$. \\
 
 \end{itemize}
 
@@ -629,7 +653,7 @@ Let $f(x)$ be a function.  The graph of $y = f(x)$ is displayed below.
 \end{image}
 
 \begin{itemize}
-\item $3$ is not a discontinuity of $f$, because $3$ is not a member of the domain of $f$. $3$ is a singularity. \\
+\item $3$ is not a discontinuity of $f$, because $3$ is not a member of the domain of $f$. ($3$ is a singularity.) \\
 
 \item $-5$ is a discontinuity of $f(x)$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = -5$ must also contain an interval of the form $(-5-\epsilon, -5+\epsilon)$, where $0 < \epsilon < 0.000001$.    Such an interval would ALWAYS contain the domain number $e = -5-\frac{\epsilon}{2}$.
 
@@ -649,10 +673,9 @@ Therefore, $-5$ is a discontinuity of $f$.
 
 \textit{But, the examples skipped over numbers not in the domain that are obviously discontinuities.}  \\
 
-The fact that these numbers are not in the domain is significiant when studying the function.  Therefore, we want to distinguish between inclusion and exclusion from the domain.
+The fact that these numbers are not in the domain is significiant when studying the function.  Therefore, we want to distinguish between inclusion and exclusion from the domain. \\
 
-
-
+This is why we have the \textit{singularity} category.
 \end{observation}
 
 
@@ -677,7 +700,7 @@ $\blacktriangleright$  $c$ is not in the domain, however,
 \item EVERY open interval containing $c$ does contain a domain number and 
 \item the function is behaving weird near $c$. \\
 \end{itemize}
-It turns our ``weird'' includes a lot of behavior.  It will take a while to state a rigorous definition of singularity.  In the mean time, we will keep noting weird behavior and building our feeling of weird.
+It turns our ``weird'' includes a lot of behavior.  It will take a while to state a \textbf{\textcolor{purple!85!blue}{rigorous}} definition of singularity.  In the mean time, we will keep noting weird behavior and building our feeling of weird.
 
 
 We will extend and sharpen our ideas and definition of singularity in Calculus.
@@ -813,8 +836,34 @@ If $S$ is a subset of the domain and $f$ is continuous at every number in $S$, t
 
 
 
+\begin{idea} \textbf{Contiuity}
 
 
+Continuous menas not discontinuous. \\
+
+Discontinuous mean there was a fixed distance in the range that separated function values no matter how close the domain numbers were. \\
+
+Continuity means this doesn't happen. \\
+
+
+Let $f$ be a function and $c$ a number in the domain. \\
+
+$f$ is \textbf{continuous} at $c$ if  \\
+
+
+For every range distance $d > 0 $, there is a corresponding domain distance $\epsilon > 0$ such that \\
+
+
+for all domain numbers $x$ inside $(c - \epsilon, c + \epsilon)$, $| f(x) - f(c) | < d$. \\
+
+
+You can get close enough to $c$ in the domain so that all of the function values are close to $f(c)$...as close as you want...any closeness.
+
+
+\end{idea}
+
+
+As you can see, this is easy to see visually, but difficult to describe algebraically.  It will take some time to read the algebra.
 
 
 
