@@ -77,7 +77,7 @@ As we have seen the graph of a quadratic equation is a parabola. The sign of the
         
 
 		\node[penColor] at (axis cs:-6.5,6.125) {$0.5 x^2 + 4 x + 6$};
-		\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+		\node[penColor2] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
 
 
 
@@ -141,7 +141,12 @@ If $a$ and $b$ are real numbers and $a\cdot b = 0$, then either $a=0$ or $b=0$.
 Zero is the ONLY number with such an identifiable test, therefore, we use it...\textbf{\textcolor{purple!85!blue}{A LOT}}! 
 
 
+\begin{procedure}
+
+
 Unless we happen to know something special, when solving equations our general approach is to set everything equal to zero and then convert the expression into a product.  This process is called \textbf{factoring}.  The whole idea is to make our situation look like the zero product property.
+
+\end{procedure}
 
 We have already seen that factors correspond to zeros of our function. Thus, it comes as no surprise that identifying zeros of functions is a top priority.  Factoring is a top priority. Spotting horizontal intercepts in the graph is a top priority.
 
@@ -198,7 +203,7 @@ As we can see from their parabolic graphs below, quadratics can have $0$, $1$, o
 
 \section{Completing the Square}
 
-Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they are to different degrees. \\
+Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they have different degrees. \\
 
 
 It will take a bit of Algebra to combine them into just one occurrence. This process is called \textbf{completing the square}. \\
@@ -283,10 +288,10 @@ The leading term is $1$ in both (since we factored out $A$). Now, the linear ter
 \end{explanation}
 
 
-To complete the square with a monic quadratic, we need $B = \frac{b}{-2}$.  Let's put that in.
+To complete the square with a monic quadratic, we need $B = \frac{b}{-2} = -\frac{b}{2}$.  Let's put that in.
 
 
-\[ t^2 - 2 t B + B^2 + C = t^2 - 2 t \left( \frac{b}{-2} \right) + \left(\frac{b}{-2}\right)^2 + C = t^2 + b t + \left(\frac{b}{-2}\right)^2 + C \]
+\[ t^2 - 2 t B + B^2 + C = t^2 - 2 t \left( -\frac{b}{2} \right) + \left( -\frac{b}{2} \right)^2 + C = t^2 + b t + \left(-\frac{b}{2}\right)^2 + C \]
 
 
 We want this to be $t^2 + b \, t + c$. \\
@@ -298,9 +303,9 @@ linear terms match...check \\
 \textbf{\textcolor{blue!75!black}{Step 3}} \\
 
 
-Now there is a mess for the constant term.  We have $\left(\frac{b}{-2}\right)^2 + C$, when we just wanted $c$.  \\
+Now there is a mess for the constant term.  We have $\left( -\frac{b}{2}\right )^2 + C$, when we just wanted $c$.  \\
 
-Then let's just pick $C$ to be $-\left(\frac{b}{-2}\right)^2 + c = -\left(\frac{b}{2}\right)^2 + c$
+Then let's just pick $C$ to be $-\left( -\frac{b}{2}\right )^2 + c = -\left(\frac{b}{2}\right)^2 + c$
 
 
 
@@ -315,7 +320,7 @@ Let's see some examples
 
 
 
-\begin{procedure} \textit{Completing the Square}
+\begin{example} \textit{Completing the Square}
 
 
 
@@ -357,13 +362,28 @@ Remember, this was inside parentheses.
 \[     2 \, t^2 + 4 \, t + 6 = 2 (t^2 + 2 \, t + 3)  = 2 ((t+1)^2 + 2) =  2 (t+1)^2 + \answer{4}\] 
 
 
-$2 (t+1)^2 + 4$ is the completed square form of $2 \, t^2 + 4 \, t + 6$
+$2 (t+1)^2 + 4$ is the completed square form of $2 \, t^2 + 4 \, t + 6$ \\
+
+
+$2 (t+1)^2 + 4 = 2 \, t^2 + 4 \, t + 6$
 
 \end{explanation}
 
 
 
-\end{procedure}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 The whole point was to change from an expression with two occurences of the variable to an expression with only one occurence of the variable.
@@ -505,7 +525,7 @@ The graph of $y = 2 x^2 - 12x + 18$ would be a parabola touching the horizontal 
 
 
 
-\begin{idea} \textbf{\textcolor{red!80!black}{Single Root}} \\
+\begin{idea} \textbf{\textcolor{red!80!black}{Double Root}} \\
 
 If the vertex of the parabola is the only intercept, then the corresponding quadratic function has a double root.
 
@@ -572,7 +592,7 @@ Square half of $b$, $\left(\frac{-6}{2}\right)^2 = (-3)^2$ and $(-3)^2 = 9$.  We
 
 \[  2 (x-3)^2 + 2 = 0  \]
 
-In the real numbers, $2 ((x-3)^2)$ is never negative, since we have a square.  This cannot be added to $2$, to get $0$.  \\
+In the real numbers, $2 (x-3)^2$ is never negative, since we have a square.  This cannot be added to $2$, to get $0$.  \\
 
 
 This equation has no real solutions.
@@ -583,7 +603,7 @@ This equation has no real solutions.
 
 
 
-The above example illustrates that there must be numbers missing from the real numbers.  
+The above example illustrates that there must be numbers missing from the real numbers.  We normally expect equations to have solutions. 
 
 
 $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{A Peek Ahead}} 
@@ -606,7 +626,7 @@ We can see that the real numbers are not enough for all of our equations.  Event
 \begin{itemize}
 \item Our first example had two real solutions.  
 \item Our second example had two identical solutions.  
-\item This third example has two distinct complex solutoins. 
+\item This third example has two distinct complex solutions. 
 \end{itemize}
 
 
