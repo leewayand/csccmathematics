@@ -1,0 +1,100 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+
+
+\begin{exercise} 
+
+
+
+A rock is launched straight up into the air from the edge of a $100 foot$ cliff with an initial vertical velocity of $15 \frac{ft}{sec}$.  The rock rises to its peak and then falls past the cliff to the river at the bottom of the cliff.
+
+
+
+\begin{question} How far above the cliff did the rock climb? \\
+
+
+
+
+The initial positive is $100 ft$. \\
+The initial vertical velocity is $15 \frac{ft}{sec}$ \\
+
+
+That is gives the following function for vertical position above the river.
+
+\[
+h(t)= -\frac{9.81}{2} t^2 + 15 t + 100
+\]
+
+
+This is a quadratic function.  The formula has a negative leading coefficient, so we know there is a maximum value occuring at $t = \frac{-15}{2 \cdot (-\frac{9.81}{2})} \approx 1.529 sec$.
+
+
+
+\[
+h(1.529) \approx -\frac{9.81}{2} \cdot (1.529)^2 + 15 \cdot 1.529 + 100 \approx 111.468 ft
+\]
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question} When does the rock hit the water? \\
+
+
+
+We want the time when the height is $0 ft$.
+
+
+
+\[
+h(t)= -\frac{9.81}{2} t^2 + 15 t + 100 = 0
+\]
+
+
+\[
+-\frac{9.81}{2} t^2 + 15 t + 100 = 0
+\]
+
+
+
+This is a quadratic equation with a negative leading coefficient and positive constant term, which means there are two real solutions.
+
+
+
+\[
+t = \frac{-15 \pm \sqrt{15^2 - 4 \cdot (-4.905) \cdot 100}}{-9.81} \approx \frac{-15 \pm \sqrt{2187}}{-9.81} 
+\]
+
+
+
+\[
+t \approx 6.296164302  \,  \text{ or } \, t \approx -3.238060327
+\]
+
+
+
+Since out stopwatch is moving forward from $0$, the rock hits the watter at approximately $6.296 sec$
+\end{question}
+
+
+
+
+
+
+
+
+
+\end{exercise}
+
+
+\end{document}
