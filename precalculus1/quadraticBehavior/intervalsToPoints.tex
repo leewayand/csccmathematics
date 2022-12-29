@@ -221,12 +221,25 @@ If the graph of $y = f(x)$ has a non-vertical tangent line at the point $(a, f(a
 
 
 
+
+
+
+
+
+
+
+
 \subsection{Quadratics}
 
-We'll being our investigation into instantaneous rate of change with quadratic functions, whose graphs are parabolas (which never have vertical tangent lines). \\
+We'll begin our investigation into instantaneous rate of change with quadratic functions, whose graphs are parabolas (which never have vertical tangent lines). \\
 
 
 We need a method of obtaining the slope of tangent lines to parabolas.
+
+
+
+
+
 
 
 $\blacktriangleright$ \textbf{Basic Quadratic}
@@ -256,13 +269,13 @@ Let's add a picture of the tangent line at $(x_0, y_0) = (x_0, (x_0)^2)$ to our 
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:7),<->] {x^2};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:3),<->] {x^2};
         \addplot [line width=1, gray, dashed,samples=100,domain=(-5:9.5)] ({0},{x});
         
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(2,4)};
-        \node[penColor2] at (axis cs:2.5,4) {$(x_0, y_0)$};
-        \addplot [draw=penColor2, very thick, smooth, domain=(1:7),<->] {4*x - 4};
+        \node[penColor2] at (axis cs:3,4) {$(x_0, y_0)$};
+        \addplot [draw=penColor2, very thick, smooth, domain=(0.5:3),<->] {4*x - 4};
         
 
 
@@ -282,6 +295,83 @@ The tangent line is the graph of a linear function. Let's call this linear funct
 $T$ is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  According to our definition, $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
 
 
+$\blacktriangleright$ We would like a way to obtain the exact value of $m$. \\
+
+
+
+To get the exact value of $m$, we are going to create a new quadratic function.
+
+
+
+\begin{explanation}
+
+
+\[
+Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0)
+\]
+
+
+
+$Q_{new}(x)$ is a quadratic function and $Q_{new}(x_0) = Q(x_0) - T(x_0) = y_0 - y_0 = 0$. \\
+
+We can also see from the graph above that $Q(x) > T(x)$ when $x \ne x_0$, which means $Q_{new}(x) \geq 0$\\
+
+
+So, its graph is a parabola with vertex, $(x_0, 0)$, on the $x$-axis.  The graph of $y = Q(x)$ has slide to the left a distance of $x_0$.  \\
+
+
+Therefore, the vertex form of $Q_{new}(x)$ is $Q_{new}(x) = (x - x_0)^2 = (x - x_0)(x - x_0)$  \\
+
+
+
+
+
+
+\[
+Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0) = (x - x_0)^2
+\]
+
+
+
+
+\[
+x^2 - (m(x - x_0) + y_0) = (x - x_0)^2 = x^2 - 2 x_0 x + x_0^2
+\]
+
+
+
+\[
+ -m \, x + m \, x_0 - y_0) =   - 2 \, x_0 \, x + x_0^2
+\]
+
+
+For this to happen, we must have $-m \, x = - 2 \, x_0 \, x$ or $m = 2 \, x_0$. \\
+
+
+\end{explanation}
+
+
+At any point $(x_0, y_0)$ on the graph of $y = x^2$, the slope of the tangent line is $2 \, x_0$.  The slope of the tangent line is always twice the $x$-coordinate of the tangent point.
+
+
+
+
+\begin{conclusion} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line}} 
+
+
+The graph of $y = x^2$ is a parabola.
+
+Let $(x_0, y_0)$ be a point on this parabola.
+
+Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
+
+
+
+\[ \text{slope } \, = \, 2 x_0  \]
+
+
+\end{conclusion}
+This for any point on the parabola.
 
 
 
@@ -309,250 +399,206 @@ $T$ is a linear function. Therefore, the formula for $T$, would look like $T(x) 
 
 
 
+$\blacktriangleright$ \textbf{Stretching}
 
 
 
+We can vertically stretch our basic quadratic parabola by multiplying all of the $y$-coordinates by a constant, $a \ne 0$. \\
 
 
+The new parabola has an equation of the form $y = a \, x^2$. \\
 
-Let's consider the graph of $Q(x) = a (x - h)^2 + k$, with $a > 0$. We are investigating the graph of $y = a (x - h)^2 + k$, which is a parabola whose vertex is $(h, k)$. \\
-
-Let's select a domain number of $Q$, call it $x_0$.   This corresponds to the point $(x_0, y_0)$ on the graph of $Q$.
-
-Let's add a picture of the tangent line at $(x_0, y_0)$ to our graph of $Q$.
+These are graphs of quadratic functions of the form $Q(x) = a \, x^2$. \\
 
 
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-5:10, ymax=10, xmax=10, ymin=-5, xmin=-5,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-4,-2,2,4,6,8,10},
-                xtick={-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
+Let's go through the same process. \\
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:7),<->] {0.5*(x-3)^2 + 2};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        
+\begin{explanation}
 
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(5,4)};
-        \node[penColor2] at (axis cs:6.5,4) {$(x_0, y_0)$};
-        \addplot [draw=penColor2, very thick, smooth, domain=(1:7),<->] {2*(x-5) + 4};
-        
+The tangent line at $(x_0, y_0)$ is the graph of a linear function. Let's call this linear function $T$.
 
 
-        \addplot [color=penColor,only marks,mark=*] coordinates{(3,2)};
-        \node[penColor] at (axis cs:2,1.5) {$(h, k)$};
-
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-The tangent line is the graph of a linear function. Let's call this linear function $T$.
-
-
-T is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  According to our definition, $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
-
+$T$ is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  According to our definition, $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
 
 
 $\blacktriangleright$ We would like a way to obtain the exact value of $m$. \\
 
 
-To do this we need to note something about formulas for quadratic functions.
 
-
-$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Double Roots}} 
-
-Our general formula for a quadratic function looks like  $f(x) = a (x - h)^2 + k$ and the graph is a parabola with vertex at $(h, k)$. If we happen to have $k = 0$, then the vertex of the parabola sits on the horizontal axis and the formula looks like $f(x) = a (x - h)^2$.
-
-
-In this case, $h$ is a double zero or double root of $f(x)$.  That means $(x - h)$ is a factor, twice.
-
-
-Another way of looking at this situation is that the function
-
-
-\[
-\frac{f(x)}{x-h} = \frac{a (x - h)^2}{x - h} = a (x - h)
-\]
-
-
-also, has $h$ as a root.  If you start with a double root and divide out one of the roots, then you still have one remaining.
-
-This is obvious with the way we have written it here.  However, no matter how we write the formula for our quadratic function, if we divide by the factor correspoinding to the zero, then the result again has the same root.
-
-
-With this in mind, we can get a formula for $m$, the slope of out tangent line at $(x_0, y_0)$ and the instanteous rate of change of $Q$ at $x_0$.
-
-
-
-
-
-
-The story so far...
-
-$Q(x) = a (x - h)^2 + k$ \\
-
-$T(x) = m(x - x_0) + y_0$ \\
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-5:10, ymax=10, xmax=10, ymin=-5, xmin=-5,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-4,-2,2,4,6,8,10},
-                xtick={-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:7),<->] {0.5*(x-3)^2 + 2};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        
-
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(5,4)};
-        \node[penColor2] at (axis cs:6.5,4) {$(x_0, y_0)$};
-        \addplot [draw=penColor2, very thick, smooth, domain=(1:7),<->] {2*(x-5) + 4};
-        
-
-
-        \addplot [color=penColor,only marks,mark=*] coordinates{(3,2)};
-        \node[penColor] at (axis cs:2,1.5) {$(h, k)$};
-
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-The point of tangency is an intersection point of the two graphs.  In fact, it is more like a point of double intersection and will be the source of a double root.
-
-
-
-
-
-
-Let's consider a new function defined as $P(x) = Q(x) - T(x)$. \\
-
-
-\[
-P(x) = Q(x) - T(x) = a (x - h)^2 + k - (m(x - x_0) + y_0)
-\]
-
-This formula looks complicated, but it is still a quadratic.  We could multiply everything out and collect like terms.
-
+To get the exact value of $m$, we are going to create a new quadratic function.
 
 
 
 \[
-P(x) = Q(x) - T(x) = a\, x^2 - 2ah \, x + ah^2 + k - m \, x + m \, x_0 - y_0
-\]
-
-
-\[
-P(x) = Q(x) - T(x) = a\, x^2 - (2ah - m) \, x + (ah^2 + k  + m \, x_0 - y_0)
+Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m(x - x_0) + y_0)
 \]
 
 
 
-$P(x)$ is a quadratic function.  And, we know some characteristics of $P(x)$
+$Q_{new}(x)$ is a quadratic function and $Q_{new}(x_0) = Q(x_0) - T(x_0) = y_0 - y_0 = 0$. \\
+
+We can also see from the graph that $Q(x) > T(x)$ when $x \ne x_0$, which means $Q_{new}(x) \geq 0$.\\
+
+
+So, its graph is a parabola with vertex, $(x_0, 0)$, on the $x$-axis.  \\
+
+
+Therefore, the vertex form of $Q_{new}(x)$ is $Q_{new}(x) = a \, (x - x_0)^2 = (x - x_0)(x - x_0)$  \\
 
 
 
-\begin{itemize}
-\item $P(x) = Q(x) - T(x) \geq 0$, since $Q(x) \geq T(x)$
-\item $P(x_0) = Q(x_0) - T(x_0) = 0$
-\end{itemize}
 
 
-
-
-$P(x)$ is a quadratic function.  Its graph is a parabola opening up with $(x_0, 0)$ as its vertex. \\
-
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  $x_0$ is a double root of $P(x)$. \\
-
-
-$(x - x_0)$ will divide evenly into $P(x)$ and after dividing, the resulting function will also have $x_0$ as a zero.
-
-
-
-We can use long division to divide $(x - x_0)$ into $P(x)$
-
-
-
-\begin{image}
-\includegraphics{longDivision.png}
-\end{image}
-
-
-We know $(x - x_0)$ divides evenly into $P(x)$, because $x_0$ is a root or zero.  That means this remainer should equal $0$.  Let's check.
-
-
-
-We know $(x_0, y_0)$ is a point on the graph of $Q$, therefore, $y_0 = a (x_0 - h)^2 + k$. Let's substitute $a (x_0 - h)^2 + k$ in for $y_0$ in the expression for our remainder. [Remember: we are trying to verify that the remainder equals $0$.]
 
 \[
-a h^2 + k - (a (x_0 - h)^2 + k) + a x_0^2 + m x_0 - x_0 (2 a h + m)
+Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m(x - x_0) + y_0) = a \, (x - x_0)^2
 \]
 
 
+
+
 \[
-a h^2 + k - a x_0^2 + 2 a h x_0 - a h^2 - k + a x_0^2 + m x_0 - 2 a h x_0 - m x_0 = 0
+a \, x^2 - (m(x - x_0) + y_0) = a \, (x - x_0)^2 = a \, x^2 - 2a \, x_0 x + a \, x_0^2
 \]
 
 
-It is $0$!   \\
-
-
-$(x - x_0)$ did divide evenly into $P(x)$, like it was supposed to.
-
-The quotient is 
-
 
 \[
-a x + (a x_0 - (2 a h + m))
-\]
-
-And, we said $x_0$ must be a root of this, since $x_0$ was a double root of $P(x)$.  Therefore, if we substitute $x_0$ in for $x$, the expression must equal $0$.
-
-
-\[
-a x_0 + (a x_0 - (2 a h + m)) = 0
+ -m \, x + m \, x_0 - y_0) =   - 2a \, x_0 \, x + a \, x_0^2
 \]
 
 
-\[
-a x_0 + a x_0 - 2 a h - m = 0
-\] 
+For this to happen, we must have $-m \, x = - 2a \, x_0 \, x$ or $m = 2a \, x_0$. \\
 
 
-We can solve this for $m$.
+\end{explanation}
+
+At any point $(x_0, y_0)$ on the graph of $y = a \, x^2$, the slope of the tangent line is $2 \, x_0$.  The slope of the tangent line is always $2a$ times the $x$-coordinate of the tangent point.
 
 
 
-\[
-m = a x_0 + a x_0 - 2 a h = 2 a (x_0 - h)
-\] 
+
+
+
+
 
 
 
 \begin{conclusion} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line}} 
+
+
+The graph of $y = a \, x^2$ is a parabola.
+
+Let $(x_0, y_0)$ be a point on this parabola.
+
+Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
+
+
+
+\[ \text{slope } \, = \, 2 \, a \, x_0  \]
+
+
+\end{conclusion}
+This for any point on the parabola.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Shifting}
+
+
+
+
+Beginning with $Q(x) = a \, x^2$ and its parabola $y = a \, x^2$, we can shift horizontally and vertically. \\
+
+
+
+
+
+If we keep the shape of the parabola, $y = a \, x^2$, intact and shift its position, then the new parabola has an equation of the form $y = a \, (x - h)^2 + k$.
+
+These are graphs of quadratic functions of the form $Q_{new}(x) = a \, (x - h)^2 + k$. \\
+
+
+If we pick any point, $(x_0, y_0)$, on this parabola, then the slope of the tangent line is the same as the slope of the tangent line for $y = a \, x^2$ at the point $(x_0 - h, y_0 - k)$.  \\
+
+From above, we know this slope is $2 \, a \, (x_0 - h)$.
+
+
+
+
+
+
+\begin{conclusion} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line}} 
+
+
+The graph of $y = a \, (x - h)^2 + k$ is a parabola.
+
+Let $(x_0, y_0)$ be a point on this parabola.
+
+Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
+
+
+
+\[ \text{slope } \, = \, 2 \, a \, (x_0 - h)  \]
+
+
+\end{conclusion}
+This for any point on the parabola.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{theorem} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line (Parabola)}} 
 
 
 The graph of $y = a (x - h)^2 + k$ is a parabola.
@@ -563,10 +609,10 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 
 
 
-\[ 2 a (x_0 - h) \]
+\[ 2 \, a \, (x_0 - h) \]
 
 
-\end{conclusion}
+\end{theorem}
 This for any point on the parabola.
 
 
@@ -601,10 +647,22 @@ $iRoC_Q(x)$ is a linear function given by
 \end{definition}
 
 
+We now have a function, with a formula, for measuring the instantaneous rate of change of any quadratic function at any domain number. \\
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the quadratic function, $Q(x) = a \, (x - h)^2 + k$, is the linear function, $iRoC_Q(x) = 2 \, a \, (x-h)$. \\
 
 
 
 
+We already have a function, with a formula, for measuring the instantaneous rate of change of any linear function at any domain number. \\ 
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the linear function, $L(x) = m \, x + b$, is the constant function, $iRoC_L(x) = m$. \\
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the constant function, $C(x) = c$, is the zero function, $iRoC_C(x) = 0$. \\
 
 
 
