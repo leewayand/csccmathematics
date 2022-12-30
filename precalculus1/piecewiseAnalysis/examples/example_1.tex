@@ -13,11 +13,11 @@
 
 
 \[
-V(h) = 
+f(x) = 
 \begin{cases}
-  -2h-3 & \text{ if } [-6, -2]   \\
-  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
-  \frac{7h}{4} - 8 & \text{ if } (4,6)
+  -\frac{x}{2} - 4   & \text{ if } [-8, -2)   \\
+  (x+2)(x-3) - 1      & \text{ if } [-2, 4]  \\
+  3x-16              & \text{ if } (4,8)
 \end{cases}
 \]
 
@@ -26,7 +26,7 @@ V(h) =
 
 
 
-
+Graph of $y = f(x)$.
 
 
 
@@ -34,7 +34,7 @@ V(h) =
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$h$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -43,24 +43,22 @@ V(h) =
             axis on top
           ]
           
-			\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:6)] {1.75*x-8};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-2)] {-0.5*x-4};
+       	  \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {(x+2)*(x-3)-1};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {3*x-16};
 
 
 
 
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,0)};
 
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-1)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,-3)};
 
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,2.5)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,5)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-4)};
 
-
-           
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,8)};
 
   \end{axis}
 \end{tikzpicture}
@@ -72,9 +70,99 @@ V(h) =
 
 
 
+\begin{question} Domain
+
+
+The domain is given in the definition of the function.
+
+\[
+[ \answer{-8}, \answer{-2} ) \cup [  \answer{-2}, \answer{4} ] \cup (  \answer{4}, \answer{8} ) = \left[ \answer{-8}, \answer{8} \right)
+\]
+
+
+\end{question}
 
 
 
+
+
+
+
+\begin{question} Continuity
+
+
+The three pieces in the definition of $f(x)$ are linear, quadratic, and linear.  These are continuous functions.  Therefore, the only candidates for discontinuities or singularities are the endpoints of the defining intervals.
+
+$-8$ is included in $[-8, -2)$ and $-\frac{x}{2} - 4$ is continuous on this interval. \\
+
+$-2$ is a discontinuity of $f$.  Let $d = 1$. For any small $\epsilon > 0$, the interval $(-2 - \epsilon, -2)$ always contains the number $-2 - \frac{\epsilon}{2}$.  
+
+
+\[
+f\left( -2 - \frac{\epsilon}{2} \right) = 1 + \frac{\epsilon}{4} - 4 =  \frac{\epsilon}{4} - 3
+\]
+
+
+\[
+f(-2) - f\left( -2 - \frac{\epsilon}{2} \right) = -1 - \frac{\epsilon}{4} + 3 = 2 - \frac{\epsilon}{4} > 1 = d
+\]
+
+
+Every small open interval around $-2$ contains a domain number where the value of $f$ is more than 1 away from $f(-2)$.
+
+
+
+
+
+Similarly, $4$ is also a discontinuity.  \\
+
+
+
+$8$ is not in the domain.  It cannot be a singularity since it is not a hole in the domain.  For the number $a$ to be a hole, there would need to be an open interval inside the domain, except for $a$:  $(c, a) \cup (a, b)$. 
+
+
+\end{question}
+
+
+
+
+
+\begin{question} Zeros
+
+
+The defininng pieces of $f$ have zeros.  The linear pieces have one zero and the quadratic piece has two zeros.  We'll determine these zeros and then see if they are in the domain of $f$. \\
+
+
+
+The zero of $f_1(x) = -\frac{x}{2} - 4$ is $-8$, which is included in the domain of $f$. \\
+
+There are two zeros for $f_2(x) = (x+2)(x-3) - 1$. \\
+
+
+$ 0 = (x+2)(x-3) - 1 = x^2 - x - 7$ \\
+
+\[
+x = \frac{1 \pm \sqrt{(-1)^2 - 4 \cdot 1 \cdot (-7)}}{2} = \frac{1 \pm \sqrt{29}}{2}
+\]
+
+
+Only $\frac{1 \pm \sqrt{29}}{2}$ is contained in the domain of $f$. \\
+
+
+The zero of $f_3(x) = 3x-16$ is $\frac{16}{3}$, which is included in the domain of $f$. \\
+
+
+
+
+$f$ has three zeros:  $-8, \frac{1 \pm \sqrt{29}}{2}, \frac{16}{3}$.
+
+
+
+
+
+
+
+\end{question}
 
 
 

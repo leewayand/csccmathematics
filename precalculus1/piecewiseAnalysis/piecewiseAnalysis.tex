@@ -13,7 +13,7 @@ characteristics and features
 
 
 
-Piecewise functions are defined by using pieces of other functions. Since we are now familiar with linear and quadratic functions, let's build some piecewise functions from their pieces.
+Piecewise functions are defined by using pieces of other functions. Since we are now familiar with linear and quadratic functions, let's build the piecewise function, $V(h)$, from their pieces.
 
 
 
@@ -98,11 +98,11 @@ From the definition of $V(h)$, we can see the domain is $[-6, -2] \cup (-2, 4] \
 
 \subsection{Zeros} 
 
-We can see from the graph that the component pieces of $V$ would total four intercepts and zeros. One each from the linear pieces and two from the quadratic piece.  However, the domain restrictions only admit two of them.  The greater zero from the quadratic piece and the zero from the right piece of the graph.
+We can see from the graph that usually the component pieces of $V$ would total four intercepts and zeros. One each from the linear pieces and two from the quadratic piece.  However, the domain restrictions only admit two of them.  The greater zero from the quadratic piece and the zero from the right linear function. These are both represented by intercepts on the graph.
 
-The left line would have an intercept, except the domain does not include it.  The middle parabola has a left intercept, except the domain does not include it. 
+The left line would have an intercept, except the domain does not allow it.  The middle parabola has a left intercept, except the domain does allow it. 
 
-From the graph, we might estimate these zeros to be around $3$ and $4.5$.  What are the exact values?
+From the graph, we might estimate our two zeros to be around $3$ and $4.5$.  What are the exact values?
 
 
 
@@ -114,7 +114,9 @@ $\blacktriangleright$ The middle piece.
 
 
 \begin{explanation}
-We are solving $-(h+3)(h-3) = 0$.  Since this is in factored form, we can quickly see the candidates are $-3$ and $3$.  $\answer{-3}$ is not in the domain for this piece of $V$.
+
+
+We are solving $-(h+3)(h-3) = 0$.  Since this is in factored form, we can quickly see the candidates are $-3$ and $3$.  $\answer{-3}$ is not in the domain for this piece of $V$, which is $(-2, 4]$.
 
 Therefore, $V$ has $\answer{3}$ as its only zero contributed from the quadratic piece.
 \end{explanation}
@@ -123,9 +125,13 @@ Therefore, $V$ has $\answer{3}$ as its only zero contributed from the quadratic 
 
 $\blacktriangleright$ The right piece. 
 
-We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V$, which agrees with our prediction.
+
+\begin{explanation}
 
 
+We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V$, which agrees with our extimation from the graph.
+
+\end{explanation}
 
 
 
@@ -140,16 +146,24 @@ We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V
 \begin{itemize}
 \item \textbf{$-2h-3$} is a linear function.  Its constant rate of change is $-2$.  This tells us it is a decreasing function.  $V$ is decreasing on $[-6, -2]$.
 
-\item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$. The vertex on the graph occurs at the midpoint of the zeros of the quadratic, which are $-3$ and $3$.  Therefore, $0$ is where the function switches behavior.  On $(-2, 0]$, $V$ is increasing.  On $[0,4]$, $V$ is decreasing.
+\item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$. Here, $iRoC_V(h) = -2h$. The critical number occurs when $iRoC_V(h) = -2h = 0$, which happens when $h=0$. This agrees with the midpoint of the zeros, which are $-3$ and $3$.  Therefore, $0$ is where the function switches behavior.  
+
+\begin{itemize}
+\item On $(-2, 0)$, $iRoC_V(h) = -2h > 0$, therefore, $V$ is increasing.  
+\item On $(0,4)$, $iRoC_V(h) = -2h < 0$, therefore, $V$ is decreasing.
+\end{itemize}
+
+This agrees with the graph.
+
 \end{itemize}
 
 
-\textbf{Technically:} $V$ is increasing on $[-2, 4]$, since the dot at $-2$ is lower than the left side of the included parabola.
+\textbf{Technically:} We also need to account for the endpoints. $V$ is increasing on $[-2, 4]$, since the dot at $-2$ is lower than the left side of the included parabola.
 
 
 \begin{question}
 \begin{itemize}
-\item \textbf{$\frac{7h}{4} - 8$} is a linear function with a rate of change of $\answer{\frac{7}{4}}$ telling us that $V$ is increasing on $(4, 6)$.
+\item \textbf{$\frac{7h}{4} - 8$} is a linear function with a constant rate of change of $\answer{\frac{7}{4}}$ telling us that $V$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}} on $(4, 6)$.
 \end{itemize}
 \end{question}
 
@@ -181,25 +195,27 @@ We have three pieces to our function and the graph will help our algebra. We'll 
 \begin{itemize}
   \item \textbf{$-2h-3$} is a decreasing linear function on $[-6, -2]$.  Its maximum would occur at the left endpoint, which is included. Therefore, the maximum is $-2(-6)-3 = 9$. Its minimum would be at the right endpoint, which is included. Therefore, the minimum is $-2(-2)-3 = 1$.
 
-  \item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$.  Its graph is a parabola opening down.  Therefore, its maximum value corresponds to the vertex, $(0, 9)$, which is included.  We get a maximum value of $9$.  The candidates for minimum value would occur at the endpoints, except only the right endpoint is included.  $-(4-3)(4+3) = -7$ is a possible minimum value.
+  \item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$.  Its graph is a parabola opening down and we have seen that $V$ increases and then decreases.  
+
+  Therefore, its maximum value corresponds to the vertex, $(0, 9)$, which is included.  We get a maximum value of $9$.  The candidates for minimum value would occur at the endpoints, except only the right endpoint is included.  $-(4-3)(4+3) = -7$ is a possible minimum value.
 
 
 \begin{observation}
 
 
-We could have expanded the factored form: $-(h+3)(h-3) = -h^2 + 9$.  This is now in vertex form, $-(h-0)^2 + 9$. From this expression we can see that the vertex is $(0, 9)$, which would tell us that we have a maximum of $9$ occuring at $0$.
+We could have expanded the factored form: $-(h+3)(h-3) = -h^2 + 9$.  This is now in vertex form, $-(h-0)^2 + 9$. From this expression we can see that the vertex is $(0, 9)$, and the negative leading coefficient tells us that we have a maximum of $9$ occuring at $0$.
 
 
 We could have observed the expanded form as a standard form, $-h^2 + 0 h + 9$.  Then the quadratic formula would give us $\frac{-b}{2a} = \frac{-0}{-2} = 0$ as the location of the vertex and the place where the behavior changes.
 
 
-The middle piece of $V$ is a quadratic, therefore, the vertex form $-(h-0)^2 + 9$ gives us $iRoC(h) = -2(h-0) = -2h$.  This equals $0$ at $0$, which means $0$ is a critical number and a possible location of changing behavior.
+And, we can look at the instantaneous rate of change. The middle piece of $V$ is a quadratic, therefore, the vertex form $-(h-0)^2 + 9$ gives us $iRoC(h) = -2(h-0) = -2h$.  This equals $0$ at $0$, which means $0$ is a critical number and a possible location of changing behavior.
 
 \end{observation}
 Lastly, \\
 
 
-  \item \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $[4, 6)$.  Its maximum would be encoded in the left endpoint, which is excluded. Its maximum would be encoded in the right endpoint, which is excluded. This piece is contributing no extreme values to $V$.
+  \item \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $[4, 6)$.  Its maximum would be encoded in the right endpoint, which is excluded. Its minimum would be encoded in the left endpoint, which is also excluded. This piece is contributing no extreme values to $V$.
 \end{itemize}
 
 
@@ -211,7 +227,7 @@ Our analysis of the pieces leaves us with a global minimum value of $-7$ for $V$
 
 Each of these global extrema are also local extrema.  In addition we have $1$, which is a local minimum occuring at $-2$.  
 
-\begin{explanation} Local
+\begin{explanation} Local Minimum
 
 
 Consider the open interval $(2 - 0.1, 2 + 0.1)$. $V$ is a decreasing function on $(2 - 0.1, 2)$. $V$ is an increasing function on $(2, 2 + 0.1)$.  This tells us that $V(2)$ is a minimum value on this neighborhood of $2$.  Thus, $V(2)=1$ is a local minimum of $V$.
@@ -237,11 +253,21 @@ $\blacktriangleright$ We know that the instantaneous rate of change of the right
 The only place where the $iRoC_V(h) = 0$ is at $0$, therefore, $0$ is a critical number.
 
 
-We also include domain numbers where the $iRoC_V$ does not exist.  That would be domain numbers where there is no corresponding tangent line.  That would include $-6$, $-2$, and $4$.
+We also include domain numbers where the $iRoC_V$ does not exist.  That would be domain numbers where there is no corresponding tangent line.  That would include $-2$ and $4$.
 
 
 
-The set of critical numbers is $\{ -6, -2, 0, 4 \}$.
+The set of critical numbers is $\{ -2, 0, 4 \}$.
+
+
+
+
+This doesn't include all of the places where we were investigating for extreme values. We also looked at $-6$.  There is a tangent line at $(-6, 9)$, which means $-6$ is not a critical number. Instead, $-6$ is an endpoint of a maximal interval of the domain. That automatically makes $-6$ a candidate for the location of an extreme value of $V$.
+
+
+
+
+Critical numbers and endpoints: $\{ -6, -2, 0, 4 \}$. \\
 
 These are exactly the places we have been investigating for possible maximums and minimums.
 
@@ -252,10 +278,15 @@ These are exactly the places we have been investigating for possible maximums an
 
 \subsection{Range} 
 
-From our analysis of extrema and the graph, we deduce that the range is $[-7, -9]$. \\
 
+Since each piece of $V$ is continuous, the ranges of the three pieces of $V$ are $[1, 9]$, $[-7, 9]$, and $\left( -1, \frac{2}{5} \right)$. \\
 
-Algebraically, $V$ is continuous on $[-2, 4]$.  Therefore, $V$ assumes all of the values between $V(-2)$ and $V(4)$, which tells us algebraically, that the range is $[-7, -9]$. \\
+The range of $V$ is their union.
+
+\[
+[1, 9] \cup [-7, 9] \cup \left( -1, \frac{2}{5} \right) = [-7, 9]
+\]
+
 
 
 
@@ -264,8 +295,13 @@ Algebraically, $V$ is continuous on $[-2, 4]$.  Therefore, $V$ assumes all of th
 \subsection{Continuity} 
 
 
-Linear and quadratic functions are continuous functions.  Therefore, we only need to check the endpoints of maximal intervals.  Here, those would be $\{ -6, -2, 4, 6 \}$.
+Linear and quadratic functions are continuous functions.  $V(h)$ is continuous on $[-6, -2]$, $(-2, 4]$, and $(4, 6)$.  These correspond to the intervals in the definition of $V(h)$, because there were no isolated points. \\
 
+Therefore, we only need to check the endpoints of maximal intervals.  Here, those would be $\{ -6, -2, 4, 6 \}$.
+
+
+
+\begin{observation} 
 From the graph, we can see that 
 
 \begin{itemize}
@@ -276,12 +312,54 @@ From the graph, we can see that
 \end{itemize}
 
 
-$V(h)$ is continuous on $[-6, -2]$, $(-2, 4]$, and $(4, 6)$.  These correspond to the intervals in the definition of $V(h)$, because there were not isolated points.
+
+\end{observation}
+
+
+This will help our algebraic explanations. \\
 
 
 
 
-\begin{explanation} Discontinuity
+
+
+
+
+
+\begin{explanation} Discontinuity at $-2$
+
+
+Let $\epsilon > 0$ be a small positive number.  Consider the corresponding interval, $(-2 - \epsilon, -2 + \epsilon)$.
+
+\begin{itemize}
+\item On $(-2 - \epsilon, -2)$, the values of $V$ are greater than $1$, since $V$ is decreasing here.
+\item On $(-2, -2 + \epsilon)$, the values of $V$ are greater than $2$.  Let's verify this.
+
+
+
+We have $V(h) = 9 - h^2$. \\
+
+For $V < 2$, we would need $h < -\sqrt{7}$ or $h > \sqrt{7}$.  Neither of these is true, since $h \in (-2, -2 + \epsilon)$
+
+
+\end{itemize}
+
+
+
+Following the definition of discontinuity, let's pick a distance of $1$.
+
+
+No matter how small $\epsilon$ is, $(-2 - \epsilon, -2 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains a domain number, $a \in (-2, -2 + \epsilon)$, such that the distance between $V(a)$ and $V(-2)$ is greater than $1$.
+
+This tells us that there is a discontinuity at $-2$.
+
+\end{explanation}
+
+
+
+
+
+\begin{explanation} Discontinuity at $4$
 
 
 Let $\epsilon > 0$ be a small positive number.  Consider the corresponding interval, $(4 - \epsilon, 4 + \epsilon)$.
@@ -295,7 +373,7 @@ Let $\epsilon > 0$ be a small positive number.  Consider the corresponding inter
 Following the definition of discontinuity, let's pick a distance of $1$.
 
 
-No matter how small $\epsilon$ is, $(4 - \epsilon, 4 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains two domain numbers, $a$ and $b$, such that the distance between $V(a)$ and $V(b)$ is greater than $1$.
+No matter how small $\epsilon$ is, $(4 - \epsilon, 4 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains two domain numbers, $a \in (4, 4 + \epsilon)$, such that the distance between $V(a)$ and $V(4)$ is greater than $1$.
 
 This tells us that there is a discontinuity at $4$.
 
@@ -308,6 +386,8 @@ This tells us that there is a discontinuity at $4$.
 
 
 Graphs are inherently inaccurate.  We cannot be exact with them.  They hide stuff all of the time. We need better ways, algebraic ways, of talking about types of discontinuities: ``jump'', ``removeable'', and ``asymptotic''.
+
+Our algebraic notation to talk about function behavior around discontinuities and singularities will be called \textbf{\textcolor{purple!85!blue}{limits}}.  Limits have already made an appearance helping us describe end-behavior, algebraically.
 \end{notation}
 
 
