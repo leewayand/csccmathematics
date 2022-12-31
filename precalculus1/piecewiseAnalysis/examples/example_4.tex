@@ -1,0 +1,100 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+\[
+H(k) = 
+\begin{cases}
+  -(k+4)(k-2)   & \text{ on } [-5, 2)   \\
+  (k-2)(k-7)      & \text{ on } [2, 8]  
+\end{cases}
+\]
+
+
+
+
+
+
+Graph of $y = H(k)$.
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-2)] {-(x+4)*(x-2)};
+       	  \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {(x-2)*(x-7)};
+       		%\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {3*x-16};
+
+
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-7)};
+
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,6)};
+			%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,0)};
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,6)};
+			%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-4)};
+
+			%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,8)};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+$H(k)$ is a continuous piecewise function.  The pieces change at $k = 2$.  Is it a smooth transition?  That is, the funciton values match at $k = 2$, but do the rates of change match? \\
+
+
+Both pieces of $H$ are quadratics, which, by themselves, would have domains of all real numbers.  Both parabolas have tangent lines at $k = 2$.  We need to compare their slopes. \\
+
+
+
+Let's rename the pieces. \\
+
+\begin{itemize}
+\item   $H_L(k) = -(k+4)(k-2) = -k^2 - 2k + 8$. $iRoC(k) = \answer{-2k - 2}$.
+\item   $H_R(k) = (k-2)(k-7) = k^2 - 9k + 14$. $iRoC(k) = \answer{2k - 9}$.
+\end{itemize}
+
+
+
+At $k = 2$, the two slopes are $-6$ and $-5$.  Close, but not equal. \\
+
+There is not a smooth transition.
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}

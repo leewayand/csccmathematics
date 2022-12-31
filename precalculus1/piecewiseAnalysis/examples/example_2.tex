@@ -1,0 +1,382 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+\[
+f(x) = 
+\begin{cases}
+  -\frac{x}{2} - 4   & \text{ if } [-8, -2)   \\
+  (x+2)(x-3) - 1      & \text{ if } [-2, 4]  \\
+  3x-16              & \text{ if } (4,8)
+\end{cases}
+\]
+
+
+
+
+
+
+Graph of $y = f(x)$.
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-2)] {-0.5*x-4};
+       	  \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {(x+2)*(x-3)-1};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {3*x-16};
+
+
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,0)};
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-1)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,-3)};
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,5)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-4)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,8)};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{question} Domain
+
+
+The domain is given in the definition of the function.
+
+\[
+\left[ \answer{-8}, \answer{-2} \right) \cup \left[  \answer{-2}, \answer{4} \right] \cup \left(  \answer{4}, \answer{8} \right) = \left[ \answer{-8}, \answer{8} \right)
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question} Continuity
+
+
+The three pieces in the definition of $f(x)$ are linear, quadratic, and linear.  These are continuous functions.  Therefore, the only candidates for discontinuities or singularities are the endpoints of the defining intervals.
+
+$-8$ is included in $[-8, -2)$ and $-\frac{x}{2} - 4$ is continuous on this interval. \\
+
+$-2$ is a discontinuity of $f$.  Let $d = 1$. For any small $\epsilon > 0$, the interval $(-2 - \epsilon, -2)$ always contains the number $-2 - \frac{\epsilon}{2}$.  
+
+
+\[
+f\left( -2 - \frac{\epsilon}{2} \right) = 1 + \frac{\epsilon}{4} - 4 =  \frac{\epsilon}{4} - 3
+\]
+
+
+\[
+f(-2) - f\left( -2 - \frac{\epsilon}{2} \right) = -1 - \frac{\epsilon}{4} + 3 = 2 - \frac{\epsilon}{4} > 1 = d
+\]
+
+
+Every small open interval around $-2$ contains a domain number where the value of $f$ is more than 1 away from $f(-2)$.
+
+
+
+
+
+Similarly, $4$ is also a discontinuity.  \\
+
+
+
+$8$ is not in the domain.  It cannot be a singularity since it is not a hole in the domain.  For the number $a$ to be a hole, there would need to be an open interval inside the domain, except for $a$:  $(c, a) \cup (a, b)$. 
+
+
+\end{question}
+
+
+
+
+
+\begin{question} Zeros
+
+
+The defininng pieces of $f$ have zeros.  The linear pieces have one zero and the quadratic piece has two zeros.  We'll determine these zeros and then see if they are in the domain of $f$. \\
+
+
+
+The zero of $f_1(x) = -\frac{x}{2} - 4$ is $\answer{-8}$, which is included in the domain of $f$. \\
+
+There are two zeros for $f_2(x) = (x+2)(x-3) - 1$. \\
+
+
+$ 0 = (x+2)(x-3) - 1 = x^2 - x - 7$ \\
+
+\[
+x = \frac{1 \pm \sqrt{(-1)^2 - 4 \cdot 1 \cdot (-7)}}{2} = \frac{1 \pm \sqrt{29}}{2}
+\]
+
+
+Only $\answer{\frac{1 \pm \sqrt{29}}{2}}$ is contained in the domain of $f$. \\
+
+
+The zero of $f_3(x) = 3x-16$ is $\answer{\frac{16}{3}}$, which is included in the domain of $f$. \\
+
+
+
+
+$f$ has three zeros:  $-8, \frac{1 \pm \sqrt{29}}{2}, \frac{16}{3}$.
+
+
+\end{question}
+
+
+
+
+
+\begin{question} End-Behavior
+
+
+
+End-behavior is explicitly for unbounded domains.  Therefore, there is no end-behavior for $f$.
+
+
+\end{question}
+
+
+
+
+
+
+\begin{question} Behavior
+
+
+
+From the graph, we can see that $f$ decreases, then decreases, then increases, then increases.  We want algebraic and functional reasoning. $iRoC_f(x)$ will give us behavior information.   \\
+
+
+Avoiding both discontinuities, we have
+
+\[
+iRoC_f(x) = 
+\begin{cases}
+  -\frac{1}{2}   & \text{ if } [-8, -2)   \\
+  2x - 1      & \text{ if } (-2, 4)  \\
+  3             & \text{ if } (4,8)
+\end{cases}
+\]
+
+
+On $[-8, -2)$, $f$ is a linear function with a negative rate of change, or we have $iRoC_f(x) = -\frac{1}{2}$, which is always negative.  Both of these tell us that $f$ is decreasing on $[-8, -2)$. \\
+
+
+On $(-2, 4)$, $f$ is a quadratic function.  $iRoC_f(x) = 0$ when $2x - 1 = 0$, which gives us $x = \frac{1}{2}$.
+
+
+\begin{itemize}
+\item $2x - 1$ \wordChoice{\choice[correct]{<} \choice{>}}  $0$ on  $\left( -2, \frac{1}{2}  \right)$ where $f$ is decreasing.
+\item $2x - 1$ \wordChoice{\choice{<} \choice[correct]{>}}  $0$ on  $\left( \frac{1}{2}, 4 \right)$ where $f$ is increasing.
+\end{itemize}
+
+On $(4, 8)$, $f$ is a linear function with a positive rate of change, or we have $iRoC_f(x) = 3$, which is always positive.  Both of these tell us that $f$ is increasing on $(4, 8)$. \\
+
+
+
+
+$\blacktriangleright$ \textbf{Discontinuities} \\
+
+
+Both discontinuities are connected to the middle piece of the function (the parabola). The critical number for the quadratic can be included in both pieces.
+
+
+
+\begin{itemize}
+\item $f$ decreases on $[-8, -2)$
+\item $f$ decreases on $\left[ -2, \frac{1}{2}  \right]$
+\item $f$ decreases on $\left[ \frac{1}{2}, 4 \right)$
+\item $f$ decreases on $(4, 8)$
+\end{itemize}
+
+\begin{warning}
+
+
+$f$ decreases on $[-8, -2)$ and on $\left[ -2, \frac{1}{2}  \right]$, however, $f$ does not decrease on the union $[-8, -2) \cup \left[ -2, \frac{1}{2}  \right]$.
+
+We can easily see this in the graph, because the graph jumps up to the right at $-2$. \\
+
+We can show this algebraically, by providing a counterexample to the definition of decreasing. Select two domain numbers $a < b$, yet $f(a) < f(b)$.  Our two numbers will be $-2.1 < -2$.
+
+
+$f(-2.1) = 1.05 - 4 = -2.95 < -1 = f(-2)$
+
+
+\end{warning}
+
+
+\end{question}
+
+
+
+
+
+\begin{question} Global Maximum
+
+
+
+
+
+
+The graph suggests that there is no global maximum. Algebraically, we can establish this by showing that 
+
+\begin{itemize}
+\item $f \leq 5$ on $[-8, 4]$ 
+\item $f$ is continuous and increasing on $(4, 8)$
+\end{itemize}
+
+We already have shown the second part. \\
+
+
+
+On $[-8, -2)$, $f$ is continuous and decreasing, therefore $f(x) \leq f(-8) = 0 \leq 5$.  \\
+
+
+On $[-2, 4]$, $f$ is continuous and decreasing and then increasing, therefore $f(x)$ is less than or equal to the maximum of the endpoint values. $f(-2) = -1$ and $f(4) = 5$. \\
+
+
+On $(4, 8)$ $f$ is continuous and \wordChoice{\choice[correct]{increasing} \choice{decreasing}} , therefore, since $8 \notin (4, 8)$, there is no maximum value.
+
+
+
+\begin{idea} Open Interval
+
+To see that $f$ has no maximum value on $(4, 8)$, pretend there is a maximum value. \\
+
+
+Suppose $c \in (4, 8)$ with $f(x) \leq f(c)$ for all $x \in (4, 8)$.
+
+
+Then, since $(4, 8)$ is an open interval we know that $\frac{c+8}{2} \in (4, 8)$ and $f\left( \frac{c+8}{2} \right) > f(c)$, because $f$ is increasing and $\frac{c+8}{2} > c$.
+
+
+
+
+
+
+
+\end{idea}
+
+
+\end{question}
+
+\begin{warning}
+
+
+Yes, it is easier to say that the graph shows us there is no maximum.  However, we have already seen graphs which have been misleading. We cannot trust the visual information from graphs to be proof.  We don't trust graphs that much.  Algebra and function reasoning is the only things we trust to be exact and to cover all posibilities.
+
+\end{warning}
+
+
+
+
+
+
+\begin{question} Global Minimum 
+
+
+Yes, the graph convinces us that there is a global minimum and it is connected to the vertex of the parabola. \\
+
+
+Now, we let that direct our algebra.  Here is our plan (which you can carry out):
+
+
+\begin{enumerate}
+\item On $[-8, -2)$, $f$ is decreasing, so $f$ is greater than $-\frac{-2}{2} - 4$.
+\item On $(-2, 4)$, $f$ is a quadratic with a positive leading coefficient.  That means a minimum at the critical number, which is included in the domain.
+\item On $(4, 8)$, $f$ is increasing, so $f$ is greater than $3 \cdot 4 - 16$.
+\end{enumerate}
+
+That will establish $f\left( \frac{1}{2} \right) = -\frac{29}{4}$ as the global minimum.
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+\begin{question} Local Maximums 
+
+$-2$ and $4$ are locations of local maximums.  We'll explain $4$. \\
+
+
+First, we need an open interval around $4$.  We'll chose $\left( 4-\frac{1}{2}, 4 + \frac{1}{2} \right)$.
+
+
+On $\left( 4-\frac{1}{2}, 4 \right]$, $f$ is increasing, which means $f(x) \leq f(4) = 5$. \\
+
+On $\left( 4, 4 + \frac{1}{2} \right]$, $f$ is increasing, which means $f(x) \leq f\left( 4 + \frac{1}{2} \right) = -2.5 < f(4) = 5$
+
+
+$f(x) \leq f(4)$  for all $x \in \left( 4-\frac{1}{2}, 4 + \frac{1}{2} \right)$.
+
+$f(4)$ is a local maximum.
+
+
+
+\end{question}
+
+
+
+
+\begin{question} Range 
+
+
+We can take the union of the ranges of each of the three pieces.\\
+
+
+\[
+(-3, 0] \cup \left[ -\frac{29}{4}, 5 \right] \cup (-4, 8) = \left[ -\frac{29}{4}, 8 \right)
+\]
+
+
+\end{question}
+
+
+
+
+
+\end{exercise}
+\end{document}

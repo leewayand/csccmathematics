@@ -1,0 +1,275 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+\[
+H(k) = 
+\begin{cases}
+  -(k+4)(k-2)   & \text{ on } [-5, 2)   \\
+  6              & \text{ if } k = 2 \\
+  (k-2)(k-7)      & \text{ on } (2, 8]  
+\end{cases}
+\]
+
+
+
+
+
+
+Graph of $y = H(k)$.
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-2)] {-(x+4)*(x-2)};
+       	  \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {(x-2)*(x-7)};
+       		%\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {3*x-16};
+
+
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-7)};
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,6)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,0)};
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,6)};
+			%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-4)};
+
+			%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,8)};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{question} Domain
+
+
+The domain is given in the definition of the function.
+
+\[
+\left[ \answer{-5}, \answer{2} \right) \cup \left\{ \answer{2} \right\} \cup \left(  \answer{2}, \answer{8} \right] = \left[ \answer{-5}, \answer{8} \right]
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question} Continuity
+
+
+The two pieces in the definition of $H(k)$ are quadratic functions.  These are continuous functions.  Therefore, the only candidate for discontinuity or singularity is $x = 2$.
+
+The graph suggests that $x = 2$ is a discontinuity. We will show this is true. \\
+
+Let $d = 1$. \\
+
+For any small $\frac{1}{100} > \epsilon > 0$, the interval $(2 - \epsilon, 2)$ always contains the number $2 - \frac{\epsilon}{2}$.  
+
+
+\[
+H\left( 2 - \frac{\epsilon}{2} \right) = H\left( \frac{4 - \epsilon}{2} \right) = -\left( \frac{4 - \epsilon}{2} + 4 \right) \left(  \frac{4 - \epsilon}{2} - 2 \right)
+\]
+
+\[
+= -\left( \frac{12 - \epsilon}{2} \right) \left(  \frac{- \epsilon}{2} \right) = \left( \frac{12 - \epsilon}{2} \right) \left(  \frac{\epsilon}{2} \right)
+\]
+
+
+Since, $\frac{1}{100} > \epsilon > 0$, $\frac{12 - \epsilon}{2} < 12$ and $\frac{\epsilon}{2} < \frac{1}{200}$
+
+
+Therefore, 
+
+\[
+H\left( 2 - \frac{\epsilon}{2} \right) < \frac{12}{200} 
+\]
+
+
+
+On the interval, $(2 - \epsilon, 2)$, $H$ always has a value less than $\frac{12}{200}$.  Its distance from $H(2) = 6$ is greater than $d = 1$.
+
+
+
+Perhaps the other side of $2$ would have been easier. \\
+
+On the interval $(2, 2 + \epsilon)$, the second piece of $H$ is negative, which is more than $1$ away from $H(2) = 6$. \\
+
+
+Every small open interval around $2$ contains a domain number where the value of $H$ is more than $1$ away from $H(2)$. \\
+
+
+$x = 2$ is a discontinuity.
+
+
+
+\end{question}
+
+
+
+
+
+\begin{question} Zeros
+
+
+The defininng pieces of $H$ have two zeros each.  The graph suggests that $x=2$ would be a zero for each quadratic piece, however, $H$ has moved this one value away from $0$.  That leaves two zeros for $H$.
+
+
+\begin{explanation}
+
+
+
+The left piece is a quadratic, which we have in factored form, $-(k+4)(k-2)$.  The zeros are $-4$ and $2$.  $H$ has redefined $H(2)$ to be $6$. \\
+
+
+The right piece is a quadratic, which we have in factored form, $(k-2)(k-7)$.  The zeros are $2$ and $7$.  $H$ has redefined $H(2)$ to be $6$. \\
+
+
+The zeros of $H$ are $\{ -4, 7 \}$.
+
+
+\end{explanation}
+
+
+\end{question}
+
+
+
+
+
+\begin{question} End-Behavior
+
+
+
+End-behavior is explicitly for unbounded domains.  Therefore, there is no end-behavior for $H$.
+
+
+\end{question}
+
+
+
+
+
+
+\begin{question} Behavior
+
+
+
+From the graph, we can see that $H$ increases, then decreases, and then increases.  We want algebraic and functional reasoning. $iRoC_H(k)$ will give us behavior information.   \\
+
+
+Avoiding the discontinuity, we have
+
+\[
+iRoC_H(k) = 
+\begin{cases}
+  \answer{-2k - 2}   & \text{ on } [-5, 2)   \\
+  \answer{2k - 9}     & \text{ on } (2, 8]  
+\end{cases}
+\]
+
+
+
+$-2k - 2$ gives us a critical number $\answer{-1}$. \\
+
+
+$2k - 9$ gives us a critical number $\answer{\frac{9}{2}}$. \\
+
+
+
+
+
+\begin{itemize}
+\item $-2k - 2$ \wordChoice{\choice{<} [correct]\choice{>}}  $0$ on  $[-5, -1)$ where $H$ is increasing.
+\item $-2k - 2$ \wordChoice{\choice[correct]{<} \choice{>}}  $0$ on  $(-1, 2)$ where $H$ is decreasing.
+\item $2k - 9$ \wordChoice{\choice[correct]{<} \choice{>}}  $0$ on  $\left( 2, \frac{9}{2} \right)$ where $H$ is decreasing.
+\item $2k - 9$ \wordChoice{\choice{<} [correct]\choice{>}}  $0$ on  $\left( \frac{9}{2}, 8]$ where $H$ is increasing.
+\end{itemize}
+
+
+
+
+
+
+
+\begin{warning}
+
+
+$H$ decreases on $[-1, 2)$ and on $\left( \frac{9}{2}, 8 \right]$, however, $H$ does not decrease on their union $[-1, 2) \cup \left( \frac{9}{2}, 8 \right]$.
+
+
+
+We can show this algebraically, by providing a counterexample to the definition of decreasing. Select two domain numbers $a < b$, yet $f(a) < f(b)$.  Our two numbers will be $\frac{7}{4} < \frac{15}{2}$.
+
+
+\begin{align*}
+H\left( \frac{7}{4} \right & = -\left( \frac{7}{4} + 4 \right) \left( \frac{7}{4} - 2 \right) \\
+& = -\left( \frac{23}{4} \right) \left( -\frac{1}{4} \right) \\
+& = \frac{23}{16}  
+\end{align*}
+
+
+\begin{align*}
+H\left( \frac{15}{2} \right & = \left( \frac{15}{2} - 2 \right) \left( \frac{15}{2} - 7 \right) \\
+& = \left( \frac{11}{2} \right) \left( \frac{1}{2} \right) \\
+& = \frac{11}{4}  
+\end{align*}
+
+
+\[
+\frac{23}{16}  < \frac{32}{16} = 2 = \frac{8}{4} < \frac{11}{4} 
+\]
+
+\end{warning}
+
+
+We now have a counterexample to the statement that $H$ is decreasing on the set $[-1, 2) \cup \left( \frac{9}{2}, 8 \right]$.
+
+
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
