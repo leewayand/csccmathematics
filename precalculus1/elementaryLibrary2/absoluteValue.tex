@@ -44,8 +44,8 @@ Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The absolute value f
 \item $|4| = 4$
 \item $|0| = 0$
 \item $|-\pi| = -(-\pi) = \pi$
-\item $|cos(\pi)| = |-1| = -(-1) = 1$
-\item $|sin(\tfrac{\pi}{4})| = \tfrac{1}{\sqrt{2}}$
+\item $|\cos(\pi)| = |-1| = -(-1) = 1$
+\item $|\sin(\tfrac{\pi}{4})| = \tfrac{1}{\sqrt{2}}$
 \end{itemize}
 \end{example}
 
@@ -58,9 +58,9 @@ Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The absolute value f
 \item $|-\sqrt{5}| = \answer{\sqrt{5}}$
 \item $|4-4| = \answer{0}$
 \item $\left|\frac{-4}{-3}\right| = \answer{\frac{4}{3}}$
-\item $|cos(\tfrac{\pi}{2})| = \answer{0}$
-\item $|sin(\tfrac{3\pi}{2})| = \answer{1}$
-\item $|tan(\tfrac{3\pi}{4})| = \answer{1}$
+\item $|\cos(\tfrac{\pi}{2})| = \answer{0}$
+\item $|\sin(\tfrac{3\pi}{2})| = \answer{1}$
+\item $|\tan(\tfrac{3\pi}{4})| = \answer{1}$
 \end{itemize}
 \end{example}
 There is no arithmetic operation called ``make positive''.  If a number is negative, then you make it positive by negating it. 
@@ -119,9 +119,199 @@ Either $m = 18$  or $m = -18$
 
 
 
+The absolute value function is a continuous function.
+
+\begin{itemize}
+\item On $(-\infty, 0)$ we have $| x | = -x$, which is a linear function, which is continuous.
+\item On $(0, \infty)$ we have $| x | = x$, which is a linear function, which is continuous.
+\end{itemize}
+
+So, the only questions is $0$ itself.  The graph certainly suggests continuity, but we want a rigorous explanation. \\
+
+
+$| 0 | = 0$, so the only other possibility for $0$ is that it might be a discontinuity.  We need to show it is not a discontinuity.  We need to show that when $x$ is close to $0$, then also $| x |$ is close to $0$. \\
+
+Select any small interval you want surrounding the function value $| 0 | = 0$.  Like, $(0 - \epsilon, 0 + \epsilon) = (-\epsilon, \epsilon)$. \\
 
 
 
+Is it possible to find a small inteval around the domain number $0$, like, $(-\delta, \delta)$, so that
+
+
+
+\[
+| x | \in (-\epsilon, \epsilon) \, \text{ whenever } \, x \in (-\delta, \delta)
+\]
+
+
+Yes.  Just pick $\delta = \epsilon$.
+
+So, $0$ is not a discontinuity and the absolute value function is a continuous function.
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Behavior
+
+
+Where is $A(x) = | x |$ increasing and decreasing?
+
+
+
+\begin{explanation}
+
+
+First, get rid of the absolute value bars.
+
+\begin{itemize}
+\item $x < 0$ when $x < \answer{0}$
+\item $x > 0$ when $x > \answer{0}$
+\end{itemize}
+
+
+
+\[
+A(x) = 
+\begin{cases}
+  -x & \text{ on } (-\infty, 0)   \\
+  x  & \text{ on } [0, \infty)
+\end{cases}
+\]
+
+
+
+Each piece is a restricted linear function.  We can get their iRoC.
+
+
+\[
+iRoC_A(x) = 
+\begin{cases}
+  -1 & \text{ on } (-\infty, 0)   \\
+  1  & \text{ on } (0, \infty).
+\end{cases}
+\]
+
+
+$A(x) = | x |$ is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$.
+
+
+
+\end{explanation}
+
+
+\end{example}
+
+
+
+
+Absolute value is a continuous function, which is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$. That makes $| 0 | = 0$ the global minimum. \\
+
+
+Since the absolute value function is a increasing linear function on $(0, \infty)$, we know that
+
+\[
+\lim\limits_{x \to \intfy}| x | = \infty
+\]
+
+
+
+Therefore, the range is $[0, \infty)$.
+
+
+
+
+
+
+
+
+\begin{example}  Critical Numbers
+
+
+WWhat are the cricital numbers for $A(x) = | x |$ ?
+
+
+
+\begin{explanation}
+
+
+First, $0$ is in the domain. \\
+
+The previous examples shows that the $iRoC_{|x|}$ is defined and nonzero everywhere except $0$. \\
+
+The only possible critical number is $0$.  We will show that there is no tangent line at $(0,0)$. \\
+
+
+Suppose there is a tangent line to the graph of $y = | x |$ at $(0,0)$.  Then, it has to match the slope on the left, which is $-1$ and it has to match the slope on the right, which is $1$.  A line cannot have two slopes. \\ 
+
+
+There is not tangent line at $(0,0)$, which means there is no slope. \\
+
+
+
+\[
+iRoC_{|x|}(0) \, \text{ does not exist }
+\]
+
+
+$0$ is the only critical number.
+
+
+
+\end{explanation}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example}  Behavior
+
+
+Rewrite $A(x) = | x - 3|$ without absolute value bars.
+
+
+
+\begin{explanation}
+
+
+First, get rid of the absolute value bars.
+
+\begin{itemize}
+\item $x - 3 < 0$ when $x < \answer{3}$
+\item $x - 3 > 0$ when $x > \answer{3}$
+\end{itemize}
+
+
+
+\[
+A(x) = 
+\begin{cases}
+  -(x - 3) & \text{ on } (-\infty, 3)   \\
+  x - 3  & \text{ on } [3, \infty).
+\end{cases}
+\]
+
+
+
+
+
+
+\end{explanation}
+
+
+\end{example}
 
 
 
