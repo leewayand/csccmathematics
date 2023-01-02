@@ -72,8 +72,20 @@ We don't need all of the power functions for polynomials.  We only need power fu
 $\blacktriangleright$  When the power, $p$, is a positive integer, then power functions have two types of end-behavior.
 
 \begin{itemize}
-\item When $p$ is even, the end-behavior is the same to the right or left - both up or both down on the graph depending on the sign of the coefficient, $k$.
-\item When $p$ is odd, the end-behavior is opposite on either side of the graph - one side up and one side down on the graph, which switches depending on the sign of the coefficient, $k$.
+\item When $p$ is even, the end-behavior is the same to the right or left.
+
+
+Correspondingly, both sides of the graph go up down, depending on the sign of the coefficient, $k$.
+
+
+\item When $p$ is odd, the end-behavior is opposite on either side.
+
+
+Correspondingly, the two sides of the graph go and down in opposite directions, depending on the sign of the coefficient, $k$.
+
+
+
+
 \end{itemize}
 
 
@@ -125,8 +137,17 @@ $\blacktriangleright$  When the power, $p$, is a positive integer, then power fu
 $\blacktriangleright$  When the power, $p$, is a negative integer, then we have two types of unbounded behavior around the singularity at $0$. 
 
 \begin{enumerate}
-\item When $p$ is even, the behavior around the singularity is the same - both up or down on the graph depending on the sign of the coeficient, $k$.
-\item When $p$ is odd, the behavior around the singularity is opposite - one side up and one side down on the graph, which switches depending on the sign of the coeficient, $k$.
+\item When $p$ is even, the behavior around the singularity is the same.  Depending on the sign of the coeficient, $k$, the function is unbounded positively or negatively as you get closer to $0$. \\
+
+
+Correspondingly, both sides of the graph go up down together, depending on the sign of the coefficient, $k$.
+
+
+
+
+\item When $p$ is odd, the behavior around the singularity is opposite.  The function is unbounded positively one one side of $0$ and unbounded negatively on the other side of $0$. \\
+
+COrrespondingly, one side of the graph goes up and one side down, depending on the sign of the coeficient, $k$.
 \end{enumerate}
 
 
@@ -180,11 +201,17 @@ In either case, the end-behavior is to tend toward $0$.
 
 
 
+
+
+
+
+
+
 \subsection{Limit Notation }
 
 
 
-In the previous descriptions, we referenced the graphs when describing the behavior around the singularity and the function's end-behavior.  We would also like algebraic descriptions of this behavior.
+In the previous descriptions, our graphs did a good job of describing limiting behavior.  We would also like algebraic descriptions of this behavior.
 
 
 $\blacktriangleright$  \textbf{End-Behavior}
@@ -225,6 +252,62 @@ It depends on the sign of the coefficient $k$.
 
 
 
+
+\begin{notation}
+
+
+Although the graph is convincing, ``we can see'' is not rigorous reasoning. \\
+
+
+We would like a precise and proper explanation of $\lim_{x \to \infty} k \, x^p = 0,  $, when $p$ is a negative integer. \\
+
+
+Let $k$ be any non-zero real number. \\
+$p$ is a negative integer, so let $p = -n$, where $n$ is a positive integer. \\
+Let $f(x) = k \, x^p = \frac{k}{x^n}$ \\
+
+
+
+For the limit to equal $0$, $f$ must ``eventually'' get smaller than any real number, and stay there. \\
+
+
+
+Given any small $\epsilon > 0$, let $M = \frac{1}{| k | \cdot \epsilon}$, which is a positive real number.
+
+
+For any $x > M$, we have 
+
+\[
+| f(x) | = | k | \, x^p  = \frac{| k |}{x^n} < \frac{| k |}{x} < \frac{| k |}{M}  = \epsilon
+\] 
+
+
+Given any small positive distance from $0$, called $\epsilon$, eventually $| f(x) |$ gets smaller and stays there. \\
+
+
+
+The ``eventually'' part is $M$. \\
+
+The ``stays there'' part is, for any $x > M$.
+
+
+\end{notation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $\blacktriangleright$  \textbf{Singularity}
 
 
@@ -247,7 +330,7 @@ Describing the function's behavior around $0$ with limit notation looks like
 
 
 
-\textbf{\textcolor{blue!55!black}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards zero from the left equals negative infinity}.
+\textbf{\textcolor{blue!55!black}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards zero from the left (or right) equals negative infinity}.
 
 It depends on the sign of coefficient $k$.
 
@@ -498,6 +581,17 @@ If the shortest expression is not what you mean, then you need to use parenthese
 \begin{center}
 \textbf{\textcolor{red!90!darkgray}{If you are unsure, then use parentheses!}} 
 \end{center}
+
+
+\begin{center}
+\textbf{\textcolor{red!90!darkgray}{Parentheses are your friends!}} 
+\end{center}
+
+
+\begin{center}
+\textbf{\textcolor{red!90!darkgray}{Parentheses clear up communication!}} 
+\end{center}
+
 
 
 \end{warning}
