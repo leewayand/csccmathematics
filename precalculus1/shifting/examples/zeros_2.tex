@@ -1,0 +1,143 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+\[
+P(t) = 
+\begin{cases}
+  ln(t+8) & \text{ on } (-8, -3]   \\
+  -4 & \text{ if } t = -2  \\
+  | t - 3 | - 4 & \text{ on } (0, 8]
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			     \addplot [line width=2, penColor, smooth,samples=100,domain=(-7.9:-3),<-] {ln(x+8)};
+           \addplot [line width=2, penColor, smooth,samples=100,domain=(0:8)] {abs(x-3)-4};
+           %\addplot [line width=2, penColor, smooth,samples=100,domain=(5:7)] {-5*(x-5)*(x-7)};
+
+
+
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,1.609)};
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+           \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-0,-1)};
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,1)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{question} Zeros of $P$
+
+
+In numerical order, what the zeros of $P$?
+
+\[
+\answer{-7}, \, \text{ and } \, \answer{7}
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Shifted Zeros 
+
+Define $M(y) = P(y - 2)$ \\
+
+
+
+
+In numerical order, what are the zeros of $M$? \\
+
+\[
+\answer{-5}, \, \text{ and } \, \answer{9}
+\]
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Shifted Zeros 
+
+Define $x(f) = V(f + 3)$ \\
+
+
+
+In numerical order, what are the zeros of $x$? \\
+
+\[
+\answer{-10}, \, \text{ and } \, \answer{4}
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}

@@ -1,0 +1,156 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+\[
+P(t) = 
+\begin{cases}
+  ln(t+8) & \text{ on } (-8, -3]   \\
+  -4 & \text{ if } t = -2  \\
+  | t - 3 | - 4 & \text{ on } (0, 8]
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			     \addplot [line width=2, penColor, smooth,samples=100,domain=(-7.9:-3),<-] {ln(x+8)};
+           \addplot [line width=2, penColor, smooth,samples=100,domain=(0:8)] {abs(x-3)-4};
+           %\addplot [line width=2, penColor, smooth,samples=100,domain=(5:7)] {-5*(x-5)*(x-7)};
+
+
+
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,1.609)};
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+           \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-0,-1)};
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,1)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{question} Domain of $P$
+
+
+What is the domain of $P$?
+
+\[
+\left( \answer{-8} , \answer{-3} \right]  \cup  \{ -2 \}  \cup  \left( \answer{0} , \answer{8} \right]
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Shifted Domain 
+
+Define $M(y) = P(y - 2)$ \\
+
+
+What is the connection between the domain variables? 
+
+
+\[
+t = \answer{y-2} \, \text{ and } \,  y = \answer{t+2}
+\]
+
+What is the domain of $M$?
+
+\[
+\left( \answer{-6} , \answer{-1} \right]  \cup  \{ 0 \}  \cup  \left( \answer{2} , \answer{10} \right]
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Shifted Domain 
+
+Define $x(f) = V(f + 3)$ \\
+
+What is the connection between the domain variables? 
+
+
+\[
+t = \answer{f+3} \, \text{ and } \,  f = \answer{t-3}
+\]
+
+
+
+What is the domain of $G$?
+
+\[
+\left( \answer{-11} , \answer{-6} \right]  \cup  \{ -5 \}  \cup  \left( \answer{-3} , \answer{5} \right]
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}

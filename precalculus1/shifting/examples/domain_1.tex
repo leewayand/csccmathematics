@@ -1,0 +1,159 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+\[
+V(h) = 
+\begin{cases}
+  -3(h + 5) & \text{ if } [-8, -4)   \\
+  (h+2)(h-2) & \text{ if } [-2, 2)  \\
+  -5(h-5)(h-7) & \text{ if } [5, 7]
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			     \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-4)] {-3*(x+5)};
+           \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:2)] {(x+2)*(x-2)};
+           \addplot [line width=2, penColor, smooth,samples=100,domain=(5:7)] {-5*(x-5)*(x-7)};
+
+
+
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,9)};
+           \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-3)};
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,0)};
+           \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,0)};
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(7,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{question} Domain of $V$
+
+
+What is the domain of $V$?
+
+\[
+\left[ \answer{-8} , \answer{-4} \right)  \cup  \left[ \answer{-2} , \answer{2} \right)  \cup  \left[ \answer{5} , \answer{7} \right]
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Shifted Domain 
+
+Define $f(x) = V(x - 3)$ \\
+
+
+What is the connection between the domain variables? 
+
+
+\[
+h = \answer{x-3} \, \text{ and } \,  x = \answer{h+3}
+\]
+
+What is the domain of $f$?
+
+\[
+\left[ \answer{-5} , \answer{-1} \right)  \cup  \left[ \answer{1} , \answer{5} \right)  \cup  \left[ \answer{8} , \answer{10} \right]
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Shifted Domain 
+
+Define $G(t) = V(t + 4)$ \\
+
+What is the connection between the domain variables? 
+
+
+\[
+h = \answer{t+4} \, \text{ and } \,  t = \answer{h-4}
+\]
+
+
+
+What is the domain of $G$?
+
+\[
+\left[ \answer{-12} , \answer{-8} \right)  \cup  \left[ \answer{-6} , \answer{-2} \right)  \cup  \left[ \answer{1} , \answer{3} \right]
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
