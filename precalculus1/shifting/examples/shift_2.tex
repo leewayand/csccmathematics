@@ -43,7 +43,11 @@ P(t) =
             axis on top
           ]
           
-			     \addplot [line width=2, penColor, smooth,samples=100,domain=(-7.9:-3),<-] {ln(x+8)};
+
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-8},{x});
+
+
+			     \addplot [line width=2, penColor, smooth,samples=100,domain=(-7.95:-3),<-] {ln(x+8)};
            \addplot [line width=2, penColor, smooth,samples=100,domain=(0:8)] {abs(x-3)-4};
            %\addplot [line width=2, penColor, smooth,samples=100,domain=(5:7)] {-5*(x-5)*(x-7)};
 
