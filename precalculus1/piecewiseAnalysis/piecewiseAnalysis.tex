@@ -167,7 +167,7 @@ This agrees with the graph.
 \end{itemize}
 \end{question}
 
-\textbf{Technically:} $V$ is increasing on $[4, 6]$, since the dot at $4$ is lower than the left side of the included line segment.
+\textbf{Technically:} $V$ is increasing on $[4, 6)$, since the dot at $4$ is lower than the left side of the included line segment.
 
 
 The intervals where $V$ is monotonic are
@@ -339,7 +339,32 @@ Let $\epsilon > 0$ be a small positive number.  Consider the corresponding inter
 
 We have $V(h) = 9 - h^2$. \\
 
-For $V < 2$, we would need $h < -\sqrt{7}$ or $h > \sqrt{7}$.  Neither of these is true, since $h \in (-2, -2 + \epsilon)$
+For $V < 2$, we would need $h < -\sqrt{7}$ or $h > \sqrt{7}$.  Neither of these is true, since $h \in (-2 - \epsilon, -2 + \epsilon)$
+
+
+\begin{idea}
+
+How come $-\sqrt{7} \notin (-2 - \epsilon, -2 + \epsilon)$? \\
+
+
+$\sqrt{7} \approx 2.64575$, which is only $0.64575$ away from $2$. That seems pretty small. \\
+
+
+\textbf{\textcolor{red!80!black}{Nope!}} \\
+
+
+$\epsilon$ is a veeeeeeeeeeery smaaaaaaaaaaaaaaall postive number.  $0.64575$ is HUGE compared to $\epsilon$. \\
+
+
+This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$.  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird.
+
+
+
+
+
+
+
+\end{idea}
 
 
 \end{itemize}
