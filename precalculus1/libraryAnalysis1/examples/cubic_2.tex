@@ -1,0 +1,224 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+The best way to analyze a polynomial is with its factored form. \\
+
+
+\textbf{Analyze B(t)} \\
+
+\[
+B(t) = 2 t^2 - 3 t^2 - 13 t - 28 \, \text { with its natural domain } 
+\]
+
+
+
+
+
+
+\subsection{Algebraic Language}
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain: }} We are given that the domain is the natural domain and the natural domain of all polynomials is $(-\infty, \infty)$.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity: }}  All polynomials are continuous on their domain.  So, $Q$ has no discontinuities.  Since, the domain is all real numbers, there can be no singularities.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros: }}  
+
+
+There are several approaches to factoring.  Identifying zeros or roots is one.  For this we need a graph.
+
+
+
+
+\begin{center}
+\desmos{zvp1r3rcfr}{400}{300}
+\end{center}
+
+
+
+The DESMOS graph is suggesting that perhaps $4$ is the only root.  Let's check:
+
+
+
+\[
+B(4) = 2 (4)^2 - 3 (4)^2 - 13 (4) - 28 = 0
+\]
+
+
+
+
+Now, we know that $(t-4)$ is a factor.  
+
+
+
+
+\[
+B(t) = 2 t^2 - 3 t^2 - 13 t - 28 = (t-4)(A t^2 + B t + C)
+\]
+
+
+
+
+\[
+B(t) = 2 t^2 - 3 t^2 - 13 t - 28 = A t^3 + (B - 4 A) t^2 + (C - 4 B) t - 4 C 
+\]
+
+
+Comparing the constant terms tells us that $C = 7$ \\
+
+
+
+Comparing leading terms tells us that $A = 2$.
+
+
+
+\[
+B(t) = 2 t^2 - 3 t^2 - 13 t - 28 = 2 t^3 + (B - 8) t^2 + (7 - 4 B) t - 28 
+\]
+
+
+$B = 5$
+
+
+
+\[
+B(t) = 2 t^2 - 3 t^2 - 13 t - 28 = (t-4)(2 t^2 + 5 t + 7)
+\]
+
+
+
+
+The quadratic formula will give us the roots of $2 t^2 + 5 t + 7$, which we thnk should both be nonreal, since there was only one intercept.
+
+
+\[
+\frac{-5 \pm \sqrt{25-4 (2) (7)}}{4} = \frac{-5 \pm \sqrt{-31}}{4}
+\]
+
+
+
+
+
+
+
+The only root of $B(t)$ is $4$.  It has a multiplicity of $1$, which is odd.  Therefore, $B$ changes signs across $4$.
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior: }} Polynomials with odd degree (like cubics) have the different end-behavior on either side.  Since $B$ has a positive leading coefficient, $B$ is unbounded negatively as $t$ tends to $-\infty$. and $B$ is unbounded positively as $t$ tends to $\infty$.
+
+\[
+\lim\limits_{t \to -\infty} B(t) = -\infty
+\]
+
+
+\[
+\lim\limits_{t \to \infty} B(t) = \infty
+\]
+
+
+There is no global maximum or global minimum. \\
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior: }}  $B$ is a cubic, which means it has three possible types. Since, it has only one real zero, we cannot tell algebraically if there are any local extrema (hills and valleys in the graph).
+
+
+
+
+We'll need Calculus to know how to get a derivative for cubic polynomials.  So, we cannot get the criticval numbers for $B$.  That means we cannot get exact information about the local maximum or minimum.  However, we can establish some information.
+
+
+
+
+
+
+
+At this point, we can only turn to the graph for approximations.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Extrema: }}  
+
+$B$ has a local maximum of approximately $-19.973$ at approximately $-1.055$.  $-1.055$ is a critical number. \\
+
+
+
+
+
+$B$ has a local minimum of approximately $-50.027$ at approximately $2.055$.  $2.055$ is a critical number. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Range: }}
+
+
+$B$ is continuous and  $\lim\limits_{t \to -\infty} B(t) = -\infty$  and $\lim\limits_{t \to \infty} B(t) = \infty$.  This tells us that the range is $(-\infty, \infty)$.
+
+
+
+
+
+
+
+
+\subsection{Graphical Language}
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ }}  The graph of $y = B(t)$ is that of a cubic with one hill and one valley. It has no holes or breaks. \\
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ }}  The graph has one intercept: $(4, 0)$.
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ }}  The graph slopes up to the right until it hits the top of a hill at approximately the point, $(-1.055, -19.973)$, then it slopes down to the right until it hits the bottom of a valley at approximately the point, $(2.055, -50.-027)$, then is slopes up tot he right.
+
+
+
+The graph has no highest or lowest points.
+
+
+
+
+From this graphical information we can approximate that $B$ increases on $(-\infty, -1.055)$, decreases on $(-1.055, 2.055)$, and increases on $(2.055, \infty)$.
+
+
+
+\end{exercise}
+\end{document}
