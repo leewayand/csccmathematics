@@ -1,0 +1,232 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+The best way to analyze a polynomial is with its factored form. \\
+
+
+\textbf{Analyze p(x)} \\
+
+\[
+p(x) = 3 x^2 + 5 x^2 - 107 x + 35 \, \text { with its natural domain } 
+\]
+
+
+
+
+
+
+\subsection{Algebraic Language}
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain: }} We are given that the domain is the natural domain and the natural domain of all polynomials is $(-\infty, \infty)$.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity: }}  All polynomials are continuous on their domain.  So, $Q$ has no discontinuities.  Since, the domain is all real numbers, there can be no singularities.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros: }}  
+
+
+There are several approaches to factoring.  Identifying zeros or roots is one.  For this we need a graph.
+
+
+
+
+\begin{center}
+\desmos{wgi6pkoje5}{400}{300}
+\end{center}
+
+
+
+The DESMOS graph is suggesting that perhaps $-7$ and $5$ might be roots and then there is a third root.  Let's check:
+
+
+
+\[
+p(-7) = 3 (-7)^2 + 5 (-7)^2 - 107 (-7) + 35 = 0
+\]
+
+
+
+\[
+p(5) = 3 (5)^2 + 5 (5)^2 - 107 (5) + 35 = 0
+\]
+
+
+
+We can now factor $Q$. \\
+
+
+We know that $(x+7)$ and $x-5$ are both factors of $p$. We just need to figure out the third factor.
+
+
+
+
+\[
+p(x) = 3 x^2 + 5 x^2 - 107 x + 35 = (x+7)(x-5)(A x + B)
+\]
+
+
+
+
+\[
+p(x) = 3 x^2 + 5 x^2 - 107 x + 35 = A x^3 + (2 A + B) x^2 + (-35 A + 2 B) x - 35 B 
+\]
+
+
+Comparing the constant terms tells us that $B = -1$ \\
+
+
+
+Comparing leading terms tells us that $A = 3$.
+
+
+
+
+\[
+p(x) = 3 x^2 + 5 x^2 - 107 x + 35 = (x+7)(x-5)(3 x - 1)
+\]
+
+
+
+
+
+The zeros or roots are $-7$, $\frac{1}{3}$, and $5$.  All three have multiplicity of $1$, which is odd.  Therefore, $p$ changes signs across all three.
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior: }} Polynomials with odd degree (like cubics) have the different end-behavior on either side.  Since $p$ has a positive leading coefficient, $Q$ is unbounded negatively as $w$ tends to $-\infty$. and $Q$ is unbounded positively as $w$ tends to $\infty$.
+
+\[
+\limlimits_{x \to -\infty} p(x) = -\infty
+\]
+
+
+\[
+\limlimits_{x \to \infty} p(x) = \infty
+\]
+
+
+There is no global maximum or global minimum. \\
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior: }}  The end-behavior for this cubic tells us that 
+
+
+
+\begin{itemize}
+\item $p$ increases on $(-\infty, -7)$ 
+\item $p$ decreases on $\left( -7, \frac{1}{3} \right)$
+\item $p$ increases on $\left( \frac{1}{3}, \infty \right)$
+\end{itemize}
+
+
+
+
+\textbf{\textcolor{$\blacktriangleright$ blue!55!black}{Extrema: }}  We'll need Calculus to know how to get a derivative for cubic polynomials.  So, we cannot get the criticval numbers for $p$.  That means we cannot get exact information about the local maximum or minimum.  However, we can establish some information.
+
+
+
+
+
+Since the cubic polynomial $p$ changes sign from negative to positive across $-7$, $p$ must be increasing around $-7$. Since the cubic polynomial $p$ changes sign from positive to negative across $\frac{1}{3}$, $p$ must be decreasing around $\frac{1}{3}$. 
+
+
+We also know that $p(-7) = 0$ and $p\left( \frac{1}{3} \right) = 0$ and that $p$ is continuous on $\left[-7, \frac{1}{3}  \right]$.  There must be a local maximum somewhere on this interval.
+
+
+Similar reasoning tells us that must be a local minimum somewhere on $\left[ \frac{1}{3}, 5 \right]$.
+
+
+
+
+
+At this point, we can only turn to the graph for approximations.
+
+
+
+$p$ has a local maximum of approximately $351.072$ at approximately $-4.048$.  $-4.048$ is a critical number. \\
+
+
+
+
+
+$p$ has a local minimum of approximately $-160.126$ at approximately $2.937$.  $2.937$ is a critical number. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Range: }}
+
+
+$p$ is continuous and  $\limlimits_{x \to -\infty} p(x) = -\infty$  and $\limlimits_{x \to \infty} p(x) = \infty$.  This tells us that the range is $(-\infty, \infty)$.
+
+
+
+
+
+
+
+
+\subsection{Graphical Language}
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ }}  The graph of $y = p(x)$ is that of a cubic with one hill and one valley. It has no holes or breaks. \\
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ }}  The graph has three intercepts:
+
+
+\[
+\left( -7, 0  \right) \,     \left( \frac{\sqrt{1}}{3}, 0  \right)  \, \text{ and } \,  (5, 0)
+\]
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ }}  The graph slopes up to the right until it hits the top of a hill at approximately the point, $(-4.048, 351.072)$, then it slopes down to the right until it hits the bottom of a valley at approximately the point, $(2.937, -160.126)$, then is slopes up tot he right.
+
+
+
+The graph has no highest or lowest points.
+
+
+
+
+
+
+\end{exercise}
+\end{document}
