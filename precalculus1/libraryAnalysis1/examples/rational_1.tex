@@ -1,0 +1,238 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+The best way to analyze a rationa function is with its factored form. \\
+
+
+\textbf{Analyze R(x)} \\
+
+\[
+R(x) = \frac{(x+5)(x-3)}{x+2}, \text { with its natural domain } 
+\]
+
+
+
+
+We want to say as much as we can exactly.  Then, we'll turn to the graph for approximations. \\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain: }} We are given that the domain is the natural domain. Therefore, we need to exclude any zero of the denominator. $(-\infty, -2) \cup (-2, \infty)$.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity: }}  All rational functions are continuous on their domain.  So, $R$ has no discontinuities and just one singularity.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior: }} 
+
+
+$R$ is a rational function. The degree of the numerator is $2$, which is greater than than the degree of the denominator.  Therefore, $R$ is unbounded as $x$ tends to $-\infty$ or $\infty$.  We just have to figure out the sign.
+
+
+When $x$ is very large and negative, we have 
+
+\begin{itemize}
+\item $x+5 < 0$
+\item $x-3 < 0$
+\item $x+2 < 0$
+\end{itemize}
+
+
+That makes $R < 0$
+
+\[
+\lim\limits_{x \to -\infty} R(x) = -\infty
+\]
+
+
+When $x$ is very large and positive, then all three factors are positive and $R$ is positive.
+
+
+\[
+\lim\limits_{x \to \infty} R(x) = \infty
+\]
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros: }}  
+
+
+We are given the factored form.  So, we can see that the zeros are $-5$ and $3$.
+
+
+
+Both zeros and the singularity have a multiplicity of $1$, which is odd.  Therefore, $R(x)$ changes signs over each one.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior Around the Singularity: }}  
+
+
+When $x$ is close to $-2$, but less than $-2$, then we have 
+
+
+\begin{itemize}
+\item $x+5 ~ 3 > 0$
+\item $x-3 ~ -5 < 0$
+\item $x+2 ~ 0 < 0$
+\end{itemize}
+
+
+The numerator will be around $-15$ and the denominator will be heading to $0$ through negative numbers.  $R$ will be positive and unbounded.
+
+
+
+
+\[
+\lim\limits_{x \to -2^-} R(x) = \infty
+\]
+
+
+
+
+
+
+When $x$ is close to $-2$, but greater than $-2$, then we have 
+
+
+\begin{itemize}
+\item $x+5 ~ 3 > 0$
+\item $x-3 ~ -5 < 0$
+\item $x+2 ~ 0 > 0$
+\end{itemize}
+
+
+The numerator will be around $-15$ and the denominator will be heading to $0$ through positive numbers.  $R$ will be negative and unbounded.
+
+
+
+
+\[
+\lim\limits_{x \to -2^+} R(x) = -\infty
+\]
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Range: }}
+
+
+$B$ is continuous on $(-\infty, -2)$ and  $\lim\limits_{x \to -\infty} R(x) = -\infty$  and $\lim\limits_{x \to -2^-} R(x) = \infty$.  This tells us that the range is $(-\infty, \infty)$.
+
+
+
+
+
+
+
+So far, all of our algebraic reasoning agrees with the graph.
+
+
+
+
+\begin{center}
+\desmos{mfppvb2aoo}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior: }}  
+
+
+
+
+Now, we want to figure out where $R$ is increasing and decreasing and then use that information to identify any local maximums or minimums.
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Our algebra cannot do that. We'll need Calculus to do that. \\
+
+
+
+
+
+
+
+
+
+
+At this point, we can only turn to the graph for approximations.
+
+
+
+
+The graph suggests that $R$ is always increasing and there are no local maximums or minimums.
+
+
+
+
+
+\subsection{with Calculus...}
+
+
+
+Calculus will give us some new algebra tools by which we can obtain a formula for a derivative.
+
+
+
+\[
+B'(x) \frac{x^2 + 4x + 19}{(x+2)^2}
+\]
+
+
+
+\begin{itemize}
+\item Where $B'(x) < 0$, $B$ is increasing.
+\item Where $B'(x) > 0$, $B$ is decreasing.
+\item Where $B'(x) = 0$ or DNE identifies critical numbers.
+\end{itemize}
+
+
+
+
+
+The quadratic formula tells us that the zeros of the numerator are not real numbers.
+
+
+\[
+\frac{-4 \pm \sqrt{16 - 4 (1) (19)}}{2}
+\]
+
+
+Therefore, the numerator is always the same sign.  It never changes sign.  Since, the numerator equals $19$ when $x=0$, we know that the numerator is always positive.  
+
+The denominator is a square, so it is never negative.
+
+
+This shows that $B'(x) > 0$ on the whole domain and $B(x)$ is always increasing.
+
+
+
+
+\end{exercise}
+\end{document}
