@@ -1,0 +1,128 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+Completely analyze $y(x) = \left(\frac{4}{3}\right)^x - 3$ with its natural domain.
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain:}}  \\
+
+$y$ is a shifted exponential function, therefore its natural domain is $(-\infty, \infty)$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity:}}  \\
+
+$y$ is a shifted exponential function, therefore it is continuous on its domain and has no discontinuities.
+
+
+$y$ is a shifted exponential function, therefore it has no singularities.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior:}}  \\
+
+
+
+$y$ is a shifted exponential function. The leading coefficient is $1$, which is positive.  The base is $\frac{4}{3}$, which is greater than $1$.  
+
+
+$\blacktriangleright$ As $x$ becomes big and negative, then the exponent becomes big and negative.  We have a number greater than $1$ raised to big negative numbers.  That will approach $0$ and then we subtract $3$
+
+\[
+\lim\limits_{x \to -\infty} y(x) = -3
+\]
+
+
+$\blacktriangleright$ As $x$ becomes big and positive, then the exponent becomes big and positive.  We have a number greater than $1$ raised to big positive numbers. That becomes unbounded positively.
+
+\[
+\lim\limits_{x \to \infty} y(x) = \infty
+\]
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior:}}  \\
+
+$y$ is a shifted exponential function. The leading coefficient is $1$, which is positive.  The base is $\frac{4}{3}$, which is greater than $1$.  Therefore, $y$ is an increasing function.
+
+Shifted exponential functions have no global or local maximums or minimums.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros:}}  \\
+
+
+Since we have a continuous exponential function with negative and positive values, it will have a single zero.
+
+
+The zero will occur when 
+
+\[
+\left(\frac{4}{3}\right)^x = 3
+\]
+
+$x$ is the thing you raise $\frac{4}{3}$ to, to get $3$.
+
+\[
+x = log_{\tfrac{4}{3}}(3)
+\]
+
+
+
+
+This all agrees with the graph.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{-3});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:8.5),<->] {(1.333)^x - 3};
+          
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
