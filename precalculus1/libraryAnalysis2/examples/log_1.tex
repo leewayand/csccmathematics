@@ -1,0 +1,152 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+Completely analyze $y(k) = -2 ln(-k+5)$ with its natural domain.
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain:}}  \\
+
+$y$ is a logarithmic function, therefore its natural domain contains those numbers that make the inside positive. 
+
+\[
+-k + 5 > 0
+\]
+
+The naatural domain is $(-\infty, 5)$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity:}}  \\
+
+$y$ is a logarithmic function, therefore it is continuous on its domain and has no discontinuities.
+
+
+$y$ is a logarithmic function, therefore it has a singularity, when the inside is $0$, which is when $k = 5$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior Near a Singularity:}}  \\
+
+
+
+$\blacktriangleright$ $y$ is a logarithmic function. The leading coefficient is $-2$, which is negative.  When the domain gets near the singularity $ln(-k+5)$ becomes unbounded negatively.  Since the leading coefficient is negative, we have
+
+\[
+\lim\limits_{k \to 5^-} y(k) = \infty
+\]
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior:}}  \\
+
+
+$\blacktriangleright$ As $x$ becomes big and negative, then the inside becomes big and positive.  $ln(big positive)$  is big and positive.  Since the leading coefficient is negative, we have
+
+\[
+\lim\limits_{k \to \infty} y(x) = -\infty
+\]
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior:}}  \\
+
+$y$ is a logarithm function, therefore, is is either increasing or decreasing.  The leading coefficient is $-2$, which is negative.  
+
+
+Logarithmic functions have no global or local maximums or minimums. Since the extreme behavior is $\infty$ to $-\infty$, we know that $y$ is a decreasing function.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros:}}  \\
+
+
+Since we have a continuous logarithmic function with negative and positive values, it will have a single zero.
+
+
+The zero will occur when 
+
+\[
+-2 ln(-k+5) = 0
+\]
+
+\[
+ln(-k+5) = 2
+\]
+
+
+
+$ln(-k+5)$ is the thing you raise $e$ to, to get $-k+5$. Therefore, $2$ is the thing you raise $e$ to, to get $-k+5$. 
+
+\[
+e^2 = -k + 5
+\]
+
+
+\[
+k = 5 - e^2 
+\]
+
+
+
+This all agrees with the graph.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({5},{x});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:4.99),<->] {-2 * ln(-x + 5)};
+          
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
