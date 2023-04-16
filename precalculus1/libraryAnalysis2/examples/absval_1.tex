@@ -1,0 +1,177 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+Completely analyze $G(t) = -2 | t - 3 | + 6$ with its natural domain.
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain:}}  \\
+
+$G$ is an absolute value function, therefore its natural domain is $(-\infty, \infty)$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity:}}  \\
+
+$G$ is an absolute value function, therefore it is continuous on its domain and has no discontinuities.
+
+
+$G$ is an absolute value function, therefore it has no singularities.
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior:}}  \\
+
+
+
+
+$\blacktriangleright$ As $t$ becomes big, then the inside becomes big positively or negatively.  Either way, the $| t - 3|$  is big and positive.  Since the leading coefficient is negative, we have
+
+\[
+\lim\limits_{t \to \infty} G(t) = -\infty
+\]
+
+
+\[
+\lim\limits_{t \to -\infty} G(t) = -\infty
+\]
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior:}}  \\
+
+$G$ is an absolute value function, therefore, it is a piecewise function.  The pieces are linear functions.
+
+
+
+
+
+
+\[
+G(t) = 
+\begin{cases}
+  -2 ( t - 3 ) + 6 & (-\infty, 5)\\
+  -2 (3 - t) + 6 & (5, \infty)
+\end{cases}
+\]
+
+
+
+
+\[
+G(t) = 
+\begin{cases}
+  -2 t + 12 & (-\infty, 5)\\
+  2t  & (5, \infty)
+\end{cases}
+\]
+
+
+
+
+$-2 t + 12$ is a decreasing linear function.  $G(t)$ decreases on $(-\infty, 5)$.
+
+$2 t$ is an increasing linear function.  $G(t)$ increases on $(5, \infty)$.
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros:}}  \\
+
+
+We can find the zeros of each piece of the piecewise function.
+
+
+
+
+$-2 t + 12 $ has a zero at $6$.
+
+
+$-2 t$ has a zero at $0$.
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Extema:}}  \\
+
+
+From the end-behavior, we know that $G$ has no global or local minimum.
+
+
+Since $G$ is an absolute value funciton, $G$ has a global and local maximum when the inside is $0$, which is at $3$.
+
+
+$G$ is a global and local maximum of $G(3) + 6$ at $3$.
+
+
+
+
+
+
+
+
+
+
+
+
+This all agrees with the graph.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({5},{x});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-4:9),<->] {-2 * abs(x-3) + 6};
+          
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
