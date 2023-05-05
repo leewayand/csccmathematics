@@ -1,0 +1,140 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+Define $A$ as follows.
+
+\[
+A(x) = 
+\begin{cases}
+  \frac{1}{3} (x-8)  & \text{ if }  -4 \leq k \leq 2 \\
+  -2x + 14 & \text{ if } 4 < k \leq 6
+\end{cases}
+\]
+
+
+
+
+
+Graph of $y = A(x)$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+         \addplot [draw=penColor,very thick,smooth,domain=(-4:2)] {0.333*x+2.666};
+         \addplot [draw=penColor,very thick,smooth,domain=(4:6)] {-2*x+14};
+         \addplot[color=penColor,only marks,mark=*] coordinates{(-4,-4)}; 
+         \addplot[color=penColor,only marks,mark=*] coordinates{(2,-2)}; 
+         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,6)}; 
+         \addplot[color=penColor,only marks,mark=*] coordinates{(6,2)}; 
+         %\addplot[color=penColor,only marks,mark=*] coordinates{(8,-6)}; 
+         %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+Define $B$ as follows. \\
+
+
+
+\[
+B(w) = 
+\begin{cases}
+  \frac{3}{2} w + 3  & \text{ if }  -6 \leq k < -2 \\
+  w & \text{ if } 3 \leq k < 5
+\end{cases}
+\]
+
+
+
+  
+Graph of $z = B(w)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel={$z$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:-2)] {1.5*x+3};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(3:5)] {x};
+
+
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,-6)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-2,0)};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(3,3)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(5,5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{question}
+
+
+To investigate the function $A \circ B$ we need the range of $B$ and the domain of $A$.
+
+
+The range of $B$ is  $\left[ \answer{-6}, \answer{0} \right) \cup \left[ \answer{3}, \answer{5} \right)$. \\
+
+
+
+The domain of $A$ is  $\left[ \answer{-4}, \answer{2} \right] \cup \left( \answer{4}, \answer{6} \right]$. \\
+
+
+Their intersection is $\left[ \answer{-4}, \answer{0} \right) \cup \left( \answer{4}, \answer{5} \right)$. \\
+
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
