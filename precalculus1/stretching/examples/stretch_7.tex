@@ -1,0 +1,121 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+
+
+Define $V$ as follows.
+
+
+\[
+V(h) = 
+\begin{cases}
+  -2h-3 & \text{ if } [-6, -2]   \\
+  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
+  \frac{7h}{4} - 8 & \text{ if } (4,6)
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:6)] {1.75*x-8};
+
+
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,2.5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$V$ has many features and characteristics, including $3$ and $\frac{32}{7}$ as zeros 
+
+
+
+
+
+
+\begin{question}
+
+
+
+Let $m(w) = V(w) + 7$
+
+
+
+$m(w)$ has only one zero at $\answer{4}$.
+
+
+\end{question}
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+
+Let $g(t) = V(t) - 1$ has three zeros.  One of these is zeros is $2 \sqrt{2}$.
+
+
+In numeric order, the other two are $\answer{-2}$ and $\answer{\frac{36}{7}}$.
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
