@@ -1,0 +1,228 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Quadratic Forms}
+
+\begin{document}
+
+\begin{abstract}
+cvertex form
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+The previous viewpoint was an algebraic viewpoint.  \\
+
+It presented a step-by-step procedure for applying algebra that would transform a quadratic polynomial in standard form to one in verxtex form.  The procedure gather terms that could be rewritten as a square.  \\
+
+The result of the procedure was an equivalent form, called the vertextform. \\
+
+
+\[
+a (x - h)^2 + k
+\]
+
+
+
+
+The procedure looked like this:
+
+
+
+\begin{example} \textit{Completing the Square}
+
+
+
+Completing the square for $2 \, t^2 + 4 \, t + 6$.
+
+
+\begin{explanation}
+
+$\blacktriangleright$ Factor out the leading coefficent, $2$.\\
+
+\[     2 \, t^2 + 4 \, t + 6 = 2 \left( \answer{t^2 + 2 \, t + 3} \right)   \] 
+
+
+Now we have a monic to work with inside the parentheses. \\
+
+
+$\blacktriangleright$ Let's move inside the parentheses.
+
+\[ t^2 + 2 t + 3 \]
+
+Take half of the linear coefficient, $\frac{2}{2} = 1$, square that $1^2 = 1$, and add and subtract it, so that we have just added $0$ to the expression and not changed its value.
+
+
+\[ t^2 + 2 t + 1 - 1 +3 \]
+
+
+Now, group.
+
+\[ (t^2 + 2 t + 1)- 1 +3 \]
+
+the grouped part is a square.
+
+\[ \left( \answer{t+1} \right)^2- 1 +3 \]
+
+\[ (t+1)^2 + 2 \]
+
+Remember, this was inside parentheses.
+
+\[     2 \, t^2 + 4 \, t + 6 = 2 (t^2 + 2 \, t + 3)  = 2 ((t+1)^2 + 2) =  2 (t+1)^2 + \answer{4}\] 
+
+
+$2 (t+1)^2 + 4$ is the completed square form of $2 \, t^2 + 4 \, t + 6$ \\
+
+
+$2 (t+1)^2 + 4 = 2 \, t^2 + 4 \, t + 6$
+
+\end{explanation}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The whole point was to change from an expression with two occurences of the variable to an expression with only one occurence of the variable.
+
+This is helpful in graphing and helpful in solving quadratic equations.
+
+
+However, the procedure isn't the point of all of this.  It is just a procedure to obtain the vertex form.  If we take a funcitonal viewpoint instead of an algebraic viewpoint, we can get there much faster.
+
+
+
+
+
+
+\subsection{a Functional Viewpoint}
+
+
+
+Oue goal is to convert $a x^2 + b x + c$ into $a (x - h)^2 + k$. \\
+
+Let's think of these as function.
+
+
+\begin{itemize}
+\item $S(x) = a x^2 + b x + c$.
+\item $V(x) = a (x - h)^2 + k$.
+\end{itemize}
+
+
+
+The $a$ is the leading coefficient in both forms.  Therefore, we only need $h$ and $k$ in terms of $a$, $b$, and $c$. \\
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  The extrema \\
+
+
+
+\begin{itemize}
+\item From the standard form, we know that the vertex's first coordinate is $\frac{-b}{2 a}$.
+\item From the vertex form, we know that the vertex's first coordinate is $h$.
+\end{itemize}
+
+
+These must be equal.
+
+\[
+h = \frac{-b}{2 a}
+\]
+
+
+
+If we evaluate each function at $\frac{-b}{2 a}$, we must get the same value.  But, $\frac{-b}{2 a} = h$.  And, $V(h) = a (h - h)^2 + k = k$
+
+Therefore, if we evaluate $S(x) = a x^2 + b x + c$ at $\frac{-b}{2 a}$, we must get $h$.
+
+
+
+\[
+h = S\left( \frac{-b}{2 a} \right) = a \left( \frac{-b}{2 a} \right)^2 + b \left( \frac{-b}{2 a} \right) + c 
+\]
+
+
+
+
+
+
+
+This makes the example above much quicker.
+
+
+
+
+
+\begin{example} \textit{Vertex Form}
+
+
+
+Completing the square for $2 \, t^2 + 4 \, t + 6$.
+
+
+\begin{explanation}
+
+
+$S(t) = 2 \, t^2 + 4 \, t + 6$
+
+
+\[
+\frac{-b}{2 a} = \frac{-4}{2 \cdot 2} = -1
+\]
+
+
+$S(-1) = 2 \, (-1)^2 + 4 \, (-1) + 6 = 4$
+
+
+
+$a (x - h)^2 + k$ give us $2 (t+1)^2 + 4$
+
+which is what we got through the procedure of completing the square.
+
+\end{explanation}
+
+
+
+\end{example}
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Quadratics]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/projectileMotion/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
