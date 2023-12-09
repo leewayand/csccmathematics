@@ -204,9 +204,9 @@ Although the definition quotes the slope-intercept form ($m x + b$), this is rea
 
 \begin{itemize}
 
-\item \textbf{Point-Slope} : $(y - y_0) = m (x - x_0)$
+\item \item \textbf{\textcolor{blue!55!black}{Point-Slope:}}  : $(y - y_0) = m (x - x_0)$
 
-\item \textbf{Two Points} : $(y - y_0) = \frac{y_1 - y_0}{x_1 - x_0} \, (x - x_0)$
+\item \item \textbf{\textcolor{blue!55!black}{Two Points:}}  : $(y - y_0) = \frac{y_1 - y_0}{x_1 - x_0} \, (x - x_0)$
 
 \end{itemize}
 
@@ -297,7 +297,7 @@ Graphs of quadratic functions are parabolas.
           ]
           
             
-      \addplot [line width=2, penColor, smooth,samples=200,domain=(-1.5:7),<->] {x^2 + x -6};
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-4:3),<->] {x^2 + x -6};
 
 
 
@@ -317,6 +317,148 @@ Although the definition quotes the standard form ($a x^2 + b x + c$), there are 
 
 
 
+\begin{itemize}
+
+\item \textbf{\textcolor{blue!55!black}{Vertex Form:}}  $a (x - h)^2 + k$ 
+
+\item \textbf{\textcolor{blue!55!black}{Factored Form:}}  $a (x - r_1)(x - r_2)$ 
+
+\end{itemize}
+
+
+
+
+
+
+
+
+\subsection{Polynomial Functions}
+
+
+\begin{template}  \textbf{\textcolor{blue!55!black}{Polynomial Functions}} \\
+
+
+
+Constant, Linear, and Quadratic funtions are examples of polynomials. \\
+
+
+Polynomials can be represented by formulas that look like
+
+
+\[ f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0  \,  \text{ for all } x  \, \text{ in the domain. }   \]
+
+
+
+\end{template}
+
+
+
+
+The natural domain of a polynomial functions is all real numbers.  However, we can always state a restricted domain.
+
+
+
+
+Although the definition quotes the standard form for a polynomial, the factored form is better suited for our analysis.
+
+\[
+p(x) = a (x - r_1)^{e_1} (x - r_2)^{e_2} \cdots (x - r_{k-1})^{e_{k-1}} (x - r_k)^{e_k}  
+\]
+
+
+\begin{itemize}
+\item $r_1, r_2, \cdots r_k$ are the unique roots (zeros) of the polynomial.
+\item $e_1, e_2, \cdots e_k$ are the exponents of the factors. They are called \textit{multiplicities}.
+\end{itemize}
+
+
+
+\begin{example}
+
+If is difficult to tell anything from the standard form of this polynomial.
+
+\[
+x^8 - 22 x^7 +145 x^6 - 6 x^5 - 2997 x^4 + 6774 x^3 + 7931 x^2 - 15386 x - 13720
+\]
+
+
+
+Our analysis will benefit greatly from the factored form.
+
+
+\[
+(x+4) (x+1)^2 (x-2) (x-5) (x-7)^3
+\]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Rational Functions}
+
+
+
+
+\begin{template}  \textbf{\textcolor{blue!55!black}{Rational Functions}} \\
+
+
+
+Rational functions are quotients of polynomials. \\
+
+
+Rational functions can be represented by formulas that look like
+
+
+\[ 
+f(x) = \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 } {b_m x^m + b_{m-1} x^{m-1} + \cdots + b_1 x + b_0}
+\]
+
+
+\[  \text{ for all } x  \, \text{ in the domain. }   \]
+
+
+
+\end{template}
+
+
+
+
+The natural domain of a polynomial functions is all real numbers except the roots (zeros) of the polynomial in the denominator.  However, we can always state a restricted domain.
+
+
+
+
+
+
+
+
+Although the definition quotes the standard form for a polynomial, the factored form is better suited for our analysis.
+
+\[
+p(x) = \frac{ a (x - r_1)^{e_1} (x - r_2)^{e_2} \cdots  (x - r_k)^{e_k} } { b (x - s_1)^{f_1} (x - s_2)^{f_2} \cdots  (x - s_h)^{f_h} }
+\]
+
+
 
 
 
@@ -324,12 +466,308 @@ Although the definition quotes the standard form ($a x^2 + b x + c$), there are 
 
 
 \begin{itemize}
-
-\item \textbf{\textcolor{blue!55!black}{Vertex Form}}  $a (x - h)^2 + k$ 
-
-\item \textbf{\textcolor{blue!55!black}{Factored Form}}  $a (x - r_0)(x - r_1)$ 
-
+\item The zeros (roots) of the polynomial in the numerator are the zeros of the rational function.
+\item The zeros (roots) of the polynomial in the denominator are the singularities of the rational function.
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Exponential Functions}
+
+
+
+
+
+
+
+
+
+
+\begin{template}  \textbf{\textcolor{blue!55!black}{Exponential Functions}} \\
+
+
+Exponential functions are characterized by a constant \textit{percentage} growth rate. \\
+
+
+We have several thoughts about exponential functions.
+
+First, we have the basic expnential function, which has a formula like, $f(x) = b^x$ with $b > 0$. 
+This give us a basic feeling for the behavior of exponential functions.
+
+
+
+for example $f(x) = e^x$:
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:2),<->] {2.7^x};
+      \addplot [line width=2, black, dashed,samples=200,domain=(-9:2),<->] {0};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Secondly, we have four basic forms of the basic exponential funciton that illustrate the basic variations of the basic behavior.
+
+\begin{itemize}
+\item $f(x) = e^x$ 
+\item $f(x) = e^{-x}$ 
+\item $f(x) = -e^x$ 
+\item $f(x) = -e^{-x}$ 
+\end{itemize}
+
+
+
+
+
+
+Finally, we include shifting and stretching, which algebraically is described by compositions with linear functions.
+
+
+\[ f(x) = a e^{b x + c} + d = L_o \circ E \circ L_i\]
+
+\[
+\text{ where } \,  E(y) = e^y   \,  \text{ and } \,   L_o(t) = a t + d    \,  \text{ and } \,   L_i(v) = b v + c
+\]
+
+
+
+Strictly speaking, vertical shifts are not allowed for exponential functions.  We call them \textit{shifted exponential functions}.  HOwever, nobody is going to complain if we just called them exponential functions.
+
+
+
+
+
+
+\end{template}
+
+
+
+
+
+The natural domain of an exponential function is all real numbers.  However, we can always state a restricted domain. \\
+
+
+
+
+
+
+
+
+
+\subsection{Logarithmic Functions}
+
+
+
+
+
+
+
+
+\begin{template}  \textbf{\textcolor{blue!55!black}{Logarithmic Functions}} \\
+
+
+Logarithmic function are the inverse functions of exponential functions. \\
+
+
+We have several thoughts about logarithmic functions.
+
+First, we have the basic logarithmic function, which has a formula like, $f(x) = \log_b(x)$ with $b > 0$. 
+This give us a basic feeling for the behavior of exponential functions.
+
+
+
+for example $f(x) = \ln(x)$:
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(0.1:9),<->] {ln(x)};
+      \addplot [line width=2, black, dashed,samples=200,domain=(-9:9),<->] ({0}, {x});
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Secondly, we have four basic forms of the basic logarithmic funciton that illustrate the basic variations of the basic behavior.
+
+\begin{itemize}
+\item $f(x) = \ln(x)$ 
+\item $f(x) = \ln(-x)$ 
+\item $f(x) = -\ln(x)$ 
+\item $f(x) = -\ln(-x)$ 
+\end{itemize}
+
+
+
+
+
+
+Finally, we include shifting and stretching, which algebraically is described by compositions with linear functions.
+
+
+\[ f(x) = a \ln(b x + c) + d = L_o \circ L \circ L_i\]
+
+\[
+\text{ where } \,   L(y) = \ln(y)   \,  \text{ and } \,    L_o(t) = a t + d    \,  \text{ and } \,   L_i(v) = b v + c
+\]
+
+
+
+
+
+
+
+
+\end{template}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Absolute Value Functions}
+
+
+
+
+
+
+
+
+\begin{template}  \textbf{\textcolor{blue!55!black}{Absolute Functions}} \\
+
+
+
+Absolute value functions are usually identified by their vertical bars.
+
+
+
+
+
+\[ f(x) = a | b x + c | + d = L_o \circ A \circ L_i\]
+
+\[
+\text{ where } \,  A(y) = | y |  \,  \text{ and } \,    L_o(t) = a t + d    \,  \text{ and } \,   L_i(v) = b v + c
+\]
+
+
+
+
+
+
+
+\end{template}
+
+
+
+
+
+
+Unfortunately, our algebra doesn't work vrey well withthe vertical bars.  Usually, our first algebraic thought is to get rid of the bars.  This is because the absolute value function is really a piecewise defined function.   \\
+
+
+
+\textbf{Notice} that all of our forms are defined by composition with linear functions.  \\
+
+When the ``inside'' or ``outside'' is not a linear function, then we do not have these basic elementary functions. (This is usually the case.)
+
 
 
 
