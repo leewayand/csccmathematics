@@ -19,6 +19,251 @@ functions
 
 
 
+\begin{template} \textbf{\textcolor{blue!55!black}{Composition}}  \\
+
+
+Let $f$ be a function with domain $D_f$.
+
+
+Let $g$ be a function with domain $D_g$.
+
+
+
+
+Then the \textbf{\textcolor{green!50!black}{composition of f and g, $f \circ g$,}} is defined as
+
+\[
+(f \circ g)(x) = f(g(x))
+\] 
+
+
+The value of $g$ becomes a domain number for $f$.
+
+
+The composition is defined on a subset of the domain of $g$.  The composition is defined at those numbers in the domain of $g$ where the value of $g$ is in the domain of $f$.
+
+
+
+
+\end{template}
+
+
+
+
+
+Algebraically, $f(g(x))$ is our map. \\
+
+
+$f(g(x))$ tells us to replace all occurrences of the variable in the formula for $f$ with the whole formula for $g$. \\
+
+
+
+
+\begin{example}
+
+
+Let $f(k) = (k + 5)(k - 3)$ with its natural domain.
+
+
+Let $g(t) = \sqrt{3t}$ with its natural domain.
+
+
+
+\begin{explanation}
+
+We would like a formula for $f \circ g$. \\
+
+$(f \circ g)(x) = f(g(x))$ \\
+
+This tells us to replace all occurrences of the variable in $f$ with the whole formula for $g$.  There are two instances of the variable $k$ in the formula for $f$.  These should be replaced with $\sqrt{3t}$. We just have to remember to use the correct variable for $(f \circ g)(x)$. \\
+
+
+
+\[
+(f \circ g)(x) = f(g(x)) = (\sqrt{3x} + 5)(\sqrt{3x} - 3)
+\]
+
+
+
+
+\end{explanation}
+
+
+\begin{observation}
+
+
+We must always pay attention to domains.  Here the domain of $g$ is $[0, \infty)$ and the range of $g$ is $[0, \infty)$.  The range fits totally inside the domain of $f$, which is $(-\infty, \infty)$.  Therefore, we can use the whole domain of $g$ as the domnain of $(f \circ g)$.
+
+\end{observation}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $f(k) = \ln(k - 4)$ with its natural domain.
+
+
+Let $g(t) = \frac{1}{t}$ with its natural domain.
+
+
+
+\begin{explanation}
+
+We would like a formula for $f \circ g$. \\
+
+$(f \circ g)(x) = f(g(x))$ \\
+
+This tells us to replace all occurrences of the variable in $f$ with the whole formula for $g$.  There is only one instance of the variable $k$ in the formula for $f$.  This should be replaced with $\frac{1}{t}$. We just have to remember to use the correct variable for $(f \circ g)(x)$. \\
+
+
+
+\[
+(f \circ g)(x) = f(g(x)) = \ln\left( \frac{1}{t} - 4 \right)
+\]
+
+
+
+
+\end{explanation}
+
+
+\begin{observation}
+
+
+We must always pay attention to domains.  Here the domain of $g$ is $(-\infty, 0) \cup (0, \infty)$ and the range of $g$ is $(-\infty, 0) \cup (0, \infty)$.  This range does not fit totally inside the domain of $f$, which is $(0, \infty)$.  We cannot have negative values of $g$.  Therefore, we need to restrict the domain of $g$ to $(0, \infty)$.
+
+
+
+Therefore, the domnain of $(f \circ g)$ is $(0, \infty)$.
+
+\end{observation}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $H(x) = 5 \ln(\sqrt{x^2-3})$ with its natural domain. \\
+
+
+We would like to view this as a composition. \\
+
+
+
+\begin{explanation}
+
+
+We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = 5 \ln(\sqrt{x^2-3})$ \\
+
+
+First, identify ``insides'' of functions.  In this case, $x^2 - 3$ is the inside of $5 \ln(\sqrt{x})$. \\
+
+
+
+
+Let $f(t) = 5 \ln(\sqrt{t})$. \\
+
+Let $g(y) = y^2 - 3$. \\
+
+
+Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = 5 \ln(\sqrt{x^2-3})$.
+
+
+
+
+
+
+
+
+\end{explanation}
+
+
+\begin{observation}
+
+Our formula presents two problems.\\
+
+First, the inside of the square root must be $0$ of positive.\\
+
+Second, the inside of the logarithm must be positive. \\
+
+
+
+So, we need $x^2 - 3 \geq 0 $, which means $x \in (-\infty, -\sqrt{3}] \cup [\sqrt{3}, \infty)$. \\
+
+
+However, this domain for $g$ will produce $0$ as a function value for $g$, which cannot go into $f$.  SO, we need to remove $-\sqrt{3}$ and $\sqrt{3}$.
+
+
+
+
+The domain of $f \circ g$ is $(-\infty, -\sqrt{3}) \cup (\sqrt{3}, \infty)$.
+
+
+
+
+\end{observation}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
