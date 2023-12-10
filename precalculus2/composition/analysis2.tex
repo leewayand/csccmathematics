@@ -1,0 +1,127 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Analysis}
+
+\begin{document}
+
+\begin{abstract}
+8 characteristics
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+Analyze $H(x) = 5 \ln(\sqrt{x^2-3})$ with its natural domain. \\
+
+Our plan is to view this as a composition. \\
+
+
+
+
+
+
+We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = 5 \ln(\sqrt{x^2-3})$ \\
+
+
+First, identify ``insides'' of functions.  In this case, $x^2 - 3$ is the inside of $5 \ln(\sqrt{x})$. \\
+
+
+
+
+Let $f(t) = 5 \ln(\sqrt{t})$. \\
+
+Let $g(y) = y^2 - 3$. \\
+
+
+Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = 5 \ln(\sqrt{x^2-3})$.
+
+
+
+We are ready to analyze. \\
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain:}} \\
+
+
+$H$ is not a logarithmic function, since the inside is not a linear function.  However, it includes a logarithm. We need $x^2-3 > 0$.  Therefore, the domain of $H$ is $(-\infty, -\sqrt{3}) \cup (\sqrt{3}, \infty)$. \\
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros:}} \\
+
+
+
+
+\[
+5 \ln(\sqrt{x^2-3}) = 0
+\]
+
+
+\[
+\ln(\sqrt{x^2-3}) = 0
+\]
+
+
+\[
+\sqrt{x^2-3} = 1
+\]
+
+
+\[
+x^2-3 = 1
+\]
+
+\[
+x^2 = 4
+\]
+
+
+We have two zeros, $-2$ and $2$. \\
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity:}} \\
+
+
+$H$ is a composition of a logarithmic function and a quadratic funciton.  Both of these are continuous, which means their composition is continuous. \\
+
+Loagrithmic functions do not have discontinuites, but they do have singularities.  $H$ has singularities where 
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of the Elementary Library]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/composition/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}

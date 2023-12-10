@@ -22,6 +22,239 @@
 
 
 
+Analyze $H(x) = 5 \sqrt{x^2-3}$ with its natural domain. \\
+
+Our plan is to view this as a composition. \\
+
+
+
+
+
+
+We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = 5 \sqrt{x^2-3}$ \\
+
+
+First, identify ``insides'' of functions.  In this case, $x^2 - 3$ is the inside of $5 \sqrt{t}$. \\
+
+
+
+
+Let $f(t) = 5 \sqrt{t}$. \\
+
+Let $g(y) = y^2 - 3$. \\
+
+
+Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = 5 \sqrt{x^2-3}$.
+
+
+
+We are ready to analyze. \\
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain:}} \\
+
+
+$H$ is not a square root function, since the inside is not a linear function.  However, the formula includes a square root. We need $x^2-3 \geq 0$.  Therefore, the domain of $H$ is $(-\infty, -\sqrt{3}] \cup [\sqrt{3}, \infty)$. \\
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros:}} \\
+
+
+
+
+\[
+5 \sqrt{x^2-3} = 0
+\]
+
+
+\[
+\sqrt{x^2-3} = 0
+\]
+
+
+\[
+x^2-3 = 0
+\]
+
+\[
+x^2 = 3
+\]
+
+
+We have two zeros, $-\sqrt{3}$ and $\sqrt{3}$. \\
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity:}} \\
+
+
+$H$ is a composition of a root function and a quadratic funciton.  Both of these are continuous, which means their composition is continuous. \\
+
+Neither root functions nor quadratics have discontinuites or singularities. \\
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior:}} \\
+
+
+As $x \to -\infty$, $x^2 -3 \to \infty$, which means $5 \sqrt{x^2 -3} \to \infty$ \\
+
+\[
+\lim\limits_{x \to -\infty} H(x) = \infty
+\]
+
+As $x \to \infty$, $x^2 -3 \to \infty$, which means $5 \sqrt{x^2 -3} \to \infty$ \\
+
+
+\[
+\lim\limits_{x \to \infty} H(x) = \infty
+\]
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior:}} \\
+
+
+We want to figure out where $H$ is increasing and decreasing. \\
+
+$H$ is a composition, so we need to know how the component funcitons behave. \\
+
+
+
+
+
+$f(t) = 5 \sqrt{t}$ is an increasing function. \\
+
+$g(y) = y^2 - 3$ is a quadratic with a positive leading coefficient.  Therefore, it decreases and then increases.   It switches at the criticial number.\\
+
+
+
+\[
+\frac{-b}{2 a} = \frac{0}{2} = 0
+\]
+
+
+$g$ decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.  However, $0$ is not in the domain of $H$.
+
+
+
+
+
+On $(-\infty, -\sqrt{3}]$, $H$ is $increasing \circ decreasing$, which is decreasing. \\
+
+
+On $[\sqrt{3}, \infty)$, $H$ is $increasing \circ increasing$, which is increasing. \\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Extrema:}} \\
+
+
+
+On $(-\infty, -\sqrt{3}]$, $H$ is $decreasing$, which makes $H(-\sqrt{3}) = 0$ a local minimum.  \\
+
+
+On $[\sqrt{3}, \infty)$, $H$ is $increasing$, which makes $H(\sqrt{3}) = 0$ a local minimum.  \\
+
+
+
+
+
+Since $5 \sqrt{x^2-3} \geq 0$, t$0$ is a global minimum occuring at $-\sqrt{3}$ and $\sqrt{3}$. \\
+
+
+
+There are no other critical numbers or endpoints.
+
+
+Since, $\lim\limits_{x \to -\infty} H(x) = \infty$ and $H$ is continuous, there is no global maximum. 
+
+
+
+The range is $[0, \infty)$.
+
+
+
+
+This all agrees with the graph. \\
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.5:-1.7),<-] ({x},{sqrt(x^2 - 3)});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-1.7,0)};
+
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1.7:2.5),->] ({x},{sqrt(x^2 - 3)});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(1.7,0)};
+
+           
+
+    \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{center}
 \textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
