@@ -13,6 +13,238 @@ piecewise defined
 
 
 
+We combine numbers together with the operations addition, subtraction, multiplication, and division.  We can combine functions by applying these same operations on the function values.  \\
+
+In this way, we can build new functions from old funcitons. \\
+
+We can also build new functions by gluing together pieces of old functions.
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Piecewise Defined Functions}} \\
+
+
+Suppose we have several functions with their domains.
+
+\begin{itemize}
+\item Function $F$ with domain $D_F$. 
+\item Function $G$ with domain $D_G$. 
+\item Function $H$ with domain $D_H$. 
+\end{itemize}
+
+
+We can create a new function, $N$, by gluing together pieces of $F$, $G$, and $H$.
+
+
+First, select disjoint subsets of the three given domains.
+
+
+\begin{itemize}
+\item $S_F \subseteq D_F$. 
+\item $S_G \subseteq D_G$. 
+\item $S_H \subseteq D_H$. 
+\end{itemize}
+
+
+The domain of $N$ will be the union of these three subsets: $S_F \cup S_G \cup S_H$. \\
+
+When evaluating $N(a)$, use the formula from $F$, $G$, or $H$ that goes with the domain subset holding $a$.
+
+
+\end{template}
+
+$N$ is called a \textbf{\textcolor{blue!55!black}{piecewise defined function}}. \\
+
+
+
+
+\begin{notation}
+
+
+The notation for a piecewise defined function must list the formulas to use along with the somain subset corresponding to formula.
+
+
+
+\[
+N(x) = 
+\begin{cases}
+  F & S_F     \\
+  G & S_G \\
+  H & S_H
+\end{cases}
+\]
+
+
+
+The right column lists the subsets of the original domains.  \\
+The left column lists the orignal formulas corresponding to the subdomains.
+
+\end{notation}
+
+
+
+
+
+
+\begin{example}
+
+Define $N$ as follows.
+
+
+\[
+N(x) = 
+\begin{cases}
+  2x - 1   &    [-8, 0)     \\
+  3 - x^2  &    (0, 2) \\
+  \ln(x)    &    (5, 9]
+\end{cases}
+\]
+
+
+\begin{explanation}
+
+The domain of $N$ is the union of the given intervals: $[-8, 0) \cup (0,2) \cup (5, 9]$.
+
+
+To evaluate $N(d)$, first identify to which interval $d$ belongs.  Then, use the corresponding formula to evaluate.
+
+
+
+
+
+
+
+\end{explanation}
+
+
+
+
+To evaluate $N(-4)$, first identify that $-4 \in [-8, 0)$.  That tells us to use the formula $2x - 1$. \\
+
+\[  N(-4) = 2(-4) - 1 = -9  \]
+
+
+
+
+
+To evaluate $N(1)$, first identify that $1 \in (0, 2)$.  That tells us to use the formula $3 - x^2$. \\
+
+\[  N(1) = 3 - (1)^1 = 2  \]
+
+
+
+
+
+To evaluate $N(7)$, first identify that $7 \in (5, 9]$.  That tells us to use the formula $\ln(x)$. \\
+
+\[  N(-7) = \ln(7)  \]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Define $N$ as follows.
+
+
+\[
+N(x) = 
+\begin{cases}
+  2x - 1   &    [-8, 0)     \\
+  3 - x^2  &    (0, 2) \\
+  \ln(x)    &    (5, 9]
+\end{cases}
+\]
+
+
+
+
+
+
+
+\begin{explanation}
+
+
+To evaluate $\lim\limits_{x \to 0^- N(x)}$, we first notice that we are only considering numbers in the interval $[8, 0)$.
+
+
+\[
+\lim\limits_{x \to 0^-} N(x) = \lim\limits_{x \to 0^-} 2x - 1 = -1
+\]
+
+
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+\begin{explanation}
+
+
+To evaluate $\lim\limits_{x \to 0^+ N(x)}$, we first notice that we are only considering numbers in the interval $(0,2)$.
+
+
+\[
+\lim\limits_{x \to 0^+} N(x) = \lim\limits_{x \to 0^+} 3 - x^2 = 3
+\]
+
+
+
+\end{explanation}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -26,7 +258,7 @@ piecewise defined
 \begin{center}
 \textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
 
-more examples can be found by following this link\\ \link[More Examples of the Elementary Library]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/functionForm/examples/exampleList}
+more examples can be found by following this link\\ \link[More Examples of the Functionm Forms]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/functionForm/examples/exampleList}
 
 \end{center}
 
