@@ -13,6 +13,221 @@ step by step
 
 
 
+The elementary functions are too nice.
+
+They don't do anything interesting.
+
+However, the world of funcitons is crazy.  Functions behave in very unexpected ways, which we'll never see if we stick to the elementary functions.
+
+For a meaningful investigation of functions, we need to explore other types of functions.
+
+We can create new functions from the elementary functions by creating sums, differences, products, and quotients.
+
+
+We can create new functions from the elementary functions by creating piecewise defined functions.
+
+
+We can create new functions from the elementary functions by composing them. 
+
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Composition}}  \\
+
+
+Let $f$ be a function with domain $D_f$.
+
+
+Let $g$ be a function with domain $D_g$.
+
+
+
+
+Then the \textbf{\textcolor{green!50!black}{composition of f and g, $f \circ g$,}} is defined as
+
+\[
+(f \circ g)(x) = f(g(x))
+\] 
+
+
+The value of $g$ becomes a domain number for $f$.
+
+
+The composition is defined on a subset of the domain of $g$.  The composition is defined at those numbers in the domain of $g$ where the value of $g$ is in the domain of $f$.
+
+
+
+
+\end{template}
+
+
+
+
+
+
+
+\begin{example}
+
+
+Let $f(x) = 3 - x$ with its natural domain.
+
+
+Let $g(y) = \ln(y)$ with its natural domain.
+
+
+Defines $H = f \circ g$ with its natural domain.
+
+
+
+\begin{explanation}
+
+
+$H(t) = (f \circ g)(t) = f(g(t))$
+
+
+The domain of $H = f \circ g$ is a subset of the domain of $g$, which is $(0, \infty)$.  
+
+We can only use those numbers where $ln(t)$ is in the domain of $f$.  However, the domain of $f$ is all real numbers.  So, we can use everything from the domain of $g$.
+
+The induced domain of $H = f \circ g$ is the domain of $g$, which is $(0, \infty)$. 
+
+
+
+
+\end{explanation}
+
+
+
+
+
+
+
+\begin{explanation}
+
+
+$K(r) = (g \circ f)(r) = g(f(r))$
+
+
+The domain of $K = g \circ f$ is a subset of the domain of $f$, which is $(-\infty, \infty)$.  
+
+We can only use those numbers where $f(r)$ is in the domain of $g$.  The domain of $g$ is $(0, \infty)$.  
+
+Therefore, we need $f(x) = 3 - x > 0$.  Or, $x < 3$.
+
+The induced domain of $K = g \circ f$ is $(-\infty, 3)$. 
+
+These are the numbers in the domain of $f$ where the value of $f$ is insdie the domain of $g$.
+
+
+\end{explanation}
+
+
+
+
+\end{example}
+
+
+An \textbf{induced} domain is a domain that is force to happen due to given restrictions. \\
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Let $T(x) = (3-x)(x-5)$ with its natural domain.
+
+
+Let $p(t) = \frac{1}{t}$ with its natural domain.
+
+
+Defines $Y = T \circ p$ with its natural domain.
+
+
+
+\begin{question}
+
+Evaluate
+
+
+\[
+(T \circ p)\left( \frac{1}{2} \right) = \answer{-3}
+\]
+
+
+
+\end{question}
+
+
+
+
+
+
+\begin{question}
+
+Evaluate
+
+
+\[
+(p \circ T)\left( \frac{1}{2} \right) = \answer{-\frac{45}{4}}
+\]
+
+
+
+\end{question}
+
+
+
+
+
+\begin{question}
+
+What is the induced domain of $(T \circ p)$?
+
+
+\[
+\left( \answer{-\infty}, \answer{0}  \right) \cup \left( \answer{0}, \answer{\infty}  \right)
+\]
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
+\begin{question}
+
+What is the induced domain of $(p \circ T)$?
+
+
+\[
+\left( \answer{-\infty}, \answer{3}  \right) \cup \left( \answer{3}, \answer{5}  \right)  \cup \left( \answer{5}, \answer{\infty}  \right)
+\]
+
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
 
 
 
