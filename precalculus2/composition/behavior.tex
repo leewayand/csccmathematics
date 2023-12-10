@@ -13,8 +13,367 @@ increasing and decreasing
 
 
 
+Probably the most important characteristic we want to know about a function is its behaviore.  That is, where is it increasing and where is it decreasing? \\
 
 
+
+
+Increasing and decreasing for a funciton is a comparison between its domain and range, which are both a set of numbers.  So, to understand function behavior, we need to first understand number behavior.
+
+
+
+\textbf{\textcolor{blue!55!black}{Number Behavior:}}  Our real numbers have a natural ordering, which we call \textit{less than} and \textit{greater than}.  Visually, these mean ``to the left of'' and ``to the right of'' on a number line. \\
+
+If you move to the right on the number line, then the numbers are increasing. \\
+
+If you move to the left on the number line, then the numbers are decreasing. \\
+
+
+
+
+
+
+
+
+
+
+
+With functions, we have two number lines and we compare movement on them to each other. \\
+
+
+
+
+
+
+
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Increasing Function}} 
+
+
+A function is increasing if its domain and range values change in the same way. \\
+
+
+In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is also to the right.
+
+When the domain increases, the function values also increase.
+
+
+Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  When we move to the right on the domain number line, then the corresponding movement on the range number line is up.
+
+
+
+\[
+\text{ When } \,  a < b \, \text{ then } \, f(a) < f(b)
+\]
+
+
+\end{template}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Decreasing Function}} 
+
+
+A function is decreasing if its domain and range values change in oppositely. \\
+
+
+In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is to the left.
+
+When the domain increases, the function values decrease.
+
+
+Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  When we move to the right on the domain number line, then the corresponding movement on the range number line is down.
+
+
+
+\[
+\text{ When } \,  a < b \, \text{ then } \, f(a) > f(b)
+\]
+
+
+\end{template}
+
+
+
+
+
+
+We want to following this idea through compositions.   \\
+
+
+
+
+
+
+\subsection{Increasing $\circ$ Increasing}
+
+
+
+$f$ and $g$ are defined graphically below.  They are both increasing functions. \\
+
+What about $f \circ g$? \\
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=f(k)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2)] ({x},{0.5*x+1});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1)};
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(2,2)}; 
+
+           
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:6)] ({x},{2*x-4});
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(0,-4)};
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(6,8)}; 
+
+
+  \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+
+
+To decide function behavior of a composition, we need to follow movement through two graphs. \\
+
+
+
+\[
+(f \circ g)(x) = f(g(x))
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement:}}  First, we think of movement to the right in the domain of $f \circ g$.  This would be movement to the right in the domain of $g$.  The graph of $g$ is on the right above.  This would be movement to the right on the horizontal axis.
+
+
+
+\textbf{\textcolor{blue!55!black}{g:}}  Next, according to the graph of $g$, as we move the right in the domain of $g$, the values of $g$ move up, which is to the right in the range of $g$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{switch:}}   The range of $g$ becomes the domain of $f$.  We were moving up on the graphof $g$, which means to the right in the range of $g$.  The switches to movement to the right in the domain of $f$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement:}}  Next, according to the graph of $f$, as we move the right in the domain of $f$, the values of $f$ move up, which is to the right in the range of $f$.  This is the range of $f \circ g$.
+
+
+
+
+Gluing the whole story, movement to the right in the domain of $f \circ g$ correspond to movement ot the right in the range of $f \circ g$.
+
+$f \circ g$ is an increasing function.
+
+
+
+\begin{observation}
+
+
+This only applies to the domain of $f \circ g$, which needs to be determined. \\
+
+
+
+The range of $g$ is 
+
+
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Define $f$ and $g$ graphically as follows:
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-10:-6)] ({x},{-0.5*x+1});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-10,6)};
+          \addplot [color=penColor,fill=background,only marks,mark=*] coordinates{(-6,4)}; 
+
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(0:5)] ({x},{0.5*x+1});
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(5,3.5)}; 
+
+           
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{-x-4});
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(0,-4)};
+          \addplot [color=penColor2,fill=background,only marks,mark=*] coordinates{(-4,0)}; 
+
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:5)] ({x},{x-8});
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0,-8)};
+          \addplot [color=penColor2,fill=background,only marks,mark=*] coordinates{(5,-3)}; 
+
+  \end{axis}
+
+\end{tikzpicture}
+\end{image}
 
 
 
