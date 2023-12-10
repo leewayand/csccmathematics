@@ -213,11 +213,11 @@ This all agrees with the graph. \\
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.5:-1.7),<-] ({x},{sqrt(x^2 - 3)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.5:-1.7),<-] ({x},{5*sqrt(x^2 - 3)});
           \addplot [color=penColor,only marks,mark=*] coordinates{(-1.7,0)};
 
 
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(1.7:2.5),->] ({x},{sqrt(x^2 - 3)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1.7:2.5),->] ({x},{5*sqrt(x^2 - 3)});
           \addplot [color=penColor,only marks,mark=*] coordinates{(1.7,0)};
 
            
