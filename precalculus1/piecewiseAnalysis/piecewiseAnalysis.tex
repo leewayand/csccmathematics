@@ -514,8 +514,8 @@ An extreme value can occur where a tangent line is vertical, or has no slope.  T
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:3),<-] {4*(x-3)^(1/4)-3};
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(3:8),->] {4*(3-x)^(1/4)-3};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:3),<-] {4*(3-x)^(1/4)-3};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(3:8),->] {4*(x-3)^(1/4)-3};
 
        
 
@@ -559,7 +559,7 @@ An extreme value can occur where no tangent line exists.  These would correspond
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:8),<-] {abs(x-3) - 5};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:9),<->] {abs(x-3) - 5};
 
 
        
