@@ -435,6 +435,173 @@ Our algebraic notation to talk about function behavior around discontinuities an
 
 
 
+\subsection{Extrema}
+
+
+The extreme values of a function are the maximum and minimum values.  There are two types of each. \\
+
+The global maximum and mimnium values are the overall greatest and least values of the function.  There can be at most one global maximum value (there might not be an actual global maximum value). There can be at most one global minimum value (there might not be an actual global minimum value).  These two values can occur at many domain numbers.\\
+
+
+Local maximum and minimum values are greatest and least values that occur in a ``neighborhood'' of a domain number.  There can be many local extrema values that occur at many domain numbers. \\
+
+
+\begin{itemize}
+\item Graphically, global maximum values are visually encoded as the highest point on the graph.
+\item Graphically, global minimum values are visually encoded as the lowest point on the graph.
+\item Graphically, local maximum values are visually encoded as the tops of hill on the graph.
+\item Graphically, global minimum values are visually encoded as the bottoms of valleys on the graph.
+\end{itemize}
+
+
+\begin{itemize}
+\item Graphically, local extrema values are visually encoded as endpoints.
+\item Graphically, local extrema values are visually encoded as singleton points.
+\end{itemize}
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Extrema}} \\
+
+As the function above illustrates, there are several places where extrema occur for functions.
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Horizontal Tangent Lines \\
+
+An extreme value can occur where a tangent line is horizontal, or has a $0$ slope.  These would correspond to tops of hills and bottoms of valleys in the graph. \\
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Endpoints \\
+
+Extreme values can happen at the endpoints. \\
+
+\textbf{Peek Ahead:} A graph can have a tangent line at an endpoint on a graph.  However, the derivative doesn't exist there since there is only one side.  In Calculus, we will talk about a one-sided derivative for these cases. \\
+
+\end{template}
+
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Extrema}} \\
+
+We have other places where an extreme value can occur. \\
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Vertical Tangent Lines \\
+
+An extreme value can occur where a tangent line is vertical, or has no slope.  These would correspond to cusps in the graph. \\
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:3),<-] {4*(x-3)^(1/4)-3};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(3:8),->] {4*(3-x)^(1/4)-3};
+
+       
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+This graph has a tangent line at $(3, -3)$.  It is a vertical line and vertical lines do not have a slope. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Corners \\
+
+An extreme value can occur where no tangent line exists.  These would correspond to corners in the graph. \\
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:8),<-] {abs(x-3) - 5};
+
+
+       
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+This graph has no tangent line at $(3, -5)$. 
+
+
+
+
+
+
+
+\end{template}
+
+
+
+We can sum up this ideas as follow: \\
+
+
+
+
+\begin{center}
+
+
+\textbf{\textcolor{red!90!darkgray}{Candidates for locations of extrema values are domain where the derivative is $0$ or Does Not Exist.}}
+
+
+\end{center}
+
+
+
+
+
+
+
+
+
 
 
 
