@@ -129,6 +129,85 @@ The idea is for mathematics to describe how we view the world, so we give relati
 
 
 
+\textbf{\textcolor{red!80!black}{A Feeling of Direction = An Order}}
+
+A feeling of direction means that we feel something comes first and then something comes second.  Something comes before and something comes after. \\
+
+
+Of course, we have mathematical notation to reflect this structure. \\
+
+
+\begin{itemize}
+\item \textbf{\textcolor{blue!55!black}{Unordered:}}  A collection of unorder items is called a ``set''.  We use curly braces to denote a set.
+
+\[
+{ \, dog, cat, turtle \, }
+\]
+
+\[
+{ \, dog, turtle, cat \, }
+\]
+
+\[
+{ \, cat, dog, turtle \, }
+\]
+
+\[
+{ \, cat, turtle, dog \, }
+\]
+
+\[
+{ \, turtle, dog, cat \, }
+\]
+
+\[
+{ \, turtle, cat, dog \, }
+\]
+
+These all represent the same set.  The order that we list the items has no significance or mathematical meaning.
+
+
+\item \item \textbf{\textcolor{blue!55!black}{Ordered:}} In addition to the items in a collection, the order in which we list them might also have some significance.  It this case, we use parentheses to signal that the ordering matters.
+
+
+These are all different:
+
+\[
+( \, dog, cat, turtle \, )
+\]
+
+\[
+( \, dog, turtle, cat \, )
+\]
+
+\[
+( \, cat, dog, turtle \, )
+\]
+
+\[
+( \, cat, turtle, dog \, )
+\]
+
+\[
+( \, turtle, dog, cat \, )
+\]
+
+\[
+( \, turtle, cat, dog \, )
+\]
+
+
+\end{itemize}
+
+
+This important for describing domains and codomains.  This is important for describing coordinates for points. \\
+
+
+
+
+
+
+
 
 
 
@@ -140,17 +219,17 @@ The idea is for mathematics to describe how we view the world, so we give relati
 Most of our communication is going to be written in this course, so we need some agreements on how we will represent relations in writing.  We already have several ways of representing sets.  The easiest is to just list the members inside curly braces and separate them with commas.
 
 \begin{center} 
-\textbf{\textcolor{blue!75!black}{ domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \} }}
+\textbf{\textcolor{blue!75!black}{ domain = \{ Casablanca, Men in Black,  The Godfather, Joker, Toy Story, King Richard \} }}
 \end{center}
 
 \begin{center} 
-\textbf{\textcolor{blue!75!black}{ codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino \} }}
+\textbf{\textcolor{blue!75!black}{ codomain = \{ Marlon Brando, Will Smith, Humphrey Bogart, Joaquin Phoenix, Harrison Ford, Al Pacino \} }}
 \end{center}
 
 Now we need a way to present the pairings.  The traditional way is to write them as ordered pairs: the left (or first) item coming from the domain and the right (or second) item from the codomain.  We can list these ordered pairs in a set of ordered pairs. 
 
 \begin{center} 
-\textbf{\textcolor{blue!75!black}{ pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casablanca, Humphrey Bogart), (Lawrence of Arabia, Peter O'Toole), (The Fly, Vincent Price), (The Godfather, Al Pacino) \}  }}
+\textbf{\textcolor{blue!75!black}{ pairs = \{ (The Godfather, Marlon Brando), (Men in Black, Will Smith), (Casablanca, Humphrey Bogart), (Joker, Joaquin Phoenix), (King Richard, Will Smith), (The Godfather, Al Pacino) \}  }}
 \end{center}
 
 
@@ -160,12 +239,12 @@ These three sets would make up a relation.
 
 \begin{question}
 
-Which item(s) from this codomain is(are) paired with the domain movie ``The Fly''?
+Which item(s) from this codomain is(are) paired with the domain movie ``King Richard''?
 \begin{selectAll}
 	\choice{Marlon Brando}
-	\choice[correct]{Vincent Price}
+	\choice[correct]{Will Smith}
 	\choice{Humphrey Bogart}
-	\choice{Peter O'Toole}
+	\choice{Joaquin Phoenix}
 	\choice{Harrison Ford}
 	\choice{Al Pacino}
 \end{selectAll}
@@ -176,14 +255,14 @@ Which item(s) from this codomain is(are) paired with the domain movie ``The Fly'
 
 \begin{question}
 
-Which item(s) from this domain is(are) paired with the codomain actor ``Al Pacino''?
+Which item(s) from this domain is(are) paired with the codomain actor ``Joaquin Phoenix''?
 \begin{selectAll}
 	\choice{Casablanca}
-	\choice{House of Wax}
-	\choice[correct]{The Godfather}
-	\choice{Lawrence of Arabia}
+	\choice{Men in Black}
+	\choice{The Godfather}
+	\choice[correct]{Joker}
 	\choice{Toy Story}
-	\choice{The Fly}
+	\choice{King Richard}
 \end{selectAll}
 
 \end{question}
@@ -198,9 +277,9 @@ Of course, we could (and will) have many relations that use the same domain and 
 
 \begin{example} The \textit{Starring} Relation\\
 \begin{itemize}
-\item domain = \{ Casablanca, House of Wax,  The Godfather, Lawrence of Arabia, Toy Story, The Fly \}  
-\item codomain = \{ Marlon Brando, Vincent Price, Humphrey Bogart, Peter O'Toole, Harrison Ford, Al Pacino  \} 
-\item pairs = \{ (The Godfather, Marlon Brando), (House of Wax, Vincent Price), (Casablanca, Humphrey Bogart), (Lawrence of Arabia, Peter O'Toole), (The Fly, Vincent Price), (The Godfather, Al Pacino) \} 
+\item domain = \{ Casablanca, Men in Black,  The Godfather, Joker, Toy Story, King Richard \}  
+\item codomain = \{ Marlon Brando, Will Smith, Humphrey Bogart, Joaquin Phoenix, Harrison Ford, Al Pacino  \} 
+\item pairs = \{ (The Godfather, Marlon Brando), (Men in Black, Will Smith), (Casablanca, Humphrey Bogart), (Joker, Joaquin Phoenix), (King Richard, Will Smith), (The Godfather, Al Pacino) \} 
 \end{itemize}
 \end{example}
 
@@ -226,7 +305,7 @@ There is a domain item written on the left and a codmain item written on the rig
 \item Nobody said every member of the domain had to actually appear in a pair.  Toy Story is in the domain but in no pair of \textit{Starring}.
 \item Nobody said every member of the codomain had to actually appear in a pair.  Harrison Ford is in the codomain but in no pair of \textit{Starring}.
 \item Nobody said domain members could not appear in multiple pairs.  The Godfather appears in two pairs of \textit{Starring}.
-\item Nobody said codomain members could not appear in multiple pairs.  Vincent Price appears in two pairs of \textit{Starring}.
+\item Nobody said codomain members could not appear in multiple pairs.  Will Smith appears in two pairs of \textit{Starring}.
 \end{itemize}
 \end{warning}
 
@@ -373,10 +452,10 @@ The table would begin like this.
 \[
 \begin{array}{l|l}
     domain      & codomain      \\ \hline
-    \text{Vincent Price}   &  \text{House of Wax} \\
+    \text{Will Smith}   &  \text{Men in Black} \\
     \text{Humphrey Bogart}   & \text{Casablanca} \\
-    \text{Peter O'Toole}  &  \text{Lawrence of Arabia} \\
-    \text{Vincent Price}  &  \text{The Fly} \\
+    \text{Joaquin Phoenix}  &  \text{Joker} \\
+    \text{Will Smith}  &  \text{King Richard} \\
     \text{Al Pacino} &  \text{The Godfather} \\ 
     \text{...} &  \text{...} \\ 
 \end{array}
