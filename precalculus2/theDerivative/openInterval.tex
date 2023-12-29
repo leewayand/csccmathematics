@@ -90,10 +90,10 @@ $f(x) = 4 \sqrt[3]{x}$ is an example.
           ]
           
 
-          addplot [line width=2, penColor, smooth,samples=200,domain=(-8:0),<-] {4*((-x)^0.333)};
-          addplot [line width=2, penColor, smooth,samples=200,domain=(0:8),->] {4*((x)^0.333)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:0),<-] {4*((-x)^0.333)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(0:8),->] {4*(x^0.333)};
 
-          addplot [line width=1, gray, smooth,samples=200,domain=(-10:10),<->] ({0},{x});
+          \addplot [line width=1, gray, smooth,samples=200,domain=(-10:10),<->] ({0},{x});
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
