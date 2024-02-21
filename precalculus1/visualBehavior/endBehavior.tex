@@ -12,6 +12,230 @@ settling down
 \maketitle
 
 
+$(-\infty, \infty)$ is very long. \\
+
+
+
+There is the left tail, which is the part with very very very very large negative numbers. There is the right tail, which is the part with very very very very large positive numbers. Then, there is the middle part. \\
+
+All of the individual characteristics of a function happen in the middle. \\
+
+That is, each function has its own middle bubble (interval) where all of the important location live.  The middle bubble contains the zeros, the discontinuities, the singularities, the critical numbers, the maximums, the minimums, the everything.  Once we are outside the middle part of the domain, the function settles down into a consistent pattern of behavior and maintains that predictable behavior all the way to $-\infty$ or $\infty$. \\
+
+This is called the \textbf{\textcolor{blue!55!black}{Dark Blue Blue}} of the function. \\
+
+
+Graphs use grapphical symbols to help describe this end-behavior.\\
+
+
+Here is the complete graph of the function $G(x)$. \\
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$x$, ylabel=$y=G(x)$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:8)] {1/(x-3) + 2};
+
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+In the graph above, we see a vertical asymptote.  This is inside the middle bubble.  It is not a part of end-behavior. \\
+
+The horizontal asymptote is communicating end-behavior.  It is tells us that as we move further out the domain, onm either side, the function approaches the value $2$.
+
+
+
+
+Here is the complete graph of the function $H(t)$. \\
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$t$, ylabel=$y=H(t)$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:8)] {1/(x-3) + 2};
+
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+The graph of $H$ does not have horizontal asymptote.  That is meaningful.  The fact that the horizontal asymptote is not included in the drawing tells us thatthe function does not settle down, getting closer to $2$.  Otherwise, there would have been a horizontal asymptote.\\
+
+From this, we deduce that as we move out in the domain towards $\infty$, the value of $H$ grows bigger and bigger negatively. \\
+
+We also deduce that as we move out in the domain towards $-\infty$, the value of $H$ grows bigger and bigger positively. \\
+
+
+The graphs suggests that this unbounded growth might be very slow, but $H$ becomes unbounded.
+
+
+
+
+
+
+\begin{example}
+
+
+Here is a complete graph of $K(v)$. \\
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$v$, ylabel=${y=K(v)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:10), ->] {10*sin(deg(x))/((x+10)^1.2) + e^(-x-5) + 2};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-6,5.25)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The domain of the function $K$ is $[-6, \infty)$. Therefore, it only has one end-behavior.  As we move out in the domain towards $\infty$, $K$ approaches $2$.  The value of $K$ continues to oscillate above and below $2$ as it moves cloaser and closer to the value of $2$. \\
+
+$K$ does not have an end-bhavior as the domain moves towards $-\infty$, because the domain doesn't move towards $-\infty$.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Here is a complete graph of $p(x)$. \\
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=${y=p(x)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:10), ->] {10*sin(deg(x))/((x+10)^1.2) + e^(-x-5) + 2};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-6,5.25)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(10,1.8)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The domain of the function $p$ is $[-6, 10]$. Therefore, it has no end-behavior.  The domain doesn't move towards $-\infty$ or $\infty$. The domain is bounded.
+
+\end{example}
+
+
+
+
+
+
+
 
 
 
