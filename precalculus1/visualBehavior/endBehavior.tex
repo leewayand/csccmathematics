@@ -16,13 +16,13 @@ $(-\infty, \infty)$ is very long. \\
 
 
 
-There is the left tail, which is the part with very very very very large negative numbers. There is the right tail, which is the part with very very very very large positive numbers. Then, there is the middle part. \\
+There is the \textbf{\textcolor{red!80!black}{left tail}}, which is the part with very very very very large negative numbers. There is the \textbf{\textcolor{red!80!black}{right tail}}, which is the part with very very very very large positive numbers. Then, there is the middle part. \\
 
 All of the individual characteristics of a function happen in the middle. \\
 
 That is, each function has its own middle bubble (domain interval) where all of the important locations live.  The middle bubble contains the zeros, the discontinuities, the singularities, the critical numbers, the maximums, the minimums, the everything.  Once we are outside the middle part of the domain, the function settles down into a consistent pattern of behavior and maintains that predictable behavior all the way to $-\infty$ or $\infty$. \\
 
-This settled down pattern in the tails is called the \textbf{\textcolor{blue!55!black}{end-behavior}} of the function. \\
+This settled down pattern in the \textbf{\textcolor{red!80!black}{tails}} is called the \textbf{\textcolor{red!80!black}{end-behavior}} of the function. \\
 
 
 Graphs use graphical symbols to help describe this end-behavior.\\
@@ -48,13 +48,13 @@ Here is the complete graph of the function $G(x)$. \\
 
         
         \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
-        \addplot [draw=penColor, very thick, smooth, domain=(3:8)] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:8), ->] {1/(x-3) + 2};
 
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
 
         \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
-        \addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
 
 
     \end{axis}
@@ -68,7 +68,7 @@ Here is the complete graph of the function $G(x)$. \\
 
 In the graph above, we see a vertical asymptote.  This is inside the middle bubble.  It is not a part of end-behavior. \\
 
-The horizontal asymptote is communicating end-behavior.  It is tells us that as we move further out the domain, one either side, the function approaches the value $2$.
+The horizontal asymptote is communicating end-behavior.  It is tells us that as we move further out the domain, on either side, the function approaches the value $2$.
 
 
 
@@ -93,13 +93,13 @@ Here is the complete graph of the function $H(t)$. \\
 
         
         \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
-        \addplot [draw=penColor, very thick, smooth, domain=(3:8)] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:8),->] {1/(x-3) + 2};
 
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
         %\addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
 
         \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
-        \addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
 
 
     \end{axis}

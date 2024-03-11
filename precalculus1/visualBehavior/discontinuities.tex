@@ -66,11 +66,11 @@ A quick review of graphs seen so far in this course shows there are three basic 
 
 
 \begin{itemize}
-\item \textbf{\textcolor{blue!75!black}{Removeable:}}  The graph above has a very subtle break at $x=-6$. The graph is almost continuous, except one point has been shifted up. This type of break gets the name \textit{removeable}, because you could remove the break by just sliding that point back in place. \\
+\item \textbf{\textcolor{blue!75!black}{Removeable:}}  The graph above has a very subtle break at $t=-6$. The graph is almost one piece, except one point has been shifted up. This type of break gets the name \textit{removeable}, because you could remove the break by just sliding that point back in place. \\
 
-\item \textbf{\textcolor{blue!75!black}{Asymptotic:}} The break at $x=3$ is not subtle at all.  One side is heading up to infinty and the other side is heading down to negative infinity.  You can't get a bigger break than that. Graphically, the asymptote is communicating this behavior, hence, the break is called an \textit{asymptotic} break. \\
+\item \textbf{\textcolor{blue!75!black}{Asymptotic:}} The break at $t=3$ is not subtle at all.  One side is heading up to infinty and the other side is heading down to negative infinity.  You can't get a bigger break than that. Graphically, the asymptote is communicating this behavior, hence, the break is called an \textit{asymptotic} break. \\
 
-\item \textbf{\textcolor{blue!75!black}{Jump:}} The break at $x=6$ is called a \textit{jump}, because the graph makes a sudden vertical jump from one location to another location.
+\item \textbf{\textcolor{blue!75!black}{Jump:}} The break at $t=6$ is called a \textit{jump}, because the graph makes a sudden vertical jump from one location to another location.
 \end{itemize}
 
 
@@ -173,18 +173,8 @@ While graphs have breaks, functions will have \textbf{\textcolor{green!50!black}
 \end{idea}
 
 
-\begin{idea} Language 
 
 
-Endpoints on graphs may or may not illustrate a discontinuity. A discontiuity looks like a vertical jump on the graph. \\
-
-
-There cannot be a vertical jump at an endpoint, which is marked by a hollow dot, because there is no jump. \\
-
-
-Discontinuities and singularities are created by the surrounding function values and how they behave.
-
-\end{idea}
 
 
 
@@ -502,9 +492,9 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
 First, $4$ is in the domain of $g$. \\
 
 
-For the second condition, let $d = 1$. Any open interval of real numbers containing $c = 4$ must also contain an interval of the form $(4-\epsilon, 4+\epsilon)$, where $0 < \epsilon < 0.1$.  Such an interval would ALWAYS contain the domain number $e = 4-\frac{\epsilon}{2}$.
+For the second condition, let $d = 1$. Any small open interval of real numbers containing $c = 4$ must also contain an interval of the form $(4-\epsilon, 4+\epsilon)$, where $0 < \epsilon < 0.1$.  Such an interval would ALWAYS contain the domain number $e = 4-\frac{\epsilon}{2}$.
 
-\[ \left| g(4) - g\left(4-\frac{\epsilon}{2}\right) \right| > d = 1 \]
+\[ \left| g(4) - g\left(4-\frac{\epsilon}{2}\right) \right| >  1 = d \]
 
 Therefore, $4$ is a discontinuity of $g$. \\
 
@@ -514,7 +504,7 @@ Therefore, $4$ is a discontinuity of $g$. \\
 
 
 
-\item $8$ is a discontinuity of $g(k)$.  First $8$ is in the domain of $g$. For the second condition, let $d = 1$. Any open interval of real numbers containing $c = 8$ must also contain an interval of the form $(8-\epsilon, 8+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would ALWAYS contain the domain number $e = 8-\frac{\epsilon}{2}$.
+\item $8$ is a discontinuity of $g(k)$.  First, $8$ is in the domain of $g$. For the second condition, let $d = 1$. Any small open interval of real numbers containing $c = 8$ must also contain an interval of the form $(8-\epsilon, 8+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would ALWAYS contain the domain number $e = 8-\frac{\epsilon}{2}$.
 
 \[ \left| g(8) - g\left(8-\frac{\epsilon}{2}\right) \right| > 1 = d \]
 
@@ -584,7 +574,7 @@ Let $T(y)$ be a function.  The graph of $z = T(y)$ is displayed below.
 \begin{itemize}
 \item $7$ is not a discontinuity of $T$, because $7$ is not a member of the domain of $T$. ($7$ is a singularity.) \\
 
-\item $-6$ is a discontinuity of $T(y)$.  $-6$ is in the domain of $T$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = -6$ must also contain an interval of the form $(-6-\epsilon, -6+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would ALWAYS contain the domain number $e = -6+\frac{\epsilon}{2}$.
+\item $-6$ is a discontinuity of $T(y)$.  $-6$ is in the domain of $T$.  For the second condition, let $d = 0.5$. Any small open interval of real numbers containing $c = -6$ must also contain an interval of the form $(-6-\epsilon, -6+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would ALWAYS contain the domain number $e = -6+\frac{\epsilon}{2}$.
 
 \[ \left| T(-6) - T\left(-6+\frac{\epsilon}{2}\right) \right| > 1 > 0.5 = d \]
 
@@ -675,7 +665,7 @@ Therefore, $-5$ is a discontinuity of $f$.
 
 The fact that these numbers are not in the domain is significiant when studying the function.  Therefore, we want to distinguish between inclusion and exclusion from the domain. \\
 
-This is why we have the \textit{singularity} category.
+This is why we also have the \textit{singularity} category.
 \end{observation}
 
 
@@ -689,7 +679,7 @@ This is why we have the \textit{singularity} category.
 
 \begin{idea} \textbf{\textcolor{green!50!black}{A Singularity}}  
 
-A real number, $c$, is said to be a \textbf{singularity} of the function $f$, if $c$ is not a member of the domain of $f$, however, $c$ is surrounded by the domain or is an edge of the domain, and the function has extreme behavior there. ($c$ is not in the domain, but it wouldn't be a singleton if it were included in the domain.) \\
+A real number, $c$, is said to be a \textbf{singularity} of the function $f$, if $c$ is not a member of the domain of $f$, however, $c$ is surrounded by the domain or is an edge of the domain, and the function has extreme/weird/unexpected behavior there. ($c$ is not in the domain, but it wouldn't be a singleton if it were included in the domain.) \\
 
 
 
@@ -698,7 +688,7 @@ $\blacktriangleright$  $c$ is not in the domain, however,
 
 \begin{itemize}
 \item EVERY open interval containing $c$ does contain a domain number and 
-\item the function is behaving weird near $c$. \\
+\item the function is behaving extreme/weird/unexpected near $c$. \\
 \end{itemize}
 It turns our ``weird'' includes a lot of behavior.  It will take a while to state a \textbf{\textcolor{purple!85!blue}{rigorous}} definition of singularity.  In the mean time, we will keep noting weird behavior and building our feeling of weird.
 
@@ -836,6 +826,22 @@ If $S$ is a subset of the domain and $f$ is continuous at every number in $S$, t
 
 
 
+
+\begin{warning}
+
+
+A function is not continuous at a singularity, because the singularity is not in the domain.  However, the singularity is not a discontinuity, because the singularity is not in the domain. \\
+
+So, it is possible for a function to be noncontinuous and yet not have discontinuity. 
+
+
+
+\end{warning}
+
+
+
+
+
 \begin{idea} \textbf{Continuity}
 
 
@@ -854,16 +860,20 @@ $f$ is \textbf{continuous} at $c$ if  \\
 For every range distance $d > 0 $, there is a corresponding domain distance $\epsilon > 0$ such that \\
 
 
-for all domain numbers $x$ inside $(c - \epsilon, c + \epsilon)$, $| f(x) - f(c) | < d$. \\
+for all domain numbers $x$ inside $(c - \epsilon, c + \epsilon)$ we have $| f(x) - f(c) | < d$. \\
 
 
-You can get close enough to $c$ in the domain so that all of the function values are close to $f(c)$...as close as you want...any closeness.
+You can get close enough to $c$ in the domain so that all of the function values are close to $f(c)$...as close as you want...any closeness. \\
+
+
+
+Continuity: Close in the domain means close in the range.
 
 
 \end{idea}
 
 
-As you can see, this is easy to see visually, but difficult to describe algebraically.  It will take some time to read the algebra.
+As you can see, this is easy to see visually, but difficult to describe algebraically.  It will take some time to describe discontinuitys and singularities with algebra.
 
 
 
