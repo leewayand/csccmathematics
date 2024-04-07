@@ -94,6 +94,43 @@ The open interval $(4,7)$ is an open set in $\mathbb{R}$.
   \end{image}
 
 
+
+
+
+
+
+\begin{image}
+  \begin{tikzpicture}
+  \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \addplot [color=penColor2, fill=white,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2, fill=white,only marks,mark=*] coordinates{(7,0)};
+
+
+    \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+
+
 \begin{explanation}
 
 Let $c$ be any number in $(4,7)$.  Then the open subinterval $\left( c - \frac{4+c}{2}, c + \frac{7+c}{2} \right)$ will always be inside $(4,7)$.
@@ -148,6 +185,47 @@ The interval $(4,7]$ is not an open set in $\mathbb{R}$.
     \end{axis}
   \end{tikzpicture}
   \end{image}
+
+
+
+
+
+
+
+
+\begin{image}
+  \begin{tikzpicture}
+  \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(7,0)};
+            \addplot [color=penColor2, fill=white,only marks,mark=*] coordinates{(4,0)};
+
+
+    \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+
+
 
 
 \begin{explanation}
