@@ -2,12 +2,12 @@
 
 \input{../../preamble.tex}
 
-\title{Subsets of Real Numbers}
+\title{Endpoints}
 
 \begin{document}
 
 \begin{abstract}
-intervals
+dots
 \end{abstract}
 \maketitle
 
@@ -381,10 +381,12 @@ We have a very popular alternative to for the graphical notation. \\
           	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
 
-          	\node at (axis cs:-4,0) [penColor2] {$[$};
-          	\node at (axis cs:-2,0) [penColor2] {$]$};
-          	\node at (axis cs:3,0) [penColor2] {$($};
-          	\node at (axis cs:6,0) [penColor2] {$]$};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-2,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(6,0)};
+
+
 
     \end{axis}
 	\end{tikzpicture}
@@ -422,10 +424,11 @@ We have a very popular alternative to for the graphical notation. \\
           	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
           	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-1,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(8,0)};
 
-          	\node at (axis cs:-1,0) [penColor2] {$]$};
-          	\node at (axis cs:4,0) [penColor2] {$($};
-          	\node at (axis cs:8,0) [penColor2] {$)$};
+
 
     \end{axis}
 	\end{tikzpicture}
@@ -464,10 +467,10 @@ We have a very popular alternative to for the graphical notation. \\
           	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
           	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
 
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(-7,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0)};
 
-          	\node at (axis cs:-7,0) [penColor2] {$($};
-          	\node at (axis cs:-4,0) [penColor2] {$]$};
-          	\node at (axis cs:3,0) [penColor2] {$($};
 
     \end{axis}
 	\end{tikzpicture}
