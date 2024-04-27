@@ -73,7 +73,7 @@ Here is the complete graph of the function $G(x)$. \\
 
 The graph has two pieces and two asymptotes. $x=3$ is a vertical asymptote. $y=2$ is a horizontal asymptote.\\
 
-The left part of the graph includes two arrows, which tell us that the first coordinates fill up the interval $(\-infty, 3)$.
+The left part of the graph includes two arrows, which tell us that the first coordinates fill up the interval $(-\infty, 3)$.
 
 The right piece of the graph includes the point $(3.2, 7)$ and then an arrow, which tell us that the first coordinates fill up the interval $[3.2, \infty)$. \\
 
@@ -97,7 +97,7 @@ We can visualize the dots on the graph smashed vertically to the horizontal axis
 \begin{tikzpicture}
      \begin{axis}[
                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-               axis lines =center, xlabel=$x$, ylabel=$y$,
+               axis lines =center, xlabel=$x$, ylabel=$domain$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -110,7 +110,7 @@ We can visualize the dots on the graph smashed vertically to the horizontal axis
 
         
         \addplot [draw=penColor2, very thick, smooth, domain=(-6:3), <->] {0};
-        \addplot [draw=penColor, very thick, smooth, domain=(3:8), ->] {0};
+        \addplot [draw=penColor2, very thick, smooth, domain=(3:8), ->] {0};
 
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
@@ -196,7 +196,7 @@ Here is a complete graph of $K(v)$. \\
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$v$, ylabel=${y=K(v)}$,
+                axis lines =center, xlabel=$v$, ylabel=${domain}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -229,6 +229,15 @@ Here is a complete graph of $K(v)$. \\
 The domain of the function $K$ is $[-6, \infty)$. 
 
 \end{example}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -293,7 +302,7 @@ Here is a complete graph of $p(x)$. \\
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$x$, ylabel=${y=p(x)}$,
+                axis lines =center, xlabel=$x$, ylabel=${domain}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
