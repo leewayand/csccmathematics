@@ -21,10 +21,14 @@ pieces and parts
 Piecewise defined functions are defined by using pieces of other functions. 
 
 
-\begin{procedure}
-We begin with several functions with their own defining sets of domain-range pairs.  \\
-Select some pairs from each of those sets. \\
-Collect them into a new set of pairs defining a new function.  
+\begin{procedure} \textbf{\textcolor{blue!55!black}{Building Piecewise Defined Functions}} 
+
+\begin{itemize}
+\item Begin with several elementary functions with their own defining sets of domain, range, and pairs.  \\
+\item Select some pairs from each of those functions. \\
+\item Collect these into a new set of pairs defining a new function.  
+\end{itemize}
+
 \end{procedure}
 
 Of course, we have to make sure that we do not duplicate domain numbers, otherwise we will not have a function.  This new collection of pairs will automatically give us a domain by collecting all of the first coordinates.
@@ -115,6 +119,21 @@ step(x) =
 \end{cases}
 \]
 
+
+or
+
+
+\[
+step(x) = 
+\begin{cases}
+  0 & (-\infty, 0) \\
+  1 & [0, \infty)
+\end{cases}
+\]
+
+
+
+
 The formulas are listed in the left column and the domain conditions are listed in the right column.  When evaluating a piecewise defined function, you don't look for the formula first.  First, you decide which domain condition in the right column your domain number satisfies.  Then you choose the corresponding formula and evaluate with your domain number.
 
 
@@ -167,6 +186,20 @@ p(k) =
 \]
 
 
+or
+
+
+\[
+p(k) = 
+\begin{cases}
+  k^2 + 1 & (-7, -4] \\
+  -4k + 3 & (-4, 1] \\
+  1 - 3k & (3, \infty]
+\end{cases}
+\]
+
+
+
 \begin{itemize}
 \item $p(-6) = \answer{37}$  
 \item $p(-2) = \answer{11}$ 
@@ -182,9 +215,14 @@ p(k) =
 
 
 
-From the formula above, we can see that the domain of $p$ is $(-7, 1] \cup (3, \infty)$.
+From the formula above, we can see that the domain of $p$ is $(-7, 1] \cup (3, \infty)$. \\
+
+This is because
 
 
+\[
+(-7, -4] \cup (-4, 1] \cup (3, \infty) = (-7, 1] \cup (3, \infty)
+\]
 
 
 \begin{example}
@@ -237,7 +275,7 @@ The line graph for $y = -v+3$ is only drawn over the domain interval $[1, 7)$.
 
 
 
-The function $T$ has no minimum value. The maximum value of $T$ is $\answer{2}$.
+The function $T$ has no minimum value. The maximum value of $T$ is $\answer{2}$, which occurs at $\answer{1}$.
 
 \end{example}
 
@@ -267,13 +305,13 @@ The function $T$ has no minimum value. The maximum value of $T$ is $\answer{2}$.
 
 
 
-Define the function $D(x)$ by the graph below.
+Define the function $D(x)$ by the graph below of the equation $y = D(x)$.
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$D(x)$,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -352,7 +390,7 @@ The function $D$ has no maximum value
 \begin{example}
 
 
-The graph of a piecewise defined function may not seem like pieces.
+The graph of a piecewise defined function may not look like pieces.
 
 
 
@@ -360,8 +398,8 @@ The graph of a piecewise defined function may not seem like pieces.
 f(x) = 
 \begin{cases}
   \frac{1}{2} (x+8)^2 - \frac{21}{4} & \text{ if }  x \le -7 \\
-  x + \frac{9}{4} & \text{ if }  -7 \geq x \leq \frac{5}{2} \\
-  -(x+3)^2 + 5   & \text{ if } \frac{5}{2} \le v 
+  x + \frac{9}{4} & \text{ if }  -7 \leq x \leq \frac{5}{2} \\
+  -(x-3)^2 + 5   & \text{ if } \frac{5}{2} \le v 
 \end{cases}
 \]
 
@@ -385,7 +423,7 @@ Graph of $y = f(x)$.
           ]
           
         \addplot [draw=penColor,very thick,smooth,domain=(-9:-7),<-] {0.5*(x+8)^2 - 5.25};
-        \addplot [draw=penColor,very thick,smooth,domain=(-7:2.5)] {x+8.25};
+        \addplot [draw=penColor,very thick,smooth,domain=(-7:2.5)] {x+1.75};
         \addplot [draw=penColor,very thick,smooth,domain=(2.5:6),->] {-(x-3)^2 + 5};
 
 
