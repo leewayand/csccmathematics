@@ -37,15 +37,18 @@ In Precalculus, we want to supply reasoning for our analysis choices.  Identifyi
 
 We have three levels of function categories.
 
-\begin{itemize}
+\begin{enumerate}
     \item Elementary Function
     \item Operation
     \item Composition
-\end{itemize} 
+\end{enumerate} 
 
 
 
 \section{Elementary Function}
+
+\textbf{\textcolor{purple!85!blue}{First Choice}} 
+
 
 If our function belongs to one of the elementary function categories, then that is important and very helpful. \\
 
@@ -56,6 +59,87 @@ If our function belongs to one of the elementary function categories, then that 
 \textbf{\textcolor{red!80!black}{CAN the function be written in the standard form for an elementary function?}}
 
 \end{center}
+
+
+
+Our categories for Elementary Functions are
+
+\begin{itemize}
+    \item Constant
+    \item Linear
+    \item Quadratic
+    \item Polynomial
+    \item Rational
+    \item Radical or Root
+    \item Exponential (Shifted)
+    \item Logarithmic
+    \item Absolute Value
+    \item Power
+    \item Sine
+    \item Cosine
+    \item Tangent
+\end{itemize} 
+
+
+
+
+
+The standard forms for formulas look like
+
+
+
+\[
+\begin{array}{ll}
+\text{Constant}  & f(x) = A  \\
+\text{Linear}  & f(x) = A x B  \\
+\text{Quadratic}  & f(x) = A x^2 + B x + C  \\
+\text{Polynomial}  & f(x) = a_n x^n + \cdots + a_1 x + a_0  \\
+\text{Rational}  & f(x) = \frac{a_n x^n + \cdots + a_1 x + a_0}{b_m x^m + \cdots + b_1 x + b_0}  \\
+\text{Root}  & f(x) = \sqrt[n]{A x + B}  \\
+\text{Exponential}  & f(x) = A b^{B x + C}  \\
+\text{Shifted Exponential}  & f(x) = A b^{B x + C} + D  \\
+\text{Logarithmic}  & f(x) = A \log_b(B x + C) + D  \\
+\text{Absolute Value}  & f(x) = A |B x + C| + D \\
+\text{Power}  & f(x) = x^A  \\
+\text{Sine}  & f(x) = A \sin(B x + C) + D  \\
+\text{Cosine}  & f(x) = A \cos(B x + C) + D  \\
+\text{Tangent}  & f(x) = A \tan(B x + C) + D  
+\end{array}
+\]
+
+
+All of the \textit{insides} are linear functions. \\
+
+
+When trying to categorize a function, the formula you have may not be in one of these forms.  That doesn't matter.  The question is whether or not, with a little algebra, you can get an equivalent formula that is in one of these forms. \\
+
+
+This is our first choice.  If we can identify our function as an elementary function, then that gives us the most information. \\
+
+
+For us, in Precalculus, if the inside of the function is not linear, then it isn't an elementary function. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,7 +159,7 @@ If our function belongs to one of the elementary function categories, then that 
 
 \section{Operation}
 
-
+\textbf{\textcolor{purple!85!blue}{Second Choice}} 
 
 
 \textbf{\textcolor{purple!85!blue}{IS:}}   This is an ``is'' question. \\
@@ -84,6 +168,41 @@ If our function belongs to one of the elementary function categories, then that 
 \textbf{\textcolor{red!80!black}{IS the function written as a sum, difference, product, or quotient}}
 
 \end{center}
+
+
+
+\[
+f(x) + g(x), \, \\ \, f(x) - g(x), \, \\ \, f(x) \cdot g(x), \, \\ \,  \frac{f(x)}{g(x)}
+\]
+
+
+
+
+
+
+
+This is our second choice.  If we can identify our function as an elementary function, then that gives us the most information. If not, then we would like some helpful information about its structure. \\
+
+
+
+If we can view the function as an operation, then that is helpful information.\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,12 +228,22 @@ If our function belongs to one of the elementary function categories, then that 
 \section{Composition}
 
 
-
+\textbf{\textcolor{purple!85!blue}{Third Choice}} 
 
 This is our default category.  It signals to use the Chain Rule in Calculus. \\
 
 
+When we view our function as a composition, then we would also like to know its component functions. These are usually elementary functions. \\
 
+Through the component functions, we have a way to analyze compositions.  We have a Precalculus version of the chain rule.
+
+
+\begin{itemize}
+\item  $inc \circ inc = inc$
+\item  $inc \circ dec = dec$
+\item  $dec \circ inc = dec$
+\item  $dec \circ dec = inc$
+\end{itemize}
 
 
 
@@ -131,13 +260,22 @@ This is our default category.  It signals to use the Chain Rule in Calculus. \\
 \section{Piecewise Defined}
 
 
+\textbf{\textcolor{purple!85!blue}{Zeroth Choice}} 
+
+If a function is a piecewise defined function, then we usually see that right away, because the formula uses a big curly brace and a list of formulas and domain pieces.
 
 
-If a funbction is a piecewise defined funciton, then we usually see that right away, because the formula uses a big curly brace and a list of formulas and domain pieces.
 
 
-
-
+\[
+f(x) = 
+\begin{cases}
+  formula 1 & domain 1  \\
+  formula 2 & domain 2  \\
+  formula 3 & domain 3  \\
+  formula 4 & domain 4  
+\end{cases}
+\]
 
 
 
