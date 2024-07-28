@@ -250,6 +250,104 @@ A function with a discontiuity has a break in the graph.
 
 
 
+However, if there is a break in the graph, then the two sides might not agree. \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
+        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
+        
+       
+
+
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {4*(x-5)+5};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {3.2*(x-4.6)+3.56};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {2.6*(x-4.3)+2.69};
+
+
+
+
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {-4};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {0.6*(x-3.3)-3.82};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {1.2*(x-3.6)-3.64};
+
+
+          %\addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+
+
+
+        %\node[penColor] at (axis cs:5,-4) {$(h, k)$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The two sides have tangent lines, but they are not smoothly turning to agree. \\
+
+
+In this case, we say that there is not tangent line. \\
+
+And, if there is no tangent line, then there is no slope of the tangent line, then the derivative has no value here. \\
+
+
+
+
+
+
+
+So, a derivative implies that there are two sides and the two sides are agreeing. \\
+
+
+
+But, there is no need to just throw everything else away.  We can extend our idea of derivative to include just one side. \\ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
