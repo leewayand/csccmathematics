@@ -355,6 +355,73 @@ But, there is no need to just throw everything else away.  We can extend our ide
 
 
 
+
+
+\section{One Side}
+
+Suppose our function has a discontinuity at $t$. \\
+
+Discontiuity means that the number is a domain number and there is a corresponding point on the graph.  The point $(t, f(t))$ is on the graph. \\
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
+        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
+        
+       
+
+
+
+          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+This point might be an endpoint on the graph, in which case there might be a line that models one side of the graph. \\
+
+A tangent line, well, a one-sided tangent line. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{center}
 \textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
 
