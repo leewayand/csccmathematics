@@ -434,33 +434,9 @@ The approaching tangent lines, approach the tangent line, on one side only.
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
-        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
-
-        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
-        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
-        
-       
+      
 
 
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {4*(x-5)+5};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {3.2*(x-4.6)+3.56};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {2.6*(x-4.3)+2.69};
-
-
-
-
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {-4};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {0.6*(x-3.3)-3.82};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {1.2*(x-3.6)-3.64};
-
-
-          %\addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
-
-
-
-        %\node[penColor] at (axis cs:5,-4) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
 
 
 
@@ -474,6 +450,116 @@ We have a one-side derivative. \\
 
 
 For the function above, we have a \textbf{left derivative}.
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Derivative}}  a.k.a. two-sided 
+
+
+Suppose we have a really nice situation.
+
+
+\begin{itemize}
+\item We have a function, $f$, 
+\item We have and a domain number, $t$, 
+\item This domain number is inside an open interval inside the domain.  $t \in (a, b) \subset Domain$. 
+\item The tangent lines on both sides of $(t, f(t))$ are smootlhy approach the same line from both sides.
+\end{itemize}
+
+Then, there is a tangent line to the graph of $f$ and the tangent lines on both sides are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+
+The slope of this tangent line is the value of the \textbf{derivative} of $f$ at $t$.
+
+\[
+iRoC(t) =f'(t) = \text{slope of tanget line}
+\]
+
+
+On the other hand, if the tangent lines and both sides are not smootly agreeing, then there is no tangent line at $(t, f(t))$ and the derivative does not exist at $t$.   
+
+\end{definition}
+
+The derivative implies a two-sided derivative \\
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Left Derivative}}  a.k.a. one-sided 
+
+
+Suppose we have a really nice situation.
+
+
+\begin{itemize}
+\item We have a function, $f$, 
+\item We have and a domain number, $t$, 
+\item This domain number is inside an  interval inside the domain of the form  $t \in (a, t] \subset Domain$. 
+\item The tangent lines on the left side of $(t, f(t))$ are smootlhy approach the same line.
+\end{itemize}
+
+Then, there is a tangent line to the graph of $f$ and the tangent lines on the left side are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+
+The slope of this tangent line is the value of the \textbf{left derivative of $f$ at $t$}.
+
+\[
+iRoC_{f-}(t) =f'-(t) = \text{slope of tanget line}
+\]
+
+
+ 
+
+\end{definition}
+The left derivative is symbolize with a ``-'' after the function name. \\
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Right Derivative}}  a.k.a. one-sided 
+
+
+Suppose we have a really nice situation.
+
+
+\begin{itemize}
+\item We have a function, $f$, 
+\item We have and a domain number, $t$, 
+\item This domain number is inside an  interval inside the domain of the form  $t \in [t, b) \subset Domain$. 
+\item The tangent lines on the right side of $(t, f(t))$ are smootlhy approach the same line.
+\end{itemize}
+
+Then, there is a tangent line to the graph of $f$ and the tangent lines on the right side are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+
+The slope of this tangent line is the value of the \textbf{right derivative of $f$ at $t$}.
+
+\[
+iRoC_{f+}(t) =f'+(t) = \text{slope of tanget line}
+\]
+
+
+ 
+
+\end{definition}
+
+The right derivative is symbolize with a ``+'' after the function name. \\
+
+
+
+
+
+If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there.
+
+
+
+
+
+
 
 
 
