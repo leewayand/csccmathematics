@@ -359,9 +359,9 @@ But, there is no need to just throw everything else away.  We can extend our ide
 
 \section{One Side}
 
-Suppose our function has a discontinuity at $t$. \\
+Suppose our function doesn't have a discontinuity at $t$, but $t$ is just an endpoint of a domain interval. \\
 
-Discontiuity means that the number is a domain number and there is a corresponding point on the graph.  The point $(t, f(t))$ is on the graph. \\
+The number is a domain number and there is a corresponding point on the graph.  The point $(t, f(t))$ is on the graph. \\
 
 
 
@@ -387,13 +387,9 @@ Discontiuity means that the number is a domain number and there is a correspondi
 
 
         \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
-        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
+
 
         \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
-        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
-        
-       
-
 
 
           \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
@@ -406,7 +402,7 @@ Discontiuity means that the number is a domain number and there is a correspondi
 \end{image}
 
 
-This point might be an endpoint on the graph, in which case there might be a line that models one side of the graph. \\
+This point is an endpoint on the graph, in which case there might be a line that models one side of the graph. \\
 
 A tangent line, well, a one-sided tangent line. \\
 
@@ -435,19 +431,11 @@ The approaching tangent lines, approach the tangent line, on one side only.
 
 
         \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
-        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
+
 
         \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
-        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
+
         
-       
-
-
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {4*(x-5)+5};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {3.2*(x-4.6)+3.56};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {2.6*(x-4.3)+2.69};
-
-
 
 
         \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {-4};
@@ -480,6 +468,64 @@ For the function above, we have a \textbf{left derivative}.
 
 
 
+
+
+Or, the other side. \\
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+  
+        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,2)};
+
+        
+       
+
+
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {4*(x-5)+5};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {3.2*(x-4.6)+3.56};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {2.6*(x-4.3)+2.69};
+
+
+
+
+          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)+2};
+
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+In this case, we have a one-side tangent line.  \\
+
+We have a one-side derivative. \\
+
+
+For the function above, we have a \textbf{right derivative}.
+
+
+
+
+
+
+
+
+
 \begin{definition} \textbf{\textcolor{green!50!black}{Derivative}}  a.k.a. two-sided 
 
 
@@ -498,7 +544,7 @@ Then, there is a tangent line to the graph of $f$ and the tangent lines on both 
 The slope of this tangent line is the value of the \textbf{derivative} of $f$ at $t$.
 
 \[
-iRoC(t) =f'(t) = \text{slope of tanget line}
+iRoC(t) =f'(t) = \text{slope of tangent line}
 \]
 
 
@@ -529,7 +575,7 @@ Then, there is a tangent line to the graph of $f$ and the tangent lines on the l
 The slope of this tangent line is the value of the \textbf{left derivative of $f$ at $t$}.
 
 \[
-iRoC_{f_{-}}(t) =f'_{-}(t) = \text{slope of tanget line}
+iRoC_{f_{-}}(t) =f'_{-}(t) = \text{slope of tangent line}
 \]
 
 
@@ -560,7 +606,7 @@ Then, there is a tangent line to the graph of $f$ and the tangent lines on the r
 The slope of this tangent line is the value of the \textbf{right derivative of $f$ at $t$}.
 
 \[
-iRoC_{f_{+}}(t) =f'_{+}(t) = \text{slope of tanget line}
+iRoC_{f_{+}}(t) =f'_{+}(t) = \text{slope of tangent line}
 \]
 
 
