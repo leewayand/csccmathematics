@@ -31,7 +31,7 @@ There are three situations to consider. \\
 
 
 
-\section{Two Sides}
+\section*{Two Sides}
 
 
 Suppose our tangent point is $(t, f(t))$ and $t$ is inside an open interval in the domain, $t \in (a, b)$. \\
@@ -280,24 +280,19 @@ However, if there is a break in the graph, then the two sides might not agree. \
        
 
 
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {4*(x-5)+5};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {3.2*(x-4.6)+3.56};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {2.6*(x-4.3)+2.69};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {4*(x-5)+5};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {3.2*(x-4.6)+3.56};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {2.6*(x-4.3)+2.69};
 
 
 
 
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {-4};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {0.6*(x-3.3)-3.82};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {1.2*(x-3.6)-3.64};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {-4};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {0.6*(x-3.3)-3.82};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {1.2*(x-3.6)-3.64};
 
 
-          %\addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
-
-
-
-        %\node[penColor] at (axis cs:5,-4) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+       
 
 
 
@@ -357,7 +352,7 @@ But, there is no need to just throw everything else away.  We can extend our ide
 
 
 
-\section{One Side}
+\section*{One Side}
 
 Suppose our function doesn't have a discontinuity at $t$, but $t$ is just an endpoint of a domain interval. \\
 
@@ -438,9 +433,9 @@ The approaching tangent lines, approach the tangent line, on one side only.
         
 
 
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {-4};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {0.6*(x-3.3)-3.82};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5),<->] {1.2*(x-3.6)-3.64};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {-4};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {0.6*(x-3.3)-3.82};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {1.2*(x-3.6)-3.64};
 
 
           \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
@@ -495,9 +490,9 @@ Or, the other side. \\
        
 
 
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {4*(x-5)+5};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {3.2*(x-4.6)+3.56};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8),<->] {2.6*(x-4.3)+2.69};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {4*(x-5)+5};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {3.2*(x-4.6)+3.56};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {2.6*(x-4.3)+2.69};
 
 
 
@@ -618,6 +613,11 @@ The right derivative is symbolized with a subscript of ``+'' with the derivative
 
 
 
+
+
+
+
+\section*{No Side}
 
 
 If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there.
