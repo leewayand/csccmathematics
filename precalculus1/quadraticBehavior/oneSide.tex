@@ -1,0 +1,348 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Two Sides}
+
+\begin{document}
+
+\begin{abstract}
+one side
+\end{abstract}
+\maketitle
+
+
+
+
+Tangent lines are tangent to a curve or graph at a tangent point. There must be a point on the curve. At that tangent point, the curve or graph is behaving in some manner, which the tangent line is modeling.  \\
+
+
+
+For quadratics, we have a formula for the tangent line. But, for a random function, how do you get a tangent line without know its slope ahead of time? \\
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} There are two behaviors happening. \\
+
+
+
+\begin{itemize}
+\item \textbf{First}, the curve or graph is approaching that point. The graph is connecting up to the point.\\
+\item \textbf{Second}, the tangent lines at approaching points are smoothly turning into the tangent line at the tangent point. \\
+\end{itemize}
+
+
+There are three situations to consider. \\
+
+
+
+
+
+
+
+
+
+
+\section*{One Side}
+
+Suppose our function doesn't have a discontinuity at $t$, but $t$ is just an endpoint of a domain interval. \\
+
+The number is a domain number and there is a corresponding point on the graph.  The point $(t, f(t))$ is on the graph. \\
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
+
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
+
+
+          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+This point is an endpoint on the graph, in which case there might be a line that models one side of the graph. \\
+
+A tangent line, well, a one-sided tangent line. \\
+
+
+
+
+
+
+
+The approaching tangent lines, approach the tangent line, on one side only.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
+
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
+
+        
+
+
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {-4};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {0.6*(x-3.3)-3.82};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {1.2*(x-3.6)-3.64};
+
+
+          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+In this case, we have a one-side tangent line.  \\
+
+We have a one-side derivative. \\
+
+
+For the function above, we have a \textbf{left derivative}.
+
+
+
+
+
+
+
+
+
+
+
+Or, the other side. \\
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+  
+        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,2)};
+
+        
+       
+
+
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {4*(x-5)+5};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {3.2*(x-4.6)+3.56};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {2.6*(x-4.3)+2.69};
+
+
+
+
+          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)+2};
+
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+In this case, we have a one-side tangent line.  \\
+
+We have a one-side derivative. \\
+
+
+For the function above, we have a \textbf{right derivative}.
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Derivative}}  a.k.a. two-sided 
+
+
+Suppose we have a really nice situation.
+
+
+\begin{itemize}
+\item We have a function, $f$, 
+\item We have and a domain number, $t$, 
+\item This domain number is inside an open interval inside the domain.  $t \in (a, b) \subset Domain$. 
+\item The tangent lines on both sides of $(t, f(t))$ are smootlhy approach the same line from both sides.
+\end{itemize}
+
+Then, there is a tangent line to the graph of $f$ and the tangent lines on both sides are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+
+The slope of this tangent line is the value of the \textbf{derivative} of $f$ at $t$.
+
+\[
+iRoC(t) =f'(t) = \text{slope of tangent line}
+\]
+
+
+On the other hand, if the tangent lines and both sides are not smootly agreeing, then there is no tangent line at $(t, f(t))$ and the derivative does not exist at $t$.   
+
+\end{definition}
+
+The derivative implies a two-sided derivative \\
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Left Derivative}}  a.k.a. one-sided 
+
+
+Suppose we have a really nice situation.
+
+
+\begin{itemize}
+\item We have a function, $f$, 
+\item We have and a domain number, $t$, 
+\item This domain number is inside an  interval inside the domain of the form  $t \in (a, t] \subset Domain$. 
+\item The tangent lines on the left side of $(t, f(t))$ are smootlhy approach the same line.
+\end{itemize}
+
+Then, there is a tangent line to the graph of $f$ and the tangent lines on the left side are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+
+The slope of this tangent line is the value of the \textbf{left derivative of $f$ at $t$}.
+
+\[
+iRoC_{f_{-}}(t) =f'_{-}(t) = \text{slope of tangent line}
+\]
+
+
+ 
+
+\end{definition}
+The left derivative is symbolized with a subscript of ``-'' with the derivative name. \\
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Right Derivative}}  a.k.a. one-sided 
+
+
+Suppose we have a really nice situation.
+
+
+\begin{itemize}
+\item We have a function, $f$, 
+\item We have and a domain number, $t$, 
+\item This domain number is inside an  interval inside the domain of the form  $t \in [t, b) \subset Domain$. 
+\item The tangent lines on the right side of $(t, f(t))$ are smootlhy approach the same line.
+\end{itemize}
+
+Then, there is a tangent line to the graph of $f$ and the tangent lines on the right side are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+
+The slope of this tangent line is the value of the \textbf{right derivative of $f$ at $t$}.
+
+\[
+iRoC_{f_{+}}(t) =f'_{+}(t) = \text{slope of tangent line}
+\]
+
+
+ 
+
+\end{definition}
+
+The right derivative is symbolized with a subscript of ``+'' with the derivative name. \\
+
+
+
+
+
+
+
+\section*{No Side}
+
+
+If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Quadratic Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/quadraticBehavior/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}
+
+
+
+
