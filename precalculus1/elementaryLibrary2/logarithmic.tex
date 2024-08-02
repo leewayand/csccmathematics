@@ -1,0 +1,320 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Logarithmic}
+
+\begin{document}
+
+\begin{abstract}
+reverse
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+\section{Backwards}
+
+What if we have a function value for an exponential function and we would like to know which domain numbers are associated with it?  In other words, we would like to solve
+
+
+\[    g(t) = k \cdot a^t  =   g_0    \]
+
+
+How would we solve for $t$?
+
+
+
+
+
+
+\begin{example} If the function value ``works well'', then we could probably guess.
+
+Let $T(f) = 4 \cdot 3^f$.  
+
+
+Solve $T(f) = 36$
+
+$4 \cdot 3^f = 36$
+
+$3^f = 9$
+
+$f = 2$
+
+\end{example}
+
+
+
+
+
+
+
+
+
+Most function values are not going to be so obvious. 
+
+
+For example, solve $ 3^x = 17$.
+
+
+We may not be able to quickly think up this number or even an approximation for it.  However, we can still talk about it.
+
+\begin{center}
+We are looking for the number that you raise $3$ to, to get $17$.
+\end{center}
+
+
+That is a specific number. We can see from the graph that there is only one such number and we could visually approximate it around $2.5$.
+
+
+\begin{example}
+The following are all descriptions that identify unique real numbers.
+
+\begin{itemize}
+\item The number that you raise $5$ to, to get $97$.
+\item The number that you raise $\frac{3}{4}$ to, to get $6$.
+\item The number that you raise $7$ to, to get $\frac{1}{2}$.
+\item The number that you raise $101$ to, to get $34$.
+\item The number that you raise $10$ to, to get $1,000$.
+\end{itemize}
+
+\end{example}
+
+
+
+As with all mathematical phrases, we have shorthand notation for these desciptions.
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Base A of B}}
+
+Let $a$ and $b$ be positive real numbers.  The number  you raise $a$ to, to get $b$ is called the \textbf{logarithm base a of b}.
+
+The symbol for the logarithm base a of b is $\log_a(b)$.
+
+
+$\log_a(b)$ is  the number you raise $a$ to, to get $b$.
+
+\[     a^{\log_a(b)} = b          \]
+
+
+
+
+\end{definition}
+
+
+
+
+
+\begin{example}
+The following are all descriptions that identify unique real numbers.
+
+\begin{itemize}
+\item The number that you raise $5$ to, to get $97$ is $\log_5(97)$. \\
+\item The number that you raise $\frac{3}{4}$ to, to get $6$ is $\log_{\tfrac{3}{4}}(6)$. \\
+\item The number that you raise $7$ to, to get $\frac{1}{2}$ is $\log_7\left(\frac{1}{2}\right)$. \\
+\item The number that you raise $101$ to, to get $34$ is $\log_{101}(34)$. \\
+\item The number that you raise $10$ to, to get $1,000$ is $\log_{10}(1000)$. \\
+\end{itemize}
+
+\end{example}
+
+
+
+\begin{example}
+Evaluate the following expressions
+
+\begin{itemize}
+\item  $3^{\log_3{56}} = \answer{56}$
+\item  $13^{\log_{13}{21}} = \answer{21}$
+\item  $\pi^{\log_{\pi}{82}} = \answer{82}$
+\item  $4^{\log_4{\sqrt{7}}} = \answer{\sqrt{7}}$
+\item  $85^{\log_{85}{2}} = \answer{2}$
+
+\end{itemize}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+Logarithms are exponents.  They can be positive or negative.
+
+
+
+$9^{-2} = \frac{1}{81}$, therefore  $\log_{9}\left(\frac{1}{81}\right) = -2$
+
+
+
+We also know that raising a positve number to any exponent cannot produce a negative number or $0$.  Therefore, the number \textit{inside} the logarithm must be positive
+
+
+
+It sounds like we have a new category of functions.
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Basic Logarithmic Functions}}
+
+A \textbf{Basic Logarithmic Function} is a function that can be represented by formulas of the form
+
+\[     L(x) =    \log_b(x)            \]
+
+where $b > 0$.
+
+The domain is positive real numbers and the range is all real numbers.
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Here is the graph of $y = L(x) = \log_2(x)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),<->] {ln(x)/ln(2)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The intercept is $(1,0)$, because $\log_2(1) = 0$, because $2^0 = 1$.
+
+On the interval $(0,1)$, we are looking at $\log_2(x)$ for $0<x<1$.  Remember, $\log_2(x)$ is the number you raise $2$ to, to get $x$, but here $0<x<1$.  Therefore, $2$ needs a negative exponent or $\log_2(x) < 0$.  And, the smaller (closer to $0$) you want $x$, the bigger the negative exponent.
+
+
+
+
+
+\end{example}
+
+
+
+If we switch the base from something greater than $1$, to something less than $1$, then all of the exponents flip.  The graph flips.
+
+
+
+
+
+
+\begin{example}
+
+Here is the graph of $y = L(x) = \log_{\tfrac{1}{2}}(x)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),<->] {ln(x)/ln(0.5)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The intercept is $(1,0)$, because $\log_{\tfrac{1}{2}}(1) = 0$, because $\left(\frac{1}{2}\right)^0 = 1$.
+
+On the interval $(0,1)$, we are looking at $\log_{\tfrac{1}{2}}(x)$ for $0<x<1$.  Now we just need large positive exponents of $\frac{1}{2}$ to get small numbers.  On the other hand, to get large positive numbers we need to raise $\frac{1}{2}$ to negative powers.
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithmic Functions}}
+
+A \textbf{Logarithmic Function} is a function that can be represented by formulas of the form
+
+\[     L(x) =    A \log_b(B x + C) +D            \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $b > 0$.
+
+The domain is all positive real numbers that make the inside positive.
+
+\end{definition}
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Elementary Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/elementaryLibrary2/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}
