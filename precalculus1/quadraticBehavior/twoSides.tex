@@ -474,6 +474,42 @@ A cube root and a point. \\
 
 
 
+\textbf{First}, the points on the graph are approaching the point on both sides.  There is no break in the curve. $f$ is continuous at $3$.\\
+
+
+The hopeful tangent point is $(2, 0)$ \\
+
+There is a tangent line.\\
+
+
+
+\\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<-] {-4*(2-x)^(0.3333)};
+
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+        
+
+          \addplot [line width=1, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
+    
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
@@ -481,6 +517,10 @@ A cube root and a point. \\
 
 
 
+
+The tangent line does the best job of modeling the curve right at the tangent point. \\
+
+Here, the tangent line described by the equation $x = 2$. It is a vertical line. \\
 
 
 
