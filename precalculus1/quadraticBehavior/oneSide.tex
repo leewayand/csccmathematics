@@ -22,49 +22,10 @@ A tangent line is a line that does the best job of pretending to be the curve at
 \textbf{Best job} means the line shares the tangent point with the curve and the slope of the line is the same as the ``slope'' of the curve at the tangent point. \\
 
 
-For quadratics, we have a formula for the tangent line. But, for a random function, how do you get a tangent line without know its slope ahead of time? \\
-
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} There are two behaviors happening. \\
 
 
 
-\begin{itemize}
-\item \textbf{First}, the curve or graph is approaching that point. The graph is connecting up to the point. The funciton is continuous at the corresponding domain number.\\
-\item \textbf{Second}, the secant lines through the tangent point are smoothly turning into the tangent line at the tangent point. \\
-\end{itemize}
-
-
-
-\begin{warning} \textbf{\textcolor{red!80!black}{Both Sides}}
-
-This means both sides. \\
-
-The points on both sides are approaching the tangent point. \\
-
-The secant lines on both sides are approaching the tangent line.
-
-\end{warning}
-We will also consider the situation where the graph only has one side. \\
-
-
-
-There are three situations to consider. \\
-
-
-
-
-
-
-
-
-
-
-\section*{One Side}
-
-Suppose our function doesn't have a discontinuity at $t$, but $t$ is just an endpoint of a domain interval. \\
-
-The number is a domain number and there is a corresponding point on the graph.  The point $(t, f(t))$ is on the graph. \\
+This is possible even at an endpoint on a graph.
 
 
 
@@ -95,7 +56,7 @@ The number is a domain number and there is a corresponding point on the graph.  
         \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
 
 
-          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+          %\addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
 
 
 
@@ -105,7 +66,7 @@ The number is a domain number and there is a corresponding point on the graph.  
 \end{image}
 
 
-This point is an endpoint on the graph, in which case there might be a line that models one side of the graph. \\
+This point $(4, -3)$ is an endpoint on the graph, in which case there might be a line that models one side of the graph. \\
 
 A tangent line, well, a one-sided tangent line. \\
 
@@ -115,7 +76,6 @@ A tangent line, well, a one-sided tangent line. \\
 
 
 
-The approaching tangent lines, approach the tangent line, on one side only.
 
 
 
@@ -138,16 +98,8 @@ The approaching tangent lines, approach the tangent line, on one side only.
 
         \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
 
-        
-
-
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {-4};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {0.6*(x-3.3)-3.82};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {1.2*(x-3.6)-3.64};
-
 
           \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
-
 
 
 
@@ -155,6 +107,72 @@ The approaching tangent lines, approach the tangent line, on one side only.
     \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+We have a tangent line.  It is a one-sided tangent line. \\
+
+
+
+
+Secant lines on the left approach the tangent line.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(0:6),<->] {(x-3)^2 - 4};
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
+        
+       
+
+
+        \addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {(x-4)-3};
+        \addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.3*(x-4)-3};
+        \addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.7*(x-4)-3};
+
+
+
+          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+
+
+
+        %\node[penColor] at (axis cs:5,-4) {$(h, k)$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The secant lines on the left smootly turn into the tangent line as you move to the right. \\
+
+
+There are no secant lines on the right, so we don't have to worry about them. \\
+
+
+
+
 
 In this case, we have a one-side tangent line.  \\
 
@@ -173,53 +191,13 @@ For the function above, we have a \textbf{left derivative}.
 
 
 
-Or, the other side. \\
 
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-6,-4,-2,2,4,6,8,10},
-                xtick={-6,-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
+Similarly, we might have a one-side tangent line on thee right.  \\
+
+We would have a one-side derivative. \\
 
 
-  
-        \addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {(x-3)^2 + 1};
-
-        \addplot [color=penColor,only marks,mark=*] coordinates{(4,2)};
-
-        
-       
-
-
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {4*(x-5)+5};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {3.2*(x-4.6)+3.56};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {2.6*(x-4.3)+2.69};
-
-
-
-
-          \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)+2};
-
-
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-In this case, we have a one-side tangent line.  \\
-
-We have a one-side derivative. \\
-
-
-For the function above, we have a \textbf{right derivative}.
+We would have a \textbf{right derivative}.
 
 
 
@@ -229,7 +207,7 @@ For the function above, we have a \textbf{right derivative}.
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Derivative}}  a.k.a. two-sided 
+\begin{definition} \textbf{\textcolor{green!50!black}{Derivative}}  (two-sided)
 
 
 Suppose we have a really nice situation.
@@ -255,12 +233,45 @@ On the other hand, if the tangent lines and both sides are not smootly agreeing,
 
 \end{definition}
 
-The derivative implies a two-sided derivative \\
+The term `derivative" implies a two-sided derivative.  Otherwise, we would say `right' or `left'. \\
 
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Left Derivative}}  a.k.a. one-sided 
+\begin{idea}
+
+For the derivative to exist at a domain number, the corresponding point on the graph must have secants approaching on both sides. \\
+
+
+
+
+\end{idea}
+
+
+
+
+
+
+
+\begin{idea}
+
+This means that end-point numbers for domain intervals are automatically critical numbers.  The derivative cannot exist at end-points, even if there is a one-sided tangent line. \\
+
+\end{idea}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Left Derivative}}  (one-sided) 
 
 
 Suppose we have a really nice situation.
@@ -291,7 +302,7 @@ The left derivative is symbolized with a subscript of ``-'' with the derivative 
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Right Derivative}}  a.k.a. one-sided 
+\begin{definition} \textbf{\textcolor{green!50!black}{Right Derivative}}  (one-sided) 
 
 
 Suppose we have a really nice situation.
@@ -328,7 +339,9 @@ The right derivative is symbolized with a subscript of ``+'' with the derivative
 \section*{No Side}
 
 
-If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there.
+If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there. \\
+
+The term derivative implies thatthere is some sort of approaching.
 
 
 
