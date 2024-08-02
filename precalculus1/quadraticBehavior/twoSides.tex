@@ -438,10 +438,10 @@ Here is the graph of the function $f(x) = 4 \sqrt[3]{x-2}$ and the point $(2, f(
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-6,-4,-2,2,4,6,8,10},
-                xtick={-6,-4,-2,2,4,6,8,10},
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -449,8 +449,8 @@ Here is the graph of the function $f(x) = 4 \sqrt[3]{x-2}$ and the point $(2, f(
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),<->] {4*(x-2)^(0.3333)};
-        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<->] {-4*(2-x)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<-] {-4*(2-x)^(0.3333)};
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
         
@@ -462,7 +462,7 @@ Here is the graph of the function $f(x) = 4 \sqrt[3]{x-2}$ and the point $(2, f(
 \end{tikzpicture}
 \end{image}
 
-A parabola and a point. \\
+A cube root and a point. \\
 
 
 \textbf{First}, the points on the graph are approaching the point on both sides.  There is no break in the curve. $f$ is continuous at $3$.\\
@@ -474,13 +474,13 @@ There is a tangent line.\\
 
 
 
-\begin{image}
+\\begin{image}
 \begin{tikzpicture}
      \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-6,-4,-2,2,4,6,8,10},
-                xtick={-6,-4,-2,2,4,6,8,10},
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -488,12 +488,13 @@ There is a tangent line.\\
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<-] {-4*(2-x)^(0.3333)};
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
         
 
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
+          \addplot [line width=1, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
     
 
 
@@ -544,7 +545,8 @@ Here are the secant lines through the tangent point and the approaching points $
 
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {4*(x-2)^(0.3333)};
+         \addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<-] {-4*(2-x)^(0.3333)};
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
         
