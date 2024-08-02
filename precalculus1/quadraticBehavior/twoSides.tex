@@ -384,7 +384,9 @@ There is no tangent line at the pont $(3,-4)$. \\
 
 There is no slope of a tangent line. \\
 
-$f$ has no derivative value at $3$.  $f'(3)$ does not exist.
+$f$ has no derivative value at $3$.  \\
+
+$f'(3)$ does not exist.
 
 
 
@@ -546,10 +548,10 @@ Here are the secant lines through the tangent point and the approaching points $
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
                 axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-6,-4,-2,2,4,6,8,10},
-                xtick={-6,-4,-2,2,4,6,8,10},
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
                 every axis y label/.style={at=(current axis.above origin),anchor=south},
                 every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -595,7 +597,9 @@ However, the tangent line is a vertical line.  It has no slope.
 
 There is no slope of a tangent line. \\
 
-$f$ has no derivative value at $2$.  $f'(2)$ does not exist.
+$f$ has no derivative value at $2$.  \\
+
+$f'(2)$ does not exist.
 
 
 
@@ -630,6 +634,11 @@ $f$ has no derivative value at $2$.  $f'(2)$ does not exist.
 
 
 A function with a discontiuity has a break in the graph, which means the graph points do not approach the same point.  This automatically results in the derivative not existing. \\
+
+
+
+
+
 
 
 
@@ -673,12 +682,7 @@ A function with a discontiuity has a break in the graph, which means the graph p
 
 
 
-
-
-
-However, if there is a break in the graph, then the two sides might not agree. \\
-
-
+We can also follow the approaching secant lines.  Remember, the secant lines go through a point on the graph at the prospective tangenbt point.  This throws the secant lines way off. \\
 
 
 
@@ -706,9 +710,9 @@ However, if there is a break in the graph, then the two sides might not agree. \
        
 
 
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {4*(x-5)+5};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {3.2*(x-4.6)+3.56};
-        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {2.6*(x-4.3)+2.69};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {19*(x-4)-3};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {9.8*(x-4)-3};
+        \addplot [draw=penColor4, very thick, smooth, domain=(3:8)] {8*(x-4)-3};
 
 
 
