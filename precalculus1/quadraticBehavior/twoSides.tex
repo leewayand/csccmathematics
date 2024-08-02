@@ -292,7 +292,8 @@ Here is the graph of the function $f(x) = | x - 3 | - 4$ and the point $(3, f(3)
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {abs(x-3) - 4};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:9),->] (x-7};
+        \addplot [draw=penColor, very thick, smooth, domain=(-5:3),<-] (-x-1};
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
         
@@ -353,7 +354,8 @@ Here are the secant lines through the tangent point and the approaching points $
                 ]
 
 
-          \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {abs(x-3) - 4};
+          \addplot [draw=penColor, very thick, smooth, domain=(3:9),->] (x-7};
+        \addplot [draw=penColor, very thick, smooth, domain=(-5:3),<-] (-x-1};
 
           \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
         
@@ -448,14 +450,12 @@ Here is the graph of the function $f(x) = 4 \sqrt[3]{x-2}$ and the point $(2, f(
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),<->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<->] {-4*(2-x)^(0.3333)};
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
         
 
-
-        %\node[penColor] at (axis cs:5,-4) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
 
 
 
@@ -550,7 +550,7 @@ Here are the secant lines through the tangent point and the approaching points $
         \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
         
 
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
+          \addplot [line width=1, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
         
        
 
@@ -561,7 +561,7 @@ Here are the secant lines through the tangent point and the approaching points $
 
         \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {5*(x-2)};
         \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {4*(x-2)};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {2.5(x-2)};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {2.5*(x-2)};
 
 
 
