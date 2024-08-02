@@ -17,6 +17,7 @@ one side
 Tangent lines are lines that are tangent to a curve or graph at a tangent point. There must be a point on the curve. At that tangent point, the curve or graph is behaving in some manner, which the tangent line is modeling.  \\
 
 \begin{idea} \textbf{\textcolor{blue!55!black}{Tangent}}
+
 A tangent line is a line that does the best job of pretending to be the curve at a single point.
 \end{idea}
 \textbf{Best job} means the line shares the tangent point with the curve and the slope of the line is the same as the ``slope'' of the curve at the tangent point. \\
@@ -138,7 +139,7 @@ Secant lines on the left approach the tangent line.
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(0:6),<->] {(x-3)^2 - 4};
+        \addplot [draw=penColor, very thick, smooth, domain=(0:4),<-] {(x-3)^2 - 4};
 
         \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3)};
         
@@ -165,7 +166,7 @@ Secant lines on the left approach the tangent line.
 \end{image}
 
 
-The secant lines on the left smootly turn into the tangent line as you move to the right. \\
+The secant lines on the left smoothly turn into the tangent line as you move to the right. \\
 
 
 There are no secant lines on the right, so we don't have to worry about them. \\
@@ -192,7 +193,7 @@ For the function above, we have a \textbf{left derivative}.
 
 
 
-Similarly, we might have a one-side tangent line on thee right.  \\
+Similarly, we might have a one-side tangent line on the right.  \\
 
 We would have a one-side derivative. \\
 
@@ -229,11 +230,11 @@ iRoC(t) =f'(t) = \text{slope of tangent line}
 \]
 
 
-On the other hand, if the tangent lines and both sides are not smootly agreeing, then there is no tangent line at $(t, f(t))$ and the derivative does not exist at $t$.   
+On the other hand, if the tangent lines and both sides are not smoothly agreeing, then there is no tangent line at $(t, f(t))$ and the derivative does not exist at $t$.   
 
 \end{definition}
 
-The term `derivative" implies a two-sided derivative.  Otherwise, we would say `right' or `left'. \\
+\textbf{Note}:The term `derivative" implies a two-sided derivative.  Otherwise, we would say `right' or `left'. \\
 
 
 
