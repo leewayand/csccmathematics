@@ -483,6 +483,7 @@ There is a tangent line.\\
 
 
 
+
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
@@ -497,19 +498,22 @@ There is a tangent line.\\
                 ]
 
 
-        %\addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),->] {4*(x-2)^(0.3333)};
-        %\addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<-] {-4*(2-x)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(2:9),->] {4*(x-2)^(0.3333)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-5:2),<-] {-4*(2-x)^(0.3333)};
 
-        %\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
         
 
           %\addplot [line width=1, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
-    
 
 
     \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
 
 
 
