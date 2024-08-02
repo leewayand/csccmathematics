@@ -54,13 +54,30 @@ The secant lines on both sides are approaching the tangent line.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Two Sides : Points and Secants Agree}
 
 
 Suppose our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. \\
 
 
-Suppose the points on the graph appraoch the point $(t_0 , f(t_0))$ and the secant lines (from both sides) approach the same line.
+Suppose the points on the graph approach the point $(t_0 , f(t_0))$ and the secant lines (from both sides) approach the same line.
 
 
 
@@ -250,7 +267,7 @@ The secant lines on the left smootly turn into the tangent line as you move to t
 Suppose our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. \\
 
 
-Suppose the points on the graph appraoch the point $(t_0 , f(t_0))$, however the secant lines (from both sides) do not approach the same line.
+Suppose the points on the graph approach the point $(t_0 , f(t_0))$, however the secant lines (from both sides) do not approach the same line.
 
 
 
@@ -275,7 +292,7 @@ Here is the graph of the function $f(x) = | x - 3 | - 4$ and the point $(3, f(3)
                 ]
 
 
-        \addplot [draw=penColor, very thick, smooth, domain=(0:6),<->] {abs(x-3) - 4};
+        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {abs(x-3) - 4};
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
         
@@ -290,7 +307,7 @@ Here is the graph of the function $f(x) = | x - 3 | - 4$ and the point $(3, f(3)
 \end{tikzpicture}
 \end{image}
 
-A parabola and a point. \\
+An absolute value ``Vee'' and a point. \\
 
 
 \textbf{First}, the points on the graph are approaching the point on both sides.  There is no break in the curve. $f$ is continuous at $3$.\\
@@ -336,13 +353,13 @@ Here are the secant lines through the tangent point and the approaching points $
                 ]
 
 
-          \addplot [draw=penColor, very thick, smooth, domain=(0:6),<->] {abs(x-3) - 4};
+          \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {abs(x-3) - 4};
 
           \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
         
           \addplot [draw=penColor4, very thick, smooth, domain=(0:5)] {-1*(x-3)-4};
 
-          \addplot [draw=penColor5, very thick, smooth, domain=(2:8)] {(x-3)-4};
+          \addplot [draw=penColor5, very thick, smooth, domain=(2:6)] {(x-3)-4};
 
 
 
@@ -357,14 +374,14 @@ Here are the secant lines through the tangent point and the approaching points $
 
 The secant lines on the left smootly turn into a line as you move to the right. The secant lines on the right smoothly turn into a line as you move to the left. \\
 
-BUT!  They are the same line! \\
+BUT!  They are NOT the same line! \\
 
 
 There is no commonline that the secandt lines are approaching. \\
 
 There is no tangent line at the pont $(3,-4)$. \\
 
-The is no slope ofa tangent line. \\
+There is no slope of a tangent line. \\
 
 $f$ has no derivative value at $3$.  $f'(3)$ does not exist.
 
@@ -400,9 +417,205 @@ $f$ has no derivative value at $3$.  $f'(3)$ does not exist.
 
 
 
+\section{Two Sides : Points Agree and Secants Agree, but No Slope}
 
 
-A function with a discontiuity has a break in the graph.
+Suppose our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. \\
+
+
+Suppose the points on the graph approach the point $(t_0 , f(t_0))$, and the secant lines (from both sides) approach the same line, but it is a vertical line. \\
+
+
+
+\textbf{\textcolor{blue!55!black}{Example}}  \\
+
+
+
+
+Here is the graph of the function $f(x) = 4 \sqrt[3]{x-2}$ and the point $(2, f(2))= (2, 0)$. \\
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {4*(x-2)^(0.3333)};
+
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+        
+
+
+        %\node[penColor] at (axis cs:5,-4) {$(h, k)$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+A parabola and a point. \\
+
+
+\textbf{First}, the points on the graph are approaching the point on both sides.  There is no break in the curve. $f$ is continuous at $3$.\\
+
+
+The hopeful tangent point is $(2, 0)$ \\
+
+There is a tangent line.\\
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {4*(x-2)^(0.3333)};
+
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+        
+
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
+    
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+The tangent line does the best job of modeling the curve right at the tangent point. \\
+
+Here, the tangent line described by the equation $x = 2$. It is a vertical line. \\
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Second}, the secant lines lines through approaching points smoothly turn into the tangent line at the tangent point...on both sides.
+
+
+Here are the secant lines through the tangent point and the approaching points $(1, -4)$, $(1.3, -3.91)$, $(1.7, -3.51)$, $(2.3, -2.31)$, $(2.7, -1.11)$, and $(3, 0)$.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-6,-4,-2,2,4,6,8,10},
+                xtick={-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-5:9),<->] {4*(x-2)^(0.3333)};
+
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+        
+
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:6)] ({2},{x});
+        
+       
+
+
+        \addplot [draw=penColor4, very thick, smooth, domain=(-2:4)] {2.5*(x-2)};
+        \addplot [draw=penColor4, very thick, smooth, domain=(-2:4)] {4*(x-2)};
+        \addplot [draw=penColor4, very thick, smooth, domain=(-2:4)] {5*(x-2)};
+
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {5*(x-2)};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {4*(x-2)};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:5)] {2.5(x-2)};
+
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The secant lines on the left smootly turn into the tangent line as you move to the right. The secant lines on the right smoothly turn into the tangent line as you move to the left. \\
+
+
+
+However, the tangent line is a vertical line.  It has no slope.
+
+
+There is no slope of a tangent line. \\
+
+$f$ has no derivative value at $2$.  $f'(2)$ does not exist.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Two Sides : Points Disagree and Secants Disagree}
+
+
+
+
+
+A function with a discontiuity has a break in the graph, which means the graph points do not approach the same point.  This automatically results in the derivative not existing. \\
 
 
 
