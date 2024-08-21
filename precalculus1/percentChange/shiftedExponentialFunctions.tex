@@ -304,6 +304,98 @@ Our graphical analysis tells us that
 
 
 
+\begin{example}  Shifted Exponential Function
+
+
+
+Analyze   $K(f) = 3^{5-f} - 5$ \\
+
+
+\begin{question}. 
+
+The exponent gets big and positive when $f$ gets big and \wordChoice{\choice{positive}\choice[correct]{negative}}.
+\end{question}
+\begin{question}. 
+
+The graph will grow to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+\end{question}
+\begin{question}. 
+
+The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
+\end{question}
+\begin{question}. 
+
+Our one anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
+\end{question}
+\begin{question}. 
+
+The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.\\
+\end{question}
+
+
+
+
+Graph of $y = K(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
+
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-5};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Our graphical analysis tells us that
+
+\begin{itemize}
+\item The natural or implied domain of $K$ is $\mathbb{R}$.
+\item $K$ is always decreasing.
+\item $K$ has no maximums or minimums.
+\item $\lim\limits_{f \to -\infty} K(f) = \infty$
+\item $\lim\limits_{f \to \infty} K(f) = -5$
+\end{itemize}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{center}
 \textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
 
