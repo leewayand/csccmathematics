@@ -338,7 +338,53 @@ Their graphs are mirror images of each other across the diagonal through quandra
 
 
 
-From this basic logarithmic function and its graph we can transform and analyze general logarithmic functions.
+From this basic logarithmic function and its graph we can transform and analyze more general logarithmic functions.
+
+
+
+
+
+
+
+\begin{fact}
+
+
+Logarithmic functions don't really have vertically shifted versions.  We can talk about a basic logarithm function being shifted.
+
+\[
+L(x) = A \log_b(B x + C) + D
+\]
+
+
+But, the $D$ can be explained with additional horizontal transformations. \\
+
+
+We know that the range of $\log_b(x)$ is all real numbers, which includes $D$.  Therefore, there must be a real number, $d$, such that $\log_b(d) = D$. \\
+
+
+That gives us 
+
+
+
+\[
+L(x) = A \log_b(B x + C) + D = A \log_b(B x + C) + \log_b(d)
+\]
+
+And, we have logarithm rules, which give us
+
+
+\[
+L(x) = A \log_b(B x + C) + D = A \log_b((B x + C)d) = A \log_b(B d x + C d) 
+\]
+
+
+
+Therefore, we separate exponential and shifted exponential, but we don't separate logarithmic and shifted logarithmic.
+
+\end{fact}
+
+
+\textbf{Note:}  Many times people just speak about exponential functions, and they mean both exponential and shifted exponential.
 
 
 
@@ -350,12 +396,7 @@ From this basic logarithmic function and its graph we can transform and analyze 
 
 
 
-
-
-
-
-
-\begin{example}  General Logarithmic Function
+\begin{example}  Shifted Logarithmic Function
 
 
 
