@@ -282,7 +282,7 @@ Graph of $y = f(x)$.
             axis on top
           ]
 
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+          \addplot [line width=2, gray, dashed,samples=200,domain=(-10:10),<->] {0};
           
       		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:-0.3),<->] {0.33 * 2^(x+5)};
 
@@ -453,7 +453,7 @@ Graph of $y = B(t)$.
             axis on top
           ]
           
-      		\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+      		\addplot [line width=2, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
           \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:6.5),<->] {-2 * (0.666^(3-x))};
 
@@ -550,11 +550,11 @@ Graph of $y = K(f)$.
             axis on top
           ]
           
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x)};
+      		\addplot [line width=2, penColor, smooth,samples=200,domain=(3:10),<->] {3^(5-x)};
 
       		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,1)};
 
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+          \addplot [line width=2, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
 
 
