@@ -1,0 +1,247 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Basic Forms}
+
+\begin{document}
+
+\begin{abstract}
+base e
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{A Different Perspective}} 
+
+
+Basic exponential functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $a \cdot r^x$.  \\
+
+
+We can decide whether the function is increasing or decreasing by the value of $r$ and the sign of $a$. \\
+
+
+
+\begin{itemize}
+\item $a > 0$ and $r > 1$ : increasing positive function
+\item $a < 0$ and $r > 1$ : decreasing negative function  
+\item $a > 0$ and $r < 1$ : decreasing positive function
+\item $a < 0$ and $r < 1$ : increasing negative function  
+\end{itemize}
+
+
+
+\textbf{On the other hand,} we have the algebra rule $\frac{1}{b} = b^{-1}$.  We could think of the base of the exponential formula as always being greater than $1$, and use positive and negative exponents to switch between increasing and decreasing functions. \\
+
+
+Basic exponential functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $a \cdot r^{b x}$, where $r > 1$.  \\
+
+
+In this case, we would have the following behaviors: \\
+
+
+\begin{itemize}
+\item $a > 0$ and $b > 0$ : increasing positive function
+\item $a > 0$ and $b < 0$ : decreasing positive function
+\item $a < 0$ and $b > 0$ : decreasing negative function  
+\item $a < 0$ and $b < 0$ : increasing negative function  
+\end{itemize}
+
+We would decide funciton behavior (increasing or decreasing) by the signs of \textbf{both} leading coefficients, $a$ and $b$.
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $a$ and $b$ are the same sign, then we have an increasing function. \\
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $a$ and $b$ are different signs, then we have a decreasing function. \\
+
+
+
+
+
+
+
+
+\section*(e)
+
+
+
+In this model, we are using bases that are greater than $1$.  \\
+
+
+If this is the case, then we might as well use $e$ as our base. \\
+
+
+\begin{explanation}
+
+
+If our formula looks like. $a \cdot r^{b x}$ and $r>1$, then we can use a little algebra to rewrite our formula.
+
+
+
+Since we are only using positive bases, we know that $r > 0$.  Since $r$ is a positive real number, we know that $r$ can be written as a power of $e$.
+
+
+\[
+r = e^{\ln(r)}
+\]
+
+
+
+We can rewrite our formula as
+
+
+
+\[
+a \cdot r^{b x} = a \cdot \left( e^{\ln(r)} \right)^{b x} = a \cdot  e^{(\ln(r) \cdot b) x} = a \cdot  e^{B x}
+\]
+
+
+\end{explanation}
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  Basic exponential functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \cdot e^{B x}$.  \\
+
+
+
+
+
+
+In this model, our basic forms to memorize would be \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$e^x$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$-e^x$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {-(1.3^x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$e^{-x}$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9), <->] {1.3^(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$-e^{-x}$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-(1.3^(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Exponential Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/expFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+\end{document}
