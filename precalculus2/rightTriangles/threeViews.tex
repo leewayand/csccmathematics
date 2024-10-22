@@ -122,10 +122,10 @@ Distance, measurement, position, location, coordinates, and direction are all ge
   \begin{image}
     \begin{tikzpicture}
       \begin{polaraxis}[
-          xmin=0,xmax=360, ymin=0,ymax=5,
+          xmin=0,xmax=360, ymin=0,ymax=5.5,
           xtick={0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360}, style={font=\scriptsize},
           xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{3\pi}{4}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{5\pi}{4}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{7\pi}{4}$,$\frac{11\pi}{6}$,$2\pi$},
-          ytick={1,2,3,4},%yticklabels={},
+          ytick={1,2,3,4,5},%yticklabels={},
         ]
         %\addplot+[draw=none, mark=none,penColor,domain=0:360,samples=100,smooth] {1};
 
@@ -135,6 +135,9 @@ Distance, measurement, position, location, coordinates, and direction are all ge
          \node at (axis cs:-5,4.3) [penColor] {\scriptsize $r_0$};
          \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $\theta_0$};
          \node at (axis cs:30,4.3) [penColor] {\scriptsize $(r_0,\theta_0)$};
+
+         \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {4.3};
+         \addplot[line width=1,penColor,domain=-4.9:5.1,samples=100,smooth] ({35.5},{x});
 
 
       \end{polaraxis}
@@ -154,10 +157,10 @@ Distance, measurement, position, location, coordinates, and direction are all ge
   \begin{image}
     \begin{tikzpicture}
       \begin{polaraxis}[
-          xmin=0,xmax=360, ymin=0,ymax=5,
+          xmin=0,xmax=360, ymin=0,ymax=5.5,
           xtick={0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360}, style={font=\scriptsize},
           xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{3\pi}{4}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{5\pi}{4}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{7\pi}{4}$,$\frac{11\pi}{6}$,$2\pi$},
-          ytick={1,2,3,4},%yticklabels={},
+          ytick={1,2,3,4,5},%yticklabels={},
         ]
         \addplot[very thick,penColor,domain=0:360,samples=100,smooth] {1};
 
