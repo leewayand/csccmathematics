@@ -36,7 +36,9 @@ We can begin with an algebra question (like about functions), consider the graph
 
 \qquad
 
-The following are three ways of describing the same information.
+
+
+\textbf{\textcolor{blue!55!black}{The following are three ways of describing the same information.}} \\
 
 \qquad
 
@@ -140,8 +142,8 @@ Distance, measurement, position, location, coordinates, and direction are all ge
         \addplot[color=penColor,only marks,mark=*] coordinates{(35.5,4.3)}; 
 
 
-         \node at (axis cs:-5,4.3) [penColor] {\scriptsize $r_0$};
-         \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $\theta_0$};
+         \node at (axis cs:-6,4.3) [penColor] {\scriptsize $r_0$};
+         \node at (axis cs:35.5,5.1) [penColor] {\scriptsize $\theta_0$};
          \node at (axis cs:30,4.3) [penColor] {\scriptsize $(r_0,\theta_0)$};
 
          \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {4.3};
@@ -198,7 +200,7 @@ Same information. Different descriptions. Different language.
 
           \node at (axis cs:3.5,-0.75) [penColor] {\scriptsize $x_0$};
           \node at (axis cs:-0.75,2.5) [penColor] {\scriptsize $y_0$};
-          \node at (axis cs:4,2) [penColor] {\scriptsize $x_0 + y_0 i)$};
+          \node at (axis cs:4,2) [penColor] {\scriptsize $x_0 + y_0 i$};
 
 
 
@@ -213,6 +215,18 @@ Same information. Different descriptions. Different language.
 
 
 
+
+\qquad
+
+
+Three different ways of describing the same information. \\
+
+
+These thee viewpoints all lay on top of each other.  We see them simultaneous, together.  That way we can swith between them quickly and convienently as it suits our needs. \\
+
+They are not separate. \\
+
+They are glued together.  There are bridges between them.
 
 
 
@@ -253,6 +267,69 @@ Same information. Different descriptions. Different language.
 
 
 
+\textbf{\textcolor{purple!85!blue}{Location}} \\
+
+
+
+
+
+
+
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{polaraxis}[
+          xmin=0,xmax=360, ymin=0,ymax=5.5,
+          xtick={0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360}, style={font=\scriptsize},
+          xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{3\pi}{4}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{5\pi}{4}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{7\pi}{4}$,$\frac{11\pi}{6}$,$2\pi$},
+          ytick={1,2,3,4,5},%yticklabels={},
+        ]
+        %\addplot+[draw=none, mark=none,penColor,domain=0:360,samples=100,smooth] {1};
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(35.5,4.3)}; 
+
+
+         \node at (axis cs:-5,4.3) [penColor] {\scriptsize $r_0$};
+         \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $\theta_0$};
+         \node at (axis cs:30,4.3) [penColor] {\scriptsize $(r_0,\theta_0)$};
+
+
+         \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {4.3};
+         \addplot[line width=1,penColor,domain=5.3:5.5,samples=100,smooth] ({35.5},{x});
+
+
+
+
+
+         \node at (axis cs:-5,3.5) [penColor] {\scriptsize $x_0$};
+         \node at (axis cs:90,2.5) [penColor] {\scriptsize $y_0$};
+         \node at (axis cs:25,4.3) [penColor] {\scriptsize $(x_0,y_0)$};
+
+
+
+         \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {3.5};
+         \addplot[line width=1,penColor,domain=-87:93,samples=100,smooth] {2.5};
+
+
+
+
+
+
+      \end{polaraxis}
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -278,29 +355,29 @@ Same information. Different descriptions. Different language.
          \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $\theta_0$};
          \node at (axis cs:30,4.3) [penColor] {\scriptsize $(r_0,\theta_0)$};
 
+
          \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {4.3};
          \addplot[line width=1,penColor,domain=5.3:5.5,samples=100,smooth] ({35.5},{x});
 
+
+
+
+
+
+          \node at (axis cs:-5,4.3) [penColor] {\scriptsize $r_0$};
+         \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $y_0$};
+         \node at (axis cs:25,4.3) [penColor] {\scriptsize $(x_0,y_0)$};
+
+
+
+
+         
          \addplot[very thick,penColor2,domain=0:360,samples=100,smooth] {1};
 
 
       \end{polaraxis}
     \end{tikzpicture}
   \end{image}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
