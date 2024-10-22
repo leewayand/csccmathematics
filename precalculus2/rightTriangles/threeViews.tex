@@ -38,41 +38,12 @@ We can begin with an algebra question (like about functions), consider the graph
 
 \subsection*{Rectangular Coordinates}
 
+The location or position of a point can be described with left/right and up/down measurements from the origin, $(0,0)$, which are called \textit{coordinates}.  The first coordinate gives the horizontal measurement and the second coordinate gives the up/down measurement.  Our favorite names for these directions are $x$ and $y$. The coordinates are written as ordered pairs: $(x_0, y_0)$.
+
+\textbf{Note:} $x_0$ and $y_0$ are specific values measured in the $x$ and $y$ directions. 
 
 
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
-            ytick={ },
-            xtick={ },
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-
-
-          \addplot[color=penColor,only marks,mark=*] coordinates{(7,5)}; 
-
-
-
-  %\addplot [draw=penColor,very thick,smooth,domain=(-9:0),<-] {0};
-  %\addplot [draw=penColor,very thick,smooth,domain=(0:9),->] {1};
-  %\addplot[color=penColor,only marks,mark=*] coordinates{(0,1)}; 
-  %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,0)}; 
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
+Distance, measurement, position, location, coordinates, and direction are all geometric information.  Left/Right and up/down are the directions forming rectangles, hence, we call these \textit{rectangular coordinates}.
 
 
 
@@ -98,9 +69,9 @@ We can begin with an algebra question (like about functions), consider the graph
           \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({7},{x});
           \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({x},{5});
 
-          \node at (axis cs:7,-0.5) [penColor] {$7$};
-          \node at (axis cs:-0.5,5) [penColor] {$5$};
-          \node at (axis cs:7,5) [penColor] {$(7,5)$};
+          \node at (axis cs:7,-0.75) [penColor] {$A$};
+          \node at (axis cs:-0.75,5) [penColor] {$B$};
+          \node at (axis cs:8,4) [penColor] {$(A,B)$};
 
 
 
@@ -115,6 +86,8 @@ We can begin with an algebra question (like about functions), consider the graph
 
 
 
+The location of every point in the plane can be described using rectanglular coordinates.
+
 
 
 
@@ -123,6 +96,64 @@ We can begin with an algebra question (like about functions), consider the graph
 
 
 \subsection*{Polar Coordinates}
+
+
+
+The location or position of a point can be described with a different set of measurements, which are still called \textit{coordinates}.  In this new measurement system, the second coordinate gives the direction of the point. This coordinate is given as an angle measurement as measured counterclockwise from the positive direction of the horizontal axis (from the rectangular system). It is a rotational measurement.  The first coordinate is the radial measurement from the origin, $(0,0)$. Our favorite names for these directions are $r$ and $\theta$. These are written as ordered pairs: $(r_0, \theta_0)$.
+
+
+Distance, measurement, position, location, coordinates, and direction are all geometric information.  Left/Right and up/down are the directions forming rectangles, hence, we call these \textit{rectangular coordinates}.
+
+
+
+
+
+
+
+
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{polaraxis}[
+          xmin=0,xmax=360, ymin=0,ymax=3,
+          xtick={0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360}, style={font=\scriptsize},
+          xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{3\pi}{4}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{5\pi}{4}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{7\pi}{4}$,$\frac{11\pi}{6}$,$2\pi$},
+          ytick={.5,1,...,2.5},%yticklabels={},
+        ]
+        %\addplot+[draw=none, mark=none,penColor,domain=0:360,samples=100,smooth] {1};
+      \end{polaraxis}
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
