@@ -258,7 +258,7 @@ They are glued together.  There are bridges between them.
 
 
 
-
+\qquad
 
 
 
@@ -338,7 +338,7 @@ They are glued together.  There are bridges between them.
 
 The bridge between these three viewpoints comes from the unit circle.
 
-In Cartesian coordinates, the unit circle is described as $\sqrt{x^2 + y^2}$. \\
+In Cartesian coordinates, the unit circle is described as $\sqrt{x^2 + y^2} = 1$. \\
 
 In polar coordinates, the unit circle is described as $r = 1$.
 
@@ -401,9 +401,9 @@ If you give the angle for a point on the unit circle, then you can determine the
 
 \begin{center}
 
-\textbf{\textcolor{blue!55!black}{$x$ is a funciton of $\theta$}}: $x(\theta)$ \\
+\textbf{\textcolor{blue!55!black}{$x$ is a function of $\theta$}}: $x(\theta)$ \\
 
-\textbf{\textcolor{blue!55!black}{$y$ is a funciton of $\theta$}}: $y(\theta)$ \\
+\textbf{\textcolor{blue!55!black}{$y$ is a function of $\theta$}}: $y(\theta)$ \\
 
 \end{center}
 
@@ -431,7 +431,47 @@ The rectangular coordinates of points on the unit circle are $(\cos(\theta), \si
 
 The polar coordinates of points on the unit circle are much simpler, $(1, \theta)$. \\
 
-This makes the Complex numbers on the unit cirlce look like $\cos(\theta) + \sin(\theta)$. \\
+This makes the Complex numbers on the unit cirlce look like $\cos(\theta) + \sin(\theta) i$. \\
+
+
+
+
+\[
+(\cos(\theta), \sin(\theta)) = (1, \theta) = \cos(\theta) + \sin(\theta) i
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\qquad
+
+
+EVerything relates back through the unit circle.
+
+
+
+
 
 
 
@@ -463,16 +503,17 @@ This makes the Complex numbers on the unit cirlce look like $\cos(\theta) + \sin
 
 
 
-
-          \node at (axis cs:-5,4.3) [penColor] {\scriptsize $r_0$};
-         \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $y_0$};
-         \node at (axis cs:25,4.3) [penColor] {\scriptsize $(x_0,y_0)$};
-
+         \node at (axis cs:-6,3.5) [penColor2] {\scriptsize $x_0$};
+         \node at (axis cs:90,2.75) [penColor2] {\scriptsize $y_0$};
+         \node at (axis cs:23,4.1) [penColor2] {\scriptsize $(x_0,y_0)$};
 
 
+         \addplot[line width=1,penColor2,domain=-3:3,samples=100,smooth] {3.5};
+         \addplot[line width=1,penColor2,domain=87:93,samples=100,smooth] {2.5};
 
-         
-         \addplot[very thick,penColor2,domain=0:360,samples=100,smooth] {1};
+
+
+         \addplot[thick,penColor3,domain=0:360,samples=300,smooth] ({x},{1});
 
 
       \end{polaraxis}
@@ -485,38 +526,73 @@ This makes the Complex numbers on the unit cirlce look like $\cos(\theta) + \sin
 
 
 
+Every aspect of the points (or numbers) can be described in all three languages.  
+
+
+\qquad
+
+
+
+Using similar triangles, we can glue everything together.  \\
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Distance}}  \\
+
+
+The distance between the origin (zero) and our point (number) can be described in three ways:
+
+
+\begin{itemize}
+\item (Rectangular)  $\sqrt{x^2 + y^2}$
+\item (Polar) $r$
+\item (Arithmetic) $|x + y i  | = \sqrt{x^2 + y^2}$, called the \textit{modulus}
+\end{itemize}
+
+
+
+\qquad
+
+
+\textbf{\textcolor{blue!55!black}{Coordinates}} 
+
+
+\[
+x = r \cos(\theta)  \\
+y = r \sin(\theta)
+\]
+
+
+\[
+x + y i = r \cos(\theta) + r \sin(\theta) i = r (\cos(\theta) +  \sin(\theta) i)
+\]
+
+
+
+
+\[
+r = \sqrt{x^2 + y^2}
+\]
+
+
+\[
+\frac{y}{x} = \tan(\theta)
+\]
 
 
 
 
 
+\qquad
 
 
+\textbf{\textcolor{blue!55!black}{Multiplication}} 
 
 
-
-
-
-
-\subsection*{Arithmetic}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\[
+r_1 (\cos(\theta_1) +  \sin(\theta_1) i) \cdot r_2 (\cos(\theta_2) +  \sin(\theta_2) i) = r_1 \cdot r_2 (\cos(\theta_1 + \theta_2) +  \sin(\theta_1 + \theta_2) i) 
+\]
 
 
 
