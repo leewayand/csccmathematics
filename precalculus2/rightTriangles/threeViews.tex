@@ -104,14 +104,14 @@ Distance, measurement, position, location, coordinates, and direction are all ge
             axis on top
           ]
           
-          \addplot[color=penColor,only marks,mark=*] coordinates{(4,2)}; 
+          \addplot[color=penColor,only marks,mark=*] coordinates{(3.5,2.5)}; 
 
-          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({4},{x});
-          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({x},{2});
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({3.5},{x});
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({x},{2.5});
 
-          \node at (axis cs:4,-0.75) [penColor] {\scriptsize $A$};
-          \node at (axis cs:-0.75,2) [penColor] {\scriptsize $B$};
-          \node at (axis cs:4,2) [penColor] {\scriptsize $(A,B)$};
+          \node at (axis cs:3.5,-0.75) [penColor] {\scriptsize $A$};
+          \node at (axis cs:-0.75,2.5) [penColor] {\scriptsize $B$};
+          \node at (axis cs:3.5,2.5) [penColor] {\scriptsize $(A,B)$};
 
 
 
