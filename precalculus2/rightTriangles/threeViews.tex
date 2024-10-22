@@ -70,8 +70,8 @@ Distance, measurement, position, location, coordinates, and direction are all ge
           \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({x},{5});
 
           \node at (axis cs:7,-0.75) [penColor] {\scriptsize $A$};
-          \node at (axis cs:-0.75,5) [penColor] {$B$};
-          \node at (axis cs:8,4) [penColor] {$(A,B)$};
+          \node at (axis cs:-0.75,5) [penColor] {\scriptsize $B$};
+          \node at (axis cs:8,4) [penColor] {\scriptsize $(A,B)$};
 
 
 
@@ -83,6 +83,48 @@ Distance, measurement, position, location, coordinates, and direction are all ge
     \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-4,-2,2,4},
+            xtick={-4,-2,2,4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot[color=penColor,only marks,mark=*] coordinates{(4,2)}; 
+
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({4},{x});
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({x},{2});
+
+          \node at (axis cs:4,-0.75) [penColor] {\scriptsize $A$};
+          \node at (axis cs:-0.75,2) [penColor] {\scriptsize $B$};
+          \node at (axis cs:4,2) [penColor] {\scriptsize $(A,B)$};
+
+
+
+  %\addplot [draw=penColor,very thick,smooth,domain=(-9:0),<-] {0};
+  %\addplot [draw=penColor,very thick,smooth,domain=(0:9),->] {1};
+  %\addplot[color=penColor,only marks,mark=*] coordinates{(0,1)}; 
+  %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,0)}; 
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
 
 
 
