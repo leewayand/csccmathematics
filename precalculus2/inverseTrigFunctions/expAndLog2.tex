@@ -1,0 +1,374 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Exponential}
+
+\begin{document}
+
+\begin{abstract}
+exponential and logarithmic
+\end{abstract}
+\maketitle
+
+
+
+Exponential and logarithmic functions are examples of inverse functions. \\
+
+
+
+First, let's notice that both types of functions are one-to-one and their graphs pass the horizontal line test.
+
+
+
+
+
+
+
+Graph of $y = E(t) = 0.5 \, e^{-t-3} - 4$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-6.2:9),<->] {0.5* (e^(-x-3)) - 4};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-3.5)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Graph of $z = L(x) = ln(x+5) - 1$.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$z$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-5},{x});
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-4.999:9),<->] {ln(x+5) - 1};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Inverse
+
+Let $E(t) = 0.5 \, e^{-t-3} - 4$.
+
+
+
+
+Graph of $y = E(t) = 0.5 \, e^{-t-3} - 4$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-6.2:9),<->] {0.5*(e^(-x-3)) - 4};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-3.5)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+We have a function called $E(t)$.  Its pairs look like $(a, E(a))$.  The inverse of this function will have pairs of the form $(E(a), a)$. The domain and range just switch roles.
+
+
+In the exponential formula and graph, $E$ is representing the range and $t$ the domain.  They just switch roles for the inverse. Same equation.  Just a different interpretation.
+
+\[    E = 0.5 \, e^{-t(E)-3} - 4   \]
+
+
+Now, $t$ is the function name and $E$ is the variable.  We can just solve this for $t(E)$.
+
+\begin{align*}
+E           & = 0.5 \, e^{-t(E)-3} - 4 \\
+\answer{E + 4}       & = 0.5 \, e^{-t(E)-3}  \\
+2(E + 4)    & =  e^{-t(E)-3}   \\
+ln(2(E+4))  & = \answer{-t(E)-3}   \\
+-(ln(2(E+4)))  & = t(E)+3   \\
+\answer{-(ln(2(E+4))) - 3}   & = t(E)
+\end{align*}
+
+
+
+
+
+
+
+Graphs of $y = E(t) = 0.5 \, e^{-t-3} - 4$ and $z = L(x) = -ln(2(x+4)) - 3$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$t,x$}, ylabel={$y,z$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
+			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-9:10),<->] {-4};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-6.2:9),<->] {0.5* (e^(-x-3)) - 4};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-3.5)};
+
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-3.999:9),<->] {-ln(2*(x+4)) - 3};
+            \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-3.5,-3)};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Since, these are inverses of each other, the pairs of each function are just reversed and the graphs are mirror images of each other over the graph of the identity function: $\{ (r,r) \, | \, r \in \mathbb{R}   \}$.
+
+
+\begin{itemize}
+\item The domain of $E(t)$ is \textbf{$\mathbb{R}$}. The range of $L(x)$ is \textbf{$\mathbb{R}$}.
+\item The range of $E(t)$ is $(-4, \infty)$. The domain of $L(x)$ is $(-4, \infty)$.
+\end{itemize}
+
+
+
+
+\begin{itemize}
+\item The graph of $E(t)$ has a horizontal asymptote at $-4$.
+\item The graph of $L(x)$ has a vertical asymptote at $-4$.
+\end{itemize}
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+
+$L(x) = ln(x+5) - 1$ is a one-to-one function, as its graph illustrates.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$z$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-5},{x});
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-4.999:9),<->] {ln(x+5) - 1};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Therefore, it must have an inverse function, $x(L)$.
+
+
+
+We can just solve for $x$.
+
+
+
+
+
+\begin{align*}
+L          & = ln(x+5) - 1    \\
+\answer{L + 1}       & = ln(x+5)  \\
+\answer{e^{L+1}}    & =  x+5   \\
+e^{L+1} - 5  & = x  \\
+e^{L+1} - 5  & = x(L)
+\end{align*}
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$D$, ylabel=$R$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-5},{x});
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-4.999:9),<->] {ln(x+5) - 1};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,-1)};
+
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{-5});
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-8:1.6),<->] {e^(x+1)-5};
+            \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-1,-4)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{question}
+
+If the graph of $f$ has a horizontal asymptote, then the graph of $f^{-1}$ also has a horizontal asymptote.
+
+
+\begin{multipleChoice}
+\choice {True}
+\choice[correct] {False}
+\end{multipleChoice}
+
+
+\end{question}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Algebra]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionAlgebra/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}
