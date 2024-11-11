@@ -15,27 +15,33 @@ behavior
 
 
 
-\section{Analysis}
+\section{Quadratic Analysis}
 
 What do we want to know when we analyze functions?
 
 We want to know the 
 \begin{itemize}
-\item \textbf{\textcolor{red!80!black}{domain}} 
-\item \textbf{\textcolor{red!80!black}{range}} 
-\item \textbf{\textcolor{red!80!black}{zeros}} 
+\item \textbf{\textcolor{red!80!black}{Domain}} 
+\item \textbf{\textcolor{red!80!black}{Zeros}} 
+\item \textbf{\textcolor{red!80!black}{Continuity}} 
+\begin{itemize}
 \item \textbf{\textcolor{red!80!black}{discontinuities}} 
 \item \textbf{\textcolor{red!80!black}{singularities}} 
-\item \textbf{\textcolor{red!80!black}{intervals of increasing and decreasing}} 
-\item \textbf{\textcolor{red!80!black}{global maximum and minimum}} 
-\item \textbf{\textcolor{red!80!black}{local maximums and minimums}} 
-\item \textbf{\textcolor{red!80!black}{symmetry}} 
-\item \textbf{\textcolor{red!80!black}{endbehavior}}  \\
-\item \textbf{\textcolor{purple!85!blue}{and we would like a nice graph}} 
+\end{itemize}
+\item \textbf{\textcolor{red!80!black}{End-Behavior}} 
+\item \textbf{\textcolor{red!80!black}{Behavior}} 
+\begin{itemize}
+\item \textbf{\textcolor{red!80!black}{intervals where increasing}} 
+\item \textbf{\textcolor{red!80!black}{intervals where decreasing}} 
+\end{itemize}
+\item \textbf{\textcolor{red!80!black}{Global Maximum and Minimum}} 
+\item \textbf{\textcolor{red!80!black}{Local Maximums and Minimums}} 
+\item \textbf{\textcolor{red!80!black}{Range}} 
+\item \textbf{\textcolor{blue!55!black}{...and we would like a nice graph}} 
 \end{itemize}
 
 
-For a quadratic function much of this information is connected to vertex of the graph, which is why we like the vertex form, which is why we like completing the square.
+For a quadratic function much of this information is connected to vertex of the graph, which is why we like the vertex form, which is why we like completing the square.  But, we can get all of our information from the standard or factored forms as well.
 
 
 
@@ -43,154 +49,11 @@ For a quadratic function much of this information is connected to vertex of the 
 
 Quadratic functions are defined for all real numbers.  Their natural domain is $\mathbb{R}$. \\
 
+If you can identify a function as quadratic, then you automatically know its domain. \\
 
 
 
-\subsection{Range}
 
-$\blacktriangleright$  \textbf{Vertex Form} \\
-
-The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula.
-
-Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola would have opened downward and the extreme point would be at the top.
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-
-        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {2*(x-3)^2 - 4};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
-        
-
-
-        \node[penColor] at (axis cs:5,-4) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-The vertex visually encodes the  minimum (or maximum) value of the function. 
-
-
-
-
-If $a<0$, then everything is reveresed.
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$x$, ylabel=$y$, 
-                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-
-        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {-2*(x-3)^2 + 4};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,4)};
-        
-
-
-        \node[penColor] at (axis cs:5,4) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-
-
-
-
-
-We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is squared, and thus nonnegative, the range of $f$ depends on the sign of $a$. \\
-
-When $a>0$, the values of $f(x)$ are greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$. \\
-
-
-
-When $a<0$, the values of $f(x)$ are less than or equal to $k$. This corresponds to the graph opening down.  The only way to get the greatest value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$.  \\
-
-We can see that the implied range of a quadratic comes in two types.  
-
-\begin{itemize}
-\item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \}$.
-\item The range could be all real numbers less than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \leq k \}$.
-\end{itemize}
-
-If there is a stated domain, then the range will be restricted appropriately. \\
-
-
-
-
-
-
-$\blacktriangleright$ \textbf{Symmetry}   \\
-
-
-If we take two domain numbers equidistant from $h$, like $h - \epsilon$ and $h + \epsilon$, and evaluate $f(x)$ at these two numbers we get the same value.
-
-
-\begin{align*}
-f(h - \epsilon) & = a (h - \epsilon - h)^2 + k \\
-& = a (-\epsilon)^2 + k  \\
-& = a (\epsilon)^2 + k  \\
-& = a (h + \epsilon - h)^2 + k \\
-& = f(h + \epsilon)
-\end{align*}
-
-
-The graph is symmetric about the line $x = h$.
-
-
-When developing the quadratic formula, we had the opportunity to complete the square and that gave us a squared term that looked like 
-
-\[  a \, \left(x + \frac{b}{2a}\right)^2       \]
-
-
-The domain coordinate of the vertex is $h = \frac{-b}{2a}$.
-
-
-The graph is symmetric about the line $x = \frac{-b}{2a}$.
-
-
-
-
-
-
-The zeros must also be symmetric about $\frac{-b}{2a}$, which we can see in the quadratic formula. \\
 
 
 
@@ -265,6 +128,11 @@ Working backwards, we can see that if we have the zeros, like from factoring, th
 \subsection{Continuity}
 
 Quadratic functions are continuous functions.  They have no discontinuities or singularities. \\
+
+
+
+
+
 
 
 
@@ -503,6 +371,131 @@ x     &=  \frac{-b}{2a}
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  $\frac{r_1 + r_2}{2}$ is the critical number for a quadratic function given in factored form: $a \, (x - r_1) (x - r_2)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Range}
+
+$\blacktriangleright$  \textbf{Vertex Form} \\
+
+The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula.
+
+Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola would have opened downward and the extreme point would be at the top.
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {2*(x-3)^2 - 4};
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,-4)};
+        
+
+
+        \node[penColor] at (axis cs:5,-4) {$(h, k)$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The vertex visually encodes the  minimum (or maximum) value of the function. 
+
+
+
+
+If $a<0$, then everything is reveresed.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$, 
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {-2*(x-3)^2 + 4};
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,4)};
+        
+
+
+        \node[penColor] at (axis cs:5,4) {$(h, k)$};
+        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is squared, and thus nonnegative, the range of $f$ depends on the sign of $a$. \\
+
+When $a>0$, the values of $f(x)$ are greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$. \\
+
+
+
+When $a<0$, the values of $f(x)$ are less than or equal to $k$. This corresponds to the graph opening down.  The only way to get the greatest value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$.  \\
+
+We can see that the implied range of a quadratic comes in two types.  
+
+\begin{itemize}
+\item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \}$.
+\item The range could be all real numbers less than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \leq k \}$.
+\end{itemize}
+
+If there is a stated domain, then the range will be restricted appropriately. \\
+
+
+
 
 
 
