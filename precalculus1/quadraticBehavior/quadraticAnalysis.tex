@@ -17,35 +17,47 @@ behavior
 
 \section{Quadratic Analysis}
 
-What do we want to know when we analyze functions?
+What do we want to know when we analyze any function?
 
 We want to know the 
 \begin{itemize}
-\item \textbf{\textcolor{red!80!black}{Domain}} 
-\item \textbf{\textcolor{red!80!black}{Zeros}} 
-\item \textbf{\textcolor{red!80!black}{Continuity}} 
+     \item \textbf{\textcolor{red!80!black}{Domain}} 
+     \item \textbf{\textcolor{red!80!black}{Zeros}} 
+     \item \textbf{\textcolor{red!80!black}{Continuity}} 
 \begin{itemize}
-\item \textbf{\textcolor{red!80!black}{discontinuities}} 
-\item \textbf{\textcolor{red!80!black}{singularities}} 
+     \item \textbf{\textcolor{red!80!black}{discontinuities}} 
+     \item \textbf{\textcolor{red!80!black}{singularities}} 
 \end{itemize}
-\item \textbf{\textcolor{red!80!black}{End-Behavior}} 
-\item \textbf{\textcolor{red!80!black}{Behavior}} 
+     \item \textbf{\textcolor{red!80!black}{End-Behavior}} 
+     \item \textbf{\textcolor{red!80!black}{Behavior}} 
 \begin{itemize}
-\item \textbf{\textcolor{red!80!black}{intervals where increasing}} 
-\item \textbf{\textcolor{red!80!black}{intervals where decreasing}} 
+     \item \textbf{\textcolor{red!80!black}{intervals where increasing}} 
+     \item \textbf{\textcolor{red!80!black}{intervals where decreasing}} 
 \end{itemize}
-\item \textbf{\textcolor{red!80!black}{Global Maximum and Minimum}} 
-\item \textbf{\textcolor{red!80!black}{Local Maximums and Minimums}} 
-\item \textbf{\textcolor{red!80!black}{Range}} 
-\item \textbf{\textcolor{blue!55!black}{...and we would like a nice graph}} 
+     \item \textbf{\textcolor{red!80!black}{Global Maximum and Minimum}} 
+     \item \textbf{\textcolor{red!80!black}{Local Maximums and Minimums}} 
+     \item \textbf{\textcolor{red!80!black}{Range}} 
+     \item \textbf{\textcolor{blue!55!black}{...and we would like a nice graph}} 
 \end{itemize}
 
-
-For a quadratic function much of this information is connected to vertex of the graph, which is why we like the vertex form, which is why we like completing the square.  But, we can get all of our information from the standard or factored forms as well.
-
+We want all of this information for quadratic functions and we want exact information, not approximations. \\
 
 
-\subsection{Domain} 
+Quadratic functions are those functions which can be described with formulas like
+
+\begin{itemize}
+     \item $A \, x^2 + B \, x + C$
+     \item $A \, (x - H)^2 + K$
+     \item $A \, (x - r_1) (x-r_2)$
+\end{itemize}
+
+For a quadratic function much of the analysis information is connected to vertex of the graph, which is why we like the vertex form, which is why we like completing the square.  But, we can get all of our information from the standard or factored forms as well.
+
+
+
+
+
+\subsection*{Domain} 
 
 Quadratic functions are defined for all real numbers.  Their natural domain is $\mathbb{R}$. \\
 
@@ -58,10 +70,17 @@ If you can identify a function as quadratic, then you automatically know its dom
 
 
 
-\subsection{Zeros}
 
 
-The quadratic formula is
+
+\subsection*{Zeros}
+
+
+The quadratic formula gives the zeros of a quadratic funciton, when we have the \textit{standard form}. The quadratic formula gives the solutions to the quadratic equation
+
+\[
+a \, x^2 + b \, x + c = 0
+\]
 
 \[ t  =   \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}      \]
 
@@ -74,7 +93,9 @@ which we can separate into
 \[ t  =   \frac{-b}{2a} \pm \frac{\sqrt{b^2 - 4 a c}}{2a}      \]
 
 
-The $\pm$ shows that the zeros are symmetric about $\frac{-b}{2a}$ and the intercepts are symmetric about the line $x = \frac{-b}{2a}$.
+The $\pm$ shows that the zeros are symmetric about $\frac{-b}{2a}$ and the intercepts are symmetric about the line $x = \frac{-b}{2a}$. \\
+
+Intercepts are $\left(  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$ and $\left(  \frac{-b + \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$.
 
 
 
@@ -96,7 +117,7 @@ The $\pm$ shows that the zeros are symmetric about $\frac{-b}{2a}$ and the inter
 
         \addplot [draw=penColor, very thick, smooth, domain=(1:5),<->] {-2*(x-3)^2 + 4};
         \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(3,4)};
+        %\addplot [color=penColor2,only marks,mark=*] coordinates{(3,4)};
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(1.585,0)};
         \addplot [color=penColor2,only marks,mark=*] coordinates{(4.414,0)};
@@ -125,7 +146,10 @@ Working backwards, we can see that if we have the zeros, like from factoring, th
 
 
 
-\subsection{Continuity}
+
+
+
+\subsection*{Continuity}
 
 Quadratic functions are continuous functions.  They have no discontinuities or singularities. \\
 
@@ -140,6 +164,49 @@ Quadratic functions are continuous functions.  They have no discontinuities or s
 
 
 
+\subsection*{End-Behavior}
+
+Quadratic functions have the same end-behavior on both sides, which is given by the sign of the leading coefficient. \\
+
+
+End-behavior describes what the function is doing out in the ``tails'' of the domain.  That is where the domain numbers are really really really really big positively or negatively. \\
+
+For quadratic functions, $f(x) = a \, x^2 + b x + c$, when $x$ is really really really really big positively or negatively, then the leading term ``dominates'' the other two terms.  The whole function behaves just like $a \, x^2$. \\
+
+That tells us that the whole function will become unbounded. \\
+
+
+\begin{itemize}
+     \item Quadratic functions become unbounded positively if the leading coefficient is positive.
+     \item Quadratic functions become unbounded negatively if the leading coefficient is negative.
+\end{itemize}
+
+
+
+\begin{idea} \textbf{\textcolor{red!80!black}{A Peek Ahead}}
+
+We will want some mathematical notation for end-behavior.  Limit notation will be introduced later and that will be our way of algebraically describing end-behavior. \\
+
+\end{idea}
+
+
+\begin{example}
+
+Let $g(t) = -2 \, t^2 + 7t - 3$. \\
+
+
+The end-behavior will be describe as 
+
+\[
+$\lim\limits_{t \to -\infty} g(t) = -\infty$
+\]
+
+
+\[
+$\lim\limits_{t \to \infty} g(t) = -\infty$
+\]
+
+\end{example}
 
 
 
@@ -147,7 +214,8 @@ Quadratic functions are continuous functions.  They have no discontinuities or s
 
 
 
-\subsection{Behavior}
+
+\subsection*{Behavior}
 
 
 
@@ -330,7 +398,10 @@ There is probably an overall pattern going on here. \\
 
 
 
-\textbf{\textcolor{blue!55!black}{Maximum and Minimum}}
+
+
+\subsection*{Maximums and Minimums}
+
 
 
 
@@ -388,7 +459,7 @@ x     &=  \frac{-b}{2a}
 
 
 
-\subsection{Range}
+\subsection*{Range}
 
 $\blacktriangleright$  \textbf{Vertex Form} \\
 
