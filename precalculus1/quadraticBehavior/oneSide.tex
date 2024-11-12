@@ -216,51 +216,55 @@ Suppose we have a really nice situation.
 
 \begin{itemize}
 \item We have a function, $f$, 
-\item We have and a domain number, $t$, 
-\item This domain number is inside an open interval inside the domain.  $t \in (a, b) \subset Domain$. 
-\item The tangent lines on both sides of $(t, f(t))$ are smootlhy approach the same line from both sides.
+\item We have and a domain number, $t_0$, 
+\item This domain number is inside an open interval inside the domain.  $t_0 \in (a, b) \subset Domain$. 
+\item The tangent lines on both sides of $(t_0, f(t_0))$ are smootlhy approach the same line from both sides.
 \end{itemize}
 
-Then, there is a tangent line to the graph of $f$ and the tangent lines on both sides are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+Then, there is a tangent line to the graph of $f$ and the tangent lines on both sides are smootly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
 
-The slope of this tangent line is the value of the \textbf{derivative} of $f$ at $t$.
+The slope of this tangent line is the value of the \textbf{derivative} of $f$ at $t_0$.
 
 \[
 iRoC(t) =f'(t) = \text{slope of tangent line}
 \]
 
 
-On the other hand, if the tangent lines and both sides are not smoothly agreeing, then there is no tangent line at $(t, f(t))$ and the derivative does not exist at $t$.   
+On the other hand, if the tangent lines and both sides are not smoothly agreeing, then there is no tangent line at $(t_0, f(t_0))$ and the derivative does not exist at $t_0$.   
 
 \end{definition}
 
-\textbf{Note}:The term `derivative" implies a two-sided derivative.  Otherwise, we would say `right' or `left'. \\
+\textbf{Note}: The term `derivative" implies a two-sided derivative.  Otherwise, we would say `right' or `left'. \\
 
 
 
 
-\begin{idea}
+\begin{warning}
+
+Saying the word ``derivative'' implies two sides. \\
 
 For the derivative to exist at a domain number, the corresponding point on the graph must have secants approaching on both sides. \\
 
 
+This means that end-point numbers for domain intervals are automatically critical numbers.  The derivative cannot exist at end-points, even if there is a one-sided tangent line, because ``derivative'' means two sides. \\
 
-
-\end{idea}
-
-
-
+\end{warning}
 
 
 
 
-\begin{idea}
-
-This means that end-point numbers for domain intervals are automatically critical numbers.  The derivative cannot exist at end-points, even if there is a one-sided tangent line. \\
-
-\end{idea}
+So, we have two separate situations. \\
 
 
+We have a domain number inside an open interval in the domain, so that there are two sides. Since, it is a domain number, we know there is a point on the graph of the function and the graph is on both sides.  We can examine if there is a tangent line or not and if it has a slope or not. \\
+
+A different situation is a domain number that is the end of an interval in the domain.  The domain number only has one side in the domain.  This automatically disqualitfies the function from having a derivative value at this domain number.  The domain number is a critical number.  However, this is still a nice situation, which we would like to describe. \\
+
+We would still like to describe one-sided situations. \\
+
+There can still be a tangent line, a one-sided tangent line. That tangent line can still have a slope. \\
+
+So, we also have a one-sided derivative, which is like half of a derivative. \\
 
 
 
@@ -275,29 +279,31 @@ This means that end-point numbers for domain intervals are automatically critica
 \begin{definition} \textbf{\textcolor{green!50!black}{Left Derivative}}  (one-sided) 
 
 
-Suppose we have a really nice situation.
+Suppose we have a really nice one-sided situation.
 
 
 \begin{itemize}
 \item We have a function, $f$, 
-\item We have and a domain number, $t$, 
-\item This domain number is inside an  interval inside the domain of the form  $t \in (a, t] \subset Domain$. 
-\item The tangent lines on the left side of $(t, f(t))$ are smootlhy approach the same line.
+\item We have and a domain number, $t_0$, 
+\item This domain number is inside an interval (half open) inside the domain of the form  $t_0 \in (a, t_)] \subset Domain$. 
+\item The tangent lines on the left side of $(t_0, f(t_0))$ are smootlhy approach the same line.
 \end{itemize}
 
-Then, there is a tangent line to the graph of $f$ and the tangent lines on the left side are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+Then, there is a tangent line to the graph of $f$ and the tangent lines on the left side are smootly turning into this tangent line at the tangent point $(t_0, f(t_))$. \\
 
-The slope of this tangent line is the value of the \textbf{left derivative of $f$ at $t$}.
+The slope of this tangent line is the value of the \textbf{left derivative of $f$ at $t_0$}. \\
+
+We have a function called the left derivative of $f$ or the left $iRoC_f$.
 
 \[
 iRoC_{f_{-}}(t) =f'_{-}(t) = \text{slope of tangent line}
 \]
 
-
+The left derivative is symbolized with a subscript of ``-'' with the derivative name. \\
  
 
 \end{definition}
-The left derivative is symbolized with a subscript of ``-'' with the derivative name. \\
+
 
 
 
@@ -306,30 +312,33 @@ The left derivative is symbolized with a subscript of ``-'' with the derivative 
 \begin{definition} \textbf{\textcolor{green!50!black}{Right Derivative}}  (one-sided) 
 
 
-Suppose we have a really nice situation.
+Suppose we have a really nice one-sided situation.
 
 
 \begin{itemize}
 \item We have a function, $f$, 
-\item We have and a domain number, $t$, 
-\item This domain number is inside an  interval inside the domain of the form  $t \in [t, b) \subset Domain$. 
-\item The tangent lines on the right side of $(t, f(t))$ are smootlhy approach the same line.
+\item We have and a domain number, $t_0$, 
+\item This domain number is inside an interval (half open) inside the domain of the form  $t \in [t_0, b) \subset Domain$. 
+\item The tangent lines on the right side of $(t_0, f(t_0))$ are smootlhy approach the same line.
 \end{itemize}
 
-Then, there is a tangent line to the graph of $f$ and the tangent lines on the right side are smootly turning into this tangent line at the tangent point $(t, f(t))$. \\
+Then, there is a tangent line to the graph of $f$ and the tangent lines on the right side are smootly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
 
-The slope of this tangent line is the value of the \textbf{right derivative of $f$ at $t$}.
+The slope of this tangent line is the value of the \textbf{right derivative of $f$ at $t_0$}.
+
+
+We have a function called the right derivative of $f$ or the right $iRoC_f$. \\
 
 \[
 iRoC_{f_{+}}(t) =f'_{+}(t) = \text{slope of tangent line}
 \]
 
 
- 
+The right derivative is symbolized with a subscript of ``+'' with the derivative name. \\ 
 
 \end{definition}
 
-The right derivative is symbolized with a subscript of ``+'' with the derivative name. \\
+
 
 
 
@@ -342,7 +351,7 @@ The right derivative is symbolized with a subscript of ``+'' with the derivative
 
 If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there. \\
 
-The term derivative implies thatthere is some sort of approaching.
+The term derivative implies that there is some sort of approaching.
 
 
 

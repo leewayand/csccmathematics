@@ -25,7 +25,7 @@ A tangent line is a line that does the best job of pretending to be the curve at
 \textbf{Best job} means the line shares the tangent point with the curve and the slope of the line is the same as the ``slope'' of the curve at the tangent point. \\
 
 
-For quadratics, we have a formula for the slope of a tangent line. We call it the derivative or $iRoC$. But, for a random function, how do you get a tangent line without knowing its slope ahead of time? \\
+For quadratics, we have a formula for the $iRoC$ or derivative, which gives the exact slope of each tangent line along the parabola.  But, for a random function, how do you get a tangent line for its graph without knowing the slope ahead of time? \\
 
 
 \textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} There are two behaviors happening. \\
@@ -33,7 +33,7 @@ For quadratics, we have a formula for the slope of a tangent line. We call it th
 
 
 \begin{itemize}
-\item \textbf{First}, the curve or graph is approaching that point. The graph is connecting up to the point. The funcition is continuous at the corresponding domain number.\\
+\item \textbf{First}, the curve or graph is approaching that point. The graph is connecting up to the point. The function is continuous at the corresponding domain number.\\
 \item \textbf{Second}, the secant lines through the tangent point are smoothly turning into the tangent line at the tangent point. \\
 \end{itemize}
 
@@ -41,7 +41,7 @@ For quadratics, we have a formula for the slope of a tangent line. We call it th
 
 \begin{warning} \textbf{\textcolor{red!80!black}{Both Sides}}
 
-This means both sides. \\
+This means both sides of the tangent point. \\
 
 The points on both sides are approaching the tangent point. \\
 
@@ -71,10 +71,10 @@ The secant lines on both sides are approaching the tangent line.
 
 
 
-\section{Two Sides : Points and Secants Agree}
+\section*{Two Sides : Points and Secants Agree}
 
 
-Suppose our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. \\
+Let $f(t)$ be a function and $t_0$ a domain number. Then our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. (Because, we need two sides.) \\
 
 
 Suppose the points on the graph approach the point $(t_0 , f(t_0))$ and the secant lines (from both sides) approach the same line.
@@ -117,10 +117,10 @@ Here is the graph of the function $f(x) = (x - 3)^2 - 4$ and the point $(4, f(4)
 \end{tikzpicture}
 \end{image}
 
-A parabola and a point. \\
+A parabola and a point on the parabola. \\
 
 
-\textbf{First}, the points on the graph are approaching the point on both sides.  There is no break in the curve. $f$ is continuous at $4$.\\
+\textbf{First}, the points on the graph are approaching the point $(4, -3)$ on both sides.  There is no break in the curve. $f$ is continuous at $4$.\\
 
 
 The soon to be tangent point is $(4, -3)$ \\
@@ -162,12 +162,12 @@ The soon to be tangent point is $(4, -3)$ \\
 
 
 
-The tangent line does the best job of modeling the curve right at the tangent point. \\
+The tangent line does the best job of modeling the curve right at the tangent point. If you were to zoom in closely to the point $(4, -3)$, the line and the curve would look the same.\\
 
 
 As it turns out, we know how to get the slope of lines tangent to a parabola.  Use the derivative of $f$ or $iRoC_f$,  $f'(x)=iRoC_f(x) = 2 (x-3)^2$, so the slope of this tangent line is $f'(3) = 2 (4-3)^2 = 2$ \\
 
-That gives us a tangent line described by the equation $y = 2 (x - 4) - 3$.
+Using the point-slope form of a line, we can get an equaiton for the tangent line, $y - (-3)=2 (x-4)$. That gives us a tangent line described by the equation $y = 2 (x - 4) - 3$.
 
 
 
@@ -179,7 +179,7 @@ That gives us a tangent line described by the equation $y = 2 (x - 4) - 3$.
 
 
 
-\textbf{Second}, the secant lines lines through approaching points smoothly turn into the tangent line at the tangent point...on both sides.
+\textbf{Second}, For every other point on the parabola, there is a line through that point and the tangent point.  These are called \textit{secant lines}. The secant lines lines through approaching points smoothly turn into the tangent line at the tangent point...on both sides.
 
 
 Here are the secant lines through the tangent point and the approaching points $(3, -4)$, $(3.3, -3.91)$, $(3.7, -3.51)$, $(4.3, -2.31)$, $(4.7, -1.11)$, and $(5, 0)$.
@@ -261,7 +261,7 @@ The secant lines on the left smootly turn into the tangent line as you move to t
 
 
 
-\section{Two Sides : Points Agree and Secants Disagree}
+\section*{Two Sides : Points Agree and Secants Disagree}
 
 
 Suppose our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. \\
@@ -307,7 +307,7 @@ Here is the graph of the function $f(x) = | x - 3 | - 4$ and the point $(3, f(3)
 \end{tikzpicture}
 \end{image}
 
-An absolute value ``Vee'' and a point. \\
+An absolute value ``Vee'' and its corner point. \\
 
 
 \textbf{First}, the points on the graph are approaching the point on both sides.  There is no break in the curve. $f$ is continuous at $3$.\\
@@ -375,10 +375,10 @@ Here are the secant lines through the tangent point and the approaching points $
 
 The secant lines on the left smootly turn into a line as you move to the right. The secant lines on the right smoothly turn into a line as you move to the left. \\
 
-BUT!  They are NOT the same line! \\
+\textbf{\textcolor{blue!55!black}{BUT!  They are NOT the same line!}}\\
 
 
-There is no commonline that the secandt lines are approaching. \\
+There is no common line that the secand lines are approaching. \\
 
 There is no tangent line at the pont $(3,-4)$. \\
 
@@ -386,7 +386,11 @@ There is no slope of a tangent line. \\
 
 $f$ has no derivative value at $3$.  \\
 
-$f'(3)$ does not exist.
+$f'(3)$ does not exist. \\
+
+$3$ is a number in the domain, but $f'(3)$ does not exist. \\
+
+($3$ is a critical number.)
 
 
 
@@ -420,7 +424,7 @@ $f'(3)$ does not exist.
 
 
 
-\section{Two Sides : Points Agree and Secants Agree, but No Slope}
+\section*{Two Sides : Points Agree and Secants Agree, but No Slope}
 
 
 Suppose our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. \\
@@ -435,7 +439,7 @@ Suppose the points on the graph approach the point $(t_0 , f(t_0))$, and the sec
 
 
 
-Here is the graph of the function $f(x) = 4 \sqrt[3]{x-2}$ and the point $(2, f(2))= (2, 0)$. \\
+Here is the graph of the function $f(x) = 4 \, \sqrt[3]{x-2}$ and the point $(2, f(2))= (2, 0)$. \\
 
 \begin{image}
 \begin{tikzpicture}
@@ -464,7 +468,7 @@ Here is the graph of the function $f(x) = 4 \sqrt[3]{x-2}$ and the point $(2, f(
 \end{tikzpicture}
 \end{image}
 
-A cube root and a point. \\
+A cube root and a point on the graph. \\
 
 
 
@@ -526,7 +530,7 @@ There is a tangent line.\\
 
 The tangent line does the best job of modeling the curve right at the tangent point. \\
 
-Here, the tangent line described by the equation $x = 2$. It is a vertical line. \\
+Here, the tangent line is described by the equation $x = 2$. It is a vertical line. \\
 
 
 
@@ -599,7 +603,11 @@ There is no slope of a tangent line. \\
 
 $f$ has no derivative value at $2$.  \\
 
-$f'(2)$ does not exist.
+$f'(2)$ does not exist. \\
+
+$2$ is a number in the domain, but $f'(2)$ does not exist. \\
+
+($2$ is a critical number.)
 
 
 
@@ -627,13 +635,13 @@ $f'(2)$ does not exist.
 
 
 
-\section{Two Sides : Points Disagree and Secants Disagree}
+\section*{Two Sides : Points Disagree and Secants Disagree}
 
 
 
 
 
-A function with a discontiuity has a break in the graph, which means the graph points do not approach the same point.  This automatically results in the derivative not existing. \\
+A function with a discontiuity has a break in the graph, which means the other graph points do not approach the same point.  This automatically results in the derivative not existing. \\
 
 
 
@@ -682,7 +690,7 @@ A function with a discontiuity has a break in the graph, which means the graph p
 
 
 
-We can also follow the approaching secant lines.  Remember, the secant lines go through a point on the graph at the prospective tangenbt point.  This throws the secant lines way off. \\
+We can also follow the approaching secant lines.  Remember, the secant lines all go through the prospective tangent point and another point on the graph at.  This throws the secant lines way off. \\
 
 
 
@@ -733,7 +741,7 @@ We can also follow the approaching secant lines.  Remember, the secant lines go 
 The two sides have tangent lines, but they are not smoothly turning to agree. \\
 
 
-In this case, we say that there is not tangent line. \\
+In this case, we say that there is no tangent line. \\
 
 And, if there is no tangent line, then there is no slope of the tangent line, then the derivative has no value here. \\
 
