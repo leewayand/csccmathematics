@@ -15,7 +15,7 @@ behavior
 
 
 
-\section{Quadratic Analysis}
+\section*{Quadratic Analysis}
 
 What do we want to know when we analyze any function?
 
@@ -42,6 +42,10 @@ We want to know the
 
 We want all of this information for quadratic functions and we want exact information, not approximations. \\
 
+Remember, we are beginning with graphical analysis, because that is a familiar jumping off point for students.  But, graphs are inherently inaccurate tools.  That isn't what we want. We are taking our familiarity with graphical descriptions and moving them over to algebraic descriptions, because algebra is our exact tool. \\
+
+Linear and quadratic functions are our first bridge to exactness. \\
+
 
 Quadratic functions are those functions which can be described with formulas like
 
@@ -51,7 +55,9 @@ Quadratic functions are those functions which can be described with formulas lik
      \item $A \, (x - r_1) (x-r_2)$
 \end{itemize}
 
-For a quadratic function much of the analysis information is connected to vertex of the graph, which is why we like the vertex form, which is why we like completing the square.  But, we can get all of our information from the standard or factored forms as well.
+For a quadratic function, much of the analysis information is connected to vertex of the graph, which is why we like the vertex form for a formula, which is why we like completing the square.  But, we can get all of our information from the standard or factored forms as well. \\
+
+We want to keep the graph in our heads, but translate to function and algebraic reasoning. \\
 
 
 
@@ -59,7 +65,7 @@ For a quadratic function much of the analysis information is connected to vertex
 
 \subsection*{Domain} 
 
-Quadratic functions are defined for all real numbers.  Their natural domain is $\mathbb{R}$. \\
+All quadratic functions are defined for all real numbers.  Their natural domain is $\mathbb{R}$. \\
 
 If you can identify a function as quadratic, then you automatically know its domain. \\
 
@@ -76,10 +82,10 @@ If you can identify a function as quadratic, then you automatically know its dom
 \subsection*{Zeros}
 
 
-The quadratic formula gives the zeros of a quadratic funciton, when we have the \textit{standard form}. The quadratic formula gives the solutions to the quadratic equation
+The quadratic formula gives the zeros of a quadratic function, when we have the \textit{standard form}. The quadratic formula gives the solutions to the quadratic equation
 
 \[
-a \, x^2 + b \, x + c = 0
+a \, t^2 + b \, t + c = 0
 \]
 
 \[ t  =   \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}      \]
@@ -137,7 +143,7 @@ Intercepts are $\left(  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$ and $\lef
 
 
 
-Working backwards, we can see that if we have the zeros, like from factoring, then we have the intercepts, and the \textbf{line of symmetry} must run in the middle. \\
+Working from a formula to a graph, we can see that if we have the zeros or roots, like from factoring or the quadratic formula, then we have the intercepts, and the \textbf{line of symmetry} must run in the middle. \\
 
 
 
@@ -171,7 +177,7 @@ Quadratic functions have the same end-behavior on both sides, which is given by 
 
 End-behavior describes what the function is doing out in the ``tails'' of the domain.  That is where the domain numbers are really really really really big positively or negatively. \\
 
-For quadratic functions, $f(x) = a \, x^2 + b x + c$, when $x$ is really really really really big positively or negatively, then the leading term ``dominates'' the other two terms.  The whole function behaves just like $a \, x^2$. \\
+For quadratic functions, $f(x) = a \, x^2 + b \, x + c$, when $x$ is really really really really big positively or negatively, then the leading term ``dominates'' the other two terms.  The whole function behaves just like $a \, x^2$. \\
 
 That tells us that the whole function will become unbounded. \\
 
@@ -185,9 +191,9 @@ That tells us that the whole function will become unbounded. \\
 
 \begin{idea} \textbf{\textcolor{red!80!black}{A Peek Ahead}}
 
-We will want some mathematical notation for end-behavior.  Limit notation will be introduced later and that will be our way of algebraically describing end-behavior. \\
+We will want some mathematical notation for end-behavior.  \textbf{Limit notation} will be introduced later and that will be our way of algebraically describing end-behavior. \\
 
-\end{idea}
+
 
 
 \begin{example}
@@ -211,6 +217,20 @@ The end-behavior will be describe as
 
 
 
+\end{idea}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -226,15 +246,15 @@ The end-behavior will be describe as
 
 
 
-The graph vividly suggests that quadratic functions switch from increasing to decreasing (or vice versa) at the symmetric/vertex number in the domain.
+The graph vividly suggests that quadratic functions switch from increasing to decreasing (or vice versa) at the ``vertex'' number in the domain, which is called a \textit{critical number}.
 
 
 \begin{itemize}
-\item If the graph is opening up, then the quadratic function is \\
+\item If the leading coefficient is positive, then the graph is opening up, then the quadratic function is \\
 
 decreasing on $\left( -\infty, \frac{-b}{2a} \right)$ and increasing on $\left( \frac{-b}{2a}, \infty \right)$
 
-\item If the graph is opening down, then the quadratic function is \\
+\item If the leading coefficient is negative, then graph is opening down, then the quadratic function is \\
 
 increasing on $\left( -\infty, \frac{-b}{2a} \right)$ and decreasing on $\left( \frac{-b}{2a}, \infty \right)$
 \end{itemize}
@@ -247,8 +267,8 @@ Increasing and decreasing refer to the rate of change.
 
 
 \begin{itemize}
-\item Increasing is a positive rate of change.
-\item Decreasing is a negative rate of change.
+\item Increasing is a positive rate of change. (The domain and function values change in the same way.)
+\item Decreasing is a negative rate of change. (The domain and function values change in the opposite way.)
 \end{itemize}
 
 
@@ -329,7 +349,7 @@ Then $x_0$ is called a \textbf{critical number}.
 
 
 
-\begin{procedure} \textbf{\textcolor{blue!75!black}{iRoC for Quadratic Functions}} 
+\begin{procedure} \textbf{\textcolor{blue!75!black}{iRoC for Quadratic Functions in Vertex Form}} 
 
 
 
@@ -340,7 +360,7 @@ Then $Q(x) = a (x - h)^2 + k$, for some $a$, $h$, and $k$ with $a \ne 0$. \\
 Then, $iRoC_Q(x) = 2 a (x - h)$. \\
 
 
-\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front of the leading coefficient and the constant term $k$ has been removed.
+\textbf{Procedure:} It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient while the constant term, $k$, has been removed.
 
 
 
@@ -350,7 +370,7 @@ Then, $iRoC_Q(x) = 2 a (x - h)$. \\
 
 We have a procedure for obtaining the $iRoC$ of a quadratic function, when the formula is in vertex form (completed square form). \\
 
-What about standard form? \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} What about standard form? \\
 
 
 
@@ -370,7 +390,7 @@ iRoC_Q(x) &= 2 a (x - h) \\
 
 
 
-\begin{procedure} \textbf{\textcolor{blue!75!black}{iRoC for Quadratic Functions}} 
+\begin{procedure} \textbf{\textcolor{blue!75!black}{iRoC for Quadratic Functions in Standard Form}} 
 
 
 
@@ -381,7 +401,7 @@ Then $Q(x) = a \, x^2 + b \, x + c$, for some $a$, $b$, and $c$ with $a \ne 0$. 
 Then, $iRoC_Q(x) = 2 \, a \, x + b$. \\
 
 
-\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front of the leading coefficient, the linear coefficent has remained, and the constant term as been removed. 
+\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient, just the linear coefficent has remained, and the constant term as been removed. 
 
 
 
@@ -405,12 +425,12 @@ There is probably an overall pattern going on here. \\
 
 
 
-The maximum and minimum values of a quadratic function, $f$, are visually encoded in the highest and lowest points on the  graph, which is the vertex of the parabola.
+The maximum and minimum values of a quadratic function, $f$, are visually encoded in coordinates of the highest or lowest points on the  graph, which is the vertex of the parabola.
 
-Depending on the sign of $a$, the maximum or minimum value of $f(x) = a \, x^2 + b \, x + c$ occurs at $\frac{-b}{2a}$. The maximum or minimum value is $f\left( \frac{-b}{2a} \right)$
+Depending on the sign of the leading coefficient, the maximum or minimum value of $f(x) = a \, x^2 + b \, x + c$ occurs at $\frac{-b}{2a}$. The maximum or minimum value is $f\left( \frac{-b}{2a} \right)$
 
 
-Depending on the sign of $a$, the maximum or minimum value of $f(x) = a \, (x - h)^2 + k$ is $k$ and occurs at $h = \frac{-b}{2a}$. 
+Depending on the sign of the leading coefficient, the maximum or minimum value of $f(x) = a \, (x - h)^2 + k$ is $k$ and occurs at $h = \frac{-b}{2a}$. 
 
 
 
@@ -463,7 +483,7 @@ x     &=  \frac{-b}{2a}
 
 $\blacktriangleright$  \textbf{Vertex Form} \\
 
-The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula.
+The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula (vertex form).
 
 Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola would have opened downward and the extreme point would be at the top.
 
@@ -548,23 +568,39 @@ If $a<0$, then everything is reveresed.
 
 
 
-We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is squared, and thus nonnegative, the range of $f$ depends on the sign of $a$. \\
-
-When $a>0$, the values of $f(x)$ are greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$. \\
+We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is squared, and thus nonnegative, the range of $f$ depends on the sign of $a$, the leading coefficient. \\
 
 
+\begin{itemize}
+     \item When $a>0$, the values of $f(x)$ are greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$. \\
 
-When $a<0$, the values of $f(x)$ are less than or equal to $k$. This corresponds to the graph opening down.  The only way to get the greatest value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$.  \\
+
+     \item When $a<0$, the values of $f(x)$ are less than or equal to $k$. This corresponds to the graph opening down.  The only way to get the greatest value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$.  \\
+\end{itemize}
+
+
 
 We can see that the implied range of a quadratic comes in two types.  
 
 \begin{itemize}
-\item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \}$.
-\item The range could be all real numbers less than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \leq k \}$.
+\item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \} = [k, \infty]$.
+\item The range could be all real numbers less than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \leq k \} = (-\infty, k]$.
 \end{itemize}
 
-If there is a stated domain, then the range will be restricted appropriately. \\
 
+
+
+
+
+$\blacktriangleright$  \textbf{Standard Form} \\
+
+$\frac{-b}{2 \, a}$ is the critical number for a quadratic given in standard form, $f(x) = a \, x^2 + b \, x + c$. \\
+
+The maximum or minium value will be 
+
+\[
+f\left( \frac{-b}{2 \, a} \right)
+\]
 
 
 
