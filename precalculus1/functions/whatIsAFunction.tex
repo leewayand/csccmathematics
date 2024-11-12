@@ -14,7 +14,7 @@ one additional rule
 
 
 
-\section{Functions}
+\section*{What are Functions?}
 
 Functions are special relations. While a relation is just two sets of items and some pairings between the two sets, functions satisfy one rule. 
 
@@ -98,14 +98,14 @@ This function is not well-defined, because there are U.S. citizens without a soc
 \begin{example} \textit{ReverseSSN} \\
 The \textit{ReverseSSN} function has a domain consisting of all 9-digit numbers and a codomain consisting of all U.S. citizens.  \textit{ReverseSSN} pairs a number in the domain with the person in the codomain who was issued the number as their social security number. 
 \\ \\ 
-This function is not well-defined, because there are 9-digit numbers that have not been issued as social security numbers.  \textit{ReverseSSN} is not a funciton.
+This function is not well-defined, because there are 9-digit numbers that have not been issued as social security numbers.  \textit{ReverseSSN} is not a function.
 \end{example}
 
 
 \begin{example} \textit{RationalAdd} \\
 The \textit{RationalAdd} function has a domain consisting of all rational numbers and a codomain consisting of all integers.  \textit{RationalAdd} pairs a rational number in the domain with an integer in the codomain according to the following procedure: \\ 
 \begin{quote}
-Since a chosen domain number is a rational number, it can be represented as $\tfrac{A}{B}$, where $A$ and $B$ are integers. This domain rational number is paired with $A+B$ in the codomain.
+\textbf{\textcolor{blue!55!black}{Since a chosen domain number is a rational number, it can be represented as $\tfrac{A}{B}$, where $A$ and $B$ are integers. This domain rational number is paired with $A+B$ in the codomain.}} 
 \end{quote}
  
 This function is not well-defined.  \\
@@ -145,7 +145,7 @@ We finally found a well-defined function. That one little rule actually narrows 
 
 
 
-\section*{Function Notation}
+\subsection*{Function Notation}
 
 Now that we are only investigating functions, rather than all relations, we discover some opportunities to help our communication.  For instance, it turns out that when you select a domain item in a function, you have automatically selected a codomain item.
 
@@ -169,21 +169,26 @@ We have notation for this thought. \\
 
 \begin{notation} \textbf{\textcolor{green!50!black}{Function Notation}}  \\
 
+
 Let $functionName$ be the name of a function. \\
 Let $d$ represent a domain item of $functionName$.
 
 
 Then, ``\textbf{\textcolor{green!50!black}{$functionName(d)$}}'' represents $d$'s partner in the codomain. \\
 
-$(d, functionName(d)$ is a pair in $functionName$. \\
+
+\textbf{\textcolor{red!80!black}{Language:}} \\
+$functionName(d)$ is \textbf{\textcolor{blue!55!black}{pronounced}} as ``functionName \textbf{\textcolor{purple!85!blue}{OF}} $d$''.
+
+
+$(d, functionName(d))$ is a pair in $functionName$. \\
 
 
 $functionName(d)$ is called ``the \textbf{\textcolor{purple!85!blue}{VALUE}} of functionName \textbf{\textcolor{purple!85!blue}{AT}} $d$''. \\
 $functionName(d)$ is called ``the \textbf{\textcolor{purple!85!blue}{IMAGE}} of $d$ under functionName''. \\
 
 
-\textbf{\textcolor{red!80!black}{Language:}} \\
-$functionName(d)$ is \textbf{\textcolor{blue!55!black}{pronounced}} as ``functionName \textbf{\textcolor{purple!85!blue}{OF}} $d$''.
+
 \end{notation}
 
 
@@ -275,7 +280,30 @@ Let $W = \{ 3, 8, 10 \}$   \\
 
 
 
+\begin{question}
 
+
+Let $D = \{ 3, 5, 7, 8, 10, 11, 13, 15, 16 \}$  \\
+Let $T = \{ 3, 10, 11, 16 \}$  \\
+Let $R = \{ 3, 6, 10, 11, 16 \}$   \\
+Let $W = \{ 3, 8, 10 \}$   \\
+
+
+Select all of the true statements.
+
+\begin{selectAll}
+	\choice [correct]{$6 \in R$}
+	\choice [correct]{$10 \in T$}
+	\choice {$15 \in W$}	
+	\choice {$6 \in R$}
+	\choice [correct] {$6 \notin D$}
+	\choice [correct]{$\{ 3, 6 \} \subset R$}
+	\choice {$\{ 3, 6 \} \subset DR$}
+	\choice [correct] {$W \subset R$}
+\end{selectAll}
+
+
+\end{question}
 
 
 
@@ -385,7 +413,7 @@ Which codomain items are not in the range of \textit{StarringAgain}?
 
 
 
-We can extend our idea of value and image and also think of the reverse. \\
+We can extend our idea of value and image and also think of a function in reverse. \\
 
 
 
@@ -417,6 +445,8 @@ f^{-1}(T) = \{ d \in D \, | \, f(d) \in T  \} \subseteq D
 
 
 The preimage is also known as the \textbf{inverse image}.
+
+$f^{-1}(T)$ is the symbol for the reverse of $f$. $f^{-1}(T)$ pairs subsets of the codomain with subsets of the domain.  It is just reading the function $f$ backwards or in reverse.
 
 
 
@@ -468,7 +498,7 @@ Define the function $H$ by these sets: \\
 
 Mathematics is full of concepts and skills which have a feeling that you are applying something.
 
-For example, multiplication.  We can think of multiplication by $3$ as ``doing'' something.  This thought automatically comes with the reverse thought.  We might think of reversing multiplication by $3$ as multiplying by $\frac{1}{3}$ and we have alternative exponential notation available, $3^{-1} = \frac{1}{3}$. \\
+Take multiplication, for example.  We can think of multiplication by $3$ as ``doing'' something.  This thought automatically comes with the reverse thought.  We might think of reversing multiplication by $3$ as multiplying by $\frac{1}{3}$ and we have alternative exponential notation available, $3^{-1} = \frac{1}{3}$. \\
 
 
 With the addition operation, we think of the opposite of $4$ as $-4 = -1 \cdot 4$. \\
@@ -502,6 +532,7 @@ Sometimes $f^{-1}(x)$ and $f^{-1}(x)$ do not mean the same thing.\\
 \end{itemize}
 
 
+Context is everything! \\
 
 \end{warning}
 
@@ -539,7 +570,7 @@ Equality uses the range instead of the codomain, because we are mostly focused o
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functions/examples/exampleList}
 
