@@ -146,6 +146,9 @@ Intercepts are $\left(  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$ and $\lef
 Working from a formula to a graph, we can see that if we have the zeros or roots, like from factoring or the quadratic formula, then we have the intercepts, and the \textbf{line of symmetry} must run in the middle. \\
 
 
+On the other hand, if we know the coordinates of the intercepts of a parabola, then we know the zeros or roots, which means we know the factors of the quadratic.
+
+
 
 
 
@@ -250,11 +253,11 @@ The graph vividly suggests that quadratic functions switch from increasing to de
 
 
 \begin{itemize}
-\item If the leading coefficient is positive, then the graph is opening up, then the quadratic function is \\
+\item If the leading coefficient is positive, (then the graph is opening up) then the quadratic function is \\
 
 decreasing on $\left( -\infty, \frac{-b}{2a} \right)$ and increasing on $\left( \frac{-b}{2a}, \infty \right)$
 
-\item If the leading coefficient is negative, then graph is opening down, then the quadratic function is \\
+\item If the leading coefficient is negative, (then graph is opening down) then the quadratic function is \\
 
 increasing on $\left( -\infty, \frac{-b}{2a} \right)$ and decreasing on $\left( \frac{-b}{2a}, \infty \right)$
 \end{itemize}
@@ -323,11 +326,11 @@ Our linear rate of change function now informs us about the behavior of $f$. \\
 
 \begin{conclusion}  \textbf{\textcolor{green!50!black}{Behavior}}
 
-$\blacktriangleright$ When the linear rate of change function $iRoC_f(x) < 0$, then $f(x)$ is decreasing. \\
+$\blacktriangleright$ When the linear rate of change function is negative, $iRoC_f(x) < 0$, then $f(x)$ is decreasing. \\
 
-$\blacktriangleright$ When the linear rate of change function $iRoC_f(x) > 0$, then $f(x)$ is increasing. \\
+$\blacktriangleright$ When the linear rate of change function is positive, $iRoC_f(x) > 0$, then $f(x)$ is increasing. \\
 
-$\blacktriangleright$ When the linear rate of change function $iRoC_f(x) = 0$, then $f(x)$ is neither increasing nor decreasing and the graph of $y = f(x)$ is flat. 
+$\blacktriangleright$ When the linear rate of change function is zero, $iRoC_f(x) = 0$, then $f(x)$ is neither increasing nor decreasing and the graph of $y = f(x)$ is flat. 
 
 \end{conclusion}
 
@@ -345,8 +348,10 @@ Then $x_0$ is called a \textbf{critical number}.
 
 
 \end{definition}
+
 \textbf{Note: } Domain numbers where $iRoC_f$ doesn't exist are also places where a function's behavior can change drastically.
 
+\textbf{Note: } Singularities are not in the domain. However, the function's behavior can also change across singularities. (Quadratics don't have singularities.)
 
 
 \begin{procedure} \textbf{\textcolor{blue!75!black}{iRoC for Quadratic Functions in Vertex Form}} 
@@ -407,7 +412,7 @@ Then, $iRoC_Q(x) = 2 \, a \, x + b$. \\
 
 \end{procedure}
 
-There is probably an overall pattern going on here. \\
+There is probably an overall pattern going on here, which will be revealed in Calculus. \\
 
 
 
@@ -425,15 +430,17 @@ There is probably an overall pattern going on here. \\
 
 
 
-The maximum and minimum values of a quadratic function, $f$, are visually encoded in coordinates of the highest or lowest points on the  graph, which is the vertex of the parabola.
-
-Depending on the sign of the leading coefficient, the maximum or minimum value of $f(x) = a \, x^2 + b \, x + c$ occurs at $\frac{-b}{2a}$. The maximum or minimum value is $f\left( \frac{-b}{2a} \right)$
+The maximum and minimum values of a quadratic function, $f$, are visually encoded in the coordinates of the highest or lowest points on the  graph, which is the vertex of the parabola.
 
 
-Depending on the sign of the leading coefficient, the maximum or minimum value of $f(x) = a \, (x - h)^2 + k$ is $k$ and occurs at $h = \frac{-b}{2a}$. 
+\begin{itemize}
+     \item Depending on the sign of the leading coefficient, the maximum or minimum value of $f(x) = a \, x^2 + b \, x + c$ occurs at $\frac{-b}{2a}$. 
 
 
+     \item Depending on the sign of the leading coefficient, the maximum or minimum value of $f(x) = a \, (x - h)^2 + k$ is $k$ and occurs at $h = \frac{-b}{2a}$. 
+\end{itemize}
 
+Either way, the maximum or minimum value is $f\left( \frac{-b}{2a} \right)$
 
 
 
@@ -572,10 +579,10 @@ We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is sq
 
 
 \begin{itemize}
-     \item When $a>0$, the values of $f(x)$ are greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$. \\
+     \item When the leading coefficient is positive, the values of $f(x)$ are greater than or equal to $k$. This corresponds to the graph opening up.  The only way to get the least value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$. \\
 
 
-     \item When $a<0$, the values of $f(x)$ are less than or equal to $k$. This corresponds to the graph opening down.  The only way to get the greatest value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$.  \\
+     \item When the leading coefficient is negative, the values of $f(x)$ are less than or equal to $k$. This corresponds to the graph opening down.  The only way to get the greatest value possible for $f$ is to select $x = h$. That corresponds to the vertex $(k, h)$.  \\
 \end{itemize}
 
 
@@ -583,7 +590,7 @@ We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is sq
 We can see that the implied range of a quadratic comes in two types.  
 
 \begin{itemize}
-\item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \} = [k, \infty]$.
+\item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \} = [k, \infty)$.
 \item The range could be all real numbers less than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \leq k \} = (-\infty, k]$.
 \end{itemize}
 
@@ -603,8 +610,8 @@ f\left( \frac{-b}{2 \, a} \right)
 \]
 
 \begin{itemize}
-     \item If the leading coefficient is positive, then the range is $\left(-\infty, f\left( \frac{-b}{2 \, a} \right)\right]$ \\
-     \item If the leading coefficient is negative, then the range is $\left[f\left( \frac{-b}{2 \, a} \right), \infty \right)$ \\
+     \item If the leading coefficient is negative, then the range is $\left(-\infty, f\left( \frac{-b}{2 \, a} \right)\right]$ \\
+     \item If the leading coefficient is positive, then the range is $\left[f\left( \frac{-b}{2 \, a} \right), \infty \right)$ \\
 \end{itemize}
 
 
