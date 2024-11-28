@@ -27,7 +27,7 @@ We have seen that the trajectories of projectiles are described by quadratic equ
 
 
 
-\section{Quadratic Functions}
+\subsection*{Quadratic Functions}
 
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Quadratic Functions}} \\
@@ -86,29 +86,38 @@ As we have seen the graph of a quadratic equation is a parabola. The sign of the
 \end{image}
 
 
-\section{Analysis}
+\subsection*{Quadratic Function Analysis}
 
-What do we want to know when we analyze functions?
+What do we want to know when we analyze any function?
 
 We want to know the 
-
 \begin{itemize}
-\item Domain 
-\item Zeros
-\item Continuity (Discontinuities and Singularities) 
-\item End-Behavior
-\item Behavior (intervals of increasing and decreasing)
-\item Global Maximum and Minimum 
-\item Local Maximums and Minimums
-\item Range  \\
-\item ...and we want a nice graph.
+     \item \textbf{\textcolor{red!80!black}{Domain}} 
+     \item \textbf{\textcolor{red!80!black}{Zeros}} 
+     \item \textbf{\textcolor{red!80!black}{Continuity}} 
+\begin{itemize}
+     \item \textbf{\textcolor{purple!85!blue}{discontinuities}} 
+     \item \textbf{\textcolor{purple!85!blue}{singularities}} 
 \end{itemize}
+     \item \textbf{\textcolor{red!80!black}{End-Behavior}} 
+     \item \textbf{\textcolor{red!80!black}{Behavior}} 
+\begin{itemize}
+     \item \textbf{\textcolor{purple!85!blue}{intervals where increasing}} 
+     \item \textbf{\textcolor{purple!85!blue}{intervals where decreasing}} 
+\end{itemize}
+     \item \textbf{\textcolor{red!80!black}{Global Maximum and Minimum}} 
+     \item \textbf{\textcolor{red!80!black}{Local Maximums and Minimums}} 
+     \item \textbf{\textcolor{red!80!black}{Range}} 
+     \item \textbf{\textcolor{blue!55!black}{...and we would like a nice graph}} 
+\end{itemize}
+
 
 
 \textbf{\textcolor{blue!75!black}{Quadratic Domain and Range}} \\
 
 
-The implied or natural domain of a quadratic function is all real numbers.  Of course, any quadratic function could come with a stated domain that restricts the domain. Or, a quadratic might be a piece of a piecewise defined function and only apply to a stated set.
+The implied or natural domain of a quadratic function is all real numbers.  Of course, any quadratic function could come with a stated domain that restricts the domain. Or, a quadratic might be a piece of a piecewise defined function and only applied to a stated subset of the whole domain. Or, the quadratic function might be used as a model and the situation restricts the domain to an applied domain. \\
+
 
 From the graphs above we can see that the natural range of a quadratic comes in two types.  
 
@@ -139,16 +148,28 @@ If $a$ and $b$ are real numbers and $a\cdot b = 0$, then either $a=0$ or $b=0$.
 Zero is the ONLY number with such an identifiable test, therefore, we use it...\textbf{\textcolor{purple!85!blue}{A LOT}}! 
 
 
-\begin{procedure}
+\begin{procedure}  \textbf{\textcolor{blue!55!black}{Solving Equations}}
+
+We have two methods for solving equations.
+
+\begin{itemize}
+     \item If you know what to do, then go do it. \\
+     \item If you do not know what to do, then get everythign to one side with $0$ on the other side and factor.
+\end{itemize}
 
 
-Unless we happen to know something special, when solving equations our general approach is to set everything equal to zero and then convert the expression into a product.  This process is called \textbf{factoring}.  The whole idea is to make our situation look like the zero product property.
+Unless we happen to know something special (which we often do), when solving equations our general approach is to set everything equal to zero and then convert the expression into a product.  This process is called \textbf{factoring}.  The whole idea is to make our situation look like the \textbf{zero product property}.
 
 \end{procedure}
 
+
+
+
+
+
 We have already seen that factors correspond to zeros of our function. Thus, it comes as no surprise that identifying zeros of functions is a top priority.  Factoring is a top priority. Spotting horizontal intercepts in the graph is a top priority.
 
-As we can see from their parabolic graphs below, quadratics can have $0$, $1$, or $2$ real zeros.  How do we find them? Factoring is one way.  Completing the Square is another method.
+As we can see from their parabolic graphs below, quadratics can have $0$, $1$, or $2$ real zeros.  How do we find them? Factoring is one way.  
 
 
 
@@ -188,18 +209,49 @@ As we can see from their parabolic graphs below, quadratics can have $0$, $1$, o
 
 
 
+\begin{example}
+
+Let $Q(x) = 3 \, x^2 - 5 \, x - 2$ be quadratic function. \\
+
+What are its zeros? \\
+
+We currently have $Q$ written in standard form, which is a sum.  We would prefer $Q$ written as a product so that we can use the zero Product Property.  This means factoring. \\
+
+
+\[
+Q(x) = (3 \, x + 1)(x - 2)
+\]
+
+Now, we want to know when this equals $0$. \\
+
+
+$Q(x) = (3 \, x + 1)(x - 2) =0$ \\
+
+By the zero product property, either $3 \, x + 1 = 0$ or $x - 2 = 0$. \\
+
+This tells us that $-\frac{1}{3}$ and $2$ are zeros of $Q$.
 
 
 
 
+\end{example}
 
 
+
+Factoring is nice, provided you can think up the factors.  Sometimes, the factors are not so easy to imagine. \\
+
+
+So far, we have seen the standard and factored forms for quadratics. We have a third form called the vertex form and we can convert our formula for $Q$ in this form by \textbf{completing the square}.
 
 
 
 
 
 \section{Completing the Square}
+
+Completing the square is an algebraic procedure.  Later in this section, we will take a funcitonal viewpoint of this. \\
+
+
 
 Zeros of linear functions were easy to identify.  Simply apply a little algebra to the equation to get the variable by itself on one side of the equation.  But, this is not always possible with equations of the form $0 = a \, t^2 + b \, t + c $, because there are two occurrences of the variable and they have different degrees. \\
 
@@ -264,24 +316,24 @@ We want to complete the square on $t^2 + b \, t + c$.  When the leading coeffice
 
 
 \begin{align*}
-(t-B)^2 + C & = (t-B)(t-B) + C \\
-& = t^2 - 2 t B + B^2 + C  
+(t-B)^2 + C & = (t - B)(t - B) + C \\
+& = t^2 - 2 \, t \, B + B^2 + C  
 \end{align*}
 
 
-This last line $t^2 - 2 t B + B^2 + C$ should turn out to be $t^2 + b \, t + c$.
+This last line $t^2 - 2 \, t \, B + B^2 + C$ should turn out to be $t^2 + b \, t + c$.
 
 We want
 
 
-\[   t^2 - 2 t B + B^2 + C = t^2 + b \, t + c   \]
+\[   t^2 - 2 \, t \, B + B^2 + C = t^2 + b \, t + c   \]
 
 
 
 \begin{explanation}
 
 
-The leading term is $1$ in both (since we factored out $A$). Now, the linear terms need to be the same: $ - 2 t B = \answer{b t}$.  That tells us that $B = \answer{\frac{b}{-2}}$.
+The leading term is $1$ in both (since we factored out $A$). Now, the linear terms need to be the same: $ - 2 \, t \, B = \answer{b t}$.  That tells us that $B = \answer{\frac{b}{-2}}$.
 
 \end{explanation}
 
@@ -289,7 +341,7 @@ The leading term is $1$ in both (since we factored out $A$). Now, the linear ter
 To complete the square with a monic quadratic, we need $B = \frac{b}{-2} = -\frac{b}{2}$.  Let's put that in.
 
 
-\[ t^2 - 2 t B + B^2 + C = t^2 - 2 t \left( -\frac{b}{2} \right) + \left( -\frac{b}{2} \right)^2 + C = t^2 + b t + \left(-\frac{b}{2}\right)^2 + C \]
+\[ t^2 - 2 \, t \, B + B^2 + C = t^2 - 2 t \left( -\frac{b}{2} \right) + \left( -\frac{b}{2} \right)^2 + C = t^2 + b \, t + \left(-\frac{b}{2}\right)^2 + C \]
 
 
 We want this to be $t^2 + b \, t + c$. \\
@@ -337,21 +389,21 @@ Now we have a monic to work with inside the parentheses. \\
 
 $\blacktriangleright$ Let's move inside the parentheses.
 
-\[ t^2 + 2 t + 3 \]
+\[ t^2 + 2 \, t + 3 \]
 
 Take half of the linear coefficient, $\frac{2}{2} = 1$, square that $1^2 = 1$, and add and subtract it, so that we have just added $0$ to the expression and not changed its value.
 
 
-\[ t^2 + 2 t + 1 - 1 +3 \]
+\[ t^2 + 2 \, t + 1 - 1 +3 \]
 
 
 Now, group.
 
-\[ (t^2 + 2 t + 1)- 1 +3 \]
+\[ (t^2 + 2 \, t + 1) - 1 + 3 \]
 
 the grouped part is a square.
 
-\[ \left( \answer{t+1} \right)^2- 1 +3 \]
+\[ \left( \answer{t+1} \right)^2 - 1 + 3 \]
 
 \[ (t+1)^2 + 2 \]
 
@@ -384,14 +436,38 @@ $2 (t+1)^2 + 4 = 2 \, t^2 + 4 \, t + 6$
 
 
 
-The whole point was to change from an expression with two occurences of the variable to an expression with only one occurence of the variable.
+The whole point was to change from an expression with two occurences of the variable to an expression with only one occurence of the variable. \\
 
-This makes solving much easier.
+This makes solving for zeros much easier. \\
+
+Instead of solving $2 \, t^2 + 4 \, t + 6 = 0$, we can solve $2 (t+1)^2 + 4 = 0$.
+
+
+\[
+2 (t+1)^2 + 4 = 0
+\]
+
+
+\[
+(t+1)^2 = -2
+\]
+
+
+From this equation, we can see that this function has no zeros. We wouldn't have been able to guess the factors. \\
+
+
+As we saw earlier, quadratic functions can have two real zeros, one real zero, or no real zeros. \\
+
+
+
+
+
+
 
 
 \begin{example} \textit{Two Real Solutions}
 
-Solve $4  t^2 - 4 t - 8 = 0$ \\
+Solve $4  t^2 - 4 \, t - 8 = 0$ \\
 
 
 \begin{explanation}
@@ -400,7 +476,7 @@ First complete the square.
 
 
 
-\[ 4 t^2 -  4 t - 8 = 0 \]
+\[ 4 \, t^2 -  4 \, t - 8 = 0 \]
 
 \[ \answer{4} (t^2 - t - 2) = 0 \]
 
@@ -415,24 +491,24 @@ We will be adding and subtracting $\answer{\frac{1}{4}}$ inside the parentheses.
 
 
 
-\[ 4 (t^2 - t + \frac{1}{4} - \frac{1}{4} - 2)  \]
+\[ 4 \, (t^2 - t + \frac{1}{4} - \frac{1}{4} - 2)  \]
 
 
-\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right)  \]
+\[ 4 \, \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right)  \]
 
 
-\[ 4 \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right)  \]
+\[ 4 \, \left(\left(t - \frac{1}{2}\right)^2 - \frac{1}{4} - 2\right)  \]
 
-\[ 4 \left( \answer{t - \frac{1}{2}} \right)^2 - 1 - 8  \]
+\[ 4 \, \left( \answer{t - \frac{1}{2}} \right)^2 - 1 - 8  \]
 
-\[ 4 \left(t - \frac{1}{2}\right)^2 - 9  \]
+\[ 4 \, \left(t - \frac{1}{2}\right)^2 - 9  \]
 
 
-One occurrence of $t$, good. Now to get $t$ by itself in our original equation.
+One occurrence of $t$, good. Now to get $t$ by itself.
 
-\[ 4 \left(t - \frac{1}{2}\right)^2 - 9 = 0  \]
+\[ 4 \, \left(t - \frac{1}{2}\right)^2 - 9 = 0  \]
 
-\[ 4 \left(t - \frac{1}{2}\right)^2 = 9  \]
+\[ 4 \, \left(t - \frac{1}{2}\right)^2 = 9  \]
 
 \[  \left(t - \frac{1}{2}\right)^2 = \answer{\frac{9}{4}}  \]
 
@@ -473,7 +549,7 @@ We have already seen that a quadratic equation can have at most two solutions.  
 
 \begin{example} \textit{One Real Solution}
 
-Solve $2 x^2 - 12x + 21 = 3$ \\
+Solve $2 \, x^2 - 12 \, x + 21 = 3$ \\
 
 \begin{explanation}
 
@@ -482,7 +558,7 @@ First, get everything to one side and $0$ on the other side.
 
 
 
-\[  2 x^2 - 12x + \answer{18} = 0  \]
+\[  2 \, x^2 - 12 \, x + \answer{18} = 0  \]
 
 Factor out $a$, which is $2$ here.
 
@@ -518,7 +594,7 @@ This equation only has one solution.
 
 
 
-The graph of $y = 2 x^2 - 12x + 18$ would be a parabola touching the horizontal axis at only one point (its vertex).
+The graph of $y = 2 \, x^2 - 12\, x + 18$ would be a parabola touching the horizontal axis at only one point (its vertex).
 
 
 
@@ -550,7 +626,7 @@ Either $x = 3$ or $x = 3$.  \\
 $3$ is the only solution to the equation, but the equation has this solution twice. \textbf{\textcolor{red!80!black}{A double root}}.
 
 
-The previous two examples illustrated that quadratic equations can have two or one solutions.  The next example illustrates that a quadratic equation can have no real solutions.
+The previous two examples illustrated that quadratic equations can have two or one solutions.  And, a quadratic equation can have no real solutions.
 
 
 
@@ -563,7 +639,7 @@ The previous two examples illustrated that quadratic equations can have two or o
 
 \begin{example} \textit{No Real Solutions}
 
-Solve $2 x^2 - 12x + 21 = 1$ \\
+Solve $2 \, x^2 - 12 \, x + 21 = 1$ \\
 
 \begin{explanation}
 
@@ -571,7 +647,7 @@ First, get everything to one side and $0$ on the other side.
 
 
 
-\[  2 x^2 - 12x + 20 = 0  \]
+\[  2 \, x^2 - 12 \, x + 20 = 0  \]
 
 Factor out the leading coefficient.
 
@@ -582,7 +658,7 @@ Square half of $b$, $\left(\frac{-6}{2}\right)^2 = (-3)^2$ and $(-3)^2 = 9$.  We
 
 
 
-\[  2 (x^2 - 6x + 9 + 1) = 0  \]
+\[  2 (x^2 - 6 \, x + 9 + 1) = 0  \]
 
 
 \[  2 ((x-3)^2 + 1) = 0  \]
@@ -672,7 +748,7 @@ For now, we note that there are no \textbf{real} solutions in the third example.
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Quadratics]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/projectileMotion/examples/exampleList}
 
