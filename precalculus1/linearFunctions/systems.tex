@@ -13,7 +13,7 @@ intersection
 
 
 
-\subsection{Common Pairs}
+\subsection*{Common Pairs}
 
 Your journey through mathematics has brought you to a major change in your thinking. You have been working with individual numbers for years and years and years. Numbers have been the fundamental object in mathematics. Functions bring a totally different viewpoint. Our new basic mathematical tool is expanding from a number to a function.  Our new basic thought is about huge collections of pairs of numbers.  Our new analysis is moving from how numbers combine and compare to how functions combine and compare.
 
@@ -23,9 +23,9 @@ We would also like to compare functions.  For instance, what pairs functions mig
 
 
 
-\section{Intersections}
+\subsection*{Intersections}
 
-Given two linear functions (1) do they share any pairs? (2) what are the common pairs?
+Given two linear functions, (1) do they share any pairs? (2) what are the common pairs?
 
 
 
@@ -157,7 +157,7 @@ It might not be immediate clear that $L(k) = \frac{4}{3}k - \frac{8}{5}$ and $p(
 
 
 
-\section{Proof}
+\subsection*{Proof}
 
 
 
@@ -169,7 +169,7 @@ Graphing and Geometry are excellent tools for believing, but when you need an ar
 
 
 
-Reasoning that accounts for everything, are called \textbf{proofs}.
+Reasoning that accounts for everything, is called \textbf{proof}.
 
 
 
@@ -283,7 +283,7 @@ This is why we only need two points to draw a line.
 
 
 
-\section{Systems of Linear Equations}
+\subsection*{Systems of Linear Equations}
 
 The thinking above is part of a larger idea.
 
@@ -334,7 +334,7 @@ x & = y - z + 2
 
 Or, some other combination. A system of linear equations can group any number of linear equations with any number of variables.  The study of these types of systems is called \textbf{Linear Algebra}.
 
-For us, solving the system - identifying the common solutions - always uses the same thinking - EQUALITY.
+For us, solving the system - identifying the common solutions - always uses the same thinking - \textbf{\textcolor{purple!85!blue}{EQUALITY}}.
 
 
 
@@ -369,38 +369,55 @@ Solve the system
 
 \begin{explanation}
 
-We have $2x = 3y + 5$, therefore we can multiply both sides by $\answer{2}$ to get $4x = 6y + 10$.  This is an equivalent equation, so we can replace the first equation.
+Solving means to find a common pair of numbers that satisfy both equations or a common point on the graph. \\
+
+Let's call this common pair or point $(x, y) = (A, B)$ \\
 
 \begin{align*}
-4x & = 6y + 10 \\
-4x & = 7y + 11
+2A & = 3B + 5 \\
+4A & = 7B + 11
 \end{align*}
 
 
-We now have two expressions both equal to $4x$, then they must, themselves, be equal.
 
+Then we have $2A = 3B + 5$. We can multiply both sides by $\answer{2}$ to get $4A = 6B + 10$.  \\
 
-\[   6y + 10 =  \answer{7y + 11}   \]
+$2A = 3B + 5$ and $4A = 6B + 10$ are equivalent equations. \\
 
-We can subtract $6y$ from both sides and subtract $\answer{11}$ from both sides to get
-
-
-\[   -1 =  y   \]
+Therefore, we can replace the first equation in our system with this new equivalent equation.\\
 
 
 
-We now know that $y=-1$ and we know that $4x = 7y + 11$.  That tell us that 
+\begin{align*}
+4A & = 6B + 10 \\
+4A & = 7B + 11
+\end{align*}
 
 
-\[   4x = 7(-1) + 11   \]
-
-\[   4x = 4   \]
+We now have two expressions both equal to $4A$, then they must, themselves, be equal.
 
 
-\[ x = 1 \]
+\[   6B + 10 =  \answer{7B + 11}   \]
+
+We can subtract $6B$ from both sides and subtract $\answer{11}$ from both sides to get
 
 
-Our common solution to the two original equations is $x = 1$ and $y = -1$.  If you graph the two lines, then $(1, -1)$ would be the intersection point.
+\[   -1 =  B   \]
+
+
+
+We now know that $B = -1$ and we know that $4A = 7B + 11$.  That tell us that 
+
+
+\[   4A = 7(-1) + 11   \]
+
+\[   4A = 4   \]
+
+
+\[ A = 1 \]
+
+
+Our common solution to the two original equations is $A = 1$ and $B = -1$.  If you graph the two lines, then $(1, -1)$ would be the intersection point.
 
 \end{explanation}
 \end{example}
@@ -427,36 +444,46 @@ x & = 3y - 1 \\
 
 \begin{explanation}
 
-We have $x = 3y - 1$, therefore we can replace any $x$ with $3y - 1$.  
+
+Supposed $(x, y) = (A, B)$ is a solution.
+
 
 \begin{align*}
-x & = 3y - 1 \\
-4(3y - 1) & = 5y + 3
+A & = 3B - 1 \\
+4A & = 5B + 3
+\end{align*}
+
+
+We have $A = 3B - 1$, therefore we can replace any $A$ with $\answer{3B - 1}$.  
+
+\begin{align*}
+A & = 3B - 1 \\
+4(3B - 1) & = 5B + 3
 \end{align*}
 
 
 The second equation tells us that 
 
 
-\[   4(3y - 1) = 5y + 3   \]
+\[   4(3B - 1) = 5B + 3   \]
 
-\[   12y- 4 = 5y + 3   \]
-
-
-\[ 7y = 7 \]
+\[   12B - 4 = 5B + 3   \]
 
 
-\[ y = 1 \]
+\[ 7B = 7 \]
+
+
+\[ B = 1 \]
 
 With this new information, the first equation in the system tells us that
 
-\[ x = 3y - 1 \]
+\[ A = 3B - 1 \]
 
-\[ x = 3(1) - 1 \]
+\[ A = 3(1) - 1 \]
 
-\[ x = 2 \]
+\[ A = 2 \]
 
-Our common solution to the two original equations is $x = 2$ and $y = 1$.  If you graph the two corresponding lines, then $(2, 1)$ would be the intersection point.
+Our common solution to the two original equations is $A = 2$ and $B = 1$.  If you graph the two corresponding lines, then $(2, 1)$ would be the intersection point.
 
 \end{explanation}
 \end{example}
@@ -470,7 +497,7 @@ Our common solution to the two original equations is $x = 2$ and $y = 1$.  If yo
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Linear Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/linearFunctions/examples/exampleList}
 
