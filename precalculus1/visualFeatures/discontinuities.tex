@@ -156,7 +156,7 @@ With this in mind, let's compare the following two graphs.
 
 These two graphs (and the underlying functions) are almost identical. They have the same breaks, almost. The difference is the graph on the left has a point for $x=6$ and no point on the asymptote.  The right graph has reversed this.
 
-The difference is the underlying function for the graph on the left includes $6$ in its domain and not $3$. The underlying function for the graph on the right reverses this. In the world of functions, this is significant.  We want our language to note the differences. Therefore, we are going to adopt some language to separate these ideas.
+The difference is the underlying function for the graph on the left includes $6$ in its domain and not $3$. The underlying function for the graph on the right reverses this. It includes $3$ and not $6$ in its domain. In the world of functions, this is significant.  We want our language to note the differences. Therefore, we are going to adopt some language to separate these ideas.
 
 
 \begin{idea} \textbf{\textcolor{blue!55!black}{Language}}  
@@ -177,8 +177,88 @@ While graphs have breaks, functions will have \textbf{\textcolor{green!50!black}
 
 
 
-
 Discontinuities are numbers in the domain of the function and singularities are not in the domain. Of course, all of this gets more complicated as we encounter more functions.  But this is a good start. \\
+
+
+
+
+\begin{example} Discontinuities \\
+
+Let $K(y)$ be a function.  The graph of $z = K(y)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$y$, ylabel=$z$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:4)] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-1.5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,1)};
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Select all of the discontiuities of $K$.
+\begin{selectAll}
+\choice {$-8$}
+\choice [correct]{$-3$}
+\choice {$-1$}
+\choice {$3$}
+\choice {$4$}
+\choice {$8$}
+\choice [correct]{None of the above}
+\end{selectAll}
+
+
+
+
+
+$K(t)$ has one discontinuity.  The idea of a discontinuity is that the value of the function changes abruptly at a domain number.  The graph jumps vertically.  
+
+There is a vertical jump at $4$. However, $4$ is not in the domain of $K$.  So, $4$ is a singularity, not a discontinuity.  \\
+
+
+There is a vertical jump at $-3$. And, $4$ is  in the domain of $K$.  So, $4$ is a discontinuity.  \\
+
+\end{example}
+
+
+Discontinuities are domain numbers. \\
+
+
+
+
+
+
+
+
+
+
 
 \begin{example} Discontinuities \\
 
@@ -350,12 +430,12 @@ A real number, $c$, is said to be a \textbf{discontinuity} of the function $f$, 
 
 
 
-The last condition says that no matter how close to $c$ you look, there is always another domain number where the function value is wildly different.
+The last condition says that no matter how close to $c$ you look in the domain, there is always another domain number where the function value is wildly different.
 
 No matter how close you look at $c$, the jump is still there.
 
 
-The second condition is our algebraic way of saying, ``\textit{no matter how close you look}''.
+The second condition in the definition is our algebraic way of saying, ``\textit{no matter how close you look}''.
 
 
 
@@ -365,10 +445,28 @@ The second condition is our algebraic way of saying, ``\textit{no matter how clo
 
 
 
+\begin{idea} \textbf{\textcolor{blue!55!black}{Language}}  
+
+
+\textbf{Not Discontinuous} and \textbf{contiuous} do not mean the same thing. \\
+
+\textbf{Not Discontinuous} at $c$ means there is not a discontinuity at $c$.  There can be different reasons for this. \\
+
+If $c$ is not in the domain of the function, then $c$ is automatically not a discontiuity.  
+\begin{itemize}
+     \item $c$ could turn out to be a singularity.  
+     \item $c$ could turn out to just not be in the domain, but not a singularity.
+\end{itemize}
+
+Or, $c$ might be in the domain and the function might be continuous at $c$.
+
+\end{idea}
 
 
 
-If $c$ is a discontinuity of $f$, then we say that $f$ is \textbf{discontinuous} at $c$.
+
+
+But, for sure, if $c$ is a discontinuity of $f$, then we say that $f$ is \textbf{discontinuous} at $c$.
 
 
 
@@ -661,11 +759,10 @@ Therefore, $-5$ is a discontinuity of $f$.
 
 \begin{observation} \textbf{\textcolor{blue!55!black}{But, But, But, ...}}  
 
-\textit{But, the examples skipped over numbers not in the domain that are obviously discontinuities.}  \\
-
-The fact that these numbers are not in the domain is significiant when studying the function.  Therefore, we want to distinguish between inclusion and exclusion from the domain. \\
+The example above illustrates that the difference between a real number being a discontinuity or not can be very thin.
 
 This is why we also have the \textit{singularity} category.
+
 \end{observation}
 
 
@@ -819,7 +916,9 @@ Let $f$ be a function. \\
 If $c$ is in the domain of $f$ and $c$ is not a discontinuity, then $f$ is said to be \textbf{contiuous} at $c$. \\
 
 
-If $S$ is a subset of the domain and $f$ is continuous at every number in $S$, then $f$ is said to be continuous on the subset.
+If $S$ is a subset of the domain and $f$ is continuous at every number in $S$, then $f$ is said to be continuous on the subset. \\
+
+A function that is continuous on its whole domain is just said be a continuous function. \\
 
 
 \end{definition}
@@ -842,26 +941,28 @@ So, it is possible for a function to be noncontinuous and yet not have discontin
 
 
 
-\begin{idea} \textbf{Continuity}
+\begin{idea} \textbf{\textcolor{blue!55!black}{Continuity}}
 
 
-Continuous means not discontinuous. \\
+Continuous means not discontinuous in the domain. \\
 
 Discontinuous means there was a fixed distance in the range that separated function values no matter how close the domain numbers were. \\
 
 Continuity means this doesn't happen. \\
 
+\begin{explanation}
 
 Let $f$ be a function and $c$ a number in the domain. \\
 
 $f$ is \textbf{continuous} at $c$ if  \\
 
 
-For every range distance $d > 0 $, there is a corresponding domain distance $\epsilon > 0$ such that \\
+For every range distance $\epsilon > 0 $, there is a corresponding domain distance $\delta > 0$ such that \\
 
 
-for all domain numbers $x$ inside $(c - \epsilon, c + \epsilon)$ we have $| f(x) - f(c) | < d$. \\
+for all domain numbers $x$ inside $(c - \delta, c + \delta)$ we have $| f(x) - f(c) | < \epsilon$. \\
 
+\end{explanation}
 
 You can get close enough to $c$ in the domain so that all of the function values are close to $f(c)$...as close as you want...any closeness. \\
 
@@ -888,7 +989,7 @@ As you can see, this is easy to see visually, but difficult to describe algebrai
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Visual Features]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/visualFeatures/examples/exampleList}
 

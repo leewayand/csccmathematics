@@ -80,6 +80,82 @@ When the domain values increase, the function values decrease. When the domain v
 \textbf{Note:} You cannot test the endpoints of an interval to show a function is decreasing.  It has to decrease for EVERY pair of numbers in the interval. \\
 
 
+
+
+
+
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!70!black}{Language}}
+
+The words \textbf{increase} and \textbf{decrease} are used in two different ways. \\
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ A List of Numbers:}} The domain and range of a function are essentially a list of numbers. When we present a list of numbers, we line them up one after the other and that gives them a natural ordering.  Each number sits at a position before or after other numbers. \\
+
+As we step through the positions, the values of the numbers get greater, or get lesser, or stay the same. \\ 
+
+\begin{itemize}
+    \item If the value of the numbers get greater as we step through the positions of the numbers, then we say the list (sequence) of numbers \textbf{increases}.  
+    \item If the value of the numbers get lesser as we step through the positions of the numbers, then we say the list (sequence) of numbers \textbf{decreases}. 
+\end{itemize}
+
+
+For lists of numbers (sequences), we use the words increase and decrease as a comparison between the change in the values of the numbers compared to the change in their position in the list. \\
+
+
+We can extend this idea to a comparison of funciton values and domain numbers, essentially two lists. \\
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ A Function:}} 
+
+A function is also kind of like a list of numbers with positions.  The domain numbers play the role of positions and the function values play the role of list numbers sitting in those positions. \\
+
+We compare the change in the function numbers with the change in the domain numbers. \\
+
+\begin{itemize}
+    \item If the function values get greater as we step through the domain numbers, then we say the function \textbf{increases}.  
+    \item If the function values get lesser as we step through the domain numbers, then we say the function \textbf{decreases}.  
+\end{itemize}
+
+We have a tendency to read left to right with graphs, but that is only half the story.  Everything can be read right to left. \\
+
+
+\begin{itemize}
+    \item If the function values get greater as we step backwards through the domain numbers, then we say the function \textbf{decreases}.  
+    \item If the function values get lesser as we step backwards through the domain numbers, then we say the function \textbf{increases}.  
+\end{itemize}
+
+
+This tells us that increasing and decreasing are two-way comparisons.
+
+\begin{itemize}
+    \item If the function values and domain numbers change in the same way (both get greater or lesser), then we say the function \textbf{increases}.  
+    \item If the function values and domain numbers change in opposite ways (one greater and one lesser), then we say the function \textbf{decreases}. 
+\end{itemize}
+
+
+
+
+
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Graphically, increasing appears as dots to the right being higher than dots to the left.  Decreasing appears as dots on the curve being lower to the right. \\
 
 
@@ -327,8 +403,9 @@ Select all of the correct statements
 
 
 
-\section{Measuring Rates}
-Comparing how the connected values in the domain and range change is called a \textbf{rate}. Our symbol for a change in an amount is a Greek Delta, $\Delta$.  And, we use fractions to quantify the comparison of changes.
+\subsection*{Measuring Rates}
+
+Comparing how the connected values in the domain and range change is called a \textbf{rate}. Our symbol for a change in an amount is a Greek uppercase delta, $\Delta$.  And, we use fractions to quantify the comparison of changes.
 
 \[ rate = \frac{\Delta \, pineapples}{\Delta \, price}\]
 
@@ -531,6 +608,123 @@ If the rate of change of a function is positive over the interval $[a,b]$ then t
 
 
 
+\subsection*{Constant Rate of Change}
+
+
+Linear functions are functions that can be represented with formulas of the form $L(x) = A \, x + B$. \\
+
+
+Given an interval, we can measure the change of al inear funciton over this interval. \\
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} 
+
+
+
+Let $L(x)$ be the linear function $L(x) = \frac{1}{2} x - 4$.  The graph of $y = L(x)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:8), <->] {0.5*x - 4};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The rate of change of $L$ over the interval $[-6, 0]$ is
+
+\[
+\frac{L(0) - L(-6)}{0 - (-6)} = \frac{-4 - (-7)}{6} = \frac{3}{6} = \frac{1}{2}
+\]
+
+
+
+
+
+The rate of change of $L$ over the interval $[-4, 6]$ is
+
+\[
+\frac{L(6) - L(-4)}{6 - (-4)} = \frac{-1 - (-6)}{10} = \frac{5}{10} = \frac{1}{2}
+\]
+
+
+
+
+
+
+The rate of change of $L$ over the interval $[-2, 2]$ is
+
+\[
+\frac{L(2) - L(-2)}{2 - (-2)} = \frac{-3 - (-5)}{4} = \frac{2}{4} = \frac{1}{2}
+\]
+
+
+
+
+The rate of change of $L$ over the interval $[8, 10]$ is
+
+\[
+\frac{L(10) - L(8)}{10 - 8} = \frac{1 - 0}{2} = \frac{1}{2}
+\]
+
+
+
+
+\end{example}
+
+
+
+Linear functions have a special property that other function do not have.  No matter what interval you select, the rate of change over that interval is always the same. \\
+
+
+
+Let $L$ be the linear function in the example above, $L(x) = \frac{1}{2} x - 4$. 
+
+Let $a$ and $b$ be any distinct real numbers. \\
+
+The rate of change of $L$ over the interval $[a, b]$ is
+
+
+\[
+\frac{L(b) - L(a)}{b - a} = \frac{\left( \frac{b}{2} - 4 \right) - \left( \frac{a}{2} - 4 \right)}{b-a} 
+= \frac{\left( \frac{b - a}{2} \right)}{b-a} = \frac{1}{2}
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Linear functions have a constant rate of change, which measures the constant slope of the corresponding line. \\
+
+
+
+We will use this fact to help us understand how function values change.
+
 
 
 
@@ -540,7 +734,7 @@ If the rate of change of a function is positive over the interval $[a,b]$ then t
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Visual Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/visualBehavior/examples/exampleList}
 

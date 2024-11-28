@@ -20,8 +20,8 @@ The graph of a function is just a big collection of individual dots. Each dot is
 
 
 \begin{itemize}
-     \item the first/left coordinate of a point (the abscissa) is a domain number.
-     \item The second/right coordinate of a point (the ordinate) is  the funciton value at this domain number.
+     \item the first/left/horizontal coordinate of a point (the abscissa) is a domain number.
+     \item The second/right/vertical coordinate of a point (the ordinate) is the function value at this domain number.
 \end{itemize}
 
 
@@ -109,15 +109,14 @@ We can visualize the dots on the graph smashed vertically to the horizontal axis
                     ]
 
         
-        \addplot [draw=penColor2, very thick, smooth, domain=(-6:3), <] {0};
+        \addplot [draw=penColor2, very thick, smooth, domain=(-6:3), <-] {0};
         \addplot [draw=penColor2, very thick, smooth, domain=(3:8), ->] {0};
 
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
 
         \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2.9,0)}; 
-        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(3.3,0)}; 
-        %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
+        \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(3.3,0)}; 
 
 
     \end{axis}
@@ -264,7 +263,7 @@ Here is a complete graph of $p(x)$. \\
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$x$, ylabel=${y=p(x)}$,
+                axis lines =center, xlabel=$t$, ylabel=${z=p(t)}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -303,7 +302,7 @@ Here is a complete graph of $p(x)$. \\
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$x$, ylabel=${domain}$,
+                axis lines =center, xlabel=$t$, ylabel=${domain}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -354,7 +353,7 @@ The domain of the function $p$ is $[-6, 10]$.
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Visual Features]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/visualFeatures/examples/exampleList}
 

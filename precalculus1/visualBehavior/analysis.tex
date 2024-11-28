@@ -26,7 +26,7 @@ Analyzing a function means listing its characteristics, features, and aspects al
 
 We want \textbf{BOTH}: \\
 \textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} A description of the characteristic \\
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Your reasoning \\
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Your reasoning on how you decided \\
 
 
 
@@ -48,7 +48,7 @@ Rigor means that you are using proper and precise mathematical language to expla
 
 \subsection{The List}
 
-The list of function characteristics, features, and aspects doesn't change. \\
+The list of function characteristics, features, and aspects doesn't change for our analysis. \\
 
 
 
@@ -78,7 +78,7 @@ Domains are usually described with interval notation.
 
 \begin{explanation}  \textbf{\textcolor{blue!75!black}{Zeros}} \\
 
-Function zeros are domain numbers whose function value is $0$.
+Function zeros are domain numbers where the function value is $0$.
 
 \end{explanation}
 
@@ -121,7 +121,7 @@ In Algebra, functions are continuous over domain intervals.  For us, just starti
 
 \begin{explanation}  \textbf{\textcolor{blue!75!black}{End-Behavior}} \\
 
-The end-behavior of a function is a simple description of how the function values behave as the domain values tend to $-\infty$ or $\infty$.
+The end-behavior of a function is a simple description of how the function values behave as the domain values tend to $-\infty$ or $\infty$, the tails of the domain.
 
 \end{explanation}
 
@@ -138,7 +138,7 @@ The end-behavior of a function is a simple description of how the function value
 The behavior of a function is a simple description of how the function values change.  This includes where in the domain the function \textbf{\textcolor{purple!85!blue}{increases}} and \textbf{\textcolor{purple!85!blue}{decreases}}. \\
 
 
-We will extend this to more detailed descriptions around discontinuities and singularities.
+We will evetually extend this to more detailed descriptions around discontinuities and singularities.
 
 
 We will use \textbf{rates of change} to \textbf{measure} function behavior.
@@ -157,7 +157,7 @@ We will use \textbf{rates of change} to \textbf{measure} function behavior.
 
 The extreme values of a function include the \textbf{\textcolor{purple!85!blue}{global maximum}} and \textbf{\textcolor{purple!85!blue}{global minimum}} values. These are also called the \textbf{\textcolor{purple!85!blue}{absolute maximum}} and \textbf{\textcolor{purple!85!blue}{absolute minimum}} values.  \\
 
-They also include \textbf{\textcolor{purple!85!blue}{local maximum}} and \textbf{\textcolor{purple!85!blue}{local minimum}} values. These are also called \textbf{\textcolor{purple!85!blue}{relative maximum}} and \textbf{\textcolor{purple!85!blue}{relative minimum}} values.  \\
+Extrema also includes \textbf{\textcolor{purple!85!blue}{local maximum}} and \textbf{\textcolor{purple!85!blue}{local minimum}} values. These are also called \textbf{\textcolor{purple!85!blue}{relative maximum}} and \textbf{\textcolor{purple!85!blue}{relative minimum}} values.  \\
 
 
 Along with the maximum and minmum function values, we want to know where in the domain these occur.
@@ -175,9 +175,115 @@ Along with the maximum and minmum function values, we want to know where in the 
 
 The range is the collection of function values. \\
 
-Domains are usually described with interval notation.
+The range is usually described with interval notation.
 
 \end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Analysis \\
+
+Let $N(z)$ be a function.  The graph of $y = N(z)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$z$, ylabel=$y$,
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3), <-] {(x+7)*(x+2)};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:2)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(2:8)] {-0.25*x-4.5};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,-4)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,5)};
+       
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,-8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6.5)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\textbf{Domain:}  The domain of $N$ is $(-\infty, 8]$. \\
+
+\textbf{Zeros:}   $-7$ and $0$ are the zeros of $N$, \\
+
+\textbf{Continuity:}  $-3$, $2$, and $8$ are discontinuities of $N$. There are no singularities. \\
+$N$ is continuous on the intervals
+
+\[
+(-\infty, -3), (-3, 2), \, \text{and} \, (2, 8)
+\]
+
+
+\textbf{End-Behavior:}  $N$ becomes unbounded positively as the domain becomes unbounded negatively.\\
+
+\textbf{Behavior:}  
+
+\begin{itemize}
+	\item $N$ is decreasing on $(-\infty, -4.5)$.
+	\item $N$ is increasing on $(-4.5, -3)$.
+	\item $N$ is decreasing on $(-3, 2)$.
+	\item $N$ is decreasing on $(2, 8)$.
+\end{itemize}
+
+
+
+\textbf{Global Maximum and Minimum:} The end-behavior tells us that $N$ has no global maximum.  The global minimum is $-8)$, which occurs at $8$.  \\
+
+
+\textbf{Local Maximum and Minimum:} 
+
+\begin{itemize}
+	\item $N$ has a local minimum of $-8$, which occurs at $8$, because the global minimum is automatically a local minimum.
+	\item $N$ has a local minimum of $-6$, which occurs at $-4.5$.
+	\item $N$ has a local maximum of $5$, which occurs at $-3$.
+
+\end{itemize}
+
+\textbf{Range:} The range of $N$ is $\{ -8 \} \cup [-6, \infty)$. \\ 
+
+
+\end{example}
+
+
+\textbf{Note:} $2$ is not a local maximum or local minimum of $N$.  That is because FOR EVERY domain interval around $2$, there are ALWAYS domain number to the left and right where the funciotn value is greater than or less than $N(2)$.  We can tells this is true, because the graph has points above and below the point fo $2$ in EVERY POSSIBLE interval around $2$. \\
+
+
+
+
+
+
 
 
 
@@ -221,7 +327,7 @@ Learning when the algebra will not produce the reasoning we want is part of lear
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Visual Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/visualBehavior/examples/exampleList}
 

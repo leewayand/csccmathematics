@@ -13,7 +13,7 @@ minimum and maximum
 
 
 
-When using functions to analyze situations, we are often interested in the maximum and minimum values that a function takes on. These are often called \textbf{extreme} values. We would like to know the extreme values and where, in the domain, they occur.
+When using functions to analyze situations, we are often interested in the maximum and minimum values that a function takes on. The maximum o r minimum value the function \textit{assumes}. These are often called \textbf{extreme} values. We would like to know the extreme values and where, in the domain, they occur.
 
 
 
@@ -70,7 +70,7 @@ Global extrema are also called \textbf{absolute} extrema.
 
 
 
-In contrast to a single maximum or minimum value, a function may also have values which are the greatest value in their own little neighborhood of the domain, but not the greatest overall value.  We see these visually encoded as tops of hills and bottom of valleys on the graph.  A function may have many of these \textbf{local} or \textbf{relative} extrema.
+In contrast to a single maximum or minimum value, a function may also have values which are the greatest value in their own little neighborhood of the domain, but not neccessarily the greatest overall value.  We see these visually encoded as tops of hills and bottom of valleys on the graph.  A function may have many of these \textbf{local} or \textbf{relative} extrema.
 
 
 
@@ -104,7 +104,7 @@ Local extrema are also called \textbf{relative} extrema.
 
 
 
-By default, all global extrema are automatically local extrema.
+\textbf{Note:} By default, all global extrema are automatically local extrema.
 
 
 
@@ -201,7 +201,7 @@ $-3.3 = g(-8) \leq g(k)$ for all $k$ in the domain within a distance of $0.5$ fr
 
 
 \textbf{Note:} As the previous example illustrates, global extrema are also local extrema. \\
-\textbf{Note:} We picked $0.3$, $0.4$, and $0.5$ for $\epsilon$, but we could have selected any small, positive numbers that work.
+\textbf{Note:} We picked $0.3$, $0.4$, and $0.5$ for $\epsilon$, but we could have selected any small, positive numbers that work. In fact, once one positive number works, then any lesser positive number will also work. \\
 
 
 
@@ -316,12 +316,36 @@ Let $T(p)$ be a function.  The graph of $y=  T(p)$ is displayed below.
 
 
 
-It appears that $8$ would have been the global maximum of $T$ occurring at $-8$, however, the point $(-8, 8)$ is missing from the graph and $8$ is not in the range.  And, there is no real number ``just below $8$''.  If you choose any real number, $r$, below $8$ to be the possible candidate for global maximum, there is the number $\frac{8+r}{2}$. This number is in the range and $r < \frac{8+r}{2} < 8$.  You cannot identify a specific number as the maximum, so there isn't one.
+It appears that $8$ would have been the global maximum of $T$ occurring at $-8$, however, the point $(-8, 8)$ is missing from the graph and $8$ is not in the range.  
 
 
 
+\begin{idea}  \textbf{\textcolor{blue!55!black}{``Next'' Real Number}}
 
 
+The real numbers have a special property which makes Calculus work. \\
+
+We can illustrate this property with the number $8$. \\
+
+\begin{explanation}
+
+There is no real number ``just below $8$''.  \\
+
+
+If you choose any real number, $r$, below $8$ to be the possible candidate for the previous number, then there is the number $\frac{8+r}{2}$. 
+
+\[  
+r < \frac{8+r}{2} < 8
+\]  
+
+You cannot identify a specific number as the ``previous'' number, so there isn't one. \\
+
+This is the idea behind space and open intervals.
+
+
+\end{explanation}
+
+\end{idea}
 
 
 
@@ -355,7 +379,7 @@ Let $r$ be a real number. \\
 Supposed $N$ is the ``next'' real number.  Then we have a problem, because the real number $\frac{r+N}{2}$ is between $r$ and $N$.  Therefore, $N$ cannot be the ``next'' real number.  There is no ``next'' real number. \\
 
 
-A consequance of this is that each open interval contains an infinite number of numbers. \\
+A consequence of this is that each open interval contains an infinite number of numbers. \\
 
 
 
@@ -369,11 +393,24 @@ A consequance of this is that each open interval contains an infinite number of 
 
 
 
+\textbf{\textcolor{red!70!black}{$\blacktriangleright$ Thinking Ahead}} \\
+
+
+Linear functions have the same rate of change over any interval. \\
+
+That is not quite true.  They have a constant rate of change over an interval of the form $[a, b]$, where $a \ne b$. \\
+
+As a mental exercise, if a linear funciton has the exact same rate of change over any interval $[a, b]$, then doesn't it feel like the linear function should have the same rate of change over the interval $[a, a]$? \\
+
+Just thinking.
+
+
+
 
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Visual Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/visualBehavior/examples/exampleList}
 
