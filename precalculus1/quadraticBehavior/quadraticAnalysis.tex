@@ -25,14 +25,14 @@ We want to know the
      \item \textbf{\textcolor{red!80!black}{Zeros}} 
      \item \textbf{\textcolor{red!80!black}{Continuity}} 
 \begin{itemize}
-     \item \textbf{\textcolor{red!80!black}{discontinuities}} 
-     \item \textbf{\textcolor{red!80!black}{singularities}} 
+     \item \textbf{\textcolor{purple!85!blue}{discontinuities}} 
+     \item \textbf{\textcolor{purple!85!blue}{singularities}} 
 \end{itemize}
      \item \textbf{\textcolor{red!80!black}{End-Behavior}} 
      \item \textbf{\textcolor{red!80!black}{Behavior}} 
 \begin{itemize}
-     \item \textbf{\textcolor{red!80!black}{intervals where increasing}} 
-     \item \textbf{\textcolor{red!80!black}{intervals where decreasing}} 
+     \item \textbf{\textcolor{purple!85!blue}{intervals where increasing}} 
+     \item \textbf{\textcolor{rpurple!85!blue}{intervals where decreasing}} 
 \end{itemize}
      \item \textbf{\textcolor{red!80!black}{Global Maximum and Minimum}} 
      \item \textbf{\textcolor{red!80!black}{Local Maximums and Minimums}} 
@@ -99,7 +99,7 @@ which we can separate into
 \[ t  =   \frac{-b}{2a} \pm \frac{\sqrt{b^2 - 4 a c}}{2a}      \]
 
 
-The $\pm$ shows that the zeros are symmetric about $\frac{-b}{2a}$, which means that the intercepts are symmetric about the vertical line $x = \frac{-b}{2a}$. \\
+The $\pm$ shows that the zeros are symmetric about $\frac{-b}{2a}$, which means that the intercepts are symmetric about the vertical line $t = \frac{-b}{2a}$. \\
 
 Intercepts are $\left(  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$ and $\left(  \frac{-b + \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$.
 
@@ -111,7 +111,7 @@ Intercepts are $\left(  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$ and $\lef
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
+                axis lines =center, xlabel=$t$, ylabel=$y$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 ticklabel style={font=\scriptsize},
@@ -209,7 +209,7 @@ We will want some mathematical notation for end-behavior.  \textbf{Limit notatio
 Let $g(t) = -2 \, t^2 + 7 \, t - 3$. \\
 
 
-The end-behavior will be describe as 
+The end-behavior will be described as 
 
 \[
 \lim\limits_{t \to -\infty} g(t) = -\infty
@@ -333,11 +333,11 @@ Our linear rate of change function now informs us about the behavior of $f$. \\
 
 \begin{conclusion}  \textbf{\textcolor{green!50!black}{Behavior}}
 
-$\blacktriangleright$ When the linear rate of change function is negative, $iRoC_f(x) < 0$, then $f(x)$ is decreasing. \\
+$\blacktriangleright$ When the instantaneous rate of change function is negative, $iRoC_f(x) < 0$, then $f(x)$ is decreasing. \\
 
-$\blacktriangleright$ When the linear rate of change function is positive, $iRoC_f(x) > 0$, then $f(x)$ is increasing. \\
+$\blacktriangleright$ When the instantaneous rate of change function is positive, $iRoC_f(x) > 0$, then $f(x)$ is increasing. \\
 
-$\blacktriangleright$ When the linear rate of change function is zero, $iRoC_f(x) = 0$, then $f(x)$ is neither increasing nor decreasing and the graph of $y = f(x)$ is flat. 
+$\blacktriangleright$ When the instantaneous rate of change function is zero, $iRoC_f(x) = 0$, then $f(x)$ is neither increasing nor decreasing and the graph of $y = f(x)$ is flat. 
 
 \end{conclusion}
 
@@ -358,7 +358,7 @@ Then $x_0$ is called a \textbf{critical number}.
 
 \textbf{Note: } Domain numbers where $iRoC_f$ doesn't exist are also places where a function's behavior can change drastically.
 
-\textbf{Note: } Singularities are not in the domain. However, the function's behavior can also change across singularities. (Quadratics don't have singularities.)
+\textbf{Note: } Singularities are not in the domain. However, a function's behavior can also change across singularities. (Quadratics don't have singularities.)
 
 
 \begin{procedure} \textbf{\textcolor{blue!75!black}{iRoC for Quadratic Functions in Vertex Form}} 
@@ -383,6 +383,7 @@ Then, $iRoC_Q(x) = 2 a (x - h)$. \\
 We have a procedure for obtaining the $iRoC$ of a quadratic function, when the formula is in vertex form (completed square form). \\
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} What about standard form? \\
+We can get standard form by multiplying out vertex form. \\
 
 
 
@@ -399,7 +400,7 @@ iRoC_Q(x) &= 2 a (x - h) \\
 \end{align*}
 
 
-
+Comparing this to standard form, $a \, x^2 + b \, x + c$, tells us that $-2ah = b$. \\
 
 
 \begin{procedure} \textbf{\textcolor{blue!75!black}{iRoC for Quadratic Functions in Standard Form}} 
@@ -413,7 +414,7 @@ Then $Q(x) = a \, x^2 + b \, x + c$, for some $a$, $b$, and $c$ with $a \ne 0$. 
 Then, $iRoC_Q(x) = 2 \, a \, x + b$. \\
 
 
-\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient, just the linear coefficent has remained, and the constant term as been removed. 
+\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient and just the linear coefficent remains. 
 
 
 
@@ -499,7 +500,7 @@ $\blacktriangleright$  \textbf{Vertex Form} \\
 
 The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula (vertex form).
 
-Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola would have opened downward and the extreme point would be at the top.
+Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola opens downward and the extreme point is at the top.
 
 \begin{image}
 \begin{tikzpicture}

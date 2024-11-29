@@ -120,7 +120,7 @@ $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Geometrically}}, this is
 \end{tikzpicture}
 \end{image}
 
-Intervals and secants are algebraic and geometric partners. Secants give a picture of rates of change over an interval.
+Intervals and secants are algebraic and geometric partners. Secants give a picture of rates of change over intervals.
 
 
 
@@ -183,7 +183,7 @@ You cannot calculate the rate of change over an interval with $0$ length.  \\
 
 Therefore, we are inventing an interpretation for the rate of change at a point. \\
 
-We are calling our invention the \textit{an instantaneous rate of change}.
+We are calling our invention the \textit{instantaneous rate of change}.
 
 
 \end{idea}
@@ -207,7 +207,7 @@ Suppose $a$ and $b$ are two distinct domain numbers of $f$.  Then the line throu
 Tangent lines are degenerate secants. Secant lines need two points on the graph of a function.  A tangent line is a secant line where the two points are the same point. Tangent lines are secant lines created from an interval of length $0$.  But tangent lines are still lines.  They still have a slope.
 
 
-If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
 
 
 We are calling this slope of the tangent line the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change}} at the domain number corresponding to the tangent point.
@@ -328,10 +328,11 @@ Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0)
 
 $Q_{new}(x)$ is a quadratic function and $Q_{new}(x_0) = Q(x_0) - T(x_0) = y_0 - y_0 = 0$. \\
 
-We can also see from the graph above that $Q(x) > T(x)$ when $x \ne x_0$, which means $Q_{new}(x) \geq 0$\\
+
+We can also see from the graph above that $Q(x) \geq T(x)$, which means $Q_{new}(x) \geq 0$\\
 
 
-So, its graph is a parabola with vertex, $(x_0, 0)$, on the $x$-axis.  The graph of $y = Q(x)$ has slide to the left a distance of $x_0$.  \\
+So, the graph of $Q_{new}(x)$ is a parabola with vertex, $(x_0, 0)$, on the $x$-axis.  The graph of $y = Q(x)$ has slid to the left a distance of $x_0$.  \\
 
 
 Therefore, the vertex form of $Q_{new}(x)$ is $Q_{new}(x) = (x - x_0)^2 = (x - x_0)(x - x_0)$  \\
@@ -342,16 +343,36 @@ Therefore, the vertex form of $Q_{new}(x)$ is $Q_{new}(x) = (x - x_0)^2 = (x - x
 
 
 \[
-Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0) = (x - x_0)^2
+Q_{new}(x) = Q(x) - T(x) = x^2 - (m \, (x - x_0) + y_0) 
 \]
 
 
+
+On the other hand,
 
 
 \[
-x^2 - (m(x - x_0) + y_0) = (x - x_0)^2 = x^2 - 2 x_0 \, x + x_0^2
+Q_{new}(x) = (x - x_0)^2
 \]
 
+
+
+Therefore, we have
+
+\[
+x^2 - (m \, (x - x_0) + y_0) =  (x - x_0)^2
+\]
+
+
+or
+
+
+\[
+x^2 - (m \, (x - x_0) + y_0) =  x^2 - 2 x_0 \, x + x_0^2
+\]
+
+
+or
 
 
 \[
@@ -389,6 +410,8 @@ This for any point on the parabola. \\
 
 What about other parabolas, besides the basic parabola? \\
 
+All parabolas can be obtained from the basic parabola by stretching and shifting. \\
+
 
 
 
@@ -419,7 +442,7 @@ What about other parabolas, besides the basic parabola? \\
 
 
 
-We can vertically stretch our basic quadratic parabola by multiplying all of the $y$-coordinates by a constant, $a \ne 0$. \\
+We can vertically stretch our basic quadratic parabola by multiplying all of the $y$-coordinates by a nonzero constant, $a \ne 0$. \\
 
 
 The new parabola has an equation of the form $y = a \, x^2$. \\
@@ -447,7 +470,7 @@ To get the exact value of $m$, we are going to create a new quadratic function.
 
 
 \[
-Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m(x - x_0) + y_0)
+Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m \, (x - x_0) + y_0)
 \]
 
 
@@ -468,20 +491,20 @@ Therefore, the vertex form of $Q_{new}(x)$ is $Q_{new}(x) = a \, (x - x_0)^2 = (
 
 
 \[
-Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m(x - x_0) + y_0) = a \, (x - x_0)^2
+Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m \, (x - x_0) + y_0) = a \, (x - x_0)^2
 \]
 
 
 
 
 \[
-a \, x^2 - (m(x - x_0) + y_0) = a \, (x - x_0)^2 = a \, x^2 - 2a \, x_0 x + a \, x_0^2
+a \, x^2 - (m \, (x - x_0) + y_0) = a \, (x - x_0)^2 = a \, x^2 - 2 \, a \, x_0 x + a \, x_0^2
 \]
 
 
 
 \[
- -m \, x + m \, x_0 - y_0 =   - 2a \, x_0 \, x + a \, x_0^2
+ -m \, x + m \, x_0 - y_0 =   - 2 \, a \, x_0 \, x + a \, x_0^2
 \]
 
 
@@ -548,7 +571,10 @@ Beginning with $Q(x) = a \, x^2$ and its parabola $y = a \, x^2$, we can shift h
 
 
 
-If we keep the shape of the parabola, $y = a \, x^2$, intact and shift its position, then the new parabola has an equation of the form $y = a \, (x - h)^2 + k$.
+Shifting keeps the shape of the parabola, $y = a \, x^2$, intact. \\
+
+
+The new shifted parabola has an equation of the form $y = a \, (x - h)^2 + k$.
 
 These are graphs of quadratic functions of the form $Q_{new}(x) = a \, (x - h)^2 + k$. \\
 
@@ -582,6 +608,8 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 Every parabola can be described by an equation of the form $y = a \, (x - h)^2 + k$. \\
 
 Our slope of tangent line idea can be applied to every parabola. \\
+
+We have covered every parabola. \\
 
 
 
@@ -623,7 +651,13 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 
 
 
-\textbf{Note:} If we look at the vertex of the parabola $(x_0, y_0) = (h, k)$, then $2 a (x_0 - h) = 2 a (h - h) = 0$ and the slope of the tangent line is $0$, just like we had reasoned before.
+\textbf{Note:} If we look at the vertex of the parabola $(x_0, y_0) = (h, k)$, then $2 a (x_0 - h) = 2 a (h - h) = 0$ and the slope of the tangent line is $0$, just like we had reasoned before. \\
+
+
+
+
+
+
 
 
 
@@ -646,6 +680,10 @@ Each tangent line has a slope, which we are calling the instantaneous rate of ch
 
 
 Given a quadratic function, $Q(x) = a (x - h)^2 + k$, we define \textbf{the instantaneous rate of change of Q} to be the slope of the tangent line on the graph of $y = Q(x)$ at the point $(x, y)$.
+
+
+The function $iRoC_Q(x)$ is defined to equal the slope of the tangent line at the point $(x, y)$.
+
 
 $iRoC_Q(x)$ is a linear function given by 
 
@@ -702,7 +740,7 @@ We will use both names.  This will keep the idea fresh in our heads and also giv
 
 
 
-\begin{notation} \textbf{\textcolor{blue!55!black}{Language}} 
+\begin{notation} \textbf{\textcolor{red!70!black}{A Peek Ahead}}
 
 
 We are beginning our investigation of function analysis at the beginning.  Our formulas have one variable.  But, later, in Calculus, it may not be so clear on what the variable is or what the function is. \\
