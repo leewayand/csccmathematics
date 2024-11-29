@@ -13,7 +13,7 @@ characteristics and features
 
 
 
-Piecewise functions are defined by using pieces of other functions. Since we are now familiar with linear and quadratic functions, let's build the piecewise function, $V(h)$, from their pieces.
+Piecewise functions are defined by using pieces of other functions. Since we are now familiar with linear and quadratic functions, let's build a piecewise function, from linear and quadratic pieces. \\
 
 
 
@@ -21,9 +21,9 @@ Piecewise functions are defined by using pieces of other functions. Since we are
 \[
 V(h) = 
 \begin{cases}
-  -2h-3 & \text{ if } [-6, -2]   \\
-  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
-  \frac{7h}{4} - 8 & \text{ if } (4,6)
+  -2h-3 & \text{ on } [-6, -2]   \\
+  -(h+3)(h-3) & \text{ on } (-2, 4]  \\
+  \frac{7h}{4} - 8 & \text{ on } (4,6)
 \end{cases}
 \]
 
@@ -90,17 +90,17 @@ A graph always helps our thinking. Here is the graph of $y = V(h)$.
 
 
 
-\subsection{Domain} 
+\subsection*{Domain} 
 
 From the definition of $V(h)$, we can see the domain is $[-6, -2] \cup (-2, 4] \cup (4,6) = [-6, 6)$.
 
 
 
-\subsection{Zeros} 
+\subsection*{Zeros} 
 
 We can see from the graph that usually the component pieces of $V$ would total four intercepts and zeros. One each from the linear pieces and two from the quadratic piece.  However, the domain restrictions only admit two of them.  The greater zero from the quadratic piece and the zero from the right linear function. These are both represented by intercepts on the graph.
 
-The left line would have an intercept, except the domain does not allow it.  The middle parabola has a left intercept, except the domain does allow it. 
+The left line would have an intercept, except the domain does not allow it for $V$.  The middle parabola has a left intercept, except the domain does allow it for $V$. 
 
 From the graph, we might estimate our two zeros to be around $3$ and $4.5$.  What are the exact values?
 
@@ -139,7 +139,245 @@ We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V
 
 
 
-\subsection{Increasing and Decreasing} 
+
+
+
+
+
+
+\subsection*{Continuity} 
+
+
+Linear and quadratic functions are continuous functions. They are continous on restricted domains, which is what we have with piecewise defined functions.  $V(h)$ is continuous on $[-6, -2]$, $(-2, 4]$, and $(4, 6)$.  These correspond to the intervals in the definition of $V(h)$. \\
+
+Therefore, we only need to check the endpoints of the intervals.  Here, those endpoints would be $\{ -6, -2, 4, 6 \}$.
+
+
+
+\begin{observation} 
+From the graph, we can see that 
+
+\begin{itemize}
+\item $-6$ is an included endpoint.  
+\item there is a jump discontinuity at $-2$.
+\item there is a jump discontinuity at $4$.
+\item $6$ is not in the domain. It is an excluded endpoint.
+\end{itemize}
+
+
+
+\end{observation}
+
+
+This will help our algebraic explanations. \\
+
+
+The graph is suggesting that $-2$ and $4$ are discontinuities.  We have an algebraic definition for discontinuities.  Let's see if these domain numbers satisfy the definition. \\
+
+
+
+
+
+
+\begin{explanation} Discontinuity at $-2$
+
+
+Let $\epsilon > 0$ be any very small positive number.  Consider the corresponding interval, $(-2 - \epsilon, -2 + \epsilon)$.
+
+\begin{itemize}
+\item On $(-2 - \epsilon, -2)$, the values of $V$ are near $1$. \\
+
+\begin{itemize}
+  \item This is because $V$ is a linear function on $[-6, -2]$.
+  \item $V$ is decreasing on $[-6, -2]$, because its formula has a negative leading coeffcient.
+\end{itemize}
+
+$V(h)$ is decreasing on $[-6, -2]$. \\
+Which means $V(-6) >= V(a) >= V(b) >= V(-2)$ for all $a < b \in [-6, -2]$ \\
+
+Let's select $a = -2 - \epsilon$ and $b = -2$. \\
+
+\[
+V(-2 - \epsilon) = -2 (-2 - \epsilon) - 3 = 4 + 2 \epsilon - 3 = 1 + 2 \epsilon 
+\]
+
+\[
+V(-2) = 1
+\]
+
+
+Remember, $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure $1 + 2 \epsilon < 2$. \\
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) <= 1$.
+
+Now for the other side. \\
+
+
+
+\item On $(-2, -2 + \epsilon)$, the values of $V$ are not near $2$.  They are around $7$. Let's verify this algebraically. \\
+
+
+
+On this interval, $V(h) = 9 - h^2$. It is a quadratic function.  And, from the graph, it looks like $V \approx 7$ on this interval. How do we say this algebraically?  \\
+
+
+Let's think for a moment.  If $V(h) = 9 - h^2$ was going to be near $2$, then we would need $h \approx -\sqrt{7}$.  But, $-\sqrt{7} \notin (-2, -2 + \epsilon)$.  \\
+
+\textbf{Note:} $h \approx \sqrt{7}$ would also make $V$ near $2$, but $\sqrt{7} \notin (-2, -2 + \epsilon)$, since the interval only contains negative numbers.\\
+
+Let's glue this all together with algebraic and function reasoning. \\
+
+
+
+
+
+\begin{itemize}
+  \item $V$ is a quadratic function on $(-2, -1]$.
+  \item The critical number of $V$ is the average of the two roots, $\frac{-3+3}{2} = 0$.
+  \item $V$ is increasing on $(-2, -1]$, because its formula has a negative leading coeffcient and we are considering numbers less than $0$.
+\end{itemize}
+
+$V(h)$ is increasing on $(-2, -1]$. \\
+Which means $V(a) <= V(b) <= V(-1)$ for all $a < b \in (-2, -1]$ \\
+
+Let's select $a = -2 + \epsilon$ and $b = -1$. \\
+
+\[
+V(-2 + \epsilon) = -(-2 + \epsilon + 3) (-2 + \epsilon - 3) = -(1 + \epsilon) (-5 + \epsilon) = (1 + \epsilon) (5 - \epsilon)
+\]
+
+\[
+V(-1) = 8
+\]
+
+
+Remember, $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure  \\
+
+
+\[
+1 + \epsilon >= 1
+\]
+
+\[
+5 -  \epsilon >= 5 -  \frac{1}{2} = \frac{9}{2}
+\]
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2, -2 + \epsilon)$, we have
+
+
+\[
+V(h) >= 1 \cdot \frac{9}{2} = \frac{9}{2}
+\]
+
+
+
+On $(-2, -2 + \epsilon)$, we have $V(h) >=  \frac{9}{2}$.
+
+
+
+
+\end{itemize}
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) <= 1$. \\
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} On $(-2, -2 + \epsilon)$, we have $V(h) >=  \frac{9}{2}$. \\
+
+
+
+
+Following the definition of discontinuity, let's pick a distance of $1$.
+
+
+No matter how small $\epsilon$ is, $(-2 - \epsilon, -2 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains a domain number, $a \in (-2, -2 + \epsilon)$, such that the distance between $V(a)$ and $V(-2)$ is greater than $1$.
+
+This tells us that there is a discontinuity at $-2$.
+
+\end{explanation}
+
+
+
+
+
+
+
+
+\begin{idea}
+
+
+We are trying to get away from specific numbers. \\
+
+We are trying to think of types of numbers. \\
+
+We are trying to think of ``types'' as algebraic conditions or relationships. \\
+
+
+This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$.  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird.
+
+
+
+\end{idea}
+
+
+
+
+
+
+
+
+
+\begin{explanation} Discontinuity at $4$
+
+
+Let $\epsilon > 0$ be a small positive number.  Consider the corresponding interval, $(4 - \epsilon, 4 + \epsilon)$.
+
+\begin{itemize}
+\item On $(4 - \epsilon, 4)$, the values of $V$ are less than $-6$.
+\item On $(4, 4 + \epsilon)$, the values of $V$ are greater than $-2$.
+\end{itemize}
+
+
+Following the definition of discontinuity, let's pick a distance of $1$.
+
+
+No matter how small $\epsilon$ is, $(4 - \epsilon, 4 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains (at least) one domain number, $a \in (4, 4 + \epsilon)$, such that the distance between $V(a)$ and $V(4)$ is greater than $1$.
+
+This tells us that there is a discontinuity at $4$.
+
+\end{explanation}
+
+
+
+
+\begin{notation}
+
+
+Graphs are inherently inaccurate.  We cannot be exact with them.  They hide stuff all of the time. We need better ways, algebraic ways, of talking about types of discontinuities: ``jump'', ``removeable'', and ``asymptotic''.
+
+Our algebraic notation to talk about function behavior around discontinuities and singularities will be called \textbf{\textcolor{purple!85!blue}{limits}}.  Limits have already made an appearance helping us describe end-behavior, algebraically.
+\end{notation}
+
+
+
+
+
+
+
+
+
+
+\subsection*{End-Behavior} 
+
+
+
+
+
+\subsection*{Behavior : Increasing and Decreasing} 
 
 
 
@@ -187,7 +425,7 @@ The intervals where $V$ is monotonic are
 
 
 
-\subsection{Extreme Values} 
+\subsection*{Extreme Values} 
 
 
 We have three pieces to our function and the graph will help our algebra. We'll gather information about the pieces indiviudally and then combine them for $V$.
@@ -246,7 +484,7 @@ Consider the open interval $(2 - 0.1, 2 + 0.1)$. $V$ is a decreasing function on
 
 
 
-\subsection{Critical Numbers} 
+\subsection*{Critical Numbers} 
 
 
 $\blacktriangleright$ We know that the instantaneous rate of change of the middle quadratic is $iRoC_V(h) = -2h$ 
@@ -283,7 +521,7 @@ These are exactly the places we have been investigating for possible maximums an
 
 
 
-\subsection{Range} 
+\subsection*{Range} 
 
 
 Since each piece of $V$ is continuous, the ranges of the three pieces of $V$ are $[1, 9]$, $[-7, 9]$, and $\left( -1, \frac{2}{5} \right)$. \\
@@ -299,143 +537,14 @@ The range of $V$ is their union.
 
 
 
-\subsection{Continuity} 
 
 
-Linear and quadratic functions are continuous functions.  $V(h)$ is continuous on $[-6, -2]$, $(-2, 4]$, and $(4, 6)$.  These correspond to the intervals in the definition of $V(h)$, because there were no isolated points. \\
 
-Therefore, we only need to check the endpoints of maximal intervals.  Here, those would be $\{ -6, -2, 4, 6 \}$.
 
 
 
-\begin{observation} 
-From the graph, we can see that 
 
-\begin{itemize}
-\item $-6$ is an included endpoint of a maximal interval.  
-\item there is a jump discontinuity at $-2$.
-\item there is a jump discontinuity at $4$.
-\item $6$ is not in the domain.
-\end{itemize}
-
-
-
-\end{observation}
-
-
-This will help our algebraic explanations. \\
-
-
-
-
-
-
-
-
-
-\begin{explanation} Discontinuity at $-2$
-
-
-Let $\epsilon > 0$ be a small positive number.  Consider the corresponding interval, $(-2 - \epsilon, -2 + \epsilon)$.
-
-\begin{itemize}
-\item On $(-2 - \epsilon, -2)$, the values of $V$ are greater than $1$, since $V$ is decreasing here.
-\item On $(-2, -2 + \epsilon)$, the values of $V$ are greater than $2$.  Let's verify this.
-
-
-
-We have $V(h) = 9 - h^2$. \\
-
-For $V < 2$, we would need $h < -\sqrt{7}$ or $h > \sqrt{7}$.  Neither of these is true, since $h \in (-2 - \epsilon, -2 + \epsilon)$
-
-
-\begin{idea}
-
-How come $-\sqrt{7} \notin (-2 - \epsilon, -2 + \epsilon)$? \\
-
-
-$\sqrt{7} \approx 2.64575$, which is only $0.64575$ away from $2$. That seems pretty small. \\
-
-
-\textbf{\textcolor{red!80!black}{Nope!}} \\
-
-
-$\epsilon$ is a veeeeeeeeeeery smaaaaaaaaaaaaaaall postive number.  $0.64575$ is HUGE compared to $\epsilon$. \\
-
-
-This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$.  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird.
-
-
-
-
-
-
-
-\end{idea}
-
-
-\end{itemize}
-
-
-
-Following the definition of discontinuity, let's pick a distance of $1$.
-
-
-No matter how small $\epsilon$ is, $(-2 - \epsilon, -2 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains a domain number, $a \in (-2, -2 + \epsilon)$, such that the distance between $V(a)$ and $V(-2)$ is greater than $1$.
-
-This tells us that there is a discontinuity at $-2$.
-
-\end{explanation}
-
-
-
-
-
-\begin{explanation} Discontinuity at $4$
-
-
-Let $\epsilon > 0$ be a small positive number.  Consider the corresponding interval, $(4 - \epsilon, 4 + \epsilon)$.
-
-\begin{itemize}
-\item On $(4 - \epsilon, 4)$, the values of $V$ are less than $-6$.
-\item On $(4, 4 + \epsilon)$, the values of $V$ are greater than $-2$.
-\end{itemize}
-
-
-Following the definition of discontinuity, let's pick a distance of $1$.
-
-
-No matter how small $\epsilon$ is, $(4 - \epsilon, 4 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains (at least) one domain number, $a \in (4, 4 + \epsilon)$, such that the distance between $V(a)$ and $V(4)$ is greater than $1$.
-
-This tells us that there is a discontinuity at $4$.
-
-\end{explanation}
-
-
-
-
-\begin{notation}
-
-
-Graphs are inherently inaccurate.  We cannot be exact with them.  They hide stuff all of the time. We need better ways, algebraic ways, of talking about types of discontinuities: ``jump'', ``removeable'', and ``asymptotic''.
-
-Our algebraic notation to talk about function behavior around discontinuities and singularities will be called \textbf{\textcolor{purple!85!blue}{limits}}.  Limits have already made an appearance helping us describe end-behavior, algebraically.
-\end{notation}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{Extrema}
+\subsection*{Extrema}
 
 
 The extreme values of a function are the maximum and minimum values.  There are two types of each. \\
@@ -610,7 +719,7 @@ We can sum up this ideas as follow: \\
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Piecewise-Defined Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/piecewiseAnalysis/examples/exampleList}
 
