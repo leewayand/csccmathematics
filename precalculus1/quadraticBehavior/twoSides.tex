@@ -273,9 +273,6 @@ Here are the secant lines through the tangent point and the approaching points $
 
 
 
-
-
-
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
@@ -297,16 +294,16 @@ Here are the secant lines through the tangent point and the approaching points $
        
 
 
-        %\addplot [draw=penColor4, very thick, smooth, domain=(2:5)] {(x-4)-3};
+        \addplot [draw=penColor4, very thick, smooth, domain=(2:5)] {(x-4)-3};
         %\addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.3*(x-4)-3};
-        \addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.7*(x-4)-3};
+        %\addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.7*(x-4)-3};
 
-        \addplot [draw=penColor5, very thick, smooth, domain=(3:5.5)] {2.3*(x-4)-3};
+        %\addplot [draw=penColor5, very thick, smooth, domain=(3:5.5)] {2.3*(x-4)-3};
         %\addplot [draw=penColor5, very thick, smooth, domain=(3:8)] {2.7*(x-4)-3};
-        %\addplot [draw=penColor5, very thick, smooth, domain=(1:8)] {3*(x-4)-3};
+        \addplot [draw=penColor5, very thick, smooth, domain=(1:8)] {3*(x-4)-3};
 
 
-        %\addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+        \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
 
 
 
@@ -315,6 +312,8 @@ Here are the secant lines through the tangent point and the approaching points $
     \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
 
 
 
@@ -353,7 +352,7 @@ Here are the secant lines through the tangent point and the approaching points $
         %\addplot [draw=penColor5, very thick, smooth, domain=(1:8)] {3*(x-4)-3};
 
 
-        %\addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+        \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
 
 
 
@@ -362,6 +361,7 @@ Here are the secant lines through the tangent point and the approaching points $
     \end{axis}
 \end{tikzpicture}
 \end{image}
+
 
 
 
@@ -393,16 +393,16 @@ Here are the secant lines through the tangent point and the approaching points $
        
 
 
-        \addplot [draw=penColor4, very thick, smooth, domain=(2:5)] {(x-4)-3};
+        %\addplot [draw=penColor4, very thick, smooth, domain=(2:5)] {(x-4)-3};
         %\addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.3*(x-4)-3};
-        %\addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.7*(x-4)-3};
+        \addplot [draw=penColor4, very thick, smooth, domain=(1:5)] {1.7*(x-4)-3};
 
-        %\addplot [draw=penColor5, very thick, smooth, domain=(3:5.5)] {2.3*(x-4)-3};
+        \addplot [draw=penColor5, very thick, smooth, domain=(3:5.5)] {2.3*(x-4)-3};
         %\addplot [draw=penColor5, very thick, smooth, domain=(3:8)] {2.7*(x-4)-3};
-        \addplot [draw=penColor5, very thick, smooth, domain=(1:8)] {3*(x-4)-3};
+        %\addplot [draw=penColor5, very thick, smooth, domain=(1:8)] {3*(x-4)-3};
 
 
-        %\addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
+        \addplot [draw=penColor2, very thick, smooth, domain=(3:8),<->] {2*(x-4)-3};
 
 
 
@@ -496,7 +496,7 @@ Here is the graph of the function $f(x) = | x - 3 | - 4$ and the point $(3, f(3)
 \end{tikzpicture}
 \end{image}
 
-An absolute value ``Vee'' and its corner point. \\
+An absolute value ``Vee'' and its corner point as teh tangent point. \\
 
 
 \textbf{First}, the points on the graph are approaching the point on both sides.  There is no break in the curve. $f$ is continuous at $3$.\\
@@ -567,7 +567,7 @@ The secant lines on the left smootly turn into a line as you move to the right. 
 \textbf{\textcolor{blue!55!black}{BUT!  They are NOT the same line!}}\\
 
 
-There is no common line that the secand lines are approaching. \\
+There is no common line that the secant lines are approaching, on both sides. \\
 
 There is no tangent line at the pont $(3,-4)$. \\
 
@@ -613,7 +613,7 @@ $3$ is a number in the domain, but $f'(3)$ does not exist. \\
 
 
 
-\section*{Two Sides : Points Agree and Secants Agree, but No Slope}
+\subsection*{Two Sides : Points Agree and Secants Agree, but No Slope}
 
 
 Suppose our tangent point is $(t_0 , f(t_0))$ and $t_0$ is inside an open interval in the domain, $t_0 \in (a, b) \subset Domain$. \\
@@ -824,7 +824,7 @@ $2$ is a number in the domain, but $f'(2)$ does not exist. \\
 
 
 
-\section*{Two Sides : Points Disagree and Secants Disagree}
+\subsection*{Two Sides : Points Disagree and Secants Disagree}
 
 
 

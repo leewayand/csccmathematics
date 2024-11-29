@@ -32,7 +32,11 @@ This is possible even at an endpoint on a graph.
 
 
 
+\subsection*{Endpoints}
 
+
+
+It this case, we have a restricted domain for our function, which gives us a graph with an endpoint. \\
 
 
 
@@ -67,7 +71,9 @@ This is possible even at an endpoint on a graph.
 \end{image}
 
 
-This point $(4, -3)$ is an endpoint on the graph, in which case there might be a line that models one side of the graph. \\
+This point $(4, -3)$ is an endpoint on the graph.\\
+
+HOwever, there still might be a line that models one side of the graph. \\
 
 A tangent line, well, a one-sided tangent line. \\
 
@@ -216,25 +222,29 @@ Suppose we have a really nice situation.
 
 \begin{itemize}
 \item We have a function, $f$, 
-\item We have and a domain number, $t_0$, 
+\item We have a domain number, $t_0$, 
 \item This domain number is inside an open interval inside the domain.  $t_0 \in (a, b) \subset Domain$. 
-\item The tangent lines on both sides of $(t_0, f(t_0))$ are smootlhy approach the same line from both sides.
+\item The secant lines on both sides of $(t_0, f(t_0))$ are smoothly approaching the same line from both sides.
 \end{itemize}
 
-Then, there is a tangent line to the graph of $f$ and the tangent lines on both sides are smootly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
+Then, there is a tangent line to the graph of $f$ and the secant lines on both sides are smoothly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
 
 The slope of this tangent line is the value of the \textbf{derivative} of $f$ at $t_0$.
 
 \[
-iRoC(t) =f'(t) = \text{slope of tangent line}
+iRoC(t_0) =f'(t_0) = \text{slope of tangent line}
 \]
 
 
-On the other hand, if the tangent lines and both sides are not smoothly agreeing, then there is no tangent line at $(t_0, f(t_0))$ and the derivative does not exist at $t_0$.   
+\begin{itemize}
+  \item If the tangent line doesn't have a slope, then the derivative has no value there. The derivative does not exist at $t_0$.
+
+  \item If the secant lines on both sides are not smoothly agreeing, then there is no tangent line at $(t_0, f(t_0))$ and the derivative does not exist at $t_0$.   
+\end{itemize}
 
 \end{definition}
 
-\textbf{Note}: The term `derivative" implies a two-sided derivative.  Otherwise, we would say `right' or `left'. \\
+\textbf{Note}: The term ``derivative" implies a two-sided derivative.  Otherwise, we would say `right' or `left'. \\
 
 
 
@@ -286,10 +296,10 @@ Suppose we have a really nice one-sided situation.
 \item We have a function, $f$, 
 \item We have and a domain number, $t_0$, 
 \item This domain number is inside an interval (half open) inside the domain of the form  $t_0 \in (a, t_0] \subset Domain$. 
-\item The tangent lines on the left side of $(t_0, f(t_0))$ are smootlhy approach the same line.
+\item The secant lines on the left side of $(t_0, f(t_0))$ are smootlhy approaching the same line.
 \end{itemize}
 
-Then, there is a tangent line to the graph of $f$ and the tangent lines on the left side are smootly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
+Then, there is a tangent line to the graph of $f$ and the secant lines on the left side are smoothly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
 
 The slope of this tangent line is the value of the \textbf{left derivative of $f$ at $t_0$}. \\
 
@@ -319,10 +329,10 @@ Suppose we have a really nice one-sided situation.
 \item We have a function, $f$, 
 \item We have and a domain number, $t_0$, 
 \item This domain number is inside an interval (half open) inside the domain of the form  $t \in [t_0, b) \subset Domain$. 
-\item The tangent lines on the right side of $(t_0, f(t_0))$ are smootlhy approach the same line.
+\item The secant lines on the right side of $(t_0, f(t_0))$ are smoothly approaching the same line.
 \end{itemize}
 
-Then, there is a tangent line to the graph of $f$ and the tangent lines on the right side are smootly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
+Then, there is a tangent line to the graph of $f$ and the secant lines on the right side are smoothly turning into this tangent line at the tangent point $(t_0, f(t_0))$. \\
 
 The slope of this tangent line is the value of the \textbf{right derivative of $f$ at $t_0$}.
 
@@ -346,7 +356,7 @@ The right derivative is symbolized with a subscript of ``+'' with the derivative
 
 
 
-\section*{No Side}
+\subsection*{No Side}
 
 
 If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there. \\
