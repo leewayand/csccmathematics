@@ -169,7 +169,7 @@ From the graph, we can see that
 \end{observation}
 
 
-This will help our algebraic explanations. \\
+This will help direct our algebraic explanations. \\
 
 
 The graph is suggesting that $-2$ and $4$ are discontinuities.  We have an algebraic definition for discontinuities.  Let's see if these domain numbers satisfy the definition. \\
@@ -209,7 +209,7 @@ V(-2) = 1
 Remember, $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure $1 + 2 \epsilon < 2$. \\
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) <= 1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) >= 1$.
 
 Now for the other side. \\
 
@@ -222,7 +222,9 @@ Now for the other side. \\
 On this interval, $V(h) = 9 - h^2$. It is a quadratic function.  And, from the graph, it looks like $V \approx 7$ on this interval. How do we say this algebraically?  \\
 
 
-Let's think for a moment.  If $V(h) = 9 - h^2$ was going to be near $2$, then we would need $h \approx -\sqrt{7}$.  But, $-\sqrt{7} \notin (-2, -2 + \epsilon)$.  \\
+Let's think for a moment.  If $V(h) = -(h + 3)(h - 3) = 9 - h^2$ was going to be near $2$, then we would need $h \approx -\sqrt{7}$.  \\
+
+But, $-\sqrt{7} \notin (-2, -2 + \epsilon)$, since $-\sqrt{7} < -2$.  \\
 
 \textbf{Note:} $h \approx \sqrt{7}$ would also make $V$ near $2$, but $\sqrt{7} \notin (-2, -2 + \epsilon)$, since the interval only contains negative numbers.\\
 
@@ -233,8 +235,11 @@ Let's glue this all together with algebraic and function reasoning. \\
 
 
 \begin{itemize}
-  \item $V$ is a quadratic function on $(-2, -1]$.
-  \item The critical number of $V$ is the average of the two roots, $\frac{-3+3}{2} = 0$.
+  \item $V$ is a quadratic function on $(-2, -1]$. 
+  \[
+V(h) = -(h + 3)(h - 3) = -h^2 -9
+  \]
+  \item The critical number of $V$ is $\frac{-b}{2a} = \frac{0}{-2} = 0$.
   \item $V$ is increasing on $(-2, -1]$, because its formula has a negative leading coeffcient and we are considering numbers less than $0$.
 \end{itemize}
 
@@ -284,7 +289,7 @@ On $(-2, -2 + \epsilon)$, we have $V(h) >=  \frac{9}{2}$.
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) <= 1$. \\
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) >= 1$. \\
 
 \textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} On $(-2, -2 + \epsilon)$, we have $V(h) >=  \frac{9}{2}$. \\
 
@@ -317,9 +322,22 @@ We are trying to think of types of numbers. \\
 We are trying to think of ``types'' as algebraic conditions or relationships. \\
 
 
-This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$.  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird.
+This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$.  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird. \\
 
 
+But, we need better language and notation to talk about discontiuities. \\
+
+It is coming. \\
+
+Limits will replace a lot of this kind of explanation. \\
+
+Instead of talking about $\epsilon$, we will use limit notation to talk about expected values. \\
+
+\[
+\lim\limits_{h \to -2^+} V(h) = 7
+\]
+
+FOr now, we are figuring out how to talk about ``small'' numbers. \\
 
 \end{idea}
 
@@ -374,6 +392,15 @@ Our algebraic notation to talk about function behavior around discontinuities an
 \subsection*{End-Behavior} 
 
 
+End-behavior describes what the funciton is doing out in the ``tails'' of the domain.  But, here, the domain of $V$ is bounded.  There are no tails. \\
+
+$V$ has no end-behavior. \\
+
+
+
+
+
+
 
 
 
@@ -408,7 +435,7 @@ This agrees with the graph.
 \textbf{Technically:} $V$ is increasing on $[4, 6)$, since the dot at $4$ is lower than the left side of the included line segment.
 
 
-The intervals where $V$ is monotonic are
+The intervals where $V$ is monotonic (always increasing or always decreasing) are
 
 \begin{itemize}
 \item $V$ is decreasing on $[-6,-2]$.
@@ -428,7 +455,7 @@ The intervals where $V$ is monotonic are
 \subsection*{Extreme Values} 
 
 
-We have three pieces to our function and the graph will help our algebra. We'll gather information about the pieces indiviudally and then combine them for $V$.
+We have three pieces to our function and the graph will help our algebra. We'll gather information about the pieces individually and then combine them for $V$.
 
 \begin{itemize}
   \item \textbf{$-2h-3$} is a decreasing linear function on $[-6, -2]$.  Its maximum would occur at the left endpoint, which is included. Therefore, the maximum is $-2(-6)-3 = 9$. Its minimum would be at the right endpoint, which is included. Therefore, the minimum is $-2(-2)-3 = 1$.
@@ -453,7 +480,7 @@ And, we can look at the instantaneous rate of change. The middle piece of $V$ is
 Lastly, \\
 
 
-  \item \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $[4, 6)$.  Its maximum would be encoded in the right endpoint, which is excluded. Its minimum would be encoded in the left endpoint, which is also excluded. This piece is contributing no extreme values to $V$.
+  \item \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $(4, 6)$.  Its maximum would be encoded in the right endpoint, which is excluded. Its minimum would be encoded in the left endpoint, which is also excluded. This piece is contributing no extreme values to $V$.
 \end{itemize}
 
 
@@ -468,7 +495,7 @@ Each of these global extrema are also local extrema.  In addition we have $1$, w
 \begin{explanation} Local Minimum
 
 
-Consider the open interval $(2 - 0.1, 2 + 0.1)$. $V$ is a decreasing function on $(2 - 0.1, 2)$. $V$ is an increasing function on $(2, 2 + 0.1)$.  This tells us that $V(2)$ is a minimum value on this neighborhood of $2$.  Thus, $V(2)=1$ is a local minimum of $V$.
+Consider the open interval $(-2 - 0.1, -2 + 0.1)$. $V$ is a decreasing function on $(-2 - 0.1, -2]$. $V$ is an increasing function on $[-2, -2 + 0.1)$.  This tells us that $V(-2)$ is a minimum value on this neighborhood of $-2$.  Thus, $V(-2) = 1$ is a local minimum of $V$.
 
 
 
@@ -507,8 +534,10 @@ The set of critical numbers is $\{ -2, 0, 4 \}$.
 
 
 
-This doesn't include all of the places where we were investigating for extreme values. We also looked at $-6$.  There is a tangent line at $(-6, 9)$, which means $-6$ is not a critical number. Instead, $-6$ is an endpoint of a maximal interval of the domain. That automatically makes $-6$ a candidate for the location of an extreme value of $V$.
+This doesn't include all of the places where we were investigating for extreme values. We also looked at $-6$.  There is a tangent line at $(-6, 9)$, which means $-6$ is not a critical number. Instead, $-6$ is an endpoint of a maximal interval of the domain. That automatically makes $-6$ a candidate for the location of an extreme value of $V$. \\
 
+
+This also includes $-6$, becasue it is an endpoint of the domain. \\
 
 
 
@@ -544,12 +573,12 @@ The range of $V$ is their union.
 
 
 
-\subsection*{Extrema}
+\section*{Extrema : More Generally}
 
 
 The extreme values of a function are the maximum and minimum values.  There are two types of each. \\
 
-The global maximum and mimnium values are the overall greatest and least values of the function.  There can be at most one global maximum value (there might not be an actual global maximum value). There can be at most one global minimum value (there might not be an actual global minimum value).  These two values can occur at many domain numbers.\\
+The global maximum and minimum values are the overall greatest and least values of the function.  There can be at most one global maximum value (there might not be an actual global maximum value). There can be at most one global minimum value (there might not be an actual global minimum value).  These two values can occur at many domain numbers.\\
 
 
 Local maximum and minimum values are greatest and least values that occur in a ``neighborhood'' of a domain number.  There can be many local extrema values that occur at many domain numbers. \\
@@ -559,13 +588,14 @@ Local maximum and minimum values are greatest and least values that occur in a `
 \item Graphically, global maximum values are visually encoded as the highest point on the graph.
 \item Graphically, global minimum values are visually encoded as the lowest point on the graph.
 \item Graphically, local maximum values are visually encoded as the tops of hill on the graph.
-\item Graphically, global minimum values are visually encoded as the bottoms of valleys on the graph.
+\item Graphically, local minimum values are visually encoded as the bottoms of valleys on the graph.
 \end{itemize}
 
+also, \\
 
 \begin{itemize}
-\item Graphically, local extrema values are visually encoded as endpoints.
-\item Graphically, local extrema values are visually encoded as singleton points.
+\item Graphically, local extrema values can be visually encoded as endpoints.
+\item Graphically, local extrema values can be visually encoded as singleton points.
 \end{itemize}
 
 
@@ -575,18 +605,18 @@ Local maximum and minimum values are greatest and least values that occur in a `
 As the function above illustrates, there are several places where extrema occur for functions.
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Horizontal Tangent Lines \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Horizontal Tangent Lines \\
 
 An extreme value can occur where a tangent line is horizontal, or has a $0$ slope.  These would correspond to tops of hills and bottoms of valleys in the graph. \\
 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Endpoints \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Endpoints \\
 
 Extreme values can happen at the endpoints. \\
 
-\textbf{\textcolor{red!90!darkgray}{Peek Ahead:}} A graph can have a tangent line at an endpoint on a graph.  However, the derivative doesn't exist there since there is only one side.  In Calculus, we will talk about a one-sided derivative for these cases. \\
+\textbf{\textcolor{red!70!darkgray}{Peek Ahead:}} A graph can have a tangent line at an endpoint on a graph.  However, the derivative doesn't exist there since there is only one side.  In Calculus, we will talk about a one-sided derivative for these cases. \\
 
 \end{template}
 
@@ -598,7 +628,7 @@ Extreme values can happen at the endpoints. \\
 We have other places where an extreme value can occur. \\
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Vertical Tangent Lines \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Vertical Tangent Lines \\
 
 An extreme value can occur where a tangent line is vertical, or has no slope.  These would correspond to cusps in the graph. \\
 
@@ -643,7 +673,7 @@ This graph has a tangent line at $(3, -3)$.  It is a vertical line and vertical 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Corners \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Corners \\
 
 An extreme value can occur where no tangent line exists.  These would correspond to corners in the graph. \\
 
@@ -698,7 +728,7 @@ We can sum up this ideas as follow: \\
 \begin{center}
 
 
-\textbf{\textcolor{red!90!darkgray}{Candidates for locations of extrema values are domain numbers where the derivative is $0$ or Does Not Exist.}}
+\textbf{\textcolor{red!70!darkgray}{Candidates for locations of extrema values are domain numbers where the derivative is $0$ or Does Not Exist.}}
 
 
 \end{center}
