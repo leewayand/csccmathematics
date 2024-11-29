@@ -173,11 +173,20 @@ How should we interpret this? \\
 What is the rate of change \textbf{\textcolor{red!90!darkgray}{AT}} a point? \\
 
 
-You cannot calculate the rate of change over an interval with $0$ length.  Therefore, we will invent an interpretation for this rate of change at a point, i.e. \textit{an instantaneous rate of change}.
 
 
 
 
+\begin{idea}
+
+You cannot calculate the rate of change over an interval with $0$ length.  \\
+
+Therefore, we are inventing an interpretation for the rate of change at a point. \\
+
+We are calling our invention the \textit{an instantaneous rate of change}.
+
+
+\end{idea}
 
 
 
@@ -201,7 +210,7 @@ Tangent lines are degenerate secants. Secant lines need two points on the graph 
 If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
 
 
-We'll call this the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change}} at the domain number corresponding to the tangent point.
+We are calling this slope of the tangent line the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change}} at the domain number corresponding to the tangent point.
 
 
 
@@ -270,7 +279,7 @@ Let's add a picture of the tangent line at $(x_0, y_0) = (x_0, (x_0)^2)$ to our 
 
 
         \addplot [draw=penColor, very thick, smooth, domain=(-3:3),<->] {x^2};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-5:9.5)] ({0},{x});
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-5:9.5)] ({0},{x});
         
 
         \addplot [color=penColor2,only marks,mark=*] coordinates{(2,4)};
@@ -295,8 +304,8 @@ The tangent line is the graph of a linear function. Let's call this linear funct
 $T$ is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  According to our definition, $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
 
 
-$\blacktriangleright$ We would like a way to obtain the exact value of $m$. \\
 
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ We would like a way to obtain the exact value of $m$.}} \\
 
 
 To get the exact value of $m$, we are going to create a new quadratic function, which will be the difference between the original quadratic function and the linear function.
@@ -314,9 +323,7 @@ Q_{new}(x) = Q(x) - T(x)
 Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0)
 \]
 
-\[
-Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0)
-\]
+
 
 
 $Q_{new}(x)$ is a quadratic function and $Q_{new}(x_0) = Q(x_0) - T(x_0) = y_0 - y_0 = 0$. \\
@@ -342,13 +349,13 @@ Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0) = (x - x_0)^2
 
 
 \[
-x^2 - (m(x - x_0) + y_0) = (x - x_0)^2 = x^2 - 2 x_0 x + x_0^2
+x^2 - (m(x - x_0) + y_0) = (x - x_0)^2 = x^2 - 2 x_0 \, x + x_0^2
 \]
 
 
 
 \[
- -m \, x + m \, x_0 - y_0) =   - 2 \, x_0 \, x + x_0^2
+ -m \, x + m \, x_0 - y_0 =   - 2 \, x_0 \, x + x_0^2
 \]
 
 
@@ -374,11 +381,13 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 
 
 
-\[ \text{slope } \, = \, 2 x_0  \]
+\[ \text{slope } \, = \, 2 \, x_0  \]
 
 
 \end{conclusion}
-This for any point on the parabola.
+This for any point on the parabola. \\
+
+What about other parabolas, besides the basic parabola? \\
 
 
 
@@ -406,7 +415,7 @@ This for any point on the parabola.
 
 
 
-$\blacktriangleright$ \textbf{Stretching}
+\subsection*{Stretching}
 
 
 
@@ -472,11 +481,11 @@ a \, x^2 - (m(x - x_0) + y_0) = a \, (x - x_0)^2 = a \, x^2 - 2a \, x_0 x + a \,
 
 
 \[
- -m \, x + m \, x_0 - y_0) =   - 2a \, x_0 \, x + a \, x_0^2
+ -m \, x + m \, x_0 - y_0 =   - 2a \, x_0 \, x + a \, x_0^2
 \]
 
 
-For this to happen, we must have $-m \, x = - 2a \, x_0 \, x$ or \textbf{$m = 2a \, x_0$}. \\
+For this to happen, we must have $-m \, x = - 2 \, a \, x_0 \, x$ or \textbf{$m = 2 \, a \, x_0$}. \\
 
 
 \end{explanation}
@@ -528,7 +537,7 @@ This for any point on the parabola.
 
 
 
-$\blacktriangleright$ \textbf{Shifting}
+\subsection*{Shifting}
 
 
 
@@ -544,7 +553,7 @@ If we keep the shape of the parabola, $y = a \, x^2$, intact and shift its posit
 These are graphs of quadratic functions of the form $Q_{new}(x) = a \, (x - h)^2 + k$. \\
 
 
-If we pick any point, $(x_0, y_0)$, on this parabola, then the slope of the tangent line is the same as the slope of the tangent line for $y = a \, x^2$ at the point $(x_0 - h, y_0 - k)$.  \\
+If we pick any point, $(x_0, y_0)$, on this parabola, then the slope of the tangent line is the same as the slope of the tangent line for $y = a \, x^2$ at the point $(x_0 - h, y_0 - k)$, because the actual shape of the parabola is not changed by shifting.  \\
 
 From above, we know this slope is \textbf{$2 \, a \, (x_0 - h)$}.
 
@@ -558,7 +567,7 @@ From above, we know this slope is \textbf{$2 \, a \, (x_0 - h)$}.
 
 The graph of $y = a \, (x - h)^2 + k$ is a parabola.
 
-Let $(x_0, y_0)$ be a point on this parabola.
+Let $(x_0, y_0)$ be any point on this parabola.
 
 Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
 
@@ -568,29 +577,11 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 
 
 \end{conclusion}
-This for any point on the parabola.
 
 
+Every parabola can be described by an equation of the form $y = a \, (x - h)^2 + k$. \\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Our slope of tangent line idea can be applied to every parabola. \\
 
 
 
@@ -610,7 +601,7 @@ This for any point on the parabola.
 
 The graph of $y = a (x - h)^2 + k$ is a parabola.
 
-Let $(x_0, y_0)$ be a point on this parabola.
+Let $(x_0, y_0)$ be any point on this parabola.
 
 Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
 
@@ -620,10 +611,19 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 
 
 \end{theorem}
-This for any point on the parabola.
 
 
-\textbf{Note:} If we look at the vertex $(x_0, y_0) = (h, k)$, then $2 a (x_0 - h) = 2 a (h - h) = 0$ and the slope of the tangent line is $0$, just like we had reasoned before.
+
+
+
+
+
+
+
+
+
+
+\textbf{Note:} If we look at the vertex of the parabola $(x_0, y_0) = (h, k)$, then $2 a (x_0 - h) = 2 a (h - h) = 0$ and the slope of the tangent line is $0$, just like we had reasoned before.
 
 
 
@@ -662,7 +662,7 @@ We now have a function, with a formula, for measuring the instantaneous rate of 
 
 
 
-We already have a function, with a formula, for measuring the instantaneous rate of change of any linear function at any domain number. \\ 
+We can add this to our growing collection. \\ 
 
 
 \textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the linear function, $L(x) = m \, x + b$, is the constant function, $iRoC_L(x) = m$. \\
@@ -689,6 +689,10 @@ Calculus uses the name \textbf{\textcolor{blue!55!black}{Derivative}} and it use
 iRoC_f(x) = f'(x)
 \]
 
+
+People pronounce $f'(x)$ as ``f prime''.
+
+
 \end{notation}
 
 We will use both names.  This will keep the idea fresh in our heads and also give us experience with Calculus notation.
@@ -701,15 +705,19 @@ We will use both names.  This will keep the idea fresh in our heads and also giv
 \begin{notation} \textbf{\textcolor{blue!55!black}{Language}} 
 
 
-We are beginning our investigation of function anlaysis at the beginning.  Our formulas have one variable.  But, later, in Calculus, it may not be so clear on what the variable is or what the function is. \\
+We are beginning our investigation of function analysis at the beginning.  Our formulas have one variable.  But, later, in Calculus, it may not be so clear on what the variable is or what the function is. \\
 
-For this reason, we have more notation the is very explicit on this matter.
+For this reason, Calculus introduces more notation that is very explicit on this matter.
 
 
 
 \[
 iRoC_f(x) = f'(x) = \frac{df}{dx}
 \]
+
+
+People pronounce $\frac{df}{dx}$ as ``dfdx''.  They just say the letters.
+
 
 \end{notation}
 
@@ -722,7 +730,7 @@ iRoC_f(x) = f'(x) = \frac{df}{dx}
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Quadratic Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/quadraticBehavior/examples/exampleList}
 
