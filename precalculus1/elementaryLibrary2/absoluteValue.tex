@@ -116,37 +116,24 @@ Either $m = 18$  or $m = -18$
 
 
 
-
+\subsection*{Continuity}
 
 
 The absolute value function is a continuous function.
 
 \begin{itemize}
 \item On $(-\infty, 0)$ we have $| x | = -x$, which is a linear function, which is continuous.
-\item On $(0, \infty)$ we have $| x | = x$, which is a linear function, which is continuous.
+\item On $[0, \infty)$ we have $| x | = x$, which is a linear function, which is continuous.
 \end{itemize}
 
-So, the only questions is $0$ itself.  The graph certainly suggests continuity, but we want a rigorous explanation. \\
 
-
-$| 0 | = 0$, so the only other possibility for $0$ is that it might be a discontinuity.  We need to show it is not a discontinuity.  We need to show that when $x$ is close to $0$, then also $| x |$ is close to $0$. \\
-
-Select any small interval you want surrounding the function value $| 0 | = 0$.  Like, $(0 - \epsilon, 0 + \epsilon) = (-\epsilon, \epsilon)$. \\
-
-
-
-Is it possible to find a small inteval around the domain number $0$, like, $(-\delta, \delta)$, so that
-
-
+Both sides match up at $0$, since 
 
 \[
-| x | \in (-\epsilon, \epsilon) \, \text{ whenever } \, x \in (-\delta, \delta)
+\lim\limits_{x \to 0^-} |x| = 0
 \]
 
 
-Yes.  Just pick $\delta = \epsilon$.
-
-So, $0$ is not a discontinuity and the absolute value function is a continuous function.
 
 
 
@@ -157,10 +144,24 @@ So, $0$ is not a discontinuity and the absolute value function is a continuous f
 
 
 
-\begin{example}  Behavior
+\subsection*{Continuity}
 
 
-Where is $A(x) = | x |$ increasing and decreasing?
+That graph suggests that $|x|$ decreases on $(-\infty, 0]$  and  increases on $[0, \infty )$.  \\
+
+This is confirmed by the formula. \\
+
+
+On $(-\infty, 0]$, $|x| = -x$, which is a decreasing linear functions. \\
+
+
+On $[0, \infty)$, $|x| = x$, which is an increasing linear functions. \\
+
+
+\begin{example}  Behavior ($iRoC$)
+
+
+Using the $iRoC$ to say where $A(x) = | x |$ increasing and decreasing. \\
 
 
 
@@ -170,14 +171,14 @@ Where is $A(x) = | x |$ increasing and decreasing?
 First, get rid of the absolute value bars.
 
 \begin{itemize}
-\item $x < 0$ when $x < \answer{0}$
-\item $x > 0$ when $x > \answer{0}$
+\item $x < 0$ when $|x| = \answer{-x}$
+\item $x > 0$ when $|x| = \answer{x}$
 \end{itemize}
 
 
 
 \[
-A(x) = 
+|x| = 
 \begin{cases}
   -x & \text{ on } (-\infty, 0)   \\
   x  & \text{ on } [0, \infty)
@@ -186,19 +187,21 @@ A(x) =
 
 
 
-Each piece is a restricted linear function.  We can get their iRoC.
+Each piece is a restricted linear function.  We can get their $iRoC$.
 
 
 \[
-iRoC_A(x) = 
+iRoC_{|x|} = 
 \begin{cases}
   -1 & \text{ on } (-\infty, 0)   \\
   1  & \text{ on } (0, \infty).
 \end{cases}
 \]
 
+$iRoC_{|x|}$ is negative on $(-\infty, 0)$ and positive on $(0, \infty)$. \\
 
-$A(x) = | x |$ is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$.
+
+$| x |$ is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$.
 
 
 
@@ -275,6 +278,22 @@ $0$ is the only critical number.
 
 
 
+\begin{definition} \textbf{\textcolor{green!50!black}{Absolute Functions}}
+
+Absolute functions are those functions that \textbf{\textcolor{purple!85!blue}{can}} be represented by formulas of the form
+
+
+\[      AV(x) = A \cdot | B \, x + C| + D   \]
+
+where $A$, $B$, $C$, and $D$ are real numbers, with $A \ne B$ and $B \ne 0$ is a nonzero real number.
+
+
+\end{definition}
+
+
+\textbf{Note:}  In the template for absolute value functions, There is a leading coefficient for the function and there is a leading coefficient for the linear function inside the absolute value bars. \\
+
+
 
 \begin{example}  Behavior
 
@@ -331,7 +350,7 @@ A(x) =
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Elementary Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/elementaryLibrary2/examples/exampleList}
 

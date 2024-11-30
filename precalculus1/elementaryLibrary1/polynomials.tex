@@ -40,7 +40,7 @@ $\blacktriangleright$ Polynomials are sums of special functions called \textbf{p
 
 
 
-\section{Power Functions}
+\section*{Power Functions}
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Power Functions}}
 
@@ -48,7 +48,7 @@ A power function is any function that can be represented with a formula of the f
 
 \[   f(x) = k \, x^p      \]
 
-where $k$ and $p$ are real numbers.
+where $k$ and $p$ are nonzero real numbers.
 
 $k$ is called the \textbf{leading coefficient}.
 
@@ -65,7 +65,7 @@ We don't need all of the power functions for polynomials.  We only need power fu
 
 
 
-\subsection{Asymptotic and End-Behavior}
+\subsection*{Asymptotic and End-Behavior}
 
 
 
@@ -207,16 +207,16 @@ In either case, the end-behavior is to tend toward $0$.
 
 
 
-\subsection{Limit Notation }
+\subsection*{Limit Notation }
 
 
 
-In the previous descriptions, our graphs did a good job of describing limiting behavior.  We would also like algebraic descriptions of this behavior.
+In the previous descriptions, our graphs did a good job of describing asymptotic and end-behavior behavior.  We would also like algebraic descriptions of these behaviors. \\
 
 
-$\blacktriangleright$  \textbf{End-Behavior}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$  \textbf{End-Behavior}}} 
 
-The domain of a power function is either all the real numbers, $\mathbb{R}$, or all of the real numbers except $0$, $\mathbb{R} \setminus \{ 0 \}$.  In either case we can imagine moving far off to the left or far off to the right on the number line to where the domain is made up of very large negative or very large positive numbers.  When we want the reader to think of moving even further to the right we use the phrase ``tending to infinity''. When we want the reader to think of moving even further to the left we use the phrase ``tending to negative infinity''.
+The domain of a power function is either all the real numbers, $\mathbb{R}$, or all of the real numbers except $0$, $\mathbb{R} \setminus \{ 0 \}$.  In either case we can imagine moving far off to the left or far off to the right on the number line to where the domain is made up of very large negative or very large positive numbers, the tail ends.  When we want the reader to think of moving even further to the right we use the phrase ``tending to infinity''. When we want the reader to think of moving even further to the left we use the phrase ``tending to negative infinity''.
 
 For power functions with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
 
@@ -228,7 +228,7 @@ If we inspect a power function, $f(x) = k \, x^p$, with a negative power, then w
 \[    \lim_{x \to \infty} k \, x^p = 0,        \]
 
 
-\textbf{\textcolor{blue!55!black}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards infinity equals zero}.
+\textbf{\textcolor{purple!85!blue}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards infinity equals zero}.
 
 
 We also have,
@@ -236,7 +236,7 @@ We also have,
 \[    \lim_{x \to -\infty} k \, x^p = 0,        \]
 
 
-\textbf{\textcolor{blue!55!black}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards negative infinity equals zero}.
+\textbf{\textcolor{purple!85!blue}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards negative infinity equals zero}.
 
 
 For power functions with a positive power, we have limits such as 
@@ -259,16 +259,21 @@ It depends on the sign of the coefficient $k$.
 Although the graph is convincing, ``we can see'' is not rigorous reasoning. \\
 
 
-We would like a precise and proper explanation of $\lim_{x \to \infty} k \, x^p = 0,  $, when $p$ is a negative integer. \\
+We would like a precise and proper explanation of $\lim_{x \to \infty} k \, x^p = 0$, when $p$ is a negative integer. \\
 
 
 Let $k$ be any non-zero real number. \\
-$p$ is a negative integer, so let $p = -n$, where $n$ is a positive integer. \\
+If $p$ is a negative integer, then let $p = -n$, where $n$ is a positive integer. \\
 Let $f(x) = k \, x^p = \frac{k}{x^n}$ \\
 
 
 
 For the limit to equal $0$, $f$ must ``eventually'' get smaller than any real number, and stay there. \\
+
+
+Let $\epsilon > 0$ represent a very small real number.  Does $\frac{k}{x^n}$ get smaller than $\epsilon$, and stay smaller, for larger enough $x$? \\
+
+Let's see. \\
 
 
 
@@ -308,11 +313,11 @@ The ``stays there'' part is, for any $x > M$.
 
 
 
-$\blacktriangleright$  \textbf{Singularity}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$  \textbf{Singularity Behavior}}} 
 
 
 
-For a power function, $f(x) = k \, x^p$, with a negative power we have seen that there is a singularity at $0$, where the function value is unbounded and tends to infinity or negative infinity.  This time we want to algebraically specify the direction we are approaching $0$.  
+For a power function, $f(x) = k \, x^p$, with a negative power we have seen that there is a singularity at $0$, where the function value is unbounded and tends to infinity or negative infinity.  This time we want our limit notation to algebraically specify the direction we are approaching $0$.  
 
 \begin{itemize}
 \item A superscript $+$ means we are approaching from the positive side or the right side.
@@ -330,13 +335,35 @@ Describing the function's behavior around $0$ with limit notation looks like
 
 
 
-\textbf{\textcolor{blue!55!black}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards zero from the left (or right) equals negative infinity}.
+\textbf{\textcolor{purple!85!blue}{Pronounced:}} \textit{The limit of $k \, x^p$ as x tends towards zero from the left (or right) equals infinity or negative infinity}.
 
 It depends on the sign of coefficient $k$.
 
 
 
+\begin{notation} \textbf{\textcolor{blue!55!black}{Limit Notation}}
 
+
+Limit notation looks like
+
+\[
+\lim\limits_{x \to r} f(x) = L
+\]
+
+There are five areas.
+
+
+\begin{itemize}
+  \item ``lim'', which stands for limit. \\
+  \item $x \to r$, which tells us the variable and the real number it is approaching.  This is written directly under ``lim''.
+  \item To the left of both of those is the name of the function or its formula.  $x \to r$ does not extend under the function.  
+  \item ``$=$''
+  \item the limiting value or description.
+\end{itemize}
+
+
+
+\end{notation}
 
 
 
@@ -457,7 +484,7 @@ It depends on the sign of coefficient $k$.
 
 
 
-\subsection{Polynomial Functions}
+\section*{Polynomial Functions}
 
 
 Polynomial functions are sums of power functions with powers that are nonnegative integers (whole numbers).
@@ -561,35 +588,35 @@ The last version is much shorter than the original, but they represent the exact
 
 
 
-\begin{warning} \textbf{\textcolor{red!90!darkgray}{Rule of Shortest Expression}} 
+\begin{warning} \textbf{\textcolor{red!70!darkgray}{Rule of Shortest Expression}} 
 
-Mathematicians don't like to write a lot.  They prefer shorter expressions.  Therefore, we are left to interpret symbols by their positions and font size and context and surrounding symbols.
+Mathematicians don't like to write a lot.  They prefer shorter expressions.  Therefore, we are left to interpret symbols by their positions and font size and context and surrounding symbols. \\
 
-The general rule is that you interpret the shortest expression that makes sense.
+The general rule is that you interpret the shortest expression that makes sense. \\
 
 
-How to interpret $7x^5$ : Is the $5$ on $x$ or $7x$?  $x$ is shorter, therefore $7x^5 = 7 (x^5)$.
+For instance, how to interpret $7x^5$ : is the $5$ on $x$ or $7x$?  $x$ is shorter, therefore $7x^5 = 7 (x^5)$. \\
 
 Of course, our abbreviations and shortest expressions also cause their own confusion.
 
-\textbf{$3+15$:} Is this $(3+1)5$ or $3+(15)$?  $5$ is shorter than $15$, however, $(3+1)5$ doesn't make sense, because there is no operator between $(3+1)$ and $5$.  On the other hand we have a shorthand abbreviation whereby no symbol means multiplication.  But that rule doesn't apply to digits.  Digits are glued together tighter than operations. $25$ never means $2 \cdot 5$.
+\textbf{$3+15$:} Is this $(3+1)5$ or $3+(15)$?  $5$ is shorter than $15$, however, $(3+1)5$ doesn't make sense, because there is no operator between $(3+1)$ and $5$.  On the other hand we have a shorthand abbreviation whereby no symbol means multiplication.  But that rule doesn't apply to digits.  Digits are glued together tighter than operations. $25$ never means $2 \cdot 5$. That give us $3 + 15 = 3 + (15)$. \\
 
 Just like with any language, mathematics has its idioms.
 
 If the shortest expression is not what you mean, then you need to use parentheses to group the symbols how you want them interpreted.
 
 \begin{center}
-\textbf{\textcolor{red!90!darkgray}{If you are unsure, then use parentheses!}} 
+\textbf{\textcolor{red!70!darkgray}{If you are unsure, then use parentheses!}} 
 \end{center}
 
 
 \begin{center}
-\textbf{\textcolor{red!90!darkgray}{Parentheses are your friends!}} 
+\textbf{\textcolor{red!70!darkgray}{Parentheses are your friends!}} 
 \end{center}
 
 
 \begin{center}
-\textbf{\textcolor{red!90!darkgray}{Parentheses clear up communication!}} 
+\textbf{\textcolor{red!70!darkgray}{Parentheses clear up miscommunication!}} 
 \end{center}
 
 
@@ -636,7 +663,7 @@ Write $(-1) x^3 + 0 x^2 + (-3) x^1 + 6 x^0$ in shorthand notation.
 
 
 
-\subsection{Products vs. Sums}
+\subsection*{Products vs. Sums}
 
 
 We engage in two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytic investigation.  Polynomials are functions for us and we are interested in analyzing them as functions.  This means, among other features, we are interested in their zeros.  For this, and other reasons, we prefer to write polynomials in factored form.
@@ -647,7 +674,7 @@ Rather than a sum (standard form)
 
 \[   f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
 
-we would prefer a product
+we would prefer a product (factored form)
 
 \[   f(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  \]
 
@@ -722,7 +749,7 @@ Write $2y^2-5y-3$ in factored form, i.e. as a product.
 
 
 
-\subsection {Graphs}
+\subsection*{Graphs}
 
 
 
@@ -868,7 +895,7 @@ The graph of $y = g(t) = \frac{1}{100} (t+7) (t+2) (t-2) (t-4) $
 \end{example}
 
 
-Polynomials have no discontinuities or singularities.  Polynomial functions may have many local maximums and minimums. They may have a global maximum or global minimum, but not both.
+Polynomials have no discontinuities or singularities.  Polynomial functions may have many local maximums and minimums. They may have a global maximum or global minimum.  The only way a polynomial can have both a global maximum and a global minimum is for the polynomial to be a constant function. \\
 
 
 
@@ -913,7 +940,7 @@ In the example above, $g(t)$ has a global maximum value.
 
 
 
-\subsection{End-Behavior}
+\subsection*{End-Behavior}
 
 
 The end-behavior of a polynomial function is the same as the leading term (a power function), which depends on the sign of the leading coefficient.
@@ -967,7 +994,7 @@ Evaluate $\lim\limits_{t \to \infty} -4 t^3 - 5 t + 2 t^4  - 3$
 
 
 
-\subsection{Power-Like Functions}
+\subsection*{Power-Like Functions}
 
 We prefer writing polynomials as products, because we can quickly identify their zeros.  Products will also help us quickly determine behavior of the polynomial.
 
@@ -1007,7 +1034,7 @@ If we think of $x^k$ as $(x-0)^k$, then $(x-r_k)^{e_k}$ seems just like a power 
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Elementary Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/elementaryLibrary1/examples/exampleList}
 

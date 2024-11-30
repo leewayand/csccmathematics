@@ -19,7 +19,7 @@ The defining characteristic of linear functions is that the pairs experience a c
 
 \[   \frac{f(b)-f(a)}{b-a} = m       \]
 
-This led to the equation or formula for linear functions:  $f(x) = m(x-a) + f(a)$ \\
+This led to the equation or formula for linear functions:  \textbf{\textcolor{purple!85!blue}{$f(x) = m(x-a) + f(a)$}}  \\
 
 
 Said another way:  If you move a fixed amount anywhere in the domain, $\Delta x$, then the function always grows by a proportionally fixed amount, $f(x + \Delta x) - f(x) = m(\Delta x)$. This fixed growth rate is always the same multiple of the change in the domain. That multiple is the constant growth rate.
@@ -150,27 +150,32 @@ In general, formulas for exponential functions look like
 Basic exponential functions are those functions that exhibit a constant percentage rate of change.  Their formulas look like
 
 
-\[      f(x) = A \cdot b^x   \]
+\[      f(x) = A \cdot r^x   \]
 
-where $A$ is a nonzero real number, and $b$ is a positive real number.
+where $A$ is a nonzero real number, and $r$ is a positive real number.
 
 
 \end{definition}
 
 
 
-Said another way:  If you move a fixed amount in the domain, $\Delta x$, then the change in an exponential function, $k \cdot a^{x + \Delta x} - k \cdot a^x = k \cdot a^x (a^{\Delta x} - 1)$, is the same fixed multiple of the \textbf{function value}.
+Said another way:  If you move a fixed amount in the domain, $\Delta x$, then the change in an exponential function, is a fixed multiple of the \textbf{function value}.
+
+
+\[
+k \cdot r^{x + \Delta x} - k \cdot r^x = k \cdot r^x (r^{\Delta x} - 1)
+\]
 
 \begin{itemize}
-\item Linear growth is a fixed multiple of the change in domain value. It is independent of the function value.
-\item Exponential growth (for a fixed change in domain value) is a fixed multiple of the function value. 
+\item Linear growth means a fixed multiple of the change in domain value. It is independent of the function value.
+\item Exponential growth means a fixed multiple of the function value. 
 \end{itemize}
 
 
 
 
 
-There are two types of exponential functions corresponding to $0<a<1$ or $1<a$.
+There are two types of exponential functions corresponding to $0<r<1$ or $1<r$.
 
 
 
@@ -178,11 +183,11 @@ There are two types of exponential functions corresponding to $0<a<1$ or $1<a$.
 
 
 \begin{itemize}
-\item If $0<a<1$, then greater positive exponents make the function value smaller.   \\
-In the other direction, a negative exponent essentially gives us the reciprocal of $a$, which would be greater than $1$ here.  Therefore, greater negative exponents result in bigger function values. \\
+\item If $0<r<1$, then greater positive exponents make the function value smaller.   \\
+In the other direction, a negative exponent essentially gives us the reciprocal of $r$, which would be greater than $1$ here.  Therefore, greater negative exponents result in bigger function values. \\
 
-\item If $1<a$, then greater positive exponents make the function value bigger.   \\ 
-In the other direction, a negative exponent essentially gives us the reciprocal of $a$, which would be less than $1$ here.  Therefore, greater negative exponents result in smaller postive function values.
+\item If $1<r$, then greater positive exponents make the function value bigger.   \\ 
+In the other direction, a negative exponent essentially gives us the reciprocal of $r$, which would be less than $1$ here.  Therefore, greater negative exponents result in smaller postive function values.
 \end{itemize}
 
 
@@ -202,6 +207,7 @@ The graphs of $y = Y(x) = 3 \cdot \left(\frac{1}{2}\right)^x$ and $z = W(t) = 3 
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0}};
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-1.5:9),<->] {03*(0.5^x)};
    
 
@@ -214,6 +220,7 @@ The graphs of $y = Y(x) = 3 \cdot \left(\frac{1}{2}\right)^x$ and $z = W(t) = 3 
             axis on top
           ]
           
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0}};
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:2.1),<->] {2*(2^x)};
 
 
@@ -281,15 +288,17 @@ Let $T(f) = 4 \cdot 3^f$.  Evaluate the following.
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Exponential Functions}}
 
-Exponential functions are those functions that can be represented by formulas of the form
+Exponential functions are those functions that \textbf{\textcolor{purple!85!blue}{can}} be represented by formulas of the form
 
 
-\[      f(x) = A \cdot b^{B \, x + C}   \]
+\[      f(x) = A \cdot r^{B \, x + C}   \]
 
-where $A$, $B$, and $C$ are real numbers, $A$ is a nonzero real number, and $b$ is a positive real number.
+where $A$, $B$, and $C$ are real numbers, $A$ is a nonzero real number, and $r$ is a positive real number.
 
 
 \end{definition}
+
+\textbf{Note:}  In the template for exponential functions, There is a leading coefficient for the function and there is a leading coefficient for the linear function inside the exponent. \\
 
 
 
@@ -299,38 +308,38 @@ This is the most general form of an exponential function.  It is equivalent to t
 
 
 \[
-f(x) = A \cdot b^{B \, x + C} 
+f(x) = A \cdot r^{B \, x + C} 
 \]
 
 \[
-f(x) = A \cdot b^{B \, x} \cdot  b^C 
+f(x) = A \cdot r^{B \, x} \cdot  r^C 
 \]
 
 \[
-f(x) = A \cdot (b^{B})^x \cdot  b^C 
+f(x) = A \cdot (r^{B})^x \cdot  r^C 
 \]
 
 
 \[
-f(x) = A \cdot b^C \cdot (b^{B})^x = a \cdot r^x
+f(x) = A \cdot r^C \cdot (r^{B})^x = a \cdot R^x
 \]
 
 
 
 
 
-$A \cdot b^C$ is the new leading coefficient. \\
+$A \cdot r^C$ is the new leading coefficient. \\
 
-$b^{B}$ is the new base.
-
-
+$r^{B}$ is the new base.
 
 
 
 
 
 
-\begin{idea} \textbf{\textcolor{red!80!black}{Basic Exponential Function}}
+
+
+\begin{idea} \textbf{\textcolor{red!70!black}{Basic Exponential Function}}
 
 
 For practical purposes, we should have an example in our head and then compare other exponential functions back to it. \\
@@ -340,18 +349,18 @@ Our example is  $exp(x) = e^x$. \\
 
 $e > 1$, which means this exponential function only has positive values on its domain, $(-\infty, \infty)$.  It is an increasing function. Its range is $(0, \infty)$.
 
-\textbf{Note:} You could select other bases besides $e$.  Most people like a base greater than $1$.
+\textbf{Note:} You could select other bases besides $e$.  Most people like a base greater than $1$ for their mental example.
 
 
 \end{idea}
 
-It we have the chanracteristics of this exponential function memorized, then we can compare other exponential functions back to this one.
+If we have the characteristics of this exponential function memorized, then we can compare other exponential functions back to this one.
 
 
 
 
 
-\begin{idea} \textbf{\textcolor{red!80!black}{Alternative Basic Exponential Function}}
+\begin{idea} \textbf{\textcolor{red!70!black}{Alternative Basic Exponential Function}}
 
 
 We have four general behaviors of exponential functions, which we will investigate in this course. By changing the sign of the leading coefficent or the leading coefficient in the exponent, you can get any of the four  types.  
@@ -381,12 +390,12 @@ Exponential functions are those functions that \textbf{\textcolor{purple!85!blue
 A \cdot r^x
 \]
 
-Using exponent rules, we can rewrite any exponential formula into this form.  Therefore, it is nice to memorize the charcateristics of one of these basic forms and then compare all others back to it. \\
+Using exponent rules, we can rewrite any exponential formula into this form.  Therefore, it is nice to memorize the characteristics of one of these basic forms and then compare all others back to it. \\
 
 
 
 
-Even if $r<1$, the base can be rewritten as $(r^{-1})^{-1}$. The first $-1$ exponent stays with the $r$, to make $r^{-1}>1$.  The second $-1$ moves up to the exponent and changes the sign of the exponent.\\
+Even if $r<1$, the base can be rewritten as $r = (r^{-1})^{-1}$. The first $-1$ exponent stays with the $r$, to make $r^{-1}= \frac{1}{r} > 1$.  The second $-1$ moves up to the exponent and changes the sign of the exponent.\\
 
 
 \textbf{Example:}  
@@ -409,7 +418,7 @@ Even if $r<1$, the base can be rewritten as $(r^{-1})^{-1}$. The first $-1$ expo
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Shifted Exponential Functions}}
 
-Shifted exponential functions are exponential functions with a number added on.
+Shifted exponential functions are exponential functions with a number added on.  They \textbf{\textcolor{purple!85!blue}{can}} be written in the form
 
 
 \[      f(x) = A \cdot r^{B \, x + C} + D   \]
@@ -419,7 +428,7 @@ where $A$, $B$, $C$, and $D$ are real numbers, $A \ne 0$ and $B \ne 0$ and $D \n
 
 \end{definition}
 
-
+\textbf{Note:}  In the template for shifted exponential functions, There is a leading coefficient for the function and there is a leading coefficient for the linear function inside the exponent. \\
 
 
 The main different between shifted exponential and exponential functions is that while exponential functions do not have zeros, a shifted exponential function may have a zero. \\
@@ -473,7 +482,7 @@ $\log_2(3)$ is the zero of $g(x)$.
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Elementary Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/elementaryLibrary2/examples/exampleList}
 
