@@ -197,6 +197,50 @@ e^x \, \text{ or } \, e^{-x} \, \text{ or } \, -e^{x} \, \text{ or } \, -e^{-x} 
 
 
 
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {e^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {e^(-x)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
 Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases very quickly and continues to do so.
 
 
