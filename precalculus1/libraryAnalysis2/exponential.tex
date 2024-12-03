@@ -243,7 +243,7 @@ e^x \, \text{ or } \, e^{-x} \, \text{ or } \, -e^{x} \, \text{ or } \, -e^{-x}
 
 \begin{image}
 \begin{tikzpicture}
-    \begin{axis}[name = basictop, 
+    \begin{axis}[name = basicbottom, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
@@ -257,7 +257,7 @@ e^x \, \text{ or } \, e^{-x} \, \text{ or } \, -e^{x} \, \text{ or } \, -e^{-x}
           \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {-(2.7)^x};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
     \end{axis}
-    \begin{axis}[at={(basictop.outer east)},anchor=outer west, 
+    \begin{axis}[at={(basicbottom.outer east)},anchor=outer west, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
