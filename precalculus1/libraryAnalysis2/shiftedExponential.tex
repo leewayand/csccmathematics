@@ -1,0 +1,352 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Exponential}
+
+\begin{document}
+
+\begin{abstract}
+attributes
+\end{abstract}
+\maketitle
+
+
+\section*{Basic Exponential Functions}
+
+Thinking about formulas, basic exponential functions are functions whose formulas look like
+
+\[
+exp(x) = a \cdot r^x
+\]
+
+Just a leading coefficent and a base greater than $1$. \\
+
+
+
+\begin{example}
+
+Here is the graph of $y = 2^x$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$.  Exponential functions become unbounded in one direction, while approaching $0$ in the other direction. \\
+
+This is determined by the size of the base and the signs of the leading coefficients. \\
+
+Graphically, the horizontal axis is a horizontal asymptote.\\
+
+
+
+\[  \lim_{x \to -\infty} 2^x = \answer{0}     \, \text{ and } \,  \lim_{x \to \infty} 2^x = \answer{\infty}   \]
+
+\end{example}
+
+
+\begin{example}
+The roles are reversed when the base is less than $1$.
+
+
+
+
+
+
+
+
+
+
+Here is the graph of $y = \left(\frac{1}{3}\right)^x$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {(0.333)^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+When the base is less than $1$, then the whole function decreases.  We still have unbounded above and approaching $0$ below.
+
+\[  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = \answer{\infty}     \, \text{ and } \,  \lim_{x \to \infty} \left(\frac{1}{3}\right)^x = \answer{0}   \]
+
+\end{example}
+
+
+Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases very quickly and continues to do so.
+
+
+
+$\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponential functions contain the point $(0, 1)$.
+
+
+
+
+
+
+
+
+
+\subsection*{Shifted Exponential}
+
+
+
+\begin{example} Shifted Exponential Function
+
+
+
+Here is the graph of $y = \left(\frac{1}{3}\right)^x + 2$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{2});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-1.8:9),<->] {(0.333)^x + 2};
+          
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The function values have all been incresaed by $2$.  Therefore, the horizontal asymptote in the graph has shifted vertically by 2 units to $y=2$.
+
+
+
+
+
+\end{example}
+
+
+
+
+\begin{warning}
+
+Exponential functions are functions that exhibit a constant percentage growth rate.  There is some constant $p$, such that
+
+\[
+f(x+1) = p \cdot f(x)
+\]
+
+
+All exponential functions CAN be written in the form $f(x) = p^{a x + b}$.  All exponenetial functions are a number raise to a linear function.  \\
+
+
+Note: Since $p = e^{ln(p)}$, every exponential funciton CAN be written in the form $e^{a x + b}$.  So, we really only need study base $e$ exponential functions.
+
+
+
+$y(x) = \left(\frac{1}{3}\right)^x + 2$ is not of this form.  The $+$ sign prevents y(x) from being written in our exponential form.  It is not an exponential function.
+
+$\blacktriangleright$ It is a shifted exponential function.
+
+
+However, for our purposes this still fits into our story.  Therefore, we are stretching our family of exponential functions to be functions that CAN be written in the form
+
+\[
+f(x) = e^{a x + b} + c
+\]
+
+which includes, forms like
+
+
+
+\[
+f(x) = a e^{r x} + c
+\]
+
+or,
+
+\[
+f(x) = a b^{r x} + c
+\]
+
+
+
+If $c = 0$, then it is an actual exponential function, rather than a shifted exponential function.
+
+
+\end{warning}
+
+
+
+
+
+
+\section{Logarithmic Functions}
+
+The expression $\log_a(b)$ was defined to be the number that you raise $a$ to, to get $b$.
+
+\[   a^{\log_a(b)} = b  \]
+
+
+
+
+We made a function from this by fixing the base:  $L(x) = \log_a(x)$.
+
+
+This function is the "reverse" of $a^x$.  Meaning that if $(A, B)$ is a pair in the $L(x) = \log_a(x)$ function, then $(B, A)$ is a pair in the $a^x$ function. Their domains and ranges are swapped.
+
+
+\begin{itemize}
+
+\item The domain of an exponential function is all real numbers. The range of a logarithmic function is all real numbers.  
+
+
+\item The range of an exponential function is all positive real number. The domain of a logarithmic function is all positive real numbers.
+
+\item The graphs of exponential functions have a horizontal asymptote. The graphs of logarithmic functions have a vertical asymptote. 
+
+\end{itemize}
+
+
+
+
+
+
+Here is the graph of $y = L(x) = \log_2(x)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),<->] {ln(x)/ln(2)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+The basic logarithmic function has a vertical asymptote where the inside of the formula equals $0$.  The domain includes only numbers that make the inside of the formula positive. The function increases over its domain and is unbounded.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Shifted Logarithmic Function
+
+
+
+Here is the graph of $y = L(x) = \log_2(5-x)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({5},{x});
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5),<->] {ln((5-x)/ln(2)};
+          
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The inside of the logarithm here is $5-x$ and this equals $0$ when $x=5$.  Therefore, the vertical asymptote in the graph is $x=5$.  The domain is $(-\infty, 5)$, since these are the numbers that make the inside of the logarithm formula positive.
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Analysis]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/libraryAnalysis2/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}

@@ -51,7 +51,9 @@ Therefore, usually our first step is to transform the rational function to look 
 
 
 
-And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist only of linear and irreducible quadratics. However, this discussion is about the roots of the polynomial.  Therefore, we will ignore the quadratic factors and leave those for a later discussion.
+And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist only of linear and irreducible quadratics.  Therefore, we will leave factors of irreducible quadratics to the next course. \\
+
+As our first step, let's consider rational functions that do factor into linear factors with real numbers. \\
 
 
 
@@ -70,7 +72,7 @@ Finally, we would like to clean up the factors and group them together
 
 
 
-\section{Reduced Form}
+\subsection*{Reduced Form}
 
 \textbf{Shared Roots}
 
@@ -103,8 +105,8 @@ $\blacktriangleright$ \textbf{Numerator}
 
 The numerator is a polynomial.  Each factor gives a root or zero of the function, which corresponds to an intercept on the graph. \\
 
-If the multiplicity is odd, then the function changes sign and the graph crosses the axis at this intercept.  \\
-If the multiplicity is even, then the graph does not cross the axis at this intercept and the function maintains its sign. 
+If the multiplicity of the root is odd, then the function changes sign and the graph crosses the axis at this intercept.  \\
+If the multiplicity of the root is even, then the graph does not cross the axis at this intercept and the function maintains its sign. 
 
 
 
@@ -120,8 +122,8 @@ The denominator is a polynomial.  Each factor gives a root or zero of the denomi
 The factors in the denominator still affect the sign of the function values.
 
 
-If the multiplicity is odd, then the function changes sign and the graph jumps to the other end of the vertical asymptote.  \\
-If the multiplicity is even, then the function does not change sign and the graph does not jump to the other end of the vertical asymptote. 
+If the multiplicity of the singularity is odd, then the function changes sign and the graph jumps to the other end of the vertical asymptote.  \\
+If the multiplicity of the singularity is even, then the function does not change sign and the graph does not jump to the other end of the vertical asymptote. 
 
 
 
@@ -210,11 +212,17 @@ Near $-3$, on either side of $-3$, the factors $w-1$ and $w-4$ do not change sig
 
 
 \begin{itemize}
-\item The value of $w-1$ is near $-4$ (negative), when $w$ is near $-3$
+\item The value of $w-1$ is near $-4$ (negative), when $w$ is near $-3$.
 \item The value of $w-4$ is near $-7$ (negative), when $w$ is near $-3$.
 \end{itemize}
 
-Both factors take on negative values when $w$ is near $-3$.
+Both factors take on negative values when $w$ is near $-3$.  
+
+Near $-3$, the value of the numerator of $H$ is near $(-4)(-7) = 28$, when $w$ is near $-3$.  \\
+
+
+
+
 
 The factor $w+3$ does change sign, since its multiplicity is odd.
 
@@ -224,7 +232,9 @@ The factor $w+3$ does change sign, since its multiplicity is odd.
 \end{itemize}
 
 
-Therefore, on the left side of $-3$, $H(w) = \frac{neg}{neg \, \cdot \, neg} = negative$.  Plus, the denominator is approaching $0$ making the whole fraction get bigger and bigger negatively.
+Therefore, on the left side of $-3$, $H(w) = \frac{neg}{neg \, \cdot \, neg} = negative$.  \\
+
+Plus, the denominator is approaching $0$ making the whole fraction get bigger and bigger negatively.
 
 We can see this in the graph.  The graph moves down the left side of the $w=-3$ vertical asymptote.
 
@@ -240,19 +250,32 @@ We can now walk through the sign changes of $H$.
 
 
 
-We can now categorize the rate of change for $H$.
+We can now categorize the singularity behavior for $H$.
 
 \begin{itemize}
-\item $H$ is decreasing on $(-\infty, -3)$.
-\item $H$ is decreasing on $(-3, 4)$.
-\item $H$ is decreasing on $(4,\infty)$.
+\item $\lim\limits_{w \to -3^-} H(w) = -\infty$
+\item $\lim\limits_{w \to -3^+} H(w) = \infty$
+\item $\lim\limits_{w \to 4^-} H(w) = -\infty$
+\item $\lim\limits_{w \to 4^+} H(w) = \infty$
 \end{itemize}
 
 $H$ has no global or local maximums or minimums.
 
 
 
-The range of $H$ is all real numbers.
+
+
+\textbf{Range:} \\
+
+
+On the interval $(-3, 4)$, $H$ is continuous.
+
+\begin{itemize}
+\item $\lim\limits_{w \to -3^+} H(w) = \infty$
+\item $\lim\limits_{w \to 4^-} H(w) = -\infty$
+\end{itemize}
+
+That gives us a range for $H$ of $(-\infty, \infty )$.
 
 \end{example}
 
@@ -262,9 +285,9 @@ The range of $H$ is all real numbers.
 
 
 
-\section{Sign Changes}
+\subsection*{Sign Changes}
 
-For rational functions, the sign can change only at a zero of odd multiplicity or a singularity of odd multiplicity. This is helpful when graphing. These requirements force the graph to go in particular directions.
+For rational functions, the sign can change only at a zero of odd multiplicity or a singularity of odd multiplicity. This is helpful when graphing. These requirements can force the graph to go in particular directions.
 
 
 
@@ -285,7 +308,7 @@ For rational functions, the sign can change only at a zero of odd multiplicity o
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Analysis]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/libraryAnalysis1/examples/exampleList}
 

@@ -1,0 +1,284 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Exponential}
+
+\begin{document}
+
+\begin{abstract}
+attributes
+\end{abstract}
+\maketitle
+
+
+\section*{Basic Exponential Functions}
+
+Thinking about formulas, basic exponential functions are functions whose formulas look like
+
+\[
+exp(x) = a \cdot r^x
+\]
+
+Just a leading coefficent and a base greater than $1$. \\
+
+
+
+\begin{example}
+
+Here is the graph of $y = 2^x$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$.  Exponential functions become unbounded in one direction, while approaching $0$ in the other direction. \\
+
+This is determined by the size of the base and the sign of the leading coefficient. \\
+
+Graphically, the horizontal axis is a horizontal asymptote.\\
+
+
+
+\[  \lim_{x \to -\infty} 2^x = \answer{0}     \, \text{ and } \,  \lim_{x \to \infty} 2^x = \answer{\infty}   \]
+
+
+\textbf{Note:}. Using the number $e$ as the base of our basic exponential function is very popular.
+
+\end{example}
+
+
+
+
+
+The roles are reversed when the base is less than $1$ \\
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Here is the graph of $y = \left(\frac{1}{3}\right)^x$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {(0.333)^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+When the base is less than $1$, then the whole function decreases.  The function is still unbounded to one side and approaches $0$ on the other.
+
+\[  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = \answer{\infty}     \, \text{ and } \,  \lim_{x \to \infty} \left(\frac{1}{3}\right)^x = \answer{0}   \]
+
+\end{example}
+
+
+
+
+Note that
+
+\[
+\frac{1}{3} = 3^{-1}
+\]
+
+
+
+
+The function  $f(x) = \left(\frac{1}{3}\right)^x$ can be written as 
+
+\[
+f(x) = \left( 3^{-1} \right)^x = f(x) = \left( 3 \right)^{-x}
+\]
+
+
+
+
+We can view any exponential function with a base less than $1$ as an exponential function with a base greater than $1$ and just change the sign of the exponent. \\
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Here is the graph of $y = \left( 3 \right)^{-x}$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {(0.333)^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\end{example}
+
+
+
+Instead of using numbers greater or less than $1$, we could always use a base graeter than $1$ and just use negative exponents.  IN that case, we might as well use $e$ as our base. \\
+
+
+This gives us a basic basic exponential function: $e^x$ \\
+
+
+
+And, then three other alternative choices, if you prefer. \\
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax]
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west]
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases very quickly and continues to do so.
+
+
+
+$\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponential functions contain the point $(0, 1)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Analysis]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/libraryAnalysis2/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}
