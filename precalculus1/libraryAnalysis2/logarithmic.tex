@@ -184,14 +184,108 @@ $\blacktriangleright$ When the leading coefficients are different signs, then th
 
 
 
+\subsection*{Basic Models}
+
+
+
+Just like with exponential functions, it is nice to have a mental model in your head of a basic logarithmic function an its characteristics. \\
+
+
+
+And, like with exponential functions, we like $e$ as the base. \\
+
+
+This gives us a basic basic logarithmic function: $\ln(x)$ \\
+
+
+
+And, then three other alternative choices, if you prefer. \\
+
+
+\[
+\ln(x) \, \text{ or } \, \ln(-x) \, \text{ or } \, -\ln(x) \, \text{ or } \, -\ln(-x) 
+\]
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = basictop, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.02:9),<->] {ln(x)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+    \end{axis}
+    \begin{axis}[at={(basictop.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:-0.02),<->] {ln(-x)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+    \end{axis}
+
+
+
+
+\end{tikzpicture}
+\end{image}
 
 
 
 
 
 
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = basictop, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.02:9),<->] {-ln(x)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+    \end{axis}
+    \begin{axis}[at={(basictop.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:-0.02),<->] {-ln(-x)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+    \end{axis}
 
 
+
+
+\end{tikzpicture}
+\end{image}
 
 
 
