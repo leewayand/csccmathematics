@@ -17,7 +17,7 @@ attributes
 Thinking about formulas, basic exponential functions are functions whose formulas look like
 
 \[
-exp(x) = a \cdot r^x
+exp(x) = a \cdot r^x \, \text{ with } \, a \ne 0 \, \text{ and } \, r > 1
 \]
 
 Just a leading coefficent and a base greater than $1$. \\
@@ -132,7 +132,7 @@ Note that
 The function  $f(x) = \left(\frac{1}{3}\right)^x$ can be written as 
 
 \[
-f(x) = \left( 3^{-1} \right)^x = f(x) = \left( 3 \right)^{-x}
+f(x) = \left(\frac{1}{3}\right)^x = \left( 3^{-1} \right)^x = f(x) = \left( 3 \right)^{-x}
 \]
 
 
@@ -180,7 +180,7 @@ Here is the graph of $y = \left( 3 \right)^{-x}$.
 
 
 
-Instead of using numbers greater or less than $1$, we could always use a base graeter than $1$ and just use negative exponents.  IN that case, we might as well use $e$ as our base. \\
+Instead of using numbers greater or less than $1$, we could always use a base graeter than $1$ and just use negative exponents.  In that case, we might as well use $e$ as our base. \\
 
 
 This gives us a basic basic exponential function: $e^x$ \\
@@ -190,11 +190,14 @@ This gives us a basic basic exponential function: $e^x$ \\
 And, then three other alternative choices, if you prefer. \\
 
 
+\[
+e^x \, \text{ or } \, e^{-x} \, \text{ or } \, -e^{x} \, \text{ or } \, -e^{-x} \, \text{ or } \,
+\]
 
 
 \begin{image}
 \begin{tikzpicture}
-    \begin{axis}[name = sinax]
+    \begin{axis}[name = sinax, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
@@ -205,10 +208,10 @@ And, then three other alternative choices, if you prefer. \\
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {e^x};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
     \end{axis}
-    \begin{axis}[at={(sinax.outer east)},anchor=outer west]
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
@@ -219,7 +222,7 @@ And, then three other alternative choices, if you prefer. \\
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {e^(-x)};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
     \end{axis}
 
@@ -231,6 +234,42 @@ And, then three other alternative choices, if you prefer. \\
 
 
 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {-(e^x)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {-(e^(-x))};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
 
 
 
