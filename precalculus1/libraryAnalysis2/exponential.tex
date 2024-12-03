@@ -384,7 +384,7 @@ Even though the graphs of exponential functions appear to increase quite quickly
 
 
 
-Here is the graph of $f(x) = -\frac{1}{5} \cdot \left( 3 \right)^{-x + 1}$.
+Here is the graph of $f(x) = -\left( 3 \right)^{-x + 1}$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -399,7 +399,7 @@ Here is the graph of $f(x) = -\frac{1}{5} \cdot \left( 3 \right)^{-x + 1}$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {-(3)^(-x-5)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-6.75:9),<->] {-(3)^(-x-5)};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
 
            
