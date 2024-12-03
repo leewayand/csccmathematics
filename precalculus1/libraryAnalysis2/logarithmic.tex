@@ -12,218 +12,25 @@ inverse
 \maketitle
 
 
-\section{LOgarithmic Functions}
+\section*{Logarithmic Functions}
 
-Thinking about formulas, exponential functions are functions whose formulas have the variable in the exponent of a constant base.
 
 
-
-
-\begin{example}
-
-Here is the graph of $y = 2^x$.
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-The domain of an exponential function is all real numbers, $(-\infty, \infty)$.  When the base is greater than $1$, then the whole function increases.  The function increases unbounded while, on the other side, the horizontal axis is a horizontal asymptote.
-
-\[  \lim_{x \to -\infty} 2^x = \answer{0}     \, \text{ and } \,  \lim_{x \to \infty} 2^x = \answer{\infty}   \]
-
-\end{example}
-
-
-\begin{example}
-The roles are reversed when the base is less than $1$.
-
-
-
-
-
-
-
-
-
-
-Here is the graph of $y = \left(\frac{1}{3}\right)^x$.
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {(0.333)^x};
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-When the base is less than $1$, then the whole function decreases.  We still have unbounded above and approaching $0$ below.
-
-\[  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = \answer{\infty}     \, \text{ and } \,  \lim_{x \to \infty} \left(\frac{1}{3}\right)^x = \answer{0}   \]
-
-\end{example}
-
-
-Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases very quickly and continues to do so.
-
-
-
-$\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponential functions contain the point $(0, 1)$.
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} Shifted Exponential Function
-
-
-
-Here is the graph of $y = \left(\frac{1}{3}\right)^x + 2$.
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{2});
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-1.8:9),<->] {(0.333)^x + 2};
-          
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-The function values have all been incresaed by $2$.  Therefore, the horizontal asymptote in the graph has shifted vertically by 2 units to $y=2$.
-
-
-
-
-
-\end{example}
-
-
-
-
-\begin{warning}
-
-Exponential functions are functions that exhibit a constant percentage growth rate.  There is some constant $p$, such that
-
-\[
-f(x+1) = p \cdot f(x)
-\]
-
-
-All exponential functions CAN be written in the form $f(x) = p^{a x + b}$.  All exponenetial functions are a number raise to a linear function.  \\
-
-
-Note: Since $p = e^{ln(p)}$, every exponential funciton CAN be written in the form $e^{a x + b}$.  So, we really only need study base $e$ exponential functions.
-
-
-
-$y(x) = \left(\frac{1}{3}\right)^x + 2$ is not of this form.  The $+$ sign prevents y(x) from being written in our exponential form.  It is not an exponential function.
-
-$\blacktriangleright$ It is a shifted exponential function.
-
-
-However, for our purposes this still fits into our story.  Therefore, we are stretching our family of exponential functions to be functions that CAN be written in the form
-
-\[
-f(x) = e^{a x + b} + c
-\]
-
-which includes, forms like
-
-
-
-\[
-f(x) = a e^{r x} + c
-\]
-
-or,
-
-\[
-f(x) = a b^{r x} + c
-\]
-
-
-
-If $c = 0$, then it is an actual exponential function, rather than a shifted exponential function.
-
-
-\end{warning}
-
-
-
-
-
-
-\section{Logarithmic Functions}
 
 The expression $\log_a(b)$ was defined to be the number that you raise $a$ to, to get $b$.
 
-\[   a^{\log_a(b)} = b  \]
+\[   a^{\log_r(b)} = b  \]
 
 
 
 
-We made a function from this by fixing the base:  $L(x) = \log_a(x)$.
+We made a function from this by fixing the base:  $L(x) = \log_a(x)$. \\
 
 
-This function is the "reverse" of $a^x$.  Meaning that if $(A, B)$ is a pair in the $L(x) = \log_a(x)$ function, then $(B, A)$ is a pair in the $a^x$ function. Their domains and ranges are swapped.
+This function is the ``reverse'' of $r^x$.  Meaning that if $(A, B)$ is a pair in the $L(x) = \log_r(x)$ function, then $(B, A)$ is a pair in the $r^x$ function. Their domains and ranges are swapped. \\
+
+
+
 
 
 \begin{itemize}
@@ -267,7 +74,7 @@ Here is the graph of $y = L(x) = \log_2(x)$.
 
 
 
-The basic logarithmic function has a vertical asymptote where the inside of the formula equals $0$.  The domain includes only numbers that make the inside of the formula positive. The function increases over its domain and is unbounded.
+The graph of a basic logarithmic function has a vertical asymptote where the inside of the logarithm equals $0$.  The domain includes only numbers that make the inside of the formula positive. The function increases over its domain and is unbounded.
 
 
 
@@ -317,6 +124,72 @@ The inside of the logarithm here is $5-x$ and this equals $0$ when $x=5$.  There
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Behavior}
+
+
+
+
+
+
+
+Our general template for logarithmic functions looks like
+
+\[
+log(x) = A \cdot log_r(B \, x + C) + D
+\]
+
+Of we choose $e$ as the base, then they look like
+
+
+\[
+log(x) = A \cdot ln(B \, x + C) + D
+\]
+
+
+\begin{itemize}
+  \item $A$ is the leading coefficent for the function.
+  \item $B$ is the leading coefficent of the inside (the argument).
+\end{itemize}
+
+
+Comparing these back to our basic logarithm functions, we get
+
+
+
+\begin{itemize}
+  \item $A > 0$ and $B > 0$ gives an increasing logarithmic function.
+  \item $A < 0$ and $B > 0$ gives a decreasing logarithmic function.
+  \item $A > 0$ and $B < 0$ gives a decreasing logarithmic function.
+  \item $A < 0$ and $B < 0$ gives an increasing logarithmic function.
+\end{itemize}
+
+
+$\blacktriangleright$ When the leading coefficients are the same sign, then the logarithmic function is increasing. \\
+
+$\blacktriangleright$ When the leading coefficients are different signs, then the logarithmic function is decreasing. \\
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

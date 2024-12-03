@@ -7,130 +7,53 @@
 \begin{document}
 
 \begin{abstract}
-aspects
+charcateristics
 \end{abstract}
 \maketitle
 
 
-\section*{Basic Exponential Functions}
 
-Thinking about formulas, basic exponential functions are functions whose formulas look like
+
+
+
+
+
+
+
+
+
+\subsection*{Shifted Exponential Functions}
+
+
+Shifted Exponential functions are sums of exponential functions constant functions. \\
+
+They are not exponential functions, because constant percentage growth doesn't work with an  added constant. \\
+
+However, as far as function properties go, they are pretty much the same. \\
+
+
+
+
+
+Our general template for shifted exponential functions looks like
 
 \[
-exp(x) = a \cdot r^x
+exp(x) = A \cdot r^{B \, x + C} + D
 \]
 
-Just a leading coefficent and a base greater than $1$. \\
+Of we choose $e$ as the base, then they look like
 
 
-
-\begin{example}
-
-Here is the graph of $y = 2^x$.
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$.  Exponential functions become unbounded in one direction, while approaching $0$ in the other direction. \\
-
-This is determined by the size of the base and the signs of the leading coefficients. \\
-
-Graphically, the horizontal axis is a horizontal asymptote.\\
-
-
-
-\[  \lim_{x \to -\infty} 2^x = \answer{0}     \, \text{ and } \,  \lim_{x \to \infty} 2^x = \answer{\infty}   \]
-
-\end{example}
-
-
-\begin{example}
-The roles are reversed when the base is less than $1$.
-
-
-
-
-
-
-
-
-
-
-Here is the graph of $y = \left(\frac{1}{3}\right)^x$.
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {(0.333)^x};
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-When the base is less than $1$, then the whole function decreases.  We still have unbounded above and approaching $0$ below.
-
-\[  \lim_{x \to -\infty} \left(\frac{1}{3}\right)^x = \answer{\infty}     \, \text{ and } \,  \lim_{x \to \infty} \left(\frac{1}{3}\right)^x = \answer{0}   \]
-
-\end{example}
-
-
-Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases very quickly and continues to do so.
-
-
-
-$\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponential functions contain the point $(0, 1)$.
-
-
-
-
-
-
-
-
-
-\subsection*{Shifted Exponential}
-
+\[
+exp(x) = A \cdot e^{B \, x + C} + D
+\]
 
 
 \begin{example} Shifted Exponential Function
 
 
 
-Here is the graph of $y = \left(\frac{1}{3}\right)^x + 2$.
+Here is the graph of $g(x) = \left(\frac{1}{3}\right)^x + 2$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -156,9 +79,14 @@ Here is the graph of $y = \left(\frac{1}{3}\right)^x + 2$.
 \end{image}
 
 
+$g$ is the sum of an exponential function, $\left(\frac{1}{3}\right)^x$ and a constant $2$. \\
 
 
-The function values have all been incresaed by $2$.  Therefore, the horizontal asymptote in the graph has shifted vertically by 2 units to $y=2$.
+
+The exponential function values have all been increased by $2$.   \\
+
+
+Graphically, the horizontal asymptote in the graph has shifted vertically by 2 units to $y=2$.
 
 
 
@@ -219,128 +147,72 @@ If $c = 0$, then it is an actual exponential function, rather than a shifted exp
 
 
 
-
-
-
-\section{Logarithmic Functions}
-
-The expression $\log_a(b)$ was defined to be the number that you raise $a$ to, to get $b$.
-
-\[   a^{\log_a(b)} = b  \]
+In Calculus, we will see that when you write exponential formulas with base $e$, then nice things happen with the calculations.  So, we like base $e$. \\
 
 
 
 
-We made a function from this by fixing the base:  $L(x) = \log_a(x)$.
+\subsection*{Behavior}
 
 
-This function is the "reverse" of $a^x$.  Meaning that if $(A, B)$ is a pair in the $L(x) = \log_a(x)$ function, then $(B, A)$ is a pair in the $a^x$ function. Their domains and ranges are swapped.
+Shifted exponential functions behave similarly to exponential functions. \\
+
+\[
+shexp(x) = A \cdot e^{B \, x + C} + D
+\]
+
+
+
 
 
 \begin{itemize}
-
-\item The domain of an exponential function is all real numbers. The range of a logarithmic function is all real numbers.  
-
-
-\item The range of an exponential function is all positive real number. The domain of a logarithmic function is all positive real numbers.
-
-\item The graphs of exponential functions have a horizontal asymptote. The graphs of logarithmic functions have a vertical asymptote. 
-
+  \item $A$ is the leading coefficent for the function.
+  \item $B$ is the leading coefficent of the exponent.
 \end{itemize}
 
 
+Comparing these back to our basic exponential functions, we get
 
 
 
+\begin{itemize}
+  \item $A > 0$ and $B > 0$ gives an increasing shifted exponential function.
+  \item $A < 0$ and $B > 0$ gives a decreasing shifted exponential function.
+  \item $A > 0$ and $B < 0$ gives a decreasing eshifted xponential function.
+  \item $A < 0$ and $B < 0$ gives an increasing shifted exponential function.
+\end{itemize}
 
-Here is the graph of $y = L(x) = \log_2(x)$.
 
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),<->] {ln(x)/ln(2)};
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+$\blacktriangleright$ When the leading coefficients are the same sign, then the shifted exponential function is increasing. \\
 
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
+$\blacktriangleright$ When the leading coefficients are different signs, then the shifted exponential function is decreasing. \\
 
 
 
 
 
-The basic logarithmic function has a vertical asymptote where the inside of the formula equals $0$.  The domain includes only numbers that make the inside of the formula positive. The function increases over its domain and is unbounded.
+\subsection{End-Behavior}
 
 
 
+The big difference between exponential functions and shifted exponential functions is the end-behavior. \
 
 
 
+While exponential functions tend to $0$ in one tail of the domain, shifted exponential functions tend to the added constant value. \\
 
 
 
+$shexp(x) = A \cdot e^{B \, x + C} + D$ will tend to $D$ in the tail where the exponent is negative. \\
 
 
-
-
-\begin{example} Shifted Logarithmic Function
-
-
-
-Here is the graph of $y = L(x) = \log_2(5-x)$.
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({5},{x});
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5),<->] {ln((5-x)/ln(2)};
-          
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-The inside of the logarithm here is $5-x$ and this equals $0$ when $x=5$.  Therefore, the vertical asymptote in the graph is $x=5$.  The domain is $(-\infty, 5)$, since these are the numbers that make the inside of the logarithm formula positive.
-
-
-
-
-
-\end{example}
-
-
-
-
-
-
-
+$shexp(x) = A \cdot e^{B \, x + C} + D$ will become unbounded in the tail where the exponent is positive.  The sign will be given by the leading coefficient, $A$. \
 
 
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Analysis]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/libraryAnalysis2/examples/exampleList}
 
