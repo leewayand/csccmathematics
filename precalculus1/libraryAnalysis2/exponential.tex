@@ -51,9 +51,7 @@ Here is the graph of $y = 2^x$.
 \end{image}
 
 
-The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$.  Exponential functions become unbounded in one direction, while approaching $0$ in the other direction. \\
-
-This is determined by the size of the base and the sign of the leading coefficient. \\
+The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$ and it increases on this domain.  \\
 
 Graphically, the horizontal axis is a horizontal asymptote.\\
 
@@ -273,7 +271,7 @@ e^x \, \text{ or } \, e^{-x} \, \text{ or } \, -e^{x} \, \text{ or } \, -e^{-x}
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-3.2:9),<->] {(2^(-x))};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-3.2:9),<->] {-(2^(-x))};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
     \end{axis}
 
@@ -288,11 +286,82 @@ e^x \, \text{ or } \, e^{-x} \, \text{ or } \, -e^{x} \, \text{ or } \, -e^{-x}
 
 
 
-Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases very quickly and continues to do so.
+
+Basic exponential functions become unbounded in one direction, while approaching $0$ in the other direction. \\
+
+
+\begin{itemize}
+  \item When the base is greater than $1$, exponential functions tend to $0$ in the direction that makes their exponent negative. \\
+  \item When the base is less than $1$, exponential functions tend to $0$ in the direction that makes their exponent positive. \\
+\end{itemize}
+
+Expoential functions are unbounded in the other direction. \\
+
+
+Exponential funcitons can be unbounded positively or negatively. This is determined by the sign of the leading coefficient. \\
 
 
 
-$\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponential functions contain the point $(0, 1)$.
+
+Those are our basic exponential functions.  Pick one as your own basic exponential function. \\
+
+
+
+$exp(x) = e^x$ is very popular. \\
+
+
+Then compare all other exponential functions to it.
+
+
+
+
+
+\subsection*{Exponential Functions}
+
+
+
+Our general template for exponential formulas looks like
+
+\[
+exp(x) = A \cdot r^{B \, x + C} + D
+\]
+
+Of we choose $e$ as the base, then they look like
+
+
+\[
+exp(x) = A \cdot e^{B \, x + C} + D
+\]
+
+
+\begin{itemize}
+  \item $A$ is the leading coefficent for the function.
+  \item $B$ is the leading coefficent of the exponent.
+\end{itemize}
+
+
+Comparing these back to our basic exponential functions, we get
+
+
+
+\begin{itemize}
+  \item $A > 0$ and $B > 0$ gives an increasing exponential function.
+  \item $A < 0$ and $B > 0$ gives a decreasing exponential function.
+  \item $A > 0$ and $B < 0$ gives a decreasing exponential function.
+  \item $A < 0$ and $B < 0$ gives an increasing exponential function.
+\end{itemize}
+
+
+$\blacktriangleright$ When the leading coefficients are the same sign, then the exponential function is increasing. \\
+
+$\blacktriangleright$ When the leading coefficients are different signs, then the exponential function is decreasing. \\
+
+
+
+
+\subsection*{Graphically}
+
+Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases or decreases very quickly and continues to do so.
 
 
 
@@ -306,6 +375,71 @@ $\blacktriangleright$ Along with the horizontal asymptote, the graphs of exponen
 
 
 
+
+
+
+
+
+\begin{example}
+
+
+
+Here is the graph of $f(x) = -\frac{1}{5} \cdot \left( 3 \right)^{-x + 1}$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {-(3)^(-x-5)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+This matches our template for an exponential function. \\
+
+
+\begin{itemize}
+  \item The leading coefficient is $-1$, which is negative. 
+  \item The leading coefficient of the exponent is $-1$, which is negative. 
+\end{itemize}
+
+Both leading coefficients have the same sign, so this exponential function is increasing. \\
+
+
+
+The leading coefficient of the function is $-1$, which is negative. Therefore, the function only has negative values. \\
+
+
+The exponent is $-x-5$.  This is negative in the positive tail of the domain. The function tends to $0$ in this direction. The function becomes unbounded in the other direction. Unbounded negatively. \\
+
+
+
+
+\[
+\lim\limits_{x \to \infty} f(x) = 0 
+\]
+
+
+\[
+\lim\limits_{x \to -\infty} f(x) = -\infty 
+\]
+
+\end{example}
 
 
 
