@@ -27,7 +27,7 @@ As we study functions we have expectations of their values or feelings about ``n
 
 
 
-``\textbf{\textcolor{purple!85!blue}{Close}}'' is a realtive term.  It doesn't have an exact value.  It depends on the context and the other measurements involved.  Therefore, we cannot really talk about close as a single concept.  It is a moving target.  How are we going to describe a moving target algebraically?
+``\textbf{\textcolor{purple!85!blue}{Close}}'' is a relative term.  It doesn't have an exact value.  It depends on the context and the other measurements involved.  Therefore, we cannot really talk about close as a single concept.  It is a moving target.  How are we going to describe a moving target algebraically?
 
 We need moving algebra and it must take into account any and all levels of closeness.
 
@@ -88,11 +88,11 @@ Let $f$ be a function. Let $d$ be a domain number.
 
 Let $\delta$ be any small positive number.
 
-Now consider \textbf{\textcolor{red!80!black}{ALL}} of the intervals described by $(d - \delta, d + \delta)$.
+Now consider \textbf{\textcolor{red!70!black}{ALL}} of the intervals described by $(d - \delta, d + \delta)$.
 
 
 \begin{itemize}
-\item There are an infinite number of these intervals.
+\item There are an infinite number of these intervals. One for each value of $\delta$.
 \item They are all open intervals.
 \item They all provide space around $d$.
 \item They get as small as anyone might wish for their chosen level of ``closeness''.
@@ -102,7 +102,22 @@ These $\delta$-intervals handle all of the closeness situations.  If someone wan
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{More Importantly:}} If we are not sure of the level of closeness, then we can talk about \textbf{\textcolor{red!80!black}{ALL}} of the $\delta$-intervals and have \textbf{\textcolor{red!80!black}{ALL}} of the bases covered at once.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{More Importantly:}} If we are not sure of the level of closeness, then we can talk about \textbf{\textcolor{red!70!black}{ALL}} of the $\delta$-intervals and have \textbf{\textcolor{red!70!black}{ALL}} of the bases covered at once.
+
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{Even More Importantly:}} If we are not sure of the level of closeness, then we can talk about \textbf{\textcolor{red!70!black}{EVENTUALLY ALL}} of the $\delta$-intervals and have \textbf{\textcolor{red!70!black}{close}} covered at once.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,13 +160,20 @@ In an open interval, there is always filled space ``\textbf{\textcolor{purple!85
 This is not true for closed intervals.
 
 
-For example, consider the number $5$ and the interval $[5, 7]$.  $5$ doesn't have space ``around'' it in this interval. Of course, we could choose the interval $[4,7]$, which has space ``around'' $5$.  However, there would now be the open interval $(4.5, 7)$ to use.  So, why take the chance on a closed interval?  If we are interested in our analysis working \textbf{\textcolor{red!80!black}{all}} of the time, then let's just stick with open intervals.  They \textbf{must} provide space ``around'' \textbf{\textcolor{red!80!black}{all}} of the numbers they contain.
+For example, consider the number $5$.  In the closed interval $[5, 7]$,  $5$ doesn't have space ``around'' it in this interval. \\
+
+Of course, if we want space around $5$, we could choose the closed interval $[4,7]$, which has space ``around'' $5$.  However, there would now be the open interval $(4.5, 7)$ to use.  So, why take the chance on a closed interval?  \\
+
+If we are interested in our analysis working \textbf{\textcolor{red!70!black}{all}} of the time, then let's just stick with open intervals.  They \textbf{must} provide space ``around'' \textbf{\textcolor{red!70!black}{all}} of the numbers they contain. \\
+
+Choosing to work with open intervals avoids possible problems that closed interval might cause.\\
 
 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The situation we are contemplating is our expectations from patterns ``around'' a domain number not matching up with the actual function at the domain number.
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} The situation we are contemplating is our expectations from patterns ``around'' a domain number not matching up with the actual function at the domain number.
 
 Therefore, we need some language to help us jump back and forth between the domain and range or function values.
 
@@ -175,7 +197,7 @@ Therefore, we need some language to help us jump back and forth between the doma
 
 
 
-\section{Image}
+\section*{Image}
 
 
 We could picture $(a-\delta, a+\delta)$ inside the domain of a function, $f$, and then investigate the image of this interval under $f$.  
@@ -252,9 +274,9 @@ $(13-2\delta, 13+2\delta)$
 
 
 
-What if we went the other way and started with a target in the range? \\
+What if we went the other way and started with a target interval in the range of a function? \\
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Actually, a range target is often too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. \\
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Actually, a range target interval is often too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. \\
 
 
 
@@ -312,7 +334,7 @@ When working backwards through the function, like this, we use the word \textbf{
 
 
 
-\section{Preimage}
+\section*{Preimage}
 
 
 
@@ -517,7 +539,7 @@ Let's pick $\delta = \frac{\epsilon}{5}$.
 
 
 
-\section{Endpoints}
+\section*{Endpoints}
 
 
 If our domain contains intervals with endpoints, then we have a bit of a technicality.
@@ -527,7 +549,7 @@ Let $B$ be a function with domain $(-9, -7] \cup (-2, 1) \cup [6, 10)$ \\
 Then there is no open interval inside the domain surrounding $6$.  This is because the numbers immediately less than $6$ are not included in the domain.
 
 
-We may need special attention to endpoints.
+We may need to spend special attention to endpoints.
 
 
 
@@ -541,7 +563,7 @@ We may need special attention to endpoints.
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Space]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/space/examples/exampleList}
 
