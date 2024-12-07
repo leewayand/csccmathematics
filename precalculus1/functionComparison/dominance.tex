@@ -7,7 +7,7 @@
 \begin{document}
 
 \begin{abstract}
-bigger faster
+relatively bigger
 \end{abstract}
 \maketitle
 
@@ -17,7 +17,7 @@ bigger faster
 
 
 
-\textbf{\textcolor{red!80!black}{$\rhd$}} Do functions tend to infinity differently? \\
+\textbf{\textcolor{red!70!black}{$\rhd$}} Do functions tend to infinity differently? \\
 
 
 
@@ -29,9 +29,9 @@ Both $p(x) = 6x^3 - 5x + 2$ and $w(t) = 2t^2 = 4t - 5$ approach $\infty$ as you 
 
 \[    \lim_{x \to \infty} p(x) = \infty  \, \text{ and }  \,       \lim_{t \to \infty} w(t) = \infty                \]
 
-$\blacktriangleright$ Do they approach $\infty$ in the same way? 
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Do they approach $\infty$ in the same way? 
 
-$\blacktriangleright$ What do we mean by ``same way''?  \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} What do we mean by ``same way''?  \\
 
 
 
@@ -40,10 +40,10 @@ How should we compare $p(x)$ and $w(t)$ to decide if they approach $\infty$ in t
 
 We have two ways of comparing things: differences and quotients. \\
 
-Quotients work better for comparing functions. \\
+Quotients work better for comparing the end-behavior of functions. \\
 
 
-By the ``same way'', we are picturing a horizontal asymptote for rational functions. This occurs when the degrees of the polynomials are equal.   The polynomial in the numerator and the polynomial in the denominator ``behave in the same way'' as we move far out in the domain.  The two polynomials are somehow ``at the same level''. \\
+By the ``same way'', we are picturing a horizontal asymptote, like for rational functions. This occurs when the degrees of the polynomials are equal.   The polynomial in the numerator and the polynomial in the denominator ``behave in the same way'' as we move far out in the domain.  The two polynomials are somehow ``at the same level'' of infinity. \\
 
 
 
@@ -74,13 +74,11 @@ If the limit is $1$, then people sometimes say the two functions are asymptotica
 
 
 
-\begin{quote}
+\begin{center}
 
-Perhaps more important for future Calculus courses is when this limit is $0$. \\
+\textbf{\textcolor{purple!85!blue}{Perhaps more important for future Calculus courses is when this limit is $0$.}} \\
 
-\end{quote}
-
-
+\end{center}
 
 
 
@@ -94,7 +92,9 @@ Perhaps more important for future Calculus courses is when this limit is $0$. \\
 
 
 
-\section{Dominance}
+
+
+\section*{Dominance}
 
 
 
@@ -114,7 +114,7 @@ Sometimes people use a double inequality for dominates:  $f \ll g$.\\
 
 
 
-When one function dominates another, then it approaches infinity at a faster level than the other function.  Since the dominant function approaches $\infty$ faster and it is in the denominator, then it drives the quotient to $0$.
+When one function dominates another, then it approaches infinity in such a way that the other function is like $0$ in comparison. When the dominate function is the denominoatr, then this drives the quotient to $0$.
 
 
 Our initial order of dominance looks like this. \\
@@ -123,11 +123,17 @@ Our initial order of dominance looks like this. \\
 \begin{summary} \textbf{\textcolor{purple!85!blue}{Order of Dominance}}
 
 
-\[   bounded functions (constants, \, sine \, cosine)  \ll logarithmic \ll power \ll  exponential  \]
+When we are comparing \textbf{unbounded} function values, then \\
+
+\[   bounded functions (constants, \, sine, \, cosine)  \ll logarithmic \ll power (polynomial) \ll  exponential  \]
 
 
 
 This goes for their powers as well. 
+
+
+\[   bounded functions (constants, \, sine, \, cosine)  \ll logarithmic^{power} \ll power polynomial^{power} \ll  exponential  \]
+
 
 
 \end{summary}
@@ -396,6 +402,173 @@ For the following limits, refer to our order of dominance.
 
 
 
+\begin{idea} \textbf{\textcolor{blue!55!black}{Upsidedown}}
+
+
+When we talk about dominance, we phrase it in terms of approaching $0$.  The quotient might be approaching $0$ through psitive numbers or negative numbers.  It doesn't matter because $-0 = 0$.
+
+
+If we our quotient is upsidedown and the dominate function is in the numerator, then we also need to think about the sign.
+
+
+\end{idea}
+
+
+
+\begin{example}
+
+
+
+
+\[
+\lim\limits_{k \to \infty} \frac{8}{3^k} = 0
+\]
+
+
+
+\[
+\lim\limits_{k \to \infty} \frac{3^k}{8} = \infty 
+\]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Since $4 - k \ll 3^k$,
+
+\[
+\lim\limits_{k \to \infty} \frac{4 - k}{3^k} = 0
+\]
+
+
+When thinking about the reciprocal, then we need to keep in mind that $4 - k < 0$ for large positive values of $k$.
+
+
+
+\[
+\lim\limits_{k \to \infty} \frac{3^k}{4 - k} = -\infty 
+\]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+\subsection{Sums and Differences}
+
+
+Dominance also helps us identify the most important terms in a function's formula.
+
+
+When one term in a formula dominates over an added term, then we can remove the dominated term from our analysis. \\
+
+
+
+
+
+
+\begin{example}
+
+Consider the function $B(t) = \frac{3e^t - 5}{e^t + 1}$. \\
+
+
+$\blacktriangleright$ As $t \to \infty$, $3e^t$ dominates $-5$. \\
+
+$\blacktriangleright$ As $t \to \infty$, $3^t$ dominates $1$. \\
+
+
+
+
+As $t \to \infty$, the exponential pieces will dominate the constant pieces in each expression.  
+
+\[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{3 e^t}{e^t} = 3   \]
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Now consider the other direction. \\
+
+
+As $t \to -\infty$, we have a different story.   
+
+
+
+\[   \lim\limits_{t \to -\infty} 3 e^t  = 0  \]
+
+
+This reverses the dominance.
+
+
+\[   \lim\limits_{t \to -\infty} \frac{e^t}{5} = 0   \]
+
+
+
+As $t \to -\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$. Therefore, in this case, the constant terms dominate.
+
+
+\[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{-5}{1} = -5   \]
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+\begin{idea} \textbf{\textcolor{blue!55!black}{Limiting Behavior}}
+
+
+
+If $f(x) \ll g(x)$, then $f(x) + g(x) \sim g(x)$
+
+
+
+\end{idea}
+
+
+This helps us think about limiting behavior.
+
+
+
+\begin{example}
+
+
+\[
+\lim\limits_{x \to -\infty} \frac{e^{x} + 5x^2 + \sqrt{4x} - 7}{5 + 6x^4 + e^{-x}} = \lim\limits_{x \to -\infty} \frac{-7}{e^{-x}} = 0
+\]
+
+
+
+\end{example}
+
+
+
+
+
+
 
 
 
@@ -410,7 +583,7 @@ For the following limits, refer to our order of dominance.
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Dominance]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionComparison/examples/exampleList}
 

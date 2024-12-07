@@ -7,7 +7,7 @@
 \begin{document}
 
 \begin{abstract}
-equally fast
+no dominance
 \end{abstract}
 \maketitle
 
@@ -15,7 +15,9 @@ equally fast
 
 
 
-Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity similarly, then the limit of their quotient equals a number.  The graph of the quotient approaches a horizontal asymptote.
+Functions can dominate other functions, or they can approach infinity similarly.  If the two functions approach infinity similarly, then the limit of their quotient equals a number.  The graph of the quotient approaches a horizontal asymptote. \\
+
+This goes for $0$ as well. \\
 
 
 
@@ -84,10 +86,12 @@ The graph has two different horizontal asymptotes.
 
 
 
-\section{Indeterminate Forms}
+\section*{Indeterminate Forms}
 
 
-We have been examining functions that approach infinity at the same rate. When combined into a new quotient function, this new function might have a contant end-behavior.  The problem is that a fraction of the form $\frac{very \, big}{very \, big}$ could equal anything.
+We have been examining functions that approach infinity (or $0$) similarly. When combine similar functions into a new quotient function, this new function might have a contant end-behavior. \\
+
+The problem is that a fraction of the form $\frac{very \, big}{very \, big}$ could equal anything.
 
 
 
@@ -117,20 +121,6 @@ The same thing happens with values near $0$
 Formulas whose values seem like they are approaching $\frac{\infty}{\infty}$ or $\frac{0}{0}$ are called \textbf{indeterminate forms}, because you can't easily determine their values.
 
 
-%\begin{definition}[End Behavior Indeterminant Forms]
-%	A limit
-%	\[
-%			\lim\limits_{a \to \infty}\frac{n(a)}{d(a)}
-%	\]
-%	is said to be of the form $\dfrac{\infty}{\infty}$ if 
-%	\[
-%			\lim\limits_{a \to \infty}n(a)=\infty \qquad \text{and} \qquad \lim\limits_{a \to \infty}d(a)=\infty
-%	\]
-%	and is said to be in the form $\dfrac{0}{0}$ if 
-%	\[
-%	\lim\limits_{a \to \infty}n(a)=0 \qquad \text{and} \qquad \lim\limits_{a \to \infty}d(a)=0
-%	\]
-%\end{definition}
 
 
 
@@ -141,6 +131,16 @@ Both the functions $S(t) = \sqrt{2t^3 - 5}$ and $L(t) = t\sqrt{9t+4}$ approach $
 
 
 $R(t) = \frac{S(t)}{L(t)} = \frac{\sqrt{2t^3 - 5}}{t\sqrt{9t+4}}$ is an indeterminate form. It is approaching the form $\frac{\infty}{\infty}$ \\
+
+
+
+
+\[
+\frac{S(t)}{L(t)} = \frac{\sqrt{2t^3 - 5}}{t\sqrt{9t+4}} \sim \frac{\infty}{\infty}
+\]
+
+
+
 
 
 If we examine the quotient in terms of dominance, then we think like...
@@ -160,6 +160,7 @@ R(t) =  \frac{\sqrt{2t^3 - 5}}{t \sqrt{9t+4}} \sim \frac{\sqrt{2t^3}}{t \sqrt{9t
 
 
 
+When we encounter a formula that behaves like $\frac{\infty}{\infty}$, then we know we are looking at the wrong formula.   Calculations that start looking like $\frac{\infty}{\infty}$ tell us to find a different equivalent formula. \\
 
 
 
@@ -186,7 +187,8 @@ R(t) =  \frac{\sqrt{2t^3 - 5}}{t \sqrt{9t+4}} \sim \frac{\sqrt{2t^3}}{t \sqrt{9t
 
 
 
-\section{Calculus}
+
+\section*{Calculus}
 
 
 We are introducing the term \textbf{indeterminate form} here in connection to dominance and horizontal asymptotes.  In Calculus, this idea will be expanded significantly to include other targets besides $\infty$.
@@ -198,7 +200,7 @@ We are introducing the term \textbf{indeterminate form} here in connection to do
 
 Both the functions $S(t) = \sin(t)$ and $L(t) = t$ approach $0$ as $t \to 0$. \\
 
-Do they approach $0$ at the same rate? \\
+Do they approach $0$ similarly? \\
 
 Let's investigate $R(t) = \frac{\sin(t)}{t}$
 
@@ -245,7 +247,7 @@ Let's investigate $R(t) = \frac{\sin(t)}{t}$
 
 
 
-$\sin(t)$ and $t$ approach $0$ at exactly the same rate.  Their quotient approaches $1$.
+The graph is very suggestive that $\sin(t)$ and $t$ approach $0$ in exactly the same way.  Their quotient approaches $1$.
 
 
 
@@ -270,12 +272,12 @@ $\sin(t)$ and $t$ approach $0$ at exactly the same rate.  Their quotient approac
 
 We have seen an even weirder indeterminate form.
 
-Everyone knows that $1$ to any power equals $1$. Everyone knows that numbers greater than $1$ to any power get bigger.
+Everyone knows that $1$ to any power equals $1$. Everyone knows that numbers greater than $1$ to bigger powers get bigger.
 
 
 What about something like $\left( 1 + \frac{1}{x} \right)^x$ ?
 
-The base is getting closer to $1$, but they are always greater than $1$.  The power is growing larger.  
+The base is getting closer to $1$, but it is always greater than $1$.  The power is growing larger.  
 
 We are heading to something like $1^{\infty}$.
 
@@ -306,7 +308,7 @@ How far out in the domain do you need to go for the graph to be inside the inter
 
 
 
-
+Calculus will investigate the ideas of indeterminance in detail.  We are just getting started.
 
 
 
@@ -318,7 +320,7 @@ How far out in the domain do you need to go for the graph to be inside the inter
 
 
 \begin{center}
-\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
 
 more examples can be found by following this link\\ \link[More Examples of Dominance]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionComparison/examples/exampleList}
 
