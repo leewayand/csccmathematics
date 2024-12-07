@@ -15,6 +15,139 @@ itself
 
 
 
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$ A Peek ahead to Calculus}}
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{In Calculus}}, we will see all of the rules for obtaining the derivative of any funciton for ourselves. \\
+
+Right now we know three rules:
+
+\begin{itemize}
+	\item if $f(x) = a \, x^2 + b \, x + c$, then $f'(x) = 2a \, x + b$
+	\item if $f(x) = a \, x + b$, then $f'(x) = a$
+	\item if $f(x) = a$, then $f'(x) = 0$
+\end{itemize}
+
+
+
+When we get to Calculus, we'll be able to ``differentiate'' any function we want. \\
+
+Right now, you would be given the derivative of a function, which you could then use to analyze the function. \\
+
+
+
+\begin{example}
+
+When analyzing $f(x) = (3x - 2) e^{4x + 5}$, you might be given the derivative.
+
+
+\[
+f'(x) = 3 \, e^{4x + 5} + (3x - 2) e^{4x + 5} \cdot 4
+\]
+
+
+We could then use this derivative to identify critical numbers and decide where the function $f$ is increasing and decreasing.
+
+
+
+
+\textbf{Critical Numbers} \\
+
+
+To find critical numbers, we need to solve $f'(x) = 0$. \\
+
+
+\[
+f'(x) = 0
+\]
+
+
+\[
+3 \, e^{4x + 5} + (3x - 2) e^{4x + 5} \cdot 4 = 0
+\]
+
+
+\[
+e^{4x + 5}  (3 + 4 \, (3x - 2)) = 0
+\]
+
+
+\[
+e^{4x + 5}  (12x - 5) = 0
+\]
+
+
+
+By the zero product property, one of the factors must equal $0$. \\
+
+
+
+$\blacktriangleright$ $e^{4x + 5}$ is never $0$, since it is an exponential function. \\
+
+
+$\blacktriangleright$ $(12x - 5) = 0$, when $x = \frac{5}{12}$. \\
+
+
+
+$f$ has $\frac{5}{12}$ as its only critical number. \\
+
+
+
+
+\textbf{Behavior}: Increasing and Decreasing \\
+
+
+
+The sign of the derivative will tell us where $f$ is increasing and decreasing. \\
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Where is $e^{4x + 5}  (12x - 5)$ positive and negative?
+
+
+This is a product, so we need the signs of the factors. \\
+
+
+$\blacktriangleright$  $e^{4x + 5}$ is always positive, since it is an exponential function with a positive leading coefficient. \\
+
+
+$\blacktriangleright$. $(12x - 5)$ is a linear function with a positive leading coefficient, which means the linear function is increasing, which means it is negative to the left and positive to the right of its zero, which is $\frac{5}{12}$. \\
+
+
+
+\[
+f'(x) < 0 \, \text{ on } \, \left( -\infty, \frac{5}{12} \right)
+\]
+
+
+\[
+f'(x) > 0 \, \text{ on } \, \left( \frac{5}{12}, -\infty \right)
+\]
+
+
+
+
+
+\[
+f(x)  \, \text{ decreases on } \, \left( -\infty, \frac{5}{12} \right)
+\]
+
+
+\[
+f(x)  \, \text{ increases on } \, \left( \frac{5}{12}, -\infty \right)
+\]
+
+
+
+Since $f(x)$ is continuous, this tells us that there is a local minimum (possibly global) at $\frac{5}{12}$.
+
+
+\end{example}
+
+
+
 
 
 
