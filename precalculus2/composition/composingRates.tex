@@ -1,0 +1,712 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Rate for Composition}
+
+\begin{document}
+
+\begin{abstract}
+rates of rates
+\end{abstract}
+\maketitle
+
+
+
+
+Rates of Change is our measurement of \textbf{function behavior}.
+
+
+$\vartriangleright$  \textbf{\textcolor{blue!55!black}{Functions increase.}}  However, they could increase slowly with a small positive rate of change.  They could increase quickly with a large positive rate of change. 
+
+
+
+$\vartriangleright$  \textbf{\textcolor{blue!55!black}{Functions decrease.}}  However, they could decrease slowly with a small negative rate of change.  They could decrease quickly with a large negative rate of change. 
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{What about compositions?}}
+
+
+
+
+
+What happens when you
+
+
+\begin{itemize}
+\item compose an increasing function with an increasing function?
+\item compose an increasing function with an decreasing function?
+\item compose an decreasing function with an increasing function?
+\item compose an decreasing function with an decreasing function?
+\end{itemize}
+
+
+
+To investigate these we need to remember the definitions of increasing and decreasing.
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{green!50!black}{Increasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{increasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \leq f(b)$.
+\end{center}
+
+\end{summary}
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{green!50!black}{Decreasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{decreasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \geq f(b)$.
+\end{center}
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Increasing}
+
+
+Suppose that both $F$ and $G$ are increasing functions. \\
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are increasing. \\
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are increasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are increasing, since $G$ is an increasing function.
+
+These values of $G(x)$, which are increasing, are going into $F$.  Therefore, the output of $F$ is increasing.  But, these are the values of the composition.
+
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ increases.}}
+\end{center}
+
+
+
+
+
+
+\begin{fact}
+$increasing \circ increasing = increasing$
+
+
+Let $F$ be an increasing function. \\
+Let $G$ be an increasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) < G(b)$, because $G$ is an increasing function. \\
+
+Then $F(G(a)) < F(G(b))$, because $F$ is an increasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Decreasing}
+
+
+Suppose that $F$ is an increasing function. \\
+Suppose that $G$ is a decreasing function. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are increasing. \\
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are decreasing. \\
+
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are decreasing, since $G$ is a decreasing function.
+
+These values of $G(x)$, which are decreasing, are going into $F$.  Therefore, the output of $F$ is decreasing, since $F$ is an increasing function.  But, these are the values of the composition.
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ decreases.}}
+\end{center}
+
+
+
+\begin{fact}
+$increasing \circ decreasing = decreasing$
+
+
+Let $F$ be an increasing function. \\
+Let $G$ be a decreasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(b) < G(a)$, because $G$ is a decreasing function. \\
+
+Then $F(G(b)) < F(G(a))$, because $F$ is an increasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Increasing}
+
+
+Suppose that $F$ is a decreasing function. \\
+Suppose that $G$ is an increasing function. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are decreasing. \\
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are increasing. \\
+
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are increasing. \\
+
+
+$\vartriangleright$ It also means that when the numbers going into $G$ are decreasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are increasing, since $G$ is a increasing function.
+
+These values of $G(x)$, which are increasing, are going into $F$.  Therefore, the output of $F$ is decreasing, since $F$ is an decreasing function.  But, these are the values of the composition.
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ decreases.}}
+\end{center}
+
+
+
+\begin{fact}
+$decreasing \circ increasing = decreasing$
+
+
+Let $F$ be a decreasing function. \\
+Let $G$ be an increasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) < G(b)$, because $G$ is an increasing function. \\
+
+Then $F(G(b)) < F(G(a))$, because $F$ is an decreasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Decreasing}
+
+
+Suppose that both $F$ and $G$ are decreasing functions. \\
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are decreasing. \\
+
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are increasing. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+$\vartriangleright$ It also means that when the numbers going into $G$ are decreasing, then the numbers coming out of $G$ are increasing. \\
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are decreasing, since $G$ is an decreasing function.
+
+These values of $G(x)$, which are decreasing, are going into $F$.  Therefore, the output of $F$ is increasing, because $F$ is a decreasing function.  But, these are the values of the composition.
+
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ increases.}}
+\end{center}
+
+
+
+
+
+
+\begin{fact}
+$decreasing \circ decreasing = increasing$
+
+
+Let $F$ be a decreasing function. \\
+Let $G$ be a decreasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) > G(b)$, because $G$ is a decreasing function. \\
+
+Then $F(G(a)) < F(G(b))$, because $F$ is a decreasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+\begin{example}   $e^{-(x+3)^2}$
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   $ln(x^2 + 3x + 5)$
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   Quartic
+
+
+
+Let $F(x) = (x+7)(x-1)$ \\
+
+
+Let $G(k) = (k+4)(k-3)$ \\
+
+
+
+Where is the composition, $F \circ G$, increasing and decreasing?
+
+
+$\vartriangleright$   $(F \circ G)(t) = t^4 +2 t^3 -17 t^2 - 18 t + 65$
+
+
+
+
+
+We can approximate the critical numbers from the graph.
+
+
+
+\begin{center}
+\desmos{4uzzkkj7co}{400}{300}
+\end{center}
+
+
+The critical numbers are approximately $-3.541$, $-0.5$, and $2.541$.
+
+
+\textbf{\textcolor{red!70!black}{Algebraically}}
+
+
+Now, let's obtain the critical numbers algebraically. \\
+
+
+We have a composition of two quadratic functions.  We need to know where they individually increase and decrease.
+
+Both $F$ and $G$ have a positive leading coefficient.  Therefore, they both decrease and the increase. The derivative will reveal the specifics.
+
+
+
+$\blacktriangleright$  $F'(x) = 2x + 6$
+
+This tells us that the critical number is $-3$.  $F$ decreases on $(-\infty, -3)$ and increases on $(-3, \infty)$.
+
+$\blacktriangleright$  $G'(k) = 2k + 1$
+
+This tells us that the critical number is $-\frac{1}{2}$.  $F$ decreases on $(-\infty, -\frac{1}{2})$ and increases on $(-\frac{1}{2}, \infty)$.
+
+
+
+
+
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{Overlaping Intervals}}  \\
+
+
+
+We need to know when the output from $G$ crosses $-3$, which is where $F$ changes its behavior.
+
+
+
+
+
+\begin{align*}
+(k+4)(k-3) & = -3 \\
+ k^2 + k - 12           & = -3  \\
+ k^2 + k - 9         & = 0
+\end{align*}
+
+
+\[
+k = \frac{-1 \pm \sqrt{1^2 - 4 (1) (-9)}}{2} = \frac{-1 \pm \sqrt{37}}{2} 
+\]
+
+
+We are feeling good, because $\frac{-1 - \sqrt{37}}{2} \approx -3.541$ and $\frac{-1 + \sqrt{37}}{2} \approx 2.541$, which are the approximations from the graph.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (-\infty, \frac{-1 - \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item The range of $G$ on this interval is $(-3, \infty)$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 + \sqrt{37}}{2}, \infty)$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G > -3$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+We now know that 
+
+\begin{itemize}
+\item $F \circ G$ decreases on $(-\infty, \frac{-1 - \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$ \\
+\item $F \circ G$ decreases on $(\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 + \sqrt{37}}{2}, \infty)$
+\end{itemize}
+
+
+
+
+At $\frac{-1 - \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right)$ \\
+
+
+At $-\frac{1}{2}$ there is a local maximum of $(F \circ G)\left( -\frac{1}{2} \right)$ \\
+
+
+At $\frac{-1 + \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 + \sqrt{37}}{2} \right)$ \\
+
+
+
+
+\end{example}
+
+
+
+How do these compare with our graph information? \
+
+
+
+
+\[
+(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right) = -16
+\]
+
+That is what the graph says! \\
+
+
+
+
+
+
+\[
+(F \circ G)\left( -\frac{1}{2} \right) = \frac{1113}{16} \approx 69.5625
+\]
+
+That is what the graph says! \\
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Wonderful !!!}}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Composition]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/composition/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}
