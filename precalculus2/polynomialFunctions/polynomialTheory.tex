@@ -277,7 +277,7 @@ With some Calculus, we could get the exact values of the critical numbers. \\
 
 Calculus would give us the derivative, $p'(w) = -\frac{1}{5}(3w^2 - 4w - 15)$. \\
 
-$p'(x)$ is another polynomial. The zeros of the derivative would be critical numbers.  $p'(w)$ is a quadratic.  Therefore, we can obtain its zeros, the critical numbers, via the quadratic formula.
+$p'(x)$ is another polynomial. The zeros of this derivative would be critical numbers of $p(x)$.  $p'(w)$ is a quadratic.  Therefore, we can obtain its zeros, the critical numbers of $p(x)$, via the quadratic formula.
 
 
 \[  \frac{4 \pm \sqrt{(-4)^2 - 4 \cdot 3 \cdot (-15)}}{2 \cdot 3} =    \frac{4 \pm \sqrt{196}}{6}  = \frac{4 \pm 14}{6}       \]
@@ -310,23 +310,50 @@ $p'(w)$ is a polynomial, which means it is continuous. It is certainly negative 
 
 
 
-Another approach to obtaining the roots of $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$ would be to notice that we already know that $3$ is a root. $w+3$ must be a factor.
+Another approach to obtaining the roots of $p'(w) = \frac{1}{5}(3w^2 - 4w - 15)$ would be to factor. 
+
+
+\[
+3w^2 - 4w - 15     & = (A \cdot w + B)(C \cdot w + D) 
+\]
+
+$A \cdot C = 3$ and $3$ is a prime number.  Therefore, one of $A$ and $C$ is $3$ and the other is $1$.
 
 
 
-\begin{align*}
-3w^2 - 4w - 15     & = 0        \\
-3w^2 - 4w - 15     & = (w+3) (???)        \\
-3w^2 - 4w - 15     & = (w+3) (3w + ?)        \\
-3w^2 - 4w - 15     & = (w+3) \left( \answer{3w + 5} \right)        
-\end{align*}
+\[
+3w^2 - 4w - 15     & = (w + B)(3 \, w + D) 
+\]
 
 
 
+$B \cdot D = -15$.  A first guess is that one of $B$ and $D$ is $-5$ and the other is $3$. 
+
+
+\[
+3w^2 - 4w - 15     & = (w - 5)(3 \, w + 3) = 3 \, w^2 -12 \, w - 15
+\]
 
 
 
+Let's try it the other way, $-3$ and the other is $5$.
 
+
+
+\[
+3w^2 - 4w - 15     & = (w - 3)(3 \, w + 5) = 3 \, w^2  -4 \, w - 15
+\]
+
+
+
+That worked. \\
+
+
+
+$p'(w) = \frac{1}{5}(3w^2 - 4w - 15) = \frac{1}{5} (w - 3)(3 \, w + 5)$. \\
+
+
+That tells us that $3$ and $-\frac{5}{3}$ are the critical numbers of $p(x)$.
 
 
 
