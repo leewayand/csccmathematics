@@ -10,61 +10,31 @@
 
 
 
+\begin{question}
+
+Define $f$ and $g$ by the following formulas and their natural domains. \\
 
 
 \[
-V(h) = 
-\begin{cases}
-  -2h-3 & \text{ if } [-6, -2]   \\
-  -(h+3)(h-3) & \text{ if } (-2, 4]  \\
-  \frac{7h}{4} - 8 & \text{ if } (4,6)
-\end{cases}
+f(x) = 3 \, x + 5
 \]
 
 
 
+\[
+g(t) = 3 \, t - 5
+\]
 
 
+Are $f$ and $g$ inverse functions? \\
 
 
+\begin{multipleChoice}
+\choice {Yes}
+\choice [correct]{No}
+\end{multipleChoice}
 
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$h$, ylabel=$y$, grid = major,
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-			\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:6)] {1.75*x-8};
-
-
-
-
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
-
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
-
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,2.5)};
-
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
+\end{question}
 
 
 
@@ -73,10 +43,100 @@ V(h) =
 
 
 
+\begin{question}
+
+Define $f$ and $g$ by the following formulas and their natural domains. \\
+
+
+\[
+f(x) = 3 \, x + 5
+\]
+
+
+
+\[
+g(t) = 3 (t - 5)
+\]
+
+
+Are $f$ and $g$ incerse functions? \\
+
+
+\begin{multipleChoice}
+\choice {Yes}
+\choice [correct]{No}
+\end{multipleChoice}
+
+\end{question}
 
 
 
 
+
+
+
+
+
+
+\begin{question}
+
+Define $f$ and $g$ by the following formulas and their natural domains. \\
+
+
+\[
+f(x) = 3 \, x + 5
+\]
+
+
+
+\[
+g(t) = \frac{1}{3} t - 5
+\]
+
+
+Are $f$ and $g$ incerse functions? \\
+
+
+\begin{multipleChoice}
+\choice {Yes}
+\choice [correct]{No}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+Define $f$ and $g$ by the following formulas and their natural domains. \\
+
+
+\[
+f(x) = 3 \, x + 5
+\]
+
+
+
+\[
+g(t) = \frac{1}{3} (t - 5)
+\]
+
+
+Are $f$ and $g$ incerse functions? \\
+
+
+\begin{multipleChoice}
+\choice [correct]{Yes}
+\choice {No}
+\end{multipleChoice}
+
+\end{question}
 
 
 \end{exercise}
