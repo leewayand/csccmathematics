@@ -33,7 +33,7 @@ We start with some formality before discussing more practical matters involving 
 
 
 
-\section{The definition of a sequence}
+\section*{The definition of a sequence}
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Sequence}} 
 
@@ -200,7 +200,7 @@ a_1, a_2, a_3, \cdots
 
 
 
-\section{Exploring sequences}
+\section*{Exploring sequences}
 We now explore an interesting scenario that highlights an important idea while working with sequences.
 
 \begin{question}
@@ -372,11 +372,11 @@ write down any term that we want.
 
 
 
-\section{Two common methods of representing the terms of a sequence}
+\section*{Two common methods of representing the terms of a sequence}
 
 Consider the examples presented at the beginning of the section.  While it doesn't seem likely that we can find a good pattern to describe the concentration of methane present in the atmosphere over time, there are actual patterns that can be found that predict future terms in the financial scenario as well as Fibonacci's example.
 
-\subsection{Explicit formulas}
+\subsection*{Explicit formulas}
 
 Just as real-valued functions were usually expressed by a formula $f(x)$, we often encounter sequences that can be expressed by a formula $f(n)$.  When all terms $a_n$ in a sequence are described by a formula that only involves $n$ (the index), we say the sequence is defined by an \textbf{\textcolor{purple!85!blue}{explicit formula}}. It is fairly easy to work with explicit formulas.
 
@@ -435,7 +435,7 @@ The sequences $\{a_n\}$ and $\{b_n\}$ given by the rules $a_n = (-1)^n$ and $b_n
 %indices---regardless of whether the given ``rules'' or procedures for
 %computing those sequences resemble each other in any way.
 
-\subsection{Recursive formulas}
+\subsection*{Recursive formulas}
 
 Sometimes, we have to know previous terms in a sequence in order to find the terms that come next.  Terms in the Fibonacci sequence stated in the introduction are easily found this way.  For instance, by taking $a_1=1$ and $a_2=1$, we find the next several terms.
 
@@ -540,7 +540,7 @@ The term $a_n = 2n+3$ satisfies the requirement $a_{n+1}=a_n+2$, so the differen
 %  the explicit rule $a_n = 2n+3$ for $n \geq 1$ generates the same sequence, and may prove beyond doubt that this is indeed the case by using induction.  We leave it to the curious young mathematician to research and explore this idea further.
 %  \end{remark}
 
-\section{Generating new sequences from other sequences}
+\section*{Generating new sequences from other sequences}
 
 Once we have defined a given sequence, we can make new sequences from it.  Some of the new sequences we can generate allow us to answer important questions about the original sequence.  Many of the results we obtain later on will require that we analyze sequences that we generate from others.  For now we will look at a few of these important sequences in the context of specific examples. 
 
@@ -684,196 +684,31 @@ an exercise.
 In the preceding example, there were many new sequences that we could form from a given one.  As it turns out, these particular new sequences play an important role in answering questions about the original sequence.  
 
 
-%\begin{remark}
-%  To do this, we must verify first that the sequences start at the same value.  Indeed, by setting $n=1$ into the explicit formula, we find $s_1 = \answer[given]{2}$.  To proceed, we can show that the sequence given by the explicit formula also satisfies the recursive one.  We do this by taking the explicit formula and substituting it into the recursive one.  
-%
-%For $n \geq 2$, by setting $s_n = \frac{3n^2+n}{2}$, we find $s_{n-1} = \frac{3\left(\answer{n-1}\right)^2+\left(\answer{n-1}\right)}{2}$, and after a little algebra: $s_{n-1} = \frac{3n^2-5n+2}{2}$.  Thus, we can check whether this satisfies $s_n = s_{n-1} + (3n-1)$:
-%
-%\begin{align*}
-% s_{n-1} + (3n-1) &= \frac{3n^2-5n+2}{2} +3n-1 \\
-% &=  \frac{3n^2-5n+2}{2} +(3n-1) \cdot \frac{2}{2} \\ 
-% &= \frac{3n^2-5n+2}{2} + \frac{6n-2}{2} \\
-% &= \frac{3n^2+n}{2} 
-%\end{align*}
-%
-%This is precisely the expression for $s_n$.
-%
-%Note that establishing that the sequences start at the same value is important here.  The general philosophy here was to show that the first term in each sequence is the same, and the above computations verify that for \emph{any} term with $n \geq 2$, both rules generate the same result.  Had we specified a different starting value for the recursive formula, the rule $s_n = \frac{3n^2+n}{2}$ would still satisfy the recursive relationship $s_n = s_{n-1} + (3n-1)$, but each expression would generate a different list of numbers.
-%
-%\end{remark}
-%
-%\begin{remark}
-%The sequences in the previous example will all play an important role in the development that follows.  We will see how they arise in the context of answering a fundamental question introduced in the next section, but it is worth mentioning them now as new sequences that can be constructed from a given sequence.
-%\end{remark}
-%
-%%Here is an example with a real-world context:
-%%
-%%\begin{example}
-%%  Suppose that when a ``super-ball'' is dropped from some height, it
-%%  bounces to $90\%$ of the original height. Let $b_1$ be the height
-%%  the ball bounces after it is dropped from a height of $3$
-%%  meters. Let $b_2$ be the height the ball bounces next, and so on.
-%%  Find formulas, both explicit and recursive, for $b_n$.
-%%  \begin{explanation}
-%%    The first bounce has a height of
-%%    \[
-%%    b_1 = 0.9\cdot 3
-%%    \]
-%%    and the second bounce has a height of 
-%%    \[
-%%    b_2 = 0.9(0.9\cdot 3) = 0.9^2 \cdot 3.
-%%    \]
-%%     To compute the height of each bounce, one simply multiplies the
-%%    previous height by $0.9$, and hence this is a geometric sequence with
-%%    explicit formula $b_n = \answer[given]{0.9^n\cdot 3}$ and recursive formula $b_1 =
-%%    \answer[given]{0.9\cdot 3}$ and $b_n = \answer[given]{0.9}\cdot b_{n-1}$.
-%%  \end{explanation}
-%%\end{example}
-%%
-%%
-%%Here is an example that is at the foundations of our number system:
-%%
-%%\begin{example}
-%%  Consider the number
-%%  \[
-%%  \frac{1}{3} = 0.3333333333\dots.
-%%  \]
-%%  Let's think of this number in stages.  Let $p_1$ be the value of the digit to the right of the decimal
-%%  point.  In other words, let $p_1$ be the number you would get if you left the first digit alone, and changed every other digit to a zero. Let $p_2$ be the value of the second digit to the right, and so
-%%  on. Find formulas, both explicit and recursive, for $p_n$.
-%%  \begin{explanation}
-%%    The first digit to the right of the decimal point is $3$ and its
-%%    value is $p_1 = 0.3$. The next digit has a value of $p_2 =
-%%    0.03$. The next digit has a value of $p_3 = 0.003$. To find the
-%%    value of each digit, we multiply the previous digit by
-%%    $\frac{1}{10}$. Hence this is a geometric sequence with explicit
-%%    formula $p_n = \answer[given]{\left(\frac{1}{10}\right)^n\cdot 3}$ and recursive
-%%    formula $p_1 =\answer[given]{0.3}$ and $p_n = \answer[given]{\left(\frac{1}{10}\right)}\cdot
-%%    p_{n-1}$.
-%%  \end{explanation}
-%%\end{example}
-%
-%
-%%MOVED TO EXERCISES.%%%
-%
-%%\section{Unsolved mysteries}
-%%
-%%To whet the appetite of the curious young mathematician further, we discuss an open problem in mathematics.
-%%
-%%\subsection{Collatz sequences}
-%%
-%%A particularly interesting example of a recursive sequence with which to amuse your friends---or distract
-%%your enemies is as follows:
-%%
-%%\begin{example}
-%%  Let's start our sequence with $a_1 = 6$.  Subsequent terms are
-%%  defined using the rule
-%%  \[
-%%  a_n =
-%%  \begin{cases}
-%%    a_{n-1} / 2 &\text{if $a_{n-1}$ is even,} \\
-%%    3a_{n-1} + 1 &\text{if $a_{n-1}$ is odd.}
-%%  \end{cases}
-%%  \]
-%%  Let's compute $a_2$.  Since $a_1$ is even, we follow the
-%%  instructions in the first line, to find that $a_2 = a_1/2 =
-%%  \answer[given]{3}$. To compute $a_3$, note that $a_2$ is odd so we
-%%  follow the instruction in the second line, and $a_3 = 3 a_2 + 1 = 3
-%%  \cdot 3 + 1 = \answer[given]{10}$.  Since $a_3$ is even, the first
-%%  line applies, and $a_4 = a_3 / 2 = 10 / 2 = \answer[given]{5}$.  But
-%%  $a_4$ is odd, so the second line applies, and we find $a_5 = 3 \cdot
-%%  5 + 1 = \answer[given]{16}$.  And $a_5$ is even, so $a_6 = 16 / 2 =
-%%  \answer[given]{8}$.  And $a_6$ is even, so $a_7 = 8/4 = 4$.  And
-%%  $a_7$ is even, so $a_8 = 4 / 2 = \answer[given]{2}$, and then $a_9 =
-%%  2/2 = \answer[given]{1}$.  Oh, but $a_9$ is odd, so $a_{10} = 3
-%%  \cdot 1 + 1 = \answer[given]{4}$.  And it repeats.  Let's write down
-%%  the start of this sequence:
-%%  \[
-%%  6,\, %1 
-%%  3,\, %2
-%%  10,\,  %3
-%%  5,\,  %4
-%%  16,\,  %5
-%%  8,\,  %6
-%%  4,\,  %7
-%%  2,\,  %8
-%%  1,\,  %9
-%%  4,\, %10
-%%  2,\, %11
-%%  1,\, %12
-%%  \overbrace{4,\, %10
-%%    2,\, %11
-%%    1,}^{\text{repeats}}\, %12
-%%  4,\, %10
-%%  \ldots
-%%  \]
-%%  What if we had started with a number other than six?  What if we set
-%%  $a_1 = 25$ but then we used the same rule?  In that case, since
-%%  $a_1$ is odd, we compute $a_2$ by finding $3 a_1 + 1 = 3 \cdot 25 +
-%%  1 = 76$.  Since $76$ is even, the next term is half that, meaning
-%%  $a_3 = 38$.  If we keep this up, we find that our sequence begins
-%%  \begin{align*}
-%%    &25,\, 76,\, 38,\, 19,\, 58,\, 29,\, 88,\, 44,\, 22,\, 11,\, 34,\, 17,\, 52,\, 26, \\
-%%    &13,\, 40,\, 20,\, 10,\, 5,\, 16,\, 8,\, 4,\, 2, \, 1, \, \ldots
-%%  \end{align*}
-%%  and then it repeats ``4, 2, 1, 4, 2, 1, \ldots'' just like before.
-%%  Does this always happen?  Is it true that no matter which positive
-%%  integer you start with, if you apply the half-if-even, $3x+1$-if-odd
-%%  rule, you end up getting stuck in the ``4, 2, 1, \ldots'' loop?
-%%  That this is true is the \dfn{Collatz conjecture}; it has been
-%%  verified for all starting values below $5 \times 2^{60}$.  Nobody
-%%  has found a value which doesn't return to one, but for all anybody
-%%  knows there \textit{might} well be a very large initial value which
-%%  doesn't return to one; nobody knows either way.  It is an unsolved
-%%  problem in mathematics.
-%%\end{example}
-%
-%
-%%\subsection{Perfect numbers}
-%%
-%%The notion of a perfect number is over two thousand years old.
-%%
-%%\begin{definition}
-%%  A whole number $P$ is a \dfn{perfect number} if the sum of the
-%%  positive divisors less than $P$ is equal to $P$.
-%%\end{definition}
-%%The number $6$ is perfect, since the positive divisors less than $6$
-%%are $1$, $2$, and $3$; and $1+2+3 = 6$.  Here we list the first nine
-%%perfect numbers:
-%%\begin{align*}
-%%P_1 &= 6\\
-%%P_2 &= 28\\
-%%P_3 &= 496\\
-%%P_4 &= 8128\\
-%%P_5 &= 33550336\\
-%%P_6 &= 8589869056\\
-%%P_7 &= 137438691328\\
-%%P_8 &= 2305843008139952128\\
-%%P_9 &= 2658455991569831744654692615953842176
-%%\end{align*}
-%%For a complete list, see
-%%\url{http://en.wikipedia.org/wiki/List_of_perfect_numbers}.  Note,
-%%every number in the list above is even, hence we are lead to a question:
-%%
-%%
-%%\begin{question}
-%%  Are there any odd perfect numbers?
-%%  \begin{prompt}
-%%    \begin{multipleChoice}
-%%      \choice{yes}
-%%      \choice{no}
-%%      \choice[correct]{nobody knows}
-%%    \end{multipleChoice}
-%%  \end{prompt}
-%%\end{question}
-%%
-%%Nobody knows the answer to this question. In 2012, Ochem and Rao
-%%published the result that there are no odd perfect numbers less than
-%%$10^{1500}$. This is an \textbf{enormous} number, and it cannot be put
-%%in perspective. Consider this: It is estimated that the mass of the
-%%\textbf{universe} is less than $10^{61}$ kilograms, and $10^{1500}$ is
-%%unfathomably larger.
-%
-%%ADD THOUGHTS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Sequences]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/sequences/examples/exampleList}
+
+\end{center}
+
+
+
+
+
 
 \end{document}
