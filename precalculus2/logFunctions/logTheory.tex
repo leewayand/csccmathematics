@@ -19,7 +19,9 @@ $\log_A(B)$ is pronounced ``the logarithm base $A$ of $B$'' or ``the log base $A
 
 
 \begin{center}
-\textbf{\textcolor{red!80!black}{$\log_A(B)$ is the thing you raise $A$ to, to get $B$.}}
+\textbf{\textcolor{red!80!black}{$\log_A(B)$ is the thing you raise $A$ to, to get $B$.}} \\
+
+\textbf{\textcolor{purple!85!blue}{this is the magic sentence}}
 \end{center}
 
 
@@ -218,10 +220,10 @@ We have a logarithmic function for every exponential function.  They are designa
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Base $A$ Function : $\log_A(x)$}}
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Base $r$ Function : $\log_r(x)$}}
 
 
-$\log_A(x)$ is the number you raise $A$ to, to get $x$. \\
+$\log_r(x)$ is the number you raise $r$ to, to get $x$. \\
 
 The domain is $(0, \infty)$. \\
 
@@ -352,14 +354,16 @@ From this basic logarithmic function and its graph we can transform and analyze 
 Logarithmic functions don't really have vertically shifted versions.  We can talk about a basic logarithm function being shifted.
 
 \[
-L(x) = A \log_b(B x + C) + D
+L(x) = A \log_r(B \, x + C) + D
 \]
 
 
-But, the $D$ can be explained with additional horizontal transformations. \\
+But, the $D$ can be explained with additional horizontal transformations, like this... \\
 
 
-We know that the range of $\log_b(x)$ is all real numbers, which includes $D$.  Therefore, there must be a real number, $d$, such that $\log_b(d) = D$. \\
+\begin{explanation}
+
+We know that the range of $\log_r(x)$ is all real numbers, which includes $D$.  Therefore, there must be a real number, $d$, such that $\log_r(d) = D$. \\
 
 
 That gives us 
@@ -367,17 +371,17 @@ That gives us
 
 
 \[
-L(x) = A \log_b(B x + C) + D = A \log_b(B x + C) + \log_b(d)
+L(x) = A \log_r(B \, x + C) + D = A \log_r(B \, x + C) + \log_r(d)
 \]
 
 And, we have logarithm rules, which give us
 
 
 \[
-L(x) = A \log_b(B x + C) + D = A \log_b((B x + C)d) = A \log_b(B d x + C d) 
+L(x) = A \log_r(B \, x + C) + D = A \log_r((B \, x + C)d) = A \log_r(B \, d \, x + C \, d) 
 \]
 
-
+\end{explanation}
 
 Therefore, we separate exponential and shifted exponential, but we don't separate logarithmic and shifted logarithmic.
 
@@ -403,13 +407,20 @@ Therefore, we separate exponential and shifted exponential, but we don't separat
 Analyze   $M(t) = \log_2(t+3) - 4$ \\
 
 
+
+We'll begin by thinking about the graph to help our analysis. \\
+
+
 \begin{explanation}
+
+
+$\blacktriangleright$ First, the base is $2$, which is greater than $1$.
 
 $\blacktriangleright$ The inside of the logarithm is $t+3$ and this equals $0$ when $t=-3$.  This must be the vertical asymptote.
 
 $\blacktriangleright$ The inside of the logarithm is $t+3$, and this is positive for $t>-3$.  The graph must be on the right side of the vertical asymptote.
 
-$\blacktriangleright$ The leading coefficient is $1$, which is positive.  Therefore, the graph hugs the asymptote down the asymptote. 
+$\blacktriangleright$ The leading coefficient of $M$ is $1$, which is positive.  Therefore, the graph hugs the asymptote down the asymptote. 
 
 $\blacktriangleright$ $t+3=1$ when $t=-2$. Therefore, the anchor point $(1,0)$ has moved to $t = -2$.  $M(-2) = -4$.  This gives us the point $(-2, -4)$.
 
@@ -445,23 +456,23 @@ Graph of $y = M(t)$.
 \end{image}
 
 
-
-
-Our analysis tells us that:
-
-\begin{itemize}
-\item The implied domain of $M$ is $\left( \answer{-3} ,\infty \right)$.
-\item The implied range of $M$ is $\mathbb{R}$.
-\item $M$ is always \wordChoice{\choice[correct]{increasing} \choice{decreasing}} .
-\item $M$ has no maximums or minimums.
-\item $\lim\limits_{t \to -3^+} M(t) = -\infty$
-\item $\lim\limits_{t \to \infty} M(t) = \infty$
-\end{itemize}
+\end{explanation}
 
 
 
 
-We can also see that the graph will have a horizontal intercept, which means the function has a zero. \\
+
+
+Now, for our function analysis.
+
+\begin{explanation}
+
+
+
+\textbf{Domain:}  The inside of the logarithm is positive on $(-3, \infty)$.  Therefore, the domain of $M$ is $(-3, \infty)$. \\
+
+
+\textbf{Zeros:}  We see that the graph has a horizontal intercept, which means the function has a zero. \\
 
 
 $M(t) = \log_2(t+3) - 4 = 0$ \\
@@ -481,7 +492,32 @@ $\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you rai
 
 
 
+\textbf{Continuity:}  Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
 
+
+\textbf{End-Behavior:} The leading coefficient of $M$ is $1$, which is positive and the leading coefficient of the argument is $1$, which is also positive.  Since these are the same sign, we know that $M$ is an increasing logarithmic function on the domain $(-3, \infty)$.
+
+\[
+\lim\limits_{t \to -3^+} M(t) = -\infty
+\]
+
+\[
+\lim\limits_{t \to \infty} M(t) = \infty
+\]
+
+
+
+\textbf{Behavior:} Since the end-behavior goes from $-\infty$ to $\infty$, $M$ is an increasing function. \\
+
+
+\textbf{Global Extrema:} Logarithmic functions do not have global maximums or minimums. \\
+
+
+\textbf{Local Extrema:} Logarithmic functions do not have local maximums or minimums. \\
+
+
+
+\textbf{Range:} The range of every logarithmic function is $(-\infty, \infty)$.
 
 
 
@@ -492,7 +528,7 @@ $\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you rai
 
 
 
-In the example, $M(t)$ is a logarithmic function, so it must have an inverse partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.\\
+In this example, $M(t)$ is a logarithmic function, so it must have an inverse partner exponential function.  The pairs for $M$ look like $(t, M(t))$ or just $(t,M)$. The pairs for the exponential function would look like $(M, t)$.  The roles of $M$ and $t$ would be switched. $M$ would be the variable in the formula. $t$ would be the function value.\\
 
 
 $M = \log_2(t+3) - 4$ is an equation describing both the logarithmic function, $M(t)$, and the exponential function $t(M)$.  We just are used to having the function name by itself on one side of the equal sign. \\
@@ -606,8 +642,13 @@ Here is the graph of both the logarithmic and the associated exponential functio
 Analyze   $K(x) = -2 \, \log_3(4-x)$ \\
 
 
+
+We'll begin by thinking about the graph to help our analysis. \\
+
 \begin{explanation}
 
+
+$\blacktriangleright$ First, the base is $3$, which is greater than $1$.
 
 $\blacktriangleright$ The inside of the logarithm is $4-x$, and this equals $0$ when $x=4$.  Therefore, $x=4$ has to be the vertical asymptote.
 
@@ -658,26 +699,80 @@ Graph of $y = K(x)$.
 \end{image}
 
 
+\end{explanation}
 
 
 
 
 
+Now, for our function analysis.
+
+\begin{explanation}
 
 
-\begin{itemize}
-\item The natural or implied domain of $K$ is $(-\infty, 4)$.
-\item The implied range of $K$ is $\mathbb{R}$.
-\item $K$ is always increasing.
-\item $K$ has no maximums or minimums.
-\item $\lim\limits_{x \to 4^-} K(x) = \infty$
-\item $\lim\limits_{x \to -\infty} K(x) = -\infty$
-\end{itemize}
+
+\textbf{Domain:}  The inside of the logarithm is positive on $(-\infty, 4)$.  Therefore, the domain of $M$ is $(-\infty, 4)$. \\
+
+
+\textbf{Zeros:}  We see that the graph has a horizontal intercept, which means the function has a zero. \\
+
+
+$K(x) = -2 \, \log_3(4 - x) = 0$ \\
+
+
+\begin{align*}
+-2 \, \log_3(4 - x) & = 0 \\
+\log_2(4 - x) & = 0 \\
+4 - x & = 1 \\
+3 & = x 
+\end{align*}
+
+
+$\blacktriangleright$ \textbf{Remember:} $\log_3(4 - x)$ is the thing that you raise $3$ to, to get $4 - x$ and $\log_3(4 - x) = 0$.  Therefore, $0$ is also the thing that you raise $3$ to, to get $4 - x$. Therefore, $4 - x$ must be $1$.
+
+
+
+
+\textbf{Continuity:}  Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
+
+
+\textbf{End-Behavior:} The leading coefficient of $K$ is $-2$, which is negative and the leading coefficient of the argument is $-1$, which is also negative.  Since these are the same sign, we know that $K$ is an increasing logarithmic function on the domain $(-\infty, 4)$.
+
+
+\[
+\lim\limits_{x \to -\infty} K(x) = -\infty
+\]
+
+
+
+\[
+\lim\limits_{t \to 4^-} K(x) = \infty
+\]
+
+
+
+
+\textbf{Behavior:} Since the end-behavior goes from $-\infty$ to $\infty$, $K$ is an increasing function. \\
+
+
+\textbf{Global Extrema:} Logarithmic function do not have global maximums or minimums. \\
+
+
+\textbf{Local Extrema:} Logarithmic function do not have local maximums or minimums. \\
+
+
+
+\textbf{Range:} The range of every logarithmic function is $(-\infty, \infty)$.
 
 
 
 
 \end{explanation}
+
+
+
+
+
 \end{example}
 
 
@@ -712,7 +807,7 @@ We can obtain a nice formula for this partner exponential function by solving th
 
 
 
-$\blacktriangleright$ \textbf{Remember:} $\log_3(4-x)$ is the thing that you raise $3$ to, to get $4-x$ and $\log_3(4-x) = - \frac{M}{2}$.  Therefore, $- \frac{M}{2}$ is the thing that you raise $3$ to, to get $4-x$
+$\blacktriangleright$ \textbf{Remember:} $\log_3(4-x)$ is the thing that you raise $3$ to, to get $4-x$ and $\log_3(4-x) = - \frac{M}{2}$.  Therefore, $- \frac{M}{2}$ is the thing that you raise $3$ to, to get $4-x$.
 
 
 

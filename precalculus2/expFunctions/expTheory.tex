@@ -371,16 +371,21 @@ They maintain the same general characteristics and features as basic exponential
 
 
 
-Analyze   $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ \\
+Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7$ \\
+
+
+
+We'll begin by thinking about the graph to help our analysis. \\
+
 
 
 \begin{explanation}
 
-Compared to a basic exponential function graph, where the horizontal axis is the horizontal asymptote, here, the horizontal asymptote has been moved down $\answer{7}$ units.
+Compared to a basic exponential function graph, where the horizontal axis is the horizontal asymptote, here, the horizontal asymptote has been moved down $\answer{7}$ units, because the constant term in the formula is $-7$.
 
 
 
-The ``inside'' of the formula for $f(x)$, representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
+The ``inside'' (the argument) of the formula for $f(x)$, representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
 
 At $x=-5$, we have our one anchor point for the graph.  The point is $\left(-5, \frac{1}{3} - 7 \right)$, which is $\frac{1}{3}$ above the horizontal asymptote, $y = -7$.
 
@@ -417,21 +422,80 @@ Graph of $y = f(x)$.
 
 
 
+\end{explanation}
 
-Our graph agrees with our analysis.
 
-\begin{itemize}
-\item The natural or implied domain of $f$ is $\mathbb{R}$.
-\item $f$ is always increasing.
-\item $f$ has no maximums or minimums.
-\item $\lim\limits_{x \to -\infty} f(x) = \answer{-7}$
-\item $\lim\limits_{x \to \infty} f(x) = \answer{\infty}$
-\end{itemize}
+Now, for our function analysis.
 
 
 
-For this function, when the domain number changes by $1$, the height ABOVE the horizontal asymptote changes by $100\%$, because it is multiplied by another $2$.
+\begin{explanation}
 
+
+
+\textbf{Domain:} The domain of every shifted exponential function is $(-\infty, \infty)$. \\
+
+
+
+\textbf{Zeros:}  We see that the graph has a horizontal intercept, which means the function has a zero. \\
+
+
+$f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = 0$ \\
+
+
+\begin{align*}
+\frac{1}{3} \cdot \, 2^{x+5} - 7 & = 0 \\
+\frac{1}{3} \cdot \, 2^{x+5} & = 7 \\
+\cdot \, 2^{x+5} & = 21 \\
+\answer{x+5} & = \log2_{21} \\
+x & = \log2_{21} - 5
+\end{align*}
+
+\textbf{Note:}  $\log2_{21} - 5 \approx -0.607$, which agrees with the graph. \\
+
+
+\textbf{Continuity:}  Shifted exponential functions are continuous.  \\
+
+
+
+\textbf{End-Behavior:} The negative direction is the direction that makes the exponent negative.  That makes this the direction that the function's value levels off to the constant term, $-7$.
+
+
+\[
+\lim\limits_{x \to -\infty} f(x) = -7
+\]
+
+
+
+
+The other direction ios where the shifted exponential function is uunbounded.  Since the leading coefficient of $f$ is positive, $f$ is unbounded positively. \\
+
+
+
+\[
+\lim\limits_{x \to \infty} f(x) = \infty
+\]
+
+
+
+
+
+
+
+
+
+\textbf{Behavior:} The leading coefficient of $f$ is $\frac{1}{3}$, which is positive and the leading coefficient of the argument is $1$, which is also positive.  Since these are the same sign, we know that $f$ is an increasing shifted exponential function.
+
+
+
+\textbf{Global Extrema:} Shifted exponential functions do not have global maximums or minimums. \\
+
+
+\textbf{Local Extrema:} Shifted exponentials function do not have local maximums or minimums. \\
+
+
+
+\textbf{Range:} The end-behavior tells us that the range is $(-7, \infty)$.
 
 
 
@@ -447,6 +511,8 @@ The shape of the graph looks like that of the basic exponential graph. \\
 \item The horizontal asymptote moved.
 \item The strategic point moved.
 \end{itemize}
+
+
 
 
 
