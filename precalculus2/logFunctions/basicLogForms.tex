@@ -163,10 +163,11 @@ In this model, our basic forms to memorize would be \\
             axis on top
           ]
           
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+         
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
-          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(0.5:9), <->] {ln(x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
 
            
 
@@ -179,10 +180,10 @@ In this model, our basic forms to memorize would be \\
             axis on top
           ]
           
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+         \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {-(1.3^x)};
-          \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(0.5:9),<->] {-ln(x))};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
 
            
 
@@ -208,10 +209,10 @@ In this model, our basic forms to memorize would be \\
             axis on top
           ]
           
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9), <->] {1.3^(-x)};
-          \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:-0.5), <->] {ln(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-1,0)};
            
 
   \end{axis}
@@ -223,10 +224,10 @@ In this model, our basic forms to memorize would be \\
             axis on top
           ]
           
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+          \addplot [line width=1, gray, dashed, domain=(-9:-0.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-(1.3^(-x)};
-          \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-ln(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-1,0)};
            
 
   \end{axis}
