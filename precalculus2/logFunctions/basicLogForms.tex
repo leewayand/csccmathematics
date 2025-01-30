@@ -166,7 +166,7 @@ In this model, our basic forms to memorize would be \\
          
           \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.005:9), <->] {ln(x)};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.001:9), <->] {ln(x)};
           \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
 
            
@@ -182,7 +182,7 @@ In this model, our basic forms to memorize would be \\
           
          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.005:9),<->] {-ln(x))};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.001:9),<->] {-ln(x))};
           \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
 
            
@@ -211,7 +211,7 @@ In this model, our basic forms to memorize would be \\
           
           \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=300,domain=(-9:-0.005), <->] {ln(-x)};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(-9:-0.001), <->] {ln(-x)};
           \addplot [color=penColor,only marks,mark=*] coordinates{(-1,0)};
            
 
@@ -224,9 +224,9 @@ In this model, our basic forms to memorize would be \\
             axis on top
           ]
           
-          \addplot [line width=1, gray, dashed, domain=(-9:-0.005),<->] ({0},{x});
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
 
-          \addplot [line width=2, penColor, smooth,samples=300,domain=(-8:9),<->] {-ln(-x)};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(-9:-0.001),<->] {-ln(-x)};
           \addplot [color=penColor,only marks,mark=*] coordinates{(-1,0)};
            
 
