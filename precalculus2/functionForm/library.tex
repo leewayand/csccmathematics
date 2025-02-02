@@ -144,7 +144,7 @@ Linear funtions are functions which exhibit a constant rate of change. \\
 They can be represented by formulas that look like
 
 
-\[ f(x) = m x + b  \,  \text{ for all } x  \, \text{ in the domain. }   \]
+\[ L(x) = A \, x + B  \,  \text{ for all } x  \, \text{ in the domain. }   \]
 
 
 
@@ -258,7 +258,7 @@ Quadratic funtions are the next level of polynomial. \\
 They can be represented by formulas that look like
 
 
-\[ f(x) = a \, x^2 + b \, x + c  \,  \text{ for all } x  \, \text{ in the domain. }   \]
+\[ f(x) = A \, x^2 + B \, x + C  \,  \text{ for all } x  \, \text{ in the domain. }   \]
 
 
 
@@ -311,7 +311,7 @@ Graphs of quadratic functions are parabolas.
 
 
 
-Although the definition quotes the standard form ($a x^2 + b x + c$), there are more useful forms. 
+Although the definition quotes the standard form ($A \, x^2 + B \, x + C$), there are more useful forms. 
 
 
 
@@ -319,9 +319,9 @@ Although the definition quotes the standard form ($a x^2 + b x + c$), there are 
 
 \begin{itemize}
 
-\item \textbf{\textcolor{blue!55!black}{Vertex Form:}}  $a (x - h)^2 + k$ 
+\item \textbf{\textcolor{blue!55!black}{Vertex Form:}}  $A \, (x - h)^2 + k$ 
 
-\item \textbf{\textcolor{blue!55!black}{Factored Form:}}  $a (x - r_1)(x - r_2)$ 
+\item \textbf{\textcolor{blue!55!black}{Factored Form:}}  $A \, (x - r_1)(x - r_2)$ 
 
 \end{itemize}
 
@@ -509,7 +509,7 @@ Exponential functions are characterized by a constant \textit{percentage} growth
 
 We have several thoughts about exponential functions.
 
-First, we have the basic expnential function, which has a formula like, $f(x) = b^x$ with $b > 0$. 
+First, we have the basic expnential function, which has a formula like, $f(x) = r^x$ with $r > 0$. 
 This give us a basic feeling for the behavior of exponential functions.
 
 
@@ -534,7 +534,7 @@ for example $f(x) = e^x$:
           
             
       \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:2),<->] {2.7^x};
-      \addplot [line width=1, black, dashed,samples=200,domain=(-9:2),<->] {0};
+      \addplot [line width=1, black, dashed,samples=200,domain=(-9:9),<->] {0};
 
 
 
@@ -574,10 +574,10 @@ Secondly, we have four basic forms of the basic exponential funciton that illust
 Finally, we include shifting and stretching, which algebraically is described by compositions with linear functions.
 
 
-\[ f(x) = a \, e^{b \, x + c} + d = L_o \circ E \circ L_i\]
+\[ f(x) = A \, e^{B \, x + C} + D = L_o \circ E \circ L_i\]
 
 \[
-\text{ where } \,  E(y) = e^y   \,  \text{ and } \,   L_o(t) = a \, t + d    \,  \text{ and } \,   L_i(v) = b \, v + c
+\text{ where } \,  E(y) = e^y   \,  \text{ and } \,   L_o(t) = A \, t + D    \,  \text{ and } \,   L_i(v) = B \, v + C
 \]
 
 
@@ -622,7 +622,7 @@ Logarithmic function are the inverse functions of exponential functions. \\
 
 We have several thoughts about logarithmic functions.
 
-First, we have the basic logarithmic function, which has a formula like, $f(x) = \log_b(x)$ with $b > 0$. 
+First, we have the basic logarithmic function, which has a formula like, $f(x) = \log_r(x)$ with $r > 0$. 
 This give us a basic feeling for the behavior of exponential functions.
 
 
@@ -687,10 +687,10 @@ Secondly, we have four basic forms of the basic logarithmic funciton that illust
 Finally, we include shifting and stretching, which algebraically is described by compositions with linear functions.
 
 
-\[ f(x) = a \, \ln(b \, x + c) + d = L_o \circ L \circ L_i\]
+\[ f(x) = A \, \ln(B \, x + C) + D = L_o \circ L \circ L_i\]
 
 \[
-\text{ where } \,   L(y) = \ln(y)   \,  \text{ and } \,    L_o(t) = a \, t + d    \,  \text{ and } \,   L_i(v) = b \, v + c
+\text{ where } \,   L(y) = \ln(y)   \,  \text{ and } \,    L_o(t) = A \, t + D    \,  \text{ and } \,   L_i(v) = B \, v + C
 \]
 
 
@@ -741,10 +741,10 @@ Absolute value functions are usually identified by their vertical bars.
 
 
 
-\[ f(x) = a | b x + c | + d = L_o \circ A \circ L_i\]
+\[ f(x) = A | B \, x + C | + D = L_o \circ A \circ L_i\]
 
 \[
-\text{ where } \,  A(y) = | y |  \,  \text{ and } \,    L_o(t) = a t + d    \,  \text{ and } \,   L_i(v) = b v + c
+\text{ where } \,  A(y) = | y |  \,  \text{ and } \,    L_o(t) = A \, t + D    \,  \text{ and } \,   L_i(v) = B \, v + C
 \]
 
 
