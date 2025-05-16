@@ -132,24 +132,11 @@ That range of $Q$ is $\left[ -\frac{13}{12}, \infty \right)$.
             axis on top
           ]
           
-			\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
-       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:6)] {1.75*x-8};
+
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-1:2.7), <->] {3*x*x-5*x+1};
 
 
-
-
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
-
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
-
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
-			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,2.5)};
-
-
-           
+    
 
   \end{axis}
 \end{tikzpicture}
