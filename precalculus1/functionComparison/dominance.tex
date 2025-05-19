@@ -179,10 +179,6 @@ According to our order of dominance, the denominator is a linear function and sh
             \addplot [line width=2, penColor2, smooth,samples=100,domain=(0.1:8), <->] {ln(x)/x};
 
 
-
-
-           
-
   \end{axis}
 \end{tikzpicture}
 \end{image}
@@ -192,35 +188,9 @@ According to our order of dominance, the denominator is a linear function and sh
 Let's zoom in.
 
 
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-1:20, ymax=1, xmax=20, ymin=-1, xmin=-1,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, 
-            ytick={-1,1},
-            xtick={2,4,6,8,10,12,14,16,18},
-            xticklabels={$2$,$4$,$6$,$8$,$10$,$12$,$14$,$16$,$18$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-
-      \addplot [line width=2, penColor2, smooth,samples=300,domain=(0.1:18), <->] {ln(x)/x};
- 
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
+\begin{center}
+\desmos{3dmdtmts1h}{400}{300}
+\end{center}
 
 
 
