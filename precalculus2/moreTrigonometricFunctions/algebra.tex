@@ -1,0 +1,309 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Cosecant}
+
+\begin{document}
+
+\begin{abstract}
+attributes
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+The functions $\sin(\theta)$ and $\cos(\theta)$ originally came from the unit circle.  $\cos(\theta)$ was the name give to the first/horizontal coordinates of points on the unit circle.   $\sin(\theta)$ was the name give to the second/vertical coordinates of points on the unit circle. 
+
+
+The coordinates of points on the unit circle satisfy the equation
+\[
+x^2 + y^2 = 1
+\]
+
+
+Therefore, $\sin(\theta)$ and $\cos(\theta)$ also satisfy that equation.
+
+
+\[
+(\sin(\theta))^2 + (\cos(\theta))^2 = 1
+\]
+
+
+From this equation, we get many algebraic relationships.
+
+
+
+\[
+(\sin(\theta))^2  = 1 - (\cos(\theta))^2
+\]
+
+
+\[
+(\sin(\theta))^2  = (1 - \cos(\theta))  (1 + \cos(\theta))
+\]
+
+
+
+
+\[
+(\cos(\theta))^2  = 1 - (\sin(\theta))^2
+\]
+
+
+\[
+(\cos(\theta))^2  = (1 - \sin(\theta))  (1 + \sin(\theta))
+\]
+
+
+
+If we divied everything by $(\cos(\theta))^2$, we get some algebraic relationships for our new functions.
+
+
+\[
+(\sin(\theta))^2 + (\cos(\theta))^2 = 1
+\]
+
+
+\[
+\frac{(\sin(\theta))^2}{(\cos(\theta))^2} + \frac{(\cos(\theta))^2}{(\cos(\theta))^2} = \frac{1}{(\cos(\theta))^2}
+\]
+
+
+\[
+(\tan(\theta))^2 + 1 = (\sec(\theta))^2
+\]
+
+
+\[
+(\tan(\theta))^2  = (\sec(\theta))^2 - 1
+\]
+
+
+
+
+
+\subsection*{Algebra}
+
+
+
+You have been studying algebra for a long time.  It may come as a surprise that our algebra is not very useful.  You have been applying the rules of algebra to situations where the rules apply. \\
+
+
+But, there are many more situations where our algebra can't do anything useful. \\
+
+
+
+\textbf{Distributing Roots}
+
+
+Our algebra does not include a rule that looks like  
+
+\[
+\sqrt{a^2 + b^2} = \sqrt{a^2} + \sqrt{b^2} = a + b
+\]
+
+
+This is a very popular rule with students, but it is wrong.  There is no such rule. \\
+
+
+When we encounter expressions of hte form $\sqrt{a^2 + b^2}$, there isn't much for us to do. \\
+
+
+
+On the other hand, if we will pretend that we are talking about trigonometric functions, then the above relationships can be quite useful. \\
+
+
+
+
+\begin{example}
+
+
+\[
+\sqrt{1 - b^2} 
+\]
+
+
+Pretend $b = \sin(\theta)$. \\
+
+Then the expression looks like
+
+\[
+\sqrt{1 - b^2} = \sqrt{1 - (\sin(\theta))^2}
+\]
+
+
+\[
+\sqrt{1 - b^2} = \sqrt{(\cos(\theta))^2}
+\]
+
+
+\[
+\sqrt{1 - b^2} = \cos(\theta)
+\]
+
+
+
+And, the square root is gone! \\
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+\[
+\sqrt{1 + b^2} 
+\]
+
+
+Pretend $b = \tan(\theta)$. \\
+
+Then the expression looks like
+
+\[
+\sqrt{1 + b^2} = \sqrt{1 + (\tan(\theta))^2}
+\]
+
+
+\[
+\sqrt{1 + b^2} = \sqrt{(\sec(\theta))^2}
+\]
+
+
+\[
+\sqrt{1 + b^2} = \sec(\theta)
+\]
+
+
+
+And, the square root is gone! \\
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+\[
+\sqrt{b^2 - 1} 
+\]
+
+
+Pretend $b = \sec(\theta)$. \\
+
+Then the expression looks like
+
+\[
+\sqrt{b^2 - 1} = \sqrt{(\sec(\theta))^2 - 1}
+\]
+
+
+\[
+\sqrt{b^2 - 1} = \sqrt{(\tan(\theta))^2}
+\]
+
+
+\[
+\sqrt{b^2  - 1} = \tan(\theta)
+\]
+
+
+
+And, the square root is gone! \\
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+This situation comes in 3 types.
+
+
+
+\begin{itemize}
+\item $\sqrt{1 - x^2}$
+\item $\sqrt{1 + x^2}$
+\item $\sqrt{x^2 - 1}$
+\end{itemize}
+
+
+Square roots do not work well with addition and subtraction.  However, if you will pretend that you have trigonometric functions, then we can get rid of the square root, which brings back in all of our algebra rules.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/moreTrigonometricFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}
