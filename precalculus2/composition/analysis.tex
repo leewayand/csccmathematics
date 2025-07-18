@@ -24,6 +24,13 @@
 
 Analyze $H(x) = 5 \sqrt{x^2-3}$ with its natural domain. \\
 
+
+
+\subsction*{Analysis}
+
+
+
+
 Our plan is to view this as a composition. \\
 
 
@@ -38,13 +45,23 @@ First, identify ``insides'' of functions.  In this case, $x^2 - 3$ is the inside
 
 
 
-
-Let $f(t) = 5 \sqrt{t}$. \\
-
-Let $g(y) = y^2 - 3$. \\
-
+\begin{itemize}
+\item Let $f(t) = 5 \sqrt{t}$ \\
+\item Let $g(y) = y^2 - 3$ \\
+\end{itemize}
 
 Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = 5 \sqrt{x^2-3}$.
+
+To get us started, we are thinking that each component function comes with its natural domain.
+
+\begin{itemize}
+\item Let $f(t) = 5 \sqrt{t}$ with domain $[0, \infty)$ \\
+\item Let $g(y) = y^2 - 3$ with domain $(-\infty, \infty)$ \\
+\end{itemize}
+
+We are also ready to revise and modify and restrict these domains to fit the composition together. \\
+
+
 
 
 
@@ -56,13 +73,30 @@ We are ready to analyze. \\
 \textbf{\textcolor{blue!55!black}{Domain:}} \\
 
 
-$H$ is not a square root function, since the inside is not a linear function.  However, the formula includes a square root. We need $x^2-3 \geq 0$.  Therefore, the domain of $H$ is $(-\infty, -\sqrt{3}] \cup [\sqrt{3}, \infty)$. \\
+$H$ is not a square root function, since the inside is not a linear function.  However, the formula includes a square root and the inside must not be negative. \\
+
+We need $x^2-3 \geq 0$.  Therefore, the domain of $H$ is is the part of the domain of $g$ that is incommon (intersectis) with $(-\infty, -\sqrt{3} ] \cup [ \sqrt{3}, \infty)$. \\
+
+Since, the natural domainm of $g$ is $(-\infty, \infty)$, the domain of $H$ is also $(-\infty, -\sqrt{3} ] \cup [ \sqrt{3}, \infty)$. \\
 
 
 
 \textbf{\textcolor{blue!55!black}{Zeros:}} \\
 
 
+The zeros of $H$ are the domain numbers of $H$ where $H$ equals $0$.  This would be where $f = 0$, since the values of $H$ are values of $f$. \\
+
+
+
+$f(t) = \sqrt{t}$ equals $0$ when $t = 0$. Therefore, we are looking for when the output of $g$ equals $0$. \\
+
+
+
+$g(y) = y^2 - 3 = 0$ at $-\sqrt{3}$ and $\sqrt{3}$. \\
+
+
+
+Or, we could just work with the entire formula for $H$. \\
 
 
 \[
@@ -86,6 +120,10 @@ x^2 = 3
 
 We have two zeros, $-\sqrt{3}$ and $\sqrt{3}$. \\
 
+We just have to make sure these are actually in the domain of $H$.  They are. \\
+
+
+
 
 
 
@@ -103,20 +141,34 @@ Neither root functions nor quadratics have discontinuites or singularities. \\
 \textbf{\textcolor{blue!55!black}{End-Behavior:}} \\
 
 
-As $x \to -\infty$, $x^2 -3 \to \infty$, which means $5 \sqrt{x^2 -3} \to \infty$ \\
+
+We'll think of this in two steps. First, we'll determine the end-behavior of $g$, then we'll determine the end-behavior of $f$ with respect to the end-behavior of $g$.\\
+
+
+Since $g$ is a quadratic function with a negative lading coeeficient, we know that 
 
 \[
-\lim\limits_{x \to -\infty} H(x) = \infty
-\]
-
-As $x \to \infty$, $x^2 -3 \to \infty$, which means $5 \sqrt{x^2 -3} \to \infty$ \\
-
-
-\[
-\lim\limits_{x \to \infty} H(x) = \infty
+\lim\limits_{y \to -\infty} g(y) = \lim\limits_{x \to -\infty} g(y)  = \infty
 \]
 
 
+\[
+\lim\limits_{y \to \infty} g(y) = \lim\limits_{x \to \infty} g(y)  = \infty
+\]
+
+This means the limit of $H$ is the limit of $f$ as the domain of $f$ approaches $\infty$. \\
+
+
+$f$ is a sqaure root function with positive leading coefficients inside and out. \\
+
+\[
+\lim\limits_{x \to \infty} H(x) =  \lim\limits_{t \to \infty} f(t)  = \lim\limits_{t \to \infty} 5\sqrt{t} = \infty
+\]
+
+
+\[
+\lim\limits_{-x \to \infty} H(x) =  \lim\limits_{t \to \infty} f(t)  = \lim\limits_{t \to \infty} 5\sqrt{t} = \infty
+\]
 
 
 
@@ -137,9 +189,9 @@ $H$ is a composition, so we need to know how the component functions behave. \\
 
 
 
-$f(t) = 5 \sqrt{t}$ is an increasing function. \\
+$f(t) = 5 \sqrt{t}$ is an increasing function, since it is a root function with positive leading coefficients inside and outside. \\
 
-$g(y) = y^2 - 3$ is a quadratic with a positive leading coefficient.  Therefore, it decreases and then increases.   It switches at the criticial number.\\
+$g(y) = y^2 - 3$ is a quadratic with a positive leading coefficient.  Therefore, it decreases and then increases.   It switches at its criticial number.\\
 
 
 
@@ -148,48 +200,38 @@ $g(y) = y^2 - 3$ is a quadratic with a positive leading coefficient.  Therefore,
 \]
 
 
-$g$ decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.  However, $0$ is not in the domain of $H$.
+$g$ decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.  However, $0$ is not in the domain of $H$. We need to restrict this information to the actual domain of $H$. \\
 
 
 
 
 
-On $(-\infty, -\sqrt{3}]$, $H$ is $increasing \circ decreasing$, which is decreasing. \\
+On $(-\infty, -\sqrt{3}]$, 
 
 
-On $[\sqrt{3}, \infty)$, $H$ is $increasing \circ increasing$, which is increasing. \\
-
-
-
+$g$ is decreasing. Here, the range of $g$ is positive and $f$ is increasing for positive domain numbers. \\ 
 
 
 
-
-
-
-
-
-\textbf{\textcolor{blue!55!black}{Global Maximum and Minimum:}} \\
-
-
-
-On $(-\infty, -\sqrt{3}]$, $H$ is $decreasing$, which makes $H(-\sqrt{3}) = 0$ a global minimum.  \\
-
-
-On $[\sqrt{3}, \infty)$, $H$ is $increasing$, which makes $H(\sqrt{3}) = 0$ a global minimum.  \\
+\begin{center}
+$H$ is $increasing \circ decreasing$, which is decreasing. \\
+\end{center}
 
 
 
 
 
-Since $5 \sqrt{x^2-3} \geq 0$, $0$ is a global minimum occuring at $-\sqrt{3}$ and $\sqrt{3}$. \\
+On $[\sqrt{3}, \infty)$, 
 
 
+$g$ is increasing. Here, the range of $g$ is positive and $f$ is increasing for positive domain numbers. \\ 
 
 
+\begin{center}
+$H$ is $increasing \circ increasing$, which is increasing. \\
+\end{center}
 
 
-Since, $\lim\limits_{x \to -\infty} H(x) = \infty$ and $H$ is continuous, there is no global maximum. 
 
 
 
@@ -204,7 +246,6 @@ Since, $\lim\limits_{x \to -\infty} H(x) = \infty$ and $H$ is continuous, there 
 \textbf{\textcolor{blue!55!black}{Local Maximum and Minimum:}} \\
 
 
-There are no other critical numbers or endpoints.
 
 
 
@@ -215,13 +256,89 @@ On $[\sqrt{3}, \infty)$, $H$ is $increasing$, which makes $H(\sqrt{3}) = 0$ a lo
 
 
 
+There are no other critical numbers or endpoints in the domain.
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Global Maximum and Minimum:}} \\
+
+
+
+On $(-\infty, -\sqrt{3}]$, $H$ is $decreasing$, which makes $H(-\sqrt{3}) = 0$ a local minimum. \\
+
+
+On $[\sqrt{3}, \infty)$, $H$ is $increasing$, which makes $H(\sqrt{3}) = 0$ a local minimum  \\
+
+
+
+
+Since $5 \sqrt{x^2-3} \geq 0$, $0$ is the global minimum. \\
+
+
+
+$0$ is the global minimum value of $H$. It occurs at two places in the domain, $-\sqrt{3}$ and $\sqrt{3}$. \\
+
+
+
+Since, $\lim\limits_{x \to -\infty} H(x) = \infty$, there is no global maximum. 
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 \textbf{\textcolor{blue!55!black}{Range:}} \\
 
-The range is $[0, \infty)$.
+
+
+$H$ is continuous and decreasing on $( -\infty, -\sqrt{3} ]$. \\
+
+
+$\lim\limits_{x \to -\infty} H(x) = \infty$ \\
+
+
+$H(-\sqrt{3}) = 0$
+
+
+Therefore, the range of $H$ on $( -\infty, -\sqrt{3} ]$ is $[0, \infty)$. \\
+
+
+
+
+
+$H$ is continuous and increasing on $[ \sqrt{3} ,\infty)$. \\
+
+
+$\lim\limits_{x \to \infty} H(x) = \infty$ \\
+
+
+$H(\sqrt{3}) = 0$
+
+
+Therefore, the range of $H$ on $[ \sqrt{3}, \infty )$ is $[0, \infty)$. \\
+
+
+
+
+
+
+
+
+The range of $H$ is $[0, \infty) \cup [0, \infty) = [0, \infty)$.
 
 
 
