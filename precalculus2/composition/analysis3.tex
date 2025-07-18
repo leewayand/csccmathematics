@@ -271,32 +271,32 @@ That agrees with the graph.\\
 \textbf{\textcolor{blue!55!black}{Continuity:}} \\
 
 
-$K$ is a composition of a logarithmic function and a quadratic function.  Both of these are continuous, which means their composition is continuous. \\
+$F$ is a composition of a logarithmic function and a root function.  Both of these are continuous, which means their composition is continuous. \\
 
 Logrithmic functions do not have discontinuites, but they do have singularities.  
 
 
-$f(t) = -4\ln(t)$ has a singularity at $0$, which means $K$ has a singularty when the value of $g$ is $0$.
+$T(w) = -3 \log_4(w) + 2$ has a singularity at $0$, which means $F$ has a singularty when the value of $B$ is $0$.
 
 
 
 \[
-5 - y^2 = 0
+\sqrt{3 - 5y} - 1 = 0
 \]
 
 
 
 \[
-5 = y^2
+3 - 5y = 1
 \]
 
 
 
 \[
-\{ -\sqrt{5}, \sqrt{5} \}
+y = \frac{2}{5}
 \]
 
-We have two singularities, $-\sqrt{5}$ and $\sqrt{5}$. \\
+$\frac{2}{5}$ is a singularity, which agree with the graph. \\
 
 
 
@@ -311,42 +311,37 @@ We have two singularities, $-\sqrt{5}$ and $\sqrt{5}$. \\
 
 \textbf{\textcolor{blue!55!black}{Singularity-Behavior:}} \\
 
+How does $F$ behavior around this singularity? \\
 
 
-Since, $f(t) = -4 \ln(t)$, we know that 
+
+Since, $T(w) = -3 \log_4(w) + 2$, we know that 
 
 
 \[
-\lim\limits_{t \to 0^+} f(t) = \infty
+\lim\limits_{w \to 0^+} T(w) = \infty
 \]
 
 
 
-We need to find out where the values of $g$ approach $0^+$, meaning from the positive side. \\
+We need to find out where the values of $B$ approach $0^+$, meaning from the positive side. \\
 
 
-We already fount the zeros of $g$.  They were $-\sqrt{5}$ and $\sqrt{5}$.  Now we have to think about which side of $-\sqrt{5}$ and $\sqrt{5}$ $g$ will be positive. \\
+We already fount the zeros of $B$, $\frac{2}{5}$.  Now we have to think about which side of $\frac{2}{5}$ makes the value of $B$ positive. \\
 
 
-Since $g(y) = 5 - y^2$ is a quadratic with a positive leading coefficent, it will be positive on the outside of its zeros. 
+Since $B(y) = \sqrt{3 - 5y} + 1$ is a root with a positive leading coefficent, it will be positive to the left of the zero. 
 
 \begin{itemize}
-\item approaching $-\sqrt{5}$ from the negative/left side
-\item approaching $\sqrt{5}$ from the positive/right side
+\item approaching $\frac{2}{5}$ from the negative/left side
 \end{itemize}
 
-BOth of these will result in $f$ approaching $0$ from the positive direction. \\
+This will result in $B$ approaching $0$ from the positive direction. \\
 
 
 
 \[
-\lim\limits_{x \to -\sqrt{5}^-} K(x)  = \lim\limits_{t \to 0^+} f(t) = \infty
-\]
-
-
-
-\[
-\lim\limits_{x \to \sqrt{5}^+} K(x)  = \lim\limits_{t \to 0^+} f(t) = \infty
+\lim\limits_{x \to -\frac{2}{5}^-} K(x)  = \lim\limits_{w \to 0^+} T(w) = \infty
 \]
 
 
@@ -366,7 +361,51 @@ BOth of these will result in $f$ approaching $0$ from the positive direction. \\
 
 \textbf{\textcolor{blue!55!black}{End-Behavior:}} \\
 
-There is no end-behavior here, because end-behavior refers to the behavior of the function as the domain becomes unbounded.  The domain here is $(-\sqrt{5}, \sqrt{5})$. It doesn't head to $-\infty$ or $\infty$.
+The domain of $F$ does not approach $\infty$, but it does approach $-\infty$. \\
+
+
+We'll look at this limit through the two step of the composition. \\
+
+
+
+
+
+\[
+\lim\limits_{y \to -\infty} B(y)  = \lim\limits_{y \to -\infty} (\sqrt{3 - 5y} - 1)  = \infty
+\]
+
+
+This is because $B(y) = \sqrt{3 - 5y} - 1$ is a square root function with a negative leading coefficient. \\
+
+
+This is going into $T$. \\
+
+
+
+\[
+\lim\limits_{x \to -\infty} H(x)  = \lim\limits_{w \to \infty} (-3 \log_4(w) + 2)  = -\infty
+\]
+
+
+This is because $-3 \log_4(w) + 2$ is a logarithmic function with a negative leading coefficient. \\
+
+
+
+
+This agree with the graph.  \\
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -381,52 +420,53 @@ There is no end-behavior here, because end-behavior refers to the behavior of th
 \textbf{\textcolor{blue!55!black}{Behavior:}} \\
 
 
-We want to figure out where $H$ is increasing and decreasing. \\
+We want to figure out where $F$ is increasing and decreasing. \\
 
-$H$ is a composition, so we need to know how the component functions behave individually. \\
-
-
+$F$ is a composition, so we need to know how the component functions behave individually. \\
 
 
 
-$f(t) = -4 \ln(t)$ is a decreasing function, because it is a logarithmic function with a negative leading coefficient while the leading coefficient of the inside linear function is  positive. \\
 
-$g(y) = 5 - y^2$ is a quadratic with a negative leading coefficient.  Therefore, it increases and then decreases.   It switches at the criticial number.\\
+
+$T(w) = -3 \log_4(w) + 2$ is a decreasing function, because $T$ is a logarithmic function with a negative leading coefficient while the leading coefficient of the inside linear function is  positive. \\
+
+$B(y) = \sqrt{3 - 5y} - 1$ is a root function with a positive leading coefficient and a negative leading coefficient for the inner linear function.  Therefore, $B$ is a decreasing function.\\
+
+
 
 
 
 \[
-\frac{-b}{2 a} = \frac{0}{-2} = 0
+F(x) = (T \circ B)(x) = decreasing \circ decreasing = increasing
 \]
 
 
-$g$ decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.  Of course, we can only use $(-\sqrt{5}, \sqrt{5})$.
+
+$F$ is always increasing. \\
 
 
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-\sqrt{5}, 0)$, 
-
-
-$g$ is increasing. Here, the range of $g$ is positive and $f$ is decreasing on positive domain numbers.
-
-\begin{center}
-$K$ is $decreasing \circ increasing$, which is decreasing. \\
-\end{center}
 
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(0, \sqrt{3})$, 
 
 
-$g$ is decreasing. Here, the range of $g$ is positive and $f$ is decreasing on positive domain numbers.
 
 
-\begin{center}
-$K$ is $decreasing \circ decreasing$, which is increasing. \\
-\end{center}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -437,11 +477,26 @@ $K$ is $decreasing \circ decreasing$, which is increasing. \\
 \textbf{\textcolor{blue!55!black}{Global/Local Maximum and Minimum:}} \\
 \textbf{Extrema:} \\
 
-$K$ is continuous, decreasing and then increasing, which means $K(0) = -4 \ln(5)$ is a local minimum. Since there is only one critical number, it is also the global minimum and there are no local maximums.\\
+$F$ is continuous with \\
 
 
 
-Since $\lim\limits_{x \to -\sqrt{5}^+} K(x) = \infty$,  there is no global maximum.
+
+\[
+\lim\limits_{x \to -\infty} H(x)  = \lim\limits_{w \to \infty} (-3 \log_4(w) + 2)  = -\infty
+\]
+
+
+
+\[
+\lim\limits_{x \to -\frac{2}{5}^-} K(x)  = \lim\limits_{w \to 0^+} T(w) = \infty
+\]
+
+
+Therefore, there is not global maximum or minimum. \\
+
+
+Since, $T$ is always increasing, there are no critical numbers.  That means there are no local mximums or minimums. \\
 
 
 
@@ -456,41 +511,30 @@ Since $\lim\limits_{x \to -\sqrt{5}^+} K(x) = \infty$,  there is no global maxim
 
 \textbf{\textcolor{blue!55!black}{Range:}} \\
 
-Since $K$ is continuous, the range is $[-4 \ln(5), \infty)$.
+
+$F$ is continuous with \\
 
 
 
 
-This all agrees with the graph. \\
+\[
+\lim\limits_{x \to -\infty} H(x)  = \lim\limits_{w \to \infty} (-3 \log_4(w) + 2)  = -\infty
+\]
+
+
+
+\[
+\lim\limits_{x \to -\frac{2}{5}^-} K(x)  = \lim\limits_{w \to 0^+} T(w) = \infty
+\]
+
+
+Therefore, the domain of $F$ is $(\infty, \infty)$.\\
 
 
 
 
 
-\begin{image}
-\begin{tikzpicture}
-    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=K(x)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.2:2.2),<->] ({x},{-4*ln(5 - x^2)});
-
-
-           
-
-    \end{axis}
-
-\end{tikzpicture}
-\end{image}
-
+This all agrees with the graph at the top of the page. 
 
 
 
