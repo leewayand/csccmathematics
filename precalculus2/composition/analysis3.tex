@@ -53,26 +53,38 @@ But, first, let's get a look at this thing. \\
 
 
 
-We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = -4 \ln(5 - x^2)$ \\
+We are looking for functions $T$ and $B$ such that $(T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1)$ \\
 
 
-First, identify ``insides'' of functions.  In this case, $5 - x^2$ is the inside of $-4 \ln(5 - x^2)$. \\
+First, identify ``insides'' of functions.  In this case, $\sqrt{3 - 5x} - 1$ is the inside of $-3 \log_4(x) + 2$. \\
 
 
 
 \begin{itemize}
-\item Let $f(t) = -4 \ln(t)$ \\
-\item Let $g(y) = 5 - y^2$ \\
+\item Let $T(w) = -3 \log_4(w) + 2$ \\
+\item Let $B(y) = \sqrt{3 - 5y} - 1$ \\
 \end{itemize}
 
-Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = -4 \ln(5 - x^2)$.
+Algebraically, this produces the formula want,  $(T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1)$.
 
 
-To get us started, we are thinking that each component function comes with its natural domain.
+To get us started, we are thinking that each component function comes with its natural domain. \\
+
+
+$T(w) = -3 \log_4(w) + 2$ is a logarithmic function, so $w \in (0, \infty)$ \\
+
+
+$B(y) = \sqrt{3 - 5y} - 1$ is a square root function, so we need $3 - 5y >= 0$.
+
+$3 - 5y$ is a linear function with a negative leading coefficient.  It's zero is $\frac{3}{5}$.
+
+That makes the natural domain of $B$ $\left(-\infty, \frac{3}{5} \right]$. \\
+
+
 
 \begin{itemize}
-\item Let $f(t) = -4 \ln(t)$ with domain $(0, \infty)$ \\
-\item Let $g(y) = 5 - y^2$ with domain $(-\infty, \infty)$ \\
+\item Let $T(w) = -3 \log_4(w) + 2$ with domain $(0, \infty)$\\
+\item Let $B(y) = \sqrt{3 - 5y} - 1$ with domain $\left(-\infty, \frac{3}{5} \right]$\\
 \end{itemize}
 
 We are also ready to revise and modify and restrict these domains to fit the composition together. \\

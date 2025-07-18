@@ -52,7 +52,7 @@ First, identify ``insides'' of functions.  In this case, $5 - x^2$ is the inside
 \item Let $g(y) = 5 - y^2$ \\
 \end{itemize}
 
-Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = -4 \ln(5 - x^2)$.
+Algebraically, this produces the formula we want, $(f \circ g)(x) = f(g(x)) = -4 \ln(5 - x^2)$.
 
 
 To get us started, we are thinking that each component function comes with its natural domain.
@@ -161,7 +161,7 @@ $K$ is a composition of a logarithmic function and a quadratic function.  Both o
 Logrithmic functions do not have discontinuites, but they do have singularities.  
 
 
-$f(t) = -4\ln(t)$ has a singularity at $0$, which means $K$ has a singularty when the value of $g$ is $0$.
+$f(t) = -4\ln(t)$ has a singularity at $0$, which means $K$ has a singularity when the value of $g$ is $0$.
 
 
 
@@ -178,7 +178,7 @@ $f(t) = -4\ln(t)$ has a singularity at $0$, which means $K$ has a singularty whe
 
 
 \[
-\{ -\sqrt{5}, \sqrt{5} \}
+\left\{ -\sqrt{5}, \sqrt{5} \right\}
 \]
 
 We have two singularities, $-\sqrt{5}$ and $\sqrt{5}$. \\
@@ -198,7 +198,7 @@ We have two singularities, $-\sqrt{5}$ and $\sqrt{5}$. \\
 
 
 
-Since, $f(t) = -4 \ln(t)$, we know that 
+Since, $f(t) = -4 \ln(t)$ is a logarithmic function with a negative leading coefficient and the inside linear function has a positive leading coefficient, we know that 
 
 
 \[
@@ -210,28 +210,28 @@ Since, $f(t) = -4 \ln(t)$, we know that
 We need to find out where the values of $g$ approach $0^+$, meaning from the positive side. \\
 
 
-We already fount the zeros of $g$.  They were $-\sqrt{5}$ and $\sqrt{5}$.  Now we have to think about which side of $-\sqrt{5}$ and $\sqrt{5}$ $g$ will be positive. \\
+We already fount the zeros of $g$.  They were $-\sqrt{5}$ and $\sqrt{5}$.  Now we have to think about which side of $-\sqrt{5}$ and $\sqrt{5}$ will make $g$ positive. \\
 
 
-Since $g(y) = 5 - y^2$ is a quadratic with a positive leading coefficent, it will be positive on the outside of its zeros. 
+Since $g(y) = 5 - y^2$ is a quadratic with a negative leading coefficent, it will be positive on the inside of its zeros. 
 
 \begin{itemize}
-\item approaching $-\sqrt{5}$ from the negative/left side
-\item approaching $\sqrt{5}$ from the positive/right side
+\item approaching $-\sqrt{5}$ from the positive/right side
+\item approaching $\sqrt{5}$ from the negative/left side
 \end{itemize}
 
-BOth of these will result in $f$ approaching $0$ from the positive direction. \\
+Both of these will result in $f$ approaching $0$ from the positive direction. \\
 
 
 
 \[
-\lim\limits_{x \to -\sqrt{5}^-} K(x)  = \lim\limits_{t \to 0^+} f(t) = \infty
+\lim\limits_{x \to -\sqrt{5}^+} K(x)  = \lim\limits_{t \to 0^+} f(t) = \infty
 \]
 
 
 
 \[
-\lim\limits_{x \to \sqrt{5}^+} K(x)  = \lim\limits_{t \to 0^+} f(t) = \infty
+\lim\limits_{x \to \sqrt{5}^-} K(x)  = \lim\limits_{t \to 0^+} f(t) = \infty
 \]
 
 
@@ -322,11 +322,11 @@ $K$ is $decreasing \circ decreasing$, which is increasing. \\
 \textbf{\textcolor{blue!55!black}{Global/Local Maximum and Minimum:}} \\
 \textbf{Extrema:} \\
 
-$K$ is continuous, decreasing and then increasing, which means $K(0) = -4 \ln(5)$ is a local minimum. Since there is only one critical number, it is also the global minimum and there are no local maximums.\\
+$K$ is continuous, decreasing and then increasing, which means $K(0) = -4 \ln(5)$ is a local and global minimum. \\
 
 
 
-Since $\lim\limits_{x \to -\sqrt{5}^+} K(x) = \infty$,  there is no global maximum.
+Since $\lim\limits_{x \to -\sqrt{5}^-} K(x) = \infty$,  there is no global maximum.
 
 
 
