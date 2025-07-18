@@ -53,7 +53,7 @@ But, first, let's get a look at this thing. \\
 
 
 
-We are looking for functions $T$ and $B$ such that $(T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1)$ \\
+We are looking for functions $T$ and $B$ such that $F(x) = (T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1) + 2$ \\
 
 
 First, identify ``insides'' of functions.  In this case, $\sqrt{3 - 5x} - 1$ is the inside of $-3 \log_4(x) + 2$. \\
@@ -65,7 +65,7 @@ First, identify ``insides'' of functions.  In this case, $\sqrt{3 - 5x} - 1$ is 
 \item Let $B(y) = \sqrt{3 - 5y} - 1$ \\
 \end{itemize}
 
-Algebraically, this produces the formula want,  $(T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1)$.
+Algebraically, this produces the formula want,  $(T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1) + 2$.
 
 
 To get us started, we are thinking that each component function comes with its natural domain. \\
@@ -76,7 +76,7 @@ $T(w) = -3 \log_4(w) + 2$ is a logarithmic function, so $w \in (0, \infty)$ \\
 
 $B(y) = \sqrt{3 - 5y} - 1$ is a square root function, so we need $3 - 5y >= 0$.
 
-$3 - 5y$ is a linear function with a negative leading coefficient.  It's zero is $\frac{3}{5}$.
+$3 - 5y$ is a linear function with a negative leading coefficient and positive left of its zero.  It's zero is $\frac{3}{5}$.
 
 That makes the natural domain of $B$ $\left(-\infty, \frac{3}{5} \right]$. \\
 
@@ -101,39 +101,66 @@ We are ready to analyze. \\
 
 
 
-Since $H(x) = f \circ g)(x) = f(g(x))$, the domain of $H$ is inside the domain of $g$, which is $(\infty, \infty)$. \\
+Since $F(x) = (T \circ B)(x) = T(B(x))$, the domain of $F$ is inside the domain of $B$, which is $\left(-\infty, \frac{3}{5} \right]$. \\
 
-We need to match up the domain of $f$ with the range of $g$. \\
-
-
-$f(t) = -4 \ln(t)$ has a domain of $(0, \infty)$.  We need the output of $g$ to be inside $(0, \infty)$. \\
+We need to match up the range of $B$ with the domain of $T$. \\
 
 
-
-$g(y) = 5 - y^2$ \\
+$T(w) = -3 \log_4(w) + 2$ has a domain of $(0, \infty)$.  We need the output of $B$ to be inside $(0, \infty)$. \\
 
 
 
-$5 - y^2$ is a quadratic function with a negative leading coefficient.  Therefore, it is positive between its two zeros.
+$B(y) = \sqrt{3 - 5y} - 1$ \\
+
+
+
+$B(y) = \sqrt{3 - 5y} - 1$ is a square root function with a positive leading coefficient.  The range is $[-1, \infty)$.   This does not fit inside $(0, \infty)$, which is the domain of $T$.  So, we cannot use the whole domain of $B$ to get the whole range of $B$, which fits inside of the domain of $T$. \\
+
+
+We need to remove $[-1, 0]$ from the range of $B$, which is $[-1, \infty)$. \\
+
+
+Where does $B(y) = 0$? \\
 
 
 \[
-5 - y^2 = 0
+B(y) = \sqrt{3 - 5y} - 1 = 0
+\]
+
+
+\[
+\sqrt{3 - 5y} = 1
+\]
+
+
+\[
+3 - 5y = 1
 \]
 
 \[
-y = -\sqrt{5}  \,  \text{ or } \, y = \sqrt{5} 
+y = \frac{2}{5}
 \]
 
+We need to cut the domain of $B$ off at $\frac{2}{5}$. \\
+
+
+The usable part of the domain of $B$ is  $\left(-\infty, \frac{2}{5} \right)$. \\
+
+
+The domain of $F$ is $\left(-\infty, \frac{2}{5} \right)$. \\
+
+
+This agrees with the DESMOS graph. \\
 
 
 
-$5 - y^2 > 0$ on $(-\sqrt{5}, \sqrt{5})$. \\
 
 
 
 
-Therefore, the domain of $K$ is the intersection of the domain of $g$ with $(-\sqrt{5}, \sqrt{5})$, which is $(-\sqrt{5}, \sqrt{5})$. \\
+
+
+
 
 
 
@@ -141,30 +168,93 @@ Therefore, the domain of $K$ is the intersection of the domain of $g$ with $(-\s
 
 
 
+$H$ is $0$ wherever $T$ is $0$.
+
+
+
+
+
 
 \[
--4 \ln(5 - x^2) = 0
+T(w) = -3 \log_4(w) + 2 = 0
 \]
 
 
 \[
- \ln(5 - x^2) = 0
+ \log_4(w) = \frac{2}{3}
 \]
 
 
 \[
-5 - x^2 = 1
+w = 4^{\tfrac{2}{3}}
 \]
+
+
+
+We need $4^{\tfrac{2}{3}}$ coming into $T$, which means we need $4^{\tfrac{2}{3}}$ coming out of $B$.
+
+
+
 
 
 \[
-4 = x^2
+B(y) = \sqrt{3 - 5y} - 1 = 4^{\tfrac{2}{3}}
 \]
 
 
-We have two zeros, $-2$ and $2$. \\
 
-Both of these are inside the domain of $H$, since $2 < \sqrt{5}$. \\
+\[
+\sqrt{3 - 5y} = 4^{\tfrac{2}{3}} + 1
+\]
+
+
+
+\[
+3 - 5y = \left( 4^{\tfrac{2}{3}} + 1 \right)^2
+\]
+
+
+
+\[
+y = -\frac{1}{5} \left( \left( 4^{\tfrac{2}{3}} + 1 \right)^2 - 3 \right)
+\]
+
+
+To check with the graph, we need a decimal approximation.
+
+
+
+
+
+
+\[
+-\frac{1}{5} \left( \left( 4^{\tfrac{2}{3}} + 1 \right)^2 - 3 \right) \approx -1.877857681
+\]
+
+
+That agrees with the graph.\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -316,7 +406,7 @@ $g$ decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.  Of course, we c
 
 
 
-On $(-\sqrt{5}, 0)$, 
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-\sqrt{5}, 0)$, 
 
 
 $g$ is increasing. Here, the range of $g$ is positive and $f$ is decreasing on positive domain numbers.
@@ -328,7 +418,7 @@ $K$ is $decreasing \circ increasing$, which is decreasing. \\
 
 
 
-On $(0, \sqrt{3})$, 
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(0, \sqrt{3})$, 
 
 
 $g$ is decreasing. Here, the range of $g$ is positive and $f$ is decreasing on positive domain numbers.
