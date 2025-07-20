@@ -46,7 +46,7 @@ with
 
 
 
-
+$R(t)$ is not a composition. It is a rational function. \\
 
 
 Here is a quick DESMOS graph.
@@ -57,7 +57,7 @@ Here is a quick DESMOS graph.
 \end{center}
 
 
-There is something wrong with this graph.  $2$ and $3$ make the denominator $0$, but the numbers in the interval $(2, 3)$ are in teh domain.  There should be a piece of the graph there that is not showing up.
+There is something wrong with this graph.  $2$ and $3$ make the denominator $0$, but the numbers in the interval $(2, 3)$ are in the domain.  There should be a piece of the graph there that is not showing up.
 
 
 Let's evalaute at $2.5$ and see what type of values we are getting. \\
@@ -110,29 +110,15 @@ From the graph, we are anticipating two singularities, two critical numbers, swi
 
 
 
-\textbf{Note:} $L(x)$ is the composition of a rational function with an exponential function.
-
-$L = f \circ g$ where
-
-\[  f(y) =  \frac{5}{1 + 3 \, y}  \, \text{ and } \, g(k) = e^{-\tfrac{k}{2}}    \]
 
 
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} 
 
-$e^{-\tfrac{x}{2}}$ is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+$R(t)$ is a rational function.  Its domain is all real numbers except the zeros of the denominator. \\
 
-
-
-The range of the exponential function, $e^{-\tfrac{x}{2}}$ is $(0, \infty)$. The range does not include \wordChoice{\choice{positive} \choice[correct]{negative}}  numbers. \\
-
-
-
-Since, the range of $g(k)$ does not include negative numbers, it does not include $-\frac{1}{3}$, which is the zero of the denominaotr of $f(y)$.  The denominator of $L(x)$ cannot equal $0$.  \\
-
-
- That makes the domain of $L$ all real numbers, $(-\infty, \infty)$.
+The domain is $(-\infty, 2) \cup (2,3) \cup (3, \infty)$  \\
 
 
 
@@ -150,12 +136,10 @@ Since, the range of $g(k)$ does not include negative numbers, it does not includ
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros}} 
 
 
-
-$L$ is a quotient, therefore the zeros of $L$ would be the zeros of the numerator (which are not also zeros of the denominator).  However, the numerator is a constant function.  It has no zeros. Therefore, $L$ has no zeros.
-
+$R(t)$ is a rational function.  Its zeros are the zeros of the numerator except those that are also zeros of the denominator. \\
 
 
-
+The zeros of $R$ are $-3$ and $-1$. \\
 
 
 
@@ -165,10 +149,104 @@ $L$ is a quotient, therefore the zeros of $L$ would be the zeros of the numerato
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity}} 
 
 
-The denominator of $L$ is a shifted exponential function, so it is continuous everywhere. The numerator is a constant function, so it is continuous everywhere.  $L$ is the quotient of two continuous functions.  Therefore, it is continuous. \\
+$R(t)$ is a rational function.  It is continuous. \\
 
 
-Since the denominator is never equal to $0$, there are no singularities. \\
+$R$ does have singularities.  We need the behavior around them.   Both $2$ and $3$ are zeros of the denominator and not zeros of the numerator.  This makes them asymptotic singularities. \\
+
+
+We knw know that $R$ is unbounded as $t$ approaches $2$ and $3$.  We need to figure out the sign. \\
+
+
+\begin{explanation}
+
+
+For $\lim\limits_{t \to 2^-}R(t)$,  $t < 2$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 < 0$
+\item $t - 3 < 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{neg \cdot neg} = positive$ \\
+
+
+
+\[
+\lim\limits_{t \to 2^-}R(t) = \infty
+\]
+
+
+
+
+
+
+For $\lim\limits_{t \to 2^+}R(t)$,  $t > 2$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 > 0$
+\item $t - 3 < 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{pos \cdot neg} = negative$ \\
+
+
+
+\[
+\lim\limits_{t \to 2^+}R(t) = -\infty
+\]
+
+
+
+
+
+For $\lim\limits_{t \to 3^-}R(t)$,  $t < 3$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 > 0$
+\item $t - 3 < 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{pos \cdot neg} = negative$ \\
+
+
+
+\[
+\lim\limits_{t \to 2^-}R(t) = -\infty
+\]
+
+
+
+
+
+
+
+For $\lim\limits_{t \to 3^+}R(t)$,  $t > 3$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 > 0$
+\item $t - 3 > 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{pos \cdot pos} = positive$ \\
+
+
+
+\[
+\lim\limits_{t \to 2^-}R(t) = \infty
+\]
 
 
 
@@ -177,6 +255,11 @@ Since the denominator is never equal to $0$, there are no singularities. \\
 
 
 
+\end{explanation}
+
+
+
+This agrees with the graph.
 
 
 
@@ -185,52 +268,20 @@ Since the denominator is never equal to $0$, there are no singularities. \\
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior}} 
 
-
-The inside function is $e^{-\tfrac{x}{2}}$, which is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
-
-That means $g(k)$ is a positive decreasing exponential function. \\
+$R(t)$ is a rational function. The degree of the numerator and the degree of the denomiator are equal.  The end-behavior is the quotient is the leading coefficients.
 
 
 
 \[  
-\lim\limits_{k \to -\infty}g(k) = \lim\limits_{k \to -\infty}e^{-\tfrac{x}{2}} = \infty
+\lim\limits_{t \to -\infty}R(t) = \frac{1}{1} = 1
 \]
 
 
 
 
 \[  
-\lim\limits_{k \to \infty}g(k) = \lim\limits_{k \to \infty}e^{-\tfrac{x}{2}} = 0
+\lim\limits_{t \to \infty}R(t) = \frac{1}{1} = 1
 \]
-
-
-
-
-To get the end-behavior of $L(x)$, we need to see what $f(y)$ is doing when $g(k)$ is behaving as above. \\
-
-
-
-
-
-\[  
-\lim\limits_{x \to -\infty}L(x) = \lim\limits_{y \to \infty}f(y) = \lim\limits_{y \to \infty}\frac{5}{1 + 3 y} = 0
-\]
-
-This is because $f(y)$ is a rational function with the degree of the denominator greater than the degree of the numerator. \\
-
-
-
-
-
-
-\[  
-\lim\limits_{x \to \infty}L(x) = \lim\limits_{y \to 0}f(y) = \frac{5}{1 + 3 (0)} = 5
-\]
-
-
-
-This is because $f$ is continuous, which means the limit as $y$ approaches $0$ is just the value of the function. \\
-
 
 
 
@@ -248,23 +299,176 @@ This is because $f$ is continuous, which means the limit as $y$ approaches $0$ i
 
 
 
-The inside function, $e^{-\tfrac{x}{2}}$, is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+The sign of $R'(t)$ will give us the behavior of $R(t)$. \\
+
+To get the sign of $R'(t)$, we will factor it. \\
+
+The denominator is factored.  The numerator is a quadratic function.  To factor it, we need its zeros, which we can get from the quadratic formula. \\
+
+But, first we might as well factor out $3$ in the numerator. \\
 
 
-$e^{-\tfrac{x}{2}}$ is a strictly \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  function 
 
 
-The outside function is a rational function with a constant positive numerator. \\
-
-The denominator of the fraction is positve and decreasing, which means it is getting smaller. \\
-
-That makes $f$ an increasing function. \\
 
 
-$L$ is a composition of two increasing functions. \\
+
+\[   
+R'(t) = -\frac{9 t^2 -6 t -39}{(t-2)^2 (t-3)^2} = -\frac{3 (3 t^2 - 2 t - 13)}{(t-2)^2 (t-3)^2}
+\]
 
 
-$L(x)$ is a strictly \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  function.
+
+
+$3 (3 t^2 - 2 t - 13) = 0$ \\
+
+$3 t^2 - 2 t - 13 = 0$ 
+
+
+
+\[
+t = \frac{2 \pm \sqrt{(-2)^2 - 4(3)(-13)}}{2(3)} = \frac{2 \pm \sqrt{160}}{6} = \frac{2 \pm 4 \sqrt{10}}{6} = \frac{1 \pm 2 \sqrt{10}}{3}
+\]
+
+
+
+
+Two critical numbers: $\frac{1 - 2 \sqrt{10}}{3}$ and $\frac{1 + 2 \sqrt{10}}{3}$ \\
+
+
+
+
+Quick Check:  \\
+
+
+\[
+\frac{1 - 2 \sqrt{10}}{3} \approx -1.774851773
+\]
+
+
+\[
+\frac{1 + 2 \sqrt{10}}{3} \approx 2.44151844
+\]
+
+
+These agree with the graph, so we feel like our algebra is correct. \\
+
+
+
+We can now factor $R'(t)$ \\
+
+
+
+
+
+
+
+
+\[   
+R'(t) = -\frac{3 \left(x - \left(\frac{1 - 2 \sqrt{10}}{3} \right) \right) \left(x - \left(\frac{1 + 2 \sqrt{10}}{3} \right) \right) }{ (t-2)^2 (t-3)^2 } 
+\]
+
+
+Both $\frac{1 - 2 \sqrt{10}}{3}$ and $\frac{1 - 2 \sqrt{10}}{3}$ have odd multiplicities, so $R'$ will change signs across them. \\
+
+
+
+
+Both $2$ and $3$ have even multiplicities, so $R'$ will not change signs across them. \\
+
+
+
+We need the order of $\frac{1 - 2 \sqrt{10}}{3}$, $\frac{1 - 2 \sqrt{10}}{3}$, $2$, and $3$.   \\
+
+
+
+\begin{explanation}
+
+That graph makes us think that 
+
+\[
+\frac{1 - 2 \sqrt{10}}{3} < 2 < \frac{1 + 2 \sqrt{10}}{3} < 3
+\]
+
+
+Let's show that $\frac{1 - 2 \sqrt{10}}{3} < 2$. \\
+
+This true because $\frac{1 - 2 \sqrt{10}}{3} < 0$, since $1 < 2 \sqrt{10}$. \\
+
+
+
+Next, we'll show that $2 < \frac{1 + 2 \sqrt{10}}{3}$. \\
+
+
+
+This is true if $6 < 1 + 2 \sqrt{10}$, which is true since $3 < \sqrt{10}$. \\
+
+
+
+Finally, we need to show that $\frac{1 + 2 \sqrt{10}}{3} < 3$ \\
+
+
+This is true if $1 + 2 \sqrt{10} < 9$, which is true since $\sqrt{10} < 4$.
+
+
+
+
+
+\end{explanation}
+
+
+
+
+We now know the ordering of the critical numbers and singularities. \\
+
+
+\[
+\frac{1 - 2 \sqrt{10}}{3} < 2 < \frac{1 + 2 \sqrt{10}}{3} < 3
+\]
+
+
+
+
+
+On $(-\infty, 2)$, 
+
+
+
+\[   
+R'(t) = -\frac{3 \left(x - \left(\frac{1 - 2 \sqrt{10}}{3} \right) \right) \left(x - \left(\frac{1 + 2 \sqrt{10}}{3} \right) \right) }{ (t-2)^2 (t-3)^2 }  = 
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
