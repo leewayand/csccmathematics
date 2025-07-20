@@ -1,0 +1,427 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Analyzing}
+
+\begin{document}
+
+\begin{abstract}
+describe everything
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!80!black}{Reasoning:}} Reasoning is a logical explanation that describes our conclusions, how we arrived at those conclusions, and why we think those conclusions are correct. \\
+
+Analysis is not a list of conclusions. We are not looking for such a list. \\
+
+We are looking for the thought process that arrived at the list of conclusions. \\
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+\textbf{\textcolor{purple!85!blue}{Completely analyze}} \\
+
+
+\[   R(t) = \frac{(t+3)(t+1)}{(t-2)(t-3)} \]
+
+with 
+
+\[   R'(t) = -\frac{9 t^2 -6 t -39}{(t-2)^2 (t-3)^2} \]
+
+
+
+
+
+
+Here is a quick DESMOS graph.
+
+
+\begin{center}
+\desmos{mgkklcsmqr}{400}{300}
+\end{center}
+
+
+There is something wrong with this graph.  $2$ and $3$ make the denominator $0$, but the numbers in the interval $(2, 3)$ are in teh domain.  There should be a piece of the graph there that is not showing up.
+
+
+Let's evalaute at $2.5$ and see what type of values we are getting. \\
+
+$R(2.5) = -77$
+
+
+\begin{center}
+\desmos{8baq5avdvr}{400}{300}
+\end{center}
+
+
+There is the other part of the graph. \\
+
+
+
+From the graph, we are anticipating two singularities, two critical numbers, switching between increasing and decreasing, and end-behavior which is not unbounded. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Note:} $L(x)$ is the composition of a rational function with an exponential function.
+
+$L = f \circ g$ where
+
+\[  f(y) =  \frac{5}{1 + 3 \, y}  \, \text{ and } \, g(k) = e^{-\tfrac{k}{2}}    \]
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} 
+
+$e^{-\tfrac{x}{2}}$ is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+
+
+
+The range of the exponential function, $e^{-\tfrac{x}{2}}$ is $(0, \infty)$. The range does not include \wordChoice{\choice{positive} \choice[correct]{negative}}  numbers. \\
+
+
+
+Since, the range of $g(k)$ does not include negative numbers, it does not include $-\frac{1}{3}$, which is the zero of the denominaotr of $f(y)$.  The denominator of $L(x)$ cannot equal $0$.  \\
+
+
+ That makes the domain of $L$ all real numbers, $(-\infty, \infty)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros}} 
+
+
+
+$L$ is a quotient, therefore the zeros of $L$ would be the zeros of the numerator (which are not also zeros of the denominator).  However, the numerator is a constant function.  It has no zeros. Therefore, $L$ has no zeros.
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity}} 
+
+
+The denominator of $L$ is a shifted exponential function, so it is continuous everywhere. The numerator is a constant function, so it is continuous everywhere.  $L$ is the quotient of two continuous functions.  Therefore, it is continuous. \\
+
+
+Since the denominator is never equal to $0$, there are no singularities. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior}} 
+
+
+The inside function is $e^{-\tfrac{x}{2}}$, which is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+
+That means $g(k)$ is a positive decreasing exponential function. \\
+
+
+
+\[  
+\lim\limits_{k \to -\infty}g(k) = \lim\limits_{k \to -\infty}e^{-\tfrac{x}{2}} = \infty
+\]
+
+
+
+
+\[  
+\lim\limits_{k \to \infty}g(k) = \lim\limits_{k \to \infty}e^{-\tfrac{x}{2}} = 0
+\]
+
+
+
+
+To get the end-behavior of $L(x)$, we need to see what $f(y)$ is doing when $g(k)$ is behaving as above. \\
+
+
+
+
+
+\[  
+\lim\limits_{x \to -\infty}L(x) = \lim\limits_{y \to \infty}f(y) = \lim\limits_{y \to \infty}\frac{5}{1 + 3 y} = 0
+\]
+
+This is because $f(y)$ is a rational function with the degree of the denominator greater than the degree of the numerator. \\
+
+
+
+
+
+
+\[  
+\lim\limits_{x \to \infty}L(x) = \lim\limits_{y \to 0}f(y) = \frac{5}{1 + 3 (0)} = 5
+\]
+
+
+
+This is because $f$ is continuous, which means the limit as $y$ approaches $0$ is just the value of the function. \\
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior}} 
+\textbf{Rate-of-Change}  
+\textbf{Increasing and Decreasing}   
+
+
+
+The inside function, $e^{-\tfrac{x}{2}}$, is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+
+
+$e^{-\tfrac{x}{2}}$ is a strictly \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  function 
+
+
+The outside function is a rational function with a constant positive numerator. \\
+
+The denominator of the fraction is positve and decreasing, which means it is getting smaller. \\
+
+That makes $f$ an increasing function. \\
+
+
+$L$ is a composition of two increasing functions. \\
+
+
+$L(x)$ is a strictly \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  function.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Extrema}} 
+
+
+As a strictly increasing function on $(-\infty, \infty)$, $L$ cannot have global or local maximums or minimums. \\
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Range}} 
+
+
+
+$L$ is a continuous function, never negative, and increasing. In addition, we nkow that 
+
+
+
+
+
+\[  
+\lim\limits_{x \to -\infty}L(x) = \lim\limits_{y \to \infty}f(y) = \lim\limits_{y \to \infty}\frac{5}{1 + 3 y} = 0
+\]
+
+
+
+
+\[  
+\lim\limits_{x \to \infty}L(x) = \lim\limits_{y \to 0}f(y) = \frac{5}{1 + 3 (0)} = 5
+\]
+
+
+
+
+
+
+
+
+The range of $L$ is $(0, 5)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ A Graph}} 
+
+
+
+
+
+The end-behavior tells us that the graph has horizontal asymptotes.
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=6, xmax=10, ymin=-1, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=L(x)$}, grid = major, grid style={dashed},
+            ytick={1,2,3,4,5,6},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$1$,$2$,$3$,$4$,$5$,$6$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10),<->] {5};
+          \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10),<->] {0};
+
+            %\addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9)] {5/(1 + 3 * e^(-x/2))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:9),<->] {5/(1 + 3 * 2.7182^(-x/2))};
+
+           
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{example}
+
+
+
+
+
+\subsection*{with Calculus}
+
+\textbf{\textcolor{red!70!black}{A Peek Ahead...}}
+
+
+
+
+Calculus will give us a formula for the derivative.
+
+\[  L'(x) =   \frac{-15}{2} \cdot \frac{e^{-\tfrac{x}{2}}}{\left(1+3 e^{-\tfrac{x}{2}}\right)^2}    \]
+
+
+This derivative has no zeros, which tells us that $L(x)$ has no critical numbers.  $L'(x)$ is always positive, which tells us that $L(x)$ is always increasing.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Analyzing Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/analyzingFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+\end{document}
