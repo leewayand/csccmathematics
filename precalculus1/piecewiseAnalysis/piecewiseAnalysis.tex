@@ -92,19 +92,31 @@ A graph always helps our thinking. Here is the graph of $y = V(h)$.
 
 \subsection*{Domain} 
 
-From the definition of $V(h)$, we can see the domain is $[-6, -2] \cup (-2, 4] \cup (4,6) = [-6, 6)$.
+From the definition of $V(h)$, we can get the domain as the union of the defining intervals. \\
+The domain is $[-6, -2] \cup (-2, 4] \cup (4,6) = [-6, 6)$.
 
 
 
 \subsection*{Zeros} 
 
-We can see from the graph that usually the component pieces of $V$ would total four intercepts and zeros. One each from the linear pieces and two from the quadratic piece.  However, the domain restrictions only admit two of them.  The greater zero from the quadratic piece and the zero from the right linear function. These are both represented by intercepts on the graph.
-
-The left line would have an intercept, except the domain does not allow it for $V$.  The middle parabola has a left intercept, except the domain does allow it for $V$. 
-
-From the graph, we might estimate our two zeros to be around $3$ and $4.5$.  What are the exact values?
+The formula for $V$ includes two linear functions and a quadratic function.  If these did not have restricted domains, then we would have expected $4$ zeros.\\
 
 
+However, the graph suggests that the domain restrictions only permit two of them.  We can find the zeros for each component function and then see if they lie in the corresponding domain interval. \\
+
+
+
+
+
+$\blacktriangleright$ The left piece. 
+
+\begin{explanation}
+
+The formula for the left piece is $-2h-3$.  This would give the zero $-\frac{3}{2}$. \\
+
+However, the left piece ofg $V$ is restricted to the domain numbers inside $[-6,-2]$ and $-\frac{3}{2} \notin [-6,-2]$.
+
+\end{explanation}
 
 
 
@@ -116,9 +128,19 @@ $\blacktriangleright$ The middle piece.
 \begin{explanation}
 
 
-We are solving $-(h+3)(h-3) = 0$.  Since this is in factored form, we can quickly see the candidates are $-3$ and $3$.  $\answer{-3}$ is not in the domain for this piece of $V$, which is $(-2, 4]$.
+We are solving $-(h+3)(h-3) = 0$.  Since this is in factored form, we can quickly see the candidates are $-3$ and $3$.   \\
+
+
+The domain interval for the middle piece is $(-2,4]$. \\
+
+
+$\answer{-3} \notin (-2,4]$. \\
+
+$\answer{3} \in (-2,4]$. \\
+
 
 Therefore, $V$ has $\answer{3}$ as its only zero contributed from the quadratic piece.
+
 \end{explanation}
 
 
@@ -129,7 +151,13 @@ $\blacktriangleright$ The right piece.
 \begin{explanation}
 
 
-We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V$, which agrees with our extimation from the graph.
+We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a possible zero of $V$. \\
+
+
+The domain interval for the right piece is $(4, 6)$. \\
+
+$\frac{32}{7} \in (4, 6)$. \\
+
 
 \end{explanation}
 
@@ -150,7 +178,7 @@ We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a zero of $V
 
 Linear and quadratic functions are continuous functions. They are continous on restricted domains, which is what we have with piecewise defined functions.  $V(h)$ is continuous on $[-6, -2]$, $(-2, 4]$, and $(4, 6)$.  These correspond to the intervals in the definition of $V(h)$. \\
 
-Therefore, we only need to check the endpoints of the intervals.  Here, those endpoints would be $\{ -6, -2, 4, 6 \}$.
+Therefore, we only need to check the endpoints of the intervals.  Here, those endpoints would be $\{ -6, -2, 4, 6 \}$, individually.
 
 
 
@@ -322,10 +350,10 @@ We are trying to think of types of numbers. \\
 We are trying to think of ``types'' as algebraic conditions or relationships. \\
 
 
-This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$.  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird. \\
+This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$ (epsilon).  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird. \\
 
 
-But, we need better language and notation to talk about discontiuities. \\
+But we need better language and notation to talk about discontiuities. \\
 
 It is coming. \\
 
@@ -337,7 +365,7 @@ Instead of talking about $\epsilon$, we will use limit notation to talk about ex
 \lim\limits_{h \to -2^+} V(h) = 7
 \]
 
-FOr now, we are figuring out how to talk about ``small'' numbers. \\
+For now, we are figuring out how to talk about ``small'' numbers. \\
 
 \end{idea}
 
@@ -392,7 +420,7 @@ Our algebraic notation to talk about function behavior around discontinuities an
 \subsection*{End-Behavior} 
 
 
-End-behavior describes what the funciton is doing out in the ``tails'' of the domain.  But, here, the domain of $V$ is bounded.  There are no tails. \\
+End-behavior describes what the function is doing out in the ``tails'' of the domain.  But, here, the domain of $V$ is bounded.  There are no tails. \\
 
 $V$ has no end-behavior. \\
 
@@ -423,10 +451,13 @@ This agrees with the graph.
 \end{itemize}
 
 
-\textbf{Technically:} We also need to account for the endpoints. $V$ is increasing on $[-2, 4]$, since the dot at $-2$ is lower than the left side of the included parabola.
+\textbf{Technically:} We also need to account for the endpoints. $V$ is increasing on $[-2, 4]$, since the dot at $-2$ is lower than the left side of the included parabola. Usually, we are not so fussy.
 
 
 \begin{question}
+
+On the domain interval $(4, 6)$. \\
+
 \begin{itemize}
 \item \textbf{$\frac{7h}{4} - 8$} is a linear function with a constant rate of change of $\answer{\frac{7}{4}}$ telling us that $V$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}} on $(4, 6)$.
 \end{itemize}
@@ -452,17 +483,44 @@ The intervals where $V$ is monotonic (always increasing or always decreasing) ar
 
 
 
+
+
+
+
+
+
+
+
+
 \subsection*{Extreme Values} 
 
 
 We have three pieces to our function and the graph will help our algebra. We'll gather information about the pieces individually and then combine them for $V$.
 
 \begin{itemize}
-  \item \textbf{$-2h-3$} is a decreasing linear function on $[-6, -2]$.  Its maximum would occur at the left endpoint, which is included. Therefore, the maximum is $-2(-6)-3 = 9$. Its minimum would be at the right endpoint, which is included. Therefore, the minimum is $-2(-2)-3 = 1$.
+  \item \textbf{left piece:} \textbf{$-2h-3$} is a decreasing linear function on $[-6, -2]$.  Its maximum would occur at the left endpoint, which is included.  This maximum value is $-2(-6)-3 = 9$. Its minimum would be at the right endpoint, which is included. Therefore, This minimum is $-2(-2)-3 = 1$. \\
 
-  \item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$.  Its graph is a parabola opening down and we have seen that $V$ increases and then decreases.  
+  Those were maximum and minimum value for the left linear piece.  They may or may not be local or global extreme values of $V$.  We will decide after we examine the three pieces individuallt. \\
 
-  Therefore, its maximum value corresponds to the vertex, $(0, 9)$, which is included.  We get a maximum value of $9$.  The candidates for minimum value would occur at the endpoints, except only the right endpoint is included.  $-(4-3)(4+3) = -7$ is a possible minimum value.
+
+ 
+  \item \textbf{middle piece:} \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$, with a negative leading coefficent.  We have seen that $V$ increases and then decreases.  It switches at the quadratic's critical number, which is $-\frac{b}{2a} = -\frac{0}{-2} = 0 \\$
+
+  We get a maximum value of $V(0) = -(0+3)(0-3) = 9$ for the middle piece.  The candidates for minimum value of the middle piece occur at the endpoints, except only the right endpoint is included.  $-(4-3)(4+3) = -7$ is a minimum value. \\
+
+   Those were maximum and minimum value for the middle quadratic piece.  They may or may not be local or global extreme values of $V$.  We will decide after we examine the three pieces individually. \\
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \begin{observation}
@@ -471,7 +529,7 @@ We have three pieces to our function and the graph will help our algebra. We'll 
 We could have expanded the factored form: $-(h+3)(h-3) = -h^2 + 9$.  This is now in vertex form, $-(h-0)^2 + 9$. From this expression we can see that the vertex is $(0, 9)$, and the negative leading coefficient tells us that we have a maximum of $9$ occuring at $0$.
 
 
-We could have observed the expanded form as a standard form, $-h^2 + 0 h + 9$.  Then the quadratic formula would give us $\frac{-b}{2a} = \frac{-0}{-2} = 0$ as the location of the vertex and the place where the behavior changes.
+We could have observed the expanded form as a standard form, $-h^2 + 0 h + 9$.  Then the quadratic formula would give us $\frac{-b}{2a} = \frac{-0}{-2} = 0$ as the location of the vertex and the place where the behavior changes (critical number).
 
 
 And, we can look at the instantaneous rate of change. The middle piece of $V$ is a quadratic, therefore, the vertex form $-(h-0)^2 + 9$ gives us $iRoC(h) = -2(h-0) = -2h$.  This equals $0$ at $0$, which means $0$ is a critical number and a possible location of changing behavior.
@@ -480,17 +538,53 @@ And, we can look at the instantaneous rate of change. The middle piece of $V$ is
 Lastly, \\
 
 
-  \item \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $(4, 6)$.  Its maximum would be encoded in the right endpoint, which is excluded. Its minimum would be encoded in the left endpoint, which is also excluded. This piece is contributing no extreme values to $V$.
+  \item \textbf{right piece:}  \textbf{$\frac{7h}{4} - 8$} is an increasing linear function on $(4, 6)$.  Its maximum would be encoded in the right endpoint, which is excluded. Its minimum would be encoded in the left endpoint, which is also excluded. This piece is contributing no extreme values to $V$.
 \end{itemize}
 
 
-Our analysis of the pieces leaves us with a global maximum value of $9$ for $V$.  $9$ occurs twice.  Once at $-6$ and then again at $0$.
-
-Our analysis of the pieces leaves us with a global minimum value of $-7$ for $V$. $-7$ occurs once at $4$.
 
 
 
-Each of these global extrema are also local extrema.  In addition we have $1$, which is a local minimum occuring at $-2$.  
+
+
+
+\textbf{\textcolor{blue!55!black}{Put the Pieces Together}} \\ 
+
+
+We have several candidates for maximums and minimums of $V$. These occur at the critical numbers.\\
+
+
+\begin{itemize}
+  \item $V(-6) = 9$
+  \item $V(-2) = 1$
+  \item $V(0) = 9$
+  \item $V(4) = -7$
+\end{itemize}
+
+
+
+
+Our analysis of the pieces leaves us with a global maximum value of $9$ for $V$.  $9$ occurs twice.  Once at $-6$ and then again at $0$. \\
+
+Our analysis of the pieces leaves us with a global minimum value of $-7$ for $V$. $-7$ occurs once at $4$. \\
+
+
+
+Each of these global extrema are also local extrema.  \\
+
+
+
+In addition we a local minimum value of $1$ occuring at $-2$.  
+
+
+
+
+
+
+
+
+
+
 
 \begin{explanation} Local Minimum
 
@@ -514,34 +608,30 @@ Consider the open interval $(-2 - 0.1, -2 + 0.1)$. $V$ is a decreasing function 
 \subsection*{Critical Numbers} 
 
 
-$\blacktriangleright$ We know that the instantaneous rate of change of the middle quadratic is $iRoC_V(h) = -2h$ 
+$\blacktriangleright$ We know that the instantaneous rate of change of the middle quadratic is $iRoC_V(h) = V' = -2h$ 
 
-$\blacktriangleright$ We know that the instantaneous rate of change of the left linear is $iRoC_V(h) = -2$
+$\blacktriangleright$ We know that the instantaneous rate of change of the left linear is $iRoC_V(h) = V' = -2$
 
-$\blacktriangleright$ We know that the instantaneous rate of change of the right linear is $iRoC_V(h) = \frac{7}{4}$
-
-
-
-The only place where the $iRoC_V(h) = 0$ is at $0$, therefore, $0$ is a critical number.
-
-
-We also include domain numbers where the $iRoC_V$ does not exist.  That would be domain numbers where there is no corresponding tangent line.  That would include $-2$ and $4$.
+$\blacktriangleright$ We know that the instantaneous rate of change of the right linear is $iRoC_V(h) V' = = \frac{7}{4}$
 
 
 
-The set of critical numbers is $\{ -2, 0, 4 \}$.
+The only place where the $iRoC_V(h) = V' = 0$ is at $0$, therefore, $0$ is a critical number.
+
+
+We also include domain numbers where the $iRoC_V = V'$ does not exist.  \\
+
+This would include the discontinuities $-2$ and $4$. \\
+
+
+This would also include domain numbers which are endpoints of intervals in the domain, like $-6$. Even though there is a tangent line at $(-6, 9)$, $-6$ is automatically a critical number, since there are not two sides.
 
 
 
-
-This doesn't include all of the places where we were investigating for extreme values. We also looked at $-6$.  There is a tangent line at $(-6, 9)$, which means $-6$ is not a critical number. Instead, $-6$ is an endpoint of a maximal interval of the domain. That automatically makes $-6$ a candidate for the location of an extreme value of $V$. \\
-
-
-This also includes $-6$, becasue it is an endpoint of the domain. \\
+The set of critical numbers is $\{ -6, -2, 0, 4 \}$.
 
 
 
-Critical numbers and endpoints: $\{ -6, -2, 0, 4 \}$. \\
 
 These are exactly the places we have been investigating for possible maximums and minimums.
 
@@ -600,6 +690,15 @@ also, \\
 
 
 
+
+
+
+
+
+
+
+
+
 \begin{template} \textbf{\textcolor{blue!55!black}{Extrema}} \\
 
 As the function above illustrates, there are several places where extrema occur for functions.
@@ -607,18 +706,23 @@ As the function above illustrates, there are several places where extrema occur 
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Horizontal Tangent Lines \\
 
-An extreme value can occur where a tangent line is horizontal, or has a $0$ slope.  These would correspond to tops of hills and bottoms of valleys in the graph. \\
+A highest or lowest point on a graph can occur where a tangent line is horizontal, or has a $0$ slope.  These would correspond to tops of hills and bottoms of valleys in the graph. The corresponding domain number is a critical number. \\
 
 
 
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Endpoints \\
 
-Extreme values can happen at the endpoints. \\
+Extreme values can happen at the endpoints of domain intervals. If the endpoint does not have two sides in the domain, then it is automatically a critical number.  If it does have two sides in the domain, then further investigation is required. \\
 
 \textbf{\textcolor{red!70!darkgray}{Peek Ahead:}} A graph can have a tangent line at an endpoint on a graph.  However, the derivative doesn't exist there since there is only one side.  In Calculus, we will talk about a one-sided derivative for these cases. \\
 
 \end{template}
+
+
+
+
+
 
 
 
@@ -630,7 +734,7 @@ We have other places where an extreme value can occur. \\
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Vertical Tangent Lines \\
 
-An extreme value can occur where a tangent line is vertical, or has no slope.  These would correspond to cusps in the graph. \\
+An extreme value can occur at domain numbres that correspond to ponits where a tangent line is vertical, or has no slope.  These would correspond to cusps in the graph. \\
 
 
 
@@ -675,7 +779,7 @@ This graph has a tangent line at $(3, -3)$.  It is a vertical line and vertical 
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Corners \\
 
-An extreme value can occur where no tangent line exists.  These would correspond to corners in the graph. \\
+An extreme value can occur at a domain number that corresponds to a point where no tangent line exists.  These would correspond to corners in the graph. \\
 
 
 
@@ -728,7 +832,9 @@ We can sum up this ideas as follow: \\
 \begin{center}
 
 
-\textbf{\textcolor{red!70!darkgray}{Candidates for locations of extrema values are domain numbers where the derivative is $0$ or Does Not Exist.}}
+\textbf{\textcolor{red!70!darkgray}{Candidates for locations of extrema values are critical numbers.}} \\
+
+\textbf{\textcolor{red!70!darkgray}{Domain numbers where the derivative is $0$ or Does Not Exist.}}
 
 
 \end{center}
