@@ -20,6 +20,8 @@ both sides together
 
 Tangent lines are lines that are tangent to a curve or graph at a tangent point. There must be a point on the curve. At that tangent point, the curve or graph is behaving in some manner, which the tangent line is modeling.  \\
 
+The tangent line models the curve only for a short distance, because the curve probably pulls away from the line as you get further from the tangent point.\\
+
 \begin{idea} \textbf{\textcolor{blue!55!black}{Tangent Line}}
 
 
@@ -27,17 +29,35 @@ A tangent line is a line that does the best job of pretending to be the curve at
 \end{idea}
 
 
-\textbf{Best job} means the line shares the tangent point with the curve and the slope of the line is the same as the ``slope'' of the curve at the tangent point. \\
+\textbf{Best job} means the line shares the tangent point with the curve and the slope of the line is the same as the ``slope'' of the curve at the tangent point. If you zoomed in on the graph at the tangent point, then the curve would slowly begin to look just like the line. \\
 
-If you zoomed in on the graph at the tangent point, then the curve would slowly begin to look just like the line. \\
+This is a graphical concept and we are hesitant to use graphs for analysis, because they are inherently inaccurate. So, we will be diligently working to translate this graphical idea over to algebraic langugae. \\
 
 
 For quadratics, we have a formula for the $iRoC$ or $f'$ (the derivative of $f$), which gives the exact slope of each tangent line along the parabola.  But, for a random function, how do you get a tangent line for its graph without knowing the slope ahead of time? \\
 
 
-We are returning to our idea of a secant line and moving it over to a tangent point. \\
+To do this, we are returning to our idea of a secant line and sliding it over to a tangent point. \\
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} There are two behaviors happening as we shift a secant line. The graph has one behavior and the moving secant lines have another behavior. The graph is behaving (there is a pattern) and the secant lines are behaving (there is a pattern). \\
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{tdkxeewwcj}{400}{300}
+\end{center}
+
+
+They idea is that we can select two points on the graph and a secant line will run through them. Since we have two points, we can calculate the slope of the secant line. We can keep selecting two points that get closer to the tangent point. The slopes of the secant lines shoulsd be getting closer to the slope of the tangent line. \\
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} There are two behaviors happening as we shift a secant line over to the tangent point. The graph has one behavior and the moving secant lines have another behavior. The graph is behaving (there is a pattern) and the secant lines are behaving (there is a pattern). Hopefully, these seprate behaviors will converge to the same behavior at the tangent point.\\
 
 
 
@@ -54,10 +74,60 @@ This means both sides of the tangent point. \\
 
 The graph points on both sides are approaching the tangent point. \\
 
-The secant lines on both sides are approaching the tangent line.
+The secant lines on both sides are approaching the tangent line
+
+
+
 
 \end{warning}
 \textbf{Later}, we will also consider the situation where the graph only has one side. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We are going to help out our calculating a little bit.  \\
+
+
+We are to select two points for our secant lines.  However, we are going to select one of these points to just be the tangent point. \\ 
+
+We'll just do this twice. \\
+
+
+One on the left of our tangent point.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{r0u5uerknf}{400}{300}
+\end{center}
+
+
+
+
+And, one on the right side of our tangent point.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{qmfjm4iebx}{400}{300}
+\end{center}
+
+
+
+By watching two secant lines approaching the tangent line, it will be easier to spot some important structure. \\
+
 
 
 
