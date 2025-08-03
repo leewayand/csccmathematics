@@ -441,7 +441,10 @@ From this basic logarithmic function and its graph we can analyze and transform 
 Analyze   $M(t) = \log_2(t+3) - 4$ \\
 
 
-\begin{explanation}
+Categorize: $M(t) = \log_2(t+3) - 4$ is a logarithmic function, because it matches our official template, $A \, \log_r(B \, x + C) + D$. \\
+
+
+\begin{idea}
 
 $\blacktriangleright$ The inside of the logarithm is $\answer{t+3}$ and this equals $0$ when $t=-3$.  This has to be the vertical asymptote.
 
@@ -492,22 +495,22 @@ Graph of $y = M(t)$.
 
 
 
+With this thinking, we can write an algebraic analysis. \\
 
-Our analysis tells us that:
 
-\begin{itemize}
-\item The implied domain of $M$ is $(-3,\infty)$.
-\item The implied range of $M$ is $\mathbb{R}$.
-\item $M$ is always \wordChoice{\choice[correct]{increasing} \choice{decreasing}}.
-\item $M$ has no maximums or minimums.
-\item $\lim\limits_{t \to -3^+} M(t) = -\infty$
-\item $\lim\limits_{t \to \infty} M(t) = \infty$
-\end{itemize}
+\end{idea}
 
 
 
 
-We can also see that the graph will have a horizontal intercept, which means the function has a zero. \\
+
+\textbf{Domain}
+
+The domain is all real numbers such that $t + 3 > 0$, which is the interval $(-3, \infty)$.\\
+
+
+
+\textbf{Zeros}
 
 
 $M(t) = \log_2(t+3) - 4 = 0$ \\
@@ -529,12 +532,83 @@ Therefore, $4$ is the thing that you raise $2$ to, to get $t+3$. $t+3$ must be $
 
 
 
+\textbf{Continuity}
+
+Logarithmic functions are continuous. There is a singularity.  We will get the behavior around $-3$ after we decide if $M$ is increasing or decreasing.\\
 
 
 
 
 
-\end{explanation}
+\textbf{Behavior (Increasing and Decreasing)}
+
+
+\begin{itemize}
+  \item the base is $2 > 1$.
+  \item the leading coeffcient is $1$, which is positive
+  \item the leading coeffciient of the linear inside is $1$, which is positive
+\end{itemize}
+
+
+This tells us $M$ is increasing.
+
+
+
+
+
+
+\textbf{Singularity Behavior}
+
+\begin{itemize}
+\item $M$ is increasing
+\item The domain is $(-3, \infty)$
+\end{itemize}
+
+
+This tells us that
+
+\[
+\lim\limits_{t \to -3^+} M(t) = -\infty
+\]
+
+
+
+
+
+\textbf{End-Behavior}
+
+
+if  $\lim\limits_{t \to -3^+} M(t) = -\infty$, then $\lim\limits_{t \to \infty} M(t) = \infty$. \\
+
+
+
+
+
+\textbf{Global Maximum and Minimum}
+
+Logarithmic functions do not have global maximums or minimums. \\
+
+
+
+
+
+
+\textbf{Local Maximum and Minimum}
+
+Logarithmic functions do not have local maximums or minimums. \\
+
+
+
+
+\textbf{Range}
+
+
+
+$\lim\limits_{t \to -3^+} M(t) = -\infty$ and $\lim\limits_{t \to \infty} M(t) = \infty$ tell us that the range is $(-\infty, \infty)$. \\
+
+
+All of this agrees with the graph.
+
 
 \end{example}
 
@@ -704,10 +778,17 @@ Here is the graph of both the logarithmic and the associated exponential functio
 \begin{example}  Logarithmic Function
 
 
-\begin{explanation}
+
 
 Analyze   $K(x) = -2 \, \log_3(4-x)$ \\
 
+
+Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic funciton, since it matches our official template, $A \, \log_r(B \, x + C) + D$. \\
+
+
+
+
+\begin{idea}
 
 $\blacktriangleright$ The inside of the logarithm is $4-x$ and this equals $0$ when $x=\answer{4}$.  $x=4$ has to be the vertical asymptote.
 
@@ -761,24 +842,130 @@ Graph of $y = K(x)$.
 
 
 
+With these ideas, we can write an algebraic analysis. \\
+
+\end{idea}
 
 
 
+
+
+
+
+\textbf{Domain}
+
+The domain is all real numbers such that $4 - x > 0$, which is the interval $(-\infty, 4)$.\\
+
+
+
+\textbf{Zeros}
+
+
+$K(x) = -2 \, \log_3(4-x) = 0$ \\
+
+
+\begin{align*}
+-2 \, \log_3(4-x) & = 0 \\
+\log_3(4-x) & = 0 \\
+4 - x & = 3^{\answer{0}} = \answer{1} \\
+4 - x & = 1 \\
+3 & = x
+\end{align*}
+
+
+$\blacktriangleright$ \textbf{Remember:} $\log_3(4 - x)$ is the thing that you raise $3$ to, to get $4 - x$ and $\log_3(4 - x) = 0$.  \\
+
+Therefore, $0$ is the thing that you raise $3$ to, to get $4 - x$. $4 - x$ must be $1$.
+
+
+
+
+\textbf{Continuity}
+
+Logarithmic functions are continuous. There is a singularity.  We will get the behavior around $4$ after we decide if $K$ is increasing or decreasing.\\
+
+
+
+
+
+\textbf{Behavior (Increasing and Decreasing)}
 
 
 \begin{itemize}
-\item The natural or implied domain of $K$ is $(-\infty, 4)$.
-\item The implied range of $K$ is $\mathbb{R}$.
-\item $K$ is always increasing.
-\item $K$ has no maximums or minimums.
-\item $\lim\limits_{x \to 4^-} K(x) = \infty$
-\item $\lim\limits_{x \to -\infty} K(x) = -\infty$
+  \item the base is $3 > 1$.
+  \item the leading coeffcient is $-2$, which is negative
+  \item the leading coeffciient of the linear inside is $-1$, which is negative
 \end{itemize}
 
 
+This tells us $K$ is increasing.
 
 
-\end{explanation}
+
+
+
+
+\textbf{Singularity Behavior}
+
+\begin{itemize}
+\item $K$ is increasing
+\item The domain is $(-\infty, 4)$
+\end{itemize}
+
+
+This tells us that
+
+\[
+\lim\limits_{t \to 4^-} M(t) = \infty
+\]
+
+
+
+
+
+\textbf{End-Behavior}
+
+
+if  $\lim\limits_{x \to 4^-} K(x) = \infty$, then $\lim\limits_{x \to -\infty} K(x) = -\infty$. \\
+
+
+
+
+
+\textbf{Global Maximum and Minimum}
+
+Logarithmic functions do not have global maximums or minimums. \\
+
+
+
+
+
+
+\textbf{Local Maximum and Minimum}
+
+Logarithmic functions do not have local maximums or minimums. \\
+
+
+
+
+\textbf{Range}
+
+
+
+$\lim\limits_{t \to 4^-} K(x) = \infty$ and $\lim\limits_{x \to -\infty} K(x) = -\infty$ tell us that the range is $(-\infty, \infty)$. \\
+
+
+All of this agrees with the graph.
+
+
+
+
+
+
+
+
+
+
 \end{example}
 
 
