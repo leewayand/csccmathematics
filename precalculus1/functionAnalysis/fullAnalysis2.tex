@@ -20,113 +20,154 @@ features
 
 Completely analyze   
 
-\[   B(f) = \frac{(f+3)(f-1)}{(f+5)(f-2)^2}        \]
+\[   B(f) = \frac{(f+3)(2f-1)}{(f+5)(f-2)}        \]
+
+with
 
 
-\begin{explanation}
+\[
+B'(f) = \frac{f^2 - 34f - 41}{(f+5)^(f-2)^}
+\]
 
 
 
-The natural domain is all real numbers except $-5$ and $2$, which make the denominator equal to $0$. These are singularities of $B$.  Otherwise, $B$ is continuous.  There are no discontinuities.
-
-Domain = $(-\infty, -5) \cup (-5, 2) \cup (2, \infty)$
-
-The graph will help us with the range, so we'll wait on that.
-
-$B$ has zeros at $\answer{-3}$ and $\answer{1}$.  These make the numerator equal to $0$. These are represented on the graph with $(-3,0)$ and $(1,0)$
-
-The graph will have vertical asymptotes $f=-5$ and $f=-2$.  $B$ will change sign over $f=-5$, since the multiplicity is \wordChoice{\choice[correct]{odd} \choice{even}} .  $B$ will not change sign over $f=2$, since the multiplicity is \wordChoice{\choice{odd} \choice[correct]{even}}.
-
-$B$ is a rational function and the degree of the denominator is \wordChoice{\choice[correct]{greater than} \choice{less than}} the degree of the numerator. Therefore, 
 
 
-\[ \lim_{f \to -\infty} B(f) = \answer{0}   \, \text{ and }  \,  \lim_{f \to \infty} B(f) = \answer{0}    \]
+Categorize:  $B(f)$ is a rational function, because it is of the form $\frac{polynomial}{polynomial}$
 
 
-The graph has a horizontal asymptote at $y=\answer{0}$. \\
 
-From this, we can sketch a graph of $y = B(f)$. \\
+
+\textbf{Domain}
+
+The natural domain of a rational function is all real numbers except the zeros of the denominator, which are $-5$ and $2$. \\
+
+The domain is $(-\infty, -5) \cup (-5, 2) \cup (2, \infty)$.
 
 
 
 
 
 
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$f$, ylabel={$y=B(f)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
 
-          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-5},{x});
-          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({2},{x});
-          \addplot [line width=1, gray, dashed, domain=(-10:10)] {0};
+\textbf{Zeros}
+
+The zeros of a rational function are the zeros of the numerator, which are not also zeros of the denominator, i.e. they are in the domain. \\
 
 
 
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:-5.03),<->] {((x+3)*(x-1))/((x+5)*(x-2)^2)};
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-4.97:1.75),<->] {((x+3)*(x-1))/((x+5)*(x-2)^2)};
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(2.3:9),<->] {((x+3)*(x-1))/((x+5)*(x-2)^2)};
-
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
 
 
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-Both zeros have odd multiplicity, therefore the graph must go below the $f$-axis between them.  There must be a local minimum. From the graph we can estimate that the critical number is approximately $0.5$. $B(0.5) = \frac{14}{99} \approx -0.1414$ is a local minimum. With some Calculus tools, we may be able to get an exact value.
-
-
-$B$ has no global maximum or minimum.
-
-$B$ has no local maximum.
-
-
-\begin{itemize}
-\item $B$ decreases on $(-\infty, -5)$.
-\item $B$ decreases on $(-5, 0.5)$.
-\item $B$ increases on $(0.5, 2)$.
-\item $B$ decreases on $(2, \infty)$.
-\end{itemize}
+$-3$ and $\answer{\frac{1}{2}}$ are the zeros of $B$. \\
 
 
 
-The graph makes it evident that the range is all real numbers.
+
+
+\textbf{Continuity}
+
+
+Rational functions are continuous. \\
+
+Rational functions can have singularities.  Here the zeros of the denominator are $-5$ and $2$.  These are not zeros of the numerator.  That makes them asymptotic singularities. So, we know $B$ is unbounded near them.  We just need to figure out the sign.\\
+
+
+Let's map out the signs of $B$. \\
+
+
+
+$B$ has four zeros and/or singularities. In order, they are $-5$, $-3$, $\frac{1}{2}$, and $2$.\\
+
+They all have multiplicity $1$, which is odd.  That means $B$ switches signs across them. \\
+
+
+The end-behavior will get us started on the signs.
 
 
 
 
 
 
-\begin{question}
-
-$B(t)$ is decreasing on $(-\infty, -5)$ and $B(t)$ is decreasing on $(-5, 0.5)$.  Therefore, $B(t)$ is decreasing on $(-\infty, -5) \cup (-5, 0.5)$
 
 
-\begin{multipleChoice}
-\choice {True}
-\choice [correct] {False}
-\end{multipleChoice}
-\end{question}
+
+
+
+
+
+
+
+
+\textbf{End-Behavior}
+
+
+$B$ is a rational function.
+
+The degree of the numerator is $\answer{2}$. \\
+
+
+The degree of the denominator is $\answer{2}$. \\
+
+
+$B$ is a rational function and the degree of the denominator is \wordChoice{\choice{greater than} \choice{less than} \choice[correct]{equal to}} the degree of the numerator. \\
+
+
+Since the degrees of the numerator and denominator are equal, the end-behvior is the quotient of the leading coefficients.
+
+
+\[ \lim_{f \to -\infty} B(f) = \frac{2}{1} = 2   \, \text{ and }  \,  \lim_{f \to \infty} B(f) = \frac{2}{1} = 2    \]
+
+
+
+
+
+\begin{explanation} Continuing with singularity behavior....
+
+
+
+
+We now know that $B$ is positive for large negative domain numbers.  This switches at $-5$, which is the first singularity.
+
+$B$ is positive on $(-\infty, -5)$ \\
+
+That tells us that 
+
+\[
+\lim\limits_{f \to -5^-} B(f) = \infty 
+\]
+
+The sign of $B$ switches at $-5$, which gives us 
+
+
+\[
+\lim\limits_{f \to -5^+} B(f) = -\infty 
+\]
+
+
+
+$B$ switches signs at $-3$, which is the first zero. \\
+
+
+Therefore, $B$ is negative on $(-5, -3)$.  Then, $B$ switches to positive on $\left( -3, \frac{1}{2} \right)$ Then, $B$ switches to negative on $\left( \frac{1}{2}, 2 \right)$.
+
+
+That tells us that 
+
+\[
+\lim\limits_{f \to 2^-} B(f) = -\infty 
+\]
+
+
+Then, $B$ switches to positive on $(2, \infty)$.
+
+
+\[
+\lim\limits_{f \to 2^+} B(f) = \infty 
+\]
+
 
 \end{explanation}
 
-\end{example}
 
 
 
@@ -135,268 +176,282 @@ $B(t)$ is decreasing on $(-\infty, -5)$ and $B(t)$ is decreasing on $(-5, 0.5)$.
 
 
 
-With some graphing tools, we can get a better approximation of the critical number.
 
 
 
 
+
+
+
+\textbf{Behavior (Increasing and Decreasing)}
+
+
+We'll use the derivative to help us with behavior. \\
+
+
+\[
+B'(f) = \frac{f^2 - 34f - 41}{(f+5)^(f-2)^}
+\]
+
+
+$B'(f)$ is also a rational function.  So, it is continous.  It has the same singularities as $B$.  But it has different zeros. \\
+
+
+To get the critical numbers, we need to factor the numerator.
+
+
+\[
+f = \frac{34 \pm \sqrt{(-34)^2 - 4 (1)(-41)}}{2(1)} = \frac{34 \pm \sqrt{1320}}{2} = \frac{34 \pm 2\sqrt{330}}{2} = 17 \pm \sqrt{330}
+\]
+
+
+
+
+Let's check with a graph.
+
+$17 - \sqrt{330} \approx -1.165902125$
+
+$17 + \sqrt{330} \approx 35.16590212$
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
 \begin{center}
-\desmos{sumsbfeafr}{400}{300}
-\end{center}
-
-
-
-The critical number is approximately $0.181$ and the local minimum value of $B$ is approximately $-1.152$.
-
-
-
-
-
-
-
-
-
-\begin{example} Analyze
-
-
-Completely analyze $K(w) = w \sqrt{9-w}$.
-
-
-\begin{explanation}
-
-
-
-The domain is restricted by the square root to be $\left( -\infty, \answer{9} \right]$.
-
-
-The formula is a product, therefore the zeros come from each factor.
-
-The factor of $w$ gives a zero of $\answer{0}$.
-
-The factor of $\sqrt{9-w}$ gives a zero of $\answer{9}$.
-
-
-Since $\sqrt{9-w}$ is always nonnegative, the sign of $K$ is the same as the sign of $w$.
-
-\begin{itemize}
-\item $K$ is negative on $\left( \answer{-\infty},\answer{0} \right)$
-\item $K$ is positive on $\left( \answer{0}, \answer{\infty} \right)$
-\end{itemize}
-
-
-
-
-From this, we can sketch a graph of $y = K(w)$. \\
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$w$, ylabel={$y=K(w)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-
-
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.5:0.5)] {x * sqrt(9-x)};
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(8.8:9)] {x * sqrt(9-x)};
-
-
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(9,0)};
-
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-Our sketch suggest a global maximum between $0$ and $9$.
-
-
-If we had the derivative, then we could identify this critical number exactly. Currently, we'll need a graph to approximate values.
-
-
-
-
-\begin{center}
-\desmos{zbhmb5usvv}{400}{300}
+\desmos{yjhhl3llii}{400}{300}
 \end{center}
 
 
 
 
 
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{le6wkkt3uz}{400}{300}
+\end{center}
+
+
+
+
+It seems our algebra is good.
+
+
+
+\[
+B'(f) = \frac{(f - (17 - \sqrt{330}))(f - (17 + \sqrt{330}))}{(f+5)^2(f-2)^2}
+\]
+
+
+$B'$ has two zeros and two singularities.
+
+\[
+17 - \sqrt{330}, 17 + \sqrt{330}, -5, 2
+\]
+
+We need their order. \\
+
+
+
+
+The graph suggests that $-5 < 17 - \sqrt{330}$.  Let's see if we can show that is true. \\
+
+
+
+\[
+-5 < -1 = 17 - 18 = 17 -\sqrt{324} < 17 - \sqrt{330}
+\]
+
+
+Since $ \sqrt{330} > \sqrt{289} = 17$, we know that $17 - \sqrt{330} < 0$. \\
+
+
+We also know that $2 < 17 + \sqrt{330} $. \\
+
+
+That gives us
+
+\[
+-5 < 17 - \sqrt{330} < 2 < 17 + \sqrt{330}
+\]
+
+
+$17 - \sqrt{330}$ and $17 + \sqrt{330}$ are zeros of $B'$ with multiplicity $1$, which is odd.  $B'$ will change signs across them.
+
+
+
+$-5$ and $2$ are singularities of $B'$ with multiplicity $2$, which is even.  $B'$ will not change signs across them.
+
+
+We just need a starting sign. \\
+
+
+
+For very large negative numbers (anything less than $17 - \sqrt{330}$), 
+
+\[
+B'(f) = \frac{negative \cdot negative}{positive \cdot positive} = positive
+\]
+
+
+Therefore, the signs of $B'$ are
+
+
 \begin{itemize}
-\item $K$ has a local and global maximum of $10.39$ at $6$.
-\item $K$ has a local minimum of $0$ at $9$.
-\item $K$ has no global minimum.
+  \item $B'$ is positive on $(-\infty, -5)$
+  \item $B'$ is positive on $(-5, 17 - \sqrt{330})$
+  \item $B'$ is negative on $(17 - \sqrt{330}, 2)$
+  \item $B'$ is negative on $(2, 17 + \sqrt{330})$
+  \item $B'$ is positive on $(17 + \sqrt{330}, \infty)$
+\end{itemize}
+
+
+
+This give us the behavior of $B$.
+
+
+
+
+
+\begin{itemize}
+  \item $B$ is increasing on $(-\infty, -5)$
+  \item $B$ is increasing on $(-5, 17 - \sqrt{330})$
+  \item $B$ is decreasing on $(17 - \sqrt{330}, 2)$
+  \item $B$ is decreasing on $(2, 17 + \sqrt{330})$
+  \item $B$ is increasing on $(17 + \sqrt{330}, \infty)$
 \end{itemize}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Global Maximums and Minimums)}
+
+
+$B$ has no global maximum or minimum, because
+
+
+\[
+\lim\limits_{f \to 2^-} B(f) = -\infty 
+\]
+
+
+
+
+\[
+\lim\limits_{f \to 2^+} B(f) = \infty 
+\]
+
+
+
+
+
+\textbf{Local Maximums and Minimums)}
+
+
+$B$ has two critical numbers.  They are locations for local maximums or minimums.
+
+
+
+
+
+
 \begin{itemize}
-\item $K$ is increasing on $(-\infty, 6]$.
-\item $K$ is decreasing on $[6, 9]$.
+  \item $B$ is increasing on $(-5, 17 - \sqrt{330})$
+  \item $B$ is decreasing on $(17 - \sqrt{330}, 2)$
 \end{itemize}
 
 
-Finally, the range is approximately $(-\infty, 10.39]$. \\
+Therefore, $B(17 - \sqrt{330})$ is a local maximum occurring at $17 - \sqrt{330}$.
 
 
-The graph has no vertical asymptotes, $\lim\limits_{w \to -\infty} K(w) = -\infty.$
 
-\end{explanation}
+
+
+\begin{itemize}
+  \item $B$ is decreasing on $(2, 17 + \sqrt{330})$
+  \item $B$ is increasing on $(17 + \sqrt{330}, \infty)$
+\end{itemize}
+
+
+
+Therefore, $B(17 + \sqrt{330})$ is a local minimum occurring at $17 + \sqrt{330}$.
+
+
+
+
+
+
+
+
+
+\textbf{Range)}
+
+
+To figure out the range, we need to know if there is a gap.  We need to know if $B(17 + \sqrt{330})$ or $B(17 - \sqrt{330})$ is greater. \\
+
+The graph suggests that 
+
+\[
+B(17 + \sqrt{330})  > B(17 - \sqrt{330})
+\]
+
+
+That is going to be a bit of algebra. Let's ask Wolfram Alpha to simply each of those.
+
+
+
+\[
+B(17 - \sqrt{330}) = \frac{1}{49} (61 - 2 \sqrt{330})
+\]
+
+
+
+
+\[
+B(17 + \sqrt{330})  =  \frac{1}{49} (61 + 2 \sqrt{330})
+\]
+
+
+Confirmed.
+
+
+\[
+B(17 + \sqrt{330})  > B(17 - \sqrt{330})
+\]
+
+
+There is a gap in the range.
+
+
+The range of $B$ is 
+
+
+\[
+\left( -\infty, \frac{1}{49} (61 - 2 \sqrt{330}) \right) \cup  \left( \frac{1}{49} (61 + 2 \sqrt{330}), \infty \right) 
+\]
+
+
+
+
 
 \end{example}
-
-
-
-We do have alternatives to the derivative for some types of functions. \\
-
-
-
-
-
-
-
-\begin{procedure} Critical Number
-
-
-Earlier, we saw an algebraic method of identifying the critical number in the previous example.
-
-
-We think there is a hump in the graph of $K$ and at the highest point, $(A, A\sqrt{9-A})$, the tangent line would be horizontal.
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=13, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$w$, ylabel={$y=K(w)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10,12},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$,$12$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-
-
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.5:8.1),<-] {x * sqrt(9-x)};
-          \addplot [line width=2, penColor, smooth,samples=300,domain=(8:9)] {x * sqrt(9-x)};
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-2.5:9),<->] {10.39};
-         
-
-
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(9,0)};
-          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6,10.39)};
-
-
-          \node at (axis cs:6,12) [penColor] {$(A, A\sqrt{9-A})$};
-
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-Now, create a new function called $F$.
-
-\[
-F(x) = K(x) - K(A) = K(x) - A\sqrt{9-A}
-\]
-
-
-As we saw earlier, since we have a tangent line, the difference of the original function and the linear function has a double root at $A$.  $x-A$ divides evenly into $F$.  And, the resulting function then also has $A$ as a root.  
-
-First, factor out $x-A$ from $F$.
-
-
-\[
-x\sqrt{9-x} - A\sqrt{9-A} = \frac{x\sqrt{9-x} - A\sqrt{9-A}}{1} \cdot \frac{x\sqrt{9-x} + A\sqrt{9-A}}{\answer{x\sqrt{9-x} + A\sqrt{9-A}}}
-\]
-
-\[
-= \frac{x^2 (9-x) - A^2 (9-A)}{x\sqrt{9-x} + A\sqrt{9-A}} = \frac{9x^2 - x^3 - 9A^2 + A^3}{x\sqrt{9-x} + A\sqrt{9-A}}
-\]
-
-
-\[
-= \frac{9(x^2-A^2) - (x^3 - A^3)}{x\sqrt{9-x} + A\sqrt{9-A}} = \frac{(x-A)(9(x+A)-(x^2 + xA + A^2))}{x\sqrt{9-x} + A\sqrt{9-A}}
-\]
-
-
-$x-A$ divides into this evenly leaving
-
-\[
-\frac{9(x+A)-(x^2 + xA + A^2)}{x\sqrt{9-x} + A\sqrt{9-A}}
-\]
-
-$A$ is a root of this, which means $A$ is a root of the numerator.
-
-
-\[
-9(A+A)-(A^2 + A^2 + A^2) = 0
-\]
-
-\[
-18A - 3A^2 = 0
-\]
-
-\[
-3A \left(\answer{6-A} \right) = 0
-\]
-
-
-The zero we are looking for is $6$.
-The critical number is $6$ and $K(6) = 6 \sqrt{3}$.
-
-
-\end{procedure}
-
-
-\begin{itemize}
-\item $K$ has a local and global maximum of $\answer{6\sqrt{3}}$ at $6$.
-\item $K$ has a local minimum of $\answer{0}$ at $9$.
-\item $K$ has no global minimum.
-\end{itemize}
-
-
-
-
-\begin{itemize}
-\item $K$ is increasing on $(-\infty, 6]$.
-\item $K$ is decreasing on $[6, 9]$.
-\end{itemize}
-
-
-Finally, the range is $(-\infty, 6\sqrt{3}]$. \\
-
-
-
-
-
 
 
 
