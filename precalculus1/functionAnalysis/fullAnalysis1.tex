@@ -263,6 +263,48 @@ Including $\frac{1}{2}  e^{2} \approx 3.6945$.
 
 
 
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=p(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=1, gray, dashed,smooth,samples=200,domain=(-9:10),<->] {0};
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-3.25:9),<->] {(x+3) * e^(-2*x-3)};
+            
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
 \end{example}
 
 
