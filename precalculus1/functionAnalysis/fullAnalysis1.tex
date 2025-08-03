@@ -75,7 +75,9 @@ $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Behavior}} \\
 \textbf{Rate-of-Change:} Identify intervals where the function increases and decreases will help identify extreme values, which often occur at critical numbers.  If you have the derivative, then its sign can tell you about the behavior of the original function.\\
 
 
-\textbf{Extreme Values:}
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Extreme Values}} \\
+
 Generally speaking, obtaining exact values of local maximums and mimimums and their critical numbers is going to be difficult without Calculus.  However, we know a lot about these in special situations. \\
 
 If you have the derivative, then you can get exact values for critical numbers, which can be found where the derivative is zero or undefined. \\
@@ -97,9 +99,11 @@ Generally speaking, you need all of the above informaiton to determine the range
 
 
 
+\begin{center}
+\textbf{\textcolor{red!70!black}{We want exact values when we can get them.}}
 
-\textbf{\textcolor{red!70!black}{We want exact values when we can get them.  Otherwise, we settle for approximations.}}
-
+\textbf{\textcolor{red!70!black}{Otherwise, we settle for approximations.}}
+\end{center}
 
 
 
@@ -110,92 +114,148 @@ Generally speaking, you need all of the above informaiton to determine the range
 
 \begin{example} Complete Anlaysis
 
-Completely analyze $p(t) = (t+3)e^{-2t-3}$.
-
-\begin{explanation}
+Completely analyze $p(t) = (t+3)e^{-2t-3}$ with $p'(t) = e^{-2t-3} + (t+3) e^{-2t-3} (-2)$.
 
 
-$p(t)$ is the product of a polynomial and an exponential function. Therefore, its implied domain is all real numbers.
-
-$p(t)$ is in factored form.  The exponential factor, $e^{-2t-3}$, does not have a zero, since it is exponential.  The linear factor has a zero when $t+3=0$ or $t=\answer{-3}$.  
-
-The exponential factor, $e^{-2t-3}$, only has positive values.   Since the exponential factor only has positive values, the sign of $p(t)$ is the same as the sign of $t+3$.  Therefore, $p(t)$ is positive on $\left( \answer{-3}, \infty \right)$ and negative on $\left( -\infty, \answer{-3} \right)$.  
+This is not an elementary funciton, so it doesn't match any of our templates. INstead this is a product of two elementart functions, a linear and an exponential. \\
 
 
 
+\textbf{Domain}
+
+$p(t)$ is the product of a linear and an exponential function. Its domain is the intersection of their two domains. The domain of all linear functions is $(-\infty, \infty)$. The domain of all exponential functions is $(-\infty, \infty)$. \\
+
+The domain of $p$ is $(-\infty, \infty)$\.\\
 
 
-As for end-behavior, this exponential factor dominates over the polynomial factor.  The exponential values tend to $0$ when the exponent takes on large negative values.  That would be when $t$ tends to $\infty$. The exponential values tend to $\infty$ when the exponent takes on large positive values.  That would be when $t$ tends to $-\infty$.  
+
+\textbf{Zeros}
+
+$p(t)$ is in factored form, so we will use the zero product property. \\
+The exponential factor, $e^{-2t-3}$, does not have a zero, since exponential funcitons do not have zeros. \\  
+The linear factor has a zero when $t+3=0$ or $t=\answer{-3}$.  \\
+
+
+$p$ has one zero, $-3$. \\
+
+
+
+The exponential factor, $e^{-2t-3}$, only has positive values.   Since the exponential factor only has positive values, the sign of $p(t)$ is the same as the sign of $t+3$.  Therefore, $p(t)$ is negative on $\left( -\infty, \answer{-3} \right)$ and positive on $\left( \answer{-3}, \infty \right)$.  
 
 
 
 
-This tells us that 
+
+\textbf{Contious}
+
+$p(t)$ is the product of a linear and an exponential function, both of which are continuous.  The product of continuous functions is continuous.  $p$ is continuous. \\
+
+Neither factor has a singularity, so $p$ has no singularities. \\
+
+
+
+
+
+\textbf{End-Behavior}
+
+
+As for end-behavior, we can use function dominance. The exponential factor dominates over the polynomial factor.  \\
+
+
+Since the base of the exponential function is $e > 1$, the exponential function tends to $0$ when the exponent takes on large negative values, which would be when $t$ takes on large positive values.  
+
+\[
+\lim\limits_{t \to \infty} p(t) = 0 
+\]
+
+
+
+Since the base of the exponential function is $e > 1$, the exponential function becomes unbounded whent the exponent becomes large positive, which would happen when $t$ becomes large and negative.  when $t$ becomes large and negative, the linear factor is negative.  Therefore, $p$ becomes unbounded and negative,
+
+\[
+\lim\limits_{t \to -\infty} p(t) = -\infty 
+\]
+ 
+
+
+\textbf{Behavior (Increasing and Decreasing)}
+
+
+We will use the derivative for Behavior. \\
+
+
+\[
+p'(t) = e^{-2t-3} + (t+3) e^{-2t-3} (-2) =  (1 - 2 (t+3)) e^{-2t-3} =  (-2t - 5) e^{-2t-3}
+\]
+
+
+$p'(t) = 0$ only when $t = -\frac{5}{2}$, since the exponential factor has no zeros. \\
+
+
+Since $e^{-2t-3} > 0$ fao ovalues of $t$, the sign if $p'(t)$ is the same as the sign of $(-2t - 5)$. \\ 
+
+$(-2t - 5)$ is a linear function with a negative leading coefficient.
+
 
 \begin{itemize}
-\item $p(t)$ tends to $0$ from the positive side as $t \to \infty$.
-\item $p(t)$ tends to $-\infty$ as $t \to -\infty$.
+  \item $(-2t - 5) > 0$ on $\right( -\infty, -\frac{5}{2} \right)$ 
+  \item $(-2t - 5) < 0$ on $\right( -\frac{5}{2}, \infty \right)$ 
 \end{itemize}
 
 
-
-Neither polynomials nor exponentials have discontinuities or singularities.  Therfore, $p(t)$ is continuous on $(-\infty, \infty)$. \\
-
+$\blacktriangleright$ Since $(-2t - 5) > 0$ on $\right( -\infty, -\frac{5}{2} \right)$, $p$ is increasing on $\right( -\infty, -\frac{5}{2} \right)$. \\
 
 
+$\blacktriangleright$ Since $(-2t - 5) < 0$ on $\right( -\frac{5}{2}, \infty \right)$, $p$ is decreasing on $\right( -\frac{5}{2}, \infty \right)$. \\
+
+That makes $-\frac{5}{2}$ the only critical number. \\
 
 
-
-We can begin to piece together a sketch of the graph.
-
+\textbf{Global Maximums and Minimums)}
 
 
+$p$ is continuous and only increases and then decreases, switching at $-\frac{5}{2}$.  That makes $p\left( -\frac{5}{2} \right)$ the global maximum.
 
 
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=p(t)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-            \addplot [line width=2, penColor, smooth,samples=200,domain=(1:9),->] {e^(-x)};
-            \addplot [line width=2, penColor, smooth,samples=200,domain=(-7:-4),<-] {-e^(-x-5)};
-
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
-
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+\[
+p\left( -\frac{5}{2} \right) = \left( -\frac{5}{2} + 3 \right ) e^{-2 \left( -\frac{5}{2} \right)- 3} = \frac{1}{2}  e^{2}  
+\]
 
 
 
-           
+Since, $\lim\limits_{t \to -\infty} p(t) = -\infty$, there is no global minimum. \\
 
-  \end{axis}
-\end{tikzpicture}
-\end{image}
+
+
+
+\textbf{Local Maximums and Minimums)}
+
+
+The global maximum is automatically a local maximum. \\
+
+That is the only critical number, which means there are no other local extema. \\
+
+
+
+\textbf{Range)}
+
+
+\begin{itemize}
+  \item $p$ is continuous
+  \item $\frac{1}{2}  e^{2}$ is the global maximum
+  \item $\lim\limits_{t \to -\infty} p(t) = -\infty$
+\end{itemize}
+
+The range is $\left( -\infty, \frac{1}{2}  e^{2} \right]$
 
 
 
 
 
-
-The graph suggests that there is a hill between $-4$ and $0$, which means there is a global maximum somewhere on $(-4, 0)$.  Without a derivative, we cannot pin this critical number down. So, we'll have to approximate.  But we now know enough to make a nice sketch of the function.
-
+All of this agrees with the graph. \\
 
 
-
-
+Including $\frac{1}{2}  e^{2} \approx 3.6945$.
 
 
 
@@ -235,44 +295,9 @@ The graph suggests that there is a hill between $-4$ and $0$, which means there 
 
 
 
-There is no vertical asymptote. Exponential functions do not have singularities and neither do polynomials.  The domain is $(-\infty, \infty)$ and the graph continues down and to the left.
 
-$y = 0$ is a horizontal asymptote.
-
-From the graph we can estimate the critical number as approximately $-2.5$.
-
-
-
-
-
-\begin{itemize}
-\item $p(t)$ increases on $(-\infty, -2.5]$.
-\item $p(t)$ decreases on $[-2.5, \infty)$.
-\end{itemize}
-
-
-$p(t)$ has a global maximum of approximately $3.7$ at $-2.5$.
-
-
-$\lim\limits_{t \to -\infty} p(t) = -\infty$
-
-
-$\lim\limits_{t \to \infty} p(t) = 0$
-
-
-
-
-\end{explanation}
 
 \end{example}
-
-If we are given the derivative, we could have determined the critical number and maximum value.
-
-
-$p'(t) = -(2t+5) e^{-2t-3}$, which equals $0$ at $-2.5$.  Our estimation was right on target.  
-
-The maximum value is $p(-2.5) = (-2.5+3)e^{-2(-2.5)-3} = 0.5 \, e^{2}$.  This is approximately $3.6945$.
-
 
 
 
