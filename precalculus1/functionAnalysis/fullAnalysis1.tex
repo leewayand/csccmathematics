@@ -211,7 +211,7 @@ $\blacktriangleright$ Since $(-2t - 5) < 0$ on $\left( -\frac{5}{2}, \infty \rig
 That makes $-\frac{5}{2}$ the only critical number. \\
 
 
-\textbf{Global Maximums and Minimums)}
+\textbf{Global Maximums and Minimums}
 
 
 $p$ is continuous and only increases and then decreases, switching at $-\frac{5}{2}$.  That makes $p\left( -\frac{5}{2} \right)$ the global maximum.
@@ -228,7 +228,7 @@ Since, $\lim\limits_{t \to -\infty} p(t) = -\infty$, there is no global minimum.
 
 
 
-\textbf{Local Maximums and Minimums)}
+\textbf{Local Maximums and Minimums}
 
 
 The global maximum is automatically a local maximum. \\
@@ -237,7 +237,7 @@ That is the only critical number, which means there are no other local extema. \
 
 
 
-\textbf{Range)}
+\textbf{Range}
 
 
 \begin{itemize}
@@ -249,52 +249,6 @@ That is the only critical number, which means there are no other local extema. \
 The range is $\left( -\infty, \frac{1}{2}  e^{2} \right]$
 
 
-
-
-
-All of this agrees with the graph, including $\frac{1}{2}  e^{2} \approx 3.6945$. \\
-
-
-
-
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=p(t)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-            \addplot [line width=1, gray, dashed,smooth,samples=200,domain=(-9:10),<->] {0};
-            \addplot [line width=2, penColor, smooth,samples=200,domain=(-3.25:9),<->] {(x+3) * e^(-2*x-3)};
-            
-
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
-          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
-
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
-
-
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
 
 
 
@@ -317,7 +271,36 @@ All of this agrees with the graph, including $\frac{1}{2}  e^{2} \approx 3.6945$
 
 
 
+Of, course it always helps to compare to a graph. \\
 
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=p(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=1, gray, dashed,smooth,samples=200,domain=(-9:10),<->] {0};
+
+
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-3.25:9),<->] {(x+3) * e^(-2*x-3)};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+     
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
