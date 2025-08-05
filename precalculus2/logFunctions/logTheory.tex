@@ -400,7 +400,24 @@ Therefore, we separate exponential and shifted exponential, but we don't separat
 
 
 
-\begin{example}  Shifted Logarithmic Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  
 
 
 
@@ -411,7 +428,7 @@ Analyze   $M(t) = \log_2(t+3) - 4$ \\
 We'll begin by thinking about the graph to help our analysis. \\
 
 
-\begin{explanation}
+\begin{idea}
 
 
 $\blacktriangleright$ First, the base is $2$, which is greater than $1$.
@@ -456,7 +473,10 @@ Graph of $y = M(t)$.
 \end{image}
 
 
-\end{explanation}
+With these ideas, we can write an algebraic analysis. \\
+
+
+\end{idea}
 
 
 
@@ -465,14 +485,18 @@ Graph of $y = M(t)$.
 
 Now, for our function analysis.
 
-\begin{explanation}
 
 
 
-\textbf{Domain:}  The inside of the logarithm is positive on $(-3, \infty)$.  Therefore, the domain of $M$ is $(-3, \infty)$. \\
+
+\textbf{Domain}  
+
+The inside of the logarithm is positive on $(-3, \infty)$.  Therefore, the domain of $M$ is $(-3, \infty)$. \\
 
 
-\textbf{Zeros:}  We see that the graph has a horizontal intercept, which means the function has a zero. \\
+\textbf{Zeros}  
+
+All logarithmic functions have a single zero. We see that this graph will have a horizontal intercept around $(11, 0)$.  \\
 
 
 $M(t) = \log_2(t+3) - 4 = 0$ \\
@@ -492,10 +516,34 @@ $\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you rai
 
 
 
-\textbf{Continuity:}  Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
+\textbf{Continuity}  
 
 
-\textbf{End-Behavior:} The leading coefficient of $M$ is $1$, which is positive and the leading coefficient of the argument is $1$, which is also positive.  Since these are the same sign, we know that $M$ is an increasing logarithmic function on the domain $(-3, \infty)$.
+Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
+
+
+\textbf{End-Behavior} 
+
+We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $M$ and compare back to $\ln(x)$, which is an increasing function.  \\
+
+
+
+The base of $M$ is $2 > 1$, so this does not change the behavior.
+The leading coefficient of $M$ is $1$, which is positive, so this does not change the behavior. 
+the leading coefficient of the linear inside is $1$, which is also positive, so this does not change the behavior.
+
+$M$ is an increasing function. \\  
+
+
+
+
+
+
+
+
+\textbf{End-Behavior} 
+
+$M$ is an increasing function on $(-3, \infty)$.\\
 
 \[
 \lim\limits_{t \to -3^+} M(t) = -\infty
@@ -507,24 +555,51 @@ $\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you rai
 
 
 
-\textbf{Behavior:} Since the end-behavior goes from $-\infty$ to $\infty$, $M$ is an increasing function. \\
 
 
-\textbf{Global Extrema:} Logarithmic functions do not have global maximums or minimums. \\
+\textbf{Global Extrema} 
+
+Logarithmic functions do not have global maximums or minimums. \\
 
 
-\textbf{Local Extrema:} Logarithmic functions do not have local maximums or minimums. \\
+\textbf{Local Extrema:} 
 
-
-
-\textbf{Range:} The range of every logarithmic function is $(-\infty, \infty)$.
-
+Logarithmic functions do not have local maximums or minimums. \\
 
 
 
-\end{explanation}
+\textbf{Range:} 
+
+The range of every logarithmic function is $(-\infty, \infty)$.
+
+
+
+
+
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -636,16 +711,28 @@ Here is the graph of both the logarithmic and the associated exponential functio
 
 
 
-\begin{example}  Logarithmic Function
+
+
+
+
+
+
+
+
+
+\begin{example}  
 
 
 Analyze   $K(x) = -2 \, \log_3(4-x)$ \\
 
 
 
-We'll begin by thinking about the graph to help our analysis. \\
+Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic function, because it matches out template, $A \, \log_r(B \, x + C) + D$. \\
 
-\begin{explanation}
+
+We'll begin by thinking about the graph to help guide our analysis. \\
+
+\begin{idea}
 
 
 $\blacktriangleright$ First, the base is $3$, which is greater than $1$.
@@ -699,7 +786,11 @@ Graph of $y = K(x)$.
 \end{image}
 
 
-\end{explanation}
+
+With these ideas, we can write an algebraic analysis. \\
+
+
+\end{idea}
 
 
 
@@ -707,14 +798,18 @@ Graph of $y = K(x)$.
 
 Now, for our function analysis.
 
-\begin{explanation}
 
 
 
-\textbf{Domain:}  The inside of the logarithm is positive on $(-\infty, 4)$.  Therefore, the domain of $M$ is $(-\infty, 4)$. \\
+
+\textbf{Domain}  
+
+The inside of the logarithm is positive on $(-\infty, 4)$.  Therefore, the domain of $K$ is $(-\infty, 4)$. \\
 
 
-\textbf{Zeros:}  We see that the graph has a horizontal intercept, which means the function has a zero. \\
+\textbf{Zeros}  
+
+We see that the graph is suggesting that the zero is around $3$. \\
 
 
 $K(x) = -2 \, \log_3(4 - x) = 0$ \\
@@ -728,15 +823,44 @@ $K(x) = -2 \, \log_3(4 - x) = 0$ \\
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $\log_3(4 - x)$ is the thing that you raise $3$ to, to get $4 - x$ and $\log_3(4 - x) = 0$.  Therefore, $0$ is also the thing that you raise $3$ to, to get $4 - x$. Therefore, $4 - x$ must be $1$.
+$\blacktriangleright$ \textbf{Remember} $\log_3(4 - x)$ is the thing that you raise $3$ to, to get $4 - x$ and $\log_3(4 - x) = 0$.  Since, $0$ is also the thing that you raise $3$ to, to get $4 - x$, we must have $4 - x$ must be $1$.
 
 
 
 
-\textbf{Continuity:}  Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
+\textbf{Continuity}  
+
+Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
 
 
-\textbf{End-Behavior:} The leading coefficient of $K$ is $-2$, which is negative and the leading coefficient of the argument is $-1$, which is also negative.  Since these are the same sign, we know that $K$ is an increasing logarithmic function on the domain $(-\infty, 4)$.
+
+
+
+
+
+
+
+\textbf{Behavior} 
+
+We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $K$ and compare back to $\ln(x)$, which is an increasing function.  \\
+
+
+
+The base of $K$ is $3 > 1$, so this does not change the behavior.
+The leading coefficient of $K$ is $-2 < 0$ and this does change the behavior to decreasing. 
+the leading coefficient of the linear inside is $-1$, which is also negative, so this again changes the behavior back to increasing.
+
+$K$ is an increasing function. \\  
+
+
+
+
+
+
+
+\textbf{End-Behavior} 
+
+$K$ is an increasing function. on the domain $(-\infty, 4)$. That tell sus that 
 
 
 \[
@@ -752,22 +876,25 @@ $\blacktriangleright$ \textbf{Remember:} $\log_3(4 - x)$ is the thing that you r
 
 
 
-\textbf{Behavior:} Since the end-behavior goes from $-\infty$ to $\infty$, $K$ is an increasing function. \\
+
+\textbf{Global Extrema} 
+
+Logarithmic function do not have global maximums or minimums. \\
 
 
-\textbf{Global Extrema:} Logarithmic function do not have global maximums or minimums. \\
+\textbf{Local Extrema} 
 
-
-\textbf{Local Extrema:} Logarithmic function do not have local maximums or minimums. \\
-
-
-
-\textbf{Range:} The range of every logarithmic function is $(-\infty, \infty)$.
-
+Logarithmic function do not have local maximums or minimums. \\
 
 
 
-\end{explanation}
+\textbf{Range} 
+
+The range of every logarithmic function is $(-\infty, \infty)$.
+
+
+
+
 
 
 
@@ -886,6 +1013,13 @@ It has special notation.
 \[
 \log_e(x) = \ln(x)
 \]
+
+
+$\ln(x)$ is the thing you raise $e$ to, to get $x$. \\
+
+
+\textbf{Note:}  That is a lowercase ``el'' and a lowercase ``en''. It is not ``In''. 
+
 
 \end{definition}
 
