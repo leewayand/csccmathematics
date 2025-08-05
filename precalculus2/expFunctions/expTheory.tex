@@ -451,7 +451,7 @@ Now, for our (algebraic) function analysis.
 
 
 
-\begin{explanation}
+
 
 
 
@@ -519,7 +519,7 @@ The base of $f$ is $2$, which is greter than $1$. The leading coefficient of $f$
 
 
 
-\end{explanation}
+
 
 \end{example}
 
@@ -735,6 +735,591 @@ Same function.  Different perspective.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} 
+
+
+
+Analyze $G(t) = 4 \cdot 3^{2t-1}$.   \\
+
+
+
+Categorize:  $G$ is an exponential function, since it matches our official template $a \, r^x$ or our alternate official template $A \, r^{B \, x + C}$. \\
+
+
+\begin{idea}
+
+
+We could take advantage of exponential algebra to simplify the exponent.   \\
+
+\[ 
+G(t) = 4 \cdot 3^{2t-1} = 4 \cdot 3^{2t} \cdot \frac{1}{3} = \frac{4}{3} \cdot (3^2)^t  = \frac{4}{3} \cdot 9^t
+\]
+
+
+We now have a basic exponential function with the new base $\answer{9}$ and the new leading coefficient is $\answer{\frac{4}{3}}$.
+
+
+
+
+The leading coefficient is $\frac{4}{3} > 0$ and the base is $9 > 1$. Therefore, $G(t)$ is a positive increasing exponential function.
+
+
+
+$G(t) = \frac{4}{3} \cdot 9^t - 5$ is a transformation of $g(t) = 3^t$.  Let's compare $G(t)$ back to $3^t$.
+
+
+Since the new base $9$ is greater than the old base of $3$, the function grows faster.  The graph goes up to the right faster and steeper.  This means the graph is compressed horizontally, which is the result of multiplying by $2$ in the exponent.
+
+
+With these ideas, we can create an algebraic analysis. 
+
+
+
+\end{idea}
+
+
+
+
+
+
+
+\textbf{Domain}
+
+
+$G$ is an exponential function, so its domain is $(-\infty, \infty)$.
+
+
+
+
+
+\textbf{Zeros}
+
+
+$G$ is an exponential function, so it has no zeros.
+
+
+
+
+\textbf{Contiuity}
+
+
+$G$ is an exponential function, so it is continuous.
+
+
+
+
+\textbf{Behavior}
+
+$G(t) = 4 \cdot 3^{2t-1}$ is an exponential function.  It  is either always increasing or always decreasing.
+
+
+The leading coeffcient is $4$, which is positive.  Therefore, $G$ is positive.
+
+The leading coefficient of the linear exponent is $2$, which is positive.  That with a base of $2 > 1$ tell us us that $G$ becomes unbounded towards the positive side of the real numbers.
+
+
+That means $G$ is an increasing function.
+
+
+
+
+\textbf{End-Behavior}
+
+
+$G$ is a positive increasing function.
+
+
+
+\[
+\lim\limits_{t \to -\infty}G(t) = \answer{0}  
+\]
+
+\[
+\lim\limits_{t \to \infty}G(t) = \answer{\infty}
+\]
+
+
+
+
+
+\textbf{Local Maximum and Minimum}
+
+Exponential functions do not have local maximums or minimums.
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum}
+
+Exponential functions do not have global maximums or minimums.
+
+
+
+
+\textbf{Range}
+
+
+
+$G$ is a positive exponential function.   Its range is $(0, \infty)$.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{observation} \textbf{\textcolor{blue!55!black}{Big Bases : $r > 1$}}     \\
+
+
+
+When multiplying by $b$ on the inside of an exponential function, for a horizontal stretch or compression, 
+
+
+if $1 < b$, then we are compressing horizontally.  This works out in the algebra. When $1 < b$, then $r < r^b$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. \\
+
+
+
+if $0 < b < 1$, then we are stretching horizontally.  This works out in the algebra. When $0 < b < 1$, then $r^b < r$. The base becomes smaller, which means the function grows slower, which means the graph goes up slower, which means the graph has been stretched horizontally.
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+\begin{example}  
+
+
+
+Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ \\
+
+
+
+Categorize: $B$ is an exponential function, since it matches our template, $A \, r^{B \, x + C} $. \\
+
+
+\begin{idea}
+
+
+\textbf{\textcolor{purple!85!blue}{Formula dissection:}}  \\
+
+
+$\blacktriangleright$  the base: $\frac{2}{3} < 1$   \\
+$\blacktriangleright$  the exponent: $3-t$ is positive for large negative $t$. \\
+$\blacktriangleright$  the exponent: $3-t$ is negative for large positive $t$. \\
+$\blacktriangleright$  the leading coefficient is negative. \\
+
+
+Together, these tell us that $B(t)$ settles down for large negative values of $t$ and that $B(t)$ becomes unbounded when $t$ is large and positive.
+
+
+
+This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t} = \left( \answer{\frac{3}{2}} \right)^t$.  
+
+
+
+When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and the basic exponential portion is becoming smaller, approaching $0$.  
+
+
+
+
+
+\[ \lim\limits_{t \to -\infty} \left( \frac{2}{3} \right)^{-t}  = 0 \]
+
+
+
+When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative} = \left( \frac{3}{2} \right)^{positive}$ and $B(t)$ is becoming unbounded.  
+
+
+
+\[ \lim\limits_{t \to \infty} \left( \frac{2}{3} \right)^{-t}  = \lim\limits_{t \to \infty} \left( \frac{3}{2} \right)^t  = \infty \]
+
+
+
+
+Exponential growth to the right and decay to the left.
+
+
+
+
+
+
+Since the leading coefficient is $-2 < 0$, these smaller/larger values of $-2 \, \left( \frac{2}{3} \right)^{-t}$ are smaller/larger negative values.
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Horizontal Shift}
+
+Our exponent here is $3 - t$.  Our function's exponent is zero, $3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away(below) from the horizontal asymptote, which is $y=0$.  Our anchor point is $(3, -2)$.
+
+
+
+
+
+
+
+
+Graph of $y = B(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+
+           \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x))};
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,-2)};
+
+          
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+With these ideas, we can write an algebraic analysis. \\
+
+
+\end{idea}
+
+
+
+
+\textbf{Domain}
+
+
+$B$ is an exponential function, so its domain is $(-\infty, \infty)$.
+
+
+
+
+
+\textbf{Zeros}
+
+
+$B$ is an exponential function, so it has no zeros.
+
+
+
+
+\textbf{Contiuity}
+
+
+$B$ is an exponential function, so it is continuous.
+
+
+
+
+\textbf{Behavior}
+
+$B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ is an exponential function.  It  is either always increasing or always decreasing.
+
+
+The leading coeffcient is $-2$, which is negative.  Therefore, $B$ is negative.
+
+The leading coefficient of the linear exponent is $-1$, which is negative.  That with a base of $\frac{2}{3} < 1$ tell us us that $B$ becomes unbounded towards the positive side of the real numbers.
+
+
+$B$ is a negative function that becomes unbounded toward the positive end of the real numbers.  That means $G$ is an decreasing function.
+
+
+
+\begin{criterion}
+
+$B$ is an exponential function, which might be compared to the basic basic exponential function $e^x$, which is a positive increasing function.\\
+
+
+First, the base has been changed from $e > 1$ to $\frac{2}{3} < 1$.  That switches the behavior to decreasing.
+
+Second, the leading coefficient of the linear exponent is $-1$, which is negative.  That switches the behavior again, back to increasing.
+
+
+Third, the leading coefficient is $-2 < 0$. That switches the behavior again, back to decreasing.
+
+
+
+\end{criterion}
+
+
+
+
+\textbf{End-Behavior}
+
+
+$B$ is a negative decreasing function.
+
+
+
+\[
+\lim\limits_{t \to -\infty}B(t) = \answer{0}  
+\]
+
+\[
+\lim\limits_{t \to \infty}B(t) = \answer{\infty}
+\]
+
+
+
+
+
+\textbf{Local Maximum and Minimum}
+
+Exponential functions do not have local maximums or minimums.
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum}
+
+Exponential functions do not have global maximums or minimums.
+
+
+
+
+\textbf{Range}
+
+
+
+$B$ is a negative exponential function.   Its range is $(-\infty, 0)$.
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In the example above, we could have algebraically moved the horizontal shift to the leading coefficient.
+
+
+
+\[
+-2 \, \left( \frac{2}{3} \right)^{3-t}
+\]
+
+
+\[
+-2 \, \left( \frac{2}{3} \right)^{3} \cdot \left( \frac{2}{3} \right)^{-t}
+\]
+
+
+\[
+-2 \, \left( \frac{8}{27} \right)  \cdot \left( \frac{2}{3} \right)^{-t}
+\]
+
+
+\[
+\left( \frac{-16}{27} \right)  \cdot \left( \frac{2}{3} \right)^{-t}
+\]
+
+
+We could have further transfered the negative sign in the exponent to the base by reciprocating the base.
+
+\[
+\left( \frac{-16}{27} \right)  \cdot \left( \frac{3}{2} \right)^t
+\]
+
+
+
+Algebra provides many tools for modifying the representing formula and altering how we think about the behavior. \\
+
+
+It just depends on how you like to think of it. \\
+
+
+
+
+
+\begin{example}  
+
+
+
+Analyze   $K(f) = 3^{5-f}$ \\
+
+\begin{question}
+ 
+
+The base is \wordChoice{\choice{less than}\choice[correct]{greater than}} $1$.
+\end{question}
+\begin{question}
+
+
+
+\begin{question}
+
+The linear exponent is \answer{$5-f$}
+
+\end{question}
+
+
+The exponent gets big and positive when $f$ gets big and \wordChoice{\choice{positive}\choice[correct]{negative}}.
+\end{question}
+\begin{question}
+
+
+The graph will become unbounded to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+\end{question}
+
+\begin{question}
+
+
+The horizontal asymptote is $y = \answer{0}$.
+\end{question}
+
+\begin{question}
+
+
+The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
+\end{question}
+\begin{question}
+
+
+Our one strategic anchor point moves to $\left(\answer{5}, \answer{1}\right)$.
+\end{question}
+\begin{question}
+
+
+The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.\\
+\end{question}
+
+
+
+
+Graph of $y = K(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-5};
+
+           \addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
+
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\end{example}
 
 
 
