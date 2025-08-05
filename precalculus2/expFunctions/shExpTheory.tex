@@ -1,0 +1,707 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Shifted Theory}
+
+\begin{document}
+
+\begin{abstract}
+the shift exponential story
+\end{abstract}
+\maketitle
+
+
+
+
+
+We have two levels of exponential formulas: the basic template and then the general template, which includes shifts and stretches.  All of these are based on our original idea of \textbf{\textcolor{purple!85!blue}{constant percentage growth}}.
+
+
+Constant percentage growth means that the value  of our function grows by an equal percentage over equal size intervals in the domain.
+
+
+
+
+
+\begin{example}  Shifted Exponential Function \\
+
+
+
+Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7$ \\
+
+
+
+We'll begin by thinking about the graph to help our analysis. \\
+
+
+
+\begin{explanation}
+
+Compared to a basic exponential function graph, where the horizontal axis is the horizontal asymptote, here, the horizontal asymptote has been moved down $\answer{7}$ units, because the constant term in the formula is $-7$.
+
+
+
+The ``inside'' (the argument) of the formula for $f(x)$, representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
+
+At $x=-5$, we have our one anchor point for the graph.  The point is $\left(-5, \frac{1}{3} - 7 \right)$, which is $\frac{1}{3}$ above the horizontal asymptote, $y = -7$.
+
+
+Graph of $y = f(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
+
+      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+
+      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
+
+          
+
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\end{explanation}
+
+
+Now, for our function analysis.
+
+
+
+\begin{explanation}
+
+
+
+\textbf{Domain:} The domain of every shifted exponential function is $(-\infty, \infty)$. \\
+
+
+
+\textbf{Zeros:}  We see that the graph has a horizontal intercept, which means the function has a zero. \\
+
+
+$f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = 0$ \\
+
+
+\begin{align*}
+\frac{1}{3} \cdot \, 2^{x+5} - 7 & = 0 \\
+\frac{1}{3} \cdot \, 2^{x+5} & = 7 \\
+2^{x+5} & = 21 \\
+\answer{x+5} & = \log_2{21} \\
+x & = \log_2{21} - 5
+\end{align*}
+
+\textbf{Note:}  $\log_2{21} - 5 \approx -0.607$, which agrees with the graph. \\
+
+
+\textbf{Continuity:}  Shifted exponential functions are continuous.  \\
+
+
+
+\textbf{End-Behavior:} The negative direction is the direction that makes the exponent negative.  That makes this the direction that the function's value levels off to the constant term, $-7$.
+
+
+\[
+\lim\limits_{x \to -\infty} f(x) = -7
+\]
+
+
+
+
+The other direction is where the shifted exponential function is uunbounded.  Since the leading coefficient of $f$ is positive, $f$ is unbounded positively. \\
+
+
+
+\[
+\lim\limits_{x \to \infty} f(x) = \infty
+\]
+
+
+
+
+
+
+
+
+
+\textbf{Behavior:} The leading coefficient of $f$ is $\frac{1}{3}$, which is positive and the leading coefficient of the argument is $1$, which is also positive.  Since these are the same sign, we know that $f$ is an increasing shifted exponential function.
+
+
+
+\textbf{Global Extrema:} Shifted exponential functions do not have global maximums or minimums. \\
+
+
+\textbf{Local Extrema:} Shifted exponentials function do not have local maximums or minimums. \\
+
+
+
+\textbf{Range:} The end-behavior tells us that the range is $(-7, \infty)$.
+
+
+
+\end{explanation}
+
+\end{example}
+
+
+The shape of the graph looks like that of the basic exponential graph. \\
+
+
+\begin{itemize}
+\item The horizontal asymptote moved.
+\item The strategic point moved.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{What happened to stretching?}} \\
+
+
+
+Basic exponential functions swallow up stretching and compressing in the leading coefficient and base.
+
+
+\begin{itemize}
+\item If we multiply on the outside, by $b$, for a vertical stretch, then we have
+
+\[
+b \cdot (a \cdot r^x) = (a \cdot b) \cdot r^x
+\]
+
+We obtain a new leading coefficient, which tells us about the sign of the function values. \\
+
+
+
+
+
+
+\item If we multiply on the inside, by $b$, for a horizontal stretch, then our exponential rules give us
+
+\[
+a \cdot r^{b \cdot x} = a \cdot (r^b)^x = a \cdot R^x
+\]
+
+We obtain a new base, which tells us about the growth of the function.
+
+
+\end{itemize}
+
+
+
+
+
+Similarly, horizontal stretching can also be absorbed by the leading coefficent.
+
+ \[
+ a \cdot r^{x+c} = a \cdot r^x \cdot r^c = (a \cdot r^c) \cdot r^x
+\]
+
+
+
+
+We have a choice.  For a shifted exponential function, we can think about stretching or we can apply a little algebra and return to a basic exponential function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Another View
+
+
+
+$f(x) = \frac{1}{3} \, 2^{x+5} - 7$ is the function in the last example.  We could take advantage of exponential algebra to simplify the formula.   \\
+
+\[ 
+f(x) = \frac{1}{3} \, 2^{x+5} - 7 = \frac{1}{3} \, 2^x \cdot 2^5 - 7 = \frac{32}{3} \, 2^x  - 7
+\]
+
+
+We now have a basic exponential function shifted down $7$.  The new base is still $2$ and the new leading coefficient is $\frac{32}{3}$.
+
+
+
+
+
+By doing this, we change our strategic point to $\left( 0, \frac{32}{3} - 7 \right) = \left( 0, \frac{11}{3} \right)$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,3.66)};
+
+          
+
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Altering Algebraically
+
+
+
+Let $G(t) = 4 \cdot 3^{2t-1} - 5$.  
+
+We could take advantage of exponential algebra to simplify the exponent.   \\
+
+\[ 
+G(t) = 4 \cdot 3^{2t-1} - 5 = 4 \cdot 3^{2t} \cdot \frac{1}{3} - 5 = \frac{4}{3} \cdot (3^2)^t - 5  = \frac{4}{3} \cdot 9^t - 5
+\]
+
+
+We now have a basic exponential function shifted down $\answer{5}$.  The new base is $\answer{9}$ and the new leading coefficient is $\answer{\frac{4}{3}}$.
+
+
+
+
+The leading coefficient is $\frac{4}{3} > 0$ and the base is $9 > 1$. Therefore, $G(t)$ is an increasing function.  The function values will be positive, once they overcome the drop of $5$ to the horizontal asymptote.
+
+
+
+$G(t) = \frac{4}{3} \cdot 9^t - 5$ is a transformation of $g(t) = 3^t$.  Let's compare $G(t)$ back to $3^t$.
+
+
+Since the new base $9$ is greater than the old base of $3$, the function grows faster.  The graph goes up to the right faster and steeper.  This means the graph is compressed horizontally, which is the result of multiplying by $2$ in the exponent.
+
+
+
+
+
+End-Behavior:
+\[
+\lim\limits_{t \to -\infty}G(t) = \answer{-5}  
+\]
+
+\[
+\lim\limits_{t \to \infty}G(t) = \answer{\infty}
+\]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{observation} \textbf{\textcolor{blue!55!black}{Big Bases : $r > 1$}}     \\
+
+
+
+When multiplying by $b$ on the inside of an exponential function, for a horizontal stretch or compression, 
+
+
+if $1 < b$, then we are compressing horizontally.  This works out in the algebra. When $1 < b$, then $r < r^b$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. \\
+
+
+
+if $0 < b < 1$, then we are stretching horizontally.  This works out in the algebra. When $0 < b < 1$, then $r^b < r$. The base becomes smaller, which means the function grows slower, which means the graph goes up slower, which means the graph has been stretched horizontally.
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+\begin{example}  Shifted Exponential Function
+
+
+
+Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
+
+
+\begin{explanation}
+
+
+\textbf{\textcolor{purple!85!blue}{Formula dissection:}}  \\
+
+
+$\blacktriangleright$  the base: $\frac{2}{3} < 1$\\
+$\blacktriangleright$  the exponent: $3-t$ is positive for large negative $t$. \\
+$\blacktriangleright$  the exponent: $3-t$ is negative for large positive $t$. \\
+$\blacktriangleright$  the leading coefficient is negative. \\
+
+
+Together, these tell us that $B(t)$ settles down for large negative $t$ and that $B(t)$ becomes unbounded when $t$ is large and positive.
+
+
+
+This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t} = \left( \answer{\frac{3}{2}} \right)^t$.  
+
+
+
+When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and the basic exponential portion is becoming smaller, approaching $0$.  
+
+
+
+
+
+\[ \lim\limits_{t \to -\infty} \left( \frac{2}{3} \right)^{-t}  = 0 \]
+
+
+
+When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{negative} = \left( \frac{3}{2} \right)^{positive}$ and $B(t)$ is becoming unbounded.  
+
+
+
+\[ \lim\limits_{t \to \infty} \left( \frac{2}{3} \right)^{-t}  = \lim\limits_{t \to \infty} \left( \frac{3}{2} \right)^t  = \infty \]
+
+
+
+
+Exponential growth to the right and decay to the left.
+
+
+
+
+
+
+Since $a = -2 < 0$, these smaller/larger values of $-2 \, \left( \frac{2}{3} \right)^{-t}$ are smaller/larger negative values.
+
+
+
+We also have two shifts. One from the $3$ in the exponent and the second from the constant term, $4$:
+
+
+
+
+$\blacktriangleright$ \textbf{Vertical Shift}
+
+
+Adding $4$ to the outside shifts the graph vertically up $4$.  The asymptote is $y = 4$ and 
+
+\[ \lim\limits_{t \to -\infty} B(t) = 4 \]
+
+
+
+$\blacktriangleright$ \textbf{Horizontal Shift}
+
+Our exponent here is $3 - t$.  Our function's exponent is zero, $3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away(below) from the horizontal asymptote, which is now $y=4$.  Our anchor point is $(3, 2)$.
+
+
+
+
+
+
+
+
+Graph of $y = B(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {4};
+
+      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
+
+      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
+
+          
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Our analysis tells us that 
+
+\begin{itemize}
+\item The natural or implied domain of $B$ is $\mathbb{R}$.
+\item $B$ is always decreasing.
+\item $B$ has no maximums or minimums.
+\item $\lim\limits_{t \to -\infty} B(t) = 4$
+\item $\lim\limits_{t \to \infty} B(t) = -\infty$
+\end{itemize}
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+
+
+In the example above, we could have algebraically moved the horizontal shift to the leading coefficient.
+
+
+
+\[
+-2 \, \left( \frac{2}{3} \right)^{3-t} + 4
+\]
+
+
+\[
+-2 \, \left( \frac{2}{3} \right)^{3} \cdot \left( \frac{2}{3} \right)^{-t}+ 4
+\]
+
+
+\[
+-2 \, \left( \frac{8}{27} \right)  \cdot \left( \frac{2}{3} \right)^{-t}+ 4
+\]
+
+
+\[
+\left( \frac{-16}{27} \right)  \cdot \left( \frac{2}{3} \right)^{-t}+ 4
+\]
+
+
+We could have further transfered the negative sign in the exponent to the base by reciprocating the base.
+
+\[
+\left( \frac{-16}{27} \right)  \cdot \left( \frac{3}{2} \right)^t+ 4
+\]
+
+
+
+Algebra provides many tools for modifying the representing formula and altering how we think about the behavior. \\
+
+
+
+
+
+
+
+
+\begin{example}  Shifted Exponential Function
+
+
+
+Analyze   $K(f) = 3^{5-f} - 5$ \\
+
+\begin{question}
+ 
+
+The base is \wordChoice{\choice{less than}\choice[correct]{greater than}} $1$.
+\end{question}
+\begin{question}
+
+
+The exponent gets big and positive when $f$ gets big and \wordChoice{\choice{positive}\choice[correct]{negative}}.
+\end{question}
+\begin{question}
+
+
+The graph will become unbounded to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+\end{question}
+
+\begin{question}
+
+
+The horizontal asymptote is $y = \answer{-5}$.
+\end{question}
+
+\begin{question}
+
+
+The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
+\end{question}
+\begin{question}
+
+
+Our one strategic anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
+\end{question}
+\begin{question}
+
+
+The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.\\
+\end{question}
+
+
+
+
+Graph of $y = K(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-5};
+
+      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
+
+      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Our analysis tells us that
+
+\begin{itemize}
+\item The natural or implied domain of $K$ is $\mathbb{R}$.
+\item $K$ is always decreasing.
+\item $K$ has no maximums or minimums.
+\item $\lim\limits_{f \to -\infty} K(f) = \infty$
+\item $\lim\limits_{f \to \infty} K(f) = -5$
+\end{itemize}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Exponential Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/expFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+\end{document}
