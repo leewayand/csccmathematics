@@ -93,6 +93,17 @@ The domain is determined by the original definition of the function, not by any 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 \begin{example}
 
 Let $R$ be defined as follows.
@@ -101,7 +112,7 @@ Let $R$ be defined as follows.
 \[   R(x) = \frac{(x-3)(x-1)}{x-1}            \]
 
 
-Just thinking algebraically, we might simplify this to $R(x) = x-3$. However, thinking functionally, these two formulas have different natural or implied domains.
+Just thinking algebraically, we might simplify this to $R(x) = x-3$. However, thinking functionally, these two formulas have different natural domains.
 
 
 We have to remember that that the domain of $R$ is still $\left( -\infty, \answer{1} \right) \cup \left( \answer{1},\infty \right)$ no mater what algebraic modifications have been made.
@@ -370,184 +381,6 @@ The critical numbers and singularities partition the real line into intervals wh
 
 
 
-
-
-
-
-
-
-
-\begin{example} Rational Function
-
-
-Completely analyze $G(t) = \frac{(t+7)(t+5)(t-2)}{(t+4)^2(t-2)}$
-
-
-
-
-\begin{explanation}
-
-
-
-The domain is $\left( -\infty, \answer{-4} \right) \cup \left(\answer{-4}, \answer{2} \right) \cup \left( \answer{2}, \infty \right)$.
-
-Let's simplify: $G(t) = \frac{(t+7)(t+5)}{(t+4)^2}$, since $t-2$ is a common factor, since $-4$ and $2$ make the denominator $0$.
-
-
-
-The $t-2$ factor is gone in our simplified formula, but $2$ is still not in the domain.  This will visually show up as a hole in the graph.
-
-
-
-\begin{itemize}
-\item $-7$ is a root of multiplicity $\answer{1}$.  Since this multiplicity is odd, $G$ will change sign through $\answer{-7}$ and the graph will cross at $(-7,0)$.
-\item $-5$ is a root of multiplicity $\answer{1}$.  Since this multiplicity is odd, $G$ will change sign through $-5$ and the graph will cross at $(-5,0)$.
-\item $-4$ is a singularity of multiplicity $\answer{2}$.  The function is unbounded near $-4$.  This will show up as a vertical asymptote on the graph. Since this multiplicity is even, $G$ will not change sign across $-4$.  The graph will approach the vertical asymptote similarly on both sides.
-\item Our simplified version does not have the $t-2$ factor.  Therefore, the graph will not have an intercept nor a vertical asymptote associated with this factor.  It will have a hole at $\left( 2, \answer{\frac{63}{36}} \right)$.
-\end{itemize}
-
-
-The end-behavior of $G$ is $\frac{t^2}{t^2}$.  Therefore, $\lim\limits_{t \to -\infty}G(t) = 1$ and $\lim\limits_{t \to \infty}G(t) = 1$.  The graph has a horizontal asymptote.
-
-
-
-
-Thinking left to right on the number line, $G$ starts off near $1$, which is positive.  It changes signs across $-7$ and becomes negative. It changes signs across $-5$ and becomes positive.  It cannot change sign until $-4$.  Therefore, $G$ becomes positively unbounded on the left side of $-4$.  Across $-4$, $G$ does not change sign.  Therefore, it is again unbounded and positive on the right side of the vertical asymptote.  There are no more zeros or singularities.  So, $G$ cannot change sign again.  Now, it approaches $1$ from above.
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=G(t)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {1};
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] ({-4},{x});
-
-
-
-            \addplot [line width=5, penColor!10!background, smooth,samples=100,domain=(-8:-6)] {-(x+7)};
-            \addplot [line width=5, penColor!10!background, smooth,samples=100,domain=(-5.5:-4.5)] {(x+5)};
-
-            \addplot [line width=5, penColor!10!background, smooth,samples=100,domain=(-4.5:-4.2)] {-1/(x+4)};
-            \addplot [line width=5, penColor!10!background, smooth,samples=100,domain=(-3.9:-3.5)] {1/(x+4)};
-
-
-
-            \addplot [line width=5, penColor!10!background, smooth,samples=100,domain=(-10:-8)] {1.5)};
-            \addplot [line width=5, penColor!10!background, smooth,samples=100,domain=(4:8),->] {1.5)};
-
-
-
-          	\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-7,0)};
-          	\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,0)};
-
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-
-
-
-The graph is very suggestive that there is a local minimum somewhere around $-5.5$.  
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=G(t)$}, grid = major, grid style={dashed},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
-            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-            \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] {1};
-            \addplot [line width=1, gray, dashed,samples=200,domain=(-9:9),<->] ({-4},{x});
-
-
-            \addplot [line width=2, penColor, smooth,samples=300,domain=(-9:-4.4),<->] {((x+7)*(x+5))/(x+4)^2};
-            \addplot [line width=2, penColor, smooth,samples=300,domain=(-3.05:9),<->] {((x+7)*(x+5))/(x+4)^2};
-
-
-            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-7,0)};
-            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,0)};
-
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-
-
-
-
-
-
-With some technology, we can approximate the critical number to be $-5.5$ and the local minimum to be $-0.333$.
-
-
-
-
-\begin{center}
-\desmos{st4dfylktg}{400}{300}
-\end{center}
-
-
-
-
-
-
-
-\begin{itemize}
-\item $G$ decreases on $(-\infty, -5.5]$.
-\item $G$ increases on $[-5.5, -4)$.
-\item $G$ decreases on $(-4, \infty)$.
-\end{itemize}
-
-
-
-The local minimum at $-5.5$ is also a global minimum.  There is no global maximum.  There are no local maximums.
-
-
-\end{explanation}
-
-\end{example}
 
 
 

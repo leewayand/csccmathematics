@@ -17,7 +17,7 @@ the polynomial story
 
 
 
-In the first Precalculus course, we investigated polynomial functions from several viewpoints.  Time to collect all of our thoughts and characterize all polynomial functions.
+In the first Precalculus course, we investigated polynomial functions from several viewpoints.  Time to collect all of our thoughts and characterize all polynomial functions...as well as we can.
 
 
 
@@ -43,11 +43,11 @@ $n$ is called the \textbf{degree} of the polynomial
 
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Domain:}} \\ 
-The natural or implied domain of a polynomial function is all real numbers.  Of course, a particular polynomial function may be defined with a restricted domain.
+The natural domain of a polynomial function is all real numbers.  Of course, a particular polynomial function may be defined with a restricted domain.
 
 
 
-It seems weird to define polynomials and then quickly annouce that we don't like the way we defined them. However, it just turns out that the form of the formula cited in the defintion is just not that helpful.  Our analysis prefers a different form. \\
+It seems weird to define polynomials and then quickly annouce that we don't like the way we defined them. However, it just turns out that the standard form for a polynomial is just not that helpful.  Our analysis prefers a different form. \\
 
 
 
@@ -67,9 +67,9 @@ Formulas for polynomial functions have two forms:
 
 
 \end{formula}
-We prefer the factored form for our function analysis.  The vertex form is also helpful.  The standard form is just not that helpful for function anlaysis. \\
+We prefer the factored form for our function analysis.    The standard form is just not that helpful for function analysis. \\
 
-A polynomial may have repeated zeros.  For this reason, the factored form usually collects like factors:
+\textbf{Note:} A polynomial may have repeated zeros.  For this reason, the factored form usually collects like factors:
 
 
 \[   a (x - r_k)^{e_k} (x - r_{k-1})^{e_{k-1}} \cdots (x - r_1)^{e_1}             \]
@@ -93,7 +93,7 @@ $\blacktriangleright$   \textbf{\textcolor{red!10!blue!90!}{Roots and Zeros:}} \
 \end{itemize}
 
 
-\textbf{Constant functions} are polynomial functions.  They don't have zeros, unless it is the zero constant function.  \\
+\textbf{Constant functions} are polynomial functions.  They don't have zeros, unless the constant function just happens to be the zero constant function.  \\
 
 
 \textbf{Linear functions} are polynomial functions. They have one real root, unless it is a constant function.  You can solve for this root. \\
@@ -113,6 +113,31 @@ Polynomials are nice functions.  They are continuous everywhere.  They have no d
 
 
 
+
+
+$\blacktriangleright$  \textbf{\textcolor{red!10!blue!90!}{Extrema:}} \\ 
+Polynomial functions can have global and local maximums and/or minimums, which our algebra is unlikely to identify. \\
+
+ In Calculus, when we have a derivative, then we can attempt to locate exact values of \textbf{critical numbers}.  Without the derivative, we turn to technology for some assistance in approximating.  That's the best we can do.
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Rate-of-Change:}} \\ 
+The critical numbers partition the real line into intervals where the polynomial function increases or decreases.  All of this depends on getting the critical numbers, which will require a derivative.
+
+
+\begin{center}
+
+A random polynomial is almost impossible to accurately analyze. Our algebra is not strong enough.
+
+
+Unless the polynomial is special (can be factored nicely), then approximating with a graph is usually unavoidable.
+
+\end{center}
+
+
+
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Graphs:}} \\ 
 Graphs of polynomials are nice.  They are smooth.  They do not have corners or spikes or breaks or asymptotes. Once we have the roots, we can plot the intercepts.  Then we can smoothly connect them according to their multiplicities and have a pretty good sketch of the shape of the graph.
 
@@ -121,14 +146,16 @@ With a basic general shape, we can estimate critical numbers and types of extrem
 
 
 
-$\blacktriangleright$  \textbf{\textcolor{red!10!blue!90!}{Extrema:}} \\ 
-Polynomial functions can have global and local maximums and/or minimums. If we have a derivative, then we can attempt to locate exact values of \textbf{critical numbers}.  Without the derivative, we turn to technology for some assistance.
 
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Rate-of-Change:}} \\ 
-The critical numbers partition the real line into intervals where the polynomial function increases or decreases.  With the help of critical numbers, we can list these intervals.
+
+
+
+
+
+
 
 
 
@@ -141,15 +168,59 @@ The critical numbers partition the real line into intervals where the polynomial
 Completely analyze $p(w) = -\frac{1}{5}(w+4)(w-3)(w-3)$
 
 
+First, let's collect like factors: $p(w) = -\frac{1}{5}(w+4)(w-3)^2$.
 
 
-\begin{explanation}
+This formula matches our template for a polynomial in factored form. \\
+
+\textbf{Domain}
+
+Since, $p$ is a polynomial function, its natural domain is $(-\infty, \infty)$. \\
 
 
 
-First, let's collect like factors: $p(w) = -\frac{1}{5}(w+4)(w-3)^2$
+\textbf{Zeros}
 
-We have a polynomial of degree $3$.  It has two roots.  Since $p(w)$ is a polynomial, these roots (zeros) are the only candidates for where $p(w)$ might change signs.  The multiplicity will tell us if $p(w)$ changes sign at each root. If we can determine the sign of $p(w)$ anywhere, then we'll know the sign of $p(w)$ everywhere.\\
+
+
+$p$ is a polynomial of degree $3$ and we can see from its factorization that it has two roots, $-4$ and $3$. \\  
+
+
+
+
+\textbf{Continuity}
+
+Since, $p$ is a polynomial function, it is continuous. \\
+
+
+
+\textbf{End-Behavior}
+
+
+The end-behavior of $p$ is dictated by the leading term and the degree, $-\frac{1}{5} w^3$.  
+
+An odd degree tells us that the two directions will have different signs for the end-behavior.  The negative leading coefficient tells us that the polynomial is unbounded negatively in the positive direction.
+
+
+\[
+\lim\limits_{w \to \infty}p(w) = -\infty
+\]
+
+
+\[
+\lim\limits_{w \to -\infty}p(w) = \infty
+\] 
+
+
+
+
+
+
+\textbf{Behavior}
+
+We can't get the behavior exactly.  We need the derivatvie for that. We can get an approximate idea.
+
+Since $p(w)$ is a polynomial, these roots (zeros) are the only candidates for where $p(w)$ might change signs.  The multiplicity will tell us if $p(w)$ changes sign at each root. If we can determine the sign of $p(w)$ anywhere, then we'll know the sign of $p(w)$ everywhere.\\
 
 \begin{itemize}
 \item $-4$ is a root of multiplicity $\answer{1}$.  Since this multiplicity is odd, $p$ will \wordChoice{\choice[correct]{change sign} \choice{not change sign}} through $-4$ and the graph will cross at $(-4,0)$.
@@ -157,7 +228,6 @@ We have a polynomial of degree $3$.  It has two roots.  Since $p(w)$ is a polyno
 \end{itemize}
 
 
-The end-behavior of $p$ is dictated by the leading term, $-\frac{1}{5} w^3$.  Therefore, $\lim\limits_{w \to -\infty}p(w) = \infty$ and $\lim\limits_{w \to \infty}p(w) = -\infty$.
 
 
 
@@ -263,9 +333,24 @@ With some technology, we can approximate the other critical number to be $-1.67$
 There is no global maximum or minimum, because  $\lim\limits_{w \to -\infty}p(w) = \infty$ and $\lim\limits_{w \to \infty}p(w) = -\infty$. 
 
 
-\end{explanation}
+That's as close as we are going to get it. \\
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \subsection*{with Calculus}
