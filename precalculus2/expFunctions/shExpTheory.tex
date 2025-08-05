@@ -15,16 +15,78 @@ the shifted story
 
 
 
-We have two levels of exponential formulas: the basic template and then the general template, which includes shifts and stretches.  All of these are based on our original idea of \textbf{\textcolor{purple!85!blue}{constant percentage growth}}.
+Shifted Exponential Functions are functions that can be represented with formulas of the form
+
+\[
+ShExp(x) = A \, r^{B \, x + C} + D
+\]
 
 
-Constant percentage growth means that the value  of our function grows by an equal percentage over equal size intervals in the domain.
+
+Shifted exponential functions are not exponential functions.  Equal changes in the domain do not give equal percentage changes in the function. \\
+
+
+
+As an example, consider $f(x) = 2^{x} + 1$. \\
+
+
+$f(0) = 1$, $f(1) = 3$, and $f(2) = 5$. \\
+
+The change in the domain from $0$ to $1$ is $1$.  The change from $1$ to $2$ is also $1$. The same change in the domain.
+
+Let's now compare the percentage changes in the function values. \\
+
+
+
+\[
+\frac{f(1) - f(0)}{f(0)} \frac{3 - 1}{1} = 2
+\]
+
+That is a $200\%$ change in the function value. \\
 
 
 
 
 
-\begin{example}  Shifted Exponential Function \\
+\[
+\frac{f(2) - f(1)}{f(1)} \frac{5 - 3}{3} = \frac{2}{3}
+\]
+
+That is a $66\%$ change in the function value. \\
+
+
+
+
+Equal changes in the domain do not give equal percentage changes in the function values.   These are not exponential functions.
+
+
+\begin{center}
+\textbf{But they are really really really close.} \\
+\end{center}
+
+
+The behavior of shifted exponential function is the same as for exponential functions.  They just exhibit this behavior away from $0$ (the horizontal axis).\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  
 
 
 
@@ -32,11 +94,14 @@ Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7$ \\
 
 
 
+Categorize:   $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7$ is a shifted exponential function, since it matches our template, $A \, r^{B \, x + C} + D$
+
+
+
+\begin{idea}
+
+
 We'll begin by thinking about the graph to help our analysis. \\
-
-
-
-\begin{explanation}
 
 Compared to a basic exponential function graph, where the horizontal axis is the horizontal asymptote, here, the horizontal asymptote has been moved down $\answer{7}$ units, because the constant term in the formula is $-7$.
 
@@ -79,22 +144,25 @@ Graph of $y = f(x)$.
 
 
 
-\end{explanation}
+\end{idea}
 
 
-Now, for our function analysis.
-
-
-
-\begin{explanation}
+With these ideas, we can write an algebraic analysis.
 
 
 
-\textbf{Domain:} The domain of every shifted exponential function is $(-\infty, \infty)$. \\
 
 
 
-\textbf{Zeros:}  We see that the graph has a horizontal intercept, which means the function has a zero. \\
+
+\textbf{Domain:} 
+
+The domain of every shifted exponential function is $(-\infty, \infty)$. \\
+
+
+
+\textbf{Zeros:}  
+
 
 
 $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = 0$ \\
@@ -111,12 +179,45 @@ x & = \log_2{21} - 5
 \textbf{Note:}  $\log_2{21} - 5 \approx -0.607$, which agrees with the graph. \\
 
 
-\textbf{Continuity:}  Shifted exponential functions are continuous.  \\
+
+
+\textbf{Continuity:}  
+
+Shifted exponential functions are continuous.  \\
 
 
 
-\textbf{End-Behavior:} The negative direction is the direction that makes the exponent negative.  That makes this the direction that the function's value levels off to the constant term, $-7$.
 
+
+
+
+
+\textbf{Behavior:} 
+
+Like exponential functions, shifted exponential functions are always increasing or always decreasing. \\
+
+
+
+The leading coefficient of $f$ is $\frac{1}{3}$, which is positive. \\
+
+The base of $f$ is $2 > 1$.\\
+
+The leading coefficient of the argument is $1$, which is also positive.  
+
+
+
+Comparing to $e^x$, a base of $2$ does not change the behavior. A positive leading coefficient does not chnage the behavior.  A positive leading coefficient for the linear exponent does not change the behavior.  We have an increasing function. \\
+
+
+
+
+
+
+\textbf{End-Behavior:} 
+
+
+
+The negative direction is the direction that makes the exponent negative.  Since the base is $2 > 1$, that makes this the direction that the function value levels off to the constant term, $-7$. 
 
 \[
 \lim\limits_{x \to -\infty} f(x) = -7
@@ -139,16 +240,14 @@ The other direction is where the shifted exponential function is uunbounded.  Si
 
 
 
+\textbf{Global Extrema:} 
+
+Shifted exponential functions do not have global maximums or minimums. \\
 
 
-\textbf{Behavior:} The leading coefficient of $f$ is $\frac{1}{3}$, which is positive and the leading coefficient of the argument is $1$, which is also positive.  Since these are the same sign, we know that $f$ is an increasing shifted exponential function.
+\textbf{Local Extrema:} 
 
-
-
-\textbf{Global Extrema:} Shifted exponential functions do not have global maximums or minimums. \\
-
-
-\textbf{Local Extrema:} Shifted exponentials function do not have local maximums or minimums. \\
+Shifted exponentials function do not have local maximums or minimums. \\
 
 
 
@@ -156,18 +255,13 @@ The other direction is where the shifted exponential function is uunbounded.  Si
 
 
 
-\end{explanation}
+
 
 \end{example}
 
 
-The shape of the graph looks like that of the basic exponential graph. \\
 
 
-\begin{itemize}
-\item The horizontal asymptote moved.
-\item The strategic point moved.
-\end{itemize}
 
 
 
@@ -184,74 +278,7 @@ The shape of the graph looks like that of the basic exponential graph. \\
 
 
 
-
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{What happened to stretching?}} \\
-
-
-
-Basic exponential functions swallow up stretching and compressing in the leading coefficient and base.
-
-
-\begin{itemize}
-\item If we multiply on the outside, by $b$, for a vertical stretch, then we have
-
-\[
-b \cdot (a \cdot r^x) = (a \cdot b) \cdot r^x
-\]
-
-We obtain a new leading coefficient, which tells us about the sign of the function values. \\
-
-
-
-
-
-
-\item If we multiply on the inside, by $b$, for a horizontal stretch, then our exponential rules give us
-
-\[
-a \cdot r^{b \cdot x} = a \cdot (r^b)^x = a \cdot R^x
-\]
-
-We obtain a new base, which tells us about the growth of the function.
-
-
-\end{itemize}
-
-
-
-
-
-Similarly, horizontal stretching can also be absorbed by the leading coefficent.
-
- \[
- a \cdot r^{x+c} = a \cdot r^x \cdot r^c = (a \cdot r^c) \cdot r^x
-\]
-
-
-
-
-We have a choice.  For a shifted exponential function, we can think about stretching or we can apply a little algebra and return to a basic exponential function.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} Another View
+\begin{example}  Another View
 
 
 
@@ -381,21 +408,15 @@ End-Behavior:
 
 
 
-\begin{observation} \textbf{\textcolor{blue!55!black}{Big Bases : $r > 1$}}     \\
 
 
 
-When multiplying by $b$ on the inside of an exponential function, for a horizontal stretch or compression, 
-
-
-if $1 < b$, then we are compressing horizontally.  This works out in the algebra. When $1 < b$, then $r < r^b$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. \\
 
 
 
-if $0 < b < 1$, then we are stretching horizontally.  This works out in the algebra. When $0 < b < 1$, then $r^b < r$. The base becomes smaller, which means the function grows slower, which means the graph goes up slower, which means the graph has been stretched horizontally.
 
 
-\end{observation}
+
 
 
 
@@ -412,15 +433,17 @@ if $0 < b < 1$, then we are stretching horizontally.  This works out in the alge
 Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
 
 
-\begin{explanation}
+Categorize: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ is a shifted exponential function, becuase it matches our template,  $A \, r^{B \, x + C} + D$. \\
+
+\begin{idea}
 
 
 \textbf{\textcolor{purple!85!blue}{Formula dissection:}}  \\
 
 
 $\blacktriangleright$  the base: $\frac{2}{3} < 1$\\
-$\blacktriangleright$  the exponent: $3-t$ is positive for large negative $t$. \\
-$\blacktriangleright$  the exponent: $3-t$ is negative for large positive $t$. \\
+$\blacktriangleright$  the linear exponent: $3-t$ is positive for large negative $t$. \\
+$\blacktriangleright$  the linear exponent: $3-t$ is negative for large positive $t$. \\
 $\blacktriangleright$  the leading coefficient is negative. \\
 
 
@@ -517,21 +540,169 @@ Graph of $y = B(t)$.
 
 
 
+With these ideas, we can write an algebraic analysis.
 
-Our analysis tells us that 
-
-\begin{itemize}
-\item The natural or implied domain of $B$ is $\mathbb{R}$.
-\item $B$ is always decreasing.
-\item $B$ has no maximums or minimums.
-\item $\lim\limits_{t \to -\infty} B(t) = 4$
-\item $\lim\limits_{t \to \infty} B(t) = -\infty$
-\end{itemize}
+\end{idea}
 
 
-\end{explanation}
+
+
+
+
+
+
+
+
+
+\textbf{Domain:} 
+
+The domain of every shifted exponential function is $(-\infty, \infty)$. \\
+
+
+
+\textbf{Zeros:}  
+
+
+
+$B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
+
+
+\begin{align*}
+-2 \, \left( \frac{2}{3} \right)^{3-t} + 4 & = 0 \\
+-2 \, \left( \frac{2}{3} \right)^{3-t}  & = -4 \\
+\left( \frac{2}{3} \right)^{3-t} & = \frac{-4}{-2} = 2 \\
+\answer{3-t} & = \log_{\tfrac{2}{3}}\left(2)\\
+3 - \log_{\tfrac{2}{3}}\left(2) & = t
+\end{align*}
+
+\textbf{Note:}  We'll need to switch bases to use the calculatr=or to get an approximatio to comapre with the graph.
+
+
+
+\[
+3 - \log_{\tfrac{2}{3}}\left(2) = 3 - \frac{\ln\left(2)}{\ln\left( \frac{2}{3}  \right)} \approx 4.709511291  
+\]
+
+
+That agrees with the graph. \\
+
+
+
+
+\textbf{Continuity:}  
+
+Shifted exponential functions are continuous.  \\
+
+
+
+
+
+
+
+
+\textbf{Behavior:} 
+
+Like exponential functions, shifted exponential functions are always increasing or always decreasing. \\
+
+
+
+The leading coefficient of $B$ is $-2$, which is negative. \\
+
+The base of $B$ is $\frac{2}{3} < 1$.\\
+
+The leading coefficient of the linear exponent is $-1$, which is negative.  
+
+
+
+Comparing to $e^x$, a base of $-2$ does change the behavior from increasing to decreasing. A negative leading coefficient changes the behavior back to increasing.  A negative leading coefficient for the linear exponent does changes the behavior again to decreasing.  We have an decreasing function. \\
+
+
+
+
+
+
+\textbf{End-Behavior:} 
+
+
+
+The positive direction is the direction that makes the exponent negative.  Since the base is $\frac{2}{3} < 1$, that makes this the direction that the function value becomes unbounded.  The negative leading coefficient means $B$ is unbounded negatively.
+
+
+
+\[
+\lim\limits_{t \to \infty} B(t) = -\infty
+\]
+
+
+The other direction is where the shifted exponential function approached the constant term
+
+
+
+\[
+\lim\limits_{x \to -\infty} f(x) = 4
+\]
+
+
+
+
+
+
+
+
+
+
+\textbf{Global Extrema:} 
+
+Shifted exponential functions do not have global maximums or minimums. \\
+
+
+\textbf{Local Extrema:} 
+
+Shifted exponentials function do not have local maximums or minimums. \\
+
+
+
+\textbf{Range:} The end-behavior tells us that the range is $(-\infty, 4)$.
+
+
+
+
+
+
+
+
+
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -582,7 +753,7 @@ Algebra provides many tools for modifying the representing formula and altering 
 
 
 
-Analyze   $K(f) = 3^{5-f} - 5$ \\
+Consider  $K(f) = 3^{5-f} - 5$ \\
 
 \begin{question}
  
@@ -656,7 +827,7 @@ Graph of $y = K(f)$.
 
 
 
-Our analysis tells us that
+Quick ideas: \\
 
 \begin{itemize}
 \item The natural or implied domain of $K$ is $\mathbb{R}$.
