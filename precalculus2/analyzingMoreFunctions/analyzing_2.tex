@@ -26,16 +26,43 @@ We are looking for the thought process that arrived at the list of conclusions. 
 \begin{example}
 
 
-\textbf{\textcolor{purple!85!blue}{Completely analyze $p(k) = k \sqrt{4-k^2}$}}
+\textbf{\textcolor{purple!85!blue}{Completely analyze}}
+
+\[
+p(k) = k \sqrt{4-k^2}
+\]
 
 
+with
+
+
+\[
+p'(k) = \sqrt{4-k^2} + k \frac{1}{2} \cdot (\sqrt{4-k^2})^{-\tfrac{1}{2}} \cdot (-2k)
+\]
+
+\begin{remark}
+
+$p$ is not an elementary function.  It is a product of two functions. One of the factors is a linear funciton, $k$. \\
+
+The other factor is not a linear function.  It is a composition of a root function and a quadratic function. \\
+
+\end{remark}
 
 
 
 
 $\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Domain:}} 
 
-We need the inside of the square root to be nonnegative (positive or zero).  So, we need $k^2 \leq 4$. Which leaves us with a natural domain of $[-2, 2]$.
+The domain of a product is the intersection of the domains of the two factors. \\
+
+The first factor is a linear function, so its domain is $(-\infty, \infty)$. \\
+
+The second factor is a square root. We need the inside of the square root to be nonnegative (positive or zero).  So, we need $k^2 \leq 4$. That gives us $[-2, 2]$. \\
+
+
+
+
+All together, the intersection leaves us with a natural domain of $[-2, 2]$ for $p$.
 
 
 
@@ -43,7 +70,26 @@ We need the inside of the square root to be nonnegative (positive or zero).  So,
 
 $\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Continuity:}} 
 
-Both $k$ and $\sqrt{4 - k^2}$ are continuous, since they are a polynomial and a square root of a polynomial.  $p$ is the product of continuous functions, so it is continuous.
+Both $k$ and $\sqrt{4 - k^2}$ are continuous. \\
+
+
+$k$ is a linear function. \\
+
+
+The other factor is the composition of a square root and a quadratic. Both of those are continuous, which makes the second factor continuous. \\
+
+
+
+$p$ is the product of continuous functions, so it is continuous.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,11 +109,38 @@ Zeros are $-2$, $0$, and $2$. \\
 
 
 
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{End-Behavior:}}  
+
+
+End-behavior is only a feature of a function with a domain that is unbounded.  It the domain does not approach $-\infty$ or $\infty$, then there is no end-behavior.\\
+
+
+Here, the domain is $[-2, 2]$.  So, there is no emdbehavior. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
 $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Behavior:}}  
 
 
 
+We will use the derivative to decipher the behavior of $p$.  But first, let's see how far some algebraic thinking will get us. \\
 
+
+\begin{idea}
 
 Since $\sqrt{k^2 - 4} \geq 0$, the sign of $p(k)$ is the same as the sign of $\answer{k}$.
 
@@ -136,6 +209,20 @@ Graph of $y = p(k)$.
 \end{tikzpicture}
 \end{image}
 
+
+
+With this thinking, we can make an algebraic approach \\
+
+
+\end{idea}
+
+
+
+
+We can use the sign of the derivative to help us figure out where $p$ increses and decreases, \\
+
+
+Step #1 is finding the critical numbers. \\
 
 
 
