@@ -37,7 +37,7 @@ where $a$, $b$, $c$ are real numbers and $a \ne 0$.
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Domain:}} \\
 
-The natural or implied domain of a quadratic function is all real numbers.  Of course, a particular quadratic function may be defined with a subset of the real numbers.  We may refer to these as \textbf{restricted} quadratic functions.
+The natural domain of a quadratic function is all real numbers, $(-\infty, \infty)$.  Of course, a particular quadratic function may be defined with a subset of the real numbers.  We may refer to these as \textbf{restricted} quadratic functions.
 
 
 
@@ -54,9 +54,9 @@ Formulas for quadratic functions have three basic forms:
 \item \textbf{\textcolor{purple!85!blue}{Standard Form:}}  The standard form for a quadratic function looks like a sum of terms
 \[ a \, t^2 + b \, t + c \]
 \item \textbf{\textcolor{purple!85!blue}{Factored Form:}}  The factored form for a quadratic function looks like a product of factors
-\[ a(t - r_1)(t - r_2) \]
+\[ a \, (t - r_1)(t - r_2) \]
 \item \textbf{\textcolor{purple!85!blue}{Vertex Form:}}  The vertex form for a quadratic function looks like 
-\[ a(t - h)^2 + k \]
+\[ a \, (t - h)^2 + k \]
 \end{itemize}
 
 
@@ -96,7 +96,7 @@ In the standard form $Q(t) = a \, t^2 + b \, t + c  $,
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Graph}} \\ 
 
-The graph of a quadratic function is a parabola, which opens up or down.  The direction depends on the sign of the leading coefficient, $a$.
+The graph of a quadratic function is a parabola, which opens up or down.  The direction depends on the sign of the leading coefficient.
 
 
 
@@ -158,7 +158,8 @@ The graph of a quadratic function is a parabola, which opens up or down.  The di
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Zeros (1)}} \\
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Zeros}} \\
+
 Quadratic functions always have two roots.  However, these roots can be complex numbers, which we will encounter later in this course.  Restricting ourselves to only real numbers means that our quadratics have $0$, $1$, or $2$ real roots.  These correspond to  $0$, $1$, or $2$ intercepts on the graph, which correspond to $0$, $1$, or $2$ distinct factors over the real numbers. 
 
 Quadratics are a type of polynomial and zeros of polynomials are also called \textbf{roots}.
@@ -170,41 +171,143 @@ Quadratics are a type of polynomial and zeros of polynomials are also called \te
 \end{itemize}
 
 
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Continuity}} \\
+
+All quadratic functions are continuous. \\
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{End-Behavior}} \\
+
+All quadratic functions have an even degree, $2$.   That means they behave the same in their tails.  They are unbounded.  The sign of the leading coefficient will tell which way. \\
+
+
+If the leading coefficient is positive, then 
+
+
+\[
+\lim\limits_{t \to -\infty} Q(t) = \infty
+\]
+
+\[
+\lim\limits_{t \to \infty} Q(t) = \infty
+\]
+
+
+
+
+
+If the leading coefficient is negative, then 
+
+
+\[
+\lim\limits_{t \to -\infty} Q(t) = -\infty
+\]
+
+\[
+\lim\limits_{t \to \infty} Q(t) = -\infty
+\]
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Behavior}} \\
+
+
+Quadratic functions exhibit one of two types of behavior.   Which one depends on the sign of the leading coefficent.  
+
+
+\begin{itemize}
+  \item If the leading coefficient is positive, then the quadratic function decreases and then increases
+  \item If the leading coefficient is negative, then the quadratic function increases and then decreases
+\end{itemize}
+
+Either way, the behavior switches at the critical number.
+
+
+\[
+Q(t) = a \, t^2 + b \, t + c
+\]
+
+
+\[
+Q'(t) = 2a \, t + b
+\]
+
+
+$Q'(t) = 2a \, t + b = 0$ at $-\frac{b}{2a}$
+
+
+
+
+If the leading coefficient is positive, then the quadratic function decreases on $\left -\infty, -\frac{b}{2a} \right)$ and increases on $\left -\frac{b}{2a}, \infty \right)$
+
+
+
+
+
+If the leading coefficient is negative, then the quadratic function increases on $\left -\infty, -\frac{b}{2a} \right)$ and decreases on $\left -\frac{b}{2a}, \infty \right)$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{red!10!blue!90!}{Global Maximum and Minimum}} \\
+
+Quadratic functions have either a global maximum or a global minimum, not both.
+
+
+
+
+
+If the leading coefficient is positive, then the quadratic function has a global minimum value of $Q\left( -\frac{b}{2a} \right)$, which occurs at $-\frac{b}{2a}$. \\
+
+
+
+
+If the leading coefficient is negative, then the quadratic function has a global maximum value of $Q\left( -\frac{b}{2a} \right)$, which occurs at $-\frac{b}{2a}$. \\
+
+
+
+
+
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{red!10!blue!90!}{Local Maximum and Minimum}} \\
+
+ The only local extreme values are the global values.
+
+
+
+
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Range}} \\
-From the graphs, we can see that the there are two types of ranges: 
-\begin{itemize}
-\item $(-\infty, k]$ if the leading coefficient is negative and the parabola opens down.
-\item $[k, \infty)$ if the leading coefficient is positive and the parabola opens up.
-\end{itemize}
 
-$k$ is the constant term in the vertex form.
+If the leading coefficient is positive, then the range is $\left[ Q\left( -\frac{b}{2a}, \infty \right)$. \\
 
 
-
-$\blacktriangleright$  \textbf{\textcolor{red!10!blue!90!}{Extrema}} \\
-From the graphs, we can see that there are two situations:
-\begin{itemize}
-\item The function has a single maximum value of $k$, if the leading coefficient is negative. The parabola opens down.
-\item The function has a single minimum value of $k$, if the leading coefficient is positive. The parabola opens up.
-\end{itemize}
-
-$k$ is the constant term in the vertex form.
-
-
-
-
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Rate-of-Change}} \\
-\begin{itemize}
-\item If the leading coefficient is negative and the parabola opens down, then the function increases on $(-\infty, h]$ and decreases on $[h, \infty)$, where $h$ is from the vertex form.
-\item If the leading coefficient is positive and the parabola opens up, then the function decreases on $(-\infty, h]$ and increases on $[h, \infty)$, where $h$ is from the vertex form.
-\end{itemize}
-
-
-
-
-
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Axis of Symmetry}} \\ 
-The vertex form, $Q(t) = a(t-h)^2 + k$ shows us that the graph is symmetric about the vertical line, $t=h$.  This is the line of symmetry or the axis of symmetry.  This should be drawn on the graph.
+If the leading coefficient is negative, then the range is $\left(-\infty, Q\left( -\frac{b}{2a} \right]$. \\
 
 
 
@@ -213,6 +316,14 @@ The vertex form, $Q(t) = a(t-h)^2 + k$ shows us that the graph is symmetric abou
 
 
 
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{and a nice graph...}} 
+
+
+We would like to see the parabola, the intercepts, the lowest/highest point, arrows, labelled axes, maybe an axis of symmetry.
 
 
 
@@ -259,7 +370,7 @@ The vertex form, $Q(t) = a(t-h)^2 + k$ shows us that the graph is symmetric abou
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Zeros (2)}} \\ 
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{MOre about Zeroo}} \\ 
 Our quadratic functions have $0$, $1$, or $2$ real roots or zeros.  These can be obtained from any of the three forms.
 
 
@@ -364,7 +475,7 @@ There are real roots when $a$ and $k$ have opposite sign in vertex form. \\
 Analyze $M(t) = -\frac{1}{2} (t-3)^2 + 5$ \\
 
 
-\begin{explanation}
+\begin{idea}
 
 $M$ is a quadratic function, which means its graph is a parabola.  The leading coefficient is negative, which means the parabola is opening down.  The highest point on the parabola is $(3, 5)$. From this, we know there are two intercepts, which means two roots and two factors.
 
@@ -409,9 +520,123 @@ $M$ is a quadratic function, which means its graph is a parabola.  The leading c
 
 
 
-The domain is $(-\infty, \infty)$ and the range is $(-\infty, 5]$.
 
-The global maximum is $5$, which occurs at $3$.  There is no global minimum.  $5$ is also a local maximum and there are no local minimums.
+With these ideas, we can write an algebraic analysis. \\
+
+\end{idea}
+
+
+
+
+
+
+
+
+\textbf{Domain}
+
+The domain is $(-\infty, \infty)$, since $M$ is a quadratic function. \\ 
+
+
+
+
+
+
+
+
+\textbf{Zeros}
+
+The graph suggest that there are two real zeros (roots). \\
+
+
+\[
+M(t) = -\frac{1}{2} (t-3)^2 + 5 =0
+\]
+
+
+\[
+M(t) = \frac{1}{2} (t-3)^2 = 5
+\]
+
+
+
+\[
+M(t) =  (t-3)^2  = 10
+\]
+
+
+
+
+
+\[
+M(t) =  (t-3)^2  - \left( \sqrt{10} \right)^2 
+\]
+
+
+a difference of two squares. 
+
+
+
+
+\[
+M(t) =  ((t-3)  - \ \sqrt{10})  ((t-3)  + \ \sqrt{10}) 
+\]
+
+
+
+
+
+
+\[
+\text{Either } \, t - 3 - \sqrt{10} = 0 \, \text{ or } \, t - 3 + \sqrt{10} = 0 
+\]
+
+
+
+
+
+
+
+\[
+\text{Either } \, t = 3 + \sqrt{10}  \, \text{ or } \, t = 3 - \sqrt{10} = 0 
+\]
+
+
+
+
+$3 - \sqrt{10} \approx -0.1622776602$ and $3 + \sqrt{10} \approx 6.16227766$ \\
+
+
+These agree with the graph. \\
+
+
+
+
+
+\textbf{Continuity}
+
+$M$ is continuous, since it is a quadratic function. \\ 
+
+
+
+
+
+
+$\blacktriangleright$ End-Behavior: \\
+
+$M$ is a quadratice function with a negative leading coefficient. It is unbounded from below.
+
+
+\[
+\lim\limits_{t \to -\infty} Q(t) = -\infty
+\]
+
+
+\[
+\lim\limits_{t \to \infty} Q(t) = -\infty
+\]
+
+
+
 
 
 
@@ -419,37 +644,58 @@ The global maximum is $5$, which occurs at $3$.  There is no global minimum.  $5
 $\blacktriangleright$ Behavior: \\
 
 
+$M$ is a quadratice function with a negative leading coefficient. $M$ increases and then decreases, switching at the critical number, which is $3$. \\
+
+
+
 $M$ increases on $(-\infty, 3]$. $M$ decreases on $[3, \infty)$.
 
 
 
-$\blacktriangleright$ Zeros: \\
 
 
 
+$\blacktriangleright$ Global Maximum and Minimum: \\
 
 
-\begin{align*}
--\frac{1}{2} (t-3)^2 + 5 & = 0  \\
-(t-3)^2     &= \answer{10} 
-\end{align*}
+$M$ is a quadratice function with a negative leading coefficient. $M$ increases and then decreases, switching at the critical number, which is $3$. \\
 
-Either $t - 3 = -\sqrt{10}$ or $t - 3 = \answer{\sqrt{10}}$
+This tells us that there is a global maximum at $3$.  The vertex form gives $5$ as the maximum.
 
-Either $t = 3 - \sqrt{10}$ or $t = \answer{3 + \sqrt{10}}$
+End-Behavior lets us know there is no global minimum.
 
 
 
 
 
 
-We have two roots or zeros: $t = 3 - \sqrt{10}$ and $t = \answer{3 + \sqrt{10}}$. \\
+$\blacktriangleright$ Local Maximum and Minimum: \\
 
 
-We have two intercepts: $(3 - \sqrt{10}, 0)$ and $\left( \answer{3 + \sqrt{10}}, 0 \right)$. \\
+The global maximum is also a local maximums and that is the only local extrema that a quadratic can have.
 
 
-We have two factors: $(t - (3 - \sqrt{10}))$ and $\left( \answer{t - (3 + \sqrt{10})} \right)$. \\
+
+
+
+
+
+
+
+$\blacktriangleright$ Range: \\
+
+
+$M$ is a quadratic function with a maximum value of $5$.  That makes its range $(-\infty, 5]$. \\
+
+
+
+
+
+
+
+
+
+We can also get the other two forms for $M$.
 
 
 $\blacktriangleright$ \textbf{Factored form: }  $M(t) = -\frac{1}{2} (t - (3 - \sqrt{10})) (t - (3 + \sqrt{10}))$ \\
@@ -457,7 +703,7 @@ $\blacktriangleright$ \textbf{Factored form: }  $M(t) = -\frac{1}{2} (t - (3 - \
 $\blacktriangleright$ \textbf{Standard form: }  $M(t) =  -\frac{1}{2} t^2 + 3t + \frac{1}{2} = -\frac{1}{2}(t^2-6t-1)$
 
 
-\end{explanation}
+
 
 \end{example}
 
