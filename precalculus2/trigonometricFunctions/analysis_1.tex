@@ -253,11 +253,11 @@ Now to glue everything together. \\
 
 
 
-$In(y)$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left(0, \frac{\pi}{2} \right)$, where $\sin(\theta)$ is increasing. \\
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left(0, \frac{\pi}{2} \right)$, where $\sin(\theta)$ is increasing. \\
 
 
 
-The range of $\sin(\theta)$ on $\theta \in \left(0, \frac{\pi}{2} \right)$ is $x = \sin(\theta) \in (0, 1)$, where $Out(x)$ is increasing
+The range of $\sin(\theta)$ on $\theta \in \left(0, \frac{\pi}{2} \right)$ is $x = \sin(\theta) \in (0, 1)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
 
 
 \[
@@ -276,61 +276,21 @@ T(r) = increasing \circ increasing \circ increasing = increasing
 
 
 
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left(\frac{\pi}{2}, \pi \right)$, where $\sin(\theta)$ is decreasing. \\
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example}
-
-
-
-Analyze  $T(r) = 3 \sin(2r - \pi) - 1$
-
-
-
-
-
-We are going to view this as a composition of three functions.
+The range of $\sin(\theta)$ on $\theta \in \left( \frac{\pi}{2}, \pi \right)$ is $x = \sin(\theta) \in (0, 1)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
 
 
 \[
-T(r) = 3 \sin(2r - \pi) - 1 = Out(x) \circ \sin(\theta) \circ In(y)
+T(r) = increasing \circ decreasing \circ increasing = decreasing
 \]
 
 
-where
 
 
-$Out(x) = 3x - 1$ \\
 
-$In(y) = 2y - \pi$ \\
 
 
 
@@ -338,167 +298,115 @@ $In(y) = 2y - \pi$ \\
 
 
 
-\textbf{\textcolor{blue!55!black}{Domain}}
+\textbf{\textcolor{purple!80!black}{On $r = y \in \left( \frac{2\pi}{3}, \frac{5\pi}{6} \right)$, }}
 
 
-The domain of $Out(x) = 3x - 1$ is $(-\infty, \infty)$.  This means $Out$
 
 
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left(\pi, \frac{3\pi}{2} \right)$, where $\sin(\theta)$ is decreasing. \\
 
 
-$Out$
 
-$Out$
+The range of $\sin(\theta)$ on $\theta \in \left( \pi, \frac{3\pi}{2} \right)$ is $x = \sin(\theta) \in (-1, 0)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
 
 
+\[
+T(r) = increasing \circ decreasing \circ increasing = decreasing
+\]
 
 
-$\blacktriangleright$ \textbf{Horizontal}
 
 
-One period of the sine wave occurs from where the inside equals $0$, to where the inside equals $\answer{2 \pi}$.
 
 
-\begin{align*}
-2r - \pi & =  0 \\
-2r       & =  \pi \\
-r        & =  \frac{\pi}{2}
-\end{align*}
 
 
 
-\begin{align*}
-2r - \pi & =  2 \pi \\
-2r       & =  3 \pi \\
-r        & =  \frac{3 \pi}{2}
-\end{align*}
 
+\textbf{\textcolor{purple!80!black}{On $r = y \in \left( \frac{5\pi}{6}, \pi \right)$, }}
 
-$\sin(2r - \pi)$ would equal $0$ at $\frac{\pi}{2}$ and $\frac{3 \pi}{2}$.
 
 
 
-$\blacktriangleright$ $\frac{\pi}{2}$ is the starting line for our one period.
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left( \frac{3\pi}{2}, \2pi \right)$, where $\sin(\theta)$ is increasing. \\
 
-$\blacktriangleright$ $\frac{3 \pi}{2}$ is the finish line for our our period.
 
 
+The range of $\sin(\theta)$ on $\theta \in \left( \frac{3\pi}{2}, 2\pi \right)$ is $x = \sin(\theta) \in (-1, 0)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
 
 
-Halfway between $\frac{\pi}{2}$ and $\frac{3 \pi}{2}$ is $\pi$ and $\sin(2r - \pi)$ would again equal $0$ there.
+\[
+T(r) = increasing \circ increasing \circ increasing = increasing
+\]
 
-A quarter of the way is $\frac{3 \pi}{4}$, where $\sin(2r - \pi) = 1$.
 
-Three-quarters of the way is $\frac{5 \pi}{4}$, where $\sin(2r - \pi) = -1$.
 
 
 
 
 
+This behavior repeats with a period of $\frac{2\pi}{3}$. \\
 
-$\blacktriangleright$ \textbf{Vertical}
 
 
-The maximum value of $\sin(2r - \pi)$ is $1$.  Therefore, the maximum value of $T(r)$ is $3 \cdot 1 - 1 = 2$, which occurs at $\answer{\frac{3 \pi}{4}}$. 
+[ This agrees with the graph. ]
 
 
 
 
-The minimum value of $\sin(2r - \pi)$ is $-1$.  Therefore, the minimum value of $T(r)$ is $3 \cdot (-1) - 1 = -4$, which occurs at $\answer{\frac{5 \pi}{4}}$. 
 
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{bntu7gqkni}{400}{300}
+\end{center}
 
 
 
 
 
-Graph of $y = T(r)$, for one period.
 
 
 
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=0:7, ymax=5, xmax=7, ymin=-5, xmin=0,
-            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
-            ytick={-4,-2,0,2,4},
-            xtick={1.57, 3.142, 4.71, 6.28, 7.85},
-            xticklabels={$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
-            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
 
-            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-1};
 
-            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
-            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
-            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
-            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
 
 
-  \end{axis}
-\end{tikzpicture}
-\end{image}
 
 
 
-Now we can extend this to the whole real line.
 
 
-The period is $\frac{3 \pi}{2} - \frac{\pi}{2} = \pi$.
 
 
+\textbf{\textcolor{blue!55!black}{Local Maximum and Minimum}}
 
 
-\begin{itemize}
-\item $T(r)$ has a maximum of $2$, which occurs at $\{  \frac{3 \pi}{4} \pm k \pi \, | \, k \in \mathbb{Z} \}$.
 
-\item $T(r)$ has a minimum of $-4$, which occurs at $\{  \frac{5 \pi}{4} \pm k \pi \, | \, k \in \mathbb{Z} \}$.
+$T$ is continuous on $(-\infty, \infty)$.
 
-\item $T(r)$ decreases on $\left[  \frac{3 \pi}{4} \pm k \pi,    \frac{5 \pi}{4} \pm k \pi    \right]$, where $k \in \mathbb{Z}$.
 
-\item $T(r)$ increases on $\left[  \frac{5 \pi}{4} \pm k \pi,    \frac{3 \pi}{4} \pm (k+1) \pi    \right]$, where $k \in \mathbb{Z}$.
-\end{itemize}
+$\blacktriangleright$ $T$ switches from increasing to decreasing at $\frac{\pi}{2}$, which makes $\frac{\pi}{2}$ a crtical number and the location of a local maximum. \\
 
 
 
 
+$\blacktriangleright$ $T$ switches from decreasing to increasing at $\frac{5\pi}{6}$, which makes $\frac{5\pi}{6}$ a crtical number and the location of a local minimum. \\
 
 
-Graph of $y = T(r)$.
+These repeat with a period of $\frac{2\pi}{3}$. \\
 
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=0:7, ymax=5, xmax=7, ymin=-5, xmin=0,
-            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
-            ytick={-4,-2,0,2,4},
-            xtick={1.57, 3.142, 4.71, 6.28, 7.85},
-            xticklabels={$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
-            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
 
-            \addplot [line width=2, penColor, smooth,samples=300,domain=(0:6.28),<->] {3*sin(deg(2*x-3.14))-1};
 
-            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
-            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
-            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
-            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
+\[
+T\left( \frac{\pi}{2} \right) = 2 \sin\left(3 \cdot \frac{\pi}{2} \right) - 1 = -3
+\]
 
 
-  \end{axis}
-\end{tikzpicture}
-\end{image}
 
 
+\[
+T\left( \frac{5\pi}{6} \right) = 2 \sin\left(3 \cdot \frac{5\pi}{6} \right) - 1 = 1
+\]
 
 
 
@@ -511,12 +419,55 @@ Graph of $y = T(r)$.
 
 
 
+\textbf{\textcolor{blue!55!black}{Global Maximum and Minimum}}
 
 
+Since $T$ is continuous on $(-\infty, \infty)$, $\frac{\pi}{2}$ and $\frac{5\pi}{6}$ are the only critical numbers, we also have global extrema here. \\
 
 
 
-\end{example}
+
+\[
+T\left( \frac{\pi}{2} \right) = 2 \sin\left(3 \cdot \frac{\pi}{2} \right) - 1 = -3
+\]
+
+
+
+
+\[
+T\left( \frac{5\pi}{6} \right) = 2 \sin\left(3 \cdot \frac{5\pi}{6} \right) - 1 = 1
+\]
+
+
+
+
+These repeat with a period of $\frac{2\pi}{3}$. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range}}
+
+
+Since $T$ is continuous with a global maximum of $1$ and a global minimum of $-1$, the range is $[-3, 1]$.  \\ 
+
+
+
+[ This agrees with the graph. ]
+
+
+
+
+
+
+
+
+
 
 
 
