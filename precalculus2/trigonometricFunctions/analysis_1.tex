@@ -1,0 +1,240 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Analysis}
+
+\begin{document}
+
+\begin{abstract}
+sine
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Analyze  $T(r) = 3 \sin(2r - \pi) - 1$
+
+
+\begin{explanation}
+
+$\blacktriangleright$ \textbf{Horizontal}
+
+
+One period of the sine wave occurs from where the inside equals $0$, to where the inside equals $\answer{2 \pi}$.
+
+
+\begin{align*}
+2r - \pi & =  0 \\
+2r       & =  \pi \\
+r        & =  \frac{\pi}{2}
+\end{align*}
+
+
+
+\begin{align*}
+2r - \pi & =  2 \pi \\
+2r       & =  3 \pi \\
+r        & =  \frac{3 \pi}{2}
+\end{align*}
+
+
+$\sin(2r - \pi)$ would equal $0$ at $\frac{\pi}{2}$ and $\frac{3 \pi}{2}$.
+
+
+
+$\blacktriangleright$ $\frac{\pi}{2}$ is the starting line for our one period.
+
+$\blacktriangleright$ $\frac{3 \pi}{2}$ is the finish line for our our period.
+
+
+
+
+Halfway between $\frac{\pi}{2}$ and $\frac{3 \pi}{2}$ is $\pi$ and $\sin(2r - \pi)$ would again equal $0$ there.
+
+A quarter of the way is $\frac{3 \pi}{4}$, where $\sin(2r - \pi) = 1$.
+
+Three-quarters of the way is $\frac{5 \pi}{4}$, where $\sin(2r - \pi) = -1$.
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Vertical}
+
+
+The maximum value of $\sin(2r - \pi)$ is $1$.  Therefore, the maximum value of $T(r)$ is $3 \cdot 1 - 1 = 2$, which occurs at $\answer{\frac{3 \pi}{4}}$. 
+
+
+
+
+The minimum value of $\sin(2r - \pi)$ is $-1$.  Therefore, the minimum value of $T(r)$ is $3 \cdot (-1) - 1 = -4$, which occurs at $\answer{\frac{5 \pi}{4}}$. 
+
+
+
+
+
+
+Graph of $y = T(r)$, for one period.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=5, xmax=7, ymin=-5, xmin=0,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-4,-2,0,2,4},
+            xtick={1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-1};
+
+            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
+            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
+            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
+            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Now we can extend this to the whole real line.
+
+
+The period is $\frac{3 \pi}{2} - \frac{\pi}{2} = \pi$.
+
+
+
+
+\begin{itemize}
+\item $T(r)$ has a maximum of $2$, which occurs at $\{  \frac{3 \pi}{4} \pm k \pi \, | \, k \in \mathbb{Z} \}$.
+
+\item $T(r)$ has a minimum of $-4$, which occurs at $\{  \frac{5 \pi}{4} \pm k \pi \, | \, k \in \mathbb{Z} \}$.
+
+\item $T(r)$ decreases on $\left[  \frac{3 \pi}{4} \pm k \pi,    \frac{5 \pi}{4} \pm k \pi    \right]$, where $k \in \mathbb{Z}$.
+
+\item $T(r)$ increases on $\left[  \frac{5 \pi}{4} \pm k \pi,    \frac{3 \pi}{4} \pm (k+1) \pi    \right]$, where $k \in \mathbb{Z}$.
+\end{itemize}
+
+
+
+
+
+
+Graph of $y = T(r)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=5, xmax=7, ymin=-5, xmin=0,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-4,-2,0,2,4},
+            xtick={1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(0:6.28),<->] {3*sin(deg(2*x-3.14))-1};
+
+            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
+            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
+            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
+            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/trigonometricFunctions/examples/exampleList}
+
+\end{center}
+
+\end{document}
+

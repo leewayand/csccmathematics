@@ -1,0 +1,223 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Analysis}
+
+\begin{document}
+
+\begin{abstract}
+cosine
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+
+Analyze  $g(t) = -2 \cos(\pi - 3t) + 1$
+
+
+\begin{explanation}
+
+$\blacktriangleright$ \textbf{Horizontal}
+
+
+One period of the cosine wave occurs from where the inside equals $0$ to where the inside equals $2 \pi$.
+
+
+\begin{align*}
+\pi - 3t  & =  0 \\
+\pi       & =  3t \\
+\frac{\pi}{3}       & =  t
+\end{align*}
+
+
+
+\begin{align*}
+\pi - 3t  & =  2 \pi \\
+-\pi      & =  3t \\
+\frac{-\pi}{3}       & =  t
+\end{align*}
+
+
+
+$\blacktriangleright$ $\frac{\pi}{3}$ is the starting line for our one period.
+
+$\blacktriangleright$ $\frac{-\pi}{3}$ is the finish line for our our period.
+
+Our wave runs backwards. \\
+
+
+
+
+$\cos(\pi - 3t)$ would equal $1$ at $\frac{\pi}{3}$ and $\frac{-\pi}{3}$. 
+
+Halfway is $0$ and $\cos(\pi - 3t)$ would equal $-1$ there.
+
+A quarterway is $\frac{\pi}{6}$, where $\cos(\pi - 3t) = 0$.  (a zero)
+
+Three-quarterway is $\frac{-\pi}{6}$, where $\cos(\pi - 3t) = 0$. (a zero)
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{Vertical}
+
+
+The maximum value of $\cos(\pi - 3t)$ is $1$.  The leading coefficient is $-2$, which is negative.  Therefore, the maximum value becomes a minimum value. The minimum value of $g(t)$ is $-2 \cdot 1 + 1 = -1$, which occurs at $\frac{\pi}{3}$ and at $\frac{-\pi}{3}$. 
+
+
+
+
+The minimum value of $\cos(\pi - 3t)$ is $-1$.  The leading coefficient is $-2$, which is negative.   Therefore, the minimum value becomes a maximum value.  The maximum value of $g(t)$ is $-2 \cdot (-1) + 1 = 3$, which occurs at $0$. 
+
+
+
+
+
+
+
+
+Graph $y = g(t)$, for one period.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-7:7, ymax=5, xmax=7, ymin=-5, xmin=-7,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-4,-2,0,2,4},
+            xtick={-7.85, -6.28, -4.71, -3.142, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$,$\tfrac{-\pi}{2}$,$0$,$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-1.047:1.047)] {-2*cos(deg(3.14-(3*x)))+1};
+
+            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
+            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
+            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
+            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Now we can extend this to the whole real line.
+
+
+The period is $\frac{\pi}{3} - \frac{-\pi}{3} = \frac{2\pi}{3}$.
+
+
+
+
+\begin{itemize}
+\item $T(r)$ has a maximum of $3$, which occurs at $\{  0 \pm k \frac{2\pi}{3} \, | \, k \in \mathbb{Z} \}$.
+
+\item $T(r)$ has a minimum of $-1$, which occurs at $\{  \frac{\pi}{3} \pm k \frac{2\pi}{3} \, | \, k \in \mathbb{Z} \}$.
+
+\item $T(r)$ decreases on $\left[  0 \pm k \frac{2\pi}{3},    \frac{\pi}{3} \pm k \frac{2\pi}{3}    \right]$, where $k \in \mathbb{Z}$.
+
+\item $T(r)$ increases on $\left[  \frac{\pi}{3} \pm k \frac{2\pi}{3},    0 \pm (k+1) \frac{2\pi}{3}    \right]$, where $k \in \mathbb{Z}$.
+\end{itemize}
+
+
+
+
+
+
+Graph $y = g(t)$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-7:7, ymax=5, xmax=7, ymin=-5, xmin=-7,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-4,-2,0,2,4},
+            xtick={-7.85, -6.28, -4.71, -3.142, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$,$\tfrac{-\pi}{2}$,$0$,$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-6.5:6.5),<->] {-2*cos(deg(3.14-(3*x)))+1};
+
+            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
+            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
+            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
+            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{explanation}
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/trigonometricFunctions/examples/exampleList}
+
+\end{center}
+
+\end{document}
+
