@@ -22,7 +22,7 @@ sine
 
 
 
-\textbf{\textcolor{purple!85!blue}{Analyze  $T(r) = 3 \sin(2r - \pi) - 1$}}
+\textbf{\textcolor{purple!85!blue}{Analyze  $T(r) =  2 \sin(3r - \pi) - 1$}}
 
 
 
@@ -33,32 +33,176 @@ We are going to view this as a composition of three functions.
 
 
 \[
-T(r) = 3 \sin(2r - \pi) - 1 = Out(x) \circ \sin(\theta) \circ In(y)
+T = Out \circ \sin \circ In
 \]
 
 
 where
 
 
-$Out(x) = 3x - 1$ \\
+$Out(x) = 2x - 1$ \\
 
-$In(y) = 2y - \pi$ \\
+
+$In(y) = 3y - \pi$ \\
+
+
+
+
+Along with $\sin(\theta)$, these three component functions, we get
+
+
+
+\[
+T(r) = (Out \circ \sin \circ In)(r) = Out(sin(In(r)))  = 2 \sin(3r - \pi) - 1
+\]
+
 
 
 
 \end{template}
+
+$T$ is a periodic function, since $\sin(\theta)$ is a periodic function. \\
+
+The principal interval of $\sin(\theta)$ is $[0, 2\pi)$.  The principal interval of $T$ will be the values of $r$ that make the values of $In(y)$ run from $0$ to $2\pi$. \\
+
+
+$3y - \pi = 0$ at $y = \frac{\pi}{3}$
+
+$3y - \pi = 2\pi$ at $y = \pi$
+
+The principle interval of $T$ is $\left[ \frac{\pi}{3}, \pi \right)$. \\
+
+The length of this interval is $\frac{2\pi}{3}$, which is the period of $T$. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{b9yiwlxg2n}{400}{300}
+\end{center}
+
+
+
+
+
+\begin{observation}
+
+$T$ is a periodic function with period $\frac{2\pi}{3}$. \\
+
+
+Therefore, our analysis will focus on the principal interval of $\left[ \frac{\pi}{3}, \pi \right)$. \\
+
+
+All of the features and characteristics we discover will repeat wiht a period of $\frac{2\pi}{3}$.\\
+
+
+\end{observation}
+
+
+
+
+
+
 
 
 
 \textbf{\textcolor{blue!55!black}{Domain}}
 
 
-The domain of $Out(x) = 3x - 1$ is $(-\infty, \infty)$, because $Out$ is a linear function.  \\
+The domain of $Out(x) = 2x - 1$ is $(-\infty, \infty)$, because $Out$ is a linear function.  \\
 
-This includes any value from $\sin(\theta)$. That means we can use the entire domain of $\sin(\theta)$, which is $(-\infty, \infty)$.  \\
+This includes any value of $\sin(\theta)$. That means we can use the entire domain of $\sin(\theta)$, which is $(-\infty, \infty)$.  \\
 
 
 This includes any value of $In(y)$, which means we can use the entire domain of $In(y)$, which is $(-\infty, \infty)$, because $In$ is a linear function.  \\
+
+
+The domain of $T$ is $(-\infty, \infty)$. \\
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros}}
+
+
+Since the values of $T$ come from the values of $Out$, we are first looking for zeros of $Out$.  $Out(x) = 2x - 1$ is a linear function and has only one zero, $\frac{1}{2}$. \\
+
+We are looking for where $\sin(\theta) = \frac{1}{2}$. \\
+
+
+There are two numbers in $[0, 2\pi)$ where $\sin(\theta) = \frac{1}{2}$.  They are $\frac{\pi}{6}$ and $\frac {5\pi}{6}$.
+
+We need the values of $y$ where $In(y) = 3y - \pi = \frac{\pi}{6}$ and $In(y) = 3y - \pi = \frac{5\pi}{6}$
+
+$y = \frac{7\pi}{18}$  and   $y = \frac{11\pi}{18}$
+
+[ These agree with the graph. ]
+
+
+And, these repeat every $\frac{2\pi}{3}$ for $T$.
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity}}
+
+
+The component functions of the composition are linear and sine, all continuous. \\
+
+The composition of continuous function is continuous.
+
+$T$ is continuous. It has no disontinuities. \\
+
+
+Since the domain is $(-\infty, \infty)$, there are no singularities. \\
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior}}
+
+
+$T$ is a periodic function with period $\frac{2\pi}{3}$. \\
+
+It either has no end-behavior or the end-behavior is that it is periodic.
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}}
+
+
+
 
 
 
