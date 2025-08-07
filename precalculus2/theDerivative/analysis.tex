@@ -13,6 +13,134 @@
 
 
 
+To analyze polynomials, we almost always need a derivative.  If the polynomial is special or we just happen to know unusual information about the polynomial, then we might be able to analyze it fully. \\
+
+Polynomials are difficult. Usually we need the derivative. \\
+
+To have any chance at analyzing a general polynomial, our first thought is factoring. What are the zeros? \\
+
+
+Let's analyze a cubic polynomial given in factored form and given its derivative. \\
+
+
+\subsection*{Analysis}
+
+
+We are given the polynomial and its derivative. \\
+
+
+\[
+P(x) = x^3 + 3 \, x^2 - 10 \, x - 24
+\]
+
+
+\[
+P'(x) = 3 \, x^2 + 6 \, x - 10
+\]
+
+
+
+First, let's factor $P$. \\
+
+Using the Ratiopnal Roots Theorem, we have some guesses on roots.  The smaller factors of $24$ are $\pm8$, $\pm6$, $\pm4$, $\pm3$, $\pm2$, $\pm1$.  
+
+
+
+\begin{itemize}
+	\item $P(1) = (1)^3 + 3 \, (1)^2 - 10 \, (1) - 24 = -30$
+	\item $P(-1) = (1)^3 + 3 \, (1)^2 - 10 \, (1) - 24 = -12$
+	\item $P(2) = (1)^3 + 3 \, (1)^2 - 10 \, (1) - 24 = -24$
+	\item $P(-2) = (1)^3 + 3 \, (1)^2 - 10 \, (1) - 24 = 0$
+	\item $P(3) = (1)^3 + 3 \, (1)^2 - 10 \, (1) - 24 = 0$
+	\item $P(-3) = (1)^3 + 3 \, (1)^2 - 10 \, (1) - 24 = 6$
+\end{itemize}
+
+$-2$ is a zero (root), which means $x+2$ is a factor. \\
+
+$3$ is a zero (root), which means $x-3$ is a factor. \\
+
+
+Since $P$ is a cubic polynomial with $1$ as the leading coefficient, we have
+
+\[
+x^3 + 3 \, x^2 - 10 \, x - 24 = (x+2) (x-3) (x-A)
+\]
+
+If these are equal as functions, then they would be equal at $0$.
+
+
+\[
+(0)^3 + 3 \, (0)^2 - 10 \, (0) - 24 = (0+2) (0-3) (0-A)
+\]
+
+
+\[
+-24 = -6 (-A)
+\]
+
+
+\[
+A = -4
+\]
+
+
+
+\[
+x^3 + 3 \, x^2 - 10 \, x - 24 = (x+2) (x-3) (x+4)
+\]
+
+
+
+With this factorizztion, we are ready to begin our analysis. \\
+
+
+
+\textbf{Domain}
+
+$P$ is a ploynomial, which makes is natural domain, $(-\infty, \infty)$. \\
+
+
+
+
+
+\textbf{Zeros}
+
+$P(x) = (x+2) (x-3) (x+4)$, which makes the zeros $-4$, $-2$, and $3$. \\
+
+
+
+
+
+\textbf{Contiuity}
+
+$P$ is a ploynomial, which makes it continuous. \\
+
+
+
+
+
+
+
+\textbf{End-Behavior}
+
+
+$P$ is not a constant polynomial, which menas is is unbounded. \\
+
+$P$ is a ploynomial of degree $3$, which is odd.  That tells us that the two end-behaviors are opposite. \\
+
+Since the leading coefficient is $1$, which is positive, we have
+
+
+\[
+\lim\limits_{x \to -\infty} P(x) = -\infty 
+\]
+
+
+
+
+\[
+\lim\limits_{x \to \infty} P(x) = \infty 
+\]
 
 
 
@@ -22,6 +150,157 @@
 
 
 
+
+
+
+
+
+
+
+
+
+\textbf{Behavior}
+
+We will use the derivative for behavior. When $P'$ is positive, then $P$ is increasing.  When $P'$ is negative, then $P$ is decreasing.  
+
+
+First critical numbers.  Since $P$ is a polynomial, the only critical numbers are zeros of $P'$.  
+
+
+We need to factor. $P'(x) = 3 \, x^2 + 6 \, x - 10$.  This is a quadratic, so we can use the quadratic formula to get  the zeros and use those to factor. \\
+
+
+\[
+\frac{-6 \pb \sqrt{6^2 - 4 (3)(-10)}}{2(3)} = \frac{-6 \pm \sqrt{156}}{6} = \frac{-6 \pm 2\sqrt{39}}{6} = \frac{-3 \pm \sqrt{39}}{3}
+\]
+
+
+
+
+\[
+P'(x) = 3 \, x^2 + 6 \, x - 10 = 3 \left( x - \frac{-3 - \sqrt{39}}{3} \right) \left( x - \frac{-3 + \sqrt{39}}{3}  \right)
+\]
+
+
+
+The critical numbers give us three intervals to examine.
+
+\[
+\left( -\infty, \frac{-3 - \sqrt{39}}{3} \right), \left( \frac{-3 - \sqrt{39}}{3}, \frac{-3 + \sqrt{39}}{3} \right), \text{ and } \left( \frac{-3 + \sqrt{39}}{3}, \infty \right)
+\]
+
+
+Since, $P'$ is a quadratic with a positive leading coefficient, we know that is negative between the zeros and positive outside. \\
+
+
+
+On $\left( -\infty, \frac{-3 - \sqrt{39}}{3} \right)$, $P' > 0$ and $P$ is increasing. \\
+
+
+On $\left( \frac{-3 - \sqrt{39}}{3}, \frac{-3 + \sqrt{39}}{3} \right)$, $P' < 0$ and $P$ is decreasing. \\
+
+
+On $\left( \frac{-3 + \sqrt{39}}{3}, \infty \right)$, $P' > 0$ and $P$ is increasing. \\
+
+
+
+
+
+\textbf{Global Maximum and Minimum}
+
+
+From the end-behaqvior, we know
+
+\[
+\lim\limits_{x \to -\infty} P(x) = -\infty 
+\]
+
+
+
+
+\[
+\lim\limits_{x \to \infty} P(x) = \infty 
+\]
+
+
+
+Therefore, $P$ has no global maximum or minimum. \\
+
+
+
+
+
+
+
+\textbf{Local Maximum and Minimum}
+
+
+$P$ is continuous on $(-\infty, \infty)$ with two critical numbers. We have local extrema at these domain numbers.\\
+
+
+
+
+
+
+
+$P$ is increasing on $\left( -\infty, \frac{-3 - \sqrt{39}}{3} \right)$ and decreasing on $\left( \frac{-3 - \sqrt{39}}{3}, \frac{-3 + \sqrt{39}}{3} \right)$.
+
+$P$ has a local maximum at $\frac{-3 - \sqrt{39}}{3}$.
+
+
+Evaluating $P\left( \frac{-3 - \sqrt{39}}{3} \right)$ is too much algebra.  But, we can get the internet to tell us.
+
+\[
+P\left( \frac{-3 - \sqrt{39}}{3} \right) = \frac{2}{9} (13 \sqrt{39} - 54)
+\]
+
+
+$P$ is decreasing on $\left( \frac{-3 - \sqrt{39}}{3}, \frac{-3 + \sqrt{39}}{3} \right)$ and increasing on $\left( \frac{-3 + \sqrt{39}}{3}, \infty \right)$
+
+
+$P$ has a local minimum at $\frac{-3 + \sqrt{39}}{3}$.
+
+
+
+Evaluating $P\left( \frac{-3 + \sqrt{39}}{3} \right)$ is too much algebra.  But, we can get the internet to tell us.
+
+\[
+P\left( \frac{-3 + \sqrt{39}}{3} \right) = -\frac{2}{9} (13 \sqrt{39} + 54)
+\]
+
+
+
+
+
+
+\textbf{Range}
+
+Since $P$ is contunuous with no singularities, the end-behavior tells us that the range is $(-\infty, \infty)$.\\
+
+
+
+
+
+
+
+
+$\frac{2}{9} (13 \sqrt{39} - 54) \approx 6.041105329$
+
+
+$\frac{2}{9} (13 \sqrt{39} + 54) \approx -30.04110533$
+
+
+These agree with the graph.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{dddjcmtve0}{400}{300}
+\end{center}
 
 
 
