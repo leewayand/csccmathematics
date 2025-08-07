@@ -37,7 +37,7 @@ with
 
 
 \[
-p'(k) = \sqrt{4-k^2} + k \frac{1}{2} \cdot (\sqrt{4-k^2})^{-\tfrac{1}{2}} \cdot (-2k)
+p'(k) = \sqrt{4-k^2} + k \cdot \frac{1}{2} \cdot (4-k^2)^{-\tfrac{1}{2}} \cdot (-2k)
 \]
 
 \begin{remark}
@@ -184,7 +184,7 @@ Graph of $y = p(k)$.
             axis lines =center, xlabel=$k$, ylabel={$y$}, grid = major, grid style={dashed},
             ytick={-4,-2,2,4},
             xtick={-4,-2,2,4},
-            yticklabels={$-4$,$-2$,$4$,$6$}, 
+            yticklabels={$-4$,$-2$,$2$,$4$}, 
             xticklabels={$-4$,$-2$,$2$,$4$},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -211,28 +211,19 @@ Graph of $y = p(k)$.
 
 
 
-With this thinking, we can make an algebraic approach \\
-
-
-\end{idea}
 
 
 
-
-We can use the sign of the derivative to help us figure out where $p$ increses and decreases, \\
-
-
-Step #1 is finding the critical numbers. \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{lz1d961td4}{400}{300}
+\end{center}
 
 
 
 
 
 
-
-
-
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Extrema:}}  
 
 
 With a little help from DESMOS, we can \textbf{approximate} the critical numbers as $-1.414$ and $1.414$.
@@ -253,10 +244,189 @@ $p(-1.414)$ is the approximate global (and local) minimum. \\
 $p(1.414)$ is the approximate global (and local) maximum. \\
 
 
+With this thinking, we can make an algebraic approach \\
 
-And this is the problem we face in Precalculus. We don't seem to have enough algebra tools to locate local minimums and maximums. Sometimes we can, depending on the formula, but mostly we cannot. We turn to graphs for help knowing that they might be hiding important information.\\
+
+\end{idea}
 
 
+
+
+We can use the sign of the derivative to help us figure out where $p$ increses and decreases, \\
+
+
+Step #1 is finding the critical numbers. To do this, we need the derivative in factored form. \\
+
+
+
+
+
+\[
+p'(k) = \sqrt{4-k^2} + k \cdot \frac{1}{2} \cdot (4-k^2)^{-\tfrac{1}{2}}  \cdot (-2k) = \sqrt{4-k^2} + k \frac{-2 k}{2 \sqrt{4-k^2}} 
+\]
+
+
+\[
+= \sqrt{4-k^2} - k \frac{k}{\sqrt{4-k^2}} = \frac{4-k^2}{\sqrt{4-k^2}} - \frac{k^2}{\sqrt{4-k^2}}
+\]
+
+
+
+
+\[
+= - \frac{4-2k^2}{\sqrt{4-k^2}} 
+\]
+
+
+Where is $p'$ equal to $0$ or where does $p'$ not exist? \\
+
+
+
+$4-2k^2 = 0$ at $k = -\sqrt{2}$ and $k = -\frac{1}\sqrt{2}$, which are both in the domain.
+
+$p'$ is undefined where the denominator equals $0$, which is at $k=-2$ and $k=2$.  Both of these are in the domain. \\
+
+
+
+$p$ has four critical numbers.  Two of these are the endpoints of the domain. So, we have three intervals to investigate. \\
+
+
+
+On $\left( -2, -\sqrt{2} \right)$, $2k^2 > 4$.
+
+
+\[
+= - \frac{4-2k^2}{\sqrt{4-k^2}} = negative \cdot \frac{negative}{positive} = positive
+\]
+
+
+$p$ is increasing.\\
+
+
+
+On $\left( -\sqrt{2}, \sqrt{2} \right)$, $2k^2 < 4$.
+
+
+\[
+= - \frac{4-2k^2}{\sqrt{4-k^2}} = negative \cdot \frac{positive}{positive} = negative
+\]
+
+
+$p$ is decreasing.\\
+
+
+
+On $\left( \sqrt{2}, 2 \right)$
+
+
+\[
+= - \frac{4-2k^2}{\sqrt{4-k^2}} = negative \cdot \frac{negative}{positive} = positive
+\]
+
+
+$p$ is increasing.\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Global Extrema:}}  
+
+
+$p$ is continuous on a closed interval.  We just need to compare the function values at the critical numbers.
+
+
+\begin{itemize}
+  \item $p(-2) = 0$
+  \item $p(-\sqrt{2}) = -\sqrt{2}\sqrt{2} = -2$
+  \item $p(\sqrt{2}) = \sqrt{2}\sqrt{2} = 2$
+  \item $p(2) = 0$
+\end{itemize}
+
+
+The global maximum is $2$, which occurs at $\sqrt{2}$. \\
+
+
+The global minimum is $-2$, which occurs at $-\sqrt{2}$. \\
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Local Extrema:}}  
+
+
+Since global extreme values are also local extreme values, we have 
+
+
+$p$ has a local maximum of $2$, which occurs at $\sqrt{2}$. \\
+
+
+$p$ has a local maximum of $-2$, which occurs at $-\sqrt{2}$. \\
+
+
+We have two other local extrema.
+
+
+
+
+
+
+First, select a small neighborhood interval around $-2$, say $\left( -2 - \frac{1}{10}, -2 + \frac{1}{10} \right)$. For the domain numbers in this interval, $\left[ -2, -2 + \frac{1}{10} \right)$, $p$ is increasing. \\
+
+Since $p$ is increasing, $p(-2)= 0$ a local maximum. \\
+
+
+
+
+
+
+
+Second, select a small neighborhood interval around $2$, say $\left( 2 - \frac{1}{10}, 2 + \frac{1}{10} \right)$. For the domain numbers in this interval, $\left( 2 + \frac{1}{10}, 2 \right]$, $p$ is decreasing. \\
+
+Since $p$ is decreasing, $p(-2)= 0$ a local minimum. \\
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Range:}}
+
+
+$p$ is continuous. $2$ is the global maximum.  $-2$ is the global minimum.  \\
+
+
+The range of $p$ is $[-2, 2]$. \\
+
+
+
+
+
+
+All of this agrees with the graph.
 
 \end{example}
 
@@ -275,13 +445,18 @@ And this is the problem we face in Precalculus. We don't seem to have enough alg
 \section*{with Calculus}
 
 
-Calculus will give us a formula for the derivative.
-
-\[    p'(k) = \sqrt{4 - k^2} + k \cdot \frac{-2k}{\sqrt{4-k^2}}  \]
+Calculus will give you all the rules you need to obtaining formulas for derivative.  In Precalculus, you will need to be given the formula for the derivative.\\
 
 
-This derivative has zeros of $-\sqrt{2}$ and $\sqrt{2}$, which are approximately $-1.414$ and $1.4141$. 
+We only know the rules for linear and quadratic functions. \\
 
+
+In this course, we will also discover the derivative rules for sine and cosine. \\
+
+That will give us four rules with which to practice. \\
+
+
+The rest will come in Calculus. 
 
 
 
