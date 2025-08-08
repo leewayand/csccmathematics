@@ -22,68 +22,62 @@ cosine
 
 
 
-\begin{example}
-
-
-
-Analyze  $g(t) = -2 \cos(\pi - 3t) + 1$
-
-
-
-
-$\blacktriangleright$ \textbf{Horizontal}
-
-
-One period of the cosine wave occurs from where the inside equals $0$ to where the inside equals $2 \pi$.
-
-
-\begin{align*}
-\pi - 3t  & =  0 \\
-\pi       & =  3t \\
-\frac{\pi}{3}       & =  t
-\end{align*}
-
-
-
-\begin{align*}
-\pi - 3t  & =  2 \pi \\
--\pi      & =  3t \\
-\frac{-\pi}{3}       & =  t
-\end{align*}
-
-
-
-$\blacktriangleright$ $\frac{\pi}{3}$ is the starting line for our one period.
-
-$\blacktriangleright$ $\frac{-\pi}{3}$ is the finish line for our our period.
-
-Our wave runs backwards. \\
-
-
-
-
-$\cos(\pi - 3t)$ would equal $1$ at $\frac{\pi}{3}$ and $\frac{-\pi}{3}$. 
-
-Halfway is $0$ and $\cos(\pi - 3t)$ would equal $-1$ there.
-
-A quarterway is $\frac{\pi}{6}$, where $\cos(\pi - 3t) = 0$.  (a zero)
-
-Three-quarterway is $\frac{-\pi}{6}$, where $\cos(\pi - 3t) = 0$. (a zero)
+\textbf{\textcolor{purple!85!blue}{Analyze  $H(x) =  2 \cos(\pi - 4x) + 1$}}
 
 
 
 
 
-
-$\blacktriangleright$ \textbf{Vertical}
-
-
-The maximum value of $\cos(\pi - 3t)$ is $1$.  The leading coefficient is $-2$, which is negative.  Therefore, the maximum value becomes a minimum value. The minimum value of $g(t)$ is $-2 \cdot 1 + 1 = -1$, which occurs at $\frac{\pi}{3}$ and at $\frac{-\pi}{3}$. 
+\begin{template}
 
 
+We are going to view this as a composition of three functions.
 
 
-The minimum value of $\cos(\pi - 3t)$ is $-1$.  The leading coefficient is $-2$, which is negative.   Therefore, the minimum value becomes a maximum value.  The maximum value of $g(t)$ is $-2 \cdot (-1) + 1 = 3$, which occurs at $0$. 
+\[
+H = Out \circ \cos \circ In
+\]
+
+
+where
+
+
+$Out(t) = 2t + 1$ \\
+
+
+$In(y) = \pi - 4y$ \\
+
+
+
+
+Along with $\cos(\theta)$, these three component functions, we get
+
+
+
+\[
+H(x) = (Out \circ \sin \circ In)(x) = Out(sin(In(x)))  = 2 \cos(\pi - 4x) + 1
+\]
+
+
+
+
+\end{template}
+
+$H$ is a periodic function, since $\cos(\theta)$ is a periodic function. \\
+
+The principal interval of $\cos(\theta)$ is $[0, 2\pi)$.  The principal interval of $H$ will be the values of $x$ that make the values of $In(x)$ run from $0$ to $2\pi$. \\
+
+
+$\pi - 4x = 0$ at $x = \frac{\pi}{4}$
+
+$\pi - 4x = 2\pi$ at $x = -\frac{\pi}{4}$
+
+The principle interval of $H$ is $\left( -\frac{\pi}{4}, \frac{\pi}{4} \right]$. \\
+
+The length of this interval is $\frac{\pi}{2}$, which is the period of $T$. \\
+
+
+\textbf{Note:}  The principal interval is $\left( -\frac{\pi}{4}, \frac{\pi}{4} \right]$, but we are running trough it backwards.  To get the inside of $\cos(\theta)$ to move from $0$ to $2\pi$, we need $x$ to run from $\frac{\pi}{4}$ to $-\frac{\pi}{4}$.
 
 
 
@@ -92,102 +86,226 @@ The minimum value of $\cos(\pi - 3t)$ is $-1$.  The leading coefficient is $-2$,
 
 
 
-Graph $y = g(t)$, for one period.
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-7:7, ymax=5, xmax=7, ymin=-5, xmin=-7,
-            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
-            ytick={-4,-2,0,2,4},
-            xtick={-7.85, -6.28, -4.71, -3.142, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
-            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$,$\tfrac{-\pi}{2}$,$0$,$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
-            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-
-            \addplot [line width=2, penColor, smooth,samples=300,domain=(-1.047:1.047)] {-2*cos(deg(3.14-(3*x)))+1};
-
-            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
-            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
-            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
-            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
-
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
 
 
 
-Now we can extend this to the whole real line.
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{rnjncnntox}{400}{300}
+\end{center}
 
 
-The period is $\frac{\pi}{3} - \frac{-\pi}{3} = \frac{2\pi}{3}$.
 
 
+
+
+
+
+
+
+
+
+\begin{observation}
+
+$H$ is a periodic function with period $\frac{\pi}{2}$. \\
+
+
+Therefore, our analysis will focus on the principal interval of $\left( -\frac{\pi}{4}, \frac{\pi}{4} \right]$. \\
+
+
+All of the features and characteristics we discover will repeat wiht a period of $\frac{\pi}{2}$.\\
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain}}
+
+
+The domain of $Out(t) = 2t + 1$ is $(-\infty, \infty)$, because $Out$ is a linear function.  \\
+
+This includes any value of $\cos(\theta)$. That means we can use the entire domain of $\cos(\theta)$, which is $(-\infty, \infty)$.  \\
+
+
+This includes any value of $In(y)$, which means we can use the entire domain of $In(y)$, which is $(-\infty, \infty)$, because $In$ is a linear function.  \\
+
+
+The domain of $H$ is $(-\infty, \infty)$. \\
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros}}
+
+
+Since the values of $H$ come from the values of $Out$, we are first looking for zeros of $Out$.  $Out(t) = 2t + 1$ is a linear function and has only one zero, $-\frac{1}{2}$. \\
+
+We are looking for where $\cos(\theta) = -\frac{1}{2}$. \\
+
+
+There are two numbers in $[0, 2\pi)$ where $\cos(\theta) = -\frac{1}{2}$.  They are $\frac{2\pi}{3}$ and $\frac {4\pi}{3}$.
+
+We need the values of $y$ where $In(y) = \pi - 4y = \frac{2\pi}{3}$ and $In(y) = \pi - 4Yx = \frac{4\pi}{3}$
+
+$y = \frac{\pi}{12}$  and   $y = -\frac{\pi}{12}$.\\
+
+Thee are both in the principal interval for $H$. \\
+
+[ These agree with the graph. ]
+
+
+And, these repeat every $\frac{\pi}{2}$ for $H$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity}}
+
+
+The component functions of the composition are linear and cosine, all continuous. \\
+
+The composition of continuous function is continuous.
+
+$H$ is continuous. It has no disontinuities. \\
+
+
+Since the domain is $(-\infty, \infty)$, there are no singularities. \\
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior}}
+
+
+$H$ is a periodic function with period $\frac{\pi}{2}$. \\
+
+It either has no end-behavior or the end-behavior is that it is periodic.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}}
+
+
+We need the behavior of each of the three component funcitons and then we will compose them together. \\
+
+
+
+
+$Out(t) = 2t + 1$ is a linear function with a positive leading coefficient, so it is an increasing function.\\
+
+
+$In(y) = \pi - 4y$ is a linear function with a positive leading coefficient, so it is an increasing function.\\
+
+
+$\cos(\theta)$ increases and decreases through the quadrants. For the principal interval, we have
 
 
 \begin{itemize}
-\item $T(r)$ has a maximum of $3$, which occurs at $\{  0 \pm k \frac{2\pi}{3} \, | \, k \in \mathbb{Z} \}$.
-
-\item $T(r)$ has a minimum of $-1$, which occurs at $\{  \frac{\pi}{3} \pm k \frac{2\pi}{3} \, | \, k \in \mathbb{Z} \}$.
-
-\item $T(r)$ decreases on $\left[  0 \pm k \frac{2\pi}{3},    \frac{\pi}{3} \pm k \frac{2\pi}{3}    \right]$, where $k \in \mathbb{Z}$.
-
-\item $T(r)$ increases on $\left[  \frac{\pi}{3} \pm k \frac{2\pi}{3},    0 \pm (k+1) \frac{2\pi}{3}    \right]$, where $k \in \mathbb{Z}$.
+  \item decreases on $\left( 0, \frac{\pi}{2} \right)$
+  \item decreases on $\left( \frac{\pi}{2}, \pi \right)$
+  \item increases on $\left( \pi, \frac{3\pi}{2} \right)$
+  \item increases on $\left( \frac{3\pi}{2}, 2\pi \right)$
 \end{itemize}
 
 
+Now to trace domains and ranges.
+
+
+We need the values of $In(y) = \pi - 4y$ to be $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, and $2\pi$. \\
 
 
 
+$\blacktriangleright$ $\pi - 4y = 0$ when $y = \frac{\pi}{4}$ \\
 
-Graph $y = g(t)$.
+$\blacktriangleright$ $\pi - 4y = \frac{\pi}{2}$ when $y = \frac{\pi}{8}$ \\
 
+$\blacktriangleright$ $\pi - 4y = \pi$ when $y = 0$ \\
 
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-7:7, ymax=5, xmax=7, ymin=-5, xmin=-7,
-            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major, grid style={dashed},
-            ytick={-4,-2,0,2,4},
-            xtick={-7.85, -6.28, -4.71, -3.142, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
-            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$,$\tfrac{-\pi}{2}$,$0$,$\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
-            yticklabels={$-4$,$-2$,$0$,$2$,$4$}, 
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
+$\blacktriangleright$ $\pi - 4y = \frac{3\pi}{2}$ when $y = -\frac{\pi}{8}$ \\
 
-            \addplot [line width=2, penColor, smooth,samples=300,domain=(-6.5:6.5),<->] {-2*cos(deg(3.14-(3*x)))+1};
-
-            %\addplot [color=penColor,only marks,mark=*] coordinates{(0,0)};
-            %\addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(6.28,0)};
-            %\addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
-            %\addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(6.28,1)};
+$\blacktriangleright$ $\pi - 4y = 2\pi$ when $y = -\frac{\pi}{4}$ \\
 
 
-  \end{axis}
-\end{tikzpicture}
-\end{image}
+\textbf{Note:}  These are running from greatest to least.  That is due to the negative leading coefficent of $In(y)$. \\
 
 
 
 
 
 
+Now to glue everything together. \\
+
+
+
+\textbf{\textcolor{purple!80!black}{On $x = y \in \left( -\frac{\pi}{4}, -\frac{\pi}{8} \right)$, }}
+
+
+
+$In(y) = \pi - 4y$ is decreasing, because $In$ is always decreasing.  The range of $In(y)$ is $\theta = In(y) \in \left(\frac{3\pi}{2}, 2\pi \right)$, where $\cos(\theta)$ is increasing. \\
+
+
+
+The range of $\cos(\theta)$ on $\theta \in \left(\frac{3\pi}{2}, 2\pi \right)$ is $x = \cos(\theta) \in (0, 1)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+H(x) = increasing \circ increasing \circ decreasing = decreasing
+\]
 
 
 
 
-\end{example}
 
 
 
@@ -195,6 +313,263 @@ Graph $y = g(t)$.
 
 
 
+\textbf{\textcolor{purple!80!black}{On $x = y \in \left( -\frac{\pi}{8}, 0 \right)$, }}
+
+
+
+$In(y) = \pi - 4y$ is decreasing, because $In$ is always decreasing.  The range of $In(y)$ is $\theta = In(y) \in \left(\pi, \frac{3\pi}{2} \right)$, where $\cos(\theta)$ is increasing. \\
+
+
+
+The range of $\cos(\theta)$ on $\theta \in \left(\pi, \frac{3\pi}{2} \right)$ is $x = \cos(\theta) \in (-1, 0)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+H(x) = increasing \circ increasing \circ decreasing = decreasing
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{On $x = y \in \left( 0, \frac{\pi}{8} \right)$, }}
+
+
+
+$In(y) = \pi - 4y$ is decreasing, because $In$ is always decreasing.  The range of $In(y)$ is $\theta = In(y) \in \left(\frac{\pi}{2}, \pi \right)$, where $\cos(\theta)$ is decreasing. \\
+
+
+
+The range of $\cos(\theta)$ on $\theta \in \left(\frac{\pi}{2}, \pi \right)$ is $x = \cos(\theta) \in (-1, 0)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+H(x) = increasing \circ decreasing \circ decreasing = increasing
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{On $x = y \in \left( \frac{\pi}{8}, \frac{\pi}{4} \right)$, }}
+
+
+
+$In(y) = \pi - 4y$ is decreasing, because $In$ is always decreasing.  The range of $In(y)$ is $\theta = In(y) \in \left(0, \frac{\pi}{2} \right)$, where $\cos(\theta)$ is decreasing. \\
+
+
+
+The range of $\cos(\theta)$ on $\theta \in \left(0, \frac{\pi}{2} \right)$ is $x = \cos(\theta) \in (0, 1)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+H(x) = increasing \circ decreasing \circ decreasing = increasing
+\]
+
+
+
+
+
+
+
+
+
+This behavior repeats with a period of $\frac{\pi}{2}$. \\
+
+
+
+[ This agrees with the graph. ]
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{mldto7vwwi}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Local Maximum and Minimum}}
+
+
+
+$H$ is continuous on $(-\infty, \infty)$.
+
+
+$\blacktriangleright$ $H$ switches from decreasing to increasing at $0$, which makes $0$ a crtical number and the location of a local minimum. \\
+
+
+
+In our principal interval, we do not see a switch from increasing to decreasing, but $H$ is periodic.  $H$ switches from increasing to decreasing at $-\frac{\pi}{4}$ and $\frac{\pi}{4}$.  Those are one period apart, so we only need one of them.
+
+$\blacktriangleright$ $T$ switches from increasing to decreasing at $\frac{\pi}{4}$, which makes $\frac{\pi}{4}$ a crtical number and the location of a local maximum. \\
+
+
+These repeat with a period of $\frac{\pi}{2}$. \\
+
+
+
+\[
+T\left(0 \right) = 2 \cos\left(3 \cdot 0 \right) + 1 = 3
+\]
+
+
+
+
+\[
+T\left( \frac{\pi}{4} \right) = 2 \cos\left(3 \cdot \frac{\pi}{4} \right) - 1 = -1
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Global Maximum and Minimum}}
+
+
+Since $H$ is continuous on $(-\infty, \infty)$, $0$ and $\frac{\pi}{4}$ are the only critical numbers, we also have global extrema here. \\
+
+
+
+
+
+\[
+T\left(0 \right) = 2 \cos\left(3 \cdot 0 \right) + 1 = 3
+\]
+
+
+
+
+\[
+T\left( \frac{\pi}{4} \right) = 2 \cos\left(3 \cdot \frac{\pi}{4} \right) - 1 = -1
+\]
+
+
+
+
+
+These repeat with a period of $\frac{\pi}{2}$. \\
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range}}
+
+
+Since $H$ is continuous with a global maximum of $3$ and a global minimum of $-1$, the range is $[-1, 3]$.  \\ 
+
+
+
+[ This agrees with the graph. ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Periodic}
+
+$H$ is periodic with period $\frac{\pi}{2}$. \\
+
+
+
+We have zeros in the principal interval as $-\frac{\pi}{12}$ and $\frac{\pi}{12}$. \\
+
+
+To describe all of the zeros of $H$, we need to include all numbers which are these two numbers plus or minus and whole number of $\frac{\pi}{2}$. \\
+
+
+
+\[
+\left\{  -\frac{\pi}{12} + k  \cdot \frac{\pi}{2}  \, | \,  k \in \mathbb{Z}         \right\}
+\]
+
+
+
+\[
+\left\{  \frac{\pi}{12} + k  \cdot \frac{\pi}{2}  \, | \,  k \in \mathbb{Z}         \right\}
+\]
+
+
+
+
+Similarly, we could describe the intervals by including $k  \cdot \frac{\pi}{2} $. \\
 
 
 
