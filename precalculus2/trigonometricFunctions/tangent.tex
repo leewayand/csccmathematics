@@ -82,19 +82,29 @@ This means intercepts at the whole-$\pi$'s and vertical asymptotes at the half-$
 
 
 
-\begin{example}
 
 
 
 
-Analyze  $K(t) = -\tan(\frac{t}{2} + \pi)$
 
 
 
-\begin{explanation}
 
 
-The usual interval people look at tangent is $\left[  \frac{-\pi}{2}, \frac{\pi}{2} \right]$.  This interval has singularities on both ends, which signal vertical asymptotes on the graph. $\frac{-\pi}{2}$ and $\frac{\pi}{2}$ are what we need the inside of our function to equal.
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{Analyze  $K(t) = -\tan\left( \frac{t}{2} + \pi \right)}}
+
+
+\begin{idea}
+
+
+
+
+The usual interval people look at tangent is $\left(  \frac{-\pi}{2}, \frac{\pi}{2} \right )$.  This interval has singularities on both ends, which signal vertical asymptotes on the graph. $\frac{-\pi}{2}$ and $\frac{\pi}{2}$ are what we need the inside of our function to equal.
 
 
 \begin{align*}
@@ -175,6 +185,10 @@ $K(t)$ is always decreasing.
 The zeros are $\{  2 k \pi \, | \, k \in \mathbb{Z}    \}$
 
 
+With these ideas, we can write an algebraic analysis.\\
+
+
+\end{idea}
 
 
 
@@ -187,7 +201,239 @@ The zeros are $\{  2 k \pi \, | \, k \in \mathbb{Z}    \}$
 
 
 
-\end{explanation}
+\begin{template}
+
+
+We are going to view this as a composition of three functions.
+
+
+\[
+K = Out \circ \tan \circ In
+\]
+
+
+where
+
+
+$Out(x) = -x$ \\
+
+
+$In(y) = \frac{y}{2} + \pi$ \\
+
+
+
+
+Along with $\tan(\theta)$, these three component functions, we get
+
+
+
+\[
+K(t) = (Out \circ \tan \circ In)(t) = Out(tan(In(t)))  = -\tan\left( \frac{t}{2} + \pi \right)
+\]
+
+
+
+
+\end{template}
+
+$K$ is a periodic function, since $\tan(\theta)$ is a periodic function. \\
+
+The principal interval of $\tan(\theta)$ is $\left( -\frac{\pi}{2}, \frac{\pi}{2}  \right)$.  The principal interval of $K$ will be the values of $t$ that make the values of $In(y)$ run from $-\frac{\pi}{2}$ to $\frac{\pi}{2}$. \\
+
+
+$\frac{y}{2} + \pi = -\frac{\pi}{2}$ at $y = -3\pi$
+
+$\frac{y}{2} + \pi = \frac{\pi}{2}$ at $y = -\pi$
+
+The principle interval of $T$ is $\left( -3\pi, \pi \right)$. \\
+
+The length of this interval is $2\pi$, which is the period of $K$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{pqjnzks9b2}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+\begin{observation}
+
+$K$ is a periodic function with period $2\pi$. \\
+
+
+Therefore, our analysis will focus on the principal interval of $\left( -3\pi, -\pi \right)$. \\
+
+
+All of the features and characteristics we discover will repeat with a period of $2\pi$.\\
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain}}
+
+
+The domain of $Out(x) = -x$ is $(-\infty, \infty)$, because $Out$ is a linear function.  \\
+
+This includes any value of $\tan(\theta)$. That means we can use the entire domain of $\tan(\theta)$, which excludes $\frac{\pi}{2} + n \pi$ where $n \in \mathbb{Z}$. \\
+
+
+This would be $-\pi$ plus or minus any whole numbers of $2\pi$.
+
+We need to exclude  all $\pi + 2n\pi$ where $n \in \mathbb{Z}$. \\
+
+
+
+
+The domain of $T$ is $(-\infty, \infty)$ except $\left\{  \pi + 2n\pi \, | \,   n \in \mathbb{Z}  \right\}$. \\
+
+
+
+
+We will be examining $K(t)$ on $(-3\pi, -\pi)$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros}}
+
+
+Since the values of $K$ come from the values of $Out$, we are first looking for zeros of $Out$.  $Out(x) = -x$ is a linear function and has only one zero, $0$. \\
+
+We are looking for where $x = \tan(\theta) = 0$. \\
+
+
+The only number in our principal interval where this happens is $\theta = 0$. \\
+
+
+
+We need the values of $y$ where $\theta = In(y) = \frac{y}{2} + \pi = 0$. \\
+
+
+$y = -2\pi$  
+
+[ These agree with the graph. ]
+
+
+And, these repeat every $2\pi$ for $K$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity}}
+
+
+The component functions of the composition are linear and tangent, all continuous. \\
+
+The composition of continuous function is continuous.
+
+$K$ is continuous. It has no disontinuities. \\
+
+
+However, $K$ does have singularities. In our principal interval, $K$ has singularities at $-3\pi$ and $\pi$.  These repeat witha period of $2\pi$.
+
+
+The singularities of $K$ are $\{ (2n+1)\pi  \, | \, n \in \mathbb{Z}  \}$. \\
+
+
+
+We also need the behvaior of $K$ at these singularities. \\
+
+
+
+\[
+\lim\limits_{y to -3\pi^+} In(y) = \lim\limits_{y to -3\pi^+} \frac{y}{2} + \pi = \left( \frac {5\pi}{2} \right)^+
+\]
+
+
+
+
+\[
+\lim\limits_{\theta to \left( \tfrac {5\pi}{2} \right)^+} \tan(\theta) = -\infty
+\]
+
+
+
+
+\[
+\lim\limits_{x to -\infty} Out(x) = \lim\limits_{x to -\infty} (-x) = \infty
+\]
+
+
+
+
+
+\[
+\lim\limits_{x to -3\pi^+} K(x) = \infty
+\]
+
+
+Tangent has the opposite behavior on the other side of the principal interval. 
+
+
+
+
+
+
+\[
+\lim\limits_{x to -\pi^-} K(x) = -\infty
+\]
+
+
+
+
 \textbf{Notes:} \\
 
 
@@ -196,7 +442,6 @@ $\blacktriangleright$ Comparing $K(t)$ to $\tan(t)$, the inside has been multipl
 $\blacktriangleright$ Additionally, an $\pi$ hs been added to the inside.  This would indicate a horizontal shift left, which has happened.
 
 
-\end{example}
 
 
 
@@ -206,6 +451,107 @@ $\blacktriangleright$ Additionally, an $\pi$ hs been added to the inside.  This 
 
 
 
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior}}
+
+
+$K$ is a periodic function with period $2\pi$. \\
+
+It either has no end-behavior or the end-behavior is that it is periodic.
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}}
+
+
+We need the behavior of each of the three component funcitons and then we will compose them together. \\
+
+
+
+
+$Out(x) = -x$ is a linear function with a negative leading coefficient, so it is an decreasing function.\\
+
+
+$In(y) = \frac{y}{2} + \pi$ is a linear function with a positive leading coefficient, so it is an increasing function.\\
+
+
+$\tan(\theta)$ is an increasing function.
+
+
+Each of the component functions is monomtonic function, which means $K$ will not change behavior. \\
+
+
+
+\[
+K(t) = negative \circ increasin \circ increasing = decreasing
+\]
+
+
+
+
+[ This agrees with the graph. ]
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Global Maximum and Minimum}}
+
+
+The singularity behavior has already shown us that $K$ is unbounded. There is no global maximum or minimum.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Local Maximum and Minimum}}
+
+
+$K$ is monotonic (its bahavior doesn't change) and it is unbounded.  There are no local minimums or minimums. 
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range}}
+
+
+Since $T$ is continuous and the singularity behavior has already shown us that $K$ is unbounded, then the range is $(-\infty, \infty)$. \\ 
+
+
+
+[ This agrees with the graph. ]
 
 
 
