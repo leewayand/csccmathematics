@@ -1,0 +1,189 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Recursive Functions}
+
+\begin{document}
+
+\begin{abstract}
+formula of formulas
+\end{abstract}
+\maketitle
+
+
+
+So far, our formulas have been arithmetic instructions involving domain numbers. We have also seen functions defined by repeating values. We can stretch the idea of repeating to recursive values.  That is function values that depend on other values of the same function.
+
+
+
+
+
+
+
+
+
+\begin{example}  \textit{Factorial} \\
+
+
+
+Domain is all whole numbers. \\
+Range is all natural numbers. \\
+
+
+
+
+\[
+Factorial(n) = 
+\begin{cases}
+  1 & n = 0 \\
+  1 & n = 1 \\ 
+  n \cdot Factorial(n-1) & 1 < n
+\end{cases}
+\]
+
+The traditional symbol for the factorial function is ``!''.
+
+
+\begin{itemize}
+  \item $0! = 1$
+  \item $1! = 1$
+  \item $n! = n \cdot (n-1) \cdot (n-2) \cdots 3 \cdot 2 \cdot 1$
+\end{itemize}
+
+
+
+
+
+\begin{question} Write these factorials in the standard place value notation.
+
+
+\begin{itemize}
+\item $3! = \answer{6}$
+\item $4! = \answer{24}$
+\item $5! = \answer{120}$
+\end{itemize}
+
+
+\end{question}
+
+
+
+\end{example}
+
+
+
+
+
+The values of the factorial function depend on previous values of the factorial function. \\
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  \textit{Fibonacci} \\
+
+
+Domain is $\mathbb{N}$. \\
+Range is $\mathbb{N}$. \\
+
+
+
+\[
+Fibonacci(n) = 
+\begin{cases}
+  1 & n = 1 \\
+  1 & n = 2 \\ 
+  Fibonacci(n-1) + Fibonacci(n-2) & 2 < n
+\end{cases}
+\]
+
+
+\begin{itemize}
+\item $Fibonacci(2) = Fibonacci(1) + Fibonacci(0) = 1 + 1 = 2$
+\item $Fibonacci(3) = Fibonacci(2) + Fibonacci(1) = 2 + 1 = 3$
+\item $Fibonacci(4) = Fibonacci(3) + Fibonacci(2) = 3 + 2 = 5$
+\end{itemize}
+
+
+
+
+\begin{question} Compute these values.
+
+
+\begin{itemize}
+\item $Fibonacci(5) = \answer{8}$
+\item $Fibonacci(6) = \answer{13}$
+\item $Fibonacci(7) = \answer{21}$
+\end{itemize}
+
+
+\end{question}
+
+
+
+\end{example}
+
+The values of the Fibonacci function depend on previous values of the Fibonacci function.
+
+
+
+
+
+Recursively defined functions mimic periodic functions.  Both use ``previous'' values.  Periodic functions repeat the ``previous'' values, while recursive functions use these ``previous'' values within more computation. \\
+
+
+Equations such as
+
+\begin{itemize}
+\item $Factorial(n) = n \cdot Factorial(n-1)$
+\item $Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)$
+\end{itemize}
+
+are called \textbf{functional equations}.  They define how function values relate to other function values.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Piecewise-Defined Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/piecewise/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\end{document}

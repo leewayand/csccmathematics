@@ -1,0 +1,566 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Formulas and Graphs}
+
+
+\begin{document}
+
+\begin{abstract}
+bridge
+\end{abstract}
+\maketitle
+
+
+
+Our two main tools for investigating functions are formulas and graphs. Not every function has a formula, but when it does there is a connection between the formula and graph.
+
+\subsection*{Domain}
+When a function is described with a formula, then the domain is described in writing - usually some sort of set notation.  Our favorite way is through interval notation.  Set builder notation is also used.  Sometimes the domain is just described with words.
+
+All of the domain numbers are pictured as lying on the horizontal axis in a graph.  They are not plotted as points on the horizontal axis, unless the function value just happens to equal $0$ at a domain number.
+
+To aid a discussion, the horizontal axis might be shaded to illustrate the domain.
+
+
+
+
+
+
+
+\subsection*{Range}
+The same idea goes for the range of a function, except these values are imagined along the vertical axis.
+
+
+
+
+
+
+
+
+\subsection*{Pairs}
+The pairs are the most important part of a function.  They give the connection between the domain and range.  Formulas do not explicitly give pairs. You can assemble an individual pair, one-at-a-time, by evaluating the formula at a particular domain number.
+
+Graphs display pairs.  The dots included in the graph are visually encoding the function pairs.  Their coordinates can be deciphered into a domain number and function value. The domain number is the first coordinate and the function value is the second coordinate.
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{purple!85!blue}{formula $\iff$ second coordinate}}
+\end{center}
+
+
+
+
+
+
+\begin{explanation} \textbf{Video: Formulas and Graphs}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{O1CSWcLUkw0}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+\begin{example}
+
+Linear functions are functions that can be described by formulas that look like $L(x) = A \cdot x + B$, with $A$ and $B$ both real numbers. ( When $A = 0$ ), the linear function is called a \textbf{constant function}.   Graphs of linear functions are lines.  It takes two points to draw a line. Given a formula, we can evaluate it twice, from which we can create two points, plot them, and draw the line.
+
+Let $L(x) = 2x-3$ with its domain and range both $(-\infty, \infty)$.
+
+\begin{itemize}
+\item $L(-2) = 2(-2) - 3 = -7$, which gives the point $\left(\answer{-2}, \answer{-7}\right)$.
+\item $L(4) = 2(4) - 3 = 5$, which gives the point $(4, 5)$.
+\end{itemize}
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=L(x)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-3:5),<->] {2*x-3};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The arrows indicate that the graph continues with the same pattern - illustrating that the domain is $(-\infty, \infty)$ as well as the range.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\subsection*{Preview: Rate of Change}
+\textbf{\textcolor{red!70!black}{A Peek Ahead}}
+
+
+Much of this course will be spent investigating rate of change. \\
+
+\textbf{Linear functions} have a constant growth rate or rate of change.  Whenever the domain changes by a given amount, then the function changes by a constant multiple of that \textbf{\textcolor{purple!85!blue}{domain change}}. \\
+
+Linear functions have a constant growth rate.    \\
+
+
+
+
+
+Later in this course, we'll compare this to a constant percentage growth rate, which characterizes \textbf{exponential functions}. Whenever the domain changes by a given amount, then the function changes by a constant percentage of the current \textbf{\textcolor{blue!55!black}{function value}}.  A constant percentage growth rate results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$. \\
+
+
+
+\begin{example}
+
+Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
+
+When $t$ changes from $a$ to $a+1$, $E$ grows by $25\%$ of $E(a)$.  Whenever $t$ changes by $1$, $E$ grows by $25\%$, because the function value is multiplied by another $1.25 = 1 + 0.25$.
+
+
+Since $1.25 > 1$, whenever the domain number, $t$, increases, so does $E(t)$.  $E$ is an increasing function.  Its graph goes uphill to the right.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=E(t)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-10:7),<->] {2*(1.25^x)};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+In addition, $1.25$ to any power will be positive.  This together with $2>0$ tells us that $E(t) > 0$ for all $t$.
+
+
+\end{example}
+
+
+\textbf{Note:} If we change $r$ to be $0 < r < 1$ (keeping $a>0$), the exponential function, $E(t) = a \cdot r^t$, becomes a decreasing function and its graph is reflected horizontally.
+
+
+
+
+
+
+
+\begin{example}
+
+Let $X(t) = 2 \cdot 0.8^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
+
+Whenever $t$ changes by $1$, $X$ decays by $20\%$, because the function value is multiplied by another $0.8 = 1 - 0.2$.
+
+
+
+Since $0.8 < 1$, whenever the domain number, $t$, increases, $X(t)$ decreases.  $X$ is a decreasing function.  Its graph goes downhill to the right.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=X(t)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-7:10),<->] {2*(0.8^x)};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Still, $0.8$ to any power will be positive.  This together with $2>0$ tells us that $X(t) > 0$ for all $t$.
+
+
+\end{example}
+
+The graph of an exponential function attempts to level off at a height of $0$.  This follows the idea that $0.8$ raised to larger and larger powers will result in a smaller and smaller positive value, but never equal $0$ itself.
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Zeros}
+
+The real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties.  $0$ also sets itself aside with properties different from both the negative and positive real numbers. \\
+
+
+For one thing, anything times $0$ is $0$.
+
+
+\[
+A \cdot 0 = 0, \, \text{for any real number} \, A
+\]
+
+In the other direction, we have the \textbf{\textcolor{purple!85!blue}{Zero Product Property}}.  
+
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Zero Product Property}} \\
+
+
+Suppose $A$ and $B$ are two real numbers such that $A \cdot B = 0$. \\
+
+
+Then, either $A = 0$ or $B = 0$.
+
+
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+This states that the ONLY way a product of two real numbers is $0$ is if one of the numbers is $0$.
+
+For these reasons, we are interested in where functions have zero values.
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{a Zero}} \\
+
+
+A \textbf{domain number} where a function value has the value $0$ is called a \textbf{zero} of the function.
+
+
+\begin{center}
+If $a$ is a number in the domain of the function $f$ and $f(a) = 0$, then $a$ is called a \textbf{zero} of $f$.
+\end{center}
+
+
+\end{definition}
+
+
+
+
+
+Zeros of functions correspond to intercepts on the graph.
+
+
+
+$\blacktriangleright$ If $a$ is a zero of the function $f$, then $(a, f(a)) = (a, 0)$ is a point on the graph of $f$. \\
+
+
+$\blacktriangleright$ If $(a, 0)$ is a point on the graph of $f$, then $f(a) = 0$ and $a$ is a zero of $f$.
+
+
+
+
+
+\begin{warning}
+
+\begin{center}
+
+\textbf{\textcolor{red!70!black}{Points on the graph are NOT zeros of a function.}}
+
+\end{center}
+
+
+Zeros of a function are numbers. \\
+
+Zeros of a function are domain numbers. \\
+
+Zeros of a function are visually encoded as intercept dots on a graph.  These are points on a graph, not zeros of a function. \\
+
+
+Graphs are not functions.  The are graphical tools we use to investigate and examine functions. \\
+
+
+We have language for graphs.  We have lanaguage for functions.  They are different.
+
+
+\end{warning}
+
+
+
+
+
+\begin{explanation} \textbf{Video: Function Zeros}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{Jd-6vAAWM3I}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Let $P(w) = w^2 - 2w - 3$ with a domain consisting of all real numbers, $\mathbb{R}$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel={$y=P(w)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-2.5:4.5),<->] {x^2 - 2*x - 3};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+The graph has two intercepts.
+
+It appears that $(-1,0)$ and $(3,0)$ are intercepts of the graph, which suggests that $-1$ and $3$ are zeros of $P$.  We can verify this via the formula.
+
+
+\begin{itemize}
+\item $P(-1) = (-1)^2 -2(-1) - 3 = \answer{0}.$
+\item $P(3) = (3)^2 -2(3) - 3 = \answer{0}.$
+\end{itemize}
+
+
+The arrows on the graph of $P$ let us know that the graph keeps rising to the left and right, which means there are no other intercepts. $P$ has two zeros.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Domain Types}
+
+We encounter functions in several ways, each affecting the domain of a function.
+
+\begin{enumerate}
+\item  \textbf{\textcolor{green!50!black}{stated domain}}   \\
+A function may come already equipped with a stated domain.  Graphs communicate a stated domain - just collect all of the first coordinates from the points. Many times we use interval notation to describe a stated the domain.
+
+
+\item  \textbf{\textcolor{green!50!black}{natural or implied domain}}   \\
+Mathematicians like shorthand. The best shorthand is just nothing.  Nothing is used all over the place. If a function is described with a formula and there is no stated domain, then there is the natural or implied domain.  The natural or implied domain is all real numbers that don't cause a problem with the formula.
+
+So far, we know of two problems: square (even) roots of negative numbers and fractions with $0$ denominators.  We will encounter a third problem, which will be logarithms of zero or negative numbers (later). Any real numbers that cause these problems are removed from the real numbers to obtain the natural or implied domain.
+
+
+\item  \textbf{\textcolor{green!50!black}{applied domain}}   \\
+We use functions to model many measuring situations. In such cases, we want our model to describe the situation.  Therefore, the domain should not contain numbers that don't fit the situation. An applied domain is a subset of the natural domain.  The applied domain includes all of the real numbers that make sense in the application.
+
+
+\item \textbf{\textcolor{green!50!black}{induced domain}}  \\
+We often create new functions from old functions. We have a laundry list of ways to accomplish this.  One method is to keep the function structure the same and simply move the domain to another location. We'll study these types of transformations extensively. For the moment, an example will give the idea. \\
+
+
+
+
+
+
+
+\textbf{Example:}  Let $f(x)$ be a function with domain $[-2, 5]$.  Define a new function by $g(t) = f(t+4)$.  To evaluate $g$, you add $4$ to $g$'s domain number and evaluate $f$.  
+
+\begin{itemize}
+\item The least number in the domain of $f$ is $-2$.  Therefore, the least number in the domain of $g$ must be $-6$.
+\item The greatest number in the domain of $f$ is $5$.  Therefore, the greatest number in the domain of $g$ must be $1$.
+\end{itemize} 
+
+The domain of $g$ is $[-6, 1]$ and it was induced (forced) from the domain of $f$ by the defining equation.
+
+
+\end{enumerate}
+
+
+
+
+
+\begin{explanation} \textbf{Video: Domain Types}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{_bu4cgnyStc}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!90!darkgray}{Problems}}   \\
+
+The natural or implied domain can be deduced from a formula by collecting all of the real numbers that don't cause a problem in the formula. \\
+
+What are the problems with formulas?
+
+\begin{itemize}
+\item  Denominators of fractions equaling $0$. \\
+\item  Square (even) roots of negative numbers.    \\
+\item  Logarithms of $0$ or negative numbers.  [seen later] 
+\end{itemize}
+
+Well, that's about it.  Formulas have three problems.  That isn't too much to watch for.
+
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Formulas]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/formulas/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,473 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{The Formula Tool}
+
+
+\begin{document}
+
+\begin{abstract}
+part 1
+\end{abstract}
+\maketitle
+
+
+
+A function can be defined via a graph. Each dot on a graph is highlighting a point and the coordinates of this point define a pair in the function. We can use a graph to estimate function values, but we cannot escape the approximation inherent to drawing.  To communicate about exactness, some functions have an algebraic description of the pairings.  We call this algebraic tool a \textbf{formula} or an \textbf{equation}. Not all functions have formulas with which we can calculate.  But when they do, that's what we want to use!  Our goal is to be exact. \\
+
+
+When functions have formulas, then there is an operation manual to follow. \\
+
+
+
+\section*{Part 1}
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Formula}} \\ 
+
+A \textbf{formula} for a function is an algebraic expression involving the domain number, that produces the function value at the domain number.
+\end{definition}
+
+
+
+\[
+\begin{array}{rcl}
+     \text{expression involving domain number} & = &  \text{function value at the domain number}  \\ 
+      \text{expression involving domain number,} \, d  & = &  \text{function,} \, f \text{, value at the domain number,} \, d \\ 
+      \text{expression involving domain number,} \, d & = & f(d) 
+\end{array}
+\]
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Variable}} (for function notation) \\ 
+
+
+In function notation, $f(d)$, the symbol inside the parentheses is called the \textbf{variable}. It represents all of the domain values.
+\end{definition}
+
+
+
+\begin{explanation} \textbf{Video: Formulas Provide Assembly Instructions}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{PKb82U5mQuc}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+\begin{explanation} \textbf{Video: Formulas are Templates or Algorithms}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{S77CMEGKXPg}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+
+\begin{example}   All Three Pieces 
+
+$P(k) = 3k - 2$ \\
+domain = $[-2, 6)$ \\
+range = $[-8, 16)$
+
+
+$P(k)$ represents the function's value at $k$.  $k$ is representing domain values. $3k - 2$ is the expression involving the domain number. \\
+
+$[-2, 6)$ is interval notation telling us the possible values of $k$. \\
+
+$[-8, 16)$ is interval notation representing the possible values of $P$ for those possible values of $k$.  
+
+
+\end{example}
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!90!darkgray}{Variables}}    \\
+
+Functions do not have variables.  Functions are packages of three sets.  There is no mention of a variable. \\
+
+Our representational tools use variables. \\
+
+Our notation uses variables. \\
+
+We communicate using variables.  \\
+
+Variables are communication tools. 
+
+\end{warning}
+
+More on this in Part 2). \\
+
+
+
+
+\section*{Operation Manual}
+
+A formula is a tool.  We use it to connect domain numbers to their range partners.  And, like any tool, it has an Operation Manual.
+
+
+
+The formula in the example above is $3k - 2$.  The equation $P(k) = 3k - 2$ tells us this formula calculates range values for the function $P$.  How would we use this formula to calculate the value of $P$ at $5$?   In other words, how would we use it to calculate $P(5)$?
+
+We just gave ourselves our first clue. We went from $P(k)$ to $P(5)$ by replacing $k$ with $5$.  We should do the same thing with the formula. However, this doesn't always work.
+
+
+
+
+
+
+Replacing $k$ with $5$ in $3k - 2$ gives us $35-2$, which equals $33$ and $33$ is not $P(5)$. The problem is that our formula is using shorthand notation. Simply replacing the variable with the domain number fails to maintain the meaning of the expression.  In this case, a number next to a variable is shorthand for multiplication and this was lost when we replaced $k$ with the $5$.
+
+We want to replace all occurrences of the variable with the domain number, \textbf{\textcolor{purple!85!blue}{while maintaining the meaning of the expression}}.  As you gain experience with formulas, you will be able to do this on-the-fly.  But a quick rule-of-thumb that cures this problem is to first replace all occurrences of the variable in the formula with the variable wrapped in parentheses.
+
+
+
+\[  P(k) = 3(k) - 2  \]
+
+
+\begin{procedure} \textbf{\textcolor{purple!85!blue}{Evaluation}}   
+
+Calculating a function value is called \textbf{evaluating} the function.  Common mistakes when evaluating functions via formulas can be avoided if all occurrences of the variable are wrapped in parentheses first.
+\end{procedure}
+
+
+
+
+
+
+
+
+\begin{explanation} \textbf{Video: The Operator's Manual}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{y6U7dh23_us}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   \textbf{\textcolor{blue!55!black}{Parentheses}}  
+
+When in doubt, first wrap all occurrences of the variable with parentheses.
+\begin{itemize}
+\item $P(n) = 3n - 5$ becomes $P(n) = 3(n) - 5$ \\
+
+\item $f(k) = 3k^2 - 5k + 3$ becomes $f(k) = 3(k)^2 - 5(k) + 3$ \\
+
+\item $T(y) = \frac{y^3 - 8y + 1}{8y^2 + 4y - 3}$ becomes $T(y) = \frac{(y)^3 - 8(y) + 1}{8(y)^2 + 4(y) - 3}$
+\end{itemize}
+
+\end{example}
+
+Once you are comfortable with the meaning of a formula, then you can see the parentheses in your head and no longer need to write them.
+
+
+
+
+
+
+
+
+
+
+  
+\begin{procedure}   \textbf{\textcolor{purple!85!blue}{Replacement}}    
+
+$P(k) = 3k - 2$ \\
+domain = $[-2, 6)$ \\
+range = $[-8, 16)$ \\
+
+Evaluating $P$ :
+\begin{itemize}
+\item $P(5) = 3(5) - 2 = 13$
+\item $P(-1) = 3(-1) - 2 = -5$
+\item $P(7) = DNE$
+\end{itemize}
+
+
+$P(7)$ does not exist, because the domain is $[-2, 6)$, which does not contain $7$.  A formula tells us how to connect domain and range numbers.  A formula does not define a function.  We still need to know what is allowed to be substituted into the formula.
+
+\end{procedure}
+$\blacktriangleright$ ``DNE'' or ``dne'' stands for Does Not Exist. 
+
+
+
+\begin{warning}  \textbf{\textcolor{red!90!darkgray}{Formula $\ne$ Function}}   
+
+A formula is not a function.  A function is a package containing three sets, following one rule.  A formula describes the connection between the domain and range numbers.
+
+\end{warning}
+
+
+
+
+
+\begin{procedure}   \textbf{\textcolor{purple!85!blue}{Substitution}}      
+
+$F(h) = \frac{h-1}{3-h^2}$ \\
+domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$ \\
+range = $(-\infty, \infty)$
+
+
+\begin{itemize}
+\item $F(0) = \frac{(0) - 1}{3 - (0)^2} = \frac{-1}{3}$
+\item $F(1) = \frac{(1) - 1}{0 - (1)^2} = \frac{0}{-1} = 0$
+\item $F(-1) = \frac{(-1) - 1}{3 - (-1)^2} = \frac{-2}{2} = -1$
+\end{itemize}
+
+\end{procedure}
+
+
+
+A formula describes the connection between domain numbers and their range partners.  Given a domain number, substitution, and then direct calculation gives the function value at that domain number.  We can also go the other way.  Given a range value or function value, we can find the domain numbers connected to it.
+
+We do this by creating an equation involving function notaion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   Solving 
+
+$F(h) = \frac{h-1}{3-h^2}$ \\
+domain = $(-\infty, -\sqrt{3}) \cup (-\sqrt{3}, \sqrt{3}) \cup (\sqrt{3}, \infty)$ \\
+range = $(-\infty, \infty)$
+
+
+In an earlier example, we saw that $-1$ is in the range of $F$.  That example showed that $2$ was one domain number where the function value equals $-1$. Are there others?
+
+
+
+\begin{explanation}
+
+
+We are looking for domain numbers, $h$, where $F(h) = -1$.  
+
+We are looking for domain numbers, $h$, where $\frac{h-1}{3-h^2} = -1$.  
+
+We need to solve $\frac{h-1}{3-h^2} = -1$.
+
+
+
+\[
+\begin{array}{ll}
+\frac{h-1}{3-h^2} = -1 &  \text{original equation} \\
+h - 1 = -1 (3-h^2)    &  \text{multiply both sides [note: nonzero]} \\
+h - 1 = -3 + h^2    &      \text{distribute} \\
+0 = h^2 - h - 2    &      \text{everything on one side} \\
+0 =(h-2)(h+1)    &   \text{factor}   
+\end{array}
+\]
+
+
+
+\textbf{Note:}  $\answer{-\sqrt{3}}$ and $\answer{\sqrt{3}}$ are not in domain, therefore $3 - h^2 \ne 0$. Therefore, we can multiply both sides by it.  \\
+
+
+
+By the Zero Product Property of real numbers, the equation $0 =(h-2)(h+1)$ tells us that either $h-2 = \answer{0}$, which tells us that $h = \answer{2}$. Or, $h+1 = \answer{0}$, which tells us that $h = \answer{-1}$.
+
+Both $2$ and $-1$ are in the domain.  We have identified two domain numbers where $F$ has the value $-1$.
+
+
+\end{explanation}
+\end{example}
+
+
+There is still a question of whether or not we have all of the domain numbers partnered with $-1$. \\
+
+
+\begin{remark}  \textbf{\textcolor{blue!75!black}{The Rule}} 
+
+Remember the only rule a function follows is that each domain number is paired to exactly one range number.  The rule does not go the other way.  A range value can be paired with many domain numbers.
+
+Each domain number is in exactly one pair. \\
+Each range number may be in multiple pairs. \\
+Each codomain number may be in one pair, multiple pairs, or no pair. \\
+
+
+If the function actually does follow the rule for the range as well, then we say the function is one-to-one. Most functions are not one-to-one.  One-to-one functions are special, as we will see later in this course.
+
+
+\end{remark}
+
+
+
+
+\begin{remark}  \textbf{\textcolor{blue!75!black}{Language}} 
+
+The above example illustrates a common theme in function analysis.  Functions have values \textbf{\textcolor{purple!85!blue}{AT}} domain numbers.  This theme will continue through Calculus.  We will describe characteristics and features of functions by their range values and then identify places in the domain \textbf{\textcolor{purple!85!blue}{WHERE}} the behavior \textbf{\textcolor{purple!85!blue}{OCCURS}}. 
+
+
+\end{remark}
+
+
+
+
+
+\subsection*{Two Questions}
+
+Questions about functions generally come in two types.
+\begin{enumerate}
+\item You know the domain number and you want the range partner or function value.  This question is answered with evaluation. Mostly you evaluate a formula or you track the function value down inside a graph.
+
+\item You know the function value and you want the associated domain values.  This question is usually phrased in terms of an equation to solve.  The solution set may include more than one domain number.
+\end{enumerate}
+
+
+
+
+
+
+
+\begin{question}
+
+Let $g(f) = 4f+1$ \\
+domain = $(-\infty, \infty)$ \\
+range = $(-\infty, \infty)$
+
+
+$g(5) = \answer{21}$
+
+If $g(f) = -3$ then $f = \answer{-1}$.
+\end{question}
+
+
+
+
+
+
+\begin{explanation} \textbf{Video: Evaluating Functions (Image)}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{UeTxCjDnFQU}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+\begin{explanation} \textbf{Video: Pre-Images}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{Xhj1i6aKgbg}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!90!darkgray}{Notation}}  \\
+
+
+Formulas often use shorthand notation.  This usually involves $0$, $1$, and $-1$, depending on where they occur and how they are used.  Here are some examples.
+
+
+\begin{itemize}
+\item $3 \cdot x$ is usually written as $3x$.
+\item $3x^2 + 0 x + 5$  might be written as $3x^2 + 5$.
+\item $3x^2 + 1 x + 5$  might be written as $3x^2 + x + 5$.
+\item $3x^2 + (-1) x + 5$  might be written as $3x^2 - x + 5$.
+\item $3(2x-4)^1 + 5$  might be written as $3(2x-4) + 5$.
+\item $3x + x^0$  might be written as $3x + 1$.
+\end{itemize}
+
+
+You may choose not to use these shorthand abbreviations, but you will need to read them when other people use them.
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Formulas]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/formulas/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}
