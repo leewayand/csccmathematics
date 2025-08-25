@@ -1,0 +1,370 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Decoding Visually}
+
+
+\begin{document}
+
+\begin{abstract}
+dots to pairs
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The graph below is the graph of $y = m(x)$.  One of the dots has been highlighted. This dot visually encodes a function pair.  How do we decipher the pair represented by this dot?\\
+
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel=${y = m(x)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-3:4)] {3*sin(deg(x)) - 1};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-3,-1.42)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3.27)};
+          
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(-1,-3.52)};
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{urfnk90ske}{400}{300}
+\end{center}
+
+
+
+We need the coordinates of this dot.  To obtain these, we move perpendicularly from the dot to the axes.
+
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=0:4, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel=${y = m(x)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-3:4)] {3*sin(deg(x)) - 1};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-3,-1.42)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(4,-3.27)};
+          
+        \addplot [color=penColor2,only marks,mark=*] coordinates{(-1,-3.52)};
+        \addplot [line width=1, penColor2, smooth,samples=100,domain=(-1:0.1)] ({x},{-3.52});
+        \addplot [line width=1, penColor2, smooth,samples=100,domain=(-3.52:0.1)] ({-1},{x});
+
+        \node[anchor=east] at (axis cs:-0.7,0.5) {$-1$};
+        \node[anchor=east] at (axis cs:1.4,-3.5) {$-3.5$};
+
+
+
+       %% \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-2)};  %% open hole      
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{70fxzxmrpn}{400}{300}
+\end{center}
+
+
+
+
+
+From there we can identify the domain number, $-1$, and its range partner (function value), $-3.52$. We now know that $m(-1)=-3.5$.
+
+
+
+
+\begin{question}
+
+According to the graph for $y = m(x)$ above, $m(2) = \answer[tolerance=0.3]{1.8}$
+
+\end{question}
+
+
+
+\begin{question}
+
+According to the graph for $y = m(x)$ above, $m(0)$ is \wordChoice{\choice{positive}\choice[correct]{negative}}.
+
+\end{question}
+
+
+
+\begin{question}
+
+According to the graph for $y = m(x)$ above, $m(1.8)$  \wordChoice{\choice{$<$}\choice[correct]{$>$}}   $m(3.2)$.
+
+\end{question}
+
+
+
+
+\begin{question}
+
+Below is the graph for $k = T(w)$. Use this graph to answer the following questions.
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=${k = T(w)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-7:-1)] {-2*x-8};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-7,6)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,-6)};
+
+        \addplot [very thick,penColor, smooth,domain=(3:8)] {x-7};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(3,-4)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(8,1)};
+          
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{iosfsxqmbr}{400}{300}
+\end{center}
+
+
+
+
+\begin{itemize}
+\item $T(-5) = \answer[tolerance=0.3]{10}$
+\item $T(-1) = \answer[tolerance=0.3]{-6}$
+\item $T(4) = \answer[tolerance=0.3]{-3}$
+\item $T(8) = \answer[tolerance=0.3]{1}$
+\end{itemize}
+
+
+\end{question}
+
+
+
+
+
+
+
+
+\begin{question}
+
+Below is the graph for $k = T(w)$. Use this graph to answer the following questions.
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=${k = T(w)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-7:-1)] {-2*x-8};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-7,6)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,-6)};
+
+        \addplot [very thick,penColor, smooth,domain=(3:8)] {x-7};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(3,-4)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(8,1)};
+          
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{iosfsxqmbr}{400}{300}
+\end{center}
+
+
+
+
+\begin{itemize}
+\item Which of the expressions below best describes the domain of $T$?
+\begin{multipleChoice}
+\choice  {$[-7,8]$}
+\choice  {$[-6,6]$}
+\choice  {$[-7,-1] \cup [3,8]$}
+\choice [correct] {$[-7,-1] \cup (3,8]$}
+\end{multipleChoice}
+
+
+
+
+\item Which of the expressions below best describes the range of $T$?
+\begin{multipleChoice}
+\choice [correct] {$[-6,6]$}
+\choice  {$(-4, 1]$}
+\choice  {$[-6,6] \cup (-4,1]$}
+\choice  {$[-6,6] \cup [-4,1]$}
+\end{multipleChoice}
+\end{itemize}
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+Below is the graph for $z = w(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=${z = w(t)}$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top,
+          ]
+
+        \addplot [very thick,penColor, smooth,domain=(-7:-1)] {2*x+8};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-7,-6)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-1,6)};
+
+        \addplot [very thick,penColor, smooth,domain=(3:8)] {x-3};
+        \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(3,0)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(8,5)};
+          
+
+
+\end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{gqavyky9so}{400}{300}
+\end{center}
+
+
+
+
+
+\begin{itemize}
+\item According to the graph, how many solutions are there to the equation $w(t) = 2$?
+\begin{multipleChoice}
+\choice  {$0$}
+\choice  {$1$}
+\choice [correct] {$2$}
+\choice  {$4$}
+\end{multipleChoice}
+
+
+ 
+\item According to the graph, how many solutions are there to the equation $w(t) = 0$?
+\begin{multipleChoice}
+\choice  {$0$}
+\choice [correct] {$1$}
+\choice  {$2$}
+\choice  {$4$}
+\end{multipleChoice}
+
+
+\item According to the graph, how many solutions are there to the equation $w(t) = -3$?
+\begin{multipleChoice}
+\choice  {$0$}
+\choice [correct] {$1$}
+\choice  {$2$}
+\choice  {$4$}
+\end{multipleChoice}
+\end{itemize}
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Graphs]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionGraphs/examples/exampleList}
+
+\end{center}
+
+\end{document}

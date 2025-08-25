@@ -1,0 +1,404 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Function Behavior}
+
+
+\begin{document}
+
+\begin{abstract}
+relative change
+\end{abstract}
+\maketitle
+
+
+
+
+
+Functions are packages containing three sets: domain, codomain (or range), and pairs.  The pairs connect the domain numbers to range values and it is this relationship we want to investigate.   We would like to know how the range values are affected by the domain values.  \\
+
+
+
+\begin{itemize}
+\item We are interested in the function values - the range values.  But they are controlled by the domain values. \\
+\item We ask questions about the function values, but the answers are in the domain.
+\end{itemize}
+
+
+
+
+\begin{idea}
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Where}} is the function increasing? 
+
+Translation: On which set of \textbf{\textcolor{purple!85!blue}{domain}} values do the function values increase? \\
+
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Where}} is the function decreasing? 
+
+Translation: On which set of \textbf{\textcolor{purple!85!blue}{domain}} values do the function values decrease? \\
+
+
+\end{idea}
+
+
+
+
+
+
+
+
+A graph provides a global view of all of the pairs, which reveals many of the patterns, features, and characteristics we seek.   
+
+However, we must separate the graph from the function.  The graph helps us answer the questions, but the graph doesn't hold the answers.  The answers are in the domain and range. 
+
+
+
+
+
+\subsection*{Increasing}
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Increasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{increasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \leq f(b)$.
+\end{center}
+
+\end{definition}
+
+
+
+
+\begin{idea}
+Increasing means the domain and range change the same: both get greater or both get lesser.
+\end{idea}
+
+
+
+\begin{observation}
+Visually, increasing looks like the points of the graph of $f$ are going uphill to the right.
+\end{observation}
+
+
+\begin{observation}
+Visually, increasing looks like the points of the graph of $f$ are going downhill to the left.
+\end{observation}
+
+
+
+
+
+
+
+\begin{example}
+
+Below is the graph of $y=f(x)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$},
+            grid = both, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{(x+5)*(x-1)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{x-3});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,-5) (1,-2) (5, 2) (8,0)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{1hdvwizmhq}{400}{300}
+\end{center}
+
+
+
+
+
+\begin{question}
+
+Select all of the subsets upon which $f$ is increasing.
+
+
+\begin{selectAll}
+\choice {$(-5,0)$}
+\choice [correct]{$(-2,0)$}
+\choice [correct]{$(-2,0) \cup (1,5)$}
+\choice [correct]{$(1,5)$}
+\choice {$(1,5) \cup (5,8)$}
+\choice [correct]{$(5,8)$}
+\end{selectAll}
+\end{question}
+
+
+
+
+
+\end{example}
+The definition of increasing never mentions breaks in the graph. \\
+
+There is a gap in $(-2,0) \cup (1,5)$.  However, for the domain numbers in this set, the associated function values follow the definition of increasing.   
+
+The set $(1,8)$ is another story.
+
+
+On $(1,8)$, we have 
+
+\begin{itemize}
+\item $4 \in (1,8)$  and  $6 \in (1,8)$  with $4 \leq 6$ \\
+
+\item however, $f(4) > f(6)$
+\end{itemize}
+
+
+The function is not increasing on the set $(1,8)$, even though it is increasing on $(1,5)$ and $[5,8)$ separately. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing}
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Decreasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{decreasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \geq f(b)$.
+\end{center}
+
+\end{definition}
+
+
+
+
+\begin{idea}
+Decreasing means the domain and range change oppositely: one gets greater and the other gets lesser.
+\end{idea}
+
+
+\begin{observation}
+Visually, decreasing looks like the points of the graph of $f$ are going downhill to the right.
+\end{observation}
+
+\begin{observation}
+Visually, decreasing looks like the points of the graph of $f$ are going uphill to the left.
+\end{observation}
+
+
+
+
+
+
+
+
+\begin{example}
+
+Below is the graph of $y=w(t)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=w(t)$},
+            grid = both, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-7:-2)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:6)] ({x},{-0.5*x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(6:8)] ({x},{-2*x+7});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-7,6) (-2,1) (6,-4)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-2,0) (6,-5) (8,-9)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{pr7lf81kkh}{400}{300}
+\end{center}
+
+
+
+\begin{question}
+
+Select all of the subsets upon which $f$ is decreasing.
+
+
+\begin{selectAll}
+\choice [correct]{$(-7,-2)$}
+\choice [correct]{$(-2,6)$}
+\choice [correct]{$[-2,6)$}
+\choice [correct]{$(6,8)$}
+\choice [correct]{$[6,8]$}
+\choice [correct]{$(-7,6)$}
+\choice [correct]{$(-2,8)$}
+\end{selectAll}
+\end{question}
+
+
+
+
+
+\end{example}
+
+
+
+
+\begin{remark}
+  \begin{itemize}
+    \item If a function is increasing on its whole domain, then we just say the function is \textbf{increasing}.
+    \item If a function is decreasing on its whole domain, then we just say the function is \textbf{decreasing}.
+  \end{itemize}
+\end{remark}
+
+
+
+
+This story is a bit misleading.  Our story involved $\leq$.  Technically, the equal sign allows the function to stay steady or constant. \\
+
+An increasing function could increase in value or stay the same.  The points could go uphill to the right or stay at the same height. \\
+
+For this reason, we have the word \textbf{strictly}.
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Strictly Increasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{strictly increasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a < b$ then $f(a) < f(b)$.
+\end{center}
+
+\end{definition}
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Strictly Decreasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{strictly decreasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a < b$ then $f(a) > f(b)$.
+\end{center}
+
+\end{definition}
+
+
+
+
+Strictly increasing or decreasing functions cannot keep the same value.  They must change as the domain changes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Graphs]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionGraphs/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}

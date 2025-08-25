@@ -1,0 +1,515 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Function Features}
+
+
+\begin{document}
+
+\begin{abstract}
+extreme values
+\end{abstract}
+\maketitle
+
+
+
+
+
+Functions are packages containing three sets: domain, codomain, and pairs.  The pairs connect the domain values to codomain values and it is this relationship we want to investigate.   \\
+
+
+For us, the codomain is often $\mathbb{R}$ and so we often ignore this until it becomes important.  (There are many reasons for it to become important).  Thus, we often think of our real-valued functions as three sets: domain, range, and pairs. \\
+
+
+We would like to know how the range values are affected by the domain values. \\
+
+
+\begin{itemize}
+\item We are interested in the function values - the range values.  But they are controlled by the domain values. \\
+\item We ask questions about the function values, but the answers are in the domain.
+\end{itemize}
+
+
+
+
+\begin{idea}
+
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Where}} is the maximum value of the function? 
+
+Translation: Which \textbf{\textcolor{purple!85!blue}{domain}} value results in the maximum value of the function? \\
+
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Where}} is the minimum value of the function? 
+
+Translation: Which \textbf{\textcolor{purple!85!blue}{domain}} value results in the minimum value of the function? \\
+
+
+\end{idea}
+
+
+
+
+
+
+
+
+A graph provides a global view of all of the pairs, which reveals many of the patterns, features, and characteristics we seek.   
+
+However, we must separate the graph from the function.  The graph helps us answer the questions, but the graph doesn't hold the answers.  The answers are in the domain and range.  The answers are not the points in the graph.  The answers are the numbers in the domain and range.
+
+
+
+\begin{center}
+
+\textbf{\textcolor{blue!55!black}{The answers are not the points in the graph.}} \\
+
+\textbf{\textcolor{blue!55!black}{The answers are the numbers in the domain and range.}}
+
+\end{center}
+
+
+
+
+
+
+\begin{explanation} \textbf{Video: Two Types of Questions}
+
+[ Click on the arrow to the right to expand the video. ]
+\begin{expandable} 
+
+\begin{center}
+\youtube{nMK4bo1Ad8g}
+\end{center}
+
+\end{expandable}
+\end{explanation}
+
+
+
+
+
+
+
+
+The graph displays patterns in its points.  These patterns help us analyze the function which has values in the range connected to numbers in the domain.
+
+
+
+
+\subsection*{Maximum}
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Maximum}} 
+
+
+Let $f$ be a function defined on the domain $D$.
+
+Then $M$ is the \textbf{maximum value} of $f$ on $D$ if    
+
+
+\begin{itemize}
+\item There exists $d \in D$, such that $f(d) = M$.   i.e., $M$ has to be a function value \\
+
+\item $f(d) \leq M$ for all $d \in D$. i.e., all function values are less than or equal to $M$. 
+
+\end{itemize}
+
+
+If there is no such $M$, then $f$ has no maximum value.
+
+\end{definition}
+
+
+
+\begin{observation}
+The maximum value is visually encoded in the highest point on the graph of the function.  The second coordinate is the maximum value and the first coordinate is the domain number where the maximum occurs.
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Below is the graph of $y=f(x)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$},
+            grid = both, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{(x+5)*(1-x)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-2) (8,0)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{dsxpdq3ooo}{400}{300}
+\end{center}
+
+
+
+
+\begin{question}
+
+The highest point on the graph of $f$ is
+
+
+\begin{multipleChoice}
+\choice {$(-5,0)$}
+\choice [correct]{$(-2,9)$}
+\choice {$(0,5)$}
+\choice {$(-1,-2)$}
+\choice {$(5,-6)$}
+\choice {$(8,0)$}
+\end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+The maximum value of $f$ is $\answer{9}$, which occurs at $\answer{-2}$.
+\end{question}
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Below is the graph of $y=g(t)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+            grid = both, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-6,5)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(5,-6) (8,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{enrjrmglxn}{400}{300}
+\end{center}
+
+
+
+
+
+There is no highest point on the graph.  Therefore, $g$ has no maximum value.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Minimum}
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Minimum}} 
+
+
+Let $f$ be a function defined on the domain $D$.
+
+Then $M$ is the \textbf{minimum value} of $f$ on $D$ if    
+
+
+\begin{itemize}
+\item There exists $d \in D$, such that $f(d) = M$.   i.e., $M$ has to be a function value \\
+
+\item $f(d) \geq M$ for all $d \in D$. i.e., all function values are greater than or equal to $M$. 
+
+\end{itemize}
+
+
+If there is no such $M$, then $f$ has no minimum value.
+
+\end{definition}
+
+
+
+\begin{observation}
+The minimum value is visually encoded in the lowest point on the graph of the function.  The second coordinate is the minimum value and the first coordinate is the domain number where the minimum occurs.
+\end{observation}
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Below is the graph of $y=f(x)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$},
+            grid = both, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{(x+5)*(1-x)});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,5) (1,-2) (8,0)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0) (5,-6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{dsxpdq3ooo}{400}{300}
+\end{center}
+
+
+
+
+
+\begin{question}
+
+The lowest point on the graph of $f$ is
+
+
+\begin{multipleChoice}
+\choice {$(-5,0)$}
+\choice {$(-2,9)$}
+\choice {$(0,5)$}
+\choice {$(-1,-2)$}
+\choice [correct]{$(5,-6)$}
+\choice {$(8,0)$}
+\end{multipleChoice}
+\end{question}
+
+
+\begin{question}
+The minimum value of $f$ is $\answer{-6}$, which occurs at $\answer{5}$.
+\end{question}
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Below is the graph of $y=H(k)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=H(k)$},
+            grid = both, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:5)] ({x},{-x-1});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{2*x-16});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(-6,5) (5,-6)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(8,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{adhfbavgxd}{400}{300}
+\end{center}
+
+
+
+
+There is no lowest point on the graph.  Therefore, $H$ has no minimum value.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Graphs]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functionGraphs/examples/exampleList}
+
+\end{center}
+
+
+
+\end{document}

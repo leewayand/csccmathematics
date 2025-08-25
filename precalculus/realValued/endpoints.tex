@@ -1,0 +1,574 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Endpoints}
+
+\begin{document}
+
+\begin{abstract}
+dots
+\end{abstract}
+\maketitle
+
+
+
+We use square brackets and parentheses for both written algebaic notation and graphical notation.  \\
+
+
+We have a very popular alternative for the graphical notation. \\
+
+
+\begin{itemize}
+    \item solid or closed dots are often used in place of square brackets to show a number is included in an interval.
+    \item hollow or open dots are often used in place of parentheses to show a number is not included in an interval.
+\end{itemize}
+
+
+
+\begin{example}
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$[$};
+            \node at (axis cs:7,0) [penColor2] {$]$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$[$};
+            \node at (axis cs:7,0) [penColor2] {$)$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2, fill=white,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$($};
+            \node at (axis cs:7,0) [penColor2] {$]$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,fill=white, only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$($};
+            \node at (axis cs:7,0) [penColor2] {$)$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+\[ A = [-4, -2] \cup \{ 2 \} \cup (3, 6] \]
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-4,-2,2,4, 6},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:-2)] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(3:6)] ({x},{0});
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-2,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(6,0)};
+
+
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+
+
+
+\begin{question}
+Select all valid statements.
+    \begin{selectAll}
+    \choice [correct] {$A$ is bounded from below}
+    \choice [correct] {$A$ is bounded from above}
+    \choice [correct] {$A$ is bounded}
+    \choice {$A$ is unbounded from below}
+    \choice {$A$ is unbounded from above}
+    \choice {$A$ is unbounded}
+    \end{selectAll}
+\end{question}
+
+
+
+
+\end{example}
+
+
+
+
+\begin{example}
+
+\[ B = (-\infty, -1]  \cup (4, 8) \]
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-1, 4, 8},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:-1),<-] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(4:8)] ({x},{0});
+          	%\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-1,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(8,0)};
+
+
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+
+
+
+
+
+
+\begin{question}
+Select all valid statements.
+    \begin{selectAll}
+    \choice {$B$ is bounded from below}
+    \choice [correct] {$B$ is bounded from above}
+    \choice {$B$ is bounded}
+    \choice [correct] {$B$ is unbounded from below}
+    \choice {$B$ is unbounded from above}
+    \choice {$B$ is unbounded}
+    \end{selectAll}
+\end{question}
+
+
+
+
+
+\end{example}
+
+
+
+
+\begin{example}
+
+\[ C = (-7, -4] \cup \{ -1, 1 \} \cup (3, \infty) \]
+
+	\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-7,-4,-1,1,3},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(3:8),->] ({x},{0});
+			\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:-4)] ({x},{0});
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(-1,0)};
+          	\addplot [color=penColor2,only marks,mark=*] coordinates{(1,0)};
+
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+          	\addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(-7,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0)};
+
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+
+
+
+
+\begin{question}
+Select all valid statements.
+    \begin{selectAll}
+    \choice [correct] {$C$ is bounded from below}
+    \choice {$C$ is bounded from above}
+    \choice {$C$ is bounded}
+    \choice {$C$ is unbounded from below}
+    \choice [correct] {$C$ is unbounded from above}
+    \choice {$C$ is unbounded}
+    \end{selectAll}
+\end{question}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Real-Valued Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/realValued/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+\end{document}

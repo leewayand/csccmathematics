@@ -1,0 +1,133 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}  Behavior  
+
+
+
+
+
+
+
+
+
+
+
+
+Below is the graph of $y=B(x)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:0)] ({x},{-(x+5)*(x-1)-5});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(1:5)] ({x},{2*x-4});
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:8)] ({x},{-2*x+12});
+
+          \addplot [color=penColor,fill=white,only marks,mark=*] coordinates{(0,0) (1,-2) (5, 2) (5,6) (8,-4)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-5,-5) (5,-4)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Evaluate the following:
+
+\begin{itemize}
+\item $B(-2) = \answer[tolerance=0.1]{4}$ \\
+\item $B(-5) = \answer[tolerance=0.1]{-5}$ \\
+\item $B(5) = \answer[tolerance=0.1]{-4}$ \\
+\item $B(6) = \answer[tolerance=0.1]{0}$ \\
+\end{itemize}
+
+
+
+
+\begin{question} True or False:
+
+
+$B(-2.5) > B(7)$
+
+\begin{multipleChoice}
+\choice [correct]{True}
+\choice {False}
+\end{multipleChoice}
+\end{question} 
+
+
+
+
+
+
+\begin{question} True or False:
+
+
+$B(-1) > B(5)$
+
+\begin{multipleChoice}
+\choice [correct]{True}
+\choice {False}
+\end{multipleChoice}
+\end{question} 
+
+
+
+
+
+
+
+
+\begin{question} True or False:
+
+
+$B(6) = B(-4)$
+
+\begin{multipleChoice}
+\choice [correct]{True}
+\choice {False}
+\end{multipleChoice}
+\end{question} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
