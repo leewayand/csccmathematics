@@ -1,0 +1,787 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Change}
+
+\begin{document}
+
+\begin{abstract}
+increasing and decreasing
+\end{abstract}
+\maketitle
+
+
+
+We use functions to compare information(measurements). One aspect we are interest in is how one measurement changes compared to changes in the other. 
+
+
+\begin{itemize}
+\item When the supply of pineapples goes up does the price go down?
+\item When medicine dosage goes up does the pain go down?
+\item When the speed limit goes up does the number of accidents go up?
+\end{itemize}
+
+
+Our words for this comparison are \textbf{\textcolor{purple!85!blue}{increase}} and \textbf{\textcolor{purple!85!blue}{decrease}}.
+
+
+\begin{itemize}
+\item If the price of pineapples goes down when the supply of pineapples goes up, then we say the price is decreasing with respect to the supply. \\
+\item If the pain goes down when the dosage goes up, then we say that pain decreases with respect to dosage. \\
+\item If the number of accidents goes up when the speed limit goes up, then we say that accidents increases with respect to speed limit.
+\end{itemize}
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Increase on a Set}} \\
+
+The function $f$ increases on the set $S$, if for EVERY pair of numbers $a < b \in S$, we have  $f(a) < f(b)$. \\
+
+When the domain values increase, the function values also increase.  When the domain values decrease, the function values also decrease.  \\
+
+
+\textbf{\textcolor{purple!85!blue}{The domain and range change in the same way.}}
+
+
+
+\end{definition}
+
+
+\textbf{Note:} You cannot test the endpoints of an interval to show a function is increasing.  It has to increase for EVERY pair of numbers in the interval.
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Decrease on a Set}} \\
+
+The function $f$ decreases on the set $S$, if for EVERY pair of numbers such that $a < b \in S$, we have  $f(a) > f(b)$. \\
+
+When the domain values increase, the function values decrease. When the domain values decrease, the function values increase.  \\
+
+
+
+\textbf{\textcolor{purple!85!blue}{The domain and range change oppositely.}}
+
+
+
+\end{definition}
+
+
+
+
+
+
+\textbf{Note:} You cannot test the endpoints of an interval to show a function is decreasing.  It has to decrease for EVERY pair of numbers in the interval. \\
+
+
+
+
+
+
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!70!black}{Language}}
+
+The words \textbf{increase} and \textbf{decrease} are used in two different ways. \\
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ A List of Numbers:}} The domain and range of a function are essentially a list of numbers. When we present a list of numbers, we line them up one after the other and that gives them a natural ordering.  Each number sits at a position before or after other numbers. \\
+
+As we step through the positions, the values of the numbers get greater, or get lesser, or stay the same. \\ 
+
+\begin{itemize}
+    \item If the value of the numbers get greater as we step through the positions of the numbers, then we say the list (sequence) of numbers \textbf{increases}.  
+    \item If the value of the numbers get lesser as we step through the positions of the numbers, then we say the list (sequence) of numbers \textbf{decreases}. 
+\end{itemize}
+
+
+For lists of numbers (sequences), we use the words increase and decrease as a comparison between the change in the values of the numbers compared to the change in their position in the list. \\
+
+
+We can extend this idea to a comparison of function values and domain numbers, essentially two lists. \\
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ A Function:}} 
+
+A function is also kind of like a list of numbers with positions.  The domain numbers play the role of positions and the function values play the role of list numbers sitting in those positions. \\
+
+We compare the change in the function numbers with the change in the domain numbers. \\
+
+\begin{itemize}
+    \item If the function values get greater as we step through the domain numbers, then we say the function \textbf{increases}.  
+    \item If the function values get lesser as we step through the domain numbers, then we say the function \textbf{decreases}.  
+\end{itemize}
+
+We have a tendency to read left to right with graphs, but that is only half the story.  Everything can be read right to left. \\
+
+
+\begin{itemize}
+    \item If the function values get greater as we step backwards through the domain numbers, then we say the function \textbf{decreases}.  
+    \item If the function values get lesser as we step backwards through the domain numbers, then we say the function \textbf{increases}.  
+\end{itemize}
+
+
+This tells us that increasing and decreasing are two-way comparisons.
+
+\begin{itemize}
+    \item \textbf{\textcolor{purple!85!blue}{If the function values and domain numbers change in the same way (both get greater or lesser), then we say the function \textbf{increases}}}.  
+    \item \textbf{\textcolor{purple!85!blue}{If the function values and domain numbers change in opposite ways (one greater and one lesser), then we say the function \textbf{decreases}}}. 
+\end{itemize}
+
+
+
+
+
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Graphically, increasing appears as dots to the right being higher than dots to the left.  Decreasing appears as dots on the curve being lower to the right. \\
+
+
+Or, the reverse....
+
+
+Increasing also appears as dots to the left being lower than dots to the right.  \\
+
+Decreasing also appears as dots on the curve being higher to the left. \\
+
+
+
+
+
+
+
+
+\begin{example} Increasing and Decreasing \\
+
+Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$k$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,-1.5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,0.5)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,2)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{itemize}
+\item $g$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing} \choice{neither}} on the interval $(-8,-3)$.  
+\item $g$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing} \choice{neither}} on the interval $[-1,3)$. 
+\item $g$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing} \choice{neither}} on the interval $[4, 8)$. 
+\end{itemize}
+\end{example}
+
+
+\begin{question}
+In the example above, $g$ is decreasing on $(-8,-3)$.  Is $g$ decreasing on any and every subinterval of $(-8,-3)$. 
+\begin{multipleChoice}
+\choice [correct]{Yes}
+\choice {No}
+\end{multipleChoice}
+\end{question}
+
+
+
+
+
+
+
+
+\begin{example} Decreasing \\
+
+Let $m(t)$ be a function.  The graph of $y = m(t)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3)] {-x};
+        %\addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:8)] {-x+3};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,-1.5)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,0.5)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,6)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-5)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{itemize}
+\item $m$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing} \choice{neither}} on the interval $(-8,-3)$.  
+\item $m$ is \wordChoice{\choice{increasing} \choice[correct]{decreasing} \choice{neither}} on the interval $[-3, 8)$. 
+\end{itemize}
+
+
+
+However, $m$ is not decreasing on the interval $(-8, 8)$.  To show that a function is not decreasing on an interval, we merely have to give ONE \textbf{counterexample}. That is we need to come up with ONE pair of numbers $a < b$ in the interval where $f(a) \ngtr f(b)$.  Let's select $a = -4$ and $b = -3$.
+
+\[ -4 < -3    \text{ but, }   f(-4) = 4  \ngtr f(-3) = 6 \]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{idea} \textbf{\textcolor{green!50!black}{Counterexample}} \\
+
+A \textbf{counterexample} is one example where all of the conditions of a statement are met, yet the conclusion is not true.  \\
+
+One single counterexample shows a statement to be false.
+
+
+\end{idea}
+
+
+
+
+
+\begin{example} Decreasing \\
+
+Let $N(z)$ be a function.  The graph of $y = N(z)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$z$, ylabel=$y$,
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3), <-] {(x+7)*(x+2)};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:2)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(2:8)] {-0.25*x-4.5};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,-4)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,5)};
+       
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,-8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6.5)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{question}
+Select all of the correct statements
+\begin{selectAll}
+    \choice [correct]{$N$ is decreasing on the interval $(-3,2)$}
+    \choice [correct]{$N$ is decreasing on the interval $(2,8)$}
+    \choice [correct]{$N$ is decreasing on the interval $(-3,8)$}
+    \choice [correct]{$N$ is decreasing on the interval $[-3,8)$}
+    \choice [correct]{$N$ is decreasing on the interval $(-3,8]$}
+    \choice [correct]{$N$ is decreasing on the interval $[-3,8]$}
+\end{selectAll}
+
+
+
+\end{question}
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Measuring Rates}
+
+Comparing how the connected values in the domain and range change is called a \textbf{rate}. Our symbol for a change in an amount is a Greek uppercase delta, $\Delta$.  And, we use fractions to quantify the comparison of changes.
+
+\[ rate = \frac{\Delta \, pineapples}{\Delta \, price}\]
+
+
+
+
+\begin{itemize}
+\item If the changes in pineapples and price are both positive, then this rate is positive.
+\item If the changes in pineapples and price are both negative, then this rate is again positive.
+\item If the changes in pineapples and price are of different sign, one increases while the other decreases, then this rate is negative.
+\end{itemize}
+
+
+Using rates, we can compare and measure changes in function values over a domain interval.
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Rate of Change}} \\
+The \textbf{rate-of-change} of a function $f$ across $[a, b]$ in the domain is given by
+
+\[  \frac{f(b) - f(a)}{b - a}  \]
+
+
+
+This is also referred to as the average rate of change across the interval.
+
+\end{definition}
+
+The rate-of-change measures how the function values change relative to changes in the domain.
+
+
+
+
+
+
+
+
+
+\begin{example} Rates \\
+
+Let $V(x)$ be a function.  The graph of $y = V(x)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            	domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            	axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+            	every axis y label/.style={at=(current axis.above origin),anchor=south},
+            	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            	axis on top,
+          		]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3), <-] {(x+7)*(x+2)};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:2)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(2:8)] {-0.25*x-4.5};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,-4)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,5)};
+       
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,-8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6.5)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+From the graph, we can estimate that over the interval $[-7, -5]$, $V$ had a rate-of-change of $\frac{-6 - 0}{-5 - (-7)} = \frac{-6}{2} = -3$.
+
+
+From the graph, we can estimate that over the interval $[1, 8]$, $V$ had a rate-of-change of $\frac{-8 - (-1)}{8 - 1} = \frac{-7}{7} = -1$.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+All of this might sound familiar. You have probably seen this when working with slopes of lines, $\frac{rise}{run}$.  The \textit{rise} is the vertical change (change in the value of the function). The \textit{run} is the horizontal change (change in the domain).
+
+$\blacktriangleright$ Rate-of-change is a function idea that we will connect up to the geometric idea of slope.
+
+
+
+
+
+The rate of change over an interval is an overall measurement.  It compares the changes occuring over the whole interval. It compares final values to initial values. 
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} 
+
+
+
+Let $M(t)$ be a function.  The graph of $y = M(t)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3), <-] {(x+8)*(x+2)+2};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:2)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(2:8)] {0.25*x + 1};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,-3)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,5)};
+       
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,1.5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,-2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,-1)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,3)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{question}
+The rate of change of $M$ over the interval $[-5,5]$ is
+    \begin{multipleChoice}
+        \choice [correct]{positive}
+        \choice {negative}
+    \end{multipleChoice}
+\end{question}
+
+
+
+\begin{question}
+The rate of change of $M$ over the interval $[-2,1]$ is
+    \begin{multipleChoice}
+        \choice {positive}
+        \choice [correct]{negative}
+    \end{multipleChoice}
+\end{question}
+
+
+\end{example}
+
+
+
+
+\begin{question}
+If the rate of change of a function is positive over the interval $[a,b]$ then the rate of change over any subinterval must also be positive.
+    \begin{multipleChoice}
+        \choice {True}
+        \choice [correct]{False}
+    \end{multipleChoice}
+\end{question}
+
+
+
+\subsection*{Constant Rate of Change}
+
+
+Linear functions are functions that can be represented with formulas of the form $L(x) = A \, x + B$. \\
+
+
+Given an interval, we can measure the change of al inear funciton over this interval. \\
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} 
+
+
+
+Let $L(x)$ be the linear function $L(x) = \frac{1}{2} x - 4$.  The graph of $y = L(x)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:8), <->] {0.5*x - 4};
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The rate of change of $L$ over the interval $[-6, 0]$ is
+
+\[
+\frac{L(0) - L(-6)}{0 - (-6)} = \frac{-4 - (-7)}{6} = \frac{3}{6} = \frac{1}{2}
+\]
+
+
+
+
+
+The rate of change of $L$ over the interval $[-4, 6]$ is
+
+\[
+\frac{L(6) - L(-4)}{6 - (-4)} = \frac{-1 - (-6)}{10} = \frac{5}{10} = \frac{1}{2}
+\]
+
+
+
+
+
+
+The rate of change of $L$ over the interval $[-2, 2]$ is
+
+\[
+\frac{L(2) - L(-2)}{2 - (-2)} = \frac{-3 - (-5)}{4} = \frac{2}{4} = \frac{1}{2}
+\]
+
+
+
+
+The rate of change of $L$ over the interval $[8, 10]$ is
+
+\[
+\frac{L(10) - L(8)}{10 - 8} = \frac{1 - 0}{2} = \frac{1}{2}
+\]
+
+
+
+
+\end{example}
+
+
+
+Linear functions have a special property that other function do not have.  No matter what interval you select, the rate of change over that interval is always the same. \\
+
+
+
+Let $L$ be the linear function in the example above, $L(x) = \frac{1}{2} x - 4$. 
+
+Let $a$ and $b$ be any distinct real numbers. \\
+
+The rate of change of $L$ over the interval $[a, b]$ is
+
+
+\[
+\frac{L(b) - L(a)}{b - a} = \frac{\left( \frac{b}{2} - 4 \right) - \left( \frac{a}{2} - 4 \right)}{b-a} 
+= \frac{\left( \frac{b - a}{2} \right)}{b-a} = \frac{1}{2}
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Linear functions have a constant rate of change, which measures the constant slope of the corresponding line. \\
+
+
+
+We will use this fact to help us understand how function values change.
+
+
+
+\textbf{\textcolor{red!70!black}{A Peek Ahead...}}
+
+
+
+Later in Calculus, we will more closely examine sequences.  We will describe and represent them as functions.  Their domains will be the natural numbers, rather than the real numbers. \\
+
+
+That will bring all of our versions of increasing and decreasing together under one umbrella.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Visual Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/visualBehavior/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+\end{document}
