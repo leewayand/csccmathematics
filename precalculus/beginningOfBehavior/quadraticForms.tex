@@ -1153,6 +1153,350 @@ which is what we got through the procedure of completing the square.
 
 
 
+\subsection*{Factored Form}
+
+
+
+
+
+
+
+
+
+
+We have seen that there are at most two real solutions to $a \, t^2 + b \, t + c = 0$, with $a \ne 0$. 
+
+Let's look at this from a function viewpoint.  The quadratic function  $Q(t) = a \, t^2 + b \, t + c$ has at most two real zeros.  
+
+The quadratic formula gives explicit expressions for these roots.
+
+
+\[   \frac{-b + \sqrt{b^2 - 4 a c}}{2a}     \text{ and }    \frac{-b - \sqrt{b^2 - 4 a c}}{2a}   \]
+
+
+
+
+
+$\blacktriangleright$  Are there other quadratic equations, besides $a \, t^2 + b \, t + c = 0$, that have these two solutions?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Perhaps, there are other quadratic functions, which have these two zeros. Let's create a quadratic function from these two zeros.
+
+
+
+\[ f(t) =  \left(t - \frac{-b + \sqrt{b^2 - 4 a c}}{2a}\right)   \left(t -  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}\right)   \]
+
+
+If we multiply this out, we get
+
+
+
+\[ f(t) =   t^2 \, - \, \frac{-b + \sqrt{b^2 - 4 a c}}{2a} t \, - \, \frac{-b - \sqrt{b^2 - 4 a c}}{2a}  t \, + \, \left(\frac{-b + \sqrt{b^2 - 4 a c}}{2a}\right) \left(\frac{-b - \sqrt{b^2 - 4 a c}}{2a}\right) \]
+
+
+\[ f(t) = t^2  \, - \, 2 \cdot \frac{-b}{2a} + \left(    \frac{b^2 - (b^2 - 4 a c)}{4 a^2}     \right)        \]
+
+
+\[ f(t) = t^2  \, + \frac{b}{a} + \left(    \frac{4 a c}{4 a^2}     \right)        \]
+
+\[ f(t) = t^2  \, +  \frac{b}{a} + \left(    \frac{c}{a}     \right)        \]
+
+
+This quadratic function has the same two zeros as $Q(t)$.  
+
+
+\textbf{Note:} If we multiply this by $a$, we get 
+
+
+\[ a \, f(t) = a \, t^2 + b \, t + c \]
+
+which is $Q(t)$.
+
+
+$\blacktriangleright$ If two quadratics have the same two roots, then they must be multiples of each other.
+
+
+
+
+
+
+We have discovered a new expression or formula or form for our quadratic functions.
+
+
+
+
+
+\[ f(t) =  \left(t - \frac{-b + \sqrt{b^2 - 4 a c}}{2a}\right)   \left(t -  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}\right)   \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The real zeros can be obtained via the quadratic formula - provided the discrimanant is positve.  If the discriminant is $0$, then $r_1 = r_2$ and we get a square.  If the discriminant is negative, then $Q(t)$ doesn't factor with real numbers.  
+
+
+The process of writing the function as a product is called \textbf{factoring}. $(t - r_1)$  and $(t - r_2)$ are the \textbf{factors}.
+
+
+
+\begin{example} \textit{Two Real Solutions} 
+
+Factor $Q(t) = 4 \, t^2 - 4 \, t - 8$ 
+
+\begin{explanation}
+
+The leading coefficient is $a=4$ and the quadratic formula gives us $2$ and $-1$ as zeros.  
+
+That gives us a \textbf{factorization} of $Q(t)$:
+
+
+
+\[    Q(t) = 4 \, t^2 - 4 \, t - 8 =  4 (t-2)(t-(-1))    = 4 (t-2)(t+1)         \]
+
+\end{explanation}
+
+\end{example}
+
+
+
+The quadratic formula always works.  But, many times it is slow with lots of steps and reducing.  Sometimes it is just easier to guess the factors.  ``Easier'' usually means integers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Guessing Factors}
+
+
+Let's begin with a quadratic function written as a sum: $g(x) = a \, x^2 + b \, x + c$, a.k.a \textbf{standard form}.  
+
+
+\textbf{\textcolor{blue!75!black}{Step 1:}} If there are any common numeric factors among the three coefficients then factor them out.
+
+
+\textbf{\textcolor{blue!75!black}{Step 2:}} We are looking for a factorization $g(x) = a \, x^2 + b \, x + c = (A \, x + B)(C \, x + D)$.
+
+for this to happen, we need
+
+\begin{itemize}
+\item $a = A \cdot C $
+\item $b = A\cdot D + B \cdot C$
+\item $c = B \cdot D$
+\end{itemize}
+
+Therefore, look for pairs of factors of $a$ and pairs of factors of $c$.
+
+
+
+
+
+
+\textbf{\textcolor{blue!75!black}{Step 3:}} Step through your pairs of factors and look for $b = A \cdot D + B \cdot C$.
+
+
+
+
+
+
+
+
+
+
+\begin{example} \textit{Factoring}
+
+Factor $k(x) = 2 \, x^2 - 5 \, x - 12$.
+
+
+\begin{explanation}
+
+First, the coefficients, $2$, $-5$, and $-21$, have no common factors.
+
+
+Second, $2$ is a prime number, therefore, it's factors are $2 \cdot 1$ or $-2 \cdot -1$.
+
+From this, we know there are only two possibilities. The factorization looks like $(2 x \, + \, ?) (x \, + \, ?)$ or $(-2 x \, + \, ?) (-x \, + \, ?)$.
+
+
+
+
+
+
+$-12$ factors as 
+\begin{itemize}
+\item $-12 \cdot \answer{1}$
+\item $12 \cdot \answer{-1}$
+\item $-6 \cdot \answer{2}$
+\item $6 \cdot \answer{-2}$
+\item $-4 \cdot \answer{3}$
+\item $4 \cdot \answer{-3}$  
+\end{itemize}
+
+
+
+Let's start stepping through our list.
+
+The middle term is $-5 \, x$.  That's our goal. It seems like it might be difficult to get $5$ from $12$, let's skip $12$ in our list and begin stepping through our list with $-6$ and $2$.
+
+\begin{itemize}
+
+\item $-12 = -6 \cdot 2$ gives $(2 x + (-6)) (x + 2) = \answer{2 x^2 - 2 x - 12}$
+\item $-12 = 6 \cdot -2$ gives $(2 x + 6) (x - 2) = \answer{2 x^2 + 2 x -12}$
+\item $-12 = -3 \cdot 4$ gives $(2 x + (-3)) (x + 4) = \answer{2 x^2 + 5 x - 12}$
+\item $-12 = 3 \cdot -4$ gives $(2 x + 3) (x + (-4)) = \answer{2 x^2 - 5 x -12}$
+\end{itemize}
+
+$2 x^2 - 5 x - 12$ factors as $(2 x + 3) (x + (-4)) = (2 x + 3)(x - 4)$
+
+
+\end{explanation}
+\end{example}
+
+As you gain more experience, this process becomes a mental process, which means it is fast. \\
+
+
+Always give factoring a try, before moving onto the quadratic formula. \\
+
+
+
+
+
+
+\begin{example} \textit{Factoring}
+
+Factor $p(y) = 6 \, y^2 - 16 \, y - 22$.
+
+\begin{explanation}
+
+First, the coefficients have a common factor.  Factor out $2$ to get $p(y) = 2 \left( \answer{3 y^2 - 8 y - 11} \right)$.
+
+
+Now factor $3 \, y^2 - 8 \, y - 11$.
+
+
+
+$3$ is a prime number, therefore, it's factors are $3 \cdot 1$ or $-3 \cdot -1$. However, $-3 \cdot -1$ is actually redundant.  If we picked $-3 \cdot -1$, then we could just factor out $-1$ from both and get back to $3 \cdot 1$.
+
+
+$3 \, y^2 - 8 \, y - 11 = (3y \, \pm \, ?) (y \, \pm \, ?) $
+
+
+$11$ is also a prime number. We only need to think about $11$ and $1$. And, since we need $-11$, then we know to pick opposite signs for $11$ and $1$.
+
+
+
+\begin{itemize}
+\item $(3y + 11) (y - 1) = \answer{3 y^2 + 8 y - 11}$
+\end{itemize}
+
+Everything is correct except the sign of $-8$. That tells us we are almost correct. We just need to reverse the signs.
+
+
+\begin{itemize}
+\item $(3y - 11) (y + 1) = 3 \, y^2 - 8 \, y - 11$
+\end{itemize}
+
+
+
+
+\end{explanation}
+\end{example}
+
+
+``Easier'' usually means integers.  
+
+All of the factorizations above involved integers, because we are fast with those. \\
+
+
+
+If the roots of the quadratic involve square roots, then we probably are not guessing them.  In any case, the quadratic formula will find all of the roots.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
