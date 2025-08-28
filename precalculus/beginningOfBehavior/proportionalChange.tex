@@ -13,6 +13,21 @@ linear
 
 
 
+Two related measurements change proportionally when a change in one measurement is a constant multiple of the change in another measurement. \\
+
+\begin{warning}
+
+The values of the measurements are not contant multiples of each other. \\
+
+
+The \textbf{\textcolor{red!70!black}{change}} in the measurments are constant multiples of each other.
+
+\end{warning}
+
+
+The growth of the two measurements has a constant rate, a conversion factor. \\
+
+
 
 There are many relationships between measurements that exhibit proportional changes.  
 
@@ -151,7 +166,7 @@ A \textbf{rate} is a ratio between two quantities with different units.   \\
 
 
 
-We usually represent rates with factions, although we also use phrases involving ``per'' or equalities.
+We usually represent rates with fractions, although we also use phrases involving ``per'' or equalities.
 
 \end{definition}
 
@@ -260,6 +275,44 @@ Two measurements share a \textbf{constant rate of change} of $\tfrac{A}{B}$ if w
 
 
 
+\begin{idea}
+
+The growth rate is a multiplier.
+
+
+Example: Whenever measurement \#1 changes by $A$, then measurement \#2 changes by $B$.  Then $\frac{A}{B}$ is a multiplier.  
+
+\[
+B \cdot \frac{A}{B} = B
+\]
+
+
+The rate converts change in one measurement to the ``equal'' change in the other measurement.
+
+\end{idea}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Linear Functions}
+
 
 
 
@@ -274,7 +327,7 @@ Linear functions are those functions where the domain and range share a constant
 \end{definition}
 
 
-Each linear function has its own constant rate of change. \\
+Each linear function has its own constant rate of change (growth rate). \\
 
 
 Suppose $L$ is a linear function.  Let $a$ and $b$ be numbers in the domain of $L$.  Then $L(a)$ and $L(b)$ are the corresponding range values.
@@ -450,61 +503,6 @@ Which is the correct statement?
 
 
 
-\section*{Linear Functions}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$\blacktriangleright$  Linear functions are those functions where the domain and range share a constant rate of change.  
-
-
-
-
-
-Each linear function has its own constant rate of change. \\
-
-
-Suppose $L$ is a linear function.  Let $a$ and $b$ be numbers in the domain of $L$.  Then $L(a)$ and $L(b)$ are the corresponding range values.
-
-Since $L$ is a linear function, we know that $\frac{L(b) - L(a)}{b - a} = constant$.  And, this works for \textbf{\textcolor{purple!85!blue}{ANY}} two domain numbers.
-
-Otherwise, it is not a linear function.
-
-
-
-
-
-
-
-Somewhere in history, $m$ became a popular choice to represent the constant rate of change of a linear function.
-
-
-
-\[
-\frac{L(b) - L(a)}{b - a} = m
-\]
-
-
-
-
-
-No matter which two numbers you select from the domain of $L$, the rate of change always turns out to be $m$.  Each linear function has its own $m$ - its own constant rate of change.
-
-
-
 
 
 
@@ -517,7 +515,7 @@ No matter which two numbers you select from the domain of $L$, the rate of chang
 \subsection*{A Formula}  
 
 
-Let $L$ be a linear function.  That means it has is own constant rate of change.  Let's call it $m$. \\
+Let $L$ be a linear function.  That means it has is own unique constant rate of change.  Let's call it $m$. \\
 
 Let $(a, b)$ be one specific pair in $L$.\\
 
@@ -541,10 +539,10 @@ Clearing the denominator gives us the point-slope form for a line.
 
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Point-Slope Form}} 
+\begin{formula} \textbf{\textcolor{blue!55!black}{Point-Slope Form for a Line}} 
 
 
-In practice, in addition to the slope, $m$, we almost always have a point on the line that is not an intercept $(a,b)$. Describing the other points on the line is much easier with the point-slope form of a line.
+In practice, along with the slope, $m$, we almost always have a point on the line that is not an intercept $(a,b)$. Describing the other points on the line is much easier with the point-slope form of a line.
 
 
 \[  (y - b) = m (x - a) \]
@@ -651,6 +649,26 @@ A formula for $g$ is
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -784,166 +802,18 @@ Same equation.  You can use any point on the line.
 
 
 
+\subsection*{Lines vs. Linear Functions}
 
 
+When representing a linear function with a graph, we are expecting the horizontal axis to represent domain values and the vertical axis to represent function values. On the other hand, lines don't care about interpretation.\\
 
 
+Depending on how we are using the graph will change how we interpret the information.  This idea will occur many times in mathematics. Context is everything.\\
 
-
-\subsection*{Linear Equations}
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Linear Equation}} \\
-
-
-A \textbf{linear equation in $x_1$ and $x_2$} is an equation that is equivalent to 
-
-\[
-a \, x_1 + b \, x_2 + c = 0
-\]
-
-
-$x_1$ and $x_2$ are the \textbf{variables}.
-
-$a$ and $b$ are constants called \textbf{coefficients}.
-
-$c$ is called the \textbf{constant term}.
-
-\end{definition}
-
-
-
-
-
-
-
-
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Solution}} \\
-
-
-A \textbf{solution} to the linear equation  $a \, x_1 + b \, x_2 + c = 0$ is a pair of numbers that \textbf{satisfy} the equation.
-
-
-\end{definition}
-
-\begin{notation}
-
-
-We often write solution pairs as an ordered pair: $(A, B)$. \\
-
-
-One of the solution numbers is designated for $x_1$ and one is designated for $x_2$.  (That is what ordered means.) Upon substituting these numbers into the equation for $x_1$ and $x_2$, the resulting statement is a true statement, i.e. the equation is \textit{satisfied}. \\
-
-If the order is not understood, then we might write $(x_1, x_2) = (A, B)$.
-
-
-\end{notation}
-
-
-
-
-
-With the order understood, each solution pair can be interpreted as coordinates for a point on the Cartesian plane and plotted as a dot.
-
-
-
-
-\begin{example}
-
-
-
-
-
-
-Consider the linear equation  $3 t + 2 y = 12$.
-
-
-Let's select $t$ to be the first variable and $y$ the second variable.
-
-With this agreement, $(4, 0)$ is a solution to the equation.   $(4,0)$ can be viewed as a point and plotted as a dot on the Cartesian plane.
-
-
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
-                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-        
-        %\addplot [draw=penColor, very thick, smooth, domain=(-3:8),<->] {(3/2)*x-5};
-
-         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,0)};
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-
-If we plot a dot for each and every solution pair for the equation, then we obtain the graph of the equation.  
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
-                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-        
-        \addplot [draw=penColor, very thick, smooth, domain=(-2:8),<->] {(-1.5)*(x-4)};
-
-         \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,0)};
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-The graph of a linear equation is a line, which can be drawn using only two points from two solution pairs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\end{example}
 
 \textbf{\textcolor{purple!85!blue}{Geometry:}} Graphs of lines don't care which axis is ``vertical'' and which axis is ``horizontal''.  The graph is just a collection of points whose coordinates satisfy the linear equation.  \\
-\textbf{\textcolor{purple!85!blue}{Analysis:}} The situation changes once we wish to interpret one of the variables as a function of the other variable. Once we designate one of the variables as the dependent variable or the function, then its axis becomes the ``vertical'' axis.  The other axis measures the independent variable and represents the domain of the function. The domain is measured horizontally in teh graph. \\
+
+\textbf{\textcolor{purple!85!blue}{Analysis:}} The situation changes once we wish to interpret one of the variables as a function of the other variable. Once we designate one of the variables as the dependent variable or the function, then its axis becomes the ``vertical'' axis.  The other axis measures the independent variable and represents the domain of the function. The domain is measured horizontally in the graph. \\
 
 
 \textbf{Note:} This all works for all lines, except for vertical lines. All lines are graphs of linear functions, except vertical lines. \\
@@ -951,13 +821,19 @@ The graph of a linear equation is a line, which can be drawn using only two poin
 
 
 \begin{explanation}
-If we interpret the first or left variable as representing domain values and the second or right variable as representing function values, then linear equations describe linear functions.  We can solve the equation for the function variable to obtain a formula.
+When switching our thnking from geometry to functions, which variable is the function and which is the domain? \\
+
+Either interpretation is ok.  The decision rests on the context.  \\
+
+We can solve the equation for the function variable to obtain a formula.
 
 
 
-In the example above, $3 t + 2 y = 12$ can be rewritten as $y = \answer{\frac{-3}{2}} \, t + \answer{6}$.
+Consider the linear equation $3 t + 2 y = 12$ \\
 
-To emphasize that we are now thinking in terms of functions, we might write $y(t) = \tfrac{-3}{2} t + 6$.
+This equation can be rewritten as $y = \answer{\frac{-3}{2}} \, t + \answer{6}$.
+
+This emphasizes that we are now thinking in terms of functions, we might write $y(t) = \tfrac{-3}{2} t + 6$.
 
 
 
@@ -975,7 +851,9 @@ In either case, the function formula matches the ``$y = m \, x + b$'' template. 
 
 
 
+\textbf{Note:}  ``$y = m \, x + b$'' is called the $y$-intercept form.  This is a nice compact form for a line equation or linear function.  However, it just disn't that useful.  We almost never get the intercept as information.  We almost always get a random point or pair.\\
 
+It is much more helpful to use the point-slope form.
 
 
 
