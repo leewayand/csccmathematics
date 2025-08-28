@@ -1,0 +1,699 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Accumulation}
+
+\begin{document}
+
+\begin{abstract}
+adding rates
+\end{abstract}
+\maketitle
+
+
+
+
+
+Suppose you are driving a car at a constant velocity (rate of change) of 20 miles per hour. 20 miles per hour tells us how the miles are changing compared to the change in hours.  Whenever the time \textbf{\textcolor{purple!85!blue}{changes}} by $1$ hour, the distance travelled \textbf{\textcolor{purple!85!blue}{changes}} by $20$ miles.
+
+\[
+\text{rate of change} = \text{velocity} = \text{20 miles per hour} = \frac{20 \, miles}{1 \, hour} = \frac{\Delta miles}{\Delta hours}
+\]
+
+\textbf{Note:} Our symbol for ``the change in'' is the uppercase Greek letter delta, $\Delta$. \\
+
+The graph of velocity would be a horizontal line.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=0, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:8),->] {20};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,20)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+In the velocity story, we know that the car's distance changes by 20 miles every time the time changes by 1 hour.  The reverse of this rate of change story is an accumulation story.
+
+Suppose we let time run for a while, how far does the car travel?  How much distance is accumulated?
+
+
+
+\subsection*{Accumulation}
+
+
+To get the accumulated distance, we multiply the velocity by the time.
+
+\[
+Distance = Velocity \cdot Time = \frac{\Delta miles}{\Delta hours} \cdot \Delta hours = \Delta miles
+\]
+
+
+We can get a geometric interpretation of this in our velocity graph.
+
+
+
+
+In that graph, miles per hour are the vertical units and hours are the horizontal units.  We can represent $\frac{\Delta miles}{\Delta hours} \cdot \Delta hours$ as the area of the rectangle underneath the graph of velocity.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:8),->] {20};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+			\addplot [name path=A,domain=0:3,draw=none] {20};   
+			\addplot [name path=B,domain=0:3,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+			\draw[penColor,thick] (0,10) -- (0,30);
+			\draw[penColor,thick] (30,10) -- (30,30);
+
+			\node at (axis cs:1.5,10) [penColor] {$area$};
+			\node at (axis cs:3,-5) [penColor] {$t$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\[
+\text{Area } = \frac{\Delta \text{miles}}{\Delta \text{hours}} \cdot \Delta \text{hours} = \Delta \text{miles}
+\]
+
+
+The area under the graph of $v(t) = 20$ over the interval $(0, t)$ is given by $20 \, t$, which is a linear function.
+
+
+
+
+
+
+The graph of accumulated distance, $D(t) = 20 \, t$ is a line with slope $20$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:4),->] {20*x};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+There is a reverse relationship between rate of change and accumulation. \\
+
+
+$\blacktriangleright$ The value of $v(t)$ gives the rate of change of $D(t)$.
+
+
+$\blacktriangleright$ The value of $D(t)$ gives the area under the graph of $v(t)$, between $0$ and $t$.
+
+
+
+
+
+
+Of course, the constant function $v(t) = 20$ is also a linear function. Its rate of change is the constant function $0$.  We can view $v(t)$ as a function with a rate of change of $0$ or we can view it as the rate of change of some function, $D(t)$. This function, $D(t)$, is represented graphically by the area under the graph of $v(t)$.
+
+
+
+$\blacktriangleright$  We can repeat this same story with $D(t)$.  \\
+
+
+That is, we could view $D(t) = 20t$ as the rate of change of some function, $Q(t)$.  The function, $Q(t)$, would measure the area under the graph of $y = D(t)$.
+
+
+What is the area under $y = D(t) = 20 \, t$?
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:4),->] {20*x};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+			\addplot [name path=A,domain=0:3,draw=none] {20*x};   
+			\addplot [name path=B,domain=0:3,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+			\draw[penColor,thick] (0,10) -- (0,30);
+			\draw[penColor,thick] (30,10) -- (30,70);
+
+			\node at (axis cs:1.5,10) [penColor] {$area$};
+			\node at (axis cs:3,-5) [penColor] {$t$};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Geometrically, we can see the region under the graph forms a triangle.
+
+
+\begin{formula}
+\[
+Area(t) = \frac{1}{2} \, Base \cdot Height = \frac{1}{2}  \, \answer{t} \cdot \left(\answer{20 \, t}\right) = 10 \, t^2
+\]
+\end{formula}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$A$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:2),->] {20*x^2};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+The right half of a parabola.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-4:4, ymax=100, xmax=4, ymin=-10, xmin=-4,
+            axis lines =center, xlabel=$t$, ylabel=$A$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={-4, -2, 0, 2, 4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(0:2),->] {20*x^2};
+			\addplot [draw=penColor, very thick, dashed, domain=(-2:0),<-] {20*x^2};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} The rate of change of a quadratic function is a linear function, and the rate of change of a linear function is a constant function. \\
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} The accumulation of a constant function is a linear function, and the accumulation of a linear function is a quadratic function. \\
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{purple!85!blue}{There could be a pattern here.}}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Shifting}
+
+
+Suppose the car travelling at 20 mph begins its journey 3 hours late.  When the car begins, our timer already reads 3 hours.
+
+
+
+The graph of velocity would still be a horizontal line, well a ray.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=0, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:8),->] {20};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,20)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The region below the graph stills forms rectangles.  The left side is just at $3$ now.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$v$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:8),->] {20};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+			\addplot [name path=A,domain=3:5,draw=none] {20};   
+			\addplot [name path=B,domain=3:5,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+			\draw[penColor,thick] (30,10) -- (30,30);
+			\draw[penColor,thick] (50,10) -- (50,30);
+
+			\node at (axis cs:5,-5) [penColor] {$t$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+The area is still $length \cdot height$.
+
+
+
+\begin{itemize}
+\item length = $t - 3$
+\item height = $v(t) = 20$
+	\end{itemize}
+
+
+
+
+\[
+Area = 20(t-3)
+\]
+
+
+
+The area under the velocity graph represents the accumulated distance travelled.
+
+
+
+
+
+
+\[
+D(t) = 20(t-3) \, \text{ for }  \, t \geq 3
+\]
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:7),->] {20*(x-3)};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The region under the graph of $D(t)$ now forms a triangle.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$D$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:7),->] {20*(x-3)};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+			\addplot [name path=A,domain=3:5,draw=none] {20*(x-3)};   
+			\addplot [name path=B,domain=3:5,draw=none] {0};
+			\addplot [fillp] fill between[of=A and B];
+
+
+			\draw[penColor,thick] (50,10) -- (50,50);
+
+			\node at (axis cs:5,-5) [penColor] {$t$};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+The area under the graph of $D(t)$ now forms a triangle, with base $t-3$ and height $D(t) = 20(t-3)$.
+
+
+
+We now have a formula for the accumulated area under the graph of $D(t) = 20(t-3)$.
+
+
+\[
+A(t) = \frac{1}{2} (t-3) \cdot 20(t-3) = 10 (t-3)^2   \, \text{ for }  \, t \geq 3
+\]
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:10, ymax=100, xmax=10, ymin=-10, xmin=0,
+            axis lines =center, xlabel=$t$, ylabel=$A$, 
+            ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
+            xtick={0, 2, 4, 6, 8, 10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [draw=penColor, very thick, smooth, domain=(3:5),->] {20*(x-3)^2};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,50)};
+
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Rate of change and accumulation are two sides of the same coin.  They tell the same story forwards and backwards.
+
+
+
+There is a reverse relationship between rate of change and accumulation.
+
+
+$\blacktriangleright$ The constant function $20$ gives the rate of change of the linear function $20(t-3)$.
+
+
+$\blacktriangleright$ The linear function $20(t-3)$ is the accumulation function of the constant function $20$.
+
+
+
+
+We have now seen that \\
+
+$\blacktriangleright$ The quadratic function $10(t-3)^2$ is the accumulation function of the linear function $20(t-3)$. \\
+
+
+
+
+
+\begin{claim}
+
+
+The linear function $20(t-3)$ gives the rate of change of the quadratic function $10(t-3)^2$.
+
+
+
+\begin{idea}
+
+
+Let $A(t) = 10 (t-3)^2$
+
+
+The rate of change of $A(t)$ over the interval $(3, t)$ is given by
+
+
+
+
+\[
+\frac{\Delta A}{\Delta t} = \frac{A(t) - A(3)}{t-3} = \frac{10 (t-3)^2}{t-3} = 10(t-3)
+\]
+
+
+Not Quite!  But, close.  It is off by a factor of $2$.  
+
+\end{idea}
+
+
+Hmmm!
+
+\end{claim}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The story is off a little bit. We need a new perspective on rate of change.  A slight adjustment will align rate of change and accumulation as different directions of the same story. \\
+
+Stay tuned!
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Linear Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/linearFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}
