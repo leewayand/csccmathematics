@@ -267,7 +267,7 @@ $5$ is a zero of the polynomial in the denominator.  However, $t=5$ is not an as
 \end{tikzpicture}
 \end{image}
 
-\end{example}
+
 
 
 This is because $5$ is also a zero of the polynomial in the numerator (with the same exponent).
@@ -275,6 +275,7 @@ This is because $5$ is also a zero of the polynomial in the numerator (with the 
 
 \[ y = h(t) = \frac{(t-1)(t-5)}{(t-5)(t+3)} = \frac{(t-1)}{(t+3)}  \, \text{ for } \,  t \ne 5  \]
 
+\end{example}
 
 
 
@@ -284,23 +285,18 @@ This is because $5$ is also a zero of the polynomial in the numerator (with the 
 
 
 
-\subsection*{End-Behavior}
 
 
 
-The end-behavior of a rational function depends on the leading terms of the numerator and denominator.
 
 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $n > m$
 
 
 
 
-\[   \lim\limits_{x \to \pm\infty}  \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   = \lim\limits_{x \to \pm\infty} \frac{ a_n x^n } { b_m x^m } = \pm \infty
-\]
 
 
 
@@ -312,67 +308,18 @@ The end-behavior of a rational function depends on the leading terms of the nume
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $n < m$
 
 
 
 
-\[  \lim\limits_{x \to \pm\infty} \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   = \lim\limits_{x \to \pm\infty} \frac{ a_n x^n } { b_m x^m } = 0
-\]
+The example illustrates why we prefer polynomial and rational functions in factored form.  It helps us make decisions on zeros and singularities. 
 
+Once we get to Calculus, we will see that the derivatives of polynomials and rational functions are again polynomials and rational functions. We will want to factor the derivatives as well to help us decide where the function is increasing and decreasing (behavior). \\
 
 
 
 
-
-
-
-
-
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $n = m$
-
-
-
-
-\[  \lim\limits_{x \to \pm\infty} \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   =  \lim\limits_{x \to \pm\infty} \frac{ a_n x^n } { b_m x^m } = \frac{ a_n} { b_m }
-\]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection*{Behavior}
-
-
-
-
-Again, we prefer rational functions in factored form when decided where they increase or decrease.  \\
-
-
-Therefore, usually our first step is to transform the rational function to look like
+Therefore, usually our first step is to transform any rational function to look like
 
 
 
@@ -619,7 +566,69 @@ That gives us a range for $H$ of $(-\infty, \infty )$.
 
 For rational functions, the sign can change only at a zero of odd multiplicity or a singularity of odd multiplicity. This is helpful when graphing. These requirements can force the graph to go in particular directions.
 
+And, since the derivative of a rational function is also a rational function, multiplicities are also helpful when determining where a rational function is increasing or decreasing, because the multiplicities of the derivative will tell us whent he derivative changes sign. \\
 
+
+
+
+
+
+
+
+
+\subsection*{End-Behavior}
+
+
+
+The end-behavior of a rational function depends on the leading terms of the numerator and denominator.
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $n > m$
+
+
+
+
+\[   \lim\limits_{x \to \pm\infty}  \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   = \lim\limits_{x \to \pm\infty} \frac{ a_n x^n } { b_m x^m } = \pm \infty
+\]
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $n < m$
+
+
+
+
+\[  \lim\limits_{x \to \pm\infty} \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   = \lim\limits_{x \to \pm\infty} \frac{ a_n x^n } { b_m x^m } = 0
+\]
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $n = m$
+
+
+
+
+\[  \lim\limits_{x \to \pm\infty} \frac{ a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x + a_0  } { b_m x^m + b_{m-1} x^{m-1} + \cdots + b_3 x^3 + b_2 x^2 + b_1 x + b_0 }   =  \lim\limits_{x \to \pm\infty} \frac{ a_n x^n } { b_m x^m } = \frac{ a_n} { b_m }
+\]
 
 
 
