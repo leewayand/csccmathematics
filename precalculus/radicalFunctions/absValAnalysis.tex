@@ -1,0 +1,383 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Abs. Value Analysis}
+
+\begin{document}
+
+\begin{abstract}
+examples
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+We are building a library of the elemntary functions.  The idea is to use the library to list characteristics, features, and aspects of all functions within each category.  \\
+
+That way, if we can identify the type of function we have, then we get free information when analyzing functions. \\
+
+The category becomes our reasoning. \\
+
+
+
+\begin{center}
+
+\textbf{\textcolor{red!70!black}{These are ``CAN'' questions.}} \\
+
+\end{center}
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{CAN}}the formula we are given be rewritten as one of the official standard forms for each category? \\
+
+
+
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{green!50!black}{Absolute Functions}}
+
+Absolute functions are those functions that \textbf{\textcolor{purple!85!blue}{can}} be represented by formulas of the form
+
+
+\[      AV(x) = A \cdot | B \, x + C| + D   \]
+
+where $A$, $B$, $C$, and $D$ are real numbers, with $A \ne B$ and $B \ne 0$ is a nonzero real number.
+
+
+\end{formula}
+
+
+\textbf{Note:}  In the template for absolute value functions, There is a leading coefficient for the function and there is a leading coefficient for the linear function inside the absolute value bars. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Comnpletely (Algebraically) analyze
+
+\[
+T(k) = -3 | 2 - k | + 5
+\]
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Category}} \\
+
+
+
+$T(k) = -3 | 2 - k | + 5$ matches our official template, $A \cdot | B \, x + C| + D$, which makes it an absolute value function.  
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} \\
+
+
+$T(k))$ is an absolute value function, which means its natural domain is all real numbers, $(-\infty, \infty)$. \\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros}} \\
+
+\[
+T(k) = -3 | 2 - k | + 5 = 0
+\]
+
+\begin{align*}
+-3 | 2 - k | + 5 &= 0 \\
+| 2 - k | &= \frac{5}{3} 
+\end{align*}
+
+
+Either,
+
+
+\begin{align*}
+2 - k &= \frac{5}{3} \\
+2 - \frac{5}{3} &= k \\ 
+\frac{1}{3} &= k 
+\end{align*}
+
+
+Or, 
+
+
+Either,
+
+
+\begin{align*}
+2 - k &= -\frac{5}{3} \\
+2 + \frac{5}{3} &= k \\ 
+\frac{11}{3} &= k 
+\end{align*}
+
+
+Two zeros: $\frac{1}{3}$ or $\frac{11}{3}$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity}} \\
+
+$T$ is continuous, since it is an absolute value function. \\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior}} \\
+
+
+The leading coefficient of $T$ is $-3 < 0$, therefore $T$ goes unbounded negatively. \\
+
+
+\[
+\lim\limits_{k \to -\infty} T(k) = -\infty
+\]
+
+
+
+
+\[
+\lim\limits_{k \to \infty} T(k) = -\infty
+\]
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior}} \\
+
+
+The leading coefficient of $T$ is $-3 < 0$, therefore $T$ increases and then decreases, changing at the critical number. \\
+
+
+The critical number is the real number that makes the inside equal to $0$. \
+
+
+$2 - k = 0$ at $k + 2$ \\
+
+
+$T$ is increasing on $(-\infty, 2)$ and decreasing on $(2, \infty)$. \\
+
+
+\textbf{Note:}  It is more accurate to say $T$ is increasing on $(-\infty, 2]$ and decreasing on $[2, \infty)$.
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Global Maximum and Minimum}} \\
+
+
+Since $T$ is continuous and increases and then decreases, there is a global maximum of $T(2) = 5$ at $2$.
+
+
+
+The end-behaviore tells us that there is no global minimum.
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Local Maximum and Minimum}} \\
+
+
+
+As an absolute value function, $T$ has a single local maximum or minimum, which is the same as the global maximum or minimum. \\
+
+Therefore, the only local maximum is $5$, which occurs at $2$ \\
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Range}} \\
+
+
+\begin{itemize}
+\item $T$ is continuous
+\item $\lim\limits_{k \to -\infty} T(k) = -\infty$
+\item The global maximum is $5$
+\end{itemize}
+
+
+The range of $T$ is $(-\infty, 5]$
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Graph}} \\
+
+
+
+
+The graph of $y = T(k) = -3 | 2 - k | + 5$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-2:6),<->] {-3*abs(2-x)+5};
+   
+ 			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.5,4)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\begin{center}
+\desmos{bkd48ytcey}{400}{300}
+\end{center}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Analysis]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/radicalFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,530 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Roots and Radicals}
+
+\begin{document}
+
+\begin{abstract}
+aspects
+\end{abstract}
+\maketitle
+
+
+
+
+
+Polynomial and rational functions only include terms with positive integer powers. On the other hand, power functions use any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Roots}}
+
+$x^{\tfrac{1}{n}}$ is called \textbf{the nth root of x}, where $n$ is a natural number.
+
+
+
+
+\textbf{odd roots}
+
+When $n$ is odd, $x^{\tfrac{1}{n}}$ is defined to be the unique real number, $r$, such that $r^n = x$. The domain is all real numbers.
+
+
+
+
+\textbf{even roots}
+
+When $n$ is even, $x^{\tfrac{1}{n}}$ is defined to be the unique nonnegative real number, $r$, such that $r^n = x$. The domain is all nonnegative real numbers.
+
+
+\end{definition}
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Radicals}}
+
+An alternate point-of-view uses radical notation rather than exponents.
+
+\[   \sqrt[n]{x} =  x^{\tfrac{1}{n}}     \]
+
+where $\sqrt{ }$ is called the \textbf{radical} symbol.
+
+
+$\sqrt[n]{x}$ is called the \textbf{nth root of x}.
+
+\end{definition}
+
+
+
+
+\subsection*{Algebra Rules}
+
+The nth-root is an exponent, so it follows all of the exponent rules.
+
+
+\begin{itemize}
+\item $a^n \cdot a^m = a^{n+m}$
+
+\item $\frac{a^n}{a^m} = a^{n-m}$
+
+\item $(a^n)^m = a^{n \cdot m}$
+
+\item $a^n \cdot b^n = (a \cdot b)^n$
+
+\item $\frac{a^n}{b^n} = \left(\frac{a}{b}\right)^n$
+
+
+\end{itemize}
+
+
+
+Similar rules for radicals.
+
+\begin{itemize}
+
+\item $\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{a \cdot b}$
+
+\item $\frac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\frac{a}{b}}$
+
+\item $\sqrt[m]{\sqrt[n]{a}} = \sqrt[nm]{a}$
+
+\end{itemize}
+
+
+
+
+
+
+
+
+\subsection*{Even Roots}
+
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers.
+
+Even roots
+
+\[   Even(x) = \sqrt[2n]{x} = x^{\tfrac{1}{2n}}          \]
+
+look a lot like the square root
+
+
+\[   Even(x) = \sqrt{x} = x^{\tfrac{1}{2}}          \]
+
+
+
+Their domains do not include negative numbers: $[0, \infty)$.  Their domains are the \textbf{nonnegative} numbers.  These functions increase very slowly over their domain, becoming unbounded.
+
+
+
+
+
+
+
+The graph of $y = SR(x) = \sqrt{x}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {sqrt(x)};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The square root function begins where the inside of the radical equals $0$.  It then moves in the direction that keeps the inside positive.
+
+
+
+
+\begin{example} Even Root
+
+The graph of $y = f(v) = \sqrt{v+3}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-3:9),->] {sqrt(x+3)};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Here the inside $v+3$ equals $0$ when $v=\answer{-3}$.  That is the start of the domain.  Then, the inside is positive $v+3>0$, when $v>-3$, which means the graph moves up to the right.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Even Root
+
+The graph of $y = T(k) = \sqrt{-k+5}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:5),<-] {sqrt(-x+5)};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k$ \wordChoice{\choice[correct]{$<$} \choice {$>$}}  $5$, which means the graph moves up to the left.  The domain is $(-\infty,5]$.
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Odd Roots}
+
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers, however we do have odd roots of negative numbers
+
+Odd roots
+
+\[   Odd(x) = \sqrt[2n+1]{x} = x^{\tfrac{1}{2n+1}}          \]
+
+look a lot like the cube root
+
+
+\[   Odd(x) = \sqrt[3]{x} = x^{\tfrac{1}{3}}          \]
+
+
+
+Their domains include all real numbers: $(-\infty, \infty)$.  Odd root functions increase very slowly over this domain, becoming unbounded.
+
+
+
+
+
+
+
+The graph of $y = CubeRoot(x) = \sqrt[3]{x}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {x^0.33333};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:0),<-] {-(-x)^0.33333};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The cube root function has a vertical tangent line where the inside of the radical equals $0$.
+
+
+
+\begin{example} Odd Root
+
+The graph of $y = f(v) = \sqrt[3]{v+3}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-3:9),->] {(x+3)^0.33333};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:-3),<-] {-((-x-3)^0.33333)};
+
+          	\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Here the inside $v+3$ equals $0$ when $v=\answer{-3}$.  The graph has a vertical tangent line there.  Otherwise, the cube root function is increasing everywhere, but increasing slower and slower and slower.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Analysis}
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain}}
+
+The domnain of a radical function depends on the whether it is an odd root or an even root.
+
+
+\begin{itemize}
+\item The natural domain of an odd root is all real numbers.
+\item The natural domain of an even root is all real numbers that make the inside of the root nonnegative.
+\end{itemize}
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros}}
+
+
+An odd root will always have a single zero. \\
+
+An odd root will have a single zero or no zero. \\
+
+To detemine the zero, set the whole formula equal to $0$ and solve. \\
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity}}
+
+
+Radical functions are continuous.\\
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior}}
+
+
+
+Odd roots have end-behavior in both directions.  The function is unbounded in both directions.  In one direction, the function will be unbounded positively and in the other direction the function will be unbounded negatively. \\
+
+The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the end-behavior. \\
+
+
+
+Even roots have end-behavior in only one directions.  The function is unbounded positively or negatively. \\
+
+The sign of the leading coefficient will tell the end-behavior. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}}
+
+
+Radical (Root) functions are either always increasing or always decreasing. \\
+
+
+The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the behavior. \\
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Extema}}
+
+
+
+Odd roots do not have global maximum or minimum.\\
+
+Odd roots do not have local maximums or minimums.\\
+
+
+
+
+Even root have either a global maximum or minimum.\\
+
+Even root have either a local maximum or minimum.\\
+
+
+The domain, behavior, and end-behavior will reveal which one. \\
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range}}
+
+
+
+The range of an odd root is $(-\infty, \infty)$. \\
+
+
+
+The range of an even root is eiter of the form $(-\infty, M]$ or $[M, \infty)$, where M is the maximum or minimum function value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Analysis]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/radicalFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+\end{document}

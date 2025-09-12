@@ -1,0 +1,352 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Radical Analysis}
+
+\begin{document}
+
+\begin{abstract}
+examples
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+We are building a library of the elemntary functions.  The idea is to use the library to list characteristics, features, and aspects of all functions within each category.  \\
+
+That way, if we can identify the type of function we have, then we get free information when analyzing functions. \\
+
+The category becomes our reasoning. \\
+
+
+
+\begin{center}
+
+\textbf{\textcolor{red!70!black}{These are ``CAN'' questions.}} \\
+
+\end{center}
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{CAN}}the formula we are given be rewritten as one of the official standard forms for each category? \\
+
+
+
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{Radical/Root Functions}} 
+
+A \textbf{radical} or \textbf{root function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form  
+
+\[   rad(x) = A \sqrt[n]{B \, x + C} + D =  A (B \, x + C)^{\tfrac{1}{n}} + D    \]
+
+where the $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$ and $B \ne 0$.
+
+\end{formula}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+Comnpletely (Algebraically) analyze
+
+\[
+R(y) = -3 \sqrt{5-2y} + 4
+\]
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Category}} \\
+
+
+
+$R(y) = -3 \sqrt{5-2y} + 4$ matches our official template, $A \sqrt[n]{B \, x + C} + D $, which makes it a radical function.  
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} \\
+
+
+$R(y)$ is an even root, which means its natural domain is all real numbers that make the inside nonegative.
+
+The inside is $5-2y$, which is a linear function with a negative leading coefficient.  That tells us that it is nonnegative for numbers less than its zero.  Its zero is $\frac{5}{2}$.\\
+
+The domain of $R$ is $\left( -\infty, \frac{5}{2} \right]$\\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros}} \\
+
+\[
+R(y) = -3 \sqrt{5-2y} + 4 = 0
+\]
+
+\begin{align*}
+-3 \sqrt{5-2y} + 4 &= 0 \\
+\sqrt{5-2y} &= \frac{4}{3} \\
+5 - 2y &= \frac{16}{9} \\
+5 - \frac{16}{9} &= 2y  \\
+\frac{1}{2} \left( 5 - \frac{16}{9} \right) &= y  
+\end{align*}
+
+
+$\frac{1}{2} \left( 5 - \frac{16}{9} \right) \approx 1.6111$, which agrees with the graph. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity}} \\
+
+$R$ is continuous, since it is a root function. \\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior}} \\
+
+
+As an even root, $R$ only has end-behavior in one direction. It is unbounded as $y$ approaches $-\infty$. \\
+
+Since the leading coefficient is $-3 < 0$, R is unbounded negatively. \\
+
+
+\[
+\lim\limits_{y \to -\infty} R(y) = -\infty
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior}} \\
+
+
+A root or radical function is always increasing or always decreasing. \\
+
+
+Since both the leading coefficient ($-3$) and the leading coefficient of the linear funciton inside the radical ($-2$) are neagtive, $R$ is increasing. \\
+
+This agrees with the end-behavior. \\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Global Maximum and Minimum}} \\
+
+
+
+The end-behavior tells us that there is no global minimum. And, since $R$ is always increasing, its global maximum value must occur at $\frac{5}{2}$
+
+
+\[
+R\left( \frac{5}{2}\right) = -3 (0) + 4 = 4
+\]
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Local Maximum and Minimum}} \\
+
+
+
+As a radical function, $R$ has a single local maximum or minimum, which is the same as the global maximum or minimum. \\
+
+Therefore, the only local maximum is $4$, which occurs at $\frac{5}{2}$ \\
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Range}} \\
+
+
+\begin{itemize}
+\item $R$ is continuous
+\item $\lim\limits_{y \to -\infty} R(y) = -\infty$
+\item The global maximum is $4$
+\end{itemize}
+
+
+The range of $R$ is $(-\infty, 4]$
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Graph}} \\
+
+
+
+
+The graph of $z = R(y) = -3 \sqrt{5-2y} + 4$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$y$, ylabel=$z$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-7:2.5),<-] {-3*sqrt(5-2*x)+4};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.5,4)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\begin{center}
+\desmos{umcu66v9sr}{400}{300}
+\end{center}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Analysis]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/radicalFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}
