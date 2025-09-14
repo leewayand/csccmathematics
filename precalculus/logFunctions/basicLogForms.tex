@@ -1,0 +1,300 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Basic Forms}
+
+\begin{document}
+
+\begin{abstract}
+basic
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{A Different Perspective}} 
+
+
+Basic logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \log_r(B \, x + C) + D$.  \\
+
+
+We can decide whether the function is increasing or decreasing by the value of $r$, the sign of $A$, and the sign of $B$. \\
+
+
+
+
+
+\begin{itemize}
+\item $r > 1$ and $A > 0$ and $B > 0$ : increasing positive function
+\item $r > 1$ and $A > 0$ and $B < 0$ : decreasing negative function  
+\item $r > 1$ and $A < 0$ and $B > 0$ : decreasing positive function
+\item $r > 1$ and $A < 0$ and $B < 0$ : increasing positive function
+\item $r < 1$ and $A > 0$ and $B > 0$ : decreasing positive function
+\item $r < 1$ and $A > 0$ and $B < 0$ : increasing negative function  
+\item $r < 1$ and $A < 0$ and $B > 0$ : increasing positive function
+\item $r < 1$ and $A < 0$ and $B < 0$ : decreasing positive function
+\end{itemize}
+
+
+
+
+
+\textbf{On the other hand,} we have the algebra rule $\frac{1}{b} = b^{-1}$.  We could think of the base of the logarithmic formula as always being greater than $1$, and just use positive and negative exponents to switch between increasing and decreasing functions. \\
+
+We can rewrite and logarithmic expression with an equivalent expression that has a base greater than $1$. \\
+
+
+
+Suppose $0 < r < 1$.\\
+
+Then $\frac{1}{r} > 1$.  We would like to use this new base, which we can accomplish through the change of base formula.\\
+
+\[
+\log_r(inside)
+\]
+
+
+\[
+\frac{\log_{\tfrac{1}{r}}(inside)}{\log_{\tfrac{1}{r}}(r)}
+\]
+
+
+$\log_{\tfrac{1}{r}}(r)$ is the thing you raise $\frac{1}{r}$ to, to get $r$, which is $-1$. \\
+
+
+That gives us
+
+
+\[
+\frac{\log_{\tfrac{1}{r}}(inside)}{-1}
+\]
+
+
+
+\[
+-\log_{\tfrac{1}{r}}(inside)
+\]
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} We can switch and logarithm from a base less than $1$, to a base greater than $1$ just by negating the logarithm.
+
+
+
+
+\textbf{New Idea:} Basic logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \log_r(B \, x + C) + D$, where $r > 1$.  \\
+
+
+In this case, we would have the following behaviors: \\
+
+
+\begin{itemize}
+\item $A > 0$ and $B > 0$ : increasing positive function
+\item $A > 0$ and $B < 0$ : decreasing negative function  
+\item $A < 0$ and $B > 0$ : decreasing positive function
+\item $A < 0$ and $B < 0$ : increasing positive function 
+\end{itemize}
+
+We would decide function behavior (increasing or decreasing) by the signs of \textbf{both} leading coefficients, $A$ and $A$.
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $A$ and $B$ are the same sign, then we have an increasing function. \\
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $A$ and $B$ are different signs, then we have a decreasing function. \\
+
+
+
+
+
+
+
+
+\section*{(e)}
+
+
+
+In this model, we are using bases that are greater than $1$.  \\
+
+
+If this is the case, then we might as well use $e$ as our base. \\
+
+
+\begin{explanation}
+
+
+If our formula looks like. $A \, \log_r(B \, x + C) + D$ and $r>1$, then we can use the change of base formula to rewrite our formula.
+
+
+
+\[
+\log_r(inside) = \frac{\log_e(inside)}{\log_e(r)} = \frac{\ln(inside)}{\ln(r)}
+\]
+
+
+\end{explanation}
+
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  Basic logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \ln(B \, x + C) + D$.  \\
+
+
+
+
+
+
+In this model, our basic forms to memorize would be \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$\ln(x)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+         
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
+
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.001:9), <->] {ln(x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
+
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={-\ln(x)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+         \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
+
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.001:9),<->] {-ln(x))};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$\ln(-x)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
+
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(-9:-0.001), <->] {ln(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-1,0)};
+           
+
+  \end{axis}
+  \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$-\ln(-x)$},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({0},{x});
+
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(-9:-0.001),<->] {-ln(-x)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-1,0)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+\subsection*{Pick Your Form}
+
+You should pick your own logarithmic exponential form that you like and understand.  \\
+
+Then, you can change anything given to you into that form.
+
+
+You might pick a particular number greater than $1$ as the base you like.  $e$ is a very popular choice, because it shows up quite frequently in mathematics, like Calculus. \\
+
+
+
+
+
+
+
+
+
+
+
+If you pick a base you like and change formulas to use that base, then you have a better chance of quickly deciding on function characteristics. \\
+
+
+
+\textbf{\textcolor{blue!55!black}{Basic Basic Form:}}  $\ln(x)$ \\
+
+
+
+\textbf{\textcolor{blue!55!black}{Basic Forms:}}  $\ln(x)$, $\ln(-x)$, $-\ln(x)$, $-\ln(-x)$ \\
+
+
+Now increasing and decreasing become questions about the signs of the two leading coefficents - the leading coefficient of the entire formula and the leading coefficient of the exponent.
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Logarithmic Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/logFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+\end{document}

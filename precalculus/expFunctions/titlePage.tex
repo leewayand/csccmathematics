@@ -1,0 +1,133 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Exponential Functions}
+
+\begin{document}
+
+\begin{abstract}
+%Stuff can go here later if we want!
+\end{abstract}
+\maketitle
+
+
+
+
+Precalculus is largely about the structure of the Elementary Functions and how we reason about them.  This includes power functions; radical and root functions; linear, quadratic, and other polynomial functions; rational functions; exponential functions; logarithmic functions; and a library of trigonometric functions (which are introduced in this course).
+
+
+Our focus is analyzing these functions.
+
+
+
+
+
+\begin{itemize}
+     \item \textbf{\textcolor{red!80!black}{Domain}} 
+     \item \textbf{\textcolor{red!80!black}{Zeros}} 
+     \item \textbf{\textcolor{red!80!black}{Continuity}} 
+\begin{itemize}
+     \item \textbf{\textcolor{purple!85!blue}{discontinuities}} 
+     \item \textbf{\textcolor{purple!85!blue}{singularities}} 
+\end{itemize}
+     \item \textbf{\textcolor{red!80!black}{End-Behavior}} 
+     \item \textbf{\textcolor{red!80!black}{Behavior}} 
+\begin{itemize}
+     \item \textbf{\textcolor{purple!85!blue}{intervals where increasing}} 
+     \item \textbf{\textcolor{purple!85!blue}{intervals where decreasing}} 
+\end{itemize}
+     \item \textbf{\textcolor{red!80!black}{Global Maximum and Minimum}} 
+     \item \textbf{\textcolor{red!80!black}{Local Maximums and Minimums}} 
+     \item \textbf{\textcolor{red!80!black}{Range}} 
+     \item \textbf{\textcolor{blue!55!black}{...and we would like a nice graph}} 
+\end{itemize}
+
+
+
+
+
+
+
+As a segue from the first half of Precalculus, let's quickly review our growing library of Elementary Functions. We'll begin with the exponential functions.   \\
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Basic Exponential Functions}} 
+
+
+The template for the basic exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = a \cdot r^x$}}. 
+
+\begin{itemize}
+\item $a$ is the \textbf{\textcolor{purple!85!blue}{leading coefficient}}.  It primarily determines the sign of the function values.
+\item $r$ is the \textbf{\textcolor{purple!85!blue}{base}}. It determines how the function values grow, depending on whether $0 < r < 1$ or $1 < r$.
+\end{itemize}
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Shifted Exponential Functions}}   
+
+The template for a shifted exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = a \cdot r^{b \, x + c} + d$}}  or just \textbf{\textcolor{blue!55!black}{$a \cdot r^x + d$}}. 
+
+\begin{itemize}
+\item $c$ describes a \textbf{\textcolor{purple!85!blue}{shift}} in the domain from the basic exponential function.  
+\item $d$ describes a \textbf{\textcolor{purple!85!blue}{shift}} in the function value from the basic exponential function. 
+\end{itemize}
+
+The first term in the formula for a shifted exponential function is, by itself, an exponential function:
+
+\[
+a \cdot r^{b \, x + c} = a \cdot r^{b \, x} \cdot  r^c = (a \cdot r^c) \cdot r^{b \, x} = (a \cdot r^c) \cdot (r^b)^x 
+\]
+
+It \textbf{\textcolor{purple!85!blue}{CAN}} be written in the form $A \cdot R^x$, where $A = a \cdot r^c$ and $R = r^b$.
+
+
+Algebraically, the second term, the ``+ d'' cannot be absorbed into the exponential form.  However, shifting functions is a very common operation and so, we'll include $a \cdot r^{b \, x + c} + d$ in our general ideas of exponential functions.
+
+
+
+
+
+\subsection*{Learning Outcomes}
+
+
+\begin{sectionOutcomes}
+In this section, students will 
+
+\begin{itemize}
+\item describe the full picture of all exponential functions and their graphs.
+\end{itemize}
+\end{sectionOutcomes}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Exponential Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/expFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+\end{document}
