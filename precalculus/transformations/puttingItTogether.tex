@@ -1,0 +1,323 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{All Together}
+
+\begin{document}
+
+\begin{abstract}
+everything
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+Let $L_i(t) = -2t + 1$. \\
+Let $L_o(t) = \frac{1}{2}t + 2$.
+
+
+Let $K(x)$ be a piecewise defined function defined by 
+
+
+\[
+K(x) = 
+\begin{cases}
+  2|x+6| - 4         &    \,     \text{ on } \,   [-8,-3)    \\
+  -6               &    \,     \text{ on } \,    [-3,1)      \\
+  -\frac{3}{2}(x-4)(x-6)    &   \,     \text{ on } \,    (4,8]
+\end{cases}
+\]
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=K(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:-3)] {2*abs(x+6)-4};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-8,0)};
+          	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,2)};
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:1)] {-6};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-6)};
+            \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-6)};
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {-1.5*(x-4)*(x-8)};
+            \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,0)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(8,0)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+This time, we will compose three functions:  $T = L_o \circ K \circ L_i$.
+
+
+What will be domain (horizontal) effects and range (vertical) effects?  The values $L_i$ will become the inputs to $K$. Therefore, $L_i$ affects the domain of $K$ and moves the graph horizontally.  $L_o$ will take the range values from $K$ and move the graph vertically.
+
+
+
+$\blacktriangleright$ Domain - horizontal : $L_i(t) = -2t + 1$
+
+
+\begin{itemize}
+\item The leading coefficient for $L_i$ is negative.  The graph is going to be reflected horizontally. \\
+The parabola will be on the left and the ``Vee'' on the right.
+\item The leading coefficent is $-2$, which speeds up the input into $K$, which compresses the graph horizontally.
+\item Finally, $L_i$ is adding $1$, which is going into $K$, which shifts the graph to the left.
+
+\end{itemize}
+
+
+
+
+
+$\blacktriangleright$ Range - vertical : $L_o = \frac{1}{2}t + 2$
+
+
+\begin{itemize}
+\item The leading coefficient for $L_o$ is $\frac{1}{2}$.  The graph is going to be compressed vertically. \\
+\item Finally, the graph will be shifted up $2$.
+
+\end{itemize}
+
+
+Graph of $ y = T(m) = (L_o \circ K \circ L_i)(m)$.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-11, xmin=-10,
+            axis lines =center, xlabel=$m$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(2:4.5)] {abs(-2*x+7)};
+            \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,3)};
+          	\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4.5,2)};
+
+
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(0:2)] {-1};
+            \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,-1)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-1)};
+
+
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-3.5:-1.5)] {-0.75*(2*x+3)*(2*x+7)+2};
+            \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1.5,2)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3.5,2)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\textbf{Note:} All of the endpoints remained the same type.  
+
+\begin{itemize}
+\item The short arm of the ``Vee'' is a solid dot on both graphs.
+\item The long arm of the ``Vee'' is a hollow dot on both graphs.
+\item The end of the horizontal line segment nearest the ``Vee'' is a solid dot on both graphs.
+\item The end of the horizontal line segment nearest the parabola is a hollow dot on both graphs.
+\item The inside endpoint on the parabola is hollow on both graphs.
+\item The outside endpoint on the parabola is solid on both graphs.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+All horizontal measurements are half what they were, so that when $L_i$ multiplies them by $2$, they get back to their original size for input into $K$.
+
+All height measurements are half what the were to begin with.
+
+
+
+We can trace the solid left enpoint of the line segment: $(-3, K(-3)) = (-3, -6)$ on the graph of $K$ through the transformations:
+
+
+
+
+
+\begin{align*}
+\text{Start :} & \text{  } & (-3, K(-3))  \\
+\text{Start :} & \text{  } & (-3, -6) \\
+\text{Horz Shift Left $1$ :} & \text{  } & (-4,-6)   \\
+\text{Horz Reflection :} & \text{  } & (4, -6)   \\
+\text{Horz Compress Factor $\tfrac{1}{2}$ :}  & \text{  } & (2, -6)   \\
+\text{Vert Compress Factor $\tfrac{1}{2}$:} & \text{  } & (2, -3)   \\
+\text{Vert Shift Up $2$ :} & \text{  } & (2, -1)   \\
+\text{Composition :} & \text{  } & (2, -1)   
+\end{align*}
+
+
+The solid endpoint of the horizontal line segment will be $(2, -1)$.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{procedure} 
+
+
+
+Trace the hollow endpoint of the parabola segment: $(4, 0)$
+
+
+
+
+
+\begin{align*}
+\text{Start :} & \text{  } & (4, K(4))  \\
+\text{Start :} & \text{  } & (4, 0) \\
+\text{Horz Shift Left $1$ :} & \text{  } & \left( \answer{3}, \answer{0} \right)   \\
+\text{Horz Reflection :} & \text{  } & \left( \answer{-3}, \answer{0} \right)   \\
+\text{Horz Compress Factor $\tfrac{1}{2}$ :}  & \text{  } & \left( \answer{-\frac{3}{2}}, \answer{0} \right)   \\
+\text{Vert Compress Factor $\tfrac{1}{2}$:} & \text{  } & \left( \answer{-\frac{3}{2}}, \answer{0} \right)   \\
+\text{Vert Shift Up $2$ :} & \text{  } & \left( \answer{-\frac{3}{2}}, \answer{2} \right)   \\
+\text{Composition :} & \text{  } & \left( -\frac{3}{2}, 2 \right)   
+\end{align*}
+
+
+The hollow endpoint of the parabola segment will be $\left( -\frac{3}{2}, 2 \right)$.
+
+\end{procedure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} 
+
+We know the horizontal line segment remains a horizontal line segment. Therefore the vertical coordinate of the hollow endpoint of the horizontal line segment will become $\answer{-1}$.
+
+\end{question}
+
+
+
+
+  
+
+
+
+
+
+
+
+
+\begin{procedure} 
+
+
+
+Trace the corner of the ``Vee'': $(-6, -4)$
+
+
+
+
+
+\begin{align*}
+\text{Start :} & \text{  } & (-6, K(-6))  \\
+\text{Start :} & \text{  } & (-6, -4) \\
+\text{Horz Shift Left $1$ :} & \text{  } & \left( \answer{-7}, \answer{-4} \right)   \\
+\text{Horz Reflection :} & \text{  } & \left( \answer{7}, \answer{-4} \right)   \\
+\text{Horz Compress Factor $\tfrac{1}{2}$ :}  & \text{  } & \left( \answer{\frac{7}{2}}, \answer{-4} \right)   \\
+\text{Vert Compress Factor $\tfrac{1}{2}$:} & \text{  } & \left( \answer{\frac{7}{2}}, \answer{-2} \right)   \\
+\text{Vert Shift Up $2$ :} & \text{  } & \left( \answer{\frac{7}{2}}, \answer{0} \right)   \\
+\text{Composition :} & \text{  } & \left( \frac{7}{2}, 0 \right)   
+\end{align*}
+
+
+The hollow endpoint of the parabola segment will be $\left( \frac{7}{2}, 0 \right)$.
+
+\end{procedure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Transforming the Outside]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/transformationsOutside/examples/exampleList}
+
+\end{center}
+
+
+\end{document}

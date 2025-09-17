@@ -1,0 +1,1179 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Stretching}
+
+\begin{document}
+
+\begin{abstract}
+both directions
+\end{abstract}
+\maketitle
+
+
+
+
+
+We have seen that addition (or subtraction) of constants shifts the domain or range and shifts the graph as a rigid object. All of the movement is the same for every point. \\
+
+Multiplication behaves differently.
+
+
+
+
+\subsection*{Stretching Horizontally}
+
+
+
+
+
+
+
+Consider the function $T$ defined as
+
+\[
+T(k) = 
+\begin{cases}
+  -2k-6 & \text{ if }  -8 \leq k < -2 \\
+  -k+3 & \text{ if } 0 \leq k < 10
+\end{cases}
+\]
+
+
+
+
+
+
+Graph of $y = T(k)$.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-8:-2)] {-2*x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(0:10)] {-x+3};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-8,10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(0,3)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(10,-7)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Now, Let's define a new function based on $T$.
+
+
+
+Define $W$ by $W(g) = T(2g)$ with the induced domain.
+
+
+
+$g$ represents numbers in the the domain of $W$ and $2g$ represents numbers in the domain of $T$.  
+
+The domain of $T$ is $[-8,-2) \cup [0,10)$.
+
+
+If $2g \in [-8,-2) \cup [0,10)$, then $g \in [-4,-1) \cup [0,5)$
+
+It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever you are evaluating $W$, you get the value by evaluating $T$ at twice the $W$ domain number.
+
+
+
+\begin{example}  Evaluating $W$
+
+\begin{itemize}
+\item $W(4) = T\left(\answer{8}\right) = -8+3=-5$
+\item $W(-2) = T\left(\answer{-4}\right) = 2$
+\item $W\left(\answer{1}\right) = T(2) = 1$
+\end{itemize}
+
+
+\end{example}
+
+
+The only exception to the stretching idea is $0$.  Since $2 \cdot 0 = 0$, whenever $g = 0$, then $2g = 0$.  While the domain is being stretched, it is being stretched away from $0$. Stretching cannot move $0$. It gets pinned down where it is.
+
+
+$W(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
+
+As the functions above demonstrate, multiplication by $2$ compressed the domain.
+
+It seems backwards.  We multiplied by $2$ and the resulting domain was a compressed version of the original domain.  That is because this is a backwards view of what happened, like what we saw with shifting.
+
+
+
+We multiplied $g$ by $2$, but $g$ is representing the domain of $W$.  The domain of $W$ is stretching.  We want to know what ``happened'' to the domain of $T$.  $T$ is the old, original function and $k$ represents the domain of $T$.  \\
+
+``What happened to $k$?'' is the question.\\
+
+In our definition of $W$, we have $k=2g$, which gives us $g=\frac{k}{2}$.  \\
+
+$k$ is cut in half, which is what we see in the domain and in the graph and in the formula.  \\
+
+$k$ is replaced with $2g$.
+
+
+
+
+\[
+W(g) = 
+\begin{cases}
+  -2(2g)-6    & \text{ if }  -8 \leq 2g < -2 \\
+  -(2g)+3   & \text{ if } 0 \leq 2g < 10
+\end{cases}
+\]
+
+
+
+
+
+\[
+W(g) = 
+\begin{cases}
+  -4g-6    & \text{ if }  -4 \leq g < -1 \\
+  -2g + 3   & \text{ if } 0 \leq g < 5
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+Graph of $z = W(g)$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$g$, ylabel=$z$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-8:-1)] {-4*x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(0:5)] {-2*x+3};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-4,10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(0,3)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,-7)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$T$ and $W$ have the same maximums and minimums.  The height of the points didn't change.  The points to the left of the vertical axis moved to the right. The points to the right of the vertical axis moved to the left as the graph compressed horizontally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Negative Coefficients}
+
+
+What if we mulitply by $-2$ rather than $2$?
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now, Let's define a new function again based on $T$.
+
+
+
+Define $M$ by $M(r) = T(-2r)$ with the induced domain.
+
+
+
+$r$ represents numbers in the domain of $M$ and now $-2r$ represents numbers in the domain of $T$.  
+
+The domain of $T$ is $[-8,-2) \cup [0,10)$.
+
+
+If $-2r \in [-8,-2) \cup [0,10)$, then $r \in (-5,0] \cup (1, 4]$
+
+
+
+
+
+
+
+
+\[
+M(r) = 
+\begin{cases}
+  -2(-2r)-6    & \text{ if }  -8 \leq -2r < -2 \\
+  -(-2r)+3   & \text{ if } 0 \leq -2r < 10
+\end{cases}
+\]
+
+
+
+
+
+\[
+M(r) = 
+\begin{cases}
+  4r-6    & \text{ if }  1 < r \leq 4 \\
+  2r + 3   & \text{ if } -5 < r \leq 0
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+It is like the domain of $T$ is on a rubberband and it shrunk in half and then reflected around $0$.  As $r$ walks through the domain of $M$ from left to right, the corresponding walking in the domain of $T$ is from right to left.
+
+
+
+\begin{example}  Evaluating $W$
+
+\begin{itemize}
+\item $M(4) = T\left(\answer{-8}\right) = 10$
+\item $M(-2) = T\left(\answer{4}\right) = -1$
+\item $M(\left(\answer{0}\right)) = T(0) = 3$
+\end{itemize}
+
+
+\end{example}
+
+
+The domain shrinks around $0$. $M(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
+
+
+
+
+
+
+
+
+
+Since this multiplication was on the inside of the function notation, it only affects the domain.  Multiplication by $-1$, reflects the graph across the vertical axis - the domain switches signs. Multiplication by $2$ compresses the graph.
+
+
+
+Graph of $m = M(r)$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$r$, ylabel=$m$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(1:4)] {4*x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(-5:0)] {2*x+3};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(4,10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(0,3)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-5,-7)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Sine
+
+
+
+Graph of $y = \sin(2\theta)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {sin(2*deg(x))};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The graph is compressed horizontally by a factor of $\frac{1}{2}$.
+
+
+\end{example}
+
+
+
+
+\begin{example} Cosine
+
+Graph of $y = \cos\left(\frac{1}{2}\theta\right)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {cos(0.5*deg(x))};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The graph has been stretched horizontally by a factor of $2$.
+
+
+\end{example}
+
+
+
+
+
+Multiplication of the domain by a constant doesn't change the shape of the graph.  It might squish it horizontally or stretch it horizontally, but the shape remains.  All of the function characteristics are relatively the same in each graph when you view them from $0$. The maximums and minimums are still in relatively the same places when viewed from $0$.  
+
+You may have to view this in reverse, if the multiplication coefficient was negative, but all of the characteristics and features remain.
+
+
+
+
+
+
+
+
+\begin{example} Absolute Value
+
+
+
+Graph of $y = |3r|$.
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$r$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-3:3),<->] {3*abs(x)};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Multiplication by $3$ compresses the graph, because all domain numbers here correspond to $3$ times their values in the domain of $|x|$, therefore the graph is steeper.
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+\begin{example}
+
+Here is the graph of $y = \log_2(-t)$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-8.1:-0.07),<->] {ln(-x)/ln(2)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+
+          \addplot[color=penColor,only marks,mark=*] coordinates{(-1,0)}; 
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The graph looks the same as the basic logarithm graph, just reflected about the vertical axis.
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example} Stretching Domains
+
+Compared to the graph of the function $y=f(x)$, the graph of $z=g(r)=f(4r)$ looks to be 
+
+\begin{multipleChoice}
+
+\choice{shifted left by $4$}
+\choice{shifted right by $4$}
+\choice{stretched by a factor of $4$}
+\choice[correct]{compressed by a factor of $\frac{1}{4}$}
+\end{multipleChoice}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let $W(y)$ be a function with its domain and range.
+
+Let $K(r)$ be defined as $K(r) = 2 W(r)$ with its induced domain and range.
+
+
+Then the domain of $K$ is
+
+\begin{multipleChoice}
+\choice {the domain of $W$ stretched by $2$}
+\choice {the domain of $W$ compressed by $\tfrac{1}{2}$}
+\choice[correct] {the same as for $W$}
+\end{multipleChoice}
+
+The induced domain of $K$ is equal to the domain of $W$.  The coefficient $2$ is multiplying the function values of $W$.
+
+
+
+\begin{question}
+
+
+Suppose $K(r) = 2 W(r)$ and $W(4) = 6$.  Then which of the following is true?
+
+\begin{multipleChoice}
+\choice {$K(2) = 6$}
+\choice[correct] {$K(4) = 12$}
+\choice {$K(2) = 3$}
+\choice {$K(4) = 3$}
+\end{multipleChoice}
+
+
+\end{question}
+
+
+
+
+
+
+
+\begin{example} Stretching Vertically
+
+
+
+
+Graph of $y = m(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-3};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+5};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,2)}; 
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-5)}; 
+  \addplot[color=penColor,fill=white, only marks,mark=*] coordinates{(1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,4)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-2)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$m$ has two zeros: $-6$ and $\answer{5}$. These are represented by intercepts in the left and right line segments. \\
+$m$ has a global minimum represent by the left endpoint of the middle line segment. \\
+$m$ has a global maximum represent by the left endpoint of the right line segment.
+
+
+
+
+
+Graph of $z = P(t) = 2 \, m(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {2*(-x-6)};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {2*(x-3)};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {2*(-x+5)};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,4)}; 
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,2)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-4)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-4)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,8)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{itemize}
+
+\item The domain of $P$ is $\left[\answer{-7},\answer{-4}\right) \cup \{3\} \cup [-2,7)$, equal to the domain of $m$. The domain remains the same, since the $2$ was outside the domain parentheses in the formula for $m$. The $2$ is multiplying the function values.
+\item $P$ has two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. (Because, $2 \cdot 0 = 0$.) \\
+\item $P$ has a global minimum represented by the left endpoint of the middle line segment. \\
+\item $P$ has a global maximum represented by the left endpoint of the right line segment.
+
+\end{itemize}
+
+
+\end{example}
+
+
+Multiplying a function by a positive constant greater than $1$ stetches the graph vertically.  Since stretching $0$ still gives $0$, the intercepts do not change.  Everything is stetched from the intercepts. The intercepts stay pinned where they are.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multiplying by a negative constant less than $-1$ does the same thing, but also reflects the graph about the horizontal axis.
+
+
+
+
+
+\begin{example} Reflecting Vertically
+
+
+
+
+Graph of $y = m(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-3};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+5};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,2)}; 
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-5)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,4)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-2)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$m$ has two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. 
+$m$ has a global minimum represent by the left endpoint of the middle line segment. 
+$m$ has a global maximum represent by the left endpoint of the right line segment.
+
+
+
+
+
+Graph of $z = B(h) = -2 \, m(h)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=$z$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {2*x+12};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {-2*x+6};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {2*x-10};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,-4)}; 
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,-2)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,4)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,10)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,4)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,-8)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,4)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The shape has not changed.  It has just been flipped over vertically, about the horizontal axis.
+
+\begin{itemize}
+
+\item The domain of $B$ is $[-7,-4) \cup \{3\} \cup [-2,7)$, equal to the domain of $m$.  The factor, $-2$, was outside the domain parentheses in the formula for $m$.
+\item $B$ has two zeros: $\answer{-6}$ and $5$. These are represented by intercepts in the left and right line segments. (Because, $-2 \cdot 0 = 0$.) \\
+\item $B$ has a global minimum.  It is represented by the flipped highest dot in the graph of $m$.\\
+\item $B$ has a global maximum.  It is represented by the flipped lowest dot in the graph of $m$.
+
+\end{itemize}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multiplying by a number smaller than $1$, squeezes the graph vertically.  Our word for this is ``compress''.  Multiplying a function by a number between $-1$ and $1$ compresses the graph vertically.
+
+
+
+
+\begin{example} Compressing Vertically
+
+
+
+
+Graph of $y = m(f)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$f$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-x-6};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {x-3};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+5};
+
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,2)}; 
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,1)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-5)}; 
+  \addplot[color=penColor,fill=white, only marks,mark=*] coordinates{(1,-2)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,4)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-2)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$m$ has two zeros: $-6$ and $\answer{5}$. These are represented by intercepts in the left and right line segments. \\
+$m$ has a global minimum represent by the left endpoint of the middle line segment. \\
+$m$ has a global maximum represent by the left endpoint of the right line segment.
+
+
+
+
+
+Graph of $z = P(t) = \frac{1}{2} \, m(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$z$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+  \addplot [draw=penColor,very thick,smooth,domain=(-7:-4)] {-0.5*(x+6)};
+  \addplot [draw=penColor,very thick,smooth,domain=(-2:1)] {0.5*(x-3)};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-0.5*(x-5)};
+
+  
+  
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-7,0.5)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-1)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-3,1)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-2,-2.5)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-1)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-1)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{itemize}
+
+\item The domain of $P$ is $\left[\answer{-7},\answer{-4}\right) \cup \{3\} \cup [-2,7)$, equal to the domain of $m$. The domain remains the same, since the factor $\frac{1}{2}$ was outside the domain parentheses in the formula for $m$. The $\frac{1}{2}$ is multiplying the function values.
+\item $P$ has two zeros: $-6$ and $5$. These are represented by intercepts in the left and right line segments. (Because, $\frac{1}{2} \cdot 0 = 0$.) \\
+\item $P$ has a global minimum represented by the left endpoint of the middle line segment. \\
+\item $P$ has a global maximum represented by the left endpoint of the right line segment.
+
+\end{itemize}
+
+
+\end{example}
+
+
+Multiplying a function by a positive constant less than $1$ compresses the graph vertically.  Since compressing $0$ still gives $0$, the intercepts do not change.  Everything is compressed from the intercepts. The intercepts stay pinned where they are.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Sine
+
+
+
+Graph of $y = 3 \sin(\theta)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=3.5, xmax=10, ymin=-3.5, xmin=-10,
+            xtick={-6.28, -3.14, 3.14, 6.28}, 
+            xticklabels={$-2\pi$, $-\pi$, $\pi$, $2\pi$},
+            axis lines =center,  xlabel={$\theta$}, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9), <->] {3*sin(deg(x))};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The location of zeros, maximums, and minimums inside the domain have not changed.  The function values have been multiplied by $3$. Therefore, the maximum and minimum values of the function have changed. But their positions have not.
+
+\begin{itemize}
+\item The zeros of $\sin(\theta)$ are all integer multiples of $\pi$.
+\item The maximum value is $1$ and it occurs at:  $\left\{     \frac{(4k+1)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\item The minimum value is $-1$ and it occurs at:  $\left\{    \frac{(4k+3)\pi}{2} \, | \, k \in \textbf{Z}     \right\}$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+Neither shifting nor stretching (or compressing) changes the shape of the graph.  The extreme features may change their values, but they remain relatively in the same position.  The shape may be reflected about one (or both) of the axes, but the shape is the same, just drawn in reverse from the original.
+
+
+
+
+
+\subsection*{Together}
+
+We can apply horizontal and vertical stretches together as well.
+
+
+
+
+
+\begin{example}  Shifting
+
+Let $C(w) = \frac{1}{2}|3w|$.
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$w$, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-5:5),<->] {0.5 * abs(3*x)};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+The graph of $|w|$ has been compressed horizontally by a factor of $\frac{1}{3}$ and compressed vertically by a factor of $\frac{1}{2}$.
+
+
+
+
+We have already noticed that multiplication and addition on the inside of the formula's parentheses affect the domain.  They also have graphical effects which seem backwards from the arithmetic.  This is because the formula shows us what happens to the new domain variable, not the original variable.  We have to set the original variable equal to this new domain expression and solve for the new variable.  That tells us what happens to the original variable.  When we solve, all of the arithmetic is reversed and that is what we see graphically.
+
+This is not the case for multiplication and addition on the outside of the parentheses.  The value of the formula is the value of the function, which gives the heights of the dots on the graph.  The multiplication and addition is applied directly to this value.  Therefore, the graphical effects follow the arithmetic.
+
+
+\begin{center}
+
+Graphs follow domain transformations backwards or in reverse as the arithmetic.
+
+
+\end{center}
+
+
+\begin{center}
+
+Graphs follow range transformations exactly as the arithmetic.
+
+
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Stretching]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/transformations/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}
