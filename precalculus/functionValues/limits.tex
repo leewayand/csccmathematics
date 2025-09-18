@@ -1,0 +1,212 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Limits}
+
+\begin{document}
+
+\begin{abstract}
+language of behavior
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+Let 
+
+
+\[
+F(t) = 
+\begin{cases}
+  \frac{(t-2)(t+3)}{(t-2)} &\text{if $t \ne 2$,}\\
+  1 &\text{if $t = 2$}.
+\end{cases}
+\]
+
+
+
+
+Graph of $y = F(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$t$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:5),<->] {x+3};
+
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+From the surrounding values, we expected $F(2) = 5$.  Instead, we got $F(2) = 1$. 
+
+
+There is nothing wrong with $F$.  It is what it is.  Our head just saw a pattern and then one of the points didn't follow our pattern.
+
+We would just like to describe all of this. \\
+
+
+
+
+
+Function notation allows us to describe what is there, $F(2) = 1$. \\
+
+Now, we need a way to communicate our expectation.  We expected $F(2) = 5$. \\
+
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{Limits}} will be our language for expectations. \\
+
+\begin{warning}
+
+
+The story of limits is a long story.  There are many surprising twists and turns to limits. We'll begin the story in Precalculus.  However, we'll leave the nuts and bolts to Calculus. Calculus will get into the nitty gritty details. \\
+
+For us, here, it is a communication issue.
+\end{warning}
+
+
+
+
+
+
+\begin{idea}
+
+In the example above we want to say that the behavior of $F$ ``around'' $2$ leads us to expects $F(2)=5$.\\
+
+Our language for this will look like
+
+\[   \lim\limits_{t \to 2} F(t) = 5\]
+
+
+This is propnounced as: 
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{``The limit of $F$ as $t$ approaches $2$ equals $5$''}}
+\end{center}
+
+
+
+\end{idea}
+
+
+
+
+
+
+This is called a \textbf{\textcolor{purple!85!blue}{two-sided limit}}, because the behavior on either side of $2$ conveys an expectation of $5$. \\
+
+
+
+
+
+We have seen that our expectations may differ on either side. \\
+
+
+
+
+
+
+
+Graph of $y = G(t)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$t$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(2:7),->] {-x+3};
+
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,5)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We now have two expectations for the same domain number. The left side of our brain is expecting $G(2)=5$ and that expectation is satisfied.  The right side of our brain is expecting $G(2)=1$ and that expectation comes up empty. \\
+
+
+
+
+\begin{itemize}
+\item From the left, the negative direction, we expect $G(2)=5$
+\item From the right, the positive direction, we expect $G(2)=1$
+\end{itemize}
+
+
+To communicate these one-sided expectations, we include ``-'' and ``+'' as superscripts to our limit notation 
+
+
+
+
+\[   \lim\limits_{t \to 2^-} G(t) = 5 \]
+
+
+
+\[   \lim\limits_{t \to 2^+} G(t) = 1 \]
+
+
+
+Just communicating function behavior and expectations.  We are just developing language and notation and symbols to communicate a full story of the functions were are analyzing. \\
+
+
+Don't fret. Calculus will continue this story to any depth of minutia that you desire. Calculus will extend this story to any number of dimensions that interest you.
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Broken Values]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/functionValues/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}

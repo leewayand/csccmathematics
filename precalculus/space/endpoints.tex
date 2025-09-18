@@ -1,0 +1,162 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Endpoints}
+
+\begin{document}
+
+\begin{abstract}
+intersection
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+We have one slight hiccup in our open interval version of closeness and that is endpoints of intervals.
+
+
+
+
+
+
+
+
+Graph of $y = K(r)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-3)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+If we want to examine the domain number $2$ and its weird function value $-3$, then our open interval idea is in trouble.  There is no filled space to the right of $2$ in the domain where we could carve out an open interval.\\
+
+
+Actually, we don't need it. \\
+
+
+We just need the domain numbers that are close to $2$.
+
+
+\begin{quote}
+We need all of the \textbf{\textcolor{purple!85!blue}{domain numbers}} that are close to our domain number under observation.
+\end{quote}
+
+
+
+We don't need all of the \textbf{\textcolor{purple!70!blue}{real numbers}} that are close to our domain number under observation. We just need the real numbers that are actually members of the domain.
+
+
+
+
+\subsection*{Slight Modification}
+
+
+\textbf{Remember}, we are after some language that works ALL of the time, even for endpoints.   \\
+
+
+
+``Space'' will refer to \textbf{\textcolor{red!90!darkgray}{domain space}} that exists ``around'' our domain number under observation. \\
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Language:}}   \\
+
+\begin{center}
+\textbf{All of the domain numbers inside a $\delta$-interval around $a$} 
+\end{center}
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Notation:}}   \\
+
+\begin{center}
+$(a - \delta, a + \delta) \cap$ Domain
+\end{center}
+
+
+
+The intersection picks out the numbers that are both in the $\delta$-interval and in the domain. \\
+
+
+
+
+
+$\blacktriangleright$ This actually fixes a hidden problem.  If our expectations are disrupted by a missing domain number, then we shouldn't be including that number in our $\delta$-interval.  However, if we stipulate that we are only looking at domain numbers inside the $\delta$-interval, then everything works. \\
+
+
+
+
+\subsection*{Tools}
+
+
+We have our communication tools.
+
+\begin{itemize}
+\item Open intervals for space.
+\item $\delta$-intervals for closeness
+\end{itemize}
+
+
+We are ready to begin our algebraic description of interrupted expectations in function values. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Space]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/space/examples/exampleList}
+
+\end{center}
+
+
+
+\end{document}

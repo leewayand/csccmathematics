@@ -1,0 +1,444 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Solving Inequalities}
+
+\begin{document}
+
+\begin{abstract}
+still break up
+\end{abstract}
+\maketitle
+
+
+
+The first step to solving an inequality is to change it to an equality. \\
+
+
+Working with greater than and less than signs algebraically has its uses, but in general, our algebra cannot really handle that type of symbolic manipulation. \\
+
+
+Instead, it is much better to switch from an algebraic viewpoint to a function viewpoint. \\
+
+
+When we swicth from an algebraic to a function viewpoint, then we can bring all of our knowledge about funcitons to help us. Chacarteristics and features like continuity and zeros are very helpful when thinking about inequalities. \\
+
+
+Instead of solving the inequality algebraically, switch to locating function zeros, discontinuities, and singularities and then let continuity tell you how the function behaves. \\
+
+
+
+
+\begin{example}  Common Factor
+
+
+Solve $\sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}} > 0$
+
+
+
+
+
+\begin{idea} \textbf{\textcolor{blue!55!black}{Quick Analysis}} 
+
+
+The square root function is never negative.  Therefore, for $x > 0$ each of the terms would be positive.  So, at least this inequality has $(0, \infty)$ in the solution set.  \\
+
+
+The domain of the square root function is nonnegative numbers.  Therefore, the interval $(-\infty, -9)$ is not in the solution set.   \\
+
+
+$x \ne -9$, because the negative exponent means that factor is in the denominator.
+
+\end{idea}
+
+
+
+That gives us a quick idea of where to look.
+
+
+\begin{explanation}
+
+
+
+
+
+
+If we look at the graph of  
+
+\[
+y = f(x) = \sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}} = \sqrt{x+9} + x \cdot \frac{1}{2 \sqrt{x+9}} 
+\]
+
+
+
+
+\begin{center}
+\desmos{lxhyyzdkza}{400}{300}
+\end{center}
+
+
+
+
+It appears that the solution set is something like  $(-6, \infty)$, which would agree with our quick analysis.  We need algebra to get the exact value of the left endpoint (looking at the graph is not enough).
+
+
+This left endpoint of this domain interval is a zero of $f(x)$ \\ 
+
+
+
+
+
+
+A common factor is a factor of the least degree in all of the terms.  We have one here. $(x+9)$ is a factor in both terms.  The powers are $\frac{1}{2}$ and $-\frac{1}{2}$. The least of which is $-\frac{1}{2}$.
+
+We will use the distributive property to factor out $(x+9)^{\answer{-\frac{1}{2}}}$.
+
+
+\[ (x+9)^{-\tfrac{1}{2}} \left((x+9) + x \cdot \frac{1}{2}\right)  = 0 \]
+
+
+We could, in turn, write this as a fraction
+
+
+\[ \frac{\left((x+9) + x \cdot \frac{1}{2}\right)}{\sqrt{x+9}} = 0 \]
+
+
+\[ \frac{ \frac{3}{2} x + 9}{\sqrt{x+9}} = 0 \]
+
+
+
+This is a fraction, so it equals $0$ when the numerator equals $0$ and the denominator does not equal $0$.
+
+
+$\answer{\frac{3}{2} x + 9} = 0$
+
+
+
+$x = 6$, which is in the domain of $\sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}}$. \\
+
+$\vartriangleright$ We are looking for where this fraction is postive. Finding the zeros breaks the domain into pieces and then we can loko at those pieces for positve function values.
+
+The denominator is $\sqrt{x+9}$, which is always positive.  So, the fraction is positive when the numerator is positive.  The numerator is positive on $(-6, \infty)$ \\
+
+
+
+
+
+The solution to the original inequality is $(-6, \infty)$
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+Incidentally, $\sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}}$ is the derivative of $x \sqrt{x+9}$. Therefore, $f(x) = x \sqrt{x+9}$ is increasing on $(-6, \infty)$. \\
+
+Let's take a look.
+
+
+
+
+
+
+
+\begin{center}
+\desmos{3ttk3hpxqt}{400}{300}
+\end{center}
+
+
+Yep.
+
+
+
+
+
+
+
+
+\begin{example}  Common Factor
+
+
+Solve $\frac{x^3 (18x) - 9(x^2-3)(3x^2)}{(x^3)^2} \leq 0$
+
+
+
+\begin{explanation}
+
+First, let's just note that the domain is $(-\infty, 0) \cup (0, \infty)$. \\
+
+A quick graph shows we might be looking for two infinite intervals.
+
+
+
+\begin{center}
+\desmos{pvtyfcpxgj}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+The numerator is a difference of two terms and $9 x^2$ is a common factor.  We can use the Distributive Property to factor it out.
+
+
+
+\[ \frac{9x^2 (2x^2 - 3(x^2-3))}{x^6} = 0 \]
+
+
+\[ \frac{9 \left( \answer{9 - x^2} \right)}{x^4} = 0 \]
+
+
+
+This is a fraction, so it equals $0$ when the numerator equals $0$ and the denominator does not equal $0$.
+
+
+$9 - x^2 = 0$
+
+This has two solutions: $\{ -3, 3  \}$, both of which are in the domain. \\
+
+
+The whole expression or formula is a fraction and the denominator is an even power function. Therefore the denominator is always positive. So, we need the numerator to be negative to make the whole fraction negative.
+
+
+$9 - x^2 < 0$, when $x^2 > 9$, which is on $(-\infty, 3) \cup (3, \infty)$.
+
+We want less than or equal, so we will add in $-3$ and $3$.
+
+
+The solution set is $(-\infty, 3] \cup [3, \infty)$.
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+Incidentally, $\sqrt{x+9} + x \cdot \frac{1}{2} (x+9)^{-\tfrac{1}{2}}$ is the derivative of $x \sqrt{x+9}$. Therefore, $f(x) = x \sqrt{x+9}$ is increasing on $(-6, \infty)$. \\
+
+Let's take a look.
+
+
+
+
+
+
+
+\begin{center}
+\desmos{3ttk3hpxqt}{400}{300}
+\end{center}
+
+
+Yep.
+
+
+
+
+
+
+
+
+\begin{example}  Common Factor
+
+
+Here is the graph of $P(t) = 3 t^4 - 4 t^3$.
+
+
+
+\begin{center}
+\desmos{jbc7gedgts}{400}{300}
+\end{center}
+
+
+From the graph we can see that $P$ decreases, flattens out, decreases, turns, and increases.  Therefore its derivative should be negative, $0$, negative, $0$, and positive. \\
+
+
+
+$P'(t) = 12 t^3 - 12 t^2$ \\
+
+
+
+
+\begin{center}
+\desmos{tujz79x16z}{400}{300}
+\end{center}
+
+
+
+To identify the intervals on which $P(t)$ increases and decreases, we need the zeros of $P'(t)$.  It appears there are two roots, one a double root.
+
+
+
+
+
+
+Solve $12 t^3 - 12 t^2 = 0$
+
+
+\begin{explanation}
+
+The Distributive Property gives us the product $12 t^2 (t-1)$.
+
+
+
+
+We have two solutions: $\{ 0, 1  \}$, both of which are in the domain.
+
+
+
+
+\begin{itemize}
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is positive on $(1, \infty)$. $P(t)$ is increasing on $(1, \infty)$. \\
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t)$ is negative on $(-\infty, 1)$. $P(t)$ is decreasing on $(-\infty, 1)$. \\
+\item From the factorization, $P'(t) = 12 t^2 (t-1)$, we can see that $P'(t) = 0$ at $0$ and $1$. \\
+\end{itemize}
+
+
+\end{explanation}
+\end{example}
+
+We now find ourselves examining functions from two different viewpoints. \\
+
+
+
+\section*{ Points vs. Intervals}
+
+
+
+
+We seem to have two different ideas of increasing and decreasing running alongside each other. \\
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} We have an algebraic point of view: the function, $f$, is increasing on the set $S$, if whenever $a < b$, then $f(a) < f(b)$.
+
+
+
+\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} We have a pointwise view: the function, $f$, is increasing at the number $a$, if $f'(a) > 0$. \\
+
+
+
+They actually fit together. If you remember, when we were inventing the idea of the derivative, we thought of secant lines slowly fading into tangent lines.  This process assumed that everything was ok with our function around $a$.  That is, there was some space around $a$ in which to move - an open interval containing $a$.
+
+If we stick to open intervals, the algebraic and pointwise views are the same.  The difference comes in at endpoints of intervals. \\
+
+
+In the example above, the function $P$ is increasing on the interval $[1, \infty)$.  When we are talking about the interval, we can add on the endpoint, where the derivative was $0$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Fractions
+
+
+Given that
+
+\begin{itemize}
+\item $R(x) = 2x - 3 x^{\tfrac{2}{3}}$
+\item $R'(x) = 2 - \frac{2}{\sqrt[3]{x}} = 0$
+\end{itemize}
+(You don't know how to get the formula for the derivative yet.  That is a topic for Calculus.)
+
+The graph of $R(x)$ appears to show that $R$ is decreasing on $[0, 1]$.
+\begin{center}
+\desmos{8jalzxiawn}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+To verify this, we need to solve $R'(x) = 2 - \frac{2}{\sqrt[3]{x}}  \leq 0$
+
+
+
+\begin{explanation}
+
+
+Converting to exponents gives us $2 - \frac{2}{x^{\tfrac{1}{3}}} = 0$
+
+
+$2 = \frac{2}{x^{\tfrac{1}{3}}}$
+
+The only way this can happen is if $x^{\tfrac{1}{3}} = \answer{1}$.
+
+This has one solution: $\{  1  \}$
+
+
+
+We can also see that $R'(t)$ is undefined at $0$.  This gives us three intervals to consider: $(-\infty, 0)$, $(0, 1)$, and $(1, \infty)$.
+
+
+
+\begin{itemize}
+\item On $(-\infty, 0)$, $R'(x) = 2 - \frac{2}{x^{\tfrac{1}{3}}} > 0$, since the cube root of a negative $x$ is still negative making the expression $2 + \text{positive} > 0$.
+\item On $(0,1)$, $R'(x) = 2 - \frac{2}{x^{\tfrac{1}{3}}} < 0$, since a small $x$ in the denominator will make the fraction big.
+\item On $(1,\infty)$, $R'(x) = 2 - \frac{2}{x^{\tfrac{1}{3}}} > 0$, since a big $x$ in the denominator will make the fraction small.
+\end{itemize}
+
+
+$R(x)$ is decreasing on $[0,1]$.
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Zeros]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/zeros/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,378 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Missing Values}
+
+\begin{document}
+
+\begin{abstract}
+blink
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+In the previous section, our functions did not meet our expectations, because the actual function value at a particular domain number was not the value suggested by the values ``around'' it.
+
+
+
+In this section, we have a similar break in our expectations. The surprise here is that there is no function value at all. The function just momentarily blinks at one domain number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Expectations}
+
+There are several similar situations where our expectations are not met.
+
+
+
+
+
+
+
+
+
+Graph of $y = h(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$x$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:5),<->] {x+3};
+
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-2)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+Here, $h(2)$ does not exist.   However, the pattern ``around'' $2$ suggests that $h(2)$ ``should'' be $5$. That would have fit our pattern better.
+
+
+
+
+
+
+
+Graph of $y = G(r)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(2:7),->] {-x+3};
+
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,1)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We now have two expectations for the same domain number. The left side of our brain is expecting $G(2)=5$ and the right side of our brain is expecting $G(2)=1$. Both of these expectations come up empty, because $G$ has no value at $2$. \\
+
+
+
+
+
+
+
+Graph of $y = r(t)$.  
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$t$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-4:1.7),<->] {3/(2-x)};
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(2.3:7),<->] {3/(x-2)};
+
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,1)};
+        
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+This one feels a little better, because we are expecting unboundedness.  But, there is still a single domain number that suddenly has no value, when all of the surrounding domain values have associated function values.
+
+
+
+
+
+
+
+
+
+
+
+
+These examples illustrate that our internal intuition for function behavior is not always met.  But, that, in and of itself, is interesting.  Perhaps we can describe our expectations and compare those to the actual function.
+
+
+
+
+
+
+
+Of course, not every open dot on the graph contradicts our expectations. Or, posseses any surprise at all.
+
+
+
+
+
+
+Graph of $y = p(w)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$w$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-3)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+In the first three examples, right in the middle of the domain interval, the function suddenly vanishes away from its nice pattern. 
+
+In this example, the domain is again a single interval, but the domain interval itself stops. The domain interval doesn’t include the endpoint, which makes it natural for the graph not to include the endpoint and for the function not to have a point there.
+
+Since the domain interval itself doesn't include the endpoint, it is not bothersome that there is no function value there.
+
+
+
+
+
+
+
+
+ 
+Graph of $y = G(x)$.
+ 
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$x$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+           
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:-4),<-] {x+7};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(2:7),->] {-x+3};
+ 
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,3)};
+            \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,1)};
+ 
+ 
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+ 
+ 
+ 
+ 
+ 
+In this example, the domain consists of two intervals, with space between them. One endpoint is include and the other is not.  The space makes all the difference.  \\
+
+
+
+We base many of our expectations on space.  Where is there empty space?  Where is space filled in? \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{idea}  \textbf{\textcolor{purple!85!blue}{What's catching our eye?}}
+
+
+Our expectations from the patterns we see are disrupted when close domain numbers don't have close function values.
+
+
+\end{idea}
+
+This time there isn't a different value than we expected.  Instead, there is no value where we expected one. How do we compare function values to no function value? \\
+
+We don't.
+
+Again, we compare function values to themselves. \\
+
+
+\begin{quote}
+ \textbf{\textcolor{blue!55!black}{For domain numbers really really really close to $2$, the function values of $K$ for those domain numbers are not ALWAYS close to each other.}} 
+\end{quote}
+
+
+\begin{quote}
+ \textbf{\textcolor{blue!55!black}{For domain numbers really really really close to $2$, the function values of $K$ for those domain numbers are close to each other, however, there is a missing value.}} 
+\end{quote}
+
+
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} We need a way of algebracially representing ``really close''.  \\
+
+
+We also want to indicate the type of expectation we experienced that was interrupted with a missing domain number. So, we need to talk about domain numbers ``around'' the single domain number under observation. 
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} We need to ensure that there is some filled in space ``around'' our domain number. \\
+
+
+
+
+
+Another issue lurking in the shadows is that we always have the goal of \textbf{\textcolor{red!70!black}{all}}. Whenever we get ready to say something about this type of function behvior, we want our statement to apply to \textbf{\textcolor{red!70!black}{all}} of these situations. \\
+
+We need to make sure that we avoid the most extreme and ridiculous situations.  We need to make sure that there is \textbf{\textcolor{red!70!black}{ALWAYS}} filled in space around our domain number.
+
+
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Open intervals are the tool of choice here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Broken Values]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/functionValues/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+\end{document}

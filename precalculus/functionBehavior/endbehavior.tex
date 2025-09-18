@@ -1,0 +1,284 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{End Behavior}
+
+\begin{document}
+
+\begin{abstract}
+approaching infinity
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+Eventually, outside some interval, the function under investigation doesn't do anything surprising.  It settles down into a simple pattern.  We call this eventual pattern the \textbf{\textcolor{purple!85!blue}{end-behavior}}.
+
+
+
+What are the simple patterns on $(-\infty, -a) \cup (a, \infty)$ when $a$ is ``big enough''?  What does ``big enough'' mean?
+
+
+
+
+\begin{example} big enough
+
+
+
+
+
+Compare the graphs of $y = f(x) = \frac{1}{2}(3x-2)(x+5)(x+3)$ and $y=g(x) = \frac{3}{2}x^3$.
+
+
+
+\begin{center}
+\desmos{hldmst701o}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+\begin{center}
+\desmos{kfhf8jbk3s}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+These two functions are either completely different or almost the same.  It depends on your viewpoint.
+
+Inside $[-10, 10]$, they behave much differently. Their zeros are different.  $f(x)$ has local maximums and minimums.  Its graph has hills and valleys.  $g(x)$ is always increasing.
+
+However, if you change your view point to $(-\infty, -50) \cup (50, \infty)$, then they are almost identical.
+
+
+We would say $g(x) = \frac{3}{2}x^3$ is the \textbf{end-behavior} of $f(x) = \frac{1}{2}(3x-2)(x+5)(x+3)$.
+
+
+
+
+
+
+\end{example}
+
+
+End-behavior occurs only for very large domain numbers, out in the tails of the domain.   Eventually, the numbers are so large that the major pieces of the function just overshadow everything else.  
+
+For polynomials, the major piece is the leading term, consisting of the leading coefficient with the highest power term.
+
+
+
+
+
+\section*{Rational Functions} 
+
+Rational functions are quotients of polynomials.  Therefore, their end-behavior is revealed by the quotient of their leading terms.
+
+
+
+
+graph of $y = g(x) = \frac{x+1}{(x+3)(x-4)}$
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+          \addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({4},{x});
+
+          \addplot [line width=2, penColor, smooth, domain=(-9:-3.1),<->] {(x-1)/((x+3)*(x-4))};
+          \addplot [line width=2, penColor, smooth, domain=(-2.9:3.9),<->] {(x-1)/((x+3)*(x-4))};
+          \addplot [line width=2, penColor, smooth, domain=(4.1:9),<->] {(x-1)/((x+3)*(x-4))};
+
+          
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The end-behavior would come from 
+
+
+\[ \frac{x+1}{(x+3)(x-4)}    \sim    \frac{x}{x^2} = \frac{1}{x}  \]
+
+
+This approaches $0$ as $x \to \infty$ or $x \to -\infty$ 
+
+
+
+\[
+\lim\limits_{x \to \infty} \frac{x+1}{(x+3)(x-4)} = \lim\limits_{x \to \infty} \frac{1}{x} = 0
+\]
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$   For a rational function, if the degree of the denominator is greater than the degree of the numerator, then the end-behavior of a rational function is the constant function $0$ and the horizontal axis is a horizontal asymptote on the graph.
+
+
+
+
+$\blacktriangleright$   For a rational function, if the degrees of the denominator and numerator are equal, then the end-behavior of a rational function is again a constant function.
+
+
+\[ \frac{(3t+1)(5t-5)}{(t+3)(2t-4)}    \sim    \frac{15t^2}{2t^2} = \frac{15}{2}  \]
+
+
+
+
+The graph of $y = h(t) = \frac{(3t+1)(5t-5)}{(t+3)(2t-4)} $ has a horizontal asymptote with the equation $y = \frac{15}{2}$.
+
+
+
+
+$\blacktriangleright$   If the degree of the numerator and is one more than the degree of the denominator, then the end-behavior is a linear function.
+
+
+\[ \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim   \frac{6w^3}{3w^2} \sim 2w \]
+
+
+
+
+
+
+
+
+\begin{center}
+\desmos{khtwpb7qdx}{400}{300}
+\end{center}
+
+
+
+
+Maybe, we want a little bit more detail. The graph makes it look like maybe the intercept is $3$.
+
+
+
+
+
+
+
+\begin{center}
+\desmos{avpix89xzs}{400}{300}
+\end{center}
+
+
+
+That seems off a little bit. \\
+
+
+Let's think algebraically, to get the linear term. \\
+
+
+
+We are looking for a linear function, $A \cdot w + B$, such that for very large values of $x$, we have
+
+
+
+
+
+
+
+
+
+
+\[ \frac{(w+8)(2w-7)(3w-1)}{(3w-5)(w+2)}    \sim    A \cdot w + B  \]
+
+
+
+
+We are looking for 
+
+
+
+\[ (w+8)(2w-7)(3w-1)   \sim   (3w-5)(w+2) \cdot  (A \cdot w + B)  \]
+
+
+
+If we multiply these out and compare...
+
+
+\[
+6 w^3 + 25 w^2 - 177 w + 56 = 3A w^2 + (A + 3B) w^2 + \cdots
+\]
+
+
+This tells us that $A = 2$ and $B = \frac{23}{3}$
+
+
+
+
+\begin{center}
+\desmos{b23uvbvp8n}{400}{300}
+\end{center}
+
+
+That looks good.  \\
+
+This line is called an \textbf{oblique} asymptote.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Behavior]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/functionBehavior/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}

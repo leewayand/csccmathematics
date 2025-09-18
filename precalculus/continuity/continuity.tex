@@ -1,0 +1,207 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Continuity}
+
+\begin{document}
+
+\begin{abstract}
+close as you want
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+A function being \textbf{continuous} at a domain number is the opposite of being discontinuous. \\
+
+
+Function values are close when the domain numbers are close.
+
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Continuous}}
+
+The function $f$ is continuous at $a$ if
+
+
+\begin{itemize}
+\item $a \in Dom_f$ - $a$ is in the domain of $f$, which means $f(a) \in \mathbb{R}$, i.e. $f(a)$ exists.
+\item For every $\epsilon > 0$ defining an open interval around $f(a)$, namely $I = (f(a) - \epsilon, f(a) + \epsilon)$, there exists a corresponding $\delta > 0$, such that the image of open interval $(a - \delta, a + \delta)$ is a subset of $(f(a)-\epsilon, f(a)+\epsilon)$.
+\end{itemize}
+
+
+For \textbf{\textcolor{red!70!black}{EVERY}} open interval $I$ around $f(a)$, there exists a corresponding open interval around $a$, such that \textbf{\textcolor{red!70!black}{ALL}} of the function values are inside $I$.
+
+
+\end{definition}
+
+
+
+
+
+$\blacktriangleright$ \textbf{Discontinuity:}  You can find a single interval around $f(a)$, such that EVERY interval around $a$ contains a domain number whose function value is outside that interval.
+
+
+$\blacktriangleright$ \textbf{Continuity:} For any and every selected interval around $f(a)$, you can find a corresponding interval around $a$, such that all of their function values are inside the selected interval.
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+\[
+\text{Let } \, f(x) = 
+\begin{cases}
+  2x-4 & \text{ on } (-2, 5) \\
+  -x + 9  & \text{ on } [5, 9)
+\end{cases}
+\]
+
+
+
+
+
+Graph of $y=f(x)$
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:5),<-] {2*x-4};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(5:9),->] {-x+9};
+
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
+            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,4)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,6)};
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$f$ is continuous at $3$. \\
+
+
+
+\begin{explanation}
+
+First, $f(3) = 2$. \\
+
+
+Pick ANY open interval around $2$:  $(2 - \epsilon, 2 + \epsilon)$, where $\epsilon > 0 $ is small. 
+
+Then there is a corresponding interval for the domain. Namely choose $\delta = \frac{\epsilon}{4}$.
+
+Let $I = (3 - \delta, 3 + \delta) = \left(3 - \frac{\epsilon}{4}, 3 + \frac{\epsilon}{4}\right)$
+
+
+The image of $I$, $f(I) = f\left(\,\left(3 - \frac{\epsilon}{4}, 3 + \frac{\epsilon}{4}\right)\,\right) = \left(2 - \frac{\epsilon}{2}, 2 + \frac{\epsilon}{2}\right)$
+
+And, $\left(2 - \frac{\epsilon}{2}, 2 + \frac{\epsilon}{2}\right) \subset  (2 - \epsilon, 2 + \epsilon) $
+
+
+\textbf{ALL} of the function values land inside the original $(2 - \epsilon, 2 + \epsilon)$ interval.
+
+
+This can be done \textbf{\textcolor{red!70!black}{FOR ANY}} $\epsilon > 0$. \\
+
+
+For ANY open interval around $f(a)$, no matter how small, a corresponding open interval around $a$ can be found, such that the function value from that interval around $a$ never jump out of the interval around $f(a)$.
+
+
+
+
+
+
+
+
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+\textbf{Continuity:} No matter what $\epsilon$ is choosen for $f(a)$, you can ALWAYS find a corresponding $\delta$ for $a$. \\
+
+
+
+\textbf{Discontinuity:} There is an $\epsilon$ for $f(a)$, such that there is no $\delta$ for $a$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Continuity]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/continuity/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+\end{document}

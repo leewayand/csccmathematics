@@ -1,0 +1,682 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Approximating Functions}
+
+\begin{document}
+
+\begin{abstract}
+tangent lines
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+What are we supposed to do with a function like this?
+
+\[  C(x) =  \frac{(\sin(2x)+2)^{|x|}}{5(x^2+1)}       \]
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=C(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:9.5)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+          %\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+          %\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+The algebra is beyond us. \\
+
+
+
+
+The formula is too difficult to manipulate with algebra.  So, we concentrate on approximations. \\ 
+
+
+The function is too complicated to consider as a whole. So, we think of it in pieces - small pieces. \\
+
+
+
+
+
+
+If we are only interested in approximating small pieces of the function, then we can use a replacement function that does a pretty good job of approximating this function over a small interval - a replacement that is easier to work with.
+
+And, our favorite functions are linear functions.
+
+
+$C(x)$ appears to be linear-ish on the interval $(6.6, 7.0)$. Our plan is to create a linear function that does a pretty good job of approximating $C(x)$ on the interval. Graphically, that means a tangent line around $6.8$.  We need two data for this.  We need $C(6.8)$ and $C'(6.8)$.
+
+
+
+
+
+Out linear approximation will be $approxC(x) = C'(6.8)(x-6.8) + C(6.8)$.
+
+Of course, it will only be useful on $(6.6, 7.0)$, if that. \\
+
+
+
+
+We'll need the derivative (which Calculus will. provide): \\
+\textbf{Note:} On the interval $(6.6, 7.0)$, $| x | = x$.
+
+\[  
+C'(x) = \frac{(\sin(2x)+2)^x (\ln(\sin(2x)+2) + \frac{2 x \cos(2x)}{\sin(2x)+2})}{5(x^2+1)} - \frac{2x(\sin(2x)+2)^x}{5(x^2+1)^2}
+\]
+
+
+
+
+That's terrible.  But we only need it for $6.8$ and we are approximating, for which decimal numbers are handy.
+
+$C'(6.8) \approx 17.132$
+
+
+$C(6.8) \approx 5.359$
+
+
+That gives $approxC(x) \approx 17.132(x-6.8)+5.359$
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=C(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:9.5)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(6.2:7.2)] {17*(x-6.8)+5.36};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+That is pretty good on $(6.6, 7.0)$.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=C(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(6.3:7.3)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(6.3:7.3)] {17*(x-6.8)+5.36};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=6.2:7.4, ymax=10, xmax=7.4, ymin=-10, xmin=6.2,
+            axis lines =center, xlabel=$x$, ylabel={$y=C(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={6.3,6.5,6.7,6.9,7.1,7.3},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$6.3$,$6.5$,$6.7$,$6.9$,$7.1$,$7.3$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(6.3:7.3)] {(sin(deg(2*x))+2)^abs(x)/(5*(x^2+1))};
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(6.3:7.3)] {17*(x-6.8)+5.36};
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+Now we can approximate $C(x) \approx approxC(x) \approx 17.132(x-6.8)+5.359$ on $(6.6, 7.0)$.  That would save a lot of time and energy and not give up too much accuracy - as long as we stay in this interval.
+
+
+
+
+
+
+However, these types of functions are for later courses.  We are just trying to figure out the concept here.  So, let's bring our investigation back down to our elementary functions.
+
+
+
+
+
+\section*{Linear Approximations}
+
+
+Approximating complex functions with linear functions is an important aspect of analysis, even if it is over a small interval.
+
+
+
+
+
+
+
+\begin{example} Square Roots
+
+
+
+Approximate $\sqrt{4.5}$ with a decimal expansion.
+
+\begin{explanation}
+
+First, graph $y = s(t) = \sqrt{t}$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=s(t)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),->] {sqrt(x)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+			%\addplot [line width=2, penColor2, smooth,samples=100,domain=(6.2:7.2)] {17*(x-6.8)+5.36};
+			%\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(6.8,5.36)};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$4.5$ simply doesn't work well with the square root function.  However, $4$ does and $4$ is near $4.5$.
+
+
+Let's create a linear approximation to $s(t)$ at $4$.
+
+Courtesy of Calculus: the derivative of $s(t)$ is $s'(t) = \frac{1}{2\sqrt{t}}$.
+
+We have 
+
+\begin{itemize}
+\item $s(4) = \sqrt{4} = 2$
+\item $s'(4) = \frac{1}{2\sqrt{4}} = \frac{1}{4}$
+\end{itemize}
+
+
+
+The linear approximation is $L(t) = \frac{1}{4}(t-4)+2$
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=s(t)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),->] {sqrt(x)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:9.5),<->] {0.25*(x-4)+2};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Now we'll use our linear approximation to get an estimate to $\sqrt{4.5} = s(4.5)$.
+
+
+
+\[   \sqrt{4.5} \approx   \frac{1}{4}(4.5-4)+2    =   \frac{0.5}{4}+2 =    2.125   \]
+
+Compare this to what a calculator gives: $2.121320344$.  Not bad for just a linear function.
+
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+
+
+
+
+
+\section*{Polygonal Lines}
+
+
+We might even approximate a function over a wider interval, just use more linear functions (i.e. line segments).
+
+
+
+
+
+Graph of $y = p(k) = -k^2 + 7$.
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=p(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-4:4),<->] {-(x^2)+7};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+			%\addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:9.5),<->] {0.25*(x-4)+2};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Let's approximate $p(k) = -k^2+7$ with five linear functions, corresponding to five tangent lines tangent where $k=-2, -1, 0, 1, 2$.
+
+$p(k)$ is a quadratic function, therefore, we know that $p'(k) = -2k$.  This will get us rate of change or slope.  Together with the point of tangency, we can get a linear model of $p(k)$.
+
+
+\begin{model}
+
+\begin{itemize}
+\item $p(-2) = 3$ and $p'(-2) = 4$ give $p(k) \approx 4(k+2)+3$
+\item $p(-1) = 6$ and $p'(-1) = 2$ give $p(k) \approx \answer{2(k+1)+6}$
+\item $p(0) = 7$ and $p'(0) = 0$   give $p(k) \approx \answer{7}$
+\item $p(1) = 6$ and $p'(1) = -2$   give  $ p(k) \approx \answer{-2(k-1)+6}$
+\item $p(2) = 3$ and $p'(2) = -4$   give $p(k) \approx -4(k-2)+3$
+\end{itemize}
+
+\end{model}
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=p(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-4:4),<->] {-(x^2)+7};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:-1),<->] {4*(x+2)+3};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:0),<->] {2*(x+1)+6};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-6:6),<->] {7};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(0:6),<->] {-2*(x-1)+6};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(1:6),<->] {-4*(x-2)+3};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+It looks like maybe these will approximate $p(k)$ on $(-3, 3)$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-4:4, ymax=8, xmax=4, ymin=-6, xmin=-4,
+            axis lines =center, xlabel=$k$, ylabel={$y=p(k)$}, grid = major,
+            ytick={-6,-4,-2,2,4,6,8},
+            xtick={-3,-2,-1,1,2,3},
+            yticklabels={$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$}, 
+            xticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-4:4),<->] {-(x^2)+7};
+      %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:-1),<->] {4*(x+2)+3};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:0),<->] {2*(x+1)+6};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-4:4),<->] {7};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(0:4),<->] {-2*(x-1)+6};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(1:4),<->] {-4*(x-2)+3};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now we need domains for each piece.  We'll decide the domains by locating the intersections of the lines.
+
+
+
+
+$\blacktriangleright$  Intersection of $4(k+2)+3$ and $2(k+1)+6$.
+
+\begin{procedure}
+
+$4(k+2)+3 = 2(k+1)+6 $
+
+$4k + 8 + 3 = \answer{2k + 2 + 6}$
+
+$2k = \answer{-3}$
+
+$k=-\frac{3}{2}$
+
+\end{procedure}
+
+
+$\blacktriangleright$  Intersection of $2(k+1)+6$ and $7$.
+
+\begin{procedure}
+
+$2(k+1)+6 = 7$
+
+$2k + 2 + 6 = 7$
+
+$2k = \answer{-1}$
+
+$k = -\frac{1}{2}$
+
+\end{procedure}
+
+
+
+
+$\blacktriangleright$  By symmetry we can see that the other two intersections happen when $k = \frac{1}{2}$  and $k = \frac{3}{2}$.
+
+
+
+Our approximating piecewise linear function is 
+
+
+
+\[
+p(k) \approx L(k) = 
+\begin{cases}
+  4(k+2)+3       &          \text{ on } \,     \left(-3, -\frac{3}{2}\right]   \\
+  2(k+1)+6       &          \text{ on } \,     \left(-\frac{3}{2}, -\frac{1}{2}\right]   \\
+  7              &          \text{ on } \,     \left(-\frac{1}{2}, \frac{1}{2}\right]   \\
+  -2(k-1)+6      &          \text{ on } \,     \left(\frac{1}{2}, \frac{3}{2}\right]   \\
+  -4(k-2)+3      &          \text{ on } \,     \left(\frac{3}{2}, 3\right)   
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=L(k)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-4:4),<->] {-(x^2)+7};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-3:-1.5)] {4*(x+2)+3};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-1.5:-0.5)] {2*(x+1)+6};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-0.5:0.5)] {7};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(0.5:1.5)] {-2*(x-1)+6};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(1.5:3)] {-4*(x-2)+3};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+Pretty good.
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-4:4, ymax=8, xmax=4, ymin=-2, xmin=-4,
+            axis lines =center, xlabel=$k$, ylabel={$y=L(k)$}, grid = major,
+            ytick={-2,2,4,6,8},
+            xtick={-4,-2,2,4},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-4:4),<->] {-(x^2)+7};
+			%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-3:-1.5)] {4*(x+2)+3};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-1.5:-0.5)] {2*(x+1)+6};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-0.5:0.5)] {7};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(0.5:1.5)] {-2*(x-1)+6};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(1.5:3)] {-4*(x-2)+3};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Linear approximations do better on straight parts of the graph rather than parts with more curve to them.  Calculus will give us a way of measuring this curvature.
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Approximate Behavior]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/nearEquivalentBehavior/examples/exampleList}
+
+\end{center}
+
+
+
+\end{document}

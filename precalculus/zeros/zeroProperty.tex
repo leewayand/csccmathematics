@@ -1,0 +1,213 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Zero Property}
+
+\begin{document}
+
+\begin{abstract}
+factoring
+\end{abstract}
+\maketitle
+
+
+
+
+Locating the zeros of a function is an important skill.  Functions switch signs at zeros which can reflect a lot of important information  - especially when the function is a derivative where switching signs signals switching behavior.
+
+We don't have many ways of locating zeros for complicated functions.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Zeros of linear functions are easy to locate - just solve the equation for the variable. \\
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Basic exponential functions don't have zeros.  Basic logarthmic functions have a zero when the inside of the formula equals $1$. For more complicated exponential and logarithmic functions, we can use transformations and the algebra rules. \\
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Sine and cosine have repeating zeros. So, we can identify them for one period and then use transformations to locate the others. \\
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} We have several methods for quadratic functions.  We can complete the square and use the quadratic formula. \\
+
+
+
+We have only one more method.  It is specifc and yet mysterious at the same time.
+
+
+
+\begin{quote}
+\textbf{Factoring: } Write the expression as a product and use the Zero Product Property of real numbers.
+\end{quote}
+
+
+
+The Zero Product Property is one of the few simple facts we know about the arithmetic of the real numbers.
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Zero Product Property}}  
+
+Let $a$ and $b$ be real numbers. \\
+
+If $a \cdot b = 0$, then either $a=0$ or $b=0$.
+
+
+\end{definition}
+
+
+
+That is one of our best tool for locating zeros of functions (or critical numbers for derivatives). \\
+
+
+
+\begin{example} Factoring
+
+Solve $k^2 - k - 20 = 0$ \\
+
+\begin{explanation}
+
+
+
+Rewrite $k^2 - k - 20$ as a product.
+
+If $k^2 - k - 20 = (factor) \cdot (factor)$, then the factors will have to be linear or constants.  If one of the factors was a constant, then we would have recognized a constant factor in all three coefficients of the terms of the expression.  We can look beyond constant factors for this quadratic. \\
+
+Therefore, we can begin with a template involving two linear factors, like $k^2 - k - 20 = (k + ?) \cdot (k + ?)$
+
+When we multiply the factors out, the product of the two constant terms will have to be $\answer{-20}$.
+
+Possibilities:
+\begin{itemize}
+\item $-20 \cdot 1$
+\item $20 \cdot \answer{-1}$
+\item $-10 \cdot 2$
+\item $10 \cdot \answer{-2}$
+\item $-5 \cdot 4$
+\item $5 \cdot \answer{-4}$
+\end{itemize}
+
+
+
+Only one of these options gives a linear term of $-k$.
+
+
+$k^2 - k - 20 = (k + 4) \cdot (k + (-5))$
+
+$k^2 - k - 20 = (k + 4) \cdot (k - 5)$
+
+
+
+Now we can replace the original equation with an equivalent one:
+
+
+$(k + 4) \left( \answer{k - 5} \right) = 0$
+
+
+
+Applying the zero product property tells us that either $k + 4 = 0$ or $k - 5 = 0$.  \\
+
+The solution set is $\{ -4, 5 \}$
+
+
+
+\end{explanation}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Common Factor
+
+
+Solve $3 \, t \, e^t - (t-1) \, e^t = 0$
+
+\begin{explanation}
+
+
+
+This expression is a difference of two terms and each term has $e^t$ as a factor.  Therefore, we will apply the Distributive Property.
+
+
+
+$e^t \, (3t - (t-1))= 0$
+
+
+We can simplify the parentheses.
+
+
+
+$e^t \left( \answer{2t + 1} \right)= 0$
+
+
+
+The zero product property tells us that either $\answer{e^t} = 0$ or $2t + 1 = 0$.  \\
+
+The function $f(t) = e^t$ has no zeros. 
+
+
+$2t + 1 = 0$, when $t = -\frac{1}{2}$
+
+We have one solution: $\left\{ -\frac{1}{2} \right\}$
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+\begin{procedure} \textbf{\textcolor{red!70!black}{Solving Equations}}
+
+
+We know two methods for solving equations.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} If you are familiar with the function's properties and have an idea of what to do, then go do that. \\
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} If you do not know what to do, then get everything on one side of the equation with zero on the other side, then factor. \\
+
+
+
+If you don't know what to do, then you know what to do.  Factor and use the zero product property.
+
+
+\end{procedure}
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{oooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Zeros]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/zeros/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+\end{document}

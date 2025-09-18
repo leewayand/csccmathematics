@@ -1,0 +1,307 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Alternate Formulas}
+
+\begin{document}
+
+\begin{abstract}
+many representations
+\end{abstract}
+\maketitle
+
+
+
+
+
+We use algebraic expressions as descriptions of relationships. \\
+
+When we wish to identify specific items within the relationship, we create equations and attempt to solve them. \\
+
+As it turns out, it is almost impossible to look at an equation and recognize its solutions.
+
+
+There are very few forms we can maniplulate in our heads that easily.
+
+
+
+\begin{summary} \textbf{\textcolor{blue!75!black}{Simple Equations}}  (We know what to do.)
+
+$\blacktriangleright$ Something like $3x = 7$ can be solved in your head.  Whatever $x$ is, it gets rid of the $3$ and inserts a $7$.  That gives us $x =\frac{7}{3}$
+
+
+
+
+
+$\blacktriangleright$ Something like $y^2 = 11$ can be solved in your head.  Whatever $y$ is, when you square it, you get $11$.  That gives us $\sqrt{11}$ and $-\sqrt{11}$.  We can handle more complicated  quadratics with the use of the quadratic formula.
+
+
+
+
+$\blacktriangleright$ Something like $4^t = 9$ can be solved in your head.  $t$ is the thing you raise $4$ to, to get $9$.  That gives us $\log_4(9)$.
+
+
+
+$\blacktriangleright$ Something like $\log_3(k) = 2$ can be solved in your head.  The equation tells us that $2$ is the thing you raise $3$ to, to get $k$.  That makes $k = 3^2$.
+
+
+
+$\blacktriangleright$ Something like $\sqrt{m} = 5$ can be solved in your head.  $m = 5^2$.
+
+
+$\blacktriangleright$ Something like $\sin(\theta) = \frac{1}{2}$ can be solved in your head, once you have some trigonometric facts memorized.
+
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+We are somewhat fluent in really small equations that involve familiar functions.   \\
+
+
+
+Start complicating the equations and we are just out of luck, algebraically. \\
+
+
+So, our strategy is to break up our expressions into expressions of these \textbf{\textcolor{blue!55!black}{forms}}.  The only way we know how to break up expressions is by factoring (distributive property).  And, factoring only works with the zero product property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Strategy for Solving Equations}
+
+
+Our strategy has two parts:
+
+
+(1) If you see what the solution should look like (a form), then start guessing and refine your guesses.\\
+(2) Get everything on one side and $0$ on the other side of the equal sign. Use the distributive property to factor.  Break up according to the zero product property. \\
+
+
+
+
+There you have it. Not much for $2,000$ years of mathematics.
+
+On the one hand, you know what to do.  On the other hand, doing it is not easy.
+
+
+
+
+
+
+
+
+\begin{example} One-to-One
+
+
+Solve $4^{2x-1} = 8^x$
+
+
+
+\begin{explanation}
+
+Our first thought is that the variable is in the exponent and we would prefer it not to be.  One way to get to the exponent is to have the same base.
+
+Let's rewrite $4$ and $8$ in terms of $2$, a common base.
+
+\[  4 = 2^{\answer{2}} \]
+
+\[  8 = 2^{\answer{3}} \]
+
+
+
+\[  4^{2x-1} = 8^x  \]
+
+\[  (2^2)^{2x-1} = (2^3)^x  \]
+
+\[  2^{\answer{4x-2}} = 2^{3x}  \]
+
+
+Since, $T(x) = 2^x$ is a one-to-one function, we get
+
+
+\[  4x-2  = \answer{3x}   \]
+
+
+\[ x = 2 \]
+
+The solution set is $\{ 2 \}$.
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Rules
+
+
+
+Solve $e^{- x^2} = \left(e^x\right)^2 \cdot \frac{1}{e^3}$
+
+
+\begin{explanation} 
+
+The pieces have the same base.  Let's combine them into one base on each side.
+
+
+
+\[  e^{- x^2} = \left(e^x\right)^2 \cdot \frac{1}{e^3}     \]
+
+\[  e^{- x^2}  = e^{2x} \cdot e^{-3} \]
+
+\[  e^{- x^2}  = e^{2x-3}  \]
+
+
+
+Since, $E(x) = e^x$ is a one-to-one function, we get
+
+
+\[  -x^2 = \answer{2x - 3}  \]
+
+
+Head to factoring...
+
+
+\[  0 = x^2 + 2x - 3  \]
+
+
+\[  0 =(x+3)(x-1) \]
+
+
+Use Zero Product Property
+
+
+
+Either  $x+3 = 0$ and $x = -3$  or $x-1=0$ and $x = 1$
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Least Power
+
+
+
+Solve 
+
+
+\[  \frac{1}{2 \sqrt{x-1}} \, e^{3x}  + 3 \sqrt{x-1} \, e^{3x} = 0  \]
+
+
+\begin{explanation} 
+
+We have a sum and the terms have common factors.
+
+
+
+\[  e^{3x}  \left( \frac{1}{2 \sqrt{x-1}}  + 3 \sqrt{x-1}  \right) = 0  \]
+
+
+
+We also have $x-1$ has a common factor.  $x-1$ has two powers: $\tfrac{1}{2}$ and $-\tfrac{1}{2}$.  We'll factor at the least power.
+
+
+\[  e^{3x}  \frac{1}{\sqrt{x-1}}   \left( \frac{1}{2}  + 3 (x-1)  \right) = 0 \]
+
+\[  e^{3x}  \frac{1}{\sqrt{x-1}}   \left( 3x - \answer{\frac{5}{2}}  \right) = 0  \]
+
+
+
+
+
+The Zero Product Property tells us that one of these factors is $0$.
+
+
+
+$\blacktriangleright$   $e^{3x}$ has no zeros. \\
+
+
+$\blacktriangleright$   $\frac{1}{\sqrt{x-1}}$ is a fraction and the numerator cannot equal $0$.
+
+
+$\blacktriangleright$  $3x - \frac{5}{2} = $ has one solution:  $\frac{5}{6}$.
+
+
+
+Solution set is $\left\{  \frac{5}{6} \right\}$
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Equivalent Forms]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/equivalentForms/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+\end{document}

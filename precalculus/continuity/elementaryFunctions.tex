@@ -1,0 +1,337 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Elementary Functions}
+
+\begin{document}
+
+\begin{abstract}
+nice
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Elementary Functions}
+
+
+
+
+The Elementary Functions don't do weird things.  They are almost always continuous everywhere (in their domain).  When they do have discontinuities or singularities, they are very nice with obvious jumps.
+
+
+
+
+
+
+\begin{itemize} 
+
+\item \textbf{\textcolor{blue!55!black}{Polynomial Function}} 
+
+
+Polynomials are continuous everywhere. They have no discontinuities or singularities. Constant functions and linear functions are the nicest of the polynomial functions.
+
+
+
+
+
+\item \textbf{\textcolor{blue!55!black}{Rational Function}} 
+
+Rational functions are continuous everywhere (on their domain).  They have singularities and these are represented with vertical asymptotes and holes on their graphs.  But singularities are not in the domain.  Rational functions are not defined at singularities. Rational functions do not have discontinuities.  They are continuous everywhere (on their domain). 
+
+
+
+
+\item \textbf{\textcolor{blue!55!black}{Radical Function}} 
+
+Radical functions are continuous everywhere.  Not everywhere on the real numbers, because their domains are often not $\mathbb{R}$. Everywhere for functions means everywhere on their domain.
+
+
+
+
+
+
+\item \textbf{\textcolor{blue!55!black}{Exponential Function}} 
+
+Exponential functions are continuous everywhere (on their domain).
+
+
+
+
+\item \textbf{\textcolor{blue!55!black}{Shifted Exponential Function}} 
+
+Shifted exponential functions are continuous everywhere (on their domain).
+
+
+
+
+\item \textbf{\textcolor{blue!55!black}{Logarithmic Function}} 
+
+Logarithmic functions are continuous everywhere (on their domain).
+
+
+
+
+
+
+
+
+
+\item \textbf{\textcolor{blue!55!black}{Absolute Value Function}} 
+
+The basic absolute value function is continuous everywhere.
+
+
+
+
+
+
+
+\item \textbf{\textcolor{blue!55!black}{Trigonometric Function}} 
+
+Trigonometric functions are continuous everywhere (on their domain).  They have singularities, like tangent, and these singularities are represented with vertical asymptotes on the graphs.  But singularities are not in the domain.  The trigonometric functions are not defined at singularities. Trigonometric functions do not have discontinuities.  They are continuous everywhere (on their domain). 
+
+
+
+
+
+
+
+
+\end{itemize}
+
+
+
+
+The Elementary Functions are very nice.  They have no discontinuites.  They are continuous everywhere on their domains - or just continuous everywhere - or just continuous.
+
+
+
+
+
+The first example of a simple function with a discontinuity is the Heaviside step (unit step) function.
+
+
+
+
+
+
+\[
+Heaviside(x) = 
+\begin{cases}
+  0 & \text{ on } (-\infty, 0) \\
+  \tfrac{1}{2} & \text{ at } 0 \\
+  1 & \text{ on } (0, \infty) 
+\end{cases}
+\]
+
+
+
+
+
+
+We also have the \textbf{Greatest Integer} function - also called the \textbf{floor} function.
+
+
+\[
+floor(x) = \lfloor x \rfloor = \, \text{ the greatest integer less than or equal to } \, x
+\]
+
+
+
+
+
+Graph of $y = \lfloor x\rfloor$ is below, except the steps keep going up to the right and down to the left.  The extra 3 dots are a graphical symbol communicating that the pattern continues.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-3:5,
+            width=6in,
+            height=4in,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            clip=false,
+            %axis on top,
+          ]
+          \addplot [textColor, very thin, domain=(0:2.3)] {0}; % puts the axis back, axis on top clobbers our open holes
+          \addplot [textColor, very thin] plot coordinates {(0,0) (0,2)}; % puts the axis back, axis on top clobbers our open holes
+          \addplot [very thick, penColor, domain=(-2:-1)] {-2};
+          \addplot [very thick, penColor, domain=(-1:0)] {-1};
+          \addplot [very thick, penColor, domain=(0:1)] {0};
+          \addplot [very thick, penColor, domain=(1:2)] {1};
+          \addplot [very thick, penColor, domain=(2:3)] {2};
+          \addplot [very thick, penColor, domain=(3:4)] {3};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-2)};  %% closed hole          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,-1)};  %% closed hole          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};  %% closed hole          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,1)};  %% closed hole          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,2)};  %% closed hole  
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,3)};  %% closed hole                  
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(-1,-2)};  %% open hole
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(0,-1)};  %% open hole
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(1,0)};  %% open hole
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(2,1)};  %% open hole
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(3,2)};  %% open hole
+          \addplot[color=penColor,fill=background,only marks,mark=*] coordinates{(4,3)};  %% open hole
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3.7,3.5) (3.8,3.6) (3.9,3.7)};  %% 3 dots     
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1.7,-2.5) (-1.8,-2.6) (-1.9,-2.7)};  %% 3 dots     
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+The floor function illustrates a general feeling about elementary functions. The only way discontinities are created is through the use of piecewise defined functions.  To create a discontinuity, we have to break a nice function and just move a piece of it to somewhere else.
+
+
+
+
+
+
+
+
+
+
+
+\section*{Forcing Discontinuities}
+
+
+
+Let's make some discontinuities.
+
+We'll take pieces of different elementary functions and glue them together via piecewise defined functions. 
+
+
+
+
+
+\begin{example} Jumps
+
+
+
+
+
+
+
+\[
+\text{Let } \, G(x) = 
+\begin{cases}
+  (x+6)(x+2) & \text{ on } (-\infty, -3] \\
+  2\sin(x) & \text{ on } (-3, 4) \\
+  2 & \text{ at } 4 \\
+  2(x-4)-3 & \text{ on } (4, \infty) 
+\end{cases}
+\]
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$x$}, ylabel={$y$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+          	xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-7:-3),<-] {(x+6)*(x+2)};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-3:4)] {2*sin(deg(x))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(4:8),->] {2*(x-4)-3};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-3)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,2)};
+
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,-0.282)};
+      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1.51)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-3)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{itemize}
+\item $G$ is continuous on $(-\infty,-3]$, because $G$ is a quadratic function on this interval.
+\item $G$ is continuous on $(-3,4]$, because $G$ is a sine function on this interval.
+\item $G$ is continuous on $(4,\infty)$, because $G$ is a linear function on this interval.
+\end{itemize}
+
+
+\end{example} 
+
+Basic elementary functions are continuous (on their domains). \\
+
+As we will see when studying compositions in more detail, if you compose a nice basic elementary function with a discontinuous function, then you usually get a discontinuous function.  If you break the domain up into pieces, then the range will follow suit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Continuity]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/continuity/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}
