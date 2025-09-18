@@ -1,0 +1,247 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Pointwise Functions}
+
+\begin{document}
+
+\begin{abstract}
+output $\rightarrow$ input
+\end{abstract}
+\maketitle
+
+
+We are tracing individual domain numbers through function chains as our first look into function composition.  When each function uses only one formula, then following the trail requires no decisions.  Now we turn to piecewise defined functions where we need to pick the appropriate formula.
+
+
+
+
+
+
+
+
+\subsection*{Graphically}
+
+
+
+
+The functions $V$ and $T$ are defined graphically via their graphs below.  
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=${y = V(h)}$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-x-3};
+       		\addplot [line width=2, penColor, smooth,samples=100,domain=(4:8)] {2*x-10};
+
+
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,-1)};
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
+
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-2)};
+			\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=${z = T(k)}$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	\addplot [draw=penColor,very thick,smooth,domain=(-7:1)] {-2*x-6};
+	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+3};
+
+	\addplot[color=penColor,only marks,mark=*] coordinates{(-7,8)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,-8)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+\begin{question} Piecewise Defined Formulas
+
+Use the graphs above to approimate the following expressions.
+
+
+
+\[
+\begin{array}{l|l}
+V(6) = \answer[tolerance=0.1]{2}  & T(V(6)) = \answer[tolerance=0.1]{1}   \\
+T(5) = \answer[tolerance=0.1]{-2}  & V(T(5)) = \answer[tolerance=0.1]{1}   \\
+V(7) = \answer[tolerance=0.1]{4}  & V(V(7)) = \answer[tolerance=0.1]{-7}   \\
+T(1) = \answer[tolerance=0.1]{2}  & T(T(1)) = \answer[tolerance=0.1]{1}   \\
+T(-5) = \answer[tolerance=0.1]{4}  & T(T(-5)) = \answer[tolerance=0.1]{-1}   \\
+\end{array}
+\]
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
+\subsection*{Algebraically}
+
+
+The functions $f$ and $g$ are defined via the formulas below.
+
+
+
+
+
+
+\[
+f(y) = 
+\begin{cases}
+  -2y-3 &  [-6, -2]   \\
+  -y-3 &  (-2, 4]  \\
+  2y - 10 & (4,8)
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\[
+g(w) = 
+\begin{cases}
+  -2w-6 &   -7 < w < 1 \\
+  -w+3 &  1 \leq w < 7
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Piecewise Defined Formulas
+
+Use the formulas above to evaluate the following expressions.
+
+
+
+\[
+\begin{array}{l|l}
+f(5) = \answer{0}  & g(f(5)) = \answer{-6}   \\
+f(7) = \answer{4}  & g(f(7)) = \answer{-1}   \\
+g(-1) = \answer{-4}  & f(g(-1)) = \answer{5}   \\
+g(-3) = \answer{0}  & f(g(-3)) = \answer{-3}   \\
+g(-6) = \answer{6}  & f(g(-6)) = \answer{2}   \\
+f(5) = \answer{0}  & f(f(5)) = \answer{-3}   \\
+f(0) = \answer{-3}  & f(f(0)) = \answer{3}   \\
+f(4) = \answer{-7}  & f(f(4)) = \answer{DNE}   \\
+g(6) = \answer{-3}  & g(g(6)) = \answer{0}   \\
+g(-6) = \answer{6}  & g(g(-6)) = \answer{-3}   \\
+g(-1) = \answer{-4}  & g(g(-1)) = \answer{2}   \\
+\end{array}
+\]
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Pointwise Composition]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/compositionEvaluating/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+
+\end{document}

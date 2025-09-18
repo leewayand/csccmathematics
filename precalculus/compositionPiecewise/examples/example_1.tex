@@ -1,0 +1,135 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+Define $T$ as follows.
+
+\[
+T(v) = 
+\begin{cases}
+  2v-1 & \text{ if }  -4 < v \leq -1 \\
+  -v+7 & \text{ if } 1 \leq v < 7
+\end{cases}
+\]
+
+
+
+
+
+Graph of $y = T(v)$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel={$y=T(v)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+         \addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+         \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+7};
+         \addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+         \addplot[color=penColor,only marks,mark=*] coordinates{(1,6)}; 
+         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+Define $F$ as follows. \\
+
+
+
+\[  F(x) = -x + 1  \, \text{ with domain } \, [-3, 5]   \]
+
+
+  
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$z=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {-x+1};
+
+
+
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-3,4)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(5,-4)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{question}
+
+
+To investigate the function $T \circ F$ we need the range of $F$ and the domain of $T$.
+
+
+The range of $F$ is  $\left[ \answer{-4}, \answer{4} \right]$. \\
+
+
+
+The domain of $T$ is  $\left( \answer{-4}, \answer{1} \right] \cup \left[ 1, 7 \right)$. \\
+
+
+Their intersection is $\left( \answer{-4}, \answer{1} \right] \cup \left[ 1, 4 \right]$. \\
+
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}

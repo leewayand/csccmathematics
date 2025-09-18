@@ -1,0 +1,606 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Linear Composition}
+
+\begin{document}
+
+\begin{abstract}
+linear linear linear
+\end{abstract}
+\maketitle
+
+
+The \textbf{\textcolor{purple!85!blue}{composition of two functions}}, $F$ and $G$, is a new function symbolized by $F \circ G$. A hollow circle hovers between the two function names.
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Composition}} 
+
+
+Given $a$ in the domain of $G$, such that $G(a)$ is in the domain of $F$, $(F \circ G)(a)$ is defined to be  $F(G(a))$.
+
+
+If $Dom_G$ and $Dom_F$ represent the domains of $G$ and $F$ respectively, the induced or implied domain of $F \circ G$ is 
+
+
+
+
+\[  Dom_{F \circ G} = \{  g \in  Dom_G  \,   |   \,   G(g) \in Dom_F                 \}           \]
+
+\end{definition}
+
+The order matters.  Generally speaking, $F \circ G \ne G \circ F$. Composition is not commutative.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Linear Composition}
+
+In this section, we will explore the composition of linear functions. \\
+
+
+Let $A(x) = a_1 \cdot x + a_0$ be a linear function with $\mathbb{R}$ as its domain. \\
+Let $B(w) = b_1 \cdot w + b_0$ be a linear function with $\mathbb{R}$ as its domain. \\
+
+
+Then $A \circ B$ is a new function. What is its formula? \\
+
+To keep everything separate, let's use $v$ as the variable for the formula of $A \circ B$.
+
+
+
+\begin{notation}
+If we write $A \circ B(v)$, then people will miss read this to say $B(v)$.  So, let's put parentheses around $A \circ B$: $(A \circ B)(v)$.
+\end{notation}
+
+
+
+
+
+
+\begin{align*}
+(A \circ B)(v) & = A(B(v)) \\
+& = A(b_1 \cdot v + b_0)  \\
+& = a_1 \cdot (b_1 \cdot v + b_0) + a_0  \\
+& = a_1 \cdot b_1 \cdot v + a_1 \cdot b_0 + a_0    \\
+& = (a_1 \cdot b_1) v + (a_1 \cdot b_0 + a_0)
+\end{align*}
+
+
+
+
+
+
+$\blacktriangleright$ The composition of two linear functions is again a linear function.
+
+
+\begin{observation}
+The rate-of-change of the composition is the \wordChoice{\choice{sum} \choice{difference} \choice[correct]{product}\choice{quotient}} of the rates-of-change of the original linear functions.
+\end{observation}
+
+
+
+
+\begin{example} Linear Composition
+
+Let $G(y) = 4 y + 3$ be a linear function with $\mathbb{R}$ as its domain. \\
+Let $H(t) = 3 t -5$ be a linear function with $\mathbb{R}$ as its domain. \\
+
+
+Define two new functions, $U(x)$ and $V(w)$, as compositions by
+
+$U(x) = (G \circ H)(x) = G(H(x)) = 4 \left(\answer{3 x - 5}\right) + 3 = 12 x -17$ \\
+$V(w) = (H \circ G)(w) =H(G(w)) = 3 \left(\answer{4 w + 3}\right) - 5 = 12 w + 4$ \\
+
+
+Two different functions. Both are linear functions. The constant rate-of-change is $12$ for both. \\
+
+Their graphs would be parallel lines. \\
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example} Linear Composition 
+
+Let $k(m) = 2 m + 1$ be a linear function with $\mathbb{R}$ as its domain. \\
+Let $h(n)$ be a linear function with $\mathbb{R}$ as its domain. \\
+
+
+Let $r(v) = (k \circ h)(v) = k(h(v)) = 3 v - 2$ 
+
+$\blacktriangleright$ Determine a formula for $h(n)$.
+
+
+
+
+
+\begin{explanation}
+
+
+$k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
+
+In that case, the rates-of-change would multiply and $h$ would start off looking like $h(n) = \frac{3}{2} n + n_0$, for some $n_0$.
+
+
+So, far we have 
+
+\[   r(v) = k(h(v)) = 2 \left(\frac{3}{2} v + n_0\right) + 1  = 3v + 2 n_0 + 1\]
+
+
+
+
+This is the composition $(k \circ h)(v)$, which we know equals $3 v - 2$.  Therefore, we must have 
+
+\[
+3 v + 2 n_0 + 1  = 3 v - 2
+\]
+
+
+
+We need $2 n_0 + 1 = -2$.  Therefore, $n_0 = \answer{-\frac{3}{2}}$.
+
+
+We have $h(n) = \frac{3}{2} n - \frac{3}{2}$
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Linear Composition (reverse order)
+
+Let $k(m) = 2 m + 1$ be a linear function with \textbf{$R$} as its domain. \\
+Let $h(n)$ be a linear function with \textbf{$R$} as its domain. \\
+
+
+Let $r(v) = (h \circ k)(v) = h(k(v)) = 3 v - 2$ 
+
+$\blacktriangleright$  Determine a formula for $h(n)$.
+
+
+
+
+\begin{explanation}
+
+
+$k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
+
+In that case the rates-of-change would mulitply and $h$ would start off looking like $h(n) = \frac{3}{2} n + n_0$, for some $n_0$.
+
+
+So, far we have 
+
+\[   r(v) = h(k(v)) = \frac{3}{2} \left( \answer{2 v + 1} \right) + n_0 =  3 v + \frac{3}{2} + n_0\]
+
+
+This is the composition $(h \circ k)(v)$, which we also know equals $3 v - 2$.  Therefore, we must have 
+
+\[
+3 v + \frac{3}{2} + n_0  = 3 v - 2
+\]
+
+
+We need $\frac{3}{2} + n_0 = -2$.  Therefore, $n_0 = \answer{-\frac{7}{2}}$.
+
+
+We have $h(n) = \frac{3}{2} n - \frac{7}{2}$
+
+
+\end{explanation}
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Restricted Domains}
+
+
+Let's restrict the domains of our linear functions.
+
+
+
+
+
+
+
+
+
+\[  T(v) = -v+3  \, \text{ with domain } \,  [1,7)   \]
+
+
+
+
+
+
+Graph of $y = T(v)$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel={$y=T(v)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	%\addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+	\addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+3};
+	%\addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+	%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\[      g(x) = \frac{7}{4}x-8 \, \text{ with domain } \, (2,8)   \]
+
+
+	
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      		%\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+Let's create the composition $T \circ g = T(g)$.
+
+
+This means the range of $g$ needs to be inside the domain of $T$. But as the chart below shows, there are numbers in
+the range of $g$ that are not in the domain of $T$.
+
+
+
+
+
+For instance, $0$ is in the range of $g$, but not in the domain of $T$. \\
+
+Therefore, we need to remove the numbers in the domain of $g$, whose function value is $0$.
+
+
+Like, $-\frac{32}{7}$ is in the domain of $g$, and $g\left(-\frac{32}{7}\right) = 0$. So, $-\frac{32}{7}$ has to be removed from the domain of $g$.
+
+
+
+
+There are more numbers in the domain of $g$, where the function value of $g$ is not in the domain of $T$. We need to remove these numbers from the domain of $T \circ g$. \\
+
+
+
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            %unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	%\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:9)] ({x},{1});
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4.5:6)] ({x},{0.5});
+          	%\node at (axis cs:-7,1) [penColor2] {$[$};
+          	%\node at (axis cs:9,1) [penColor2] {$]$};
+          	\node at (axis cs:-4.5,0.5) [penColor2] {$($};
+          	\node at (axis cs:6,0.5) [penColor2] {$)$};
+          	\node at (axis cs:5,1) [penColor2] {Range of $g$};
+
+
+
+
+          	%\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({x},{-0.5});
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{-0.5});
+          	%\node at (axis cs:-4,-0.5) [penColor] {$($};
+          	%\node at (axis cs:-1,-0.5) [penColor] {$]$};
+          	\node at (axis cs:1,-0.5) [penColor] {$[$};
+          	\node at (axis cs:7,-0.5) [penColor] {$)$};
+          	\node at (axis cs:5,-1) [penColor] {Domain of $T$};
+
+
+
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+What part of the range of $g$ can we use?
+
+
+
+
+
+
+
+
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            %unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+          	%\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:9)] ({x},{1});
+          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4.5:6)] ({x},{0.5});
+          	%\node at (axis cs:-7,1) [penColor2] {$[$};
+          	%\node at (axis cs:9,1) [penColor2] {$]$};
+          	\node at (axis cs:-4.5,0.5) [penColor2] {$($};
+          	\node at (axis cs:6,0.5) [penColor2] {$)$};
+          	\node at (axis cs:5,1) [penColor2] {Range of $g$};
+
+
+
+
+          	%\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({x},{-0.5});
+          	\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{-0.5});
+          	%\node at (axis cs:-4,-0.5) [penColor] {$($};
+          	%\node at (axis cs:-1,-0.5) [penColor] {$]$};
+          	\node at (axis cs:1,-0.5) [penColor] {$[$};
+          	\node at (axis cs:7,-0.5) [penColor] {$)$};
+          	\node at (axis cs:5,-1) [penColor] {Domain of $T$};
+
+
+
+
+          	\addplot [line width=1, gray, dashed,smooth,samples=100,domain=(-1:1)] ({1},{x});
+          	\addplot [line width=1, gray, dashed,smooth,samples=100,domain=(-1:1)] ({6},{x});
+
+
+
+
+    \end{axis}
+	\end{tikzpicture}
+	\end{image}
+
+
+
+\begin{explanation}
+
+
+
+It looks like we can use the interval $\left[ \answer{1}, \answer{6} \right)$.   $6$ is not included, so we'll have to keep this in mind as we investigate the domain of $g$.
+
+
+The range of $g$ needs to be restricted to $[1, 6)$.  Therefore we need to restrict the domain of $g$, so that the range is just $[1, 6)$. We need to find the \textbf{preimages} of $6$ and $1$ in the domain of $g$.
+
+
+
+
+\begin{itemize}
+\item $g(x) = \frac{7}{4}x-8 = 6$
+\item $\frac{7}{4}x = \answer{14}$
+\item $x = \frac{4}{7} \cdot 14 = \answer{8}$
+\end{itemize}
+
+
+The preimage of $6$ is $8$.  The domain of $g$ is $(2,8)$. $8$ is an endpoint of the interval that is already excluded.
+
+
+Now, for the preimage of $1$.
+
+\begin{itemize}
+\item $g(x) = \frac{7}{4}x-8 = 1$
+\item $\frac{7}{4}x = 9$
+\item $x = \frac{4}{7} \cdot 9 = \frac{36}{7} \approx 5.14$
+\end{itemize}
+
+$\frac{36}{7}$ is inside $(2,8)$.
+
+We need to restrict the domain of $g$ to $\left[ \answer{\frac{36}{7}}, \answer{8} \right)$
+
+
+With this restricted domain, the range of $g$ will be $[1, 6)$, which is the biggest piece of the domain of $T$ that we can get from values of $g$.
+
+We now have a domain for our composition: $Dom_{T \circ g} = \left[\frac{36}{7}, 8\right)$
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now we need to take our restricted domain of $T$, $[1, 6)$, and determine the restricted range.
+
+
+
+\begin{itemize}
+\item $T(1) = -1+3 = 2$, included\\
+\item $T(6) = -6+3 = -3$, excluded \\
+\end{itemize}
+
+
+
+
+
+
+
+\textbf{What do we have?}
+
+
+
+\begin{explanation}
+We have a composition: $T \circ g$.  We know this is a linear function, because it is the composition of two linear functions. \\
+
+Our composition has a formula, let's use $c$ for its variable. \\
+
+$(T \circ g)(c) = -\left(\frac{7}{4}c - 8\right) + 3 =  -\frac{7}{4}c + 11$ \\
+
+It's domain is $\left[ \answer{\frac{36}{7}}, \answer{8} \right)$.
+
+
+It's range is $\left( \answer{-3}, \answer{2} \right]$.
+
+
+\end{explanation}
+
+
+
+Graph of $y = T(g(c))$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$c$, ylabel={$y=T(g(c))$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	%\addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+	\addplot [draw=penColor,very thick,smooth,domain=(5.14:8)] {-1.75*x+11};
+	%\addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+	%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+	\addplot[color=penColor,only marks,mark=*] coordinates{(5.14,2)}; 
+	\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-3)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Piecewise Composition]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/compositionPiecewise/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+\end{document}

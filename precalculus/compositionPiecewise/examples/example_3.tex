@@ -1,0 +1,137 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+
+
+Define $f$ as follows.
+
+\[
+f(k) = 
+\begin{cases}
+  \frac{3}{4} + 2  & \text{ if }  -8 \leq k < 0 \\
+  -\frac{3}{2} + 6 & \text{ if } 4 \leq k \leq 8
+\end{cases}
+\]
+
+
+
+
+
+Graph of $z = f(k)$.
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$z$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+         \addplot [draw=penColor,very thick,smooth,domain=(-8:0)] {0.75*x+2};
+         \addplot [draw=penColor,very thick,smooth,domain=(4:8)] {-1.5*x+6};
+         \addplot[color=penColor,only marks,mark=*] coordinates{(-8,-4)}; 
+         \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,2)}; 
+         \addplot[color=penColor,only marks,mark=*] coordinates{(4,0)}; 
+         \addplot[color=penColor,only marks,mark=*] coordinates{(8,-6)}; 
+         %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,0)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+Define $g$ as follows. \\
+
+
+
+\[  g(x) = -\frac{1}{4} - \frac{3}{2}  \, \text{ with domain } \, [-2, 6)   \]
+
+
+  
+Graph of $y = g(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-2:6)] {0.25*x-1.5};
+
+
+
+
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+          %\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-3,4)};
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-2,-2)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(6,0)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{question}
+
+
+To investigate the function $f \circ g$ we need the range of $g$ and the domain of $f$.
+
+
+The range of $g$ is  $\left[ \answer{-2}, \answer{0} \right)$. \\
+
+
+
+The domain of $f$ is  $\left[ \answer{-8}, \answer{0} \right) \cup \left[ 4, 8 \right)$. \\
+
+
+Their intersection is $\left[ -2, 0 \right)$. \\
+
+
+
+\end{question}
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}
