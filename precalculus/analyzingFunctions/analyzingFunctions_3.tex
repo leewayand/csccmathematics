@@ -1,0 +1,796 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Analyzing}
+
+\begin{document}
+
+\begin{abstract}
+describe everything
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!80!black}{Reasoning:}} Reasoning is a logical explanation that describes our conclusions, how we arrived at those conclusions, and why we think those conclusions are correct. \\
+
+Analysis is not a list of conclusions. We are not looking for such a list. \\
+
+We are looking for the thought process that arrived at the list of conclusions. \\
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+\textbf{\textcolor{purple!85!blue}{Completely analyze}} \\
+
+
+\[   R(t) = \frac{(t+3)(t+1)}{(t-2)(t-3)} \]
+
+with 
+
+\[   R'(t) = -\frac{9 t^2 -6 t -39}{(t-2)^2 (t-3)^2} \]
+
+
+
+$R(t)$ is not a composition. It is a rational function. \\
+
+
+Here is a quick DESMOS graph.
+
+
+\begin{center}
+\desmos{mgkklcsmqr}{400}{300}
+\end{center}
+
+
+There is something wrong with this graph.  $2$ and $3$ make the denominator $0$, but the numbers in the interval $(2, 3)$ are in the domain.  There should be a piece of the graph there that is not showing up.
+
+
+Let's evalaute at $2.5$ and see what type of values we are getting. \\
+
+$R(2.5) = -77$
+
+
+\begin{center}
+\desmos{8baq5avdvr}{400}{300}
+\end{center}
+
+
+There is the other part of the graph. \\
+
+
+
+From the graph, we are anticipating two singularities, two critical numbers, switching between increasing and decreasing, and end-behavior which is not unbounded. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} 
+
+$R(t)$ is a rational function.  Its domain is all real numbers except the zeros of the denominator. \\
+
+The domain is $(-\infty, 2) \cup (2,3) \cup (3, \infty)$  \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Zeros}} 
+
+
+$R(t)$ is a rational function.  Its zeros are the zeros of the numerator except those that are also zeros of the denominator. \\
+
+
+The zeros of $R$ are $-3$ and $-1$. \\
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity}} 
+
+
+$R(t)$ is a rational function.  It is continuous. \\
+
+
+$R$ does have singularities.  We need the behavior around them.   Both $2$ and $3$ are zeros of the denominator and not zeros of the numerator.  This makes them asymptotic singularities. \\
+
+
+We knw know that $R$ is unbounded as $t$ approaches $2$ and $3$.  We need to figure out the sign. \\
+
+
+\begin{explanation}
+
+
+For $\lim\limits_{t \to 2^-}R(t)$,  $t < 2$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 < 0$
+\item $t - 3 < 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{neg \cdot neg} = positive$ \\
+
+
+
+\[
+\lim\limits_{t \to 2^-}R(t) = \infty
+\]
+
+
+
+
+
+
+For $\lim\limits_{t \to 2^+}R(t)$,  $t > 2$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 > 0$
+\item $t - 3 < 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{pos \cdot neg} = negative$ \\
+
+
+
+\[
+\lim\limits_{t \to 2^+}R(t) = -\infty
+\]
+
+
+
+
+
+For $\lim\limits_{t \to 3^-}R(t)$,  $t < 3$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 > 0$
+\item $t - 3 < 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{pos \cdot neg} = negative$ \\
+
+
+
+\[
+\lim\limits_{t \to 3^-}R(t) = -\infty
+\]
+
+
+
+
+
+
+
+For $\lim\limits_{t \to 3^+}R(t)$,  $t > 3$, which gives
+
+\begin{itemize}
+\item $t + 3 > 0$
+\item $t + 1 > 0$
+\item $t - 2 > 0$
+\item $t - 3 > 0$
+\end{itemize}
+
+
+The sign of $R$ is $\frac{pos \cdot pos}{pos \cdot pos} = positive$ \\
+
+
+
+\[
+\lim\limits_{t \to 3^+}R(t) = \infty
+\]
+
+
+
+
+
+
+
+
+\end{explanation}
+
+
+
+This agrees with the graph.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior}} 
+
+$R(t)$ is a rational function. The degree of the numerator and the degree of the denomiator are equal.  The end-behavior is the quotient is the leading coefficients.
+
+
+
+\[  
+\lim\limits_{t \to -\infty}R(t) = \frac{1}{1} = 1
+\]
+
+
+
+
+\[  
+\lim\limits_{t \to \infty}R(t) = \frac{1}{1} = 1
+\]
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior}} 
+\textbf{Rate-of-Change}  
+\textbf{Increasing and Decreasing}   
+
+
+
+The sign of $R'(t)$ will give us the behavior of $R(t)$. \\
+
+To get the sign of $R'(t)$, we will factor it. \\
+
+The denominator is factored.  The numerator is a quadratic function.  To factor it, we need its zeros, which we can get from the quadratic formula. \\
+
+But, first we might as well factor out $3$ in the numerator. \\
+
+
+
+
+
+
+
+\[   
+R'(t) = -\frac{9 t^2 -6 t -39}{(t-2)^2 (t-3)^2} = -\frac{3 (3 t^2 - 2 t - 13)}{(t-2)^2 (t-3)^2}
+\]
+
+
+
+
+$3 (3 t^2 - 2 t - 13) = 0$ \\
+
+$3 t^2 - 2 t - 13 = 0$ 
+
+
+
+\[
+t = \frac{2 \pm \sqrt{(-2)^2 - 4(3)(-13)}}{2(3)} = \frac{2 \pm \sqrt{160}}{6} = \frac{2 \pm 4 \sqrt{10}}{6} = \frac{1 \pm 2 \sqrt{10}}{3}
+\]
+
+
+
+
+Two critical numbers: $\frac{1 - 2 \sqrt{10}}{3}$ and $\frac{1 + 2 \sqrt{10}}{3}$ \\
+
+
+
+
+Quick Check:  \\
+
+
+\[
+\frac{1 - 2 \sqrt{10}}{3} \approx -1.774851773
+\]
+
+
+\[
+\frac{1 + 2 \sqrt{10}}{3} \approx 2.44151844
+\]
+
+
+These agree with the graph, so we feel like our algebra is correct. \\
+
+
+
+We can now factor $R'(t)$ \\
+
+
+
+
+
+
+
+
+\[   
+R'(t) = -\frac{3 \left(t - \left(\frac{1 - 2 \sqrt{10}}{3} \right) \right) \left(t - \left(\frac{1 + 2 \sqrt{10}}{3} \right) \right) }{ (t-2)^2 (t-3)^2 } 
+\]
+
+
+Both $\frac{1 - 2 \sqrt{10}}{3}$ and $\frac{1 - 2 \sqrt{10}}{3}$ have odd multiplicities, so $R'$ will change signs across them. \\
+
+
+
+
+Both $2$ and $3$ have even multiplicities, so $R'$ will not change signs across them. \\
+
+
+
+We need the order of $\frac{1 - 2 \sqrt{10}}{3}$, $\frac{1 - 2 \sqrt{10}}{3}$, $2$, and $3$.   \\
+
+
+
+\begin{explanation}
+
+That graph makes us think that 
+
+\[
+\frac{1 - 2 \sqrt{10}}{3} < 2 < \frac{1 + 2 \sqrt{10}}{3} < 3
+\]
+
+
+Let's show that $\frac{1 - 2 \sqrt{10}}{3} < 2$. \\
+
+This true because $\frac{1 - 2 \sqrt{10}}{3} < 0$, since $1 < 2 \sqrt{10}$. \\
+
+
+
+Next, we'll show that $2 < \frac{1 + 2 \sqrt{10}}{3}$. \\
+
+
+
+This is true if $6 < 1 + 2 \sqrt{10}$, which is true since $3 < \sqrt{10}$. \\
+
+
+
+Finally, we need to show that $\frac{1 + 2 \sqrt{10}}{3} < 3$ \\
+
+
+This is true if $1 + 2 \sqrt{10} < 9$, which is true since $\sqrt{10} < 4$.
+
+
+
+
+
+\end{explanation}
+
+
+
+
+We now know the ordering of the critical numbers and singularities. \\
+
+
+\[
+\frac{1 - 2 \sqrt{10}}{3} < 2 < \frac{1 + 2 \sqrt{10}}{3} < 3
+\]
+
+
+
+
+
+On $\left( -\infty, \frac{1 - 2 \sqrt{10}}{3} \right)$, 
+
+
+
+\begin{itemize}
+\item $t < \frac{1 - 2 \sqrt{10}}{3}$ and $\left( t - \frac{1 - 2 \sqrt{10}}{3} \right) < 0$
+\item $t < 2$ and $(t - 2) < 0$
+\item $t < \frac{1 + 2 \sqrt{10}}{3}$ and $\left( t - \frac{1 + 2 \sqrt{10}}{3} \right) < 0$
+\item $t < 3$ and $(t - 3) < 0$
+\end{itemize}
+
+Note: $(t-2)$ and $(t-3)$ are squared in the denominator, making the denominator positive. \\
+
+\[   
+R'(t) = -\frac{3 \left(t - \left(\frac{1 - 2 \sqrt{10}}{3} \right) \right) \left(t - \left(\frac{1 + 2 \sqrt{10}}{3} \right) \right) }{ (t-2)^2 (t-3)^2 }  = neg \cdot \frac{pos \cdot neg \cdot neg}{pos \cdot pos} = neg
+\]
+
+
+$R$ is decreasing. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+On $\left( \frac{1 - 2 \sqrt{10}}{3}, 2 \right)$, 
+
+
+$\frac{1 - 2 \sqrt{10}}{3}$ has an odd multiplicity, so the sign of $R'$ switches, $R'(t) > 0$. \\
+
+
+
+
+Or, 
+
+
+
+
+\begin{itemize}
+\item $t > \frac{1 - 2 \sqrt{10}}{3}$ and $\left( t - \frac{1 - 2 \sqrt{10}}{3} \right) > 0$
+\item $t < 2$ and $(t - 2) < 0$
+\item $t < \frac{1 + 2 \sqrt{10}}{3}$ and $\left( t - \frac{1 + 2 \sqrt{10}}{3} \right) < 0$
+\item $t < 3$ and $(t - 3) < 0$
+\end{itemize}
+
+Note: $(t-2)$ and $(t-3)$ are squared in the denominator, making the denominator positive. \\
+
+
+
+\[   
+R'(t) = -\frac{3 \left(t - \left(\frac{1 - 2 \sqrt{10}}{3} \right) \right) \left(t - \left(\frac{1 + 2 \sqrt{10}}{3} \right) \right) }{ (t-2)^2 (t-3)^2 }  = neg \cdot \frac{pos \cdot pos \cdot neg}{pos \cdot pos} = pos
+\]
+
+
+$R$ is increasing. \\
+
+
+
+
+
+
+
+
+
+
+
+On $\left( 2, \frac{1 + 2 \sqrt{10}}{3} \right)$, 
+
+
+$2$ has an even multiplicity, so the sign of $R'$ does not switch sign, $R'(t) > 0$. \\
+
+
+$R$ is increasing. \\
+
+
+
+
+
+
+On $\left( \frac{1 + 2 \sqrt{10}}{3}, 3 \right)$, 
+
+
+$\frac{1 + 2 \sqrt{10}}{3}$ has an odd multiplicity, so the sign of $R'$ switches sign, $R'(t) < 0$. \\
+
+
+$R$ is decreasing. \\
+
+
+
+
+
+
+
+
+
+On $(3, \infty)$, 
+
+
+$3$ has an even multiplicity, so the sign of $R'$ does not switch sign, $R'(t) < 0$. \\
+
+
+$R$ is decreasing. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Global (Extrema) Maximum and Minimum}} 
+
+
+
+
+From the behavior around the singularities, we know
+
+
+\[
+\lim\limits_{t \to 3^-}R(t) = -\infty
+\]
+
+
+
+\[
+\lim\limits_{t \to 3^+}R(t) = \infty
+\]
+
+
+$R$ has no global maximum or minimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Local (Extrema) Maximum and Minimum}} 
+
+
+We have two critical numbers.
+
+
+For critical number $\frac{1 - 2 \sqrt{10}}{3}$: \\
+
+
+$bullet$ On $\left( -\infty, \frac{1 - 2 \sqrt{10}}{3} \right)$, $R$ is decreasing. \\
+
+
+$bullet$ On $\left( \frac{1 - 2 \sqrt{10}}{3} \right), 2$, $R$ is increasing. \\
+
+
+$R$ has a local minimum value at $\frac{1 - 2 \sqrt{10}}{3}$.  \\
+
+
+
+
+For critical number $\frac{1 + 2 \sqrt{10}}{3}$: \\
+
+
+$bullet$ On $\left( 2, \frac{1 + 2 \sqrt{10}}{3} \right)$, $R$ is increasing. \\
+
+
+$bullet$ On $\left( \frac{1 + 2 \sqrt{10}}{3} \right), 3$, $R$ is decreasing. \\
+
+
+$R$ has a local maximum value at $\frac{1 + 2 \sqrt{10}}{3}$.  \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Range}} 
+
+
+
+
+The only thing we need to know is which is greater 
+
+\[
+R \left( \frac{1 - 2 \sqrt{10}}{3} \right) \, \text{ or } \, R \left( \frac{1 + 2 \sqrt{10}}{3} \right)
+\]
+
+
+
+This will tell us if there is a gap in the range. \\
+Hint: We can see a gap in the graph. \\
+
+Instead of comparing these two function values directly, it might be easy to compare them to other numbers forcing a gap.
+
+
+Like, we might show that 
+
+
+\[
+R \left( \frac{1 - 2 \sqrt{10}}{3} \right) > -10 > R \left( \frac{1 + 2 \sqrt{10}}{3} \right)
+\]
+
+
+\[
+R\left( \frac{1 - 2 \sqrt{10}}{3}   \right) = \frac{\left( \frac{1 - 2 \sqrt{10}}{3} + 3 \right) \left( \frac{1 - 2 \sqrt{10}}{3} + 1 \right)}{\left( \frac{1 - 2 \sqrt{10}}{3} - 2 \right)  \left( \frac{1 - 2 \sqrt{10}}{3} - 3 \right)}
+\]
+
+
+
+
+\[
+= \frac{\left( \frac{10 - 2 \sqrt{10}}{3}  \right) \left( \frac{4 - 2 \sqrt{10}}{3} \right)}{\left( \frac{-3 - 2 \sqrt{10}}{3} \right)  \left( \frac{-8 - 2 \sqrt{10}}{3} \right)}
+\]
+
+
+
+
+\[
+= \frac{ (10 - 2 \sqrt{10}) (4 - 2 \sqrt{10}) }{ (-3 - 2 \sqrt{10}) (-8 - 2 \sqrt{10}) }
+\]
+
+
+
+\[
+= \frac{ 80 - 28 \sqrt{10} }{ 64 + 22\sqrt{10} }
+\]
+
+
+
+
+\[
+= \frac{ 80 - 28 \sqrt{10} }{ 64 + 22\sqrt{10} } \cdot \frac{ 64 - \sqrt{10} }{ 64 - 22\sqrt{10} } = \frac{11280 - 3552 \sqrt{10}}{-744}
+\]
+
+
+
+Is this greater than $-10$ ? \\
+
+
+\[
+\frac{11280 - 3552 \sqrt{10}}{-744} > -10
+\]
+
+\[
+11280 - 3552 \sqrt{10} < -10 (-744)
+\]
+
+
+\[
+11280 - 7440 < 3552 \sqrt{10}
+\]
+
+
+\[
+3840 < 3552 \sqrt{10}
+\]
+
+This is certainly true, since  $3552 \cdot 2 = 7104 < 3552 \sqrt{10}$
+
+
+Similarly,  $-10 > R \left( \frac{1 + 2 \sqrt{10}}{3} \right)$
+
+
+
+
+The range has a gap.
+
+
+
+The function has three connected components (from the singularities) and the range of each is \\
+
+
+
+\[
+\left[ R \left( \frac{1 - 2 \sqrt{10}}{3} \right), \infty \right)
+\]
+
+
+\[
+\left( -\infty, R \left( \frac{1 + 2 \sqrt{10}}{3} \right) \right] 
+\]
+
+
+\[
+(1, \infty)
+\]
+
+
+
+
+The range of $R$ is 
+
+\[
+\left( -\infty, R \left( \frac{1 + 2 \sqrt{10}}{3} \right) \right] \cup \left[ R \left( \frac{1 - 2 \sqrt{10}}{3} \right), \infty \right)
+\]
+
+
+
+
+
+
+
+
+\begin{center}
+
+\textbf{\textcolor{red!70!black}{Everything agrees with the graph.}}
+
+
+\end{center}
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Analyzing Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/analyzingFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+
+\end{document}
