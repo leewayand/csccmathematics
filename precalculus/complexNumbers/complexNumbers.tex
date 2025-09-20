@@ -1,0 +1,523 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Notation}
+
+\begin{document}
+
+\begin{abstract}
+$a + b \, i$
+\end{abstract}
+\maketitle
+
+
+So, far our 2-dimensional arithmetic has a strong geometric flavor.  In this section, we will introduce a new layer of abbreviations and notation, that will give our new arithmetic a more algebraic feel. 
+
+
+We are currently representing our new numbers with 2-dimensional vectors.
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:7,3);
+ 
+
+            \node at (axis cs:5,5) [penColor] {$\langle a, b \rangle$};
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Our vector notation $\langle a, b \rangle$ wraps together two components, which we could stretch out.
+
+\[    \langle a, b \rangle = a \cdot \langle 1, 0 \rangle + b \cdot \langle 0, 1 \rangle            \]
+
+
+\begin{notation} \textbf{\textcolor{blue!55!black}{Unit Component Vectors}}  \\
+
+$\blacktriangleright$ $\langle 1, 0 \rangle$ is often written as $\hat{x}$ \\
+
+$\blacktriangleright$ $\langle 0, 1 \rangle$ is often written as $\hat{y}$ \\
+
+\end{notation}
+
+
+These component vectors are the horizontal and vertical components of $\langle a, b \rangle$.
+
+
+\[    \langle a, b \rangle = a \cdot \langle 1, 0 \rangle + b \cdot \langle 0, 1 \rangle  =  a \, \hat{x} + b \, \hat{y}         \]
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+            \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:7,3);
+            \draw[black,ultra thick,->] (axis cs:0,0) -- (axis cs:7,0);
+            \draw[black,ultra thick,->] (axis cs:7,0) -- (axis cs:7,3);
+ 
+
+            \node at (axis cs:5,5) [penColor] {$\langle a, b \rangle$};
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\section*{Arithmetic Shorthand}
+
+
+
+We have already noted that the real numbers are embedded in our plane as horizontal vectors.
+
+$\blacktriangleright$  As algebraic shorthand notation, let's symbolize $a \cdot \langle 1, 0 \rangle = \langle a, 0 \rangle$ as $a$.  It is a horizontal vector and therefore represents a real number, so let's just represent it as we would a real number.
+
+
+
+$\blacktriangleright$  As algebraic shorthand notation, the vector $ \langle 0, 1 \rangle $ is historically abbreviated as $i$.  \\
+
+
+
+
+With these abbreviations, our 2-dimensional numbers now look like this
+
+
+\begin{align*}
+\langle a, b \rangle & = \langle a, 0 \rangle + \langle 0, b \rangle  \\
+         & = \langle a, 0 \rangle + b \cdot \langle 0, 1 \rangle  \\
+          & = a + b \, i
+\end{align*}
+
+
+
+
+Our 2-dimensional numbers have several representations.  Points and vectors are a geometric view, which will use extensively.
+
+
+ $a + b \, i$, is our algebraic representation of the \textbf{Complex Numbers}. \\
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Complex Numbers}}  \\
+
+
+\[   \mathbb{C}  = \{  a + b \, i   \, | \, a, b \in \mathbb{R}             \}               \]
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Complex Numbers are our algebraic view of our new 2-dimensional numbers.  In our story, the line between geometry and algebra is very blurry. It is almost like having double vision.  
+
+
+\begin{itemize}
+\item We have a geometric plane mapped out with points and coordinates.
+\item We have a geometric plane in which we move about by vectors.
+\item We have a 2-dimensional number system, where numbers are represented by points and vectors.
+\item We have algebraic shorthand symbols where $i$ represents $\langle 0, 1 \rangle$.
+\item We have our old real numbers, which are embedded in the new system as horizontal vectors or points on the horizontal axis. $1$ is represented by $\langle 1, 0 \rangle$ and can be written as $1 + 0 \, i$ or just $1$.
+\end{itemize}
+
+
+
+
+
+We hold all of these views on top of each other simultaneously and use the strength of each in our reasoning.
+
+
+
+
+
+As noted before, multiplication by $i$ rotates counterclockwise $90^{\circ}$. What about twice?
+
+
+\[  1 \cdot i \cdot i = -1    \]
+
+
+
+If you rotate $1 = \langle 1, 0 \rangle$, $90^{\circ}$ counterclockwise, twice, then  you end up with $\langle 0,-1 \rangle = -1$
+
+
+
+
+
+\[   i^2 = -1\]
+
+
+
+\[   i = \sqrt{-1}   \]
+
+
+
+
+Whoa!  We were looking for this number when studying the quadratic formula.  
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{$i$ is the missing piece to the puzzle!}}
+\end{center}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!50!blue!90!black}{History}}
+
+
+Mathematics has been a part of human thought for thousands of years.  Many people in many different countries have thought about mathematics over centuries.  And, unlike today, communication was not always easy.  Therefore, we have many groups of people inventing different notation and language for the same thing.  
+
+We have to live with this history.
+
+That means we have names and symbols for stuff that seems silly now, but it was serious business a couple of centuries ago.
+
+For historical reasons the horizontal axis is called the \textbf{real axis} and the vertical axis is called the \textbf{imaginary axis}.  Complex numbers of the form $0 + a \, i$, like $i$, are called \textbf{imaginary numbers} - because a couple of centuries ago people thought this was all in our imagination.
+
+
+A complex number, $a + b \, i$, has a real part, $Re(a + b \, i)= a$, and an imaginary part, $Im( a + b \, i)= b$.
+
+That is the langugage we are stuck with.
+
+
+
+
+
+
+
+
+
+
+\begin{example} Complex Numbers
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,7)}; 
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,-2)}; 
+ 
+
+            \node at (axis cs:3,7) [penColor,anchor=north] {$3+7i$};
+            \node at (axis cs:-6,-2) [penColor,anchor=north] {$-6-2i$};
+
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{itemize}
+\item $Re(3+7i) = 3$
+\item $Im(3+7i) = 7$
+\end{itemize}
+
+
+\begin{itemize}
+\item $Re(-6-2i) = -6$
+\item $Im(-6-2i) = -2$
+\end{itemize}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+If we represented Complex Numbers with vectors, then each vector would have a \textbf{length}.  Inside our algebraic viewpoint, $a + b \, i$ doesn't have a length. It has a \textbf{modulus}.  The symbol for the modulus looks exactly like the absolute value symbol.
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Modulus}} \\
+\[      |a + b \, i|    = \sqrt{a^2 + b^2}   \]
+\end{definition}
+
+The length of $\langle a, b \rangle$ equals the modulus of $a + b \, i$, both equal $\sqrt{a^2 + b^2}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Unit Circle
+
+
+We can now describe curves in the Cartesian plane via equations using complex numbers.
+
+The unit circle is the collection of all points a distance of $1$ from the origin.  We can idenitfy these points via complex numbers.  The unit circle consists of the complex numbers whose modulus equals $1$
+
+\[  |z| = 1  \]
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
+          \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+On the unit circle, the coordinates of the points are $(\cos(\theta), \sin(\theta))$.  Therefore the real and  imaginary parts of complex numbers on the unit circle must also be $\cos(\theta)$ and $\sin(\theta)$.
+
+
+
+
+
+The Unit Circle consists of all complex numbers of the form $\cos(\theta) + \sin(\theta) \, i$
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Complex Arithmetic}} \\
+
+
+
+\begin{itemize}
+\item $ (a + b \, i) + (c + d \, i) = (a+c) + (b+d) \, i$
+\item $ (a + b \, i) - (c + d \, i) = (a-c) + (b-d) \, i$
+\item $ (a + b \, i) \cdot (c + d \, i) = (ac-bd) + (ad+bc) \, i$
+\end{itemize}
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+\textbf{Note:} We still need to figure out division
+
+
+
+
+
+
+\begin{question}
+
+
+Compute   $(4 + 2 \, i) \cdot (-1 + i) = \answer{-6} + \answer{2} \, i$
+
+\end{question}
+
+
+
+
+
+\begin{question}
+
+
+\begin{itemize}
+\item Compute   $i^2 = i \cdot i = \answer{-1} + \answer{0} \, i$
+\item Compute   $i^3 =  \answer{0} + \answer{-1} \, i$
+\item Compute   $i^4 =  \answer{1} + \answer{0} \, i$
+\item Compute   $i^5 =  \answer{0} + \answer{1} \, i$
+\item Compute   $i^6 =  \answer{-1} + \answer{0} \, i$
+\item Compute   $i^7 =  \answer{0} + \answer{-1} \, i$
+\item Compute   $i^8 =  \answer{1} + \answer{0} \, i$
+\end{itemize}
+
+\end{question}
+
+
+The calculations above demonstrate that $i = \sqrt{-1}$, which means that $i^2 = -1$.  It also means that $i^4 = 1$ and then we start all over.  The powers if $i$ are cyclic with a period of $4$.  Visually, on the unit circle, the powers of $i$ rotate around the unit circle in jumps of $90^{\circ} or \frac{\pi}{2}$ radians.
+
+\begin{question}
+
+
+$\sqrt{-9} = \sqrt{9} \cdot \sqrt{-1} =  \answer{3} \, i$
+
+\end{question}
+
+This presents some calculations, which, in previous courses, we would have avoided. And, for good reason:\\
+
+\[  1 = \sqrt{1} = \sqrt{-1 \cdot -1} = \sqrt{-1} \cdot \sqrt{-1} = i \cdot i = -1   \]
+
+
+The reason is that, in earlier courses, we simply declared that $\sqrt{number}$ is ALWAYS a positive number.  Now, we need to expand our calculational thinking. $\sqrt{1}$ could be $1$ or $-1$. \\
+
+Usually, we do this by differentiating between radicals and fractional exponents.\\
+
+\begin{itemize}
+\item $\sqrt{r}$ still represents a positive real number if $r$ is a positive real number.
+\item $\sqrt{-1} = i$ rather than $-i$.
+\item $c^{\tfrac{1}{2}}$ will represent TWO numbers until someone specifies one of them.
+\end{itemize}
+
+That's where we'll begin.  It is not the complete story, but it will get us going.  More details coming up later.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Complex Arithmetic]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/complexNumbers/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}

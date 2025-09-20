@@ -1,0 +1,315 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Direction Vectors}
+
+\begin{document}
+
+\begin{abstract}
+unit vectors
+\end{abstract}
+\maketitle
+
+
+
+
+On the real number line, we draw ``tick'' marks to mark off distances of $1$ to the left and right of $0$. On the real number line, we have two direction vectors: $-1$ and $1$.  They establish a unit length in each direction. Every real number is a positive scalar multiple of one of these.
+
+Can we do the same thing for the Complex numbers? \\
+
+
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Direction Vectors}}   \\
+
+A \textbf{direction vector}, also called a \textbf{unit vector}, is a vector of length $1$.
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Polar(Circular) Coordinates}}  \\
+
+
+Of course, this is easy with polar coordinates.  Unit vectors look like $(1, \theta)$. \\
+
+Every complex number can be described as a positive scalar multiple of a polar unit vector:  
+
+
+\[
+r \cdot (1, \theta) = (r, 0) \cdot (1, \theta) = (r, \theta)
+\]
+
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{How can we do this with rectangular coordinates?}}
+\end{center}
+
+
+
+Can we describe each complex number as a scalar multiple of a unit vector in rectangular coordinates? \\
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Rectangular Coordinates}}  
+
+
+Currently, we can describe every complex number as a sum of two scalar multiples of two direction vectors: 
+
+\[ \hat{x} = \langle 1, 0 \rangle  \, \text{ and }  \, \hat{y} = \langle 0, 1 \rangle      \]
+
+
+The Cartesian plane has two axes, so two sets of tick marks on two lines.  The left/right tick marks are marking off multiples of $\langle 1, 0 \rangle$ on the real axis. The up/down tick marks are marking off multiples of $\langle 0, 1 \rangle$ on the imaginary axis.
+
+
+
+
+We can view our vectors as constructed as a sum of perpendicular pieces, each of size $1$.
+
+
+
+\begin{example}
+
+
+\[ \langle 5, 7 \rangle = 5 \cdot  \langle 1, 0 \rangle + 7 \cdot \langle 0, 1 \rangle  \]
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$\mathbb{R}$, ylabel=$\mathbb{R}$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \draw[black,ultra thick,->] (axis cs:0,0) -- (axis cs:5,7);
+
+          \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:0,1);
+          \draw[penColor,ultra thick,->] (axis cs:0,1) -- (axis cs:0,2);
+          \draw[penColor,ultra thick,->] (axis cs:0,2) -- (axis cs:0,3);
+          \draw[penColor,ultra thick,->] (axis cs:0,3) -- (axis cs:0,4);
+          \draw[penColor,ultra thick,->] (axis cs:0,4) -- (axis cs:0,5);
+          \draw[penColor,ultra thick,->] (axis cs:0,5) -- (axis cs:0,6);
+          \draw[penColor,ultra thick,->] (axis cs:0,6) -- (axis cs:0,7);
+
+
+
+          \draw[penColor2,ultra thick,->] (axis cs:0,0) -- (axis cs:1,0);
+          \draw[penColor2,ultra thick,->] (axis cs:1,0) -- (axis cs:2,0);
+          \draw[penColor2,ultra thick,->] (axis cs:2,0) -- (axis cs:3,0);
+          \draw[penColor2,ultra thick,->] (axis cs:3,0) -- (axis cs:4,0);
+          \draw[penColor2,ultra thick,->] (axis cs:4,0) -- (axis cs:5,0);
+
+
+
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\end{example}
+
+
+
+But, we want just a single vector, not a combination of two vectors. \\
+
+Our idea is to take the vector representing a complex number and factor out its length. The resulting vector is a unit vector. We will have a unit vector pointing in the right direction (a direction vector) and a positive scalar, which is the length of the vector.
+
+
+Each complex number can be represented by a vector.  This vector can then be written as a scalar (number) times a \textbf{unit vector}.  
+
+
+
+\begin{example}
+
+\[  3 + 4 \, i = \langle 3, 4 \rangle = 5 \cdot \left\langle \frac{3}{5}, \frac{4}{5} \right\rangle     \]
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$t$, ylabel=$y$, grid = major, grid style={dashed},
+            unit vector ratio*=1 1 1,
+            ytick={-4,-2,2,4},
+            xtick={-4,-2,2,4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,4)};
+          \draw[penColor,ultra thick,->] (axis cs:0,0) -- (axis cs:0.6,0.8);
+          \draw[penColor,ultra thick,->] (axis cs:0.6,0.8) -- (axis cs:1.2,1.6);
+          \draw[penColor,ultra thick,->] (axis cs:1.2,1.6) -- (axis cs:1.8,2.4);
+          \draw[penColor,ultra thick,->] (axis cs:1.8,2.4) -- (axis cs:2.4,3.2);
+          \draw[penColor,ultra thick,->] (axis cs:2.4,3.2) -- (axis cs:3,4);
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The modulus of $3 + 4 \, i$ is $| 3 + 4 \, i | = \sqrt{3^2 + 4^2} = \sqrt{25} = 5$.  \\
+
+We factor out this length. $5 \cdot \left\langle \frac{3}{5}, \frac{4}{5} \right\rangle $. \\
+
+The result is the length times a unit vector 
+
+\[   \left | \cdot \left\langle \frac{3}{5}, \frac{4}{5} \right\rangle  \right | = 1   \]
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+Substitute ``modulus'' for ``length'' and we can do the same for complex numbers in standard form. \\ 
+
+
+
+
+
+
+\begin{center}
+
+\textbf{\textcolor{purple!50!blue!90!black}{EVERY COMPLEX NUMBER}}
+
+\textbf{\textcolor{purple!50!blue!90!black}{CAN BE DESCRIBED THIS WAY}}
+
+\end{center}
+
+
+
+
+Any complex number can be factored by dividing the real and imaginary parts by the modulus of the complex number.  This modulus is the scalar out front.
+
+
+
+
+\[     a + b \, i    =  \sqrt{a^2 + b^2}  \cdot \left(  \frac{a}{\sqrt{a^2 + b^2}} + \frac{b}{\sqrt{a^2 + b^2}} \, i \right)                      \]
+
+
+We have factored $a + b \, i $ into a product of a positive real number times a ``unit'' number. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{red!80!black}{All, Every, Each}}  \\
+
+Every Complex number can be written as a product of a real number times a unit ``number''.
+
+
+To understand the Complex numbers, we really need to understand the unit complex numbers - the Complex numbers with modulus equal to $1$
+
+
+The numbers with modulus equal to $1$ make up the unit circle.
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{We need to understand the unit circle.}}   
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Polar Form of Complex Numbers]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/algebraicGeometry/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}

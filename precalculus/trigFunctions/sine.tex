@@ -1,0 +1,536 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Sine}
+
+\begin{document}
+
+\begin{abstract}
+analysis
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{Analyze  $T(r) =  2 \sin(3r - \pi) - 1$}}
+
+
+
+\begin{template}
+
+
+We are going to view this as a composition of three functions.
+
+
+\[
+T = Out \circ \sin \circ In
+\]
+
+
+where
+
+
+$Out(x) = 2x - 1$ \\
+
+
+$In(y) = 3y - \pi$ \\
+
+
+
+
+Along with $\sin(\theta)$, these three component functions, we get
+
+
+
+\[
+T(r) = (Out \circ \sin \circ In)(r) = Out(sin(In(r)))  = 2 \sin(3r - \pi) - 1
+\]
+
+
+
+
+\end{template}
+
+$T$ is a periodic function, since $\sin(\theta)$ is a periodic function. \\
+
+The principal interval of $\sin(\theta)$ is $[0, 2\pi)$.  The principal interval of $T$ will be the values of $r$ that make the values of $In(y)$ run from $0$ to $2\pi$. \\
+
+
+$3y - \pi = 0$ at $y = \frac{\pi}{3}$
+
+$3y - \pi = 2\pi$ at $y = \pi$
+
+The principle interval of $T$ is $\left[ \frac{\pi}{3}, \pi \right)$. \\
+
+The length of this interval is $\frac{2\pi}{3}$, which is the period of $T$. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{b9yiwlxg2n}{400}{300}
+\end{center}
+
+
+
+
+
+\begin{observation}
+
+$T$ is a periodic function with period $\frac{2\pi}{3}$. \\
+
+
+Therefore, our analysis will focus on the principal interval of $\left[ \frac{\pi}{3}, \pi \right)$. \\
+
+
+All of the features and characteristics we discover will repeat wiht a period of $\frac{2\pi}{3}$.\\
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain}}
+
+
+The domain of $Out(x) = 2x - 1$ is $(-\infty, \infty)$, because $Out$ is a linear function.  \\
+
+This includes any value of $\sin(\theta)$. That means we can use the entire domain of $\sin(\theta)$, which is $(-\infty, \infty)$.  \\
+
+
+This includes any value of $In(y)$, which means we can use the entire domain of $In(y)$, which is $(-\infty, \infty)$, because $In$ is a linear function.  \\
+
+
+The domain of $T$ is $(-\infty, \infty)$. \\
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros}}
+
+
+Since the values of $T$ come from the values of $Out$, we are first looking for zeros of $Out$.  $Out(x) = 2x - 1$ is a linear function and has only one zero, $\frac{1}{2}$. \\
+
+We are looking for where $\sin(\theta) = \frac{1}{2}$. \\
+
+
+There are two numbers in $[0, 2\pi)$ where $\sin(\theta) = \frac{1}{2}$.  They are $\frac{\pi}{6}$ and $\frac {5\pi}{6}$.
+
+We need the values of $y$ where $In(y) = 3y - \pi = \frac{\pi}{6}$ and $In(y) = 3y - \pi = \frac{5\pi}{6}$
+
+$y = \frac{7\pi}{18}$  and   $y = \frac{11\pi}{18}$
+
+[ These agree with the graph. ]
+
+
+And, these repeat every $\frac{2\pi}{3}$ for $T$.
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity}}
+
+
+The component functions of the composition are linear and sine, all continuous. \\
+
+The composition of continuous function is continuous.
+
+$T$ is continuous. It has no disontinuities. \\
+
+
+Since the domain is $(-\infty, \infty)$, there are no singularities. \\
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior}}
+
+
+$T$ is a periodic function with period $\frac{2\pi}{3}$. \\
+
+It either has no end-behavior or the end-behavior is that it is periodic.
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}}
+
+
+We need the behavior of each of the three component funcitons and then we will compose them together. \\
+
+
+
+
+$Out(x) = 2x - 1$ is a linear function with a positive leading coefficient, so it is an increasing function.\\
+
+
+$In(y) = 3y - \pi$ is a linear function with a positive leading coefficient, so it is an increasing function.\\
+
+
+$\sin(\theta)$ increases and decreases through the quadrants. For the principal interval, we have
+
+
+\begin{itemize}
+  \item increases on $\left( 0, \frac{\pi}{2} \right)$
+  \item decreases on $\left( \frac{\pi}{2}, \pi \right)$
+  \item decreases on $\left( \pi, \frac{3\pi}{2} \right)$
+  \item increases on $\left( \frac{3\pi}{2}, 2\pi \right)$
+\end{itemize}
+
+
+Now to trace domains and ranges.
+
+
+We need the values of $In(y) = 3y - \pi$ to be $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, and $2\pi$. \\
+
+
+
+$\blacktriangleright$ $3y - \pi = 0$ when $y = \frac{\pi}{3}$ \\
+
+$\blacktriangleright$ $3y - \pi = \frac{\pi}{2}$ when $y = \frac{\pi}{2}$ \\
+
+$\blacktriangleright$ $3y - \pi = \pi$ when $y = \frac{2\pi}{3}$ \\
+
+$\blacktriangleright$ $3y - \pi = \frac{3\pi}{2}$ when $y = \frac{5\pi}{6}$ \\
+
+$\blacktriangleright$ $3y - \pi = 2\pi$ when $y = \pi$ \\
+
+
+
+
+
+Now to glue everything together. \\
+
+
+
+\textbf{\textcolor{purple!80!black}{On $r = y \in \left( \frac{\pi}{3}, \frac{\pi}{2} \right)$, }}
+
+
+
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left(0, \frac{\pi}{2} \right)$, where $\sin(\theta)$ is increasing. \\
+
+
+
+The range of $\sin(\theta)$ on $\theta \in \left(0, \frac{\pi}{2} \right)$ is $x = \sin(\theta) \in (0, 1)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+T(r) = increasing \circ increasing \circ increasing = increasing
+\]
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{On $r = y \in \left( \frac{\pi}{2}, \frac{2\pi}{3} \right)$, }}
+
+
+
+
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left(\frac{\pi}{2}, \pi \right)$, where $\sin(\theta)$ is decreasing. \\
+
+
+
+The range of $\sin(\theta)$ on $\theta \in \left( \frac{\pi}{2}, \pi \right)$ is $x = \sin(\theta) \in (0, 1)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+T(r) = increasing \circ decreasing \circ increasing = decreasing
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{On $r = y \in \left( \frac{2\pi}{3}, \frac{5\pi}{6} \right)$, }}
+
+
+
+
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left(\pi, \frac{3\pi}{2} \right)$, where $\sin(\theta)$ is decreasing. \\
+
+
+
+The range of $\sin(\theta)$ on $\theta \in \left( \pi, \frac{3\pi}{2} \right)$ is $x = \sin(\theta) \in (-1, 0)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+T(r) = increasing \circ decreasing \circ increasing = decreasing
+\]
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{On $r = y \in \left( \frac{5\pi}{6}, \pi \right)$, }}
+
+
+
+
+$In(y) = 3y - \pi$ is increasing.  The range of $In(y)$ is $\theta = In(y) \in \left( \frac{3\pi}{2}, 2\pi \right)$, where $\sin(\theta)$ is increasing. \\
+
+
+
+The range of $\sin(\theta)$ on $\theta \in \left( \frac{3\pi}{2}, 2\pi \right)$ is $x = \sin(\theta) \in (-1, 0)$, where $Out(x)$ is increasing, because $Out$ is always increasing. \\
+
+
+\[
+T(r) = increasing \circ increasing \circ increasing = increasing
+\]
+
+
+
+
+
+
+
+This behavior repeats with a period of $\frac{2\pi}{3}$. \\
+
+
+
+[ This agrees with the graph. ]
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{bntu7gqkni}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Local Maximum and Minimum}}
+
+
+
+$T$ is continuous on $(-\infty, \infty)$.
+
+
+$\blacktriangleright$ $T$ switches from increasing to decreasing at $\frac{\pi}{2}$, which makes $\frac{\pi}{2}$ a crtical number and the location of a local maximum. \\
+
+
+
+
+$\blacktriangleright$ $T$ switches from decreasing to increasing at $\frac{5\pi}{6}$, which makes $\frac{5\pi}{6}$ a crtical number and the location of a local minimum. \\
+
+
+These repeat with a period of $\frac{2\pi}{3}$. \\
+
+
+
+\[
+T\left( \frac{\pi}{2} \right) = 2 \sin\left(3 \cdot \frac{\pi}{2} \right) - 1 = -3
+\]
+
+
+
+
+\[
+T\left( \frac{5\pi}{6} \right) = 2 \sin\left(3 \cdot \frac{5\pi}{6} \right) - 1 = 1
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Global Maximum and Minimum}}
+
+
+Since $T$ is continuous on $(-\infty, \infty)$, $\frac{\pi}{2}$ and $\frac{5\pi}{6}$ are the only critical numbers, we also have global extrema here. \\
+
+
+
+
+\[
+T\left( \frac{\pi}{2} \right) = 2 \sin\left(3 \cdot \frac{\pi}{2} \right) - 1 = -3
+\]
+
+
+
+
+\[
+T\left( \frac{5\pi}{6} \right) = 2 \sin\left(3 \cdot \frac{5\pi}{6} \right) - 1 = 1
+\]
+
+
+
+
+These repeat with a period of $\frac{2\pi}{3}$. \\
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range}}
+
+
+Since $T$ is continuous with a global maximum of $1$ and a global minimum of $-1$, the range is $[-3, 1]$.  \\ 
+
+
+
+[ This agrees with the graph. ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Periodic}
+
+$T$ is periodic with period $\frac{2\pi}{3}$. \\
+
+
+
+We have zeros in the principal interval as $\frac{7\pi}{18}$ and $\frac{11\pi}{18}$. \\
+
+
+To describe all of the zeros of $T$, we need to include all numbers which are these two numbers plus or minus and whole number of $\frac{2\pi}{3}$. \\
+
+
+
+\[
+\left\{  \frac{7\pi}{18} + k  \cdot \frac{2\pi}{3}  \, | \,  k \in \mathbb{Z}         \right\}
+\]
+
+
+
+\[
+\left\{  \frac{11\pi}{18} + k  \cdot \frac{2\pi}{3}  \, | \,  k \in \mathbb{Z}         \right\}
+\]
+
+
+
+
+Similarly, we could describe the intervals by including $k  \cdot \frac{2\pi}{3} $. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/trigFunctions/examples/exampleList}
+
+\end{center}
+
+
+\end{document}
+

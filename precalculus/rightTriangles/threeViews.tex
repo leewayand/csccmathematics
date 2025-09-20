@@ -1,0 +1,628 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{3 Views}
+
+\begin{document}
+
+\begin{abstract}
+information
+\end{abstract}
+\maketitle
+
+
+
+
+We now have three views of the same information.
+
+
+
+\begin{itemize}
+\item \textbf{\textcolor{purple!85!blue}{Geometry}} We have the Cartesian plane, which consists of points.  These points have locations described by rectangular coordinates. \\
+
+\item \textbf{\textcolor{purple!85!blue}{Geometry}} We can also describe these locations with polar (circular) coordinates. \\
+
+\item \textbf{\textcolor{purple!85!blue}{Arithmetic}} We can now glue a layer of arthmetic over these same points with the Complex Numbers.
+\end{itemize}
+
+
+These are three ways to describe the same information.  The sit on top of each other and we choose which lens to look through.  This also allows us to quickly change lens.  We can begin thinking one way and then quickly change to a different perspective, where we might have better ideas. \\
+
+We can begin with a geometric question, rephrase it in terms of arithmetic, apply some algebra, and then interpret back into geometry. \\
+
+We can begin with an algebra question (like about functions), consider the graph, apply some geometry, and then interpret the results back into arithmetic.  \\
+
+
+\qquad
+
+
+
+\textbf{\textcolor{blue!55!black}{The following are three ways of describing the same information.}} \\
+
+\qquad
+
+\subsection*{Rectangular Coordinates} 
+
+\textbf{\textcolor{purple!85!blue}{Geometry}} \\
+
+The location or position of a point can be described with left/right and up/down measurements from the origin, $(0,0)$, which are called \textit{coordinates}.  The coordinates are written as ordered pairs: $(x_0, y_0)$. The first coordinate gives the measurement in one direction and the second coordinate gives the measurement in a perpendicular direction.  Our favorite names for these directions are $x$ and $y$. 
+
+\textbf{Note:} $x_0$ and $y_0$ are specific values measured in the $x$ and $y$ directions. 
+
+
+Distance, measurement, position, location, coordinates, and direction are all geometric information.  Left/Right and up/down are the directions forming rectangles, hence, we call these \textit{rectangular coordinates}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-4,-2,2,4},
+            xtick={-4,-2,2,4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot[color=penColor,only marks,mark=*] coordinates{(3.5,2.5)}; 
+
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({3.5},{x});
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({x},{2.5});
+
+          \node at (axis cs:3.5,-0.75) [penColor] {\scriptsize $x_0$};
+          \node at (axis cs:-0.75,2.5) [penColor] {\scriptsize $y_0$};
+          \node at (axis cs:4,2) [penColor] {\scriptsize $(x_0,y_0)$};
+
+
+
+  %\addplot [draw=penColor,very thick,smooth,domain=(-9:0),<-] {0};
+  %\addplot [draw=penColor,very thick,smooth,domain=(0:9),->] {1};
+  %\addplot[color=penColor,only marks,mark=*] coordinates{(0,1)}; 
+  %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,0)}; 
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\qquad
+
+The location of every point in the plane can be described using rectanglular coordinates.
+
+
+
+
+
+
+
+
+\subsection*{Polar Coordinates}
+
+\textbf{\textcolor{purple!85!blue}{Geometry}} \\
+
+
+
+The location or position of a point can be described with a different set of perpendicular measurements, which are still called \textit{coordinates}.  In this new measurement system, the second coordinate gives the direction of the point. This coordinate is given as an angle measurement measured counterclockwise from the positive direction of the horizontal axis (from the rectangular system). It is a rotational measurement.  The first coordinate is the radial measurement from the origin, $(0,0)$. Our favorite names for these directions are $r$ and $\theta$. These are written as ordered pairs: $(r_0, \theta_0)$.
+
+\textbf{Note:} $y_0$ and $\theta_0$ are specific values measured in the $r$ and $\theta$ directions. 
+
+Distance, measurement, position, location, coordinates, and direction are all geometric information.  Turning and outward are the directions forming circles, hence, we call these \textit{polar (circular) coordinates}.
+
+
+
+
+
+
+
+
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{polaraxis}[
+          xmin=0,xmax=360, ymin=0,ymax=5.5,
+          xtick={0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360}, style={font=\scriptsize},
+          xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{3\pi}{4}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{5\pi}{4}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{7\pi}{4}$,$\frac{11\pi}{6}$,$2\pi$},
+          ytick={1,2,3,4,5},%yticklabels={},
+        ]
+        %\addplot+[draw=none, mark=none,penColor,domain=0:360,samples=100,smooth] {1};
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(35.5,4.3)}; 
+
+
+         \node at (axis cs:-6,4.3) [penColor] {\scriptsize $r_0$};
+         \node at (axis cs:35.5,5.1) [penColor] {\scriptsize $\theta_0$};
+         \node at (axis cs:30,4.3) [penColor] {\scriptsize $(r_0,\theta_0)$};
+
+         \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {4.3};
+         \addplot[line width=1,penColor,domain=5.3:5.5,samples=100,smooth] ({35.5},{x});
+
+
+      \end{polaraxis}
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Complex Numbers}
+
+\textbf{\textcolor{purple!85!blue}{Arithmetic}} \\
+
+
+We have an arithmetic viewpoint to all of this as well. Complex Numbers are our 2-dimensional number line, where we can describe the same information through 2-dimensional numbers.
+
+Rather than write $(x_0, y_0)$, which is a geometric description, we write $x_0, + y_0 \, i$ for numbers, which is an arithmetic description.
+
+Same information. Different descriptions. Different language.
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-5:5, ymax=5, xmax=5, ymin=-5, xmin=-5,
+            axis lines =center, xlabel=$Re$, ylabel=$Im$,
+            ytick={-4,-2,2,4},
+            xtick={-4,-2,2,4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot[color=penColor,only marks,mark=*] coordinates{(3.5,2.5)}; 
+
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({3.5},{x});
+          \addplot [line width=1, penColor, smooth,samples=100,domain=(-0.25:0.25)] ({x},{2.5});
+
+          \node at (axis cs:3.5,-0.75) [penColor] {\scriptsize $x_0$};
+          \node at (axis cs:-0.75,2.5) [penColor] {\scriptsize $y_0$};
+          \node at (axis cs:4,2) [penColor] {\scriptsize $x_0 + y_0 i$};
+
+
+
+  %\addplot [draw=penColor,very thick,smooth,domain=(-9:0),<-] {0};
+  %\addplot [draw=penColor,very thick,smooth,domain=(0:9),->] {1};
+  %\addplot[color=penColor,only marks,mark=*] coordinates{(0,1)}; 
+  %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,0)}; 
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\qquad
+
+
+Three different ways of describing the same information. \\
+
+
+These three viewpoints all lay on top of each other.  We see them simultaneously, together.  That way we can switch between them quickly and convienently as it suits our needs. \\
+
+They are not separate. \\
+
+They are glued together.  There are bridges between them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\qquad
+
+
+
+
+\subsection*{Together}
+
+
+
+\textbf{\textcolor{purple!85!blue}{Location}} \\
+
+
+\begin{itemize}
+\item Geometry: Rectangular (Cartesian) coordinates
+\item Geometry: Polar (Circular) coordinates
+\item Arithmetic: Complex Numbers
+\end{itemize}
+
+
+
+\[
+(x_0, y_0) = (r_0, \theta_0) = x_0 + y_0 \, i
+\]
+
+
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{polaraxis}[
+          xmin=0,xmax=360, ymin=0,ymax=5.5,
+          xtick={0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360}, style={font=\scriptsize},
+          xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{3\pi}{4}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{5\pi}{4}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{7\pi}{4}$,$\frac{11\pi}{6}$,$2\pi$},
+          ytick={1,2,3,4,5},%yticklabels={},
+        ]
+        %\addplot+[draw=none, mark=none,penColor,domain=0:360,samples=100,smooth] {1};
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(35.5,4.3)}; 
+
+
+         \node at (axis cs:-5,4.3) [penColor] {\scriptsize $r_0$};
+         \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $\theta_0$};
+         \node at (axis cs:30,4.3) [penColor] {\scriptsize $(r_0,\theta_0)$};
+
+
+         \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {4.3};
+         \addplot[line width=1,penColor,domain=5.3:5.5,samples=100,smooth] ({35.5},{x});
+
+
+
+
+
+         \node at (axis cs:-6,3.5) [penColor2] {\scriptsize $x_0$};
+         \node at (axis cs:90,2.75) [penColor2] {\scriptsize $y_0$};
+         \node at (axis cs:23,4.1) [penColor2] {\scriptsize $(x_0,y_0)$};
+
+
+         \addplot[line width=1,penColor2,domain=-3:3,samples=100,smooth] {3.5};
+         \addplot[line width=1,penColor2,domain=87:93,samples=100,smooth] {2.5};
+
+
+          \node at (axis cs:16,4.1) [penColor3] {\scriptsize $x_0 + y_0 \, i$};
+
+
+
+
+
+
+      \end{polaraxis}
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{Bridge}} \\
+
+
+
+The bridge between these three viewpoints comes from the unit circle.
+
+In Cartesian coordinates, the unit circle is described by the equation $\sqrt{x^2 + y^2} = 1$. \\
+
+In polar coordinates, the unit circle is described by $r = 1$.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}[line cap=round]
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (.766,.643)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(.766,0) (.766,.643)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:40)] ({.15*cos(x)},{.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:.15,.07) [anchor=west] {$\theta$};
+          \node[penColor, rotate=-90] at (axis cs:.84,.322) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.766,0.643)}; 
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+\qquad
+
+
+As you travel around the unit circle, the coordinates of the points change. The $x$-coordinate changes.  The $y$-coordinate changes. The changing of the coordinates corresponds to the changing of the angle, $\theta$, measured counterclockwise from the positive $x$-axis.   
+
+If you give the angle for a point on the unit circle, then you can determine the $x$ and $y$ coordinates.
+
+$x$ and $y$ are functions of $\theta$! \\
+
+
+\begin{center}
+
+\textbf{\textcolor{blue!55!black}{$x$ is a function of $\theta$}}: $x(\theta)$ \\
+
+\textbf{\textcolor{blue!55!black}{$y$ is a function of $\theta$}}: $y(\theta)$ \\
+
+\end{center}
+
+
+
+
+We have adopted Greek names for these functions.
+
+
+
+\[
+x = x(\theta) = cosine(\theta) = \cos(\theta)
+\]
+
+
+
+
+\[
+y = y(\theta) = sine(\theta) = \sin(\theta)
+\]
+
+
+
+The rectangular coordinates of points on the unit circle are $(\cos(\theta), \sin(\theta))$. \\
+
+The polar coordinates of points on the unit circle are much simpler, $(1, \theta)$. \\
+
+This makes the Complex numbers on the unit cirlce look like $\cos(\theta) + \sin(\theta) \, i$. \\
+
+
+
+
+\[
+(\cos(\theta), \sin(\theta)) = (1, \theta) = \cos(\theta) + \sin(\theta) \, i
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\qquad
+
+
+Everything relates back through the unit circle.
+
+
+
+
+
+
+
+
+
+
+  \begin{image}
+    \begin{tikzpicture}
+      \begin{polaraxis}[
+          xmin=0,xmax=360, ymin=0,ymax=5.5,
+          xtick={0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330,360}, style={font=\scriptsize},
+          xticklabels={$0$,$\frac{\pi}{6}$,$\frac{\pi}{4}$,$\frac{\pi}{3}$,$\frac{\pi}{2}$,$\frac{2\pi}{3}$,$\frac{3\pi}{4}$,$\frac{5\pi}{6}$,$\pi$,$\frac{7\pi}{6}$,$\frac{5\pi}{4}$,$\frac{4\pi}{3}$,$\frac{3\pi}{2}$,$\frac{5\pi}{3}$,$\frac{7\pi}{4}$,$\frac{11\pi}{6}$,$2\pi$},
+          ytick={1,2,3,4,5},%yticklabels={},
+        ]
+        %\addplot+[draw=none, mark=none,penColor,domain=0:360,samples=100,smooth] {1};
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(35.5,4.3)}; 
+
+
+         \node at (axis cs:-5,4.3) [penColor] {\scriptsize $r_0$};
+         \node at (axis cs:35.5,4.9) [penColor] {\scriptsize $\theta_0$};
+         \node at (axis cs:30,4.3) [penColor] {\scriptsize $(r_0,\theta_0)$};
+
+
+         \addplot[line width=1,penColor,domain=-3:3,samples=100,smooth] {4.3};
+         \addplot[line width=1,penColor,domain=5.3:5.5,samples=100,smooth] ({35.5},{x});
+
+
+
+
+
+         \node at (axis cs:-6,3.5) [penColor2] {\scriptsize $x_0$};
+         \node at (axis cs:90,2.75) [penColor2] {\scriptsize $y_0$};
+         \node at (axis cs:23,4.1) [penColor2] {\scriptsize $(x_0,y_0)$};
+
+
+         \addplot[line width=1,penColor2,domain=-3:3,samples=100,smooth] {3.5};
+         \addplot[line width=1,penColor2,domain=87:93,samples=100,smooth] {2.5};
+
+
+         \node at (axis cs:16,4.1) [penColor3] {\scriptsize $x_0 + y_0 \, i$};
+
+
+
+         \addplot[thick,penColor3,domain=0:360,samples=300,smooth] ({x},{1});
+
+
+      \end{polaraxis}
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+Every aspect of the points (or numbers) can be described in all three languages.  
+
+
+\qquad
+
+
+
+Using similar triangles, we can glue everything together.  \\
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Distance}}  \\
+
+
+The distance between the origin (zero) and our point (number) can be described in three ways:
+
+
+\begin{itemize}
+\item (Rectangular)  $\sqrt{x^2 + y^2}$
+\item (Polar) $r$
+\item (Arithmetic) $| x + y \, i  | = \sqrt{x^2 + y^2}$, called the \textit{modulus}
+\end{itemize}
+
+
+
+\qquad
+
+
+\textbf{\textcolor{blue!55!black}{Coordinates}} 
+
+
+\[
+x = r \cos(\theta)  \\
+y = r \sin(\theta)
+\]
+
+
+\[
+x + y i = r \cos(\theta) + r \sin(\theta) \, i = r (\cos(\theta) +  \sin(\theta) \, i)
+\]
+
+
+
+
+\[
+r = \sqrt{x^2 + y^2}
+\]
+
+
+\[
+\frac{y}{x} = \tan(\theta)
+\]
+
+
+
+
+
+\qquad
+
+
+\textbf{\textcolor{blue!55!black}{Multiplication}} 
+
+
+\[
+r_1 (\cos(\theta_1) +  \sin(\theta_1) \, i) \cdot r_2 (\cos(\theta_2) +  \sin(\theta_2) \, i) = r_1 \cdot r_2 (\cos(\theta_1 + \theta_2) +  \sin(\theta_1 + \theta_2) \, i) 
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Right Triangles]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/rightTriangles/examples/exampleList}
+
+\end{center}
+
+
+
+
+\end{document}
+

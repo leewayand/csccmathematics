@@ -1,0 +1,619 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{As Input}
+
+\begin{document}
+
+\begin{abstract}
+composition
+\end{abstract}
+\maketitle
+
+
+
+
+
+\begin{example}
+
+
+
+Analyze $f(t) = 3 \sin(2t - \pi) - 2$
+
+
+
+\begin{explanation}
+
+
+$\blacktriangleright$ \textbf{One period} \\
+
+
+Start:  $2t - \pi = 0$, which occurs at $t = \frac{\pi}{2}$where $f = 3 \cdot 0 - 2 = -2$  \\
+
+
+Finish:  $2t - \pi = 2 \pi$, which occurs at $t = \frac{3 \pi}{2}$, where $f = 3 \cdot 0 - 2 = -2$ \\
+
+
+Period = $\frac{3 \pi}{2} - \frac{\pi}{2} = \pi$
+
+
+Halfway between $\frac{\pi}{2}$ and $\frac{3\pi}{2}$ is $\pi$.  \\
+
+
+$\sin(2t - \pi)$ equals $0$ at $\pi$, where $f = 3 \cdot 0 - 2 = -2$.
+
+
+A quarter of the way from Start to Finish is $\frac{3 \pi}{4}$, where $f = 3 \cdot 1 - 2 = 1$
+
+
+The three-quarter mark is $\frac{5 \pi}{4}$, where $f = 3 \cdot -1 - 2 = -5$
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={t}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$\blacktriangleright$ \textbf{Then, extend periodically} 
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={t}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(0.2:6.5),<->] {3*sin(deg(2*x-3.14)) -2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+We can calculate some additional exact values at the easy angles. \\
+
+
+
+Our principle interval was $\left[ \frac{\pi}{2}, \frac{3\pi}{2}   \right]$, which has a length of $\pi$. \\
+
+
+
+
+
+$\blacktriangleright$ $30^{\circ} = \frac{\pi}{6}$ is $\frac{1}{12}$ of the normal basic interval $[0, 2\pi]$.  \\
+
+
+$\frac{1}{12}$ of our period here would be $\frac{1}{12} \cdot \pi = \frac{\pi}{12}$.
+
+Therefore, if we move $\frac{\pi}{12}$ from $\frac{\pi}{2}$, then we should be at the angle where we normally get $\sin(\frac{\pi}{6}) = \frac{1}{2}$.
+
+
+$\frac{\pi}{2} + \frac{\pi}{12}  = \frac{7\pi}{12}$.
+
+Let's evaluate $f\left( \frac{7\pi}{12} \right)$ and see if we get $\frac{\pi}{6}$ inside the sine function.
+
+\[
+f\left( \frac{7\pi}{12} \right) = 3 \sin\left(2 \left(\frac{7\pi}{12} \right) - \pi \right) - 2 = 3 \sin\left( \frac{2\pi}{12} \right) - 2  = 3 \sin\left( \frac{\pi}{6} \right) - 2 = 3 \cdot \frac{1}{2} - 2 = -\frac{1}{2}
+\]
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.833,-0.5)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ $60^{\circ} = \frac{\pi}{3}$ is $\frac{1}{6}$ of the normal basic interval $[0, 2\pi]$.  \\
+
+$\frac{1}{6}$ of our period here would be $\frac{1}{6} \cdot \pi = \frac{\pi}{6}$.
+
+Therefore, if we move $\frac{\pi}{6}$ from $\frac{\pi}{2}$, then we should be at the angle where we get $\sin(\frac{\pi}{3}) = \frac{\sqrt{3}}{2}$.
+
+
+$\frac{\pi}{2} + \frac{\pi}{6} = \frac{4\pi}{6} =  \frac{2\pi}{3}$.
+
+Let's evaluate $f\left( \frac{2\pi}{3} \right)$ and see if we get $\frac{\pi}{3}$ inside the sine. \\
+
+\[
+f\left( \frac{2\pi}{3} \right) = 3 \sin\left(2 \left(\frac{2\pi}{3} \right) - \pi \right) - 2 = 3 \sin\left( \frac{\pi}{3} \right) - 2  =  3 \cdot \frac{\sqrt{3}}{2} - 2 = \frac{3\sqrt{3}-4}{2} \approx 0.5980762114
+\]
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=0:7, ymax=6, xmax=7, ymin=-6, xmin=0,
+            axis lines =center, xlabel={t}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-5,-4,-3,-2,-1,0,1,2,3,4,5},
+            xtick={0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$},
+            yticklabels={$-5$,$-4$,$-3$,$-2$,$-1$,$0$,$1$,$2$,$3$,$4$,$5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(1.57:4.71)] {3*sin(deg(2*x-3.14))-2};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.833,-0.5)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2.094,0.59)};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\end{explanation}
+
+
+\end{example}
+
+
+
+
+
+
+\begin{summary} Sine and Cosine \\
+
+
+Sine and Cosine are basically shifts of each other.  They follow the same periodic patterns. \\
+
+They both oscillate between $-1$ and $1$, which makes their range $[-1,1]$. \\
+
+They both have their maximum value of $1$ and their minimum value of $-1$ at the top, bottom, or sides of the unit circle. \\
+
+When one has maximum or minimum, the other has a zero. \\
+
+\end{summary}
+
+
+When we analyze sine and cosine functions, we usually start by locating when the inside is $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, or $2\pi$.  This tells us when the function is experiencing a maximum, minimum, or zero.
+
+Then we move to the easy angles ($\frac{\pi}{6}$, $\frac{\pi}{4}$, and $\frac{\pi}{3}$) to round out the shape. \\
+
+
+
+
+
+\textbf{\textcolor{red!80!black}{$\blacktriangleright$}} This is how we analyze compositions involving sine and cosine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Now that we can move around the circle and obtain values of sine and cosine, we can use these function values as input to additional functions, via composition. \\
+
+
+
+
+Let's examine 
+\[ g(x) = \frac{1}{2} (\sin(x) - 3)^2 - 4 \]
+
+
+We can view this as a composition: $\sin(x)$ has been composed with $P(t) = \frac{1}{2} (t - 3)^2 - 4$.
+
+
+
+$P(t) = \frac{1}{2} (t - 3)^2 - 4$ is a quadratic function whose graph is a parabola.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=P(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.2:8.2),<->] {0.5*(x-3)^2 - 4};
+
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+We are replacing $t$ with $\sin(x)$ to get $g(x) = \frac{1}{2} (\sin(x) - 3)^2 - 4$.\\
+
+$\sin(x)$ has values from $-1$ to $1$ and those values will be going in for $t$ into $P(t) = \frac{1}{2} (t - 3)^2 - 4$. \\
+
+Therefore, we want to look at $P(t)$ on the interval $[-1,1]$. \\
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=P(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:1)] {0.5*(x-3)^2 - 4};
+
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+On this interval $P$ is decreasing, which means the maximum occurs on the left and the minimum on the right.\\
+
+As $\sin(x)$ moves from $-1$ to $1$, $P(t)$ moves from $P(-1)=4$ to $P(1)=-2$. \\
+
+
+To get $\sin(x)$ to move from $-1$ to $1$, $x$ needs to start at $-\frac{\pi}{2}$ and proceed to $\frac{\pi}{2}$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-1.570:1.570)] {0.5*(sin(deg(x))-3)^2 - 4};
+
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+As $x$ moves from $\frac{\pi}{2}$ to $\frac{3\pi}{2}$, $\sin(x)$ to moves from $1$ to $-1$. This piece of the parabola is traced backwards as $x$ moves forward.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-1.570:4.71)] {0.5*(sin(deg(x))-3)^2 - 4};
+
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+And, this repeats.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9.5:9.5),<->] {0.5*(sin(deg(x))-3)^2 - 4};
+
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          	%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$g(x)$ has a maximum value whenever $t=-1$ and a minimum value whenever $t=1$. \\
+
+This corresponds to when $x=\frac{-\pi}{2} \pm 2k\pi$ and $=\frac{\pi}{2} \pm 2k\pi$. \\
+
+
+$g(x)$ has a maximum value of 
+
+
+\begin{align*}
+g\left( -\frac{\pi}{2} \right) &= \frac{1}{2} \left(\left( -\frac{\pi}{2} \right) - 3 \right)^2 - 4 \\
+                               &= \frac{1}{2} (-1 - 3)^2 - 4 \\
+                               &= \frac{1}{2} \cdot 16 - 4 \\
+                               &=  4
+\end{align*}
+
+
+
+
+
+$g(x)$ has a minimum value of
+\begin{align*}
+g\left( \frac{\pi}{2} \right) &= \frac{1}{2} \left(\left( \frac{\pi}{2} \right) - 3 \right)^2 - 4 \\
+                               &= \frac{1}{2} (1 - 3)^2 - 4 \\
+                               &= \frac{1}{2} \cdot 4 - 4 \\
+                               &=  -2
+\end{align*}
+
+
+
+$g$ is decreasing on 
+\[
+\left[ \frac{-\pi}{2} + 2k\pi, \frac{\pi}{2} + 2k\pi \right], \text{ where } \,  k \in \mathbb{Z}
+\]
+
+
+
+
+$g$ is increasing on 
+\[
+\left[ \frac{\pi}{2} + 2k\pi, \frac{3\pi}{2} + 2k\pi \right], \text{ where } \,  k \in \mathbb{Z}
+\]
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/trigFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+\end{document}
+
