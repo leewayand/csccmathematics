@@ -1,0 +1,2336 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Behavior}
+
+\begin{document}
+
+\begin{abstract}
+chain rule
+\end{abstract}
+\maketitle
+
+
+
+Probably the most important characteristic we want to know about a function is its behavior.  That is, where is it increasing and where is it decreasing? \\
+
+
+
+
+Increasing and decreasing for a function is a comparison between its domain and range, which are both a set of numbers.  So, to understand function behavior, we need to first understand number behavior.
+
+
+
+\textbf{\textcolor{blue!55!black}{Number Behavior:}}  Our real numbers have a natural ordering, which we call \textit{less than} and \textit{greater than}.  Visually, these mean ``to the left of'' and ``to the right of'' on a number line. \\
+
+If you move to the right on the number line, then the numbers are increasing. \\
+
+If you move to the left on the number line, then the numbers are decreasing. \\
+
+
+
+
+
+
+
+
+
+
+
+With functions, we have two number lines and we compare movement on them to each other. \\
+
+
+
+
+
+
+
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Increasing Function}} 
+
+
+A function is increasing if its domain and range values change in the same way. \\
+
+
+In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is also to the right.
+
+When the domain increases, the function values also increase.
+
+
+Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  When we move to the right on the domain number line, then the corresponding movement on the range number line is up.
+
+
+
+\[
+\text{ When } \,  a < b \, \text{ then } \, f(a) < f(b)
+\]
+
+
+\end{template}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{template} \textbf{\textcolor{blue!55!black}{Decreasing Function}} 
+
+
+A function is decreasing if its domain and range values change in oppositely. \\
+
+
+In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is to the left.
+
+When the domain increases, the function values decrease.
+
+
+Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  When we move to the right on the domain number line, then the corresponding movement on the range number line is down.
+
+
+
+\[
+\text{ When } \,  a < b \, \text{ then } \, f(a) > f(b)
+\]
+
+
+\end{template}
+
+
+
+
+
+
+We want to following this idea through compositions.   \\
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Increasing}
+
+
+
+$f$ and $g$ are defined graphically below.  They are both increasing functions. \\
+
+What about $f \circ g$? \\
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=f(k)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2)] ({x},{0.5*x+1});
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(-4,-1)};
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(2,2)}; 
+
+           
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:6)] ({x},{2*x-4});
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(0,-4)};
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(6,8)}; 
+
+
+  \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+
+
+To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+
+
+
+\[
+(f \circ g)(x) = f(g(x))
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $g$:}}  First, we think of movement to the right in the domain of $f \circ g$.  This would be movement to the right in the domain of $g$.  The graph of $g$ is on the right above.  This would be movement to the right on the horizontal axis.
+
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $g$:}}  Next, according to the graph of $g$, as we move the right in the domain of $g$, the values of $g$ move up, which is to the right in the range of $g$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{switch:}}   The range of $g$ becomes the domain of $f$.  
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $f$:}}   The range of $g$ becomes the domain of $f$.  We were moving up on the graph of $g$, which means to the right in the range of $g$.  This switches to movement to the right in the domain of $f$.
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $f$:}}  Next, according to the graph of $f$, as we move the right in the domain of $f$, the values of $f$ move up, which is to the right in the range of $f$.  This is the range of $f \circ g$.
+
+
+
+
+Gluing the whole story, movement to the right in the domain of $f \circ g$ corresponds to movement to the right in the range of $f \circ g$.
+
+$f \circ g$ is an increasing function.
+
+
+
+\begin{observation}
+
+
+This only applies to the domain of $f \circ g$, which needs to be determined. \\
+
+
+
+The range of $g$ is $(-4, 8)$.  However, the domain of $f$ is $(-4, 2)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(-4, 2)$? \\
+
+
+We need solutions to $g(t) = 2$.  From the graph, it looks like $g(3) = 2$.  Therefore, we can only use $(0, 3)$ from the domain of $g$.
+
+
+Therefore, the domain of $f \circ g$ is $(0, 3)$.  On this domain, $f \circ g$ is increasing.
+
+
+
+\end{observation}
+
+
+
+
+\begin{warning}
+
+Increasing means the domain and range change in the same way.
+
+When the domain increases, then range increases.
+
+It goes the other way as well.
+
+When the domain decreases, the range decreases.
+
+They mean the same thing.
+
+
+\end{warning}
+
+
+
+We can describe all of this thinking algebraically as well. \\
+
+
+If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.
+
+
+
+\textbf{Step 1:}  If $a < b$, then $g(a) < g(b)$, because $g$ is an increasing function.
+
+
+\textbf{Step 2:}  Now think of $g(a)$  and $g(b)$ as domain numbers for $f$.
+
+
+\textbf{Step 3:}  If $g(a) < g(b)$, then $f(g(a)) < f(g(b))$, because $f$ is an incresing function.
+
+
+\textbf{Beginning to End:} If $a < b$, then $f(g(a)) < f(g(b))$ and $f \circ g$ is an increasing function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Decreasing}
+
+
+
+$f$ and $g$ are defined graphically below.  $f$ is an increasing function.  $g$ is a decreasing function. \\
+
+What about $f \circ g$? \\
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=f(k)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2)] ({x},{0.5*x+1});
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(-4,-1)};
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(2,2)}; 
+
+           
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:6)] ({x},{-2*x+4});
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(0,4)};
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(6,-8)}; 
+
+
+  \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+
+
+To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+
+
+
+\[
+(f \circ g)(x) = f(g(x))
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $g$:}}  First, we think of movement to the right in the domain of $f \circ g$.  This would be movement to the right in the domain of $g$.  The graph of $g$ is on the right above.  This would be movement to the right on the horizontal axis.
+
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $g$:}}  Next, according to the graph of $g$, as we move the right in the domain of $g$, the values of $g$ move down, which is to the left in the range of $g$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{switch:}}   The range of $g$ becomes the domain of $f$.  
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $f$:}}   The range of $g$ becomes the domain of $f$.  We were moving down on the graph of $g$, which means to the left in the range of $g$.  This switches to movement to the left in the domain of $f$.
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $f$:}}  Next, according to the graph of $f$, as we move the left in the domain of $f$, the values of $f$ move down, which is to the left in the range of $f$.  This is the range of $f \circ g$.
+
+
+
+
+Gluing the whole story, movement to the right in the domain of $f \circ g$ corresponds to movement to the left in the range of $f \circ g$.
+
+$f \circ g$ is a decreasing function.
+
+
+
+\begin{observation}
+
+
+This only applies to the domain of $f \circ g$, which needs to be determined. \\
+
+
+
+The range of $g$ is $(-8, 4)$.  However, the domain of $f$ is $(-4, 2)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(-4, 2)$? \\
+
+
+We need solutions to $g(t) = -4$ and $g(t) = 2$.  From the graph, it looks like $g(4) = -4$  and $g(2) = 2$. Therefore, we can only use $(2, 4)$ from the domain of $g$.
+
+
+Therefore, the domain of $f \circ g$ is $(2, 4)$.  On this domain, $f \circ g$ is decreasing.
+
+
+
+\end{observation}
+
+
+
+
+
+
+\begin{warning}
+
+Decreasing means the domain and range change in the opposite way.
+
+When the domain increases, then range decreases.
+
+It goes the other way as well.
+
+When the domain decreases, the range increases.
+
+They mean the same thing.
+
+
+\end{warning}
+
+
+
+
+
+
+We can describe all of this thinking algebraically as well. \\
+
+
+If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.
+
+
+
+\textbf{Step 1:}  If $a < b$, then $g(a) > g(b)$, because $g$ is an decreasing function.
+
+
+\textbf{Step 2:}  Now think of $g(a)$  and $g(b)$ as domain numbers for $f$.
+
+
+\textbf{Step 3:}  If $g(a) > g(b)$, then $f(g(a)) > f(g(b))$, because $f$ is an increasing function.
+
+
+\textbf{Beginning to End:} If $a < b$, then $f(g(a)) > f(g(b))$ and $f \circ g$ is a decreasing function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Increasing}
+
+
+
+$f$ and $g$ are defined graphically below.  $f$ is a decreasing function.  $g$ is an increasing function. \\
+
+What about $f \circ g$? \\
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=f(k)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:6)] ({x},{-2*x+4});
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(0,4)};
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(6,-8)}; 
+
+           
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2)] ({x},{0.5*x+1});
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(-4,-1)};
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(2,2)}; 
+
+
+  \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+
+
+To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+
+
+
+\[
+(f \circ g)(x) = f(g(x))
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $g$:}}  First, we think of movement to the right in the domain of $f \circ g$.  This would be movement to the right in the domain of $g$.  The graph of $g$ is on the right above.  This would be movement to the right on the horizontal axis.
+
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $g$:}}  Next, according to the graph of $g$, as we move the right in the domain of $g$, the values of $g$ move up, which is to the right in the range of $g$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{switch:}}   The range of $g$ becomes the domain of $f$.  
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $f$:}}   The range of $g$ becomes the domain of $f$.  We were moving up on the graph of $g$, which means to the right in the range of $g$.  This switches to movement to the right in the domain of $f$.
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $f$:}}  Next, according to the graph of $f$, as we move the right in the domain of $f$, the values of $f$ move down, which is to the left in the range of $f$.  This is the range of $f \circ g$.
+
+
+
+
+Gluing the whole story, movement to the right in the domain of $f \circ g$ corresponds to movement to the left in the range of $f \circ g$.
+
+$f \circ g$ is a decreasing function.
+
+
+
+\begin{observation}
+
+
+This only applies to the domain of $f \circ g$, which needs to be determined. \\
+
+
+
+The range of $g$ is $(-4, 2)$.  However, the domain of $f$ is $(0, 6)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(0, 6)$? \\
+
+
+We need solutions to $g(t) = 0$.  From the graph, it looks like $g(-2) = 0$.  Therefore, we can only use $(-2, 2)$ from the domain of $g$.
+
+
+Therefore, the domain of $f \circ g$ is $(-2, 2)$.  On this domain, $f \circ g$ is decreasing.
+
+
+
+\end{observation}
+
+
+
+
+
+
+\begin{warning}
+
+Decreasing means the domain and range change in the opposite way.
+
+When the domain increases, then range decreases.
+
+It goes the other way as well.
+
+When the domain decreases, the range increases.
+
+They mean the same thing.
+
+
+\end{warning}
+
+
+
+
+
+
+We can describe all of this thinking algebraically as well. \\
+
+
+If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.
+
+
+
+\textbf{Step 1:}  If $a < b$, then $g(a) < g(b)$, because $g$ is an increasing function.
+
+
+\textbf{Step 2:}  Now think of $g(a)$ and $g(b)$ as domain numbers for $f$.
+
+
+\textbf{Step 3:}  If $g(a) < g(b)$, then $f(g(a)) > f(g(b))$, because $f$ is a decreasing function.
+
+
+\textbf{Beginning to End:} If $a < b$, then $f(g(a)) > f(g(b))$ and $f \circ g$ is a decreasing function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Decreasing}
+
+
+
+$f$ and $g$ are defined graphically below.  $f$ and $g$ are both decreasing functions.  \\
+
+What about $f \circ g$? \\
+
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[name = sinax, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel={$y=f(k)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(0:6)] ({x},{-2*x+4});
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(0,4)};
+          \addplot [color=penColor2,fill=background, only marks,mark=*] coordinates{(6,-8)}; 
+
+           
+
+    \end{axis}
+    \begin{axis}[at={(sinax.outer east)},anchor=outer west, domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=g(t)$}, grid = major, grid style={dashed},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:6)] ({x},{-0.5*x+5});
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(-4,7)};
+          \addplot [color=penColor,fill=background, only marks,mark=*] coordinates{(6,2)}; 
+
+
+  \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+
+
+To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+
+
+
+\[
+(f \circ g)(x) = f(g(x))
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $g$:}}  First, we think of movement to the right in the domain of $f \circ g$.  This would be movement to the right in the domain of $g$.  The graph of $g$ is on the right above.  This would be movement to the right on the horizontal axis.
+
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $g$:}}  Next, according to the graph of $g$, as we move to the right in the domain of $g$, the values of $g$ move down, which is to the left in the range of $g$.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{switch:}}   The range of $g$ becomes the domain of $f$.  
+
+
+\textbf{\textcolor{blue!55!black}{Domain Movement in $f$:}}   The range of $g$ becomes the domain of $f$.  We were moving down on the graph of $g$, which means to the left in the range of $g$.  This switches to movement to the left in the domain of $f$.
+
+
+\textbf{\textcolor{blue!55!black}{Range Movement in $f$:}}  Next, according to the graph of $f$, as we move the left in the domain of $f$, the values of $f$ move up, which is to the right in the range of $f$.  This is the range of $f \circ g$.
+
+
+
+
+Gluing the whole story, movement to the right in the domain of $f \circ g$ corresponds to movement to the right in the range of $f \circ g$.
+
+$f \circ g$ is a increasing function. \\
+
+
+Decreasing means turning around and we turned around twice. \\
+
+
+\begin{observation}
+
+
+This only applies to the domain of $f \circ g$, which needs to be determined. \\
+
+
+
+The range of $g$ is $(2, 7)$.  However, the domain of $f$ is $(0, 6)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(0, 6)$? \\
+
+
+We need sa olution to $g(t) = 6$.  From the graph, it looks like $g(-2) = 6$.  Therefore, we can only use $(-2, 6)$ from the domain of $g$.
+
+
+Therefore, the domain of $f \circ g$ is $(-2, 6)$.  On this domain, $f \circ g$ is decreasing.
+
+
+
+\end{observation}
+
+
+
+
+
+
+\begin{warning}
+
+Decreasing means the domain and range change in the opposite way.
+
+When the domain increases, then range decreases.
+
+It goes the other way as well.
+
+When the domain decreases, the range increases.
+
+They mean the same thing.
+
+
+\end{warning}
+
+
+
+
+
+
+We can describe all of this thinking algebraically as well. \\
+
+
+If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.
+
+
+
+\textbf{Step 1:}  If $a < b$, then $g(a) > g(b)$, because $g$ is a decreasing function.
+
+
+\textbf{Step 2:}  Now think of $g(a)$ and $g(b)$ as domain numbers for $f$.
+
+
+\textbf{Step 3:}  If $g(a) > g(b)$, then $f(g(a)) < f(g(b))$, because $f$ is a decreasing function.
+
+
+\textbf{Beginning to End:} If $a < b$, then $f(g(a)) < f(g(b))$ and $f \circ g$ is an increasing function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Rate of Rates}
+
+
+
+
+
+
+Rates of Change is our measurement of \textbf{function behavior}.
+
+
+
+
+$\vartriangleright$  \textbf{\textcolor{blue!55!black}{Functions increase.}}  However, they could increase slowly with a small positive rate of change.  They could increase quickly with a large positive rate of change. 
+
+
+
+$\vartriangleright$  \textbf{\textcolor{blue!55!black}{Functions decrease.}}  However, they could decrease slowly with a small negative rate of change.  They could decrease quickly with a large negative rate of change. 
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{What about compositions?}}
+
+
+
+
+
+What happens when you
+
+
+\begin{itemize}
+\item compose an increasing function with an increasing function?
+\item compose an increasing function with an decreasing function?
+\item compose an decreasing function with an increasing function?
+\item compose an decreasing function with an decreasing function?
+\end{itemize}
+
+
+
+To investigate these we need to remember the definitions of increasing and decreasing.
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{green!50!black}{Increasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{increasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \leq f(b)$.
+\end{center}
+
+\end{summary}
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{green!50!black}{Decreasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{decreasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \geq f(b)$.
+\end{center}
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Increasing}
+
+
+Suppose that both $F$ and $G$ are increasing functions. \\
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are increasing. \\
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are increasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are increasing, since $G$ is an increasing function.
+
+These values of $G(x)$, which are increasing, are going into $F$.  Therefore, the output of $F$ is increasing.  But, these are the values of the composition.
+
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ increases.}}
+\end{center}
+
+
+
+
+
+
+\begin{fact}
+$increasing \circ increasing = increasing$
+
+
+Let $F$ be an increasing function. \\
+Let $G$ be an increasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) < G(b)$, because $G$ is an increasing function. \\
+
+Then $F(G(a)) < F(G(b))$, because $F$ is an increasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Decreasing}
+
+
+Suppose that $F$ is an increasing function. \\
+Suppose that $G$ is a decreasing function. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are increasing. \\
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are decreasing. \\
+
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are decreasing, since $G$ is a decreasing function.
+
+These values of $G(x)$, which are decreasing, are going into $F$.  Therefore, the output of $F$ is decreasing, since $F$ is an increasing function.  But, these are the values of the composition.
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ decreases.}}
+\end{center}
+
+
+
+\begin{fact}
+$increasing \circ decreasing = decreasing$
+
+
+Let $F$ be an increasing function. \\
+Let $G$ be a decreasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(b) < G(a)$, because $G$ is a decreasing function. \\
+
+Then $F(G(b)) < F(G(a))$, because $F$ is an increasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Increasing}
+
+
+Suppose that $F$ is a decreasing function. \\
+Suppose that $G$ is an increasing function. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are decreasing. \\
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are increasing. \\
+
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are increasing. \\
+
+
+$\vartriangleright$ It also means that when the numbers going into $G$ are decreasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are increasing, since $G$ is a increasing function.
+
+These values of $G(x)$, which are increasing, are going into $F$.  Therefore, the output of $F$ is decreasing, since $F$ is an decreasing function.  But, these are the values of the composition.
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ decreases.}}
+\end{center}
+
+
+
+\begin{fact}
+$decreasing \circ increasing = decreasing$
+
+
+Let $F$ be a decreasing function. \\
+Let $G$ be an increasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) < G(b)$, because $G$ is an increasing function. \\
+
+Then $F(G(b)) < F(G(a))$, because $F$ is an decreasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Decreasing}
+
+
+Suppose that both $F$ and $G$ are decreasing functions. \\
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are decreasing. \\
+
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are increasing. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+$\vartriangleright$ It also means that when the numbers going into $G$ are decreasing, then the numbers coming out of $G$ are increasing. \\
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are decreasing, since $G$ is an decreasing function.
+
+These values of $G(x)$, which are decreasing, are going into $F$.  Therefore, the output of $F$ is increasing, because $F$ is a decreasing function.  But, these are the values of the composition.
+
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ increases.}}
+\end{center}
+
+
+
+
+
+
+\begin{fact}
+$decreasing \circ decreasing = increasing$
+
+
+Let $F$ be a decreasing function. \\
+Let $G$ be a decreasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) > G(b)$, because $G$ is a decreasing function. \\
+
+Then $F(G(a)) < F(G(b))$, because $F$ is a decreasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+\begin{example}   $e^{-(x+3)^2}$
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   $ln(x^2 + 3x + 5)$
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   Quartic
+
+
+
+Let $F(x) = (x+7)(x-1)$ \\
+
+
+Let $G(k) = (k+4)(k-3)$ \\
+
+
+
+Where is the composition, $F \circ G$, increasing and decreasing?
+
+
+$\vartriangleright$   $(F \circ G)(t) = t^4 +2 t^3 -17 t^2 - 18 t + 65$
+
+
+
+
+
+We can approximate the critical numbers from the graph.
+
+
+
+\begin{center}
+\desmos{4uzzkkj7co}{400}{300}
+\end{center}
+
+
+The critical numbers are approximately $-3.541$, $-0.5$, and $2.541$.
+
+
+\textbf{\textcolor{red!70!black}{Algebraically}}
+
+
+Now, let's obtain the critical numbers algebraically. \\
+
+
+We have a composition of two quadratic functions.  We need to know where they individually increase and decrease.
+
+Both $F$ and $G$ have a positive leading coefficient.  Therefore, they both decrease and the increase. The derivative will reveal the specifics.
+
+
+
+$\blacktriangleright$  $F'(x) = 2x + 6$
+
+This tells us that the critical number is $-3$.  $F$ decreases on $(-\infty, -3)$ and increases on $(-3, \infty)$.
+
+$\blacktriangleright$  $G'(k) = 2k + 1$
+
+This tells us that the critical number is $-\frac{1}{2}$.  $F$ decreases on $(-\infty, -\frac{1}{2})$ and increases on $(-\frac{1}{2}, \infty)$.
+
+
+
+
+
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{Overlaping Intervals}}  \\
+
+
+
+We need to know when the output from $G$ crosses $-3$, which is where $F$ changes its behavior.
+
+
+
+
+
+\begin{align*}
+(k+4)(k-3) & = -3 \\
+ k^2 + k - 12           & = -3  \\
+ k^2 + k - 9         & = 0
+\end{align*}
+
+
+\[
+k = \frac{-1 \pm \sqrt{1^2 - 4 (1) (-9)}}{2} = \frac{-1 \pm \sqrt{37}}{2} 
+\]
+
+
+We are feeling good, because $\frac{-1 - \sqrt{37}}{2} \approx -3.541$ and $\frac{-1 + \sqrt{37}}{2} \approx 2.541$, which are the approximations from the graph.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (-\infty, \frac{-1 - \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item The range of $G$ on this interval is $(-3, \infty)$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 + \sqrt{37}}{2}, \infty)$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G > -3$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+We now know that 
+
+\begin{itemize}
+\item $F \circ G$ decreases on $(-\infty, \frac{-1 - \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$ \\
+\item $F \circ G$ decreases on $(\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 + \sqrt{37}}{2}, \infty)$
+\end{itemize}
+
+
+
+
+At $\frac{-1 - \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right)$ \\
+
+
+At $-\frac{1}{2}$ there is a local maximum of $(F \circ G)\left( -\frac{1}{2} \right)$ \\
+
+
+At $\frac{-1 + \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 + \sqrt{37}}{2} \right)$ \\
+
+
+
+
+\end{example}
+
+
+
+How do these compare with our graph information? \
+
+
+
+
+\[
+(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right) = -16
+\]
+
+That is what the graph says! \\
+
+
+
+
+
+
+\[
+(F \circ G)\left( -\frac{1}{2} \right) = \frac{1113}{16} \approx 69.5625
+\]
+
+That is what the graph says! \\
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Wonderful !!!}}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{red!70!black}{A Peek Ahead...}}
+
+
+Behavior is the general term for increasing and decreasing, which are comparisons between changes in the function values to changes in the domain. \\
+
+
+If we have an elementary function, then we might know how to decide the behavior from the type of funciton and the signs of coefficients. \\
+
+If we have a composition, then we examine the individual component functions (perhaps from their function type) and then rules above tell us how to put that information together to get the behavior of the composite function.
+
+
+Calculus is going to translate this question of behavior for compositions into an arithmetic questions.
+
+Once we have the derivative, the operation of composition will be translated into multiplication.
+
+\begin{center}
+
+\textbf{\textcolor{red!70!black}{This is called the Chain Rule in Calculus.}}
+
+\end{center}
+
+
+Arithmetic will be MUCH easier.
+
+Right now, we have an algebra version of the chain rule, which works quite well right now.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{The Chain Rule}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rates of Change is our measurement of \textbf{function behavior}.
+
+
+$\vartriangleright$  \textbf{\textcolor{blue!55!black}{Functions increase.}}  However, they could increase slowly with a small positive rate of change.  They could increase quickly with a large positive rate of change. 
+
+
+
+$\vartriangleright$  \textbf{\textcolor{blue!55!black}{Functions decrease.}}  However, they could decrease slowly with a small negative rate of change.  They could decrease quickly with a large negative rate of change. 
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{What about compositions?}}
+
+
+
+
+
+What happens when you
+
+
+\begin{itemize}
+\item compose an increasing function with an increasing function?
+\item compose an increasing function with an decreasing function?
+\item compose an decreasing function with an increasing function?
+\item compose an decreasing function with an decreasing function?
+\end{itemize}
+
+
+
+To investigate these we need to remember the definitions of increasing and decreasing.
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{green!50!black}{Increasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{increasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \leq f(b)$.
+\end{center}
+
+\end{summary}
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{green!50!black}{Decreasing}} 
+
+
+Let $f$ be a function defined on the domain $D$. \\
+Let $S \subset D$ be any subset of $D$.
+
+$f$ is \textbf{decreasing} on $S$ provided $f$ possesses this property:  
+
+
+\begin{center}
+For every pair $a, b \in S$, when $a \leq b$ then $f(a) \geq f(b)$.
+\end{center}
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Increasing}
+
+
+Suppose that both $F$ and $G$ are increasing functions. \\
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are increasing. \\
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are increasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are increasing, since $G$ is an increasing function.
+
+These values of $G(x)$, which are increasing, are going into $F$.  Therefore, the output of $F$ is increasing.  But, these are the values of the composition.
+
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ increases.}}
+\end{center}
+
+
+
+
+
+
+\begin{fact}
+$increasing \circ increasing = increasing$
+
+
+Let $F$ be an increasing function. \\
+Let $G$ be an increasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) < G(b)$, because $G$ is an increasing function. \\
+
+Then $F(G(a)) < F(G(b))$, because $F$ is an increasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Increasing $\circ$ Decreasing}
+
+
+Suppose that $F$ is an increasing function. \\
+Suppose that $G$ is a decreasing function. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are increasing. \\
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are decreasing. \\
+
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are decreasing, since $G$ is a decreasing function.
+
+These values of $G(x)$, which are decreasing, are going into $F$.  Therefore, the output of $F$ is decreasing, since $F$ is an increasing function.  But, these are the values of the composition.
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ decreases.}}
+\end{center}
+
+
+
+\begin{fact}
+$increasing \circ decreasing = decreasing$
+
+
+Let $F$ be an increasing function. \\
+Let $G$ be a decreasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(b) < G(a)$, because $G$ is a decreasing function. \\
+
+Then $F(G(b)) < F(G(a))$, because $F$ is an increasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Increasing}
+
+
+Suppose that $F$ is a decreasing function. \\
+Suppose that $G$ is an increasing function. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are decreasing. \\
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are increasing. \\
+
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are increasing. \\
+
+
+$\vartriangleright$ It also means that when the numbers going into $G$ are decreasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are increasing, since $G$ is a increasing function.
+
+These values of $G(x)$, which are increasing, are going into $F$.  Therefore, the output of $F$ is decreasing, since $F$ is an decreasing function.  But, these are the values of the composition.
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ decreases.}}
+\end{center}
+
+
+
+\begin{fact}
+$decreasing \circ increasing = decreasing$
+
+
+Let $F$ be a decreasing function. \\
+Let $G$ be an increasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) < G(b)$, because $G$ is an increasing function. \\
+
+Then $F(G(b)) < F(G(a))$, because $F$ is an decreasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Decreasing $\circ$ Decreasing}
+
+
+Suppose that both $F$ and $G$ are decreasing functions. \\
+
+$\vartriangleright$ That means that when the numbers going into $F$ are increasing, then the numbers coming out of $F$ are decreasing. \\
+
+
+$\vartriangleright$ It also means that when the numbers going into $F$ are decreasing, then the numbers coming out of $F$ are increasing. \\
+
+
+$\vartriangleright$ That means that when the numbers going into $G$ are increasing, then the numbers coming out of $G$ are decreasing. \\
+
+
+
+$\vartriangleright$ It also means that when the numbers going into $G$ are decreasing, then the numbers coming out of $G$ are increasing. \\
+
+
+Now, consider the composition, $F \circ G$. \\
+
+
+Suppose the numbers going in $F \circ G$ are increasing.  What are the output numbers doing? \\
+
+
+
+
+\[ (F \circ G)(x) = F(G(x)) \]
+
+
+Pretend that the values of $x$ are increasing. Then the values of $G(x)$ are decreasing, since $G$ is an decreasing function.
+
+These values of $G(x)$, which are decreasing, are going into $F$.  Therefore, the output of $F$ is increasing, because $F$ is a decreasing function.  But, these are the values of the composition.
+
+
+
+\begin{center}
+\textbf{\textcolor{red!70!black}{When $x$ increases, then $(F \circ G)(x) = F(G(x))$ increases.}}
+\end{center}
+
+
+
+
+
+
+\begin{fact}
+$decreasing \circ decreasing = increasing$
+
+
+Let $F$ be a decreasing function. \\
+Let $G$ be a decreasing function. \\
+
+
+Consider, $F \circ G$.
+
+Suppose $a$ and $b$ are in the domain of $F \circ G$, with $a < b$. \\
+
+Then $G(a) > G(b)$, because $G$ is a decreasing function. \\
+
+Then $F(G(a)) < F(G(b))$, because $F$ is a decreasing function.
+
+
+\end{fact}
+
+
+
+
+
+
+
+\begin{example}   $e^{-(x+3)^2}$
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   $ln(x^2 + 3x + 5)$
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}   Quartic
+
+
+
+Let $F(x) = (x+7)(x-1)$ \\
+
+
+Let $G(k) = (k+4)(k-3)$ \\
+
+
+
+Where is the composition, $F \circ G$, increasing and decreasing?
+
+
+$\vartriangleright$   $(F \circ G)(t) = t^4 +2 t^3 -17 t^2 - 18 t + 65$
+
+
+
+
+
+We can approximate the critical numbers from the graph.
+
+
+
+\begin{center}
+\desmos{4uzzkkj7co}{400}{300}
+\end{center}
+
+
+The critical numbers are approximately $-3.541$, $-0.5$, and $2.541$.
+
+
+\textbf{\textcolor{red!70!black}{Algebraically}}
+
+
+Now, let's obtain the critical numbers algebraically. \\
+
+
+We have a composition of two quadratic functions.  We need to know where they individually increase and decrease.
+
+Both $F$ and $G$ have a positive leading coefficient.  Therefore, they both decrease and the increase. The derivative will reveal the specifics.
+
+
+
+$\blacktriangleright$  $F'(x) = 2x + 6$
+
+This tells us that the critical number is $-3$.  $F$ decreases on $(-\infty, -3)$ and increases on $(-3, \infty)$.
+
+$\blacktriangleright$  $G'(k) = 2k + 1$
+
+This tells us that the critical number is $-\frac{1}{2}$.  $F$ decreases on $(-\infty, -\frac{1}{2})$ and increases on $(-\frac{1}{2}, \infty)$.
+
+
+
+
+
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{Overlaping Intervals}}  \\
+
+
+
+We need to know when the output from $G$ crosses $-3$, which is where $F$ changes its behavior.
+
+
+
+
+
+\begin{align*}
+(k+4)(k-3) & = -3 \\
+ k^2 + k - 12           & = -3  \\
+ k^2 + k - 9         & = 0
+\end{align*}
+
+
+\[
+k = \frac{-1 \pm \sqrt{1^2 - 4 (1) (-9)}}{2} = \frac{-1 \pm \sqrt{37}}{2} 
+\]
+
+
+We are feeling good, because $\frac{-1 - \sqrt{37}}{2} \approx -3.541$ and $\frac{-1 + \sqrt{37}}{2} \approx 2.541$, which are the approximations from the graph.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (-\infty, \frac{-1 - \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item The range of $G$ on this interval is $(-3, \infty)$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is a decreasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G < -3$.
+\item On $(-\infty, -3)$, $F$ is a decreasing function.
+\item Therefore, the composition $F \circ G$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright (\frac{-1 + \sqrt{37}}{2}, \infty)$}}
+
+
+\begin{itemize}
+\item On this interval $G$ is an increasing function.
+\item On this interval, $G > -3$.
+\item On $(-3, \infty)$, $F$ is an increasing function.
+\item Therefore, the composition $F \circ G$ is an increasing function.
+\end{itemize}
+
+
+
+
+
+We now know that 
+
+\begin{itemize}
+\item $F \circ G$ decreases on $(-\infty, \frac{-1 - \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 - \sqrt{37}}{2}, \frac{1}{2})$ \\
+\item $F \circ G$ decreases on $(\frac{1}{2}, \frac{-1 + \sqrt{37}}{2})$ \\
+\item $F \circ G$ increases on $(\frac{-1 + \sqrt{37}}{2}, \infty)$
+\end{itemize}
+
+
+
+
+At $\frac{-1 - \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right)$ \\
+
+
+At $-\frac{1}{2}$ there is a local maximum of $(F \circ G)\left( -\frac{1}{2} \right)$ \\
+
+
+At $\frac{-1 + \sqrt{37}}{2}$ there is a local minimum of $(F \circ G)\left( \frac{-1 + \sqrt{37}}{2} \right)$ \\
+
+
+
+
+\end{example}
+
+
+
+How do these compare with our graph information? \
+
+
+
+
+\[
+(F \circ G)\left( \frac{-1 - \sqrt{37}}{2} \right) = -16
+\]
+
+That is what the graph says! \\
+
+
+
+
+
+
+\[
+(F \circ G)\left( -\frac{1}{2} \right) = \frac{1113}{16} \approx 69.5625
+\]
+
+That is what the graph says! \\
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Wonderful !!!}}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Composition]{https://ximera.osu.edu/csccmathematics/precalculu/precalculus2/composition/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}

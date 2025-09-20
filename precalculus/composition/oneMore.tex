@@ -1,0 +1,573 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{One More}
+
+\begin{document}
+
+\begin{abstract}
+analysis
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+
+
+
+
+
+Analyze $F(x) = -3 \log_4(\sqrt{3 - 5x} - 1)$ with its natural domain. \\
+
+
+
+
+\subsection*{Analysis}
+
+
+
+
+
+Our plan is to view this as a composition. \\
+
+
+
+But, first, let's get a look at this thing. \\
+
+
+
+\begin{idea}
+
+\begin{center}
+\desmos{tinu7usdun}{400}{300}
+\end{center}
+
+
+
+
+
+
+
+
+
+We are looking for functions $T$ and $B$ such that $F(x) = (T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1) + 2$ \\
+
+
+First, identify ``insides'' of functions.  In this case, $\sqrt{3 - 5x} - 1$ is the inside of $-3 \log_4(x) + 2$. \\
+
+
+
+\begin{itemize}
+\item Let $T(w) = -3 \log_4(w) + 2$ \\
+\item Let $B(y) = \sqrt{3 - 5y} - 1$ \\
+\end{itemize}
+
+Algebraically, this produces the formula want,  $(T \circ B)(x) = T(B(x)) = -3 \log_4(\sqrt{3 - 5x} - 1) + 2$.
+
+
+To get us started, we are thinking that each component function comes with its natural domain. \\
+
+
+$T(w) = -3 \log_4(w) + 2$ is a logarithmic function, so $w \in (0, \infty)$ \\
+
+
+$B(y) = \sqrt{3 - 5y} - 1$ is a square root function, so we need $3 - 5y >= 0$.
+
+$3 - 5y$ is a linear function with a negative leading coefficient and positive left of its zero.  It's zero is $\frac{3}{5}$.
+
+That makes the natural domain of $B$ $\left(-\infty, \frac{3}{5} \right]$. \\
+
+
+
+\begin{itemize}
+\item Let $T(w) = -3 \log_4(w) + 2$ with domain $(0, \infty)$\\
+\item Let $B(y) = \sqrt{3 - 5y} - 1$ with domain $\left(-\infty, \frac{3}{5} \right]$\\
+\end{itemize}
+
+We are also ready to revise and modify and restrict these domains to fit the composition together. \\
+
+
+
+
+We are ready to analyze. \\
+
+
+\end{idea}
+
+\textbf{\textcolor{blue!55!black}{Domain:}} \\
+
+
+
+Since $F(x) = (T \circ B)(x) = T(B(x))$, the domain of $F$ is inside the domain of $B$, which is $\left(-\infty, \frac{3}{5} \right]$. \\
+
+We need to match up the range of $B$ with the domain of $T$. \\
+
+
+$T(w) = -3 \log_4(w) + 2$ has a domain of $(0, \infty)$.  We need the output of $B$ to be inside $(0, \infty)$. \\
+
+
+
+$B(y) = \sqrt{3 - 5y} - 1$ \\
+
+
+
+$B(y) = \sqrt{3 - 5y} - 1$ is a square root function with a positive leading coefficient.  The range is $[-1, \infty)$.   This does not fit inside $(0, \infty)$, which is the domain of $T$.  So, we cannot use the whole domain of $B$ to get the whole range of $B$, which fits inside of the domain of $T$. \\
+
+
+We need to remove $[-1, 0]$ from the range of $B$, which is $[-1, \infty)$. \\
+
+
+Where does $B(y) = 0$? \\
+
+
+\[
+B(y) = \sqrt{3 - 5y} - 1 = 0
+\]
+
+
+\[
+\sqrt{3 - 5y} = 1
+\]
+
+
+\[
+3 - 5y = 1
+\]
+
+\[
+y = \frac{2}{5}
+\]
+
+We need to cut the domain of $B$ off at $\frac{2}{5}$. \\
+
+
+The usable part of the domain of $B$ is  $\left(-\infty, \frac{2}{5} \right)$. \\
+
+
+The domain of $F$ is $\left(-\infty, \frac{2}{5} \right)$. \\
+
+
+This agrees with the DESMOS graph. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros:}} \\
+
+
+
+$H$ is $0$ wherever $T$ is $0$.
+
+
+
+
+
+
+\[
+T(w) = -3 \log_4(w) + 2 = 0
+\]
+
+
+\[
+ \log_4(w) = \frac{2}{3}
+\]
+
+
+\[
+w = 4^{\tfrac{2}{3}}
+\]
+
+
+
+We need $4^{\tfrac{2}{3}}$ coming into $T$, which means we need $4^{\tfrac{2}{3}}$ coming out of $B$.
+
+
+
+
+
+\[
+B(y) = \sqrt{3 - 5y} - 1 = 4^{\tfrac{2}{3}}
+\]
+
+
+
+\[
+\sqrt{3 - 5y} = 4^{\tfrac{2}{3}} + 1
+\]
+
+
+
+\[
+3 - 5y = \left( 4^{\tfrac{2}{3}} + 1 \right)^2
+\]
+
+
+
+\[
+y = -\frac{1}{5} \left( \left( 4^{\tfrac{2}{3}} + 1 \right)^2 - 3 \right)
+\]
+
+
+To check with the graph, we need a decimal approximation.
+
+
+
+
+
+
+\[
+-\frac{1}{5} \left( \left( 4^{\tfrac{2}{3}} + 1 \right)^2 - 3 \right) \approx -1.877857681
+\]
+
+
+That agrees with the graph.\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity:}} \\
+
+
+$F$ is a composition of a logarithmic function and a root function.  Both of these are continuous, which means their composition is continuous. \\
+
+Logrithmic functions do not have discontinuites, but they do have singularities.  
+
+
+$T(w) = -3 \log_4(w) + 2$ has a singularity at $0$, which means $F$ has a singularty when the value of $B$ is $0$.
+
+
+
+\[
+\sqrt{3 - 5y} - 1 = 0
+\]
+
+
+
+\[
+3 - 5y = 1
+\]
+
+
+
+\[
+y = \frac{2}{5}
+\]
+
+$\frac{2}{5}$ is a singularity, which agree with the graph. \\
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Singularity-Behavior:}} \\
+
+How does $F$ behavior around this singularity? \\
+
+
+
+Since, $T(w) = -3 \log_4(w) + 2$, we know that 
+
+
+\[
+\lim\limits_{w \to 0^+} T(w) = \infty
+\]
+
+
+
+We need to find out where the values of $B$ approach $0^+$, meaning from the positive side. \\
+
+
+We already fount the zeros of $B$, $\frac{2}{5}$.  Now we have to think about which side of $\frac{2}{5}$ makes the value of $B$ positive. \\
+
+
+Since $B(y) = \sqrt{3 - 5y} + 1$ is a root with a positive leading coefficent, it will be positive to the left of the zero. 
+
+\begin{itemize}
+\item approaching $\frac{2}{5}$ from the negative/left side
+\end{itemize}
+
+This will result in $B$ approaching $0$ from the positive direction. \\
+
+
+
+\[
+\lim\limits_{x \to -\frac{2}{5}^-} K(x)  = \lim\limits_{w \to 0^+} T(w) = \infty
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior:}} \\
+
+The domain of $F$ does not approach $\infty$, but it does approach $-\infty$. \\
+
+
+We'll look at this limit through the two step of the composition. \\
+
+
+
+
+
+\[
+\lim\limits_{y \to -\infty} B(y)  = \lim\limits_{y \to -\infty} (\sqrt{3 - 5y} - 1)  = \infty
+\]
+
+
+This is because $B(y) = \sqrt{3 - 5y} - 1$ is a square root function with a negative leading coefficient. \\
+
+
+This is going into $T$. \\
+
+
+
+\[
+\lim\limits_{x \to -\infty} H(x)  = \lim\limits_{w \to \infty} (-3 \log_4(w) + 2)  = -\infty
+\]
+
+
+This is because $-3 \log_4(w) + 2$ is a logarithmic function with a negative leading coefficient. \\
+
+
+
+
+This agree with the graph.  \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior:}} \\
+
+
+We want to figure out where $F$ is increasing and decreasing. \\
+
+$F$ is a composition, so we need to know how the component functions behave individually. \\
+
+
+
+
+
+$T(w) = -3 \log_4(w) + 2$ is a decreasing function, because $T$ is a logarithmic function with a negative leading coefficient while the leading coefficient of the inside linear function is  positive. \\
+
+$B(y) = \sqrt{3 - 5y} - 1$ is a root function with a positive leading coefficient and a negative leading coefficient for the inner linear function.  Therefore, $B$ is a decreasing function.\\
+
+
+
+
+
+\[
+F(x) = (T \circ B)(x) = decreasing \circ decreasing = increasing
+\]
+
+
+
+$F$ is always increasing. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Global/Local Maximum and Minimum:}} \\
+\textbf{Extrema:} \\
+
+$F$ is continuous with \\
+
+
+
+
+\[
+\lim\limits_{x \to -\infty} H(x)  = \lim\limits_{w \to \infty} (-3 \log_4(w) + 2)  = -\infty
+\]
+
+
+
+\[
+\lim\limits_{x \to -\frac{2}{5}^-} K(x)  = \lim\limits_{w \to 0^+} T(w) = \infty
+\]
+
+
+Therefore, there is not global maximum or minimum. \\
+
+
+Since, $T$ is always increasing, there are no critical numbers.  That means there are no local mximums or minimums. \\
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range:}} \\
+
+
+$F$ is continuous with \\
+
+
+
+
+\[
+\lim\limits_{x \to -\infty} H(x)  = \lim\limits_{w \to \infty} (-3 \log_4(w) + 2)  = -\infty
+\]
+
+
+
+\[
+\lim\limits_{x \to -\frac{2}{5}^-} K(x)  = \lim\limits_{w \to 0^+} T(w) = \infty
+\]
+
+
+Therefore, the range of $F$ is $(\infty, \infty)$.\\
+
+
+
+
+
+This all agrees with the graph at the top of the page. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Composition]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/composition/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+\end{document}
