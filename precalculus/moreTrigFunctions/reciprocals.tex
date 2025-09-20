@@ -1,0 +1,319 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Reciprocals}
+
+\begin{document}
+
+\begin{abstract}
+upsidedown and backwards
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+\begin{definition}  \textbf{\textcolor{green!50!black}{Reciprocal}}
+
+
+Consider a $\frac{A}{B}$.  The \textbf{reciprocal} of this fraction is $\frac{B}{A}$.
+
+
+\end{definition}
+
+
+
+If we say $\frac{A}{B}$ is a fraction, then we are automatically saying that $B \ne 0$, because the denominator of a fraction cannot equal $0$. \\
+
+$A$ might equal $0$.  The numerator of a fraction can equal $0$. \\
+
+
+However, then the reciprocal of $\frac{A}{B}$ would not be a fraction, because its denoninator would be $A$, which equals $0$.
+
+
+
+\begin{warning}
+
+The reciprocal of any fraction is again a fraction, except for $0$. \\
+
+Any fraction representing $0$ does not have a reciprocal.
+
+
+\end{warning}
+
+
+
+\subsection*{Size}
+
+
+
+There are only two numbers that equal their own reciprocals.
+
+
+
+$\blacktriangleright$ The only fractions that represent $1$ are fractions where the numerator and denominator are equal.  They are of the form $\frac{A}{A}$.  The reciprocal of such a fraction would be $\frac{A}{A}$, which equals $1$ again.
+
+
+$\blacktriangleright$ The only fractions that represent $1$ are fractions where the numerator and denominator are opposites.  They are of the form $\frac{-A}{A}$.  The reciprocal of such a fraction would be $\frac{A}{-A}$, which equals $-1$ again.
+
+
+
+$-1$ and $1$ are the only numbers tha equal their own reciprocal. \\
+
+
+
+
+
+$\blacktriangleright$ If a fraction has a small value, then it is of the form $\frac{small}{big}$.  Its reciprocal would look like $\frac{big}{small}$, which has a large value. \\
+
+
+
+$\blacktriangleright$ Conversely, if a fraction has a big value, then it is of the form $\frac{big}{small}$.  Its reciprocal would look like $\frac{small}{big}$, which has a small value. \\
+
+
+
+
+This helps us think about zeros and singularities.
+
+
+
+\begin{exmaple}
+
+Consider the linear function $f(x) = \frac{5x - 10}{3}$. \\
+
+Its only zero is $2$. \\
+
+Since the leading coefficient is positive, we have
+
+
+\[
+\lim\limits_{x \to 2^-}f(x) = 0^-
+\]
+
+
+As $x$ approaches $2$ from the negative side, $f(x)$ approaches $0$ from the negative side.
+
+
+
+
+
+\[
+\lim\limits_{x \to 2^+}f(x) = 0^+
+\]
+
+
+As $x$ approaches $2$ from the positive side, $f(x)$ approaches $0$ from the positive side.
+
+
+\textbf{\textcolor{blue!55!black}{What happens with the reciprocal function?}} \\
+
+The reciprocal of $f(x)$ is another function.  Let's call it $g$.  Let's select $t$ for its variable.
+
+
+\[
+g(t) = \frac{3}{5t - 10}
+\]
+
+
+The domain of $g$ does not include $2$, since that would make hte denomintor equal to $0$. \\
+
+
+Now what happens as $t$ approaches $2$? \\
+
+As $t$ approaches $2$ from the negative side, the numerator stays constant at $3$, but the denominator approach $0$ from negative side.  The fraction for $g$ starts to look like $\frac{big}{small}$, which has a big value. \\
+
+The numerator is positive and the denominator will be negative.  That makes the whole fraction negative.  \\
+
+
+Let $\epsilon$ be a very small positive number. On the interval $(2 - \epsilon, 2)$, $g$ is unbounded negatively. \\
+
+$2$ is a singularity of $g$.  There is a vertical asymptote on the graph. \\
+
+
+
+
+On the other side. On the interval $(2, 2 + \epsilon)$, $g$ is unbounded positively. \\
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{mmilwksy8w}{400}{300}
+\end{center}
+
+
+
+
+
+\end{example}
+
+
+
+\subsection*{Sign}
+
+
+If a fraction, $\frac{A}{B}$ represents a negative value, then the sign of the numerator and denominator are opposite. \\
+
+That means the signs of the numerator and denominator of the reciprocal are also opposite.  The reciprocal is also negative. \\
+
+
+If a fraction, $\frac{A}{B}$ represents a positive value, then the sign of the numerator and denominator are the same. \\
+
+That means the signs of the numerator and denominator of the reciprocal are also the same.  The reciprocal is also positive.
+
+
+
+
+
+
+
+
+\begin{fact}
+
+A function and its reciprocal have the same sign.
+
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Behavior}
+
+
+
+Conside the two quotient funcitons from the previous example.
+
+
+\[
+f(x) = \frac{5x - 10}{3}
+\]
+
+
+
+
+\[
+g(t) = \frac{3}{5t - 10}
+\]
+
+
+
+$f(x)$ is a linear function with a positive leading coeffcient.  So, it is an increasing function. \\
+
+
+The fraction for $f$ gets greater and greater. \\
+
+That means its reciprocal gets lesser and lesser. \\
+
+$g$ is a decreasing function.
+
+
+
+
+\begin{fact}
+
+A function and its reciprocal have opposite behaviors.
+
+
+\end{fact}
+
+If we know the behavior of a function, then we automatically know the behavior of its reciprocal. \\
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{Sine}} 
+
+We know the behavior of $\sin(\theta)$, which means we also know the behavior of its reciprocal $\frac{1}{\sin(\theta)}$. \\
+
+
+We know the zeros of $\sin(\theta)$, which means we also know the singularities of its reciprocal $\frac{1}{\sin(\theta)}$. \\
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{Cosine}} 
+
+We know the behavior of $\cos(\theta)$, which means we also know the behavior of its reciprocal $\frac{1}{\cos(\theta)}$. \\
+
+
+We know the zeros of $\cos(\theta)$, which means we also know the singularities of its reciprocal $\frac{1}{\cos(\theta)}$. \\
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{purple!80!black}{Tangent}} 
+
+We know the behavior of $\tan(\theta)$, which means we also know the behavior of its reciprocal $\frac{1}{\tan(\theta)}$. \\
+
+
+We know the zeros of $\tan(\theta)$, which means we also know the singularities of its reciprocal $\frac{1}{\tan(\theta)}$. \\
+
+
+
+
+
+We know the singularities of $\tan(\theta)$, which means we also know the zeros of its reciprocal $\frac{1}{\tan(\theta)}$. \\
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/moreTrigFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}

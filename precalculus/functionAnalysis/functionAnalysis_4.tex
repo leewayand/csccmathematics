@@ -1,0 +1,331 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Analyzing}
+
+\begin{document}
+
+\begin{abstract}
+describe everything
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+
+Completely analyze $T(r) = \tan(\sin(\pi r))$ \\
+
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Domain: }}
+
+
+We know that $-1 \leq \sin(\pi r) \leq 1$ and $[-1,1] \subset \left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$ and $\tan(x)$ is continuous on $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$.  Therefore $T(r)$ is defined for all $r$.  
+
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Continuity: }}
+
+
+
+
+Since both $\tan(x)$ and $\sin(x)$ are continuous, $T$ is the composition of two continuous functions. This also tells us that $T(r)$ is a continuous function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$T(r)$ will be using $[-1,1]$ out of tangent's $\left( -\frac{\pi}{2}, \frac{\pi}{2} \right)$ waveform.
+
+
+
+Graph of $y = T(r)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-5:5, ymax=10, xmax=5, ymin=-10, xmin=-5,
+            xtick={-4.9, -1.7, 1.7, 4.9}, 
+            xticklabels={$-\frac{3\pi}{2}$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            axis lines =center,  xlabel={$r$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-1.47:1.47), <->] {tan(deg(x))};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-1:1)] {tan(deg(x))};
+            \addplot[color=penColor2,only marks,mark=*] coordinates{(-1,-1.557)}; 
+            \addplot[color=penColor2,only marks,mark=*] coordinates{(1,1.557)}; 
+
+
+      %\addplot[color=penColor,fill=penColor,only marks, mark size=1pt, mark=*] coordinates{(-9,5) (-8,5) (-7,5) (7,5) (8,5) (9,5)};
+
+
+
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({-1.57},{x});
+            \addplot [line width=1, gray, dashed,samples=100,domain=(-10:10), <->] ({1.57},{x});
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$[-1,1]$ is the output of $\sin(\pi r)$, which then becomes the input to tangent.  
+
+
+
+
+For this to happen, the input to sine must be $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$, which means that $r \in \left[-\frac{1}{2}, \frac{1}{2}\right]$.
+
+
+But that is only half the story. \\
+
+
+As $r$ moves from $-\frac{1}{2}$ to $\frac{1}{2}$, $\sin(\pi r)$ moves from $-1$ to $1$.  As $r$ continues, it moves from $\frac{1}{2}$ to $\frac{3}{2}$ and $\sin(\pi r)$ moves from $1$ back down to $-1$.  Then the whole thing repeats.
+
+Now we have a full period. \\
+
+
+
+That gives a full wave over the interval $\left[-\frac{1}{2}, \frac{3}{2}\right]$ and a period of $2$.
+
+
+
+As $r$ increases, the sine wave will oscillate between $-1$ and $1$ and this piece of the tangent graph will also oscillate.  
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-5:5, ymax=2, xmax=5, ymin=-2, xmin=-5,
+            xtick={-4.9, -1.7, 1.7, 4.9}, 
+            xticklabels={$-\frac{3\pi}{2}$, $-\frac{\pi}{2}$, $\frac{\pi}{2}$, $\frac{3\pi}{2}$},
+            axis lines =center,  xlabel={$r$}, ylabel=$y$,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.9:4.9), <->] {tan(deg(sin(deg(3.1415*x)))};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+Since our period is $\left[-\frac{1}{2}, \frac{3}{2}\right]$, let's regraph with integer tick marks.
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-5:5, ymax=2, xmax=5, ymin=-2, xmin=-5,
+            xtick={-4,-3,-2,-1,0,1,2,3,4}, 
+            xticklabels={-4,-3,-2,-1,0,1,2,3,4},
+            axis lines =center,  xlabel={$r$}, ylabel=$y$, grid = major,
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.9:4.9), <->] {tan(deg(sin(deg(3.1415*x)))};
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Maximums: }}
+
+
+
+The maximum of sine is $1$ and it occurs at $\frac{\pi}{2}$.\\
+
+Tangent is an increasing function, so the maximum of $T(r)$ is also going to occur at $\frac{\pi}{2}$. However, in $T(r)$, the inside of sine is $\pi r$.\\
+
+
+The maximum of the sine waveform occurs at $r = \frac{1}{2}$.
+
+
+\[   \tan\left(\sin\left(\pi \cdot \frac{1}{2}\right)\right)  =   \tan\left(\sin\left(\frac{\pi}{2}\right)\right)  = \tan(1)  \approx 1.557  \]
+
+
+The minimum of $-\tan(1) \approx -1.557$ occurs at $r = -\frac{1}{2}$.
+
+
+That is just for one period. These maximums and minimums are periodic with a period of $2$.
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Minimums: }}
+
+
+
+The minimum of sine is $-1$ and it occurs at $-\frac{\pi}{2}$.\\
+
+Tangent is an increasing function, so the minimum of $T(r)$ is also going to occur at $-\frac{\pi}{2}$. However, in $T(r)$, the inside of sine is $\pi r$.\\
+
+
+The minimum of the sine waveform occurs at $r = -\frac{1}{2}$.
+
+
+\[   \tan\left(\sin\left(-\pi \cdot \frac{1}{2}\right)\right)  =   \tan\left(\sin\left(-\frac{\pi}{2}\right)\right)  = \tan(-1)  \approx -1.557  \]
+
+
+
+
+That is just for one period. These maximums and minimums are periodic with a period of $2$.
+
+
+
+
+
+
+
+We have also discovered that the critical numbers for $T$ are $\left\{ \frac{1}{2} + 2k \, | \, k \in \mathbb{Z} \right\}$ and $\left\{ -\frac{1}{2} + 2k \, | \, k \in \mathbb{Z} \right\}$
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Rate-of-Change: }} 
+
+
+$\tan(t)$ increases on any interval in its domain.  Therefore, $T(r) = \tan(\sin(\pi r))$ will increase and decrease with $\sin(\pi r)$, which we know everything about.
+
+
+
+
+$T(r)$ increases on $\left[ -\frac{1}{2}, \frac{1}{2} \right]$ and decreases on $\left[\frac{1}{2}, \frac{3}{2} \right]$.
+
+
+
+And, this agrees with our graph.
+
+
+
+
+
+
+
+\begin{warning} \textbf{\textcolor{red!80!black}{Increasing}}
+
+
+
+We have two versions of \textbf{increasing} and we are beginning to notice.
+
+
+
+First, we have a Algebra version of increasing.  The Algebra version occurs over an interval.  
+
+$f(x)$ increases on the interval $[a,b]$, provided whenever $c < d$, then $f(c) < f(d)$. \\
+
+We often attach the work \textbf{average} to the Algebra version.\\
+
+
+
+
+
+
+
+Separate from that is a Calculus version of increasing. The Calculus version occurs at a domain number.
+
+$f(x)$ increases at $x=d$, provided $f'(d) > 0$. \\
+
+We often attach the work \textbf{instantaneous} to the Calculus version.\\
+
+
+
+
+These are different.  A function can be increasing at every domain number and yet not be an increasing function over the whole domain.  We'll want to keep these ideas separate.
+
+
+
+
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Function Analysis]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/functionAnalysis/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+\end{document}

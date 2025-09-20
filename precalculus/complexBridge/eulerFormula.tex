@@ -1,0 +1,438 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Euler's Formula}
+
+\begin{document}
+
+\begin{abstract}
+complex exponentials
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+\subsection*{An Adventure}
+
+
+
+
+One of the biggest surprises in mathematics is the fact that trigonometric functions and exponential functions are the same building blocks, provided we use Complex numbers. \\
+
+
+Euler's Formula is the bridge:
+
+
+
+\[    e^{i \, t} = \cos(t) + i \sin(t)    \]
+
+
+
+This is very weird.  It claims that exponential functions are trigonometric functions are two perspectives on the same thing.  Our previous mathematcis courses have never even hinted at such a connection.  That is because the bridge  travels through the Complex Numbers.
+
+
+
+With this bridge, we now have direct connections between
+
+
+\begin{itemize}
+\item percentage growth
+\item exponential functions
+\item trigonometric functions
+\item triangles
+\item circles
+\end{itemize}
+
+This would also connect inverse trigonometric functions and logarithms and soon hyperbolas and hyperbolic trigonometric functions.  This is crazy!
+
+
+\begin{center}
+\textbf{\textcolor{red!80!black}{Everything is Connected!!!}}
+\end{center}
+
+
+
+
+
+
+It would be nice to show that Euler's Formula is true.  However, we will need Calculus to dot our i's and cross our t's and leave no doubt.   But, we can understand the basic idea. 
+
+
+To see that Euler's Formula is true, we need several pieces of information. \\
+
+
+
+
+
+We have already seen that the derivative of $\sin(x)$ is $\cos(x)$ and derivative of $\cos(x)$ is $-\sin(x)$.
+
+We need one more derivative.
+
+
+
+\subsection*{Derivatives} 
+
+
+\textbf{\textcolor{purple!85!blue}{Step A)}}
+
+$\blacktriangleright$ We would like the derivative of $f(x) = e^{r \, x}$. \\
+
+
+$f'(a)$ would be the slope of the tangent line at the point $(a, e^{r \, a})$. \\
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-1:0.5, ymax=3, xmax=0.5, ymin=-0.5, xmin=-1,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major, grid style={dashed},
+            ytick={-0.5,0,0.5,1,1.5,2,2.5,3},
+            xtick={-1,-0.5,-0.2,0,0.5},
+            yticklabels={$-0.5$,$0$,$0.5$,$1$,$1.5$,$2$,$2.5$,$3$}, 
+            xticklabels={$-1$,$-0.5$,$a$,$0$,$0.5$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+			\addplot [line width=2, penColor, smooth,samples=200,domain=(-1:0.3),<->] {2.718^(3*x)};
+
+
+			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-0.2,0.5488)};
+			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-0.8:0.4)] {1.646*(x+0.2)+0.5488};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+That's what we want.  However, we don't know the derivative of $e^{r x}$, so we can't get the slope of the tangent line. \\
+
+So, let's approximate the slope by using some close chords on the graph. \\
+
+
+
+Let's pick two points on the graph of $e^{r x}$ and near $(a, e^{r a})$.  We'll pick
+\[
+(a-h, e^{r(a-h)}) \, \text{ and } \, (a+h, e^{r(a+h)})
+\]
+
+These two points are both on the graph and they are close to $(a, e^{r a})$ as long as $h$ is really small. \\
+
+The slope of the line through these two point is 
+\[
+\frac{e^{r(a+h)} - e^{r(a-h)}}{2h}
+\]
+
+
+
+
+\begin{example}  $f(x) = e^{3 x}$
+
+\begin{center}
+\desmos{3ohrxje6e7}{400}{300}
+\end{center}
+
+
+
+Slide the value of $h$ closer to $0$.  Watch what happens to the secant line.
+
+\end{example}
+
+
+
+
+
+The slope of the secant line is really close to the slope of the tangent line. \\
+
+The smaller the value of $h$, the closer the slopes are. \\
+
+
+\[
+\lim_{h \to 0} \frac{e^{r(a+h)} - e^{r(a-h)}}{2h} = \, \text{ slope of tangent at }a \, = f'(a)
+\]
+
+
+Move the tangent point along the curve by varying $a$.  Everytime you reposition $a$, you can slide the value of $h$ closer to $0$ and watch what happens with the sectant line.  It gets closer to the tangent line.  The slope of the secant line gets closer to the slope of the tangent line.
+
+If we reposition $a$ a lot and we collect these slopes for a lot of $a$'s, then we could plot each of the slope values forming another graph.
+\[   (a, f'(a)) \]
+
+
+
+Let's do this for $r = 3$.
+
+\begin{example}
+
+
+
+Let's compare the plot of tangent slopes to the graph of $3 e^{3 x}$
+
+
+The dashed curve is for $3 e^{3 x}$.
+
+The plotted dot is $(a, f'(a))$.
+
+\begin{example}  $f(x) = e^{3 x}$
+
+\begin{center}
+\desmos{5rjkc2evu0}{400}{300}
+\end{center}
+
+\end{example}
+
+
+
+
+
+This is very suggestive that the derivative of $f(x) = e^{3 x}$ is $f'(x) = 3 e^{3 x}$.
+
+
+
+\end{example}
+
+
+
+
+
+It is not a far jump to believe that 
+
+
+
+
+\begin{idea}
+
+\[
+\text{The derivative of } \, f(x) = e^{r x} \, \text{ is } \, f'(x) = r \, e^{r x}
+\]
+
+
+\[
+\frac{d}{dx} e^{r x}  = r \, e^{r x}
+\]
+
+\end{idea}
+
+
+
+That was \textbf{\textcolor{purple!85!blue}{Step A)}}. \\
+
+
+
+
+
+\section*{Mean Value Theorem}
+
+\textbf{\textcolor{purple!85!blue}{Step B)}} \\
+
+In Calculus, you will study the \textbf{Mean Value Theorem}. One version follows this race track story:
+
+
+Suppose two horses are racing.  They both line up at the starting line.  During the race, they both run at exactly the same speed at every second of the race.  Under these circumstances, the two horses are at exactly the same place on the track at every second of the race and end the race in a tie.
+
+
+
+
+In function language, the story goes like this:
+
+Suppose 
+
+\begin{itemize}
+\item $f$ and $g$ are two functions,
+\item $f(0) = g(0)$, and
+\item $f'(t) = g'(t)$  for all $t$.
+\end{itemize}
+
+Then $f(t)=g(t)$ for all $t$.   $f$ and $g$ are the same function.
+
+
+
+If two functions start with the same value and then they have the exact same derivative everywhere, then they are the same function. \\
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$  When you study differential equations, this idea will lead to the fact that a first-order differential equation with an initial condition has only one solution. \\
+
+\textbf{\textcolor{blue!55!black}{Example: }} If $y'(t) = k \cdot y(t)$ with $y(0)=1$
+
+
+There is only one function that could be $y(t)$.  $y(t) = e^{k t}$
+
+Let's apply this to our situation. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Euler's Formula}
+
+
+\textbf{\textcolor{purple!85!blue}{Step C)}} \\
+
+
+That Mean Value Theorem horse race story was for real numbers, but we are going to take a slight leap of faith and extend it to complex numbers.
+
+
+
+
+Consider these two functions:
+
+
+\begin{itemize}
+	\item $f(t) = e^{i t}$
+	\item $g(t) = \cos(t) + i \sin(t)$
+\end{itemize}
+
+
+
+
+$\blacktriangleright$   \textbf{Step 1:} Our functions have the same initial value.
+
+\begin{itemize}
+	\item $f(0) = e^0 = 1$
+	\item $g(0) = \cos(0) + i \sin(0) = 1$
+\end{itemize}
+
+
+
+
+
+$\blacktriangleright$   \textbf{Step 2:} Our functions satisfy the same differential equation: $y'(t) = i \cdot y(t)$
+
+
+
+\begin{itemize}
+	\item $f'(t) = i \, e^{i \, t} = i \, f(t)$
+	\item $g'(t) = -\sin(t) + i \cos(t) = i \, g(t)$
+\end{itemize}
+
+
+
+We have two functions satisfying the same differential equation with the same initial value.  They must, in fact, be the same function. \\
+
+
+
+
+\begin{theorem} \textbf{\textcolor{green!50!black}{Euler's Formula}}   
+
+
+\[   e^{i \, t} = \cos(t) + i \sin(t)         \]
+
+
+
+$t$ is called the \textbf{argument}, often shortened to \textbf{\textcolor{green!50!black}{$arg$}}.  
+
+\end{theorem}
+
+
+
+
+Euler's Formula is a bridge between exponential functions and trigonometric functions. \\
+
+
+\begin{center}
+
+It is pronounced ``\textit{Oiler}''.
+
+
+\end{center}
+
+
+Complex Numbers are described by polar coordinates, which are connected to right triangles, which are similar to right triangles on the unit circle, which are built from sine and cosine, which are now connected to complex exponentials.
+
+
+
+
+\begin{center}
+
+
+\[
+a + b \, i =  r \cdot (\cos(\theta) + i \, \sin(\theta)) = r \cdot e^{i \cdot \theta}
+\]
+
+\end{center}
+
+
+Complex numbers can be written in exponential form, just like real numbers can.  They just need complex exponents.
+
+
+
+\begin{example}
+
+
+Let $z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i$
+
+The modulus of $z$ is $\answer{5}$ 
+
+$arg(z) = \answer{\frac{\pi}{3}}$
+
+
+$z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}}$
+
+\end{example}
+
+
+
+
+Of course, we can also write $5$ as $e^{\ln(5)}$.
+
+
+$z = \frac{5}{2} + \frac{5\sqrt{3}}{2} \, i = 5 \, e^{i \tfrac{\pi}{3}} = e^{\ln(5)} \, e^{i \tfrac{\pi}{3}} = e^{\ln(5) + i \tfrac{\pi}{3}}$
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Complex Bridge]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/complexBridge/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}
