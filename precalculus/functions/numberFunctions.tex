@@ -1,0 +1,336 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Number Functions}
+
+\begin{document}
+
+\begin{abstract}
+measurements
+\end{abstract}
+\maketitle
+
+
+
+
+
+Most of the comparisons that interest us in Calculus involve measurements and we measure eveything...\\
+
+\begin{quote}
+Count, Length, Weight, Volume, Odor, Density, Brightness, Strength, Pressure, Heat, Temperature, Loudness, Change, Speed, Direction, Angle, Moisture, Voltage, Current, Tone, Notes, Satisfaction, Likelihood, Distance, Absorption, Reflection, Position, Heat, Magnetism, Sweetness, Sour, Focus, Flexibility, Pollution, Time, Smoothness, Humor, Stress, Area, Rates, Shape, Location, Orientation, Health, Age... \\
+\end{quote}
+
+
+...it just keeps going and going and going. \\
+
+
+We compare all of these to each other:
+
+
+
+\begin{itemize}
+\item Odor vs. Direction
+\item Pollution vs. Location
+\item Flexibility vs. Density
+\item Heat vs. Pressure
+\item Voltage vs. Shape 
+\item Age vs. Health
+\end{itemize}
+
+
+
+
+
+
+
+\subsection*{Number Functions}
+
+We make functions connecting just about everything.  In particular, we could make functions where both the domain and codomain are sets of measurements. These are the types of functions we study in Calculus.  These are the types of functions we will study in this course.  And, since measurements are real numbers accompanied by a unit, we will frequently temporarily set aside the unit and analyze functions that connect sets of real numbers with sets of real numbers. \\
+
+In Calculus, our applied functions will connect sets of measurements with sets of measurements. However, we usually hold the measurement units off to the side, work with the numbers, and then bring back the units when we interpret our results.  Once we arrive at any conclusions, then we will interpret our findings within the context of the situation under investigation and the measurements involved. \\
+
+
+
+
+$\blacktriangleright$ \textbf{Context: The Harpo Chalk Company} \\
+
+The Harpo Chalk company sells chalk in bulk to schools and school districts. In an effort to increase sales, the company lowers the price per box of chalk as the order size increases.  The price per box is given in the table below. \\
+
+
+
+
+Table 1. Chalk Prices per Box
+\[
+\begin{array}{lll}
+\text{from box number} & \text{to box number}  & \text{the price per box is} \\
+0 &  100 &  \$0.25 \text{ per box}   \\
+101 &  500 &  \$0.23 \text{ per box}   \\
+501 &  750 &  \$0.20 \text{ per box}   \\
+751 &  1000 &  \$0.17 \text{ per box}   \\
+1001 &  2000 &  \$0.15 \text{ per box}   \\
+2001 &  \text{unlimited} &  \$0.11 \text{ per box}   
+\end{array}
+\]
+
+
+
+
+For example, if you purchased $150$ boxes of chalk, the first $100$ boxes would cost $\$0.25$ each for a total cost of $\$25.00$.  The final $50$ boxes (boxes numbered $101$ to $150$) would cost $\$0.23$ each for a total cost of $\$11.50$.  The total cost of the entire order would be $\$25.00 + \$11.50 = \$36.50$.
+
+
+\begin{question}
+How much would an order of $550$ boxes cost?
+
+\begin{explanation}
+
+\begin{itemize}
+\item The first $100$ boxes cost $\$\answer{0.25}$ each for a total of $\$\answer{25.00}$.
+\item The next $400$ boxes cost $\$\answer{0.23}$ each for a total of $\$\answer{92.00}$.
+\item The next $50$ boxes cost $\$\answer{0.20}$ each for a total of $\$\answer{10.00}$.
+\end{itemize}
+
+The total cost for the $550$ boxes is $\$\answer{127}$.
+\end{explanation}
+\end{question}
+
+
+
+
+\begin{question}
+If the bill is $\$173.29$, then how many boxes of chalk were ordered?
+
+\begin{explanation}
+
+We can see from the previous question that more than $550$ boxes were ordered.  The next cut-off is at $750$ boxes.  How much do $750$ boxes cost? \\
+
+\begin{itemize}
+\item The first $100$ boxes cost $\$25$.
+\item The next $400$ boxes cost $\$92$.
+\item The next $250$ boxes cost $\$\answer{0.20}$ each for a total of $\$\answer{50.00}$.
+\end{itemize}
+The total cost for the $750$ boxes is $\$\answer{167}$. More than $750$ boxes were ordered.  We need to buy $\$173.29 - \$167 = \$6.29$ worth of chalk.  These boxes will cost $\$0.17$ each, which gives us $\answer{37}$ boxes.  \\
+
+
+Total number of boxes ordered is $750 + 37 = 787$ boxes.
+
+
+\end{explanation}
+\end{question}
+
+
+
+\begin{question}
+If $787$ boxes of chalk were purchsed for $\$173.29$, then, on average, each box costs $\$\answer[tolerance=0.01]{0.22}$. \\
+
+This is called the \textbf{effective price}.
+\end{question}
+
+
+
+The previous story compares boxes to dollars.  Those were the units for the measurements. \\
+
+
+
+We can also have functions that just relate numbers. \\
+
+
+
+
+
+
+
+\begin{example} \textit{Double} \\
+The \textit{Double} function pairs a real number with its double.
+
+domain = all real numbers  \\ 
+codomain = all real numbers
+
+
+\begin{itemize}
+\item \textit{Double}($3$) = $6$.
+\item \textit{Double}($-4$) = $-8$.
+\item \textit{Double}($\pi$) = $2 \pi$.
+
+\item $\textit{Double}(7) = \answer{14}$.
+\end{itemize}
+
+\end{example} 
+
+
+
+
+
+
+
+\begin{example} \textit{Half} \\
+The \textit{Half} function pairs a real number with its half.
+
+domain = positive real numbers  \\ 
+codomain = positive real numbers
+
+
+Solve \textit{Half}(d) = $8$ \\
+
+The solution is $d = \answer{16}$.
+
+\end{example} 
+
+
+
+
+
+
+
+\begin{example} \textit{Successor} \\
+The \textit{Successor} function pairs an integer with one more than the integer.
+
+domain = all integers  \\ 
+codomain = all integers
+
+
+\begin{itemize}
+\item \textit{Successor}($3$) = $4$.
+\item \textit{Successor}($-4$) = $-3$.
+\item \textit{Successor}($0$) = $1$.
+\item \textit{Successor}($\pi$) = $undefined$.
+
+\item $\textit{Successor}(-7) = \answer{-6}$.
+\end{itemize}
+
+
+Solve \textit{Successor}(z) = $-1$ \\
+
+The solution is $z = \answer{-2}$.
+
+\end{example} 
+
+
+
+
+
+
+
+\begin{question} 
+Is every integer in the range of \textit{Successor}?
+
+
+\begin{multipleChoice}
+	\choice[correct]{Yes}
+	\choice{No}
+\end{multipleChoice}
+\begin{feedback}
+Every integer has a previous integer.  
+\end{feedback}
+\end{question} 
+
+
+
+\begin{question} 
+Is \textit{Successor} an onto function?
+\begin{multipleChoice}
+	\choice[correct]{Yes}
+	\choice{No}
+\end{multipleChoice}
+\end{question} 
+
+
+
+\begin{question} 
+Is \textit{Successor} a one-to-one function?
+\begin{multipleChoice}
+	\choice[correct]{Yes}
+	\choice{No}
+\end{multipleChoice}
+\end{question} 
+
+
+
+
+
+
+
+\begin{example} Multiplication by $r$ 
+
+
+
+Fix a number $r$ such that $0 < r < 1$, a real number strictly between $0$ and $1$, and let $R$ be a function, such that
+
+\begin{itemize}
+\item the domain of $R$ is all real numbers strictly between $0$ and $1$  
+\item the codomain of $R$ is all real numbers strictly between $0$ and $1$  
+\[
+R : (0,1) \mapsto (0,1)
+\]
+\item $R$ pairs a domain number with its product with $r$, i.e. $R(d) = d \cdot r$.
+\end{itemize}
+
+
+
+
+
+$\blacktriangleright$ $R$ is well-defined.  
+
+To show this, we need only recognize that the product of two real numbers can have only one value.  In addition, the product of two numbers between $0$ and $1$ is also between $0$ and $1$.  \\
+
+
+$\blacktriangleright$ $R$ is one-to-one. 
+
+To show this, suppose $x$ and $y$ are two domain numbers and they have the same range partner: $r \cdot x = r \cdot y$.  Since $r \ne 0$, we have that $x = y$. Therefore, if two domain numbers have the same function value, then, in fact, they were not different domain numbers.  They were the same domain number. i.e. a range number cannot be in more than one pair.\\
+
+
+$\blacktriangleright$ $R$ is not onto.
+
+\textbf{Idea:} If you multiply $r$ by all of the numbers in $(0,1)$, then you get the numbers $(0,r) \subset (0, 1)$.\\
+
+\begin{explanation}
+If $0 < r < 1$, then there exists $h$, such that $0 < r < h < 1$.  \\
+
+Now, suppose that $h$ is a range number, i.e. a function value. That would mean it is partnered with some domain number.  There would be a domain number $0 < d < 1$, such that  $r \cdot d = h$.  \\
+
+
+But that would mean that $d = \frac{h}{r}$ and $\frac{h}{r} > 1$, since $h > r$.  \\
+
+
+If $h$ is in the range, then its domain partner is not in the domain.  That can't happen, which means $h$ must not be in the range and $R$ is not onto.
+\end{explanation}
+
+
+
+
+\end{example} 
+
+The domain and range above were \textbf{\textcolor{purple!85!blue}{open sets}}, which gave space between $r$ and $1$, which allowed for $h$. Once you allow some space, then the real numbers can do unexpected things.\\
+
+Much of our analysis of functions will rest on properties of \textit{open} sets. \
+
+
+If our function domains and ranges will be sets of real numbers, then it seems we should know about sets of real numbers.
+
+Therefore, we need a way to communicate about sets of real numbers, especially open sets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{onlineOnly}
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Functions]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/functions/examples/exampleList}
+
+\end{center}
+\end{onlineOnly}
+
+
+\end{document}
