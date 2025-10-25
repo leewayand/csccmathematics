@@ -96,101 +96,25 @@ To this end, we have three viewpoints into the inner workings of quadratic funct
 
 
 
-\subsection*{Standard Form (the Quadratic Formula)}
+\subsection*{Standard Form}
 
 
-
-
-
-\[ a\left(t + \frac{b}{2 a}\right)^2 + c - \frac{b^2}{4 a}  = 0\]
-
-Solve for $t$.
-
-
-
-\begin{explanation}
-\[ a \left(t + \frac{b}{2 a} \right)^2  = \frac{b^2}{4 a} - c\]
-
-\[ \left(t + \frac{b}{2 a} \right)^2  = \frac{b^2}{4 a^2} - \frac{c}{a}\]
-
-\[ \left(t + \frac{b}{2 a} \right)^2  = \frac{\answer{b^2 - 4 a c}}{4 a^2} \]
-\end{explanation}
-
-
-Either 
-
-
-\[ t + \frac{b}{2 a}  = \sqrt{\frac{b^2 - 4 a c}{4 a^2}}  = \frac{\sqrt{b^2 - 4 a c}}{| 2a |}   \]
-
-or
-
-
-\[ t + \frac{b}{2 a}  = -\sqrt{\frac{b^2 - 4 a c}{4 a^2}} = -\frac{\sqrt{b^2 - 4 a c}}{| 2a |}    \]
-
+When analyzing a quadratic function (or any function), we want to know two basic pieces of information: where is it and how is it changing? 
 
 
 \begin{itemize}
-\item If $a > 0$, then $| 2a | = 2a$.
-\item If $a < 0$, then $| 2a | = -2a$.
+\item ``Where is it?'' includes the function's zeros, maximum value, and minimum value.
+\item ``How is it changing?'' includes increasing and decreasing.
 \end{itemize}
 
-Either way, we still get one negative and one positive fraction.  Therefore, we can drop the absolute value signs.  
+
+
+For a quadratic, all of this information is directly connected to its zeros.  So, we have many perspectives and viewpoints of a quadratic function's zeros (also called roots).
 
 
 
+The standard form of a quadratic function looks like \textbf{$Q(t) = a \, t^2 + b \, t + c$, with $a \ne 0$}.  From this form the zeros are given by the \textbf{quadratic formula}.
 
-
-Either 
-
-
-\[ t + \frac{b}{2 a}  = \sqrt{\frac{b^2 - 4 a c}{4 a^2}}  = \frac{\sqrt{b^2 - 4 a c}}{2a}   \]
-
-or
-
-
-\[ t + \frac{b}{2 a}  = -\sqrt{\frac{b^2 - 4 a c}{4 a^2}} = -\frac{\sqrt{b^2 - 4 a c}}{2a}    \]
-
-
-
-
-
-
-
-
-
-
-And, finally \\
-
-
-\begin{conclusion}
-
-
-
-Either 
-
-
-\[ t   = - \frac{b}{2 a} + \frac{\sqrt{b^2 - 4 a c}}{2a}  = \frac{-b + \sqrt{b^2 - 4 a c}}{2a}      \]
-
-or
-
-
-\[ t  = - \frac{b}{2 a}  -\frac{\sqrt{b^2 - 4 a c}}{2a} =    \frac{-b - \sqrt{b^2 - 4 a c}}{2a}      \]
-
-\end{conclusion}
-
-
-
-
-
-
-People generally shorthand these two separate solutions as
-
-
-
-\[ t  =   \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}      \]
-
-
-This is known as \textbf{The Quadratic Formula}.
 
 
 
@@ -222,9 +146,60 @@ Shorthand:
 
 
 
+\begin{example}
 
 
-Let's apply this to the previous three examples
+Solve $3 \, x^2 + 4 \, x - 5 = 0$ \\
+
+
+\[
+x = \frac{-4 \pm \sqrt{4^2 - 4 (3)(-5)}}{2(3)} = \frac{-4 \pm \sqrt{76}}{6}
+\]
+
+\[
+= \frac{-4 \pm \sqrt{4 \cdot 19}}{6} \frac{-4 \pm \sqrt{4} \cdot \sqrt{19}}{6} = \frac{-4 \pm 2\sqrt{19}}{6}
+\]
+
+\[
+= \frac{2}{2} \cdot \frac{-2 \pm \sqrt{19}}{3} = \frac{-2 \pm \sqrt{19}}{3}
+\]
+
+
+
+\textbf{checking...} \\
+
+
+\[
+3 \, \left( \frac{-2 - \sqrt{19}}{3} \right)^2 + 4 \, \left( \frac{-2 - \sqrt{19}}{3} \right) - 5 
+\]
+
+\[
+=  3 \, \left( \frac{4 + 4\sqrt{19}+19}{9} \right) + 4 \, \left( \frac{-2 - \sqrt{19}}{3} \right) - 5
+\]
+
+
+\[
+= \frac{12 + 12\sqrt{19} + 57 - 24 - 12\sqrt{19} - 45}{9} = \frac{0}{9} = 0
+\]
+
+\end{example}
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Possible Roots}} 
+
+
+The quadratic formula tells us that there are three possibilities for types of zeros or roots.
+
+
+\begin{itemize}
+\item two real roots
+\item one real root
+\item no real roots (two complex roots)
+\end{itemize}
+
 
 
 
@@ -407,6 +382,43 @@ In each of the examples above the number of solutions was determined by $\sqrt{b
 \item If $b^2 - 4 a c$ \, \wordChoice{\choice{$>$}\choice{$=$}\choice[correct]{$<$}} \, $0$, then there are no distinct real solutions.
 
 \end{itemize}
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Where does the Quadratic Formula come from?}} 
+
+To answer this, we need a different form for a quadratice function, the vertex form.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1155,6 +1167,111 @@ which is what we got through the procedure of completing the square.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Where does the Quadratic Formula come from?}} 
+
+
+
+
+\[ a\left(t + \frac{b}{2 a}\right)^2 + c - \frac{b^2}{4 a}  = 0\]
+
+Solve for $t$.
+
+
+
+\begin{explanation}
+\[ a \left(t + \frac{b}{2 a} \right)^2  = \frac{b^2}{4 a} - c\]
+
+\[ \left(t + \frac{b}{2 a} \right)^2  = \frac{b^2}{4 a^2} - \frac{c}{a}\]
+
+\[ \left(t + \frac{b}{2 a} \right)^2  = \frac{\answer{b^2 - 4 a c}}{4 a^2} \]
+\end{explanation}
+
+
+Either 
+
+
+\[ t + \frac{b}{2 a}  = \sqrt{\frac{b^2 - 4 a c}{4 a^2}}  = \frac{\sqrt{b^2 - 4 a c}}{| 2a |}   \]
+
+or
+
+
+\[ t + \frac{b}{2 a}  = -\sqrt{\frac{b^2 - 4 a c}{4 a^2}} = -\frac{\sqrt{b^2 - 4 a c}}{| 2a |}    \]
+
+
+
+\begin{itemize}
+\item If $a > 0$, then $| 2a | = 2a$.
+\item If $a < 0$, then $| 2a | = -2a$.
+\end{itemize}
+
+Either way, we still get one negative and one positive fraction.  Therefore, we can drop the absolute value signs.  
+
+
+
+
+
+Either 
+
+
+\[ t + \frac{b}{2 a}  = \sqrt{\frac{b^2 - 4 a c}{4 a^2}}  = \frac{\sqrt{b^2 - 4 a c}}{2a}   \]
+
+or
+
+
+\[ t + \frac{b}{2 a}  = -\sqrt{\frac{b^2 - 4 a c}{4 a^2}} = -\frac{\sqrt{b^2 - 4 a c}}{2a}    \]
+
+
+
+
+
+
+
+
+
+
+And, finally \\
+
+
+\begin{conclusion}
+
+
+
+Either 
+
+
+\[ t   = - \frac{b}{2 a} + \frac{\sqrt{b^2 - 4 a c}}{2a}  = \frac{-b + \sqrt{b^2 - 4 a c}}{2a}      \]
+
+or
+
+
+\[ t  = - \frac{b}{2 a}  -\frac{\sqrt{b^2 - 4 a c}}{2a} =    \frac{-b - \sqrt{b^2 - 4 a c}}{2a}      \]
+
+\end{conclusion}
+
+
+
+
+
+
+People generally shorthand these two separate solutions as
+
+
+
+\[ t  =   \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}      \]
+
+
+This is known as \textbf{The Quadratic Formula}.
 
 
 
