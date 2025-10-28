@@ -1,0 +1,194 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+\begin{exercise}
+
+
+Define $f(x)$ as follows
+
+
+\[
+f(x) = 
+\begin{cases}
+  3x + 8     &   \text{ if } x \leq -1\\
+  -\frac{1}{3}(x-4) - 1  &     \text{ if }   x > -1
+\end{cases}
+\]
+
+
+
+Graph of $y = f(x)$:
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-5:-1),<-] {3*x+8};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-1:9),->] {-0.3333*(x-4)-1};
+
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,0.666)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,5)};
+          %\addplot [line width=1, gray, dashed, domain=(-9.5:9.5),<->] ({-3},{x});
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{question} Evaluate
+
+
+
+$f(-4) = \answer{-4}$  \\
+
+
+$f(-1) = \answer{5}$  \\
+
+
+$f(0) = \answer{\frac{1}{3}}$  \\
+
+
+$f(1) = \answer{0}$  \\
+
+
+
+\end{question}
+
+
+
+
+
+
+\begin{question} Domain and Range
+
+
+
+The domain of $f$ is
+\begin{multipleChoice}
+\choice {$(-\infty, 5)$}
+\choice {$(-\infty, 5]$}
+\choice {$(-\infty, -1) \cup (-1, \infty)$}
+\choice [correct]{$(-\infty, \infty)$}
+\end{multipleChoice}
+
+
+
+
+
+The range of $f$ is
+\begin{multipleChoice}
+\choice {$(-\infty, 1)$}
+\choice {$(-\infty, 1]$}
+\choice [correct]{$(-\infty, 5]$}
+\choice {$(-\infty, 5)$}
+\end{multipleChoice}
+
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question} Zeros
+
+
+List the zeros of $f$, in numeric order.
+
+\[
+\answer{-\frac{8}{3}} \, \text{ and } \, \answer{1}
+\]
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question} Continuity
+
+
+$f$ is continuous, except at $\answer{-1}$, which is a \wordChoice{\choice[correct]{discontinuity} \choice{singularity}}.
+
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+\begin{question} Behavior
+
+
+$f$ is increasing on $\left( \answer{-\infty}, \answer{-1} \right]$. \\
+
+$f$ is decreasing on $\left[ \answer{-1}, \answer{\infty} \right)$. \\
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question} Extrema
+
+
+The maximum value of $f$ is $\answer{5}$. \\
+
+The minimum value of $f$ is $\answer{DNE}$. \\
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{exercise}
+\end{document}

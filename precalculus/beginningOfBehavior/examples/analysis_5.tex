@@ -1,0 +1,181 @@
+\documentclass{ximera}
+
+\input{../../../preamble.tex}
+
+
+\author{Lee Wayand}
+
+\begin{document}
+
+
+\begin{exercise} 
+
+
+
+
+Let $p(x) = 2x^2 - x + 3$ with its natural domain. \\
+
+
+Completely analyze $p$. \\
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{Domain}}
+
+
+$p$ is a \wordChoice{\choice{constant} \choice{linear} \choice[correct]{quadratic}} function, which means its natural domain is all real numbers.
+
+\end{question}
+
+
+
+
+
+
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{Zeros}}
+
+
+$p(x)$ doesn't factor easily. factor.  We'll use the quadratic formula.\\
+
+$2x^2 - x + 3 = $ \\
+
+
+$a = \answer{2}$ \\
+
+$b = \answer{-1}$ \\
+
+$c = \answer{3}$ \\
+
+
+\[
+x = \frac{-(-1) \pm \sqrt{(-1)^2 - 4 \cdot 2 \cdot 3}}{2 \cdot 2}
+\]
+
+
+\[
+x = \frac{1 \pm \sqrt{-23}}{4}
+\]
+
+
+
+
+$p$ has no real zeros.
+
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{Continuity}}
+
+
+$p$ is a \wordChoice{\choice{constant} \choice{linear} \choice[correct]{quadratic}} function, which means it is continuous.
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{End-Behavior}}
+
+
+The leading coefficient of $p$ is $\answer{2}$. \\
+
+
+Because $p$ is a quadratic function with a positive leading coefficient,
+
+$\lim\limits_{x \to -\infty} p(x) = \answer{\infty}$ \\
+
+
+$\lim\limits_{x \to \infty} p(x) = \answer{\infty}$ \\
+
+\end{question}
+
+
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{Behavior}}
+
+Let's rewrite $p$ as a completed square.
+
+
+\begin{align*}
+p(x) & = 2x^2 - x + 3 \\
+& = 2 \left( x^2 - \frac{1}{2} x \right) + 3  \\
+& = 2 \left( x^2 - \frac{1}{2} x + \frac{1}{16} - \frac{1}{16} \right) + 3  \\
+& = 2 \left( x - \frac{1}{4} \right)^2 - \frac{1}{16} + 3  \\
+& = 2 \left( x - \frac{1}{4} \right)^2 + \frac{47}{16} + 3  
+\end{align*}
+
+
+
+Because $p$ is a quadratic function with a positive leading coefficient, $p$ decreases on $\left( \answer{-\infty}, \answer{\frac{1}{4}} \right]$ and increases on $\left[ \answer{\frac{1}{4}}, \answer{\infty} \right)$. 
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{Global Extrema}}
+
+Because $p$ decreases on $\left( -\infty, \frac{1}{4} \right]$ and increases on $\left[ \frac{1}{4}, \infty \right)$, $p$ has a global \wordChoice{\choice[correct]{minimum} \choice{maximum}}  of $\answer{\frac{47}{16}}$ at $\answer{\frac{1}{4}}$.
+
+
+
+Because $\lim\limits_{x \to \infty} p(x) = \answer{\infty}$, $p$ has no global \wordChoice{\choice{minimum} \choice[correct]{maximum}}.
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{Local Extrema}}
+
+The only local minimum value of $p$ is the global minimum of $\answer{\frac{47}{16}}$ at $\answer{\frac{1}{4}}$.
+
+\end{question}
+
+
+
+
+
+
+
+\begin{question}  \textbf{\textcolor{blue!55!black}{Range}}
+
+$p$ is continuous with no maximum value and a minimum value of $\frac{47}{16}$.  Therefore, the range of $p$ is
+
+\[
+\left[ \answer{\frac{47}{16}}, \answer{\infty} \right)
+\]
+
+\end{question}
+
+
+\end{exercise}
+
+
+\end{document}
