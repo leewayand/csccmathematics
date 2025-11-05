@@ -250,6 +250,378 @@ Is \textit{Successor} a one-to-one function?
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Real-Valued Functions}
+
+For the most part, our attention in this course is focused on real-valued functions.
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Real-Valued Function}} \\
+
+A \textbf{real-valued function} is one whose range is a subset of the real numbers.
+
+\end{definition}
+The values of a real-valued function are real numbers.
+
+
+
+
+
+
+
+\begin{example} Squaring Function \\
+
+Let the function $SQ$ be defined as follows.
+
+
+\begin{itemize}
+\item Domain of $SQ$ is $(-3, 5]$.
+\item Codomain of $SQ$ is $[-30, 30)$.
+\item $SQ$ pairs a domain number with its square.
+\end{itemize}
+
+
+First, this function is well-defined, since the square of any number in $(-3, 5]$ will be in $[-30, 30)$ and each domain number has exactly one square.
+
+
+\textbf{Shorthand Notation: } $SQ: (-3, 5] \mapsto [-30, 30)$.
+
+\begin{question}
+Evaluate the following:
+
+\begin{itemize}
+	\item $SQ(-2) = \answer{4}$
+	\item $SQ(0) = \answer{0}$
+	\item $SQ(1.1) = \answer{1.21}$
+	\item $SQ\left(\frac{7}{5}\right) = \answer{\frac{49}{25}}$
+\end{itemize}
+
+\end{question}
+
+
+
+
+\begin{question} Range \\
+
+The range of $SQ$ is $\left[ \answer{0}, \answer{25} \right]$.
+
+\end{question}
+
+$SQ$ is not an onto function.  For instance, $-1 \in [-30,30)$, yet $-1$ is not in the range, since squares of real numbers cannot be negative. \\
+
+
+$SQ$ is not a one-to-one function, since $SQ(-1)=SQ(1)$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Collatz \\
+
+Let the function $C$ be defined as follows.
+
+
+\begin{itemize}
+\item Domain of $C$ is the positive integers: $\mathbb{N}$.
+\item Codomain of $C$ is the positive integers: $\mathbb{N}$.
+\item $C$ pairs a domain number with a range number according to the following rule:
+	\begin{itemize}
+			\item If the domain number is even, then $C$ pairs it with half the domain number:
+			\item If the domain number is odd, then $C$ pairs it with one more than three times the domain number.
+	\end{itemize}
+\end{itemize}
+
+
+First, this function is well-defined, since the calculations can only produce one result.
+
+
+\textbf{Shorthand Notation: } $C: \mathbb{N} \mapsto \mathbb{N}$.
+
+\begin{question}
+Evaluate the following:
+
+\begin{itemize}
+	\item $C(8) = \answer{4}$
+	\item $C(7) = \answer{22}$
+	\item $C(1) = \answer{4}$
+	\item $C(28) = \answer{14}$
+\end{itemize}
+
+\end{question}
+
+
+
+$C$ is not a one-to-one function since $C(8) = C(1)$.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example} Identity Function \\
+
+Let the function $Id$ be defined as follows.
+
+
+\begin{itemize}
+\item Domain of $Id$ is all real numbers: $\mathbb{R}$.
+\item Codomain of $Id$ is all real numbers: $\mathbb{R}$.
+\item $Id$ pairs a domain number with itself.
+\end{itemize}
+
+
+First, this function is well-defined.
+
+
+\textbf{Shorthand Notation: } $Id: \mathbb{R} \mapsto \mathbb{R}$.
+
+\begin{question}
+Evaluate the following:
+
+\begin{itemize}
+	\item $Id(\pi) = \answer{\pi}$
+	\item $Id(\sqrt{5}) = \answer{\sqrt{5}}$
+	\item $Id\left(\frac{13}{27}\right) = \answer{\frac{13}{27}}$
+	\item $Id(0) = \answer{0}$
+\end{itemize}
+
+\end{question}
+
+
+
+
+
+The Identity function is an onto function.  If $r \in \mathbb{R}$, the range, then $Id(r) = r$. \\
+
+
+The Identity function is a one-to-one function, since if $Id(r)=Id(s)$, then $r = s$.  If two $Id$ values are equal, then the domain numbers are equal. They were not different domain numbers.
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Remainder \\
+
+Let the function $Remainder$ be defined as follows.
+
+
+\begin{itemize}
+\item Domain of $Remainder$ is all natural numbers: $\mathbb{N}$.
+\item Codomain of $Remainder$ is $\{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
+\item $Remainder$ pairs a natural number with the remainder when divided by $10$.
+\end{itemize}
+
+
+First, this function is well-defined. Dividing by $10$ can only have one remainder.
+
+
+\textbf{Shorthand Notation: } $Remainder: \mathbb{N} \mapsto \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
+
+
+
+
+
+\begin{itemize}
+	\item $Remainder(12) = 2$
+	\item $Remainder(25) = 5$
+	\item $Remainder(77) = 7$
+	\item $Remainder(12 + 11) = 3$
+	\item $Remainder(7 \cdot 7) = 9$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\begin{question}
+Evaluate the following:
+
+\begin{itemize}
+	\item $Remainder(101) = \answer{1}$
+	\item $Remainder(3) = \answer{3}$
+	\item $Remainder(1652435) = \answer{5}$
+	\item $Remainder(94) = \answer{4}$
+\end{itemize}
+
+\end{question}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Linear \\
+
+Let the function $L$ be defined as follows.
+
+
+\begin{itemize}
+\item Domain of $L$ is $[-3, 4)$.
+\item Codomain of $L$ is $\mathbb{R}$.
+\item $L$ pairs a number with twice the number.
+\end{itemize}
+
+
+First, this function is well-defined. 
+
+
+\textbf{Shorthand Notation: } $L: [-3, 4) \mapsto \mathbb{R}$.
+
+\begin{question}
+
+The codomain of $L$ is $\mathbb{R}$ but the range is not.  
+
+The range is \wordChoice{\choice[correct]{[}\choice{(}} \wordChoice{\choice{-8}\choice[correct]{-6},\choice{6}\choice{8}} , \wordChoice{\choice{-8}\choice{-6},\choice{6}\choice[correct]{8}} \wordChoice{\choice{]}\choice[correct]{)}}.
+
+\end{question}
+
+
+
+\end{example}
+...more communication. \\
+
+
+
+
+
+
+\subsection*{Communication Summary}
+
+
+
+
+
+
+
+The range is also called the \textbf{image} of the function.   
+
+Sometimes the range partner of a domain number is called the \textbf{image} of the domain number.
+
+$f(a)$ is called the ``value of $f$ at $a$'' or ``the image of $a$ under $f$''.
+
+
+$f(a)$ is pronounced ``$f$ of $a$''.
+
+
+And, we have the reverse direction.
+
+The preimage of a subset of the codomain consists of the domain members whose function values are inside the given subset.
+
+The \textbf{preimage} of $S$ is the set
+
+\[  f^{-1}(S) = \{ d \in D \, | \, f(d) \in S  \}    \]
+
+\textbf{Notation:}  The $-1$ exponent does not mean reciprocal.  Instead, it is conveying an ``opposite'' direction.
+
+
+The preimage of the range is the domain. \\
+
+Sometimes when the preimage is a single domain member, then we drop the idea of a set and just quote that one domain member. \\
+
+
+\textbf{Note:} The preimage of a codomain number, which is not in the range, is the empty set, $\emptyset$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Functions Defined on Open Sets}
+
+Open sets provide space for functions.  This space has far-reaching consequences. Space forces numbers to appear.\\
+
+
+
 \begin{example} Multiplication by $r$ 
 
 
