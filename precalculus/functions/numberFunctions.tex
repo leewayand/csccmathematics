@@ -76,10 +76,11 @@ Table 1. Chalk Prices per Box
 
 
 
-For example, if you purchased $150$ boxes of chalk, the first $100$ boxes would cost $\$0.25$ each for a total cost of $\$25.00$.  The final $50$ boxes (boxes numbered $101$ to $150$) would cost $\$0.23$ each for a total cost of $\$11.50$.  The total cost of the entire order would be $\$25.00 + \$11.50 = \$36.50$.
+For example, if you purchased $150$ boxes of chalk, the first $100$ boxes would be priced at $\$0.25$ each for a cost of $\$25.00$.  The final $50$ boxes (boxes numbered $101$ to $150$) would priced at $\$0.23$ each for a cost of $\$11.50$.  The total cost of the entire order would be $\$25.00 + \$11.50 = \$36.50$.
 
 
-\begin{question}
+\begin{question} Chalk Cost
+
 How much would an order of $550$ boxes cost?
 
 
@@ -97,7 +98,8 @@ The total cost for the $550$ boxes is $\$\answer{127}$.
 
 
 
-\begin{question}
+\begin{question} Chalk Order
+
 If the bill is $\$173.29$, then how many boxes of chalk were ordered?
 
 
@@ -119,7 +121,8 @@ Total number of boxes ordered is $750 + 37 = 787$ boxes.
 
 
 
-\begin{question}
+\begin{question} Effective Price
+
 If $787$ boxes of chalk were purchsed for $\$173.29$, then, on average, each box costs $\$\answer[tolerance=0.01]{0.22}$. \\
 
 This is called the \textbf{effective price}.
@@ -306,7 +309,8 @@ First, this function is well-defined, since the square of any number in $(-3, 5]
 
 \textbf{Shorthand Notation: } $SQ: (-3, 5] \mapsto [-30, 30)$.
 
-\begin{question}
+\begin{question} Squaring Function
+
 Evaluate the following:
 
 \begin{itemize}
@@ -321,7 +325,7 @@ Evaluate the following:
 
 
 
-\begin{question} Range \\
+\begin{question} Range 
 
 The range of $SQ$ is $\left[ \answer{0}, \answer{25} \right]$.
 
@@ -343,7 +347,7 @@ $SQ$ is not a one-to-one function, since $SQ(-1)=SQ(1)$.
 
 
 
-\begin{example} Collatz \\
+\begin{example} \link[Collatz Conjecture]{https://en.wikipedia.org/wiki/Collatz_conjecture}
 
 Let the function $C$ be defined as follows.
 
@@ -364,7 +368,8 @@ First, this function is well-defined, since the calculations can only produce on
 
 \textbf{Shorthand Notation: } $C: \mathbb{N} \mapsto \mathbb{N}$.
 
-\begin{question}
+\begin{question} Evaluating
+
 Evaluate the following:
 
 \begin{itemize}
@@ -391,7 +396,7 @@ $C$ is not a one-to-one function since $C(8) = C(1)$.
 
 
 
-\begin{example} Identity Function \\
+\begin{example} Identity Function 
 
 Let the function $Id$ be defined as follows.
 
@@ -408,7 +413,8 @@ First, this function is well-defined.
 
 \textbf{Shorthand Notation: } $Id: \mathbb{R} \mapsto \mathbb{R}$.
 
-\begin{question}
+\begin{question} Id
+
 Evaluate the following:
 
 \begin{itemize}
@@ -422,13 +428,12 @@ Evaluate the following:
 
 
 
+\textbf{Note:} The identity funciton both a one-to-one and onto function.
 
-
-The Identity function is an onto function.  If $r \in \mathbb{R}$, the range, then $Id(r) = r$. \\
-
-
-The Identity function is a one-to-one function, since if $Id(r)=Id(s)$, then $r = s$.  If two $Id$ values are equal, then the domain numbers are equal. They were not different domain numbers.
-
+\begin{itemize}
+\item The Identity function is an onto function.  If $r \in \mathbb{R}$, the range, then $Id(r) = r$. 
+\item The Identity function is a one-to-one function, since if $Id(r)=Id(s)$, then $r = s$.  If two $Id$ values are equal, then the domain numbers are equal. They were not different domain numbers.
+\end{itemize}
 
 
 
@@ -447,33 +452,33 @@ The Identity function is a one-to-one function, since if $Id(r)=Id(s)$, then $r 
 
 
 
-\begin{example} Remainder \\
+\begin{example} Remainder 
 
-Let the function $Remainder$ be defined as follows.
+Let the function $RemainderTen$ be defined as follows.
 
 
 \begin{itemize}
-\item Domain of $Remainder$ is all natural numbers: $\mathbb{N}$.
-\item Codomain of $Remainder$ is $\{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
-\item $Remainder$ pairs a natural number with the remainder when divided by $10$.
+\item Domain of $RemainderTen$ is all natural numbers: $\mathbb{N}$.
+\item Codomain of $RemainderTen$ is $\{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
+\item $RemainderTen$ pairs a natural number with the remainder when divided by $10$.
 \end{itemize}
 
 
 First, this function is well-defined. Dividing by $10$ can only have one remainder.
 
 
-\textbf{Shorthand Notation: } $Remainder: \mathbb{N} \mapsto \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
+\textbf{Shorthand Notation: } $RemainderTen: \mathbb{N} \mapsto \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 \}$.
 
 
 
 
 
 \begin{itemize}
-	\item $Remainder(12) = 2$
-	\item $Remainder(25) = 5$
-	\item $Remainder(77) = 7$
-	\item $Remainder(12 + 11) = 3$
-	\item $Remainder(7 \cdot 7) = 9$
+	\item $RemainderTen(12) = 2$
+	\item $RemainderTen(25) = 5$
+	\item $RemainderTen(77) = 7$
+	\item $RemainderTen(12 + 11) = 3$
+	\item $RemainderTen(7 \cdot 7) = 9$
 \end{itemize}
 
 
@@ -484,14 +489,15 @@ First, this function is well-defined. Dividing by $10$ can only have one remaind
 
 
 
-\begin{question}
+\begin{question} Evaluating
+
 Evaluate the following:
 
 \begin{itemize}
-	\item $Remainder(101) = \answer{1}$
-	\item $Remainder(3) = \answer{3}$
-	\item $Remainder(1652435) = \answer{5}$
-	\item $Remainder(94) = \answer{4}$
+	\item $RemainderTen(101) = \answer{1}$
+	\item $RemainderTen(3) = \answer{3}$
+	\item $RemainderTen(1652435) = \answer{5}$
+	\item $RemainderTen(94) = \answer{4}$
 \end{itemize}
 
 \end{question}
@@ -509,7 +515,7 @@ Evaluate the following:
 
 
 
-\begin{example} Linear \\
+\begin{example} Linear 
 
 Let the function $L$ be defined as follows.
 
@@ -526,7 +532,9 @@ First, this function is well-defined.
 
 \textbf{Shorthand Notation: } $L: [-3, 4) \mapsto \mathbb{R}$.
 
-\begin{question}
+
+
+\begin{question} Range
 
 The codomain of $L$ is $\mathbb{R}$ but the range is not.  
 
@@ -618,7 +626,7 @@ Sometimes when the preimage is a single domain member, then we drop the idea of 
 
 \subsection*{Functions Defined on Open Sets}
 
-Open sets provide space for functions.  This space has far-reaching consequences. Space forces numbers to appear.\\
+Open sets provide space for functions.  This space has far-reaching consequences. Space forces numbers to appear. This will be extremely helpful to us when we analyze functions. \\
 
 
 
