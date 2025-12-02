@@ -14,7 +14,7 @@ intervals
 
 
 
-We have whittled our investigation down to a study of real-valued functions.  These are functions whose domain and range are both subsets of the real numbers.  When it comes right down to it, \textbf{Precalculus} is a study of our numbers. We will see in Precalculus that our numbers include more than we might think.\\
+We have whittled our investigation down to a study of real-valued functions.  For us, these are functions whose domain and range are both subsets of the real numbers.  When it comes right down to it, \textbf{Precalculus} is a study of our numbers. We will see in Precalculus that our numbers include more than we might think.\\
 
 
 
@@ -23,7 +23,7 @@ We have whittled our investigation down to a study of real-valued functions.  Th
 
 
 
-As a consequence, we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers, both algebraically and graphically.
+Naturally, we have a need to communicate about sets of real numbers.  We have several ways of communicating our ideas of real numbers, both algebraically and graphically.
 
 
 \section*{Building Blocks}
@@ -33,11 +33,12 @@ The subsets we are interested in are collections of three types of basic buildin
 \begin{itemize}
 \item \textbf{Building Block:} \textbf{\textcolor{purple!85!blue}{Individual Numbers}}  
 
-Our subsets might include one or more individual isolated numbers.  
+Our subsets might include one or more individual isolated numbers (singletons).  
+
 	\begin{itemize}
 	\item Our set might be just the numbers -3, 2, and 5.
 
-	Curly braces around a comma-separated list denotes a set of individual numbers $\{ -3, 2, 5 \}$
+	\item Curly braces around a comma-separated list denotes a set of individual numbers $\{ -3, 2, 5 \}$
 
 	\item Graphically, individual dots on a number line represent a set of the corresponding individual numbers.
 
@@ -146,7 +147,7 @@ Our subsets might include whole, unbroken, pieces or segments of the real number
 
 
 
-	\item All of the real numbers between $4$ and $7$, including $7$ but not $4$:   $(4, 7]$
+	\item All of the real numbers between $4$ and $7$, not including $4$, but including $7$:   $(4, 7]$
 	\begin{image}
 	\begin{tikzpicture}
 	\begin{axis}[
@@ -426,7 +427,8 @@ In the examples above, we used \textbf{interval notation} to describe the interv
 \end{itemize}
 
 
-\begin{question}
+\begin{question} Interval Notation
+
 Which is valid interval notation?
 	\begin{multipleChoice}
 	\choice {$[3, -2)$}
@@ -436,7 +438,8 @@ Which is valid interval notation?
 
 
 
-\begin{question}
+\begin{question}Interval Notation
+
 Which is valid interval notation?
 	\begin{multipleChoice}
 	\choice {$[1, \infty]$}
@@ -446,7 +449,8 @@ Which is valid interval notation?
 
 
 
-\begin{question}
+\begin{question}Interval Notation
+
 Select all that have valid interval notation.
 	\begin{selectAll}
 	\choice {$[-3, -5]$}
@@ -494,7 +498,8 @@ Now that we can describe sets of numbers with interval notation, we can use our 
 
 
 
-\begin{question}
+\begin{question} Membership
+
 Which is a valid statement?
     \begin{multipleChoice}
     \choice {$ 2 \in [3, -2)$}
@@ -504,7 +509,8 @@ Which is a valid statement?
 
 
 
-\begin{question}
+\begin{question} Membership
+
 Which is a valid statement?
     \begin{multipleChoice}
     \choice {$3 \notin [1, \infty]$}
@@ -514,7 +520,8 @@ Which is a valid statement?
 
 
 
-\begin{question}
+\begin{question} Membership
+
 Select all valid statements.
     \begin{selectAll}
     \choice {$4 \in [-3, -5]$}
@@ -569,7 +576,12 @@ $(-\infty, \infty)$ is both an open interval and a closed interval.
 
 
 
+\begin{warning}
 
+The empty set, $\emptyset$, is both an open interval and a closed interval.
+
+
+\end{warning}
 
 
 
@@ -605,7 +617,8 @@ We begin with a pair of curly braces $\{  \, \}$ containing a vertical bar:  ${|
 
 
 
-\begin{example}
+\begin{example} Set-Builder Notation
+
 ``The set of all real numbers such that the numbers are greater than or equal to 4 and less than 7.''
 \[ \{ r \in \mathbb {R} \, | \, (4 \leq r)  \text{ and } (r < 7) \} \]
 \[ \{ r \in \mathbb {R} \, | \, 4 \leq r < 7 \} \]
@@ -617,13 +630,14 @@ We begin with a pair of curly braces $\{  \, \}$ containing a vertical bar:  ${|
 
 
 
-\begin{example}
+\begin{example} Set-Builder Notation
+
 ``The set of all integers such that the numbers are greater than or equal to 4 and less than 7.''
 \[ \{ n \in \mathbb {Z} \, | \, 4 \leq n < 7 \} \]
 
-\textbf{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
-This would be the set $\{ 4, 5, 6 \}$.
+This would be the set $\{ 4, 5, 6 \}$, since $n \in \mathbb{Z}$.
 
 
 \end{example}
@@ -631,7 +645,8 @@ This would be the set $\{ 4, 5, 6 \}$.
 
 
 
-\begin{question}
+\begin{question} Set-Builder Notation
+
 Select the interval notation that describes the same set as 
 \[ \{ t \in \mathbb {R} \, | \, 2 < t \leq 9 \} \]
 	\begin{multipleChoice}
@@ -647,7 +662,8 @@ Select the interval notation that describes the same set as
 
 
 
-\begin{question}
+\begin{question} Set-Builder Notation
+
 Complete the interval notation that describes the same set as 
 \[ \{ r \in \mathbb {R} \, | \, -3 \leq r < 7 \} \]
 
@@ -746,7 +762,7 @@ A \cap B = \{  x \, | \, (x \in A) \, \text{ and } \, (x \in B)  \}
 
 
 
-\begin{example}
+\begin{example} Interval Notation
 
 \[ [-4, -2] \cup \{ 2 \} \cup (3, 6] \]
 
@@ -788,7 +804,7 @@ A \cap B = \{  x \, | \, (x \in A) \, \text{ and } \, (x \in B)  \}
 
 
 
-\begin{example}
+\begin{example} Interval Notation
 
 \[ (-\infty, -1]  \cup (4, 8) \]
 
@@ -829,7 +845,7 @@ A \cap B = \{  x \, | \, (x \in A) \, \text{ and } \, (x \in B)  \}
 
 
 
-\begin{example}
+\begin{example} Interval Notation
 
 \[ (-7, -4] \cup \{ -1, 1 \} \cup (3, \infty) \]
 
@@ -872,7 +888,8 @@ A \cap B = \{  x \, | \, (x \in A) \, \text{ and } \, (x \in B)  \}
 
 
 
-\begin{question}
+\begin{question} Interval Notation
+
 Select the interval notation that describes the same set as the following graph.
 	\begin{image}
 	\begin{tikzpicture}
@@ -951,9 +968,9 @@ All of the following describe the same set.
 \item $[-2, 0) \cup [-1, 1) \cup [1, 2)$
 \end{itemize}
 
-Having such a wide variety of descriptions is very valuable as we move through mathematics.  However, for communication purposes, it causes confusion. Therefore, we are establishing an official reduced form for interval notation.  We will always use the reduced form, unless there is a good reason not to.  (There are often good reasons.)
+Having such a wide variety of descriptions is very valuable as we move through mathematics.  However, for communication purposes, it causes confusion. Therefore, we are establishing an \textbf{official reduced form} for interval notation.  We will always use the reduced form, unless there is a good reason not to.  (There are often good reasons.)
 
-Our reduced form will adhere to some rules:
+Our \textbf{reduced form} will adhere to some rules:
 
 
 
@@ -994,7 +1011,8 @@ Our reduced form of interval notation mimics exactly what you would draw on a nu
 
 
 
-\begin{question}
+\begin{question} Reduced Form
+
 Select all of the unions that are written in reduced form.
   \begin{selectAll}
   \choice [correct]{$(-3, 2) \cup (4, 7)$}
@@ -1054,6 +1072,600 @@ We can extend this interval to $[-3, 1)$ and still stay inside $S$.
 Of course, we could have also extended $(-3, 1)$ to the maximal interval it sits inside, $(-3, 1) \subset [-4, 1)$. \\
 
 Maximal intervals give us information about the structure of the domain of functions.
+
+
+
+\begin{notation} Reduced Interval Notation
+
+
+Our official reduced interval notation uses maximal intervals.
+
+
+\end{notation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Dots}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We use square brackets and parentheses for both written algebaic notation and graphical notation.  \\
+
+
+We have a very popular alternative for the graphical notation. \\
+
+
+\begin{itemize}
+    \item solid or closed dots are often used in place of square brackets to show a number is included in an interval.
+    \item hollow or open dots are often used in place of parentheses to show a number is not included in an interval.
+\end{itemize}
+
+
+
+\begin{example}  Closed Interval
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$[$};
+            \node at (axis cs:7,0) [penColor2] {$]$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Half Open Half Close Interval
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$[$};
+            \node at (axis cs:7,0) [penColor2] {$)$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2, fill=white,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Half Open Half Close Interval
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$($};
+            \node at (axis cs:7,0) [penColor2] {$]$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,fill=white, only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\newpage
+
+
+\begin{example} Open Interval
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \node at (axis cs:4,0) [penColor2] {$($};
+            \node at (axis cs:7,0) [penColor2] {$)$};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-5,4, 7},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:7)] ({x},{0});
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(7,0)};
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Union
+
+\[ A = [-4, -2] \cup \{ 2 \} \cup (3, 6] \]
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-4,-2,2,4, 6},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:-2)] ({x},{0});
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(3:6)] ({x},{0});
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-2,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(6,0)};
+
+
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+
+
+\begin{question} Union
+
+Select all valid statements.
+    \begin{selectAll}
+    \choice [correct] {$A$ is bounded from below}
+    \choice [correct] {$A$ is bounded from above}
+    \choice [correct] {$A$ is bounded}
+    \choice {$A$ is unbounded from below}
+    \choice {$A$ is unbounded from above}
+    \choice {$A$ is unbounded}
+    \end{selectAll}
+\end{question}
+
+
+
+
+\end{example}
+
+
+
+
+\begin{example} Union
+
+\[ B = (-\infty, -1]  \cup (4, 8) \]
+
+\begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-1, 4, 8},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-4:-1),<-] ({x},{0});
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(4:8)] ({x},{0});
+            %\addplot [color=penColor2,only marks,mark=*] coordinates{(2,0)};
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-1,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(8,0)};
+
+
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+
+
+
+
+\begin{question} Boundedness
+
+Select all valid statements.
+    \begin{selectAll}
+    \choice {$B$ is bounded from below}
+    \choice [correct] {$B$ is bounded from above}
+    \choice {$B$ is bounded}
+    \choice [correct] {$B$ is unbounded from below}
+    \choice {$B$ is unbounded from above}
+    \choice {$B$ is unbounded}
+    \end{selectAll}
+\end{question}
+
+
+
+
+
+\end{example}
+
+
+
+
+\begin{example} Union
+
+\[ C = (-7, -4] \cup \{ -1, 1 \} \cup (3, \infty) \]
+
+    \begin{image}
+    \begin{tikzpicture}
+    \begin{axis}[
+            %xmin=-25,xmax=25,ymin=-25,ymax=25,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-7,-4,-1,1,3},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(3:8),->] ({x},{0});
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:-4)] ({x},{0});
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-1,0)};
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(1,0)};
+
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(-10:-9.9)] ({x},{0});
+            \addplot [line width=0.5, penColor, smooth,samples=100,domain=(9.9:10)] ({x},{0});
+
+            \addplot [color=penColor2,only marks,mark=*] coordinates{(-4,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(-7,0)};
+            \addplot [color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0)};
+
+
+    \end{axis}
+    \end{tikzpicture}
+    \end{image}
+
+
+
+
+
+
+\begin{question} Boundedness
+
+Select all valid statements.
+    \begin{selectAll}
+    \choice [correct] {$C$ is bounded from below}
+    \choice {$C$ is bounded from above}
+    \choice {$C$ is bounded}
+    \choice {$C$ is unbounded from below}
+    \choice [correct] {$C$ is unbounded from above}
+    \choice {$C$ is unbounded}
+    \end{selectAll}
+\end{question}
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

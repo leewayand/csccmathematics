@@ -39,7 +39,7 @@ In an open set in $\mathbb{R}$, each number has room on either side.
 \begin{definition}  \textbf{\textcolor{green!50!black}{Open Set in $\mathbb{R}$}}
 
 
-$S \subset \mathbb{R}$ is an \textbf{open set in $\mathbb{R}$} provided 
+$S \subseteq \mathbb{R}$ is an \textbf{open set in $\mathbb{R}$} provided 
 
 \[
 \text{For each } a \in S, \text{ there exists an } \epsilon > 0 \text{ such that }  (a - \epsilon, a + \epsilon) \subset S
@@ -49,7 +49,7 @@ $S \subset \mathbb{R}$ is an \textbf{open set in $\mathbb{R}$} provided
 
 
 
-\begin{idea}
+\begin{idea} Space
 
 The idea is that inside an open set, every number sits inside an open interval inside the set.  There is space between each number and the endpoint. There is a positive distance between each number and each endpoint.
 \end{idea}
@@ -58,10 +58,12 @@ Forcing a positive distance between each number and the endpoints turns out to h
 
 
 
-\begin{example}  \textit{Open Intervals in $\mathbb{R}$}
+\begin{example}  Open Intervals in $\mathbb{R}$
 
 
 The open interval $(4,7)$ is an open set in $\mathbb{R}$.
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 \begin{image}
@@ -150,11 +152,13 @@ Since this is true for all of the numbers in $(4,7)$, the interval is an open se
 
 \newpage
 
-\begin{example}  
+\begin{example}  Open Sets
 
 
 
 The interval $(4,7]$ is not an open set in $\mathbb{R}$.
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 \begin{image}
@@ -230,7 +234,7 @@ The interval $(4,7]$ is not an open set in $\mathbb{R}$.
 
 
 
-Consider the number $7$.  Any open interval around $7$ would look like $(7 - \epsilon, 7 + \delta)$, with both $\epsilon > 0$  and $\delta > 0$.  However, there is always a real number in the interval $(7, 7 + \delta)$, like $7 + \frac{\delta}{2}$, which lies outside $(4, 7]$.
+Consider the number $7$.  Any open interval around $7$ would contain a subinterval like $(7 - \epsilon, 7 + \epsilon)$, with  $\epsilon > 0$.  However, there is always a real number in the interval $(7, 7 + \epsilon)$, like $7 + \frac{\epsilon}{2}$, which lies outside $(4, 7]$.
 
 Therefore, no matter which open interval you choose around $7$, it will always containing a number outside $(4, 7]$.
 
@@ -245,13 +249,13 @@ $\blacktriangleright$ Open intervals cannot contain their endpoints. \\
 
 
 
-\begin{example}  \textit{Unions of Open Intervals} \\
+\begin{example}  Unions of Open Intervals \\
 
 
 Any union of open intervals is itself an open set.
 
 
-
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 Let $S$ be a union of open intervals.  \\
@@ -278,7 +282,7 @@ Then there exists an $\epsilon > 0$, such that $(c - \epsilon, c + \epsilon)$ is
 
 
 
-\begin{example}  \textit{The Empty Set} \\
+\begin{example}  The Empty Set \\
 
 
 The \textbf{empty set}, $\emptyset$, is the set with no element.  The empty set is a subset of the real numbers.  It is the subset containing no real numbers. \\
@@ -288,7 +292,7 @@ $\emptyset$ is an open set. \\
 
 
 
-
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 The reasoning is sort of reverse thinking.  If $\emptyset$ is not open, then it MUST contain a number, such that there is no tiny open interval around it.  There is no such number.  Therefore, $\emptyset$ is an open set.
