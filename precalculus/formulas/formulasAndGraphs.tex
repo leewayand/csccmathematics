@@ -137,157 +137,6 @@ The arrows indicate that the graph continues with the same pattern - illustratin
 
 
 
-\subsection*{Preview: Rate of Change}
-\textbf{\textcolor{red!70!black}{A Peek Ahead}}
-
-
-Much of this course will be spent investigating rate of change. \\
-
-\textbf{Linear functions} have a constant growth rate or rate of change.  Whenever the domain changes by a given amount, then the function changes by a constant multiple of that \textbf{\textcolor{purple!85!blue}{domain change}}. \\
-
-Linear functions have a constant growth rate.    \\
-
-
-
-
-
-Later in this course, we'll compare this to a constant percentage growth rate, which characterizes \textbf{exponential functions}. Whenever the domain changes by a given amount, then the function changes by a constant percentage of the current \textbf{\textcolor{blue!55!black}{function value}}.  A constant percentage growth rate results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$. \\
-
-
-
-\begin{example}
-
-Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
-
-When $t$ changes from $a$ to $a+1$, $E$ grows by $25\%$ of $E(a)$.  Whenever $t$ changes by $1$, $E$ grows by $25\%$, because the function value is multiplied by another $1.25 = 1 + 0.25$.
-
-
-Since $1.25 > 1$, whenever the domain number, $t$, increases, so does $E(t)$.  $E$ is an increasing function.  Its graph goes uphill to the right.
-
-
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=E(t)$},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [draw=penColor,very thick,smooth,domain=(-10:7),<->] {2*(1.25^x)};
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-
-\begin{onlineOnly}
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
-\begin{center}
-\desmos{urudb0lzaj}{400}{300}
-\end{center}
-\end{onlineOnly}
-
-
-
-In addition, $1.25$ to any power will be positive.  This together with $2>0$ tells us that $E(t) > 0$ for all $t$.
-
-
-\end{example}
-
-
-\textbf{Note:} If we change $r$ to be $0 < r < 1$ (keeping $a>0$), the exponential function, $E(t) = a \cdot r^t$, becomes a decreasing function and its graph is reflected horizontally.
-
-
-
-
-
-
-
-\begin{example}
-
-Let $X(t) = 2 \cdot 0.8^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
-
-Whenever $t$ changes by $1$, $X$ decays by $20\%$, because the function value is multiplied by another $0.8 = 1 - 0.2$.
-
-
-
-Since $0.8 < 1$, whenever the domain number, $t$, increases, $X(t)$ decreases.  $X$ is a decreasing function.  Its graph goes downhill to the right.
-
-
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel={$y=X(t)$},
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [draw=penColor,very thick,smooth,domain=(-7:10),<->] {2*(0.8^x)};
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
-
-
-\begin{onlineOnly}
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
-\begin{center}
-\desmos{0lhfebwgwe}{400}{300}
-\end{center}
-\end{onlineOnly}
-
-
-
-
-Still, $0.8$ to any power will be positive.  This together with $2>0$ tells us that $X(t) > 0$ for all $t$.
-
-
-\end{example}
-
-The graph of an exponential function attempts to level off at a height of $0$.  This follows the idea that $0.8$ raised to larger and larger powers will result in a smaller and smaller positive value, but never equal $0$ itself.
-
-
-
-
-
-
 
 
 
@@ -296,7 +145,7 @@ The graph of an exponential function attempts to level off at a height of $0$.  
 
 \subsection*{Zeros}
 
-The real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties.  $0$ also sets itself aside with properties different from both the negative and positive real numbers. \\
+The real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties, especially if they are describing rates of change.  $0$ also sets itself aside with properties different from both the negative and positive real numbers. \\
 
 
 For one thing, anything times $0$ is $0$.
@@ -336,9 +185,11 @@ Then, either $A = 0$ or $B = 0$.
 
 
 
-This states that the ONLY way a product of two real numbers is $0$ is if one of the numbers is $0$.
+This states that the ONLY way a product of two real numbers is $0$ is if one of the numbers is $0$.  
 
-For these reasons, we are interested in where functions have zero values.
+One of our rigor goals is to explain how we know we have accounted for everything and the zero product property provides reasoning toward that.
+
+For all of the reasons above, we are very interested in where functions have zero values.
 
 
 
@@ -388,10 +239,10 @@ Zeros of a function are numbers. \\
 
 Zeros of a function are domain numbers. \\
 
-Zeros of a function are visually encoded as intercept dots on a graph.  These are points on a graph, not zeros of a function. \\
+Zeros of a function are visually encoded inside intercept dots on a graph.  These are points on a graph, not zeros of a function. \\
 
 
-Graphs are not functions.  The are graphical tools we use to investigate and examine functions. \\
+Graphs are not functions.  They are graphical tools we use to investigate and examine functions. \\
 
 
 We have language for graphs.  We have lanaguage for functions.  They are different.
@@ -522,7 +373,7 @@ A function may come already equipped with a stated domain.  Graphs communicate a
 
 
 \item  \textbf{\textcolor{green!50!black}{natural or implied domain}}   \\
-Mathematicians like shorthand. The best shorthand is just nothing.  Nothing is used all over the place. If a function is described with a formula and there is no stated domain, then there is the natural or implied domain.  The natural or implied domain is all real numbers that don't cause a problem with the formula.
+Mathematicians like shorthand. The best shorthand is just nothing.  Nothing is used all over the place in mathematics. If a function is described with a formula and there is no stated domain, then there is the natural or implied domain.  The natural or implied domain is all real numbers that don't cause a problem with the formula.
 
 So far, we know of two problems: square (even) roots of negative numbers and fractions with $0$ denominators.  We will encounter a third problem, which will be logarithms of zero or negative numbers (later). Any real numbers that cause these problems are removed from the real numbers to obtain the natural or implied domain.
 
@@ -590,6 +441,224 @@ Well, that's about it.  Formulas have three problems.  That isn't too much to wa
 
 
 \end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Preview: Rate of Change}
+\textbf{\textcolor{red!70!black}{A Peek Ahead}}
+
+
+Calculus (and much of this course) focuses on tools to help us measure rate of change. 
+
+
+For most functions, their rates of change fluxuate throughout the domain.  We have two functions which have constant aspects to their rates of change.  We like to begin our investigation with these functions.
+
+
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{Linear Functions}}
+
+Linear functions have a constant growth rate or rate of change.  Whenever the domain changes by a given amount, then the function changes by a \textbf{\textcolor{purple!85!blue}{constant multiple}} of that domain change. 
+
+Graphically, this constant growth rate is illustrated as a constant slope of the line graph.
+
+Having a constant rate of change makes linear functions a nice introductory story into function analysis.  
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{Exponential Functions}}
+
+
+Exponential functions do not have a constant growth rate or rate of change. Instead, the percentage of growth is constant for exponential functions.
+
+
+Whenever the domain changes by a given amount, then the function changes by a \textbf{\textcolor{purple!85!blue}{constant percentage}} of the current \textbf{\textcolor{blue!55!black}{function value}}.  
+
+A constant percentage growth rate results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$. \\
+
+
+
+\begin{example} Constant Percentage Growth
+
+Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
+
+When $t$ changes from $a$ to $a+1$, $E$ grows by $25\%$ of $E(a)$.  Whenever $t$ changes by $1$, $E$ grows by $25\%$, because the function value is \textbf{multiplied} by another $1.25 = 1 + 0.25$.
+
+
+Since $1.25 > 1$, whenever the domain number, $t$, increases, so does $E(t)$.  $E$ is an increasing function.  Its graph goes uphill to the right.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=E(t)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-10:7),<->] {2*(1.25^x)};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{urudb0lzaj}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+In addition, $1.25$ to any power will be positive.  This together with $2>0$ tells us that $E(t) > 0$ for all $t$.
+
+
+\end{example}
+
+
+\textbf{Note:} If we change $r$ to be $0 < r < 1$ (keeping $a>0$), the exponential function, $E(t) = a \cdot r^t$, becomes a decreasing function and its graph is reflected horizontally.
+
+
+
+
+
+
+
+\begin{example} Negative Percentage Growth
+
+Let $X(t) = 2 \cdot 0.8^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
+
+Whenever $t$ changes by $1$, $X$ decays by $20\%$, because the function value is multiplied by another $0.8 = 1 - 0.2$.
+
+
+
+Since $0.8 < 1$, whenever the domain number, $t$, increases, $X(t)$ decreases.  $X$ is a decreasing function.  Its graph goes downhill to the right.
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel={$y=X(t)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [draw=penColor,very thick,smooth,domain=(-7:10),<->] {2*(0.8^x)};
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{0lhfebwgwe}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+Still, $0.8$ to any power will be positive.  This together with $2>0$ tells us that $X(t) > 0$ for all $t$.
+
+
+\end{example}
+
+The graph of an exponential function attempts to level off at a height of $0$.  This follows the idea that $0.8$ raised to larger and larger powers will result in a smaller and smaller positive value, but never equal $0$ itself.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
