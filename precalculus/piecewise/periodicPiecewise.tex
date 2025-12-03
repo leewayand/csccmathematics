@@ -23,7 +23,7 @@ In addition to gluing together pieces from several functions, we also have funct
 
 
 
-\begin{example}  \textit{Sawtooth Functions} \\
+\begin{example}  Sawtooth Functions
 
 
 Let's begin with a function whose graph looks like an iscoceles triangle.
@@ -128,7 +128,7 @@ Graph of $y = SawTooth(t)$.
 
 
 
-\begin{question}
+\begin{question} Evaluation
   \begin{itemize}
     \item $SawTooth(0) = \answer{0}$
     \item $SawTooth(1) = \answer{1}$
@@ -165,7 +165,7 @@ SawTooth(x) =
 $SawTooth(x) = SawTooth(x+2)$ tells us to keep jumping by $2$ until you get to a known value.
 
 
-\begin{example}
+\begin{example} Evaluation
 
 
 Evaluate  $SawTooth(9)$. \\
@@ -207,7 +207,34 @@ You can make a periodic function out of any piece of any function, just use that
 
 
 
-Travelling around the unit circle produces two important periodic functions.
+Traveling around the unit circle produces two important periodic functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -236,7 +263,7 @@ The unit circle is the circle of radius $1$ centered at the origin in the Cartes
 Both of these depend on an angle measurement, $\theta$. $\theta$ is the angle made between the positive horizontal axis and a radius formed by drawing a line from the origin (center of the circle) the point on the unit circle.
 
 
-\begin{example} \textit{Sine} and \textit{Cosine}  \\
+\begin{example} Sine and Cosine  
 
 \begin{image}
 \begin{tikzpicture} 
@@ -319,6 +346,44 @@ As the angle turns around the unit circle, these coordinates repeat. Sine and co
 
 
 
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Cosine}}
+
+
+Given an angle $\theta$, measured counterclockwise from the positive $x$-axis, draw a radius from the origin to the unit circle.  This radius intersects the unit circle in exactly one point.
+
+
+$\cos(\theta)$ is the value of the $x$-coordinate of that intersection point.
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Sine}}
+
+
+Given an angle $\theta$, measured counterclockwise from the positive $x$-axis, draw a radius from the origin to the unit circle.  This radius intersects the unit circle in exactly one point.
+
+
+$\sin(\theta)$ is the value of the $y$-coordinate of that intersection point.
+
+
+\end{definition}
+
+
+
+
+
+
 \begin{remark}  Etymology
 
 
@@ -368,7 +433,7 @@ The domain of \textit{sine} and \textit{cosine} are real numbers interpreted as 
 As the angle, $\theta$, rotates counter-clockwise from $0^\circ$, the value of cosine start at $1$, decreases to $0$ at $90^\circ$, keeps decreasing to $-1$ at $180^\circ$, increases to $0$ at $270^\circ$, keeps increasing to $1$ at $360^\circ$.  These values continue to repeat with a period of $360^\circ$.
 
 \item With Radians: \\
-As the angle, $\theta$, rotates counter-clockwise from $0^\circ$, the values of cosine start at $1$, decrease to $0$ at $\frac{\pi}{2}$, keeps decreasing to $-1$ at $\pi$, increases to $0$ at $\frac{3\pi}{2}$, keeps increasing to $1$ at $32\pi$.  These values continue to repeat with a period of $2\pi$.
+As the angle, $\theta$, rotates counter-clockwise from $0^\circ$, the values of cosine start at $1$, decrease to $0$ at $\frac{\pi}{2}$, keeps decreasing to $-1$ at $\pi$, increases to $0$ at $\frac{3\pi}{2}$, keeps increasing to $1$ at $2\pi$.  These values continue to repeat with a period of $2\pi$.
 \end{itemize}
 \end{idea}
 
@@ -401,13 +466,92 @@ Angles are measured counterclockwise from the positive horizontal axis.  It is l
 
 
 
+
+
+
+
+
+
+
+
+\begin{example} Values
+
+The radius from the origin at $45^{\circ}$ intersects the unit circle at $\left( \frac{1}{\sqrt{2}},  \frac{1}{\sqrt{2}} \right)$.
+
+
+Therefore,
+
+\[
+\cos(45^{\circ}) = \cos\left( \frac{\pi}{4} \right) = \frac{1}{\sqrt{2}}
+\]
+
+
+
+$765^{\circ}$ = $45^{\circ} + 360^{\circ} + 360^{\circ}$
+
+
+\[
+\cos(765^{\circ}) = \cos(45^{\circ}) = \frac{1}{\sqrt{2}}
+\]
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example} Values
+
+The radius from the origin at $135^{\circ}$ intersects the unit circle at $\left( -\frac{1}{\sqrt{2}},  \frac{1}{\sqrt{2}} \right)$.
+
+
+Therefore,
+
+\[
+\cos(135^{\circ}) = \cos\left( \frac{3\pi}{4} \right) = -\frac{1}{\sqrt{2}}
+\]
+
+
+
+$-225^{\circ}$ = $135^{\circ} - 360^{\circ}$
+
+
+\[
+\cos(-225^{\circ}) = \cos(135^{\circ}) = -\frac{1}{\sqrt{2}}
+\]
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{warning}
 It turns out that there are many connections between sine and cosine. Many. One of these connections concerns rate of change, which is a very important thread in this course.  The easiest way to describe these connections is with radians. Hence, Calculus only uses radians. Therefore, we will attempt to speak in radians as much as possible.
 \end{warning}
 
 
 
-Sine and Cosine are periodic functions with periods of $2\pi$. Therefore, we only need examine the interval $[0, 2\pi)$ and then repeat our findings every $2\pi$. \\
+Sine and Cosine are periodic functions with periods of $2\pi$ (radians). Therefore, we only need examine the interval $[0, 2\pi)$ and then repeat our findings every $2\pi$. \\
 
 
 We call the interval $[0, 2\pi)$, the \textbf{principle interval} for sine and cosine. \\
@@ -444,6 +588,182 @@ From the graphs we can see that Sine and Cosine have maximum and minimum values.
 \end{itemize}
 
 \end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Easy Angles}
+
+
+
+
+
+Sine and cosine are \textbf{transcendental functions}.  They transcend Algebra. They are beyond our usual algebraic tools.  That makes equations difficult when they involve sine and cosine.
+
+
+This is true unless you work with angles that just happen to have nice values for sine and cosine.  We have several easy angles: $30^{\circ}$, $45^{\circ}$, and $60^{\circ}$.
+
+
+
+
+\begin{itemize}
+\item $\sin(30^{\circ}) = \frac{1}{2}$
+\item $\cos(30^{\circ}) = \frac{\sqrt{3}}{2}$
+\end{itemize}
+
+
+And, since $30^{\circ}$ and $60^{\circ}$ make up a right triangle, we have 
+
+
+\begin{itemize}
+\item $\sin(60^{\circ}) = \frac{\sqrt{3}}{2}$
+\item $\cos(60^{\circ}) = \frac{1}{2}$
+\end{itemize}
+
+
+
+
+$45^{\circ}$ cuts the quadrant in half making sine and cosine equal.
+
+\begin{itemize}
+\item $\sin(45^{\circ}) = \frac{1}{\sqrt{2}}$
+\item $\cos(45^{\circ}) = \frac{1}{\sqrt{2}}$
+\end{itemize}
+
+
+
+Add these to $0^{\circ}$, $90^{\circ}$, $180^{\circ}$, and $270^{\circ}$ and we can walk around the unit circle.
+
+
+
+
+
+
+  \begin{image}
+    \begin{tikzpicture}[scale=5.3,cap=round,>=latex]
+        % draw the coordinates
+        \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
+        \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
+
+        % draw the unit circle
+        \draw[thick] (0cm,0cm) circle(1cm);
+
+        \foreach \x in {0,30,...,360} {
+                % lines from center to point
+                \draw[gray] (0cm,0cm) -- (\x:1cm);
+                % dots at each point
+                \filldraw[black] (\x:1cm) circle(0.4pt);
+                % draw each angle in degrees
+                \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
+        }
+
+        % draw each angle in radians
+        \foreach \x/\xtext in {
+            30/\frac{\pi}{6},
+            45/\frac{\pi}{4},
+            60/\frac{\pi}{3},
+            90/\frac{\pi}{2},
+            120/\frac{2\pi}{3},
+            135/\frac{3\pi}{4},
+            150/\frac{5\pi}{6},
+            180/\pi,
+            210/\frac{7\pi}{6},
+            225/\frac{5\pi}{4},
+            240/\frac{4\pi}{3},
+            270/\frac{3\pi}{2},
+            300/\frac{5\pi}{3},
+            315/\frac{7\pi}{4},
+            330/\frac{11\pi}{6},
+            360/2\pi}
+                \draw (\x:0.85cm) node[fill=white] {$\xtext$};
+
+        \foreach \x/\xtext/\y in {
+            % the coordinates for the first quadrant
+            30/\frac{\sqrt{3}}{2}/\frac{1}{2},
+            45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+            60/\frac{1}{2}/\frac{\sqrt{3}}{2},
+            % the coordinates for the second quadrant
+            150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
+            135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
+            120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
+            % the coordinates for the third quadrant
+            210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
+            225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+            240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
+            % the coordinates for the fourth quadrant
+            330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
+            315/\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
+            300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
+                \draw (\x:1.25cm) node[fill=white] {$\left(\xtext,\y\right)$};
+
+        % draw the horizontal and vertical coordinates
+        % the placement is better this way
+        \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
+              (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
+              (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
+              (0cm,1.25cm)  node[fill=white] {$(0,1)$};
+    \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{question} Value
+
+
+\[
+\sin\left \frac{7\pi}{6} \right) = \answer{-\frac{1}{2}}
+\]
+
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question} Value
+
+
+\[
+\cos\left \frac{5\pi}{3} \right) = \answer{\frac{1}{2}}
+\]
+
+
+\end{question}
+
 
 
 
