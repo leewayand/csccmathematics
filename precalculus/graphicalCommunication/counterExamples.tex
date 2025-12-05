@@ -262,6 +262,174 @@ Some of the values of $H$ are less than or equal to $2$, but this statement clai
 
 
 
+
+\subsection{If Then}
+
+
+It is quite common to present a statement about functions in the form of an \textbf{IF-THEN} statment.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ IF: }} The ``if'' part of the statement lists all of the assumptions, all of the facts that are known to be true of the situation.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ THEN: }} The ``then'' part of the statement describes the consequences of those assumptions.
+
+
+
+
+The IF-THEN claims that if all of the assumptions are true, then it is automatically true that the consequence is also true.
+
+
+
+
+
+
+The IF-THEN statements could be true or false.
+
+
+
+\begin{example} Continuity
+
+
+Claim: If the domain of a function is domain is $(-\infty, \infty)$, then the function is contiuous.
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+We have already seen a function which shows that this statement is false.
+
+
+
+Earlier we encountered the greatest integer function (also known as the ceiling function).
+
+
+The domain of GIF is $(-\infty, \infty)$.  But, it is not a continuous function.  There is a discontinuity at every integer.
+
+\end{example}
+
+
+This example explained that the IF-THEN statement is false by presenting a \textbf{counterexample}.
+
+
+The GIF function is the counterexample that shows the IF-THEN statement is false.
+
+
+\begin{explanation} Counterexample
+
+
+The GIF function satisfies the assumptions given in the IF part of the statement. The domain of GIF function is $(-\infty, \infty)$.  The \textbf{\textcolor{purple!85!blue}{IF}} part is  \textbf{\textcolor{purple!85!blue}{true}}.
+
+The \textbf{\textcolor{blue!75!black}{THEN}} part is  \textbf{\textcolor{blue!75!black}{false}}. The GIF function is not contiuous.  We saw the jumps in the graph.
+
+
+\end{explanation}
+
+
+
+At the beginning, it is usually easiest to draw the graphg of functions that are counterexamples to statements.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ IF or LET}}
+
+SOmetimes people will write ``let'' instead of ``if''.  They both present the ture part of the statement, the assumptions.
+
+
+\begin{example} Counterexample
+
+
+
+Let $f$ be a function with domain $[-3, 7]$ with $f$ increasing on $[-3.1)$ and decreasing on $(1,7]$.  
+
+Then $f(1)$ is the maximum value of the function.
+
+
+
+This statement is false.  A counterexample is drawn below.
+
+
+
+
+
+Graph of $y = f(v)$.
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+     \addplot [draw=penColor,very thick,smooth,domain=(-3:1)] {2*x-3};
+     \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+3};
+     \addplot[color=penColor,only marks,mark=*] coordinates{(-3,-9)}; 
+     \addplot[color=penColor,only marks,mark=*] coordinates{(1,-1)};
+
+     \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(1,2)};
+     \addplot[color=penColor,only marks,mark=*] coordinates{(7,-4)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+All of the assumptions in the IF/LET part are true.
+
+\begin{itemize}
+     \item $f$ is a function with domain $[-3, 7]$.
+     \item $f$ is increasing on $[-3.1)$.
+     \item $f$ is decreasing on $(1,7]$.
+\end{itemize}
+
+
+
+However, the THEN part is false.  $f(1) = -1$ is not the maximum value.
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{onlineOnly}
 \begin{center}
 \textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
