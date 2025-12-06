@@ -275,6 +275,152 @@ The graph appears to have two intercepts, not three. This means the function $P$
 
 
 
+
+
+
+
+
+
+
+
+\begin{example} Hidden Zeros
+
+
+
+
+
+Let $K(z)$ be a function.  The graph of $y = K(z)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$z$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-4),->] {-(x+8)*(x+5)+5};
+        %\addplot [draw=penColor, very thick, smooth, domain=(-4:4)] {sin(deg(2*x)) + 4};
+        %\addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {-2*x+15};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,5)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-4)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The graph appears to have no intercepts.  That is because the whole graph is not drawn.  The arrow tells us that the graph continues to go down to the right.
+
+That means there is an intercept around $(-3.8,0)$.
+
+
+$-3.8$ is the only zero of $K(z)$.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Hidden Zeros
+
+
+
+
+
+Let $S(\theta)$ be a function.  The graph of $y = S(\theta)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$\theta$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-8:-4),->] {-(x+8)*(x+5)+5};
+        \addplot [draw=penColor, very thick, smooth, domain=(-4:4),<->] {sin(deg(x/3.14))};
+        %\addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {-2*x+15};
+
+
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,5)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-4)};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The graph appears to have an infinite number of intercepts.  
+
+
+
+
+
+
+$-3.8$ is the only zero of $S(\theta)$.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{onlineOnly}
 \begin{center}
 \textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
