@@ -373,7 +373,7 @@ Let $S(\theta)$ be a function.  The graph of $y = S(\theta)$ is displayed below.
 
         
         %\addplot [draw=penColor, very thick, smooth, domain=(-8:-4),->] {-(x+8)*(x+5)+5};
-        \addplot [draw=penColor, very thick, smooth, domain=(-4:4),<->] {sin(deg(x/3.14))};
+        \addplot [draw=penColor, very thick, smooth, domain=(-4:4),<->] {sin(deg(x*6.28))};
         %\addplot [draw=penColor, very thick, smooth, domain=(4:6),->] {-2*x+15};
 
 
@@ -387,12 +387,16 @@ Let $S(\theta)$ be a function.  The graph of $y = S(\theta)$ is displayed below.
 
 The graph appears to have an infinite number of intercepts.  
 
+They occur at even integers.
 
 
 
+The zeros of $S(\theta)$ are
 
 
-$-3.8$ is the only zero of $S(\theta)$.
+\[
+\{ 2k \, \text{ | } \,  k \in \mathbb{Z}    \}
+\]
 
 
 \end{example}
