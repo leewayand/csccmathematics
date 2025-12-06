@@ -149,7 +149,7 @@ We can visualize the dots on the graph smashed vertically to the horizontal axis
 
 
 
-\begin{example}
+\begin{example} Horizontal Asymptote
 
 
 Here is a complete graph of $K(v)$. \\
@@ -188,6 +188,9 @@ Here is a complete graph of $K(v)$. \\
 
 
 
+If we drop all of the points down to the horizontal axis, we get a picture of the domain. \\
+
+
 
 
 
@@ -196,7 +199,7 @@ Here is a complete graph of $K(v)$. \\
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$v$, ylabel=${domain}$,
+                axis lines =center, xlabel=${domain}$, ylabel=$ $,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -253,10 +256,14 @@ The domain of the function $K$ is $[-6, \infty)$.
 
 
 
-\begin{example}
+\begin{example} No Horizontal Axis
 
 
-Here is a complete graph of $p(x)$. \\
+Here is a complete graph of $p(t)$. 
+
+
+
+There is no horizontal axis and no arrow on the graph.  Instead, there is a solid dot, which shows us the end of the domain.
 
 
 \begin{image}
@@ -294,6 +301,9 @@ Here is a complete graph of $p(x)$. \\
 
 
 
+If we drop all of the points down to the horizontal axis, we get a picture of the domain. \\
+
+
 
 
 
@@ -302,7 +312,7 @@ Here is a complete graph of $p(x)$. \\
 \begin{tikzpicture}
      \begin{axis}[
                 domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-                axis lines =center, xlabel=$t$, ylabel=${domain}$,
+                axis lines =center, xlabel=${domain}$, ylabel=$ $,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -340,6 +350,554 @@ The domain of the function $p$ is $[-6, 10]$.
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Logarithm
+
+
+Here is a complete graph of $L(k)$. 
+
+
+
+There is no horizontal axis and no arrow on the graph.  Instead, there is a solid dot, which shows us the end of the domain.
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$k$, ylabel=${k=L(k)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(0.001:0.01),<-] {ln(x)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(0.01:10),->] {ln(x)};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({0},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(-6,5.25)}; 
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(10,1.8)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+If we drop all of the points down to the horizontal axis, we get a picture of the domain. \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=${domain}$, ylabel=$ $,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor2, very thick, smooth, domain=(0:10),->] {0};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(-6,0)}; 
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(10,0)}; 
+        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(0,0)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+The domain of the function $p$ is $(0, \infty)$. 
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Breaks
+
+
+Here is a complete graph of $g(t)$. 
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$t$, ylabel={$y=g(t)$},
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:6), <-] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(6:8), ->] {2*x-14};
+
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,1.88)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+If we drop all of the points down to the horizontal axis, we get a picture of the domain. \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=${domain}$, ylabel=$ $,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor2, very thick, smooth, domain=(-10:10),<->] {0};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(-6,0)}; 
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(10,0)}; 
+        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-6,0)}; 
+        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0)};
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+The domain of the function $p$ is $(-\infty, -6) \cup (-6,3) \cup (3,\infty)$. 
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Breaks
+
+
+Here is a complete graph of $z=K(y)$. 
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$y$, ylabel=$z$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:4)] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,-2.5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,1)};
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+If we drop all of the points down to the horizontal axis, we get a picture of the domain. \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=${domain}$, ylabel=$ $,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor2, very thick, smooth, domain=(-9:8)] {0};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(-6,0)}; 
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(10,0)}; 
+        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-8,0)}; 
+        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(4,0)};
+         \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,0)};
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+The domain of the function $p$ is $(-8, 4) \cup (4,8)$. 
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Breaks and Gaps
+
+Let $h(t)$ be a function.  The graph of $y= h(t)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-3)] {-x};
+        \addplot [draw=penColor, very thick, smooth, domain=(-1:3)] {0.5*x-1};
+        \addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,8)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-3,3)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,-1.5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3,0.5)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,2)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+If we drop all of the points down to the horizontal axis, we get a picture of the domain. \\
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=${domain}$, ylabel=$ $,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+          \addplot [draw=penColor2, very thick, smooth, domain=(-8:-3)] {0};
+          \addplot [draw=penColor2, very thick, smooth, domain=(-1:3)] {0};
+          \addplot [draw=penColor2, very thick, smooth, domain=(4:8)] {0};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(-6,0)}; 
+        %\addplot[color=penColor2,only marks,mark=*] coordinates{(10,0)}; 
+        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-8,0)}; 
+        \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(-3,0)};
+
+        \addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(-1,-1.5)};
+         \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(3,0.5)};
+
+          
+         \addplot[color=penColor2,fill=penColor,only marks,mark=*] coordinates{(4,2)};
+         \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,-6)};
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+The domain of the function $p$ is $(-8, -3) \cup [-1,3) \cup [4,8)$. 
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

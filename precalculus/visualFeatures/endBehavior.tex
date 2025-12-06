@@ -15,8 +15,13 @@ settling down
 $(-\infty, \infty)$ is very long. \\
 
 
+When we think of analyzing functions, we envision three pieces of the real line. \\
 
-There is the \textbf{\textcolor{red!80!black}{left tail}}, which is the part with very very very very large negative numbers. There is the \textbf{\textcolor{red!80!black}{right tail}}, which is the part with very very very very large positive numbers. Then, there is the middle part. \\
+
+
+
+
+There is the \textbf{\textcolor{red!80!black}{left tail}}, which is the part with very very very very large negative numbers. There is the \textbf{\textcolor{red!80!black}{right tail}}, which is the part with very very very very large positive numbers. Then, there is the \textbf{\textcolor{purple!85!blue}{middle}} part. \\
 
 All of the individual characteristics of a function happen in the middle. \\
 
@@ -75,6 +80,65 @@ The horizontal asymptote is communicating end-behavior.  It tells us that as we 
 
 
 
+We also have algebraic notation that describes the end-behavior.
+
+
+\[
+\lim\limits{x \to -\infty} G(x) = 2
+\]
+
+
+
+\[
+\lim\limits{x \to \infty} G(x) = 2
+\]
+
+
+
+\begin{notation} Limits
+
+
+``lim'' is shorthand for limit.  
+
+
+Underneath ``lim'' we show which tail we are talking about. 
+
+
+$\blacktriangleright$ If we are talking about the left tail then we write $variable \to -\infty$.
+
+$\blacktriangleright$ If we are talking about the right tail then we write $variable \to \infty$.
+
+All of that fits underneath ``lim''.
+
+
+
+The function name is written next, then $=$, then the expected value is written.
+
+
+
+The expected value could be 
+
+\begin{itemize}
+\item a number
+\item $\infty$, indicating that the funciton is unbounded positively
+\item $-\infty$, indicating that the funciton is unbounded negatively
+\item DNE, indicating that the function is doing none of those
+\end{itemize}
+
+
+\end{notation}
+
+
+
+
+
+
+
+
+
+
+
+
 Here is the complete graph of the function $H(t)$. \\
 
 
@@ -115,9 +179,9 @@ Here is the complete graph of the function $H(t)$. \\
 
 The graph of $H$ does not have horizontal asymptote.  That is meaningful.  The fact that the horizontal asymptote is not included in the drawing tells us that the function does not settle down, getting closer to $2$.  Otherwise, there would have been a horizontal asymptote. (This is an example of a missing symbol communicating meaning.)\\
 
-From this, we deduce that as we move out in the domain towards $\infty$ (the right tail), the value of $H$ grows bigger and bigger negatively. \\
+From this, we deduce that as we move out in the domain towards $\infty$ (the right tail), the value of $H$ grows bigger and bigger - unbounded negatively. \\
 
-We also deduce that as we move out in the domain towards $-\infty$ (the left tail), the value of $H$ grows bigger and bigger positively. \\
+We also deduce that as we move out in the domain towards $-\infty$ (the left tail), the value of $H$ grows bigger and bigger - unbounded positively. \\
 
 
 The graphs suggests that this unbounded growth might be very slow, but $H$ does become unbounded.
@@ -126,9 +190,46 @@ The graphs suggests that this unbounded growth might be very slow, but $H$ does 
 
 
 
+\[
+\lim\limits{t \to -\infty} H(t) = \infty
+\]
 
-\begin{example}
-Limiting Behavior
+
+
+\[
+\lim\limits{t \to \infty} H(t) = -\infty
+\]
+
+
+
+
+\begin{warning} Bigger and Bigger
+
+
+Bigger and bigger does not mean the limit is $\infty$.
+
+
+For example,  $E(x) = 7 - e^{-x}$ is an increasing function.  Its values get bigger and bigger as $x$ moves out through the right tail. But, it does not become unbounded. Its values get closer and closer to $7$.
+
+
+
+
+
+\[
+\lim\limits{x \to \infty} E(x) = 7
+\]
+
+
+
+\end{warning}
+
+
+
+
+
+
+
+\begin{example} Limiting Behavior
 
 Here is a complete graph of $K(v)$. \\
 
@@ -167,9 +268,33 @@ Here is a complete graph of $K(v)$. \\
 
 
 
-The domain of the function $K$ is $[-6, \infty)$. Therefore, it only has one end-behavior.  As we move out in the domain towards $\infty$, $K$ approaches $2$.  The value of $K$ continues to oscillate above and below $2$ as it moves cloaser and closer to the value of $2$. \\
+The domain of the function $K$ is $[-6, \infty)$. Therefore, it only has one end-behavior.  As we move out in the domain towards $\infty$, $K$ approaches $2$.  The value of $K$ continues to oscillate above and below $2$ as it moves cloaser and closer to the value of $2$. 
+
+
+
+
+
+\[
+\lim\limits{v \to \infty} K(v) = 2
+\]
+
+
+
+
 
 $K$ does not have an end-behavior as the domain moves towards $-\infty$, because the domain doesn't move towards $-\infty$ (no left tail).
+
+
+
+
+
+\[
+\lim\limits{v \to \-infty} K(v) = DNE
+\]
+
+
+
+
 
 \end{example}
 
@@ -187,8 +312,7 @@ $K$ does not have an end-behavior as the domain moves towards $-\infty$, because
 
 
 
-\begin{example}
-No End-Behavior
+\begin{example} No End-Behavior
 
 Here is a complete graph of $p(x)$. \\
 
@@ -260,21 +384,21 @@ The domain of the function $p$ is $[-6, 10]$. Therefore, it has no end-behavior.
 
 
 
-\subsection*{Language}
+\subsection*{Language for End-Behavior}
 
 
-We have language for end-behavior. \\
+We have language, symbols, and notation for end-behavior. \\
 
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Graphical Language}} 
 
 
-We use graphic symbols on our graphs to communicate to readers how the function behaves in the two tails of thee domain.  These are horizontal asymptotes and are drawn as dashed horizontal lines on the graph.\\
+We use graphic symbols on our graphs to communicate to readers how the function behaves in the two tails of the domain.  These are horizontal asymptotes and are drawn as dashed horizontal lines on the graph.\\
 
 If there is a horizontal dashed line, that is telling the reader that the function's values will eventually get close to a constant value and stay there. \\
 
-If there is no horizontal dashed asymptote, then the function's values \textbf{do not} eventually get close to a constant value and stay there. It doesn;t matter what is ``looks like''.
+If there is no horizontal dashed asymptote, then the function's values \textbf{do not} eventually get close to a constant value and stay there. It doesn't matter what is ``looks like''.
 
 The horizontal asymptotes tells the reader something and its absence also tells the reader something. \\
 
@@ -315,7 +439,7 @@ When the graph $y = f(x)$ of the function $f$ includes the horizontal asymptote 
 
 \begin{example}
 
-Here is the complete graph of the function $G(x)$.
+Here is the complete graph of the function $R(m)$.
 
 
 
@@ -325,7 +449,7 @@ Here is the complete graph of the function $G(x)$.
 \begin{tikzpicture}
      \begin{axis}[
                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-               axis lines =center, xlabel=$x$, ylabel=$y$,
+               axis lines =center, xlabel=$m$, ylabel=$y$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -337,13 +461,14 @@ Here is the complete graph of the function $G(x)$.
                     ]
 
         
-        \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
-        \addplot [draw=penColor, very thick, smooth, domain=(3:8), ->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(-9:9), <->] {(3-4*(2.7^(-x)))/(1+2.7^(-x))};
+        
 
-        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
         \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
 
-        \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
         %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
 
 
@@ -355,18 +480,18 @@ Here is the complete graph of the function $G(x)$.
 \end{image}
 
 
-The horizontal asymptote graphically gives the same information as 
+The horizontal asymptotes graphically give the same information as 
 
 
 
 \[
-\lim\limits_{x \to \infty}G(x) = 2
+\lim\limits_{m \to \infty}R(m) = 3
 \]
 
 
 
 \[
-\lim\limits_{x \to -\infty}G(x) = 2
+\lim\limits_{m \to -\infty}R(m) = -4
 \]
 
 
@@ -400,14 +525,14 @@ The horizontal asymptote graphically gives the same information as
 
 
 
-Here is the complete graph of the function $H(t)$. \\
+Here is the complete graph of the function $W(p)$. \\
 
 
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-               axis lines =center, xlabel=$t$, ylabel=${y=H(t)}$,
+               axis lines =center, xlabel=$p$, ylabel=${y=W(p)}$,
                 ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
                 yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -419,13 +544,13 @@ Here is the complete graph of the function $H(t)$. \\
                     ]
 
         
-        \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
-        \addplot [draw=penColor, very thick, smooth, domain=(3:8),->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(-9:9), <->] {1+4*cos(deg(x))};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8),->] {1/(x-3) + 2};
 
-        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
         %\addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
 
-        \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
         %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
 
 
@@ -438,29 +563,84 @@ Here is the complete graph of the function $H(t)$. \\
 
 
 
-The missing horizontal asymptote graphically gives the same information as 
+This function does not become unbounded.  It does not settle down and approach a constant value. Instead, it continues to oscillate through both tails
 
 
 
 \[
-\lim\limits_{t \to \infty}H(t) = -\infty
+\lim\limits_{p \to \infty}W(p) = DNE
 \]
 
 
 
 \[
-\lim\limits_{t \to -\infty}H(t) = \infty
+\lim\limits_{p \to -\infty}W(p) = DNE
 \]
 
 
 
-
-If that wasn;t true, then the author of the graph would have included a horizontal asymptote, and they didn't.
 
 
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{remark} Discontinuties and Singularities
+
+
+Graphs have vertical asymptotes, just like they have horizontal asymptotes.
+
+Graphs also have holes and jumps.
+
+
+All of these involve expected values, which do not agree with actual values.
+
+
+We would like to describe these discrepencies.
+
+
+Limits will be our language for these as well.
+
+
+
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

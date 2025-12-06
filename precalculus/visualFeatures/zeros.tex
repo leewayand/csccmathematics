@@ -15,10 +15,10 @@ intercepts
 
 Let $f$ be a function with its natural domain. \\
 
-The domain number $b$ is a \textbf{\textcolor{blue!55!black}{zero}} of $f$, if $f(b) = 0$. \\ 
+AS we saw before, a domain number $b$ is a \textbf{\textcolor{blue!55!black}{zero}} of $f$, if $f(b) = 0$. \\ 
 
 
-The point corresponding to the zero $b$ is $(b, f(b)) = (b, 0)$, an intercept. \\
+The point corresponding to the zero $b$ is $(b, f(b)) = (b, 0)$, an intercept on the graph. \\
 
 
 
@@ -62,19 +62,197 @@ Here is the complete graph of the function $G(x)$. \\
 \end{image}
 
 
-The graph has one intercept, which means that $G$ has one zero, which appears to be $2.4$. \\
+The graph has one intercept, which means that $G$ has one zero, which appears to be $2.4$. 
 
 \[  G(2.4) = 0  \]
 
 
 
 
-The graph has another intercept: $(0, 1.7)$. This tells us that $G(0)=1.7$.  However, this is not really useful information in function analysis. \\
+The graph has another intercept: $(0, 1.7)$. This tells us that $G(0)=1.7$.  However, this is not really useful information in function analysis. 
+
+It might be useful information if the function was modeling some situation, so that the domain was an applied domain.
 
 
-If this function was a model for some timed event, then perhaps $t = 0$, would be important to the situation, as initial information.  That would be left for the interpretation of the model. \\
+
+If this function was a model for some timed event, then perhaps $t = 0$, would be important to interpret back to the situation, as initial information.  That would be left for the interpretation of the model. 
+
 
 When analyzing a function, we are mostly interested in its zeros, which correspond to intercepts on the horizontal axis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Zeros
+
+
+
+
+
+
+
+
+Here is the complete graph of the function $G(x)$. \\
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:3), <->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:8), ->] {1/(x-3) + 2};
+
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{2});
+
+        \addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+The graph appears to have two intercepts, which means the function $g$ has two zeros.
+
+
+
+
+\begin{itemize}
+\item Intercepts of graph: $(3,0)$ and $(7,0)$.
+\item Zeros of $g$: $3$ and $7$.
+\end{itemize}
+
+
+
+\textbf{Note:} The intercepts are points on the graph.  They are not zeros of the function.  Function zeros are domain numbers.  The intercepts on the graph visually encode a function zero as the first coordinate of the intercept.
+
+
+
+\textbf{Note:} The $y$-intercept has nothing to do with function zeros.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Zeros
+
+
+
+
+
+Let $P(w)$ be a function.  The graph of $y = P(w)$ is displayed below. 
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$w$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-8:-4)] {-(x+8)*(x+5)};
+        \addplot [draw=penColor, very thick, smooth, domain=(-4:4)] {sin(deg(2*x)) + 4};
+        \addplot [draw=penColor, very thick, smooth, domain=(4:8)] {-2*x+10};
+
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-8,0)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-4)};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-4,3.01) (-8,4)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,4.989)};
+
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,2)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(8,-6)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+The graph appears to have two intercepts, not three. This means the function $P$ has two zeros.
+
+
+
+
+\begin{itemize}
+\item Intercepts of graph: $(-5,0)$ and $(5,0)$.
+\item Zeros of $P$: $-5$ and $5$.
+\end{itemize}
+
+
+
+\textbf{Note:} The intercepts are points on the graph.  They are not zeros of the function.  Function zeros are domain numbers.  The intercepts on the graph visually encode a function zero as the first coordinate of the intercept.
+
+\textbf{Note:} $-8$ is in the domain. However, there is an open/hollow dot at $(-8,0)$. which means it is not there.  The dot for $-8$ is $(-8,4)$.  $-8$ is not a zero of $P$.
+
+
+\textbf{Note:} The $y$-intercept has nothing to do with function zeros.
+
+
+\end{example}
 
 
 
