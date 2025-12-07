@@ -22,7 +22,7 @@ There are two views on extreme values.
 \begin{definition} \textbf{\textcolor{green!50!black}{Global Extreme Values}} 
 
 \begin{itemize}
-\item The \textbf{global maximum value} is the greatest value of the function.  
+\item The \textbf{global maximum value} is the greatest value of the function on its whoe domain.  
 
 \[  f(c) \text{ is a global maximum if } f(x) \leq f(c) \text{ for all } x \text{ in the domain of } f \]
 
@@ -159,7 +159,7 @@ Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below.
 Let's run through the idea of a local extrema for the previous example. \\
 
 
-\begin{explanation} \textit{Local Explanations}
+\begin{explanation} Local Explanations
 
 
 
@@ -327,7 +327,7 @@ The real numbers have a special property which makes Calculus work. \\
 
 We can illustrate this property with the number $8$. \\
 
-\textbf{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
@@ -335,7 +335,7 @@ We can illustrate this property with the number $8$. \\
 There is no real number ``just below $8$''.  \\
 
 
-If you choose any real number, $r$, below $8$ to be the possible candidate for the previous number, then there is the number $\frac{8+r}{2}$. 
+If you choose any real number, $r$, below $8$, to be the possible candidate for the previous number, then there is the number $\frac{8+r}{2}$. 
 
 \[  
 r < \frac{8+r}{2} < 8
@@ -352,7 +352,7 @@ This is the idea behind space and open intervals.
 
 
 
-\begin{explanation} \textit{Local Explanations}
+\begin{explanation} Local Explanations
 
 
 Let $0 < \epsilon = \answer{0.5}$.  $T(-8) \leq T(p)$ for all $p$ in the domain within a distance of $0.5$ from $-8$, which would be the interval $[-8, -7.5)$.
@@ -403,9 +403,20 @@ Linear functions have the same rate of change over any interval. \\
 
 That is not quite true.  They have a constant rate of change over an interval of the form $[a, b]$, where $a \ne b$. \\
 
+
+If $ a = b$, then the rate of change would be 
+
+\[
+\frac{f(b)-f(a)}{b-a} = \frac{0}{0} = ?
+\]
+
 As a mental exercise, if a linear function has the exact same rate of change over any interval $[a, b]$, then doesn't it feel like the linear function should have the same rate of change over the interval $[a, a]$? \\
 
-Just thinking.
+
+
+Calculus is interested in the rate of change over teh interval $[a,a]$.
+
+We will use limits to think about such a measurement.
 
 
 
