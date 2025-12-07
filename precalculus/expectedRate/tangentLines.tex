@@ -73,15 +73,15 @@ The parabola and line have a special relationship, which we can see by zooming i
 
 
 
-As you zoom in, the graph slowly looks more and more like the line. \\
+As you zoom in, the graph of $Q(x)$ slowly looks more and more like the line. 
 
 
-The line does the best job of approximating the graph at the point $\left( 3, \frac{3}{2} \right)$. \\
+The line does the best job of approximating the graph at the point $\left( 3, \frac{3}{2} \right)$. 
 
 
-And, this is the only line that will work for the point $\left( 3, \frac{3}{2} \right)$.  Any other line, besides this one, will have a permanant angle between the graph and the line.  \\
+And, this is the only line that will work for the point $\left( 3, \frac{3}{2} \right)$.  Any other line, besides this one, will have a permanant nonzero angle between the graph and the line.  
 
-The graph and this particular line have the same ``slope'' at the point. \\
+The graph and this particular line have the same ``slope'' at the point. 
 
 
 This line is called the \textbf{\textcolor{blue!55!black}{tangent line}} for $Q(x) = \frac{1}{2} (x - 2)^2 + 1$ at the point $\left( 3, \frac{3}{2} \right)$.
@@ -92,13 +92,13 @@ This line is called the \textbf{\textcolor{blue!55!black}{tangent line}} for $Q(
 \begin{definition} \textbf{\textcolor{green!50!black}{Tangent Line}}
 
 
-Suppose $C$ is a curve, like the graph of a function. \\
+Suppose $C$ is a curve, like the graph of a function. 
 
 Let $(a, b)$ be a point on the curve.
 
 The line tangent to the curve, $C$, at the point $(a, b)$ is the line that goes through the point $(a, b)$ and does the best job of approximating the curve at the point $(a, b)$.
 
-This line is called a \textbf{tangent line} or a \textbf{tangent} at the point $(a, b)$.
+This line is called the \textbf{tangent line} at the point $(a, b)$.
 
 
 
@@ -106,21 +106,51 @@ This line is called a \textbf{tangent line} or a \textbf{tangent} at the point $
 \end{definition}
 
 
-Since ``slope'' is a characteristic of a line and a curve is not a line, curves do not have a slope as we know that word. \\
+Since ``slope'' is a characteristic of a line and a curve is not a line, curves do not have a slope as we know that word. We are inventing a meaning.
 
-However, it is easy to see that curves have something that seems a lot like a slope at points. We will adopt the slope of the tangent as the slope of the curve. \\
+It is easy to see that curves have something that seems a lot like a slope at points. We will adopt the slope of the tangent as the slope of the curve. 
 
-As the parabola curve above demonstrates, curves might have different slopes at different points. \\
 
-We want to quantize this idea of a slope for a curve at a point. \\
 
-If we can quantize it, then we can build a function for it and use that to measure a rate of change for our curve. This is the first step toward Calculus. It will take us a while to quantize this idea of slope for a curve in a logical tool. A tool we will call the \textbf{derivative}.\\
+
+
+\begin{idea} Slope of a Curve
+
+
+The \textbf{slope of a curve} at the point $(a, b)$ is the slope of the tangent line to the curve at $(a,b)$.
+
+
+
+\end{idea}
+
+
+
+
+
+
+
+As the parabola curve above demonstrates, curves might have different slopes at different points. 
+
+We want to quantify this idea of a slope for a curve at a point. 
+
+If we can quantify it, then we can build a function for it and use that to measure a rate of change for our curve. This is the first step towards Calculus. It will take us a while to quantify this idea of slope for a curve in a logical tool. A tool we will call the \textbf{derivative}.
 
 We will first investigate this idea with quadratic functions and parabolas. 
 
 
 
+Our plan is illustrated in the graph below.
 
+We have a quadratic function $f(x) = \frac{1}{2} (x - 2)^2 + 1$.
+
+We have a point on the graph and a line tangent to the curve at this point.
+
+We have two other points on the graph. One on either side of the tangent point.
+
+We have a line through these two other points.  This is called a \textbf{secant line}.
+
+
+As you move the outer two points close to the tangent point, the secant line becomes closer to the tangent line.
 
 
 
@@ -131,6 +161,8 @@ We will first investigate this idea with quadratic functions and parabolas.
 \end{center}
 
 
+
+We want an algebraic description of that story.
 
 
 
@@ -345,13 +377,13 @@ What if we push the secant over a little bit until it becomes a tangent line?
 
 
 
-Now it is a picture of the rate of change over the interval $\left[ \tfrac{7}{2}, \tfrac{7}{2} \right]$. \\
+Now it is a picture of the rate of change over the interval $\left[ \tfrac{7}{2}, \tfrac{7}{2} \right]$. 
 
 
-How should we interpret this? \\
+How should we interpret this? 
 
 
-What is the rate of change \textbf{\textcolor{red!90!darkgray}{AT}} a point? \\
+What is the rate of change \textbf{\textcolor{red!70!darkgray}{AT}} a point? 
 
 
 
@@ -360,11 +392,11 @@ What is the rate of change \textbf{\textcolor{red!90!darkgray}{AT}} a point? \\
 
 \begin{idea}
 
-You cannot calculate the rate of change over an interval with $0$ length.  \\
+You cannot calculate the rate of change over an interval with $0$ length.  
 
-Therefore, we are inventing an interpretation for the rate of change at a point. \\
+Therefore, we are inventing an interpretation for the rate of change at a point. 
 
-We are calling our invention the \textit{instantaneous rate of change}.
+We are calling our invention the \textbf{instantaneous rate of change}.
 
 
 \end{idea}
@@ -388,7 +420,7 @@ Suppose $a$ and $b$ are two distinct domain numbers of $f$.  Then the line throu
 Tangent lines are degenerate secants. Secant lines need two points on the graph of a function.  A tangent line is a secant line where the two points are the same point. Tangent lines are secant lines created from an interval of length $0$.  But tangent lines are still lines.  They still have a slope.
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
 
 
 We are calling this slope of the tangent line the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change}} at the domain number corresponding to the tangent point.
@@ -408,9 +440,9 @@ If the graph of $y = f(x)$ has a non-vertical tangent line at the point $(a, f(a
 
 
 
+\textbf{Note:} We are beginning with a graphical defintion, because that is a good introduction to the idea.  But, we really want an algebraic definition.  We want to be exact.  Getting to an exact definition of the derivative requires limits.  Therefore, we will take our time and slowly gain enough experience, so that Calculus can present a detailed story.
 
-
-
+\textbf{Note:} We are leaving out vertical lines, because they do not have a slope.  But, we will eventually include them to complete the story of derivaties.
 
 
 
@@ -855,7 +887,7 @@ Every point, $(x_0, y_0)$, on the graph of $y = Q(x)$ has a tangent line.
 Each tangent line has a slope, which we are calling the instantaneous rate of change of $Q$ at $x_0$.
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} We can create a new function from this.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} We can create a new function from this.
 
 
 
@@ -875,15 +907,34 @@ $iRoC_Q(x)$ is a linear function given by
 \end{definition}
 
 
-We now have a function, with a formula, for measuring the instantaneous rate of change of any quadratic function at any domain number. \\
+We now have a function, with a formula, for measuring the instantaneous rate of change of any quadratic function at any domain number. 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the quadratic function, $Q(x) = a \, (x - h)^2 + k$, is the linear function, $iRoC_Q(x) = 2 \, a \, (x-h)$. \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the quadratic function, $Q(x) = a \, (x - h)^2 + k$, is the linear function, $iRoC_Q(x) = 2 \, a \, (x-h)$. 
 
 
 If we remember that the connection between the standard form and the vertex form gives $h = -\frac{b}{2a}$, then we can get the $iRoC_Q(x)$ for the standard form.
 
-If  $Q(x) = a \, x^2 + b \, x + C$, then $iRoC_Q(x) = 2a \x + b$.
+
+
+
+\[
+iRoC_Q(x) = 2 \, a \, (x-h) = 2 \, a \, \left(x - \frac{-b}{2a} \right) = 2 \, a x + b
+\]
+
+
+
+
+
+\begin{fact}
+
+Given a quadratic function, $Q(x) = a \, x^2 + b \, x + c$,
+
+\[
+iRoC_Q(x) = 2a \, x + b
+\]
+
+\end{fact}
 
 
 
@@ -893,14 +944,15 @@ If  $Q(x) = a \, x^2 + b \, x + C$, then $iRoC_Q(x) = 2a \x + b$.
 
 
 
-We can add both of these to our growing collection. \\ 
+
+We already know that linear functions have a constant rate of change.
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the linear function, $L(x) = m \, x + b$, is the constant function, $iRoC_L(x) = m$. \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the linear function, $L(x) = m \, x + b$, is the constant function, $iRoC_L(x) = m$. \\
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the constant function, $C(x) = c$, is the zero function, $iRoC_C(x) = 0$. \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the constant function, $C(x) = c$, is the zero function, $iRoC_C(x) = 0$. \\
 
 
 
