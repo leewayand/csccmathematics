@@ -18,7 +18,238 @@ analysis
 
 
 
-For every angle, $\theta$, measured counterclockwise from the positive $x$-axis, we have a point on the unit circle. The coordinates of these points are functions of $\theta$.  We call them \textbf{cosine} and \textbf{sine}.
+As we have seen, the cosine function is just the $x$-coordinates of points on the unit circle viewed as a function of a central angle.
+
+
+
+The coordinates of points on the Unit Circle are $( \cos(\theta), \sin(\theta) )$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (0.766,0.643)}; %% 40 degrees
+
+          \addplot [ultra thick,penColor] plot coordinates {(0.766,0) (0.766,0.643)}; %% 40 degrees
+          \addplot [ultra thick,penColor2] plot coordinates {(0,0) (0.766,0)}; %% 40 degrees
+          
+          %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
+
+          \addplot [textColor,smooth, domain=(0:40)] ({0.15*cos(x)},{0.15*sin(x)});
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
+          %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
+          %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
+          \node at (axis cs:0.15,0.07) [anchor=west] {$\theta$};
+          \node[penColor, rotate=-90] at (axis cs:0.84,0.322) {$\sin(\theta)$};
+          \node[penColor2] at (axis cs:0.383,0) [anchor=north] {$\cos(\theta)$};
+          %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
+
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.766,0.643)};
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+If we watch how the $x$-coordinates change as you travel counterclockwise around the unit circle, then we will see exactly how the cosine function behaves.
+
+
+
+
+
+
+\subsection*{Basic Cosine Function}
+
+
+
+The basic sine function is $\cos(\theta)$.
+
+Its characteristics exactly follow the characteristics of the $x$-coordinates of points on the unit circle.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Domain}}
+
+The domain of $\cos(\theta)$ is $(-\infty, \infty)$.
+
+
+
+\textbf{\textcolor{blue!55!black}{Zeros}}
+
+
+The zeros of $\cos(\theta)$ are the angles where the $x$-coordinates equal $0$.  These are the angles correspond to the points $(0,1)$ and $(0,-1)$.
+
+That would be an infinite collection of angles.
+
+\[
+\{ \, \frac{\pi}{2} + k \pi\, \text{ | } \,  k \in \mathbb{Z} \,  \}
+\]
+
+
+
+\textbf{\textcolor{blue!55!black}{Continuity}}
+
+
+$\cos(\theta)$ is a continuous function with no singularities.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{End-Behavior}}
+
+
+
+Since cosine is the $x$-coordinate of points on the unit circle, it just keeps oscillating between $-1$ and $1$.
+
+$\cos(\theta)$ has no end-behaviot other than oscillating.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}}
+
+
+Following the $x$-coordinates for one cycle around the unit circle, we can see the behavior of $\cos(\theta)$.
+
+
+
+\begin{itemize}
+\item On $\left( 0, \frac{\pi}{2} \right)$, $\cos(\theta)$ decreases from $1$ to $0$.
+\item On $\left( \frac{\pi}{2}, \pi \right)$, $\cos(\theta)$ decreases from $0$ to $-1$.
+\item On $\left( \pi, \frac{3\pi}{2} \right)$, $\cos(\theta)$ increases from $-1$ to $0$.
+\item On $\left( \frac{3\pi}{2}, 2\pi \right)$, $\cos(\theta)$ increases from $0$ to $1$.
+\end{itemize}
+
+
+Since $\cos(\theta)$ is periodic with period $2\pi$, this behavior keeps repeating.
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Global Maximum and Minimum}}
+
+
+
+$\cos(\theta)$ is a continuous function and switches from decreasing to increasing at $\pi$.  
+
+
+That makes $\cos(\pi) = -1$ the global minimum, which occurs at $\pi$.
+
+
+Since $\cos(\theta)$ is periodic with period $2\pi$, this minimum keeps occurring.
+
+
+The minimum value of $-1$ occurs on the set 
+
+\[
+\{ \, \pi + 2k \pi \, \text{ | } \,  k \in \mathbb{Z} \,  \}
+\]
+
+
+
+
+
+Remembering that cosine is periodic, we locate the maximum value of $0$ and $2\pi$.
+
+
+
+$\cos(\theta)$ is a continuous function and switches from increasing to decreasing at $0$.  
+
+
+That makes $\cos(0) = 1$ the global maximum, which occurs at $0$.
+
+
+
+
+Since $\cos(\theta)$ is periodic with period $2\pi$, this maximum keeps occurring.
+
+
+The maximum value of $1$ occurs on the set 
+
+\[
+\{ \, 2k \pi \, \text{ | } \,  k \in \mathbb{Z} \,  \}
+\]
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Local Maximum and Minimum}}
+
+
+
+The global extrema are automatically local extrema and they are the only ones, since there are no other critical numbers.
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Range}}
+
+
+$\cos(\theta)$ is a continuous function with a maximum of $1$ and a minimum of $-1$.
+
+Therefore the range is $[-1,1]$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
