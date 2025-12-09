@@ -239,7 +239,8 @@ This angle is whatever is inside the parentheses in $\sin(angle)$.
 
 
 
-\begin{example}
+\begin{example} Sine
+
 Describe the behavior of   $f(x) = \sin\left( 2 x + \frac{\pi}{2} \right)$
 
 
@@ -259,12 +260,12 @@ We want to know when $2 x + \frac{\pi}{2}$ has the values $0$, $\frac{\pi}{2}$, 
 
 \[
 \begin{array}{l|l}
-\text{angle}                  & x  \\
+\text{angle}                  & x  \\ \hline
 2 x + \frac{\pi}{2} = 0        & x = -\frac{\pi}{4}  \\
 2 x + \frac{\pi}{2} = \frac{\pi}{2}      &  x = 0 \\
 2 x + \frac{\pi}{2} = \pi      & x = \frac{\pi}{4}  \\
 2 x + \frac{\pi}{2} = \frac{3\pi}{2}     & x = \frac{\pi}{2}   \\
-2 x + \frac{\pi}{2} = 2\pi     & x = \frac{2\pi}{4}
+2 x + \frac{\pi}{2} = 2\pi     & x = \frac{3\pi}{4}
 \end{array}
 \]
 
@@ -277,7 +278,7 @@ We now know which values of $x$ define our quadrants.
 
 \[
 \begin{array}{l|l}
-\text{Quadrant}                  & x\text{-Interval}  \\
+\text{Quadrant}                  & x\text{-Interval}  \\  \hline
 I        & x \in  \left( -\frac{\pi}{4}, 0 \right)  \\
 II       & x \in  \left( 0, \frac{\pi}{4} \right) \\
 III      & x \in  \left( \frac{\pi}{4}, \frac{\pi}{2} \right)  \\
@@ -338,6 +339,15 @@ On our principal interval, $f(x)$ has a global and local minimum of $-1$ at $\fr
 
 
 
+\begin{warning}
+
+
+We must distinguish between the variable of the function and the angle of sine.
+
+
+Our anlaysis follows the angle around the unit circle through the four quadrants.
+
+\end{warning}
 
 
 
@@ -350,6 +360,173 @@ On our principal interval, $f(x)$ has a global and local minimum of $-1$ at $\fr
 
 
 
+
+
+
+\begin{example} Sine
+
+Describe the behavior of   $g(t) = \sin\left( \frac{\pi}{2} - 3 t \right)$
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+
+The ``angle'' is $\frac{\pi}{2} - 3 t$.
+
+We want to know when $\frac{\pi}{2} - 3 t$ has the values $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, and $2\pi$.
+
+
+
+
+
+
+\[
+\begin{array}{l|l}
+\text{angle}                  & t  \\ \hline
+\frac{\pi}{2} - 3 t = 0        & t = \frac{\pi}{12}  \\
+\frac{\pi}{2} - 3 t = \frac{\pi}{2}      &  t = -\frac{\pi}{12} \\
+\frac{\pi}{2} - 3 t = \pi      & t = -\frac{\pi}{4}  \\
+\frac{\pi}{2} - 3 t = \frac{3\pi}{2}     & t = -\frac{5\pi}{12}   \\
+\frac{\pi}{2} - 3 t = 2\pi     & t = -\frac{7\pi}{12}
+\end{array}
+\]
+
+
+We now know which values of $t$ define our quadrants, but they are running backwards.  
+
+That is because of the negative coefficient in $-2 t$.
+
+
+We just have to remember that we write interval notation as the numbers appear on the number line.  They are not written backwards.  
+
+We write interval notation from left to right, but our angles are running backwards of that.  That reverses the behavior of $g(t)$.
+
+
+The first quadrant begins at $\frac{\pi}{12}$ and ends at $-\frac{\pi}{12}$.
+
+Therefore, our basic sine function is $0$ at $\frac{\pi}{12}$ and it is $1$ at $-\frac{\pi}{12}$.
+
+But, we write our interval notation like  $\left( -\frac{\pi}{12}, \frac{\pi}{12} \right)$.
+
+Our function will be $1$ on the left and $0$ on the right.  $g(t)$ will be decreasing.
+
+
+
+
+
+\[
+\begin{array}{l|l}
+\text{Quadrant}                  & t\text{-Interval}  \\ \hline
+I        & t \in  \left( -\frac{\pi}{12}, \frac{\pi}{12} \right)  \\
+II       & t \in  \left( -\frac{\pi}{4}, -\frac{\pi}{12} \right) \\
+III      & t \in  \left( -\frac{5\pi}{12}, -\frac{\pi}{4} \right)  \\
+IV       & t \in  \left( -\frac{7\pi}{12}, -\frac{5\pi}{12} \right)   \\
+\end{array}
+\]
+
+
+
+Our principal interval is $\left( -\frac{7\pi}{12}, \frac{\pi}{12} \right)$.
+
+That makes the period $\frac{\pi}{12} - \left( -\frac{7\pi}{12} \right) = \frac{\pi}{12} -\frac{7\pi}{12} = \frac{8\pi}{12} = \frac{2\pi}{3}$.
+
+
+Now we just remember what the basic sine function does in each quadrant. 
+
+We just read it backwards.
+
+The basic sine function values are 
+\[
+0 \rightarrow 1 \rightarrow 0 \rightarrow -1 \rightarrow 0
+\]
+
+
+$g(t)$ odes the same thing.  It just does it from right to left:
+
+\[
+0 \leftarrow -1 \leftarrow 0 \leftarrow 1 \leftarrow 0
+\]
+
+
+But, we still read left to right.  So, $g(t)$ begins on the left at $0$, decreases to $-1$, increases to $0$, increases to $1$, then decreases to $0$.
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}} 
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( -\frac{\pi}{12}, \frac{\pi}{12} \right)$, $g(t)$ decreases from $0$ to $-1$.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( -\frac{\pi}{4}, \frac{\pi}{4} \right)$, $g(t)$ increases from $-1$ to $0$.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$(III):}} On $\left( -\frac{5\pi}{12}, -\frac{\pi}{4} \right)$, $g(t)$ increases from $0$ to $1$.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$(IV):}} On $\left( -\frac{7\pi}{12}, -\frac{5\pi}{12} \right)$, $g(t)$ decreases from $1$ to $0$.
+
+
+
+All of this repeats with a period of $\frac{2\pi}{3}$.
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{tjeuggk3k2}{400}{300}
+\end{center}
+
+
+
+
+We can reverse the order of our intervals to make it follow the graph better.
+
+On $\left( -\frac{7\pi}{12}, -\frac{5\pi}{12} \right)$, $g(t)$ decreases.
+
+On $\left( -\frac{5\pi}{12}, -\frac{\pi}{4} \right)$, $g(t)$ increases.
+
+On $\left( -\frac{\pi}{4}, \frac{\pi}{4} \right)$, $g(t)$ increases.
+
+On $\left( -\frac{\pi}{12}, \frac{\pi}{12} \right)$, $g(t)$ decreases.
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Extrema}} 
+
+
+On our principal interval, $g(t)$ has a global and local maximum of $1$ at $-\frac{\pi}{12}$.
+
+
+On our principal interval, $g(t)$ has a global and local minimum of $-1$ at $-\frac{5\pi}{12}$.
+
+
+
+
+\end{example}
 
 
 
