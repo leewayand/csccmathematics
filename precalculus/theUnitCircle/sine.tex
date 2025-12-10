@@ -301,22 +301,38 @@ Now we just remember what the basic sine function does in each quadrant.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( -\frac{\pi}{4}, 0 \right)$, $f(x)$ increases from $0$ to $1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( -\frac{\pi}{4}, 0 \right)$, $f(x)$ increases from $0$ to $1$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( 0, \frac{\pi}{4} \right)$, $f(x)$ decreases from $1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( 0, \frac{\pi}{4} \right)$, $f(x)$ decreases from $1$ to $0$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( \frac{\pi}{4}, \frac{\pi}{2} \right)$, $f(x)$ decreases from $0$ to $-1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( \frac{\pi}{4}, \frac{\pi}{2} \right)$, $f(x)$ decreases from $0$ to $-1$.
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( \frac{\pi}{2}, \frac{3\pi}{4} \right)$, $f(x)$ increases from $-1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{\pi}{2}, \frac{3\pi}{4} \right)$, $f(x)$ increases from $-1$ to $0$.
 
 
 
 All of this repeats with a period of $\pi$.
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{9gfp3dowoh}{400}{300}
+\end{center}
 
 
 
@@ -363,7 +379,17 @@ Our anlaysis follows the angle around the unit circle through the four quadrants
 
 
 
-\begin{example} Sine
+
+
+
+
+
+
+
+
+
+
+\begin{example} Negative Leading Coefficient Inside
 
 Describe the behavior of   $g(t) = \sin\left( \frac{\pi}{2} - 3 t \right)$
 
@@ -529,12 +555,375 @@ On our principal interval, $g(t)$ has a global and local minimum of $-1$ at $-\f
 \end{example}
 
 
+\textbf{\textcolor{red!70!black}{Note:}}  In the example above, the inside of the sine function is a linear function with a negative leading coefficent.  That has reversed the behavior from the basic sine function.
+
+Reading the graph of the basic sine function from left, we see that the basic sine function increases, then decreases, then increases.
+
+
+Reading the graph of the sine function in the example above, from left we see that the sine function decreases, then increases, then decreases.
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} In addition to the leading coefficient of the inner linear function, the sine funciton itself has a leading coefficient.  WHen it is negative, the behavior reverses again.
+
+
+
+
+This example has illustrated a fact about funciton behavior.
+
+
+
+\begin{fact}
+
+If $f(x)$ is increasing on $(a, b)$, then $f(-x)$ is decreasing on $(a, b)$.
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+$f(x)$ is increasing on $(a, b)$ means that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $f(x) < f(y)$.
+
+
+We want to show that $f(-x)$ is decreasing on $(a, b)$.  Let's call $f(-x)$ by a new name.  $g(x) = f(-x)$
+
+We want to show that $g(x)$ is decreasing.
+
+We want to show that that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $g(x) > g(y)$.
+
+
+
+So, let's pretend we have $x$ and $y$ in $(a, b)$ with $x < y$.
+
+Then $-x > -y$.
+
+Then $f(-x) > f(-y)$, because $f$ is increasing.
+
+But, that is the same as $g(x) > g(y)$.
+
+Than means that $g$ is decreasing.
+
+
+
+\end{fact}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Negative Leading Coefficient
+
+Describe the behavior of   $H(k) = -2 \sin\left( \frac{k}{3} - \pi \right)$
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+
+\textbf{Step 1)}  We'll take this in two steps.  First, the inside.  Then, the outside.
+
+
+First, we'll just think of $\sin\left( \frac{k}{3} - \pi \right)$.  Then, we'll bring in the $-2$.
+
+
+
+The ``angle'' is $\frac{k}{3} - \pi$.
+
+We want to know when $\frac{k}{3} - \pi$ has the values $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, and $2\pi$.
+
+
+
+
+
+
+\[
+\begin{array}{l|l}
+\text{angle}                  & k  \\ \hline
+\frac{k}{3} - \pi = 0        & k = 3 \pi  \\
+\frac{k}{3} - \pi = \frac{\pi}{2}      &  k = \frac{9\pi}{2} \\
+\frac{k}{3} - \pi = \pi      & k = 6 \pi  \\
+\frac{k}{3} - \pi = \frac{3\pi}{2}     & k = \frac{15\pi}{2}   \\
+\frac{k}{3} - \pi = 2\pi     & k = 9 \pi
+\end{array}
+\]
+
+
+We now know which values of $k$ define our quadrants.
+
+
+
+
+
+\[
+\begin{array}{l|l}
+\text{Quadrant}                  & k\text{-Interval}  \\  \hline
+I        & k \in  \left( 3\pi, \frac{9\pi}{2} \right)  \\
+II       & k \in  \left( \frac{9\pi}{2}, 6 \pi \right) \\
+III      & k \in  \left( 6 \pi, \frac{15\pi}{2} \right)  \\
+IV       & k \in  \left( \frac{15\pi}{2}, 9 \pi \right)   \\
+\end{array}
+\]
+
+
+
+Our principal interval is $\left( 3 \pi, 9 \pi \right)$.
+
+That makes the period $9 \pi - 3 \pi = 6 \pi$.
+
+
+Now we just remember what the basic sine function does in each quadrant. 
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior}} 
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(x)$ increases from $0$ to $1$.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(x)$ decreases from $1$ to $0$.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(x)$ decreases from $0$ to $-1$.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(x)$ increases from $-1$ to $0$.
+
+
+
+All of this repeats with a period of $6 \pi$.
+
+
+
+
+
+
+\textbf{Step 2)}
+
+
+
+Now we'll bring in $-2$ as the leading coefficent.
+
+
+We need another fact about function behavior.
+
+
+
+
+\begin{fact}
+
+If $f(x)$ is increasing on $(a, b)$, then $-f(x)$ is decreasing on $(a, b)$.
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+$f(x)$ is increasing on $(a, b)$ means that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $f(x) < f(y)$.
+
+
+We want to show that $-f(x)$ is decreasing on $(a, b)$.  Let's call $-f(x)$ by a new name.  $g(x) = -f(x)$
+
+We want to show that $g(x)$ is decreasing.
+
+We want to show that that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $g(x) > g(y)$.
+
+
+
+So, let's pretend we have $x$ and $y$ in $(a, b)$ with $x < y$.
+
+Then $f(x) < f(y)$, because $f$ is increasing.
+
+Then $-f(x) > -f(y)$.
+
+But, that is the same as $g(x) > g(y)$.
+
+Than means that $g$ is decreasing.
+
+
+
+\end{fact}
+
+
+
+
+The negative leading coefficient reverses all of the behavior.
+
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Behavior of $H(k)$}} 
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(x)$ decreases from $0$ to $1$.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(x)$ increases from $1$ to $0$.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(x)$ increases from $0$ to $-1$.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(x)$ decreases from $-1$ to $0$.
+
+
+
+All of this repeats with a period of $6 \pi$.
+
+
+
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{xljum2jpck}{400}{300}
+\end{center}
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Extrema}} 
+
+
+
+
+$\sin\left( \frac{k}{3} - \pi \right)$ has a maximum value of $1$ and a minimum value of $-1$.
+
+$-2 \sin\left( \frac{k}{3} - \pi \right) + 1$ has a maximum value of $3$ and a minimum value of $-1$.
+
+
+
+
+
+On our principal interval, $H(k)$ has a global and local maximum of $3$ at $\frac{15\pi}{2}$.  This is where the function switches from increasing to decreasing.
+
+
+On our principal interval, $H(k)$ has a global and local maximum of $-1$ at $\frac{9\pi}{2}$.  This is where the function switches from decreasing to increasing.
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Sine Functions}}
+
+A \textbf{Basic Sine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     sin(x) =    \sin(x)           \]
+
+where $A$ is a real number.
+
+
+\end{formula}
+
+
+
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{Sine Functions}}
+
+A \textbf{Sine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     sin(x) =    A \sin(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers.
+
+
+\end{formula}
 
 
 
