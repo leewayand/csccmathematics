@@ -92,23 +92,27 @@ We have encountered such angles.  Since the value of sine is negative here, we a
           ]        
           \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
 
-          \addplot [textColor] plot coordinates {(0,0) (0.866,-0.5)}; %% 40 degrees
+          \addplot [textColor] plot coordinates {(0,0) (0.866,-0.5)}; %% 30 degrees
+          \addplot [textColor] plot coordinates {(0,0) (-0.866,-0.5)};
 
           %\addplot [ultra thick,penColor] plot coordinates {(0.766,0) (0.766,0.643)}; %% 40 degrees
           %\addplot [ultra thick,penColor2] plot coordinates {(0,0) (0.766,0)}; %% 40 degrees
           
           %\addplot [ultra thick,penColor3] plot coordinates {(1,0) (1,.839)}; %% 40 degrees          
 
-          \addplot [textColor,smooth, domain=(0:40)] ({0.15*cos(x)},{-0.15*sin(x)});
+          \addplot [textColor,smooth, domain=(0:30)] ({0.15*cos(x)},{-0.15*sin(x)});
+           \addplot [textColor,smooth, domain=(0:30)] ({-0.15*cos(x)},{-0.15*sin(x)});
           %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-          \node at (axis cs:0.15,-0.07) [anchor=west] {$\theta$};
+          \node at (axis cs:0.15,-0.07) [anchor=west] {$\tfrac{\pi}{6}$};
+          \node at (axis cs:-0.15,-0.07) [anchor=east] {$\tfrac{\pi}{6}$};
           %\node[penColor, rotate=-90] at (axis cs:0.84,0.322) {$\sin(\theta)$};
-          \node[penColor] at (axis cs:0.866,-0.5) [anchor=west] {$(x,y))$};
+          \node[penColor] at (axis cs:0.866,-0.5) [anchor=west] {$\left( \frac{\sqrt{3}}{2}, -\frac{1}{2} \right)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
 
           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.866,-0.5)};
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(-0.866,-0.5)};
 
 
         \end{axis}
@@ -124,11 +128,44 @@ We have encountered such angles.  Since the value of sine is negative here, we a
 
 
 
+Two such angle are the angles $\frac{7\pi}{6}$ and $\frac{11\pi}{6}$.
+
+
+The other angles are full circles from these.
+
+\[
+\frac{7\pi}{6} + 2 \pi k \, \text{ and } \, \frac{11\pi}{6} + 2 \pi k \, \text{ where } \, k \in \mathbb{Z}
+\]
+
+
+These are the values of the angles.
+
+These are the values of $3x - \pi$.
 
 
 
+\[ 
+3x - \pi = \frac{7\pi}{6} + 2 \pi k \, \text{ where } \, k \in \mathbb{Z}
+\]
 
 
+\[ 
+3x = \frac{13\pi}{6} + 2 \pi k  \, \text{ where } \, k \in \mathbb{Z}
+\]
+
+
+\[ 
+x = \frac{13\pi}{18} + \frac{2}{3} \pi k  \, \text{ where } \, k \in \mathbb{Z}
+\]
+
+
+and
+
+
+
+\[ 
+x = \frac{17\pi}{18} + \frac{2}{3} \pi k  \, \text{ where } \, k \in \mathbb{Z}
+\]
 
 
 
