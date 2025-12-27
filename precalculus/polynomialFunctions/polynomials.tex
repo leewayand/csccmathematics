@@ -43,7 +43,7 @@ This is called the \textbf{standard form}.
 \end{definition}
 
 
-
+When analyzing the behavior of polynomials, the characteristcis depend on the zeros of the derivative, which Calculus will show us is another polynomial.  Analyzing polynomials rests on their zeros.
 
 
 For analytic purposes, we would prefer a product
@@ -64,7 +64,7 @@ For analytic purposes, we would prefer a product
 
 
 
-Polynomials are the most familiar feeling functions we have. Their formulas look like extended linear or quadratic functions, just more terms.\\
+Polynomials are the most familiar feeling functions we have. Their formulas look like extended linear or quadratic functions, just more terms. Their graphs are smoothly flowing hills and valleys.\\
 
 The graph of $y = f(x) = \frac{1}{100} x^3 + \frac{1}{25} x^2 - \frac{31}{100} x - \frac{7}{10}$
 
@@ -107,8 +107,7 @@ Polynomials smoothly alternate between increasing and decreasing, which switch a
 As you will see later, polynomials have a limit on the number of zeros and extrema they can have.  They cannot have more than the degree of the polynomial. So, what happens outside all of the wiggling?  This is known as the \textbf{end-behavior}.  All polynomials continue without bound after the zeros and extrema.  Either they tend to infinity or negative infinity, which is tied to the sign of the leading coefficient and the degree.
 
 
-
-
+\textbf{Note:} Constant functions are technically polynomials. They have a completely different behavior than what we think of with polynomials.
 
 
 
@@ -122,6 +121,12 @@ As you will see later, polynomials have a limit on the number of zeros and extre
 
 
 \subsection*{Factored Form}
+
+
+
+
+
+
 
 
 $p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the \textbf{factored form} of a polynomial.  \\
@@ -147,9 +152,7 @@ Let $p(x)$ be a polynomial with root $r$.  The number of times $(x - r)$ appears
 
 \end{definition}
 
-As we saw with quadratics, this factorization into linear factors often requires complex numbers, which we will encounter later in this course. We are only using real numbers now.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors (nonreal roots).
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  Therefore, our discussion on polynomial roots, will center around the linear factors.  Irreducible quadratics will have to stay that way until the next course.
+As we saw with quadratics, this factorization into linear factors often requires complex numbers, which we will encounter later in this course. We are only using real numbers now.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors (quadratics nonreal/complex roots).
 
 
 
@@ -166,7 +169,7 @@ If we think of the real numbers as lining up to form the number line, then we co
 
 For a polynomial, we would run through each distinct root once.  As we ran from the left side to the right side of each root, the sign of the value of the polynomial with either change or stay the same.
 
-At each root, $r_k$, the value of the polynomial is $0$.  But on either side of the root, the polynomial is either positive or negative. There are four possible combinations.
+At each root, $r_k$, the value of the polynomial is $0$.  But on either immediate side of the root, the polynomial is either positive or negative. There are four possible combinations.
 
 
 \[
@@ -204,7 +207,7 @@ As $x$ runs from less than $r_k$ to greater than $r_k$, the base of this factor 
 
 If the exponent, $e_k$, is even, then the sign of $x-r_k$ doesn't matter. The sign of the whole factor $(x-r_k)^{e_k}$ will be positve regardless of the sign of the base.
 
-However, if $e_k$ is odd then the sign of the base does matter, because, unlike an even power, a negative number raise to an odd power will remain negative.
+However, if $e_k$ is odd then the sign of the base does matter, because a negative number raised to an odd power will remain negative.
 
 
 
@@ -218,7 +221,7 @@ However, if $e_k$ is odd then the sign of the base does matter, because, unlike 
 
 
 
-
+The multiplicity or exponent tells us if the sign changes across the zero or singularitiy.
 
 
 \begin{itemize}
@@ -231,7 +234,7 @@ However, if $e_k$ is odd then the sign of the base does matter, because, unlike 
 
 
 
-\begin{example}
+\begin{example} SIgns
 
 
 Let $p(x) = 3(x+4) (x-1)^2 (x-3)$.
@@ -390,7 +393,7 @@ $\blacktriangleright$ \textbf{The $x-3$ factor:}
 
 The polynomial function has three zeros: $-4$, $1$, and $3$. \\
 
-In between these zeros, the values of the polynomial function has a positive or negative sign. It can't change. \\
+In between these zeros, the values of the polynomial function has a positive or negative sign. It can't change, since polynomilas are continuous. \\
 
 The sign of the whole polynomial depends on the \textbf{\textcolor{purple!85!blue}{product}} of the signs of the individual factors.
 
@@ -404,7 +407,7 @@ The sign of the whole polynomial depends on the \textbf{\textcolor{purple!85!blu
   \item $(x-1)^2 > 0$
   \item $x-3 < 0$ 
 \end{itemize}
-The whole polynomial is positive. We also know this because $p$ is a fourth degree polynomial and the leading coefficient is positive.
+In the interval; $(-\infty, -4)$, the whole polynomial is $pos \cdot neg \cdot pos \cdot neg = positive$.  We also know this because $p$ is a fourth degree polynomial and the leading coefficient is positive. That tell us that the end-behvior is unbounded positively in both directions.
 
 
 \item For $-4 < x < 1$, 
@@ -414,7 +417,7 @@ The whole polynomial is positive. We also know this because $p$ is a fourth degr
   \item $(x-1)^2 > 0$
   \item $x-3 < 0$ 
 \end{itemize}
-The whole polynomial is negative. The also agrees with the fact that $p$ was positive and MUST change signs over $-4$, since we have an odd multiplicity.
+In the interval; $(-4, 1)$, the whole polynomial is $pos \cdot pos \cdot pos \cdot neg = negative$.  This also agrees with the fact that $p$ was positive on $(-\infty, -4)$ and MUST change signs over $-4$, since it has an odd multiplicity.
 
 
 \item For $1 < x < 3$, 
@@ -424,7 +427,7 @@ The whole polynomial is negative. The also agrees with the fact that $p$ was pos
   \item $(x-1)^2 > 0$
   \item $x-3 < 0$ 
 \end{itemize}
-The whole polynomial is negative. The also agrees with the fact that $p$ was negative and DOES NOT change signs over $1$, since we have an even multiplicity.
+In the interval; $(1, 3)$, the whole polynomial is $pos \cdot pos \cdot pos \cdot neg = negative$.  This also agrees with the fact that $p$ was negative on $(-4,1)$ and MUST NOT change signs over $1$, since it has an even multiplicity.
 
 
 \item For $3 < x$, 
@@ -434,7 +437,7 @@ The whole polynomial is negative. The also agrees with the fact that $p$ was neg
   \item $(x-1)^2 > 0$
   \item $x-3 > 0$ 
 \end{itemize}
-The whole polynomial is positive. The also agrees with the fact that $p$ was negative and MUST change signs over $3$, since we have an odd multiplicity.
+In the interval; $(3, \infty)$, the whole polynomial is $pos \cdot pos \cdot pos \cdot pos = positive$.  This also agrees with the fact that $p$ was negative on $(1,3)$ and MUST change signs over $3$, since it has an odd multiplicity.
 \end{itemize}
 
 
@@ -486,13 +489,19 @@ $\blacktriangleright$ \textbf{The whole polynomial $3(x+4)(x-1)^2(x-3)$}
 
 
 
-All of the information about the sign of the polynomial is encoded in the exponents. \\
+All of the information about the sign of the polynomial is encoded in the zeros and their exponents. \\
 
 
-Our polynomial here has a positive leading coefficient and is of degree $4$. Any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $-\infty$.  Our polynomial is positive for domain numbers less than $-4$.
+In this example, our polynomial has a positive leading coefficient and is of degree $4$. Any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $-\infty$.  Our polynomial is positive for domain numbers less than $-4$.
 
 
-Then, this polynomial must change signs at $-4$, because $-4$ has odd multiplicity.  Then, this polynomial cannot change signs at $1$, since it has even multiplicity.  Then, this polynomial must change signs at $3$.  Finally, any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $\infty$.
+Then, this polynomial must change signs at $-4$, because $-4$ has odd multiplicity.  
+
+Then, this polynomial cannot change signs at $1$, since it has even multiplicity.  
+
+Then, this polynomial must change signs at $3$.  
+
+Finally, any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $\infty$.
  
 
 
@@ -523,7 +532,7 @@ All of this should agree with the graph of the polynomial. \\
 
 
 
-\textbf{\textcolor{purple!85!blue}{Graphically}} 
+\subsection*{Graphically}} 
 
 Graphically, the values of the function are measured vertically. Zeroes are represented as dots positioned on the horizontal axis.  The graph either flows from one side of the horizontal axis to the other side as the function changes sign or the graph rebounds from the intercept and stays on the same side of the horizontal axis.  The multiplicity of the root tells us which.
 
@@ -532,9 +541,18 @@ Graphically, the values of the function are measured vertically. Zeroes are repr
 
 
 
-\begin{example}
+\begin{example} Multiplicities
 
-Change the exponent of the $x+2$ factor from odd to even.  The graph will crossover the $x$-axis for odd exponents and bounce back for even expoents.  If you change the sign of the leading coefficient, then the crossing and bouncing will jump to the other side of the $x$-axis.
+
+In the graph below, change the sign of exponent for $(x+2)$ from $2$ to $3$.  
+
+The sign of $(x+2)^3$ switches across $-2$ and the graph crosses over the axis.
+
+
+The sign of $(x+2)^2$ stays the same across $-2$ and the graph does not cross over the axis.
+
+
+If you change the sign of the leading coefficient, then the crossing and bouncing will jump to the other side of the $x$-axis.
 
 
 
@@ -565,7 +583,7 @@ Change the exponent of the $x+2$ factor from odd to even.  The graph will crosso
 
 
 
-\textbf{\textcolor{purple!85!blue}{Extrema}} 
+\subsection*{Extrema}} 
 
 Unless we have a quadratic polynomial, the best we can do for the maximums and minimums, at this point, is estimate them.
 
@@ -579,6 +597,9 @@ Unless we have a quadratic polynomial, the best we can do for the maximums and m
 
 The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
+$-2$ and $3$ are consecutive zeros or roots of $f$.  Since $f$ is continuous, it must remain positive or negative on the interval $(-2,3)$.
+
+This means there must be a local maximum or minimum somewhere inside the interval $(-2,3)$.
 
 
 \begin{center}
@@ -593,7 +614,7 @@ $f(x)$ has an approximate global minimum value of $\answer[tolerance=0.1]{-6.6}$
 \end{example}
 
 
-
+Calculus will goive us the tools to obtain the derivative for ourselves, and that will help us locate where in the domain maximums and minimums occur.
 
 
 
@@ -693,6 +714,21 @@ $f$ has two critical numbers: $-2$ and $1.75$. These correspond to the two place
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection*{Zeros, Factors, and Intercepts}
 
 
@@ -701,7 +737,7 @@ $f$ has two critical numbers: $-2$ and $1.75$. These correspond to the two place
 Polynomial functions are nice.  They allow us to see many connections that we will keep in mind as we investigate other types of functions.
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Zeros, Factors, and Intercepts are different things but they all refer to the same idea.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Zeros, Factors, and Intercepts are different things but they all refer to the same information.
 
 
 

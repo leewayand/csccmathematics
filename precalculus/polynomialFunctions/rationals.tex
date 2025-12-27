@@ -55,12 +55,14 @@ And, again, we will be able to obtain a product of exclusively linear factors wi
 
 
 
+\subsection*{Domain}
+
+
+The domain of a rational function is all real numbers except for the zeros of the denominator.
 
 
 
-
-
-\begin{example}
+\begin{example} Domain
 
 
 The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
@@ -91,6 +93,12 @@ The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
 \end{tikzpicture}
 \end{image}
 
+
+
+The domain of $H$ is $(-\infty, -3) \cup (-3, 4) \cup (4,\infty)$.
+
+
+
 \end{example}
 
 
@@ -100,7 +108,8 @@ The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
 
 
 
-\begin{example}
+
+\begin{example} Domain
 
 
 The graph of $y = v(r) = \frac{(r-1)}{(r+3) (r-4)^2} $
@@ -131,25 +140,46 @@ The graph of $y = v(r) = \frac{(r-1)}{(r+3) (r-4)^2} $
 \end{tikzpicture}
 \end{image}
 
+
+
+The domain of $v$ is $(-\infty, -3) \cup (-3, 4) \cup (4,\infty)$.
+
+
 \end{example}
 
 
 
 
 
+The domain of a rational function is all real numbers except for the zeros of the denominator. This holds no matter what any reduced form looks like.
 
 
 
-While polynomials only combined factors with positive integer powers, rational functions include factors with negative integer powers.
+
+Let $D(y) = \frac{(y-1) (y-5)}{(y+3) (y-4)^2 (y-5)}$.
 
 
-We can pull $H(w)$ apart to see these power-like functions.
+
+The domain of $D$ is $(-\infty, -3) \cup (-3, 4) \cup (4, 5) \cup (5, \infty)$.
 
 
-\[    H(w) = \frac{(w-1)}{(w+3) (w-4)}  = \frac{4}{7} \cdot \frac{1}{w+3}  + \frac{3}{7} \cdot \frac{1}{w-4} =  \frac{4}{7} (w+3)^{-1}  + \frac{3}{7} (w-4)^{-1} \]
 
 
-Strictly speaking, these are not power functions, but more like shifted power functions - in the denominator.
+The formula for $D$ reduces to $\frac{(y-1)}{(y+3) (y-4)^2}$. The $(y-5)$ is not present.
+
+
+However, this is an algebraic reduction. It only works when $y \ne 5$.
+
+
+\[
+D(y) = \frac{(y-1)}{(y+3) (y-4)^2} \, \text{ when } \, y \ne 5
+\]
+
+
+$5$ is still not in the domain of $D$, even if it would be in the domain of a reduced formula.
+
+
+
 
 
 
@@ -164,7 +194,7 @@ Strictly speaking, these are not power functions, but more like shifted power fu
 
 Rational functions are continuous everywhere on their domain.  They have singularities at zeros of their denominators.  
 
-Graphs of rational functions might have vertical asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  This has to do with the power of the corresponding factor, which we will investigate later.
+Graphs of rational functions might have vertical asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  The multiplicity indicates which.
 
 
 
@@ -178,10 +208,10 @@ Graphs of rational functions might have vertical asymptotes at these singulariti
 
 
 
-\begin{example}
+\begin{example} Singularities
 
 
-The graph of $y = B(c) = \frac{(c-1)(c-5)}{5(c+3)} $
+The graph of $y = B(c) = \frac{(c-1)(c-5)(c-9)}{5(c+3)(c-9)}$.
 
 
 \begin{image}
@@ -205,11 +235,33 @@ The graph of $y = B(c) = \frac{(c-1)(c-5)}{5(c+3)} $
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-19:-3.4),<->] {((x-1)*(x-5))/(5*(x+3))};
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.9:19),<->] {((x-1)*(x-5))/(5*(x+3))};
 
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(9,0.58)};
 
 
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+$B$ has two singularities: $-3$ and $9$.  
+
+
+Since $-3$ is a zero of the denominator and not a zero of the numerator, there is a vertical asymptote in the graph.
+
+
+$9$ is a zero of both the denominator and the numerator. It has the same multiplicity in both.
+
+
+$y = B(c) = \frac{(c-1)(c-5)}{5(c+3)}$ for $y \ne 9$.
+
+
+Since $\frac{(c-1)(c-5)}{5(c+3)}$ has no singularity at $9$, the graph of $B$ just has a hole for $9$.
+
+
+
+
+
 
 \end{example}
 
@@ -229,7 +281,7 @@ In addition to horizontal and vertical asymptotes, graphs of rational functions 
 
 
 
-The graph of a rational function need not have an asymptote at a zero of the denominator.
+The graph of a rational function need not have a vertical asymptote at a zero of the denominator.
 
 
 \begin{example}
@@ -312,7 +364,7 @@ This is because $5$ is also a zero of the polynomial in the numerator (with the 
 
 
 
-The example illustrates why we prefer polynomial and rational functions in factored form.  It helps us make decisions on zeros and singularities. 
+The example above illustrates why we prefer polynomial and rational functions in factored form.  It helps us make decisions on zeros and singularities. 
 
 Once we get to Calculus, we will see that the derivatives of polynomials and rational functions are again polynomials and rational functions. We will want to factor the derivatives as well to help us decide where the function is increasing and decreasing (behavior). \\
 
@@ -328,7 +380,7 @@ Therefore, usually our first step is to transform any rational function to look 
 
 
 
-And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist only of linear and irreducible quadratics.  Therefore, we will leave factors of irreducible quadratics to the next course. \\
+And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist only of linear and irreducible quadratics.  Therefore, we will leave factors of irreducible quadratics to later in the course. \\
 
 As our first step, let's consider rational functions that do factor into linear factors with real numbers. \\
 
@@ -380,9 +432,10 @@ $\blacktriangleright$ \textbf{Numerator}
 
 
 
-The numerator is a polynomial.  Each factor gives a root or zero of the function, which corresponds to an intercept on the graph. \\
+The numerator is a polynomial.  Each factor gives a root or zero of the function, which corresponds to an intercept on the graph. 
 
-If the multiplicity of the root is odd, then the function changes sign and the graph crosses the axis at this intercept.  \\
+If the multiplicity of the root is odd, then the function changes sign and the graph crosses the axis at this intercept.  
+
 If the multiplicity of the root is even, then the graph does not cross the axis at this intercept and the function maintains its sign. 
 
 
@@ -393,14 +446,14 @@ If the multiplicity of the root is even, then the graph does not cross the axis 
 $\blacktriangleright$ \textbf{Denominator}
 
 
-The denominator is a polynomial.  Each factor gives a root or zero of the denominator, which corresponds to a singularity of the rational function and a vertical asymptote on the graph. \\
+The denominator is a polynomial.  Each factor gives a root or zero of the denominator, which corresponds to a singularity of the rational function and a vertical asymptote or hole on the graph. 
 
 
 The factors in the denominator still affect the sign of the function values.
 
 
-If the multiplicity of the singularity is odd, then the function changes sign and the graph jumps to the other end of the vertical asymptote.  \\
-If the multiplicity of the singularity is even, then the function does not change sign and the graph does not jump to the other end of the vertical asymptote. 
+If the multiplicity of the singularity is odd, then the function changes sign and the graph jumps to the other end of the vertical asymptote (if there is one).  
+If the multiplicity of the singularity is even, then the function does not change sign and the graph does not jump to the other end of the vertical asymptote (if there is one). 
 
 
 
@@ -495,7 +548,7 @@ Near $-3$, on either side of $-3$, the factors $w-1$ and $w-4$ do not change sig
 
 Both factors take on negative values when $w$ is near $-3$.  
 
-Near $-3$, the value of the numerator of $H$ is near $(-4)(-7) = 28$, when $w$ is near $-3$.  \\
+Near $-3$, the value of the numerator of $H$ is near $(-4)(-7) = 28$, when $w$ is near $-3$.  
 
 
 
@@ -509,7 +562,7 @@ The factor $w+3$ does change sign, since its multiplicity is odd.
 \end{itemize}
 
 
-Therefore, on the left side of $-3$, $H(w) = \frac{neg}{neg \, \cdot \, neg} = negative$.  \\
+Therefore, on the left side of $-3$, $H(w) = \frac{neg}{neg \, \cdot \, neg} = negative$.  
 
 Plus, the denominator is approaching $0$ making the whole fraction get bigger and bigger negatively.
 
@@ -542,7 +595,12 @@ $H$ has no global or local maximums or minimums.
 
 
 
-\textbf{Range:} \\
+\textbf{Range:} 
+
+
+The domain of $H$ has three maximal intervals and three connected continuous pieces.  The range of $H$ is the union of the ranges of these three pieces.
+
+However, the range of the middle piece is already all real numbers.
 
 
 On the interval $(-3, 4)$, $H$ is continuous.

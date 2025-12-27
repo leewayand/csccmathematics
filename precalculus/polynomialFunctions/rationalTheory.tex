@@ -19,7 +19,7 @@ the rational story
 
 
 
-Rational functions are quotients or fractions of polynomials.  (Polynomials are rational functions, since they can be written in a fraction form with $1$ as the denominator.)  So, it is not surprising that analyzing rational function follows the same plan as for polynomials.
+Rational functions are quotients or fractions of polynomials.  (Polynomials are also rational functions, since they can be written in a fraction form with $1$ as the denominator.)  So, it is not surprising that analyzing rational function follows the same plan as for polynomials.
 
 
 
@@ -77,7 +77,8 @@ Here, the roots are distinct, which means that  $r_i \ne r_j$ when $i \ne j$, an
 
 
 
-\begin{warning}   \textbf{\textcolor{red!80!black}{Common Roots}} \\
+\begin{warning}   \textbf{\textcolor{red!80!black}{Common Roots}} 
+
 
 The formula for a rational function could have a root in common between the polynomials in the numerator and denominator.
 
@@ -104,7 +105,7 @@ The domain is determined by the original definition of the function, not by any 
 
 
 
-\begin{example}
+\begin{example} Domain
 
 Let $R$ be defined as follows.
 
@@ -169,7 +170,7 @@ Graph of $y = R(x)$.
 
 
 
-$1$ does not cause a problem for $x-3$, but that isn't the formula for $R$. \\
+$1$ does not cause a problem for $x-3$, but that isn't the formula for $R$. 
 
 $R(x) = \frac{(x-3)(x-1)}{(x-1)}$ is equal to $x-3$, provided $x \ne 1$.  We cannot reinsert $1$ after simplifying.
 
@@ -185,16 +186,16 @@ We prefer working with a simplified formula.  We just need to keep track of how 
 
 
 
-\textbf{\textcolor{red!80!black}{Assuming a simplified formula...}} \\
+\textbf{\textcolor{red!80!black}{Assuming a simplified formula...}} 
 
 
-\textbf{\textcolor{red!80!black}{Note:}} A simplified formula assures us that the zeros of the numerator polynomial are all different from the zeros of the denominator polynomial. (Otherwise, we would have removed the common factors.) \\
+\textbf{\textcolor{red!80!black}{Note:}} By removing common factors, a simplified formula assures us that the zeros of the numerator polynomial are all different from the zeros of the denominator polynomial. (Otherwise, we would have removed the common factors.)  This helps our analysis, but we must remember the domain given by the original formula.
 
 
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Roots and Zeros:}} \\
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Roots and Zeros:}} 
    Zeros or Roots of a rational function are the zeros or roots of the numerator polynomial.  A polynomial function behaves in one of two ways around a root.
 
 \begin{itemize}
@@ -207,8 +208,11 @@ $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Roots and Zeros:}} \\
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Singularities:}} \\
-Singularities of a rational function are the zeros of the denominator polynomial.  Vertical asymptotes usually represent these types of singularities graphically.
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Singularities:}} 
+Singularities of a rational function are the zeros of the denominator polynomial.  Vertical asymptotes and holes usually represent these types of singularities graphically.
+
+
+\textbf{Vertical Asymptotes}
 
 \begin{itemize}
 \item If the multiplicity is odd then the function changes sign over the singularity.  The graph moves to the other end of the corresponding vertical asymptote.
@@ -217,9 +221,10 @@ Singularities of a rational function are the zeros of the denominator polynomial
 
 
 
+\textbf{Holes}
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Hole:}} \\
-Another type of singularity for rational functions is a hole. If a common factor between the numerator and denominator have the same multiplicity, then they will be completely removed from the formula upon simplification.  In this case, the rational function behaves nicely, except that particular number is removed from the domain.  We have a hole in the graph.  The new, simplified formula has a value for the missing factors.  However, we cannot use it, because the factors were initially there, thus removing the zero from the domain.  Therefore, we end up with a hole in the graph. \\
+
+If a common factor between the numerator and denominator have the same multiplicity, then they will be completely removed from the formula upon simplification.  In this case, the rational function behaves nicely, except that particular number is removed from the domain.  We have a hole in the graph.  The new, simplified formula has a value for the missing factors.  However, we cannot use it, because the factors were initially there, thus removing the zero from the domain.  Therefore, we end up with a hole in the graph. 
 
 
 
@@ -244,7 +249,7 @@ Of course ``fixing'' the hole of singularity creates a new and different functio
 
 
 
-
+Rational functions can have removeable singulatarities. Other functions can also have removeable discontinuities.
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Removeable Discontinuity}}
 
@@ -286,9 +291,9 @@ We must always remember the original formula when it comes to the domain.  Simpl
 
 
 $\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Continuity:}} \\
-For the most part, rational functions are relatively nice functions.  They are continuous everywhere in their domain.  They have no discontinuities.  The singularities correspond to vertical asymptotes or removeable singularities, both of which we understand.  \\
+For the most part, rational functions are relatively nice functions.  They are continuous everywhere in their domain.  They have no discontinuities.  The singularities correspond to vertical asymptotes or holes (removeable singularities), both of which we understand.  \\
 
-Of course, we are always on the lookout for common factors, which are represented with holes in the graph.
+
 
 
 
@@ -351,14 +356,43 @@ If $n < m$, then
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Extrema (Maximums and Minimums):}} \\
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Global Maximums and Minimums (Extrema):}} 
+
+Just like polynomials, rational funcitons can have a global maximum or a global minimum, but not both - unless the rational function is a constant function.
+
+Maximums and minimums are located at critical numbers, which are difficult for our algebra to locate.
+
+
 If we have a derivative, then we can attempt to locate exact values of critical numbers.  Without the derivative, we turn to technology for some assistance in approximating critical numbers.
 
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Behavior (Rate of Change):}} \\
-The critical numbers and singularities partition the real line into intervals where the rational function increases or decreases.  We can then list these intervals.
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Local Maximums and Minimums (Extrema):}} 
+
+Just like polynomials, rational funcitons can have a local maximums or minimums or both.
+
+Maximums and minimums are located at critical numbers, which are difficult for our algebra to locate.
+
+
+If we have a derivative, then we can attempt to locate exact values of critical numbers.  Without the derivative, we turn to technology for some assistance in approximating critical numbers.
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Behavior (Rate of Change):}} 
+
+
+The critical numbers and singularities partition the real line into intervals where the rational function increases or decreases.  
+
+With a derivative, we can describe the behavior exactly.
 
 
 
@@ -376,7 +410,9 @@ The critical numbers and singularities partition the real line into intervals wh
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Graph:}} \\
+$\blacktriangleright$ \textbf{\textcolor{red!10!blue!90!}{Graph:}} 
+
+
 Graphs of rational functions are nice.  They are smooth.  They do not have corners or spikes or jump breaks. They do have vertical asymptotes, which we understand.
 
 
@@ -384,7 +420,7 @@ Once we have the roots of the numerator and denominator polynomials, then we can
 
 With a basic general shape, we can estimate critical numbers and identify the type of extrema values. 
 
-Of course, we are always on the lookout for common factors, which are represented with holes in the graph. \\
+Of course, we are always on the lookout for common factors, which are represented with holes in the graph. 
 
 
 
