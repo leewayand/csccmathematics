@@ -1,0 +1,386 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Categories}
+
+\begin{document}
+
+\begin{abstract}
+Trig Templates
+\end{abstract}
+\maketitle
+
+
+
+
+
+We are building a library of the elemntary functions.  The idea is to use the library to list characteristics, features, and aspects of all functions within each category.  
+
+That way, if we can identify the type of function we have, then we get free information when analyzing functions. 
+
+The category becomes our reasoning. 
+
+
+
+\begin{center}
+
+\textbf{\textcolor{red!70!black}{These are ``CAN'' questions.}} 
+
+\end{center}
+
+
+
+
+\textbf{\textcolor{purple!85!blue}{CAN}} the formula we are given be rewritten as one of the official standard forms for each category? 
+
+
+
+
+
+
+
+\section*{Official Templates}
+
+
+These elementary function categories are our \textbf{first choice}.  If a function can be represented by one of these standard forms, then we want to describe the function as one of these elementary functions.  That gives us the most information. 
+
+
+
+Our general templates are really compositions of basic functions with linear functions.
+
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Sine Functions}}
+
+There is one \textbf{basic sine function}. 
+
+\[     S(x) = \sin(x)           \]
+
+
+\end{formula}
+
+Our category of sine functions is built from composing this basic sine function with linear functions
+
+
+Let $L_{out}(t) = A t + D$
+
+Let $L_{in}(v) = B v + C$
+
+
+\[
+(L_{out} \, \circ \, \sin \, \circ L_{in})(x) = A \sin(B \, x + C) + D 
+\]
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Sine Functions}}
+
+A \textbf{sine function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     S(x) =    A \sin(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
+
+
+\end{formula}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Cosine Functions}}
+
+There is one \textbf{basic cosine function}. 
+
+\[     Cx) = \cos(x)           \]
+
+
+\end{formula}
+
+Our category of cosine functions is built from composing this basic sine function with linear functions
+
+
+Let $L_{out}(t) = A t + D$
+
+Let $L_{in}(v) = B v + C$
+
+
+\[
+(L_{out} \, \circ \, \cos \, \circ L_{in})(x) = A \cos(B \, x + C) + D 
+\]
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Cosine Functions}}
+
+A \textbf{cosine function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     C(x) =    A \cos(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
+
+
+\end{formula}
+
+
+
+
+The same composition with linear functions gives the general categories for tangent, secant, cosecant, and cotangent.
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Tangent Functions}}
+
+A \textbf{tangent function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     T(x) =    A \tan(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
+
+
+\end{formula}
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Secant Functions}}
+
+A \textbf{secant function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     S(x) =    A \sec(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
+
+
+\end{formula}
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Cosecant Functions}}
+
+A \textbf{cosecant function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     C(x) =    A \csc(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
+
+
+\end{formula}
+
+
+
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Cotangent Functions}}
+
+A \textbf{cotangent function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     C(x) =    A \cot(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
+
+
+\end{formula}
+
+
+
+
+
+
+
+\subsection{Reciprocals}
+
+
+
+Cotangent, secant, and cosecant were defined as reciprocals of tangent, cosine, and secant.
+
+
+
+\[
+\cot(x) = \frac{1}{\tan(x)}
+\]
+
+
+
+
+\[
+\sec(x) = \frac{1}{\cos(x)}
+\]
+
+
+
+\[
+\csc(x) = \frac{1}{\sin(x)}
+\]
+
+
+
+
+
+However, this does not hold for the general forms.
+
+
+
+It is not true that the reciprocal of any sine function is a secant function.
+
+
+
+\begin{example} Reciprocals
+
+
+Let $f(x) = \sin(x) + 2$.
+
+This is a sine function, becasue it matches our template, $A \sin(B x + C) + D$.
+
+The reciprocal of $f$ is another function, $g(t) = \frac{1}{\sin(t) + 2}$.
+
+However, this is not a cosecant function.
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+The claim is that $g(t) = \frac{1}{\sin(t) + 2}$ is not a cosecant function.
+
+It cannot be written in the form $A \csc(B t + C) + D$.
+
+
+This is shown by assuming it is a cosecant function and running into a contradiction.
+
+
+Assume $g(t)$ is cosecant function.
+
+
+\[
+\frac{1}{\sin(t) + 2} = A \csc(B t + C) + D = A \csc(B t + C) + D
+\]
+
+
+The reason that this cannot happen is that $\sin(t) + 2$ can never equal $0$. That means that the domain of $\frac{1}{\sin(t) + 2}$ is al lreal numbers.
+
+However, the domain of $A \csc(B t + C) + D$ can never be all real numbers.
+
+
+As long as $B \ne 0$, then $B t + C = 0$ has a solution.  That solution is a singularity for the cosecant function and so is not in the domain of $A \csc(B t + C) + D$.
+
+One function includes a real number in its domain that is not in the other domain.  They cannot be equal functions.
+
+
+
+
+\end{example}
+
+The problems is the added constant term.  Added constants are trouble for denominators, because fractions cannot be split at addition in the denominator.
+
+
+
+
+If just stay with $0$ added constant terms, then the reciprocal of sine functions are cosecant functions.
+
+
+
+\[
+\frac{1}{A \sin(B t + C)} = \frac{1}{A} \csc(B t + C) 
+\]
+
+
+
+
+\begin{warning} Reciprocals
+
+
+Reciprocals of trigonometric functions are not always trigonometric functions.
+
+
+Since, we use function categories as our reasoning for many characteristics, we must be careful.
+
+
+\end{warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Functions]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/moreTrigonometricFunctions/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+
+\end{document}
