@@ -28,14 +28,14 @@ $x^{\tfrac{1}{n}}$ is called \textbf{the nth root of x}, where $n$ is a natural 
 
 \textbf{odd roots}
 
-When $n$ is odd, $x^{\tfrac{1}{n}}$ is defined to be the unique real number, $r$, such that $r^n = x$. The domain is all real numbers.
+When $n = 2k+1$ is odd, $x^{\tfrac{1}{n}} = x^{\tfrac{1}{2k+1}}$ is defined to be the unique real number, $r$, such that $r^n = x$. The domain is all real numbers.
 
 
 
 
 \textbf{even roots}
 
-When $n$ is even, $x^{\tfrac{1}{n}}$ is defined to be the unique nonnegative real number, $r$, such that $r^n = x$. The domain is all nonnegative real numbers.
+When $n=2k$ is even, $x^{\tfrac{1}{n}} = x^{\tfrac{1}{2k}}$ is defined to be the unique nonnegative real number, $r$, such that $r^n = x$. The domain is all nonnegative real numbers.
 
 
 \end{definition}
@@ -117,8 +117,22 @@ Their domains do not include negative numbers: $[0, \infty)$.  Their domains are
 
 
 
+By far, we encounter the square root funciton more than any other even root.
 
 
+
+
+
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Square Root Function}}
+
+There is one \textbf{basic square root function}. 
+
+\[     SR(x) = \sqrt{x}           \]
+
+
+\end{formula}
 
 
 The graph of $y = SR(x) = \sqrt{x}$
@@ -151,6 +165,44 @@ The graph of $y = SR(x) = \sqrt{x}$
 
 
 The square root function begins where the inside of the radical equals $0$.  It then moves in the direction that keeps the inside positive.
+
+
+
+
+
+
+
+
+
+
+
+Our category of square root functions is built from composing this basic square root function with linear functions
+
+
+Let $L_{out}(t) = A t + D$
+
+Let $L_{in}(v) = B v + C$
+
+
+\[
+(L_{out} \, \circ \, \sqrt{ } \, \circ L_{in})(x) = A \sqrt{B \, x + C} + D 
+\]
+
+
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Square Root Function}}
+
+A \textbf{square root function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     SR(x) =    A \sqrt(B \, x + C) + D           \]
+
+where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
+
+
+\end{formula}
+
+
+
+
 
 
 
@@ -245,7 +297,7 @@ Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of t
 
 
 
-
+Odd root functions follow the same type templates.  The difference is that we have odd roots of negative numbers.
 
 
 
@@ -256,7 +308,7 @@ Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of t
 
 \subsection*{Odd Roots}
 
-This course is the study of the real numbers. As a result we don't take even roots of negative numbers, however we do have odd roots of negative numbers
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers, however we do have odd roots of negative numbers.
 
 Odd roots
 
@@ -385,11 +437,11 @@ The domnain of a radical function depends on the whether it is an odd root or an
 \textbf{\textcolor{blue!55!black}{Zeros}}
 
 
-An odd root will always have a single zero. \\
+An odd root will always have a single zero. 
 
-An odd root will have a single zero or no zero. \\
+An even root will have a single zero or no zero, since it can be ssifted. 
 
-To detemine the zero, set the whole formula equal to $0$ and solve. \\
+To detemine the zero, set the whole formula equal to $0$ and solve. 
 
 
 
@@ -400,7 +452,7 @@ To detemine the zero, set the whole formula equal to $0$ and solve. \\
 \textbf{\textcolor{blue!55!black}{Continuity}}
 
 
-Radical functions are continuous.\\
+Radical functions are continuous.
 
 
 
@@ -410,15 +462,15 @@ Radical functions are continuous.\\
 
 
 
-Odd roots have end-behavior in both directions.  The function is unbounded in both directions.  In one direction, the function will be unbounded positively and in the other direction the function will be unbounded negatively. \\
+Odd roots have end-behavior in both directions.  The function is unbounded in both directions.  In one direction, the function will be unbounded positively and in the other direction the function will be unbounded negatively. 
 
-The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the end-behavior. \\
+The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the end-behavior. 
 
 
 
-Even roots have end-behavior in only one directions.  The function is unbounded positively or negatively. \\
+Even roots have end-behavior in only one directions.  The function is unbounded positively or negatively. 
 
-The sign of the leading coefficient will tell the end-behavior. \\
+The sign of the leading coefficient will tell the end-behavior. 
 
 
 
@@ -431,13 +483,14 @@ The sign of the leading coefficient will tell the end-behavior. \\
 \textbf{\textcolor{blue!55!black}{Behavior}}
 
 
-Radical (Root) functions are either always increasing or always decreasing. \\
+Radical (Root) functions are either always increasing or always decreasing. 
 
 
-The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the behavior. \\
+The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the behavior. 
 
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} When the two leading coefficents have the same sign, then the function is increasing.
 
-
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} When the two leading coefficents have different signs, then the function is decreasing.
 
 
 
@@ -446,19 +499,19 @@ The sign of the leading coefficient along with the sign of the leading coefficie
 
 
 
-Odd roots do not have global maximum or minimum.\\
+Odd roots do not have global maximum or minimum.
 
-Odd roots do not have local maximums or minimums.\\
-
-
+Odd roots do not have local maximums or minimums.
 
 
-Even root have either a global maximum or minimum.\\
-
-Even root have either a local maximum or minimum.\\
 
 
-The domain, behavior, and end-behavior will reveal which one. \\
+Even root have either a global maximum or minimum.
+
+Even root have either a local maximum or minimum.
+
+
+The domain, behavior, and end-behavior will reveal which one. 
 
 
 
