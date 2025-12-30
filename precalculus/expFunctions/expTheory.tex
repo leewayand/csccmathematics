@@ -47,7 +47,7 @@ For example, let $g$ be a function that grows by $10\%$ over every domain interv
 \item If $g(\sqrt{3}) = 7$, then $g(\sqrt{3} + 3) = 1.1 \cdot 7 = 7.7$
 \end{itemize}
 
-Every time the domain interval changes by $3$, then the function value is multiplied by $1.1$ (an increase (change) of $10\%$).
+Every time the domain interval changes by $3$, then the function value is multiplied by $1.1$ (an change/increase of $10\%$).
 
 
 
@@ -95,9 +95,21 @@ We call \textbf{\textcolor{purple!85!blue}{$r$}} the \textbf{\textcolor{purple!8
 
 
 
-Functions that possess this constant percentage growth proprty are called exponential formula.
+Functions that possess this constant percentage growth proprty are called exponential functions.
 
-We can think of exponential functions as shifts and stretches of a basic exponential funciton. \\
+We can think of exponential functions as shifts and stretches of a basic exponential function. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,7 +122,24 @@ The template for the formula of the basic exponential function looks like
 
 
 
-\[  a \cdot r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  a \ne 0, \, r > 0   \]
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Basic Exponential Functions}}
+
+The \textbf{basic exponential function}. 
+
+\[  Exp(x) = a \cdot r^x    \, | \,  a \ne 0, \, r > 0   \]
+
+\end{definition}
+
+
+
+
+
+
+
 
 
 The \textbf{\textcolor{purple!85!blue}{leading coefficient}}, $a$, controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values, which is illustrated graphically as a vertical reflection. The \textbf{\textcolor{purple!85!blue}{base}}, $r$, dictates a growing or decaying function - the constant prcentage change could be an increase or decrease.
@@ -321,7 +350,7 @@ $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Greater than $1$:
 \end{itemize}
 
 
-The coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
+The leading coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
 
 
 \begin{itemize}
@@ -343,7 +372,7 @@ $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Less than $1$: $0
 \end{itemize}
 
 
-The coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
+The leading coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
 
 
 \begin{itemize}
@@ -379,6 +408,17 @@ As we see, basic exponential functions can be
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 \subsection*{Analysis}
 
 
@@ -386,21 +426,31 @@ As we see, basic exponential functions can be
 
 
 
-\begin{example}  
+\begin{example}  Analysis
 
 
 
-Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5}$ \\
-
-Categorize: $f$ is an exponential function, because it matches our template for exponential functions, $a \, r^x$.
+Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5}$ 
 
 
 
 
+\textbf{\textcolor{red!75!green}{explanation}} 
 
-\begin{idea}
 
-We'll begin by thinking about the graph to help guide our analysis. \\
+
+
+Categorize: $f$ is an exponential function, because it can match our template for exponential functions, $a \, r^x$.
+
+
+\[
+\frac{1}{3} \cdot \, 2^{x+5} = \frac{1}{3} \cdot \, 2^{x} \cdot 2^{5} = \frac{32}{3} \cdot \, 2^{x}
+\]
+
+
+\textbf{\textcolor{red!70!black}{IDEA: Thinking Graphically:}}  
+
+We'll begin by thinking about the graph to help guide our analysis. 
 
 
 
@@ -444,7 +494,7 @@ Graph of $y = f(x)$.
 
 
 
-\end{idea}
+
 
 
 Now, for our (algebraic) function analysis.
@@ -457,26 +507,33 @@ Now, for our (algebraic) function analysis.
 
 \textbf{Domain:} 
 
-The domain of every exponential function is $(-\infty, \infty)$. \\
+The domain of every exponential function is $(-\infty, \infty)$. 
+
 
 
 
 \textbf{Zeros:}  
 
-Exponential functions do not have zeros. \\
+Exponential functions do not have zeros. 
 
 
-\textbf{Continuity:}  Exponential functions are continuous.  \\
+
+
+\textbf{Continuity:}  Exponential functions are continuous.  
 
 
 
 \textbf{End-Behavior:} 
 
-The base of $f$ is $2 > 1$. $2^{positive}$ will get big. $2^{negative}$ will get small. \\ 
+The base of $f$ is $2 > 1$. 
 
-The linear exponent of $f$ is $x+5$ has a positive leading coefficient. \\
 
-The negative direction is the direction that makes the exponent large and negative.  That makes this the direction that the function value levels off to $0$. \\
+
+$2^{positive}$ will get big. $2^{negative}$ will get small. 
+
+The linear exponent of $f$ is $x+5$ has a positive leading coefficient. 
+
+The negative direction is the direction that makes the exponent large and negative.  That makes this the direction that the function value levels off to $0$. 
 
 
 \[
@@ -486,7 +543,7 @@ The negative direction is the direction that makes the exponent large and negati
 
 
 
-The other direction is where the exponential function is uunbounded.  Since the leading coefficient of $f$ is positive, $f$ is unbounded positively. \\
+The other direction is where the exponential function is uunbounded.  Since the leading coefficient of $f$ is positive, $f$ is unbounded positively. 
 
 
 
@@ -504,14 +561,14 @@ The other direction is where the exponential function is uunbounded.  Since the 
 
 \textbf{Behavior:} 
 
-The base of $f$ is $2$, which is greter than $1$. The leading coefficient of $f$ is $\frac{1}{3}$, which is positive. The leading coefficient of the linear exponent is $1$, which is also positive.  These make $f$ is a positive increasing exponential function.
+The base of $f$ is $2$, which is greater than $1$. The leading coefficient of $f$ is $\frac{1}{3}$, which is positive. The leading coefficient of the linear exponent is $1$, which is also positive.  These make $f$ is a positive increasing exponential function.
 
 
 
-\textbf{Global Extrema:}  Exponential functions do not have global maximums or minimums. \\
+\textbf{Global Extrema:}  Exponential functions do not have global maximums or minimums. 
 
 
-\textbf{Local Extrema:}  Exponentials functions do not have local maximums or minimums. \\
+\textbf{Local Extrema:}  Exponentials functions do not have local maximums or minimums. 
 
 
 
@@ -539,7 +596,7 @@ The base of $f$ is $2$, which is greter than $1$. The leading coefficient of $f$
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Shifting or Not}} \\
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Shifting or Not}} 
 
 
 
@@ -553,11 +610,9 @@ If we add/subtract $b$ in the exponent, for a horizontal stretch, then we have
 a \cdot r^{x + b} = a \cdot r^x \cdot r^b = a \cdot r^b \cdot r^x = (a \cdot r^b) \cdot r^x
 \]
 
-We obtain a new leading coefficient. \\
+We obtain a new leading coefficient. 
 
-It just depends on how you like to see exponential functions. \\
-
-
+It just depends on how you like to see exponential functions. 
 
 
 
@@ -573,7 +628,9 @@ It just depends on how you like to see exponential functions. \\
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Stretching or Not}} \\
+
+
+$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Stretching or Not}} 
 
 
 
@@ -587,7 +644,7 @@ Basic exponential functions swallow up stretching and compressing into the leadi
 b \cdot (a \cdot r^x) = (a \cdot b) \cdot r^x
 \]
 
-We obtain a new leading coefficient. \\
+We obtain a new leading coefficient. 
 
 
 
@@ -606,16 +663,16 @@ We obtain a new base, which tells us about the growth of the function.
 \end{itemize}
 
 
-It just depends on how you like to see exponential functions. \\
+It just depends on how you like to see exponential functions. 
 
 
 
 You should pick a basic basic exponential function to which you will compare other exponential functions.
 
-It is common for students to first select $2^x$. It turns out that $e^x$ will become the focus of our attention in mathematics.  So, it becomes common to select $e^x$ is the basic basic exponential function to memorize. \\
+It is common for students to first select $2^x$. It turns out that $e^x$ will become the focus of our attention in mathematics.  So, it becomes common to select $e^x$ is the basic basic exponential function to memorize. 
 
 
-From this choice, there are four immediate configurations from our template, $a \, r^x$.\\
+From this choice, there are four immediate configurations from our template, $a \, r^x$.
 
 
 
@@ -647,7 +704,7 @@ $r > 1$, the base is greater than $1$, so examine leading coefficients.
 
 
 
-It just depends on how you like to see exponential functions. \\
+It just depends on how you like to see exponential functions.  Algebra let's us see exponential funcitons in many different forms.
 
 
 
@@ -656,12 +713,16 @@ It just depends on how you like to see exponential functions. \\
 
 
 
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Exponential Functions}}
 
+A general \textbf{exponential function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
 
+\[     Exp(x) =    A \cdot r^{B \, x + C}          \]
 
+where $A$, $B$, and $C$ are real numbers and $A \ne 0$, $B \ne 0$.
 
 
-We can use any algebra any time any where that we feel helps us.
+\end{formula}
 
 
 
@@ -669,66 +730,37 @@ We can use any algebra any time any where that we feel helps us.
 
 
 
+We can use any algebra any time any where that we feel helps us.  
 
 
 
 
-\begin{example} 
 
 
 
-$f(x) = \frac{1}{3} \, 2^{x+5}$ is the function in the last example.  We could take advantage of exponential algebra to simplify the formula.   \\
 
-\[ 
-f(x) = \frac{1}{3} \, 2^{x+5} = \frac{1}{3} \, 2^x \cdot 2^5 = \frac{32}{3} \, 2^x 
-\]
 
 
-The new base is still $2$ and the new leading coefficient is $\frac{32}{3}$ and there is no shifting.  Same function.  Different formula.
 
 
 
 
 
-From this viewpoint, we change our strategic point to $\left( 0, \frac{32}{3} \right)$.
 
 
 
 
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=15, xmax=10, ymin=-5, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
-            ytick={-4,-2,2,4,6,8,10,12,14},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)};
 
-          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,10.66)};
 
-          
 
 
- 
 
-  \end{axis}
-\end{tikzpicture}
-\end{image}
 
 
 
 
-Same function.  Different perspective.
 
-\end{example}
 
 
 
@@ -742,61 +774,27 @@ Same function.  Different perspective.
 
 
 
+\begin{example} Analysis
 
 
 
+Analyze $G(t) = 4 \cdot 3^{2t-1}$.   
 
 
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
+Categorize:  $G$ is an exponential function, since it matches our official template $a \, r^x$ or our alternate official template $A \, r^{B \, x + C}$. 
 
 
 
 
 
+\textbf{\textcolor{red!70!black}{IDEA: Dissecting the Formula:}}  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} 
-
-
-
-Analyze $G(t) = 4 \cdot 3^{2t-1}$.   \\
-
-
-
-Categorize:  $G$ is an exponential function, since it matches our official template $a \, r^x$ or our alternate official template $A \, r^{B \, x + C}$. \\
-
-
-\begin{idea}
-
-
-We could take advantage of exponential algebra to simplify the exponent.   \\
+We could take advantage of exponential algebra to simplify the exponent.   
 
 \[ 
 G(t) = 4 \cdot 3^{2t-1} = 4 \cdot 3^{2t} \cdot \frac{1}{3} = \frac{4}{3} \cdot (3^2)^t  = \frac{4}{3} \cdot 9^t
@@ -822,8 +820,6 @@ With these ideas, we can create an algebraic analysis.
 
 
 
-\end{idea}
-
 
 
 
@@ -847,7 +843,7 @@ $G$ is an exponential function, so it has no zeros.
 
 
 
-\textbf{Contiuity}
+\textbf{Continuity}
 
 
 $G$ is an exponential function, so it is continuous.
@@ -919,19 +915,53 @@ $G$ is a positive exponential function.   Its range is $(0, \infty)$.
 
 
 
+\begin{warning}  Sign vs. Behavior
+
+
+Exponential functions are eiher always positive or always negative. The sign of the leading coeffcient dictates this.
+
+
+However, behavior is not so simple.
+
+
+Behavior is controlled by three pieces of the formula.
+
+
+\begin{itemize}
+   \item the leading coefficient
+   \item the base
+   \item the leading coefficient of the exponent (a linear function)
+\end{itemize}
+
+
+
+$f(x) = 3 \cdot e^{x}$ is an increasing function.
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} If we change the sign of the leading coefficient, $g(x) = -3 \cdot e^{x}$ is a decreasing function.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Or, if instead, we change the sign of the exponent's leading coefficient, $h(x) = 3 \cdot e^{-x}$ is a decreasing function.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Or, if instead, we change the base to be less than $1$, $h(x) = 3 \cdot \left( \frac{1}{2} \right)^{x}$ is a decreasing function.
+
+
+
+We must watch all three to determine the behavior.
+
+\end{warning}
 
 
 
 
-
-\begin{observation} \textbf{\textcolor{blue!55!black}{Big Bases : $r > 1$}}     \\
+\begin{observation} \textbf{\textcolor{blue!55!black}{Big Bases : $r > 1$}}     
 
 
 
 When multiplying by $b$ on the inside of an exponential function, for a horizontal stretch or compression, 
 
 
-if $1 < b$, then we are compressing horizontally.  This works out in the algebra. When $1 < b$, then $r < r^b$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. \\
+if $1 < b$, then we are compressing horizontally.  This works out in the algebra. When $1 < b$, then $r < r^b$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. 
 
 
 
@@ -944,26 +974,49 @@ if $0 < b < 1$, then we are stretching horizontally.  This works out in the alge
 
 
 
+One way to watch this is to think of how the exponential function is built from a basic exponential function through composition.
+
+
+Begin with the base, is it greater than or less than $1$.  That will tell you if the basic exponential function is increasing or decreasing.
+
+Then look at the signs of the leading coefficients. If they have the same sign, then the bhavior doesn't change. If they have different signs, then the behavior changes.
 
 
 
 
-\begin{example}  
 
 
 
-Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ \\
 
 
 
-Categorize: $B$ is an exponential function, since it matches our template, $A \, r^{B \, x + C} $. \\
 
 
-\begin{idea}
 
 
-\textbf{\textcolor{purple!85!blue}{Formula dissection:}}  \\
 
+
+
+
+\begin{example}  Analysis
+
+
+
+Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ 
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+
+Categorize: $B$ is an exponential function, since it matches our template, $A \, r^{B \, x + C} $. 
+
+
+
+
+
+\textbf{\textcolor{red!70!black}{IDEA: Formula dissection:}}  
 
 $\blacktriangleright$  the base: $\frac{2}{3} < 1$   \\
 $\blacktriangleright$  the exponent: $3-t$ is positive for large negative $t$. \\
@@ -1053,10 +1106,18 @@ Graph of $y = B(t)$.
 
 
 
-With these ideas, we can write an algebraic analysis. \\
+With these ideas guiding us, we can write an algebraic analysis. 
 
 
-\end{idea}
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Algebraic Analysis}} 
+
+
 
 
 
@@ -1100,9 +1161,10 @@ $B$ is a negative function that becomes unbounded toward the positive end of the
 
 
 
-\begin{criterion}
+Or, we can compare back to a basic exponential function...
 
-$B$ is an exponential function, which might be compared to the basic basic exponential function $e^x$, which is a positive increasing function.\\
+
+$B$ is an exponential function, which might be compared to the basic basic exponential function $e^x$, which is a positive increasing function.
 
 
 First, the base has been changed from $e > 1$ to $\frac{2}{3} < 1$.  That switches the behavior to decreasing.
@@ -1114,7 +1176,6 @@ Third, the leading coefficient is $-2 < 0$. That switches the behavior again, ba
 
 
 
-\end{criterion}
 
 
 
