@@ -90,6 +90,8 @@ Its characteristics exactly follow the characteristics of the $x$-coordinates of
 
 The domain of $\cos(\theta)$ is $(-\infty, \infty)$.
 
+A point can be rotated counterclockwise and clockwise.
+
 
 
 \textbf{\textcolor{blue!55!black}{Zeros}}
@@ -100,7 +102,7 @@ The zeros of $\cos(\theta)$ are the angles where the $x$-coordinates equal $0$. 
 That would be an infinite collection of angles.
 
 \[
-\{ \, \frac{\pi}{2} + k \pi\, \text{ | } \,  k \in \mathbb{Z} \,  \}
+\left\{ \, \frac{\pi}{2} + k \pi\, \text{ | } \,  k \in \mathbb{Z} \,  \right\}
 \]
 
 
@@ -200,7 +202,7 @@ The maximum value of $1$ occurs on the set
 
 
 
-The global extrema are automatically local extrema and they are the only ones, since there are no other critical numbers.
+The global extrema are automatically local extrema and they are the only ones, since there are no other critical numbers (switching behavior).
 
 
 
@@ -379,6 +381,12 @@ On our principal interval, $f(x)$ has a global and local minimum of $-1$ at $\fr
 
 
 
+
+\textbf{\textcolor{blue!55!black}{Range}} 
+
+Since cosine is continuous, the extreme values give a range of $[-1,1]$.
+
+
 \end{example}
 
 
@@ -498,7 +506,7 @@ The basic cosine function values are
 \]
 
 
-$g(t)$ odes the same thing.  It just does it from right to left:
+$g(t)$ does the same thing.  It just does it from right to left:
 
 \[
 1 \leftarrow 0 \leftarrow -1 \leftarrow 0 \leftarrow 1
@@ -580,6 +588,14 @@ On our principal interval, $g(t)$ has a global and local minimum of $-1$ at $-\f
 
 
 
+\textbf{\textcolor{blue!55!black}{Range}} 
+
+
+Since cosine is continuous, the extreme values give a range of $[-1,1]$.
+
+
+
+
 
 \end{example}
 
@@ -601,57 +617,11 @@ On our principal interval, $g(t)$ has a global and local minimum of $-1$ at $-\f
 
 \textbf{\textcolor{red!70!black}{Note:}}  In the example above, the inside of the cosine function is a linear function with a negative leading coefficent.  That has reversed the behavior from the basic cosine function.
 
-Reading the graph of the basic cosine function from left, we see that the basic cosine function decreases across two quadrants then increases across two quadrants.
-
-
-Reading the graph of the cosine function in the example above, from left we see that the cosine function decreases across two quadrants then increases across two quadrants.
-
 
 
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} In addition to the leading coefficient of the inner linear function, the cosine funciton itself has a leading coefficient.  When it is negative, the behavior reverses again.
-
-
-
-
-This example has illustrated a fact about function behavior.
-
-
-
-\begin{fact}
-
-If $f(x)$ is increasing on $(a, b)$, then $f(-x)$ is decreasing on $(a, b)$.
-
-\textbf{\textcolor{red!75!green}{explanation}} 
-
-$f(x)$ is increasing on $(a, b)$ means that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $f(x) < f(y)$.
-
-
-We want to show that $f(-x)$ is decreasing on $(a, b)$.  Let's call $f(-x)$ by a new name.  $g(x) = f(-x)$
-
-We want to show that $g(x)$ is decreasing.
-
-We want to show that that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $g(x) > g(y)$.
-
-
-
-So, let's pretend we have $x$ and $y$ in $(a, b)$ with $x < y$.
-
-Then $-x > -y$.
-
-Then $f(-x) > f(-y)$, because $f$ is increasing.
-
-But, that is the same as $g(x) > g(y)$.
-
-Than means that $g$ is decreasing.
-
-
-
-\end{fact}
-
-
-
 
 
 
@@ -699,6 +669,8 @@ Describe the behavior of   $H(k) = -2 \cos\left( \frac{k}{3} - \pi \right)$
 First, we'll just think of $\cos\left( \frac{k}{3} - \pi \right)$.  Then, we'll bring in the $-2$.
 
 
+Let $f(k) = \cos\left( \frac{k}{3} - \pi \right)$.
+
 
 The ``angle'' is $\frac{k}{3} - \pi$.
 
@@ -744,7 +716,7 @@ Our principal interval is $\left( 3 \pi, 9 \pi \right)$.
 That makes the period $9 \pi - 3 \pi = 6 \pi$.
 
 
-Now we just remember what the basic sine function does in each quadrant. 
+Now we just remember what the basic sine function does in each quadrant and multiply by $-2$. 
 
 
 
@@ -752,18 +724,18 @@ Now we just remember what the basic sine function does in each quadrant.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(x)$ decreases from $1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(k)$ decreases from $1$ to $0$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(x)$ decreases from $0$ to $-1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(k)$ decreases from $0$ to $-1$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(x)$ increases from $-1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(k)$ increases from $-1$ to $0$.
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(x)$ increases from $0$ to $1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(k)$ increases from $0$ to $1$.
 
 
 
@@ -781,46 +753,8 @@ All of this repeats with a period of $6 \pi$.
 Now we'll bring in $-2$ as the leading coefficent.
 
 
-We need another fact about function behavior.
 
-
-
-
-\begin{fact}
-
-If $f(x)$ is increasing on $(a, b)$, then $-f(x)$ is decreasing on $(a, b)$.
-
-\textbf{\textcolor{red!75!green}{explanation}} 
-
-$f(x)$ is increasing on $(a, b)$ means that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $f(x) < f(y)$.
-
-
-We want to show that $-f(x)$ is decreasing on $(a, b)$.  Let's call $-f(x)$ by a new name.  $g(x) = -f(x)$
-
-We want to show that $g(x)$ is decreasing.
-
-We want to show that that for any $x$ and $y$ in $(a, b)$ with $x < y$, it must be true that $g(x) > g(y)$.
-
-
-
-So, let's pretend we have $x$ and $y$ in $(a, b)$ with $x < y$.
-
-Then $f(x) < f(y)$, because $f$ is increasing.
-
-Then $-f(x) > -f(y)$.
-
-But, that is the same as $g(x) > g(y)$.
-
-Than means that $g$ is decreasing.
-
-
-
-\end{fact}
-
-
-
-
-The negative leading coefficient reverses all of the behavior.
+\textbf{Remember:} The negative leading coefficient reverses all of the behavior.
 
 
 
@@ -835,18 +769,21 @@ The negative leading coefficient reverses all of the behavior.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(x)$ increases from $-2$ to $0$.
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(k)$ decreases from $1$ to $0$, so $H(k)$ increases $-2$ to $0$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(x)$ increases from $0$ to $2$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(k)$ decreases from $0$ to $-1$, so $H(k)$ increases $0$ to $2$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(x)$ decreases from $2$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(k)$ increases from $-1$ to $0$, so $H(k)$ decreases $2$ to $0$.
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(x)$ decreases from $-2$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(k)$ increases from $0$ to $1$, so $H(k)$ decreases $0$ to $-2$.
+
+
 
 
 
@@ -875,9 +812,7 @@ All of this repeats with a period of $6 \pi$.
 
 
 
-$\sin\left( \frac{k}{3} - \pi \right)$ has a maximum value of $1$ and a minimum value of $-2$.
-
-$-2 \sin\left( \frac{k}{3} - \pi \right) + 1$ has a maximum value of $3$ and a minimum value of $-1$.
+$-2 \sin\left( \frac{k}{3} - \pi \right)$ has a maximum value of $2$ and a minimum value of $-2$, which occur at $6 \pi$ and $3 \pi$, respectively.
 
 
 
