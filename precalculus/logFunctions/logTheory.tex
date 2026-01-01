@@ -114,11 +114,11 @@ Here, we know the desired value of the function.  We seek the domain numbers pai
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\bigstar$}}  Since $E(t) = 2^t > 0$ for any $t$, thinking backwards only works if we provide positive function values. $2^t$ cannot equal a negative value. $2^t$ cannot equal $0$.   \\ 
+\textbf{\textcolor{red!70!darkgray}{$\bigstar$}}  Since $E(t) = 2^t > 0$ for any $t$, thinking backwards only works if we provide positive function values. $2^t$ cannot equal a negative value. $2^t$ cannot equal $0$.   \\ 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\bigstar$}} For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number, one exponent, one \textbf{\textcolor{purple!85!blue}{logarithm}}. (That is eeriely similar to the function rule for pairs in the exponential function.) \\ 
+\textbf{\textcolor{red!70!darkgray}{$\bigstar$}} For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number, one exponent, one \textbf{\textcolor{purple!85!blue}{logarithm}}. (That is eeriely similar to the function rule for pairs in the exponential function.) \\ 
 
 
 
@@ -145,7 +145,7 @@ range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
 \]
 
 
-The basic logarithmic function just reverses the pairs in the basic exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the logarithmic function.
+The basic logarithmic function just reverses the pairs in the basic exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the corresponding logarithmic function.
 
 
 Therefore, the domains and ranges switch. \\
@@ -159,7 +159,7 @@ Therefore, the domains and ranges switch. \\
 
 It seems weird to write $(2^a, a)$, even though it is perfectly correct.  We are supplying values of an exponential function, which look like $2^a$ and then the value of the logarithmic function is the needed exponent.
 
-Instead, we are used to writing the domain number by a letter, like $b$, and then the function value as a formula involving $b$. That's what we are used to.
+We are used to writing the domain number by a letter, like $b$, and then the function value as a formula involving $b$. That's what we are used to.
 
 We would prefer our pairs in the logarithm function to look like 
 
@@ -245,6 +245,25 @@ The range is $(-\infty, \infty)$.
 \end{itemize}
 
 \end{conclusion}
+
+
+
+
+\begin{formuala} \textbf{\textcolor{blue!55!black}{Logarithmic Rules}}
+
+
+\begin{itemize}
+  \item $\log_A(B \cdot C) = \log_A(B) + \log_A(C)$
+  \item $\log_A\left( \frac{B}{C} \right) = \log_A(B) - \log_A(C)$
+  \item $\log_A(B^C) = C \log_A(B)$
+\end{itemize}
+
+
+\end{formula}
+
+
+
+
 
 
 
@@ -348,17 +367,35 @@ From this basic logarithmic function and its graph we can transform and analyze 
 
 
 
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Logarithmic Functions}}
+
+Genral \textbf{logarithmic functions} are functions that \textbf{\textcolor{red!70!black}{CAN}} be described by formulas of the form 
+
+\[     L(x) = A \log(B \, x + C) + D           \]
+
+
+$A \ne 0$ and $B \ne 0$
+
+\end{definition}
+
+
+
+
+
+
+
+
 \begin{fact}
 
 
-Logarithmic functions don't really have vertically shifted versions.  We can talk about a basic logarithm function being shifted.
-
-\[
-L(x) = A \log_r(B \, x + C) + D
-\]
+Unlike exponential functions, the $D$ can be absorded into the logarithm.
 
 
-But, the $D$ can be explained with additional horizontal transformations, like this... \\
 
 
 \begin{explanation}
@@ -366,24 +403,41 @@ But, the $D$ can be explained with additional horizontal transformations, like t
 We know that the range of $\log_r(x)$ is all real numbers, which includes $D$.  Therefore, there must be a real number, $d$, such that $\log_r(d) = D$. \\
 
 
-That gives us 
-
-
-
-\[
-L(x) = A \log_r(B \, x + C) + D = A \log_r(B \, x + C) + \log_r(d)
-\]
-
 And, we have logarithm rules, which give us
 
 
+
 \[
-L(x) = A \log_r(B \, x + C) + D = A \log_r((B \, x + C)d) = A \log_r(B \, d \, x + C \, d) 
+L(x) = A \log_r(B \, x + C) + D 
 \]
+
+
+
+
+\[
+= A \log_r(B \, x + C) + \log_r(d)
+\]
+
+
+
+\[
+= A \log_r((B \, x + C)d) 
+\]
+
+
+
+
+
+\[
+= A \log_r(B \, d \, x + C \, d) 
+\]
+
+
+
 
 \end{explanation}
 
-Therefore, we separate exponential and shifted exponential, but we don't separate logarithmic and shifted logarithmic.
+Therefore, while we separate exponential and shifted exponential functions, we don't separate logarithmic and shifted logarithmic functions into different categories.
 
 \end{fact}
 
@@ -421,14 +475,18 @@ Therefore, we separate exponential and shifted exponential, but we don't separat
 
 
 
-Analyze   $M(t) = \log_2(t+3) - 4$ \\
+Analyze   $M(t) = \log_2(t+3) - 4$ 
 
 
+\textbf{\textcolor{red!75!green}{explanation}} 
 
-We'll begin by thinking about the graph to help our analysis. \\
+
+\textbf{\textcolor{red!70!black}{IDEA: Thinking Graphically:}}  
 
 
-\begin{idea}
+We'll begin by thinking about the graph to help our analysis. 
+
+
 
 
 $\blacktriangleright$ First, the base is $2$, which is greater than $1$.
@@ -473,10 +531,9 @@ Graph of $y = M(t)$.
 \end{image}
 
 
-With these ideas, we can write an algebraic analysis. \\
+With these ideas, we can write an algebraic analysis. 
 
 
-\end{idea}
 
 
 
@@ -488,15 +545,14 @@ With these ideas, we can write an algebraic analysis. \\
 
 \textbf{Domain}  
 
-The inside of the logarithm is positive on $(-3, \infty)$.  Therefore, the domain of $M$ is $(-3, \infty)$. \\
+The inside of the logarithm is positive on $(-3, \infty)$.  Therefore, the domain of $M$ is $(-3, \infty)$. 
 
 
 \textbf{Zeros}  
 
-All logarithmic functions have a single zero. We see that this graph will have a horizontal intercept around $(11, 0)$.  \\
+All logarithmic functions have a single zero. We see that this graph will have a horizontal intercept around $(11, 0)$.  
 
-
-$M(t) = \log_2(t+3) - 4 = 0$ \\
+To calculate exctly, we solve $M(t) = \log_2(t+3) - 4 = 0$ 
 
 
 \begin{align*}
@@ -516,20 +572,22 @@ $\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you rai
 \textbf{Continuity}  
 
 
-Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
+Logarithmic functions are continuous.  That is a property of all logarithmic functions. 
 
 
 \textbf{End-Behavior} 
 
-We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $M$ and compare back to $\ln(x)$, which is an increasing function.  \\
+We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $M$ and compare back to $\ln(x)$, which is an increasing function.  
 
 
 
-The base of $M$ is $2 > 1$, so this does not change the behavior.
+The base of $M$ is $2 > 1$, so this does not change the behavior from $\ln(x)$.
+
 The leading coefficient of $M$ is $1$, which is positive, so this does not change the behavior. 
+
 the leading coefficient of the linear inside is $1$, which is also positive, so this does not change the behavior.
 
-$M$ is an increasing function. \\  
+$M$ is an increasing function. 
 
 
 
@@ -538,9 +596,11 @@ $M$ is an increasing function. \\
 
 
 
-\textbf{End-Behavior} 
+\textbf{Behavior} 
 
-$M$ is an increasing function on $(-3, \infty)$.\\
+Logarithmic functins are either always increasing or always decreasing.
+
+The end-behavior tells us which.
 
 \[
 \lim\limits_{t \to -3^+} M(t) = -\infty
@@ -552,16 +612,22 @@ $M$ is an increasing function on $(-3, \infty)$.\\
 
 
 
+$M$ is an increasing function on $(-3, \infty)$.
+
+
+
+
+
 
 
 \textbf{Global Extrema} 
 
-Logarithmic functions do not have global maximums or minimums. \\
+Logarithmic functions do not have global maximums or minimums. 
 
 
 \textbf{Local Extrema:} 
 
-Logarithmic functions do not have local maximums or minimums. \\
+Logarithmic functions do not have local maximums or minimums. 
 
 
 
@@ -720,16 +786,22 @@ Here is the graph of both the logarithmic and the associated exponential functio
 \begin{example}  
 
 
-Analyze   $K(x) = -2 \, \log_3(4-x)$ \\
+Analyze   $K(x) = -2 \, \log_3(4-x)$ 
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic function, because it matches out template, $A \, \log_r(B \, x + C) + D$. 
+
+
+We'll begin by thinking about the graph to help guide our analysis. 
 
 
 
-Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic function, because it matches out template, $A \, \log_r(B \, x + C) + D$. \\
 
 
-We'll begin by thinking about the graph to help guide our analysis. \\
-
-\begin{idea}
+\textbf{\textcolor{red!70!black}{IDEA: Thinking Graphically:}}  
 
 
 $\blacktriangleright$ First, the base is $3$, which is greater than $1$.
@@ -784,10 +856,10 @@ Graph of $y = K(x)$.
 
 
 
-With these ideas, we can write an algebraic analysis. \\
+With these ideas, we can write an algebraic analysis. 
 
 
-\end{idea}
+
 
 
 
@@ -797,15 +869,15 @@ With these ideas, we can write an algebraic analysis. \\
 
 \textbf{Domain}  
 
-The inside of the logarithm is positive on $(-\infty, 4)$.  Therefore, the domain of $K$ is $(-\infty, 4)$. \\
+The inside of the logarithm is positive on $(-\infty, 4)$.  Therefore, the domain of $K$ is $(-\infty, 4)$. 
 
 
 \textbf{Zeros}  
 
-We see that the graph is suggesting that the zero is around $3$. \\
+We see that the graph is suggesting that the zero is around $3$. 
 
 
-$K(x) = -2 \, \log_3(4 - x) = 0$ \\
+To calculate the zero exactly solve $K(x) = -2 \, \log_3(4 - x) = 0$ 
 
 
 \begin{align*}
@@ -816,14 +888,14 @@ $K(x) = -2 \, \log_3(4 - x) = 0$ \\
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember} $\log_3(4 - x)$ is the thing that you raise $3$ to, to get $4 - x$ and $\log_3(4 - x) = 0$.  Since, $0$ is also the thing that you raise $3$ to, to get $4 - x$, we must have $4 - x$ must be $1$.
+$\blacktriangleright$ \textbf{Remember} $\log_3(4 - x)$ is the thing that you raise $3$ to, to get $4 - x$. We are given that $\log_3(4 - x) = 0$.  We know that $0$ is the thing that you raise $3$ to, to get $1$. So, we must have $4 - x$ must be $1$.
 
 
 
 
 \textbf{Continuity}  
 
-Logarithmic functions are continuous.  That is a property of all logarithmic functions. \\
+Logarithmic functions are continuous.  That is a property of all logarithmic functions. 
 
 
 
@@ -835,7 +907,7 @@ Logarithmic functions are continuous.  That is a property of all logarithmic fun
 
 \textbf{Behavior} 
 
-We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $K$ and compare back to $\ln(x)$, which is an increasing function.  \\
+We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $K$ and compare back to $\ln(x)$, which is an increasing function.  
 
 
 
@@ -843,7 +915,7 @@ The base of $K$ is $3 > 1$, so this does not change the behavior.
 The leading coefficient of $K$ is $-2 < 0$ and this does change the behavior to decreasing. 
 the leading coefficient of the linear inside is $-1$, which is also negative, so this again changes the behavior back to increasing.
 
-$K$ is an increasing function. \\  
+$K$ is an increasing function. 
 
 
 
@@ -853,7 +925,7 @@ $K$ is an increasing function. \\
 
 \textbf{End-Behavior} 
 
-$K$ is an increasing function. on the domain $(-\infty, 4)$. That tell sus that 
+$K$ is an increasing function. on the domain $(-\infty, 4)$. That tells us that 
 
 
 \[
@@ -872,12 +944,12 @@ $K$ is an increasing function. on the domain $(-\infty, 4)$. That tell sus that
 
 \textbf{Global Extrema} 
 
-Logarithmic function do not have global maximums or minimums. \\
+Logarithmic function do not have global maximums or minimums. 
 
 
 \textbf{Local Extrema} 
 
-Logarithmic function do not have local maximums or minimums. \\
+Logarithmic function do not have local maximums or minimums. 
 
 
 
@@ -903,7 +975,7 @@ The range of every logarithmic function is $(-\infty, \infty)$.
 
 
 
-Reversing all of the pairs will give the inverse exponential function.  \\
+Reversing all of the pairs will give the inverse exponential function.  
 
 
 
@@ -1037,11 +1109,14 @@ Evaluate the following.
 
 \begin{remark} \textbf{\textcolor{purple!85!blue}{e}} \\
 
-\textbf{\textcolor{blue!55!black}{Remember:}} The function $\left( 1 + \frac{1}{x}  \right)^{x}$ has a limiting value.  Its end-behavior is a constant.  Its graph has a horizontal asymptote.  $e$ is this limiting value.
+The function $\left( 1 + \frac{1}{x}  \right)^{x}$ has a limiting value.  Take a look at its graph. Its graph has a horizontal asymptote. 
+
+Its end-behavior is a constant.   $e$ is this limiting value.
 
 It might seem strange to select that number as the base for a logarithm and give it special notation.  However, it turns out that exponential functions with this base, $e$, are intricately connected to natural growth in the universe.
 
 It is used A LOT!
+
 \end{remark}
 
 
