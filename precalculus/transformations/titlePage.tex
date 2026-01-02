@@ -15,6 +15,8 @@
 
 
 
+\subsection*{Composition}
+
 
 Composition is an operation on functions.  It takes two functions and produces a third function.
 
@@ -22,45 +24,62 @@ Composition is an operation on functions.  It takes two functions and produces a
 \[  (Outside \circ Inside)(d) = Outside(Inside(d))    \]
 
 
-For our transformation story, we have a function, $f(x)$, and we would like to transform horizontally.  In a previous section, that has looked like
+We will examine composition in more detail throughout the course, but right now we are emphasizing composition with linear functions.
 
 
-\[   f(a \, x + b)  \]
+
+For our transformation story, we begin with a function, $f(x)$.
+
+
+We can compose with a linear function in two ways:
+
+
+
+\[
+f(linear)
+\] 
+
+
+\[
+linear(f)
+\]
+
+
+How does each of these affect $f(x)$?
+
+
+\textbf{\textcolor{blue!55!black}{Inside:}} $f(a \, x + b)$  
 
 
 We can view this as a composition:
 
 
-\[  \text{Let } \, L(x) = a \, x + b   \]
+\[  \text{Let } \, L(t) = a \, t + b   \]
 
 
 \[   f(a \, x + b)  = (f \circ L)(x)\]
 
 
 
-Our horizontal graphical transformations can be viewed as a composition with a linear function.
+This affects the domain of $f$, which is illustrated as horizontal graphical transformations.
 
 
 
 
 
-For our transformation story, we have a function, $f(x)$, and we would also like to transform vertically.  In a previous section, that has looked like
-
-
-\[   a \, f(x) + b  \]
+\textbf{\textcolor{blue!55!black}{Outside:}} $a \, f(x) + b$  
 
 
 We can view this as a composition:
 
 
-\[  \text{Let } \, L(x) = a \, x + b   \]
+\[  \text{Let } \, L(t) = a \, t + b   \]
 
 
 \[   a \, f(x) + b  = (L \circ f)(x)\]
 
 
-
-Our vertical graphical transformations can be viewed as a composition with a linear function.
+This affects the range of $f$, which is illustrated as vertical graphical transformations.
 
 
 

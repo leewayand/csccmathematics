@@ -14,11 +14,11 @@ same characteristics
 
 
 
+\textbf{\textcolor{blue!55!black}{Inside}}
 
 
 
-
-One way to create a new function from an existing function is to shift all of the domain numbers in the function pairs. \\
+One way to create a new function from an existing function is to shift all of the domain numbers in the function pairs. 
 
 \[
 (a, b) \mapsto (a + k, b)
@@ -26,9 +26,9 @@ One way to create a new function from an existing function is to shift all of th
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} How do we describe a shifting domain? \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} How do we describe a shifting domain? 
 
-We want a graphical description. We want an algebraic description. \\
+We'll begin with a graphical description and then translate to an algebraic description. 
 
 
 
@@ -102,7 +102,21 @@ The domain of $T$ has two maximal intervals:, $(-4,-1]$ and $[1,7)$.  These corr
 
 
 
-\subsection*{A New Function}
+
+
+With $T$ as our initial function, we can build a new funciton through composition.
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{A New Function : B}
 
 $B(k)$ is a new function we are creating, but its definition is based on $T(v)$.
 
@@ -140,9 +154,9 @@ $k$ must be in a similar set, but shifted to the left by $3$, because we need to
 
 The domain of $B$ is $(-7,-4] \cup [-2,4)$.   \\
 
-It was ``induced'' from the domain of $T$ through the definition of $B$, which is using $T$.  The values in the domain of $B$ are real numbers, $k$, such that $k+3$ is in the domain of $T$.
+Thsi domain was ``induced'' from the domain of $T$ through the definition of $B$, which is using $T$.  The values in the domain of $B$ are real numbers, $k$, such that $k+3$ is in the domain of $T$.
 
-The domain has shifted. 
+The domain of $B$ is a shift of the domain of $T$.  
 
 
 But, the structure of the function hasn't changed.  The same formulas are in use.  They are just used by different domain numbers.
@@ -151,10 +165,12 @@ But, the structure of the function hasn't changed.  The same formulas are in use
 
 \end{explanation}
 
+$T$ is $B$ with the domain shifted. All of the values of $B$ are still there. They just have new domain partners.  
+
+All of the points from the graph of $B$ are still there.  They just have new first coordinates.  They have moved horizontally.
 
 
-
-\textbf{\textcolor{purple!85!blue}{Second Question:}}  The graph of $T$ had four strategic points.  What are the corresponding points on the graph of $B$?
+\textbf{\textcolor{purple!85!blue}{Second Question:}}  The graph of $T$ has four strategic points.  What are the corresponding points on the graph of $B$?
 
 
 We have four strategic points on the graph of $T$: 
@@ -169,7 +185,7 @@ We have four strategic points on the graph of $T$:
 \end{itemize}
 
 
-How do these translate to strategic points on the graph of $B$?
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} How do these translate to strategic points on the graph of $B$?
 
 
 \begin{itemize}
@@ -202,6 +218,7 @@ $B(4) = -4$ and the point $(4, -4)$ is on the graph of $B$. It is an open dot.
 
 
 
+The strategic points on the graph of $B$ are connected in the same way they were connected in the graph of $T$.
 
 
 
@@ -209,33 +226,70 @@ $B(4) = -4$ and the point $(4, -4)$ is on the graph of $B$. It is an open dot.
 
 
 
+Now for the algebra.
+
+
+\textbf{\textcolor{purple!85!blue}{Third Question:}} What is the formula for $B(k)$?
 
 
 
-
-\textbf{\textcolor{purple!85!blue}{Third Question:}} What is the formula for $B$?
-
+\begin{explanation} Domain (first interval)
 
 
-\begin{explanation}
-When $k \in (-7,-4]$, then $k+3 \in \left(\answer{-4},\answer{-1}\right]$.  
+We have a formula for $T(v)$.  We are attempting to build a formula for $B(k)$ from the formula for $T(v)$.
 
-$v=k+3$, so $v \in \left(\answer{-4},\answer{-1}\right]$ and we are using the formula $2v-1$ with $v=k+3$. 
+We are given that $B(k) = T(k+3)$.  We are given that $v = k+3$ and we already know the values of $v$ for $T$.  We want to know the corresponding values of $k$.
 
-All together: when $k \in (-7,-4]$, then $B(k) = 2(k+3)-1$.
+The first part of the defintion of $T$ says $T(v) = 2v - 1$ on $(-4,-1]$.
+
+\[
+v \in (-4,-1]
+\]
+
+When $v \in (-4,-1]$, then $v = k+3 \in \left(\answer{-4},\answer{-1}\right]$.  
+
+That gives us $k \in \left(\answer{-7},\answer{-4}\right]$ .
+
+
+For the first interval in the definition of $T$, we are using the formula $T(v) = 2v - 1$. 
+
+Now $v = k + 3$, with $k \in (-7,-4]$.
+
+All together: when $k \in (-7,-4]$, then $B(k) = 2(k+3)-1 = 2k+5$. 
+
 \end{explanation}
 
 
 
-\begin{explanation}
-When $k \in [-2,4)$, then $k+3 \in \left[\answer{1},\answer{7}\right)$.  
 
-$v=k+3$, so $v \in \left[\answer{1},\answer{7}\right)$ and we are using the formula $-v+3$ with $v=k+3$.
 
-All together: when $k \in [-2,4)$, then $B(k) = -(k+3)+3$.
+
+
+\begin{explanation} Domain (second interval)
+
+
+We have a formula for $T(v)$.  We are attempting to build a formula for $B(k)$ from the formula for $T(v)$.
+
+We are given that $B(k) = T(k+3)$.  We are given that $v = k+3$ and we already know the values of $v$ for $T$.  We want to know the corresponding values of $k$.
+
+The first part of the defintion of $T$ says $T(v) = -v + 3$ on $[1,7)$.
+
+\[
+v \in [1,7)
+\]
+
+When $v \in [1,7)$, then $v = k+3 \in \left[\answer{1},\answer{7}\right)$.  
+
+That gives us $k \in \left[\answer{-2},\answer{4}\right)$ .
+
+
+For the second interval in the definition of $T$, we are using the formula $T(v) = -v + 3$. 
+
+Now $v = k + 3$, with $k \in [-2, 4)$.
+
+All together: when $k \in [-2, 4)$, then $B(k) = -(k+3)+3 = -k$. 
+
 \end{explanation}
-
-
 
 
 
@@ -458,14 +512,41 @@ A graph always helps our thinking. Here is the graph of $y = V(h)$.
 \end{image}
 
 
+The graph of $V$ has $7$ strategic points, $6$ endpoints and a vertex.
+
+
+
+
+
+
+
 
 
 
 Define a new function by $f(x) = V(x-1)$ with the induced domain.
 
+
+
+What is a formula for $f$?
+
+What does the graph of $f$ look like?
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+
 The domain of $V$ is $[-6, 6)$.  These values are represented by $x-1$ in this definition, because $x-1$ is the expression inside the parentheses for $V$ and that is where the expression lives for the domain values of $V$.
 
-$x$ represents the domain values of $f$.   If $x - 1 \in [-6, 6)$, then $x \in \left[\answer{-5}, \answer{7}\right)$.  This is the domain for $f$.  It is shifted $1$ to the right from the domain of $V$.  The individual maximal intervals become $[-5, -1]$, $\left(\answer{-1}, \answer{5}\right]$, and $[5, 7)$.
+$x$ represents the domain values of $f$.   
+
+If $x - 1 \in [-6, 6)$, then $x \in \left[\answer{-5}, \answer{7}\right)$.  
+
+
+This is the domain for $f$.  It is shifted $1$ to the right from the domain of $V$.  
+
+The individual domain intervals become $[-5, -1]$, $\left(\answer{-1}, \answer{5}\right]$, and $[5, 7)$.
 
 
 
@@ -492,14 +573,6 @@ f(x) =
   \frac{7(x-1)}{4} - 8 &  (5, 7)
 \end{cases}
 \]
-
-
-
-
-
-
-
-
 
 
 
@@ -553,6 +626,218 @@ The graph has the same three shapes. The corresponding endpoints are hollow or f
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let's try shifting $V$ from the other side of the definition.
+
+
+
+
+\begin{example} Shifting the Domain 
+
+
+
+
+
+
+\[
+V(h) = 
+\begin{cases}
+  -2h-3 & \text{ on } [-6, -2]   \\
+  -(h+3)(h-3) & \text{ on } (-2, 4]  \\
+  \frac{7h}{4} - 8 & \text{ on } (4,6)
+\end{cases}
+\]
+
+
+
+A graph always helps our thinking. Here is the graph of $y = V(h)$.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$h$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+      \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:-2)] {-2*x-3};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2:4)] {-1*(x+3)*(x-3))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(4:6)] {1.75*x-8};
+
+
+
+
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,9)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,1)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-2,5)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(4,-7)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(4,-1)};
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,2.5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The graph of $V$ has $7$ strategic points, $6$ endpoints and a vertex.
+
+
+
+
+
+
+
+
+
+
+Define a new function, $g(y)$, by $g(x-3) = V(x)$ with the induced domain.
+
+
+
+What is a formula for $g$?
+
+What does the graph of $g$ look like?
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+
+The domain of $V$ is $[-6, 6)$.  These values are represented by $x$ in this definition, because $x$ is the expression inside the parentheses for $V$ and that is where the expression lives for the domain values of $V$.
+
+$x-3$ represents the domain values of $g$.   
+
+If $x \in [-6, 6)$, then $y = x-3 \in \left[\answer{-9}, \answer{3}\right)$.  
+
+
+This is the domain for $g$.  It is shifted $3$ to the left from the domain of $V$.  
+
+The individual domain intervals become $[-9, -5]$, $\left(\answer{-5}, \answer{1}\right]$, and $[1, 3)$.
+
+
+
+Now for a formula for $g(y)$.
+
+If $g(x-3) = V(x)$, then $g(y) = V(y+3)$
+
+
+
+\[
+g(y) = V(y+3) = 
+\begin{cases}
+  -2(y+3)-3 & \text{ on } [-9, -5]   \\
+  -((y+3)+3)((y+3)-3) & \text{ on } (-5, 1]  \\
+  \frac{7(y+3)}{4} - 8 & \text{ on } (1, 3)
+\end{cases}
+\]
+
+
+
+
+
+\[
+g(y) = 
+\begin{cases}
+  -2y - 9 &  [-9, -5]   \\
+  -y*(y+6) &  (-5, 1]  \\
+  \frac{7(y+3)}{4} - 8 &  (1, 3)
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$y$, ylabel={$z=g(y)$},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:-5)] {-2*x-9};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5:1)] {-1*(x*(x+6))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(5:7)] {1.75*(x+3)-8};
+
+
+
+
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,9)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1,1)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-1,5)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-7)};
+
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,-1)};
+      \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,2.5)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+The graph has the same three shapes. The corresponding endpoints are hollow or filled as they were in the graph of $y=V(h)$.
+
+
+
+\end{example}
+
+
 
 
 
