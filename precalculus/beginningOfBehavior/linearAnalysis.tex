@@ -24,16 +24,12 @@ We want to know the
      \item \textbf{\textcolor{red!70!black}{Domain}} 
      \item \textbf{\textcolor{red!70!black}{Zeros}} 
      \item \textbf{\textcolor{red!70!black}{Continuity}} \\
-     \text{    }$\circ$ discontinuities\\
-     \text{    }$\circ$ singularities\\
-     \item \textbf{\textcolor{purple!85!blue}{discontinuities}} 
-     \item \textbf{\textcolor{purple!85!blue}{singularities}} 
-
-
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{discontinuities}}\\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{singularities}}\\
      \item \textbf{\textcolor{red!70!black}{End-Behavior}} 
      \item \textbf{\textcolor{red!70!black}{Behavior}} \\
-     \text{    }$\circ$ intervals where increasing\\
-     \text{    }$\circ$ intervals where decreasing\\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{intervals where increasing}}\\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{intervals where decreasing}}\\
      \item \textbf{\textcolor{red!70!black}{Global Maximum and Minimum}} 
      \item \textbf{\textcolor{red!70!black}{Local Maximums and Minimums}} 
      \item \textbf{\textcolor{red!70!black}{Range}} 
@@ -42,12 +38,12 @@ We want to know the
 
 We want all of this information for linear functions and we want exact information, not approximations. 
 
-Remember, we are beginning with graphical analysis, because that is a familiar jumping off point for students.  But, graphs are inherently inaccurate tools.  That isn't what we want. We are taking our familiarity with graphical descriptions and moving them over to algebraic descriptions, because algebra is our exact tool. 
+Remember, we are beginning with graphical analysis, because that is a familiar jumping off point for students.  But, graphs are inherently inaccurate tools.  That isn't what we want. We are taking our familiarity with graphical descriptions and moving it over to algebraic descriptions, because algebra is our exact tool. 
 
 Linear functions are our initial bridge to exactness. 
 
 
-Linear functions are those functions which can be described with formulas like
+Linear functions are those functions have a constant rate of change, which can be described with formulas like
 
 \[
 L(x) = A \, x + B 
@@ -55,7 +51,7 @@ L(x) = A \, x + B
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Constant Functions}}
 
 The leading coefficient, $A$, can be $0$ in our template for linear functions. 
 
@@ -89,7 +85,7 @@ If you can identify a function as linear, then you automatically know its domain
 
 Every time we describe a characteristic for a linear function, we must separate constant functions from other linear functions. 
 
-Constant functions do not have zeros, unless the constant function is the zero function.  In that case every number in the domain is a zero of the function. 
+Constant functions do not have zeros, unless the constant function is the zero function.  In that case, every number in the domain is a zero of the function. 
 
 
 Otherwise, linear functions have exactly one zero. 
@@ -97,7 +93,7 @@ Otherwise, linear functions have exactly one zero.
 The zero of $L(x) = A \, x + B $ is $\frac{-B}{A}$
 
 
-
+\textbf{Note:} If we restrict the domain and remove the zero, then is is possible our linear wil lnot have a zero.
 
 
 
@@ -190,38 +186,45 @@ We need some symbols and notation to make it easier to write about end-behavior.
 
 
 
-\begin{notation}  \textbf{\textcolor{red!70!black}{Limits}}
+\begin{notation}  \textbf{\textcolor{red!50!green}{Limits}}
 
 Our notation for end-behavior will be called \textit{limit notation}. 
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} the function is unbounded negatively in the negative tail of the domain.
+\textbf{\textcolor{red!50!green}{$\blacktriangleright$}} the function is unbounded negatively in the negative tail of the domain.
 
 \[
 \lim\limits_{x \to -\infty} f(x) = -\infty
 \]
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} the function is unbounded positively in the positive tail of the domain.
+\textbf{\textcolor{red!50!green}{$\blacktriangleright$}} the function is unbounded positively in the positive tail of the domain.
 
 \[
 \lim\limits_{x \to \infty} f(x) = \infty
 \]
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} the function is unbounded positively in the negative tail of the domain.
+\textbf{\textcolor{red!50!green}{$\blacktriangleright$}} the function is unbounded positively in the negative tail of the domain.
 
 \[
 \lim\limits_{x \to -\infty} f(x) = \infty
 \]
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} the function is unbounded negatively in the positive tail of the domain.
+\textbf{\textcolor{red!50!green}{$\blacktriangleright$}} the function is unbounded negatively in the positive tail of the domain.
 
 \[
 \lim\limits_{x \to \infty} f(x) = -\infty
 \]
+
+
+
+
+Limit notation uses ``lim'' as a shorthand abbreviation for limit.  Under the ``lim'' we indicate which tail we are talking about.  Under the ``lim'', $variable \to -\infty$ indicates it is the left tail. Under the ``lim'', $variable \to \infty$ indicates it is the right tail.  The function name (or possibly formula) is then written to the right followed by an equal sign and then an expression describing the end-behavior. 
+
+
 
 
 \end{notation}
@@ -257,7 +260,7 @@ We will say ``the constant term''.
 
 
 
-The graph above vividly suggests that linear functions are always increasing or always decreasing (unless they are constant).
+The graphs above vividly suggests that linear functions are always increasing or always decreasing (unless they are constant).
 
 
 \begin{itemize}
@@ -311,12 +314,12 @@ Unless it is a constant function, a linear function is unbounded on either side 
 
 
 
-\begin{warning} Again
+\begin{warning} \textbf{\textcolor{red!70!black}{Again}} 
 
 This is all true if the linear function is not a constant function. 
 
 
-If the linear function is a constant function, then the function only has one function value at every domain number.  That makes the one function value a global and local maximum that occurs at every domain number. 
+If the linear function is a constant function, then the function has the same function value at every domain number.  That makes the one function value a global and local maximum that occurs at every domain number. 
 
 Weirdly enough, that also makes the one function value both a global and local minimum that occurs at every domain number.
 
