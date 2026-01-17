@@ -136,7 +136,7 @@ $\blacktriangleright$ Determine a formula for $h(n)$.
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 $k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
@@ -165,7 +165,7 @@ We need $2 n_0 + 1 = -2$.  Therefore, $n_0 = \answer{-\frac{3}{2}}$.
 We have $h(n) = \frac{3}{2} n - \frac{3}{2}$
 
 
-\end{explanation}
+
 \end{example}
 
 
@@ -199,7 +199,7 @@ $\blacktriangleright$  Determine a formula for $h(n)$.
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 $k$ is linear and the composition, $r$, is linear. A good guess is that $h$ is linear.  
@@ -225,7 +225,7 @@ We need $\frac{3}{2} + n_0 = -2$.  Therefore, $n_0 = \answer{-\frac{7}{2}}$.
 We have $h(n) = \frac{3}{2} n - \frac{7}{2}$
 
 
-\end{explanation}
+
 \end{example}
 
 
@@ -265,6 +265,10 @@ Let's restrict the domains of our linear functions.
 
 
 Graph of $y = T(v)$.
+
+
+
+
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
@@ -294,6 +298,22 @@ Graph of $y = T(v)$.
 
 
 
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{ihexboi6vr}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+Graph of $z=g(x)$.
+
+
 \[      g(x) = \frac{7}{4}x-8 \, \text{ with domain } \, (2,8)   \]
 
 
@@ -304,7 +324,7 @@ Graph of $y = T(v)$.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
+            axis lines =center, xlabel=$x$, ylabel={$z=g(x)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
@@ -335,17 +355,33 @@ Graph of $y = T(v)$.
 
 
 
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{pvriu9vdvw}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
+
 Let's create the composition $T \circ g = T(g)$.
 
 
 This means the range of $g$ needs to be inside the domain of $T$. But as the chart below shows, there are numbers in
 the range of $g$ that are not in the domain of $T$.
 
+The range of $g$ is $\left( -\frac{9}{2}, 6 \right)$. 
+
+The domain of $f$ is $[1,7)$.
 
 
 
 
-For instance, $0$ is in the range of $g$, but not in the domain of $T$. \\
+
+For instance, $0$ is in the range of $g$, but not in the domain of $T$. 
 
 Therefore, we need to remove the numbers in the domain of $g$, whose function value is $0$.
 
@@ -355,7 +391,7 @@ Like, $-\frac{32}{7}$ is in the domain of $g$, and $g\left(-\frac{32}{7}\right) 
 
 
 
-There are more numbers in the domain of $g$, where the function value of $g$ is not in the domain of $T$. We need to remove these numbers from the domain of $T \circ g$. \\
+There are more numbers in the domain of $g$, where the function value of $g$ is not in the domain of $T$. We need to remove these numbers from the domain of $T \circ g$. 
 
 
 
@@ -587,6 +623,16 @@ Graph of $y = T(g(c))$.
 
 
 
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{panc4yr3lj}{400}{300}
+\end{center}
+\end{onlineOnly}
 
 
 

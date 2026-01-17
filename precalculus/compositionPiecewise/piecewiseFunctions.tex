@@ -33,7 +33,7 @@ T(v) =
 
 
 
-Graph of $y = T(v)$.
+
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
@@ -47,12 +47,12 @@ Graph of $y = T(v)$.
             axis on top
           ]
           
-	       \addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
-	       \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+3};
-	       \addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
-	       \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
-	       \addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
-	       \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
+  \addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+  \addplot [draw=penColor,very thick,smooth,domain=(1:7)] {-x+3};
+  \addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+  \addplot[color=penColor,only marks,mark=*] coordinates{(1,2)}; 
+  \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(7,-4)}; 
 
 
     \end{axis}
@@ -63,10 +63,26 @@ Graph of $y = T(v)$.
 
 
 
-\[  g(x) = \frac{7}{4}x-8  \, \text{ with domain } \, (2, 8)   \]
 
 
-	
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{llalmcut39}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+Graph of $z=g(x)$.
+
+
+\[      g(x) = \frac{7}{4}x-8 \, \text{ with domain } \, (2,8)   \]
+
+
+  
 
 
 \begin{image}
@@ -75,26 +91,22 @@ Graph of $y = T(v)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel={$z=g(x)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-      		%\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
-          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
 
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
+          %\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
 
-
-
-      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-6,9)};
-      		%\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
-
-
-      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
-      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
+          \addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
 
 
            
@@ -104,6 +116,16 @@ Graph of $y = T(v)$.
 \end{image}
 
 
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{pvriu9vdvw}{400}{300}
+\end{center}
+\end{onlineOnly}
 
 
 
@@ -120,7 +142,7 @@ the range of $g$ that are not in the domain of $T$.
 
 
 
-For instance, $0$ is in the range of $g$, but not in the domain of $T$. \\
+For instance, $0$ is in the range of $g$, but not in the domain of $T$. 
 
 We need to identify the intersection of the range of $g$ and the domain of $T$.
 
@@ -230,15 +252,26 @@ We need to map the domain of $T$ back onto the range of $g$ and then work our wa
 
 
 
-Focusing on the common endpoints (hollow or solid), we need to find the preimages of $-4$, $-1$, $1$, and $6$ in $g$. \\
+Focusing on the common endpoints (hollow or solid), we need to find the preimages of $-4$, $-1$, $1$, and $6$ in $g$. 
 
 
 
 
 
-\subsection{Domain of $T \circ g$}
 
-Which numbers in the domain of $g$ have $-4$, $-1$, $1$, and $6$ as function values? \\
+
+
+
+
+
+
+
+
+
+
+\subsection*{Domain of $T \circ g$}
+
+Which numbers in the domain of $g$ have $-4$, $-1$, $1$, and $6$ as function values? 
 
 
 \begin{explanation}
@@ -273,7 +306,7 @@ Which numbers in the domain of $g$ have $-4$, $-1$, $1$, and $6$ as function val
 
 
 
-The domain of $T \circ g$ is $\left( \frac{16}{7}, \answer{4} \right] \cup \left[ \frac{36}{7}, \answer{8} \right)$ \\
+The domain of $T \circ g$ is $\left( \frac{16}{7}, \answer{4} \right] \cup \left[ \frac{36}{7}, \answer{8} \right)$ 
 
 
 \end{explanation}
@@ -282,28 +315,28 @@ These are the domain numbers of $g$, that have function values in $(-4,1] \cup [
 
 
 
-\textbf{Now for the formulas} \\
+\textbf{Now for the formulas} 
 
 
-We have a composition: $T \circ g$.  We know this is a linear function, because it is the composition of linear functions. \\
+We have a composition: $T \circ g$.  We know this is a linear function, because it is the composition of linear functions. 
 
 
 
 \begin{explanation}
-Our composition has a formula, let's use $c$ for its variable. \\
+Our composition has a formula, let's use $c$ for its variable. 
 
 
-$\blacktriangleright$ On $\left(\frac{16}{7}, 4\right]$, we have $T(v) = \answer{2v - 1}$.  \\
-
-
-
-$(T \circ g)(c) = 2\left( \frac{7}{4}c - 8 \right) - 1 = \frac{7}{2}c - 17$ \\
+$\blacktriangleright$ On $\left(\frac{16}{7}, 4\right]$, we have $T(v) = \answer{2v - 1}$.  
 
 
 
+$(T \circ g)(c) = 2\left( \frac{7}{4}c - 8 \right) - 1 = \frac{7}{2}c - 17$ 
 
 
-$\blacktriangleright$ On $\left[\frac{36}{7}, 8\right)$,  we have $T(v) = \answer{-v + 3}$. \\
+
+
+
+$\blacktriangleright$ On $\left[\frac{36}{7}, 8\right)$,  we have $T(v) = \answer{-v + 3}$. 
 
 $(T \circ g)(c) = -\left(\frac{7}{4}c - 8\right) + 3 = -\frac{7}{4}c + 11$
 
@@ -371,6 +404,14 @@ Graph of $w = T(g(c))$.
 
 
 
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{bwoh0hcnww}{400}{300}
+\end{center}
+\end{onlineOnly}
 
 
 

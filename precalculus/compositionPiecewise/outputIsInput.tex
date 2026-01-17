@@ -15,7 +15,7 @@ evaluating
 
 
 
-
+Let's begin graphically.
 
 
 
@@ -37,7 +37,7 @@ Let $T$ be a function.  Its graph is shown here.
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=K(x)$}, grid = major,
+            axis lines =center, xlabel=$k$, ylabel={$y=T(k)$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -63,12 +63,12 @@ Let $T$ be a function.  Its graph is shown here.
 
 
 
-
-
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
 \begin{center}
 \desmos{jukryzlv9o}{400}{300}
 \end{center}
-
+\end{onlineOnly}
 
 
 
@@ -91,16 +91,58 @@ Using the graph estimate the following values.
 
 \end{question}
 
+THere is one function.
 
+Now we'll add in a second function.
 
 Let $f$ be a function.  Its graph is shown here. 
 
 
 
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y=f(x)$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:2)] {-2*x-3};
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-9:9)] {0.05*(x+6)*(x+1)*(x-5)*cos(0.5*x)+3};
+       
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
 \begin{center}
 \desmos{i02dlbl2ax}{400}{300}
 \end{center}
-
+\end{onlineOnly}
 
 
 
@@ -117,7 +159,7 @@ All of the values of $T$ you determined above were real numbers.
 \end{itemize}
 
 
-Therefore, we could evaluate $f$ at these numbers.
+Therefore, we can evaluate $f$ at these numbers.
 
 
 \begin{question}
@@ -196,6 +238,9 @@ Use the graphs above to approximate the following expressions.
 \subsection*{Formulas}
 
 
+Formulas follow the same composition pattern. One function is evaluated at a domain number and then the scond function is evaluated at the value of the first function.
+
+
 Define the functions $M$, $N$, and $P$ by the following formulas with their implied or natural domains.
 
 $\blacktriangleright$  $M(t) = t^2 - 1$ 
@@ -247,7 +292,16 @@ Use the formulas above to approximate the following expressions.
 
 
 
+\begin{notation} \textbf{\textcolor{red!50!green}{Composition}}
 
+We have two versions of notation for composition.
+
+One version illustrates the substitution: $F(G(a))$.
+
+The other uses the circle symbol for composition: $(F \circ G)(a)$.
+
+
+\end{notation}
 
 
 
