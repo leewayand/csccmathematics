@@ -18,20 +18,20 @@ As we study functions we have expectations of their values or feelings about ``n
 
 \begin{itemize}
 \item There is a domain number. The function has a value at this domain number. When other domain numbers are close to this domain number, their function values are not close to this function value.
-\item There is a real number, which is not a domain number. So, the function has no value at this real number. When  domain numbers are close to this real number, their function values are not close to each other.
+\item There is a real number, which is not a domain number. So, the function has no value at this real number. However, there are domain numbers as close to this real number as you want. The corresponding function values might be close to each other or the might not be close to each other.
 \end{itemize}
 
 
 We have two concepts we need to get control over. We need algebraic language that allows us to describe exactly the concepts of ``around'' and ``close''.  These ideas are vital to Calculus and the study of functions.  And we will never get anywhere with vague or graphical language.
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} First up is ``\textbf{\textcolor{purple!85!blue}{around}}''.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} First up is ``\textbf{\textcolor{purple!85!blue}{around}}''.
 
 
 
 We want an exact notion of ``around'', because the function values surrounding our target are generating our expectations.  Their values are making the target function value suspicious.
 
-So, we need precise algebraic language for ``around'' and \textbf{open intervals} will provide it.
+We need precise algebraic language for ``around'' and \textbf{open intervals} will provide it.
 
 
 
@@ -47,7 +47,7 @@ So, we need precise algebraic language for ``around'' and \textbf{open intervals
 
 
 
-An \textbf{interval} of real numbers, or on the real line, is a whole connected piece of the real line.
+An \textbf{interval} of real numbers, or an interval on the real line, is a whole connected piece of the real line.
 
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Open Intervals}} 
@@ -57,7 +57,7 @@ An \textbf{interval} of real numbers, or on the real line, is a whole connected 
 \begin{itemize}
 \item A \textbf{finite open interval} contains all of the real numbers between two distinct real numbers, but excludes the two distinct numbers themselves.\\
 
-We symbolize finite open intervals like $(a, b)$. \\
+We symbolize finite open intervals like $(a, b)$. 
 
 $(a,b)$ includes all real numbers strictly between $a$ and $b$. \\ 
 $(a,b)$ includes all real numbers that are simultaneously greater than $a$ and also less than $b$.  \\
@@ -91,7 +91,7 @@ $(a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a < r   \,  \}$
 
 
 \begin{itemize}
-\item A \textbf{finite closed interval} contains all of the real numbers between two distinct real numbers, including the two distinct numbers themselves.\\
+\item A \textbf{finite closed interval} contains all of the real numbers between two distinct real numbers, including the two distinct numbers themselves.
 
 We symbolize finite closed intervals like $[a, b]$. \\
 $[a,b]$ includes all real numbers that are simultaneously greater than or equal $a$ and also less than or equal $b$.  \\
@@ -112,7 +112,7 @@ $[a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a \leq r   \,  \}$
 
 
 \end{definition}
-\textbf{Distinct} means different or not equal. \\
+\textbf{Distinct} means different or not equal. 
 
 
 
@@ -122,7 +122,7 @@ $[a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a \leq r   \,  \}$
 
 
 
-You cannot tell from the definitions, but open intervals are weird, which means this is where we learn a lot about real numbers and functions. \\
+You cannot tell from the definitions, but open intervals are weird, which means this is where we learn a lot about real numbers and functions. 
 
 
 $\blacktriangleright$  Open intervals always contain a real number, for instance the average of the two endpoint numbers.
@@ -133,7 +133,7 @@ $\blacktriangleright$  Open intervals always contain a real number, for instance
 
 
 
-So, open intervals are never empty.  \\
+So, open intervals are never empty.  
 
 
 $\blacktriangleright$ Open intervals do not contain a maximum real number.
@@ -153,7 +153,7 @@ Suppose $c \in (a,b)$ is the maximum number in the interval $(a,b)$.  Then, cons
 \[  \frac{c+b}{2} \in (a,b)  \, \text{ and } \,  c < \frac{c+b}{2} \]  
 
 
-If we have the maximum number in the interval, $c$, then we can find a greater number also in the interval. Therefore, $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in an open interval. \\
+If we have the maximum number in the interval, $c$, then we can find a greater number also in the interval. Therefore, $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in an open interval. 
 
 
 \end{explanation}
@@ -164,15 +164,15 @@ If we have the maximum number in the interval, $c$, then we can find a greater n
 
 \begin{paradox}
 
-This type of argument is called a \textbf{proof by contradiction}.   \\
+This type of argument is called a \textbf{proof by contradiction}.   
 
-You assume a fact is true, like $c \in (a,b)$ is the maximum number in the open interval.  \\
+You assume a fact is true, like $c \in (a,b)$ is the maximum number in the open interval.  
 
-Then you use logic to discover other facts that also must be true based on the truth of your assumed fact.  You do this until you discover something that must also be true, but you know it is not. \\
+Then you use logic to discover other facts that also must be true based on the truth of your assumed fact.  You do this until you discover something that must also be true, but you know it is not. 
 
-At this point, you know that your original asummption cannot be true. \\
+At this point, you know that your original asummption cannot be true. 
 
-An explanation that includes both true and false statements is called a \textbf{contradiction}. \\
+An explanation that includes both true and false statements is called a \textbf{contradiction}. 
 
 The conclusion is that your original assumption must be false, because your assumption has generated a contradiction, like a number greater than the maximum value in an interval.
 
@@ -185,17 +185,17 @@ The conclusion is that your original assumption must be false, because your assu
 
 
 
-$\blacktriangleright$ We can make similar observations about infinite open intervals. \\
+$\blacktriangleright$ We can make similar observations about infinite open intervals. 
 
 
 
 
 
 
-\begin{idea} \textbf{\textcolor{purple!85!blue}{The Next Real Number}}
+\begin{idea} \textbf{\textcolor{blue!55!black}{The Next Real Number}}
 
 
-A consequence of this is that there is no such thing as a ``next'' real number. \\
+A consequence of this is that there is no such thing as a ``next'' real number. 
 
 
 There is no such thing as a real number ``right before'' any particular real number.
@@ -203,9 +203,9 @@ There is no such thing as a real number ``right before'' any particular real num
 
 \end{idea}
 
-Real numbers do not behave like integers or whole numbers.  They are very different. \\
+Real numbers do not behave like integers or whole numbers.  They are very different. 
 
-There is always more real numbers filling in thespace around any particular real number. \\
+There is always more real numbers filling in the space around any particular real number. 
 
 
 
@@ -369,7 +369,7 @@ Sets also follow this idea that complements of open sets are closed and vice ver
 
 
 
-\begin{fact} Open and Closed
+\begin{fact}  \textbf{\textcolor{red!75!green!50}{Open and Closed}} 
 
 $\mathbb{R}$ and $\emptyset$ are both open and closed sets at the same time.
 
@@ -381,7 +381,7 @@ $\mathbb{R}$ and $\emptyset$ are both open and closed sets at the same time.
 
 
 
-\begin{observation} Intersections
+\begin{observation} \textbf{\textcolor{-red!75}{Intersections}} 
 
 $(-\infty, 3] \cap  [2, \infty) = \left[\answer{2}, \answer{3}\right]$
 
@@ -426,8 +426,13 @@ The observation above gives the idea of why intersections of closed sets are clo
 \section*{Nested Intervals}
 
 
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Nested Intervals}}
+
+
 An interval is \textbf{nested} inside another interval if it is completely contained inside the other interal.
 
+\end{definition}
 
 
 
@@ -443,7 +448,7 @@ If $a \leq b < c \leq d$, then $[b,c]$ is \textbf{\textcolor{purple!85!blue}{nes
 
 $\blacktriangleright$  The intersection of two nested closed intervals equals the inner closed interval.
 
-$\blacktriangleright$  The intersection of a finite number of nested closed intervals equals the closed inner most interval.
+$\blacktriangleright$  The intersection of a finite number of nested closed intervals equals the closed inner-most interval.
 
 $\blacktriangleright$ What about an infinite number of nested closed intervals?
 
@@ -597,10 +602,10 @@ Open intervals are weird.  Closed intervals are nice.  They are so nice that eve
 
 
 
-\begin{theorem} \textbf{\textcolor{blue!75!black}{Intersection Theorem}}  
+\begin{theorem} \textbf{\textcolor{-red!75!green}{Intersection Theorem}}  
 
 
-Suppose we have a infinitely decreasing, nested, sequence of non-empty closed intervals.
+Suppose we have an infinitely decreasing, nested, sequence of non-empty closed intervals.
 
 
 \[   I_0 \supset    I_1 \supset  \cdots \supset I_{k}   \supset I_{k+1}  \cdots  \]

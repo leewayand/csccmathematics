@@ -24,27 +24,25 @@ We have one slight hiccup in our open interval version of closeness and that is 
 
 
 
-
-
-Graph of $y = K(r)$.
+Graph of $h = P(n)$.
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            axis lines =center, xlabel={$n$}, ylabel={$h$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:2),<-] {x+3};
 
-      		\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-3)};
+          \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(2,5)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(2,-3)};
 
 
   \end{axis}
@@ -54,10 +52,27 @@ Graph of $y = K(r)$.
 
 
 
-If we want to examine the domain number $2$ and its weird function value $-3$, then our open interval idea is in trouble.  There is no filled space to the right of $2$ in the domain where we could carve out an open interval.\\
 
 
-Actually, we don't need it. \\
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{qpju0hxors}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
+
+
+
+If we want to examine the domain number $2$ and its weird function value $-3$, then our open interval idea is in trouble.  There is no filled space to the right of $2$ in the domain where we could carve out an open interval.
+
+
+Actually, we don't need it. 
 
 
 We just need the domain numbers that are close to $2$.
@@ -77,15 +92,15 @@ We don't need all of the \textbf{\textcolor{purple!70!blue}{real numbers}} that 
 \subsection*{Slight Modification}
 
 
-\textbf{Remember}, we are after some language that works ALL of the time, even for endpoints.   \\
+\textbf{Remember}, we are after some language that works ALL of the time, even for endpoints.   
 
 
 
-``Space'' will refer to \textbf{\textcolor{red!90!darkgray}{domain space}} that exists ``around'' our domain number under observation. \\
+``Space'' will refer to \textbf{\textcolor{red!70!darkgray}{domain space}} that exists ``around'' our domain number under observation. 
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Language:}}   \\
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Language:}}   
 
 \begin{center}
 \textbf{All of the domain numbers inside a $\delta$-interval around $a$} 
@@ -96,15 +111,15 @@ $\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Language:}}   \\
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Notation:}}   \\
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Notation:}}   
 
 \begin{center}
-$(a - \delta, a + \delta) \cap$ Domain
+$(a - \delta, a + \delta) \, \cap$ Domain
 \end{center}
 
 
 
-The intersection picks out the numbers that are both in the $\delta$-interval and in the domain. \\
+The intersection picks out the numbers that are both in the $\delta$-interval and in the domain. 
 
 
 

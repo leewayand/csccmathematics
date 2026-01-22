@@ -22,7 +22,7 @@ As we study functions we have expectations of their values or feelings about ``n
 
 \begin{itemize}
 \item There is a domain number. The function has a value at this domain number. When other domain numbers are close to this domain number, their function values are not close to this function value.
-\item There is a real number, which is not  a domain number. So, the function has no value at this real number. When  domain numbers are close to this real number, their function values are not close to each other.
+\item There is a real number, which is not a domain number. So, the function has no value at this real number. However, there are domain numbers as close to this real number as you want. The corresponding function values might be close to each other or the might not be close to each other.
 \end{itemize}
 
 
@@ -34,7 +34,7 @@ We need moving algebra and it must take into account any and all levels of close
 
 In our case, we are concerned with a single domain number where the function suddenly has a different value than we were expecting from the surrounding values.  We need our closeness to go right up against the domain number. We need a distance of $0$.  Except, the distance can't really be $0$, because that would be the number itself and not surrounding numbers.
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  How do you talk about surrounding numbers within a distance of $0$, except not $0$?
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}}  How do you talk about surrounding numbers within a distance of $0$, except not $0$?
 
 
 
@@ -46,9 +46,9 @@ In our case, we are concerned with a single domain number where the function sud
 
 
 
-Let's contemplate $0$ for a moment. \\
+Let's contemplate $0$ for a moment. 
 
-\begin{fact}
+\begin{fact}  \textbf{\textcolor{red!75!green!50}{$0$}} 
 
 
 \textbf{Fact:} $0$ is the only nonnegative number that is less than every positive number.
@@ -56,7 +56,7 @@ Let's contemplate $0$ for a moment. \\
 
 \end{fact}
 
-This is a way to talk about $0$ by only talking about positive numbers. \\
+This is a way to talk about $0$ by only talking about positive numbers. 
 
 
 
@@ -88,21 +88,21 @@ Let $f$ be a function. Let $d$ be a domain number.
 
 Let $\delta$ be any small positive number.
 
-Now consider \textbf{\textcolor{red!70!black}{ALL}} of the intervals described by $(d - \delta, d + \delta)$.
+Now consider \textbf{\textcolor{red!70!black}{ALL}} of the intervals described by $(d - \delta, d + \delta)$ for \textbf{\textcolor{red!70!black}{ALL}} possible values of $\delta$.
 
 
 \begin{itemize}
 \item There are an infinite number of these intervals. One for each value of $\delta$.
 \item They are all open intervals.
 \item They all provide space around $d$.
-\item They get as small as anyone might wish for their chosen level of ``closeness''.
+\item They get as small as anyone might wish for any chosen level of ``closeness''.
 \end{itemize}
 
 These $\delta$-intervals handle all of the closeness situations.  If someone wants a particular closeness, then there is a $\delta$-interval that matches their closeness.
 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{More Importantly:}} If we are not sure of the level of closeness, then we can talk about \textbf{\textcolor{red!70!black}{ALL}} of the $\delta$-intervals and have \textbf{\textcolor{red!70!black}{ALL}} of the bases covered at once.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} \textbf{\textcolor{purple!85!blue}{More Importantly:}} If we are not sure of the level of closeness, then we can talk about \textbf{\textcolor{red!70!black}{ALL}} of the $\delta$-intervals and have \textbf{\textcolor{red!70!black}{ALL}} of the possibilities covered at once.
 
 
 
@@ -112,7 +112,29 @@ These $\delta$-intervals handle all of the closeness situations.  If someone wan
 
 
 
+\begin{example} Eventually
 
+
+Consider the interval $(-0.5, 0.3)$.
+
+\textbf{\textcolor{blue!55!black}{Q:}} Is \textbf{EVERY} interval of the form $(0.2 - \delta, 0.2 + \delta)$ completely contained inside $(-0.5, 0.3)$?
+
+
+\textbf{\textcolor{blue!55!black}{A:}} Of course not.  Just take $\delta = 0.2$.  The interval $(0.2 - 0.2, 0.2 + 0.2) = (0, 0.4)$ is not inside $(-0.5, 0.3)$.
+
+
+
+Now try $\delta = 0.05$.
+
+The interval $(0.2 - 0.05, 0.2 + 0.05) = (0.15, 0.25)$ is  inside $(-0.5, 0.3)$.
+And, this remains true for \textbf{\textcolor{red!70!black}{EVERY}} value of $\delta < 0.05$.  They \textbf{\textcolor{red!70!black}{ALL}} work.
+
+
+\textbf{\textcolor{red!70!black}{EVENTUALLY}}, there is a value for $\delta$ so that $(0.2 - \delta, 0.2 + \delta)$ is inside $(-0.5, 0.3)$ for \textbf{\textcolor{red!70!black}{ALL}} values less that this particular value of $\delta$.
+
+
+
+\end{example}
 
 
 
@@ -132,11 +154,11 @@ These $\delta$-intervals handle all of the closeness situations.  If someone wan
 
 
 
-Given two real numbers, $a$ and $b$, you can measure the distance between them, symbolized by $|b-a|$.  We use this measurement to decide if things are close.  The smaller $|b-a|$, the closer $a$ and $b$ are. \\
+Given two real numbers, $a$ and $b$, you can measure the distance between them, symbolized by $|b-a|$.  We use this measurement to decide if things are close.  The smaller $|b-a|$, the closer $a$ and $b$ are. 
 
 
 
-Or, we could think the other way.  Given a real number $a$ and a distance $\delta$, we could describe all of the real numbers closer to $a$ than a distance of $\delta$.  They would be the numbers inside the interval $(a-\delta, a+\delta)$, which we could describe with absolute value.
+We can use this idea to talk about numbers ``around'' the number $a$.  Given a real number $a$ and a distance $\delta$, we could describe all of the real numbers closer to $a$ than a distance of $\delta$.  They would be the numbers inside the interval $(a-\delta, a+\delta)$, which we could describe with absolute value.
 
 \[      (a-\delta, a+\delta) = \{ r \in \mathbb{R} \, | \, |r - a| < \delta        \}       \]
 
@@ -160,13 +182,13 @@ In an open interval, there is always filled space ``\textbf{\textcolor{purple!85
 This is not true for closed intervals.
 
 
-For example, consider the number $5$.  In the closed interval $[5, 7]$,  $5$ doesn't have space ``around'' it in this interval. \\
+For example, consider the number $5$.  In the closed interval $[5, 7]$,  $5$ doesn't have space ``around'' it in this interval. 
 
-Of course, if we want space around $5$, we could choose the closed interval $[4,7]$, which has space ``around'' $5$.  However, there would now be the open interval $(4.5, 7)$ to use.  So, why take the chance on a closed interval?  \\
+Of course, if we want space around $5$, we could choose the closed interval $[4,7]$, which has space ``around'' $5$.  However, there would now be the open interval $(4.5, 7)$ to use.  So, why take the chance on a closed interval?  
 
-If we are interested in our analysis working \textbf{\textcolor{red!70!black}{all}} of the time, then let's just stick with open intervals.  They \textbf{must} provide space ``around'' \textbf{\textcolor{red!70!black}{all}} of the numbers they contain. \\
+If we are interested in our analysis working \textbf{\textcolor{red!70!black}{all}} of the time, then let's just stick with open intervals.  They \textbf{must} provide space ``around'' \textbf{\textcolor{red!70!black}{all}} of the numbers they contain. 
 
-Choosing to work with open intervals avoids possible problems that closed interval might cause.\\
+Choosing to work with open intervals avoids possible problems that closed interval might cause.
 
 
 
@@ -274,24 +296,24 @@ $(13-2\delta, 13+2\delta)$
 
 
 
-What if we went the other way and started with a target interval in the range of a function? \\
+What if we went the other way and started with a target interval in the range of a function? 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} Actually, a range target interval is often too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. \\
-
-
-
-What if, in the previous example, we wanted $f(I) \subset (6-\epsilon, 6+\epsilon)$, where $\epsilon > 0$ is some small distance?  \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Actually, a range target interval is often too difficult to hit EXACTLY.  Instead, let's just try to land inside the target interval. 
 
 
-What are the possibilities for $I$?  \\
+
+What if, in the previous example, we wanted $f(I) \subset (6-\epsilon, 6+\epsilon)$, where $\epsilon > 0$ is some small distance?  
 
 
+What are the possibilities for $I$?  
 
 
 
 
 
-To land near $6$ with $f(x) = 2x + 5 = 6$, $x$ would need to be near $\frac{1}{2}$.  \\
+
+
+To land near $6$ with $f(x) = 2x + 5 = 6$, our domain number, $x$, would need to be near $\frac{1}{2}$.  \\
 
 $I$ would need to look like $\left( \frac{1}{2} - \delta, \frac{1}{2}+ \delta \right)$  But this isn't going to work if $\delta$ is too big compared to $\epsilon$.  We need to describe $\delta$ in terms of $\epsilon$ to make sure.  And, we are in the business of making sure. \\
 
@@ -406,7 +428,7 @@ Then $I$ is a small \textbf{neighborhood} of $10$ in the range of $G$.
 
 What is the preimage of $I$?
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
@@ -435,7 +457,7 @@ $G$ will stretch $\delta$ by a factor of $4$, therefore,  we need $\delta = \fra
 \[   G^{-1}((10-\epsilon, 10+\epsilon)) = \left( -\frac{13}{4} - \frac{\epsilon}{4}, -\frac{13}{4} + \frac{\epsilon}{4} \right)   \]
 
 
-\end{explanation}
+
 
 
 
@@ -490,7 +512,7 @@ Then $I$ is a small \textbf{neighborhood} of $-5$ in the range of $H$.
 
 Identify an interval, $D$ in the domain of $H$, such that $H(D) \subset I$.
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
@@ -525,7 +547,8 @@ Let's pick $\delta = \frac{\epsilon}{5}$.
 
 
 
-\end{explanation}
+
+
 \end{example}
 
 
