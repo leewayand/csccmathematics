@@ -17,7 +17,7 @@ blink
 
 
 
-In the previous section, our functions did not meet our expectations, because the actual function value at a particular domain number was not the value suggested by the values ``around'' it.
+In the previous section, our functions did not always meet our expectations, because the actual function value at a particular domain number was not the value suggested by the values ``around'' it.
 
 
 
@@ -85,6 +85,23 @@ Graph of $y = h(x)$.
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{ylv4x1dqew}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
 Here, $h(2)$ does not exist.   However, the pattern ``around'' $2$ suggests that $h(2)$ ``should'' be $5$. That would have fit our pattern better.
 
 
@@ -121,7 +138,21 @@ Graph of $y = G(r)$.
 
 
 
-We now have two expectations for the same domain number. The left side of our brain is expecting $G(2)=5$ and the right side of our brain is expecting $G(2)=1$. Both of these expectations come up empty, because $G$ has no value at $2$. \\
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{ol9jta0b0f}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+We now have two expectations for the same domain number. The left side of our brain is expecting $G(2)=5$ and the right side of our brain is expecting $G(2)=1$. Both of these expectations come up empty, because $G$ has no value at $2$. 
 
 
 
@@ -129,13 +160,13 @@ We now have two expectations for the same domain number. The left side of our br
 
 
 
-Graph of $y = r(t)$.  
+Graph of $B = M(k)$.  
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel={$t$}, ylabel={$y$}, grid = major,
+            axis lines =center, xlabel={$k$}, ylabel={$B$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -154,6 +185,21 @@ Graph of $y = r(t)$.
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{5m89hj4qmf}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
 
 
 
@@ -185,13 +231,13 @@ Of course, not every open dot on the graph contradicts our expectations. Or, pos
 
 
 
-Graph of $y = p(w)$.
+Graph of $g = p(w)$.
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel={$w$}, ylabel={$y$}, grid = major,
+            axis lines =center, xlabel={$w$}, ylabel={$g$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -215,6 +261,15 @@ Graph of $y = p(w)$.
 
 
 
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{8eaye5rky2}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
 
 
 In the first three examples, right in the middle of the domain interval, the function suddenly vanishes away from its nice pattern. 
@@ -231,13 +286,13 @@ Since the domain interval itself doesn't include the endpoint, it is not bothers
 
 
  
-Graph of $y = G(x)$.
+Graph of $v = D(s)$.
  
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel={$x$}, ylabel={$y$}, grid = major,
+            axis lines =center, xlabel={$s$}, ylabel={$v$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -259,25 +314,35 @@ Graph of $y = G(x)$.
  
  
  
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{rivljx1emn}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
  
  
-In this example, the domain consists of two intervals, with space between them. One endpoint is include and the other is not.  The space makes all the difference.  \\
-
-
-
-We base many of our expectations on space.  Where is there empty space?  Where is space filled in? \\
+In this example, the domain consists of two intervals, with space between them. One endpoint is include and the other is not.  The space makes all the difference.  
 
 
 
 
+\begin{itemize}
+\item For \textbf{domain numbers} really really really close to $-4$, the function values of $D$ for those domain numbers are close to each other. The ``domain numbers'' include $-4$.
+
+\item For \textbf{domain numbers} really really really close to $2$, the function values of $D$ for those domain numbers are close to each other. The ``domain numbers'' do not include $2$.
+\end{itemize}
 
 
-
-
-
-
-
-
+We base many of our expectations on space.  Where is there empty space?  Where is space filled in? 
 
 
 
@@ -299,7 +364,19 @@ We base many of our expectations on space.  Where is there empty space?  Where i
 
 
 
-\begin{idea}  \textbf{\textcolor{purple!85!blue}{What's catching our eye?}}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{idea}  \textbf{\textcolor{blue!55!black}{What's catching our eye?}}
 
 
 Our expectations from the patterns we see are disrupted when close domain numbers don't have close function values.
@@ -307,26 +384,21 @@ Our expectations from the patterns we see are disrupted when close domain number
 
 \end{idea}
 
-This time there isn't a different value than we expected.  Instead, there is no value where we expected one. How do we compare function values to no function value? \\
+This time there isn't a different value than we expected.  Instead, there is no value where we expected one. How do we compare function values to no function value? 
 
 We don't.
 
-Again, we compare function values to themselves. \\
+Again, we compare function values to other function values. 
 
 
 \begin{quote}
- \textbf{\textcolor{blue!55!black}{For domain numbers really really really close to $2$, the function values of $K$ for those domain numbers are not ALWAYS close to each other.}} 
-\end{quote}
-
-
-\begin{quote}
- \textbf{\textcolor{blue!55!black}{For domain numbers really really really close to $2$, the function values of $K$ for those domain numbers are close to each other, however, there is a missing value.}} 
+ \textbf{\textcolor{blue!55!black}{For domain numbers really really really close to $a$, are the function values really really really close to each other?}} 
 \end{quote}
 
 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} We need a way of algebracially representing ``really close''.  \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} We need a way of \textbf{algebracially} representing ``really close''.  
 
 
 We also want to indicate the type of expectation we experienced that was interrupted with a missing domain number. So, we need to talk about domain numbers ``around'' the single domain number under observation. 
