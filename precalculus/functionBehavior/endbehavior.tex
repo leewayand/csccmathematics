@@ -52,8 +52,8 @@ Compare the graphs of $y = f(x) = \frac{1}{2}(3x-2)(x+5)(x+3)$ and $y=g(x) = \fr
           ]
           
 
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-7:5),<-] {0.5*(3*x-2)*(x+5)*(x+3)};
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(5:9),->] {1.5*x^3};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(-7:3),<->] {0.5*(3*x-2)*(x+5)*(x+3)};
+          \addplot [line width=2, penColor2, smooth,samples=300,domain=(-4:3),<->] {1.5*x^3};
 
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
@@ -98,42 +98,6 @@ Compare the graphs of $y = f(x) = \frac{1}{2}(3x-2)(x+5)(x+3)$ and $y=g(x) = \fr
 
 
 
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-200:200, ymax=1000000, xmax=100, ymin=-1000000, xmin=-100,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
-            ytick={-50000,50000},
-            xtick={-200,-100,100,200},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-100:100),<-] {0.5*(3*x-2)*(x+5)*(x+3)};
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-100:100),->] {1.5*x^3};
-
-            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
-            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
-
-
-          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,4)};
-          %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,6)};
-
-
-
-
-
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
 
 
 
