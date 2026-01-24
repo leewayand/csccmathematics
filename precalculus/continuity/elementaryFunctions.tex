@@ -204,7 +204,7 @@ Graph of $y = \lfloor x\rfloor$ is below, except the steps keep going up to the 
 
 
 
-The floor function illustrates a general feeling about elementary functions. The only way discontinities are created is through the use of piecewise defined functions.  To create a discontinuity, we have to break a nice function and just move a piece of it to somewhere else.
+The floor function illustrates a general feeling about elementary functions. The only way discontinuities are created is through the use of piecewise defined functions.  To create a discontinuity, we have to break a nice function and just move a piece of it to somewhere else.
 
 
 
@@ -237,7 +237,7 @@ We'll take pieces of different elementary functions and glue them together via p
 
 
 \[
-\text{Let } \, G(x) = 
+\text{Let } \, G(t) = 
 \begin{cases}
   (x+6)(x+2) & \text{ on } (-\infty, -3] \\
   2\sin(x) & \text{ on } (-3, 4) \\
@@ -248,11 +248,14 @@ We'll take pieces of different elementary functions and glue them together via p
 
 
 
+
+Graph of $z=G(t)$.
+
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel={$x$}, ylabel={$y$}, grid = major,
+            axis lines =center, xlabel={$t$}, ylabel={$z$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
           	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
@@ -281,6 +284,22 @@ We'll take pieces of different elementary functions and glue them together via p
   \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{jjcjivqup5}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
 
 
 \begin{itemize}

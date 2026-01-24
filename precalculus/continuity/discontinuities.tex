@@ -17,10 +17,10 @@ breaks
 
 
 
-A \textbf{discontinuity} is the first kind of interruption in our expectations. \\
+A \textbf{discontinuity} is the first kind of interruption in our expectations. 
 
 
-They say a picture is worth a thousand words. Here are a thousand words. \\
+They say a picture is worth a thousand words. Here are a thousand words. 
 
 
 Graph of $y = f(x)$.
@@ -48,7 +48,25 @@ Graph of $y = f(x)$.
 \end{tikzpicture}
 \end{image}
 
-The domain number $5$ is a discontinuity of $f$. \\
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{6pzlypxtxr}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
+
+The domain number $5$ is a discontinuity of $f$. 
 
 
 
@@ -64,31 +82,33 @@ The function has a value at this number. $f(5) = 4$, in the function above.
 
 
 
-Secondly, around this domain number, the function values are not \textbf{\textcolor{purple!85!blue}{all}} close to the value at the discontinuity. There is empty space between the function value at the discontinuity and \textbf{\textcolor{purple!85!blue}{some}} of the surrounding function values - \textbf{\textcolor{red!70!black}{no matter how close you get to the discontinuity in the domain}}. \\
+Secondly, around this domain number, the function values are not \textbf{\textcolor{purple!85!blue}{all}} close to the value at the discontinuity. There is (vertical) empty space between the function value at the discontinuity and \textbf{\textcolor{purple!85!blue}{some}} of the surrounding function values - \textbf{\textcolor{red!70!black}{no matter how close you get to the discontinuity in the domain}}. 
 
 
 In the function above, no matter how close you get to $5$ in the domain, there are still domain numbers less than $5$ where $f$ has values around $6$, not $4$. You cannot get close enough to $5$ in the domain to get away from function values around $6$.
 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Our job is to \link[algebraize]{https://en.wiktionary.org/wiki/algebraize} this idea. \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Our job is to \link[algebraize]{https://en.wiktionary.org/wiki/algebraize} this idea. 
 
 
-Our plan is to use $\epsilon$-intervals around function values and $\delta$-intervals around domain numbers.\\
+Our plan is to use $\epsilon$-intervals around function values and $\delta$-intervals around domain numbers to be exact about ``\textbf{no matter}''.
 
 
 
 
 $\blacktriangleright$ \textbf{First Draft:}
 
-Let $a$ be a discontinuity of the function $f$.  First, $a$ is in the domain of $f$. $f(a)$ exists.  $f(a)$ is a value in the range of $f$. Since $a$ is a discontinuity, there must be a distance (perhaps really small), which we'll call $\epsilon$, which defines an open interval in the codomain around $f(a)$ - namely $(f(a)-\epsilon, f(a)+\epsilon)$.  \\
+Let $a$ be a discontinuity of the function $f$.  First, $a$ is in the domain of $f$. $f(a)$ exists.  $f(a)$ is a value in the range of $f$. 
+
+Since $a$ is a discontinuity, there must be a codomain distance (perhaps really small), which we'll call $\epsilon$, which defines an open interval in the codomain around $f(a)$ - namely $(f(a)-\epsilon, f(a)+\epsilon)$ - where some functions values ``should'' be, yet are not.  
 
 
-And, no matter how close you get to $a$, there are domain numbers closer to $a$ where the function value is outside $(f(a)-\epsilon, f(a)+\epsilon)$. \\
+No matter how close you get to $a$, there are domain numbers closer to $a$ where the function value is outside $(f(a)-\epsilon, f(a)+\epsilon)$. 
 
 
 
-No matter how small $\delta>0$ is, there is always a domain number, $b \in (a-\delta, a+\delta)$ such that $ f(b) \not\in(f(a)-\epsilon, f(a)+\epsilon)$ \\
+No matter how small $\delta>0$ is, there is always a domain number, $b \in (a-\delta, a+\delta)$ such that $ f(b) \not\in(f(a)-\epsilon, f(a)+\epsilon)$ 
 
 
 
@@ -96,7 +116,7 @@ No matter how small $\delta>0$ is, there is always a domain number, $b \in (a-\d
 
 \begin{observation}
 
-For the function $f$ above, $5$ is a discontinuity. \\
+For the function $f$ above, $5$ is a discontinuity. 
 
 
 $f(5) = 4$ and we can select the open interval $(3.5, 4.5)$ around $4$.   This would correspond to $\epsilon = 0.5$.
@@ -106,6 +126,10 @@ $f(5) = 4$ and we can select the open interval $(3.5, 4.5)$ around $4$.   This w
 
 No matter how close you get to $5$, no matter how small you select $\delta$, the open interval $(5 - \delta, 5 + \delta)$ contains the domain number $\frac{(5 - \delta) + 5}{2}$, where the function $f$ has a value outside $(3.5, 4.5)$.
 
+
+\[
+f\left( \frac{(5 - \delta) + 5}{2} \right) \approx 6
+\]
 
 No matter how close you get to $5$ in the domain, you cannot get \textbf{\textcolor{blue!55!black}{all}} of the function values to be close to $f(5)$.
 
@@ -143,20 +167,21 @@ There is an open interval $I$ around $f(a)$, such that \textbf{\textcolor{purple
 \end{definition}
 
 
-\textbf{Discontinuity:}  When domain numbers are close, the function values are not ALL close. \\
+\textbf{Discontinuity:}  When domain numbers are close, the function values are not ALL close. 
+
+
+The words \textbf{all}, \textbf{every}, and \textbf{exists} are the keys here.
 
 
 
-
-
-\begin{example}
+\begin{example}  Discontinuity
 
 
 \[
 \text{Let } \, f(x) = 
 \begin{cases}
-  2x-4 & \text{ on } (-2, 5) \\
-  -x + 9  & \text{ on } [5, 9)
+  2x-4 & \text{ on } (-\infty, 5) \\
+  -x + 9  & \text{ on } [5, \infty)
 \end{cases}
 \]
 
@@ -188,18 +213,34 @@ Graph of $y=f(x)$
 \end{image}
 
 
-$5$ is a disconinuity for $f$. \\
 
 
 
-\begin{explanation}
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{6pzlypxtxr}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+$5$ is a discontinuity for $f$. 
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 First, $5$ is in the domain and $f(5)=4$ is in the range.  Our plan is to pick an open $\epsilon$-interval around $4$ and show that no matter how close you get to $5$ in the domain, there is always a domain number whose function value is not inside our $\epsilon$-interval.
 
 
 
-For our selection, pick a radius of $\epsilon = 1$ and consider the interval $(4-\epsilon , 4+\epsilon) = (4-1 , 4+1) = (3,5)$. \\
+For our selection, pick a radius of $\epsilon = 1$ and consider the interval $(4-\epsilon , 4+\epsilon) = (4-1 , 4+1) = (3,5)$. 
 
 
 \begin{image}
@@ -233,7 +274,7 @@ For our selection, pick a radius of $\epsilon = 1$ and consider the interval $(4
 
 $\vartriangleright$ Can we select an interval CONTAINING $5$, small enough, so that all domain numbers inside this interval have their function values inside $(3,5)$?  The answer is yes.
 
-Select $[5, 6)$. \\
+Select $[5, 6)$. 
 
 
 
@@ -282,12 +323,12 @@ Consider the open interval $(5-\delta, 5+\delta)$ around $5$. It doesn't matter 
 
 
 
-Since $0.1 > \delta$, we know for sure that $6 - \delta > 5$.  \\
+Since $0.1 > \delta$, we know for sure that $6 - \delta > 5$.  
 $6 - \delta$ is \textbf{\textcolor{red!70!black}{NEVER}} inside $(3, 5)$, for \textbf{\textcolor{red!70!black}{ANY}} $\delta$.\\
 
 
 
-There is no \textbf{open} interval around $5$, such that all function values of all domain numbers inside this interval are always inside $(3,5)$. \\
+There is no \textbf{open} interval around $5$, such that all function values of all domain numbers inside this interval are always inside $(3,5)$. 
 
 
 
@@ -299,13 +340,29 @@ That is, algebraically, what is means to be a discontinuity.
 
 
 
-\end{explanation}
+
 \end{example}
 
 
 
 
 
+
+
+
+\begin{warning} \textbf{\textcolor{red!70!black}{ALL, EVERY, EXIST}}
+
+
+$\delta$ is not a specific number.  
+
+$\delta$ depends on $\epsilon$, which you do not know. You have to be prepared for ANY $\epsilon$ that someone might select.
+
+Therefore, $\delta$ is usally choose as a comparison to $\epsilon$.
+
+
+
+
+\end{warning}
 
 
 
@@ -316,11 +373,11 @@ That is, algebraically, what is means to be a discontinuity.
 
 \begin{warning} \textbf{\textcolor{red!70!black}{You are Assuming Something}}
 
-Read the definition again. \\
+Read the definition again. 
 
-It did not say that the $\epsilon$-interval would be totally inside the range. \\
+It did not say that the $\epsilon$-interval would be totally inside the range. 
 
-It did not say that the $\delta$-interval would be totally inside the domain. \\
+It did not say that the $\delta$-interval would be totally inside the domain. 
 
 \end{warning}
 
@@ -350,28 +407,28 @@ The following two examples will illustrate this.
 
 
 
-\begin{example}
+\begin{example} Discontinuity
 
 
 \[
 \text{Let } \, K(t) = 
 \begin{cases}
-  2t-8 & \text{ on } (-2, 5) \\
+  2t-8 & \text{ on } (-\infty, 5) \\
   7   & \text{ at } 5 \\
-  -t + 9  & \text{ on } (5, 9)
+  -t + 9  & \text{ on } (5, \infty)
 \end{cases}
 \]
 
 
 
-Graph of $y=K(t)$
+Graph of $z=K(t)$
 
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel={$t$}, ylabel={$y$}, grid = major,
+            axis lines =center, xlabel={$t$}, ylabel={$z$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -393,11 +450,25 @@ Graph of $y=K(t)$
 \end{image}
 
 
-$5$ is a disconinuity of $K$. \\
 
 
 
-\begin{explanation}
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{lhbq4mgtjr}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+$5$ is a disconinuity of $K$. 
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 First, $5$ is in the domain and $f(5)=7$ is in the range.  Our plan is to pick an open interval around $7$ and show that no matter how close you get to $5$ in the domain, there is always a domain number whose function value is not inside our interval.
@@ -498,7 +569,7 @@ That is, algebraically, what is means to be a discontinuity.
 
 
 
-\end{explanation}
+
 \end{example}
 
 
@@ -531,27 +602,28 @@ In this example, the $\epsilon$-interval, $(7-\epsilon, 7+\epsilon) = (6,8)$, wa
 
 
 
-\begin{example}
+\begin{example} Discontinuity
+
 
 
 \[
 \text{Let } \, B(r) = 
 \begin{cases}
   7   & \text{ at } 5 \\
-  -t + 9  & \text{ on } (5, 9)
+  -r + 9  & \text{ on } (5, \infty)
 \end{cases}
 \]
 
 
 
-Graph of $y=B(t)$
+Graph of $w=B(r)$
 
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel={$r$}, ylabel={$y$}, grid = major,
+            axis lines =center, xlabel={$r$}, ylabel={$w$}, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -571,24 +643,37 @@ Graph of $y=B(t)$
 \end{image}
 
 
-$5$ is a disconinuity of $B$. \\
 
 
 
-\begin{explanation}
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{lhbq4mgtjr}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+$5$ is a disconinuity of $B$. 
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 First, $5$ is in the domain and $f(5)=7$ is in the range.  Our plan is to pick an open interval around $7$ and show that no matter how close you get to $5$ in the domain, there is always a domain number whose function value is not inside our interval.
 
 
-For our selection, pick a radius of $\epsilon = 1$ and consider the interval $(7-\epsilon , 7+\epsilon) = (7-1 , 7+1) = (6,8)$. \\
+For our selection, pick a radius of $\epsilon = 1$ and consider the interval $(7-\epsilon , 7+\epsilon) = (7-1 , 7+1) = (6,8)$. 
 
 
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$r$, ylabel=$w$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -629,7 +714,7 @@ Consider the open interval $(5-\delta, 5+\delta)$ around $5$. It doesn't matter 
 \begin{tikzpicture}
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$r$, ylabel=$w$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -673,7 +758,8 @@ That is, algebraically, what is means to be a discontinuity.
 
 
 
-\end{explanation}
+
+
 \end{example}
 
 
@@ -683,7 +769,91 @@ That is, algebraically, what is means to be a discontinuity.
 
 
 
+\begin{example} Discontinuity
 
+
+
+
+$K(m) = -m+9$ on $[5,\infty)$
+
+
+
+Graph of $v=K(m)$
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$m$}, ylabel={$v$}, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(5:9),->] {-x+9};
+
+
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,4)};
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{gay5fghadf}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+$5$ is a not disconinuity of $K$. 
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+First, $5$ is in the domain and $f(5)=4$ is in the range.  
+
+Pick any $0.1 > \epsilon > 0$ and consider the interval $(4-\epsilon , 4+\epsilon)$. 
+
+
+No matter what value is selected for $\epsilon$, we can selest $\delta = \frac{\epsilon}{2}$.
+
+
+
+Consider the corresponding interval $\left(5-\frac{\epsilon}{2} , 5+\frac{\epsilon}{2} \right)$.
+
+
+Let's look at \textbf{ALL} of the function values for domain numbers inside the interval $\left(5-\frac{\epsilon}{2} , 5+\frac{\epsilon}{2} \right)$.
+
+The domain numbers inside the interval $\left(5-\frac{\epsilon}{2} , 5+\frac{\epsilon}{2} \right)$ are the numbers in the interval $\left[5 , 5+\frac{\epsilon}{2} \right)$.
+
+On $\left[5 , 5+\frac{\epsilon}{2} \right)$, the image of $K$ is $\left( 4-\frac{\epsilon}{2} ,4 \right]$.
+
+
+$\left( 4-\frac{\epsilon}{2} ,4 \right]$ is completely inside $(4-\epsilon , 4+\epsilon)$. 
+
+
+This works for \textbf{ANY} choice of $\epsilon$.
+
+We cannot find a value for $\epsilon$ where we cannot find a suitable value of $\delta$.
+
+$5$ is not a discontinuity.
+
+
+\end{example}
 
 
 
@@ -730,19 +900,19 @@ How about an example where the graph is not so easy to draw?
 
 
 
-Claim: $0$ is a discontinuity of $f$. \\
+Claim: $0$ is a discontinuity of $T$. 
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
-$T(k)$ is $0$ everywhere except the reciprocals of the natural numbers.
+$T(k)$ is $0$ everywhere except at the reciprocals of the natural numbers.
 
 The natural numbers are $\{ 1, 2, 3, 4, \cdots \}$.
 
 The reciprocals of the natural numbers are $\left\{ 1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \cdots \right\}$.
 
-On the reciprocals, $f\left(\frac{1}{n}\right) = 1$ \\
+On the reciprocals, $T\left(\frac{1}{n}\right) = 1$ 
 
 
 
@@ -760,9 +930,9 @@ Now, consider any $\delta > 0$ and the interval $(-\delta, \delta)$. No mater ho
 For \textbf{\textcolor{red!50!blue!90!black}{ANY}} choosen $\epsilon$-interval around $f(0)= 0$, there is no corresponding $\delta$ such that \textbf{\textcolor{red!50!blue!90!black}{ALL}} of the function values from  $(-\delta, \delta)$ land inside $(-\epsilon, \epsilon)$.
 
 
-$0$ is a discontinuity of $f$.
+$0$ is a discontinuity of $T$.
 
-\end{explanation}
+
 
 \end{example}
 
@@ -771,7 +941,7 @@ $0$ is a discontinuity of $f$.
 
 
 
-In the example above, $T(k)$ didn't have a big space surrounding the function value.  Instead it just had an infinite number of single individual values jump away from the target value.
+In the example above, $T(n)$ didn't have a big space surrounding the function value.  Instead it just had an infinite number of single individual values jump away from the target value no matter how close you got.
 
 
 The example demonstrates that functions do just about any and every weird thing you can think of.
@@ -799,7 +969,7 @@ We'll start with \textbf{jump}, \textbf{removeable}, and \textbf{asymptotic}.
 
 
 
-\begin{example} \textbf{\textcolor{blue!55!black}{Jump Discontinuity}}
+\begin{example} Jump Discontinuity
 
 
 
@@ -946,7 +1116,7 @@ Or, the point could be off on its own, isolated.
 
 
 
-\begin{example} \textbf{\textcolor{blue!55!black}{Removeable Discontinuity}} 
+\begin{example} Removeable Discontinuity 
 
 
 
@@ -989,7 +1159,7 @@ A removeable discontinuity occurs when the function is continuous to the left an
 
 
 
-\end{example}
+
 
 This type of discontinuity can be ``removed'' simply by redefining the function value at that one number and moving the point back onto the graph to plug the hole.
 
@@ -1024,6 +1194,7 @@ This type of discontinuity can be ``removed'' simply by redefining the function 
 
 
 
+\end{example}
 
 
 
@@ -1053,8 +1224,7 @@ This type of discontinuity can be ``removed'' simply by redefining the function 
 
 
 
-
-\begin{example} \textbf{\textcolor{blue!55!black}{Asymptotic Discontinuity}} 
+\begin{example} Asymptotic Discontinuity 
 
 
 The third type of discontinuity is when the values of function become unbounded near a domain number.  Graphically, these are represented with asymptotes.  There are several possible configurations.
