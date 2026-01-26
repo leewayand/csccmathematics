@@ -17,7 +17,7 @@ relatively bigger
 
 
 
-\textbf{\textcolor{red!70!black}{$\rhd$}} Do functions tend to infinity differently? \\
+\textbf{Question:} Do functions tend to infinity differently? 
 
 
 
@@ -31,19 +31,19 @@ Both $p(x) = 6x^3 - 5x + 2$ and $w(t) = 2t^2 = 4t - 5$ approach $\infty$ as you 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Do they approach $\infty$ in the same way? 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} What do we mean by ``same way''?  \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} What do we mean by ``same way''?  
 
 
 
-How should we compare $p(x)$ and $w(t)$ to decide if they approach $\infty$ in the same way?  \\
+How should we compare $p(x)$ and $w(t)$ to decide if they approach $\infty$ in the same way?  
 
 
-We have two ways of comparing things: differences and quotients. \\
+We have two ways of comparing things: differences and quotients. 
 
-Quotients work better for comparing the end-behavior of functions. \\
+Quotients work better for comparing the end-behavior of functions. 
 
 
-By the ``same way'', we are picturing a horizontal asymptote, like for rational functions. This occurs when the degrees of the polynomials are equal.   The polynomial in the numerator and the polynomial in the denominator ``behave in the same way'' as we move far out in the domain.  The two polynomials are somehow ``at the same level'' of infinity. \\
+By the ``same way'', we are picturing a horizontal asymptote, like for rational functions. This occurs when the degrees of the polynomials are equal.   The polynomial in the numerator and the polynomial in the denominator ``behave in the same way'' as we move far out in the domain.  The two polynomials are somehow ``at the same level'' of infinity. 
 
 
 
@@ -57,17 +57,16 @@ By the ``same way'', we are picturing a horizontal asymptote, like for rational 
 To decide if two functions, $f$ and $g$, approach infinity in the same way, 
 
 \begin{enumerate}
-\item create a quotient: $\frac{f(x)}{g(x)}$ \\
+\item create a quotient: $\frac{f(x)}{g(x)}$ 
 
 
-\item examine the end-behavior of this quotient: $\lim\limits_{x \to \infty} \frac{f(x)}{g(x)}$ \\
-
+\item examine the end-behavior of this quotient: $\lim\limits_{x \to \infty} \frac{f(x)}{g(x)}$ 
 
 \item if this limit equals a nonzero constant, then $f$ and $g$ approach $\infty$ the same - neither overshadows the other.
 \end{enumerate}
 
 
-If the limit is $1$, then people sometimes say the two functions are asymptotically equivalent. People sometimes use the symbol $\sim$ for asymptotically equivalent. \\
+If the limit is $1$, then people sometimes say the two functions are asymptotically equivalent. People sometimes use the symbol $\sim$ for asymptotically equivalent. 
 
 \end{idea}
 
@@ -76,7 +75,7 @@ If the limit is $1$, then people sometimes say the two functions are asymptotica
 
 \begin{center}
 
-\textbf{\textcolor{purple!85!blue}{Perhaps more important for future Calculus courses is when this limit is $0$.}} \\
+\textbf{\textcolor{purple!85!blue}{Perhaps more important for future Calculus courses is when this limit is $0$.}} 
 
 \end{center}
 
@@ -104,11 +103,11 @@ If the quotient limit equals $0$,
 
 \[  \lim_{x \to \infty} \frac{f(x)}{g(x)}  = 0\]
 
-then we say that $g$ \textbf{dominates} $f$. \\
+then we say that $g$ \textbf{dominates} $f$. 
 
 
 
-Sometimes people use a double inequality for dominates:  $f \ll g$.\\
+Sometimes people use a double inequality for dominates:  $f \ll g$.
 
 \end{definition}
 
@@ -117,28 +116,28 @@ Sometimes people use a double inequality for dominates:  $f \ll g$.\\
 When one function dominates another, then it approaches infinity in such a way that the other function is like $0$ in comparison. When the dominate function is the denominator, then this drives the quotient to $0$.
 
 
-Our initial order of dominance looks like this. \\
+Our initial order of dominance looks like this. 
 
 
-\begin{summary} \textbf{\textcolor{purple!85!blue}{Order of Dominance}}
+\begin{summary} \textbf{\textcolor{red!70!yellow}{Order of Dominance}}
 
 
-When we are comparing \textbf{unbounded} function values, then \\
+When we are comparing \textbf{unbounded} function values, then 
 
 \[   bounded functions (constants, \, sine, \, cosine)  \ll logarithmic \ll power (polynomial) \ll  exponential  \]
 
 
 
-This goes for their powers as well. 
+This goes for their positive powers as well. 
 
 
-\[   bounded functions (constants, \, sine, \, cosine)  \ll logarithmic^{power} \ll power polynomial^{power} \ll  exponential  \]
+\[   bounded functions (constants, \, sine, \, cosine)  \ll logarithmic^{power} \ll power (polynomial)^{power} \ll  exponential  \]
 
 
 
 \end{summary}
 
-\textbf{Note:} power functions include roots and radicals and linear and polynomials.
+\textbf{Note:} Power functions include roots and radicals and linear and polynomials.
 
 
 
@@ -185,24 +184,38 @@ According to our order of dominance, the denominator is a linear function and sh
 
 
 
+
+
+
+
+
+
+
 Let's zoom in.
 
 
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
 \begin{center}
-\desmos{3dmdtmts1h}{400}{300}
+\desmos{irjufakhn8}{400}{300}
 \end{center}
+\end{onlineOnly}
 
 
 
-Here we can see the graph peak and begin to come back down.   \\
 
 
-However, we are investigating \textbf{end-behavior}.  $18$ is not very large. We are interested in the values of $g(x)$ when $x$ is very very large. \\  
+Here we can see the graph peak and begin to come back down.   
+
+
+However, we are investigating \textbf{end-behavior}.  $18$ is not very large. We are interested in the values of $g(x)$ when $x$ is very very large.  
 
 That was not a good graph for our purposes.  We are interested in large values of $x$.
 
 
-
+Zoom way way way out.
 
 
 
@@ -240,7 +253,7 @@ That was not a good graph for our purposes.  We are interested in large values o
 
 
 
-Eventually, the graph approaches the x-axis as the function value approaches $0$. \\
+Eventually, the graph approaches the x-axis as the function value approaches $0$. 
 
 
 The denominator function, $x$, dominates the numerator function, $\ln(x)$.   The values of $\ln(x)$ become like $0$ compared to the values of $x$, when $x$ is very very very large. Not when $x$ takes on small values.  Not when $x$ has medium values.  Dominance is a statement when $x$ takes on very very very large values.
@@ -256,7 +269,7 @@ The denominator function, $x$, dominates the numerator function, $\ln(x)$.   The
 
 
 
-The level of dominance includes powers.  We can raise the power of $\ln(x)$, but they are still overshadowed by values of $x$, when $x$ is very very very large. \\
+The level of dominance includes powers.  We can raise the power of $\ln(x)$, but they are still overshadowed by values of $x$, when $x$ is very very very large. 
 
 
 
@@ -279,16 +292,21 @@ The level of dominance includes powers.  We can raise the power of $\ln(x)$, but
 
 Graph of $y = \frac{(\ln(x))^5}{x}$.
 
-$x$ should dominate any power of $\ln(x)$.  Therefore, the graph of this function should eventually aproach the the $x$-axis as the function value approaches $0$. \\
+$x$ should dominate any power of $\ln(x)$.  Therefore, the graph of this function should eventually aproach the the $x$-axis as the function value approaches $0$. 
 
 
 If this function approaches $0$, then it must get below and stay below $2$, eventually. How far out in the domain do you need to go before this function eventually dips and stays below $2$.
 
 
-\begin{center}
-\desmos{rksndotdsv}{400}{300}
-\end{center}
 
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{bkbn7bp9ye}{400}{300}
+\end{center}
+\end{onlineOnly}
 
 
 
@@ -307,7 +325,7 @@ For the following limits, refer to our order of dominance.
 \begin{question}
 
 \[
-\lim\limits_{t \to \infty} \frac{x^6}{e^x} = \answer{0}
+\lim\limits_{x \to \infty} \frac{x^6}{e^x} = \answer{0}
 \]
 
 \end{question}
@@ -371,17 +389,17 @@ For the following limits, refer to our order of dominance.
 \begin{idea} \textbf{\textcolor{blue!55!black}{Upsidedown}}
 
 
-When we talk about dominance, we phrase it in terms of approaching $0$.  The quotient might be approaching $0$ through psitive numbers or negative numbers.  It doesn't matter because $-0 = 0$.
+When we talk about dominance, we phrase it in terms of approaching $0$.  The quotient might be approaching $0$ through positive numbers or negative numbers.  It doesn't matter because $-0 = 0$.
 
 
-If we our quotient is upsidedown and the dominate function is in the numerator, then we also need to think about the sign.
+If  our quotient is upsidedown and the dominate function is in the numerator, then we also need to think about the sign.
 
 
 \end{idea}
 
 
 
-\begin{example}
+\begin{example} Reciprocals
 
 
 
@@ -409,7 +427,7 @@ If we our quotient is upsidedown and the dominate function is in the numerator, 
 
 
 
-\begin{example}
+\begin{example} Reciprocals
 
 
 
@@ -444,36 +462,39 @@ When thinking about the reciprocal, then we need to keep in mind that $4 - k < 0
 Dominance also helps us identify the most important terms in a function's formula.
 
 
-When one term in a formula dominates over an added term, then we can remove the dominated term from our analysis. \\
+A \textbf{term} is an expression that is added or subtracted.
+
+When one term in a formula dominates over an added term, then we can remove the dominated term from our analysis. 
 
 
 
 
 
 
-\begin{example}
-
-Consider the function $B(t) = \frac{3e^t - 5}{e^t + 1}$. \\
+\begin{example} Terms
 
 
-$\blacktriangleright$ As $t \to \infty$, $3e^t$ dominates $-5$. \\
-
-$\blacktriangleright$ As $t \to \infty$, $3^t$ dominates $1$. \\
+Consider the function $B(t) = \frac{3e^t - 5}{e^t + 1}$. 
 
 
+$\blacktriangleright$ As $t$ approaches $\infty$, $3e^t$ dominates $-5$. 
+
+$\blacktriangleright$ As $t$ approaches $\infty$, $3^t$ dominates $1$. 
 
 
-As $t \to \infty$, the exponential pieces will dominate the constant pieces in each expression.  
+
+
+As $t$ approaches $\infty$, the exponential pieces will dominate the constant pieces in each expression.  
 
 \[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{3 e^t}{e^t} = 3   \]
 
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Now consider the other direction. \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} Now consider the other direction. 
 
 
-As $t \to -\infty$, we have a different story.   
+As $t$ approaches $-\infty$, we have a different story.   
 
 
 
@@ -487,7 +508,7 @@ This reverses the dominance.
 
 
 
-As $t \to -\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$. Therefore, in this case, the constant terms dominate.
+As $t$ approaches $-\infty$, we have a different story.  $\lim\limits_{t \to -\infty} e^t = 0$. Therefore, in this case, the constant terms dominate.
 
 
 \[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{-5}{1} = -5   \]
@@ -519,7 +540,7 @@ This helps us think about limiting behavior.
 
 
 
-\begin{example}
+\begin{example} Terms
 
 
 \[
@@ -536,7 +557,7 @@ This helps us think about limiting behavior.
 
 
 
-\begin{example}
+\begin{example} Terms
 
 
 \[

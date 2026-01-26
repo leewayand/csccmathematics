@@ -1,0 +1,225 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Trig Identities}
+
+\begin{document}
+
+\begin{abstract}
+double and half
+\end{abstract}
+\maketitle
+
+
+
+
+
+
+\section*{Double Angle Formulas}
+
+
+\[   \sin(2t) = \frac{e^{i 2t} - e^{-i 2t}}{2 i}      \]
+
+
+This is a difference of two squares.  It factors.
+
+
+
+\[   \sin(2t) = \frac{(e^{i t} - e^{-i t})(e^{i t} + e^{-i t})}{2 i}      \]
+
+
+
+
+\[   \sin(2t) = 2 \cdot \frac{(e^{i t} - e^{-i t})}{2i}    \cdot    \frac{(e^{i t} + e^{-i t})}{2}      \]
+
+
+
+\[   \sin(2t) = 2 \sin(t)   \cos(t)      \]
+
+This is the double angle formla for sine.  How about cosine?
+Let's begin with $\cos^2(t) - \sin^2(t)$ and rearrange it.
+
+
+
+
+
+
+
+
+
+
+
+\[      \cos^2(t) - \sin^2(t)      \]
+
+
+
+\[      \cos^2(t) - \sin^2(t)   = \left( \frac{e^{i t} + e^{-i t}}{2} \right)^2 - \left( \frac{e^{i t} - e^{-i t}}{2i} \right)^2  \]
+
+
+\[      \cos^2(t) - \sin^2(t)   = \left( \frac{e^{2i t} + 2 + e^{-2i t}}{4} \right) - \left( \frac{e^{2 i t} - 2 + e^{-2i t}}{-4} \right)  \]
+
+
+
+\[      \cos^2(t) - \sin^2(t)   = \frac{2 e^{2i t}  + 2 e^{-2i t}}{4}   = \frac{e^{2i t}  + e^{-2i t}}{2} = \cos(2t)   \]
+
+
+
+
+\[      \cos^2(t) - \sin^2(t)  = \cos(2t)    \]
+
+
+This is the double angle formula for cosine. \\
+
+Additionally, we have 
+
+
+
+
+\[   \cos(2t) =    \cos^2(t) - \sin^2(t)  =    \cos^2(t) - (1 - \cos^2(t)) =  2 \cos^2(t) - 1 \]
+
+
+and
+
+\[   \cos(2t) =    \cos^2(t) - \sin^2(t)  =    (1 - \sin^2(t)) - \sin^2(t)  = 1 - 2 \sin^2(t)     \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Half Angle Formulas}
+
+
+
+\[   \cos(2t)  =  2 \cos^2(t) - 1 \]
+
+
+\[   \frac{1 + \cos(2t)}{2}  =   \cos^2(t)  \]
+
+
+
+and we know that $\cos^2(t) = 1- \sin^2(t)$. Applying this to the formula above gives us
+
+\[  \frac{1 -  \cos(2t)}{2}  =  \sin^2(t)     \]
+
+
+
+These are half-angle formulas.  We can see the half better by replacing $t$ with $\frac{x}{2}$
+
+
+
+\[   \frac{1 + \cos(x)}{2}  =   \cos^2\left( \tfrac{x}{2} \right)  \]
+
+
+
+\[   \frac{1 - \cos(x)}{2}  =   \sin^2\left( \tfrac{x}{2} \right)  \]
+
+
+
+
+
+
+
+\begin{example}
+
+Obtain an expression for $\cos\left(  \frac{\pi}{8}  \right)$ that only uses square roots.
+Let $t = \frac{\pi}{8}$ in the equation above.
+
+
+
+\begin{explanation}
+
+$\frac{\pi}{8}$ is half of $\frac{\pi}{4}$
+
+
+
+
+\[   \frac{1 + \cos( \frac{\pi}{4} )}{2}  =   \cos^2\left( \frac{\pi}{8} \right)  \]
+
+
+\[   \frac{1 + \frac{1}{\sqrt{2}}}{2}  =   \cos^2\left( \frac{\pi}{8} \right)  \]
+
+
+
+$\frac{\pi}{8}$ is in quadrant I, therefore cosine is positive.
+
+
+
+
+\[   \sqrt{ \frac{1 + \frac{1}{\sqrt{2}}}{2} }  =   \cos\left( \frac{\pi}{8} \right)  \]
+
+
+
+
+
+\end{explanation}
+
+\end{example}
+
+
+The double angle formulas help you reduce the argument inside the trigonometric function. \\
+
+
+You replace $\sin(2 \theta)$ with $2 \sin(\theta) \cos(\theta)$.  You end up with more functions, but they are easier to work with. \\
+
+
+The half angle formulas get rid of squaring.
+
+
+$\sin^2\left( \tfrac{x}{2} \right)$ is replaced with $\frac{1 - \cos(x)}{2}$.  Much easier to work with.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of the Complex Bridge]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/complexBridge/examples/exampleList}
+
+\end{center}
+
+
+
+\end{document}
