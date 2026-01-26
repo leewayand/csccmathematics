@@ -41,9 +41,9 @@ Compare the graphs of $y = f(x)$ and $y = g(x)$.
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            domain=-10:10, ymax=20, xmax=10, ymin=-20, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ytick={-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -52,15 +52,9 @@ Compare the graphs of $y = f(x)$ and $y = g(x)$.
           ]
           
 
-          \addplot [line width=2, penColor, smooth,samples=300,domain=(-7:3),<->] {0.5*(3*x-2)*(x+5)*(x+3)};
-          \addplot [line width=2, penColor2, smooth,samples=300,domain=(-4:3),<->] {1.5*x^3};
+          \addplot [line width=2, penColor, smooth,domain=(-5.7:1.1),<->] {0.5*(3*x-2)*(x+5)*(x+3)};
 
-            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-4},{x});
-            %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
-
-
-          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,4)};
-          %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(5,6)};
+          \addplot [line width=2, penColor2, smooth,domain=(-2.3:2.3),<->] {1.5*x^3};
 
  
 
