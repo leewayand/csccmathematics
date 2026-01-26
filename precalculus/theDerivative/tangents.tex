@@ -321,6 +321,8 @@ Two: The secant line through  $(0,-3)$ and $(h,f(h))$.
 
 
 
+
+
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
@@ -340,6 +342,15 @@ Two: The secant line through  $(0,-3)$ and $(h,f(h))$.
           \addplot [line width=1, penColor, smooth,domain=(-2:4),<->] {2.9*x-3};
 
  
+
+
+          \addplot [line width=1, penColor3, smooth,domain=(-6:0),<->] {x-3};
+          \addplot [line width=1, penColor3, smooth,domain=(0:2),<->] {5.4*x-3};
+
+          \addplot[color=black,only marks,mark=*] coordinates{(0,-3)}; 
+          \addplot[color=penColor3,only marks,mark=*] coordinates{(-1,-4)}; 
+          \addplot[color=penColor3,only marks,mark=*] coordinates{(1,2.4)}; 
+
 
   \end{axis}
 \end{tikzpicture}
