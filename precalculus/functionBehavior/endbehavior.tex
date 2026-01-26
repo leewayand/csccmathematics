@@ -65,14 +65,47 @@ Compare the graphs of $y = f(x)$ and $y = g(x)$.
 
 
 
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{ulc3ynrhog}{400}{300}
+\end{center}
+\end{onlineOnly}
 
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-50:50, ymax=10000, xmax=20, ymin=-10000, xmin=-20,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-8000,-6000,-4000,-2000,2000,4000,6000,8000},
+            xtick={-20,-15,-10,-5,5,10,15,20},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,domain=(-20:16),<->] {0.5*(3*x-2)*(x+5)*(x+3)};
+
+          \addplot [line width=2, penColor2, smooth,domain=(-18.5:18.5),<->] {1.5*x^3};
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 
 \begin{onlineOnly}
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
 \begin{center}
-\desmos{ulc3ynrhog}{400}{300}
+\desmos{gax1jj1cyn}{400}{300}
 \end{center}
 \end{onlineOnly}
 
