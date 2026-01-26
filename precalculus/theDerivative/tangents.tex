@@ -25,7 +25,7 @@ The story about tangent lines we told involved parabolas, but it extends to any 
 
 
 
-Suppose we have the cubic function $W(t) = \frac{1}{10} (3x - 2)(x+5)(x+3)$. 
+Suppose we have the cubic function $f(x) = \frac{1}{10} (3x - 2)(x+5)(x+3)$. 
 
 This graph contains the point $(0,-3)$.
 
@@ -113,7 +113,7 @@ The curve and line have a special relationship, which we can see by zooming in a
             domain=-0.02:0.02, ymax=-2.9, xmax=0.02, ymin=-3.1, xmin=-0.02,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
             ytick={-3.05,-3,-2.95},
-            xtick={--0.02,-0.1,0.1,0.02},
+            xtick={-0.02,-0.01,0.01,0.02},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
@@ -187,15 +187,6 @@ The way Calculus gets to this tangent line is through secant lines on either sid
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
-\begin{center}
-\desmos{vilqspjxsf}{400}{300}
-\end{center}
-
-
-
-
-
 
 
 
@@ -260,10 +251,7 @@ The way Calculus gets to this tangent line is through secant lines on either sid
 
 
 
-Suppose we have a quadratic function $Q(x) = a (x - h)^2 + k$, with $a > 0$. 
-
-
-Then its graph is a parabola.
+Continuing with our cubic function $W(t) = \frac{1}{10} (3x - 2)(x+5)(x+3)$ and the tangent point $(0,-3)$ and the tangent line $y=\frac{29}{10}x-3$   through the tangent point, we are going to investigate pairs of secant lines.
 
 
 
@@ -273,32 +261,112 @@ Then its graph is a parabola.
 
 \begin{image}
 \begin{tikzpicture}
-     \begin{axis}[
-                domain=-5:10, ymax=10, xmax=10, ymin=-5, xmin=-5,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-4,-2,2,4,6,8,10},
-                xtick={-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
+  \begin{axis}[
+            domain=-8:6, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
 
+          \addplot [line width=2, penColor2, smooth,domain=(-6.2:1.5),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
 
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:7),<->] {0.5*(x-3)^2 + 2};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        
+          \addplot [line width=1, penColor, smooth,domain=(-2:4),<->] {2.9*x-3};
 
+ 
 
-        \addplot [color=penColor,only marks,mark=*] coordinates{(3,2)};
-        \node[penColor] at (axis cs:4,1.5) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
-
-
-
-    \end{axis}
+  \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
+
+Let $h > 0$ be a small positive real number.
+
+With this value of $h$, we can consider two intervals: $(-h,0)$ and $(0,h)$.
+
+We image the two secant lines:
+
+One: The secant line through  $(-h,0)$ and $(0,-3)$.
+
+\[
+\frac{f(0) - f(-h)}{0-(-h)} x - 3 = \frac{-3-f(-h)}{h} x - 3
+\]
+
+
+
+Two: The secant line through  $(0,-3)$ and $(h,f(h))$.
+
+\[
+\frac{f(h) - f(0)}{h-0} x - 3 = \frac{f(h)+3}{h} x - 3
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-8:6, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor2, smooth,domain=(-6.2:1.5),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
+
+          \addplot [line width=1, penColor, smooth,domain=(-2:4),<->] {2.9*x-3};
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{onlineOnly}
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
+\begin{center}
+\desmos{vilqspjxsf}{400}{300}
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
+
+
+
+
+
+
 We can examine the rate of change over any interval.
 
 
