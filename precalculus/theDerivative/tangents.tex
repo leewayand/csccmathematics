@@ -32,6 +32,37 @@ This graph contains the point $(0,-3)$.
 
 The line $y=\frac{29}{10}x-3$  goes through the point.
 
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-8:6, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-20,-18,-16,-14,-12,-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18,20},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,domain=(-6.2:1.5),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
+
+          \addplot [line width=1, penColor2, smooth,domain=(-2:4),<->] {2.9*x-3};
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
 The curve and line have a special relationship, which we can see by zooming in around the point.
 
 
@@ -75,6 +106,30 @@ The curve and line have a special relationship, which we can see by zooming in a
 
 
 
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-0.02:0.02, ymax=-2.9, xmax=0.02, ymin=-3.1, xmin=-002,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-3.05,-3,-2.95},
+            xtick={--0.02,-0.1,0.1,0.02},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,domain=(-0.02:0.02),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
+
+          \addplot [line width=1, penColor2, smooth,domain=(-0.02:0.02),<->] {2.9*x-3};
+
+ 
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
 
 
 As you zoom in, the graph slowly looks more and more like the line. 
