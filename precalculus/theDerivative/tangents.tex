@@ -371,6 +371,16 @@ Two: The secant line through  $(0,-3)$ and $(h,f(h))$.
 
 
 
+This general set up works for any positive value of $h$.
+
+However, we want the slope of the tangent line.
+
+We want $h=0$.
+
+Unfortunately, if $h=0$, then we would be lokoing at secant lines that go through $(0,-3)$ and $(0,-3)$.
+
+
+The slope of our secant lines would be $\frac{0}{0}$, which has no meaning.
 
 
 
@@ -378,119 +388,17 @@ Two: The secant line through  $(0,-3)$ and $(h,f(h))$.
 
 
 
-We can examine the rate of change over any interval.
+We have an idea that will help.
+
+We have the idea of \textbf{\textcolor{blue!55!black}{expected values}}.
 
 
-Let's examine the interval $[2, 5]$.
-
-
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Algebraically}}, the rate of change of $Q(x)$ over the interval $[2,5]$ is given by 
-
-\[
-\frac{Q(5) - Q(2)}{5 - 2} 
-\]
-
-
-
-$\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Geometrically}}, this is the slope of the \textbf{secant} line running through the points $(2, Q(2))$ and $(5, Q(5))$.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-5:10, ymax=10, xmax=10, ymin=-5, xmin=-5,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-4,-2,2,4,6,8,10},
-                xtick={-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:7),<->] {0.5*(x-3)^2 + 2};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        
-
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(5,4)};
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(2,2.5)};
-        
-        \addplot [draw=penColor2, very thick, smooth, domain=(-2:9),<->] {0.5*(x-5) + 4};
-
-        \addplot [color=penColor,only marks,mark=*] coordinates{(3,2)};
-        \node[penColor] at (axis cs:4,1.5) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-Intervals and secants are algebraic and geometric partners. Secants give a picture of rates of change over intervals.
-
-
-
-What if we push the secant over a little bit until it becomes a tangent line?
-
-
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-5:10, ymax=10, xmax=10, ymin=-5, xmin=-5,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-4,-2,2,4,6,8,10},
-                xtick={-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-
-        \addplot [draw=penColor, very thick, smooth, domain=(-1:7),<->] {0.5*(x-3)^2 + 2};
-        \addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
-        
-
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(3.5,2.125)};
-        
-        \addplot [draw=penColor2, very thick, smooth, domain=(-2:9),<->] {0.5*(x-3.5) + 2.125};
-
-        %\addplot [color=penColor,only marks,mark=*] coordinates{(3,2)};
-        %\node[penColor] at (axis cs:4,1.5) {$(h, k)$};
-        %\node[penColor] at (axis cs:5,-9) {$-0.5 x^2 - 5 x + 15.5$};
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-Now it is a picture of the rate of change over the interval $\left[ \tfrac{7}{2}, \tfrac{7}{2} \right]$. 
-
-
-How should we interpret this? 
 
 
 What is the rate of change \textbf{\textcolor{red!90!darkgray}{AT}} a point? 
+
+
+It is the expected value coming from the slopes of the secant lines as $h$ tends to $0$.
 
 
 
@@ -535,508 +443,81 @@ We are calling this slope of the tangent line the \textbf{\textcolor{purple!85!b
 
 
 
-\textbf{\textcolor{green!50!black}{Remember Definition: Instantaneous Rate of Change}}  
+\begin{definition} (from earlier) \textbf{\textcolor{green!50!black}{Instantaneous Rate of Change}}  
 
 
 Let $f$ be a function. Let $a$ be a number in the domain of $f$.
 
 If the graph of $y = f(x)$ has a non-vertical tangent line at the point $(a, f(a))$, then the slope of this tangent line is the \textbf{instantaneous rate of change} of $f$ \textbf{at} a.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection*{Quadratics}
-
-We'll begin our investigation into instantaneous rate of change with quadratic functions, whose graphs are parabolas (which never have vertical tangent lines). \\
-
-
-We need a method of obtaining the slope of tangent lines to parabolas.
-
-
-
-
-
-
-
-$\blacktriangleright$ \textbf{Basic Quadratic}
-
-
-We'll begin with our basic quadratic function: \textbf{\textcolor{purple!85!blue}{$Q(x) = x^2$}} and its graph \textbf{\textcolor{purple!85!blue}{$y = x^2$}}. \\
-
-
-We are investigating the graph of $y = x^2$, which is a parabola whose vertex is $(0, 0)$. \\
-
-Let's select a domain number of $Q$, call it $x_0$.   This corresponds to the point $(x_0, y_0) = (x_0, (x_0)^2)$ on the graph of $Q$.
-
-Let's add a picture of the tangent line at $(x_0, y_0) = (x_0, (x_0)^2)$ to our graph of $Q$.
-
-
-\begin{image}
-\begin{tikzpicture}
-     \begin{axis}[
-                domain=-5:5, ymax=10, xmax=5, ymin=-5, xmin=-5,
-                axis lines =center, xlabel=$x$, ylabel=$y$,
-                ytick={-4,-2,2,4,6,8,10},
-                xtick={-4,-2,2,4,6,8,10},
-                ticklabel style={font=\scriptsize},
-                every axis y label/.style={at=(current axis.above origin),anchor=south},
-                every axis x label/.style={at=(current axis.right of origin),anchor=west},
-                axis on top,
-                ]
-
-
-        \addplot [draw=penColor, very thick, smooth, domain=(-3:3),<->] {x^2};
-        %\addplot [line width=1, gray, dashed,samples=100,domain=(-5:9.5)] ({0},{x});
-        
-
-        \addplot [color=penColor2,only marks,mark=*] coordinates{(2,4)};
-        \node[penColor2] at (axis cs:3,4) {$(x_0, y_0)$};
-        \addplot [draw=penColor2, very thick, smooth, domain=(0.5:3),<->] {4*x - 4};
-        
-
-
-        %\addplot [color=penColor,only marks,mark=*] coordinates{(3,2)};
-        %\node[penColor] at (axis cs:2,1.5) {$(h, k)$};
-
-
-
-
-    \end{axis}
-\end{tikzpicture}
-\end{image}
-
-The tangent line is the graph of a linear function. Let's call this linear function $T$.
-
-
-$T$ is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  According to our definition, $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
-
-
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ We would like a way to obtain the exact value of $m$.}} \\
-
-
-To get the exact value of $m$, we are going to create a new quadratic function, which will be the difference between the original quadratic function and the linear function.
-
-
-
-\begin{explanation}
-
-
-\[
-Q_{new}(x) = Q(x) - T(x) 
-\]
-
-\[
-Q_{new}(x) = Q(x) - T(x) = x^2 - (m(x - x_0) + y_0)
-\]
-
-
-
-
-$Q_{new}(x)$ is a quadratic function and $Q_{new}(x_0) = Q(x_0) - T(x_0) = y_0 - y_0 = 0$. \\
-
-
-We can also see from the graph above that $Q(x) \geq T(x)$, which means $Q_{new}(x) \geq 0$\\
-
-
-So, the graph of $Q_{new}(x)$ is a parabola with vertex, $(x_0, 0)$, on the $x$-axis.  The graph of $y = Q(x)$ has slid to the left a distance of $x_0$.  \\
-
-
-Therefore, the vertex form of $Q_{new}(x)$ is $Q_{new}(x) = (x - x_0)^2 = (x - x_0)(x - x_0)$  \\
-
-
-
-
-
-
-\[
-Q_{new}(x) = Q(x) - T(x) = x^2 - (m \, (x - x_0) + y_0) 
-\]
-
-
-
-On the other hand,
-
-
-\[
-Q_{new}(x) = (x - x_0)^2
-\]
-
-
-
-Therefore, we have
-
-\[
-x^2 - (m \, (x - x_0) + y_0) =  (x - x_0)^2
-\]
-
-
-or
-
-
-\[
-x^2 - (m \, (x - x_0) + y_0) =  x^2 - 2 x_0 \, x + x_0^2
-\]
-
-
-or
-
-
-\[
- -m \, x + m \, x_0 - y_0 =   - 2 \, x_0 \, x + x_0^2
-\]
-
-
-For this to happen, we must have $-m \, x = - 2 \, x_0 \, x$ or \textbf{$m = 2 \, x_0$}. \\
-
-
-\end{explanation}
-
-
-At any point $(x_0, y_0)$ on the graph of $y = x^2$, the slope of the tangent line is $2 \, x_0$.  The slope of the tangent line is always twice the $x$-coordinate of the tangent point.
-
-
-
-
-\begin{conclusion} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line}} 
-
-
-The graph of $y = x^2$ is a parabola.
-
-Let $(x_0, y_0)$ be a point on this parabola.
-
-Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
-
-
-
-\[ \text{slope } \, = \, 2 \, x_0  \]
-
-
-\end{conclusion}
-This for any point on the parabola. \\
-
-What about other parabolas, besides the basic parabola? \\
-
-All parabolas can be obtained from the basic parabola by stretching and shifting. \\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection*{Stretching}
-
-
-
-We can vertically stretch our basic quadratic parabola by multiplying all of the $y$-coordinates by a nonzero constant, $a \ne 0$. \\
-
-
-The new parabola has an equation of the form $y = a \, x^2$. \\
-
-These are graphs of quadratic functions of the form $Q(x) = a \, x^2$. \\
-
-
-Let's go through the same process. \\
-
-
-\begin{explanation}
-
-The tangent line at $(x_0, y_0)$ is the graph of a linear function. Let's call this linear function $T$.
-
-
-$T$ is a linear function. Therefore, the formula for $T$, would look like $T(x) = m(x - x_0) + y_0$, for some $m$.  According to our definition, $m$ is the instantaneous rate of change of $Q$ at $x_0$.  How do we determine its exact value?
-
-
-$\blacktriangleright$ We would like a way to obtain the exact value of $m$. \\
-
-
-
-To get the exact value of $m$, we are going to create a new quadratic function.
-
-
-
-\[
-Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m \, (x - x_0) + y_0)
-\]
-
-
-
-$Q_{new}(x)$ is a quadratic function and $Q_{new}(x_0) = Q(x_0) - T(x_0) = y_0 - y_0 = 0$. \\
-
-We can also see from the graph that $Q(x) > T(x)$ when $x \ne x_0$, which means $Q_{new}(x) \geq 0$.\\
-
-
-So, its graph is a parabola with vertex, $(x_0, 0)$, on the $x$-axis.  \\
-
-
-Therefore, the vertex form of $Q_{new}(x)$ is $Q_{new}(x) = a \, (x - x_0)^2 = (x - x_0)(x - x_0)$  \\
-
-
-
-
-
-
-\[
-Q_{new}(x) = Q(x) - T(x) = a \, x^2 - (m \, (x - x_0) + y_0) = a \, (x - x_0)^2
-\]
-
-
-
-
-\[
-a \, x^2 - (m \, (x - x_0) + y_0) = a \, (x - x_0)^2 = a \, x^2 - 2 \, a \, x_0 x + a \, x_0^2
-\]
-
-
-
-\[
- -m \, x + m \, x_0 - y_0 =   - 2 \, a \, x_0 \, x + a \, x_0^2
-\]
-
-
-For this to happen, we must have $-m \, x = - 2 \, a \, x_0 \, x$ or \textbf{$m = 2 \, a \, x_0$}. \\
-
-
-\end{explanation}
-
-At any point $(x_0, y_0)$ on the graph of $y = a \, x^2$, the slope of the tangent line is $2 \, a \, x_0$.  The slope of the tangent line is always $2a$ times the $x$-coordinate of the tangent point.
-
-
-
-
-
-
-
-
-
-
-\begin{conclusion} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line}} 
-
-
-The graph of $y = a \, x^2$ is a parabola.
-
-Let $(x_0, y_0)$ be a point on this parabola.
-
-Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
-
-
-
-\[ \text{slope } \, = \, 2 \, a \, x_0  \]
-
-
-\end{conclusion}
-This for any point on the parabola.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection*{Shifting}
-
-
-
-
-Beginning with $Q(x) = a \, x^2$ and its parabola $y = a \, x^2$, we can shift horizontally and vertically. \\
-
-
-
-
-
-Shifting keeps the shape of the parabola, $y = a \, x^2$, intact. \\
-
-
-The new shifted parabola has an equation of the form $y = a \, (x - h)^2 + k$.
-
-These are graphs of quadratic functions of the form $Q_{new}(x) = a \, (x - h)^2 + k$. \\
-
-
-If we pick any point, $(x_0, y_0)$, on this parabola, then the slope of the tangent line is the same as the slope of the tangent line for $y = a \, x^2$ at the point $(x_0 - h, y_0 - k)$, because the actual shape of the parabola is not changed by shifting.  \\
-
-From above, we know this slope is \textbf{$2 \, a \, (x_0 - h)$}.
-
-
-
-
-
-
-\begin{conclusion} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line}} 
-
-
-The graph of $y = a \, (x - h)^2 + k$ is a parabola.
-
-Let $(x_0, y_0)$ be any point on this parabola.
-
-Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
-
-
-
-\[ \text{slope } \, = \, 2 \, a \, (x_0 - h)  \]
-
-
-\end{conclusion}
-
-
-Every parabola can be described by an equation of the form $y = a \, (x - h)^2 + k$. \\
-
-Our slope of tangent line idea can be applied to every parabola. \\
-
-We have covered every parabola. \\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{theorem} \textbf{\textcolor{green!50!black}{Slope of a Tangent Line (Parabola)}} 
-
-
-The graph of $y = a (x - h)^2 + k$ is a parabola.
-
-Let $(x_0, y_0)$ be any point on this parabola.
-
-Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by 
-
-
-
-\[ 2 \, a \, (x_0 - h) \]
-
-
-\end{theorem}
-
-
-
-
-
-
-
-
-
-
-
-
-\textbf{Note:} If we look at the vertex of the parabola $(x_0, y_0) = (h, k)$, then $2 a (x_0 - h) = 2 a (h - h) = 0$ and the slope of the tangent line is $0$, just like we had reasoned before. \\
-
-
-
-
-
-
-
-
-
-
-
-\section*{iRoC}
-
-Let $Q(x) = a (x - h)^2 + k$ be any quadratic function.
-
-Every point, $(x_0, y_0)$, on the graph of $y = Q(x)$ has a tangent line.
-
-Each tangent line has a slope, which we are calling the instantaneous rate of change of $Q$ at $x_0$.
-
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} We can create a new function from this.
-
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{iRoC}}  
-
-
-Given a quadratic function, $Q(x) = a (x - h)^2 + k$, we define \textbf{the instantaneous rate of change of Q} to be the slope of the tangent line on the graph of $y = Q(x)$ at the point $(x, y)$.
-
-
-The function $iRoC_Q(x)$ is defined to equal the slope of the tangent line at the point $(x, y)$.
-
-
-$iRoC_Q(x)$ is a linear function given by 
-
-\[  iRoC_Q(x) = 2 a (x-h) \]
-
 \end{definition}
 
 
-We now have a function, with a formula, for measuring the instantaneous rate of change of any quadratic function at any domain number. \\
-
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the quadratic function, $Q(x) = a \, (x - h)^2 + k$, is the linear function, $iRoC_Q(x) = 2 \, a \, (x-h)$. \\
 
 
 
 
-We can add this to our growing collection. \\ 
-
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the linear function, $L(x) = m \, x + b$, is the constant function, $iRoC_L(x) = m$. \\
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the constant function, $C(x) = c$, is the zero function, $iRoC_C(x) = 0$. \\
 
 
+
+
+
+
+
+
+\subsection*{the Derivative}
+
+Let $f(x)$ be any function.
+
+Let $(x_0, y_0)$ be a point on the graph of $y = f(x)$.
+
+We have three possibilities:
+
+
+\begin{itemize}
+\item The graph has a tangent line at $(x_0, y_0)$ with a slope.
+\item The graph has a tangent line at $(x_0, y_0)$ without a slope.
+\item The graph does not have a tangent line at $(x_0, y_0)$.
+\end{itemize}
+
+
+
+If the point has a tangent line with a slope, which we are calling the instantaneous rate of change of $Q$ at $x_0$, then we can create a new function from this.
+
+
+
+\begin{idea} \textbf{\textcolor{blue!55!black}{the Derivative Function}}  
+
+
+Let $f(x)$ be any function.
+
+Define a new function called \textbf{the derivative of f}, denoted by $f'(x)$.
+
+
+It domain is all of the domain values, $a$, of $f$ where the tangent line at $(a, f(a))$ has a slope.
+
+\[
+f'(a) = \text{slope of tangent line} at (a, f(a))
+\]
+
+
+\end{idea}
+
+
+We now have a function for measuring the instantaneous rate of change of any function at any domain number (where there is a tangent line). 
+
+
+\
 
 
 
 \begin{notation} \textbf{\textcolor{blue!55!black}{Language}} 
 
 
-We are just beginning our investigation of function behavior, so we have given our new function a very descriptive name, \textbf{\textcolor{blue!55!black}{Instantaneous Rate of Change}},  \textbf{\textcolor{blue!55!black}{$iRoC$}}. \\
+We are just beginning our investigation of function behavior, so we have given our new function a very descriptive name, \textbf{\textcolor{blue!55!black}{Instantaneous Rate of Change}},  \textbf{\textcolor{blue!55!black}{$iRoC$}}. 
 
 
 Calculus uses the name \textbf{\textcolor{blue!55!black}{Derivative}} and it uses a little prime sign as the notation.
