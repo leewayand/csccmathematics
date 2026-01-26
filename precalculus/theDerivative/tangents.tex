@@ -49,9 +49,9 @@ The line $y=\frac{29}{10}x-3$  goes through the point.
           ]
           
 
-          \addplot [line width=2, penColor, smooth,domain=(-6.2:1.5),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
+          \addplot [line width=2, penColor2, smooth,domain=(-6.2:1.5),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
 
-          \addplot [line width=1, penColor2, smooth,domain=(-2:4),<->] {2.9*x-3};
+          \addplot [line width=1, penColor, smooth,domain=(-2:4),<->] {2.9*x-3};
 
  
 
@@ -110,7 +110,7 @@ The curve and line have a special relationship, which we can see by zooming in a
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
-            domain=-0.02:0.02, ymax=-2.9, xmax=0.02, ymin=-3.1, xmin=-002,
+            domain=-0.02:0.02, ymax=-2.9, xmax=0.02, ymin=-3.1, xmin=-0.02,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
             ytick={-3.05,-3,-2.95},
             xtick={--0.02,-0.1,0.1,0.02},
@@ -121,9 +121,9 @@ The curve and line have a special relationship, which we can see by zooming in a
           ]
           
 
-          \addplot [line width=2, penColor, smooth,domain=(-0.02:0.02),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
+          \addplot [line width=2, penColor2, smooth,domain=(-0.02:0.02),<->] {0.1*(3*x-2)*(x+5)*(x+3)};
 
-          \addplot [line width=1, penColor2, smooth,domain=(-0.02:0.02),<->] {2.9*x-3};
+          \addplot [line width=1, penColor, smooth,domain=(-0.02:0.02),<->] {2.9*x-3};
 
  
 
