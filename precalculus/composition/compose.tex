@@ -34,7 +34,7 @@ We can create new functions from the elementary functions by composing them.
 
 
 
-\begin{template} \textbf{\textcolor{blue!55!black}{Composition}}  \\
+\begin{template} \textbf{\textcolor{blue!55!black}{Composition}}  
 
 
 Let $f$ be a function with domain $D_f$.
@@ -45,7 +45,7 @@ Let $g$ be a function with domain $D_g$.
 
 
 
-Then the \textbf{\textcolor{green!50!black}{composition of f and g, $f \circ g$,}} is defined as
+Then the \textbf{\textcolor{blue!55!black}{composition of f and g, $f \circ g$,}} is defined as
 
 \[
 (f \circ g)(x) = f(g(x))
@@ -68,7 +68,7 @@ The composition is defined on a subset of the domain of $g$.  The composition is
 
 
 
-\begin{example}
+\begin{example} Composition
 
 
 Let $f(x) = 3 - x$ with its natural domain.
@@ -80,8 +80,7 @@ Let $g(y) = \ln(y)$ with its natural domain.
 Defines $H = f \circ g$ with its natural domain.
 
 
-
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 $H(t) = (f \circ g)(t) = f(g(t))$
@@ -96,7 +95,6 @@ The induced domain of $H = f \circ g$ is the domain of $g$, which is $(0, \infty
 
 
 
-\end{explanation}
 
 
 
@@ -104,7 +102,7 @@ The induced domain of $H = f \circ g$ is the domain of $g$, which is $(0, \infty
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 $K(r) = (g \circ f)(r) = g(f(r))$
@@ -121,7 +119,7 @@ The induced domain of $K = g \circ f$ is $(-\infty, 3)$.
 These are the numbers in the domain of $f$ where the value of $f$ is inside the domain of $g$.
 
 
-\end{explanation}
+
 
 
 
@@ -129,7 +127,7 @@ These are the numbers in the domain of $f$ where the value of $f$ is inside the 
 \end{example}
 
 
-An \textbf{induced} domain is a domain that is force to happen due to given restrictions. \\
+An \textbf{induced} domain is a domain that is force to happen due to given restrictions. 
 
 
 
@@ -137,7 +135,7 @@ An \textbf{induced} domain is a domain that is force to happen due to given rest
 
 
 
-\begin{example}
+\begin{example} Composition
 
 
 
@@ -277,9 +275,9 @@ What is the induced domain of $(p \circ T)$?
 
 
 
-Let $Out(x) = 2|x-3|+1$ with its natural or implied domain. \\
+Let $Out(x) = 2|x-3|+1$ with its natural or implied domain. 
 
-Let $In(t) = -(t-1)^2 + 5$ with its natural or implied domain. \\
+Let $In(t) = -(t-1)^2 + 5$ with its natural or implied domain. 
 
 
 
@@ -319,12 +317,13 @@ Graph of $y = Out(x) =2|x-3|+1$
   \end{axis}
 \end{tikzpicture}
 \end{image}
-The natural domain of $Out$ is $\mathbb{R}$. \\
+The natural domain of $Out$ is $\mathbb{R}$. 
 
-The graph of $Out$ has a ``V''-shape, opening up, with a corner at $(3,1)$. \\
-This illustrates that $Out$ decreases on $(-\infty, 3]$ and increases on $[3, \infty)$.  $Out$ has a minimum value of $1$, which occurs at $3$. \\
+The graph of $Out$ has a ``V''-shape, opening up, with a corner at $(3,1)$. 
 
-If we think of tracing the domain from left to right on the graph, the corresponding values of $Out$ decrease from $\infty$ down to $1$, then reverse direction and increase from $1$ back to $\infty$. \\
+This illustrates that $Out$ decreases on $(-\infty, 3]$ and increases on $[3, \infty)$.  $Out$ has a minimum value of $1$, which occurs at $3$. 
+
+If we think of tracing the domain from left to right on the graph, the corresponding values of $Out$ decrease from $\infty$ down to $1$, then reverse direction and increase from $1$ back to $\infty$. 
 
 
 
@@ -366,33 +365,33 @@ Graph of $z = In(t) = -(t-1)^2 + 5$
   \end{axis}
 \end{tikzpicture}
 \end{image}
-The natural domain of $In$ is $\mathbb{R}$. \\
+The natural domain of $In$ is $\mathbb{R}$. 
 
 
-Since $In$ is a quadratic function, its graph has the shape of a parabola, opening down.  $In$ increases on $(-\infty, 1]$ and decreases on $[1, \infty)$. $In$ has a maximum value of $5$, which occurs at $1$. \\
+Since $In$ is a quadratic function, its graph has the shape of a parabola, opening down.  $In$ increases on $(-\infty, 1]$ and decreases on $[1, \infty)$. $In$ has a maximum value of $5$, which occurs at $1$. 
 
 If we think of tracing the domain from left to right on the graph, the values of $In$ increase from $-\infty$ up to $5$, then reverse direction and decrease from $5$ back to $-\infty$.
 
 
-The output from the function $In$ will become the input to $Out$.  Therefore, in the composition, the new input to $Out$ will be the interval $(-\infty, 5]$, which is the output of $In$. This interval is traced twice: the values going into $Out$ will begin at $-\infty$, go up to $5$, then turn around and go back down to $-\infty$. The values of $Out$ will similarly repeat themselves in reverse.\\
+The output from the function $In$ will become the input to $Out$.  Therefore, in the composition, the new input to $Out$ will be the interval $(-\infty, 5]$, which is the output of $In$. This interval is traced twice: the values going into $Out$ will begin at $-\infty$, go up to $5$, then turn around and go back down to $-\infty$. The values of $Out$ will similarly repeat themselves in reverse.
 
 
 
 
 
 
-\textbf{\textcolor{purple!85!blue}{Now to examine the composition:}} \\
+\textbf{\textcolor{purple!85!blue}{Now to examine the composition:}} 
 
 
 
-\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}   First, the inside function: $In(t) = -(t-1)^2 + 5$ \\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}   First, the inside function: $In(t) = -(t-1)^2 + 5$ 
 
 The natural domain of $In(t)$ is the whole real line. As we move from left to right along the real line, the domain numbers increase from $-\infty$ to $\infty$.
 
 The corresponding movement in the range has the function values increasing from $-\infty$ to $5$.  The maximum function value $5$ occurs at $1$ in the domain.  As we keep moving beyond $1$ in the domain, the corresponding movement in the range is for the function values to decrease from $5$ to $-\infty$.
 
 
-This path in the range of $In(t)$ becomes the path in the domain of $Out(x)$. \\
+This path in the range of $In(t)$ becomes the path in the domain of $Out(x)$. 
 
 
 
@@ -466,17 +465,17 @@ This path in the range of $In(t)$ becomes the path in the domain of $Out(x)$. \\
 
 
 
-\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  Movement inside the domain of $Out(x)$.\\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  Movement inside the domain of $Out(x)$.
 
 
 
-Inside the natural domain of $Out(x) =2|x-3|+1$, the domain numbers will increase from $-\infty$ to $5$.  Then they will decrease from $5$ back down to $-\infty$. \\
+Inside the natural domain of $Out(x) =2|x-3|+1$, the domain numbers will increase from $-\infty$ to $5$.  Then they will decrease from $5$ back down to $-\infty$. 
 
-Following our graph of $Out(x)$, we will move from the far left toward the right until we reach $5$.  Then we will turn around and move toward the left.\\
+Following our graph of $Out(x)$, we will move from the far left toward the right until we reach $5$.  Then we will turn around and move toward the left.
 
 
 
-\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  Put those together. \\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  Put those together. 
 
 
 
@@ -577,11 +576,11 @@ So, we really should view $(-\infty, 5]$  as  $(-\infty, 3] \cup [3,5]$ and high
 
 
 
-That was on our first pass through $(-\infty, 5]$. \\
+That was on our first pass through $(-\infty, 5]$. 
 
 
 
-The input to $Out$ continues beginning at $5$ and moving towards $-\infty$.  \\
+The input to $Out$ continues beginning at $5$ and moving towards $-\infty$.  
 
 As the overall domain to the whole compostion continues to cover $[5, \infty)$, The function $In$ reverses this interval and sends the reversed interval into $Out$. As the overall composition domain continues to move through $[5, \infty)$, the input to $Out$ traces backwards from $5$ to $-\infty$.  The overall composition graph keeps moving to the right, but it is retracing the left side in reverse, mirroring it.
 
@@ -641,7 +640,7 @@ Since we reverse our travelling direction inside the domain, we hit the corner t
 
 
 
-\textbf{\textcolor{blue!55!black}{All together now...}}   \\
+\textbf{\textcolor{blue!55!black}{All together now...}}   
 
 
 Graph of $w = Out(In(m)) =2 \, |(-(m-1)^2 + 5)-3|+1 = 2 \, |-(m-1)^2 + 2| + 1$
@@ -680,7 +679,7 @@ Graph of $w = Out(In(m)) =2 \, |(-(m-1)^2 + 5)-3|+1 = 2 \, |-(m-1)^2 + 2| + 1$
 
 
 
-$\blacktriangleright$ The function values of $Out \circ In$ are all inside the interval $[1, \infty)$, which was the range of $Out$.  Thus, the composition has no zeros, because $Out$ has no zeros.\\
+$\blacktriangleright$ The function values of $Out \circ In$ are all inside the interval $[1, \infty)$, which was the range of $Out$.  Thus, the composition has no zeros, because $Out$ has no zeros.
 
 
 $\blacktriangleright$ The graph of $Out \circ In$ has two corners, because the corner of the graph of $Out$ was included twice.
@@ -799,14 +798,14 @@ The middle piece is a quadratic with a negative leading coefficient.  Its graph 
 
 
 Let $Out(x) = -2|x-3|+2$ with its natural or implied domain. \\
-Let $In(t) = 2 \sin(t)+2$ with its natural or implied domain. \\
+Let $In(t) = 2 \sin(t)+2$ with its natural or implied domain. 
 
 
 
 Graph $w = (Out \circ In)(r) = Out(In(r))$
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 Graph of $y = Out(x) = -2|x-3|+2$
 
@@ -838,12 +837,12 @@ Graph of $y = Out(x) = -2|x-3|+2$
   \end{axis}
 \end{tikzpicture}
 \end{image}
-The natural domain of $Out$ is $\mathbb{R}$. \\
+The natural domain of $Out$ is $\mathbb{R}$. 
 
-If we think of moving through the domain from $-\infty$ to $\infty$, then the graph illustrates that $Out$ will increase on $(-\infty, 3]$ and decrease on $[3, \infty)$.  The function $Out$ has a maximum value of $\answer{2}$, which occurs at $\answer{3}$. \\
+If we think of moving through the domain from $-\infty$ to $\infty$, then the graph illustrates that $Out$ will increase on $(-\infty, 3]$ and decrease on $[3, \infty)$.  The function $Out$ has a maximum value of $\answer{2}$, which occurs at $\answer{3}$. 
 
 
-However, the output from $In$ is not $\mathbb{R}$, so we will not get the full output of $Out$. In addition, the output of $In$ will oscillate, which means the input values coming into $Out$ will osciallate.  This will make the output of $Out$ oscillate. \\
+However, the output from $In$ is not $\mathbb{R}$, so we will not get the full output of $Out$. In addition, the output of $In$ will oscillate, which means the input values coming into $Out$ will osciallate.  This will make the output of $Out$ oscillate. 
 
 
 
@@ -1095,7 +1094,6 @@ The smooth rounding of the sine curve will round out the corners of the absolute
 
 
 
-\end{explanation}
 
 \end{example}
 
@@ -1105,7 +1103,7 @@ The smooth rounding of the sine curve will round out the corners of the absolute
 
 
 
-We are repeating the piece of $Out$ on the interval $[0,4]$.  \\
+We are repeating the piece of $Out$ on the interval $[0,4]$.  
 
 
 
@@ -1220,7 +1218,7 @@ The domain for $K \circ T$ is $(-\infty, -3) \cup (-3, -2) \cup (-2, \infty)$
 
 
 
-The composition is a function. \\
+The composition is a function. 
 
 
 This is a good reminder that a formula is not a function. There are always domain considerations.  In the case of a composition, we need to restrict the domain of the inner function to avoid inner function values that are not in the domain of the outer function.
@@ -1270,7 +1268,7 @@ $g$ and $H$ are inverse functions.
 
 \end{example}
 
-Of course, that isn't the whole story.  As we said earlier, formulas are not functions. \\
+Of course, that isn't the whole story.  As we said earlier, formulas are not functions. 
 
 $(g \circ H)(r) = r$ and so $g \circ H = Id$, the identity function.  But remember our caveat.  There are always domain issues.  In this case $(g \circ H)(r) = r$ for almost all of the real numbers.
 
@@ -1444,12 +1442,6 @@ $\blacktriangleright$  Therefore, $g$ and $H$ are inverse functions on $(-\infty
 
 
 
-
-
-
-
-
-
 \textbf{\textcolor{purple!85!blue}{Algebraically, we just replace.}}
 
 
@@ -1458,26 +1450,8 @@ $\blacktriangleright$  Therefore, $g$ and $H$ are inverse functions on $(-\infty
 
 
 
-
-
-
-
-
-
-
-
-
-
-\section*{Algebraically}
-
-
-
-
-
-
-
 Let $Out(x) = 3x^3 + \sin(4x) - \frac{3}{2-x}$ with its natural or implied domain. \\
-Let $In(t) = \frac{5t-7}{t^2-8}$ with its natural or implied domain. \\
+Let $In(t) = \frac{5t-7}{t^2-8}$ with its natural or implied domain. 
 
 
 
@@ -1527,7 +1501,7 @@ We can always make two compositions from two functions.
 
 
 Let $f(x) = 5x^2 - 4x + 2$ with its natural or implied domain. \\
-Let $g(t) = \frac{3}{6-t}$ with its natural or implied domain. \\
+Let $g(t) = \frac{3}{6-t}$ with its natural or implied domain. 
 
 
 
@@ -1561,7 +1535,7 @@ Let $g(t) = \frac{3}{6-t}$ with its natural or implied domain. \\
 
 
 Let $f(x) = 3x^2 - x + 5$ with its natural or implied domain. \\
-Let $g(t) = \frac{4}{7-t}$ with its natural or implied domain. \\
+Let $g(t) = \frac{4}{7-t}$ with its natural or implied domain. 
 
 
 
@@ -1640,7 +1614,7 @@ Select all real numbers which cannot be in the domain of $g \circ f$.
 
 
 
-\begin{example}
+\begin{example} Composition
 
 
 Let $H(d)$ and $M(p)$ be two functions and $H \circ M$ be their composition.
@@ -1655,16 +1629,16 @@ Find $H(d)$.
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
 
-$(H \circ M)(k) = H(M(k)) = H(3 k - 5)$  \\
+$(H \circ M)(k) = H(M(k)) = H(3 k - 5)$  
 
 
 
-$H$ is going to do something to $3 k - 5$ and produce $5 k + 1$. \\
+$H$ is going to do something to $3 k - 5$ and produce $5 k + 1$. 
 
 
 
@@ -1694,7 +1668,6 @@ $\blacktriangleright$ Check:
 
 
 
-\end{explanation}
 
 \end{example}
 
@@ -1710,7 +1683,7 @@ $\blacktriangleright$ Check:
 
 
 
-\begin{example}
+\begin{example} Composition
 
 
 Let $H(d)$ and $M(p)$ be two functions and $H \circ M$ be their composition.
@@ -1725,12 +1698,12 @@ Find $M(p)$.
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
 
-$(H \circ M)(k) = H(M(k)) = 3 M(k) - 5 $  \\
+$(H \circ M)(k) = H(M(k)) = 3 M(k) - 5 $  
 
 
 
@@ -1757,7 +1730,6 @@ $\blacktriangleright$ Check:
 
 
 
-\end{explanation} 
 
 \end{example}
 
@@ -1770,13 +1742,13 @@ $\blacktriangleright$ Check:
 
 
 
-\begin{example}
+\begin{example} Composition
 
 
 Let $f(x)$ and $g(w)$ be two functions and $f \circ g$ be their composition.
 
 
-Suppose $g(w) = 3w + 1$ \\
+Suppose $g(w) = 3w + 1$ 
 
 Suppose $(f \circ g)(t) = \frac{2t}{t-1}$
 
@@ -1785,21 +1757,21 @@ Find $f(x)$.
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
 
-$(f \circ g)(t) =  f(g(t)) =  \frac{2t}{t-1}$ \\
+$(f \circ g)(t) =  f(g(t)) =  \frac{2t}{t-1}$ 
 
 
 
 The composition has two occurrences of the variable.  $g$ has one occurrence and when it is put into $f$ the resulting formula has two occurrences.  It seems reasonable to guess that $f$ has two occurences of its variable - one in a numerator and one in a denominator.  $3t + 1$ will replace each in the composition.
 
-So, let's start constructing. \\
+So, let's start constructing. 
 
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Guess \#1)}}   \\
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Guess \#1)}}   
 
 Let's start with two occurences of $x$, one in the numerator and one in the denominator.
 
@@ -1814,7 +1786,7 @@ this makes the composition look like
 
 We need the coefficients of $t$ to be $2$ in the numerator and $1$ in the denominator.
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Guess \#2)}}   \\
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Guess \#2)}}   
 
 \[   f(g(t)) =      \frac{\answer{\frac{2}{3}}(3t + 1)}{\frac{1}{3}(3t + 1)}       \]
 
@@ -1825,9 +1797,9 @@ That gives
 
 
 
-Now, we need constant terms of $0$ in the numerator and $-1$ in the denominator.  Subtract $\answer{\frac{2}{3}}$ from the numerator. Subtract $\answer{\frac{4}{3}}$ from the denominator. \\
+Now, we need constant terms of $0$ in the numerator and $-1$ in the denominator.  Subtract $\answer{\frac{2}{3}}$ from the numerator. Subtract $\answer{\frac{4}{3}}$ from the denominator. 
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Guess \#3)}}   \\
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Guess \#3)}}   
 
 
 \[   f(g(t)) =      \frac{\frac{2}{3}(3t + 1) - \frac{2}{3}}{\frac{1}{3}(3t + 1) - \frac{4}{3}}       \]
@@ -1841,7 +1813,7 @@ That tells us what $f$ needs to do.
 
 
 
-\end{explanation}
+
 
 \end{example}
 
@@ -1867,13 +1839,13 @@ That tells us what $f$ needs to do.
 
 
 
-\begin{example}
+\begin{example} Composition
 
 
 Let $H(x)$ and $B(w)$ be two functions and $B \circ H$ be their composition.
 
 
-Suppose $B(w) = 3w + 1$ \\
+Suppose $B(w) = 3w + 1$ 
 
 Suppose $(B \circ H)(t) = \frac{2t}{t-1}$
 
@@ -1881,13 +1853,12 @@ Suppose $(B \circ H)(t) = \frac{2t}{t-1}$
 Find $H(x)$.
 
 
-
-\begin{explanation}
-
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
-$(B \circ H)(t) =  B(H(t)) = 3 H(t) + 1$ \\
+
+$(B \circ H)(t) =  B(H(t)) = 3 H(t) + 1$ 
 
 
 We want this to equal $\frac{2t}{t-1}$.
@@ -1931,7 +1902,6 @@ Check:
 
 
 
-\end{explanation}
 
 \end{example}
 
