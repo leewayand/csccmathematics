@@ -1,0 +1,235 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title {Test}
+
+  
+\begin{document}
+\begin{abstract}
+first derivative test 
+\end{abstract}
+\maketitle
+
+
+
+
+
+\section{The first derivative test}
+
+We will further explore and refine the method of the previous section for deciding whether there is a
+local maximum or minimum at a critical number.
+ Recall that
+\begin{itemize}
+\item If $f'(x) >0$ on an interval, then $f$ is increasing on that interval.
+\item If $f'(x) <0$ on an interval, then $f$ is decreasing on that interval.
+\end{itemize}
+
+So how exactly does the derivative tell us whether there is a maximum,
+minimum, or neither at a number? Use the \textit{first derivative test}.
+
+\begin{theorem}  \textbf{\textcolor{purple!85!blue}{First Derivative Test}} \index{first derivative test}\label{T:fdt}
+
+
+
+Suppose that $f$ is continuous on an open interval, and that $f$  has a critical number
+at $x=a$, for some value $a$ in that interval.
+\begin{itemize}
+\item If $f'(x)>0$ to the left of $a$ and $f'(x)<0$ to the right of
+  $a$, then $f(a)$ is a local maximum.
+\item If $f'(x)<0$ to the left of $a$ and $f'(x)>0$ to the right of
+  $a$, then $f(a)$ is a local minimum.
+\item If $f'(x)$ has the same sign to the left and right of $a$,
+  then $f(a)$ is not a local extremum.
+\end{itemize}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Consider the function 
+\[
+f(x) = \frac{x^4}{4}+\frac{x^3}{3}-x^2
+\]
+Find the intervals on which $f$ is increasing, the intervals on which $f$ is decreasing and
+identify the local extrema of $f$.
+
+
+\begin{explanation}
+In Calculus, we will be able to calculate the derivative:
+\[
+\frac{d}{dx} f(x) = x^3+x^2-2x.
+\]
+Now we need to find on what intervals is $f'$ positive and what intervals it is
+negative. To do this, solve 
+\[
+f'(x) = x^3+x^2-2x = \answer[given]{0}.
+\]
+Let's factor $f'(x)$
+\begin{align*}
+f'(x) &= \answer[given]{x^3+x^2-2x} \\
+&=x\left(\answer[given]{x^2+x-2}\right)\\
+&=x(x+2)\left(\answer[given]{x-1}\right).
+\end{align*}
+
+
+Since the derivative is a polynomial, we know it is continuous.  Therefore, the only critical number of $f$ are the zeros of $f'$.
+
+
+So, the critical numbers are  $-2$, $0$, and $1$. 
+
+
+
+Since the derivative, $f'(x)$, is a polynomial (and continuous), it does not change the sign on intervals between its zeros, i.e., between the critical numbers. Now we can check the sign of $f'(x)$ at some numbers \textbf{between} the critical numbers to find where $f'(x)$ is positive and where negative.
+
+
+
+
+\textbf{Sampling: } 
+
+
+Since we know that polynomials do not change sign between their zeros, we can take a single sample of the funciton values between the zeros and know what the sign of the function is between the zeros. \\
+
+
+
+\begin{itemize}
+\item We'll sample $f$ at $-3$ in the interval $(-\infty, -2)$. \\
+\item We'll sample $f$ at $-1$ in the interval $(-2, 0)$. \\
+\item We'll sample $f$ at $\frac{1}{2}$ in the interval $(0, 1)$. \\
+\item We'll sample $f$ at $2$ in the interval $(1, \infty)$. \\
+\end{itemize}
+
+
+
+\begin{align*}
+  f'(-3)&=\answer[given]{-12} &< 0,\\
+  f'(-1)&=\answer[given]{2} &> 0,\\
+  f'(.5)&=\answer[given]{-0.625} &< 0,\\
+  f'(2)&=\answer[given]{8} &> 0.
+\end{align*}
+From this we can make a sign table:
+
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            trim axis left,
+            scale only axis,
+            domain=-3:3,
+            ymax=2,
+            ymin=-2,
+            axis lines=none,
+            height=3cm, %% Hard coded height! 
+            width=\textwidth, %% width
+          ]
+          %\addplot [draw=none, fill=fill1, domain=(-3:-2)] {2} \closedcycle;
+          %\addplot [draw=none, fill=fill2, domain=(-2:0)] {2} \closedcycle;
+          %\addplot [draw=none, fill=fill1, domain=(0:1)] {2} \closedcycle;
+          %\addplot [draw=none, fill=fill2, domain=(1:3)] {2} \closedcycle;
+          
+          \addplot [->,textColor] plot coordinates {(-3,0) (3,0)}; %% axis{0};
+
+          \addplot [->,ultra thick,textColor,shorten <=2pt,shorten >=2pt] plot coordinates {(-3,1.5) (-2,.5)}; %% decreasing
+          \addplot [->,ultra thick,textColor,shorten <=2pt,shorten >=2pt] plot coordinates {(-2,.5) (0,1.5)}; %% increasing
+          \addplot [->,ultra thick,textColor,shorten <=2pt,shorten >=2pt] plot coordinates {(0,1.5) (1,.5)}; %% decreasing
+          \addplot [->,ultra thick,textColor,shorten <=2pt,shorten >=2pt] plot coordinates {(1,.5) (3,1.5)}; %% increasing
+          
+          \addplot [dashed, textColor] plot coordinates {(-2,0) (-2,2)};
+          \addplot [dashed, textColor] plot coordinates {(0,0) (0,2)};
+          \addplot [dashed, textColor] plot coordinates {(1,0) (1,2)};
+          
+          \node at (axis cs:-2,0) [anchor=north,textColor] {\footnotesize$-2$};
+          \node at (axis cs:0,0) [anchor=north,textColor] {\footnotesize$0$};
+          \node at (axis cs:1,0) [anchor=north,textColor] {\footnotesize$1$};
+
+          \node at (axis cs:-2.5,-.7) [textColor] {\footnotesize$f'(x)<0$};
+          \node at (axis cs:.5,-.7) [textColor] {\footnotesize$f'(x)<0$};
+          \node at (axis cs:-1,-.7) [textColor] {\footnotesize$f'(x)>0$};
+          \node at (axis cs:2,-.7) [textColor] {\footnotesize$f'(x)>0$};
+
+          %% \node at (axis cs:-2.5,-.5) [anchor=north,textColor] {\footnotesize Decreasing};
+          %% \node at (axis cs:.5,-.5) [anchor=north,textColor] {\footnotesize Decreasing};
+          %% \node at (axis cs:-1,-.5) [anchor=north,textColor] {\footnotesize Increasing};
+          %% \node at (axis cs:2,-.5) [anchor=north,textColor] {\footnotesize Increasing};
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Hence $f$ is increasing on $(-2,0)$ and $(1,\infty)$ and $f$ is
+decreasing on $(-\infty,-2)$ and $(0,1)$. Moreover, from the first
+derivative test, the local maximum is at $x=0$ while the local minimums
+are at $x=-2$ and $x=1$.
+
+This can be confirmed by checking the graphs of $f(x) = \frac{x^4}{4} + \frac{x^3}{3}
+-x^2$ and $f'(x) = x^3 + x^2 -2x$.
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            domain=-4:4,
+            ymax=5,
+            ymin=-5,
+            %samples=100,
+            axis lines =middle, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west}
+          ]
+          \addplot [dashed, textColor, smooth] plot coordinates {(-2,0) (-2,-2.667)}; %% {.451};
+          \addplot [dashed, textColor, smooth] plot coordinates {(1,0) (1,-.4167)}; %% axis{2.215};
+
+          \addplot [very thick, penColor, smooth] {(x^4)/4 + (x^3)/3 -x^2};
+          \addplot [very thick, penColor2, smooth] {x^3 + x^2 -2*x};
+
+          \node at (axis cs:-1.3,-2) [anchor=west] {\color{penColor}$f$};  
+          \node at (axis cs:-2.1,2) [anchor=west] {\color{penColor2}$f'$};
+
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-2,0)};  %% closed hole
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};  %% closed hole
+          \addplot[color=penColor2,fill=penColor3,only marks,mark=*] coordinates{(0,0)};  %% closed hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,.-2.667)};  %% closed hole
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,-.4167)};  %% closed hole
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+\end{explanation}
+\end{example}
+
+
+Hence we have seen that if $f'$ is zero at a number and increasing on an interval containing that  number,
+then $f$ has a local minimum at the number. If $f'$ is zero at a number and
+decreasing on an interval containing that number, then $f$ has a local maximum at the
+number. 
+
+
+
+\textbf{\textcolor{blue!55!black}{Thinking Ahead:}} We see that we can gain information about $f$ by
+studying how $f'$ changes. This leads to questions about the derivative of the derivative, $f''(x)$, which we'll leave for Calculus.
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Optimization]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/optimization/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+
+\end{document}
