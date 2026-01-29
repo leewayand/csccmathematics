@@ -18,7 +18,7 @@ often useful to know what the graph of the function looks like. We can
 obtain a good picture of the graph using certain crucial information
 provided by derivatives of the function.
 
-\section{Extrema}
+\section*{Extrema}
 
 A function has a value at each domain number. The set of all function values might have a greatest (maximum) or least(minimum) value. Together these are know as extreme values or extrema.  These correspond to highest and lowest points on the graph.
 
@@ -27,7 +27,9 @@ A local \textit{extremum} of a function $f$ is a number, a function value, $f(a)
 $vertical$-coordinate is larger (or smaller) than all other $vertical$-coordinates
  of points on the graph whose $horizontal$-coordinates are ``close to''  $a$. 
 
-\begin{definition}\hfil\index{maximum/minimum!local}
+\begin{definition} \textbf{\textcolor{green!50!black}{Local Extrema}}
+
+
 \begin{enumerate}
 \item A function $f(x)$ has a \textbf{local maximum} at $x=a$, if $f(a)\ge
   f(x)$ for every domain number, $x$, in some open interval I containing $a$.
@@ -80,7 +82,9 @@ Consider the graph of a function $f$:
 %% \label{figure:x^3-4x^2+3x}
 \end{image}
 Identify the local extrema of $f$ and give an explanation.
-\begin{explanation}
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
 In the figure above the function $f$ has a local minimum at,
 \[
 a=\answer[given]{1},
@@ -94,7 +98,8 @@ and for all domain numbers $x$ in $I$ the following statement is true:
  \[
 f\left(\answer[given]{1}\right)\le f\left(\answer[given]{x}\right).
 \]
-\end{explanation}
+
+
 \end{example}
 
 Local maximum and minimum values of a function correspond to quite distinctive points on the graph of
@@ -116,7 +121,7 @@ to find the minimum cost at which some task can be performed).
 
 
 
-\section{Critical Numbers}
+\section*{Critical Numbers}
 
 Consider the graph of the function $f$.
 \begin{image}
@@ -163,48 +168,48 @@ We say that $f$ is \textbf{differentiable} at $a$ if there is a tangent line to 
 i.e. differentiable means has a derivative value.
 
 \end{definition}
-Can a tangent line not have a slope?  Yes. We'll see an example later. \\
+Can a tangent line not have a slope?  Yes. We'll see an example later. 
 
 
 
 
 
 
-Notice that the function $f$ above is \textbf{not differentiable} at  $x=-4$ and  $x=-2$. \\
+Notice that the function $f$ above is \textbf{not differentiable} at  $x=-4$ and  $x=-2$. 
 
 
 
 
 \begin{idea}
 
-$f$ is not differentiable at $x=-4$, because the graph doesn't have a tangent line at $(-4, 5)$. \\
+$f$ is not differentiable at $x=-4$, because the graph doesn't have a tangent line at $(-4, 5)$. 
 
-How do we know this? \\
+How do we know this? 
 
 
 If there was a tangent line, then it would need to be close to the graph on the left side of $(-4, 5)$. Well, the left side is a line and a line is its own tangent line.  That tells us that the tangent line must be $y = x + 9$.  Unfortunately, the same reasoning on the right side tells us that the tangent line must be $y = -x +1$. 
 
-There is no line that does both of those.  There is no tangent line. \\
+There is no line that does both of those.  There is no tangent line. 
 
 
 
-$f$ is not differentiable at $x=-2$, because the graph doesn't have a tangent line at $(-2, 6)$. \\
+$f$ is not differentiable at $x=-2$, because the graph doesn't have a tangent line at $(-2, 6)$. 
 
-How do we know this? \\
+How do we know this? 
 
 Well, the tangent line must go through the tangent point, which is $(-2, 6)$.  On the right side of $(-2, 6)$ the tangent line would need to have a tremendously large negative slope to immediate get down near $1$.  But, no line like this could get down near $3$ on the left sife of $(-2, 6)$.
 
-There is no tangent line. \\
+There is no tangent line. 
 
 
 
 \end{idea}
 
 
-This example function illustrates that extreme function values can occur where the derivative does not exist. \\
+This example function illustrates that extreme function values can occur where the derivative does not exist. 
 
 
-Extreme function values can occur at other places as well. \\
+Extreme function values can occur at other places as well. 
 
 Notice that $f'(0)=0$ and $f'(4)=0$.
 
@@ -220,6 +225,7 @@ If $f$ has a local extremum at $x=a$ and $f$ is differentiable at $a$, then $f'(
 
 
 \begin{question}
+
   Does Fermat's Theorem say that if $f'(a) = 0$, then $f$ has a local
   extrema at $x=a$?
   \begin{multipleChoice}
@@ -264,7 +270,8 @@ zero or the derivative is undefined. As an illustration of the first scenario, c
 %% \label{figure:x^3-4x^2+3x}
 \end{image}
 \begin{question}
- Make a correct choice that completes the sentence below. \\
+
+ Make a correct choice that completes the sentence below. 
  
   At the number $1$, the function $f$ has 
 
@@ -283,8 +290,10 @@ Select the correct statement.
      \choice{$f'(1)<0$}
   \end{multipleChoice}
 \end{question}
+
 \begin{question}
- Make a correct choice that completes the sentence below. \\
+
+ Make a correct choice that completes the sentence below. 
  
   At the number $1.5$, the function $f$ has 
 
@@ -305,7 +314,8 @@ Select the correct statement.
 \end{question}
 
 \begin{question}
- Make a correct choice that completes the sentence below. \\
+
+ Make a correct choice that completes the sentence below. 
  
   At the number $2$, the  function $f$ has 
 
@@ -315,7 +325,11 @@ Select the correct statement.
     \choice{no local extremum}
   \end{multipleChoice}
   \end{question}
+
+
+
   \begin{question}
+
 Select the correct statement.
   \begin{multipleChoice}
     \choice{$f'(2)$ is undefined}
@@ -324,7 +338,9 @@ Select the correct statement.
      \choice{$f'(2)<0$}
   \end{multipleChoice}
 \end{question}
+
  As an illustration of the second scenario, consider the plots of $f(x) = x^{2/3}$ and $f'(x) = \frac{2}{3x^{1/3}}$:
+
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
@@ -346,8 +362,10 @@ Select the correct statement.
 %% \caption{A plot of $f(x) = x^{2/3}$ and $f'(x) = \frac{2}{3x^{1/3}}$.}
 %% \label{figure:x^{2/3}}
 \end{image}
+
 \begin{question}
- Make a correct choice that completes the sentence below. \\
+
+ Make a correct choice that completes the sentence below. 
  
   At the number $-2$, the function $f$ has 
 
@@ -357,7 +375,11 @@ Select the correct statement.
     \choice[correct]{no local extremum}
   \end{multipleChoice}
   \end{question}
+
+
+
   \begin{question}
+
 Select the correct statement.
   \begin{multipleChoice}
     \choice{$f'(-2)$ is undefined}
@@ -366,8 +388,11 @@ Select the correct statement.
      \choice[correct]{$f'(-2)<0$}
   \end{multipleChoice}
 \end{question}
+
+
 \begin{question}
- Make a correct choice that completes the sentence below. \\
+
+ Make a correct choice that completes the sentence below. 
  
   At the number $0$, the function $f$ has 
 
@@ -398,7 +423,9 @@ This brings us to our next definition.
 
 
 
-\begin{definition}\index{critical number} \textbf{\textcolor{green!50!black}{Critical Number}}
+\begin{definition} (from earlier) \textbf{\textcolor{green!50!black}{Critical Number}}
+
+
   Let $f$ be a function defined on an open interval, I, that contains a number $a$. Then we say that the function $f$ has a \textbf{critical number} at $x=a$ if 
   \[
   f'(a) = 0\qquad\text{or}\qquad \text{$f'(a)$ does not exist.}
@@ -408,6 +435,8 @@ This brings us to our next definition.
 \end{definition}
 
 \begin{warning} 
+
+
 When looking for local maximum and minimum numbers, be careful not to
 make two common mistakes: 
 \begin{itemize}
@@ -452,9 +481,14 @@ Critical numbers are \textbf{candidates} for locations of extrema.
 
 
 \begin{example}
+
 Find all local maximum and minimum values for the function 
 $f(x)=x^3-x$. 
-\begin{explanation} 
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
 The derivative of $f$ is given by
 \[
 3x^2 - 1
@@ -472,7 +506,7 @@ $f'(x)$ \textbf{does not change the sign} on the intervals
 $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$,
 $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$, and
 $\left(\frac{\sqrt{3}}{3},\infty\right)$, because these intervals do not contain
-any zeros of $f'(x)$. \\
+any zeros of $f'(x)$. 
  
 \begin{question}
 Select the correct statement about the sign of $f'(x)$ on the
@@ -493,10 +527,10 @@ $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$.
 
 
 
-  If we know the sign of the derivative on an interval, we also know whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=-\frac{\sqrt{3}}{3}$. \\
+  If we know the sign of the derivative on an interval, we also know whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=-\frac{\sqrt{3}}{3}$. 
   \begin{question}
 
-At the critical number where $x=-\frac{\sqrt{3}}{3}$, the function $f$ has  \\
+At the critical number where $x=-\frac{\sqrt{3}}{3}$, the function $f$ has  
  
   \begin{multipleChoice}
     \choice{no local extremum, because $f$ is increasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
@@ -523,10 +557,11 @@ Select the correct  statement about the sign of $f'(x)$ on the intervals  $\left
 
 
 
-Again, the sign of the derivative on an interval determines whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=\frac{\sqrt{3}}{3}$. \\
+Again, the sign of the derivative on an interval determines whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical number  where $x=\frac{\sqrt{3}}{3}$. 
+
   \begin{question}
 
-At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
+At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  
  
   \begin{multipleChoice}
     \choice{no local extremum, because $f$ is increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
@@ -570,7 +605,9 @@ At the critical number where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
 %%\caption{A plot of $f(x) = x^3-x$ and $f'(x) = 3x^2-1$.}
 %%\label{figure:x^3-x}
 \end{image}
-\end{explanation}
+
+
+
 \end{example}
 
 
@@ -704,7 +741,7 @@ Hence, differentiable means there is a tangent line and that tangent line has a 
 \begin{center}
 \textbf{\textcolor{green!50!black}{ooooo=-=-=-=-=-=-=-=-=-=-=-=-=ooOoo=-=-=-=-=-=-=-=-=-=-=-=-=ooooo}} \\
 
-more examples can be found by following this link\\ \link[More Examples of Optimization]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/optimization/examples/exampleList}
+more examples can be found by following this link\\ \link[More Examples of Optimization]{https://ximera.osu.edu/csccmathematics/precalculus/precalculus/optimization/examples/exampleList}
 
 \end{center}
 
