@@ -1,0 +1,440 @@
+\ProvidesPackage{manual}[2024/08/09 Custom style for the Ximera Manual]
+%% Bart Snapp and ChatGPT
+
+% Required Packages
+%\RequirePackage[letterspace=-80]{microtype}   % To be investigated: causes dummy page with AaGg ???
+% \RequirePackage{tikz}
+\RequirePackage{standalone}
+\RequirePackage[landscape,includehead,includefoot,margin=2cm,headheight=1cm]{geometry}
+\RequirePackage{stix2}
+\RequirePackage{gillius}
+\RequirePackage[scale=.82]{FiraMono}
+%  \renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
+\RequirePackage[T1]{fontenc}
+%\RequirePackage{multicol}
+\RequirePackage{mathtools}
+\RequirePackage[framemethod=TikZ]{mdframed}
+\RequirePackage{pgf}
+\RequirePackage[skip=5pt plus1pt, indent=0pt]{parskip} %% FOR OUR VERTICAL SPACING
+\RequirePackage{fancyhdr}
+
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\sf\bfseries #1}  %% MAYBE ADD CLS
+
+% Generate a random 4-digit number
+\pgfmathsetseed{\number\pdfuniformdeviate10000} % Initialize the random number generator with a seed
+\pgfmathtruncatemacro{\myrandom}{1000 + \pdfuniformdeviate 9000} % Random number between 1000 and 9999
+
+\tikzset{>=stealth}
+\qrset{height=1cm}
+
+
+\renewcommand{\theHsection}{\thepart.section.\thesection}  %% MAKES LINKS WORK should be added to CLS
+
+
+% https://tex.stackexchange.com/questions/455396/how-to-include-the-current-git-commit-id-and-branch-in-my-document
+% \usepackage{xstring}
+% \usepackage{catchfile}
+\usepackage[mmddyyyy,hhmmss]{datetime}
+
+% \CatchFileDef{\headfull}{/code/.git/HEAD}{}
+% \StrGobbleRight{\headfull}{1}[\head]
+% \StrBehind[2]{\head}{/}[\branch]
+
+%FOUND \headfull with \head and \branch
+
+% \IfFileExists{.git/refs/heads/\branch}{%
+%     \CatchFileDef{\commit}{.git/refs/heads/\branch}{}}{%
+%     \newcommand{\commit}{\dots~(in \emph{packed-refs})}}
+
+    \newcommand{\commit}{\otherinput{.git/refs/heads/main}}
+
+\newcommand{\MONTH}{%
+  \ifcase\the\month
+  \or January% 1
+  \or February% 2
+  \or March% 3
+  \or April% 4
+  \or May% 5
+  \or June% 6
+  \or July% 7
+  \or August% 8
+  \or September% 9
+  \or October% 10
+  \or November% 11
+  \or December% 12
+  \fi}
+
+
+
+% \def\cleartheorem#1{%
+%     \expandafter\let\csname#1\endcsname\relax
+%     \expandafter\let\csname c@#1\endcsname\relax
+% }
+% \cleartheorem{warning}
+% \cleartheorem{question}
+% \cleartheorem{definition}
+% \newtheoremstyle{definition}
+
+
+
+% {\topsep}{\topsep}{\rmfamily}{}{\bfseries\sffamily}{:}{ }{#1}
+% \theoremstyle{definition}
+% \newtheorem*{definition}{Definition}
+% \newtheorem*{warning}{WARNING}
+% \newtheorem*{question}{Question}
+
+
+%% Redefine "question"
+\let\question\relax
+\let\endquestion\relax
+%% Redefine "warning"
+\let\warning\relax
+\let\endwarning\relax
+%% Redefine "definition"
+\let\definition\relax
+\let\enddefinition\relax
+%\let\c@example\relax
+\newtheoremstyle{definition}
+{\topsep}{\topsep}{\rmfamily}{}{\bfseries\sffamily}{:}{ }{#1}
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{warning}{WARNING}
+\newtheorem*{question}{Question}
+
+\surroundwithmdframed[roundcorner=0pt, innertopmargin=10pt]{warning}  %% DO THIS IN CLS TOO!
+
+%% image environment
+%%\renewenvironment{image}[1][]{\begin{center}}{\end{center}}
+\let\image\relax
+\let\endimage\relax
+\NewEnviron{image}{% 
+  \begin{center}\fbox{\BODY}\end{center}%  center
+}
+%\surroundwithmdframed[roundcorner=2pt]{image} 
+
+
+%% SHOULD BE ADDED TO CLS
+\surroundwithmdframed[
+  linewidth=2pt,
+  outerlinewidth=3,
+  topline=false,
+  bottomline=false,
+  leftline=true,
+  rightline=false,
+  leftmargin=0,skipbelow=\baselineskip,skipabove=\baselineskip,
+  linecolor=black!20!white
+]{verbatim}
+
+
+
+\renewcommand{\part}[1]{\chapterstyle\title{#1}\begin{abstract}\end{abstract}\maketitle\def\thechaptertitle{#1}}
+
+
+
+
+\makeatletter
+\renewcommand\sectionstyle{%  MOVE TO CLS
+  \def\activitystyle{activity-section}
+  \def\maketitle{%
+    \gdef\headerNameContent{\thechaptertitle:~\@title}%% Needs a gdef to make the definition global.
+    \addtocounter{section}{1}
+    \setcounter{sectiontitlenumber}{\value{section}}
+    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+    {\flushleft\Large\sffamily\bfseries\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
+    {\vskip .6em\noindent\textit\theabstract\setcounter{subsection}{0}}%
+    \par\vspace{2em}
+    \phantomsection\addcontentsline{toc}{section}{\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
+
+ \renewcommand\section{\@startsection{subsection}{2}{\z@}%
+                                       {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                       {1.5ex \@plus .2ex}%
+                                       {\normalfont\large\sffamily\bfseries}}
+
+ \renewcommand\subsection{\@startsection{subsubsection}{3}{\z@}%
+                                          {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                          {1.5ex \@plus .2ex}%
+                                          {\normalfont\normalsize\sffamily\bfseries}}
+
+}}
+\makeatother
+
+% \makeatletter
+% %% Redefine section and subsection %% MOVE TO CLS
+% \renewcommand\section{\@startsection {section}{1}{\z@}%
+%                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
+%                                    {2.3ex \@plus.2ex}%
+%                                    {\boldmath\normalfont\large\sffamily\bfseries}}
+
+% \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+%                                      {-3.25ex \@plus -1ex \@minus -.2ex}%
+%                                      {1.5ex \@plus .2ex}%
+%                                      {\boldmath\normalfont\large\sffamily\bfseries}}
+
+% \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+%                                      {-3.25ex \@plus -1ex \@minus -.2ex}%
+%                                      {1.5ex \@plus .2ex}%
+%                                      {\normalfont\normalsize\sffamily\bfseries}}
+\makeatletter %% move to CLS
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\normalfont\normalsize\sffamily\bfseries}}
+\makeatother
+
+
+
+% Fancy Headers and Footers
+\renewcommand{\headrulewidth}{0pt}
+
+%%
+%% One way to maybe fix headers is with this:
+%% https://tex.stackexchange.com/questions/490101/what-are-the-parameters-of-newpagestyle
+%% This is essentially how it is implmented in the CLS.
+
+
+\fancyhead[L]{\sffamily\flushleft%You cannot use input or otherinput here
+\resizebox{!}{.7em}{\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{scope}
+    \clip(0,0) rectangle (73cm,12cm);
+    %% X
+    \begin{scope}[xshift=1cm]
+    \draw[line width=2.5cm] (0,-2) -- (14,14);
+    \draw[line width=2.5cm] (0,14) -- (14,-2);
+    \end{scope}
+    %% I
+    \begin{scope}[xshift=16.5cm]
+      \draw[line width=2.5cm] (0,0) -- (0,12);
+    \end{scope}
+    %% M
+    \begin{scope}[xshift=19.5cm]
+    \draw[line width=2.5cm, smooth, rounded corners=1cm]
+    (0,0) -- (0,10.75)%%
+    --(3.5,10.75) % width of top
+    --(6.5,1.25)--(8.5,1.25)
+    --(11.5,10.75)
+    --(15,10.75)--(15,0);
+    \end{scope}
+    %% E
+    \begin{scope}[xshift=37.25cm,yshift=1.25cm]
+      \draw[line width=2.5cm, smooth, rounded corners=2cm]
+      (10,0)--(0,0)--(0,4.75)--(10,4.75);
+      \draw[line width=2.5cm, smooth, rounded corners=2cm]
+      (5,4.75) -- (0,4.75)--(0,9.5)--(11.8,9.5);
+    \end{scope}
+    %% R
+    \begin{scope}[xshift=49cm,yshift=-1.25cm]
+      \draw[line width=2.5cm, smooth, rounded corners=2cm]
+      (0,12)--(10,12)--(10,7)--(0,7)--(0,1.25);
+      \draw[line width=2.5cm]
+      (4.5,7)--(10,0);
+    \end{scope}
+    %% A
+    \begin{scope}[xshift=59.5cm,yshift=-1.25cm]
+      \draw[line width=2.5cm, smooth, rounded corners=1.5cm]
+      (0,0)--(6,12.75)--(12,0);
+    \end{scope}
+  \end{scope}
+  %\draw[step=1cm,gray,very thin] (0,0) grid (71,10);
+\end{tikzpicture}}%
+\resizebox{!}{.7em}{User\,Manual}\hfill \headerNameContent \hfill \MONTH~\thedate \\[-.1cm]
+\rule{\textwidth}{.1cm}\\[0cm]\rmfamily
+Email:~{\tt ximera@math.osu.edu} \hfill Website:~{\tt https://github.com/ximeraProject/}
+}
+\fancyhead[R]{}
+\fancyfoot[LO,RE]{\sffamily\tiny\textbf{
+XIMERA\quad FORM \quad 75567 \quad GIT \quad COMMIT \quad %\branch(
+  \commit
+ \quad PREVIOUS \quad EDITION \quad IS \quad OBSOLETE.
+}}
+\fancyfoot[C]{}
+\fancyfoot[RO,LE]{\thepage}
+
+
+
+
+
+\newenvironment{absolutelynopagebreak} %% to stop page break in cover.
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+\setcounter{tocdepth}{1}
+\usepackage{pagecolor}
+\usepackage{ccicons}
+
+%
+% Add a frontCover  (by redefining \maketitle)
+%
+%  color setting to be done properly  (HACK to make \ifcolorwork at runtime (vs at load-time))
+%  picture to be done properly (avoid \input's ... !)
+
+\makeatletter
+\definecolor{bkgndcr}{rgb}{1,1,1}
+\definecolor{txtcr}{rgb}{0,0,0}
+\let\othermaketitle\maketitle
+\renewcommand{\maketitle}{
+  \ifcolor
+  \definecolor{bkgndcr}{RGB}{0,50,190}  %% Blue AA compliant
+  \definecolor{txtcr}{RGB}{255, 150,225}  %% Pink AA compliant
+
+  % \definecolor{bkgndcr}{RGB}{255,100,255} %% Pink 
+  % \definecolor{txtcr}{RGB}{20,20,20}      %% Dark Gray
+
+  % \definecolor{bkgndcr}{RGB}{255,255,150} %% Yellow AA compliant
+  % \definecolor{txtcr}{RGB}{200,0,200}   %% Pink AA compliant
+
+  % \definecolor{bkgndcr}{RGB}{240,50,50}   %% Red
+  % \definecolor{txtcr}{RGB}{255,255,255}   %% White
+
+  % \definecolor{bkgndcr}{RGB}{70,100,200}   %% Blue
+  % \definecolor{txtcr}{RGB}{255,255,255}   %% White
+
+
+  % \definecolor{bkgndcr}{RGB}{255,100,50}  %% Orange
+  % \definecolor{txtcr}{RGB}{20,20,20}      %% Dark Gray
+
+  \colorlet{otherbkgndcr}{bkgndcr}
+  \colorlet{othertxtcr}{txtcr}
+  \fi
+
+\pagestyle{empty}
+\iflulu
+\pdfpagewidth=11.13in \pdfpageheight=9.75in \newgeometry{hmargin={1cm,1cm},vmargin={1.3175cm,0cm}}
+\else 
+  \newgeometry{hmargin={1cm,1cm},vmargin={1cm,1cm}}
+\fi 
+  \pagecolor{bkgndcr}
+  \boldmath % Makes all math text bold
+  \bfseries % Makes all text bold
+  \color{txtcr}
+  \sffamily\flushleft%
+  \!\resizebox{!}{1cm}{\input{tikzLogo.tex}}\\[0cm]%
+  Interactive\\
+  Mathematics\\
+  Education\\
+  Resources for\\
+  All \\
+  \vspace*{-6cm}
+  \hspace*{-4cm}\rotatebox{15}{\resizebox{!}{8.7cm}{\begin{minipage}{1.1cm}\flushright User\\[-.2cm]Manual\end{minipage}}}\hfill
+  
+  \begin{center}
+    \scalebox{3}{Fowler $\bullet$ Nowell $\bullet$ Obbels $\bullet$ Snapp}
+  \end{center}\begin{absolutelynopagebreak}
+  \small This document was typeset on \today. \hfill \Large\textsf{\ccbyncsa}\\
+  \small\texttt{GIT COMMIT: \commit}\\
+  \small Source: {\hypersetup{allcolors=txtcr}\docURL}\hfill developed in \textbf{XIMERA}\end{absolutelynopagebreak}
+\clearpage\pagecolor{white}\color{black}\unboldmath\normalfont\restoregeometry\colorlet{bkgndcr}{white}\colorlet{txtcr}{black}\pdfpagewidth=11in\pdfpageheight=8.5in 
+\mbox{}
+\vspace{3cm}
+\begin{center}
+\Large\it To lovers of mathematics everywhere.
+\end{center}
+%\newpage\null\thispagestyle{empty}\newpage
+\ifnotoc
+\else  \newgeometry{hmargin={8cm,8cm},vmargin={2.5cm,2.5cm}}
+  \tableofcontents\clearpage
+  \mbox{}\cleardoublepage
+\fi
+\pagestyle{main}\restoregeometry%\twocolumn
+\let\maketitle\othermaketitle
+}
+\makeatother
+
+
+
+%
+% Add a backCover
+%
+
+\newcommand{\backCover}{
+\pagestyle{empty}
+\iflulu
+\pdfpagewidth=11.13in \pdfpageheight=9.75in \newgeometry{hmargin={1cm,1.3175cm},vmargin={1.3175cm,1cm}}
+\else 
+  \newgeometry{hmargin={1cm,1cm},vmargin={1cm,1cm}}
+\fi 
+\onecolumn
+\colorlet{bkgndcr}{otherbkgndcr}
+\colorlet{txtcr}{othertxtcr}
+\pagecolor{otherbkgndcr}
+\boldmath % Makes all math text bold
+\bfseries % Makes all text bold
+\color{txtcr}
+\sffamily
+\mbox{}\vspace{3cm}
+\begin{center}
+  \begin{minipage}{16cm}
+Ximera, pronounced ``chimera,'' (\textbf{X}imera: \textbf{I}nteractive,
+\textbf{M}athematics, \textbf{E}ducation,
+\textbf{R}esources, for \textbf{A}ll) is an open-source platform that provides
+tools for
+authoring and publishing (PDF and Online), open-source, interactive educational
+content, such as textbooks, assessments, and online courses.
+
+\vspace{.5cm}
+
+
+Authors  write and store their content on their own
+machines and GitHub repositories.
+Authors own their content and decide how to license their content. From a
+single source written in \LaTeX, Ximera generates various output: PDF
+worksheets,
+PDF textbooks, and  PDF solution manuals, and so on. 
+\begin{center}
+  \begin{tikzpicture}
+      \node at (-1.8,.2)
+      {\resizebox{1cm}{!}{\input{document.tex}}};
+      \node at (-1.85,.2) {\small PDF};
+      \node at (-2,0) {\resizebox{1cm}{!}{\input{document.tex}}};
+      \node at (-2.05,0) {\small PDF};
+      
+      \node at (-2.2,-.2)
+      {\resizebox{1cm}{!}{\input{document.tex}}};
+      \node at (-2.25,-.2) {\small PDF};
+      \draw[->] (-.6,0) -- (-1.3,0);
+      \draw[->] (-.6,.3) -- (-1.3,.3);
+      \draw[->] (-.6,-.3) -- (-1.3,-.3);
+
+      \node at (0,0) {\resizebox{1cm}{!}{\input{document.tex}}};
+      \node at (0,-.05) {\LaTeX};
+      \draw[->] (.6,0) -- (1.4,0);
+
+      \node at (2,0) {\resizebox{1cm}{!}{\input{server.tex}}};
+      \draw[->] (2.6,0) -- (3.4,0);
+      \node at (4,0) {\resizebox{1cm}{!}{\input{computer.tex}}};
+      
+      \node[anchor=north] at (-2,-.8) {Various};
+      \node[anchor=north] at (-2,-1.2) {PDFs};
+
+      \node[anchor=north] at (0,-.8) {Single};
+      \node[anchor=north] at (0,-1.2) {Source};
+
+      \node[anchor=north] at (2,-.8) {Deploy};
+      \node[anchor=north] at (2,-1.2) {Server};
+
+      \node[anchor=north] at (4,-.8) {Students};
+      \node[anchor=north] at (4,-1.2) {Engage};
+
+  \end{tikzpicture}
+\end{center}
+The exact same source code used to produce PDFs can also create \textbf{interactive online
+activities} when deployed to a Ximera server. Students access this content via a
+URL or an assignment in their Learning Management System.
+
+
+\vspace{.5cm}
+
+Ximera empowers educators to design dynamic learning experiences that 
+engage students. By embracing open-source tools and 
+principles, Ximera ensures that quality educational content is freely available to all.
+\end{minipage}
+\end{center}
+\vfill
+
+\small This document was typeset on \today. \hfill \Large\textsf{\ccbyncsa}\\%\hspace*{3.7in} \\
+\small\texttt{GIT COMMIT: \commit 
+%(on \branch)
+}\\
+\small Source: {\hypersetup{allcolors=txtcr}\docURL}\hfill developed in \textbf{XIMERA}\\%\hspace{3.7in}
+}
