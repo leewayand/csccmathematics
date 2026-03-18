@@ -1,0 +1,166 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Assembly Line}
+
+\begin{document}
+
+\begin{abstract}
+composition
+\end{abstract}
+\maketitle
+
+
+
+
+
+Mathematics is a language. It is a tool we use to describe structure. Functions is a part of this language. We use funcitons to describe relationships, associations, and connections.
+
+We also use functions to describe processes.
+
+We use functions to describe an order application of actions. We might see this as step-by-step instructions, an algorithm, or an assembly line.
+
+
+
+\textbf{For example,} in a bottling plant the cap is not attached before the beer is poured into the bottle. Beer first, then cap.
+
+
+\textbf{For example,} the tires are not screwed to the chassi of the car before it is dipped into the rust prevention tank.
+
+
+\textbf{For example,} Flour, sugar, oil, and eggs are mixed together before baking.
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Composition}}
+
+
+Let $F$ and $G$ be two functions.
+
+The composition of $F$ and $G$ is another function called the composition of $F$ and $G$.  A circle between the function names denotes a composition.
+
+\[
+F \circ G
+\]
+
+
+\[
+(F \circ G)(a) = F(G(a))
+\]
+
+
+The composition applies $G$ to an element of the domain of $G$ and then uses the resulting function value as a domain number of $F$ and ultimately repsents this function value of $F$.
+
+
+\end{definition}
+
+
+
+Composition is our way of representing and ordered application of processes.
+
+
+
+\begin{example} Composition
+
+Let $Shirts$ and $Pants$ be the two functions represented by the maps below.
+
+\textbf{Shirts}
+
+\begin{center}
+(arrows go from the domain to the codomain.)
+\begin{image}
+\includegraphics{pics/c_3.png}
+\end{image}
+\end{center}
+
+
+
+
+\textbf{Pants}
+
+\begin{center}
+(arrows go from the domain to the codomain.)
+\begin{image}
+\includegraphics{pics/c_6.png}
+\end{image}
+\end{center}
+
+
+
+Now define a new function called \textbf{Dressing}.
+
+
+\[
+\textbf{Dressing = Pants $\circ$ Shirts}
+\]
+
+
+\[
+Dressing(\includegraphics{pics/0.png}) = Pants(Shirts(\includegraphics{pics/0.png}))
+\]
+
+\[
+= Pants(\includegraphics{pics/10.png})
+\]
+
+\[
+= Pants(\includegraphics{pics/20.png})
+\]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{onlineOnly}
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Functions]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/functions/examples/exampleList}
+
+\end{center}
+\end{onlineOnly}
+
+
+
+
+
+\end{document}
