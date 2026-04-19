@@ -15,11 +15,11 @@ composition
 
 
 
-Mathematics is a language. It is a tool we use to describe structure. Functions is a part of this language. We use funcitons to describe relationships, associations, and connections.
+Mathematics is a language. It is a tool we use to describe structure. Functions is a part of this language. We use functions to describe relationships, associations, and connections.
 
 We also use functions to describe processes.
 
-We use functions to describe an order application of actions. We might see this as step-by-step instructions, an algorithm, or an assembly line.
+We use functions to describe an ordered application of actions. We might see this as step-by-step instructions, an algorithm, or an assembly line.
 
 
 
@@ -52,14 +52,15 @@ F \circ G
 \]
 
 
-The composition applies $G$ to an element of the domain of $G$ and then uses the resulting function value as a domain number of $F$ and ultimately repsents this function value of $F$.
+The composition applies $G$ to an element of the domain of $G$ and then uses the resulting function value from $G$ as a domain number of $F$ obtaining a function value of $F$.
 
+This ultimate value of $F$ from this process is the value of $F \circ G$.
 
 \end{definition}
 
 
 
-Composition is our way of representing and ordered application of processes.
+Composition is our way of representing an ordered application of processes.
 
 
 
@@ -97,6 +98,9 @@ Now define a new function called \textbf{Dressing}.
 \textbf{Dressing = Pants $\circ$ Shirts}
 \end{center}
 
+\begin{center}
+Dressing(\includegraphics{pics/0.png}) = (Pants $\circ$ Shirts)(\includegraphics{pics/0.png}))
+\end{center}
 
 \begin{center}
 Dressing(\includegraphics{pics/0.png}) = Pants(Shirts(\includegraphics{pics/0.png}))
@@ -107,7 +111,79 @@ Dressing(\includegraphics{pics/0.png}) = Pants(Shirts(\includegraphics{pics/0.pn
 \end{center}
 
 \begin{center}
-= Pants(\includegraphics{pics/20.png})
+= \includegraphics{pics/20.png}
+\end{center}
+
+
+
+\end{example}
+
+Everything has to fit together.
+
+
+The domain of \textbf{Dressing} is a subset of the domain of \textbf{Shirts}.  The range of \textbf{Dressing} is a subset of the range of \textbf{Pants}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Composition
+
+Let $Oufit$ and $Person$ be the two functions represented by the maps below.
+
+\textbf{Outfit}
+
+\begin{center}
+(arrows go from the domain to the codomain.)
+\begin{image}
+\includegraphics{pics/c_6.png}
+\end{image}
+\end{center}
+
+
+
+
+\textbf{Person}
+
+\begin{center}
+(arrows go from the domain to the codomain.)
+\begin{image}
+\includegraphics{pics/c_1.png}
+\end{image}
+\end{center}
+
+
+
+Now define a new function called \textbf{Dressed}.
+
+
+\begin{center}
+\textbf{Dressed = Person $\circ$ Outfit}
+\end{center}
+
+\begin{center}
+Dressed(\includegraphics{pics/9.png}) = (Person $\circ$ Outfit)(\includegraphics{pics/9.png}))
+\end{center}
+
+\begin{center}
+Dressed(\includegraphics{pics/9.png}) = Person(Outfit(\includegraphics{pics/9.png}))
+\end{center}
+
+\begin{center}
+= Person(\includegraphics{pics/17.png})
+\end{center}
+
+\begin{center}
+= \includegraphics{pics/0.png}
 \end{center}
 
 
@@ -115,23 +191,7 @@ Dressing(\includegraphics{pics/0.png}) = Pants(Shirts(\includegraphics{pics/0.pn
 \end{example}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\textbf{Note:} We could not form the composition Outfit $\circ$ Person, because the values of the function Person are not members of the domain of the function Outfit.
 
 
 
