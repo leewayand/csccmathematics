@@ -224,13 +224,85 @@ But, really, you can ignore the pistop and just think of the composition as its 
 
 
 
+
+We are chaining two functions together, which means they must match up.
+
+The range of the inner function has to be inside the domain of the outer function.
+
+If they don't match up, then we must adjust the domain of the outer function.
+
+
+\begin{explanation} Matching
+
+Situation:
+
+We have two functions: $Inner$ and $Outer$.
+
+We want to form the composition: $Outer \circ Inner$.
+
+Suppose $a$ is in the domain of $inner$, but $inner(a)$ is not a member of the domain of $outer$.
+
+In this case, we need to remove $a$ from the domain of the composition.
+
+
+
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
 \begin{example}
 
 
+Let $Inner$ and $Outer$ be the two functions represented by the maps below.
+
+\textbf{Inner}
 
 \begin{center}
-\includegraphics{pics/comp_full_2.png}
+(arrows go from the domain to the codomain.)
+\begin{image}
+\includegraphics{pics/c_7.png}
+\end{image}
 \end{center}
+
+
+
+
+\textbf{Outer}
+
+\begin{center}
+(arrows go from the domain to the codomain.)
+\begin{image}
+\includegraphics{pics/c_9.png}
+\end{image}
+\end{center}
+
+
+
+Notice that $Inner() = $
+
+
+
+
+Now define a new function called \textbf{C}.
+
+
+\begin{center}
+\textbf{C = Outer $\circ$ Inner}
+\end{center}
+
+
+
+
+
 
 
 
