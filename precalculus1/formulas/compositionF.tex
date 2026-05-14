@@ -15,24 +15,22 @@ composition
 
 
 
-Mathematics is a language. It is a tool we use to describe structure. Functions is a part of this language. We use functions to describe relationships, associations, and connections.
+Using two given two functions, we can create a third function, called the \textbf{composition}.
 
-We also use functions to describe processes.
+If $f$ and $g$ are the names of the two component functions, then $f \circ g$ is the symbol for the composition of $f$ and $g$.
 
-We use functions to describe an ordered application of actions. We might see this as step-by-step instructions, an algorithm, or an assembly line.
+We compose $f$ and $g$ to form $(f \circ g)$.
 
+The order makes a difference.
 
-
-\textbf{For example,} in a bottling plant the cap is not attached before the beer is poured into the bottle. Beer first, then cap.
-
-
-\textbf{For example,} the tires are not screwed to the chassi of the car before it is dipped into the rust prevention tank.
+We compose $g$ and $f$ to form $(g \circ f)$.
 
 
-\textbf{For example,} Flour, sugar, oil, and eggs are mixed together before baking.
+Most of time these are not equal functions.
 
-
-
+\[
+(f \circ g) \ne (g \circ f)
+\]
 
 
 \begin{idea} \textbf{\textcolor{green!50!black}{Composition}}
@@ -54,7 +52,7 @@ F \circ G
 
 The composition applies $G$ to an element of the domain of $G$ and then uses the resulting function value from $G$ as a domain number of $F$ obtaining a function value of $F$.
 
-This ultimate value of $F$ from this process is the value of $F \circ G$.
+This ultimate value of $F$ resulting from this process is the value of $F \circ G$.
 
 \end{idea}
 
@@ -64,9 +62,213 @@ Composition is our way of representing an ordered application of processes.
 
 
 
+\subsection*{Algebraic Composition}
+
+
+Our first version of algebraic representations for functions is formulas (there will be other versions).
+
+Each component function has its own formula, using its own variable.
+
+The composition is evaluated by first evaluating the inner function at the domain number, and then evaluating the outer function at the value of the inner function.
 
 
 
+
+\textbf{Two Component Functions:}
+
+
+Let $H$ and $K$ be two functions defined by the following formulas.
+
+\[
+H(n) = 2 n^2 - 5 \,  \text{ with domain }  \,  (-3, 8)
+\]
+
+
+\[
+K(v) = -v + 1 \,  \text{ with domain }  \,  (-10, 5)
+\]
+
+
+
+
+
+\begin{example}
+
+From the formula for $H$, we can see that $H(0) = -5$.
+
+From the formula for $K$, we can see that $K(-5) = 6$.
+
+These two values tell us that $(K \circ H)(0) = 6$
+
+\end{example}
+
+
+
+
+
+
+\begin{example}
+
+From the formula for $K$, we can see that $K(2) = -1$.
+
+From the formula for $H$, we can see that $H(-1) = -3$.
+
+These two values tell us that $(H \circ K)(2) = -3$
+
+\end{example}
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+From the formula for $H$, we can see that $H(-3) = 13$.
+
+From the formula for $K$, we can see that $K(13) = -12$.
+
+These two values tell us that $(K \circ H)(-3) = -12$
+
+\end{example}
+
+
+
+
+
+
+\begin{example}
+
+From the formula for $K$, we can see that $K(-9) = 10$.
+
+From the formula for $H$, we can see that $H(10)$ is undefined.
+
+We cannot include $10$ in the domain of $(H \circ K)$.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+
+
+Let $a$ and $b$ be two functions defined by the following formulas.
+
+\[
+a(x) = 3 - 2x \,  \text{ with domain }  \,  (-5, 5]
+\]
+
+
+\[
+b(y) = -y^2 \,  \text{ with domain }  \,  [-9, 5]
+\]
+
+
+
+
+From the formula for $b$, we can see that $b(1) = \answer{-1}$.
+
+From the formula for $a$, we can see that $a(-1) = \answer{1}$.
+
+These two values tell us that $(a \circ b)(1) = \answer{1}$
+
+\end{question}
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+
+
+Let $a$ and $b$ be two functions defined by the following formulas.
+
+\[
+a(x) = 3 - 2x \,  \text{ with domain }  \,  (-5, 5]
+\]
+
+
+\[
+b(y) = -y^2 \,  \text{ with domain }  \,  [-9, 5]
+\]
+
+
+
+
+
+From the formula for $a$, we can see that $a(3) = \answer{-3}$.
+
+From the formula for $b$, we can see that $b(-3) = \answer{-9}$.
+
+These two values tell us that $(b \circ a)(3) = \answer{-9}$
+
+\end{question}
+
+
+
+
+
+
+
+
+
+\begin{question}
+
+
+
+
+Let $a$ and $b$ be two functions defined by the following formulas.
+
+\[
+a(x) = 3 - 2x \,  \text{ with domain }  \,  (-5, 5]
+\]
+
+
+\[
+b(y) = -y^2 \,  \text{ with domain }  \,  [-9, 5]
+\]
+
+
+Is $4$ in the domain of $(b \circ a)$?
+
+\begin{multipleChoice}
+\choice [correct]{Yes}
+\choice {No}
+\end{multipleChoice}
+
+
+
+
+
+
+
+Is $4$ in the domain of $(a \circ b)$?
+
+\begin{multipleChoice}
+\choice {Yes}
+\choice [correct]{No}
+\end{multipleChoice}
+
+
+
+\end{question}
 
 
 
