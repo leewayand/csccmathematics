@@ -17,82 +17,101 @@ Part 2
 As a starting point for function analysis, let's think a bit about our Core Functions.
 
 
-\begin{explanation} \textbf{\textcolor{red!75!green}{Constant Functions}} 
+\begin{explanation} \textbf{\textcolor{red!75!green}{The Exponential Function}} 
 
 
-\[ Constant(x) = C  \]
+\[ E(x) = e^x  \]
 
+where is approximately $2.718281828$.
 
+\textbf{Domain:} The domain $(-\infty, \infty)$.
 
-\textbf{Domain:} The domain of every constant function is always $(-\infty, \infty)$.
-
-\textbf{Zeros:} If the constant funciton just happens to be the zero function and every value is $0$, then every number in the domain is a zero of the function.
-
-Otherwise, constant functions do not have zeros.
-
-\textbf{Continuity:} Constant functions are always contiuous.
-
-\textbf{End-Behavior:} The end-behavior is just the value of constant function.
-
-
-\textbf{Behavior (Inc/Dec):} Constant functions do not increase and they do not decrease.
-
-\textbf{Global Maximum and Minimum:} Since a constant function has only one value, that value is the global maxmum and global minimum and they both occur at every domain number.
-
-\textbf{Local Maximum and Minimum:}  Since a constant function has only one value, that value is a local maxmum and local minimum and they both occur at every domain number.
-
-\textbf{Range:} The range of a constant function consists of just one number, the value of the function.
-
-\end{explanation}
+\textbf{Zeros:} The Core Exponential Function has no zeros.
 
 
 
+\textbf{Continuity:} The Core Exponential Function is contiuous.
+
+\textbf{End-Behavior:} The Core Exponential Function tends to $0$ as the domain becomes unbounded negatively. The Core Exponential Function tends to $\infty$ as the domain becomes unbounded positively.
 
 
-
-
-
-
-\begin{explanation} \textbf{\textcolor{red!75!green}{The Identity Function}} 
-
-
-\[ Id(x) = x  \]
-
-
-
-\textbf{Domain:} The domain of the identity funciton is $(-\infty, \infty)$.
-
-\textbf{Zeros:} $0$ is the only zero of the identity function.
-
-\textbf{Continuity:} The identity function is a continuous function.
-
-\textbf{End-Behavior:} 
-
-As the domain becomes unbounded positively, the identity also becomes unbounded positively.  Our notation for this will look like
 
 \[
-\lim\limits_{x \to \infty} Id(x) = \infty
+\lim\limits_{x \to \infty} e^x = \infty
 \]
 
-As the domain becomes unbounded negatively, the identity also becomes unbounded negatively.  Our notation for this will look like
 
 \[
-\lim\limits_{x \to -\infty} Id(x) = -\infty
+\lim\limits_{x \to -\infty} e^x = 0
 \]
 
 
 
 
-\textbf{Behavior (Inc/Dec):} The identity is an increasing function.
-
-\textbf{Global Maximum and Minimum:} The identity function has no global maximum or global minimum.  This is explained by the end-behavior.
 
 
+\textbf{Behavior (Inc/Dec):} The Core Exponential Function is an increasing function.
+
+\textbf{Global Maximum and Minimum:} The Core Exponential Function has no global maximum or minimum.
+
+\textbf{Local Maximum and Minimum:}  The Core Exponential Function has no local maximums or minimums.
+
+\textbf{Range:} The range of the Core Exponential Function is $(0,\infty)$.
+
+\end{explanation}
 
 
-\textbf{Local Maximum and Minimum:}  The identity function has no local maximums or global minimums. 
 
-\textbf{Range:} The range of the identity function is $(-\infty, \infty)$.
+
+
+
+
+
+
+
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{The Natural Logarithm Function}} 
+
+
+\[ L(x) = \ln(x)  \]
+
+
+
+\textbf{Domain:} The domain $(0, \infty)$.
+
+\textbf{Zeros:} The Natural Logarithm Function has no zeros.
+
+
+
+\textbf{Continuity:} The Natural Logarithm Function is contiuous.
+
+\textbf{End-Behavior:} Since the domain in $(0, \infty)$, The Natural Logarithm Function only end-behavior as the domain become unbounded positively.
+
+
+
+\[
+\lim\limits_{x \to \infty} \ln(x) = \infty
+\]
+
+
+The other side is called Singularity Behavior.
+
+\[
+\lim\limits_{x \to 0^+} \ln(x) = -\infty
+\]
+
+
+
+
+
+
+\textbf{Behavior (Inc/Dec):} The Natural Logarithm Function is an increasing function.
+
+\textbf{Global Maximum and Minimum:} The Natural Logarithm Function has no global maximum or minimum.
+
+\textbf{Local Maximum and Minimum:}  The Natural Logarithm Function has no local maximums or minimums.
+
+\textbf{Range:} The range of the Core Exponential Function is $(-\infty,\infty)$.
 
 \end{explanation}
 
@@ -108,126 +127,135 @@ As the domain becomes unbounded negatively, the identity also becomes unbounded 
 
 
 
-\begin{explanation} \textbf{\textcolor{red!75!green}{Power Functions}} 
 
 
-The power makes a big difference here.  As a beginning, we will only consider two types of powers: positive integers and negative integers,
 
 
-\[ Power(x) = x^n  \]
+\begin{explanation} \textbf{\textcolor{red!75!green}{Sine and Cosine}} 
 
 
-\textbf{Domain:} 
+\[ S(x) = \sin(x)  \]
 
-If $n$ is a whole number, then the domain is $(-\infty, \infty)$.
-
-If $n$ is a negative integer, then the domain is $(-\infty, 0) \cup (0, \infty)$.
+\[ C(x) = \cos(x)  \]
 
 
-\textbf{Zeros:} 
 
-If $n$ is a whole number, then $0$ is the only zero.
+\textbf{Domain:} The domain both functions is $(-\infty, \infty)$.
 
-If $n$ is a negative integer, then the power function has no zeros.
+\textbf{Zeros:} Both functions have zeros and since both functions are periodic, they have an infinite number of zeros.
 
-
-\textbf{Continuity:} Power functions are continuous functions
-
-\textbf{End-Behavior:} 
-
-If $n$ is a whole number, then there are two different cases.
 
 \begin{itemize}
-\item If $n$ is odd, then the power function is unbounded positively as the domain becomes unbounded positively or negative.
-\item If $n$ is even, then the power function is unbounded positively in both directions.
+\item Zeros of $\sin(x)$ are ${k \pi \, | \, k \in \mathbb{Z}}$.
+\item Zeros of $\cos(x)$ are ${\frac{\pi}{2} + k \pi\, | \, k \in \mathbb{Z}}$.
+\begin{itemize}
+
+
+\textbf{Continuity:} Both functions are contiuous.
+
+\textbf{End-Behavior:} Both functions continue to oscillate.
+
+
+
+
+
+
+\textbf{Behavior (Inc/Dec):} Both functions switch back-and-forth between increasing and decreasing with a period of $2\pi$.
+
+\begin{itemize}
+\item $\sin(x)$ increases on $\right(0, \frac{\pi}{2} \right)$
+\item $\sin(x)$ decreases on $\right(\frac{\pi}{2}, \frac{3\pi}{2} \right)$
+\item $\sin(x)$ increases on $\right(\frac{3\pi}{2}, 2\pi \right)$
 \end{itemize}
 
-If $n$ is a negative integer, then the power function tends to $0$ as the domain becomes unbounded positively or negatively.
+\begin{itemize}
+\item $\cos(x)$ decreases on $(0, \pi)$
+\item $\cos(x)$ increases on $(\pi. 2\pi)$
+\end{itemize}
+
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} Both functions have a global maximum of $1$ and a global minimum of $-1$.
+
+
+
+
+\textbf{Local Maximum and Minimum:}  Both functions $1$ and $-1$ as their local extrema.
+
+
+
+
+\textbf{Range:} The range of both functions is $[-1, 1]$.
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{Absolute Value Function}} 
+
+
+\[ Abs(x) = |x|  \]
+
+
+
+\textbf{Domain:} The domain is $(-\infty, \infty)$.
+
+\textbf{Zeros:} $0$ is the only zero.
+
+
+
+
+\textbf{Continuity:} The Core Absolute Value Function is contiuous.
+
+\textbf{End-Behavior:} The Core Absolute Value Function becomes unbounded positively on both sides.
+
+
+
 
 
 
 \textbf{Behavior (Inc/Dec):} 
 
-If $n$ is a whole number, then there are two different cases.
-
-\begin{itemize}
-\item If $n$ is odd, then the power function is an increasing function.
-\item If $n$ is even, then the power function decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.
-\end{itemize}
-
-If $n$ is a negative integer, then there are two different cases.
-
-\begin{itemize}
-\item If $n$ is odd, then the power function is a decreasing function.
-\item If $n$ is even, then the power function increases on $(-\infty, 0)$ and decreases on $(0, \infty)$.
-\end{itemize}
+The Core Absolute Value Function decreases on $(-\infty, 0)$ and increases on $(0, \infty)$
 
 
 
-\textbf{Global Maximum and Minimum:} 
 
-A power function has a global minimums only if the power is an even whole number. In that case, $0$ is the global minimum, which occurs at $0$.
 
-\textbf{Local Maximum and Minimum:} 
 
-\textbf{Range:} 
+
+\textbf{Global Maximum and Minimum:} The Core Absolute Value Function has $0$ as its global minimum and it has no global maximum.
+
+
+
+
+\textbf{Local Maximum and Minimum:}  The Core Absolute Value Function has $0$ as its only local minimum and it has no local maximum.
+
+
+
+\textbf{Range:} The range is $[0, \infty)$.
 
 \end{explanation}
-
-
-
-
-
-
-
-
-
-
-\begin{explanation} \textbf{\textcolor{red!75!green}{Constant Functions}} 
-
-\textbf{Domain:} 
-
-\textbf{Zeros:} 
-
-\textbf{Continuity:} 
-
-\textbf{End-Behavior:} 
-
-
-\textbf{Behavior (Inc/Dec):} 
-
-\textbf{Global Maximum and Minimum:} 
-
-\textbf{Local Maximum and Minimum:} 
-
-\textbf{Range:} 
-
-\end{explanation}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
