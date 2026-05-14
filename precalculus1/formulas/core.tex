@@ -81,7 +81,7 @@ Creating the library of Elementray Functions is a long journey. We'll need a lot
 A constant function is a function where all domain numbers are paired with the exact same range number. A constant function only has one value. 
 
 
-\[   \Constant(x) = C      \]
+\[   Constant(x) = C      \]
 
 where $C$ is a fixed ``constant'' real number.
 
@@ -119,7 +119,7 @@ There is a core constant function for every real number.
 The is only one Identity function. The Identity function pairs every domain number with itself. The value of the Idenitty function is just the domain value where it is evaluated. 
 
 
-\[   \Id(x) = x      \]
+\[   Id(x) = x      \]
 
 
 
@@ -128,13 +128,13 @@ The is only one Identity function. The Identity function pairs every domain numb
 
 \begin{example}
 
-$\blacktriangleright \Id(3) = 3$
+$\blacktriangleright Id(3) = 3$
 
-$\blacktriangleright \Id(\sqrt{2}) = \sqrt{2}$
+$\blacktriangleright Id(\sqrt{2}) = \sqrt{2}$
 
-$\blacktriangleright \Id(\pi) = \pi$
+$\blacktriangleright Id(\pi) = \pi$
 
-$\blacktriangleright \Id \left( \frac{3}{4} \right) = \frac{3}{4}$
+$\blacktriangleright Id \left( \frac{3}{4} \right) = \frac{3}{4}$
 
 \end{example}
 
@@ -158,7 +158,7 @@ $\blacktriangleright \Id \left( \frac{3}{4} \right) = \frac{3}{4}$
 Power functions raise the domain number to a power.
 
 
-\[   \Power(x) = x^r      \]
+\[   Power(x) = x^r      \]
 
 where $r$ is a fixed non-zero real number.
 
@@ -167,13 +167,13 @@ where $r$ is a fixed non-zero real number.
 
 \begin{example}
 
-$\blacktriangleright \Power(x) = x^3 $
+$\blacktriangleright Power(x) = x^3 $
 
-$\blacktriangleright \Power(x) = x^{-2} $
+$\blacktriangleright Power(x) = x^{-2} $
 
-$\blacktriangleright \Power(x) = x^{\sqrt{2}} $
+$\blacktriangleright Power(x) = x^{\sqrt{2}} $
 
-$\blacktriangleright \Power(x) = x^{\frac{2}{3}} $
+$\blacktriangleright Power(x) = x^{\frac{2}{3}} $
 
 \end{example}
 
@@ -194,7 +194,7 @@ There is a core power function for every real number.
 The value of a Root (Radical) function is a root of the domain number.
 
 
-\[   \Root(x) = \sqrt[n]{x}      \]
+\[   Root(x) = \sqrt[n]{x}      \]
 
 where $n$ is a fixed positive real number.
 
@@ -205,13 +205,13 @@ These are often called ``$n^{th}$'' Root Functions.
 
 \begin{example}
 
-$\blacktriangleright \Root(x) = \sqrt[2]{x} = \sqrt{x}  $
+$\blacktriangleright Root(x) = \sqrt[2]{x} = \sqrt{x}  $
 
-$\blacktriangleright \Root(x) = \sqrt[3]{x}  $
+$\blacktriangleright Root(x) = \sqrt[3]{x}  $
 
-$\blacktriangleright \Root(x) = \sqrt[\tfrac{3}{4}]{x}  $
+$\blacktriangleright Root(x) = \sqrt[\tfrac{3}{4}]{x}  $
 
-$\blacktriangleright \Root(x) = \sqrt[\pi]{x}  $
+$\blacktriangleright Root(x) = \sqrt[\pi]{x}  $
 
 \end{example}
 
@@ -238,7 +238,7 @@ We will see that every exponential function can be described in terms of $e$, so
 
 
 
-\[   \Exp(x) = e^x     \]
+\[   Exp(x) = e^x     \]
 
 
 
@@ -336,10 +336,29 @@ Our last Core function is how we algebraically talk about distance.  The Absolut
 \end{formula}
 
 
+We can describe the distance bewteen any two number on the number line using the absolute value function.
+
+Suppose $a$ and $b$ are two real numbers on the real number line.
 
 
 
 
+
+\[
+|a-b| = 
+\begin{cases}
+  -(a-b) & \text{if $a<b$,}  \\
+  a-b & \text{if $b\ge a$}
+\end{cases}
+\]
+
+
+
+$|a-b| = |b-a|$
+
+Both are positive or $0$.
+
+Either describes the distance between $a$ and $b$.
 
 
 
