@@ -419,7 +419,9 @@ The graph of $y = CR(x) = \sqrt[3]{x}$
           ]
           
             %\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-            \addplot [line width=2, penColor, smooth, samples=200,domain=(-9:9),<->] {(x)^(0.333))};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(-9:0),<->] {-((x)^(0.333))};
+
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),<->] {(x)^(0.333)};
    
       %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
 
@@ -440,7 +442,7 @@ All odd root/radical functions can be viewed as the Core Cube Root function comp
 \begin{idea} \textbf{\textcolor{blue!55!black}{Cube Root Functions}} 
 
 
-Let $CR(x) = \sqrt[3]{k}$ be the Core Cube Root function.
+Let $CR(x) = \sqrt[3]{k}$ an increasing function.
 
 Let $L_{in}(t) = B \, t + C$ be a linear function.
 
@@ -550,7 +552,8 @@ The graph of $y = g(t) = -4 \sqrt[3]{2t+3}+1$
           ]
           
           	\addplot [line width=2, penColor, smooth, samples=200,domain=(-1.49:8),->] {-4*(2*x+3)^0.33333+1};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-6:-1.49),<-] {-4*(2*x+3)^0.33333+1};
+
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-6:-1.49),<-] {4*(-(2*x+3)^0.33333+1};
 
           	%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
 
@@ -561,10 +564,55 @@ The graph of $y = g(t) = -4 \sqrt[3]{2t+3}+1$
 \end{image}
 
 
-Here the inside $v+3$ equals $0$ when $v=\answer{-3}$.  The graph has a vertical tangent line there.  Otherwise, the cube root function is increasing everywhere, but increasing slower and slower and slower.
+Here the inside $2t+3$ equals $0$ when $v=\answer{\frac{-2}{3}}$.  The graph has a vertical tangent line at $\left( \frac{-2}{3}, 1 \right)$.  
+
+
+
+
+$g$ is the composition of
+
+\begin{itemize}
+\item $CR(x) = \sqrt[3]{k}$, an increasing function
+
+\item $L_{in}(t) = 2t+3$, an inecreasing linear function
+
+\item $L_{out}(y) = -4y + 1$, a decreasing linear function
+\end{itemize}
+
+
+
+\[ dec \circ inc \circ inc = dec  \]
+
+
+$f$ is a decreasing square root function, which agrees with the graph.
 
 
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
