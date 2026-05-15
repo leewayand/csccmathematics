@@ -13,10 +13,10 @@ distance
 
 
 
-The absolute value function, $|x|$, gives the distance on the number line between a number, $x$, and $0$.  Since distance cannot be negative, it appears that the function just ``makes numbers positive''.
+The Core absolute value function, $|x|$, gives the distance on the number line between a number, $x$, and $0$.  Since distance cannot be negative, it appears that the function just ``makes numbers positive''.
 
 
-To do this, the absolute value function just returns nonnegative numbers unharmed, and makes negative numbers turn positive.  Algebraically, this is accomplished through a piecewise defined function.
+To do this, the Core absolute value function just returns nonnegative numbers unharmed, and makes negative numbers turn positive.  Algebraically, this is accomplished through a piecewise defined function.
 
 
 
@@ -32,10 +32,10 @@ To do this, the absolute value function just returns nonnegative numbers unharme
 \]
 
 
-Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The absolute value function negates negative numbers.
+Technically speaking, $|-3| = -(-3)$ and then $-(-3) = 3$.  The Core absolute value function negates negative numbers.
 
 
-\textbf{Note:} Just because you see a negaitve sign doesn't mean you have a negative number.
+\textbf{Note:} Just because you see a negative sign doesn't mean you have a negative number.
 
 
 
@@ -138,21 +138,21 @@ Both sides match up at $0$, since
 
 
 
-That graph suggests that $|x|$ decreases on $(-\infty, 0]$  and  increases on $[0, \infty )$.  \\
+That graph suggests that $|x|$ decreases on $(-\infty, 0]$  and  increases on $[0, \infty )$.  
 
-This is confirmed by the formula. \\
-
-
-On $(-\infty, 0]$, $|x| = -x$, which is a decreasing linear functions. \\
+This is confirmed by the formula. 
 
 
-On $[0, \infty)$, $|x| = x$, which is an increasing linear functions. \\
+On $(-\infty, 0]$, $|x| = -x$, which is a decreasing linear functions. 
+
+
+On $[0, \infty)$, $|x| = x$, which is an increasing linear functions. 
 
 
 \begin{example}  Behavior ($iRoC$)
 
 
-Using the $iRoC$ to say where $A(x) = | x |$ increasing and decreasing. \\
+Using the $iRoC$ to say where $A(x) = | x |$ increasing and decreasing. 
 
 
 
@@ -189,7 +189,7 @@ iRoC_{|x|} =
 \end{cases}
 \]
 
-$iRoC_{|x|}$ is negative on $(-\infty, 0)$ and positive on $(0, \infty)$. \\
+$iRoC_{|x|}$ is negative on $(-\infty, 0)$ and positive on $(0, \infty)$. 
 
 
 $| x |$ is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$.
@@ -204,7 +204,7 @@ $| x |$ is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$.
 
 
 
-Absolute value is a continuous function, which is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$. That makes $| 0 | = 0$ the global minimum. \\
+Absolute value is a continuous function, which is decreasing on $(-\infty, 0)$ and increasing on $(0, \infty)$. That makes $| 0 | = 0$ the global minimum. 
 
 
 Since the absolute value function is a increasing linear function on $(0, \infty)$, we know that
@@ -234,17 +234,17 @@ What are the cricital numbers for $A(x) = | x |$ ?
 \begin{explanation}
 
 
-First, $0$ is in the domain. \\
+First, $0$ is in the domain. 
 
-The previous examples shows that the $iRoC_{|x|}$ is defined and nonzero everywhere except $0$. \\
+The previous examples shows that the $iRoC_{|x|}$ is defined and nonzero everywhere except $0$. 
 
-The only possible critical number is $0$.  We will show that there is no tangent line at $(0,0)$. \\
-
-
-Suppose there is a tangent line to the graph of $y = | x |$ at $(0,0)$.  Then, it has to match the slope on the left, which is $-1$ and it has to match the slope on the right, which is $1$.  A line cannot have two slopes. \\ 
+The only possible critical number is $0$.  We will show that there is no tangent line at $(0,0)$. 
 
 
-There is not tangent line at $(0,0)$, which means there is no slope. \\
+Suppose there is a tangent line to the graph of $y = | x |$ at $(0,0)$.  Then, it has to match the slope on the left, which is $-1$ and it has to match the slope on the right, which is $1$.  A line cannot have two slopes. 
+
+
+There is not tangent line at $(0,0)$, which means there is no slope. 
 
 
 
@@ -282,7 +282,45 @@ where $A$, $B$, $C$, and $D$ are real numbers, with $A \ne B$ and $B \ne 0$ is a
 \end{definition}
 
 
-\textbf{Note:}  In the template for absolute value functions, There is a leading coefficient for the function and there is a leading coefficient for the linear function inside the absolute value bars. \\
+\textbf{Note:}  In the template for absolute value functions, There is a leading coefficient for the function and there is a leading coefficient for the linear function inside the absolute value bars. 
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{idea} \textbf{\textcolor{green!50!black}{Absolute Value Functions}}
+
+
+Let $Abs(k) = |x| $ be the Core absolute value function.
+
+Let $L_{in}(t) = B \, t + C$ be a linear function.
+
+Let $L_{out}(y) = A \, y + D$ be a linear function.
+
+
+Absolute Value functions are constructed by composing these component funcitons.
+
+
+\[
+(L_{out} \circ Abs \circ L_{in})(x) = A |B \,x + C| + D
+\]
+
+
+
+
+\end{idea}
+
+
+
+
+
 
 
 
