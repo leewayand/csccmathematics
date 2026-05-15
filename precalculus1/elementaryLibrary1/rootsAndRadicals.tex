@@ -12,9 +12,12 @@ separating dimensions
 \maketitle
 
 
-Polynomial and rational functions only include terms with positive integer powers. On the other hand, power functions use any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
+Polynomial and rational functions only include terms with integer powers. 
 
 
+On the other hand, power functions use any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
+
+We saw this with our Core Root and RAdical functions.
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Roots}}
 
@@ -184,6 +187,118 @@ The graph of $y = R(t) = t^{\tfrac{1}{2}} = \sqrt{t} $
 
 
 There are no horizontal asymptotes on these graphs.  The graph keeps moving up or down unbounded.  The root and radical functions are unbounded. Their values tend to $\pm \infty$ as the domain moves out towards $\pm \infty$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Root/Radical Functions}
+
+The Elementary Functions also include Root and Radical functions.
+
+These are constructed from the Core functions by composing them with linear functions.
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Root and Radical Functions}}
+
+
+Let $R(k) = \sqrt[n]{k} =  k^{\tfrac{1}{n}} $ be a Core root function.
+
+Let $L_{in}(t) = B \, t + C$ be a linear function.
+
+Let $L_{out}(y) = A \, y + D$ be a linear function.
+
+
+Root and Radical functions are constructed by composing these component funcitons.
+
+
+\[
+(L_{out} \circ R \circ L_{in})(x) = A \sqrt[n]{B \,x + C} + D
+\]
+
+
+
+
+\end{definition}
+
+
+
+
+\begin{example}
+
+
+The graph of $y = R(t) = -2 \sqrt{4 t - 5} + 1 $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(1.25:8),->] {-2*x^(4*x-5)}+1;
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.25,1)};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
