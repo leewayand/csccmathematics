@@ -12,15 +12,35 @@ attributes
 \maketitle
 
 
-\section*{Basic Exponential Functions}
+Our Core exponential functions look like $r^x$. Not every exponential function can be represented with such formulas.
 
-Thinking about formulas, basic exponential functions are functions whose formulas look like
+If we allow a leading coefficient, then we get a template that covers half of the exponential functions.
+
+Once we are familiar with this basic template, we can describe all exponential functions through composition with linear functions.
+
+
+
+
+\section*{Core Exponential Functions}
+
 
 \[
-exp(x) = A \cdot r^x \, \text{ with } \, A \ne 0 \, \text{ and } \, r > 1
+exp(x) =  \cdot r^x \, \text{ with } \,  \text{ and } \, 0 > r > 1
 \]
 
-Just a leading coefficent and a base greater than $1$. \\
+
+The behavior of the Core exponential functions is completely dictated by the size of the base.
+
+
+\begin{itemize}
+\item A base greater than $1$. If $r>1$ then $r^x$ is an increasing function.
+\item A base less than $1$. If $0<r<1$ then $r^x$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
 
 
 
@@ -51,16 +71,16 @@ Here is the graph of $y = 2^x$.
 \end{image}
 
 
-The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$ and it increases on this domain.  \\
+The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$.   
 
-Graphically, the horizontal axis is a horizontal asymptote.\\
+Graphically, the horizontal axis is a horizontal asymptote.
 
 
 
 \[  \lim_{x \to -\infty} 2^x = \answer{0}     \, \text{ and } \,  \lim_{x \to \infty} 2^x = \answer{\infty}   \]
 
 
-\textbf{Note:}. Using the number $e$ as the base of our basic exponential function is very popular.
+
 
 \end{example}
 
@@ -68,7 +88,7 @@ Graphically, the horizontal axis is a horizontal asymptote.\\
 
 
 
-The roles are reversed when the base is less than $1$ \\
+When the base is less than $1$, then the behavior switches.
 
 
 
@@ -118,6 +138,37 @@ When the base is less than $1$, then the whole function decreases.  The function
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Note that
 
 \[
@@ -136,7 +187,82 @@ f(x) = \left(\frac{1}{3}\right)^x = \left( 3^{-1} \right)^x = f(x) = \left( 3 \r
 
 
 
-We can view any exponential function with a base less than $1$ as an exponential function with a base greater than $1$ and just change the sign of the exponent. \\
+We can view any exponential function with a base less than $1$ as an exponential function with a base greater than $1$ and just change the sign of the exponent. 
+
+This is where composition with linear functions comes in.
+
+
+
+
+
+\subsection*{General Exponential Functions}
+
+
+
+Our general template for exponential functions looks like
+
+\[
+exp(x) = A \cdot r^{B \, x + C}
+\]
+
+
+This can be viewd as a composition of a core exponential function and two linear functions.
+
+
+
+\begin{itemize}
+\item Let $r^t$ be a Core exponential function.
+\item Let $L_{in}(u) = B \, u + C$ be a linear function.
+\item Let $L_{out}(v) = A \, v$ be a linear function.
+\end{itemize}
+
+Then, our general exponential function can be expressed as a composition.
+
+
+\[
+ A \cdot r^{B \, x + C} = L_{out} \circ r^t \circ L_{in}
+\]
+
+
+
+Now we can use the Chain Rule to establish whether an exponential function increases or decreases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,7 +275,7 @@ We can view any exponential function with a base less than $1$ as an exponential
 
 
 
-Here is the graph of $y = \left( 3 \right)^{-x}$.
+Here is the graph of $y = f(x) = 3^{-x}$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -174,18 +300,123 @@ Here is the graph of $y = \left( 3 \right)^{-x}$.
 \end{image}
 
 
+
+$f$ can be viewed as a composition of the following component functions.
+
+
+
+
+\begin{itemize}
+\item Let $3^t$, an increasing Core exponential function.
+\item Let $L_{in}(u) = -u $, a decreasing linear function.
+\item Let $L_{out}(v) = 3 \, v$, an increasing linear function.
+\end{itemize}
+
+
+
+\[  f(x) = 3^{-x} =  L_{out} \circ 3^x \circ L_{in} \]
+
+The Chain Rule gives us
+
+
+\[ inc \circ inc \circ dec = dec  \]
+
+
+This agrees with the graph.
+
 \end{example}
 
 
 
-Instead of using numbers greater or less than $1$, we could always use a base greater than $1$ and just use negative exponents.  In that case, we might as well use $e$ as our base. \\
-
-
-This gives us a basic basic exponential function: $e^x$ \\
 
 
 
-And, then three other alternative choices, if you prefer. \\
+
+
+
+\begin{example}
+
+
+
+Here is the graph of $y = g(x) = \left( \frac{2}{3} \right)^{-2x+1}$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:2),<->] {(0.666)^(-2*x+1)};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+$g$ can be viewed as a composition of the following component functions.
+
+
+
+
+\begin{itemize}
+\item Let $\left( \frac{2}{3} \right)^t$, a decreasing Core exponential function.
+\item Let $L_{in}(u) = -2u+1 $, a decreasing linear function.
+\end{itemize}
+
+
+
+\[  g(x) = \left( \frac{2}{3} \right)^{-2x+1} =  \left( \frac{2}{3} \right)^t \circ L_{in}(x) \]
+
+The Chain Rule gives us
+
+
+\[ dec \circ dec = inc  \]
+
+
+This agrees with the graph.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Instead of using numbers greater or less than $1$, we could always use a base greater than $1$ and just use negative exponents.  In that case, we might as well use $e$ as our base. 
+
+
+This gives us a basic basic exponential function: $e^x$ 
+
+
+
+And, then three other alternative models, if you prefer. 
 
 
 \[
@@ -287,27 +518,27 @@ e^x \, \text{ or } \, e^{-x} \, \text{ or } \, -e^{x} \, \text{ or } \, -e^{-x}
 
 
 
-Basic exponential functions become unbounded in one direction, while approaching $0$ in the other direction. \\
+All exponential functions become unbounded in one direction, while approaching $0$ in the other direction. 
 
 
 \begin{itemize}
-  \item When the base is greater than $1$, exponential functions tend to $0$ in the direction that makes their exponent negative. \\
-  \item When the base is less than $1$, exponential functions tend to $0$ in the direction that makes their exponent positive. \\
+  \item When the base is greater than $1$, exponential functions tend to $0$ in the direction that makes their exponent negative. 
+  \item When the base is less than $1$, exponential functions tend to $0$ in the direction that makes their exponent positive. 
 \end{itemize}
 
-Expoential functions are unbounded in the other direction. \\
+Expoential functions are unbounded in the other direction. 
 
 
-Exponential funcitons can be unbounded positively or negatively. This is determined by the sign of the leading coefficient. \\
-
-
-
-
-Those are our basic exponential functions.  Pick one as your own basic exponential function. \\
+Exponential funcitons can be unbounded positively or negatively. This is determined by the sign of the leading coefficient. 
 
 
 
-$exp(x) = e^x$ is very popular. \\
+
+Those are our basic exponential functions.  Pick one as your own basic exponential function. 
+
+
+
+$exp(x) = e^x$ is very popular. 
 
 
 Then compare all other exponential functions to it.
@@ -316,45 +547,18 @@ Then compare all other exponential functions to it.
 
 
 
-\subsection*{General Exponential Functions}
 
 
 
-Our general template for exponential functions looks like
-
-\[
-exp(x) = A \cdot r^{B \, x + C}
-\]
-
-If we choose $e$ as the base, then they look like
-
-
-\[
-exp(x) = A \cdot e^{B \, x + C}
-\]
-
-
-\begin{itemize}
-  \item $A$ is the leading coefficent for the function.
-  \item $B$ is the leading coefficent of the exponent.
-\end{itemize}
-
-
-Comparing these back to our basic exponential functions, we get
 
 
 
-\begin{itemize}
-  \item $A > 0$ and $B > 0$ gives an increasing exponential function.
-  \item $A < 0$ and $B > 0$ gives a decreasing exponential function.
-  \item $A > 0$ and $B < 0$ gives a decreasing exponential function.
-  \item $A < 0$ and $B < 0$ gives an increasing exponential function.
-\end{itemize}
 
 
-$\blacktriangleright$ When the leading coefficients are the same sign, then the exponential function is increasing. \\
 
-$\blacktriangleright$ When the leading coefficients are different signs, then the exponential function is decreasing. \\
+
+
+
 
 
 
@@ -362,15 +566,6 @@ $\blacktriangleright$ When the leading coefficients are different signs, then th
 \subsection*{Graphically}
 
 Even though the graphs of exponential functions appear to increase quite quickly, there are no vertical asymptotes.  The domains include all real numbers.  The function just increases or decreases very quickly and continues to do so.
-
-
-
-
-
-
-
-
-
 
 
 
@@ -410,7 +605,7 @@ Here is the graph of $f(x) = -\left( 3 \right)^{-x + 1}$.
 
 
 
-This matches our template for an exponential function. \\
+This matches our template for an exponential function. 
 
 
 \begin{itemize}
@@ -418,14 +613,14 @@ This matches our template for an exponential function. \\
   \item The leading coefficient of the exponent is $-1$, which is negative. 
 \end{itemize}
 
-Both leading coefficients have the same sign, so this exponential function is increasing. \\
+Both leading coefficients have the same sign, so this exponential function is increasing. 
 
 
 
-The leading coefficient of the function is $-1$, which is negative. Therefore, the function only has negative values. \\
+The leading coefficient of the function is $-1$, which is negative. Therefore, the function only has negative values. 
 
 
-The exponent is $-x+1$.  This is negative in the positive tail of the domain. The function tends to $0$ in this direction. The function becomes unbounded in the other direction. Unbounded negatively. \\
+The exponent is $-x+1$.  This is negative in the positive tail of the domain. The function tends to $0$ in this direction. The function becomes unbounded in the other direction. Unbounded negatively. 
 
 
 
