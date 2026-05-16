@@ -7,11 +7,205 @@
 \begin{document}
 
 \begin{abstract}
-facets
+oscillation
 \end{abstract}
 \maketitle
 
 
+
+
+
+\subsection*{The Core Sine}
+
+
+We get the Core sine function by viewing the $y$-coordinates of the unit circle as a function of the angle.
+
+
+
+\begin{example} \textit{Sine} and \textit{Cosine}  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-1.5:1.5, ymax=1.5, xmax=1.5, ymin=-1.5, xmin=-1.5,
+            axis lines =center, unit vector ratio*=1 1 1, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(0:6.3)] ({cos(deg(x))},{sin(deg(x)});
+
+
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0.5,0.866)};
+
+
+          %\draw[decoration={brace,raise=.2cm,mirror},decorate,thin] (axis cs:0.75,0)--(axis cs:0.75,0.866);
+          %\draw[decoration={brace,raise=.2cm},decorate,thin] (axis cs:0,0.95)--(axis cs:0.75,0.95);
+          %\node[anchor=east] at (axis cs:1.85,3) {$d$};
+          %\node[anchor=east] at (axis cs:4.6,1) {$f(d)$};
+                     
+          \node at (axis cs:0.75,1.2) [penColor2] {$(\cos(\theta),\sin(\theta))$};
+
+
+          \addplot [line width=1, penColor2, smooth,samples=100,domain=(0:0.5)] ({x},{1.7320*x});
+          \node at (axis cs:0.25,0.15) [penColor2] {$\theta$};
+
+
+          %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
+
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
+          %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+As you travel counterclockwise around the circle from the point $(1,0)$, the $y$-coordinate of the points
+
+\begin{itemize}
+\item increase from $0$ to $1$, then
+\item decrease from $1$ to $0$ and then to $-1$, then
+\item increase from $-1$ to $0$
+\end{itemize}
+
+This keeps repeating with each full circle, counterclockwise (positive angles) or clockwise (negative angles).
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-1.5,-1,-0.5,0.5,1,1.5},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$, $\tfrac{-\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$1.5$,$-1$,$-0.5$,$0.5$,$1$,$1.5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+            %\addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            \node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            %\node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+\begin{summary}\textbf{\textcolor{red!70!yellow}{Core Sine Analysis}}
+
+
+\textbf{Domain:} The domain of the Core sine function is all real numbers, $(-\infty, \infty)$. 
+
+\textbf{Zeros:} The zeros of the Core sine function are $\{ k\pi \, | \, k \in \mathbb{Z} \}$.
+
+\textbf{Continuity:} The Core sine function is continuous.
+
+\textbf{End-Behavior:} The Core sine function keeps oscillating between $1$ and $-1$.
+
+
+
+\textbf{Behavior (Increasing and Decreasing):} The Core sine function switches between increasing and decreasing with a period of $2\pi$.
+
+On the interval $[0 , \2\pi)$, the Core sine function
+
+\begin{itemize}
+\item increases on $\left(0, \frac{\pi}{2} \right)$
+\item increases on $\left(\frac{\pi}{2},  \frac{3\pi}{2}\right)$
+\item increases on $\left(\frac{3\pi}{2}, 2\pi \right)$
+\end{itemize}
+
+
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} 
+
+The global maximum value is $1$, which occurs at $\{ \frac{\pi}{2} + 2k\pi \, | \, k \in \mathbb{Z} \}$.
+
+
+The global minimum value is $-1$, which occurs at $\{ \frac{3\pi}{2} + 2k\pi \, | \, k \in \mathbb{Z} \}$.
+
+
+
+
+\textbf{Local Maximums and Minimums:}  The global maximum and minimum are the obly local extrema.
+
+
+
+
+\textbf{Range:} The range of the Core sine funciton is $[-1, 1]$.
+
+
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{The Core Cosine}
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{The Core Tangent}
 
 
 Rational functions were quotients of polynomials.  We can do the same with trigonometric functions.

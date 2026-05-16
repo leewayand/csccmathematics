@@ -12,7 +12,7 @@ inverse
 \maketitle
 
 
-\section*{Logarithmic Functions}
+\section*{Core Logarithmic Functions}
 
 
 
@@ -24,7 +24,7 @@ The expression $\log_a(b)$ was defined to be the number that you raise $a$ to, t
 
 
 
-We made a Core logarithmic function from this by fixing the base:  $L(x) = \log_a(x)$. 
+We made a Core logarithmic function from this by fixing the base:  $L(x) = \log_r(x)$. 
 
 
 This function is the ``reverse'' of $r^x$.  Meaning that if $(A, B)$ is a pair in the $L(x) = \log_r(x)$ function, then $(B, A)$ is a pair in the $r^x$ function. Their domains and ranges are swapped. 
@@ -61,7 +61,7 @@ Here is the graph of $y = L(x) = \log_2(x)$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),<->] {ln(x)/ln(2)};
+          \addplot [line width=2, penColor, smooth,samples=300,domain=(0.001:9),<->] {ln(x)/ln(2)};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
 
            
@@ -74,7 +74,38 @@ Here is the graph of $y = L(x) = \log_2(x)$.
 
 
 
-The graph of a basic logarithmic function has a vertical asymptote where the inside of the logarithm equals $0$.  The domain includes only numbers that make the inside of the formula positive. The function increases over its domain and is unbounded.
+
+Here is the graph of $y = E(x) = 2^x$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.2),<->] {2^x};
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The graphs of exponential functions (and shifted exponential functions) have a horizontal asymptote. 
+
+
+The graphs of logarithmic functions have a vertical asymptote. 
+
+
+
+
+We get general logarithmic functions by composing with linear functions.
 
 
 
@@ -88,11 +119,62 @@ The graph of a basic logarithmic function has a vertical asymptote where the ins
 
 
 
-\begin{example} Shifted Logarithmic Function
+\section*{General Logarithmic Functions}
+
+
+Logarithmic functions are functions taht can bre represented by formulas of the form
+
+
+\[  A \log_r(B \, x + C) + D  \]
 
 
 
-Here is the graph of $y = L(x) = \log_2(5-x)$.
+These templates can be viewed as a composition.
+
+
+
+
+
+\begin{itemize}
+\item Let $\log_r(t)$ be a Core logarithmic function.
+\item Let $L_{in}(u) = B \, u + C$ be a linear function.
+\item Let $L_{out}(v) = A \, v$ be a linear function.
+\end{itemize}
+
+Then, our general logarithmic function can be expressed as a composition.
+
+
+\[
+ A \log_r(B \, x + C) + D = L_{out}(v) \circ \log_r(t) \circ L_{in}(x)
+\]
+
+
+
+Now we can use the Chain Rule to establish whether a logarithmic function increases or decreases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Logarithmic Function
+
+
+
+Here is the graph of $y = L(x) = -3 \log_2(5-x)+1$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -105,7 +187,8 @@ Here is the graph of $y = L(x) = \log_2(5-x)$.
           ]
           
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({5},{x});
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:5),<->] {ln((5-x)/ln(2)};
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-5:4.8),<->] {-3*ln((5-x)/ln(2)+1};
           
 
            
@@ -117,8 +200,82 @@ Here is the graph of $y = L(x) = \log_2(5-x)$.
 
 
 
-The inside of the logarithm here is $5-x$ and this equals $0$ when $x=5$.  Therefore, the vertical asymptote in the graph is $x=5$.  The domain is $(-\infty, 5)$, since these are the numbers that make the inside of the logarithm formula positive.
+Analysis:
 
+\textbf{Domain:} The inside must be positive. This tells us that the domain is $(-\infty, 5)$.
+
+\textbf{Zero:} 
+
+\begin{align*}
+-3 \log_2(5-x)+1 &= 0 \\
+\log_2(5-x)      &= \frac{1}{3} \\
+5-x              &= 2^{\tfrac{1}{3}} \\
+5-2^{\tfrac{1}{3}}    &= x 
+\end{align*}
+
+Just Checking:  $5-2^{\tfrac{1}{3}} \approx 3.74 \in (-\infty, 5)$ and agrees with the graph.
+
+
+\textbf{Continuity:} Logarithmic functions are continuous.
+
+\textbf{Behavior:}
+
+We can view $L(x) = -3 \log_2(5-x)+1$ as a composition of three functions.
+
+
+
+\begin{itemize}
+\item Let $\log_2(t)$, is an increasing Core logarithmic function.
+\item Let $L_{in}(u) = 5 - u$, is a decreasing linear function.
+\item Let $L_{out}(v) = -3 \, v + 1$, is a decreasing linear function.
+\end{itemize}
+
+Then, our general logarithmic function can be expressed as a composition.
+
+
+\[
+ L(x) = -3 \log_2(5-x)+1 = L_{out}(v) \circ \log_2(t) \circ L_{in}(x)
+\]
+
+
+The Chain Rule tells us that $dec \circ inc \circ dec = inc$
+
+$L(x)$ is an increasing function.
+
+Just Checking: This agrees with the graph.
+
+
+
+
+
+\textbf{End-Beavior:} $L$ only has end-behavior in only one direction.
+
+The domain of $L$ is $(-\infty, 5)$ and $L$ is an increasing logarithmic function.  The gives
+
+\[ \lim\limits_{x \to -\infty} L(x) = -\infty \]
+
+
+
+
+
+
+
+\textbf{Singularity Beavior:} 
+
+
+The domain of $L$ is $(-\infty, 5)$ and $L$ is an increasing logarithmic function.  The gives
+
+\[ \lim\limits_{x \to 5^-} L(x) = \infty \]
+
+
+
+
+
+\textbf{Global Maximum and Minimum:}  Logarithmic functions do not have a global maximum or global minimum.
+
+\textbf{Local Maximums and Minimums:} Logarithmic functions do not have local maximums or minimums.
+
+\textbf{Range:} The range of any logarithmic function is either $(-\infty, \infty)$.
 
 
 
@@ -139,7 +296,12 @@ The inside of the logarithm here is $5-x$ and this equals $0$ when $x=5$.  There
 
 
 
+Logarithmic functions either increase or they decrease.
 
+The domain and behavior can tell you which.
+
+
+This can also be summed up by comparing the base, the leading coefficient, and the leading coefficient of the linear inside function.
 
 
 
@@ -149,23 +311,9 @@ Our general template for logarithmic functions looks like
 log(x) = A \cdot \log_r(B \, x + C) + D
 \]
 
-Of we choose $e$ as the base, then they look like
 
 
-\[
-log(x) = A \cdot \ln(B \, x + C) + D
-\]
-
-
-\begin{itemize}
-  \item $A$ is the leading coefficent for the function.
-  \item $B$ is the leading coefficent of the inside (the argument).
-\end{itemize}
-
-
-Comparing these back to our basic logarithm functions, we get
-
-
+If the base $r > 1$, then
 
 \begin{itemize}
   \item $A > 0$ and $B > 0$ gives an increasing logarithmic function.
@@ -175,16 +323,29 @@ Comparing these back to our basic logarithm functions, we get
 \end{itemize}
 
 
-$\blacktriangleright$ When the leading coefficients are the same sign, then the logarithmic function is increasing. 
-
-$\blacktriangleright$ When the leading coefficients are different signs, then the logarithmic function is decreasing. 
 
 
 
+If the base $r < 1$, then everything is reversed (per the Chain Rule)
+
+\begin{itemize}
+  \item $A > 0$ and $B > 0$ gives an decreasing logarithmic function.
+  \item $A < 0$ and $B > 0$ gives a increasing logarithmic function.
+  \item $A > 0$ and $B < 0$ gives a increasing logarithmic function.
+  \item $A < 0$ and $B < 0$ gives an decreasing logarithmic function.
+\end{itemize}
+
+
+$\blacktriangleright$ When the leading coefficients are the same sign, then the behavior of the logarithmic function is the same as the Core function. 
+
+$\blacktriangleright$ When the leading coefficients are different signs, then the behavior of the logarithmic function is opposite the Core function.
 
 
 
-\subsection*{Basic Models}
+
+
+
+\subsection*{Mental Models}
 
 
 
@@ -302,22 +463,24 @@ And, then three other alternative choices, if you prefer.
 \begin{summary}\textbf{\textcolor{red!70!yellow}{Logarithmic Analysis}}
 
 
-\textbf{Domain:} 
+\textbf{Domain:} The domain of a logarithmic funciton is all real numebrs that make the inside function positive.
 
-\textbf{Zeros:} 
+\textbf{Zeros:} Every logarithmic funciton has exatly one zero.
 
-\textbf{Continuity:} 
+\textbf{Continuity:} All logarithmic functions are continuous.
 
-\textbf{End-Behavior:} 
+\textbf{End-Behavior:} Logarithmic functions have end-behavior in only one direction.  This behavior is also unbounded behavior, either positive or negative.
+
+In the other direction is the singularity. The singularity behavior is opposite of the end-behavior.
 
 
-\textbf{Behavior (Increasing and Decreasing):} 
+\textbf{Behavior (Increasing and Decreasing):} A logarithmic function is either increasing or it is decreasing.  The Chain Rule can tell you which.
 
-\textbf{Global Maximum and Minimum:} 
+\textbf{Global Maximum and Minimum:} Logarithmic funcitins do not have a global maximum or minium.
 
-\textbf{Local Maximums and Minimums:} 
+\textbf{Local Maximums and Minimums:}  Logarithmic functions do not have local maximums or miniums.
 
-\textbf{Range:} 
+\textbf{Range:} The range of a logarithmic function is always $(-\infty, \infty)$.
 
 
 
