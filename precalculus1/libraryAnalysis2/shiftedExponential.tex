@@ -25,11 +25,13 @@ charcateristics
 \subsection*{Shifted Exponential Functions}
 
 
-Shifted Exponential functions are sums of exponential functions constant functions. \\
+Shifted Exponential functions are sums of exponential functions and constant functions. 
 
-They are not exponential functions, because constant percentage growth doesn't work with an  added constant. \\
+They are not exponential functions, because constant percentage growth doesn't work with an added constant. 
 
-However, as far as function properties go, they are pretty much the same. \\
+However, as far as function properties go, they are quite similar.
+
+We can account for all of the leading coefficients and added constants through composition with linear functions. 
 
 
 
@@ -41,12 +43,34 @@ Our general template for shifted exponential functions looks like
 exp(x) = A \cdot r^{B \, x + C} + D
 \]
 
-Of we choose $e$ as the base, then they look like
+
+Shifted exponential functions can be viewed as compositions.
+
+
+
+\begin{itemize}
+\item Let $r^t$ be a Core exponential function.
+\item Let $L_{in}(u) = B \, u + C$ be a linear function.
+\item Let $L_{out}(v) = A \, v + D$ be a linear function.
+\end{itemize}
+
+Then, our general shifted exponential function can be expressed as a composition.
 
 
 \[
-exp(x) = A \cdot e^{B \, x + C} + D
+ A \cdot r^{B \, x + C} = L_{out}(v) \circ r^t \circ L_{in}(x)
 \]
+
+
+
+Now we can use the Chain Rule to establish whether an exponential function increases or decreases.
+
+
+
+
+
+
+
 
 
 \begin{example} Shifted Exponential Function
@@ -79,11 +103,11 @@ Here is the graph of $g(x) = \left(\frac{1}{3}\right)^x + 2$.
 \end{image}
 
 
-$g$ is the sum of an exponential function, $\left(\frac{1}{3}\right)^x$ and a constant $2$. \\
+$g$ is the sum of an exponential function, $\left(\frac{1}{3}\right)^x$, and the constant function $2$. 
 
 
 
-The exponential function values have all been increased by $2$.   \\
+The exponential function values have all been increased by $2$.   
 
 
 Graphically, the horizontal asymptote in the graph has shifted vertically by 2 units to $y=2$.
@@ -91,6 +115,30 @@ Graphically, the horizontal asymptote in the graph has shifted vertically by 2 u
 
 
 
+We can view $g(x)$ as a composition.
+
+
+
+
+\begin{itemize}
+\item Let $\left(\frac{1}{3}\right)^x$, a decreasing Core exponential function.
+\item Let $L_{out}(v) = v + 2$, an increasing linear function.
+\end{itemize}
+
+Then, $g(x)$ can be expressed as a composition.
+
+
+\[
+ g(x) = \left(\frac{1}{3}\right)^x + 2 = L_{out}(v) \circ \left(\frac{1}{3}\right)^x
+\]
+
+
+
+Now we can use the Chain Rule to establish whether $g(x)$ increases or decreases.
+
+\[  inc \circ dec = dec \]
+
+This agrees with the graph.
 
 \end{example}
 
@@ -106,7 +154,7 @@ f(x+1) = p \cdot f(x)
 \]
 
 
-All exponential functions CAN be written in the form $f(x) = p^{a \, x + b}$.  All exponenetial functions are a number raise to a linear function.  \\
+All exponential functions CAN be written in the form $f(x) = p^{a \, x + b}$.  All exponential functions are a number raised to a linear function.  
 
 
 \textbf{Note:} Since $p = e^{ln(p)}$, every exponential function CAN be written in the form $e^{a \, x + b}$.  So, we really only need study base $e$ exponential functions.
@@ -115,15 +163,15 @@ All exponential functions CAN be written in the form $f(x) = p^{a \, x + b}$.  A
 $\blacktriangleright$ Shifted exponential functions
 
 
-$y(x) = \left(\frac{1}{3}\right)^x + 2$ is not of the form $f(x) = p^{a \, x + b}$. \\  
+$y(x) = \left(\frac{1}{3}\right)^x + 2$ cannot be written in the form $f(x) = p^{a \, x + b}$. 
 
 
-The added constant term prevents $y(x)$ from being written in our exponential form.  It is not an exponential function. \\
+The added constant term prevents $y(x)$ from being written in our exponential form.  It is not an exponential function. 
 
-It is a shifted exponential form. \\
+It is a shifted exponential form. 
 
 
-However, for our purposes this still fits nicely into our overall exponential story.  So, shifted exponenetial functions are a part of the exponential story, just another chapter. \\
+However, for our purposes shited exponential functions fits nicely into our composition story.  So, shifted exponenetial functions are a part of the exponential story, just another chapter. 
 
 \[
 shexpf(x) = A \cdot e^{B \, x + C} + D
@@ -135,7 +183,7 @@ shexpf(x) = A \cdot e^{B \, x + C} + D
 
 
 
-In Calculus, we will see that when you write exponential formulas with base $e$, then nice things happen with the calculations.  So, we like base $e$. \\
+\textbf{Note:} In Calculus, we will see that when you write exponential formulas with base $e$, then nice things happen with the calculations.  So, we like base $e$. 
 
 
 
@@ -143,7 +191,11 @@ In Calculus, we will see that when you write exponential formulas with base $e$,
 \subsection*{Behavior}
 
 
-Shifted exponential functions behave similarly to exponential functions. \\
+Shifted exponential functions behave similarly to exponential functions. 
+
+Their behavior can be identified through the Chain Rule.
+
+If we write shifted exponential functions in terms of base $e$, then we can compare leading coefficients for behavior.
 
 \[
 shexp(x) = A \cdot e^{B \, x + C} + D
@@ -195,6 +247,54 @@ $shexp(x) = A \cdot e^{B \, x + C} + D$ will tend to $D$ in the tail where the e
 
 
 $shexp(x) = A \cdot e^{B \, x + C} + D$ will become unbounded in the tail where the exponent is positive.  The sign will be given by the leading coefficient, $A$. \
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{summary}\textbf{\textcolor{red!70!yellow}{Shifted Exponential Analysis}}
+
+
+\textbf{Domain:} The domain of every exponential function is $(-\infty, \infty)$.
+
+\textbf{Zeros:} 
+
+\textbf{Continuity:} 
+
+\textbf{End-Behavior:} 
+
+
+\textbf{Behavior (Increasing and Decreasing):} 
+
+\textbf{Global Maximum and Minimum:} 
+
+\textbf{Local Maximums and Minimums:} 
+
+\textbf{Range:} 
+
+
+
+\end{summary}
+
+
+
+
+
 
 
 

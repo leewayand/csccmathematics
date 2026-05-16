@@ -14,9 +14,9 @@ attributes
 
 Our Core exponential functions look like $r^x$. Not every exponential function can be represented with such formulas.
 
-If we allow a leading coefficient, then we get a template that covers half of the exponential functions.
+If we allow a leading coefficient, then we get a template that covers all the exponential functions. We can accomplish this through composition with linear functions.
 
-Once we are familiar with this basic template, we can describe all exponential functions through composition with linear functions.
+Once we are familiar with this Core template, we can describe all exponential functions through composition with linear functions.
 
 
 
@@ -25,7 +25,7 @@ Once we are familiar with this basic template, we can describe all exponential f
 
 
 \[
-exp(x) =  \cdot r^x \, \text{ with } \,  \text{ and } \, 0 > r > 1
+exp(x) =  r^x \, \text{ with } \,  \text{ and } \, 0 > r > 1
 \]
 
 
@@ -71,7 +71,7 @@ Here is the graph of $y = 2^x$.
 \end{image}
 
 
-The domain of a basic exponential function is all real numbers, $(-\infty, \infty)$.   
+The domain of a Core exponential function is all real numbers, $(-\infty, \infty)$.   
 
 Graphically, the horizontal axis is a horizontal asymptote.
 
@@ -220,7 +220,7 @@ Then, our general exponential function can be expressed as a composition.
 
 
 \[
- A \cdot r^{B \, x + C} = L_{out} \circ r^t \circ L_{in}
+ A \cdot r^{B \, x + C} = L_{out}(v) \circ r^t \circ L_{in}(x)
 \]
 
 
@@ -529,12 +529,12 @@ All exponential functions become unbounded in one direction, while approaching $
 Expoential functions are unbounded in the other direction. 
 
 
-Exponential funcitons can be unbounded positively or negatively. This is determined by the sign of the leading coefficient. 
+Exponential functions can be unbounded positively or negatively. This is determined by the sign of the leading coefficient. 
 
 
 
 
-Those are our basic exponential functions.  Pick one as your own basic exponential function. 
+Those are our basic exponential models.  Pick one as your own basic exponential function model to memorize. 
 
 
 
@@ -643,6 +643,52 @@ The exponent is $-x+1$.  This is negative in the positive tail of the domain. Th
 
 
 
+
+
+
+\begin{summary}\textbf{\textcolor{red!70!yellow}{Exponential Analysis}}
+
+
+\textbf{Domain:} The domain of every exponential function is $(-\infty, \infty)$.
+
+\textbf{Zeros:} Exponential functions do not have zeros.
+
+\textbf{Continuity:} Exponential functions are continuous.
+
+\textbf{End-Behavior:} In one direction, exponential functions become unbounded. In the other direction, exponential functions tend to $0$.
+
+
+When the base is greater than $1$,
+\begin{itemize}
+\item In the domain, when you move in the direction that makes the exponent unbounded negative, the function tends to $0$.
+\item In the domain, when you move in the direction that makes the exponent unbounded positive, the function is unbounded. Its sign is given by the leading coefficient.
+\end{itemize}
+
+
+
+
+When the base is less than $1$,
+\begin{itemize}
+\item In the domain, when you move in the direction that makes the exponent unbounded negative, the function is unbounded. Its sign is given by the leading coefficient.
+\item In the domain, when you move in the direction that makes the exponent unbounded positive, the function tends to $0$.
+\end{itemize}
+
+
+
+
+\textbf{Behavior (Increasing and Decreasing):} Exponential functions are either increasing or they are decreasing.
+
+The Chain Rule can tell you which.
+
+\textbf{Global Maximum and Minimum:}  Exponential functions do not have a global maximum or global minimum.
+
+\textbf{Local Maximums and Minimums:} Exponential functions do not have local maximums or minimums.
+
+\textbf{Range:} The range of an exponential function is either $(-\infty, 0)$ or it is $(0, \infty$.
+
+
+
+\end{summary}
 
 
 
