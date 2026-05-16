@@ -14,15 +14,11 @@ traits
 
 
 
+\subsection*{The Core Absolute Value Function}
 
-Absolute value makes negative numbers positive and leaves nonnegative numbers alone.  Of course, there is no algebra called "make positive".  Instead, we need a piecewise defined function.
-
-
-
+The Core absolute value function is a piecewsie defined function.
 
 
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Absolute Value}} 
 \[
 |k| = 
 \begin{cases}
@@ -30,9 +26,9 @@ Absolute value makes negative numbers positive and leaves nonnegative numbers al
    k & \text{if $k\ge 0$}.
 \end{cases}
 \]
-\end{definition}
 
-The symbol for the absolute value function are two vertical bars surrounding the domain value.
+
+
 
 
 
@@ -63,15 +59,83 @@ Graph of $y = |k|$.
 
 
 
+The symbol for the Core absolute value function are two vertical bars surrounding the domain value.
+
+The domain is $(-\infty, \infty)$.
+
+Its only zero is $0$.
+
+It is continuous.
+
+It is unbounded positively in both directions.
+
+It decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.
+
+It has a global minimum of $0$ at $0$ and no global maximum.  This is also the only local extreme number.
+
+Its range is $[0, \infty)$.
+
+
+
+All other absolute value functions are compositions of linear funcitons with the Core absolute value function.
 
 
 
 
 
 
-\begin{example}  Shifting
 
-Graph of $y = P(t) = |t+4|$.
+
+
+
+
+
+\subsection*{General Absolute Value Functions}
+
+Absolute value functions are those functions that can be represented by formulas of the form
+
+
+\[
+A \, |B \, x + C| + D  \, \text{ with }  \, A \ne 0, B \ne 0
+\]
+
+
+
+These can be viewed as compositions.
+
+
+
+
+\begin{itemize}
+\item Let $|t|$ be the Core absolute value function.
+\item Let $L_{in}(u) = B \, u + C$ be a linear function.
+\item Let $L_{out}(v) = A \, v$ be a linear function.
+\end{itemize}
+
+Then, our general absolute value function can be expressed as a composition.
+
+
+\[
+ A \, |B \, x + C| + D = L_{out}(v) \circ |t| \circ L_{in}(x)
+\]
+
+
+
+Now we can use the Chain Rule to establish whether an absolute value function increases or decreases.
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Absolute Value
+
+Graph of $y = P(t) = -3|2t+4|+5$.
 
 
 \begin{image}
@@ -87,30 +151,114 @@ Graph of $y = P(t) = |t+4|$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:6),<->] {abs(x+4)};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-4.33:0.33),<->] {-3*abs(2*x+4)+5};
         
 
   \end{axis}
 \end{tikzpicture}
 \end{image}
 
-The graph is positioned by its corner, which occurs when the inside of the absolute value formula equals $0$.  $t+4=0$, when $t=-4$.
-
-
-$P$ has a global minimum of $\answer{0}$, which occurs at $\answer{-4}$. $P$ has no maximums.
-
-$P$ decreases on $(-\infty, -4]$ and increases on $[-4, \infty)$ 
-
-
-
+The formula:
 
 \[
-P(t) = |t+4| = 
+P(t) = -3|2t+4|+5 = 
 \begin{cases}
-  -(t+4) & \text{if $t<\answer{-4}$,}\\
-   t+4 & \text{if $t\ge \answer{-4}$}.
+  (-3)(-(2t+4))+5 & \text{if $t < \answer{-2}$,}\\
+   -3(2t+4)+5 & \text{if $t \ge \answer{-2}$}.
 \end{cases}
 \]
+
+
+
+\textbf{Domain:} The domain of every absolute value function is $(-\infty, \infty)$.
+
+\textbf{Zeros:}
+
+\begin{center}
+$-3|2t+4|+5 = 0$
+
+$|2t+4| = \frac{5}{3}$
+
+Either $2t+4 = -\frac{5}{3}$ or $2t+4 = \frac{5}{3}$
+
+Either $t = \frac{1}{2} \left( -\frac{5}{3}-4 \right)$ or $t = \frac{1}{2} \eft(\frac{5}{3} - 4 \right)$
+
+\end{center}
+
+
+
+
+
+\textbf{Continuity:} Absolute value functions are continuous.
+
+\textbf{End-Behavior:} The leading coefficient is negative, therefore $P$ becomes unbounded negatively in either direction.
+
+\textbf{Behavior:} 
+
+We can view $P$ as a composition:
+
+
+
+\begin{itemize}
+\item Let $|x|$ be the Core absolute value function.
+\item Let $L_{in}(u) = 2 \, u + 4$, an increasing linear function.
+\item Let $L_{out}(v) = -3 \, v + 5$, a decreasinglinear function.
+\end{itemize}
+
+
+\[ P(t) = -3|2t+4|+5 = L_{out}(v) \circ |x| \circ L_{out}(t)\]
+
+
+$|x|$ switches from decreasing to increasing at $0$, so we need to locate where $L_{in} = 0$.
+
+
+$L_{in}(v) = 2 \, u + 4 = 0$ at $v = -2$
+
+
+
+On $\left( -\infty,  \frac{5}{3} \right)$ the values of $L_{in} < 0$ and the Core absolute value function is decreasing on $(-\infty, 0)$. 
+
+On $\left( -\infty,  \frac{5}{3} \right)$, the Chain Rule gives
+
+\[ dec \circ dec \circ inc = inc \]
+
+
+
+
+
+On $\left( \frac{5}{3}, \infty \right)$ the values of $L_{in} > 0$ and the Core absolute value function is increasing on $(0, \infty)$. 
+
+On $\left( \frac{5}{3}, \infty \right)$, the Chain Rule gives
+
+\[ dec \circ inc \circ inc = dec \]
+
+
+Just CHecking: This agrees with the graph.
+
+
+\textbf{Global Maximum and Minimum:}
+
+Since the leading coefficient is negative, $P$ has no global minimum value.
+
+$P$ switches from increasing to decreasing at $-2$, which means that $P(-2) = 5$ is global maximum value.
+
+
+\textbf{Local Maximums and Minimums:}  $P(-2) = 5$ is the only local maximum value. There are no local minimum values.
+
+\textbf{Range:} $P$ is continuous.  $5$ is its global maximum value. $P$ is unbounded negatively.  That gives a range of $(-\infty, 5]$.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134,49 +282,35 @@ P(t) = |t+4| =
 
 
 
-
-\begin{example}  Solving Equations
-
-Let $B(r) = |r-3| + 2$.
+\begin{summary}\textbf{\textcolor{red!70!yellow}{Absolute Value Analysis}}
 
 
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$r$, ylabel=$y$,
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-5:9),<->] {abs(x-3)+2};
-        
+\textbf{Domain:} The domain of every absolute function is $(-\infty, \infty)$.
 
-  \end{axis}
-\end{tikzpicture}
-\end{image}
+\textbf{Zeros:} Absolulte value functions can have 2 zeros, 1 zero, or no zeros.
+
+\textbf{Continuity:} Absolute value functions are continuous.
+
+\textbf{End-Behavior:} In both directions absolute values become unbounded with the same sign.  The leading coefficient gives the sign.
 
 
 
-$\blacktriangleright$ Solve $B(r) = 5$.
-
-We can see from the graph that there are two solutions to this equation. Our first goal in solving this equation is to get the absolute term by itself.
 
 
-$|r-3| + 2 = 5$
+
+\textbf{Behavior (Increasing and Decreasing):} Absolute value functions switch their behavior. The critical number is the real number that makes the inside equal to $0$.
+
+The Chain Rule can tell you which side is increasing and which side is decreasing.
+
+\textbf{Global Maximum and Minimum:}  Absolute value functions dhave either a global maximum or a global minimum.
+
+\textbf{Local Maximums and Minimums:} The global extrema is also the only local extrema.
+
+\textbf{Range:} The range of an absolute value function is either $(-\infty, D]$ or it is $[D, \infty)$.
 
 
-$|r-3| = 3$
 
-There are only two numbers whose absolute value is $3$.  They are $\answer{-3}$ or $\answer{3}$.
-
-We have two possibilities, either the inside of the absolute value, $r-3=-3$ or $r-3=3$.
-
-If $r-3=-3$, then $r=0$. If $r-3=3$, then $r=6$. 
+\end{summary}
 
 
 
@@ -188,53 +322,6 @@ If $r-3=-3$, then $r=0$. If $r-3=3$, then $r=6$.
 
 
 
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$r$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-           \addplot [line width=2, penColor, smooth, samples=200, domain=(-5:9),<->] {abs(x-3)+2};
-           \addplot [line width=2, penColor3, smooth, samples=200, domain=(-9:9)] {5};
-
-           \addplot[color=penColor,fill=penColor3,only marks,mark=*] coordinates{(0,5)};
-           \addplot[color=penColor,fill=penColor3,only marks,mark=*] coordinates{(6,5)};
-        
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-We can also turn to the definition of the absolute value function.
-
-
-The function $|r-3| + 2$ can be written as 
-
-
-
-\[
-|r-3| + 2 = 
-\begin{cases}
-  -(r-3) + 2  & \text{if $t<\answer{3}$,}\\
-   r-3 + 2  & \text{if $t\ge \answer{3}$}.
-\end{cases}
-\]
-
-
-We are looking for where $-(r-3) + 2 = 5$ and $ t < 3$  \\
-
-or \\
-
-where $(r-3) + 2 = 5$ and $t \ge 3$.  \\
-
-
-These produce the solutions $r=0$ and $r=6$
 
 
 
@@ -244,16 +331,11 @@ These produce the solutions $r=0$ and $r=6$
 
 
 
-
-\end{example}
-
+\subsection*{Reading Coeffients}
 
 
 
-
-
-\subsection*{Behavior}
-
+\textbf{Behavior}
 
 
 Formulas for absolute value functions look like
@@ -274,7 +356,7 @@ B \, x + C = 0
 \]
 
 
-The absolute value function increases on one side of the critical number and decreases on the other.  The sign of the leading coefficient determines which way it goes. \\
+The absolute value function increases on one side of the critical number and decreases on the other.  The sign of the leading coefficient determines which way it goes. 
 
 
 
@@ -292,10 +374,11 @@ The absolute value function increases on one side of the critical number and dec
 
 
 
-\subsection*{End-Behavior}
+
+\textbf{End-Behavior}
 
 
-The end-behavior is the same on both sides for an absolute value function. The sign of the leading coefficient determines which way it goes.\\
+The end-behavior is the same on both sides for an absolute value function. The sign of the leading coefficient determines which way it goes.
 
 
 If the leading coefficent is positive, then 
