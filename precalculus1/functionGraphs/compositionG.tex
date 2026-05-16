@@ -289,6 +289,176 @@ These two values tell us that $(f \circ w)(4) = \answer[tolerance=0.1]{-8}$
 
 
 
+\subsection*{The Chain Rule}
+
+
+The Chain Rule tells us when compositions are increasing and decreasing.
+
+
+
+
+
+
+\begin{fact}  \textbf{\textcolor{red!75!green!50}{$inc \circ inc = inc$}} 
+
+Let $f$ be an increasing function. \\
+Let $g$ be an increasing function.
+
+
+Let $a < b$.
+
+Since $f$ is an increasing function, we know that $f(a) < f(b)$.
+
+Now evaluate $g$ at $f(a)$ and $f(b)$.
+
+
+We have $f(a) < f(b)$ and $g$ is an increasing function. That give us $g(f(a)) < g(f(b))$
+
+
+
+\[ \text{If } \, a < b \, \text{then, } \, g(f(a)) < g(f(b)) \]
+
+That tells us that $g \circ f$ is an increasing function.
+
+\end{fact}
+
+
+
+
+
+
+
+
+\begin{fact}  \textbf{\textcolor{red!75!green!50}{$dec \circ inc = dec$}} 
+
+Let $f$ be an increasing function. \\
+Let $g$ be a decreasing function.
+
+
+Let $a < b$.
+
+Since $f$ is an increasing function, we know that $f(a) < f(b)$.
+
+Now evaluate $g$ at $f(a)$ and $f(b)$.
+
+
+We have $f(a) < f(b)$ and $g$ is a decreasing function. That give us $g(f(a)) > g(f(b))$
+
+
+
+\[ \text{If } \, a < b \, \text{then, } \, g(f(a)) > g(f(b)) \]
+
+That tells us that $g \circ f$ is a decreasing function.
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{fact}  \textbf{\textcolor{red!75!green!50}{$inc \circ dec = dec$}} 
+
+Let $f$ be a decreasing function. \\
+Let $g$ be an increasing function.
+
+
+Let $a < b$.
+
+Since $f$ is a decreasing function, we know that $f(a) > f(b)$.
+
+Now evaluate $g$ at $f(a)$ and $f(b)$.
+
+
+We have $f(a) > f(b)$ and $g$ is an increasing function. That give us $g(f(a)) > g(f(b))$
+
+
+
+\[ \text{If } \, a < b \, \text{then, } \, g(f(a)) > g(f(b)) \]
+
+That tells us that $g \circ f$ is a decreasing function.
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{fact}  \textbf{\textcolor{red!75!green!50}{$dec \circ dec = inc$}} 
+
+Let $f$ be a decreasing function. \\
+Let $g$ be a decreasing function.
+
+
+Let $a < b$.
+
+Since $f$ is a decreasing function, we know that $f(a) > f(b)$.
+
+Now evaluate $g$ at $f(a)$ and $f(b)$.
+
+
+We have $f(a) > f(b)$ and $g$ is a decreasing function. That give us $g(f(a)) < g(f(b))$
+
+
+
+\[ \text{If } \, a < b \, \text{then, } \, g(f(a)) < g(f(b)) \]
+
+That tells us that $g \circ f$ is an increasing function.
+
+\end{fact}
+
+
+
+
+\begin{theorem} \textbf{\textcolor{-red!75!green}{The Chain Rule}} 
+
+\[ inc \circ inc = inc \]
+
+\[ dec \circ inc = dec \]
+
+\[ inc \circ dec = dec \]
+
+\[ dec \circ dec = inc \]
+
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
