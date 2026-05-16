@@ -157,12 +157,12 @@ The global minimum value is $-1$, which occurs at $\{ \frac{3\pi}{2} + 2k\pi \, 
 
 
 
-\textbf{Local Maximums and Minimums:}  The global maximum and minimum are the obly local extrema.
+\textbf{Local Maximums and Minimums:}  The global maximum and minimum are the only local extrema.
 
 
 
 
-\textbf{Range:} The range of the Core sine funciton is $[-1, 1]$.
+\textbf{Range:} The range of the Core sine function is $[-1, 1]$.
 
 
 \end{summary}
@@ -193,6 +193,124 @@ The global minimum value is $-1$, which occurs at $\{ \frac{3\pi}{2} + 2k\pi \, 
 \subsection*{The Core Cosine}
 
 
+We get the Core cosine function by viewing the $x$-coordinates of the unit circle as a function of the angle.
+
+
+
+As you travel counterclockwise around the circle from the point $(1,0)$, the $x$-coordinate of the points
+
+\begin{itemize}
+\item decrease from $1$ to $0$ and then to $-1$, then
+\item increase from $-1$ to $0$ and then to $1$
+\end{itemize}
+
+This keeps repeating with each full circle, counterclockwise (positive angles) or clockwise (negative angles).
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-1.5,-1,-0.5,0.5,1,1.5},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$, $\tfrac{-\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$1.5$,$-1$,$-0.5$,$0.5$,$1$,$1.5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            %\addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            %\node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            \node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The general cosine function will be seen as compositions of the Core cosine function and two linear functions.
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{red!70!yellow}{Cosine Analysis}}
+
+
+\textbf{Domain:} The domain of the Core cosine function is all real numbers, $(-\infty, \infty)$. 
+
+\textbf{Zeros:} The zeros of the Core sine function are $\{ \frac{\pi}{2}  + k\pi \, | \, k \in \mathbb{Z} \}$.
+
+\textbf{Continuity:} The Core cosine function is continuous.
+
+\textbf{End-Behavior:} The Core cosine function keeps oscillating between $1$ and $-1$.
+
+
+
+\textbf{Behavior (Increasing and Decreasing):} The Core cosine function switches between increasing and decreasing with a period of $2\pi$.
+
+On the interval $[0 , 2\pi)$, the Core cosine function
+
+\begin{itemize}
+\item decreases on $(0, \pi)$
+\item increases on $(\pi, 2\pi)$
+\end{itemize}
+
+
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} 
+
+The global maximum value is $1$, which occurs at $\{ 2k\pi \, | \, k \in \mathbb{Z} \}$.
+
+
+The global minimum value is $-1$, which occurs at $\{  (2k+1)\pi \, | \, k \in \mathbb{Z} \}$.
+
+
+
+
+\textbf{Local Maximums and Minimums:}  The global maximum and minimum are the only local extrema.
+
+
+
+
+\textbf{Range:} The range of the Core cosine function is $[-1, 1]$.
+
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -206,7 +324,7 @@ The global minimum value is $-1$, which occurs at $\{ \frac{3\pi}{2} + 2k\pi \, 
 \subsection*{The Core Tangent}
 
 
-Rational functions were quotients of polynomials.  We can do the same with trigonometric functions.
+Rational functions were quotients of polynomials.  We can also create quotients with trigonometric functions.
 
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Tangent}} 
@@ -276,6 +394,89 @@ Tangent is always \wordChoice{\choice[correct]{increasing} \choice{decreasing}} 
 Tangent is unbounded and has no global or local maximums or minimums.
 
 Tangent has an infinite number of zeros. They coincide with the zeros of \wordChoice{\choice[correct]{sine} \choice{cosine}} : $\{  k \pi    \, | \,   k \in \textbf{Z}        \}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{summary} \textbf{\textcolor{red!70!yellow}{Tangent Analysis}}
+
+
+\textbf{Domain:} The domain of the Core tangent function is all real, except the zeros of cosine. 
+
+\[ (-\infty, \infty) -  \{ \frac{\pi}{2}  + k\pi \, | \, k \in \mathbb{Z} \} \]
+
+
+Another way to say this is the domain is the union of all intervals of the form 
+
+\[ \left(  -\frac{\pi}{2}  + k\pi, \frac{\pi}{2}  + k\pi   \right) \, | \, k \in \mathbb{Z}   \]
+
+
+These real numbers left out of the domain are singularities of tangent.
+
+
+
+\textbf{Zeros:} The zeros of the Core tangent are the zeros of the Core sine function, which are $\{ \frac{\pi}{2}  + k\pi \, | \, k \in \mathbb{Z} \}$.
+
+\textbf{Continuity:} The Core tangent function is continuous.
+
+\textbf{End-Behavior:} The Core tangent function keeps repeating with a period of $\pi$.
+
+It does become unbounded near its singularities.
+
+
+\[
+\lim\limits_{\theta \to -\frac{\pi}{2}^+} \tan(\theta) = -\infty
+\]
+
+
+\[
+\lim\limits_{\theta \to \frac{\pi}{2}^-} \tan(\theta) = \infty
+\]
+
+
+
+
+
+\textbf{Behavior (Increasing and Decreasing):} The Core tangent function is an increasing function.
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} The Core tangent function has no global maximum or minimum.
+
+
+
+
+\textbf{Local Maximums and Minimums:}  The Core tangent function has no local maximums or minimums.
+
+
+
+
+\textbf{Range:} The range of the Core cosine function is $[-1, 1]$.
+
+
+\end{summary}
+
+
+
+
+
+
+
+
+
 
 
 
