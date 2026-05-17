@@ -56,8 +56,7 @@ Graphs display pairs.  The dots included in the graph are visually encoding the 
 
 
 
-
-\begin{explanation} \textbf{Video: Formulas and Graphs}
+\begin{explanation} \textbf{\textcolor{red!75!green}{Video: Formulas and Graphs}}
 
 [ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
@@ -128,23 +127,23 @@ The arrows indicate that the graph continues with the same pattern - illustratin
 \textbf{\textcolor{red!70!black}{A Peek Ahead}}
 
 
-Much of this course will be spent investigating rate of change. \\
+Much of this course will be spent investigating ``rate of change'' (growth rate). 
 
-\textbf{Linear functions} have a constant growth rate or rate of change.  Whenever the domain changes by a given amount, then the function changes by a constant multiple of that \textbf{\textcolor{purple!85!blue}{domain change}}. \\
+\textbf{Linear functions} have a constant growth rate or rate of change.  Whenever the domain changes by a given amount, then the function changes by a constant multiple of that \textbf{\textcolor{purple!85!blue}{domain change}}. 
 
-Linear functions have a constant growth rate.    \\
-
-
+Linear functions have a constant growth rate.    
 
 
 
-Later in this course, we'll compare this to a constant percentage growth rate, which characterizes \textbf{exponential functions}. Whenever the domain changes by a given amount, then the function changes by a constant percentage of the current \textbf{\textcolor{blue!55!black}{function value}}.  A constant percentage growth rate results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$. \\
+
+
+Later in this course, we'll compare this to a constant percentage growth rate, which characterizes \textbf{exponential functions}. Whenever the domain changes by a given amount, then an exponential function changes by a constant percentage of the current \textbf{\textcolor{blue!55!black}{function value}}.  A constant percentage growth rate results in a formula of the form $E(t) = a \cdot r^t$, where $a$ is a nonzero real number and $0 < r$. 
 
 
 
 \begin{example}
 
-Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$. \\
+Let $E(t) = 2 \cdot 1.25^t$ with a domain consisting of all real numbers, $\mathbb{R}$. 
 
 When $t$ changes from $a$ to $a+1$, $E$ grows by $25\%$ of $E(a)$.  Whenever $t$ changes by $1$, $E$ grows by $25\%$, because the function value is multiplied by another $1.25 = 1 + 0.25$.
 
@@ -173,7 +172,8 @@ Since $1.25 > 1$, whenever the domain number, $t$, increases, so does $E(t)$.  $
           ]
           
           \addplot [draw=penColor,very thick,smooth,domain=(-10:7),<->] {2*(1.25^x)};
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+         
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
            
 
   \end{axis}
@@ -230,7 +230,8 @@ Since $0.8 < 1$, whenever the domain number, $t$, increases, $X(t)$ decreases.  
           ]
           
           \addplot [draw=penColor,very thick,smooth,domain=(-7:10),<->] {2*(0.8^x)};
-          %\addplot [color=penColor,only marks,mark=*] coordinates{(-2,-7) (4,5)};
+          
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
            
 
   \end{axis}
@@ -260,7 +261,7 @@ The graph of an exponential function attempts to level off at a height of $0$.  
 
 \subsection*{Zeros}
 
-The real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties.  $0$ also sets itself aside with properties different from both the negative and positive real numbers. \\
+The real numbers experience a significant change in behavior at $0$.  The positive and negative numbers possess drastically different algebraic properties.  $0$ also sets itself aside with properties different from both the negative and positive real numbers. 
 
 
 For one thing, anything times $0$ is $0$.
@@ -282,7 +283,7 @@ In the other direction, we have the \textbf{\textcolor{purple!85!blue}{Zero Prod
 \begin{definition}  \textbf{\textcolor{green!50!black}{Zero Product Property}} \\
 
 
-Suppose $A$ and $B$ are two real numbers such that $A \cdot B = 0$. \\
+Suppose $A$ and $B$ are two real numbers such that $A \cdot B = 0$. 
 
 
 Then, either $A = 0$ or $B = 0$.
@@ -309,7 +310,7 @@ For these reasons, we are interested in where functions have zero values.
 
 
 
-\begin{definition}  \textbf{\textcolor{green!50!black}{a Zero}} \\
+\begin{definition}  \textbf{\textcolor{green!50!black}{a Zero}} 
 
 
 A \textbf{domain number} where a function value has the value $0$ is called a \textbf{zero} of the function.
@@ -330,7 +331,7 @@ Zeros of functions correspond to intercepts on the graph.
 
 
 
-$\blacktriangleright$ If $a$ is a zero of the function $f$, then $(a, f(a)) = (a, 0)$ is a point on the graph of $f$. \\
+$\blacktriangleright$ If $a$ is a zero of the function $f$, then $(a, f(a)) = (a, 0)$ is a point on the graph of $f$. 
 
 
 $\blacktriangleright$ If $(a, 0)$ is a point on the graph of $f$, then $f(a) = 0$ and $a$ is a zero of $f$.
@@ -348,14 +349,14 @@ $\blacktriangleright$ If $(a, 0)$ is a point on the graph of $f$, then $f(a) = 0
 \end{center}
 
 
-Zeros of a function are numbers. \\
+Zeros of a function are numbers. 
 
-Zeros of a function are domain numbers. \\
+Zeros of a function are domain numbers. 
 
-Zeros of a function are visually encoded as intercept dots on a graph.  These are points on a graph, not zeros of a function. \\
+Zeros of a function are visually encoded as intercept dots on a graph.  These are points on a graph, not zeros of a function. 
 
 
-Graphs are not functions.  The are graphical tools we use to investigate and examine functions. \\
+Graphs are not functions.  They are graphical tools we use to investigate and examine functions. 
 
 
 We have language for graphs.  We have lanaguage for functions.  They are different.
@@ -366,8 +367,7 @@ We have language for graphs.  We have lanaguage for functions.  They are differe
 
 
 
-
-\begin{explanation} \textbf{Video: Function Zeros}
+\begin{explanation} \textbf{\textcolor{red!75!green}{Video: Function Zeros}}
 
 [ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
@@ -460,7 +460,7 @@ The arrows on the graph of $P$ let us know that the graph keeps rising to the le
 
 \subsection*{Domain Types}
 
-We encounter functions in several ways, each affecting the domain of a function.
+We encounter functions in several ways, each expressing the domain of a function in a different way.
 
 \begin{enumerate}
 \item  \textbf{\textcolor{green!50!black}{stated domain}}   \\
@@ -478,7 +478,7 @@ We use functions to model many measuring situations. In such cases, we want our 
 
 
 \item \textbf{\textcolor{green!50!black}{induced domain}}  \\
-We often create new functions from old functions. We have a laundry list of ways to accomplish this.  One method is to keep the function structure the same and simply move the domain to another location. We'll study these types of transformations extensively. For the moment, an example will give the idea. \\
+We often create new functions from old functions. We have a laundry list of ways to accomplish this.  One method is to keep the function structure the same and simply move the domain to another location. We'll study these types of transformations extensively. For the moment, an example will give the idea. 
 
 
 
@@ -501,8 +501,7 @@ The domain of $g$ is $[-6, 1]$ and it was induced (forced) from the domain of $f
 
 
 
-
-\begin{explanation} \textbf{Video: Domain Types}
+\begin{explanation} \textbf{\textcolor{red!75!green}{Video: Domain Types}}
 
 [ Click on the arrow to the right to expand the video. ]
 \begin{expandable} 
@@ -520,9 +519,9 @@ The domain of $g$ is $[-6, 1]$ and it was induced (forced) from the domain of $f
 
 
 
-\begin{warning} \textbf{\textcolor{red!90!darkgray}{Problems}}   \\
+\begin{warning} \textbf{\textcolor{red!70!darkgray}{Problems}}   
 
-The natural or implied domain can be deduced from a formula by collecting all of the real numbers that don't cause a problem in the formula. \\
+The natural or implied domain can be deduced from a formula by collecting all of the real numbers that don't cause a problem in the formula. 
 
 What are the problems with formulas?
 
