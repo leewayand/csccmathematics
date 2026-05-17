@@ -40,7 +40,7 @@ We use functions to describe an ordered application of actions. We might see thi
 
 Let $F$ and $G$ be two functions.
 
-The composition of $F$ and $G$ is another function called the composition of $F$ and $G$.  A circle between the function names denotes a composition.
+The composition of $F$ and $G$ is another function built from pieces of $F$ and $G$. A circle between the function names denotes a composition.
 
 \[
 F \circ G
@@ -52,15 +52,15 @@ F \circ G
 \]
 
 
-The composition applies $G$ to an element of the domain of $G$ and then uses the resulting function value from $G$ as a domain number of $F$ obtaining a function value of $F$.
+The composition applies $G$ to an element of the domain of $G$ and then uses the resulting function value from $G$ as a domain member of $F$ obtaining a function value of $F$.
 
-This ultimate value of $F$ from this process is the value of $F \circ G$.
+This ultimate value of $F$ from this process is the value of $F \circ G$ at the original domain balue of $G$.
 
 \end{definition}
 
 
 
-Composition is our way of representing an ordered application of processes.
+Composition is our way of representing an ordered application or processes.
 
 
 
@@ -118,10 +118,12 @@ Dressing(\includegraphics{pics/0.png}) = Pants(Shirts(\includegraphics{pics/0.pn
 
 \end{example}
 
-Everything has to fit together.
+Everything has to fit together for a composition to work.
 
 
-The domain of \textbf{Dressing} is a subset of the domain of \textbf{Shirts}.  The range of \textbf{Dressing} is a subset of the range of \textbf{Pants}.
+The domain of \textbf{Dressing} is a subset of the domain of \textbf{Shirts}.  
+
+The range of \textbf{Dressing} is a subset of the range of \textbf{Pants}.
 
 
 
@@ -191,7 +193,7 @@ Dressed(\includegraphics{pics/9.png}) = Person(Outfit(\includegraphics{pics/9.pn
 \end{example}
 
 
-\textbf{Note:} IN the previous example, we could not form the composition Outfit $\circ$ Person, because the values of the function Person are not members of the domain of the function Outfit.
+\textbf{Note:} In the previous example, we could not form the composition Outfit $\circ$ Person, because the values of the function Person are not members of the domain of the function Outfit.
 
 
 
@@ -202,7 +204,7 @@ Dressed(\includegraphics{pics/9.png}) = Person(Outfit(\includegraphics{pics/9.pn
 
 \subsection*{A New Function}
 
-The composition of two functions is a new function. It glues two existing functions together to form a brand new function.
+The composition of two functions is a new function. It links together two existing functions together to form a brand new function.
 
 \begin{itemize}
 \item The domain of the composition is a subset of the domain of the first (inner) function.
@@ -234,13 +236,13 @@ If they don't match up, then we must adjust the domain of the outer function.
 
 \begin{explanation} Matching
 
-Situation:
+Consider this situation:
 
 We have two functions: $Inner$ and $Outer$.
 
 We want to form the composition: $Outer \circ Inner$.
 
-Suppose $a$ is in the domain of $inner$, but $inner(a)$ is not a member of the domain of $outer$.
+Suppose $a$ is in the domain of $Inner$, but $Inner(a)$ is not a member of the domain of $Outer$.
 
 In this case, we need to remove $a$ from the domain of the composition.
 
@@ -318,7 +320,7 @@ We must modify the domain.
 
 
 
-We had to remove both \includegraphics{pics/20.png} and \includegraphics{pics/19.png}. They both had \includegraphics{pics/2.png} as their image in the $Inner$ function.
+We had to remove both \includegraphics{pics/20.png} and \includegraphics{pics/19.png}, because they both had \includegraphics{pics/2.png} as their image in the $Inner$ function.
 
 This also affected the range.
 
@@ -339,7 +341,7 @@ This is very common.
 
 This type of domain and range modification for compositions happens all of the time.
 
-We will encounter this kind of activity every time we look at compositions, which is all of the time.
+We will encounter this kind of activity every time we look at compositions, which is all the time.
 
 
 
