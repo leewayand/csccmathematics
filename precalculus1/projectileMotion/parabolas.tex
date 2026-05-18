@@ -19,13 +19,13 @@ We have three forms for quadratic functions (or equations):
 
 
 
-$\blacktriangleright$ $S(x) = A \, x^2 + B \, x + C$  with $A \ne 0$ : Standard Form. \\
+$\blacktriangleright$ $S(x) = A \, x^2 + B \, x + C$  with $A \ne 0$ : Standard Form. 
 
 
-$\blacktriangleright$ $F(t) = A \, (t - r_1)(t - r_2)$  with $A \ne 0$ : Factored Form. \\
+$\blacktriangleright$ $F(t) = A \, (t - r_1)(t - r_2)$  with $A \ne 0$ : Factored Form. 
 
 
-$\blacktriangleright$ $V(d) = A \, (d - h)^2 + k$  with $A \ne 0$ : Vertex Form. \\
+$\blacktriangleright$ $V(d) = A \, (d - h)^2 + k$  with $A \ne 0$ : Vertex Form. 
 
 
 
@@ -201,17 +201,59 @@ In addition, the intercepts represent the zeros of the quadratic function and we
 
 
 
-\begin{example}   Analyze $f(x) = x^2 + 4 \, x - 5$ with its natural domain    \\ 
+\begin{example}  Analysis 
+
+
+
+Analyze $f(x) = x^2 + 4 \, x - 5$ with its natural domain    
 
 
 
 
-\begin{explanation} Analysis \\
+\textbf{\textcolor{red!75!green}{explanation}} 
 
-$f$ is a quadratic function, since it matches the standard form, $A \, x^2 + B \, x + C$. \\
+$f$ is a quadratic function, since it matches the standard form, $A \, x^2 + B \, x + C$. 
+
+It is always helpful to have the graph nearby for refernce.
 
 
-et's get the other two forms.
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+               xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+               ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+
+        \addplot [draw=penColor, very thick, smooth, domain=(-6.12:2.12),<->] {(x+5)*(x-1)};
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9.5:9.5)] ({3},{x});
+        
+
+
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-2,-9)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(-5,0)};
+        \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
+
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+Let's get the other two forms.
 
 Factored form: $f(x) = (x+5)(x-1)$. \\
 
@@ -222,24 +264,24 @@ Vertex form: $f(x) = (x+2)^2 - 9$ \\
 
 \textbf{Domain}
 
-$f$ is a quadratic function, therefore its domain is $(-\infty, \infty)$. \\
+$f$ is a quadratic function, therefore its domain is $(-\infty, \infty)$. 
 
 
 
 \textbf{Zeros}
 
-From the factored form, we can see that $-5$ and $1$ are the zeros of $f(x)$.  \\
+From the factored form, we can see that $-5$ and $1$ are the zeros of $f(x)$.  
 
 
 \textbf{Continuity}
 
-$f$ is a quadratic function, therefore it is continuous. Quadratic functions donot have singularities.\\
+$f$ is a quadratic function, therefore it is continuous. Quadratic functions do not have singularities.
 
 
 
 \textbf{End-Behavior}
 
-$f$ is a quadratic function, with a positive leading coefficient. Therefore, its end-behavior is unbounded positively in both directions. \\
+$f$ is a quadratic function, with a positive leading coefficient. Therefore, its end-behavior is unbounded positively in both directions. 
 
 \[
 \lim\limits_{x \to -\infty} f(x) = \infty 
@@ -255,7 +297,7 @@ $f$ is a quadratic function, with a positive leading coefficient. Therefore, its
 
 \textbf{Behavior}
 
-$f$ is a quadratic function, with a positive leading coefficient. Therefore, it will decreas and then increase. It switches behavior at the domain number for the vertex, which is
+$f$ is a quadratic function, with a positive leading coefficient. Therefore, it will decrease and then increase. It switches behavior at the domain number for the vertex, which is
 
 
 \[
@@ -263,7 +305,7 @@ $f$ is a quadratic function, with a positive leading coefficient. Therefore, it 
 \]
 
 
-$f$ decreases on $(-\infty, -2)$ and increases on $(-2, \infty )$. \\
+$f$ decreases on $(-\infty, -2)$ and increases on $(-2, \infty )$. 
 
 
 
@@ -271,7 +313,7 @@ $f$ decreases on $(-\infty, -2)$ and increases on $(-2, \infty )$. \\
 \textbf{Maximum and Minimum}
 
 
-Since $f$ decreases on $(-\infty, -2)$ and increases on $(-2, \infty )$, we have a global minimum at $-2$.   The minimum value is $f(-2) = -9$. This is also a local minimum and is the only local extrema.\\
+Since $f$ decreases on $(-\infty, -2)$ and increases on $(-2, \infty )$, we have a global minimum at $-2$.   The minimum value is $f(-2) = -9$. This is also a local minimum and is the only local extrema.
 
 
 $\lim\limits_{x \to -\infty} f(x) = \infty$ tells us that there is no global maximum. \\
@@ -281,15 +323,15 @@ $\lim\limits_{x \to -\infty} f(x) = \infty$ tells us that there is no global max
 
 \textbf{Range}
 
-$f$ is continuous, with a global maximum and unbounded positively. \\
+$f$ is continuous, with a global maximum and unbounded positively. 
 
-The range is $[-9, \infty)$. \\
+The range is $[-9, \infty)$. 
 
 
 
 \textbf{\textcolor{purple!85!blue}{A Nice Graph}}
 
-$f$ is a quadratic function and will have a parabola for a graph.
+$f$ is a quadratic function and has a parabola for a graph.
 
 
 From any of the three forms, we can see that the leading coefficient is $1$, which is positive.  Thus, our parabola will open up.
