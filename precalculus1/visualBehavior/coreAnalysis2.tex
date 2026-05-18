@@ -14,49 +14,64 @@ Part 2
 
 
 
-As a starting point for function analysis, let's think a bit about our Core Functions.
+As a starting point for function analysis, let's list characteristics of our Core Functions. A full analysis would also provide reasoning.
 
 
-\begin{explanation} \textbf{\textcolor{red!75!green}{The Exponential Function}} 
+\begin{explanation} \textbf{\textcolor{red!75!green}{Exponential Functions}} 
 
 
-\[ E(x) = e^x  \]
+\[ E(x) = r^x  \, \text{ where } \, r > 0  \, \text{ and } \, r \ne 1 \]
 
-where is $e$ approximately $2.718281828$.
+
 
 \textbf{Domain:} The domain $(-\infty, \infty)$.
 
-\textbf{Zeros:} The Core Exponential Function has no zeros.
+\textbf{Zeros:} Core Exponential Functions have no zeros.
 
 
 
-\textbf{Continuity:} The Core Exponential Function is contiuous.
+\textbf{Continuity:} Core Exponential Functions are contiuous.
 
-\textbf{End-Behavior:} The Core Exponential Function tends to $0$ as the domain becomes unbounded negatively. The Core Exponential Function tends to $\infty$ as the domain becomes unbounded positively.
+
+
+\textbf{End-Behavior:} 
+
+
+
+If $r > 1$, the Core Exponential Functions tend to $0$ as the domain becomes unbounded negatively. Core Exponential Functions tend to $\infty$ as the domain becomes unbounded positively.
 
 
 
 \[
-\lim\limits_{x \to \infty} e^x = \infty
+\lim\limits_{x \to \infty} r^x = \infty
 \]
 
 
 \[
-\lim\limits_{x \to -\infty} e^x = 0
+\lim\limits_{x \to -\infty} r^x = 0
 \]
 
 
+If $0 < r < 1$, then this is reversed.
+
+
+
+\textbf{Behavior (Inc/Dec):} 
+
+
+If $r > 1$, then Core Exponential Functions are increasing functions.
+
+If $0 < r < 1$, then Core Exponential Functions are decreasing functions.
 
 
 
 
-\textbf{Behavior (Inc/Dec):} The Core Exponential Function is an increasing function.
 
-\textbf{Global Maximum and Minimum:} The Core Exponential Function has no global maximum or minimum.
+\textbf{Global Maximum and Minimum:} Core Exponential Functions have no global maximum or minimum.
 
-\textbf{Local Maximum and Minimum:}  The Core Exponential Function has no local maximums or minimums.
+\textbf{Local Maximum and Minimum:}  Core Exponential Functions have no local maximums or minimums.
 
-\textbf{Range:} The range of the Core Exponential Function is $(0,\infty)$.
+\textbf{Range:} The range of a Core Exponential Function is either $(0,\infty)$ or $(-\infty, 0)$.
 
 \end{explanation}
 
@@ -70,34 +85,54 @@ where is $e$ approximately $2.718281828$.
 
 
 
-\begin{explanation} \textbf{\textcolor{red!75!green}{The Natural Logarithm Function}} 
+\begin{explanation} \textbf{\textcolor{red!75!green}{Core Logarithmic Functions}} 
 
 
-\[ L(x) = \ln(x)  \]
+\[ L(x) = \log_r(x)  \]
 
 
 
 \textbf{Domain:} The domain $(0, \infty)$.
 
-\textbf{Zeros:} The Natural Logarithm Function has no zeros.
+\textbf{Zeros:} Core Logarithmic Function have $1$ as their only zero.
 
 
 
-\textbf{Continuity:} The Natural Logarithm Function is contiuous.
-
-\textbf{End-Behavior:} Since the domain in $(0, \infty)$, The Natural Logarithm Function only end-behavior as the domain become unbounded positively.
+\textbf{Continuity:} Core Logarithmic Functions are contiuous.
 
 
+
+\textbf{End-Behavior:} Since the domain is $(0, \infty)$, Core Logarithmic Functions only end-behavior as the domain become unbounded positively.
+
+
+If $r > 1$, then
 
 \[
-\lim\limits_{x \to \infty} \ln(x) = \infty
+\lim\limits_{x \to \infty} \log_r(x) = \infty
 \]
 
 
 The other side is called Singularity Behavior.
 
 \[
-\lim\limits_{x \to 0^+} \ln(x) = -\infty
+\lim\limits_{x \to 0^+} \log_r(x) = -\infty
+\]
+
+
+
+
+
+If $0 < r < 1$, then
+
+\[
+\lim\limits_{x \to \infty} \log_r(x) = -\infty
+\]
+
+
+The other side is called Singularity Behavior.
+
+\[
+\lim\limits_{x \to 0^+} \log_r(x) = \infty
 \]
 
 
@@ -105,13 +140,26 @@ The other side is called Singularity Behavior.
 
 
 
-\textbf{Behavior (Inc/Dec):} The Natural Logarithm Function is an increasing function.
 
-\textbf{Global Maximum and Minimum:} The Natural Logarithm Function has no global maximum or minimum.
+\textbf{Behavior (Inc/Dec):} C
 
-\textbf{Local Maximum and Minimum:}  The Natural Logarithm Function has no local maximums or minimums.
 
-\textbf{Range:} The range of the Core Exponential Function is $(-\infty,\infty)$.
+
+
+If $r > 1$, then Core Logarithmic Functions are increasing functions.
+
+
+If $0 < r < 1$, then Core Logarithmic Functions are decreasing functions.
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} Core Logarithmic Functions have no global maximum or minimum.
+
+\textbf{Local Maximum and Minimum:}  Core Logarithmic Functions have no local maximums or minimums.
+
+\textbf{Range:} The range of Core Logarithmic Functions is $(-\infty,\infty)$.
 
 \end{explanation}
 
