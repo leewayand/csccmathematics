@@ -13,7 +13,7 @@ characteristics and features
 
 
 
-Piecewise functions are defined by using pieces of other functions. Since we are now familiar with linear and quadratic functions, let's build a piecewise function, from linear and quadratic pieces. \\
+Piecewise functions are defined by using pieces of other functions. Since we are now familiar with linear and quadratic functions, let's build a piecewise function, from linear and quadratic pieces. 
 
 
 
@@ -99,11 +99,10 @@ The domain is $[-6, -2] \cup (-2, 4] \cup (4,6) = [-6, 6)$.
 
 \subsection*{Zeros} 
 
-The formula for $V$ includes two linear functions and a quadratic function.  If these did not have restricted domains, then we would have expected $4$ zeros.\\
+The formula for $V$ includes two linear functions and a quadratic function.  If these did not have restricted domains, then we would have expected $4$ zeros.
 
 
-However, the graph suggests that the domain restrictions only permit two of them.  We can find the zeros for each component function and then see if they lie in the corresponding domain interval. \\
-
+However, the graph suggests that the domain restrictions only permit two of them.  We can find the zeros for each component function and then see if they are members of the corresponding domain interval. 
 
 
 
@@ -112,9 +111,9 @@ $\blacktriangleright$ The left piece.
 
 \begin{explanation}
 
-The formula for the left piece is $-2h-3$.  This would give the zero $-\frac{3}{2}$. \\
+The formula for the left piece is $-2h-3$.  This would give the zero $-\frac{3}{2}$. 
 
-However, the left piece ofg $V$ is restricted to the domain numbers inside $[-6,-2]$ and $-\frac{3}{2} \notin [-6,-2]$.
+However, the left piece of $V$ is restricted to the domain numbers inside $[-6,-2]$ and $-\frac{3}{2} \notin [-6,-2]$.
 
 \end{explanation}
 
@@ -128,15 +127,15 @@ $\blacktriangleright$ The middle piece.
 \begin{explanation}
 
 
-We are solving $-(h+3)(h-3) = 0$.  Since this is in factored form, we can quickly see the candidates are $-3$ and $3$.   \\
+We are solving $-(h+3)(h-3) = 0$.  Since this is in factored form, we can quickly see the candidates are $-3$ and $3$.   
 
 
-The domain interval for the middle piece is $(-2,4]$. \\
+The domain interval for the middle piece is $(-2,4]$. 
 
 
-$\answer{-3} \notin (-2,4]$. \\
+$\answer{-3} \notin (-2,4]$. 
 
-$\answer{3} \in (-2,4]$. \\
+$\answer{3} \in (-2,4]$. 
 
 
 Therefore, $V$ has $\answer{3}$ as its only zero contributed from the quadratic piece.
@@ -151,12 +150,12 @@ $\blacktriangleright$ The right piece.
 \begin{explanation}
 
 
-We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a possible zero of $V$. \\
+We are solving $\frac{7h}{4} - 8 = 0$.  This give $\frac{32}{7}$ as a possible zero of $V$. 
 
 
-The domain interval for the right piece is $(4, 6)$. \\
+The domain interval for the right piece is $(4, 6)$. 
 
-$\frac{32}{7} \in (4, 6)$. \\
+$\frac{32}{7} \in (4, 6)$. 
 
 
 \end{explanation}
@@ -176,7 +175,7 @@ $\frac{32}{7} \in (4, 6)$. \\
 \subsection*{Continuity} 
 
 
-Linear and quadratic functions are continuous functions. They are continous on restricted domains, which is what we have with piecewise defined functions.  $V(h)$ is continuous on $[-6, -2]$, $(-2, 4]$, and $(4, 6)$.  These correspond to the intervals in the definition of $V(h)$. \\
+Linear and quadratic functions are continuous functions. They are continous on restricted domains, which is what we have with piecewise defined functions.  $V(h)$ is continuous on $[-6, -2]$, $(-2, 4]$, and $(4, 6)$.  These correspond to the intervals in the definition of $V(h)$. 
 
 Therefore, we only need to check the endpoints of the intervals.  Here, those endpoints would be $\{ -6, -2, 4, 6 \}$, individually.
 
@@ -197,33 +196,41 @@ From the graph, we can see that
 \end{observation}
 
 
-This will help direct our algebraic explanations. \\
+This will help direct our algebraic explanations. 
 
 
-The graph is suggesting that $-2$ and $4$ are discontinuities.  We have an algebraic definition for discontinuities.  Let's see if these domain numbers satisfy the definition. \\
-
-
-
+The graph is suggesting that $-2$ and $4$ are discontinuities.  We have an algebraic definition for discontinuities.  Let's see if these domain numbers satisfy the definition. 
 
 
 
-\begin{explanation} Discontinuity at $-2$
 
 
-Let $\epsilon > 0$ be any very small positive number.  Consider the corresponding interval, $(-2 - \epsilon, -2 + \epsilon)$.
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{Discontinuity at $-2$}} 
+
+
+Let's examine $V$ on the left side of $-2$.
+
+
+Let $\epsilon > 0$ be any very small positive number.  We are considering domain numbers in the interval, $(-2 - \epsilon, -2 + \epsilon)$.
+
 
 \begin{itemize}
-\item On $(-2 - \epsilon, -2)$, the values of $V$ are near $1$. \\
+\item Claim: On $(-2 - \epsilon, -2)$, the values of $V$ are near $1$. 
 
-\begin{itemize}
-  \item This is because $V$ is a linear function on $[-6, -2]$.
-  \item $V$ is decreasing on $[-6, -2]$, because its formula has a negative leading coeffcient.
-\end{itemize}
 
-$V(h)$ is decreasing on $[-6, -2]$. \\
-Which means $V(-6) >= V(a) >= V(b) >= V(-2)$ for all $a < b \in [-6, -2]$ \\
+On $(-2 - \epsilon, -2) \subset [-6, -2]$, which tells us that $V(h) = -2h-3$.
 
-Let's select $a = -2 - \epsilon$ and $b = -2$. \\
+$V$ is a linear function on $[-6, -2]$.
+
+$V$ is decreasing on $[-6, -2]$, because its linear formula has a negative leading coeffcient.
+
+
+Since, $V(h)$ is decreasing on $[-6, -2]$, we have  
+
+\[ V(-6) \geq V(a) \geq V(b) \geq V(-2) \, \text{ for all } \, a < b \in [-6, -2] \]
+
+Let's select $a = -2 - \epsilon$ and $b = -2$. 
 
 \[
 V(-2 - \epsilon) = -2 (-2 - \epsilon) - 3 = 4 + 2 \epsilon - 3 = 1 + 2 \epsilon 
@@ -234,45 +241,72 @@ V(-2) = 1
 \]
 
 
-Remember, $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure $1 + 2 \epsilon < 2$. \\
 
+So, we have $1 + 2\epsilon \geq V(a) \geq 1$ for $a \in (-2 - \epsilon, -2)$.
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) >= 1$.
+$V$ is near $1$ on $(-2 - \epsilon, -2)$.
 
-Now for the other side. \\
-
-
-
-\item On $(-2, -2 + \epsilon)$, the values of $V$ are not near $2$.  They are around $7$. Let's verify this algebraically. \\
+This also means that $V$ is not near $2$. $V(h) < 1$ on $(-2 - \epsilon, -2)$.
 
 
 
-On this interval, $V(h) = 9 - h^2$. It is a quadratic function.  And, from the graph, it looks like $V \approx 7$ on this interval. How do we say this algebraically?  \\
+We can see this by remembering that $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure $1 + 2 \epsilon < 2$. 
 
 
-Let's think for a moment.  If $V(h) = -(h + 3)(h - 3) = 9 - h^2$ was going to be near $2$, then we would need $h \approx -\sqrt{7}$.  \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 \geq V(h) \geq 1$.
 
-But, $-\sqrt{7} \notin (-2, -2 + \epsilon)$, since $-\sqrt{7} < -2$.  \\
+Now for the other side. 
 
-\textbf{Note:} $h \approx \sqrt{7}$ would also make $V$ near $2$, but $\sqrt{7} \notin (-2, -2 + \epsilon)$, since the interval only contains negative numbers.\\
-
-Let's glue this all together with algebraic and function reasoning. \\
+Now for the right side of $-2$.
 
 
 
 
 
-\begin{itemize}
-  \item $V$ is a quadratic function on $(-2, -1]$. 
-  \[
-V(h) = -(h + 3)(h - 3) = -h^2 -9
-  \]
-  \item The critical number of $V$ is $\frac{-b}{2a} = \frac{0}{-2} = 0$.
-  \item $V$ is increasing on $(-2, -1]$, because its formula has a negative leading coeffcient and we are considering numbers less than $0$.
-\end{itemize}
 
-$V(h)$ is increasing on $(-2, -1]$. \\
-Which means $V(a) <= V(b) <= V(-1)$ for all $a < b \in (-2, -1]$ \\
+
+
+
+
+\item On $(-2, -2 + \epsilon)$, the graph suggests that the values of $V$ are not near $2$.  They are around $7$. Let's verify this algebraically. 
+
+
+
+On $(-2, -2 + \epsilon)$, $V(h) = 9 - h^2$. It is a quadratic function.  
+
+
+Let's think for a moment.  If $V(h) = -(h + 3)(h - 3) = 9 - h^2$ was going to be near $2$, then we would need $h \approx -\sqrt{7}$.  
+
+But, $-\sqrt{7} \notin (-2, -2 + \epsilon)$, since $-\sqrt{7} < -2$.  
+
+\textbf{Note:} $h \approx \sqrt{7}$ would also make $V$ near $2$, but $\sqrt{7} \notin (-2, -2 + \epsilon)$, since the interval only contains negative numbers.
+
+Let's glue this all together with algebraic and function reasoning. 
+
+
+
+
+
+$V$ is a quadratic function on $(-2, -1]$. 
+
+  \[ V(h) = -(h + 3)(h - 3) = -h^2 -9 \]
+
+
+The critical number of $V$ is $\frac{-b}{2a} = \frac{0}{-2} = 0$.
+
+
+$V$ is increasing on $(-2, -1]$, because its formula has a negative leading coeffcient and we are considering numbers less than the critical number $0$.
+
+
+
+
+
+
+$V(h)$ is increasing on $(-2, -1]$, which means 
+
+
+
+\[ V(a) \leq V(b) \leq V(-1) \, \text{ for all } \, a < b \in (-2, -1] \]
 
 Let's select $a = -2 + \epsilon$ and $b = -1$. \\
 
@@ -285,30 +319,32 @@ V(-1) = 8
 \]
 
 
-Remember, $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure  \\
+Remember, $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure  
 
 
 \[
-1 + \epsilon >= 1
+1 + \epsilon \geq 1
 \]
 
 \[
-5 -  \epsilon >= 5 -  \frac{1}{2} = \frac{9}{2}
+5 -  \epsilon \geq 5 -  \frac{1}{2} = \frac{9}{2}
 \]
 
+That tells us that
 
+\[ V(-2 + \epsilon) =  \(1 + \epsilon) (5 - \epsilon) \geq \frac{9}{2} \]
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2, -2 + \epsilon)$, we have
 
 
 \[
-V(h) >= 1 \cdot \frac{9}{2} = \frac{9}{2}
+V(h) \geq 1 \cdot \frac{9}{2} = \frac{9}{2}
 \]
 
 
 
-On $(-2, -2 + \epsilon)$, we have $V(h) >=  \frac{9}{2}$.
+On $(-2, -2 + \epsilon)$, we have $V(h) \geq  \frac{9}{2}$.
 
 
 
@@ -316,18 +352,25 @@ On $(-2, -2 + \epsilon)$, we have $V(h) >=  \frac{9}{2}$.
 \end{itemize}
 
 
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 >= V(h) >= 1$. \\
-
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} On $(-2, -2 + \epsilon)$, we have $V(h) >=  \frac{9}{2}$. \\
+What have we discovered?
 
 
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 \geq V(h) \geq 1$. 
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} On $(-2, -2 + \epsilon)$, we have $V(h) \geq  \frac{9}{2}$. 
+
+The left side is always less than $2$.
+
+The right side is always greater than $\frac{9}{2}$.
+
+
+There is always a gap in the function values.
 
 
 Following the definition of discontinuity, let's pick a distance of $1$.
 
 
-No matter how small $\epsilon$ is, $(-2 - \epsilon, -2 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains a domain number, $a \in (-2, -2 + \epsilon)$, such that the distance between $V(a)$ and $V(-2)$ is greater than $1$.
+No matter how small $\epsilon$ is, $(-2 - \epsilon, -2 + \epsilon)$ \textbf{\textcolor{red!70!darkgray}{ALWAYS}} contains a domain number, $a \in (-2, -2 + \epsilon)$, such that the distance between $V(a)$ and $V(-2)$ is greater than $1$.
 
 This tells us that there is a discontinuity at $-2$.
 
@@ -343,29 +386,36 @@ This tells us that there is a discontinuity at $-2$.
 \begin{idea}
 
 
-We are trying to get away from specific numbers. \\
+We are trying to get away from specific numbers. 
 
-We are trying to think of types of numbers. \\
+We are trying to think of types of numbers. 
 
-We are trying to think of ``types'' as algebraic conditions or relationships. \\
-
-
-This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$ (epsilon).  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird. \\
+We are trying to think of ``types'' as algebraic conditions or relationships. 
 
 
-But we need better language and notation to talk about discontiuities. \\
+This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$ (epsilon).  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird. 
 
-It is coming. \\
 
-Limits will replace a lot of this kind of explanation. \\
+But we need better language and notation to talk about discontinuities. 
 
-Instead of talking about $\epsilon$, we will use limit notation to talk about expected values. \\
+It is coming. 
+
+Limits will replace a lot of this kind of explanation. 
+
+Instead of talking about $\epsilon$, we will use limit notation to talk about expected values. 
+
+
+
+\[
+\lim\limits_{h \to -2^-} V(h) = 1
+\]
+
 
 \[
 \lim\limits_{h \to -2^+} V(h) = 7
 \]
 
-For now, we are figuring out how to talk about ``small'' numbers. \\
+For now, we are figuring out how to talk about ``small'' numbers. 
 
 \end{idea}
 
@@ -377,13 +427,13 @@ For now, we are figuring out how to talk about ``small'' numbers. \\
 
 
 
-\begin{explanation} Discontinuity at $4$
+\begin{explanation} \textbf{\textcolor{red!75!green}{Discontinuity at $4$}}  
 
 
-Let $\epsilon > 0$ be a small positive number.  Consider the corresponding interval, $(4 - \epsilon, 4 + \epsilon)$.
+Let $\epsilon > 0$ be a small positive number.  Consider the interval, $(4 - \epsilon, 4 + \epsilon)$.
 
 \begin{itemize}
-\item On $(4 - \epsilon, 4)$, the values of $V$ are less than $-6$.
+\item On $(4 - \epsilon, 4]$, the values of $V$ are less than or equal to $-6$.
 \item On $(4, 4 + \epsilon)$, the values of $V$ are greater than $-2$.
 \end{itemize}
 
@@ -391,7 +441,7 @@ Let $\epsilon > 0$ be a small positive number.  Consider the corresponding inter
 Following the definition of discontinuity, let's pick a distance of $1$.
 
 
-No matter how small $\epsilon$ is, $(4 - \epsilon, 4 + \epsilon)$ \textbf{\textcolor{red!90!darkgray}{ALWAYS}} contains (at least) one domain number, $a \in (4, 4 + \epsilon)$, such that the distance between $V(a)$ and $V(4)$ is greater than $1$.
+No matter how small $\epsilon$ is, $(4 - \epsilon, 4 + \epsilon)$ \textbf{\textcolor{red!70!darkgray}{ALWAYS}} contains (at least) one domain number, $a \in (4, 4 + \epsilon)$, such that the distance between $V(a)$ and $V(4)$ is greater than $1$.
 
 This tells us that there is a discontinuity at $4$.
 
@@ -405,7 +455,7 @@ This tells us that there is a discontinuity at $4$.
 
 Graphs are inherently inaccurate.  We cannot be exact with them.  They hide stuff all of the time. We need better ways, algebraic ways, of talking about types of discontinuities: ``jump'', ``removeable'', and ``asymptotic''.
 
-Our algebraic notation to talk about function behavior around discontinuities and singularities will be called \textbf{\textcolor{purple!85!blue}{limits}}.  Limits have already made an appearance helping us describe end-behavior, algebraically.
+Our algebraic notation to talk about function behavior around discontinuities and singularities is called \textbf{\textcolor{purple!85!blue}{limits}}.  Limits have already made an appearance helping us describe end-behavior, algebraically. They will slowly take over our thinking for Calculus.
 \end{notation}
 
 
@@ -420,9 +470,9 @@ Our algebraic notation to talk about function behavior around discontinuities an
 \subsection*{End-Behavior} 
 
 
-End-behavior describes what the function is doing out in the ``tails'' of the domain.  But, here, the domain of $V$ is bounded.  There are no tails. \\
+End-behavior describes what the function is doing out in the ``tails'' of the domain.  But, here, the domain of $V$ is bounded.  There are no tails. 
 
-$V$ has no end-behavior. \\
+$V$ has no end-behavior. 
 
 
 
@@ -456,7 +506,7 @@ This agrees with the graph.
 
 \begin{question}
 
-On the domain interval $(4, 6)$. \\
+On the domain interval $(4, 6)$. 
 
 \begin{itemize}
 \item \textbf{$\frac{7h}{4} - 8$} is a linear function with a constant rate of change of $\answer{\frac{7}{4}}$ telling us that $V$ is \wordChoice{\choice[correct]{increasing} \choice{decreasing}} on $(4, 6)$.
@@ -548,7 +598,7 @@ Lastly, \\
 
 
 
-\textbf{\textcolor{blue!55!black}{Put the Pieces Together}} \\ 
+\textbf{\textcolor{blue!55!black}{Put the Pieces Together}} \
 
 
 We have several candidates for maximums and minimums of $V$. These occur at the critical numbers.\\
@@ -564,17 +614,17 @@ We have several candidates for maximums and minimums of $V$. These occur at the 
 
 
 
-Our analysis of the pieces leaves us with a global maximum value of $9$ for $V$.  $9$ occurs twice.  Once at $-6$ and then again at $0$. \\
+Our analysis of the pieces leaves us with a global maximum value of $9$ for $V$.  $9$ occurs twice.  Once at $-6$ and then again at $0$. 
 
-Our analysis of the pieces leaves us with a global minimum value of $-7$ for $V$. $-7$ occurs once at $4$. \\
-
-
-
-Each of these global extrema are also local extrema.  \\
+Our analysis of the pieces leaves us with a global minimum value of $-7$ for $V$. $-7$ occurs once at $4$. 
 
 
 
-In addition we a local minimum value of $1$ occuring at $-2$.  
+Each of these global extrema are also a local extrema.  
+
+
+
+In addition, we have a local minimum value of $1$ occuring at $-2$.  
 
 
 
@@ -612,19 +662,19 @@ $\blacktriangleright$ We know that the instantaneous rate of change of the middl
 
 $\blacktriangleright$ We know that the instantaneous rate of change of the left linear is $iRoC_V(h) = V' = -2$
 
-$\blacktriangleright$ We know that the instantaneous rate of change of the right linear is $iRoC_V(h) V' = = \frac{7}{4}$
+$\blacktriangleright$ We know that the instantaneous rate of change of the right linear is $iRoC_V(h) = V' = \frac{7}{4}$
 
 
 
 The only place where the $iRoC_V(h) = V' = 0$ is at $0$, therefore, $0$ is a critical number.
 
 
-We also include domain numbers where the $iRoC_V = V'$ does not exist.  \\
+We also include domain numbers where the $iRoC_V = V'$ does not exist.  
 
-This would include the discontinuities $-2$ and $4$. \\
+This would include the discontinuities $-2$ and $4$. 
 
 
-This would also include domain numbers which are endpoints of intervals in the domain, like $-6$. Even though there is a tangent line at $(-6, 9)$, $-6$ is automatically a critical number, since there are not two sides.
+This would also include domain numbers which are endpoints of intervals in the domain, like $-6$. Even though there exists a tangent line at $(-6, 9)$, $-6$ is automatically a critical number, since there are not two sides.
 
 
 
@@ -643,7 +693,7 @@ These are exactly the places we have been investigating for possible maximums an
 \subsection*{Range} 
 
 
-Since each piece of $V$ is continuous, the ranges of the three pieces of $V$ are $[1, 9]$, $[-7, 9]$, and $\left( -1, \frac{2}{5} \right)$. \\
+Since each piece of $V$ is continuous, the ranges of the three pieces of $V$ are $[1, 9]$, $[-7, 9]$, and $\left( -1, \frac{2}{5} \right)$. 
 
 The range of $V$ is their union.
 
@@ -666,12 +716,12 @@ The range of $V$ is their union.
 \section*{Extrema : More Generally}
 
 
-The extreme values of a function are the maximum and minimum values.  There are two types of each. \\
+The extreme values of a function are the maximum and minimum values.  There are two types of each. 
 
-The global maximum and minimum values are the overall greatest and least values of the function.  There can be at most one global maximum value (there might not be an actual global maximum value). There can be at most one global minimum value (there might not be an actual global minimum value).  These two values can occur at many domain numbers.\\
+The global maximum and minimum values are the overall greatest and least values of the function.  There can be at most one global maximum value (there might not be an actual global maximum value). There can be at most one global minimum value (there might not be an actual global minimum value).  These two values can occur at many domain numbers.
 
 
-Local maximum and minimum values are greatest and least values that occur in a ``neighborhood'' of a domain number.  There can be many local extrema values that occur at many domain numbers. \\
+Local maximum and minimum values are greatest and least values that occur in a ``neighborhood'' of a domain number.  There can be many local extrema values that occur at many domain numbers. 
 
 
 \begin{itemize}
@@ -681,7 +731,7 @@ Local maximum and minimum values are greatest and least values that occur in a `
 \item Graphically, local minimum values are visually encoded as the bottoms of valleys on the graph.
 \end{itemize}
 
-also, \\
+also, 
 
 \begin{itemize}
 \item Graphically, local extrema values can be visually encoded as endpoints.
@@ -699,23 +749,23 @@ also, \\
 
 
 
-\begin{template} \textbf{\textcolor{blue!55!black}{Extrema}} \\
+\begin{template} \textbf{\textcolor{blue!55!black}{Extrema}} 
 
 As the function above illustrates, there are several places where extrema occur for functions.
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Horizontal Tangent Lines \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Horizontal Tangent Lines 
 
-A highest or lowest point on a graph can occur where a tangent line is horizontal, or has a $0$ slope.  These would correspond to tops of hills and bottoms of valleys in the graph. The corresponding domain number is a critical number. \\
-
-
+A highest or lowest point on a graph can occur where a tangent line is horizontal, or has a $0$ slope.  These would correspond to tops of hills and bottoms of valleys in the graph. The corresponding domain number is a critical number. 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Endpoints \\
 
-Extreme values can happen at the endpoints of domain intervals. If the endpoint does not have two sides in the domain, then it is automatically a critical number.  If it does have two sides in the domain, then further investigation is required. \\
 
-\textbf{\textcolor{red!70!darkgray}{Peek Ahead:}} A graph can have a tangent line at an endpoint on a graph.  However, the derivative doesn't exist there since there is only one side.  In Calculus, we will talk about a one-sided derivative for these cases. \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Endpoints 
+
+Extreme values can happen at the endpoints of domain intervals. If the endpoint does not have two sides in the domain, then it is automatically a critical number.  If it does have two sides in the domain, then further investigation is required. 
+
+\textbf{\textcolor{red!70!darkgray}{Peek Ahead:}} A graph can have a tangent line at an endpoint on a graph.  However, the derivative doesn't exist there since there is only one side.  In Calculus, we will talk about a one-sided derivative for these cases. 
 
 \end{template}
 
@@ -727,14 +777,14 @@ Extreme values can happen at the endpoints of domain intervals. If the endpoint 
 
 
 
-\begin{template} \textbf{\textcolor{blue!55!black}{Extrema}} \\
+\begin{template} \textbf{\textcolor{blue!55!black}{Extrema}} 
 
-We have other places where an extreme value can occur. \\
+We have other places where an extreme value can occur. 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Vertical Tangent Lines \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Vertical Tangent Lines 
 
-An extreme value can occur at domain numbres that correspond to ponits where a tangent line is vertical, or has no slope.  These would correspond to cusps in the graph. \\
+An extreme value can occur at domain numbers that correspond to points where a tangent line is vertical (and so has no slope - no derivative).  These would correspond to cusps in the graph. 
 
 
 
@@ -767,7 +817,7 @@ An extreme value can occur at domain numbres that correspond to ponits where a t
 \end{image}
 
 
-This graph has a tangent line at $(3, -3)$.  It is a vertical line and vertical lines do not have a slope. \\
+This graph has a tangent line at $(3, -3)$.  It is a vertical line and vertical lines do not have a slope. 
 
 
 
@@ -777,9 +827,9 @@ This graph has a tangent line at $(3, -3)$.  It is a vertical line and vertical 
 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Corners \\
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Corners 
 
-An extreme value can occur at a domain number that corresponds to a point where no tangent line exists.  These would correspond to corners in the graph. \\
+An extreme value can occur at a domain number that corresponds to a point where no tangent line exists.  These would correspond to corners in the graph. 
 
 
 
@@ -824,7 +874,7 @@ This graph has no tangent line at $(3, -5)$.
 
 
 
-We can sum up this ideas as follow: \\
+We can sum up this ideas as follow: 
 
 
 
@@ -832,9 +882,7 @@ We can sum up this ideas as follow: \\
 \begin{center}
 
 
-\textbf{\textcolor{red!70!darkgray}{Candidates for locations of extrema values are critical numbers.}} \\
-
-\textbf{\textcolor{red!70!darkgray}{Domain numbers where the derivative is $0$ or Does Not Exist.}}
+\textbf{\textcolor{red!70!darkgray}{Candidates for locations of extrema values are critical numbers, which are domain numbers where the derivative is $0$ or Does Not Exist.}}
 
 
 \end{center}
