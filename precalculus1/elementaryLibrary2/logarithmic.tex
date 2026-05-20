@@ -19,7 +19,7 @@ reverse
 
 \section*{Backwards}
 
-What if we have a function value for an exponential function and we would like to know which domain numbers are associated with it?  In other words, we would like to solve
+What if we have a function value for an exponential function and we would like to know which domain numbers are associated with it?  In other words, if $g_0$ is a member of the range, then we would like to solve
 
 
 \[    g(t) = A \cdot r^t  =   g_0    \]
@@ -32,7 +32,10 @@ How would we solve for $t$?
 
 
 
-\begin{example} If the function value ``works well'', then we could probably guess.
+\begin{example} Backwards
+
+
+If the function value ``works well'', then we could probably guess.
 
 Let $T(f) = 4 \cdot 3^f$.  
 
@@ -78,9 +81,9 @@ That is a specific number. We can see from the graph that there is only one such
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
-            domain=-10:10, ymax=20, xmax=10, ymin=-10, xmin=-10,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10,12,14,16,18},
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
@@ -107,6 +110,7 @@ We can see from the general shape of the graph of an exponential function that a
 
 
 \begin{example}
+
 The following are all descriptions that identify unique real numbers.
 
 \begin{itemize}
@@ -144,7 +148,8 @@ The number  you raise $a$ to, to get $b$ is called the \textbf{logarithm base a 
 The symbol for the logarithm base a of b is $\log_a(b)$.
 
 
-$\log_a(b)$ is  the number you raise $a$ to, to get $b$.
+\textbf{\textcolor{red!75!green}{$\log_a(b)$ is  the number you raise $a$ to, to get $b$.}} 
+
 
 \[     a^{\log_a(b)} = b          \]
 
@@ -158,14 +163,15 @@ $\log_a(b)$ is  the number you raise $a$ to, to get $b$.
 
 
 \begin{example}
+
 The following are all descriptions that identify unique real numbers.
 
 \begin{itemize}
-\item The number that you raise $5$ to, to get $97$ is $\log_5(97)$. \\
-\item The number that you raise $\frac{3}{4}$ to, to get $6$ is $\log_{\tfrac{3}{4}}(6)$. \\
-\item The number that you raise $7$ to, to get $\frac{1}{2}$ is $\log_7\left(\frac{1}{2}\right)$. \\
-\item The number that you raise $101$ to, to get $34$ is $\log_{101}(34)$. \\
-\item The number that you raise $10$ to, to get $1,000$ is $\log_{10}(1000)$. \\
+\item The number that you raise $5$ to, to get $97$ is $\log_5(97)$. 
+\item The number that you raise $\frac{3}{4}$ to, to get $6$ is $\log_{\tfrac{3}{4}}(6)$. 
+\item The number that you raise $7$ to, to get $\frac{1}{2}$ is $\log_7\left(\frac{1}{2}\right)$. 
+\item The number that you raise $101$ to, to get $34$ is $\log_{101}(34)$. 
+\item The number that you raise $10$ to, to get $1,000$ is $\log_{10}(1000)$. 
 \end{itemize}
 
 \end{example}
@@ -214,7 +220,7 @@ It sounds like we have a new category of functions (a Core function).
 
 
 
-\begin{idea} \textbf{\textcolor{green!50!black}{Core Logarithmic Functions}}
+\begin{idea} \textbf{\textcolor{blue!55!black}{Core Logarithmic Functions}}
 
 Our \textbf{Core Logarithmic Function} is a function that \textbf{\textcolor{purple!85!blue}{can}} be represented by formulas of the form
 
@@ -324,7 +330,7 @@ On the interval $(0,1)$, we are looking at $\log_{\tfrac{1}{2}}(x)$ for $0<x<1$.
 
 
 
-
+Our Elementary Function version of logarithmic functions is the Core funciton composed with linear functions.
 
 
 
@@ -350,7 +356,7 @@ The domain is all positive real numbers that make the inside positive.
 We can think of these as compostions of our Core logarithmic functions with linear functions.
 
 
-\begin{idea} \textbf{\textcolor{green!50!black}{Logarithmic Functions}}
+\begin{idea} \textbf{\textcolor{blue!55!black}{Logarithmic Functions}}
 
 
 Let $Log(k) = \log_r(x) $ be a Core logarithmic function.

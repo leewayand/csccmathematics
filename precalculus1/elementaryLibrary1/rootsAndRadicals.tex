@@ -257,7 +257,7 @@ The graph of $y = R(t) = -2 \sqrt{4 t - 5} + 1 $
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(1.25:8),->] {-2*x^(4*x-5)+1};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(1.25:8),->] {-2*((4*x-5)^0.5)+1};
           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.25,1)};
 
 
