@@ -39,7 +39,7 @@ where the $a_k$ and $b_k$ are real numbers and $a_n \ne 0$ and $b_m \ne 0$.
 
 
 
-Again, we prefer polynomials in factored form.  \\
+Again, we prefer polynomials in factored form.  
 
 
 Therefore, usually our first step is to transform the rational function to look like
@@ -51,9 +51,9 @@ Therefore, usually our first step is to transform the rational function to look 
 
 
 
-And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist only of linear and irreducible quadratics.  Therefore, we will leave factors of irreducible quadratics to the next course. \\
+And, again, we will be able to obtain a product of linear factors with the addition of complex numbers.  With real numbers we can get these products to consist only of linear and irreducible quadratics.  Therefore, we will leave factors of irreducible quadratics to the next course. 
 
-As our first step, let's consider rational functions that do factor into linear factors with real numbers. \\
+As our first step, let's consider rational functions that do factor into linear factors with real numbers. 
 
 
 
@@ -79,7 +79,7 @@ Finally, we would like to clean up the factors and group them together
 Suppose the numerator and denominater share a root, $r_i = s_j$.  Then we can reduce the expression but we must remember that $s_j$ is not in the domain.
 
 
-With that reduction in mind, let's assume that we have reduced the rational expression and there are no shared roots between the numerator and denominator. \\
+With that reduction in mind, let's assume that we have reduced the rational expression and there are no shared roots between the numerator and denominator. 
 
 
 
@@ -103,9 +103,9 @@ $\blacktriangleright$ \textbf{Numerator}
 
 
 
-The numerator is a polynomial.  Each factor gives a root or zero of the function, which corresponds to an intercept on the graph. \\
+The numerator is a polynomial.  Each factor gives a root or zero of the function, which corresponds to an intercept on the graph. 
 
-If the multiplicity of the root is odd, then the function changes sign and the graph crosses the axis at this intercept.  \\
+If the multiplicity of the root is odd, then the function changes sign and the graph crosses the axis at this intercept.  
 If the multiplicity of the root is even, then the graph does not cross the axis at this intercept and the function maintains its sign. 
 
 
@@ -116,13 +116,13 @@ If the multiplicity of the root is even, then the graph does not cross the axis 
 $\blacktriangleright$ \textbf{Denominator}
 
 
-The denominator is a polynomial.  Each factor gives a root or zero of the denominator, which corresponds to a singularity of the rational function and a vertical asymptote on the graph. \\
+The denominator is a polynomial.  Each factor gives a root or zero of the denominator, which corresponds to a singularity of the rational function and a vertical asymptote on the graph. 
 
 
 The factors in the denominator still affect the sign of the function values.
 
 
-If the multiplicity of the singularity is odd, then the function changes sign and the graph jumps to the other end of the vertical asymptote.  \\
+If the multiplicity of the singularity is odd, then the function changes sign and the graph jumps to the other end of the vertical asymptote.  
 If the multiplicity of the singularity is even, then the function does not change sign and the graph does not jump to the other end of the vertical asymptote. 
 
 
@@ -176,19 +176,58 @@ The graph of $y = H(w) = \frac{(w-1)}{(w+3) (w-4)} $
 
 
 
+\textbf{Domain:} $H$ is a rational function, so its domain is all real numbers except the zeros of the denominator, which are $-3$ and $4$.
+
+\[  (-\infty, -3) \cup (-3, 4) \cup (4, \infty)  \]
 
 
-The numerator has the factor $w-1$, which has multiplicity $\answer{1}$, odd.  Therefore $H$ has $\answer{1}$ as a root and the graph has $(1,0)$ as its only intercept, the only place where the graph crosses the horizontal $w$-axis.
+\textbf{Zeros:}
 
-
-The denominator has two factors $w+3$ and $w-4$.  Both have \wordChoice{\choice[correct]{odd} \choice {even}}  multiplicity, therefore, the function changes sign over these singularities and the graph jumps to the other end of the vertical asymptotes.
-
-
-The degree of the denominator is larger than the degree of the numerator, therefore the $w$-axis is a horizontal asymptote.
+The numerator has the factor $w-1$, therefore $H$ has $\answer{1}$ as its only root.
 
 
 
-The end-behavior is
+\textbf{Continuity:} $H$ is a rational function, so it is continuous.
+
+
+Since, they make the denominator $0$, $-3$ and $4$ are singularities of $H$. \\
+Since $-3$ and $4$ are not zeros of the numerator, they are asymptotic singularities.  $H$ is unbounded near them.  We need the sign of $H$ to determine the singularity behavior around $-3$ and $4$.
+
+
+On $(-\infty, -3)$, $H = \frac{neg}{neg \dot neg} = neg$ \\
+On $(-3, 1)$, $H = \frac{neg}{pos \dot neg} = pos$ \\
+On $(1, 4)$, $H = \frac{pos}{pos \dot neg} = neg$ \\
+On $(4, \infty)$, $H = \frac{pos}{pos \dot pos} = pos$ 
+
+
+This gives us the singlarity behavior
+
+
+
+\begin{itemize}
+\item $\lim\limits_{w \to -3^-} H(w) = -\infty$
+\item $\lim\limits_{w \to -3^+} H(w) = \infty$
+\item $\lim\limits_{w \to 4^-} H(w) = -\infty$
+\item $\lim\limits_{w \to 4^+} H(w) = \infty$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{End-Behavior:}
+
+
+The degree of the denominator is larger than the degree of the numerator, therefore the end-behavior is
 
 
 
@@ -198,74 +237,22 @@ The end-behavior is
 
 
 
-$\blacktriangleright$ \textbf{Vertical Asymptotes} 
+
+
+
+\textbf{Behavior:}  We cannot be exact about the behavior of $H$ without the derivative.  We can make educated guesses using the graph, but that is not exact reasoning.
+
+We'll get the derivative in the next example and use it to get the behavior.
 
 
 
 
 
-The factor $w+3$ corresponds to the vertical asymptote described by $w = -3$.
-
-
-Near $-3$, on either side of $-3$, the factors $w-1$ and $w-4$ do not change sign. 
-
-
-
-\begin{itemize}
-\item The value of $w-1$ is near $-4$ (negative), when $w$ is near $-3$.
-\item The value of $w-4$ is near $-7$ (negative), when $w$ is near $-3$.
-\end{itemize}
-
-Both factors take on negative values when $w$ is near $-3$.  
-
-Near $-3$, the value of the numerator of $H$ is near $(-4)(-7) = 28$, when $w$ is near $-3$.  \\
 
 
 
 
-
-The factor $w+3$ does change sign, since its multiplicity is odd.
-
-\begin{itemize}
-\item On the left side, where $w < -3$, we have $w+3<0$, negative.
-\item On the right side, where $w > -3$, we have $w+3>0$, positive.
-\end{itemize}
-
-
-Therefore, on the left side of $-3$, $H(w) = \frac{neg}{neg \, \cdot \, neg} = negative$.  \\
-
-Plus, the denominator is approaching $0$ making the whole fraction get bigger and bigger negatively.
-
-We can see this in the graph.  The graph moves down the left side of the $w=-3$ vertical asymptote.
-
-Since this singularity has an odd multiplicity, we also know that $H$ changes sign across this vertical asymptote.
-
-
-We can now walk through the sign changes of $H$.
-
-\begin{itemize}
-\item $w = 1$ is a zero of $H$ with odd multipicity.  The sign of $H$ changes across this zero. The graph crosses the $w$-axis at the $(1, 0)$ intercept.
-\item $w = 4$ has an odd singularity. The sign of $H$ changes across this singularity.  The graph jumps to the other infinity across the vertical asymptote.
-\end{itemize}
-
-
-
-We can now categorize the singularity behavior for $H$.
-
-\begin{itemize}
-\item $\lim\limits_{w \to -3^-} H(w) = -\infty$
-\item $\lim\limits_{w \to -3^+} H(w) = \infty$
-\item $\lim\limits_{w \to 4^-} H(w) = -\infty$
-\item $\lim\limits_{w \to 4^+} H(w) = \infty$
-\end{itemize}
-
-$H$ has no global or local maximums or minimums.
-
-
-
-
-
-\textbf{Range:} \\
+\textbf{Range:} 
 
 
 On the interval $(-3, 4)$, $H$ is continuous.
@@ -282,12 +269,48 @@ That gives us a range for $H$ of $(-\infty, \infty )$.
 
 
 
+\begin{example} Behavior Using a Derivative
 
+When you get to Calculus, you will be able to obtain the derivative.
+
+\[  H'(w) = -\frac{w^2 - 2w + 13}{(w+3)^2 (w-4)^2}  \]
+
+The denominator is a square, so it is always positive.
+
+Therefore the sign of $H'$ is the same as the sign of the numerator, $-(w^2 - 2w + 13) = -w^2 + 2w - 13$.
+
+This is a quadratic with a negative leading coefficient, so we know the signs of $H'$ are neg-pos-neg.  They switch at the zeros of the quadratic.
+
+We'll use the quadratic formula to get the zeros of the quadratic.
+
+\[
+\frac{-b \pm \sqrt{b^2 - 4 a c}}{2a} = \frac{-2 \pm \sqrt{-48}}{-2}
+\]
+
+This is not a real number. It is a complex number.  The numerator quadratic does not have any zeros, which measn it is either always positive or always negative.
+
+Since the constant term of the quadratic numerator is $-13$, we know that the quadratic numerator is always negative.
+
+That menas $H'$ is always negative.
+
+That means $H$ is always decreasing.
+
+Just Checking...this agrees with the graph.
+
+\textbf{Local Maximums and Minimums:}
+
+Since there are no critical nuymbers, there can be no local maximums or minimums.
+
+
+\end{example}
 
 
 \subsection*{Sign Changes}
 
-For rational functions, the sign can change only at a zero of odd multiplicity or a singularity of odd multiplicity. This is helpful when graphing. These requirements can force the graph to go in particular directions.
+For rational functions, the sign can change only at a zero of odd multiplicity or a singularity of odd multiplicity. This is helpful when analyzing. 
+
+
+Since the derivative of a rational function is again a rational function (from Calculus), this odd multiplicity reasoning helps determine critical numbers, sign of the derivative (behavior), and local maximums and minimums.
 
 
 
