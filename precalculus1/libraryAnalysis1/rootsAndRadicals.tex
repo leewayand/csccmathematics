@@ -54,7 +54,7 @@ The domain of the square root function (and all even roots) is $[0, \infty)$, th
 
 
 
-The graph of $y = SR(x) = \sqrt{x}$
+The graph of $y = SQR(x) = \sqrt{x}$
 
 
 \begin{image}
@@ -92,7 +92,7 @@ All even root/radical functions can be viewed as the Core Square Root function c
 \begin{idea} \textbf{\textcolor{blue!55!black}{Square Root Functions}} 
 
 
-Let $SQ(x) = \sqrt{k}$ be the Core Square Root function.
+Let $SQR(x) = \sqrt{k}$ be the Core Square Root function.
 
 Let $L_{in}(t) = B \, t + C$ be a linear function.
 
@@ -103,11 +103,255 @@ In general, square root (radical) functions are constructed by composing these c
 
 
 \[
-(L_{out} \circ SQ \circ L_{in})(x) = A \sqrt{B \,x + C} + D
+(L_{out} \circ SQR \circ L_{in})(x) = A \sqrt{B \,x + C} + D
 \]
 
 
 \end{idea}
+
+
+
+
+
+
+
+\begin{example} Square Root Function
+
+The graph of $y = f(v) = \frac{1}{3} \sqrt{5-3v}-4$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$v$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:2.67),<-] {0.33*sqrt(5-3*x)-4};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.67,-4)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\textbf{Domain:} The domain of $f$ is the interval that makes the inside of the radical nonnegative.  The inside is $5-3v$, which is a linear function with a negative leading coefficient. The negative leading coefficient tells us that $5-3v > 0$ on the negative side of its zero, which is $\frac{5}{3}$.
+
+\[ \left(-\infty, \frac{5}{3} \right] \]
+
+\textbf{Zeros:}
+
+
+\begin{align*}
+\frac{1}{3} \sqrt{5-3v}-4 & = 0   \\
+\sqrt{5-3v}               & = 12  \\
+5-3v                      & = 36  \\
+-31 &= 3v   \\
+-\frac{31}{3}   &= v
+\end{align*}
+
+
+\textbf{Continuity:} Root or Radical functions are continuous.
+
+
+\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction.  
+
+The leading coefficient tells us the end-behaviore. Here the leading coefficient of $f$ is $\frac{1}{3}$, which is positive.
+
+
+\[  \lim\limits_{v \to -\infty} f(v) = \infty   \]
+
+
+
+
+
+
+
+\textbf{Behavior:}  We'll use the Chain Rule.
+
+$f$ is the composition of
+
+\begin{itemize}
+\item $SQR(x) = \sqrt{x}$ 
+
+\item $L_{in}(t) = 5 - 3 \, t$, a decreasing linear function
+
+\item $L_{out}(y) = \frac{1}{3} \, y + 4$, an increasing linear function
+\end{itemize}
+
+
+\[  f(v) =  \frac{1}{3} \sqrt{5-3v}-4 = (L_{out} \circ SQR \circ L_{in})(v) \]
+
+\[ inc \circ inc \circ dec = dec  \]
+
+
+$f$ is a decreasing square root function, which agrees with the graph.
+
+
+
+\textbf{Global Maximum and Minimum:} 
+
+
+Since $\lim\limits_{v \to -\infty} f(v) = \infty$, we know $f$ has no global maximum.
+
+Since $f$ is always decreasing, we know that $f\left( \frac{5}{3} \right) = -4$ is the global minimum.
+
+
+\textbf{Local Maximums and Minimums:} 
+
+Global extrema are automatically local extrema.  So, $f\left( \frac{5}{3} \right) = -4$ is a local minimum.
+
+Since $f$ is always decreasing, there are no other local extrema.
+
+
+\textbf{Range:} 
+
+\begin{itemize}
+\item $f$ is continuous
+\item $\lim\limits_{v \to -\infty} f(v) = \infty$
+\item $-4$ is the global minimum
+\end{itemize}
+
+All of this gives the range  $\left[ -4, \infty \right)$
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Even Root
+
+The graph of $y = T(k) = \sqrt{-k+5}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:5),<-] {sqrt(-x+5)};
+   
+ 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\textbf{Domain:} 
+Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k$ \wordChoice{\choice[correct]{$<$} \choice {$>$}}  $5$, which means the domain is $(-\infty,5]$.
+
+
+\textbf{Zeros:}  Root and Radical functions can only have at most one zero, which must be $5$.
+
+
+\textbf{Continuity:} Root and Radical functions are continuous. 
+
+
+\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction.  
+
+The leading coefficient tells us the end-behaviore. Here the leading coefficient of $T$ is $1$, which is positive.
+
+
+\[  \lim\limits_{k \to -\infty} T(k) = \infty   \]
+
+
+
+
+
+
+
+\textbf{Behavior:}  We'll use the Chain Rule.
+
+$T$ is the composition of
+
+\begin{itemize}
+\item $SQR(x) = \sqrt{x}$ 
+\item $L_{in}(t) = -k + 5$, a decreasing linear function
+\end{itemize}
+
+
+\[  T(k) =  \sqrt{-k+5} = SQR \circ L_{in})(k) \]
+
+\[ inc \circ inc \circ dec = dec  \]
+
+
+$T$ is a decreasing square root function, which agrees with the graph.
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} 
+
+
+Since $\lim\limits_{k \to -\infty} T(k) = \infty$, we know $T$ has no global maximum.
+
+Since $T$ is always decreasing, we know that $T(5) = 0$ is the global minimum.
+
+
+\textbf{Local Maximums and Minimums:} 
+
+Global extrema are automatically local extrema.  So, $T(5) = 0$ is a local minimum.
+
+Since $T$ is always decreasing, there are no other local extrema.
+
+
+\textbf{Range:} 
+
+\begin{itemize}
+\item $T$ is continuous
+\item $\lim\limits_{k \to -\infty} T(k) = \infty$
+\item $0$ is the global minimum
+\end{itemize}
+
+All of this gives the range  $\left[ 0, \infty \right)$.
+
+
+
+
+
+
+\end{example}
+
+
+
+
+
+
 
 
 
@@ -174,110 +418,11 @@ Then apply the Chain Rule.
 
 
 
-\begin{example} Square Root Function
-
-The graph of $y = f(v) = \frac{1}{3} \sqrt{5-3v}-4$
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:2.67),<-] {0.33*sqrt(5-3*x)-4};
-   
- 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.67,-4)};
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-The domain of $f$ is the interval that makes the inside of the radical nonnegative.  
-
-\[ \left(-\infty, \frac{5}{3} \right] \]
-
-
-$f$ is the composition of
-
-\begin{itemize}
-\item $SQ(x) = \sqrt{k}$ 
-
-\item $L_{in}(t) = 5 - 3 \, t$, a decreasing linear function
-
-\item $L_{out}(y) = \frac{1}{3} \, y + 4$, an increasing linear function
-\end{itemize}
-
-
-
-\[ inc \circ inc \circ dec = dec  \]
-
-
-$f$ is a decreasing square root function, which agrees with the graph.
-
-
-\end{example}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-\begin{example} Even Root
-
-The graph of $y = T(k) = \sqrt{-k+5}$
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$k$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:5),<-] {sqrt(-x+5)};
-   
- 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k$ \wordChoice{\choice[correct]{$<$} \choice {$>$}}  $5$, which means the graph moves up to the left.  The domain is $(-\infty,5]$.
-
-
-
-
-\end{example}
 
 
 
@@ -382,58 +527,6 @@ The cube root function has a vertical tangent line where the inside of the radic
 
 
 
-\subsection*{Odd Roots}
-
-This course is the study of the real numbers. As a result we don't take even roots of negative numbers, because a negative number raised to an even power always results in a positive number. However, an odd root of a negative number is again a negative number.
-
-
-
-\[   OddRoot(r) = \sqrt[2n]{r} = r^{\tfrac{1}{2n}}          \]
-
-The cube root function is the most popular Core odd root function
-
-
-\[   \sqrt[3]{x} = x^{\tfrac{1}{3}}          \]
-
-
-
-The domain of the cube root function (and all odd roots) is $(-\infty, \infty)$.  
-
-
-
-
-The graph of $y = CR(x) = \sqrt[3]{x}$
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-            %\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-            \addplot [line width=2, penColor, smooth, samples=200,domain=(-9:0),<->] {-((-x)^(0.333))};
-
-            \addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),<->] {(x)^(0.333)};
-   
-      %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
 
 
 All odd root/radical functions can be viewed as the Core Cube Root function composed with linear function. One linear function affects the inside of the radical sign and the other affects the outside.
@@ -458,6 +551,133 @@ In general, cube root (radical) functions are constructed by composing these com
 
 
 \end{idea}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Cube Root Function
+
+
+The graph of $y = g(t) = -4 \sqrt[3]{2t+3}+1$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-1.5:8),->] {-4*(2*x+3)^0.33333+1};
+
+          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-6:-1.5),<-] {4*(-2*x-3)^0.33333+1};
+
+          	%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\textbf{Domain:}  The domain of all cube root functions is $(-\infty, \infty)$.
+
+
+\textbf{Zeros:} Cube root functions always have one zero.
+
+
+\begin{align*}
+-4 \sqrt[3]{2t+3}+1      & = 0 \\
+\sqrt[3]{2t+3}           & = \frac{1}{4} \\
+2t+3                     & = \left( \frac{1}{4} \right) = \frac{1}{64}  \
+t          & = \frac{1}{2} \left( \frac{1}{64} - 3 \right)
+          & = -\frac{191}{128}
+\end{align*}
+
+
+Just Checking...$-\frac{191}{128} \approx 1.49$, which agrees with the graph.
+
+
+\textbf{Continuity:} Cube root functions are continuous.
+
+
+
+\textbf{End-Behavior:} Cube root functions are unbounded in either direction.  The behavior will tell us which way.
+
+
+
+
+\textbf{Behavior:} 
+
+
+$g$ is the composition of
+
+\begin{itemize}
+\item $CR(x) = \sqrt[3]{x}$, an increasing function
+\item $L_{in}(t) = 2t+3$, an increasing linear function
+\item $L_{out}(y) = -4y + 1$, a decreasing linear function
+\end{itemize}
+
+
+\[ g(t) = -4 \sqrt[3]{2t+3}+1 =  (L_{out} \circ g \circ L_{in})(t) \]
+
+\[ dec \circ inc \circ inc = dec  \]
+
+
+$g$ is a decreasing cube root function, which agrees with the graph.
+
+This also gives us the end-behavior.
+
+
+\[ \lim\limits_{t \to -\infty} g(t) = \infty \, \text{ and } \,  \lim\limits_{t \to \infty} g(t) = -\infty \]
+
+
+
+\textbf{Global Maximum and Minimum:}  CUbe root functions do not have global a maximum or minimum. 
+
+
+\textbf{Local Maximums and Minimums:}  CUbe root functions do not have local maximums or minimums. 
+
+
+\textbf{Range:} The range of all cube root functions is $(-\infty, \infty)$. 
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -513,92 +733,6 @@ Then apply the Chain Rule.
 \textbf{Range:} The range is always $(-\infty, \infty)$.
 
 \end{summary}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} Cube Root Function
-
-
-The graph of $y = g(t) = -4 \sqrt[3]{2t+3}+1$
-
-
-\begin{image}
-\begin{tikzpicture} 
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$t$, ylabel=$y$, 
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-1.5:8),->] {-4*(2*x+3)^0.33333+1};
-
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-6:-1.5),<-] {4*(-2*x-3)^0.33333+1};
-
-          	%\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
-
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-Here the inside $2t+3$ equals $0$ when $v=\answer{\frac{-2}{3}}$.  The graph has a vertical tangent line at $\left( -\frac{2}{3}, 1 \right)$.  
-
-
-
-
-$g$ is the composition of
-
-\begin{itemize}
-\item $CR(x) = \sqrt[3]{k}$, an increasing function
-
-\item $L_{in}(t) = 2t+3$, an increasing linear function
-
-\item $L_{out}(y) = -4y + 1$, a decreasing linear function
-\end{itemize}
-
-
-
-\[ dec \circ inc \circ inc = dec  \]
-
-
-$g$ is a decreasing cube root function, which agrees with the graph.
-
-
-\end{example}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
