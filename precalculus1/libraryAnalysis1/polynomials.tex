@@ -692,6 +692,220 @@ Critical numbers are \textbf{candidates} for locations of maximums and minimums.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Cubic Analysis
+
+
+Let $p(t) = (x+4)(x+1)(x-3)$
+
+Once we get to Calculus, you will be able to get the derivative of $p$ for yourself. Right now, the derivative will just be given.
+
+$p'(t) = 3 \, t^2 + 4 \, t - 11$
+
+We'll use the derivative to determine the behavior of $p$.
+
+
+Graph of $y = p(t)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-6:5, ymax=15, xmax=5, ymin=-25, xmin=-6,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-25,-20,-15,-10,-5,0,5,10,15},
+            xtick={-6,-4,-2,0,2,4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, domain=(-6:5),<->] {(x+4)*(x+1)*(x-3)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Let's step through our standard analysis list.
+
+
+
+
+\textbf{Domain:} Since $p$ is a polynomial, its domain is $(-\infty, \infty)$.
+
+
+\textbf{Zeros:} By the Zero Product Property, for $p = 0$, 
+
+either $x+4=0$, $x+1=0$, or $x-3=0$.
+
+
+Either $x=-4$, $x=-1$, or $x=3$.
+
+All of these are in the domain.
+
+
+The zeros of $p$ are $\{ -4, -1, 3 \}$.
+
+
+\textbf{Continuity:} Since $p$ is a polynomial, it is contiuous.
+
+
+\textbf{End-Behavior:} $p$ is a polynomial with degree $3$, which is odd. Therefore, the end-behavior of $p$ is opposite on either side.  Since the leading coefficient is positive, we have
+
+
+\[  \lim\limits_{t \to -\infty} p(t) = -\infty \]
+
+
+\[  \lim\limits_{t \to \infty} p(t) = \infty \]
+
+
+\textbf{Behavior:}
+
+We'll use the derivative, $p'$.
+
+We'll need the sign of $p'$. 
+
+So, we'll factor $p'$ to getthe critical numbers of $p$.
+
+$p'(t) = 3 \, t^2 + 4 \, t - 11$ doesn't factor nicely, so we'll use the quadratic formula.
+
+
+\[ 
+\frac{-b \pm \sqrt{b^2 - 4 \, a \, c}}{2 \, a} = \frac{-4 \pm \sqrt{4^2 - 4(3)(-11)}}{2(3)}
+\]
+
+\[ 
+\frac{-4 \pm \sqrt{148}}{6} = \frac{-4 \pm 2 \sqrt{37}}{6} = \frac{-2 \pm \sqrt{37}}{3}
+\]
+
+Just Checking...
+For a cubic polynomial, these critical numbers should be in between the zeros.
+
+$ \frac{-2 - \sqrt{37}}{3} \approx -2.69 $ \\
+$ \frac{-2 + \sqrt{37}}{3} \approx 1.36 $
+
+They are.
+
+
+Now we can factor $p'$.
+
+
+\[ p'(t) = 3 \left( t - \frac{-2 - \sqrt{37}}{3} \right) \left( t - \frac{-2 + \sqrt{37}}{3}\right)
+\]
+
+We want to know where $p'$ is positive and negative.
+
+$p'$ is a quadratic function with apositive leading coefficent, so we know it is postive : negative : positive, swicthing at is zeros.
+
+
+\begin{itemize}
+\item $p'$ is positive on $\left(-\infty, \frac{-2 - \sqrt{37}}{3} \right)$
+\item $p'$ is negative on $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$
+\item $p'$ is positive on $\left(\frac{-2 + \sqrt{37}}{3}, \infty \right)$
+\end{itemize}
+
+
+\begin{itemize}
+\item $p$ is increasing on $\left(-\infty, \frac{-2 - \sqrt{37}}{3} \right)$
+\item $p$ is decreasing on $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$
+\item $p$ is increasing on $\left(\frac{-2 + \sqrt{37}}{3}, \infty \right)$
+\end{itemize}
+
+
+
+
+
+
+\textbf{Global MAximum and Minimum:} 
+
+
+Since, 
+
+\[  \lim\limits_{t \to -\infty} p(t) = -\infty   \, \text{ and } \,   \lim\limits_{t \to \infty} p(t) = \infty \]
+
+we know there is not a global maximum nor a global minimum.
+
+
+
+\textbf{Local Maximums and Minimums:} 
+
+$p$ has two critical numbers, so two candidates for local maximum and/or minimum. We need the beahvior of $p$ around these critical numbers.
+
+
+
+On $\left(-\infty, \frac{-2 - \sqrt{37}}{3} \right)$, $p$ is increasing. \\
+On $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$, $p$ is decreasing. \\
+$\frac{-2 - \sqrt{37}}{3}$ is the location of a local maximum.
+
+
+On $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$, $p$ is decreasing. \\
+On $\frac{-2 + \sqrt{37}}{3}, \infty \right)$, $p$ is increasing. \\
+$\frac{-2 - \sqrt{37}}{3}$ is the location of a local minimum.
+
+
+Just Checking...this agrees with the graph.
+
+
+\textbf{Range:}  Since $p$ is continuous and
+
+ \[  \lim\limits_{t \to -\infty} p(t) = -\infty   \, \text{ and } \,   \lim\limits_{t \to \infty} p(t) = \infty \]
+
+
+ the range of $p$ is $(-\infty, \infty)$.
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection*{Zeros, Factors, and Intercepts}
 
 
