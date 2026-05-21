@@ -22,7 +22,7 @@ rate as a relationship
 
 
 
-Consider the function $Q(x) = \frac{(x+7)(x-5)}{5}$
+Consider the quadratic function $Q(x) = \frac{(x+7)(x-5)}{5}$
 
 
 
@@ -111,13 +111,27 @@ This is the slope of the secant line through the points $(-3, Q(-3))$ and $(4, Q
 
 
 
-This rate-of-change is the \textbf{constant} rate-of-change that would be needed in order for a linear funciton to match the endpoint values of the function.  Of course, we can see from the graph that this rate-of-change varies depending on the interval selected. 
+This rate-of-change is the \textbf{constant} rate of change that would be needed in order for a linear function to match the endpoint values of the function.  Of course, we can see from the graph that this rate ofchange calculation will variy depending on the interval selected. 
 
-$[-3, 4]$ would not be a good interval to use if you were interested in the rate-of-change near $-3$.
+We want to extend this idea. We want the rate of change over an interval of the form $[a,a]$.   The rate of change at a single domain number.
+
+We cannot use our $\frac{rise}{run}$ idea for this extension, because $run = 0$.
+
+How would we go about translating out idea of rate of change over an interval to rate of change at a single domain number?
+
+
+For instance, how would we think of the rate of change of $Q$ at $-3$?
+
+
+We could start by thinking of rates of change over small intervals near $-3$.
+
+
+
+$[-3, 4]$ would not be a good interval to use if you were interested in the rate-of-change near $-3$. $4$ is too far away from $-3$.
 
 $[-3, -2.5]$ would probably give a better interval. 
 
-
+It seems like the smaller interval, the better.
 
 
 
@@ -177,9 +191,9 @@ That is looking more like a tangent line, than a secant.
 
 
 \begin{idea}
-\textbf{\textcolor{green!50!black}{Tangent Line}}
+\textbf{\textcolor{blue!55!black}{Tangent Line}}
 
-A tangent line to a graph at a point, is first a line. Second it intersects the graph at a given point, called the \textbf{point of tangency} or the \textbf{tangent point}. Third, it does the best job of pretending to be the graph \textbf{\textcolor{red!70!darkgray}{at that point}}. \\
+A tangent line to a graph at a point, is first a line. Second it intersects the graph at a given point, called the \textbf{point of tangency} or the \textbf{tangent point}. Third, it does the best job of pretending to be the graph \textbf{\textcolor{red!70!darkgray}{at that point}}. 
 
 
 
@@ -248,7 +262,9 @@ By moving the value of $h$ close to $0$, we can get a good estimate of the slope
 
 The slope of the line tangent to the graph at $(-3, -6.4)$ looks to be about $-0.8$.
 
-Of course $-3$ was nothing special.  We can get slopes of tangent lines at any point on the graph. Let's move around the graph and record the tangent line slopes.  We'll record visually.
+Of course $-3$ was nothing special.  We can get slopes of tangent lines at any point on the graph. Let's move around the graph and record the tangent line slopes.  We want to record $(-3, -0.8)$ as slope information for the tangent line to the graph of $Q$ at the point $(-3, -6.4)$.
+
+We'll record visually by plotting does for our new slope information.  The pair $(-3, -0.8)$ will be visually encoded with a dot at $(-3, -0.8)$.
 
 The slope of the tangent line at $-3$ is $-0.8$, so we'll plot the point $(-3,-0.8)$ to record this information.  This will be a visual encoding of the tangent slope for the domain number $-3$.
 
@@ -362,7 +378,7 @@ This function, whose values are the rates-of-change of another function, is call
 
 
 
-$\blacktriangleright$ Let $f$ be a function.  Then the derivative of $f$ is denoted as $f'$. People pronounce this as ``\textit{f prime}''. \\
+$\blacktriangleright$ Let $f$ be a function.  Then the derivative of $f$ is denoted as $f'$. People pronounce this as ``\textit{f prime}''. 
 
 
 
@@ -438,7 +454,17 @@ The function $Q(x) = \frac{(x+7)(x-5)}{5}$ is a quadratic and has a parabola for
 
 The slope of this tangent line is $0$.  Therefore, $Q'(-1) = 0$.
 
+We could already figure this out, because $Q$ is a quadratic function and  the $iRoC_Q$ is $Q'$, the derivative of $Q$.
 
+Since $Q$ is a quadratric and
+
+\[ Q(x) = \frac{(x+7)(x-5)}{5} = \frac{1}{5} x^2 + \frac{2}{5} x - 7 \]
+
+That gives us
+
+\[ Q'(x) = \frac{2}{5} x + \frac{2}{5}  \]
+
+\[ Q'(1) = \frac{2}{5} (-1) + \frac{2}{5} = 0  \]
 
 \end{example}
 
