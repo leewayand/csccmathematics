@@ -220,7 +220,7 @@ Then, our general exponential function can be expressed as a composition.
 
 
 \[
- A \cdot r^{B \, x + C} = L_{out}(v) \circ r^t \circ L_{in}(x)
+ A \cdot r^{B \, x + C} = (L_{out}(v) \circ r^t \circ L_{in})(x)
 \]
 
 
@@ -271,11 +271,11 @@ Now we can use the Chain Rule to establish whether an exponential function incre
 
 
 
-\begin{example}
+\begin{example} Exponential Function Analysis
 
 
 
-Here is the graph of $y = f(x) = 3^{-x}$.
+Here is the graph of $y = f(x) = \frac{1}{5} \cdot 3^{-2x+1}$.
 
 \begin{image}
 \begin{tikzpicture} 
@@ -290,7 +290,7 @@ Here is the graph of $y = f(x) = 3^{-x}$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-2:9),<->] {(0.333)^x};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-1.2:9),<->] {0.2*(0.333)^(-2*x+1)};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
 
            
@@ -301,20 +301,46 @@ Here is the graph of $y = f(x) = 3^{-x}$.
 
 
 
+\textbf{Domain:}  The domain of every exponential funciton is $(-\infty, \infty )$.
+
+
+\textbf{Zeros:} Exponential functions do not have zeros.
+
+
+\textbf{Continuity:} Exponential functions are continuous.
+
+
+\textbf{End-Behavior:} Exponential functions approach $0$ in the direction that makes the exponent negative. Here, the exponenti is $-2x+1$, which is become negative in the positive $x$-direction. 
+
+\[ \lim\limits_{x \to \infty} f(x) = 0 \]
+
+
+In the other direction, exponential functions become unbounded. The sign is given by the sign of the leading coefficient, which is $\frac{1}{5}$, positive.
+
+
+\[ \lim\limits_{x \to -\infty} f(x) = \infty \]
+
+
+
 $f$ can be viewed as a composition of the following component functions.
 
 
+\textbf{Behavior:} Exponential functions are either increasing or decreasing functions.  The end-behavior shows us that $f$ is decreasing.
 
+
+But, we could also use the Chain Rule.
+
+$f$ is the composition of three functions.
 
 \begin{itemize}
-\item Let $3^t$, an increasing Core exponential function.
-\item Let $L_{in}(u) = -u $, a decreasing linear function.
-\item Let $L_{out}(v) = 3 \, v$, an increasing linear function.
+\item Let $E(t) = 3^t$, an increasing Core exponential function.
+\item Let $L_{in}(u) = -2 \, u + 1 $, a decreasing linear function.
+\item Let $L_{out}(v) = \frac{1}{5} \, v$, an increasing linear function.
 \end{itemize}
 
 
 
-\[  f(x) = 3^{-x} =  L_{out} \circ 3^x \circ L_{in} \]
+\[  f(x) = \frac{1}{5} \cdot 3^{-2x+1} =  (L_{out} \circ E \circ L_{in})(x) \]
 
 The Chain Rule gives us
 
@@ -322,7 +348,22 @@ The Chain Rule gives us
 \[ inc \circ inc \circ dec = dec  \]
 
 
-This agrees with the graph.
+Just Checking...This agrees with the graph.
+
+
+
+\textbf{Global Maximum and Minimum:} Exponential functions do not have a global minimum or maximum.
+
+
+
+
+\textbf{Local Maximums and Minimums:} Exponential functions do not have local minimums or maximums.
+
+
+\textbf{Range:} The sign of the leading coefficient tells us that the range is $(0, \infty)$.
+
+
+
 
 \end{example}
 
@@ -338,13 +379,13 @@ This agrees with the graph.
 
 
 
-Here is the graph of $y = g(x) = \left( \frac{2}{3} \right)^{-2x+1}$.
+Here is the graph of $y = g(m) = -2 \cdot \left( \frac{2}{3} \right)^{-2x+1}$.
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, 
+            axis lines =center, xlabel=$m$, ylabel=$y$, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -353,7 +394,7 @@ Here is the graph of $y = g(x) = \left( \frac{2}{3} \right)^{-2x+1}$.
             axis on top
           ]
           
-          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:2),<->] {(0.666)^(-2*x+1)};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:2.5),<->] {-2*(0.666)^(-3*x+4)};
           \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({x},{0});
 
            
@@ -370,21 +411,43 @@ $g$ can be viewed as a composition of the following component functions.
 
 
 \begin{itemize}
-\item Let $\left( \frac{2}{3} \right)^t$, a decreasing Core exponential function.
-\item Let $L_{in}(u) = -2u+1 $, a decreasing linear function.
+\item Let $E(t) = \left( \frac{2}{3} \right)^t$, a decreasing Core exponential function.
+\item Let $L_{in}(u) = -3u+4 $, a decreasing linear function.
+\item Let $L_{out}(v) = -2 \, v $, a decreasing linear function.
 \end{itemize}
 
 
 
-\[  g(x) = \left( \frac{2}{3} \right)^{-2x+1} =  \left( \frac{2}{3} \right)^t \circ L_{in}(x) \]
+\[  g(m) = -2 \cdot \left( \frac{2}{3} \right)^{-2x+1} = (L_{out} \circ E \circ L_{in})(m) \]
 
 The Chain Rule gives us
 
 
-\[ dec \circ dec = inc  \]
+\[ dec \circ dec \circ dec = dec  \]
+
+$g$ is a decreasing function.
 
 
-This agrees with the graph.
+Just Checking...This agrees with the graph.
+
+
+
+
+\textbf{Global Maximum and Minimum:} Exponential functions do not have a global minimum or maximum.
+
+
+
+
+\textbf{Local Maximums and Minimums:} Exponential functions do not have local minimums or maximums.
+
+
+\textbf{Range:} The sign of the leading coefficient tells us that the range is $(-\infty, 0)$.
+
+
+
+
+
+
 
 \end{example}
 

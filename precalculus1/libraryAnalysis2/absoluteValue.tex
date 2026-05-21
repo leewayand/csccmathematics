@@ -107,7 +107,7 @@ These can be viewed as compositions.
 
 
 \begin{itemize}
-\item Let $|t|$ be the Core absolute value function.
+\item Let $AV(t) = |t|$ be the Core absolute value function.
 \item Let $L_{in}(u) = B \, u + C$ be a linear function.
 \item Let $L_{out}(v) = A \, v$ be a linear function.
 \end{itemize}
@@ -116,7 +116,7 @@ Then, our general absolute value function can be expressed as a composition.
 
 
 \[
- A \, |B \, x + C| + D = L_{out}(v) \circ |t| \circ L_{in}(x)
+ A \, |B \, x + C| + D = (L_{out} \circ AV \circ L_{in})(x)
 \]
 
 
@@ -200,13 +200,13 @@ We can view $P$ as a composition:
 
 
 \begin{itemize}
-\item Let $|x|$ be the Core absolute value function.
+\item Let $AV(x) = |x|$ be the Core absolute value function.
 \item Let $L_{in}(u) = 2 \, u + 4$, an increasing linear function.
 \item Let $L_{out}(v) = -3 \, v + 5$, a decreasinglinear function.
 \end{itemize}
 
 
-\[ P(t) = -3|2t+4|+5 = L_{out}(v) \circ |x| \circ L_{out}(t)\]
+\[ P(t) = -3|2t+4|+5 = (L_{out} \circ AV \circ L_{out})(t)\]
 
 
 $|x|$ switches from decreasing to increasing at $0$, so we need to locate where $L_{in} = 0$.
@@ -233,7 +233,7 @@ On $\left( \frac{5}{3}, \infty \right)$, the Chain Rule gives
 \[ dec \circ inc \circ inc = dec \]
 
 
-Just CHecking: This agrees with the graph.
+Just Checking: This agrees with the graph.
 
 
 \textbf{Global Maximum and Minimum:}

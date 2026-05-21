@@ -49,7 +49,7 @@ Shifted exponential functions can be viewed as compositions.
 
 
 \begin{itemize}
-\item Let $r^t$ be a Core exponential function.
+\item Let $CE(t)=r^t$ be a Core exponential function.
 \item Let $L_{in}(u) = B \, u + C$ be a linear function.
 \item Let $L_{out}(v) = A \, v + D$ be a linear function.
 \end{itemize}
@@ -58,12 +58,12 @@ Then, our general shifted exponential function can be expressed as a composition
 
 
 \[
- A \cdot r^{B \, x + C} = L_{out}(v) \circ r^t \circ L_{in}(x)
+ A \cdot r^{B \, x + C} = (L_{out}(v) \circ CE \circ L_{in})(x)
 \]
 
 
 
-Now we can use the Chain Rule to establish whether an exponential function increases or decreases.
+Now we can use the Chain Rule to establish whether a shifted exponential function increases or decreases.
 
 
 
@@ -115,13 +115,15 @@ Graphically, the horizontal asymptote in the graph has shifted vertically by 2 u
 
 
 
+\textbf{Behavior:}
+
 We can view $g(x)$ as a composition.
 
 
 
 
 \begin{itemize}
-\item Let $\left(\frac{1}{3}\right)^x$, a decreasing Core exponential function.
+\item Let $CE(t) = \left(\frac{1}{3}\right)^t$, a decreasing Core exponential function.
 \item Let $L_{out}(v) = v + 2$, an increasing linear function.
 \end{itemize}
 
@@ -129,7 +131,7 @@ Then, $g(x)$ can be expressed as a composition.
 
 
 \[
- g(x) = \left(\frac{1}{3}\right)^x + 2 = L_{out}(v) \circ \left(\frac{1}{3}\right)^x
+ g(x) = \left(\frac{1}{3}\right)^x + 2 = (L_{out} \circ CE)(x)
 \]
 
 
@@ -185,68 +187,6 @@ shexpf(x) = A \cdot e^{B \, x + C} + D
 
 \textbf{Note:} In Calculus, we will see that when you write exponential formulas with base $e$, then nice things happen with the calculations.  So, we like base $e$. 
 
-
-
-
-\subsection*{Behavior}
-
-
-Shifted exponential functions behave similarly to exponential functions. 
-
-Their behavior can be identified through the Chain Rule.
-
-If we write shifted exponential functions in terms of base $e$, then we can compare leading coefficients for behavior.
-
-\[
-shexp(x) = A \cdot e^{B \, x + C} + D
-\]
-
-
-
-
-
-\begin{itemize}
-  \item $A$ is the leading coefficent for the function.
-  \item $B$ is the leading coefficent of the exponent.
-\end{itemize}
-
-
-Comparing these back to our basic exponential functions, we get
-
-
-
-\begin{itemize}
-  \item $A > 0$ and $B > 0$ gives an increasing shifted exponential function.
-  \item $A < 0$ and $B > 0$ gives a decreasing shifted exponential function.
-  \item $A > 0$ and $B < 0$ gives a decreasing eshifted xponential function.
-  \item $A < 0$ and $B < 0$ gives an increasing shifted exponential function.
-\end{itemize}
-
-
-$\blacktriangleright$ When the leading coefficients are the same sign, then the shifted exponential function is increasing. \\
-
-$\blacktriangleright$ When the leading coefficients are different signs, then the shifted exponential function is decreasing. \\
-
-
-
-
-
-\subsection*{End-Behavior}
-
-
-
-The big difference between exponential functions and shifted exponential functions is the end-behavior. \
-
-
-
-While exponential functions tend to $0$ in one tail of the domain, shifted exponential functions tend to the added constant value. \\
-
-
-
-$shexp(x) = A \cdot e^{B \, x + C} + D$ will tend to $D$ in the tail where the exponent is negative. \\
-
-
-$shexp(x) = A \cdot e^{B \, x + C} + D$ will become unbounded in the tail where the exponent is positive.  The sign will be given by the leading coefficient, $A$. \
 
 
 
@@ -310,6 +250,76 @@ The Chain Rule can tell you which.
 
 
 \end{summary}
+
+
+
+
+
+
+
+
+
+
+\subsection*{Reading Coefficients}
+
+\textbf{Behavior:}
+
+Shifted exponential functions behave similarly to exponential functions. 
+
+Their behavior can be identified through the Chain Rule.
+
+If we write shifted exponential functions in terms of base $e$, then we can compare leading coefficients for behavior.
+
+\[
+shexp(x) = A \cdot e^{B \, x + C} + D
+\]
+
+
+
+
+
+\begin{itemize}
+  \item $A$ is the leading coefficent for the function.
+  \item $B$ is the leading coefficent of the exponent.
+\end{itemize}
+
+
+Comparing these back to our basic exponential functions, we get
+
+
+
+\begin{itemize}
+  \item $A > 0$ and $B > 0$ gives an increasing shifted exponential function.
+  \item $A < 0$ and $B > 0$ gives a decreasing shifted exponential function.
+  \item $A > 0$ and $B < 0$ gives a decreasing eshifted xponential function.
+  \item $A < 0$ and $B < 0$ gives an increasing shifted exponential function.
+\end{itemize}
+
+
+$\blacktriangleright$ When the leading coefficients are the same sign, then the shifted exponential function is increasing. 
+
+$\blacktriangleright$ When the leading coefficients are different signs, then the shifted exponential function is decreasing. 
+
+
+
+
+
+
+\textbf{End-Behavior:}
+
+
+The big difference between exponential functions and shifted exponential functions is the end-behavior. 
+
+
+
+While exponential functions tend to $0$ in one tail of the domain, shifted exponential functions tend to the added constant value. 
+
+
+
+$shexp(x) = A \cdot e^{B \, x + C} + D$ will tend to $D$ in the tail where the exponent is negative. 
+
+
+$shexp(x) = A \cdot e^{B \, x + C} + D$ will become unbounded in the tail where the exponent is positive.  The sign will be given by the leading coefficient, $A$. 
 
 
 

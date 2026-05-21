@@ -136,7 +136,7 @@ These templates can be viewed as a composition.
 
 
 \begin{itemize}
-\item Let $\log_r(t)$ be a Core logarithmic function.
+\item Let $CL(t) = \log_r(t)$ be a Core logarithmic function.
 \item Let $L_{in}(u) = B \, u + C$ be a linear function.
 \item Let $L_{out}(v) = A \, v$ be a linear function.
 \end{itemize}
@@ -145,7 +145,7 @@ Then, our general logarithmic function can be expressed as a composition.
 
 
 \[
- A \log_r(B \, x + C) + D = L_{out}(v) \circ \log_r(t) \circ L_{in}(x)
+ A \log_r(B \, x + C) + D = (L_{out} \circ CL \circ L_{in})(x)
 \]
 
 
@@ -225,7 +225,7 @@ We can view $L(x) = -3 \log_2(5-x)+1$ as a composition of three functions.
 
 
 \begin{itemize}
-\item Let $\log_2(t)$, is an increasing Core logarithmic function.
+\item Let $CL(t) = \log_2(t)$, is an increasing Core logarithmic function.
 \item Let $L_{in}(u) = 5 - u$, is a decreasing linear function.
 \item Let $L_{out}(v) = -3 \, v + 1$, is a decreasing linear function.
 \end{itemize}
@@ -234,7 +234,7 @@ Then, our general logarithmic function can be expressed as a composition.
 
 
 \[
- L(x) = -3 \log_2(5-x)+1 = L_{out}(v) \circ \log_2(t) \circ L_{in}(x)
+ L(x) = -3 \log_2(5-x)+1 = (L_{out} \circ CL \circ L_{in})(x)
 \]
 
 
@@ -292,8 +292,10 @@ The domain of $L$ is $(-\infty, 5)$ and $L$ is an increasing logarithmic functio
 
 
 
-\subsection*{Behavior}
+\subsection*{Reading Coefficients}
 
+
+\textbf{Behavior}
 
 
 Logarithmic functions either increase or they decrease.
