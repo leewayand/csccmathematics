@@ -23,7 +23,7 @@ stretch the range
 
 Let $W(y)$ be a function with its domain and range.
 
-Let $K(r)$ be defined as $K(r) = 2 W(r)$ with its induced domain and range.
+Let $K(r)$ be defined as $K(r) = 2 \, W(r)$ with its induced domain and range.
 
 
 Then the domain of $K$ is
@@ -34,14 +34,14 @@ Then the domain of $K$ is
 \choice[correct] {the same as for $W$}
 \end{multipleChoice}
 
-The induced domain of $K$ is equal to the domain of $W$.  The coefficient $2$ is multiplying the function values of $W$.
+The induced domain of $K$ is equal to the domain of $W$.  The coefficient $2$ is multiplying the function values of $W$ (the outside).
 
 
 
 \begin{question}
 
 
-Suppose $K(r) = 2 W(r)$ and $W(4) = 6$.  Then which of the following is true?
+Suppose $K(r) = 2 \, W(r)$ and $W(4) = 6$.  Then which of the following is true?
 
 \begin{multipleChoice}
 \choice {$K(2) = 6$}
@@ -516,9 +516,67 @@ The graph of $|w|$ has been compressed horizontally by a factor of $\frac{1}{3}$
 
 
 
+
+\subsection*{Composition}
+
+Shifting and stretching vertically can be viewed algebraically as composition with an outer linear function.
+
+
+
+Suppose we have a function, $G(x)$. 
+
+Suppose we want to create a new function, $F(t)$, by shifting and stretching the range (function values) of $G$.
+
+
+For instance, 
+\begin{itemize}
+\item $F(t) = 3 \, G(t)-2$
+\item $F(t) = 6-G(t)$
+\item $F(t) = 5 \, G(t)+7$
+\item $F(t) = 1 - 8 \, G(t)$
+\item $F(t) = -4 \, G(t)-9$
+\end{itemize}
+
+
+We can view this as compostion with an inner function.
+
+Let $L(w) = A \, w + B$
+
+
+\[ F(t) = A \, G(t) + B = (L_{out} \circ F)(t) = L_{out}(F(t)) \]
+
+
+
+
+\begin{align*}
+F(t) = 3 \, G(t)-2 = (L \circ G)(t)  & \text{ where } L(w) = 3t-2 \\
+F(t) = 6-G(t) = (L \circ G)(t)   & \text{ where } L(w) = 6-t    \\
+F(t) = 5 \, G(t)+7 = (L \circ G)(t)  & \text{ where } L(w) = 5t+7   \\
+F(t) = 1 - 8 \, G(t) = (L \circ G)(t)  & \text{ where } L(w) = 1-8t    \\
+F(t) = -4 \, G(t)-9 = (L \circ G)(t) & \text{ where } L(w) = -4t-9   
+\end{align*}
+
+
+
+
+
+
+\subsection*{Variables}
+
+
+
+
+
+
+
+
+
+
+
+
 We have already noticed that multiplication and addition on the inside of the formula's parentheses affect the domain.  They also have graphical effects which seem backwards from the arithmetic.  This is because the formula shows us what happens to the new domain variable, not the original variable.  We have to set the original variable equal to this new domain expression and solve for the new variable.  That tells us what happens to the original variable.  When we solve, all of the arithmetic is reversed and that is what we see graphically.
 
-This is not the case for multiplication and addition on the outside of the parentheses.  The value of the formula is the value of the function, which gives the heights of the dots on the graph.  The multiplication and addition is applied directly to this value.  Therefore, the graphical effects follow the arithmetic.
+This is not the case for multiplication and addition on the outside of the parentheses.  The value of the formula is the value of the function, which gives the heights of the dots on the graph.  The multiplication and addition on the outside is applied directly to this value.  Therefore, the graphical effects follow the arithmetic.
 
 
 \begin{center}
