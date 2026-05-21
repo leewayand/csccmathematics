@@ -19,10 +19,14 @@ The formula template for the basic exponential function looks like
 
 
 
-\[  a \, r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  r > 0   \]
+\[  A \, R^x   \, \text{ with } \,  A, R \in \mathbb{R} \, | \,  R > 0, R \ne 1   \]
 
 
-As we have seen before, the coefficient $a$ controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values. $r$ dictates a growing or decaying function.
+
+We can always view this as a composition and let the Chain Rule tells us the behavior.
+
+
+We can also read the coefficients, where $A$ and $R$ control the behavior.
 
 
 
@@ -30,19 +34,19 @@ As we have seen before, the coefficient $a$ controls vertical stretching or comp
 We have four combinations
 
 \begin{itemize}
-\item \textbf{\textcolor{blue!55!black}{$a>0$ and $r>1$}}
-\item \textbf{\textcolor{blue!55!black}{$a>0$ and $r<1$}}
-\item \textbf{\textcolor{blue!55!black}{$a<0$ and $r>1$}}
-\item \textbf{\textcolor{blue!55!black}{$a<0$ and $r<1$}}
+\item \textbf{\textcolor{blue!55!black}{$A>0$ and $R>1$}}
+\item \textbf{\textcolor{blue!55!black}{$A>0$ and $R<1$}}
+\item \textbf{\textcolor{blue!55!black}{$A<0$ and $R>1$}}
+\item \textbf{\textcolor{blue!55!black}{$A<0$ and $R<1$}}
 \end{itemize}
 
 
-For graphs of basic exponential functions, the horizontal axis is a horizontal asymptote in one direction or the other.
+For graphs of basic core exponential functions, the horizontal axis is a horizontal asymptote in one direction or the other.
 
 
-When $r > 1$ we have a growing function.
+When $R > 1$ we have a growing function.
 
-\[  \lim_{x \to -\infty} a \, r^x = 0 \, \text{ and } \, \lim_{x \to \infty} a \, r^x = \pm\infty \]
+\[  \lim_{x \to -\infty} A \, R^x = 0 \, \text{ and } \, \lim_{x \to \infty} A \, R^x = \pm\infty \]
 
 
 The sign of $a$ dictates if the unbounded growth is positive or negative.
@@ -64,7 +68,7 @@ The sign of $a$ dictates if the unbounded growth is positive or negative.
           \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
 
 
-          \node at (axis cs:-5,5) {$a > 0$};
+          \node at (axis cs:-5,5) {$A > 0$};
 
 
           %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
@@ -86,7 +90,7 @@ The sign of $a$ dictates if the unbounded growth is positive or negative.
         \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {-(1.3^x)};
         \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
 
-         \node at (axis cs:-5,5) {$a < 0$};
+         \node at (axis cs:-5,5) {$A < 0$};
 
           %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
           %\addplot [color=penColor,only marks,mark=*] coordinates{(-4,-1) (0,1) (1,-6.5) (7,-3.5)};
@@ -105,14 +109,14 @@ The sign of $a$ dictates if the unbounded growth is positive or negative.
 
 
 
-When $r<1$, the horizontal axis is still a horizontal asymptote, just in the other direction. The function now decays.
+When $R<1$, the horizontal axis is still a horizontal asymptote, just in the other direction. The function now decays.
 
 
-\[ \lim_{x \to -\infty} a \, r^x = \pm\infty \, \text{ and } \, \lim_{x \to \infty} a \, r^x = 0 \]
+\[ \lim_{x \to -\infty} A \, R^x = \pm\infty \, \text{ and } \, \lim_{x \to \infty} A \, R^x = 0 \]
 
 
 
-The sign of $a$ dictates if the function decays through positive or negative values.
+The sign of $A$ dictates if the function decays through positive or negative values.
 
 
 
@@ -130,7 +134,7 @@ The sign of $a$ dictates if the function decays through positive or negative val
           %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
           \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
 
-          \node at (axis cs:5,5) {$a > 0$};
+          \node at (axis cs:5,5) {$A > 0$};
 
           %\addplot [line width=1, penColor2, smooth,samples=100,domain=(-4:0)] ({x},{0});
           %\addplot [line width=1, penColor2, smooth,samples=100,domain=(1:7)] ({x},{0});
@@ -148,7 +152,7 @@ The sign of $a$ dictates if the function decays through positive or negative val
         \addplot [line width=2, penColor, smooth,samples=200,domain=(-8:9),<->] {-(1.3^(-x)};
         \addplot [color=penColor,only marks,mark=*] coordinates{(0,-1)};
 
-         \node at (axis cs:5,5) {$a < 0$};
+         \node at (axis cs:5,5) {$A < 0$};
 
 
           %\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{0.5x-7});
@@ -253,28 +257,28 @@ The coefficient in front, $a$, tells us if this larger/smaller value is larger p
 
 
 
-Analyze   $f(x) = \frac{1}{3} \, 2^{x+5}$ \\
+Analyze   $f(x) = \frac{1}{3} \, 2^{x+5}$ 
 
 
 
 
 
-Categorizing: $f(x) = \frac{1}{3} \, 2^{x+5}$ is an exponential function since it matches our official template, $A r^{B \, x + C}$. \\
+Categorizing: $f(x) = \frac{1}{3} \, 2^{x+5}$ is an exponential function since it matches our official template, $A r^{B \, x + C}$. 
 
 
 \textbf{Domain}
 
-$f$ is an exponential function, which tells us that its domain is $(-\infty, \infty)$. \\
+$f$ is an exponential function, which tells us that its domain is $(-\infty, \infty)$. 
 
 
 \textbf{Zeros}
 
-$f$ is an exponential function, therefore it has no zeros. \\
+$f$ is an exponential function, therefore it has no zeros. 
 
 
 \textbf{Continuity}
 
-$f$ is an exponential function, therefore it is continuous. \\
+$f$ is an exponential function, therefore it is continuous. 
 
 
 
@@ -282,7 +286,7 @@ $f$ is an exponential function, therefore it is continuous. \\
 
 
 \begin{itemize}
-\item The base is $2$, which is greater than $1.
+\item The base is $2$, which is greater than $1$.
 \item The leading coeffcient is $\frac{1}{3} > 0$.
 \item The leading coeffcient of the linear exponent is $1 > 0$.
 \end{itemize}
@@ -290,11 +294,30 @@ $f$ is an exponential function, therefore it is continuous. \\
 That tells us that $f$ is increasing and positive.
 
 
+Or, work with the Chain Rule.
+
+
+
+\[ f(x) = \frac{1}{3} \, 2^{x+5} = (L_{out} \circ E \circ L_{in})(x) \]
+
+
+where 
+
+
+\begin{itemize}
+\item $E(t) = 2^x$, an increasing core exponential function.
+\item $L_{out}(u) = \frac{1}{3} \, u$, an increasing linear function.
+\item $L_{in}(v) = v + 5$, an increasing linear function.
+\end{itemize}
+
+The Chain Rule gives us
+
+\[ inc \circ inc \circ inc = inc  \]
 
 
 \textbf{End-Behavior}
 
-$f$ is an exponential function, therefore the end-behavior of one side is $0$ and the other is unbounded. Since $f$ is positive and increasing, we have \\
+$f$ is an exponential function, therefore the end-behavior of one side is $0$ and the other is unbounded. Since $f$ is positive and increasing, we have 
 
 
 \[ \lim\limits_{x \to -\infty} f(x) = 0 \]
@@ -312,7 +335,7 @@ $f$ is an exponential function, therefore the end-behavior of one side is $0$ an
 
 \textbf{Local Maximum and Minimum}
 
-$f$ is an exponential function, therefore it has no local extrema. \\
+$f$ is an exponential function, therefore it has no local extrema. 
 
 
 
@@ -320,7 +343,7 @@ $f$ is an exponential function, therefore it has no local extrema. \\
 
 \textbf{Global Maximum and Minimum}
 
-$f$ is an exponential function, therefore it has no global extrema. \\
+$f$ is an exponential function, therefore it has no global extrema. 
 
 
 
@@ -337,15 +360,15 @@ $f$ is an exponential function, therefore it has no global extrema. \\
 \end{itemize}
 
 
-The range is $(0, \infty)$. \\
+The range is $(0, \infty)$. 
 
 
 
 
 
-\textbf{\textcolor{purple!85!blue}{Graphing}} \\
+\textbf{\textcolor{purple!85!blue}{Graphing}} 
 
-For graphs of exponential functions, the horizontal axis is the horizontal asymptote.  \\
+For graphs of exponential functions, the horizontal axis is the horizontal asymptote.  
 
 
 
@@ -420,16 +443,16 @@ Our graph agrees with our analysis.
 
 
 
-Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ \\
+Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ 
 
 
 
 
 
-Categorizing: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ is an exponential function since it matches our official template, $A r^{B \, x + C}$. \\
+Categorizing: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ is an exponential function since it matches our official template, $A r^{B \, x + C}$. 
 
 
-\begin{idea}
+\textbf{\textcolor{blue!55!black}{Idea}} 
 
 
 First, observe that the base $\frac{2}{3} < \answer{1}$.
@@ -451,7 +474,7 @@ Except, the variable, $t$, in the exponent is multiplied by $-1$.  Therefore, we
 
 
 
-\begin{model}
+
 
 The exponential stem of $B(t)$ is $\left( \frac{2}{3} \right)^{-t}$, which is a transformed version of the basic exponential function model $M(t) = \left( \frac{2}{3} \right)^{t}$.  
 
@@ -480,12 +503,12 @@ When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{-t} = \left
 
 
 
-\end{model}
 
 
 
 
-Finally, all of that is multiplied by $-2$, which switches all of the behavior. \\
+
+Finally, all of that is multiplied by $-2$, which switches all of the behavior. 
 
 
 
@@ -527,25 +550,25 @@ With this thinking, we can create an algebraic analysis.
 
 
 
-\end{idea}
 
 
 
 
 
 
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 \textbf{Domain}
 
-$B$ is an exponential function, therefore its domain is $(-\infty, \infty)$. \\
+$B$ is an exponential function, therefore its domain is $(-\infty, \infty)$. 
 
 
 
 
 \textbf{Zeros}
 
-$B$ is an exponential function, therefore it has no zeros. \\
+$B$ is an exponential function, therefore it has no zeros. 
 
 
 
@@ -553,7 +576,7 @@ $B$ is an exponential function, therefore it has no zeros. \\
 
 \textbf{Continuity}
 
-$B$ is an exponential function, therefore it is continuous. \\
+$B$ is an exponential function, therefore it is continuous. 
 
 
 
@@ -562,10 +585,10 @@ $B$ is an exponential function, therefore it is continuous. \\
 
 \textbf{End-Behavior}
 
-$B$ is an exponential function, therefore on one side the end-behavior is $0$ and unbounded on the other side. \\
+$B$ is an exponential function, therefore on one side the end-behavior is $0$ and unbounded on the other side. 
 
 
-Since the leading coefficient is $-2 < 0$, we know $B$ will be unbounded negatively.  We just need to figure out which side. \\
+Since the leading coefficient is $-2 < 0$, we know $B$ will be unbounded negatively.  We just need to figure out which side. 
 
 
 \begin{itemize}
@@ -575,7 +598,7 @@ Since the leading coefficient is $-2 < 0$, we know $B$ will be unbounded negativ
 \end{itemize}
 
 
-This makes $B$ a decreasing function with neagtive values. \\
+This makes $B$ a decreasing function with neagtive values. 
 
 
 \[ \lim\limits_{t \to -\infty} B(t) = 0 \]
@@ -585,17 +608,24 @@ This makes $B$ a decreasing function with neagtive values. \\
 
 
 
-\textbf{Behavior (Increasing and  Decreasing)} \\
+\textbf{Behavior (Increasing and  Decreasing)} 
+
+
+
+$B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$, which can be viewed as a composition.
 
 
 \begin{itemize}
-  \item the base of $B$ is $\frac{2}{3} < 1$
-  \item the leading coefficient of $B$ is $-2$, which is negative.
-  \item the leading coefficient of the linear exponent is $-1$, which is negative.
+\item Let $E(x) = \left( \frac{2}{3} \right)^x$, a decreasing core exponential function.
+\item Let $L_{out}(u) = -2\,u$, a decreasing linear function.
+\item Let $L_{in}(v) = 3-v,u$, a decreasing linear function.
 \end{itemize}
 
 
-This makes $B$ a decreasing function. \\ 
+The Chain Rule gives $dec \circ dec \circ dec = dec$.
+
+
+This makes $B$ a decreasing function. 
 
 
 
@@ -604,7 +634,7 @@ This makes $B$ a decreasing function. \\
 
 \textbf{Local Maximum and Minimum}
 
-$B$ is an exponential function, therefore it has no local extrema. \\
+$B$ is an exponential function, therefore it has no local extrema. 
 
 
 
@@ -612,7 +642,7 @@ $B$ is an exponential function, therefore it has no local extrema. \\
 
 \textbf{Global Maximum and Minimum}
 
-$B$ is an exponential function, therefore it has no global extrema. \\
+$B$ is an exponential function, therefore it has no global extrema. 
 
 
 
@@ -629,7 +659,7 @@ $B$ is an exponential function, therefore it has no global extrema. \\
 \end{itemize}
 
 
-The range is $(-\infty, 0)$. \\
+The range is $(-\infty, 0)$. 
 
 
 
@@ -640,7 +670,7 @@ The range is $(-\infty, 0)$. \\
 
 
 
-Our analysis agrees with the graph. \\
+Our analysis agrees with the graph. 
 
 
 
@@ -671,11 +701,11 @@ Our analysis agrees with the graph. \\
 
 
 
-Analyze   $K(f) = 3^{5-f}$ \\
+Analyze   $K(f) = 3^{5-f}$ 
 
 
 
-\begin{idea}
+\textbf{\textcolor{blue!55!black}{Idea}} 
 
 
 
@@ -758,27 +788,64 @@ Graph of $y = K(f)$.
 
 
 
-With this thinking, we can create an algebraic analysis. \\
+With this thinking, we can create an algebraic analysis. 
 
-\end{idea}
+\textbf{\textcolor{red!75!green}{explanation}}
 
 
 
 \textbf{Domain}
 
-The natural or implied domain of $K$ is $\mathbb{R}$, because $K$ is an exponential function. \\
+The natural or implied domain of $K$ is $\mathbb{R}$, because $K$ is an exponential function. 
 
 
 \textbf{Zeros}
 
-There are no zeros, because $K$ is an exponential function. \\
+There are no zeros, because $K$ is an exponential function. 
 
 
 
 
 \textbf{Continuity}
 
-$K$ is continuous, because $K$ is an exponential function. \\
+$K$ is continuous, because $K$ is an exponential function. 
+
+
+
+
+\textbf{Behavior (Increasing and Decreasing)}
+
+
+The base is greater than $1$ and the leading coeffcients are of opposite sign.  That tells us that $K$ is decreasing.
+
+Or, use the Chain Rule.
+
+$K(f) = 3^{5-f}$ can be viewed as a composition.
+
+
+
+
+\begin{itemize}
+\item Let $E(x) = 3^x$, an increasing core exponential function.
+\item Let $L_{in}(v) = 5-v,u$, a decreasing linear function.
+\end{itemize}
+
+
+The Chain Rule gives $inc \circ dec = dec$.
+
+
+This makes $B$ a decreasing function. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -787,17 +854,9 @@ $K$ is continuous, because $K$ is an exponential function. \\
 \textbf{End-Behavior}
 
 
-\begin{itemize}
-  \item The base is $3 > 1$
-  \item The leading coefficient is $1$, which is positive
-  \item The leading coefficient of the linear exponent is $-1$, which is negative
-\end{itemize}
+The leading coefficient is $1$, which is positive, which tells us that $K$ is a positive function. $K$ only has positive values.
 
-
-The base is greater than $1$ and the leading coeffcients are of opposite sign.  That tells us that $K$ is decreasing.
-
-The positive leading coefficient tells us that $K$ is a positive function.
-
+We just found out that $K$ is a decreasnig function.
 
 The end-behavior of a positive decreasing exponential function is
 
@@ -807,10 +866,7 @@ The end-behavior of a positive decreasing exponential function is
 
 
 
-\textbf{Behavior (Increasing and Decreasing)}
 
-
-The base is greater than $1$ and the leading coeffcients are of opposite sign.  That tells us that $K$ is decreasing.
 
 
 
@@ -838,7 +894,7 @@ Exponential functions do not have local maximum or minimum values.
 \end{itemize}
 
 
-The range is $(0, \infty)$. \\
+The range is $(0, \infty)$. 
 
 
 
@@ -846,7 +902,7 @@ The range is $(0, \infty)$. \\
 
 
 
-This all agrees with the graph. \\
+This all agrees with the graph. 
 
 
 \end{example}

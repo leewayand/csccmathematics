@@ -19,21 +19,21 @@ The formula template for the basic exponential function looks like
 
 
 
-\[  a \, r^x   \, \text{ with } \,  a, r \in \mathbb{R} \, | \,  r > 0   \]
+\[  A \, R^x   \, \text{ with } \,  A, R \in \mathbb{R} \, | \,  R > 0   \]
 
 
-As we have seen before, the coefficient $a$ controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values. $r$ dictates a growing or decaying function.
+As we have seen before, the coefficient $A$ controls vertical stretching or compression. The sign of $A$ dictates the sign of our function values. $R$ dictates a growing or decaying function.
 
 
-Shifted exponential functions shift the range by adding a constant. \\
+Shifted exponential functions shift the range by adding A constant. 
 
 
-\[  a \, r^x  + b \, \text{ with } \,  a, b, r \in \mathbb{R} \, | \,  r > 0   \]
+\[  A \, R^x  + B \, \text{ with } \,  A, B, R \in \mathbb{R} \, | \,  R > 0   \]
 
 
 
 
-These no longer have a constant percent growth rate.  However, their analysis is exactly the same as for exponential functions with one big difference in our conclusions. Shifted exponential functions may have zeros. \\
+These no longer have a constant percent growth rate.  However, their analysis is exactly the same as for exponential functions with one big difference in our conclusions. Shifted exponential functions may have zeros. 
 
 
 
@@ -49,27 +49,27 @@ These no longer have a constant percent growth rate.  However, their analysis is
 
 
 
-Analyze   $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ \\
+Analyze   $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ 
 
-Categorize:  $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ is a shifted exponential function, since it matches our official template,  $A \, r^{B \, x + C} + D$\\
-
-
+Categorize:  $f(x) = \frac{1}{3} \, 2^{x+5} - 7$ is a shifted exponential function, since it matches our official template,  $A \, r^{B \, x + C} + D$
 
 
 
 
 
-\begin{idea}
+
+
+\textbf{\textcolor{blue!55!black}{Idea}} 
 
 
 For the basic exponential function graph, the horizontal axis is the horizontal asymptote.  Here, this has been moved down $7$.
 
 
 
-The ``inside'', representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, since the base is $2 > 1$, this is the direction of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the coefficient, $\frac{1}{3} > 0$, the unbounded growth is positive. \\
+The ``inside'', representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, since the base is $2 > 1$, this is the direction of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the coefficient, $\frac{1}{3} > 0$, the unbounded growth is positive. 
 
 
-$f$ is the sum of an exponential function, $\frac{1}{3} \, 2^{x+5}$, and a constant function, $-7$.  The exponential part will approach $0$ on one side of the domain.  Therefore, $f$ will approach $-7$ on that side of the domain. \\
+$f$ is the sum of an exponential function, $\frac{1}{3} \, 2^{x+5}$, and a constant function, $-7$.  The exponential part will approach $0$ on one side of the domain.  Therefore, $f$ will approach $-7$ on that side of the domain. 
 
 
 
@@ -111,19 +111,19 @@ Graph of $y = f(x)$.
 
 With these ideas, we can create an algebraic analysis.
 
-\end{idea}
+\textbf{\textcolor{red!75!green}{algebraic explanation}} 
 
 
 
 
 \textbf{Domain}
 
-$f$ is a shifted exponential function, which tells us that its domain is $(-\infty, \infty)$. \\
+$f$ is a shifted exponential function, which tells us that its domain is $(-\infty, \infty)$. 
 
 
 \textbf{Zeros}
 
-$f$ is a shifted exponential function, therefore it might have a zero. \\
+$f$ is a shifted exponential function, therefore it might have a zero. 
 
 
 
@@ -140,7 +140,7 @@ $f$ is a shifted exponential function, therefore it might have a zero. \\
 \[ x = \log_2(21) - 5 \]
 
 
-\textbf{Note:} $\log_2(21) - 5 \approx -0.6076825772$, which agrees with the graph. \\
+Just Checking...$\log_2(21) - 5 \approx -0.6076825772$, which agrees with the graph. 
 
 
 
@@ -148,7 +148,7 @@ $f$ is a shifted exponential function, therefore it might have a zero. \\
 
 \textbf{Continuity}
 
-$f$ is a shifted exponential function, therefore it is continuous. \\
+$f$ is a shifted exponential function, therefore it is continuous. 
 
 
 
@@ -157,12 +157,23 @@ $f$ is a shifted exponential function, therefore it is continuous. \\
 
 
 \begin{itemize}
-\item The base is $2$, which is greater than $1$.
-\item The leading coeffcient is $\frac{1}{3} > 0$.
-\item The leading coeffcient of the linear exponent is $1 > 0$.
+\item Let $E(t) = 2^x$, an increasing core exponential function.
+\item Let $L_{out}(u) = \frac{1}{3} \, u - 7$, increasing linear function.
+\item Let $L_{in}(v) = \v+5$, increasing linear function.
 \end{itemize}
 
-That tells us that $f$ is increasing.
+
+
+
+$f(x) = \frac{1}{3} \, 2^{x+5} - 7 =(L_{out} \circ E \circ L_{in})(x)$
+
+
+The Chain Rule tells us $inc \circ inc \circ inc = inc$.
+
+$f$ is an increasing function.
+
+
+
 
 
 
@@ -170,7 +181,7 @@ That tells us that $f$ is increasing.
 
 \textbf{End-Behavior}
 
-$f$ is a shifted exponential function, therefore the end-behavior of one side is the constant term, $-7$ and the other is unbounded. The leading coefficient is $\frac{1}{3}$, which tells is that when $f$ becomes unbounded, it will become unbounded positively.  \\
+$f$ is a shifted exponential function, therefore the end-behavior of one side is the constant term, $-7$ and the other is unbounded. The leading coefficient is $\frac{1}{3}$, which tells is that when $f$ becomes unbounded, it will become unbounded positively.  
 
 
 $f$ is increasing and is unbounded positively.  That gives us
@@ -190,7 +201,7 @@ $f$ is increasing and is unbounded positively.  That gives us
 
 \textbf{Local Maximum and Minimum}
 
-$f$ is a shifted exponential function, therefore it has no local extrema. \\
+$f$ is a shifted exponential function, therefore it has no local extrema. 
 
 
 
@@ -198,7 +209,7 @@ $f$ is a shifted exponential function, therefore it has no local extrema. \\
 
 \textbf{Global Maximum and Minimum}
 
-$f$ is a shifted exponential function, therefore it has no global extrema. \\
+$f$ is a shifted exponential function, therefore it has no global extrema. 
 
 
 
@@ -216,7 +227,7 @@ $f$ is a shifted exponential function, therefore it has no global extrema. \\
 
 
 
-The range of $(-7, \infty)$. \\
+The range of $(-7, \infty)$. 
 
 
 
@@ -252,13 +263,13 @@ The range of $(-7, \infty)$. \\
 
 
 
-Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
+Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ 
 
 
-\begin{idea}
+\textbf{\textcolor{blue!55!black}{Idea}} 
 
 
-Categorize: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$  is a shifted exponential function, since it matches our template, $A \, r^{B \, x + C} +D$ \\
+Categorize: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$  is a shifted exponential function, since it matches our template, $A \, r^{B \, x + C} +D$ 
 
 
 
@@ -282,8 +293,6 @@ Except, the variable, $t$, in the exponent is multiplied by $-1$.  Therefore, we
 
 
 
-
-\begin{model}
 
 The exponential stem of $B(t)$ is $\left( \frac{2}{3} \right)^{-t}$, which is a transformed version of the basic exponential function model $M(t) = \left( \frac{2}{3} \right)^{t}$.  
 
@@ -312,7 +321,7 @@ When $t > 0$, then $-t < 0$ and we get  $\left( \frac{2}{3} \right)^{-t} = \left
 
 
 
-\end{model}
+
 
 
 
@@ -375,11 +384,11 @@ Graph of $y = B(t)$.
 
 
 
-With these ideas, we can create an algebraic analysis. \\
+With these ideas, we can create an algebraic analysis. 
 
 
 
-\end{idea}
+\textbf{\textcolor{red!75!green}{algebraic explanation}} 
 
 
 
@@ -392,14 +401,14 @@ With these ideas, we can create an algebraic analysis. \\
 
 \textbf{Domain}
 
-$B$ is a shifted exponential function, therefore its domain is $(-\infty, \infty)$. \\
+$B$ is a shifted exponential function, therefore its domain is $(-\infty, \infty)$. 
 
 
 
 
 \textbf{Zeros}
 
-$B$ is a shifted exponential function, therefore it might have a zero. \\
+$B$ is a shifted exponential function, therefore it might have a zero. 
 
 
 
@@ -416,7 +425,7 @@ $B$ is a shifted exponential function, therefore it might have a zero. \\
 \[ 3 - \log_{\tfrac{2}{3}}(2) = t \]
 
 
-\textbf{Note:} $3 - \log_{\tfrac{2}{3}}(2) \approx -3.584962501$, which agrees with the graph. \\
+\textbf{Note:} $3 - \log_{\tfrac{2}{3}}(2) \approx -3.584962501$, which agrees with the graph. 
 
 
 
@@ -426,7 +435,34 @@ $B$ is a shifted exponential function, therefore it might have a zero. \\
 
 \textbf{Continuity}
 
-$B$ is a shifted exponential function, therefore it is continuous. \\
+$B$ is a shifted exponential function, therefore it is continuous. 
+
+
+
+
+
+
+\textbf{Behavior (Increasing and  Decreasing)} 
+
+$B$ can be viewed as a composition.
+
+
+
+\begin{itemize}
+  \item Let $E(x) = \left( \frac{2}{3} \right)^x$, a decreasing core exponential function.
+  \item Let $L_{out}(u) = -2\,u+4$, a decreasing linear function.
+  \item Let $L_{in}(v) = 3-v$, a decreasing linear function.
+\end{itemize}
+
+\[
+B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4 = (L_{out} \circ E \circ L_{in}(t)
+\]
+
+The Chain Rule gives us $dec \circ dec \circ dec = dec$
+
+
+$B$ a decreasing function. 
+
 
 
 
@@ -435,20 +471,14 @@ $B$ is a shifted exponential function, therefore it is continuous. \\
 
 \textbf{End-Behavior}
 
-$B$ is a shifted exponential function, therefore on one side the end-behavior is the constant term $4$ and unbounded on the other side. \\
+$B$ is a shifted exponential function, therefore on one side the end-behavior is the constant term $4$ and unbounded on the other side. 
 
 
-Since the leading coefficient is $-2 < 0$, we know $B$ will be unbounded negatively.  We just need to figure out which side. \\
+Since the leading coefficient is $-2 < 0$, we know $B$ will be unbounded negatively.  We just need to figure out which side. 
 
 
-\begin{itemize}
-  \item the base of $B$ is $\frac{2}{3} < 1$
-  \item the leading coefficient of $B$ is $-2$, which is negative and tells us that $B$ will become unbounded negatively.
-  \item the leading coefficient of the linear exponent is $-1$, which is negative.
-\end{itemize}
 
-
-This makes $B$ a decreasing function, which becomes unbounded negatively.  That gives us \\
+$B$ a decreasing function, which becomes unbounded negatively.  That gives us 
 
 
 \[ \lim\limits_{t \to -\infty} B(t) = 4 \]
@@ -458,26 +488,10 @@ This makes $B$ a decreasing function, which becomes unbounded negatively.  That 
 
 
 
-\textbf{Behavior (Increasing and  Decreasing)} \\
-
-
-\begin{itemize}
-  \item the base of $B$ is $\frac{2}{3} < 1$
-  \item the leading coefficient of $B$ is $-2$, which is negative.
-  \item the leading coefficient of the linear exponent is $-1$, which is negative.
-\end{itemize}
-
-
-This makes $B$ a decreasing function. \\ 
-
-
-
-
-
 
 \textbf{Local Maximum and Minimum}
 
-$B$ is a shifted exponential function, therefore it has no local extrema. \\
+$B$ is a shifted exponential function, therefore it has no local extrema. 
 
 
 
@@ -485,7 +499,7 @@ $B$ is a shifted exponential function, therefore it has no local extrema. \\
 
 \textbf{Global Maximum and Minimum}
 
-$B$ is a shifted exponential function, therefore it has no global extrema. \\
+$B$ is a shifted exponential function, therefore it has no global extrema. 
 
 
 
@@ -501,13 +515,13 @@ $B$ is a shifted exponential function, therefore it has no global extrema. \\
 \end{itemize}
 
 
-The range is $(-\infty, 4)$. \\
+The range is $(-\infty, 4)$. 
 
 
 
 
 
-The graph agrees with our analysis. \\
+The graph agrees with our analysis. 
 
 
 
@@ -538,9 +552,9 @@ The graph agrees with our analysis. \\
 
 
 
-Analyze   $K(f) = 3^{5-f} - 5$ \\
+Analyze   $K(f) = 3^{5-f} - 5$ 
 
-\begin{idea}
+\textbf{\textcolor{blue!55!black}{Idea}} 
 
 \begin{question}
 
@@ -567,12 +581,12 @@ The exponent gets big and positive when $f$ gets big and \wordChoice{\choice{pos
 \begin{question}
 
 
-The graph will grow to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+The graph will grow to the \wordChoice{\choice{right}\choice[correct]{left}}.
 \end{question}
 \begin{question}.
 
 
-The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
+The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.
 \end{question}
 \begin{question}
 
@@ -582,7 +596,7 @@ Our one anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
 \begin{question}
 
 
-The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.\\
+The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.
 \end{question}
 
 
@@ -618,10 +632,10 @@ Graph of $y = K(f)$.
 \end{image}
 
 
-With these ideas, we can create an algebraic analysis. \\
+With these ideas, we can create an algebraic analysis. 
 
 
-\end{idea}
+\textbf{\textcolor{red!75!green}{algebraic explanation}} 
 
 
 
@@ -629,18 +643,18 @@ With these ideas, we can create an algebraic analysis. \\
 
 \textbf{Domain}
 
-The natural or implied domain of $K$ is $\mathbb{R}$, because $K$ is a shifted exponential function. \\
+The natural or implied domain of $K$ is $\mathbb{R}$, because $K$ is a shifted exponential function. 
 
 
 \textbf{Zeros}
 
-$B$ is a shifted exponential function, so it might have a zero. \\
+$K$ is a shifted exponential function, so it might have a zero. 
 
 
 
 
 
-\[ B(t) = 3^{5 - f} - 5 = 0 \]
+\[ K(t) = 3^{5 - f} - 5 = 0 \]
 
 
 \[ 3^{5 - f} = 5 \]
@@ -650,46 +664,58 @@ $B$ is a shifted exponential function, so it might have a zero. \\
 \[ 5 - \log_3(5) = f \]
 
 
-\textbf{Note:}  $5 - \log_3(5) \approx 3.535026479$, which agrees with the graph. \\
+\textbf{Note:}  $5 - \log_3(5) \approx 3.535026479$, which agrees with the graph. 
 
 
 
 
 \textbf{Continuity}
 
-$K$ is continuous, because $K$ is a shifted exponential function. \\
+$K$ is continuous, because $K$ is a shifted exponential function. 
 
 
-
-
-
-\textbf{End-Behavior}
-
-
-\begin{itemize}
-  \item The base is $3 > 1$
-  \item The leading coefficient is $1$, which is positive
-  \item The leading coefficient of the linear exponent is $-1$, which is negative
-\end{itemize}
-
-
-The base is greater than $1$ and the leading coeffcients are of opposite sign.  That tells us that $K$ is decreasing.
-
-The positive leading coefficient tells us that $K$ becomes unbounded positively. We just need to figure out which side.  The end-behavior on the other side is the constant term, $-5$.
-
-
-$K$ is a decreasing shifted exponential function that becomes unbounded positively. \\
-
-
-\[ \lim\limits_{f \to -\infty} K(f) = \infty \]
-\[ \lim\limits_{f \to \infty} K(f) = -5 \]
 
 
 
 \textbf{Behavior (Increasing and Decreasing)}
 
 
-The base is greater than $1$ and the leading coeffcients are of opposite sign.  That tells us that $K$ is decreasing.
+$K$ can be viewed as a composition.
+
+
+
+\begin{itemize}
+  \item Let $E(x) = 3^x$, an increasing core exponential function.
+  \item Let $L_{out}(u) = 3\,u-5$, an increasing linear function.
+  \item Let $L_{in}(v) = 5-v$, a decreasing linear function.
+\end{itemize}
+
+\[
+K(f) = 3^{5 - f} - 5 = (L_{out} \circ E \circ L_{in}(f)
+\]
+
+The Chain Rule gives us $inc \circ inc \circ dec = dec$
+
+
+$K$ is a decreasing function. 
+
+
+
+\textbf{End-Behavior}
+
+
+$K$ is a decreasing function. 
+
+The positive leading coefficient tells us that $K$ becomes unbounded positively. We just need to figure out which side.  The end-behavior on the other side is the constant term, $-5$.
+
+
+$K$ is a decreasing shifted exponential function that becomes unbounded positively. 
+
+
+\[ \lim\limits_{f \to -\infty} K(f) = \infty \]
+\[ \lim\limits_{f \to \infty} K(f) = -5 \]
+
+
 
 
 
@@ -717,7 +743,7 @@ Shifted exponential functions do not have local maximum or minimum values.
 \end{itemize}
 
 
-The range is $(0, \infty)$. \\
+The range is $(0, \infty)$. 
 
 
 
@@ -725,7 +751,7 @@ The range is $(0, \infty)$. \\
 
 
 
-This all agrees with the graph. \\
+This all agrees with the graph. 
 
 
 

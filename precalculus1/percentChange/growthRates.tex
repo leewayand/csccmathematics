@@ -20,7 +20,7 @@ constant percentage
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Linear Functions}}   \\
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Linear Functions}}   
 
 
 \begin{quote}
@@ -36,22 +36,22 @@ The defining characteristic of linear functions is that the have a constant grow
 This led to the formula for linear functions:  $L(x) = m(x-a) + L(a)$
 
 
-This tells us that no matter where you are in the domain, of $L$, if you move the same distance inside the domain, then the value of $L$ changes by the same \textbf{\textcolor{purple!85!blue}{amount}}. The same amount is \textbf{added} to the function value.\\
+This tells us that no matter where you are in the domain, of $L$, if you move the same distance inside the domain, then the value of $L$ changes by the same \textbf{\textcolor{purple!85!blue}{amount}}. The same amount is \textbf{added} to the function value.
 
 
 
 
 
 
-Exponential functions have a similar growth characteristic, but with percentages. \\
+Exponential functions have a similar growth characteristic, but with percentages. 
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Exponential Functions}} \\
+$\blacktriangleright$ \textbf{\textcolor{purple!85!blue}{Exponential Functions}} 
 
 
 
-Suppose we have a function with this property:  No mater where you are in the domain, if you move the same amount in the domain, then the function value changes by the same \textbf{\textcolor{purple!85!blue}{percent}}.  The function value is \textbf{multiplied} by the same factor. \\
+Suppose we have a function with this property:  No mater where you are in the domain, if you move the same amount in the domain, then the function value changes by the same \textbf{\textcolor{purple!85!blue}{percent}}.  The function value is \textbf{multiplied} by the same factor. 
 
 Then what does the formula look like?
 
@@ -93,7 +93,7 @@ E(d+D) = E(d) (1+p)
 
 
 
-To get the value of $E(d+D)$, we multiply $E(d)$ by $1+p$. \\
+To get the value of $E(d+D)$, we multiply $E(d)$ by $1+p$. 
 
 
 
@@ -103,13 +103,13 @@ To get the value of $E(d+D)$, we multiply $E(d)$ by $1+p$. \\
 
 
 
-If we travel another $D$, then we move from $d+D$ to $d+2D$, inside the domain. \\
+If we travel another $D$, then we move from $d+D$ to $d+2D$, inside the domain. 
 
 We have travelled another distance of $D$. Our exponential property says that we should get another $p$ percent.
 
 
 
-This time our starting value is $E(d+D) = E(d) (1+p)$ and we would like to calculate the value of $E(d+2D)$. \\
+This time our starting value is $E(d+D) = E(d) (1+p)$ and we would like to calculate the value of $E(d+2D)$. 
 
 
 
@@ -154,10 +154,10 @@ An exponential function.
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Exponential Functions}}
+\begin{idea} \textbf{\textcolor{blue!55!black}{Exponential Functions}}
 
 
-\textbf{Exponential functions} are those functions that experience a constant percentage growth rate. \\
+\textbf{Exponential functions} are those functions that experience a constant percentage growth rate. 
 
 
 Their formulas look like
@@ -171,13 +171,23 @@ where $a \ne 0$ and $r > 0$.
 
 $a$ is called the \textbf{coefficient} and $r$ is called the \textbf{base}.
 
-\end{definition}
+\end{idea}
 
 
 
+\textbf{Note:}  We have two forms for exponential functions:
+
+\begin{itemize}
+\item $a \, r^x$
+\item $A \, R^{B\,x+C}$
+\end{itemize}
+
+This is not a problem since they are equivalent.
 
 
-
+\[
+A \, R^{B\,x+C} = A \, R^{B\,x} \, R^C = (A \, R^C)\, (R^B)^x = a \, r^x
+\]
 
 
 
@@ -193,9 +203,9 @@ $a$ is called the \textbf{coefficient} and $r$ is called the \textbf{base}.
 
 
 
-Exponential functions do not have a constant growth rate. \\
+Exponential functions do not have a constant growth rate. 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 Let $G(t) = 5 \cdot \left(\frac{3}{2}\right)^t$ with domain \textbf{$R$}. 
 
@@ -214,21 +224,21 @@ Let $G(t) = 5 \cdot \left(\frac{3}{2}\right)^t$ with domain \textbf{$R$}.
 
 Each time we moved $1$ in the domain, $G(t)$ DID NOT increase by the same amount.
 
-$G(1) - G(0) = \answer{\frac{5}{2}}$ \\
+$G(1) - G(0) = \answer{\frac{5}{2}}$ 
 
-$G(2) - G(1) = \answer{\frac{15}{4}}$ \\
+$G(2) - G(1) = \answer{\frac{15}{4}}$ 
 
-$ \frac{5}{2}  \ne  \frac{15}{4} $, therefore $G(t)$ does not have a constant rate-of-change. \\
+$ \frac{5}{2}  \ne  \frac{15}{4} $, therefore $G(t)$ does not have a constant rate-of-change. 
 
 
-\end{explanation}
+
 
 \end{fact}
 
 
 
 
-This example function, $G$, has a constant percentage rate-of-change. \\
+This example function, $G$, has a constant percentage rate-of-change. 
 
 No matter where you are in the domain, when you move $1$, the value of $G$ increases by the same percentage (is multiplied by the same factor).
 
@@ -393,134 +403,13 @@ Every time $x$ increases by $1$, the value of $k$ gets multiplied by another $\f
 
 
 
+\begin{example} General Percentage Change
 
 
 
+Let $R(t) = a \cdot r^t$, with $a$ and $r$ real numbers and $r>0$ 
 
-
-
-\section*{A New Number: e}
-
-
-Consider this function 
-
-\[
-e(x) = \left(1 + \frac{1}{x}\right)^x
-\]
-
-
-
-Here is a graph
-
-
-\begin{center}
-\desmos{0tuazdb3kc}{400}{300}
-\end{center}
-
-
-The graph of this function has a horizontal asymptote.  The horizontal asymptote intersects the $y$-axis at a number.  This number is called $e$.   It is a special number and gets its own symbol, much like $\pi$ gets its own symbol.
-
-
-
-\[
-e \approx  2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427
-\]
-
-
-$e$ is an irrational number that has many connections to natural growth.  The importance of $e$ will show up in Calculus.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} Percentage Change
-
-
-
-Let $p(x) = 3 \, e^x$ \\
-
-$p$ is an exponential function, which means it has a constant percentage change. \\
-
-
-
-\begin{explanation}
-
-Values of $p$:
-
-\begin{itemize}
-\item $p(0) = 3$
-
-\item $p(1) = 3 e$
-
-\item $p(2) = 3 e^2$
-\end{itemize}
-
-
-
-Change in $p$:
-
-\begin{itemize}
-\item $p(1) - p(0) = 3 (e-1)$
-
-\item $p(2) - p(1) = 3 e (e-1)$
-
-\end{itemize}
-
-
-
-
-
-Percentage change in $p$:
-
-\begin{itemize}
-\item $\frac{p(1) - p(0)}{p(0)} = e - 1$, which is about $171.8\%$
-
-\item $\frac{p(2) - p(1)}{p(1)} = e-1 $, which is about $171.8\%$
-
-\end{itemize}
-
-\end{explanation}
-
-\end{example}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{example} Percentage Change
-
-
-
-Let $R(t) = a \cdot r^t$, with $a$ and $r$ real numbers and $r>0$ \\
-
-$R$ is an exponential function, which means it has a constant percentage change. \\
+$R$ is an exponential function, which means it has a constant percentage change. 
 
 Values of $R$:
 
@@ -567,6 +456,193 @@ Percentage change in $R$:
 
 
 
+
+
+
+
+
+\section*{A New Number: e}
+
+
+Consider this function 
+
+
+\[
+e(x) = \left(1 + \frac{1}{x}\right)^x
+\]
+
+
+
+Here is a graph of $y = e(x)$.
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-5:100, ymax=4, xmax=100, ymin=-1, xmin=-5,
+            axis lines =center, xlabel=$x$, ylabel={$y$}, grid = major,
+            ytick={2, 4},
+            xtick={20,40,60,80},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+	%\addplot [draw=penColor,very thick,smooth,domain=(-4:-1)] {2*x-1};
+	\addplot [draw=penColor2,very thick,smooth,domain=(1:95)] {(1+1/x)^x};
+	%\addplot[color=penColor,only marks,mark=*] coordinates{(-1,-3)}; 
+	%\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-4,-9)}; 
+	
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+\begin{center}
+\desmos{0tuazdb3kc}{400}{300}
+\end{center}
+
+
+The graph of this function has a horizontal asymptote.  The horizontal asymptote intersects the $y$-axis at a number.  This number is called $e$.   It is a special number and gets its own symbol, much like $\pi$ gets its own symbol.
+
+
+
+\[
+e \approx  2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427
+\]
+
+
+$e$ is an irrational number that has many connections to natural growth.  The importance of $e$ will show up in Calculus.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Percentage Change
+
+
+
+Let $p(x) = 3 \, e^x$ 
+
+$p$ is an exponential function, which means it has a constant percentage change. 
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+Values of $p$:
+
+\begin{itemize}
+\item $p(0) = 3$
+
+\item $p(1) = 3 e$
+
+\item $p(2) = 3 e^2$
+\end{itemize}
+
+
+
+Change in $p$:
+
+\begin{itemize}
+\item $p(1) - p(0) = 3 (e-1)$
+
+\item $p(2) - p(1) = 3 e (e-1)$
+
+\end{itemize}
+
+
+
+
+
+Percentage change in $p$:
+
+\begin{itemize}
+\item $\frac{p(1) - p(0)}{p(0)} = e - 1$, which is about $171.8\%$
+
+\item $\frac{p(2) - p(1)}{p(1)} = e-1 $, which is about $171.8\%$
+
+\end{itemize}
+
+
+\end{example}
+
+
+
+
+
+
+
+\textbf{What's is so special about $e$?}
+
+We'll see what is special about $e$ in Calculus.  
+
+But here is a peek ahead.
+
+
+Let's consider the exponential function $E(x) = e^x$.
+
+This is an exponential function, which means it has a constant percentage growth rate.
+
+But, let's look at its growth rate or rate of change. Let's look around $0$. And, we'll look closer and closer to $0$.
+
+
+$\frac{E(0.5)-E(0)}{0.5} \approx 1.297$
+
+$\frac{E(0.25)-E(0)}{0.25} \approx 1.13$
+
+$\frac{E(0.1)-E(0)}{0.1} \approx 1.05$
+
+$\frac{E(0.05)-E(0)}{0.05} \approx 1.025$
+
+$\frac{E(0.1)-E(0)}{0.1} \approx 1.05$
+
+$\frac{E(0.01)-E(0)}{0.01} \approx 1.005$
+
+$\frac{E(0.001)-E(0)}{0.001} \approx 1.0005$
+
+$\frac{E(0.0001)-E(0)}{0.0001} \approx 1.00005$
+
+The growth rate of $e^x$ near $1$ is $1$.
+
+Since $e^0 = 1$, The growth rate of $e^x$ near $e^0$ 
+
+
+Let's try that for some other numbers.
+
+
+$\frac{E(2.0001)-E(2)}{0.0001} \approx 7.389 \approx e^2$
+
+
+$\frac{E(3.0001)-E(3)}{0.0001} \approx 20.0855 \approx e^3$
+
+
+
+
+$e^x$ is its own rate of change!
+
+This will prove to be VERY useful in Calculus.
 
 
 
