@@ -28,6 +28,28 @@ Let $T$ be a function.  Its graph is shown here.
 
 
 
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:9),<->] {4*(x^2)*sin(deg(x-4))*2.7^(-(0.35*x)^2)+3};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
 \begin{center}
 \desmos{jukryzlv9o}{400}{300}
 \end{center}
@@ -43,11 +65,11 @@ Using the graph estimate the following values.
 
 \begin{itemize}
 
-\item $T(2) = \answer[tolerance=0.1]{-5.9}$ \\
+\item $T(2) = \answer[tolerance=0.1]{-5.9}$ 
 
-\item $T(-6) = \answer[tolerance=0.1]{3.95}$ \\
+\item $T(-6) = \answer[tolerance=0.1]{3.95}$ 
 
-\item $T(0) = \answer[tolerance=0.1]{3}$ \\
+\item $T(0) = \answer[tolerance=0.1]{3}$ 
 
 \end{itemize}
 
@@ -57,6 +79,30 @@ Using the graph estimate the following values.
 
 
 Let $f$ be a function.  Its graph is shown here. 
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$k$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9.4:9.5),<->] {0.05*(x+6)*(x+1)*(x-5)*cos(deg(0.5*x))+3};
+        
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
 
 
 
