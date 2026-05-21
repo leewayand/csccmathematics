@@ -18,14 +18,14 @@ As we study functions we have expectations of their values or feelings about ``n
 
 \begin{itemize}
 \item There is a domain number. The function has a value at this domain number. When other domain numbers are close to this domain number, their function values are not close to this function value.
-\item There is a real number, which is not a domain number. So, the function has no value at this real number. When  domain numbers are close to this real number, their function values are not close to each other.
+\item There is a real number, which is not a domain number. So, the function has no value at this real number. When  domain numbers are close to this real number, their function values may or may not be close to each other.
 \end{itemize}
 
 
 We have two concepts we need to get control over. We need algebraic language that allows us to describe exactly the concepts of ``around'' and ``close''.  These ideas are vital to Calculus and the study of functions.  And we will never get anywhere with vague or graphical language.
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} First up is ``\textbf{\textcolor{purple!85!blue}{around}}''.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} First up is ``\textbf{\textcolor{purple!85!blue}{around}}''.
 
 
 
@@ -55,9 +55,9 @@ An \textbf{interval} of real numbers, or on the real line, is a whole connected 
 
 
 \begin{itemize}
-\item A \textbf{finite open interval} contains all of the real numbers between two distinct real numbers, but excludes the two distinct numbers themselves.\\
+\item A \textbf{finite open interval} contains all of the real numbers between two distinct real numbers, but excludes the two distinct numbers themselves.
 
-We symbolize finite open intervals like $(a, b)$. \\
+We symbolize finite open intervals like $(a, b)$. 
 
 $(a,b)$ includes all real numbers strictly between $a$ and $b$. \\ 
 $(a,b)$ includes all real numbers that are simultaneously greater than $a$ and also less than $b$.  \\
@@ -65,9 +65,9 @@ $(a,b)$ includes all real numbers, $r$, such that $a < r < b$.
 
 
 
-\item An \textbf{infinite open interval} contains either (1) all of the real numbers less than some specific real number, or (2) all of the real numbers greater than some specific real number. \\
+\item An \textbf{infinite open interval} contains either (1) all of the real numbers less than some specific real number, or (2) all of the real numbers greater than some specific real number. 
 
-We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$. \\
+We symbolize infinite open intervals like $(-\infty, b)$ or $(a, \infty)$. 
 
 $(-\infty, b) = \{ \, r \in \mathbb{R} \, | \,  r < b   \,  \}$
 
@@ -91,7 +91,7 @@ $(a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a < r   \,  \}$
 
 
 \begin{itemize}
-\item A \textbf{finite closed interval} contains all of the real numbers between two distinct real numbers, including the two distinct numbers themselves.\\
+\item A \textbf{finite closed interval} contains all of the real numbers between two distinct real numbers, including the two distinct numbers themselves.
 
 We symbolize finite closed intervals like $[a, b]$. \\
 $[a,b]$ includes all real numbers that are simultaneously greater than or equal $a$ and also less than or equal $b$.  \\
@@ -112,7 +112,7 @@ $[a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a \leq r   \,  \}$
 
 
 \end{definition}
-\textbf{Distinct} means different or not equal. \\
+\textbf{Distinct} means different or not equal. 
 
 
 
@@ -122,7 +122,7 @@ $[a, \infty) = \{ \, r \in \mathbb{R} \, | \,  a \leq r   \,  \}$
 
 
 
-You cannot tell from the definitions, but open intervals are weird, which means this is where we learn a lot about real numbers and functions. \\
+You cannot tell from the definitions, but open intervals are weird, which means this is where we learn a lot about real numbers and functions. 
 
 
 $\blacktriangleright$  Open intervals always contain a real number, for instance the average of the two endpoint numbers.
@@ -133,27 +133,28 @@ $\blacktriangleright$  Open intervals always contain a real number, for instance
 
 
 
-So, open intervals are never empty.  \\
+So, open intervals are never empty. 
+\textbf{Technically:}  $(a,a)$ would represent the empty set, which is techically an open set. 
 
 
-$\blacktriangleright$ Open intervals do not contain a maximum real number.
+$\blacktriangleright$ Open intervals do not contain a greatest real number.
 
-$\blacktriangleright$ Open intervals do not contain a minimum real number.
+$\blacktriangleright$ Open intervals do not contain a least real number.
 
-\textbf{Note:} $b$ is not a member of $(a,b)$, so it cannot be the maximum number in the interval.    $a$ is not a member of $(a,b)$, so it cannot be the minimum number in the interval.   
-
-
-\begin{explanation}
-
-Suppose $(a,b)$ does contain a maximum number. Then the maximum would be some number, $c \in (a,b)$.  Why can't that happen?  
+\textbf{Note:} $b$ is not a member of $(a,b)$, so it cannot be the greatest number in the interval.    $a$ is not a member of $(a,b)$, so it cannot be the least number in the interval.   
 
 
-Suppose $c \in (a,b)$ is the maximum number in the interval $(a,b)$.  Then, consider the number  $\frac{c+b}{2}$.   
+\begin{explanation} \textbf{\textcolor{red!75!green}{No Greatest or Least Number}} 
+
+Suppose $(a,b)$ does contain a greates number. Then the greatest number would be some number, $c \in (a,b)$.  Why can't that happen?  
+
+
+Suppose $c \in (a,b)$ is the greatest number in the interval $(a,b)$.  Then, consider the number  $\frac{c+b}{2}$.   
 
 \[  \frac{c+b}{2} \in (a,b)  \, \text{ and } \,  c < \frac{c+b}{2} \]  
 
 
-If we have the maximum number in the interval, $c$, then we can find a greater number also in the interval. Therefore, $c$ cannot be the maximum number in the interval.  As a result, there is no maximum number in an open interval. \\
+If we have the greatest number in the interval, $c$, then we can find a greater number also in the interval. That is not logical. Therefore, $c$ cannot be the greatest number in the interval.  As a result, there is no greatest number in an open interval. 
 
 
 \end{explanation}
@@ -164,17 +165,17 @@ If we have the maximum number in the interval, $c$, then we can find a greater n
 
 \begin{paradox}
 
-This type of argument is called a \textbf{proof by contradiction}.   \\
+This type of argument is called a \textbf{proof by contradiction}.   
 
-You assume a fact is true, like $c \in (a,b)$ is the maximum number in the open interval.  \\
+You assume a fact is true, like $c \in (a,b)$ is the greatest number in the open interval.  
 
-Then you use logic to discover other facts that also must be true based on the truth of your assumed fact.  You do this until you discover something that must also be true, but you know it is not. \\
+Then you use logic to discover other facts that also must be true based on the truth of your assumed fact.  You do this until you discover something that must also be true, but you know it is not. 
 
-At this point, you know that your original asummption cannot be true. \\
+At this point, you know that your original asummption cannot be true. 
 
-An explanation that includes both true and false statements is called a \textbf{contradiction}. \\
+An explanation that includes both true and false statements is called a \textbf{contradiction}. 
 
-The conclusion is that your original assumption must be false, because your assumption has generated a contradiction, like a number greater than the maximum value in an interval.
+The conclusion is that your original assumption must be false, because your assumption has generated a contradiction, like a number greater than the greatest value in an interval.
 
 
 \end{paradox}
@@ -185,17 +186,17 @@ The conclusion is that your original assumption must be false, because your assu
 
 
 
-$\blacktriangleright$ We can make similar observations about infinite open intervals. \\
+$\blacktriangleright$ We can make similar observations about infinite open intervals. 
 
 
 
 
 
 
-\begin{idea} \textbf{\textcolor{purple!85!blue}{The Next Real Number}}
+\begin{idea} \textbf{\textcolor{blue!55!black}{The Next Real Number}}
 
 
-A consequence of this is that there is no such thing as a ``next'' real number. \\
+A consequence of this is that there is no such thing as a ``next'' real number. 
 
 
 There is no such thing as a real number ``right before'' any particular real number.
@@ -203,9 +204,9 @@ There is no such thing as a real number ``right before'' any particular real num
 
 \end{idea}
 
-Real numbers do not behave like integers or whole numbers.  They are very different. \\
+Real numbers do not behave like integers or whole numbers.  They are very different. 
 
-There is always more real numbers filling in thespace around any particular real number. \\
+There is always more real numbers filling in thespace around any particular real number. 
 
 
 
@@ -226,10 +227,10 @@ Let $c \in (a,b)$.
 
 Then there is an open proper subinterval inside $(a,b)$ that also contains $c$.
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
-Consider $\frac{a+c}{2}$ and  $\frac{c+b}{2}$ \\
+Consider $\frac{a+c}{2}$ and  $\frac{c+b}{2}$ 
 
 $a < \frac{a+c}{2} < c$ and  $c < \frac{c+b}{2}  < b$
 
@@ -237,7 +238,7 @@ $a < \frac{a+c}{2} < c$ and  $c < \frac{c+b}{2}  < b$
 
 \[   c \in \left(\frac{a+c}{2} , \frac{c+b}{2} \right) \subset (a,b)              \]
 
-\end{explanation}
+
 \end{observation}
 
 
@@ -277,7 +278,7 @@ We have several types of intervals of real numbers.
 \begin{itemize}
 \item Finite Open:   $(a, b)$
 \item Finite Closed: $[a, b]$
-\item Finite Half-Opened, Half-Closed:  $[a, b)$  or $(a,b]$ \\
+\item Finite Half-Opened, Half-Closed:  $[a, b)$  or $(a,b]$ 
 
 \item Infinite Open: $(-\infty, b)$ or $(a, \infty)$
 \item Infinite Closed: $(-\infty, b]$ or $[a, \infty)$
@@ -369,7 +370,7 @@ Sets also follow this idea that complements of open sets are closed and vice ver
 
 
 
-\begin{fact} Open and Closed
+\begin{fact} \textbf{\textcolor{red!75!green!50}{Open and Closed}}  
 
 $\mathbb{R}$ and $\emptyset$ are both open and closed sets at the same time.
 
@@ -381,7 +382,7 @@ $\mathbb{R}$ and $\emptyset$ are both open and closed sets at the same time.
 
 
 
-\begin{observation} Intersections
+\begin{observation} \textbf{\textcolor{-red!75}{Intersections}} 
 
 $(-\infty, 3] \cap  [2, \infty) = \left[\answer{2}, \answer{3}\right]$
 
@@ -468,7 +469,7 @@ The intersection would be all real numbers that are in every one of those nested
 \end{example} 
 
 
-An infinite intersection of nested closed intervals is again a closed interval. \\
+An infinite intersection of nested closed intervals is again a closed interval. 
 
 
 
@@ -494,7 +495,7 @@ The intersection would be all real numbers that are in every one of those nested
 \end{example}
 
 
-An infinite intersection of nested closed intervals is again a closed interval, which might just contain a single number. \\
+An infinite intersection of nested closed intervals is again a closed interval, which might just contain a single number. 
 
 
 
@@ -597,7 +598,7 @@ Open intervals are weird.  Closed intervals are nice.  They are so nice that eve
 
 
 
-\begin{theorem} \textbf{\textcolor{blue!75!black}{Intersection Theorem}}  
+\begin{theorem} \textbf{\textcolor{-red!75!green}{Intersection Theorem}}  
 
 
 Suppose we have a infinitely decreasing, nested, sequence of non-empty closed intervals.
