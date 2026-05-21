@@ -15,7 +15,7 @@ stretch the domain
 
 
 
-We have seen that addition (or subtraction) of constants shifts the domain or range and shifts the graph as a rigid object. All of the movement is the same for every point. \\
+We have seen that addition (or subtraction) of constants shifts the domain or range and shifts the graph as a rigid object. All of the movement is the same for every point. 
 
 Multiplication behaves differently.
 
@@ -95,7 +95,7 @@ The domain of $T$ is $[-8,-2) \cup [0,10)$.
 
 If $2g \in [-8,-2) \cup [0,10)$, then $g \in [-4,-1) \cup [0,5)$
 
-It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever you are evaluating $W$, you get the value by evaluating $T$ at twice the $W$ domain number.
+It is like the domain of $T$ is on a rubberband and it shrunk to half its original size. Wherever you are evaluating $W$, you get the value by evaluating $T$ at twice the $W$ domain number.
 
 
 
@@ -111,7 +111,7 @@ It is like the domain of $T$ is on a rubberband and it shrunk in half. Wherever 
 \end{example}
 
 
-The only exception to the stretching idea is $0$.  Since $2 \cdot 0 = 0$, whenever $g = 0$, then $2g = 0$.  While the domain is being stretched, it is being stretched away from $0$. Stretching cannot move $0$. It gets pinned down where it is.
+The only oddity to the stretching idea happens for $0$.  Since $2 \cdot 0 = 0$, whenever $g = 0$, then $2g = 0$.  While the domain is being stretched, it is being stretched away from $0$. Stretching cannot move $0$. It gets pinned down where it is.
 
 
 $W(0) = T(0)$.  The rubberband is pinned at $0$, because any multiple of $0$ is still $0$.  
@@ -122,13 +122,13 @@ It seems backwards.  We multiplied by $2$ and the resulting domain was a compres
 
 
 
-We multiplied $g$ by $2$, but $g$ is representing the domain of $W$.  The domain of $W$ is stretching.  We want to know what ``happened'' to the domain of $T$.  $T$ is the old, original function and $k$ represents the domain of $T$.  \\
+We multiplied $g$ by $2$, but $g$ is representing the domain of $W$.  The domain of $W$ is stretching.  We want to know what ``happened'' to the domain of $T$.  $T$ is the old, original function and $k$ represents the domain of $T$.  
 
-``What happened to $k$?'' is the question.\\
+``What happened to $k$?'', is the question.
 
-In our definition of $W$, we have $k=2g$, which gives us $g=\frac{k}{2}$.  \\
+In our definition of $W$, we have $k=2g$, which gives us $g=\frac{k}{2}$.  
 
-$k$ is cut in half, which is what we see in the domain and in the graph and in the formula.  \\
+$k$ is cut in half, which is what we see in the domain and in the graph and in the formula.  
 
 $k$ is replaced with $2g$.
 
@@ -567,16 +567,44 @@ Compared to the graph of the function $y=f(x)$, the graph of $z=g(r)=f(4r)$ look
 
 
 
+\subsection*{Composition}
+
+Shifting and stretching horizontally can be viewed algebraically as composition with an inner linear function.
+
+
+
+Suppose we have a function, $G(x)$. 
+
+Suppose we want to create a new function, $F(t)$, by shifting and stretching the domain of $G$.
+
+
+For instance, 
+\begin{itemize}
+\item $F(t) = G(3t-2)$
+\item $F(t) = G(6-t)$
+\item $F(t) = G(5t+7)$
+\item $F(t) = G(1-8t)$
+\item $F(t) = G(-4t+9)$
+\end{itemize}
+
+
+We can view this as compostion with an inner function.
+
+Let $L_{in}(w) = A \, w + B$
+
+
+\[ F(t) = G(A \, t + B) = (F \circ L_{in})(t) = F(L_{in}(t))\]
 
 
 
 
-
-
-
-
-
-
+\begin{align*}
+F(t) = G(3t-2) = (G \circ L)(t)  & \text{ where } L(w) = 3t-2 \\
+F(t) = G(6-t) = (G \circ L)(t)   & \text{ where } L(w) = 6-t    \\
+F(t) = G(5t+7) = (G \circ L)(t)  & \text{ where } L(w) = 5t+7   \\
+F(t) = G(1-8t) = (G \circ L)(t)  & \text{ where } L(w) = 1-8t    \\
+F(t) = G(-4t+9) = (G \circ L)(t) & \text{ where } L(w) = -4t+9   
+\end{align*}
 
 
 
