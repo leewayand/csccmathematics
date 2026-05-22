@@ -19,7 +19,7 @@ one additional rule
 Functions are special relations. While a relation is just two sets of items and some pairings between the two sets, functions satisfy one rule. 
 
 
-\begin{condition} \textbf{\textcolor{purple!85!blue}{THE Rule}} 
+\begin{condition} \textbf{\textcolor{green!50!black}{THE Rule}} 
 
 \begin{itemize}
 \item Functions are those relations where each domain item is paired with \textbf{\textcolor{red!70!black}{exactly}} one codomain item, or
@@ -88,7 +88,8 @@ A relation is a function and is said to be \textbf{well-defined}, if it satisfie
 
 
 
-\begin{example} \textit{SSN} \\
+\begin{example} SSN
+
 The \textit{SSN} function has a domain consisting of all U.S. citizens and a codomain consisting of all 9-digit numbers.  \textit{SSN} pairs a U.S. citizen in the domain with the 9-digit number in the codomain that was issued to them as their social security number. 
 
 
@@ -96,7 +97,8 @@ This function is not well-defined, because there are U.S. citizens without a soc
 \end{example}
 
 
-\begin{example} \textit{ReverseSSN} \\
+\begin{example} ReverseSSN
+
 The \textit{ReverseSSN} function has a domain consisting of all 9-digit numbers and a codomain consisting of all U.S. citizens.  \textit{ReverseSSN} pairs a number in the domain with the person in the codomain who was issued the number as their social security number. 
 
 
@@ -104,16 +106,15 @@ This function is not well-defined, because there are 9-digit numbers that have n
 \end{example}
 
 
-\begin{example} \textit{RationalAdd} \\
+\begin{example} RationalAdd
+
 The \textit{RationalAdd} function has a domain consisting of all rational numbers and a codomain consisting of all integers.  \textit{RationalAdd} pairs a rational number in the domain with an integer in the codomain according to the following procedure: 
 
 \begin{center}
-\begin{quote}
 \textbf{\textcolor{blue!55!black}{Since a chosen domain number is a rational number, it can be represented as $\tfrac{A}{B}$, where $A$ and $B$ are integers. 
 
 
 This domain rational number is paired with $A+B$ in the codomain.}} 
-\end{quote}
 \end{center}
 
 This function is not well-defined.  
@@ -121,18 +122,22 @@ This function is not well-defined.
 For instance, there is a rational number that can be represented as $\tfrac{2}{3}$ and thus it would be paired with $2 + 3 = 5$.  However, this same rational number can also be represented as $\tfrac{4}{6}$ and thus would be paired with $4 + 6 = 10$.  This violates the one and only rule we have for functions.  
 
 
-This particular rational number from the domain is paired with both $5$ and $10$. That isn't allowed for a function. Each domain item must be paired with exactly one codomain number. \textit{RationalAdd} is not well-defined and not a function.
+This particular rational number from the domain is paired with both $5$ and $10$. That isn't allowed for a function. Each domain item must be paired with exactly one codomain number. 
+
+\textit{RationalAdd} is not well-defined and not a function.
 
 \end{example}
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Numbers vs. Notation}}
+
 When function values depend on how you write and represent numbers, that is a pretty good clue that the function may not be well-defined.
 \end{warning}
 
 
-\begin{example} \textit{SuperBowlWinner}  \\
+\begin{example} SuperBowlWinner  
+
 The \textit{SuperBowlWinner} function has a domain consisting of the NFL Superbowls played and a codomain consisting of all of the NFL teams that have existed.  \textit{SuperBowlWinner} pairs a Superbowl in the domain with the NFL team in the codomain that won that Superbowl.  
 
 This function is well-defined. Each Superbowl has exactly one winner.
@@ -195,7 +200,7 @@ $(d, functionName(d))$ is a pair in $functionName$.
 
 
 $functionName(d)$ is called ``the \textbf{\textcolor{purple!85!blue}{VALUE}} of functionName \textbf{\textcolor{purple!85!blue}{AT}} $d$''. \\
-$functionName(d)$ is called ``the \textbf{\textcolor{purple!85!blue}{IMAGE}} of $d$ under functionName''. 
+$functionName(d)$ is also called ``the \textbf{\textcolor{purple!85!blue}{IMAGE}} of $d$ under functionName''. 
 
 
 
@@ -207,10 +212,10 @@ $functionName(d)$ is called ``the \textbf{\textcolor{purple!85!blue}{IMAGE}} of 
 
 
 
-\begin{example} \textit{SuperBowlWinner}
+\begin{example} SuperBowlWinner
 
 
-\textit{SuperBowlWinner}(Superbowl 13) represents the winning team from Superbowl 13, which is the Pittsburgh Steelers.  The following equality is communicating this with an equation.
+\textit{SuperBowlWinner}(Superbowl 13) represents the winning team from Superbowl 13, which is the Pittsburgh Steelers.  The following equality is communicating this connection with an equation.
 
 \begin{itemize}
 \item \textit{SuperBowlWinner}(Superbowl 13) = Pittsburgh Steelers  
@@ -461,7 +466,7 @@ f^{-1}(T) = \{ d \in D \, | \, f(d) \in T  \} \subseteq D
 
 The preimage is also known as the \textbf{inverse image}.
 
-$f^{-1}(T)$ is the symbol for the reverse of $f$. $f^{-1}(T)$ pairs subsets of the codomain with subsets of the domain.  It is just reading the function $f$ backwards or in reverse.
+$f^{-1}$ is the symbol for the reverse of $f$. $f^{-1}$ pairs members of the codomain with members of the domain.  It is just reading the function $f$ backwards or in reverse.
 
 
 
@@ -478,7 +483,7 @@ $f^{-1}(T)$ is the symbol for the reverse of $f$. $f^{-1}(T)$ pairs subsets of t
 \begin{example}
 
 
-Define the function $H$ by these sets: \\
+Define the function $H$ by these sets: 
 
 \begin{itemize}
 	\item  $D = \{ 1, 2, 3, 4, 5, 6, 7, 8 \}$
@@ -513,16 +518,16 @@ Define the function $H$ by these sets: \\
 
 Mathematics is full of concepts and skills which have a feeling that you are applying something.
 
-Take multiplication, for example.  We can think of multiplication by $3$ as ``doing'' something.  This thought automatically comes with the reverse thought.  We might think of reversing multiplication by $3$ as multiplying by $\frac{1}{3}$ and we have alternative exponential notation available, $3^{-1} = \frac{1}{3}$. \\
+Take multiplication, for example.  We can think of multiplication by $3$ as ``doing'' something.  This thought automatically comes with the reverse thought.  We might think of reversing multiplication by $3$ as multiplying by $\frac{1}{3}$ and we have alternative exponential notation available, $3^{-1} = \frac{1}{3}$. 
 
 
-With the addition operation, we think of the opposite of $4$ as $-4 = -1 \cdot 4$. \\
+With the addition operation, we think of the opposite of $4$ as $-4 = -1 \cdot 4$. 
 
 
-Mathematics has many ideas that involve reverse, opposite, backwards, undo, inverse, back up, turn around, etc. In one way or another, $-1$ seems to be included in the notation for this reverse action.  \\
+Mathematics has many ideas that involve reverse, opposite, backwards, undo, inverse, back up, turn around, etc. In one way or another, $-1$ seems to be involved in the notation for this reverse action.  
 
 
-Functions have a feeling of beginning with a domain number and pairing it with a range number.  And, naturally, we have the reverse idea. \\
+Functions have a feeling of beginning with a domain number and pairing it with a range number.  And, naturally, we have the reverse idea. 
 
 Our symbol for the reverse of $f$, is $f^{-1}$.  It begins with range items and pairs them with their domain partners.  This reversing of function pairs is certainly a relation, because, well everything is a relation.  Whether or not this reverse action results in a function is a topic for later in the course.
 
@@ -532,13 +537,13 @@ Our symbol for the reverse of $f$, is $f^{-1}$.  It begins with range items and 
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{$-1$}}
 
 
-The $-1$ superscript has different meanings depending on the context. \\
+The $-1$ superscript has different meanings depending on the context. 
 
 
-Sometimes $f^{-1}(x)$ and $f^{-1}(x)$ do not mean the same thing.\\
+Sometimes $f^{-1}(x)$ and $f^{-1}(x)$ do not mean the same thing.
 
 
 \begin{itemize}
@@ -547,14 +552,16 @@ Sometimes $f^{-1}(x)$ and $f^{-1}(x)$ do not mean the same thing.\\
 \end{itemize}
 
 
-Context is everything! \\
+We leave it up to the context in which the notationm appears to tell us which interpretation is correct.
+
+Context is everything! 
 
 \end{warning}
 
 
 
 
-Lastly, we should establish when two functions are equal. \\
+Lastly, we should establish when two functions are equal. 
 
 
 
