@@ -13,7 +13,20 @@ sudden breaks
 
 
 
-The graphs we have seen so far clearly show all kinds of breaks.  The function represented by the graph below is experiencing some drastic behavior around some individual domain numbers.  Let's examine some of these breaks and classify them into a few types.
+Continuity is one of the characteristics, features, or properties of functions listed in our offical analysis list.
+
+The definition of continuity requires more experience with limits than we have so far. However, we can begin to get a feel for contiuity by first examining functions that are not continuous.
+
+We have several types of discontinuities and they all have a similar graphical pattern - they appear as breaks in the graph.
+
+
+A break in a graph is a place in the graph where the graph is not following our expectations based on surrounding points.
+
+
+
+The graphs we have seen so far clearly show several kinds of breaks.  A quick review of graphs seen so far in this course shows there are three basic types of breaks.
+
+
 
 
 
@@ -23,7 +36,7 @@ The graphs we have seen so far clearly show all kinds of breaks.  The function r
 
 \subsection*{Basic Types of Breaks}
 
-A quick review of graphs seen so far in this course shows there are three basic types of breaks.
+The function represented by the graph below is experiencing some drastic behavior around some individual domain numbers.  Let's examine some of these breaks and classify them into a few types.
 
 
 
@@ -85,6 +98,8 @@ In all three cases, the graph experiences a sudden vertical movement.  This sudd
 
 \subsection*{Discontinuities}
 One of the strongest purposes of mathematics is simply description and communication.  We like mathematics to be explicit and exact, which requires the support of lots of specific language and notation. We call this \textbf{\textcolor{purple!85!blue}{rigor}}. As we investigate breaks in the graphs of functions, we want language that is explicit, so that we can clearly communicate about the underlying function behavior.
+
+It is not enough to a basic idea. We want to be exact and we want to express our thoughts on exactness so that other people can understand what we see.
 
 With this in mind, let's compare the following two graphs.
 
@@ -403,15 +418,9 @@ Select all of the discontiuities of $K$.
 \end{example}
 
 
-$\blacktriangleright$ Endpoints make an exact definition of discontinuity messy, because we want to say there are ALWAYS domain numbers on one or both sides of the discontinuity no matter how close you get to the discontinuity. 
+$\blacktriangleright$ We want to say that there are ALWAYS domain numbers on one or both sides of the discontinuity no matter how close you get to the discontinuity. 
 
 How are we going to talk about ``no matter how close you get'', algebraically?
-
-
-
-\textit{Open interval} are our way of talking about `no matter how close you get''. 
-
-
 
 
 
@@ -427,6 +436,9 @@ A real number, $c$, is said to be a \textbf{discontinuity} of the function $f$, 
 
 \item there is a distance, $d > 0$, such that \textbf{\textcolor{purple!85!blue}{EVERY}} open interval of real numbers containing $c$ also contains a different \textbf{\textcolor{purple!85!blue}{DOMAIN}} number, $e \ne c$, with $ |f(c) - f(e)| > d $.
 
+
+\textbf{Note:}  $ |f(c) - f(e)| > d $ says the distance between $f(c)$ and $f(e)$ is greater than $d$.
+
 \end{itemize}
 
 
@@ -436,13 +448,15 @@ A real number, $c$, is said to be a \textbf{discontinuity} of the function $f$, 
 
 
 
-The last condition says that no matter how close to $c$ you look in the domain, there is always another domain number where the function value is wildly different.
+The last condition says that no matter how close to $c$ you look in the domain, there is always another domain number where the function value is wildly different from $f(c)$.
 
 No matter how close you look at $c$, the jump is still there.
 
 
-The second condition in the definition is our algebraic way of saying, ``\textit{no matter how close you get}''.
+We need algebraic language for ``\textit{no matter how close you get in the domain}'' and `\textit{no matter how close you get in the codomain}''.
 
+
+We will slowly build this language.
 
 
 
@@ -454,17 +468,15 @@ The second condition in the definition is our algebraic way of saying, ``\textit
 \begin{warning} \textbf{\textcolor{red!70!black}{Language}}  
 
 
-\textbf{Not Discontinuous} and \textbf{continuous} do not mean the same thing. 
+\textbf{Not Continuous} does not automatically mean there is a discontinuity. 
 
-\textbf{Not Discontinuous} at $c$ means there is not a discontinuity at $c$.  There can be different reasons for this. 
 
-If $c$ is not in the domain of the function, then $c$ is automatically not a discontiuity.  
-\begin{itemize}
-     \item $c$ could turn out to be a singularity.  
-     \item $c$ could turn out to just not be in the domain, but not a singularity.
-\end{itemize}
+A function is not continuous at a singularity, but a singularity is not a discontinuity.
 
-Or, $c$ might be in the domain and the function might be continuous at $c$.
+
+A function is not continuous at any number outside its domain, whether it is a singularity or not.
+
+
 
 But, for sure, if $c$ is a discontinuity of $f$, then we say that $f$ is \textbf{discontinuous} at $c$.
 
@@ -549,7 +561,7 @@ Select all of the discontiuities of $P$.
 
 
 
-\begin{example} Jump Discontinuity \\
+\begin{example} Jump Discontinuity 
 
 Let $g(k)$ be a function.  The graph of $y= g(k)$ is displayed below. 
 
@@ -921,7 +933,7 @@ Is $-1$ a discontiuity, sigualrity, or neither of $h$.
 
 
 Let $f$ be a function. \\
-If $c$ is in the domain of $f$ and $c$ is not a discontinuity, then $f$ is said to be \textbf{contiuous} at $c$. 
+If $c$ is in the domain of $f$ and $c$ is not a discontinuity, then $f$ is said to be \textbf{continuous} at $c$. 
 
 
 If $S$ is a subset of the domain and $f$ is continuous at every number in $S$, then $f$ is said to be continuous on the subset. 
@@ -978,11 +990,20 @@ for all domain numbers $x$ inside $(c - \delta, c + \delta)$ we have $| f(x) - f
 
 
 
-You can get close enough to $c$ in the domain so that all of the function values are close to $f(c)$...as close as you want...any closeness. \\
+You can get close enough to $c$ in the domain so that all of the function values are close to $f(c)$...as close as you want...any closeness. 
 
 
 
 Continuity: Close in the domain means close in the range.
+
+
+
+\textbf{Note:} $| f(x) - f(c) | < \epsilon$ is an algebraic way of saying  
+
+\[  f(x) \in (f(c) - \epsilon, f(c) + \epsilon)  \]
+
+a small open interval around $f(c)$.
+
 
 
 \end{idea}
@@ -993,9 +1014,17 @@ As you can see, this is easy to see visually, but difficult to describe algebrai
 
 
 
+\subsection*{Core and Elementary Functions}
 
 
+All of the core and elementary functions are continuous, except for GIF.
 
+
+They are all continuous on their domains.
+
+This makes studying discontinunities difficult using core and elementary functions.  The only tool we have to help us study discontinuities is piecewise defined functions.
+
+We use piecewise defined functions a lot!
 
 
 
