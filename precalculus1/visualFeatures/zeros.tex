@@ -62,19 +62,89 @@ Here is the complete graph of the function $G(x)$.
 \end{image}
 
 
-The graph has one intercept, which means that $G$ has one zero, which appears to be $2.4$. \\
+The graph has one intercept, which means that $G$ has one zero, which appears to be $2.4$. 
 
 \[  G(2.4) = 0  \]
 
 
 
 
-The graph has another intercept: $(0, 1.7)$. This tells us that $G(0)=1.7$.  However, this is not really useful information in function analysis. \\
+The graph has another intercept: $(0, 1.7)$. This tells us that $G(0)=1.7$.  However, this is not really useful information in function analysis. 
 
 
 If this function was a model for some timed event, then perhaps $t = 0$, would be important to the situation, as initial information.  That would be left for the interpretation of the model. 
 
 Absent some physical interpretation, when analyzing a function, we are only interested in its zeros, which correspond to intercepts on the horizontal axis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+
+
+Here is a complete graph of $K(v)$. 
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=3.1:25, ymax=10, xmax=25, ymin=-10, xmin=0,
+                axis lines =center, xlabel=$v$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={5,10,15,20},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$5$,$10$,$15$,$20$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(2.5:24), <->] {50*sin(deg(x))/((x+1)^1.2) + e^(-x-5) + 2};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(-6,5.25)}; 
+
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
