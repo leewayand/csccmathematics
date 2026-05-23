@@ -493,12 +493,87 @@ There is no lowest point on the graph.  Therefore, $H$ has no minimum value.
 
 
 
+\subsection*{Where?}
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} A function might not have a global maximum value.
+
+If a function has a global maximum value, it has exactly one global maximum value.
+
+However, this one global maximum value might occur at many domain numbers.
+
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} A function might not have a global minimum value.
+
+If a function has a global minimum value, it has exactly one global minimum value.
+
+However, this one global minimum value might occur at many domain numbers.
 
 
 
 
 
 
+
+
+
+
+
+\begin{example} A Weird Example
+
+Below is the graph of $y=C(x)$.  
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={y},
+            grid = both, 
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10}, 
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+            xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-6:5)] ({x},{2});
+
+          \addplot [color=penColor,only marks,mark=*] coordinates{(-6,2)};
+          \addplot [color=penColor,only marks,mark=*] coordinates{(5,2)};
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+$C$ is a constant function with $[-6,5]$ as its domain.
+
+$C$ has only one function value.  That is $2$.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} $C(x) \leq 2$ for every domain number.
+
+So, $2$ is the global maximum value of $C$, and it occurs at every domain number.
+
+
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} $C(x) \geq 2$ for every domain number.
+
+So, $2$ is the global minimum value of $C$, and it occurs at every domain number.
+
+
+
+\end{example}
+
+
+Functions can do weird things.
 
 
 
