@@ -7,7 +7,7 @@
 \begin{document}
 
 \begin{abstract}
-composition
+Chain Rule
 \end{abstract}
 \maketitle
 
@@ -33,7 +33,7 @@ Most of time these are not equal functions.
 \]
 
 
-\begin{idea} \textbf{\textcolor{green!50!black}{Composition}}
+\begin{idea} \textbf{\textcolor{blue!55!black}{Composition}}
 
 
 Let $F$ and $G$ be two functions.
@@ -70,11 +70,11 @@ When representing a function graphically, the domain sits on the horizontal axis
 
 The composing process begins with a number on the inner function's horizontal axis. The inner function's value is found on the vertical axis via the points on the graph.
 
-You then turn your attention to the horizontal axis of the graph for the outer function. You locate the value of the inner function on the domain axis of the outer function.
+Attention then turns to the horizontal axis of the graph for the outer function. Locate the value of the inner function on the domain axis of the outer function.
 
-Now you run through the evaluation proces once more.
+Now, run through the evaluation proces once more with the outer function.
 
-From this outer function domain number, you locate the value of the outer function via the points on the graph of the outer function.
+From this outer function domain number, the value of the outer function is determined via the points on the graph of the outer function.
 
 This final number on the vertical axis of the outer function is the value of the composition.
 
@@ -290,17 +290,37 @@ These two values tell us that $(f \circ w)(4) = \answer[tolerance=0.1]{-8}$
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection*{The Chain Rule}
 
 
 The Chain Rule tells us when compositions are increasing and decreasing.
 
+The Chain Rule combines the behavior of the component functions and identifies the behavior of the composite function.
+
+This allows us to study very complex functions by examining the pieces from which they are built.
 
 
 
 
-
-\begin{fact}  \textbf{\textcolor{red!75!green!50}{$inc \circ inc = inc$}} 
+\begin{fact}  \textbf{\textcolor{red!75!green}{$inc \circ inc = inc$}} 
 
 Let $f$ be an increasing function. \\
 Let $g$ be an increasing function.
@@ -332,7 +352,7 @@ That tells us that $g \circ f$ is an increasing function.
 
 
 
-\begin{fact}  \textbf{\textcolor{red!75!green!50}{$dec \circ inc = dec$}} 
+\begin{fact}  \textbf{\textcolor{red!75!green}{$dec \circ inc = dec$}} 
 
 Let $f$ be an increasing function. \\
 Let $g$ be a decreasing function.
@@ -371,7 +391,7 @@ That tells us that $g \circ f$ is a decreasing function.
 
 
 
-\begin{fact}  \textbf{\textcolor{red!75!green!50}{$inc \circ dec = dec$}} 
+\begin{fact}  \textbf{\textcolor{red!75!green}{$inc \circ dec = dec$}} 
 
 Let $f$ be a decreasing function. \\
 Let $g$ be an increasing function.
@@ -411,7 +431,7 @@ That tells us that $g \circ f$ is a decreasing function.
 
 
 
-\begin{fact}  \textbf{\textcolor{red!75!green!50}{$dec \circ dec = inc$}} 
+\begin{fact}  \textbf{\textcolor{red!75!green}{$dec \circ dec = inc$}} 
 
 Let $f$ be a decreasing function. \\
 Let $g$ be a decreasing function.
@@ -437,6 +457,7 @@ That tells us that $g \circ f$ is an increasing function.
 \end{fact}
 
 
+These are the four combinations that make up \textbf{\textcolor{-red!75!green}{The Chain Rule}}.
 
 
 \begin{theorem} \textbf{\textcolor{-red!75!green}{The Chain Rule}} 
@@ -457,6 +478,7 @@ The Chain Rule is indispensable.
 
 Without it, we could never analyze any meaningful functions.
 
+We will slowly uncover its secrets and how to apply it in any situation.
 
 
 
