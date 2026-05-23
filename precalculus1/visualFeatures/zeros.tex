@@ -371,7 +371,7 @@ Core root (radical) functions have only $0$ as a zero.
 
         \addplot [draw=penColor2, very thick, smooth, domain=(-3,9), <->] {0.5^x};
 
-        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] {0};
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{0});
 
 
 
@@ -419,7 +419,7 @@ Core exponential functions do not have zeros.
 
         \addplot [draw=penColor2, very thick, smooth, domain=(0.01:8), <->] {ln(x)};
 
-        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({0},{x});
 
 
 
