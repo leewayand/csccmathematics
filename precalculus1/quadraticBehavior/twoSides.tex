@@ -53,20 +53,20 @@ To do this, we are returning to our idea of a secant line and sliding it over to
 \end{center}
 
 
-The idea is that we can select two points on the graph and a secant line will run through them. Since we have two points, we can calculate the slope of the secant line. We can keep selecting two points that get closer to the tangent point. The slopes of the secant lines should be getting closer to the slope of the tangent line. 
+The idea is that we can select two points on the graph and a secant line will run through them. Since we have two points, we can calculate the slope of the secant line. We can keep selecting two points that get closer to the tangent point. Each pair of new points on the graph define a secant line. The slopes of these secant lines should be getting closer to the slope of the tangent line. 
 
 
 
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} There are two changes happening as we shift a secant line over to the tangent point. The graph has its own twists and turns, and the moving secant lines are changing position. 
 
-The graph has its own pattern and the secant lines have their pattern. Hopefully, these seprate patterns will converge to the same pattern at the tangent point.
+The graph has its own pattern and the secant lines have their pattern. Hopefully, these separate patterns will converge to the same pattern at the tangent point.
 
 
 
 \begin{itemize}
 \item \textbf{First}, the points on the curve or graph itself are approaching the tangent point, from \textbf{both sides}. The graph is connecting up to the point. There is no break. The function is continuous at the corresponding domain number.\\
-\item \textbf{Second}, the secant lines are smoothly turning into the tangent line at the tangent point. 
+\item \textbf{Second}, the secant lines are smoothly turning into the tangent line at the tangent point on \textbf{both sides}. 
 \end{itemize}
 
 
@@ -78,9 +78,9 @@ We want to keep track of these two patterns and see if they agree at the tangent
 
 Both sides means both sides of the tangent point. 
 
-The graph points on both sides are approaching the tangent point. 
+The points on the graph on both sides of the tangent point are both approaching the tangent point. 
 
-The secant lines on both sides are approaching the tangent line
+The secant lines are approaching the tangent line on both sides.
 
 
 
@@ -102,13 +102,24 @@ It will help our investigation of both sides, if we allow both sides to operate 
 We are going to help our calculation a little bit by giving each side its own secant line.  
 
 
-We are to select two points for our secant lines.  We are going to select one of these points to just be the tangent point. 
 
-We'll just do this twice. 
+Each secant line needs two points on the graph. We are still selecting two points on either side of the tangent line, however, we are not drawing a line through them.
+
+Instead, we are drawing two sectant lines.
+
+We are using the tangent point itself as a secant partner for each of the two selected points.
 
 
-One on the left of our tangent point.
+\begin{itemize}
+\item We'll have one secant line through the left selected point and the tangent point.
+\item We'll have another secant line through the right selected point and the tangent point.
+\end{itemize}
 
+Two secant lines. One on the left of our tangent point and one on the right.
+
+
+
+Here is a secant line on the left side of hte tangent line.
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
 \begin{center}
@@ -138,13 +149,13 @@ By watching two secant lines approaching the tangent line, it will be easier to 
 \begin{idea}   \textbf{\textcolor{blue!55!black}{Special Secant Lines}}
 
 
-To help us watch the moving secant lines, we are going to use special secant lines. 
+To help us watch the moving secant lines, we are using special secant lines. 
 
 We are using secant lines that also go through the tangent point. 
 
 We need two points on the graph for a secant. One of the points will be the tangent point.  The second point will be another point on the graph. 
 
-To move the secant line, we will select graph points that are getting ever closer to the tangent point. 
+To move the secant lines, we will continue selecting graph points that are getting ever closer to the tangent point. 
 
 We can do this on either side of the tangent line. 
 
@@ -154,7 +165,7 @@ This will help our eyes.
 \end{idea}
 
 
-\textbf{Note:} We are considering the situation where we have both sides, which means the domain number corresponding to the tangent line is inside an open interval in the domain. 
+\textbf{Note:} We are considering the situation where we have both sides, which means the domain number corresponding to the tangent line must be inside an open interval in the domain. 
 
 
 
@@ -169,7 +180,7 @@ This will help our eyes.
 
 
 
-
+Let's see what our two secant lines show us.
 
 
 
@@ -195,7 +206,7 @@ Our secant lines are special secant lines. Rather than a secant line running thr
 
 
 
-Our first situation is the nicest. The points on the graph approach the tangent point $(t_0 , f(t_0))$ and the secant lines (from both sides) approach the same line, which is the tangent line.
+This first situation is the nicest. The points on the graph approach the tangent point $(t_0 , f(t_0))$ and the secant lines (from both sides) approach the same line, which is the tangent line.
 
 
 
@@ -280,7 +291,7 @@ The soon to be tangent point is $(4, -3)$ and a tangent line runs through it are
 
 
 
-The tangent line does the best job of modeling the curve right at the tangent point. If you were to zoom in closely to the point $(4, -3)$, the line and the curve would look the same.
+The tangent line does the best job of modeling the curve at the tangent point. If you were to zoom in closely to the point $(4, -3)$, the tangent line and the curve would look the same.
 
 
 As it turns out, we know how to get the slope of lines tangent to a parabola.  Use the derivative of $f$ or $iRoC_f$.   
@@ -289,12 +300,12 @@ As it turns out, we know how to get the slope of lines tangent to a parabola.  U
 f'(x)=iRoC_f(x) = 2 (x - 3)
 \] 
 
-In this example, the slope of this tangent line is $f'(3) = 2 (4-3) = 2$ 
+In this example, the slope of this tangent line is $f'(4) = 2 (4-3) = 2$ 
 
 Using the point-slope form of a line, we can get an equation for the tangent line, $y - (-3)=2 (x-4)$. That gives us a tangent line described by the equation $y = 2 (x - 4) - 3$.
 
 
-
+Our algebra tells us that this is the equation for the tangent line at $(4, -3)$.
 
 
 
@@ -369,7 +380,7 @@ The two secant lines converge to the tangent line, which you can convince yourse
 
 
 
-The secant lines on the left smoothly turn into the tangent line as you move the left secant point to the right. The secant lines on the right smoothly turn into the tangent line as you move the secand point to the left. 
+The secant lines on the left smoothly turn into the tangent line (on the left) as you move the left secant point to the right. The secant lines on the right smoothly turn into the tangent line (on the right) as you move the secand point to the left. 
 
 
 
@@ -530,7 +541,9 @@ Here are the secant lines through the tangent point and the approaching points $
 
 
 
-The secant lines on the left smootly turn into a line as you move to the right. The secant lines on the right smoothly turn into a line as you move to the left. 
+The secant lines on the left smoothly turn into a line as you move to the right, because they are all the same tangent line, because the graph is just a line to the left of the tangent line. 
+
+The secant lines on the right smoothly turn into a line as you move to the right, because they are all the same tangent line, because the graph is just a line to the right of the tangent line.
 
 
 \begin{center}
@@ -543,19 +556,17 @@ The secant lines on the left smootly turn into a line as you move to the right. 
 
 There is no common line that the secant lines are approaching, on both sides. 
 
-There is no tangent line at the pont $(3,-4)$. 
+So, there is no tangent line at the pont $(3,-4)$. 
 
-There is no slope of a tangent line, since there is no tangent line. 
+So, there is no slope of a tangent line, since there is no tangent line. 
 
-$f$ has no derivative value at $3$.  
+So, $f$ has no derivative value at $3$.  
 
-$f'(3)$ does not exist. 
+So, $f'(3)$ does not exist. 
 
-$3$ is a number in the domain, but $f'(3)$ does not exist. 
+So, $3$ is a number in the domain, but $f'(3)$ does not exist. 
 
-($3$ is a critical number.)
-
-
+So, $3$ is a critical number.
 
 
 
@@ -586,6 +597,8 @@ $3$ is a number in the domain, but $f'(3)$ does not exist.
 
 
 
+
+More kinks in the story...
 
 \subsection*{Two Sides : Points Agree and Secants Agree, but No Slope}
 
@@ -655,7 +668,7 @@ A cube root and a point on the graph.
 
 The hopeful tangent point is $(2, 0)$ 
 
-There is a tangent line.
+Here is the tangent line.
 
 
 
@@ -783,21 +796,18 @@ The secant lines on the left smoothly turn into the tangent line as you move the
 
 
 
-However, the tangent line is a vertical line.  It has no slope.
+Everythign is working just fine, however, the tangent line is a vertical line.  It has no slope.
 
 
-There is no slope of a tangent line. 
+There is no slope of the tangent line. 
 
-$f$ has no derivative value at $2$.  
+So, $f$ has no derivative value at $2$.  
 
-$f'(2)$ does not exist. 
+So, $f'(2)$ does not exist. 
 
-$2$ is a number in the domain, but $f'(2)$ does not exist. 
+So, $2$ is a number in the domain, but $f'(2)$ does not exist. 
 
-($2$ is a critical number.)
-
-
-
+So, $2$ is a critical number.
 
 
 
@@ -820,15 +830,18 @@ $2$ is a number in the domain, but $f'(2)$ does not exist.
 
 
 
+
+
+More kinks in the story....
 
 
 \subsection*{Two Sides : Points Disagree and Secants Disagree}
 
 
 
+Can a discontinuity have a tangent line?
 
-
-A function with a discontiuity has a break in the graph, which means the points on the graph do not approach the same point.  This automatically results in the derivative not existing. 
+A function with a discontinuity has a break in the graph, which means the points on the graph on both sides of the point do not approach the same point.  This automatically results in the derivative not existing. 
 
 
 
@@ -947,7 +960,7 @@ The secant lines on the two sides are approaching their own lines, but they are 
 
 In this case, we say that there is no tangent line. 
 
-And, if there is no tangent line, then there is no slope of the tangent line, then the derivative has no value here. 
+And, if there is no tangent line, then there is no slope of the tangent line, and the derivative has no value here. 
 
 
 
@@ -960,7 +973,7 @@ So, a derivative implies that there are two sides and the two sides are agreeing
 
 We need two sides of a tangent point to talk about a derivative.
 
-But, there is no need to just throw everything else away.  We can extend our idea of derivative to include just one side.  
+ 
 
 
 
@@ -1015,8 +1028,12 @@ A tangent point is a point on the graph, which means it corresponds to a domain 
 
 
 
+These scenarios involve a point on the graph with graph points on both sides.
+
+This automatically excludes endpoints.
 
 
+Can extend our idea of derivative to include just one side? Yes!
 
 
 

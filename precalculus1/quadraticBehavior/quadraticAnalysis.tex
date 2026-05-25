@@ -23,7 +23,7 @@ behavior
 
 What do we want to know when we analyze any function?
 
-We want to know the 
+Our official list is 
 \begin{itemize}
      \item \textbf{\textcolor{red!70!black}{Domain}} 
      \item \textbf{\textcolor{red!70!black}{Zeros}} 
@@ -56,9 +56,9 @@ We can be totally exact and algebraic about linear and quadratic functions.
 Quadratic functions are those functions which can be described with formulas like
 
 \begin{itemize}
-     \item $A \, x^2 + B \, x + C$
-     \item $A \, (x - H)^2 + K$
-     \item $A \, (x - r_1) (x-r_2)$
+     \item $Q(x) = A \, x^2 + B \, x + C$
+     \item $Q(x) = A \, (x - H)^2 + K$
+     \item $Q(x) = A \, (x - r_1) (x-r_2)$
 \end{itemize}
 
 For a quadratic function, much of the analysis information is connected to vertex of the graph, which is why we like the vertex form for a formula, which is why we like completing the square.  But, we can get all of our information from the standard or factored forms as well. 
@@ -98,7 +98,19 @@ a \, t^2 + b \, t + c = 0
 
 
 
-which we can separate into 
+
+Thsi allows us to factor the quadratic.
+
+
+
+\[ a \, \left( x -  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}, 0 \right) \, \text{ and } \, \left( x -   \frac{-b + \sqrt{b^2 - 4 a c}}{2a}, 0 \right)   \]
+
+
+
+
+
+
+We can separate the quadratic formula into two fractions 
 
 
 
@@ -260,7 +272,7 @@ The end-behavior is described as
 
 
 
-The graph vividly suggests that quadratic functions switch from increasing to decreasing (or vice versa) at the ``vertex'' number in the domain. Any domain number where a functions switches its behavior is called a \textbf{\textcolor{blue!55!black}{critical number}}.
+The graph vividly suggests that quadratic functions switch from increasing to decreasing (or vice versa) at the ``vertex'' number in the domain. Any domain number where a function switches its behavior is called a \textbf{\textcolor{blue!55!black}{critical number}}.
 
 
 \begin{itemize}
@@ -290,7 +302,7 @@ Increasing and decreasing refer to the rate of change.
 Now, we can replace our graphical intuition with algebraic rigor. 
 
 
-We have seen if we write a quadratic function as $f(x) = a (x - h)^2 + k$, then the instantaneous rate of change of $f$ (the derivative of $f$) is the linear function $iRoC_f(x) = 2 a (x - h)$. The values of $iRoC$ are the slopes of the lines tangent to the parabola.
+We have seen that if we write a quadratic function as $f(x) = a (x - h)^2 + k$, then the instantaneous rate of change of $f$ (the derivative of $f$) is the linear function $iRoC_f(x) = 2 a (x - h)$. The values of $iRoC$ are the slopes of the lines tangent to the parabola.
 
 
 Since $iRoC_f$ is a linear function, its graph is a line. 
@@ -332,8 +344,15 @@ Here is a graph of both the parabola for $f$ and the line for $iRoC_f = f'$.
     \end{axis}
 \end{tikzpicture}
 \end{image}
-Our linear rate of change function now informs us about the behavior of $f$. \\
+Our linear rate of change function now informs us about the behavior of the quadratic function. 
 
+
+For instance, At the domain number $h$, $iRoC_Q(h) = 2a(h-h)=0$.  This tells us two things.
+
+\begin{itemize}
+\item The slope of the tangent line at $(h, k)$ is $0$. The tangent line is horizontal.
+\item The instantaneous rate of change of our quadratic function is $0$ at the domain number $h$. $h$ is a critical number.
+\end{itemize}
 
 
 
@@ -347,7 +366,7 @@ $\blacktriangleright$ When the instantaneous rate of change function is positive
 $\blacktriangleright$ When the instantaneous rate of change function is zero, $iRoC_f(x) = 0$, then $f(x)$ is neither increasing nor decreasing and the graph of $y = f(x)$ is flat. 
 
 
-We can say the exat same thing with the word ``derivative''. 
+We can say the exact same thing with the word ``derivative''. 
 
 
 
@@ -369,9 +388,16 @@ As we can see, the behavior of our function, $f(x)$, can change drastically wher
 \begin{definition} \textbf{\textcolor{green!50!black}{Critical Number}}  
 
 
-Let $f$ be a function. Let $x_0$ be a number in the domain of $f$ such that $iRoC_f(x_0) = f'(x) = 0$ or $iRoC_f(x_0) = f'(x)$ does not exist.
+Let $f$ be a function. Let $x_0$ be a number in the domain of $f$ such that 
 
-Then $x_0$ is called a \textbf{critical number}.
+\begin{itemize}
+\item $iRoC_f(x_0) = f'(x) = 0$, or
+\item $iRoC_f(x_0) = f'(x)$ does not exist
+\end{itemize}
+
+
+
+then $x_0$ is called a \textbf{critical number}.
 
 
 \end{definition}
@@ -434,7 +460,7 @@ Then $Q(x) = a \, x^2 + b \, x + c$, for some $a$, $b$, and $c$ with $a \ne 0$.
 Then, $iRoC_Q(x) = 2 \, a \, x + b$. 
 
 
-\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient and just the linear coefficent remains. 
+\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient. That and the linear coefficent make up the derivative of the quadratic. 
 
 
 
@@ -458,7 +484,7 @@ There is probably an overall pattern going on here, which will be revealed in Ca
 
 
 
-The maximum and minimum values of a quadratic function, $f$, are visually encoded in the coordinates of the highest or lowest points on the  graph, which is the vertex of the parabola.
+The maximum or minimum value of a quadratic function, $f$, is visually encoded in the coordinates of the highest or lowest point on the graph, which is the vertex of the parabola.
 
 
 \begin{itemize}
@@ -473,7 +499,7 @@ Either way, the maximum or minimum value is $f\left( \frac{-b}{2a} \right)$
 
 
 
-We can also look at the linear $iRoC_f(x) = f'(x)$ function.  Where $iRoC_f(x) = 0$ is the critical number and corresponds to the vertex on the parabola which visually encodes Tinformation about the maximum or minimum value of $f$.
+We can also look at the linear $iRoC_f(x) = f'(x)$ function.  Where $iRoC_f(x) = 0$ is the critical number and corresponds to the vertex on the parabola which visually encodes information about the maximum or minimum value of $f$.
 
 
 
@@ -520,7 +546,10 @@ x     &=  \frac{-b}{2a}
 
 The graph of a quadratic function is a parabola, which is easily connected to the completed square form of the formula (vertex form).
 
-Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. If $a<0$, then the parabola opens downward and the extreme point is at the top.
+Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ all real numbers and $a > 0$. The extreme point is called the \textbf{vertex}. 
+
+
+If $a>0$, then the parabola opens upward and the extreme point is at the bottom.
 
 \begin{image}
 \begin{tikzpicture}
@@ -551,7 +580,7 @@ Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ a
 \end{tikzpicture}
 \end{image}
 
-The vertex visually encodes the  minimum (or maximum) value of the function. 
+The vertex visually encodes the minimum value of the function. 
 
 
 
@@ -595,7 +624,7 @@ If $a<0$, then everything is reveresed.
 
 
 
-
+Now, the vertex visually encodes the maximum value of the function. 
 
 
 
@@ -615,7 +644,7 @@ We can see from the formula $f(x) = a (x - h)^2 + k$, that since $(x - h)$ is sq
 
 
 
-We can see that the implied range of a quadratic comes in two types.  
+We can see that the range of a quadratic comes in two types.  
 
 \begin{itemize}
 \item The range could be all real numbers greater than or equal to some particular number:  $\{ r \in \textbf{R} \, | \, r \geq k \} = [k, \infty)$.
