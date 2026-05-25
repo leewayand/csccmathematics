@@ -14,7 +14,7 @@ inverse square law
 
 
 
-Gravity affects the trajectory of every projectile.  Gravity is a force and pulls objects down to the Earth. This force is greater on objects with more mass and weaker the farther the objects are from the Earth.
+Gravity affects the trajectory of every projectile.  Gravity is a force and accelerates objects down to the Earth. This force is greater on objects with more mass and weaker the farther the objects are from the Earth.
 
 
 
@@ -42,7 +42,7 @@ For us:
 
 
 
-Now, add in the fact that $F = m \, a$ and this tells us that the gravity(acceleration) a projectile feels from the Earth is given by
+Now, add in the fact that $F = m \, a$ and this tells us that the acceleration a projectile feels due to gravity is given by
 
 
 \[ g = \frac{F_g}{m_p}  = \frac{G \, m_e}{(r_e)^2}    \]
@@ -76,8 +76,11 @@ Acceleration is meters per second PER second.  This constant acceleration is a c
 
 
 
-This vertical velocity is a linear function. We will see in this section that the accumulated vertical distance traveled would be the accumulated area under the linear velocity graph. We will see that this area (distance) is a described by a quadratic. 
+This vertical velocity is a linear function. We will see in this section that the accumulated vertical distance traveled would be the accumulated area under the linear velocity graph. The region under a linear graph is a triangle and its area would be $\frac{1}{2} \, base \, height.$
 
+The base and the height are linear functions, which makes the area a quadratic function.
+
+Vertical height is a quadratic function.
 
 
 
@@ -89,7 +92,7 @@ This vertical velocity is a linear function. We will see in this section that th
 \begin{itemize}
 \item $v_0$ is the initial (vertical) velocity for a projectile thrown into the air. 
 
-\item $s_0$ is the initial height for a projectile thrown into the air. 
+\item $s_0$ is the initial height for a projectile thrown straight up into the air. 
 
 \item $h(t)$ is height (vertical distance) as a function of time.  Seconds is the domain unit and meters is the range unit.
 \end{itemize}
@@ -102,11 +105,11 @@ This vertical velocity is a linear function. We will see in this section that th
 
 $\blacktriangleright$ Acceleration due to the Earth is a \wordChoice{\choice[correct]{constant} \choice{linear} \choice{quadratic}}. 
 
-$\blacktriangleright$ Acceleration is the rate of change of velocity, which makes velocity \wordChoice{\choice{constant} \choice[correct]{linear} \choice{quadratic}}. 
+$\blacktriangleright$ Acceleration is the rate of change of vertical velocity, which makes vertical velocity \wordChoice{\choice{constant} \choice[correct]{linear} \choice{quadratic}}. 
 
-$\blacktriangleright$ The area under the velocity graph measures the distance traveled, which makes this area \wordChoice{\choice{constant} \choice{linear} \choice[correct]{quadratic}}. 
+$\blacktriangleright$ The area of the triangular regiopn under the graph of vertical velocity measures the vertical distance traveled. This area is a \wordChoice{\choice{constant} \choice{linear} \choice[correct]{quadratic}}. 
 
-$\blacktriangleright$ Distance traveled is a \wordChoice{\choice{constant} \choice{linear} \choice[correct]{quadratic}}. 
+$\blacktriangleright$ Vertical distance traveled is a \wordChoice{\choice{constant} \choice{linear} \choice[correct]{quadratic}}. 
 
 
 
@@ -131,7 +134,7 @@ $\blacktriangleright$ Distance traveled is a \wordChoice{\choice{constant} \choi
 
 \subsection*{Projectile Motion}
 
-Projectiles don't just go straight up into the air.  They travel horizontally.
+Projectiles don't just go straight up into the air.  They also travel horizontally.
 
 The story above is actually a 2-dimensional story.
 
@@ -155,7 +158,7 @@ We have already seen this equation for the height (vertical distance) of a proje
 D_y(t) = s_{y_0} + v_{y_0} \, t - \frac{9.81}{2} t^2  
 \]
 
-Horizontal motion isn't effected by the Earth's gravity, since gravity is a downward acceleration. Therefore, the horizontal distance is just affected by the initial horizontal velocity.
+Horizontal motion isn't effected by the Earth's gravity, since gravity is a downward acceleration. Therefore, the horizontal acceleration is $0$ and the horizontal distance is just affected by the initial horizontal velocity.
 
 
 \[ 
@@ -186,7 +189,7 @@ The resulting two functions together are called the \textbf{parameterization}.  
 
 
 
-\begin{model} 
+\textbf{\textcolor{purple!30!blue}{Model}} 
 
 
 The Parameterized Model for projectile motion is
@@ -199,7 +202,6 @@ The Parameterized Model for projectile motion is
 
 $t$ is the parameter.
 
-\end{model}
 
 
 
@@ -289,16 +291,16 @@ If we select a random point, $(x,y)$, on the parabola then the distance from thi
 \[  \sqrt{x^2 + (y-c)^2} = \answer{y+c}   \]
 
 
-Simplifying gives
+Squaring both sides gives
 
 
 \[  x^2 + (y-c)^2 = (y+c)^2   \]
 
 \[  x^2 + y^2 - \answer{2 y c} + c^2 = y^2 + \answer{2 y c} + c^2   \]
 
-\[  x^2  - 2 y c  =  2 y c    \]
+\[  x^2  - 2 \, y \, c  =  2 \, y \, c    \]
 
-\[  x^2   =  4 y c    \]
+\[  x^2   =  4 \, y \, c    \]
 
 
 The coordinates of the points on the parabola satisfy a quadratic equation.  
@@ -323,7 +325,7 @@ The coordinates of the points on the parabola satisfy a quadratic equation.
 
 We have separate descriptions of the vertical height and the horizontal distance for a projectile under the influence of gravity.  
 
-Let's put those together and get height as a function of distance.  That will correspond to our normal experience standing on the ground watching a projectile fly.
+Let's put those together and get height as a function of horizontal distance.  That will correspond to our normal experience standing on the ground watching a projectile fly.
 
 
 \begin{itemize}
