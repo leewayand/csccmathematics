@@ -139,7 +139,7 @@ Correspondingly, the two sides of the graph go up and down in opposite direction
 $\blacktriangleright$  When the power, $p$, is a negative integer, then we have two types of unbounded behavior around the singularity at $0$. 
 
 \begin{enumerate}
-\item When $p$ is even, the behavior around the singularity is the same.  Depending on the sign of the coeficient, $k$, the function is unbounded positively or negatively as you get closer to $0$. 
+\item When $p$ is even, the behavior around the singularity is the same.  Depending on the sign of the coeficient, $k$, the function is unbounded positively or negatively for domain numbers close to $0$. 
 
 
 Correspondingly, both sides of the graph go up or down together, depending on the sign of the coefficient, $k$.
@@ -191,7 +191,7 @@ Correspondingly, one side of the graph goes up and one side down, depending on t
 \end{tikzpicture}
 \end{image}
 
-In either case, the end-behavior is to tend toward $0$.
+In either case, the end-behavior is to be closer to $0$ further out in the domain.
 
 
 
@@ -220,7 +220,7 @@ In the previous descriptions, our graphs did a good job of describing asymptotic
 
 The domain of a power function is either all the real numbers, $\mathbb{R}$, or all of the real numbers except $0$, $\mathbb{R} \setminus \{ 0 \}$.  In either case we can imagine moving far off to the left or far off to the right on the number line to where the domain is made up of very large negative or very large positive numbers, the tail ends.  When we want the reader to think of moving even further to the right we use the phrase ``tending to infinity''. When we want the reader to think of moving even further to the left we use the phrase ``tending to negative infinity''.
 
-For power functions with a negative power, the function values become smaller and smaller as the domain tends to positive or negative infinity.
+For power functions with a negative power, the function values are smaller for larger domain numbers.
 
 The mathematical word for this ``tending'' relationship is \textbf{\textcolor{purple!85!blue}{limit}}.
 
@@ -288,13 +288,16 @@ Although the graph is convincing, ``we can see'' is not rigorous reasoning.
 We would like a precise and proper explanation of $\lim\limits_{x \to \infty} k \, x^p = 0$, when $p$ is a negative integer. 
 
 
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
 Let $k$ be any non-zero real number. \\
 If $p$ is a negative integer, then let $p = -n$, where $n$ is a positive integer. \\
 Let $f(x) = k \, x^p = \frac{k}{x^n}$ 
 
 
 
-For the limit to equal $0$, $f$ must ``eventually'' get smaller than any real number, and stay there. 
+For the limit to equal $0$, $f$ must ``eventually'' be smaller than any real number, and stay smaller. 
 
 
 Let $\epsilon > 0$ represent a very small real number.  Does $\frac{k}{x^n}$ get smaller than $\epsilon$, and stay smaller, for larger enough $x$? 
@@ -303,7 +306,7 @@ Let's see.
 
 
 
-Given any small $\epsilon > 0$, let $M = \frac{1}{| k | \cdot \epsilon}$, which is a positive real number.
+Given any small $\epsilon > 0$, let $M = \frac{| k |}{\epsilon}$, which is a positive real number.
 
 
 For any $x > M$, we have 
@@ -313,13 +316,13 @@ For any $x > M$, we have
 \] 
 
 
-Given any small positive distance from $0$, called $\epsilon$, eventually $| f(x) |$ gets smaller and stays there. 
+Given any small positive size, called $\epsilon$, eventually $| f(x) |$ is eventually smaller than $\epsilon$ and stays smaller. 
 
 
 
-The ``eventually'' part is $M$. 
+The ``eventually'' part is $M$, a place far out in the real numbers. 
 
-The ``stays there'' part is, for any $x > M$.
+The ``stays there'' part is, for any $x > M$, all further places.
 
 
 \end{notation}
@@ -343,7 +346,7 @@ The ``stays there'' part is, for any $x > M$.
 
 
 
-For a power function, $f(x) = k \, x^p$, with a negative power we have seen that there is a singularity at $0$, where the function value is unbounded and tends to infinity or negative infinity.  This time we want our limit notation to algebraically specify the direction we are approaching $0$.  
+For a power function, $f(x) = k \, x^p$, with a negative power we have seen that there is a singularity at $0$, where the function value is unbounded and tends to infinity or negative infinity.  This time we want our limit notation to algebraically specify the direction we are approaching, which is $0$.  
 
 \begin{itemize}
 \item A superscript $+$ means we are approaching from the positive side or the right side.
@@ -725,7 +728,7 @@ Write $(-1) x^3 + 0 x^2 + (-3) x^1 + 6 x^0$ in shorthand notation.
 \subsection*{Products vs. Sums}
 
 
-We engage in two very different investigations involving polynomials.  One is an algebraic investigation and the other is our investigation - an analytic investigation.  Polynomials are functions for us and we are interested in analyzing them as functions.  This means, among other features, we are interested in their zeros.  For this, and other reasons, we prefer to write polynomials in factored form.
+We engage in two very different investigations involving polynomials.  One is an algebraic investigation and the other is an analytic investigation - our investigation.  Polynomials are functions for us and we are interested in analyzing them as functions.  This means, among other features, we are interested in their zeros.  For this, and other reasons, we prefer to write polynomials in factored form.
 
 
 

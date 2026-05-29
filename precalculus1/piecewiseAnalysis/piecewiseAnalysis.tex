@@ -209,6 +209,12 @@ The graph is suggesting that $-2$ and $4$ are discontinuities.  We have an algeb
 \begin{explanation} \textbf{\textcolor{red!75!green}{Discontinuity at $-2$}} 
 
 
+Remember, a domain is a discontiuity if there is a gap in the range at that domain number.  We can see a gap in the graph of $V$ at $-2$.  We need to establish the gap algebraically.
+
+Our plan is show that to the left of $-2$, $V$ is less than $2$ and to the right of $-2$, $V$ is greater than $\frac{9}{2}$. That will be our gap in the function values.  
+
+
+
 Let's examine $V$ on the left side of $-2$.
 
 
@@ -244,16 +250,14 @@ V(-2) = 1
 
 So, we have $1 + 2\epsilon \geq V(a) \geq 1$ for $a \in (-2 - \epsilon, -2)$.
 
-$V$ is near $1$ on $(-2 - \epsilon, -2)$.
-
-This also means that $V$ is not near $2$. $V(h) < 1$ on $(-2 - \epsilon, -2)$.
+Since $\epsilon > 0$ is a very small positive number, we know that $1 + 2\epsilon < 2$.
 
 
+For $a \in (-2 - \epsilon, -2)$, we have $1 \leq V(a) < 2$,
 
-We can see this by remembering that $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \frac{1}{2}$, so for sure $1 + 2 \epsilon < 2$. 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2 - \epsilon, -2)$, $2 \geq V(h) \geq 1$.
+That tells us that to the left $-2$, $V$ is less than $2$.
 
 Now for the other side. 
 
@@ -277,7 +281,7 @@ On $(-2, -2 + \epsilon)$, $V(h) = 9 - h^2$. It is a quadratic function.
 
 Let's think for a moment.  If $V(h) = -(h + 3)(h - 3) = 9 - h^2$ was going to be near $2$, then we would need $h \approx -\sqrt{7}$.  
 
-But, $-\sqrt{7} \notin (-2, -2 + \epsilon)$, since $-\sqrt{7} < -2$.  
+But, $-\sqrt{7} \notin (-2, -2 + \epsilon)$, since $-\sqrt{7} < -2$. Therefore, $V$ cannot get down to $2$. We just need to explain this rigorously. That means details.  
 
 \textbf{Note:} $h \approx \sqrt{7}$ would also make $V$ near $2$, but $\sqrt{7} \notin (-2, -2 + \epsilon)$, since the interval only contains negative numbers.
 
@@ -332,7 +336,7 @@ Remember, $\epsilon$ is a very small postive number.  Certainly, $\epsilon < \fr
 
 That tells us that
 
-\[ V(-2 + \epsilon) =  \(1 + \epsilon) (5 - \epsilon) \geq \frac{9}{2} \]
+\[ V(-2 + \epsilon) =  (1 + \epsilon) (5 - \epsilon) \geq \frac{9}{2} \]
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} On $(-2, -2 + \epsilon)$, we have
@@ -344,7 +348,10 @@ V(h) \geq 1 \cdot \frac{9}{2} = \frac{9}{2}
 
 
 
-On $(-2, -2 + \epsilon)$, we have $V(h) \geq  \frac{9}{2}$.
+On $(-2, -2 + \epsilon)$, all of the values of $V$ are greater than $\frac{9}{2}$.
+
+
+We have $V(h) \geq  \frac{9}{2}$ on $(-2, -2 + \epsilon)$.
 
 
 
@@ -388,19 +395,21 @@ This tells us that there is a discontinuity at $-2$.
 
 We are trying to get away from specific numbers. 
 
-We are trying to think of types of numbers. 
+We are trying to think in terms of types of numbers. 
 
 We are trying to think of ``types'' as algebraic conditions or relationships. 
 
 
-This part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  Our first encounter with this type of thinking is $\epsilon$ (epsilon).  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird. 
+This is part of our new way of thinking.  We are trying to get away from specific numbers and, instead, think of \textbf{types} of numbers.  This is called algebra.
+
+Our first encounter with this type of thinking is $\epsilon$ (epsilon).  It is representing a very small type of number, much smaller than the usual small numbers we have encountered in the past.  But, it is not any particular small number.  It is representing all of them. Kind of weird. 
 
 
 But we need better language and notation to talk about discontinuities. 
 
 It is coming. 
 
-Limits will replace a lot of this kind of explanation. 
+Limits will replace a lot of this kind of long-winded explanation. 
 
 Instead of talking about $\epsilon$, we will use limit notation to talk about expected values. 
 
@@ -489,11 +498,11 @@ $V$ has no end-behavior.
 \begin{itemize}
 \item \textbf{$-2h-3$} is a linear function.  Its constant rate of change is $-2$.  This tells us it is a decreasing function.  $V$ is decreasing on $[-6, -2]$.
 
-\item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$. Here, $iRoC_V(h) = -2h$. The critical number occurs when $iRoC_V(h) = -2h = 0$, which happens when $h=0$. This agrees with the midpoint of the zeros, which are $-3$ and $3$.  Therefore, $0$ is where the function switches behavior.  
+\item \textbf{$-(h+3)(h-3)$} is a quadratic on $(-2, 4]$. Here, $iRoC_V(h) = V'(h)= -2h$. The critical number occurs when $iRoC_V(h) = V'(h) = -2h = 0$, which happens when $h=0$. This agrees with the midpoint of the zeros, which are $-3$ and $3$.  Therefore, $0$ is where the function switches behavior.  
 
 \begin{itemize}
-\item On $(-2, 0)$, $iRoC_V(h) = -2h > 0$, therefore, $V$ is increasing.  
-\item On $(0,4)$, $iRoC_V(h) = -2h < 0$, therefore, $V$ is decreasing.
+\item On $(-2, 0)$, $iRoC_V(h) = V'(h) = -2h > 0$, therefore, $V$ is increasing.  
+\item On $(0,4)$, $iRoC_V(h) = V'(h) = -2h < 0$, therefore, $V$ is decreasing.
 \end{itemize}
 
 This agrees with the graph.
@@ -582,7 +591,7 @@ We could have expanded the factored form: $-(h+3)(h-3) = -h^2 + 9$.  This is now
 We could have observed the expanded form as a standard form, $-h^2 + 0 h + 9$.  Then the quadratic formula would give us $\frac{-b}{2a} = \frac{-0}{-2} = 0$ as the location of the vertex and the place where the behavior changes (critical number).
 
 
-And, we can look at the instantaneous rate of change. The middle piece of $V$ is a quadratic, therefore, the vertex form $-(h-0)^2 + 9$ gives us $iRoC(h) = -2(h-0) = -2h$.  This equals $0$ at $0$, which means $0$ is a critical number and a possible location of changing behavior.
+And, we can look at the instantaneous rate of change. The middle piece of $V$ is a quadratic, therefore, the vertex form $-(h-0)^2 + 9$ gives us $iRoC_V(h) = V'(h) = -2(h-0) = -2h$.  This equals $0$ at $0$, which means $0$ is a critical number and a possible location of changing behavior.
 
 \end{observation}
 Lastly, \\
@@ -636,7 +645,7 @@ In addition, we have a local minimum value of $1$ occuring at $-2$.
 
 
 
-\begin{explanation} Local Minimum
+\begin{explanation} \textbf{\textcolor{red!75!green}{Local Minimum}}  
 
 
 Consider the open interval $(-2 - 0.1, -2 + 0.1)$. $V$ is a decreasing function on $(-2 - 0.1, -2]$. $V$ is an increasing function on $[-2, -2 + 0.1)$.  This tells us that $V(-2)$ is a minimum value on this neighborhood of $-2$.  Thus, $V(-2) = 1$ is a local minimum of $V$.
