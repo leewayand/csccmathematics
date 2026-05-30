@@ -232,54 +232,12 @@ The range of piece #1 is $[-7, 0]$.
 \item $g(2) = \frac{7}{4} \cdot 2 - 8 = -\frac{9}{2} $
 \item $g(8) = \frac{7}{4} \cdot 8 - 8 = 6 $
 \end{itemize}
-The raneg of piece #2 is $\left( -\frac{9}{2}, 6 \right)$.
+The range of piece #2 is $\left( -\frac{9}{2}, 6 \right)$.
 
 
+\textbf{Note:} The range of $g$ is $[-7, 0] \cup \left( -\frac{9}{2}, 6 \right) = [-7, 6)$.  However, we need to see what each piece is doing, so we'll leave the range separated as a union. 
 
-First, let's map the domain of $T$ back to the range of $g$. We need to see what each piece is doing.  So, we'll plot the domain of $T$ on the vertical axis of the graph of $g$.
-
-
-
-
-
-\begin{image}
-\begin{tikzpicture}
-  \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$y=g(x)$}, grid = major,
-            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
-            ticklabel style={font=\scriptsize},
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top
-          ]
-          
-      		\addplot [line width=2, penColor2, smooth,samples=100,domain=(-1.5:2)] {-2*x-3};
-          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(2:8)] {1.75*x-8};
-      		\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-1.5,0)};
-      		\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(2,-7)};
-      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(2,-4.5)};
-      		\addplot[color=penColor2,fill=white,only marks,mark=*] coordinates{(8,6)};
-
-      		\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({0},{x});
-      		\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({0},{x});
-      		\node at (axis cs:0,-4) [rotate=90, penColor] {$($};
-          	\node at (axis cs:0,-1) [rotate=90, penColor] {$]$};
-          	\node at (axis cs:0,1) [rotate=90, penColor] {$[$};
-          	\node at (axis cs:0,7) [rotate=90, penColor] {$)$};
-
-          	%\draw[very thick, black] (axis cs:0,0) -- (axis cs:3,5.2) node [pos=.36, above, rotate=60, black] {$\theta=\pi/3$};
-           
-
-  \end{axis}
-\end{tikzpicture}
-\end{image}
-
-
-
-
+First, let's map the domain of $T$ back to the range of $g$. We need to see what each piece is doing.  So, we'll plot all of the pieces separately.
 
 
 
@@ -336,6 +294,15 @@ First, let's map the domain of $T$ back to the range of $g$. We need to see what
   \end{image}
 
 
+
+The range of $g$ is: $[-7, 0] \cup \left( -\frac{9}{2}, 6 \right)$ \\
+The domain of $T$:  $(-4,-1] \cup [1, 7)$.
+
+
+
+
+
+
 The intersection is $(-4, -1] \cup [1, 6)$.
 
 
@@ -352,20 +319,23 @@ Let's follow the endpoints backwards through $g$ to the domain of $g$.
 Focusing on the interval endpoints (included or excluded) of this intersection, we need the preimages of $-4$, $-1$, $1$, and $6$ in the domain of $g$.  
 
 
-$g$ has two pieces. 
+
+
+\subsection*{Preimages}
+
+$g$ has two pieces and their individual ranges overlap.  This means we will get two domain intervals for the same range interval. 
 
 
 
 
+\textbf{\textcolor{red!75!green}{Preimage of $(-4,-1]$}} 
 
 
 
 
+$\blacktriangleright$ The interval $(-4, -1]$ is in both pieces of the range of $g$.  It has a preimage from each piece.  Let's examine each piece separately.  
 
-$\blacktriangleright$ The interval $(-4, -1]$ is in both pieces of the range of $g$.  It has a preimage from each piece. 
-
-
-Let's examine each piece separately.  First, $-2x - 3$. 
+\textbf{First,} $-2x - 3$. 
 
 
 \begin{itemize}
@@ -433,36 +403,29 @@ Let's see if our graphical approximations are close to the actual values.
 
 
 
-\begin{itemize}
-\item $g(x) = -2x-3 = -4$
-\begin{itemize}
-\item $-2x = -1$
-\item $x = \frac{1}{2}$
-\end{itemize}
-\end{itemize}
+\begin{align*}
+-2x-3 & = -4 \\
+-2x   & = -1   \\
+x     & = \frac{1}{2}
+\end{align*}
 
-\begin{itemize}
-\item $g(x) = -2x-3 = -1$
-\begin{itemize}
-\item $-2x = 2$
-\item $x = -1$
-\end{itemize}
-\end{itemize}
+\begin{align*}
+-2x-3 & = -1 \\
+-2x   & = 2   \\
+x     & = -1
+\end{align*} 
 
 
-
-We guessed fairly well from the graph.  We now have the preimage of the bottom interval through one piece of the formula for $g$.  
-
-
-We get the interval $\left[ -1, \frac{1}{2} \right)$.
+We get the domain interval $\left[ -1, \frac{1}{2} \right)$.
 
 
-\textbf{Now for the other piece of $g$.}
+The function $g$ maps the domain interval $\left[ -1, \frac{1}{2} \right)$ to the range interval $(-4, -1]$, which is inside the domain of $T$.
 
 
 
 
 
+\textbf{Piece #2:}
 
 
 The other piece of $g$ is $\frac{7}{4}x - 8$. 
@@ -537,47 +500,39 @@ Graphically, we begin at $-1$ on the vertical axis.  It is the top endpoint of t
 Let's see if our graphical approximations are close to the actual values.
 
 
-\begin{itemize}
-\item $g(x) = \frac{7}{4}x -8 = -4$
-\begin{itemize}
-\item $\frac{7}{4}x = 4$
-\item $x = \frac{16}{7} \approx 2.3$
-\end{itemize}
-\end{itemize}
 
 
+\begin{align*}
+\frac{7}{4}x - 8 & = -4 \\
+\frac{7}{4}x     & = 4   \\
+x                & = \frac{16}{7} \approx 2.3
+\end{align*}
+
+\begin{align*}
+\frac{7}{4}x - 8 & = -1 \\
+\frac{7}{4}x     & = 7   \\
+x                & = 4
+\end{align*} 
 
 
-\begin{itemize}
-\item $g(x) = \frac{7}{4}x -8 = -1$
-\begin{itemize}
-\item $\frac{7}{4}x = 7$
-\item $x = 4$
-\end{itemize}
-\end{itemize}
-
-
-
-
-
-
-
-
-We guessed fairly well from the graph.  We now have the preimage of the bottom interval through the second piece of the formula for $g$.  
 
 
 We get the interval $\left( \frac{16}{7}, 4 \right]$.
 
 
-
-
-
-\textbf{Now for the other interval in the range of $g$.}
+The function $g$ maps the domain interval $\left( \frac{16}{7}, 4 \right]$ to the range interval $(-4,-1]$, which is inside the domain of $T$.
 
 
 
 
-$\blacktriangleright$ The interval $[1, 6)$ has a preimage on only one piece. \\
+That was one of the domain intervals of $T$.
+
+
+\textbf{\textcolor{red!75!green}{Now for the other interval in the domain of $T$.}} 
+
+
+
+$\blacktriangleright$ The range interval $[1, 6)$ of $g$ has a preimage on only one piece. \\
 $1$ and $6$ have preimages only through $g(x) = -2x-3$.
 
 
@@ -645,33 +600,29 @@ Graphically, we begin at $6$ on the vertical axis.  It is the upper endpoint of 
 
 Let's see if our graphical approximations are close to the actual values.
 
-\begin{itemize}
-\item $g(x) = \frac{7}{4}x -8 = 1$
-\begin{itemize}
-\item $\frac{7}{4}x = 9$
-\item $x = \frac{36}{7} \approx 5.1$
-\end{itemize}
-\end{itemize}
 
-\begin{itemize}
-\item $g(x) = \frac{7}{4}x -8 = 6$
-\begin{itemize}
-\item $\frac{7}{4}x = 14$
-\item $x = 8$
-\end{itemize}
-\end{itemize}
+\begin{align*}
+\frac{7}{4}x - 8 & 1 \\
+\frac{7}{4}x     & = 9  \\
+x                & = \frac{36}{7} \approx 5.1
+\end{align*}
+
+
+\begin{align*}
+\frac{7}{4}x - 8 & 6 \\
+\frac{7}{4}x     & = 14  \\
+x                & = 8
+\end{align*}
 
 
 
-
-
-
-
-
-We guessed fairly well from the graph.  We now have the preimage of the top interval through the larger piece of $g$.  
 
 
 We get the interval $\left[ \frac{36}{7}, 8 \right)$.
+
+
+The function $g$ maps the domain interval $\left[ \frac{16}{7}, 4 \right)$ to the range interval $[1,6)$, which is inside the domain of $T$.
+
 
 
 
