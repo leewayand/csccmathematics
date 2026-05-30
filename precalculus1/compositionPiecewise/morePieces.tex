@@ -119,7 +119,62 @@ g(x) =
 Let's create the composition $T \circ g = T(g)$.
 
 
-This means the range of $g$ needs to be inside the domain of $T$. Since there are two pieces to each of $T$ and $g$, let's follow the pieces separately.  The chart below shows the parts of the range of $g$ coming from the individual linear pieces as well as the parts of the domain of $T$. We can see that there are numbers in the full range of $g$ that are not in the full domain of $T$.
+This means the range of $g$ needs to be inside the domain of $T$. Since there are two pieces to each of $T$ and $g$, let's follow the pieces separately.  The chart below shows the parts of the range of $g$ coming from the individual linear pieces as well as the parts of the domain of $T$. 
+
+
+
+
+
+
+\begin{image}
+  \begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
+            %width=3in,
+            clip=false,
+            axis lines=center,
+            %ticks=none,
+            %unit vector ratio*=1 1 1,
+            ymajorticks=false,
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            %xlabel=$x$, ylabel=$y$,
+            %every axis y label/.style={at=(current axis.above origin),anchor=south},
+            ticklabel style={font=\scriptsize},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]      
+       
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:0)] ({x},{1});
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-4.5:6)] ({x},{0.5});
+            \node at (axis cs:-7,1) [penColor2] {$[$};
+            \node at (axis cs:0,1) [penColor2] {$]$};
+            \node at (axis cs:-4.5,0.5) [penColor2] {$($};
+            \node at (axis cs:6,0.5) [penColor2] {$)$};
+            \node at (axis cs:5,1.5) [penColor2] {Range of $g$};
+
+
+
+
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({x},{-0.5});
+            \addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{-0.5});
+            \node at (axis cs:-4,-0.5) [penColor] {$($};
+            \node at (axis cs:-1,-0.5) [penColor] {$]$};
+            \node at (axis cs:1,-0.5) [penColor] {$[$};
+            \node at (axis cs:7,-0.5) [penColor] {$)$};
+            \node at (axis cs:5,-1) [penColor] {Domain of $T$};
+
+
+
+
+    \end{axis}
+  \end{tikzpicture}
+  \end{image}
+
+
+
+
+
+
+We can see that there are numbers in the full range of $g$ that are not in the full domain of $T$.
 
 For instance, $0$ is in the range of $g$ and not in the domain of $T$. 
 
@@ -143,53 +198,42 @@ What other numbers from the domain of $g$ do we need to leave out?
 
 
 
-\begin{image}
-	\begin{tikzpicture}
-	\begin{axis}[
-            domain=-10:10, ymax=2, xmax=10, ymin=-2, xmin=-10,
-            %width=3in,
-            clip=false,
-            axis lines=center,
-            %ticks=none,
-            %unit vector ratio*=1 1 1,
-            ymajorticks=false,
-            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-            %xlabel=$x$, ylabel=$y$,
-            %every axis y label/.style={at=(current axis.above origin),anchor=south},
-            ticklabel style={font=\scriptsize},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]      
-       
-          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-7:0)] ({x},{1});
-          	\addplot [line width=2, penColor2, smooth,samples=100,domain=(-4.5:6)] ({x},{0.5});
-          	\node at (axis cs:-7,1) [penColor2] {$[$};
-          	\node at (axis cs:0,1) [penColor2] {$]$};
-          	\node at (axis cs:-4.5,0.5) [penColor2] {$($};
-          	\node at (axis cs:6,0.5) [penColor2] {$)$};
-          	\node at (axis cs:5,1.5) [penColor2] {Range of $g$};
-
-
-
-
-          	\addplot [line width=2, penColor, smooth,samples=100,domain=(-4:-1)] ({x},{-0.5});
-          	\addplot [line width=2, penColor, smooth,samples=100,domain=(1:7)] ({x},{-0.5});
-          	\node at (axis cs:-4,-0.5) [penColor] {$($};
-          	\node at (axis cs:-1,-0.5) [penColor] {$]$};
-          	\node at (axis cs:1,-0.5) [penColor] {$[$};
-          	\node at (axis cs:7,-0.5) [penColor] {$)$};
-          	\node at (axis cs:5,-1) [penColor] {Domain of $T$};
-
-
-
-
-    \end{axis}
-	\end{tikzpicture}
-	\end{image}
-
-
-
 
 We need to map the domain of $T$ back onto the range of $g$, find the intersection, and then work our way back into the domain of $g$, in order to restrict the domain of $g$ to just the numbers that work in the composition.
+
+
+
+
+
+\subsection*{Range of $g$ $\subseteq$ Domain of $T$}
+
+
+\textbf{\textcolor{red!75!green}{Intersection}} 
+
+
+We are given the domain of $T$:  $(-4,-1] \cup [1, 7)$.
+
+We need the range of $g$.
+
+
+Each piece of $g$ is linear, so we just need to see the value of $g$ at each enpoint of each piece.
+
+\textbf{Piece #1:} $\left[ -\frac{3}{2}, 2 \right]$
+\begin{itemize}
+\item $g\left( -\frac{3}{2} \right) = -2 \left( -\frac{3}{2} \right) - 3 = 0 $
+\item $g(2) = -2 (2)-3 = -7$
+\end{itemize}
+The range of piece #1 is $[-7, 0]$.
+
+
+
+\textbf{Piece #2:} $(2, 8)$
+\begin{itemize}
+\item $g(2) = \frac{7}{4} \cdot 2 - 8 = -\frac{9}{2} $
+\item $g(8) = \frac{7}{4} \cdot 8 - 8 = 6 $
+\end{itemize}
+The raneg of piece #2 is $\left( -\frac{9}{2}, 6 \right)$.
+
 
 
 First, let's map the domain of $T$ back to the range of $g$. We need to see what each piece is doing.  So, we'll plot the domain of $T$ on the vertical axis of the graph of $g$.
