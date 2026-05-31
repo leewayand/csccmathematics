@@ -111,7 +111,7 @@ This is the slope of the secant line through the points $(-3, Q(-3))$ and $(4, Q
 
 
 
-This rate-of-change is the \textbf{constant} rate of change that would be needed in order for a linear function to match the endpoint values of the function.  Of course, we can see from the graph that this rate ofchange calculation will variy depending on the interval selected. 
+This rate-of-change is the \textbf{constant} rate of change that would be needed in order for a linear function to match the endpoint values of the function.  Of course, we can see from the graph that this rate of change calculation will vary depending on the interval selected. 
 
 We want to extend this idea. We want the rate of change over an interval of the form $[a,a]$.   The rate of change at a single domain number.
 
@@ -127,7 +127,7 @@ We could start by thinking of rates of change over small intervals near $-3$.
 
 
 
-$[-3, 4]$ would not be a good interval to use if you were interested in the rate-of-change near $-3$. $4$ is too far away from $-3$.
+$[-3, 4]$ would not be a good interval to use if you were interested in the rate-of-change near $-3$, because $4$ is too far away from $-3$.
 
 $[-3, -2.5]$ would probably give a better interval. 
 
@@ -193,7 +193,7 @@ That is looking more like a tangent line, than a secant.
 \begin{idea}
 \textbf{\textcolor{blue!55!black}{Tangent Line}}
 
-A tangent line to a graph at a point, is first a line. Second it intersects the graph at a given point, called the \textbf{point of tangency} or the \textbf{tangent point}. Third, it does the best job of pretending to be the graph \textbf{\textcolor{red!70!darkgray}{at that point}}. 
+A tangent line to a graph at a point, is first a line. Second, it intersects the graph at a given point, called the \textbf{point of tangency} or the \textbf{tangent point}. Third, it does the best job of pretending to be the graph \textbf{\textcolor{red!70!darkgray}{at that point}}. 
 
 
 
@@ -262,9 +262,29 @@ By moving the value of $h$ close to $0$, we can get a good estimate of the slope
 
 The slope of the line tangent to the graph at $(-3, -6.4)$ looks to be about $-0.8$.
 
-Of course $-3$ was nothing special.  We can get slopes of tangent lines at any point on the graph. Let's move around the graph and record the tangent line slopes.  We want to record $(-3, -0.8)$ as slope information for the tangent line to the graph of $Q$ at the point $(-3, -6.4)$.
+Of course $-3$ was nothing special.  We can get slopes of tangent lines at any point on the graph. Let's move around the graph and record the tangent line slopes.  
 
-We'll record visually by plotting does for our new slope information.  The pair $(-3, -0.8)$ will be visually encoded with a dot at $(-3, -0.8)$.
+The information we want to record is 
+
+\begin{enumerate}
+\item the location of the tangent line, and
+\item the slope of the tangent line 
+\end{enumerate}
+
+We could record the location of the tangent by giving the tangent point. A shorter way of recording the locaiton of the tangent line is to give the corersponding domain number.
+
+For our tangent line above, we want to record $-3$ and $-0.8$.
+
+We will record these as ordered pairs: (domain number, slope).
+
+\[ (-3, -0.8)  \]
+
+
+If we do this for a lot of points, then we create a collection of ordered pairs - just like a function.
+
+We can represent the slope information $(-3, -0.8)$ as a plotted point.
+
+
 
 The slope of the tangent line at $-3$ is $-0.8$, so we'll plot the point $(-3,-0.8)$ to record this information.  This will be a visual encoding of the tangent slope for the domain number $-3$.
 
@@ -288,9 +308,9 @@ The slope of the tangent line at $-3$ is $-0.8$, so we'll plot the point $(-3,-0
           ]
           
             %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {-0.7*(x+3)-6.4};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
 
-          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-3,-0.8)};
+          	\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-3,-0.8)};
 
 
 
@@ -333,14 +353,14 @@ We could do this for a bunch of domain numbers.
           ]
           
             %\addplot [line width=2, penColor2, smooth,samples=100,domain=(-6:8),<->] {-0.7*(x+3)-6.4};
-            \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-9:8),<->] {.2*(x+7)*(x-5)};
 
-          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-5,-1.6)};
-          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-3,-0.8)};
-          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-1,0)};
-          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0.8)};
-          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(3,1.6)};
-          	\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(5,2.4)};
+          	\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-5,-1.6)};
+          	\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-3,-0.8)};
+          	\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(-1,0)};
+          	\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(1,0.8)};
+          	\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(3,1.6)};
+          	\addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(5,2.4)};
 
 
 

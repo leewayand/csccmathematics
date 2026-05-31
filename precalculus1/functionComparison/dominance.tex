@@ -42,9 +42,11 @@ We have two ways of comparing things: differences and quotients.
 
 Quotients work better for comparing the end-behavior of functions. 
 
-If two functions approach $\infty$ in the ``same way''. then their quotient should approach a constant as you move out in the domain.
+If two functions approach $\infty$ in the ``same way'', then their quotient should approach a constant as you move out in the domain.
 
-By the ``same way'', we are picturing a horizontal asymptote, like for rational functions. This occurs when the degrees of the polynomials are equal.   The polynomial in the numerator and the polynomial in the denominator ``behave in the same way'' as we move far out in the domain.  The two polynomials are somehow ``at the same level'' of infinity. 
+By the ``same way'', we are picturing a horizontal asymptote for the quotient.
+
+For instance, rational functions approach $\infty$ when the degrees of the polynomials are equal.   The polynomial in the numerator and the polynomial in the denominator ``behave in the same way'' as we move far out in the domain.  The two polynomials are somehow ``at the same level'' of infinity. 
 
 
 
@@ -186,7 +188,7 @@ According to our order of dominance, the denominator is a linear function and sh
 
 
 
-Let's zoom in.
+Let's zoom out.
 
 
 \begin{center}
@@ -244,7 +246,13 @@ That was not a good graph for our purposes.  We are interested in large values o
 Eventually, the graph approaches the x-axis as the function value approaches $0$. 
 
 
-The denominator function, $x$, dominates the numerator function, $\ln(x)$.   The values of $\ln(x)$ become like $0$ compared to the values of $x$, when $x$ is very very very large. Not when $x$ takes on small values.  Not when $x$ has medium values.  Dominance is a statement when $x$ takes on very very very large values.
+The denominator function, $x$, dominates the numerator function, $\ln(x)$.   The values of $\ln(x)$ become like $0$ compared to the values of $x$, when $x$ is very very very large. 
+
+Dominance is not when $x$ takes on small values.  
+
+Dominance is not when $x$ has medium values.  
+
+Dominance is a statement when $x$ takes on very very very large values.
 
 
 
@@ -283,7 +291,7 @@ Graph of $y = \frac{(\ln(x))^5}{x}$.
 $x$ should dominate any power of $\ln(x)$.  Therefore, the graph of this function should eventually aproach the the $x$-axis as the function value approaches $0$. 
 
 
-If this function approaches $0$, then it must get below and stay below $2$, eventually. How far out in the domain do you need to go before this function eventually dips and stays below $2$.
+\textbf{Thinking:} If this function approaches $0$, then it must get below and stay below $2$, eventually. How far out in the domain do you need to go before this function eventually dips and stays below $2$.
 
 
 \begin{center}
@@ -372,7 +380,7 @@ For the following limits, refer to our order of dominance.
 \begin{idea} \textbf{\textcolor{blue!55!black}{Upsidedown}}
 
 
-When we talk about dominance, we phrase it in terms of approaching $0$.  The quotient might be approaching $0$ through psitive numbers or negative numbers.  It doesn't matter because $-0 = 0$.
+When we talk about dominance, we phrase it in terms of the quotient approaching $0$.  The quotient might be approaching $0$ through positive numbers or negative numbers.  It doesn't matter because $-0 = 0$.
 
 
 If we flip our quotient upsidedown and the dominate function is in the numerator, then the quotient becomes unbounded. Then we also need to think about the sign.
@@ -464,10 +472,10 @@ $\blacktriangleright$ As $t$ becomes unbounded positively, $3^t$ dominates $1$.
 As $t$ becomes unbounded positively,
 
 \[
-B(t) = \frac{3e^t - 5}{e^t + 1} = \frac{2 e^t}{e^t} \cdot \frac{3 - \tfrac{5}{e^t}}{1 + \ftrac{1}{e^t}} \sim \frac{2 e^t}{e^t}
+B(t) = \frac{3e^t - 5}{e^t + 1} = \frac{2 e^t}{e^t} \cdot \frac{3 - \tfrac{5}{e^t}}{1 + \tfrac{1}{e^t}} \sim \frac{2 e^t}{e^t}
 \]
 
-As $t$ becomes unbounded positively,, the exponential pieces will dominate the constant pieces in each expression.  
+As $t$ becomes unbounded positively, the exponential pieces will dominate the constant pieces in each expression.  
 
 \[   B(t) = \frac{3e^t - 5}{e^t + 1} \sim \frac{3 e^t}{e^t} = 3   \]
 

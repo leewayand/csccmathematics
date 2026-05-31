@@ -64,10 +64,10 @@ The function has a value at this number. $f(5) = 4$, in the function above.
 
 
 
-Secondly, around this domain number, $5$, the function values are not \textbf{\textcolor{purple!85!blue}{all}} close to the value at the discontinuity. There is empty space between the function value at the discontinuity and \textbf{\textcolor{purple!85!blue}{some}} of the surrounding function values - \textbf{\textcolor{red!70!black}{no matter how close you get to the discontinuity in the domain}}. 
+Secondly, for \textbf{\textcolor{purple!85!blue}{all}} domain numbers close to $5$, the function values are not \textbf{\textcolor{purple!85!blue}{all}} close to $f(5)$. There is empty space between the function value at the discontinuity and \textbf{\textcolor{purple!85!blue}{some}} of the surrounding function values - \textbf{\textcolor{red!70!black}{no matter how close you get to the discontinuity in the domain}}. 
 
 
-In the function above, no matter how close you get to $5$ in the domain, where $f$ has the value $4$, there are still domain numbers less than $5$ where $f$ has values around $6$, not $4$. You cannot get close enough to $5$ in the domain to get away from function values around $6$.
+In the function above, no matter how close you get to $5$ in the domain, where $f$ has the value $4$, there are still domain numbers very close to $5$ where $f$ has values around $6$, not $4$. You cannot get close enough to $5$ in the domain to get away from function values around $6$.
 
 
 
@@ -78,8 +78,9 @@ Our plan is to use $\epsilon$-intervals around function values and $\delta$-inte
 
 
 
+\subsection*{First Draft}
 
-$\blacktriangleright$ \textbf{First Draft:}
+
 
 Let $a$ be a discontinuity of the function $f$.  First, $a$ is in the domain of $f$. $f(a)$ exists.  $f(a)$ is a value in the range of $f$. Since $a$ is a discontinuity, there must be a distance (perhaps really small), which we'll call $\epsilon$, which defines an open interval in the codomain around $f(a)$, namely $(f(a)-\epsilon, f(a)+\epsilon)$.  
 
@@ -104,7 +105,7 @@ $f(5) = 4$ and we can select the open interval $(3.5, 4.5)$ around $4$.   This w
 \[   (3.5, 4.5) = (f(5) - \epsilon, f(5) + \epsilon)    \]
 
 
-No matter how close you get to $5$, no matter how small you select $\delta$, the open interval $(5 - \delta, 5 + \delta)$ contains the domain number $\frac{(5 - \delta) + 5}{2}$, where the function $f$ has a value outside $(3.5, 4.5)$.
+No matter how close you get to $5$, no matter how small you select $\delta$, the open interval $(5 - \delta, 5 + \delta)$ contains the domain number $5-\frac{\delta}{2}$, where the function $f$ has a value outside $(3.5, 4.5)$.
 
 
 No matter how close you get to $5$ in the domain, you cannot get \textbf{\textcolor{blue!55!black}{all}} of the function values to be close to $f(5)$.
@@ -134,7 +135,7 @@ No matter how close you get to $5$ in the domain, you cannot get \textbf{\textco
 The real number $a$ is a \textbf{discontinuity} of the function $f$ if
 
 \begin{itemize}
-\item $a \in Dom_f$ meaning $a$ is in the domain of $f$, which means $f(a) \in \mathbb{R}$, i.e. $f(a)$ exists.
+\item $a \in Dom_f$, meaning $a$ is in the domain of $f$, which means $f(a) \in \mathbb{R}$, i.e. $f(a)$ exists.
 \item There is an $\epsilon > 0$ defining an open interval around $f(a)$, namely $I = (f(a) - \epsilon, f(a) + \epsilon)$, such that for any $\delta > 0$, the open interval $(a - \delta, a + \delta)$ always contains a domain number $b$, such that $f(b) \not\in(f(a)-\epsilon, f(a)+\epsilon)$.
 \end{itemize}
 
@@ -728,6 +729,9 @@ How about an example where the graph is not so easy to draw?
 \end{cases}
 \]
 
+$T$ is $0$ everywhere, except at reciprocals of natural numbers.
+
+$0$ is not a natural number, so $T(0)=0$. However, the reciprocals of natural numbers get as closer to $0$ than any distance you can think up. $T$ equals $1$ at these numbers.  $T$ jumps a lot!
 
 
 Claim: $0$ is a discontinuity of $f$. 
