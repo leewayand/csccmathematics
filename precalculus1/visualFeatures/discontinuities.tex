@@ -87,7 +87,15 @@ The function represented by the graph below is experiencing some drastic behavio
 \end{itemize}
 
 
-In all three cases, the graph experiences a sudden vertical movement.  This sudden vertical movement may not be predictable from the points leading up to the sudden movement.
+In all three cases, the graph experiences a sudden vertical movement.  This sudden vertical movement may or may not not be predictable from the points leading up to the sudden movement.
+
+
+In all three cases, the graph illustrates that there is a difference between the value of the function and the expectation of the value based on surrounding points. 
+
+We would like to communicate the difference between values and expected values.
+
+Our language for expected values is called \textbf{limits}, which is a main interest of Calculus.
+
 
 
 
@@ -97,6 +105,7 @@ In all three cases, the graph experiences a sudden vertical movement.  This sudd
 
 
 \subsection*{Discontinuities}
+
 One of the strongest purposes of mathematics is simply description and communication.  We like mathematics to be explicit and exact, which requires the support of lots of specific language and notation. We call this \textbf{\textcolor{purple!85!blue}{rigor}}. As we investigate breaks in the graphs of functions, we want language that is explicit, so that we can clearly communicate about the underlying function behavior.
 
 It is not enough to a basic idea. We want to be exact and we want to express our thoughts on exactness so that other people can understand what we see.
@@ -169,9 +178,13 @@ With this in mind, let's compare the following two graphs.
 \end{image}
 
 
-These two graphs (and the underlying functions) are almost identical. They have the same breaks, almost. The difference is the graph on the left has a point for $x=6$ and no point on the vertical asymptote.  The right graph has reversed this.
+These two graphs (and the underlying functions) are almost identical. They have the same breaks, almost. 
 
-The difference is the underlying function for the graph on the left includes $6$ in its domain and not $3$. The underlying function for the graph on the right reverses this. It includes $3$ and not $6$ in its domain. In the world of functions, this is significant.  We want our language to note the differences. Therefore, we are going to adopt some language to separate these ideas.
+The difference is the graph on the left has a point for $x=6$ and no point on the vertical asymptote.  The right graph has reversed this.
+
+The difference is the underlying function for the graph on the left includes $6$ in its domain and not $3$. The underlying function for the graph on the right reverses this. It includes $3$ and not $6$ in its domain. In the world of functions, this is significant.  We want our language to note the differences. 
+
+Therefore, we are going to adopt some language to separate these ideas.
 
 
 \begin{idea} \textbf{\textcolor{blue!55!black}{Language}}  
@@ -192,9 +205,11 @@ While graphs have breaks, functions will have \textbf{\textcolor{blue!55!black}{
 
 
 
-Discontinuities are numbers in the domain of the function and singularities are not in the domain. Of course, all of this gets more complicated as we encounter more functions.  But this is a good start. 
+Discontinuities are numbers in the domain of the function and singularities are not in the domain. 
 
+Of course, all of this gets more complicated as we encounter more functions.  But this is a good start. 
 
+We will soon algebraically define discontiuities to match these ideas.
 
 
 \begin{example} Discontinuities 
@@ -465,27 +480,26 @@ We will slowly build this language.
 
 
 
-\begin{warning} \textbf{\textcolor{red!70!black}{Language}}  
+\begin{idea} \textbf{\textcolor{blue!55!black}{Language}}  
 
 
-\textbf{Not Continuous} does not automatically mean there is a discontinuity. 
+\textbf{Not Discontinuous} and \textbf{continuous} do not mean the same thing. 
 
+\textbf{Not Discontinuous} at $c$ means there is not a discontinuity at $c$.  There can be different reasons for this. 
 
-A function is not continuous at a singularity, but a singularity is not a discontinuity.
+If $c$ is not in the domain of the function, then $c$ is automatically not a discontiuity.  
+\begin{itemize}
+     \item $c$ could turn out to be a singularity.  
+     \item $c$ could turn out to just not be in the domain, but not a singularity.
+\end{itemize}
 
+Or, $c$ might be in the domain and the function might be continuous at $c$.
 
-A function is not continuous at any number outside its domain, whether it is a singularity or not.
+\end{idea}
 
 
 
 But, for sure, if $c$ is a discontinuity of $f$, then we say that $f$ is \textbf{discontinuous} at $c$.
-
-\end{warning}
-
-
-
-
-
 
 
 
@@ -699,7 +713,7 @@ Let $T(y)$ be a function.  The graph of $z = T(y)$ is displayed below.
 Therefore, $-6$ is a discontinuity of $T$. 
 
 
-\item $4$ is a discontiuity of $T(y)$.   $4$ is in the domain of $T$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = 4$ must also contain an interval of the form $(4-\epsilon, 4+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would ALWAYS contain the domain number $e = 4-\frac{\epsilon}{2}$.
+\item $4$ is a discontiuity of $T(y)$.   $4$ is in the domain of $T$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = 4$ must also contain an interval of the form $(4-\epsilon, 4+\epsilon)$, where $0 < \epsilon < 0.1$.   Such an interval would \textbf{ALWAYS} contain the domain number $e = 4-\frac{\epsilon}{2}$.
 
 \[ \left| T(4) - T\left(4-\frac{\epsilon}{2}\right) \right| > 1 > 0.5 = d \]
 
@@ -711,7 +725,7 @@ Therefore, $4$ is a discontinuity of $T$.
 
 \end{example}
 
-No matter how close you get to $-6$ in the domain, there is ALWAYS a jump of more than $1$ in the value of the function.  
+No matter how close you get to $-6$ in the domain, there is \textbf{ALWAYS} a jump of more than $1$ in the value of the function.  
 
 
 
@@ -763,7 +777,7 @@ Let $f(x)$ be a function.  The graph of $y = f(x)$ is displayed below.
 \begin{itemize}
 \item $3$ is not a discontinuity of $f$, because $3$ is not a member of the domain of $f$. ($3$ is a singularity.) 
 
-\item $-5$ is a discontinuity of $f(x)$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = -5$ must also contain an interval of the form $(-5-\epsilon, -5+\epsilon)$, where $0 < \epsilon < 0.000001$.    Such an interval would ALWAYS contain the domain number $e = -5-\frac{\epsilon}{2}$.
+\item $-5$ is a discontinuity of $f(x)$.  For the second condition, let $d = 0.5$. Any open interval of real numbers containing $c = -5$ must also contain an interval of the form $(-5-\epsilon, -5+\epsilon)$, where $0 < \epsilon < 0.000001$.    Such an interval would \textbf{ALWAYS} contain the domain number $e = -5-\frac{\epsilon}{2}$.
 
 \[ \left| f(-5) - f\left(-5-\frac{\epsilon}{2}\right) \right| > 0.5 = d \]
 
@@ -834,7 +848,7 @@ We will extend and sharpen our ideas and definition of singularity in Calculus.
 
 
 
-\begin{example} 
+\begin{example}  Discontiuity and Singularity
 
 
 
@@ -932,7 +946,8 @@ Is $-1$ a discontiuity, sigualrity, or neither of $h$.
 \begin{definition} \textbf{\textcolor{green!50!black}{Continuity}} 
 
 
-Let $f$ be a function. \\
+Let $f$ be a function.  
+
 If $c$ is in the domain of $f$ and $c$ is not a discontinuity, then $f$ is said to be \textbf{continuous} at $c$. 
 
 
@@ -946,12 +961,16 @@ A function that is continuous on its whole domain is just said be a continuous f
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Not Continuous}}
 
 
 A function is not continuous at a singularity, because the singularity is not in the domain.  However, the singularity is not a discontinuity, because the singularity is not in the domain. 
 
-So, it is possible for a function to be noncontinuous at a real number and yet the real number is not a discontinuity. (It isn't in the domain.)
+Continuity only refers to domain numbers.
+
+A function can be continuous if it has singularities, because a singularity is not in the domain.
+
+The function is certainly not continuous at a singularity, because the number is not in the domain. But, it is not a discontinuity, which are the only places where a function could fail to be continuous.
 
 
 

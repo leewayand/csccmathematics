@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Zeros}
+\title{Function Zeros}
 
 \begin{document}
 
@@ -138,7 +138,7 @@ Here is the complete graph of the function $G(x)$.
         %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
 
         \addplot[color=penColor,only marks,mark=*] coordinates{(7,0)};
-        \addplot[color=penColor,fill=white, only marks,mark=*] coordinates{(7,2.5)};
+        \addplot[color=penColor,fill=white, only marks,mark=*] coordinates{(7,2.25)};
 
 
     \end{axis}
@@ -411,6 +411,479 @@ The zeros of $S(\theta)$ are
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Zeros
+
+
+Here is a complete graph of $K(v)$. 
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=3.1:25, ymax=10, xmax=25, ymin=-10, xmin=0,
+                axis lines =center, xlabel=$v$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={5,10,15,20},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$5$,$10$,$15$,$20$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(2.5:24), <->] {50*sin(deg(x))/((x+1)^1.2) + e^(-x-5) + 2};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=0.5, gray, dashed,samples=100,domain=(1:25)] ({x},{2});
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(-6,5.25)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+In this graph, $y=2$ is a horizontal asymptote, which means the graph will slowly approach the asymptote and stay near it.
+
+This tells that eventually the values of $K$ approach $2$ and stay near $2$.
+
+This tells that eventually the values of $K$ will be away from $0$.
+
+The graph seems to suggest that after $15$, the values of $K$ are no longer near $0$.
+
+That would give $K$ four zeros: $3.9$, $5.8$, $10.2$, $11.6$.
+
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} No Zeros
+
+
+Here is a complete graph of $p(t)$. 
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=${z=p(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-6:10)] {10*sin(deg(x))/((x+10)^1.2) + e^(-x-5) + 2};
+        %\addplot [draw=penColor, very thick, smooth, domain=(3:8), <->] {1/(x-3) + 2};
+
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(1:9)] ({x},{2});
+        \addplot[color=penColor,only marks,mark=*] coordinates{(-6,5.25)}; 
+        \addplot[color=penColor,only marks,mark=*] coordinates{(10,1.8)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+The graph has no horizontal intercepts.  So, $p$ has no zeros.
+
+\end{example}
+
+
+
+
+\subsection*{Core Functions}
+
+Some core functions have zeros and others do not.
+
+
+
+
+
+\begin{example} Constant Functions
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-9:9), <->] {-4};
+        \addplot [draw=penColor, very thick, smooth, domain=(-9:9), <->] {2};
+
+        \addplot [draw=penColor2, very thick, smooth, domain=(-9:9), <->] {0};
+
+        %\addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+     
+
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(3.2,7)}; 
+        %\addplot[color=penColor,only marks,mark=*] coordinates{(8,2.2)}; 
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Core constant functions do not have zeros, unless it is the Zero function.  Then every domain number is a zero.
+
+
+\end{example}
+
+
+
+
+
+
+\begin{example} Power Functions
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, domain=(-3:3), <->] {x^2};
+        \addplot [draw=penColor2, very thick, smooth, domain=(-2:2), <->] {x^3};
+        
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+If the power is positive, then core power functions only have one zero and that is $0$.
+
+
+If the power is negative, then core power functions do not have zeros.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+\begin{example} Root Functions
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+     \addplot [draw=penColor, very thick, smooth, samples=200,domain=(0:9), ->] {x^0.5};
+     \addplot[color=penColor,only marks,mark=*] coordinates{(0,0)}; 
+
+     \addplot [draw=penColor2, very thick, smooth, samples=200, domain=(0.01:8), ->] {x^0.333};
+     \addplot [draw=penColor2, very thick, smooth, samples=200, domain=(-8:-0.01), <-] {-(-x)^0.333};
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Core root (radical) functions have only $0$ as a zero.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Exponential Functions
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+               domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+               axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                yticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$}, 
+                xticklabels={$-10$,$-8$,$-6$,$-4$,$-2$,$2$,$4$,$6$,$8$,$10$},
+                ticklabel style={font=\scriptsize},
+               every axis y label/.style={at=(current axis.above origin),anchor=south},
+               every axis x label/.style={at=(current axis.right of origin),anchor=west},
+               axis on top,
+                    ]
+
+        
+     \addplot [draw=penColor, very thick, smooth, samples=200,domain=(-9:3), <->] {2^x};
+     \addplot [draw=penColor2, very thick, smooth, samples=200,domain=(-3:9), <->] {(0.5)^x};
+     %\addplot[color=penColor,only marks,mark=*] coordinates{(0,0)}; 
+
+
+     \addplot [line width=0.5, gray, dashed,samples=100,domain=(-9:9)] ({x},{0});
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+Core exponential functions do not have zeros.
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+\begin{example} Logarithmic Functions
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(0:9),<->] {ln(x)/ln(2)};
+
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(0:9),<->] {ln(x)/ln(0.5)};
+
+          \addplot [line width=1, gray, dashed,domain=(-9:9),<->] ({0},{x});
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Core logarithmic functions have exactly one zero. The zero is the domain number that makes the inside of the logarithm equal to $1$.
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Sine and Cosine
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=1.5, xmax=10, ymin=-1.5, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel={$y$}, grid = major, grid style={dashed},
+            ytick={-1.5,-1,-0.5,0.5,1,1.5},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$\tfrac{-5\pi}{2}$,$-2\pi$,$\tfrac{-3\pi}{2}$,$-\pi$, $\tfrac{-\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$1.5$,$-1$,$-0.5$,$0.5$,$1$,$1.5$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {cos(deg(x)};
+
+
+            \node[penColor] at (axis cs:3.5,1.1) [anchor=north] {$\sin(\theta)$};
+            \node[penColor2] at (axis cs:1.4,1.3) [anchor=north] {$\cos(\theta)$};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Sine and Cosine have an infinite number of zeros.
+
+
+The zeros of $\sin(\theta)$ are $\{    k\pi \, | \, k \in \mathbb{Z}    \}$
+
+
+
+The zeros of $\cos(\theta)$ are $\{  \frac{\pi}{2} + k\pi \, | \, k \in \mathbb{Z}    \}$
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Absolute Value 
+
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:9),<->] {abs(x)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+The absolute value function has one zero. It is $0$.
+
+
+\end{example}
 
 
 
