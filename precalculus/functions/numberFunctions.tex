@@ -148,22 +148,21 @@ We can also have functions that just relate numbers.
 
 
 
-\begin{example} Double
+\begin{example} The $Double$ function
 
-The \textit{Double} function pairs a real number with its double.
+The $Double$ function pairs a real number with its double.
 
 domain = all real numbers  \\ 
 codomain = all real numbers
 
 
 \begin{itemize}
-\item \textit{Double}($3$) = $6$.
-\item \textit{Double}($-4$) = $-8$.
-\item \textit{Double}($\pi$) = $2 \pi$.
+\item $Double(3) = 6$.
+\item $Double(-4) = -8$.
+\item $Double(\pi) = 2 \pi$.
 
-\item $\textit{Double}(7) = \answer{14}$.
+\item $Double(7) = \answer{14}$.
 \end{itemize}
-
 \end{example} 
 
 
@@ -172,15 +171,15 @@ codomain = all real numbers
 
 \newpage
 
-\begin{example} Half
+\begin{example} The $Half$ function
 
-The \textit{Half} function pairs a real number with its half.
+The $Half$ function pairs a real number with its half.
 
 domain = positive real numbers  \\ 
 codomain = positive real numbers
 
 
-Solve \textit{Half}(d) = $8$ \\
+Solve $Half(d) = 8$ 
 
 The solution is $d = \answer{16}$.
 
@@ -192,25 +191,25 @@ The solution is $d = \answer{16}$.
 
 
 
-\begin{example} Successor
+\begin{example} The $Successor$ function
 
-The \textit{Successor} function pairs an integer with one more than the integer.
+The $Successor$ function pairs an integer with one more than the integer.
 
 domain = all integers  \\ 
 codomain = all integers
 
 
 \begin{itemize}
-\item \textit{Successor}($3$) = $4$.
-\item \textit{Successor}($-4$) = $-3$.
-\item \textit{Successor}($0$) = $1$.
-\item \textit{Successor}($\pi$) = $undefined$.
+\item $Successor(3) = 4$.
+\item $Successor(-4) = -3$.
+\item $Successor(0) = 1$.
+\item $Successor(\pi) = $undefined.
 
-\item $\textit{Successor}(-7) = \answer{-6}$.
+\item $Successor(-7) = \answer{-6}$.
 \end{itemize}
 
 
-Solve \textit{Successor}(z) = $-1$ \\
+Solve $Successor(z) = -1$ 
 
 The solution is $z = \answer{-2}$.
 
@@ -225,7 +224,7 @@ The solution is $z = \answer{-2}$.
 \begin{question}  
 
 
-Is every integer in the range of \textit{Successor}?
+Is every integer in the range of $Successor$?
 
 
 \begin{multipleChoice}
@@ -242,7 +241,7 @@ Every integer has a previous integer.
 \begin{question} 
 
 
-Is \textit{Successor} an onto function?
+Is $Successor$ an onto function?
 \begin{multipleChoice}
 	\choice[correct]{Yes}
 	\choice{No}
@@ -255,7 +254,7 @@ Is \textit{Successor} an onto function?
 \begin{question} 
 
 
-Is \textit{Successor} a one-to-one function?
+Is $Successor$ a one-to-one function?
 \begin{multipleChoice}
 	\choice[correct]{Yes}
 	\choice{No}
@@ -697,16 +696,16 @@ $\blacktriangleright$ $R$ is not onto.
 
 \textbf{Rigor:}
 
-If $0 < r < 1$, then there exists $h$, such that $0 < r < h < 1$.  
+Since $r < 1$, we know that  $(0,r) \ne (0, 1)$. There exists a number, $h$, such that $0 < r < h < 1$.  
 
-Now, suppose that $h$ is a range number, i.e. a function value. That would mean it is partnered with some domain number.  There would be a domain number $0 < d < 1$, such that  $r \cdot d = h$.  
-
-
-But that would mean that $d = \frac{h}{r}$ and $d = \frac{h}{r} > 1$, since $h > r$.  $d$ is not in $(0,1)$.
+Now, suppose that $h$ is a range number of $R$, i.e. a function value. That would mean it is partnered with some domain number.  There would be a domain number $0 < d < 1$, such that  $r \cdot d = h$.  
 
 
-If $h$ is in the range, then its domain partner is not in the domain. $d$ is in the domain and $d$ is not in the domain.  That can't happen, which means $h$ must not be in the range and $R$ is not onto.
+But that would mean $d = \frac{h}{r}$ with $\frac{h}{r} > 1$, since $h > r$.  
 
+So, $d > 1$.  WHich means that $d$ is not in the domain.
+
+\textbf{Recap:} If $h$ is in the range, then its domain partner is not in the domain.  That can't happen, which means $h$ must not be in the range and $R$ is not onto.
 
 
 
