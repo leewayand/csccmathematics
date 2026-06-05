@@ -1,0 +1,358 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Core Analysis}
+
+\begin{document}
+
+\begin{abstract}
+Part 2
+\end{abstract}
+\maketitle
+
+
+
+
+As a starting point for function analysis, let's just list characteristics of our Core Functions. A full analysis would also provide reasoning.
+
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{Exponential Functions}} 
+
+
+\[ E(x) = r^x  \, \text{ where } \, r > 0  \, \text{ and } \, r \ne 1 \]
+
+
+
+\textbf{Domain:} The domain $(-\infty, \infty)$.
+
+\textbf{Zeros:} Core Exponential Functions have no zeros.
+
+
+
+\textbf{Continuity:} Core Exponential Functions are continuous.
+
+
+
+\textbf{End-Behavior:} 
+
+
+
+If $r > 1$, the Core Exponential Functions tend to $0$ as the domain becomes unbounded negatively. Core Exponential Functions tend to $\infty$ as the domain becomes unbounded positively.
+
+
+
+\[
+\lim\limits_{x \to \infty} r^x = \infty
+\]
+
+
+\[
+\lim\limits_{x \to -\infty} r^x = 0
+\]
+
+
+If $0 < r < 1$, then this is reversed.
+
+
+
+\textbf{Behavior (Inc/Dec):} 
+
+
+If $r > 1$, then Core Exponential Functions are increasing functions.
+
+If $0 < r < 1$, then Core Exponential Functions are decreasing functions.
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} Core Exponential Functions have no global maximum or minimum.
+
+\textbf{Local Maximum and Minimum:}  Core Exponential Functions have no local maximums or minimums.
+
+\textbf{Range:} The range of a Core Exponential Function is either $(0,\infty)$ or $(-\infty, 0)$.
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{Core Logarithmic Functions}} 
+
+
+\[ L(x) = \log_r(x)  \]
+
+
+
+\textbf{Domain:} The domain $(0, \infty)$.
+
+\textbf{Zeros:} Core Logarithmic Function have $1$ as their only zero.
+
+
+
+\textbf{Continuity:} Core Logarithmic Functions are continuous.
+
+
+
+\textbf{End-Behavior:} Since the domain is $(0, \infty)$, Core Logarithmic Functions only end-behavior as the domain become unbounded positively.
+
+
+If $r > 1$, then
+
+\[
+\lim\limits_{x \to \infty} \log_r(x) = \infty
+\]
+
+
+The other side is called Singularity Behavior.
+
+\[
+\lim\limits_{x \to 0^+} \log_r(x) = -\infty
+\]
+
+
+
+
+
+If $0 < r < 1$, then
+
+\[
+\lim\limits_{x \to \infty} \log_r(x) = -\infty
+\]
+
+
+The other side is called Singularity Behavior.
+
+\[
+\lim\limits_{x \to 0^+} \log_r(x) = \infty
+\]
+
+
+
+
+
+
+
+\textbf{Behavior (Inc/Dec):} 
+
+
+
+
+If $r > 1$, then Core Logarithmic Functions are increasing functions.
+
+
+If $0 < r < 1$, then Core Logarithmic Functions are decreasing functions.
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} Core Logarithmic Functions have no global maximum or minimum.
+
+\textbf{Local Maximum and Minimum:}  Core Logarithmic Functions have no local maximums or minimums.
+
+\textbf{Range:} The range of Core Logarithmic Functions is $(-\infty,\infty)$.
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{Sine and Cosine}} 
+
+
+\[ S(x) = \sin(x)  \]
+
+\[ C(x) = \cos(x)  \]
+
+
+
+\textbf{Domain:} The domain both functions is $(-\infty, \infty)$.
+
+\textbf{Zeros:} Both functions have zeros and since both functions are periodic, they have an infinite number of zeros.
+
+
+\begin{itemize}
+\item Zeros of $\sin(x)$ are ${k \pi \, | \, k \in \mathbb{Z}}$.
+\item Zeros of $\cos(x)$ are ${\frac{\pi}{2} + k \pi\, | \, k \in \mathbb{Z}}$.
+\end{itemize}
+
+
+\textbf{Continuity:} Both functions are continuous.
+
+
+
+\textbf{End-Behavior:} Both functions continue to oscillate.
+
+
+
+
+
+
+\textbf{Behavior (Inc/Dec):} Both functions switch back-and-forth between increasing and decreasing with a period of $2\pi$.
+
+\begin{itemize}
+\item $\sin(x)$ increases on $\left(0, \frac{\pi}{2} \right)$
+\item $\sin(x)$ decreases on $\left(\frac{\pi}{2}, \frac{3\pi}{2} \right)$
+\item $\sin(x)$ increases on $\left(\frac{3\pi}{2}, 2\pi \right)$
+\end{itemize}
+
+\begin{itemize}
+\item $\cos(x)$ decreases on $(0, \pi)$
+\item $\cos(x)$ increases on $(\pi. 2\pi)$
+\end{itemize}
+
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} Both functions have a global maximum of $1$ and a global minimum of $-1$.
+
+
+
+
+\textbf{Local Maximum and Minimum:}  Both functions $1$ and $-1$ as their local extrema.
+
+
+
+
+\textbf{Range:} The range of both functions is $[-1, 1]$.
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{Absolute Value Function}} 
+
+
+\[ Abs(x) = |x|  \]
+
+
+
+\textbf{Domain:} The domain is $(-\infty, \infty)$.
+
+\textbf{Zeros:} $0$ is the only zero.
+
+
+
+
+\textbf{Continuity:} The Core Absolute Value Function is continuous.
+
+\textbf{End-Behavior:} The Core Absolute Value Function becomes unbounded positively on both sides.
+
+
+
+
+
+
+\textbf{Behavior (Inc/Dec):} 
+
+The Core Absolute Value Function decreases on $(-\infty, 0)$ and increases on $(0, \infty)$
+
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} The Core Absolute Value Function has $0$ as its global minimum and it has no global maximum.
+
+
+
+
+\textbf{Local Maximum and Minimum:}  The Core Absolute Value Function has $0$ as its only local minimum and it has no local maximum.
+
+
+
+\textbf{Range:} The range is $[0, \infty)$.
+
+\end{explanation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Visual Behavior]{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/visualBehavior/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+\end{document}
