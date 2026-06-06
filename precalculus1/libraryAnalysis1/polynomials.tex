@@ -123,7 +123,7 @@ As you will see later, polynomials have a limit on the number of zeros and extre
 \subsection*{Factored Form}
 
 
-$p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the factored form of a polynomial.  
+$p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the \textbf{factored form} of a polynomial (a product).  
 
 In an effort to be clearer, we clean up the roots, because there could be repeated roots and we would like to point this out.  Therefore the standard factored form looks like
 
@@ -148,7 +148,7 @@ If the factors are collected, then the multiplicity of $r$ is the exponent of $(
 
 \end{definition}
 
-As we noted with quadratics, this factorization into linear factors often requires complex numbers, which we are leaving for the next course. We are only using real numbers now.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors (nonreal roots).
+As we saw with quadratics, this factorization into linear factors often requires complex numbers, which we are leaving for the next course. We are only using real numbers now.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors (quadratics with nonreal/complex roots).
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}}  Therefore, our discussion on polynomial roots, will center around the linear factors.  Irreducible quadratics will have to stay that way until the next course.
 
@@ -167,7 +167,7 @@ If we think of the real numbers as lining up to form the number line, then we co
 
 For a polynomial, we would run through each distinct root once.  As we ran from the left side to the right side of each root, the sign of the value of the polynomial with either change or stay the same.
 
-At each root, $r_k$, the value of the polynomial is $0$.  But on either side of the root, the polynomial is either positive or negative. There are four possible combinations.
+At each root, $r_k$, the value of the polynomial is $0$.  But on either immediate side of the root, the polynomial is either positive or negative. There are four possible combinations.
 
 
 \[
@@ -181,7 +181,7 @@ negative & 0 & positive
 \]
 
 
-Either the sign switches or it stays the same across the root.  What in the formula dictates this?
+Either the sign switches or it stays the same across the root.  How can we see this in the formula?
 
 
 
@@ -217,7 +217,7 @@ However, if $e_k$ is odd then the sign of the base does matter, because, unlike 
 \end{itemize}
 
 
-
+The multiplicity or exponent tells us if the sign changes across the zero or singularitiy.
 
 
 
@@ -232,7 +232,7 @@ However, if $e_k$ is odd then the sign of the base does matter, because, unlike 
 
 
 
-\begin{example}
+\begin{example} Signs
 
 
 Let $p(x) = 3(x+4) (x-1)^2 (x-3)$.
@@ -487,10 +487,19 @@ $\blacktriangleright$ \textbf{The whole polynomial $3(x+4)(x-1)^2(x-3)$}
 
 
 
-All of the information about the sign of the polynomial is encoded in the exponents. 
+All of the information about the sign of the polynomial is encoded in the zeros and their exponents. 
 
 
-Any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $-\infty$.  Then, this polynomial must change signs at $-4$. Then, this polynomial cannot change signs at $1$.  Then, this polynomial must change signs at $3$.  Finally, any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $\infty$.
+In this example, our polynomial has a positive leading coefficient and is of degree $4$. Any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $-\infty$.  Our polynomial is positive for domain numbers less than $-4$.
+
+
+Then, this polynomial must change signs at $-4$, because $-4$ has odd multiplicity.  
+
+Then, this polynomial cannot change signs at $1$, since it has even multiplicity.  
+
+Then, this polynomial must change signs at $3$.  
+
+Finally, any fourth degree polynomial with a positive leading coefficient approaches $\infty$ as the domain approaches $\infty$.
  
 
 
@@ -521,8 +530,7 @@ All of this should agree with the graph of the polynomial.
 
 
 
-
-\textbf{\large Graphically}
+\subsection*{Graphically}} 
 
 
 Graphically, the values of the function are measured vertically. Zeroes are represented as dots positioned on the horizontal axis.  The graph either flows from one side of the horizontal axis to the other side as the function changes sign or the graph rebounds from the intercept and stays on the same side of the horizontal axis.  The multiplicity of the root tells us which.
@@ -532,9 +540,17 @@ Graphically, the values of the function are measured vertically. Zeroes are repr
 
 
 
-\begin{example}
+\begin{example} Multiplicities
 
-Change the exponent of the $x+2$ factor from odd to even.  The graph will crossover the $x$-axis for odd exponents and bounce back for even expoents.  If you change the sign of the leading coefficient, then the crossing and bouncing will jump to the other side of the $x$-axis.
+In the graph below, change the sign of exponent for $(x+2)$ from $2$ to $3$.  
+
+The sign of $(x+2)^3$ switches across $-2$ and the graph crosses over the axis.
+
+
+The sign of $(x+2)^2$ stays the same across $-2$ and the graph does not cross over the axis.
+
+
+If you change the sign of the leading coefficient, then the crossing and bouncing will jump to the other side of the $x$-axis.
 
 
 
@@ -575,7 +591,7 @@ Unless we have a quadratic polynomial, the best we can do for the maximums and m
 
 
 
-\begin{example}
+\begin{example} Extrema
 
 The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
@@ -593,6 +609,11 @@ $f(x)$ has an approximate global minimum value of $\answer[tolerance=0.1]{-6.6}$
 \end{example}
 
 
+Calculus will give us the tools to obtain derivatives for ourselves, and that will help us locate where in the domain maximums and minimums occur.
+
+
+
+\subsection*{Rate of Change}
 
 
 Extending our analysis of quadratic functions, the global and local extreme values of a function occur at numbers in the domain where the corresponding points on the graph have horizontal tangent lines. We call these domain numbers \textbf{critical numbers}.  Thus, critical numbers play an important role in function analysis.  
@@ -642,7 +663,7 @@ The next example shows that they also include places that are not marking maximu
 
 
 
-\subsection*{Rate of Change}
+
 
 
 

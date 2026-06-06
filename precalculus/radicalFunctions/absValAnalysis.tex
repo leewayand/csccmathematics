@@ -62,13 +62,41 @@ where $A$, $B$, $C$, and $D$ are real numbers, with $A \ne B$ and $B \ne 0$ is a
 \end{formula}
 
 
-\textbf{Note:}  In the template for absolute value functions, There is a leading coefficient for the function and there is a leading coefficient for the linear function inside the absolute value bars. \\
+\textbf{Note:}  In the template for absolute value functions, There is a leading coefficient for the function and there is a leading coefficient for both linear functions inside the absolute value bars and outside. 
 
 
 
 
 
 
+
+
+
+
+
+
+
+\begin{idea} \textbf{\textcolor{blue!55!black}{Absolute Value Functions}}
+
+
+Let $Abs(k) = |k| $ be the Core absolute value function.
+
+Let $L_{in}(t) = B \, t + C$ be a linear function.
+
+Let $L_{out}(y) = A \, y + D$ be a linear function.
+
+
+Absolute Value functions are constructed by composing these component funcitons.
+
+
+\[
+(L_{out} \circ Abs \circ L_{in})(x) = A |B \,x + C| + D
+\]
+
+
+
+
+\end{idea}
 
 
 
@@ -201,23 +229,35 @@ The leading coefficient of $T$ is $-3 < 0$, therefore $T$ becomes unbounded nega
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior}} 
 
 
-The leading coefficient of $T$ is $-3 < 0$, therefore $T$ increases and then decreases, changing at the critical number. 
+For behavior, we are viewing $T$ as a composition.
 
 
-The critical number is the real number that makes the inside equal to $0$. 
+\begin{itemize}
+\item Let $L_{out}(u) = -3 \, u + 5$, a decreasing linear function
+\item Let $AV(x) = |x|$, a core absolute value function
+\item Let $L_{in}(v) = 2 - v$, a decreasing linear function
+\end{itemize}
 
 
-$2 - k = 0$ at $k + 2$ 
+$0$ is the criticcal number for $AV(x) = |x|$. It switches from decreasing to increasing at $0$.
+
+So, we need to find when $L_{in}(v) = 2 - v = 0$, which is at $v=2$.
 
 
-$T$ is increasing on $(-\infty, 2)$ and decreasing on $(2, \infty)$. 
+$\blacktriangleright$ On $(-\infty, 2)$, the range of $L_{in}(v) = 2 - v$ is  $(0, \infty)$, where $AV(x)$ is increasing.
 
 
-\textbf{Note:}  It is more accurate to say $T$ is increasing on $(-\infty, 2]$ and decreasing on $[2, \infty)$.
+\[ dec \circ inc \circ dec = inc \]
+
+
+$\blacktriangleright$ On $(2, \infty)$, the range of $L_{in}(v) = 2 - v$ is  $(-\infty, 0)$, where $AV(x)$ is decreasing.
+
+
+\[ dec \circ dec \circ dec = dec \]
 
 
 
-
+\textbf{Note:} It is more accurate to say that $T$ is increasing on $(-0, \infty]$ and decreasing on $[2, \infty)$.
 
 
 

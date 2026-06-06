@@ -15,7 +15,12 @@ aspects
 
 
 
-Polynomial and rational functions only include terms with positive integer powers. On the other hand, power functions use any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
+Polynomial and rational functions only include terms with integer powers. 
+
+
+On the other hand, power functions use any real number power.  The noninteger powers belong to a category called \textbf{roots and radicals}.
+
+We saw this with our Core Root and Radical functions.
 
 
 
@@ -98,44 +103,210 @@ Similar rules for radicals.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Core Radical Functions}
+
+
+
+Negative numbers raised to odd powers result in negative numbers, which means every real number has an odd root.  The domain of odd roots or radicals is all real numbers.
+
+\begin{example}
+
+
+The graph of $y = R(t) = t^{\tfrac{1}{3}} = \sqrt[3]{t}$
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(0:9),->] {x^(0.333333)};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-9:0),<-] {-(-x)^(0.333333)};
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+
+
+
+Negative numbers raised to even powers result in positive numbers, just like positive numbers raised to even power.  This makes going backwards a problem.  
+
+
+
+Should $\sqrt{4} = -2$ or $\sqrt{4} = 2$?  When squared, both $-2$ and $2$ give $4$.
+
+
+
+We are forced to choose between two even roots.  We pick positive numbers . The domain and range of even roots are both $[0, \infty)$.
+
+\begin{example}
+
+
+The graph of $y = R(t) = t^{\tfrac{1}{2}} = \sqrt{t} $
+
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(0:9),->] {x^(0.5)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+
+
+
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+
+
+
+
+
+There are no horizontal asymptotes on these graphs.  The graph keeps moving up or down unbounded.  The root and radical functions are unbounded. Their values tend to $\pm \infty$ as the domain moves out towards $\pm \infty$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Root/Radical Functions}
+
+The Elementary Functions also include root and radical functions.
+
+These are constructed from the Core functions by composing them with linear functions.
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Root and Radical Functions}}
+
+
+Let $R(k) = \sqrt[n]{k} =  k^{\tfrac{1}{n}} $ be a Core root function.
+
+Let $L_{in}(t) = B \, t + C$ be a linear function.
+
+Let $L_{out}(y) = A \, y + D$ be a linear function.
+
+
+Root and Radical functions are constructed by composing these component functions.
+
+
+\[
+(L_{out} \circ R \circ L_{in})(x) = A \sqrt[n]{B \,x + C} + D
+\]
+
+
+
+
+\end{definition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection*{Even Roots}
 
-This course is the study of the real numbers. As a result we don't take even roots of negative numbers.
-
-Even roots
-
-\[   Even(x) = \sqrt[2n]{x} = x^{\tfrac{1}{2n}}          \]
-
-look a lot like the square root
-
-
-\[   Even(x) = \sqrt{x} = x^{\tfrac{1}{2}}          \]
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers, because a negative number raised to an even power always results in a positive number.
 
 
 
-Their domains do not include negative numbers: $[0, \infty)$.  Their domains are the \textbf{nonnegative} numbers.  These functions increase very slowly over their domain, becoming unbounded.
+\[   EvenRoot(r) = \sqrt[2n]{r} = r^{\tfrac{1}{2n}}          \]
+
+The square root function is the most popular core root function
+
+
+\[   \sqrt{x} = x^{\tfrac{1}{2}}          \]
 
 
 
-By far, we encounter the square root funciton more than any other even root.
+The domain of the square root function (and all even roots) is $[0, \infty)$, the \textbf{nonnegative} numbers.  
 
 
 
 
 
 
-
-\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Square Root Function}}
-
-There is one \textbf{basic square root function}. 
-
-\[     SR(x) = \sqrt{x}           \]
-
-
-\end{formula}
-
-
-The graph of $y = SR(x) = \sqrt{x}$
+The graph of $y = SQR(x) = \sqrt{x}$
 
 
 \begin{image}
@@ -151,10 +322,10 @@ The graph of $y = SR(x) = \sqrt{x}$
             axis on top
           ]
           
-          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {sqrt(x)};
+            %\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {sqrt(x)};
    
- 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
 
            
 
@@ -167,38 +338,28 @@ The graph of $y = SR(x) = \sqrt{x}$
 The square root function begins where the inside of the radical equals $0$.  It then moves in the direction that keeps the inside positive.
 
 
+All even root/radical functions can be viewed as the core square root function composed with linear function. One linear function affects the inside of the radical sign and the other affects the outside.
 
 
+\begin{idea} \textbf{\textcolor{blue!55!black}{Square Root Functions}} 
 
 
+Let $SQR(x) = \sqrt{k}$ be the core square root function.
+
+Let $L_{in}(t) = B \, t + C$ be a linear function.
+
+Let $L_{out}(y) = A \, y + D$ be a linear function.
 
 
-
-
-
-Our category of square root functions is built from composing this basic square root function with linear functions
-
-
-Let $L_{out}(t) = A t + D$
-
-Let $L_{in}(v) = B v + C$
+In general, square root (radical) functions are constructed by composing these component functions.
 
 
 \[
-(L_{out} \, \circ \, \sqrt{ } \, \circ L_{in})(x) = A \sqrt{B \, x + C} + D 
+(L_{out} \circ SQR \circ L_{in})(x) = A \sqrt{B \,x + C} + D
 \]
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{General Square Root Function}}
-
-A \textbf{square root function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
-
-\[     SR(x) =    A \sqrt(B \, x + C) + D           \]
-
-where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
-
-
-\end{formula}
+\end{idea}
 
 
 
@@ -206,10 +367,9 @@ where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
 
 
 
+\begin{example} Square Root Function
 
-\begin{example} Even Root
-
-The graph of $y = f(v) = \sqrt{v+3}$
+The graph of $y = f(v) = \frac{1}{3} \sqrt{5-3v}-4$
 
 
 \begin{image}
@@ -225,10 +385,10 @@ The graph of $y = f(v) = \sqrt{v+3}$
             axis on top
           ]
           
-          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-3:9),->] {sqrt(x+3)};
+            %\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(-9:2.67),<-] {0.33*sqrt(5-3*x)-4};
    
- 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.67,-4)};
 
            
 
@@ -236,8 +396,85 @@ The graph of $y = f(v) = \sqrt{v+3}$
 \end{tikzpicture}
 \end{image}
 
+\textbf{Domain:} The domain of $f$ is the interval that makes the inside of the radical nonnegative.  The inside is $5-3v$, which is a linear function with a negative leading coefficient. The negative leading coefficient tells us that $5-3v > 0$ on the negative side of its zero, which is $\frac{5}{3}$.
 
-Here the inside $v+3$ equals $0$ when $v=\answer{-3}$.  That is the start of the domain.  Then, the inside is positive $v+3>0$, when $v>-3$, which means the graph moves up to the right.
+\[ \left(-\infty, \frac{5}{3} \right] \]
+
+\textbf{Zeros:}
+
+
+\begin{align*}
+\frac{1}{3} \sqrt{5-3v}-4 & = 0   \\
+\sqrt{5-3v}               & = 12  \\
+5-3v                      & = 36  \\
+-31 &= 3v   \\
+-\frac{31}{3}   &= v
+\end{align*}
+
+
+\textbf{Continuity:} Root or Radical functions are continuous.
+
+
+\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction.  
+
+The leading coefficient tells us the end-behaviore. Here the leading coefficient of $f$ is $\frac{1}{3}$, which is positive.
+
+
+\[  \lim\limits_{v \to -\infty} f(v) = \infty   \]
+
+
+
+
+
+
+
+\textbf{Behavior:}  We'll use the Chain Rule.
+
+$f$ is the composition of
+
+\begin{itemize}
+\item $SQR(x) = \sqrt{x}$ 
+
+\item $L_{in}(t) = 5 - 3 \, t$, a decreasing linear function
+
+\item $L_{out}(y) = \frac{1}{3} \, y + 4$, an increasing linear function
+\end{itemize}
+
+
+\[  f(v) =  \frac{1}{3} \sqrt{5-3v}-4 = (L_{out} \circ SQR \circ L_{in})(v) \]
+
+\[ inc \circ inc \circ dec = dec  \]
+
+
+$f$ is a decreasing square root function, which agrees with the graph.
+
+
+
+\textbf{Global Maximum and Minimum:} 
+
+
+Since $\lim\limits_{v \to -\infty} f(v) = \infty$, we know $f$ has no global maximum.
+
+Since $f$ is always decreasing, we know that $f\left( \frac{5}{3} \right) = -4$ is the global minimum.
+
+
+\textbf{Local Maximums and Minimums:} 
+
+Global extrema are automatically local extrema.  So, $f\left( \frac{5}{3} \right) = -4$ is a local minimum.
+
+Since $f$ is always decreasing, there are no other local extrema.
+
+
+\textbf{Range:} 
+
+\begin{itemize}
+\item $f$ is continuous
+\item $\lim\limits_{v \to -\infty} f(v) = \infty$
+\item $-4$ is the global minimum
+\end{itemize}
+
+All of this gives the range  $\left[ -4, \infty \right)$
+
 
 
 \end{example}
@@ -274,10 +511,10 @@ The graph of $y = T(k) = \sqrt{-k+5}$
             axis on top
           ]
           
-          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:5),<-] {sqrt(-x+5)};
+            %\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(-9:5),<-] {sqrt(-x+5)};
    
- 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,0)};
 
            
 
@@ -286,7 +523,76 @@ The graph of $y = T(k) = \sqrt{-k+5}$
 \end{image}
 
 
-Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k$ \wordChoice{\choice[correct]{$<$} \choice {$>$}}  $5$, which means the graph moves up to the left.  The domain is $(-\infty,5]$.
+\textbf{Domain:} 
+Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of the domain.  Then the inside is positive $-k+5>0$, when $k$ \wordChoice{\choice[correct]{$<$} \choice {$>$}}  $5$, which means the domain is $(-\infty,5]$.
+
+
+\textbf{Zeros:}  Root and Radical functions can only have at most one zero, which must be $5$.
+
+
+\textbf{Continuity:} Root and Radical functions are continuous. 
+
+
+\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction.  
+
+The leading coefficient tells us the end-behaviore. Here the leading coefficient of $T$ is $1$, which is positive.
+
+
+\[  \lim\limits_{k \to -\infty} T(k) = \infty   \]
+
+
+
+
+
+
+
+\textbf{Behavior:}  We'll use the Chain Rule.
+
+$T$ is the composition of
+
+\begin{itemize}
+\item $SQR(x) = \sqrt{x}$, an increasing core function
+\item $L_{in}(t) = -k + 5$, a decreasing linear function
+\end{itemize}
+
+
+\[  T(k) =  \sqrt{-k+5} = (SQR \circ L_{in})(k) \]
+
+\[ inc \circ dec = dec  \]
+
+
+$T$ is a decreasing square root function, which agrees with the graph.
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} 
+
+
+Since $\lim\limits_{k \to -\infty} T(k) = \infty$, we know $T$ has no global maximum.
+
+Since $T$ is always decreasing, we know that $T(5) = 0$ is the global minimum.
+
+
+\textbf{Local Maximums and Minimums:} 
+
+Global extrema are automatically local extrema.  So, $T(5) = 0$ is a local minimum.
+
+Since $T$ is always decreasing, there are no other local extrema.
+
+
+\textbf{Range:} 
+
+\begin{itemize}
+\item $T$ is continuous
+\item $\lim\limits_{k \to -\infty} T(k) = \infty$
+\item $0$ is the global minimum
+\end{itemize}
+
+All of this gives the range  $\left[ 0, \infty \right)$.
+
+
 
 
 
@@ -297,7 +603,84 @@ Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of t
 
 
 
-Odd root functions follow the same type templates.  The difference is that we have odd roots of negative numbers.
+
+
+
+
+\begin{summary} \textbf{\textcolor{red!70!yellow}{Analysis}}
+
+
+Consider the general square root function.
+
+\[  A \sqrt{B \,x + C} + D  \]
+
+
+\textbf{Domain:} The domain is all real numbers that make the inside nonnegative
+
+
+\[ B \,x + C >= 0 \]
+
+
+\textbf{Zeros:} Square root functions can have a single zero or no zeros.
+
+
+\[  A \sqrt{B \,x + C} + D  = 0 \]
+
+Since square roots of real numbers are always positive (or $0$), this equation has a solution only if $A$ and $D$ have opposite signs.
+
+
+\textbf{Continuity:} Square root functions are contuous functions.  They are continuous on their domain.
+
+
+
+\textbf{End-Behavior:} Square root functions have end-behavior only in the direction that makes the inside positive. In that direction, the value of the function approaches $-\infty$ or $\infty$, which is dictated by the sign of the leading coeffcient.
+
+
+
+\textbf{Behavior:} Square root functions are either increasing functions or they are decreasing functions.  
+
+The Chain Rule will give us this information from the behavior of its component functions.
+
+
+\[
+(L_{out} \circ SQ \circ L_{in})(x) = A \sqrt{B \,x + C} + D
+\]
+
+
+$SQ$ is the core square root function and is an increasing function.  $L_{out}$ and $L_{in}$ are linear functions and their behavior is given by the sign of their leading coefficients.
+
+Then apply the Chain Rule.
+
+
+
+\textbf{Global Maximum and Minimum:}  Square root functions have either a global minimum or a global maximum, but not both. This global extreme value occurs at the real number that makes the inside of the radical equal to $0$.
+
+
+\textbf{Local Maximums and Minimums:} Same as global.
+
+
+\textbf{Range:} The range is either of the form $[m, \infty)$ or $(-\infty, M]$.
+
+\end{summary}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -308,7 +691,7 @@ Odd root functions follow the same type templates.  The difference is that we ha
 
 \subsection*{Odd Roots}
 
-This course is the study of the real numbers. As a result we don't take even roots of negative numbers, however we do have odd roots of negative numbers.
+This course is the study of the real numbers. As a result we don't take even roots of negative numbers, however we do have odd roots of negative numbers
 
 Odd roots
 
@@ -345,11 +728,11 @@ The graph of $y = CubeRoot(x) = \sqrt[3]{x}$
             axis on top
           ]
           
-          	%\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {x^0.33333};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:0),<-] {-(-x)^0.33333};
+            %\addplot [line width=2, penColor, smooth, domain=(-9:0),<->] {(x-1)/((x+3)*(x-4))};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(0:9),->] {x^0.33333};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(-9:0),<-] {-(-x)^0.33333};
    
- 			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
+      %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,0)};
 
            
 
@@ -363,16 +746,91 @@ The cube root function has a vertical tangent line where the inside of the radic
 
 
 
-\begin{example} Odd Root
 
-The graph of $y = f(v) = \sqrt[3]{v+3}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+All odd root/radical functions can be viewed as the Core Cube Root function composed with linear function. One linear function affects the inside of the radical sign and the other affects the outside.
+
+
+\begin{idea} \textbf{\textcolor{blue!55!black}{Cube Root Functions}} 
+
+
+Let $CR(x) = \sqrt[3]{k}$ an increasing function.
+
+Let $L_{in}(t) = B \, t + C$ be a linear function.
+
+Let $L_{out}(y) = A \, y + D$ be a linear function.
+
+
+In general, cube root (radical) functions are constructed by composing these component functions.
+
+
+\[
+(L_{out} \circ CR \circ L_{in})(x) = A \sqrt[3]{B \,x + C} + D
+\]
+
+
+\end{idea}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Cube Root Function
+
+
+The graph of $y = g(t) = -4 \sqrt[3]{2t+3}+1$
 
 
 \begin{image}
 \begin{tikzpicture} 
   \begin{axis}[
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$v$, ylabel=$y$, 
+            axis lines =center, xlabel=$t$, ylabel=$y$, 
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -381,10 +839,11 @@ The graph of $y = f(v) = \sqrt[3]{v+3}$
             axis on top
           ]
           
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-3:9),->] {(x+3)^0.33333};
-          	\addplot [line width=2, penColor, smooth, samples=200,domain=(-9:-3),<-] {-((-x-3)^0.33333)};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(-1.5:8),->] {-4*(2*x+3)^0.33333+1};
 
-          	\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
+            \addplot [line width=2, penColor, smooth, samples=200,domain=(-6:-1.5),<-] {4*(-2*x-3)^0.33333+1};
+
+            %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3,0)};
 
            
 
@@ -393,7 +852,68 @@ The graph of $y = f(v) = \sqrt[3]{v+3}$
 \end{image}
 
 
-Here the inside $v+3$ equals $0$ when $v=\answer{-3}$.  The graph has a vertical tangent line there.  Otherwise, the cube root function is increasing everywhere, but increasing slower and slower and slower.
+\textbf{Domain:}  The domain of all cube root functions is $(-\infty, \infty)$.
+
+
+\textbf{Zeros:} Cube root functions always have one zero.
+
+
+\begin{align*}
+-4 \sqrt[3]{2t+3}+1      & = 0 \\
+\sqrt[3]{2t+3}           & = \frac{1}{4} \\
+2t+3                     & = \left( \frac{1}{4} \right) = \frac{1}{64}  \
+t          & = \frac{1}{2} \left( \frac{1}{64} - 3 \right)
+          & = -\frac{191}{128}
+\end{align*}
+
+
+Just Checking...$-\frac{191}{128} \approx 1.49$, which agrees with the graph.
+
+
+\textbf{Continuity:} Cube root functions are continuous.
+
+
+
+\textbf{End-Behavior:} Cube root functions are unbounded in either direction.  The behavior will tell us which way.
+
+
+
+
+\textbf{Behavior:} 
+
+
+$g$ is the composition of
+
+\begin{itemize}
+\item $CR(x) = \sqrt[3]{x}$, an increasing function
+\item $L_{in}(t) = 2t+3$, an increasing linear function
+\item $L_{out}(y) = -4y + 1$, a decreasing linear function
+\end{itemize}
+
+
+\[ g(t) = -4 \sqrt[3]{2t+3}+1 =  (L_{out} \circ g \circ L_{in})(t) \]
+
+\[ dec \circ inc \circ inc = dec  \]
+
+
+$g$ is a decreasing cube root function, which agrees with the graph.
+
+This also gives us the end-behavior.
+
+
+\[ \lim\limits_{t \to -\infty} g(t) = \infty \, \text{ and } \,  \lim\limits_{t \to \infty} g(t) = -\infty \]
+
+
+
+\textbf{Global Maximum and Minimum:}  Cube root functions do not have global a maximum or minimum. 
+
+
+\textbf{Local Maximums and Minimums:}  Cube root functions do not have local maximums or minimums. 
+
+
+\textbf{Range:} The range of all cube root functions is $(-\infty, \infty)$. 
+
+
 
 
 \end{example}
@@ -413,124 +933,60 @@ Here the inside $v+3$ equals $0$ when $v=\answer{-3}$.  The graph has a vertical
 
 
 
+\begin{summary} \textbf{\textcolor{red!70!yellow}{Analysis}}
 
-\subsection*{Analysis}
 
+Consider the general cube root function.
 
+\[  A \sqrt[3]{B \,x + C} + D  \]
 
 
-\textbf{\textcolor{blue!55!black}{Domain}}
+\textbf{Domain:} The domain is all real numbers.
 
-The domnain of a radical function depends on the whether it is an odd root or an even root.
 
+\textbf{Zeros:} Cube root functions always have a single.
 
-\begin{itemize}
-\item The natural domain of an odd root is all real numbers.
-\item The natural domain of an even root is all real numbers that make the inside of the root nonnegative.
-\end{itemize}
 
+\[  A \sqrt[3]{B \,x + C} + D  = 0 \]
 
 
 
 
+\textbf{Continuity:} Cube root functions are contuous functions.   
 
-\textbf{\textcolor{blue!55!black}{Zeros}}
 
 
-An odd root will always have a single zero. 
+\textbf{End-Behavior:} Cube root functions have opposite end-behavior on the two sides.  This is dictated by the behavior of the function.
 
-An even root will have a single zero or no zero, since it can be ssifted. 
 
-To detemine the zero, set the whole formula equal to $0$ and solve. 
 
+\textbf{Behavior:} Cube root functions are either increasing functions or they are decreasing functions.  
 
+The Chain Rule will give us this information from the behavior of its component functions.
 
 
+\[
+(L_{out} \circ CR \circ L_{in})(x) = A \sqrt[3]{B \,x + C} + D
+\]
 
 
+$CR$ is the core cube root function and is an increasing function.  $L_{out}$ and $L_{in}$ are linear functions and their behavior is given by the sign of their leading coefficients.
 
-\textbf{\textcolor{blue!55!black}{Continuity}}
+Then apply the Chain Rule.
 
 
-Radical functions are continuous.
 
+\textbf{Global Maximum and Minimum:}  Cube root functions do not have a global maximum or minimum.
 
 
+\textbf{Local Maximums and Minimums:} Cube root functions do not have a local maximums or minimums.
 
 
-\textbf{\textcolor{blue!55!black}{End-Behavior}}
+\textbf{Range:} The range is always $(-\infty, \infty)$.
 
+\end{summary}
 
 
-Odd roots have end-behavior in both directions.  The function is unbounded in both directions.  In one direction, the function will be unbounded positively and in the other direction the function will be unbounded negatively. 
-
-The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the end-behavior. 
-
-
-
-Even roots have end-behavior in only one directions.  The function is unbounded positively or negatively. 
-
-The sign of the leading coefficient will tell the end-behavior. 
-
-
-
-
-
-
-
-
-
-\textbf{\textcolor{blue!55!black}{Behavior}}
-
-
-Radical (Root) functions are either always increasing or always decreasing. 
-
-
-The sign of the leading coefficient along with the sign of the leading coefficient inside the root will tell the behavior. 
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} When the two leading coefficents have the same sign, then the function is increasing.
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} When the two leading coefficents have different signs, then the function is decreasing.
-
-
-
-
-\textbf{\textcolor{blue!55!black}{Extema}}
-
-
-
-Odd roots do not have global maximum or minimum.
-
-Odd roots do not have local maximums or minimums.
-
-
-
-
-Even root have either a global maximum or minimum.
-
-Even root have either a local maximum or minimum.
-
-
-The domain, behavior, and end-behavior will reveal which one. 
-
-
-
-
-
-
-
-
-
-
-\textbf{\textcolor{blue!55!black}{Range}}
-
-
-
-The range of an odd root is $(-\infty, \infty)$. \\
-
-
-
-The range of an even root is eiter of the form $(-\infty, M]$ or $[M, \infty)$, where M is the maximum or minimum function value.
 
 
 

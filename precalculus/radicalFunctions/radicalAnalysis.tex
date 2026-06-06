@@ -71,7 +71,7 @@ where the $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$ and $B \ne 0$.
 
 
 
-\begin{example}
+\begin{example} Radical Function
 
 Comnpletely (Algebraically) analyze
 
@@ -87,7 +87,7 @@ R(y) = -3 \sqrt{5-2y} + 4
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Category}} \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Category}} 
 
 
 
@@ -97,14 +97,14 @@ $R(y) = -3 \sqrt{5-2y} + 4$ matches our official template, $A \sqrt[n]{B \, x + 
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} 
 
 
 $R(y)$ is an even root, which means its natural domain is all real numbers that make the inside nonegative.
 
-The inside is $5-2y$, which is a linear function with a negative leading coefficient.  That tells us that it is nonnegative for numbers less than its zero.  Its zero is $\frac{5}{2}$.\\
+The inside is $5-2y$, which is a linear function with a negative leading coefficient.  That tells us that it is nonnegative for numbers less than its zero.  Its zero is $\frac{5}{2}$.
 
-The domain of $R$ is $\left( -\infty, \frac{5}{2} \right]$\\
+The domain of $R$ is $\left( -\infty, \frac{5}{2} \right]$
 
 
 
@@ -153,7 +153,7 @@ $R$ is continuous, since it is a root function and all root funcitons are contin
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior}} 
 
 
-As an even root, $R$ only has end-behavior in one direction. It is unbounded as $y$ approaches $-\infty$. \\
+As an even root, $R$ only has end-behavior in one direction. It is unbounded as $y$ approaches $-\infty$. 
 
 Since the leading coefficient is $-3 < 0$, R is unbounded negatively. 
 
@@ -178,13 +178,23 @@ Since the leading coefficient is $-3 < 0$, R is unbounded negatively.
 
 A root or radical function is always increasing or always decreasing. 
 
-
-Since both the leading coefficient ($-3$) and the leading coefficient of the linear function inside the radical ($-2$) are neagtive, $R$ is increasing. 
-
-This agrees with the end-behavior. 
+The Chain Rule will tell us which.
 
 
+We are viewing $R$ as a composition.
 
+
+\begin{itemize}
+\item Let $L_{out}(v) = -3 \, v + 4$, a decreasing linear function
+\item Let $SQ(t) = \sqrt{t}$, an increasing core square root function
+\item Let $L_{in}(u) = 5 - 2 \, u$, a decreasing linear function
+\end{itemize}
+
+\[  R(y) = (L_{out} \circ SQ \circ L_{in})(y)  \]
+
+\[ dec \circ inc \circ dec = inc \]
+
+The Chain Rule tells us that $R$ is an increasing function.
 
 
 
@@ -211,7 +221,7 @@ R\left( \frac{5}{2}\right) = -3 (0) + 4 = 4
 
 
 
-As a radical function, $R$ has a single local maximum or minimum, which is the same as the global maximum or minimum. \\
+As a radical function, $R$ has a single local maximum or minimum, which is the same as the global maximum or minimum. 
 
 Therefore, the only local maximum is $4$, which occurs at $\frac{5}{2}$ 
 

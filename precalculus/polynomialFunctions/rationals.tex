@@ -18,7 +18,7 @@ fractions of polynomials
 
 
 
-Rational functions are fractions of polynomials
+Rational functions are constructed from polynomials. They are fractions of polynomials
 
 
 \begin{definition}\textbf{\textcolor{green!50!black}{Rational Functions}}
@@ -183,6 +183,33 @@ $5$ is still not in the domain of $D$, even if it would be in the domain of a re
 
 
 
+\textbf{Polynomial-like Functions}
+
+
+While polynomials only combined factors with positive integer powers, rational functions include factors with negative integer powers.
+
+
+We can pull $H(w)$ apart to see these power-like functions.
+
+
+\[    H(w) = \frac{(w-1)}{(w+3) (w-4)}  = \frac{4}{7} \cdot \frac{1}{w+3}  + \frac{3}{7} \cdot \frac{1}{w-4} =  \frac{4}{7} (w+3)^{-1}  + \frac{3}{7} (w-4)^{-1} \]
+
+
+Strictly speaking, these are not power functions, but more like shifted power functions - in the denominator. They are compositions of power functions with linear functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -194,7 +221,7 @@ $5$ is still not in the domain of $D$, even if it would be in the domain of a re
 
 Rational functions are continuous everywhere on their domain.  They have singularities at zeros of their denominators.  
 
-Graphs of rational functions might have vertical asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  The multiplicity indicates which.
+Graphs of rational functions might have vertical asymptotes at these singularities, where the function grows (positively or negatively) without bound.  As we can see in the examples above, the sign of the function can switch across a singularity, or not.  This has to do with the power of the corresponding factor, which we will investigate later.
 
 
 
@@ -233,7 +260,7 @@ The graph of $y = B(c) = \frac{(c-1)(c-5)(c-9)}{5(c+3)(c-9)}$.
 
 
           \addplot [line width=2, penColor, smooth, samples=200, domain=(-19:-3.4),<->] {((x-1)*(x-5))/(5*(x+3))};
-          \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.9:19),<->] {((x-1)*(x-5))/(5*(x+3))};
+          \addplot [line width=2, penColor, smooth, samples=200, domain=(-2.68:19),<->] {((x-1)*(x-5))/(5*(x+3))};
 
           \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(9,0.58)};
 
@@ -284,10 +311,10 @@ In addition to horizontal and vertical asymptotes, graphs of rational functions 
 The graph of a rational function need not have a vertical asymptote at a zero of the denominator.
 
 
-\begin{example}
+\begin{example} Singularities
 
 
-The graph of $y = h(t) = \frac{(t-1)(t-5)}{(t-5)(t+3)} $ \\
+The graph of $y = h(t) = \frac{(t-1)(t-5)}{(t-5)(t+3)} $ 
 
 $5$ is a zero of the polynomial in the denominator.  However, $t=5$ is not an asymptote in the graph.
 
@@ -366,7 +393,7 @@ This is because $5$ is also a zero of the polynomial in the numerator (with the 
 
 The example above illustrates why we prefer polynomial and rational functions in factored form.  It helps us make decisions on zeros and singularities. 
 
-Once we get to Calculus, we will see that the derivatives of polynomials and rational functions are again polynomials and rational functions. We will want to factor the derivatives as well to help us decide where the function is increasing and decreasing (behavior). \\
+Once we get to Calculus, we will see that the derivatives of polynomials and rational functions are again polynomials and rational functions. We will want to factor the derivatives as well to help us decide where the function is increasing and decreasing (behavior). 
 
 
 

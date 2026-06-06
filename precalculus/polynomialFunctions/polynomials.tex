@@ -14,36 +14,53 @@ characteristics
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Polynomials}} 
+
+In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers - you can find a polynomial as close as you want to any continuous function. 
 
 
-Polynomial functions (over the real numbers) are functions that can be described as sums of power functions with whole number exponents.
+In other words, no matter what small distance you think up...
+
+\begin{itemize}
+\item \textbf{Numbers} Given any real number, there is a rational number within that small distance of the real number.
+
+\item \textbf{Functions} Given any continuous function on a closed interval, there is a polynomial within that ``small distance'' of the continuous function.
+\end{itemize}
+
+This makes polynomials extremely useful and thus very interesting. 
+
+Polynomials are linear combinations of core power functions.
 
 
-\[    p(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
+\begin{definition} \textbf{\textcolor{green!50!black}{Polynomial Functions}} 
+
+A polynomial function is any function that can be represented with a formula of the form
+
+\[    a_n x^n + a_{n-1} x^{n-1} + \cdots + a_3 x^3 + a_2 x^2 + a_1 x^1 + a_0 x^0      \]
 
 where the $a_k$ are real numbers and $a_n \ne 0$.
 
+This is called the \textbf{standard form}.
+
+$a_k$ are called \textbf{coefficients}.
+
+$a_k x^k$ are called \textbf{terms}.
+
+
 
 \begin{itemize}
-\item Each of the summands is called a \textbf{term}.  
-\item $n$ is called the \textbf{degree} of the polynomial.
-\item $a_k$ are called \textbf{coefficients}.
+\item $n$, a whole number, is called the \textbf{degree} of the polynomial.
 \item $a_n$ is called the \textbf{leading coefficient}.
 \item $a_n x^n$ is called the \textbf{leading term}.
-\item $a_2 x^2$ is called the \textbf{quadratic term}.
-\item $a_1 x^1$ is called the \textbf{linear term}, often written as $a_1 x$.
-\item $a_0 x^0$ is called the \textbf{constant term}, often written as $a_0$.
-
+\item $a_1 x^1$ is called the \textbf{linear term}.
+\item $a_0 x^0$ is called the \textbf{constant term}.
+\item $x$ is called the \textbf{variable}.
 \end{itemize}
 
 
-
-This is called the \textbf{standard form}.
 \end{definition}
 
 
-When analyzing the behavior of polynomials, the characteristcis depend on the zeros of the derivative, which Calculus will show us is another polynomial.  Analyzing polynomials rests on their zeros.
+When analyzing the behavior of polynomials, the characteristics depend on the zeros of the derivative, which Calculus will show us is another polynomial.  Analyzing polynomials rests on their zeros.
 
 
 For analytic purposes, we would prefer a product
@@ -64,7 +81,7 @@ For analytic purposes, we would prefer a product
 
 
 
-Polynomials are the most familiar feeling functions we have. Their formulas look like extended linear or quadratic functions, just more terms. Their graphs are smoothly flowing hills and valleys.\\
+Polynomials are the most familiar feeling functions we have. Their formulas look like extended linear or quadratic functions, just more terms. Their graphs are smoothly flowing hills and valleys.
 
 The graph of $y = f(x) = \frac{1}{100} x^3 + \frac{1}{25} x^2 - \frac{31}{100} x - \frac{7}{10}$
 
@@ -129,7 +146,7 @@ As you will see later, polynomials have a limit on the number of zeros and extre
 
 
 
-$p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the \textbf{factored form} of a polynomial.  \\
+$p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the \textbf{factored form} of a polynomial (a product).  
 
 In an effort to be clearer, we clean up the roots, because there could be repeated roots and we would like to point this out.  Therefore the reduced or simplified factored form looks like
 
@@ -150,10 +167,14 @@ The $e_k$ are the exponents and tell us how many times a particular root repeats
 
 Let $p(x)$ be a polynomial with root $r$.  The number of times $(x - r)$ appears in the complete factorization of $p(x)$ is called the \textbf{multiplicity} of $r$.
 
+If the factors are collected, then the multiplicity of $r$ is the exponent of $(x-r)$.
+
 \end{definition}
 
-As we saw with quadratics, this factorization into linear factors often requires complex numbers, which we will encounter later in this course. We are only using real numbers now.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors (quadratics nonreal/complex roots).
+As we saw with quadratics, this factorization into linear factors often requires complex numbers, which we will encounter later in this course. We are only using real numbers now.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors (quadratics with nonreal/complex roots).
 
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}}  Therefore, our discussion on polynomial roots, will center around the linear factors.  Irreducible quadratics will have to stay that way until the next course.
 
 
 
@@ -593,7 +614,7 @@ Unless we have a quadratic polynomial, the best we can do for the maximums and m
 
 
 
-\begin{example}
+\begin{example} Extrema
 
 The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
@@ -613,10 +634,7 @@ $f(x)$ has an approximate global minimum value of $\answer[tolerance=0.1]{-6.6}$
 
 \end{example}
 
-
-Calculus will goive us the tools to obtain the derivative for ourselves, and that will help us locate where in the domain maximums and minimums occur.
-
-
+Calculus will give us the tools to obtain derivatives for ourselves, and that will help us locate where in the domain maximums and minimums occur.
 
 
 
@@ -637,20 +655,25 @@ It will take some further analysis to get a full definition of critical numbers.
 
 
 
+
+
 \begin{idea} \item \textbf{\textcolor{blue!55!black}{Critical numbers}}
 
+\textbf{Critical numbers} are domain numbers, which correspond to points on the graph where 
 
-Polynomials are nice.  Their graphs have hills and valleys. Their graphs do not have corners or cusps or vertical tangents.
+\begin{itemize}
+\item the tangent line has slope $0$ (is horizontal), or 
+\item the tangent line has no slope (is vertical), or
+\item there is no tangent line (corner, cusp, discontinuity).
+\end{itemize}
 
-
-For polynomials, \textbf{critical numbers} are domain numbers, which correspond to points on the graph where the tangent line has slope $0$ (is horizontal).
 
 \end{idea}
 
 
 
 
-Critical numbers are domain numbers marking flat/horizontal places in the graph.  These include tops of hills and bottoms of valleys. Critical numbers include places where extreme values occur.
+For polynomials, critical numbers are domain numbers marking flat/horizontal places in the graph.  These include tops of hills and bottoms of valleys. Critical numbers include places where extreme values occur.
 
 
 The next example shows that they also include places that are not marking maximums or minimums.
@@ -707,7 +730,207 @@ $f$ has two critical numbers: $-2$ and $1.75$. These correspond to the two place
 \end{example}
 
 
+
 \textbf{Note:} $-2$ is a critical number, because the graph is flat there.  However, the sign of the rate of change of $f$ does not switch there, since $f$ does not have an extreme value there.
+
+\textbf{\textcolor{red!70!black}{$\blacktriangleright$}} Critical numbers are \textbf{candidates} for locations of maximums and minimums.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Cubic Analysis
+
+
+Let $p(t) = (x+4)(x+1)(x-3)$
+
+Once we get to Calculus, you will be able to get the derivative of $p$ for yourself. Right now, the derivative will just be given.
+
+$p'(t) = 3 \, t^2 + 4 \, t - 11$
+
+We'll use the derivative to determine the behavior of $p$.
+
+
+Graph of $y = p(t)$.
+
+\begin{image}
+\begin{tikzpicture} 
+  \begin{axis}[
+            domain=-6:5, ymax=15, xmax=5, ymin=-25, xmin=-6,
+            axis lines =center, xlabel=$t$, ylabel=$y$,
+            ytick={-25,-20,-15,-10,-5,0,5,10,15},
+            xtick={-6,-4,-2,0,2,4},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=2, penColor, smooth, domain=(-4.7:3.4),<->] {(x+4)*(x+1)*(x-3)};
+
+           
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Let's step through our standard analysis list.
+
+
+
+
+\textbf{Domain:} Since $p$ is a polynomial, its domain is $(-\infty, \infty)$.
+
+
+\textbf{Zeros:} By the Zero Product Property, for $p = 0$, 
+
+either $x+4=0$, $x+1=0$, or $x-3=0$.
+
+
+Either $x=-4$, $x=-1$, or $x=3$.
+
+All of these are in the domain.
+
+
+The zeros of $p$ are $\{ -4, -1, 3 \}$.
+
+
+\textbf{Continuity:} Since $p$ is a polynomial, it is contiuous.
+
+
+\textbf{End-Behavior:} $p$ is a polynomial with degree $3$, which is odd. Therefore, the end-behavior of $p$ is opposite on either side.  Since the leading coefficient is positive, we have
+
+
+\[  \lim\limits_{t \to -\infty} p(t) = -\infty \]
+
+
+\[  \lim\limits_{t \to \infty} p(t) = \infty \]
+
+
+\textbf{Behavior:}
+
+We'll use the derivative, $p'$.
+
+We'll need the sign of $p'$. 
+
+So, we'll factor $p'$ to getthe critical numbers of $p$.
+
+$p'(t) = 3 \, t^2 + 4 \, t - 11$ doesn't factor nicely, so we'll use the quadratic formula.
+
+
+\[ 
+\frac{-b \pm \sqrt{b^2 - 4 \, a \, c}}{2 \, a} = \frac{-4 \pm \sqrt{4^2 - 4(3)(-11)}}{2(3)}
+\]
+
+\[ 
+\frac{-4 \pm \sqrt{148}}{6} = \frac{-4 \pm 2 \sqrt{37}}{6} = \frac{-2 \pm \sqrt{37}}{3}
+\]
+
+Just Checking...
+For a cubic polynomial, these critical numbers should be in between the zeros.
+
+$ \frac{-2 - \sqrt{37}}{3} \approx -2.69 $ \\
+$ \frac{-2 + \sqrt{37}}{3} \approx 1.36 $
+
+They are.
+
+
+Now we can factor $p'$.
+
+
+\[ p'(t) = 3 \left( t - \frac{-2 - \sqrt{37}}{3} \right) \left( t - \frac{-2 + \sqrt{37}}{3}\right)
+\]
+
+We want to know where $p'$ is positive and negative.
+
+$p'$ is a quadratic function with apositive leading coefficent, so we know it is postive : negative : positive, swicthing at is zeros.
+
+
+\begin{itemize}
+\item $p'$ is positive on $\left(-\infty, \frac{-2 - \sqrt{37}}{3} \right)$
+\item $p'$ is negative on $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$
+\item $p'$ is positive on $\left(\frac{-2 + \sqrt{37}}{3}, \infty \right)$
+\end{itemize}
+
+
+\begin{itemize}
+\item $p$ is increasing on $\left(-\infty, \frac{-2 - \sqrt{37}}{3} \right)$
+\item $p$ is decreasing on $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$
+\item $p$ is increasing on $\left(\frac{-2 + \sqrt{37}}{3}, \infty \right)$
+\end{itemize}
+
+
+
+
+
+
+\textbf{Global Maximum and Minimum:} 
+
+
+Since, 
+
+\[  \lim\limits_{t \to -\infty} p(t) = -\infty   \, \text{ and } \,   \lim\limits_{t \to \infty} p(t) = \infty \]
+
+we know there is not a global maximum nor a global minimum.
+
+
+
+\textbf{Local Maximums and Minimums:} 
+
+$p$ has two critical numbers, so two candidates for local maximum and/or minimum. We need the beahvior of $p$ around these critical numbers.
+
+
+
+On $\left(-\infty, \frac{-2 - \sqrt{37}}{3} \right)$, $p$ is increasing. \\
+On $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$, $p$ is decreasing. \\
+$\frac{-2 - \sqrt{37}}{3}$ is the location of a local maximum.
+
+
+On $\left(\frac{-2 - \sqrt{37}}{3}, \frac{-2 + \sqrt{37}}{3} \right)$, $p$ is decreasing. \\
+On $\left( \frac{-2 + \sqrt{37}}{3}, \infty \right)$, $p$ is increasing. \\
+$\frac{-2 - \sqrt{37}}{3}$ is the location of a local minimum.
+
+
+Just Checking...this agrees with the graph.
+
+
+\textbf{Range:}  Since $p$ is continuous and
+
+ \[  \lim\limits_{t \to -\infty} p(t) = -\infty   \, \text{ and } \,   \lim\limits_{t \to \infty} p(t) = \infty \]
+
+
+ the range of $p$ is $(-\infty, \infty)$.
+
+\end{example}
+
+
+
+
+
+
+
 
 
 
@@ -741,7 +964,7 @@ $f$ has two critical numbers: $-2$ and $1.75$. These correspond to the two place
 Polynomial functions are nice.  They allow us to see many connections that we will keep in mind as we investigate other types of functions.
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Zeros, Factors, and Intercepts are different things but they all refer to the same information.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} Zeros, Factors, and Intercepts are different things but they all refer to the same idea.
 
 
 
@@ -760,7 +983,7 @@ Polynomial functions are nice.  They allow us to see many connections that we wi
 \end{itemize}
 
 
-However, the existence of any of these implies the other two
+The existence of any of these implies the other two
 
 
 
@@ -778,6 +1001,9 @@ However, the existence of any of these implies the other two
 \item If $(z_0,0)$ is an intercept of the graph of the polynomial $p(x)$, then $p(z_0)=0$ and $(x-z_0)$ is a factor.
 
 \end{itemize}
+
+
+
 
 
 
