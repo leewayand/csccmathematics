@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Analysis}
+\title{Linear Analysis}
 
 \begin{document}
 
@@ -23,17 +23,13 @@ We want to know the
 \begin{itemize}
      \item \textbf{\textcolor{red!70!black}{Domain}} 
      \item \textbf{\textcolor{red!70!black}{Zeros}} 
-     \item \textbf{\textcolor{red!70!black}{Continuity}} 
-\begin{itemize}
-     \item \textbf{\textcolor{purple!85!blue}{discontinuities}} 
-     \item \textbf{\textcolor{purple!85!blue}{singularities}} 
-\end{itemize}
+     \item \textbf{\textcolor{red!70!black}{Continuity}} \\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{discontinuities}}\\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{singularities}}\\
      \item \textbf{\textcolor{red!70!black}{End-Behavior}} 
-     \item \textbf{\textcolor{red!70!black}{Behavior}} 
-\begin{itemize}
-     \item \textbf{\textcolor{purple!85!blue}{intervals where increasing}} 
-     \item \textbf{\textcolor{purple!85!blue}{intervals where decreasing}} 
-\end{itemize}
+     \item \textbf{\textcolor{red!70!black}{Behavior}} \\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{intervals where increasing}}\\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{intervals where decreasing}}\\
      \item \textbf{\textcolor{red!70!black}{Global Maximum and Minimum}} 
      \item \textbf{\textcolor{red!70!black}{Local Maximums and Minimums}} 
      \item \textbf{\textcolor{red!70!black}{Range}} 
@@ -55,7 +51,7 @@ L(x) = A \, x + B
 
 
 
-\begin{warning} \textbf{\textcolor{red!70!black}{Leading Coefficient}}
+\begin{warning} \textbf{\textcolor{red!70!black}{Constant Functions}}
 
 The leading coefficient, $A$, can be $0$ in our template for linear functions. 
 
@@ -77,7 +73,7 @@ All linear functions are defined for all real numbers.  Their natural domain is 
 If you can identify a function as linear, then you automatically know its domain. 
 
 
-\textbf{Note:}  We can restrict the domain of any function.  Restricting the domain just means that the stated domain is not all of the numbers that could be used in the formula.  For linear functions, we will alert the reader by titling such functions as restricted linear functions.
+\textbf{Restricting:}  We can restrict the domain of any function.  Restricting the domain just means that the stated domain is not all of the numbers that could be used in the formula.  For linear functions, we will alert the reader by titling such functions as restricted linear functions.
 
 
 
@@ -96,7 +92,7 @@ Otherwise, linear functions have exactly one zero.
 
 The zero of $L(x) = A \, x + B $ is $\frac{-B}{A}$
 
-
+\textbf{Restricting:} If we restrict the domain and remove the zero, then it is possible our linear function will not have a zero.
 
 
 
@@ -172,6 +168,8 @@ This is probably easier to see, then write.
 \end{image}
 
 
+\textbf{Algebraic Description}
+
 We will need some symbols and notation to make it easier to write about end-behavior. 
 
 
@@ -210,11 +208,21 @@ Our notation for end-behavior is be called \textit{limit notation}.
 \]
 
 
+
+Limit notation uses ``lim'' as a shorthand abbreviation for limit.  Under the ``lim'' we indicate which tail we are talking about.  Under the ``lim'', $variable \to -\infty$ indicates it is the left tail. Under the ``lim'', $variable \to \infty$ indicates it is the right tail.  The function name (or possibly formula) is then written to the right followed by an equal sign and then an expression describing the end-behavior. 
+
+
+
 \end{notation}
 
 
 
+\textbf{Note:} People write linear forms in many ways, like $m \, x + b$ or $A \, x + B$ and there will be others. Therefore, we do not want to refer to $m$ or $A$ in our analysis. We don't want to refer to the symbol. We want to refer to the symbol's role.
 
+We will say ``leading coefficent'' for $A$.
+
+
+We will say ``the constant term'' for $B$.
 
 
 
@@ -238,7 +246,7 @@ Our notation for end-behavior is be called \textit{limit notation}.
 
 
 
-The graph above vividly suggests that linear functions are always increasing or always decreasing.
+The graphs above vividly suggests that linear functions are always increasing or always decreasing (unless they are constant).
 
 
 \begin{itemize}
@@ -286,11 +294,13 @@ Increasing and decreasing refer to the rate of change.
 \end{itemize}
 
 
-If we restrict the domain, then we might have a maximum or minimum. 
+Unless it is a constant function, a linear function is unbounded on either side of its domain.
+
+\textbf{Restricting:} If we restrict the domain, then we might have a maximum or minimum. 
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Again}} 
 
 This is all true if the linear function is not a constant function. 
 
@@ -310,7 +320,7 @@ If the linear function is a constant function, then the range is just a single n
 
 Otherwise, all linear function have the same range, $(-\infty, \infty)$ 
 
-\textbf{Note:} Restricting the domain will also restrict the range.
+\textbf{Restricting:} Restricting the domain will also restrict the range.
 
 
 
@@ -321,10 +331,12 @@ Otherwise, all linear function have the same range, $(-\infty, \infty)$
 
 
 
-\begin{example}
+\begin{example} Analysis
 
 Analyze $L(x) = 3 \, x - 5$  
 
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 $L(x) = 3 \, x - 5$ matches the template for a linear function $L(x) = A \, x + B$.\\
 Since the leading coefficient is not $0$, $L$ is a nonconstant linear function.
@@ -390,7 +402,7 @@ As a nonconstant linear function, the range of $L$ is $(-\infty, \infty)$.
 \end{example}
 
 
-\textbf{Note:} Reasons given for each conclusion. 
+\textbf{Rigor:} Reasons are given for each conclusion. That is rigor. 
 
 
 
@@ -404,9 +416,11 @@ As a nonconstant linear function, the range of $L$ is $(-\infty, \infty)$.
 
 
 
-\begin{example}
+\begin{example} Analysis
 
 Analyze $g(t) = \frac{7 - 3 \, t}{4}$  
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 Although the formula is not matching the template for a linear function $L(x) = A \, x + B$, we can rewrite $g(t)$ in the form $g(t) = -\frac{3}{4} t + \frac{7}{4}$, which does match the template. 
@@ -481,7 +495,7 @@ As a nonconstant linear function, the range of $g$ is $(-\infty, \infty)$.
 
 \end{example}
 
-\textbf{Note:} Reasons for each conclusion.  The quickest reason is to cite the category of the function, because we know lots of characteristics for functions in each category.  This makes it very helpful to study categories of functions. 
+\textbf{Reasons:} Reasons for each conclusion.  The quickest reason is to cite the category of the function, because we know lots of characteristics for functions in each category.  This makes it very helpful to study categories of functions. 
 
 
 

@@ -66,7 +66,7 @@ We want to keep the graph in our heads, but translate to function and algebraic 
 
 \subsection*{Domain} 
 
-All quadratic functions are defined for all real numbers.  Their natural domain is $\mathbb{R}$. 
+All quadratic functions are defined for all real numbers.  Their natural domain is $\mathbb{R} = (-\infty, \infty)$. 
 
 If you can identify a function as quadratic, then you automatically know its domain. 
 
@@ -93,12 +93,23 @@ a \, t^2 + b \, t + c = 0
 
 
 
-which we can separate into 
+
+This allows us to factor the quadratic.
+
+
+
+\[ a \, \left( x -  \frac{-b - \sqrt{b^2 - 4 a c}}{2a} \right) \, \text{ and } \, \left( x -   \frac{-b + \sqrt{b^2 - 4 a c}}{2a} \right)   \]
+
+
+
+
+
+
+We can separate the quadratic formula into two fractions 
 
 
 
 \[ t  =   \frac{-b}{2a} \pm \frac{\sqrt{b^2 - 4 a c}}{2a}      \]
-
 
 The $\pm$ shows that the zeros are symmetric about $\frac{-b}{2a}$, which means that the intercepts are symmetric about the vertical line $t = \frac{-b}{2a}$. \\
 
@@ -140,7 +151,7 @@ Intercepts are $\left(  \frac{-b - \sqrt{b^2 - 4 a c}}{2a}, 0 \right)$ and $\lef
 \end{tikzpicture}
 \end{image}
 
-\textcolor{gray!90}{\textbf{Graph Description:} Cartesian plane. Horizontal axis labeled $t$. Vertical axis labeled $y$. Parabola opening down with vertex at $(3,4)$ and $t$-intercepts at $(1.6,0)$ and $(4.4,0)$. There is a dashed vertical line through the vertex. }
+
 
 
 
@@ -194,24 +205,40 @@ That tells us that the whole function will become unbounded.
 
 \begin{itemize}
      \item Quadratic functions become unbounded positively if the leading coefficient is positive.
+     \item Quadratic functions become unbounded negatively if the leading coefficient is negative.
+\end{itemize}
+
+
+
+\begin{notation} \textbf{\textcolor{red!50!green}{End-Behavior Notation}} 
+
+We will want some mathematical notation for end-behavior.  \textbf{Limit notation} will be our way of algebraically describing end-behavior. 
+
+
+
+
+\textbf{Example}
+
+Let $g(t) = -2 \, t^2 + 7 \, t - 3$. 
+
+
+The end-behavior is described as 
+
+\[
+\lim\limits_{t \to -\infty} g(t) = -\infty
+\]
 
 
 \[
-\lim\limits_{t \to -\infty} g(t) = \infty \, \text{ and } \,  \lim\limits_{t \to \infty} g(t) = \infty
+\lim\limits_{t \to \infty} g(t) = -\infty
 \]
 
 
 
 
-     \item Quadratic functions become unbounded negatively if the leading coefficient is negative.
-
-     \[
-\lim\limits_{t \to -\infty} g(t) = -\infty \, \text{ and } \,  \lim\limits_{t \to \infty} g(t) = -\infty
-\]
 
 
-
-\end{itemize}
+\end{notation}
 
 
 
@@ -276,15 +303,15 @@ That tells us that
 
 
 
-The graph vividly suggests that quadratic functions switch from increasing to decreasing (or vice versa) at the ``vertex'' number in the domain, which is called the \textit{critical number}.
+The graph vividly suggests that quadratic functions switch from increasing to decreasing (or vice versa) at the ``vertex'' number in the domain. Any domain number where a function switches its behavior is called a \textbf{\textcolor{blue!55!black}{critical number}}.
 
 
 \begin{itemize}
-\item If the leading coefficient is positive, (then the graph is opening up) then the quadratic function is \\
+\item If the leading coefficient is positive, (then the graph is opening up) then the quadratic function is 
 
 decreasing on $\left( -\infty, \frac{-b}{2a} \right)$ and increasing on $\left( \frac{-b}{2a}, \infty \right)$
 
-\item If the leading coefficient is negative, (then graph is opening down) then the quadratic function is \\
+\item If the leading coefficient is negative, (then graph is opening down) then the quadratic function is 
 
 increasing on $\left( -\infty, \frac{-b}{2a} \right)$ and decreasing on $\left( \frac{-b}{2a}, \infty \right)$
 \end{itemize}
@@ -305,7 +332,7 @@ Increasing and decreasing refer to the rate of change.
 
 Now, we can replace our graphical intuition with algebraic rigor. 
 
-We have seen if we write a quadratic function as $f(x) = a (x - h)^2 + k$, then the instantaneous rate of change of $f$ is the linear function $iRoC_f(x) = 2 a (x - h)$. The values of $iRoC$ are the slopes of the lines tangent to the parabola.
+We have seen that if we write a quadratic function as $f(x) = a (x - h)^2 + k$, then the instantaneous rate of change of $f$ (the derivative of $f$) is the linear function $iRoC_f(x) = 2 a (x - h)$. The values of $iRoC$ are the slopes of the lines tangent to the parabola.
 
 
 Since $iRoC_f$ is a linear function, its graph is a line.
@@ -347,14 +374,19 @@ Here is a graph of both the parabola for $f$ and the line for $iRoC_f = f'$.
     \end{axis}
 \end{tikzpicture}
 \end{image}
-\textcolor{gray!90}{\textbf{Graph Description:} Cartesian plane. Horizontal axis labeled $x$. Vertical axis labeled $y$. Parabola opening up with vertex at $(3,-4)$ and $x$-intercepts at $(1.6,0)$ and $(4.4,0)$. There is a dashed vertical line through the vertex. There is a line of positive slope going through $(3,0)$.}
+
 
 
 
 Our linear rate of change function now informs us about the behavior of $f$. 
 
 
+For instance, At the domain number $h$, $iRoC_Q(h) = 2a(h-h)=0$.  This tells us two things.
 
+\begin{itemize}
+\item The slope of the tangent line at $(h, k)$ is $0$. The tangent line is horizontal.
+\item The instantaneous rate of change of our quadratic function is $0$ at the domain number $h$. $h$ is a critical number.
+\end{itemize}
 
 
 \begin{conclusion}  \textbf{\textcolor{green!25!black}{Behavior}}
@@ -483,10 +515,10 @@ Let $Q$ be a quadratic function.
 
 Then $Q(x) = a (x - h)^2 + k$, for some $a$, $h$, and $k$ with $a \ne 0$. 
 
-Then, $iRoC_Q(x) = 2 a (x - h)$. \\
+Then, $iRoC_Q(x) = 2 a (x - h)$. 
 
 
-\textbf{Procedure:} It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient while the constant term, $k$, has been removed.
+\textbf{Procedure:}. It appears that the $2$ in the exponent has slid down in front and is multiplying the leading coefficient. That and the linear coefficent make up the derivative of the quadratic. 
 
 
 
@@ -747,7 +779,7 @@ Below is the graph of $y = f(x) = a (x - h)^2 + k$, with $a$, and $h$, and $k$ a
 \end{tikzpicture}
 \end{image}
 
-\textcolor{gray!90}{\textbf{Graph Description:} Cartesian plane. Horizontal axis labeled $x$. Vertical axis labeled $y$. Parabola opening up with vertex labeled ``(h,k)'' at $(3,-4)$. There is a dashed vertical line through the vertex.}
+
 
 
 
@@ -793,7 +825,7 @@ If $a<0$, then everything is reveresed.
 \end{tikzpicture}
 \end{image}
 
-\textcolor{gray!90}{\textbf{Graph Description:} Cartesian plane. Horizontal axis labeled $x$. Vertical axis labeled $y$. Parabola opening down with vertex labeled ``(h,k)'' at $(3,4)$. There is a dashed vertical line through the vertex.}  
+ 
 
 
 

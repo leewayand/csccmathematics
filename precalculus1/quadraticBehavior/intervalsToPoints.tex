@@ -59,6 +59,9 @@ Then its graph is a parabola.
     \end{axis}
 \end{tikzpicture}
 \end{image}
+
+
+
 We can examine the rate of change of $Q$ over any domain interval.
 
 
@@ -178,7 +181,7 @@ What is the rate of change \textbf{\textcolor{red!70!darkgray}{AT}} a point?
 
 
 
-\begin{idea} \textbf{\textcolor{blue!55!black}{Instantaneous}} 
+\begin{idea} \textbf{\textcolor{blue!55!black}{Instantaneous Rate of Change}} 
 
 You cannot calculate the rate of change of a function over a domain interval with $0$ length.  
 
@@ -236,6 +239,9 @@ If the graph of $y = f(x)$ has a non-vertical tangent line at the point $(a, f(a
 
 
 
+\textbf{Just a Beginning:} We are beginning with a graphical definition, because that is a good introduction to the idea.  But, we really want an algebraic definition.  We want to be exact.  Getting to an exact definition of the derivative requires limits.  Therefore, we will take our time and slowly gain enough experience, so that Calculus can present a detailed story.
+
+\textbf{Vertical:} We are leaving out vertical lines, because they do not have a slope.  But, we will eventually include them to complete the story of derivaties.
 
 
 
@@ -392,6 +398,7 @@ For this to happen, we must have $-m \, x = - 2 \, x_0 \, x$ or \textbf{$m = 2 \
 
 \[  m = 2 \, x_0  \]
 
+For this to happen, we must have $-m \, x = - 2 \, x_0 \, x$ or \textbf{$m = 2 \, x_0$}. 
 
 \end{explanation}
 
@@ -712,12 +719,54 @@ $iRoC_Q(x)$ is a linear function given by
 We now have a function, with a formula, for measuring the instantaneous rate of change of any quadratic function at any domain number. 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the quadratic function, $Q(x) = a \, (x - h)^2 + k$, is the linear function, $iRoC_Q(x) = 2 \, a \, (x-h)$. 
+
+
+
+\begin{fact} \textbf{\textcolor{red!75!green!50}{Vertex Form}} 
+
+The instantaneous rate of change of the quadratic function, $Q(x) = a \, (x - h)^2 + k$, \\ is the linear function, $iRoC_Q(x) = 2 \, a \, (x-h)$. }
+
+
+\end{fact}
 
 
 
 
-We can add this to our growing collection. 
+
+
+If we remember that the connection between the standard form and the vertex form gives $h = -\frac{b}{2a}$, then we can get the $iRoC_Q(x)$ for the standard form.
+
+
+
+
+\[
+iRoC_Q(x) = 2 \, a \, (x-h) = 2 \, a \, \left(x - \frac{-b}{2a} \right) = 2 \, a x + b
+\]
+
+
+
+
+
+\begin{fact} \textbf{\textcolor{red!75!green!50}{Standard Form}} 
+
+Given a quadratic function, $Q(x) = a \, x^2 + b \, x + c$,
+
+\[
+iRoC_Q(x) = 2a \, x + b
+\]
+
+\end{fact}
+
+
+
+
+
+
+
+
+
+
+We already know that linear functions have a constant rate of change.
 
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} The instantaneous rate of change of the linear function, $L(x) = m \, x + b$, is the constant function, $iRoC_L(x) = m$. 
@@ -733,10 +782,10 @@ We can add this to our growing collection.
 \begin{notation} \textbf{\textcolor{red!50!green}{Language}} 
 
 
-We are just beginning our investigation of function behavior, so we have given our new function a very descriptive name, \textbf{\textcolor{blue!55!black}{Instantaneous Rate of Change}},  \textbf{\textcolor{blue!55!black}{$iRoC$}}. 
+We are just beginning our investigation of function behavior, so we have given our new function a very descriptive name, \textbf{\textcolor{red!50!green}{Instantaneous Rate of Change}},  \textbf{\textcolor{red!50!green}{$iRoC$}}. 
 
 
-Calculus uses the name \textbf{\textcolor{blue!55!black}{Derivative}} and it uses a little prime sign as the notation.
+Calculus uses the name \textbf{\textcolor{red!50!green}{Derivative}} and it uses a little prime sign as a superscript for the notation.
 
 
 
@@ -760,7 +809,7 @@ We will use both names.  This will keep the idea fresh in our heads and also giv
 \begin{notation} \textbf{\textcolor{red!50!green}{A Peek Ahead}}
 
 
-We are beginning our investigation of function analysis at the beginning.  Our formulas have one variable.  But, later, in Calculus, it may not be so clear oas to what the variable is and/or what the function is. 
+We are beginning our investigation of function analysis at the beginning.  Our formulas have one variable.  But, later, in Calculus, it may not be so clear on what the variable is or what the function is. 
 
 For this reason, Calculus introduces more notation that is very explicit on this matter.
 
@@ -775,6 +824,15 @@ People pronounce $\frac{df}{dx}$ as ``dfdx''.  They just say the letters.
 
 
 \end{notation}
+
+
+
+
+
+
+
+
+
 
 
 

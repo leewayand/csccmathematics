@@ -15,7 +15,6 @@ zooming in
  
  
 
-
 \subsection*{Tangent Lines}
 
 
@@ -34,29 +33,101 @@ The parabola and line have a special relationship, which we can see by zooming i
 
 
 
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
-\begin{center}
-\desmos{u1t7fjxu1k}{400}{300}
-\end{center}
-
-
-
-
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
-\begin{center}
-\desmos{k8wipse9fu}{400}{300}
-\end{center}
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
 
 
+          \addplot [draw=penColor, very thick, smooth, domain=(-2:6),<->] {0.5*(x-2)^2 + 1};
+        
+          \addplot [draw=penColor2, very thick, smooth, domain=(0:8),<->] {x-1.5};
+
+          \addplot [color=penColor,only marks,mark=*] coordinates{(3,1.5)};
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
-\begin{center}
-\desmos{4fr5sjugep}{400}{300}
-\end{center}
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=2:3.5, ymax=2, xmax=3.5, ymin=0.5, xmin=2,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={0.6,0.8,1,1.2,1.4,1.6,1.8},
+                xtick={2.2,2.4,2.6,2.8,3,3.2,3.4},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+          \addplot [draw=penColor, very thick, smooth, domain=(2.2:3.4),<->] {0.5*(x-2)^2 + 1};
+        
+          \addplot [draw=penColor2, very thick, smooth, domain=(2.2:3.4),<->] {x-1.5};
+
+          \addplot [color=penColor,only marks,mark=*] coordinates{(3,1.5)};
+        
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=2.7:3.2, ymax=1.7, xmax=3.2, ymin=1.2, xmin=2.7,
+                axis lines =center, xlabel=$x$, ylabel=$y$,
+                ytick={1.3,1.4,1.5,1.6},
+                xtick={2.8,2.9,3,3.1,3.2},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+
+          \addplot [draw=penColor, very thick, smooth, domain=(2.7:3.2),<->] {0.5*(x-2)^2 + 1};
+        
+          \addplot [draw=penColor2, very thick, smooth, domain=(2.7:3.2),<->] {x-1.5};
+
+          \addplot [color=penColor,only marks,mark=*] coordinates{(3,1.5)};
+        
+
+
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
 
 
 
@@ -100,57 +171,40 @@ The line tangent to the curve, $C$, at the point $(a, b)$ is the line that goes 
 
 This line is called the \textbf{tangent line} at the point $(a, b)$.
 
-
-
-
-\end{definition}
-
-
-Since ``slope'' is a characteristic of a line and a curve be more than a line, curves do not have a slope as we know that word. We are inventing a meaning.
-
-It is easy to see that curves have something that seems a lot like a slope at points. We will adopt the slope of the tangent as the slope of the curve. 
-
-
-
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Slope of a Curve at a Point}}
-
-
-The \textbf{slope of a curve} at the point $(a, b)$ is the slope of the tangent line to the curve at $(a,b)$.
-
+This line is \textbf{tangent} to the curve at the point $(a, b)$.
 
 
 \end{definition}
 
 
+Since ``slope'' is a characteristic of a line and most curves are not lines, curves do not have a slope as we know that word. 
+
+However, it is easy to see that curves have something that seems a lot like a slope at points. 
 
 
-
-
+\begin{center}
+\textbf{\textcolor{blue!55!black}{We will adopt the slope of the tangent line as the slope of the curve at the tangent point. }}  
+\end{center}
 
 As the parabola curve above demonstrates, curves might have different slopes at different points. 
 
-We want to quantify this idea of a slope for a curve at a point. 
+We want to quantize this idea of a slope for a curve at a point. 
 
-If we can quantify it, then we can build a function for it and use that to measure a rate of change for our curve. This is the first step towards Calculus. It will take us a while to quantify this idea of slope for a curve into a logical tool. A tool we will call the \textbf{derivative}.
+If we can quantize it, then we can build a function for it and use that to measure slopes for our curve. This is the first step toward Calculus. It will take us a while to quantize this idea of slope for a curve into a logical tool. 
+
+
+
+\begin{center}
+\textbf{\textcolor{blue!55!black}{A tool we will call the \textbf{derivative}.}}  
+\end{center}
+
+
 
 We will first investigate this idea with quadratic functions and parabolas. 
 
 
 
-Our plan is illustrated in the graph below.
 
-We have a quadratic function $f(x) = \frac{1}{2} (x - 2)^2 + 1$.
-
-We have a point on the graph and a line tangent to the curve at this point.
-
-We have two other points on the graph. One on either side of the tangent point.
-
-We have a line through these two other points.  This is called a \textbf{secant line}.
-
-
-As you move the outer two points close to the tangent point, the secant line becomes closer to the tangent line.
 
 
 
@@ -162,7 +216,6 @@ As you move the outer two points close to the tangent point, the secant line bec
 
 
 
-We want an algebraic description of that story.
 
 
 
@@ -238,7 +291,7 @@ Then its graph is a parabola.
     \end{axis}
 \end{tikzpicture}
 \end{image}
-\textcolor{gray!90}\textbf{Graph Description:} Parabola opening up, vertex labeled ``(h, k)'' at $(3,2)$.} 
+
 
 
 
@@ -247,7 +300,7 @@ Then its graph is a parabola.
 We can examine the rate of change of $Q$ over any interval.
 
 
-Let's examine the interval $[2, 5]$, which includes $3$.
+Let's examine the interval $[2, 5]$.
 
 
 $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Algebraically}}, the rate of change of $Q(x)$ over the interval $[2,5]$ is given by 
@@ -392,12 +445,13 @@ What is the rate of change \textbf{\textcolor{red!70!darkgray}{AT}} a point?
 
 \begin{idea} \textbf{\textcolor{blue!55!black}{Instantaneous Rate of Change}} 
 
-You cannot calculate the rate of change over an interval with $0$ length.  
+You cannot calculate the rate of change of a function over a domain interval with $0$ length.  
 
-Therefore, we are inventing an interpretation for the rate of change at a point. 
+Therefore, we are inventing a rate of change at a domain number. 
 
-We are calling our invention the \textbf{instantaneous rate of change}.
+We are calling our invention the \textbf{\textcolor{blue!55!black}{instantaneous rate of change}}.
 
+We are inventing a graphical intepretation and using that to help us think about functions.
 
 \end{idea}
 
@@ -420,7 +474,11 @@ Suppose $a$ and $b$ are two distinct domain numbers of $f$.  Then the line throu
 Tangent lines are degenerate secants. Secant lines need two points on the graph of a function.  A tangent line is a secant line where the two points are the same point. Tangent lines are secant lines created from an interval of length $0$.  But tangent lines are still lines.  They still have a slope.
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
+\begin{conclusion} \textbf{\textcolor{green!25!black}{Instantaneous}}
+
+If the slope of a secant line corresponds to the function's rate of change over an interval, then the slope of a tangent line corresponds to the function's rate of change at a single number.
+
+\end{conclusion}
 
 
 We are calling this slope of the tangent line the \textbf{\textcolor{purple!85!blue}{instantaneous rate of change}} at the domain number corresponding to the tangent point.
@@ -442,9 +500,9 @@ If the graph of $y = f(x)$ has a non-vertical tangent line at the point $(a, f(a
 
 
 
-\textbf{Note:} We are beginning with a graphical definition, because that is a good introduction to the idea.  But, we really want an algebraic definition.  We want to be exact.  Getting to an exact definition of the derivative requires limits.  Therefore, we will take our time and slowly gain enough experience, so that Calculus can present a detailed story.
+\textbf{Just a Beginning:} We are beginning with a graphical definition, because that is a good introduction to the idea.  But, we really want an algebraic definition.  We want to be exact.  Getting to an exact definition of the derivative requires limits.  Therefore, we will take our time and slowly gain enough experience, so that Calculus can present a detailed story.
 
-\textbf{Note:} We are leaving out vertical lines, because they do not have a slope.  But, we will eventually include them to complete the story of derivaties.
+\textbf{Vertical:} We are leaving out vertical lines, because they do not have a slope.  But, we will eventually include them to complete the story of derivaties.
 
 
 
@@ -466,13 +524,13 @@ We need a method of obtaining the slope of tangent lines to parabolas.
 
 
 
-$\blacktriangleright$ \textbf{Basic Quadratic}
+$\blacktriangleright$ \textbf{Core Quadratic}
 
 
-We'll begin with our basic quadratic function: \textbf{\textcolor{purple!85!blue}{$Q(x) = x^2$}} and its graph \textbf{\textcolor{purple!85!blue}{$y = x^2$}}. \\
+We'll begin with our basic core quadratic function: \textbf{\textcolor{purple!85!blue}{$Q(x) = x^2$}} and its graph \textbf{\textcolor{purple!85!blue}{$y = x^2$}}. 
 
 
-We are investigating the graph of $y = x^2$, which is a parabola whose vertex is $(0, 0)$. \\
+We are investigating the graph of $y = x^2$, which is a parabola whose vertex is $(0, 0)$. 
 
 Let's select a domain number of $Q$, call it $x_0$.   This corresponds to the point $(x_0, y_0) = (x_0, (x_0)^2)$ on the graph of $Q$.
 
@@ -512,7 +570,6 @@ Let's add a picture of the tangent line at $(x_0, y_0) = (x_0, (x_0)^2)$ to our 
     \end{axis}
 \end{tikzpicture}
 \end{image}
-\textcolor{gray!90}{\textbf{Graph Description:} Parabola opening up, vertex at the origin, and a point labeled ``$(x_0, y_0)$'' at $(2,4)$. There is a line drawn through this point, which is tangent to the parabola.}
 
 
 The tangent line is the graph of a linear function. Let's call this linear function $T$.
@@ -525,7 +582,7 @@ $T$ is a linear function. Therefore, the formula for $T$, would look like $T(x) 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ We would like a way to obtain the exact value of $m$.}} 
 
 
-To get the exact value of $m$, we are going to create a new quadratic function, which will be the difference between the original quadratic function and the linear function.
+To get the exact value of $m$, we are going to create a new quadratic function, which will be the difference between the original quadratic function, $Q$, and the linear function, $T$.
 
 
 
@@ -597,7 +654,7 @@ or
 \]
 
 
-For this to happen, we must have $-m \, x = - 2 \, x_0 \, x$ or \textbf{$m = 2 \, x_0$}. \\
+For this to happen, we must have $-m \, x = - 2 \, x_0 \, x$ or \textbf{$m = 2 \, x_0$}. 
 
 
 \end{explanation}
@@ -737,6 +794,7 @@ a \, x^2 - (m \, (x - x_0) + y_0) = a \, (x - x_0)^2 = a \, x^2 - 2 \, a \, x_0 
 
 For this to happen, we must have $-m \, x = - 2 \, a \, x_0 \, x$ or \textbf{$m = 2 \, a \, x_0$}. 
 
+\[ \text{slope } \, = \, 2 \, a \, x_0  \]
 
 \end{explanation}
 
@@ -768,7 +826,7 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 \end{conclusion}
 This for any point on the parabola.
 
-
+\textbf{Note:} This agrees with the orginal core parabola, because $a = 1$ for the core quadratic.
 
 
 
@@ -832,7 +890,7 @@ Then the slope of the tangent line to the parabola at $(x_0, y_0)$ is given by
 \end{conclusion}
 
 
-Every parabola can be described by an equation of the form $y = a \, (x - h)^2 + k$. 
+\textbf{Note:} Every parabola can be described by an equation of the form $y = a \, (x - h)^2 + k$. 
 
 Our slope of tangent line idea can be applied to every parabola. 
 

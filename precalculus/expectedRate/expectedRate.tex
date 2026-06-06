@@ -33,6 +33,7 @@ A tangent line is a line that does the best job of pretending to be the curve at
 
 This is a graphical concept and we are hesitant to use graphs for analysis, because they are inherently inaccurate. So, we will be diligently working to translate this graphical idea over to algebraic language. 
 
+So far, we can translate over for linear and quadratic functions.
 
 For quadratics, we have a formula for the $iRoC$ or $f'$ (the derivative of $f$), which gives the exact slope of each tangent line along the parabola.  But, for a random function, how do you get a tangent line for its graph without knowing the slope ahead of time? 
 
@@ -52,22 +53,21 @@ To do this, we are returning to our idea of a secant line and sliding it over to
 \end{center}
 
 
-The idea is that we can select two points on the graph and a secant line will run through them. Since we have two points, we can calculate the slope of the secant line. We can keep selecting two points that get closer to the tangent point. The slopes of the secant lines should be getting closer to the slope of the tangent line. 
+The idea is that we can select two points on the graph and a secant line will run through them. Since we have two points, we can calculate the slope of the secant line. We can keep selecting two points that get closer to the tangent point. Each pair of new points on the graph define a secant line. The slopes of these secant lines should be getting closer to the slope of the tangent line. 
 
 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} There are two behaviors happening as we shift a secant line over to the tangent point. The graph has its own behavior and the moving secant lines have another behavior. 
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} There are two changes happening as we shift a secant line over to the tangent point. The graph has its own twists and turns, and the moving secant lines are changing position. 
 
 
 
-The graph is behaving (there is a pattern) and the secant lines are behaving (there is a pattern). Hopefully, these seprate behaviors will converge to the same behavior at the tangent point.
+The graph is behaving (there is a pattern) and the secant lines are changing (there is a pattern). Hopefully, these seprate behaviors will converge to the same behavior at the tangent point.
 
 
 
 \begin{itemize}
 \item \textbf{First}, the points on the curve or graph itself are approaching the tangent point, from \textbf{both sides}. The graph is connecting up to the point. There is no break. The function is continuous at the corresponding domain number.
-
 \item \textbf{Second}, the secant lines are smoothly turning into the tangent line at the tangent point. 
 \end{itemize}
 
@@ -96,7 +96,7 @@ The secant lines connecting the points on both sides are approaching the tangent
 
 
 
-\textbf{\textcolor{red!70!black}{$\blacktriangleright$ Both Sides}}
+\textbf{\textcolor{red!70!black}{$\blacktriangleright$ Two Sides}}
 
 It will help our investigation of both sides, if we allow both sides to operate independently. 
 
@@ -104,12 +104,24 @@ It will help our investigation of both sides, if we allow both sides to operate 
 We are going to help our calculation a little bit by giving each side its own secant line.  
 
 
-We are to select two points for our secant lines.  We are going to select one of these points to just be the tangent point. 
 
-We'll just do this twice. 
+Each secant line needs two points on the graph. We are still selecting two points on either side of the tangent line, however, we are not drawing a line through them.
+
+Instead, we are drawing two sectant lines.
+
+We are using the tangent point itself as a secant partner for each of the two selected points.
 
 
-One on the left of our tangent point.
+\begin{itemize}
+\item We'll have one secant line through the left selected point and the tangent point.
+\item We'll have another secant line through the right selected point and the tangent point.
+\end{itemize}
+
+Two secant lines. One on the left of our tangent point and one on the right.
+
+
+
+Here is a secant line on the left side of the tangent line.
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ desmos graph}} 
@@ -156,11 +168,14 @@ This will help our eyes.
 \end{idea}
 
 
-\textbf{Note:} We are considering the situation where we have both sides, which means the domain number corresponding to the tangent line is inside an open interval in the domain. 
+\textbf{Note:} We are considering the situation where we have both sides, which means the domain number corresponding to the tangent line must be inside an open interval in the domain. 
 
 
 
 
+
+
+Let's see what our two secant lines show us.
 
 
 
@@ -237,17 +252,16 @@ Here is the graph of the function $f(x) = (x - 3)^2 - 4$ and the point $(4, f(4)
 \end{tikzpicture}
 \end{image}
 
-\textcolor{gray!90}{\textbf{Graph Description:} Cartesian plane. Horizontal axis labeled $x$. Vertical axis labeled $y$. Parabola opening up with vertex at $(3,-4)$.  The point $(4,-3)$ is plotted on the parabola.}  
+ 
 
 
 
-we have a parabola and a point on the parabola. 
+We have a parabola and a point on the parabola. 
+
+\textbf{First}, the graph has no breaks. The points on the graph are approaching the point $(4, -3)$ smoothly on both sides.  There is no break in the curve. $f$ is continuous at $4$.
 
 
-\textbf{First}, The graph has no breaks. The graph smoothly approaches the point $(4, -3)$ on both sides.  $f$ is continuous at $4$.
-
-
-Here, the soon to be tangent point is $(4, -3)$ and a tangent line runs through it are shown together below.
+The soon to be tangent point is $(4, -3)$ and a tangent line runs through it are shown together below.
 
 
 
@@ -284,7 +298,7 @@ Here, the soon to be tangent point is $(4, -3)$ and a tangent line runs through 
 \end{tikzpicture}
 \end{image}
 
-\textbf{Graph Description:} Cartesian plane. Horizontal \textbf{Graph Description:} Cartesian plane. Horizontal axis labeled $x$. Vertical axis labeled $y$. Parabola opening up with vertex at $(3,-4)$.  The point $(4,-3)$ is plotted on the parabola. A tangent line is plotted through this point.} 
+
 
 
 
@@ -304,6 +318,7 @@ Using the point-slope form of a line, we can get an equation for the tangent lin
 
 
 
+Our algebra tells us that this is the equation for the tangent line at $(4, -3)$.
 
 
 
@@ -556,19 +571,17 @@ The secant lines on the left smootly turn into a line as you move to the right. 
 
 There is no common line that the secant lines are approaching, on both sides. 
 
-There is no tangent line at the pont $(3,-4)$. 
+So, there is no tangent line at the pont $(3,-4)$. 
 
-There is no slope of a tangent line, since there is no tangent line. 
+So, there is no slope of a tangent line, since there is no tangent line. 
 
-$f$ has no derivative value at $3$.  
+So, $f$ has no derivative value at $3$.  
 
-$f'(3)$ does not exist. 
+So, $f'(3)$ does not exist. 
 
-$3$ is a number in the domain, but $f'(3)$ does not exist. 
+So, $3$ is a number in the domain, but $f'(3)$ does not exist. 
 
-($3$ is a critical number.)
-
-
+So, $3$ is a critical number.
 
 
 
@@ -599,6 +612,7 @@ $3$ is a number in the domain, but $f'(3)$ does not exist.
 
 
 
+More kinks in the story...
 
 \subsection*{Two Sides : Points Agree and Secants Agree, but No Slope}
 
@@ -801,15 +815,13 @@ However, the tangent line is a vertical line.  It has no slope.
 
 There is no slope of a tangent line. 
 
-$f$ has no derivative value at $2$.  
+So, $f$ has no derivative value at $2$.  
 
-$f'(2)$ does not exist. 
+So, $f'(2)$ does not exist. 
 
-$2$ is a number in the domain, but $f'(2)$ does not exist. 
+So, $2$ is a number in the domain, but $f'(2)$ does not exist. 
 
-($2$ is a critical number.)
-
-
+So, $2$ is a critical number.
 
 
 
@@ -834,6 +846,8 @@ $2$ is a number in the domain, but $f'(2)$ does not exist.
 
 
 
+
+More kinks in the story....
 
 \subsection*{Two Sides : Points Disagree and Secants Disagree}
 
@@ -841,8 +855,9 @@ $2$ is a number in the domain, but $f'(2)$ does not exist.
 
 
 
-A function with a discontinuity has a break in the graph, which means the points on the graph do not approach the same point.  This automatically results in the derivative not existing, because the derivative requires both sides to agree.
+Can a graph have a tangent line at a discontinuity?
 
+A function with a discontinuity has a break in the graph, which means the points on the graph on both sides of the point do not approach the same point.  This automatically results in the derivative not existing, because the derivative requires both sides to agree.
 
 
 
@@ -970,7 +985,7 @@ And, if there is no tangent line, then there is no slope of the tangent line, th
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} A derivative implies that there are two sides and the two sides are agreeing. 
 
-
+We need two sides of a tangent point to talk about a derivative.
 
 But, there is no need to just throw everything else away.  We can extend our idea of derivative to include just one side, which we will do. 
 
@@ -992,19 +1007,19 @@ A tangent point is a point on the graph, which means it corresponds to a domain 
 \end{center}
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  The function could be continuous at this domain number.  However, the graph might not have a tangent line at this point because the secant lines on BOTH sides might not BOTH converge to this tangent line.  In this case, we do not have a value of the derivative at this domain number. \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  The function could be continuous at this domain number.  However, the graph might not have a tangent line at this point because the secant lines on BOTH sides might not BOTH converge to this tangent line.  In this case, we do not have a value of the derivative at this domain number. 
 
 \begin{center}
 \textbf{\textcolor{blue!55!black}{The domain number is a critical number.}}
 \end{center}
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  The function could be continuous at this domain number. The graph could have a tangent line at this point and the secant lines on both sides might converge to this tangent line.  However, the tangent line is vertical, so it doesn't have a slope. In this case, we do not have a value of the derivative at this domain number. \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  The function could be continuous at this domain number. The graph could have a tangent line at this point and the secant lines on both sides might converge to this tangent line.  However, the tangent line is vertical, so it doesn't have a slope. In this case, we do not have a value of the derivative at this domain number. 
 
 \begin{center}
 \textbf{\textcolor{blue!55!black}{The domain number is a critical number.}}
 \end{center}
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  This domain number might be a discontinuity of the function. In this situation, the secant lines on both sides cannot both converge to the same line.  There is no tangent line, which means there is no slope for the tangent line, which means there is no value for the derivative for this domain number. \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}}  This domain number might be a discontinuity of the function. In this situation, the secant lines on both sides cannot both converge to the same line.  There is no tangent line, which means there is no slope for the tangent line, which means there is no value for the derivative for this domain number. 
 
 \begin{center}
 \textbf{\textcolor{blue!55!black}{The domain number is a critical number.}}
@@ -1014,8 +1029,12 @@ A tangent point is a point on the graph, which means it corresponds to a domain 
 
 
 
+These scenarios involve a point on the graph with graph points on both sides.
+
+This automatically excludes endpoints.
 
 
+Can extend our idea of derivative to include just one side? Yes!
 
 
 
@@ -1114,7 +1133,7 @@ In this case, we have a restricted domain for our function, which gives us a gra
 \end{tikzpicture}
 \end{image}
 
-\textcolor{gray!90}{\textbf{Graph Description:} Cartesian plane. Horizontal axis labeled $x$. Vertical axis labeled $y$. The graph begins with an arrow pointing up and to the left at $(0,5)$. The graph continues down to the point $(3,-4)$ and then turns upward to a solid dot at $(4,3)$.}
+
 
 
 
@@ -1251,7 +1270,10 @@ In this case, we have a one-side tangent line.
 We have a one-side derivative. 
 
 
-For the function above, we have a \textbf{left derivative}.
+For our curve above, we have a \textbf{left tangent line} or \textbf{left tangent ray}.
+
+For the function, we have a \textbf{left derivative}.
+
 
 
 
@@ -1317,7 +1339,7 @@ iRoC(t_0) =f'(t_0) = \text{slope of tangent line}
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Derivative Implies Two Sides}}
 
 Saying the word ``derivative'' implies two sides. 
 
@@ -1331,19 +1353,6 @@ This means that end-point numbers for domain intervals are automatically critica
 
 
 
-
-
-
-
-\begin{definition} \textbf{\textcolor{green!50!black}{Critical Number}}  
-
-
-Let $f$ be a function. Let $x_0$ be a number in the domain of $f$ such that $iRoC_f(x_0) = f'(x) = 0$ or $iRoC_f(x_0) = f'(x)$ does not exist.
-
-Then $x_0$ is called a \textbf{critical number}.
-
-
-\end{definition}
 
 
 
@@ -1470,10 +1479,12 @@ The right derivative is symbolized with a subscript of ``+'' with the derivative
 
 If the domain number is isolated, meaning no domain numbers immediately to the left or right, then there just is no derivative there. 
 
+Isolated domain numbers are automatically critical numbers.
+
 The term derivative implies that there is some sort of approaching.
 
 
-
+We are just beginning to think about these types of mental exercises. We want to think about how to think about them.  Calculus will officially take over this story and give all of the details.
 
 
 
