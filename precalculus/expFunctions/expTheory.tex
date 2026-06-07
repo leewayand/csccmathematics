@@ -44,12 +44,11 @@ The \textbf{general exponential function} is a function that \textbf{\textcolor{
 
 \end{definition}
 
+We can think of exponential functions as shifts and stretches of a core exponential function. 
 
 
 
 The \textbf{\textcolor{purple!85!blue}{leading coefficient}}, $a$, controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values, which is illustrated graphically as a vertical reflection. 
-
-The \textbf{\textcolor{purple!85!blue}{base}}, $r$, dictates a growing or decaying function - the constant prcentage change could be an increase or decrease.
 
 
 
@@ -95,21 +94,75 @@ The \textbf{\textcolor{purple!85!blue}{base}}, $r$, dictates a growing or decayi
 
 
 
-Functions that possess this constant percentage growth proprty are called exponential functions.
-
-We can think of exponential functions as shifts and stretches of a core exponential function. 
 
 
 
+The \textbf{\textcolor{purple!85!blue}{base}}, $r$, dictates a growing or decaying function - the constant prcentage change could be an increase or decrease.
 
 
 
 
 
 
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[name = leftgraph, 
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel={$y$},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
 
-Graphs of the basic exponential functions have the horizontal axis as a horizontal asymptote in one direction or the other.
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5.7:9)] {2 * (1.3^(-x))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.4:9)] {3 * (1.3^(-x))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.4:9)] {5 * (1.3^(-x))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:9)] {0.3 * (1.3^(-x))};
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-8:9), <->] {1.3^(-x)};
+
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0,1)};
+
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-5.7:9)] {-2 * (1.3^(-x))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-4.4:9)] {-3 * (1.3^(-x))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-2.4:9)] {-5 * (1.3^(-x))};
+          \addplot [line width=2, penColor, smooth,samples=100,domain=(-8:9)] {-0.3 * (1.3^(-x))};
+          \addplot [line width=2, penColor2, smooth,samples=100,domain=(-8:9), <->] {-1 * 1.3^(-x)};
+
+          \addplot [color=penColor2,only marks,mark=*] coordinates{(0,-1)};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+Exponential functions possess a constant percentage growth rate.
+
+
+
+
+
+
+
+
+
+
+
+
+Graphs of the basic exponential functions have the horizontal axis as a horizontal asymptote in one direction or the other, which illustrates that they have no zeros.
 
 \begin{explanation}
 
@@ -411,7 +464,7 @@ Categorize: $f$ is an exponential function, because it can match our template fo
 \]
 
 
-\textbf{\textcolor{red!70!black}{IDEA: Thinking Graphically:}}  
+\textbf{Just Thinking...}  
 
 We'll begin by thinking about the graph to help guide our analysis. 
 
@@ -460,9 +513,9 @@ Graph of $y = f(x)$.
 
 
 
-Now, for our (algebraic) function analysis.
 
 
+\textbf{\textcolor{red!75!green}{Now, for our (algebraic) function analysis.}} 
 
 
 
@@ -654,7 +707,7 @@ where $A$, $B$, and $C$ are real numbers and $A \ne 0$, $B \ne 0$.
 
 \end{definition}
 
-We can use any algebra any time any where that we feel helps us.  
+We can use any algebra, any time, any where that we feel helps us.  
 
 
 
@@ -665,7 +718,7 @@ We can view exponential functions as compositions
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = A \,$, a linear function
+\item Let $L_{out}(u) = A \, u $, a linear function
 \item Let $E(t) = r^t$, a core exponential function
 \item Let $L_{in}(v) = B \, v + C$, a linear function
 \end{itemize}
@@ -754,10 +807,8 @@ $G(t) = \frac{4}{3} \cdot 9^t - 5$ is a transformation of $g(t) = 3^t$.  Let's c
 Since the new base $9$ is greater than the old base of $3$, the function grows faster.  The graph goes up to the right faster and steeper.  This means the graph is compressed horizontally, which is the result of multiplying by $2$ in the exponent.
 
 
-With these graphical ideas, we can create an algebraic analysis. 
 
-
-
+\textbf{\textcolor{red!75!green}{With these ideas, we can create an algebraic analysis.}} 
 
 
 
@@ -909,6 +960,9 @@ $f(x) = 3 \cdot e^{x}$ is an increasing function.
 
 
 We must watch all three to determine the behavior.
+
+
+This is exactly what the Chain Rule tells us.
 
 \end{warning}
 
@@ -1067,10 +1121,9 @@ Graph of $y = B(t)$.
 
 
 
-With these ideas guiding us, we can write an algebraic analysis. 
 
 
-
+\textbf{\textcolor{red!75!green}{With these ideas guiding us, we can write an algebraic analysis. }} 
 
 
 
@@ -1112,7 +1165,7 @@ $B$ is an exponential function, so it is continuous.
 
 
 
-\textbf{Thinking with the Chain Rule...}
+$\blacktriangleright$ \textbf{Thinking with the Chain Rule...}
 
 
 \begin{itemize}
@@ -1131,7 +1184,7 @@ B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} = (L_{out} \circ E \circ L_{in})(t
 
 
 
-\textbf{Thinking of the formula pieces...}
+$\blacktriangleright$ \textbf{Thinking of the formula pieces...}
 
 
 $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t}$ is an exponential function.  It  is either always increasing or always decreasing.

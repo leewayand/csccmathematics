@@ -19,10 +19,39 @@ basic
 \textbf{\textcolor{blue!55!black}{A Different Perspective}} 
 
 
-Basic logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \log_r(B \, x + C) + D$.  \\
+Logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \log_r(B \, x + C) + D$.  
 
 
-We can decide whether the function is increasing or decreasing by the value of $r$, the sign of $A$, and the sign of $B$. \\
+The Chain Rule allows us to think about these functions through their simplier component functions.
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u + D$, a linear function
+\item Let $L(t) = \log_r(t)$, a core logarithmic function
+\item Let $L_{in}(v) = B \, v + C$, a linear function
+\end{itemize}
+
+
+The sign of $A$ tells us the behavior of $L_{out}$.
+The size of $r$ tells us the behavior of $L$.
+The sign of $B$ tells us the behavior of $L_{in}$.
+
+
+With these component functions, we can view exponential functions as compositions.
+
+
+\[  Log(x) = A \log_r(B \, x + C) + D = (L_{out} \circ L \circ L_{in})(x) \]
+
+
+Now the Chain Rule can give us the behavior.
+
+
+
+
+
+
+We can decide whether the logarithmic function is increasing or decreasing by the size of $r$, the sign of $A$, and the sign of $B$. 
 
 
 
@@ -89,10 +118,14 @@ That gives us
 
 
 
-\textbf{New Idea:} Logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \log_r(B \, x + C) + D$, where $r > 1$.  \\
+\subsection*{New Idea} 
 
 
-In this case, we would have the following behaviors: \\
+
+Logarithmic functions, are those functions which \textbf{\textcolor{red!70!black}{CAN}} be represented by formulas of the form $A \, \log_r(B \, x + C) + D$, where $r > 1$.  
+
+
+In this case, we would have the following behaviors: 
 
 
 \begin{itemize}
@@ -104,16 +137,16 @@ In this case, we would have the following behaviors: \\
 
 We would decide function behavior (increasing or decreasing) by the signs of \textbf{both} leading coefficients, $A$ and $A$.
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $A$ and $B$ are the same sign, then we have an increasing function. 
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} If $A$ and $B$ are the same sign, then we have an increasing function. 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}} If $A$ and $B$ are different signs, then we have a decreasing function. 
-
-
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} If $A$ and $B$ are different signs, then we have a decreasing function. 
 
 
 
 
 
+
+In this case, we might as well always write our logarithmic functions with base $e$.
 
 \section*{(e)}
 
@@ -142,14 +175,14 @@ If our formula looks like. $A \, \log_r(B \, x + C) + D$ and $r>1$, then we can 
 
 
 
-\textbf{\textcolor{red!90!darkgray}{$\blacktriangleright$}}  Logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \ln(B \, x + C) + D$.  
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}}  Logarithmic functions, are those functions which \textbf{\textcolor{red!70!black}{CAN}} be represented by formulas of the form $A \, \ln(B \, x + C) + D$.  
 
 
 
 
 
 
-In this model, our basic forms to memorize would be 
+In this model, our core forms to memorize would be $e^x$ and there would be several alternative choices for you.
 
 
 
@@ -171,6 +204,12 @@ In this model, our basic forms to memorize would be
 
           \addplot [line width=2, penColor, smooth,samples=300,domain=(0.001:9), <->] {ln(x)};
           \addplot [color=penColor,only marks,mark=*] coordinates{(1,0)};
+
+
+           \addplot [line width=1, magenta, dashed, domain=(-10:10),<->] ({10},{x});
+           \addplot [line width=1, magenta, dashed, domain=(-10:10),<->] ({-10},{x});
+           \addplot [line width=1, magenta, dashed, domain=(-10:10),<->] ({x},{10});
+           \addplot [line width=1, magenta, dashed, domain=(-10:10),<->] ({x},{-10});
 
            
 
@@ -246,12 +285,12 @@ In this model, our basic forms to memorize would be
 
 \subsection*{Pick Your Form}
 
-You should pick your own logarithmic exponential form that you like and understand.  \\
+You should pick your own logarithmic exponential form that you like and understand.  
 
 Then, you can change anything given to you into that form.
 
 
-You might pick a particular number greater than $1$ as the base you like.  $e$ is a very popular choice, because it shows up quite frequently in mathematics, like Calculus. \\
+You might pick a particular number greater than $1$ as the base you like.  $e$ is a very popular choice, because it shows up quite frequently in mathematics, like Calculus. 
 
 
 
@@ -263,15 +302,15 @@ You might pick a particular number greater than $1$ as the base you like.  $e$ i
 
 
 
-If you pick a base you like and change formulas to use that base, then you have a better chance of quickly deciding on function characteristics. \\
+If you pick a base you like and change formulas to use that base, then you have a better chance of quickly deciding on function characteristics. 
 
 
 
-\textbf{\textcolor{blue!55!black}{Basic Basic Form:}}  $\ln(x)$ \\
+\textbf{\textcolor{blue!55!black}{Core Form:}}  $\ln(x)$ 
 
 
 
-\textbf{\textcolor{blue!55!black}{Basic Forms:}}  $\ln(x)$, $\ln(-x)$, $-\ln(x)$, $-\ln(-x)$ \\
+\textbf{\textcolor{blue!55!black}{Optional Basic Forms:}}  $\ln(x)$, $\ln(-x)$, $-\ln(x)$, $-\ln(-x)$ 
 
 
 Now increasing and decreasing become questions about the signs of the two leading coefficents - the leading coefficient of the entire formula and the leading coefficient of the exponent.

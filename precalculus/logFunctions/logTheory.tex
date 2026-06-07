@@ -19,7 +19,7 @@ $\log_A(B)$ is pronounced ``the logarithm base $A$ of $B$'' or ``the log base $A
 
 
 \begin{center}
-\textbf{\textcolor{red!70!black}{$\log_A(B)$ is the thing you raise $A$ to, to get $B$.}} \\
+\textbf{\textcolor{red!70!black}{$\log_A(B)$ is the thing you raise $A$ to, to get $B$.}} 
 
 \textbf{\textcolor{purple!85!blue}{this is the magic sentence}}
 \end{center}
@@ -222,9 +222,9 @@ We have a logarithmic function for every exponential function.  They are designa
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Logarithm Base $r$ : $\log_r(B)$}}
 
-
+\begin{center}
 $\log_r(B)$ is the number you raise $r$ to, to get $B$. 
-
+\end{center}
 
 \textbf{Note:} We are only considering $r > 0$.
 
@@ -356,8 +356,88 @@ Their graphs are mirror images of each other across the diagonal through quandra
 
 
 
+\textbf{\textcolor{blue!55!black}{Core Logarithmic Functions}} 
 
-From this basic logarithmic function and its graph we can transform and analyze more general logarithmic functions.
+We have two types of core logarithmic functions whose behavior is dictated by their bases.
+
+
+\begin{itemize}
+\item If $r > 1$, then $\log_r(x)$ is an increasing function.
+\item If $0 < r < 1$, then $\log_r(x)$ is a decreasing function.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+
+
+
+  \begin{axis}[name=invexp,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
+
+
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(0.003:8),<->] {-ln(x)/ln(2)};
+
+
+          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(1,0)};
+
+          \node[penColor2] at (axis cs:7,1) {$\log_{\tfrac{1}{2}}(x)$};
+
+  \end{axis}
+  \begin{axis}[at={(invexp.outer east)},anchor=outer west,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+          \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({0},{x});
+
+
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(0.003:8),<->] {ln(x)/ln(2)};
+
+
+          \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(1,0)};
+
+          \node[penColor2] at (axis cs:7,1) {$\log_2(x)$};
+    \end{axis}
+
+
+
+
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+From these core logarithmic function we can transform and analyze more general logarithmic functions.
 
 
 
@@ -386,6 +466,36 @@ $A \ne 0$, $B \ne 0$, and $r > 0$
 
 
 
+We can view logarithmic functions as compositions.
+
+
+
+\begin{idea}  \textbf{\textcolor{blue!55!black}{Logarithmic Compositions}} 
+
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u + D$, a linear function
+\item Let $L(t) = \log_r(t)$, a core logarithmic function
+\item Let $L_{in}(v) = B \, v + C$, a linear function
+\end{itemize}
+
+With these component functions, we can view exponential functions as compositions.
+
+
+\[  Log(x) = A \log_r(B \, x + C) + D = (L_{out} \circ L \circ L_{in})(x) \]
+
+
+Now the Chain Rule can give us the behavior.
+
+\end{idea}
+
+
+
+
+
+
 
 
 \begin{fact}
@@ -398,7 +508,7 @@ Unlike exponential functions, the $D$ can be absorded into the logarithm.
 
 \textbf{\textcolor{red!75!green}{explanation}} 
 
-We know that the range of $\log_r(x)$ is all real numbers, which includes $D$.  Therefore, there must be a real number, $d$, such that $\log_r(d) = D$. \\
+We know that the range of $\log_r(x)$ is all real numbers, which includes $D$.  Therefore, there must be a real number, $d$, such that $\log_r(d) = D$. 
 
 
 And, we have logarithm rules, which give us
@@ -478,7 +588,7 @@ Analyze   $M(t) = \log_2(t+3) - 4$
 \textbf{\textcolor{red!75!green}{explanation}} 
 
 
-\textbf{\textcolor{red!70!black}{IDEA: Thinking Graphically:}}  
+\textbf{Just Thinking...}  
 
 
 We'll begin by thinking about the graph to help our analysis. 
@@ -528,10 +638,10 @@ Graph of $y = M(t)$.
 \end{image}
 
 
-With these ideas, we can write an algebraic analysis. 
 
 
 
+\textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis. }} 
 
 
 
@@ -610,6 +720,23 @@ The end-behavior tells us which.
 
 
 $M$ is an increasing function on $(-3, \infty)$.
+
+
+
+Or, we can use the Chain Rule...
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = u - 4$, an increasing linear function
+\item Let $L(x) = \log_2(x)$, an increasing core logarithmic function
+\item Let $L_{in}(v) = v + 3$, an increasing linear function
+\end{itemize}
+
+
+\[ M(t) = \log_2(t+3) - 4 = (L_{out} \circ L \circ L_{in})(t)\]
+
+
+\[ inc \circ inc \circ inc = inc  \]
 
 
 
@@ -798,7 +925,7 @@ We'll begin by thinking about the graph to help guide our analysis.
 
 
 
-\textbf{\textcolor{red!70!black}{IDEA: Thinking Graphically:}}  
+\textbf{Just Thinking...}  
 
 
 $\blacktriangleright$ First, the base is $3$, which is greater than $1$.
@@ -853,11 +980,11 @@ Graph of $y = K(x)$.
 
 
 
-With these ideas, we can write an algebraic analysis. 
 
 
 
 
+\textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis. }} 
 
 
 
@@ -913,6 +1040,26 @@ The leading coefficient of $K$ is $-2 < 0$ and this does change the behavior to 
 the leading coefficient of the linear inside is $-1$, which is also negative, so this again changes the behavior back to increasing.
 
 $K$ is an increasing function. 
+
+
+
+
+
+Or, we can use the Chain Rule...
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function
+\item Let $L(k) = \log_3(k)$, an increasing core logarithmic function
+\item Let $L_{in}(v) = 4 - v$, a decreasing linear function
+\end{itemize}
+
+
+\[ K(x) = -2 \, \log_3(4-x) = (L_{out} \circ L \circ L_{in})(x)\]
+
+
+\[ dec \circ inc \circ dec = inc  \]
+
 
 
 

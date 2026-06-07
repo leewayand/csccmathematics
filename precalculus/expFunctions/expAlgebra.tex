@@ -29,7 +29,7 @@ The template for the formula of the basic exponential function looks like
 
 
 
-Exponential functions are those functions that \textbf{\textcolor{red!80!black}{CAN}} be represented by a formula of the form $A \cdot r^x$.
+Exponential functions are those functions that \textbf{\textcolor{red!70!black}{CAN}} be represented by a formula of the form $A \cdot r^x$.
 
 
 
@@ -292,7 +292,7 @@ However, this is not how we usually encounter exponential and shifted exponentia
 
 \begin{template}
 
-We usually encounter exponential and shifted exponential functions in the more general form. \\
+We usually encounter exponential and shifted exponential functions in the more general forms. 
 
 
 
@@ -312,13 +312,60 @@ We usually encounter exponential and shifted exponential functions in the more g
 $r$ is called the \textbf{base}. \\
 $A$ is called the \textbf{leading coefficient} of the function. \\
 $B$ is the \textbf{leading coefficient} of the linear function in the exponent. \\
-$D$ is called the \textbf{constant term}. \\
+$D$ is called the \textbf{constant term}. 
+
+
+
+
+We can also view exponential and shifted exponential functions as compositions, which allows us to use the Chain Rule.
+
+
+
+\begin{idea}  \textbf{\textcolor{blue!55!black}{Exponential Compositions}} 
+
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u $, a linear function
+\item Let $E(t) = r^t$, a core exponential function
+\item Let $L_{in}(v) = B \, v + C$, a linear function
+\end{itemize}
+
+With these component functions, we can view exponential functions as compositions.
+
+
+\[  Exp(x) =    A \cdot r^{B \, x + C} = (L_{out} \circ E \circ L_{in})(x) \]
+
+
+Now the Chain Rule can give us the behavior.
+
+\end{idea}
 
 
 
 
 
+\begin{idea}  \textbf{\textcolor{blue!55!black}{Shifted Exponential Compositions}} 
 
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u + D$, a linear function
+\item Let $E(t) = r^t$, a core exponential function
+\item Let $L_{in}(v) = B \, v + C$, a linear function
+\end{itemize}
+
+With these component functions, we can view exponential functions as compositions.
+
+
+\[  Exp(x) =    A \cdot r^{B \, x + C} + D= (L_{out} \circ E \circ L_{in})(x) \]
+
+
+Now the Chain Rule can give us the behavior.
+
+\end{idea}
 
 
 
