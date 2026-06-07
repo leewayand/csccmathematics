@@ -21,7 +21,7 @@ analysis
 
 
 
-Tangent is the quotient of sine and cosine.
+\textbf{The Core Tangent} is the quotient of sine and cosine.
 
 \[   \tan(\theta)  =  \frac{\sin(\theta)}{\cos(\theta)}  \]
 
@@ -342,9 +342,9 @@ The range of tangent functions is $(-\infty, \infty)$.
 
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Tangent Functions}}
+\begin{formula} \textbf{\textcolor{blue!55!black}{Core Tangent Function}}
 
-A \textbf{Basic Cosine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+A \textbf{Core Tangent Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
 
 \[     T(x) =    \tan(x)           \]
 
@@ -362,14 +362,30 @@ A \textbf{Basic Cosine Function} is any function that \textbf{\textcolor{purple!
 
 
 
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Tangent Functions}}
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Tangent Functions}}
-
-A \textbf{Cosine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+A \textbf{General Tangent Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
 
 \[     T(x) =    A \tan(B \, x + C) + D           \]
 
 where $A$, $B$, $C$, and $D$ are real numbers, and $A, B \ne 0$.
+
+
+This can be viewed as a composition.
+
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u + D$, a linear function.
+\item Let $T(\theta) = \tan(\theta)  \, u$, the core tangent function.
+\item Let $L_{in}(v) = B \, v + C$, a linear function.
+\end{itemize}
+
+\[     T(x) = A \tan(B \, x + C) + D = (L_{out}(u) \circ T \circ L_{in})(x)          \]
+
+
+The Chain Rule will now give us the bhavior.
 
 
 \end{formula}

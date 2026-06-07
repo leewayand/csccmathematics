@@ -73,7 +73,7 @@ If we watch how the $x$-coordinates change as you travel counterclockwise around
 
 
 
-\subsection*{Basic Cosine Function}
+\subsection*{Core Cosine Function}
 
 
 
@@ -230,13 +230,42 @@ Therefore the range is $[-1,1]$.
 
 
 
-\begin{idea}
+\begin{observation} \textbf{\textcolor{-red!75}{Sine is the $x$-coordinate}}
 
 The idea is that the basic cosine function describes the $x$-coordinate as you travel counterclockwise around the unit circle.
 
 The characteristics of the basic cosine function hold steady during each quadrant, changing at the angles $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, and $2\pi$. From there, they keep repeating.
 
 This angle is whatever is inside the parentheses in $\cos(angle)$.
+
+
+\end{observation}
+
+
+
+
+
+
+
+
+We can build more general cosine functions as we have been doing, through compositions.
+
+
+
+\begin{idea} \textbf{\textcolor{blue!55!black}{General Cosine Functions as Compositions}} 
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u + D$, a linear function
+\item Let $C(\theta) = \cos(\theta)$, the core cosine function
+\item Let $L_{in}(v) = B \, v + C$, a linear function
+\end{itemize}
+
+
+\[
+A \, \cos(B \, t + C) + D = (L_{out} \circ C \circ L_{in})(t)
+\]
+
 
 
 \end{idea}
@@ -263,14 +292,7 @@ This angle is whatever is inside the parentheses in $\cos(angle)$.
 
 
 
-
-
-
-
-
-
-
-\begin{example} Cosine
+\begin{example} Cosine Behavior
 
 Describe the behavior of   $f(x) = \cos\left( 2 x + \frac{\pi}{2} \right)$
 
@@ -278,6 +300,24 @@ Describe the behavior of   $f(x) = \cos\left( 2 x + \frac{\pi}{2} \right)$
 
 \textbf{\textcolor{red!75!green}{explanation}} 
 
+
+
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = u$, an increasing linear function
+\item Let $C(\theta) = \sin(\theta)$, the core cosine function
+\item Let $L_{in}(v) = 2 \, v + \frac{\pi}{2}$, an increasing linear function
+\end{itemize}
+
+
+\[
+f(x) = \cos\left( 2 x + \frac{\pi}{2} \right) = (L_{out} \circ S \circ L_{in})(x)
+\]
+
+
+The core cosine funtion increases and decreases as the angle passes through the four quadrants.
 
 
 The ``angle'' is $2 x + \frac{\pi}{2}$.
@@ -327,6 +367,8 @@ That makes the period $\frac{3\pi}{4} - \left( -\frac{\pi}{4} \right) = \pi$.
 Now we just remember what the basic cosine function does in each quadrant. 
 
 
+
+Since both linear functions in our composition are increasing linear functions, the behavior of the whole composition will be the same as the behavior of cosine.
 
 \textbf{\textcolor{blue!55!black}{Behavior}} 
 
@@ -391,12 +433,16 @@ Since cosine is continuous, the extreme values give a range of $[-1,1]$.
 
 
 
-
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Variable vs Angle}}
 
 
 We must distinguish between the variable of the function and the angle of sine.
 
+The variable in $f(x) = \cos\left( 2 x + \frac{\pi}{2} \right)$ is $x$.
+
+That is not the angle.
+
+The angle is $2 x + \frac{\pi}{2}$.
 
 Our analysis follows the angle around the unit circle through the four quadrants.
 
@@ -436,6 +482,21 @@ Describe the behavior of   $g(t) = \cos\left( \frac{\pi}{4} - 3 t \right)$
 
 
 
+
+\begin{itemize}
+\item Let $L_{out}(u) = u$, an increasing linear function
+\item Let $S(\theta) = \sin(\theta)$, the core sine function
+\item Let $L_{in}(v) = \frac{\pi}{4} - 3 t$, a decreasing linear function
+\end{itemize}
+
+
+\[
+g(t) = \sin\left( \frac{\pi}{4} - 3 t \right) = (L_{out} \circ S \circ L_{in})(t)
+\]
+
+
+
+
 The ``angle'' is $\frac{\pi}{4} - 3 t$.
 
 We want to know when $\frac{\pi}{4} - 3 t$ has the values $0$, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, and $2\pi$.
@@ -457,24 +518,7 @@ We want to know when $\frac{\pi}{4} - 3 t$ has the values $0$, $\frac{\pi}{2}$, 
 \]
 
 
-We now know which values of $t$ define our quadrants, but they are running backwards.  
-
-That is because of the negative coefficient in $-2 t$.
-
-
-We just have to remember that we write interval notation as the numbers appear on the number line.  They are not written backwards.  
-
-We write interval notation from left to right, but our angles are running backwards of that.  That reverses the behavior of $g(t)$.
-
-
-The first quadrant begins at $\frac{\pi}{12}$ and ends at $-\frac{\pi}{12}$.
-
-Therefore, our basic cosine function is $1$ at $\frac{\pi}{12}$ and it is $0$ at $-\frac{\pi}{12}$.
-
-But, we write our interval notation like  $\left( -\frac{\pi}{12}, \frac{\pi}{12} \right)$.
-
-Our function will be $0$ on the left and $1$ on the right.  $g(t)$ will be increasing.
-
+We now know which values of $t$ define our quadrants.
 
 
 
@@ -489,7 +533,7 @@ IV       & t \in  \left( -\frac{7\pi}{12}, -\frac{5\pi}{12} \right)   \\
 \end{array}
 \]
 
-
+They are running backwards.
 
 Our principal interval is $\left( -\frac{7\pi}{12}, \frac{\pi}{12} \right)$.
 
@@ -497,27 +541,6 @@ That makes the period $\frac{\pi}{12} - \left( -\frac{7\pi}{12} \right) = \frac{
 
 
 Now we just remember what the basic cosine function does in each quadrant. 
-
-We just read it backwards.
-
-The basic cosine function values are 
-\[
-1 \rightarrow 0 \rightarrow -1 \rightarrow 0 \rightarrow 1
-\]
-
-
-$g(t)$ does the same thing.  It just does it from right to left:
-
-\[
-1 \leftarrow 0 \leftarrow -1 \leftarrow 0 \leftarrow 1
-\]
-
-
-But, we still read left to right.  So, $g(t)$ begins on the left at $1$, decreases to $0$, decreases to $-1$, increases to $0$, then increases to $1$.
-
-
-
-
 
 
 
@@ -528,18 +551,18 @@ But, we still read left to right.  So, $g(t)$ begins on the left at $1$, decreas
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( -\frac{\pi}{12}, \frac{\pi}{12} \right)$, $g(t)$ increases from $0$ to $1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( -\frac{\pi}{12}, \frac{\pi}{12} \right)$, $inc \circ dec \circ dec = dec$ : $g(t)$ increases from $0$ to $1$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( -\frac{\pi}{4}, \frac{\pi}{4} \right)$, $g(t)$ increases from $-1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( -\frac{\pi}{4}, \frac{\pi}{4} \right)$, $inc \circ dec \circ dec = dec$ : $g(t)$ increases from $-1$ to $0$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$(III):}} On $\left( -\frac{5\pi}{12}, -\frac{\pi}{4} \right)$, $g(t)$ decreases from $0$ to $-1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$(III):}} On $\left( -\frac{5\pi}{12}, -\frac{\pi}{4} \right)$, $inc \circ inc \circ dec = dec$ : $g(t)$ decreases from $0$ to $-1$.
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$(IV):}} On $\left( -\frac{7\pi}{12}, -\frac{5\pi}{12} \right)$, $g(t)$ decreases from $1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$(IV):}} On $\left( -\frac{7\pi}{12}, -\frac{5\pi}{12} \right)$, $inc \circ inc \circ dec = dec$ : $g(t)$ decreases from $1$ to $0$.
 
 
 
@@ -615,13 +638,13 @@ Since cosine is continuous, the extreme values give a range of $[-1,1]$.
 
 
 
-\textbf{\textcolor{red!70!black}{Note:}}  In the example above, the inside of the cosine function is a linear function with a negative leading coefficent.  That has reversed the behavior from the basic cosine function.
+\textbf{Note:}  In the example above, the inside of the cosine function is a linear function with a negative leading coefficent.  That has reversed the behavior from the core cosine function.
 
 
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} In addition to the leading coefficient of the inner linear function, the cosine funciton itself has a leading coefficient.  When it is negative, the behavior reverses again.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} In addition to the leading coefficient of the inner linear function, the cosine function itself has a leading coefficient.  When it is negative, the behavior reverses again.
 
 
 
@@ -663,13 +686,18 @@ Describe the behavior of   $H(k) = -2 \cos\left( \frac{k}{3} - \pi \right)$
 
 
 
-\textbf{Step 1)}  We'll take this in two steps.  First, the inside.  Then, the outside.
+
+\begin{itemize}
+\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function.
+\item Let $C(\theta) = \cos(\theta)  \, u$, the core cosine function.
+\item Let $L_{in}(v) = \frac{u}{3} - \pi$, an increasing linear function.
+\end{itemize}
 
 
-First, we'll just think of $\cos\left( \frac{k}{3} - \pi \right)$.  Then, we'll bring in the $-2$.
 
-
-Let $f(k) = \cos\left( \frac{k}{3} - \pi \right)$.
+\[
+H(k) = -2 \sin\left( \frac{k}{3} - \pi \right) = (L_{out} \circ S \circ L_{in})(k)
+\]
 
 
 The ``angle'' is $\frac{k}{3} - \pi$.
@@ -716,6 +744,9 @@ Our principal interval is $\left( 3 \pi, 9 \pi \right)$.
 That makes the period $9 \pi - 3 \pi = 6 \pi$.
 
 
+The global maximum and minimum values of the core sine function are $-1$ and $1$. When the compositoin passes these into $L_{out}(u) = -2 \, u$, we will get the values $-2$ and $2$.
+
+
 Now we just remember what the basic sine function does in each quadrant and multiply by $-2$. 
 
 
@@ -724,64 +755,23 @@ Now we just remember what the basic sine function does in each quadrant and mult
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(k)$ decreases from $1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $dec \circ dec \circ inc = inc$ : $f(k)$ decreases from $1$ to $0$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(k)$ decreases from $0$ to $-1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $dec \circ dec \circ inc = inc$ : $f(k)$ decreases from $0$ to $-1$.
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(k)$ increases from $-1$ to $0$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $dec \circ inc \circ inc = dec$ : $f(k)$ increases from $-1$ to $0$.
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(k)$ increases from $0$ to $1$.
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $dec \circ inc \circ inc = dec$ : $f(k)$ increases from $0$ to $1$.
 
 
 
 All of this repeats with a period of $6 \pi$.
 
-
-
-
-
-
-\textbf{Step 2)}
-
-
-
-Now we'll bring in $-2$ as the leading coefficent.
-
-
-
-\textbf{Remember:} The negative leading coefficient reverses all of the behavior.
-
-
-
-
-
-
-
-
-
-
-\textbf{\textcolor{blue!55!black}{Behavior of $H(k)$}} 
-
-
-
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (I):}} On $\left( 3 \pi, \frac{9\pi}{2} \right)$, $f(k)$ decreases from $1$ to $0$, so $H(k)$ increases $-2$ to $0$.
-
-
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (II):}} On $\left( \frac{9\pi}{2}, 6 \pi \right)$, $f(k)$ decreases from $0$ to $-1$, so $H(k)$ increases $0$ to $2$.
-
-
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (III):}} On $\left( 6 \pi, \frac{15\pi}{2} \right)$, $f(k)$ increases from $-1$ to $0$, so $H(k)$ decreases $2$ to $0$.
-
-
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ (IV):}} On $\left( \frac{15\pi}{2}, 9 \pi \right)$, $f(k)$ increases from $0$ to $1$, so $H(k)$ decreases $0$ to $-2$.
 
 
 
@@ -826,6 +816,15 @@ On our principal interval, $H(k)$ has a global and local maximum of $-2$ at $3 \
 
 
 
+
+\textbf{\textcolor{blue!55!black}{Range}} 
+
+
+Since cosine is continuous, the extreme values give a range of $[-2,2]$.
+
+
+
+
 \end{example}
 
 
@@ -858,9 +857,10 @@ On our principal interval, $H(k)$ has a global and local maximum of $-2$ at $3 \
 
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Cosine Functions}}
 
-A \textbf{Basic Cosine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+\begin{formula} \textbf{\textcolor{blue!55!black}{Core Cosine Functions}}
+
+The \textbf{Core Cosine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with the formula 
 
 \[     C(x) =    \cos(x)           \]
 
@@ -879,16 +879,34 @@ A \textbf{Basic Cosine Function} is any function that \textbf{\textcolor{purple!
 
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Cosine Functions}}
+\begin{formula} \textbf{\textcolor{blue!55!black}{General Cosine Functions}}
 
-A \textbf{Cosine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+A \textbf{General Cosine Function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
 
 \[     C(x) =    A \cos(B \, x + C) + D           \]
 
 where $A$, $B$, $C$, and $D$ are real numbers, and $A, B \ne 0$.
 
 
+This can be viewed as a composition.
+
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u + D$, a linear function.
+\item Let $C(\theta) = \cos(\theta)  \, u$, the core cosine function.
+\item Let $L_{in}(v) = B \, v + C$, a linear function.
+\end{itemize}
+
+\[     C(x) = A \cos(B \, x + C) + D = (L_{out}(u) \circ C \circ L_{in})(x)          \]
+
+
+The Chain Rule will now give us the bhavior.
+
+
 \end{formula}
+
 
 
 

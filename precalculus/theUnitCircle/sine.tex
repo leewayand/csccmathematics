@@ -248,7 +248,7 @@ We can build more general sine functions as we have been doing, through composit
 
 
 \[
-A \, \sin(B \, t + C) + D = (L_{out} \circ S \circ L{in})(t)
+A \, \sin(B \, t + C) + D = (L_{out} \circ S \circ L_{in})(t)
 \]
 
 
@@ -282,7 +282,7 @@ Describe the behavior of   $f(x) = \sin\left( 2 x + \frac{\pi}{2} \right)$
 
 
 \[
-f(x) = \sin\left( 2 x + \frac{\pi}{2} \right) = (L_{out} \circ S \circ L{in})(x)
+f(x) = \sin\left( 2 x + \frac{\pi}{2} \right) = (L_{out} \circ S \circ L_{in})(x)
 \]
 
 
@@ -334,7 +334,7 @@ That makes the period $\frac{3\pi}{4} - \left( -\frac{\pi}{4} \right) = \pi$.
 
 
 
-Since both linear functions in our composition are increasing linear functions, the behavior of the whole composition will be the same as the behavior of $f$.
+Since both linear functions in our composition are increasing linear functions, the behavior of the whole composition will be the same as the behavior of sine.
 
 Now we just remember what the core sine function does in each quadrant. 
 
@@ -465,7 +465,7 @@ Describe the behavior of   $g(t) = \sin\left( \frac{\pi}{4} - 3 t \right)$
 
 
 \[
-g(t) = \sin\left( \frac{\pi}{4} - 3 t \right) = (L_{out} \circ S \circ L{in})(t)
+g(t) = \sin\left( \frac{\pi}{4} - 3 t \right) = (L_{out} \circ S \circ L_{in})(t)
 \]
 
 
@@ -521,11 +521,6 @@ That makes the period $\frac{\pi}{12} - \left( -\frac{7\pi}{12} \right) = \frac{
 
 
 Now we just remember what the basic sine function does in each quadrant. 
-
-
-
-
-
 
 
 
@@ -610,7 +605,7 @@ Since sine is continuous, the extreme values give us a range of $[-1,1]$.
 
 
 
-\textbf{Note:}  In the example above, the inside of the sine function is a linear function with a negative leading coefficent.  That has reversed the behavior from the basic sine function.
+\textbf{Note:}  In the example above, the inside of the sine function is a linear function with a negative leading coefficent.  That has reversed the behavior from the core sine function.
 
 
 
@@ -624,7 +619,7 @@ The example above has illustrated a fact about function behavior.
 
 
 
-\subsection*{Compositoin Reverses Behavior}
+\subsection*{Composition Reverses Behavior}
 
 \begin{fact}
 
@@ -749,7 +744,7 @@ Describe the behavior of   $H(k) = -2 \sin\left( \frac{k}{3} - \pi \right)$
 
 
 \[
-H(k) = -2 \sin\left( \frac{k}{3} - \pi \right) = (L_{out} \circ S \circ L{in})(k)
+H(k) = -2 \sin\left( \frac{k}{3} - \pi \right) = (L_{out} \circ S \circ L_{in})(k)
 \]
 
 
@@ -858,7 +853,7 @@ $H(k)$ has a maximum value of $2$ and a minimum value of $-2$, which occur at $\
 \textbf{\textcolor{blue!55!black}{Range}} 
 
 
-Since sine is continuous, the extreme values give a range of $-2,2$.
+Since sine is continuous, the extreme values give a range of $[-2,2]$.
 
 
 
@@ -951,9 +946,9 @@ This can be viewed as a composition.
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = A \, u + D$, a decreasing linear function.
+\item Let $L_{out}(u) = A \, u + D$, a linear function.
 \item Let $S(\theta) = \sin(\theta)  \, u$, the core sine function.
-\item Let $L_{in}(v) = B \, v + C$, an increasing linear function.
+\item Let $L_{in}(v) = B \, v + C$, a linear function.
 \end{itemize}
 
 \[     S(x) = A \sin(B \, x + C) + D = (L_{out}(u) \circ S \circ L_{in})(x)          \]
