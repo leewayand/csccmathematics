@@ -133,6 +133,11 @@ In this model, our basic forms to memorize would be
           \addplot [line width=2, penColor, smooth,samples=100,domain=(-9:8), <->] {1.3^x};
           \addplot [color=penColor,only marks,mark=*] coordinates{(0,1)};
 
+           \addplot [line width=1, violet, dashed, domain=(-10:10)] ({10},{x});
+           \addplot [line width=1, violet, dashed, domain=(-10:10)] ({-10},{x});
+           \addplot [line width=1, violet, dashed, domain=(-10:10)] ({x},{10});
+           \addplot [line width=1, violet, dashed, domain=(-10:10)] ({x},{-10});
+
            
 
   \end{axis}
