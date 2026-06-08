@@ -34,7 +34,7 @@ Let $f$ and $g$ be two functions.
 The composition of $f$ and $g$ is a third function denoted by $f \circ g$.
 
 \[
-(f \circ g)(a) f(g(a))
+(f \circ g)(a) = f(g(a))
 \]
 
 
@@ -115,11 +115,11 @@ T(v) =
 \]
 
 
-On the interval $(-4, -1]$, the graph is a line segment for $T(v) = 2v-1$, a linear function with a restricted domain. \\
+On the interval $(-4, -1]$, the graph is a line segment for $T(v) = 2v-1$, a linear function with a restricted domain. 
 
 
 
-On the interval $[1, 7)$, the graph is another line segment for $T(v) = -v+3$, a linear function with a restricted domain. \\
+On the interval $[1, 7)$, the graph is another line segment for $T(v) = -v+3$, a linear function with a restricted domain. 
 
 
 
@@ -189,8 +189,10 @@ With $T$ as our initial function, we can build a new function through compositio
 $B(k)$ is a new function we are creating, but its definition is based on $T(v)$.
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Define $B$ by $B(k) = T(k+3)$ with the induced domain.}} 
+\textbf{Define $B$ by the equation \textcolor{blue!55!black}{$\blacktriangleright$ $B(k) = T(k+3)$} with the induced domain.}
 
+
+Induced domain means that the domain of $B$ will deduced from the domain of $T$.
 
 
 \textbf{Questions:} 
@@ -220,9 +222,9 @@ $k$ must be in a similar set, but shifted to the left by $3$, because we need to
 \[     k \in      \left( -7,\answer{-4} \right] \cup \left[ \answer{-2},4 \right)     \]
 
 
-The domain of $B$ is $(-7,-4] \cup [-2,4)$.   \\
+The domain of $B$ is $(-7,-4] \cup [-2,4)$.   
 
-Thsi domain was ``induced'' from the domain of $T$ through the definition of $B$, which is using $T$.  The values in the domain of $B$ are real numbers, $k$, such that $k+3$ is in the domain of $T$.
+This domain was ``induced'' from the domain of $T$ through the definition of $B$, which is using $T$.  The values in the domain of $B$ are real numbers, $k$, such that $k+3$ is in the domain of $T$.
 
 The domain of $B$ is a shift of the domain of $T$.  
 
@@ -261,19 +263,19 @@ We have four strategic points on the graph of $T$:
 \item $(-4, -9)$ tells us that $T(-4) = -9$.   
 To match the template $B(k) = T(k+3)$, we need $k=-7$.  Replacing $k$ with $-7$ gives us
 \[ B(-7) = T(-7 + 3) = T(-4) = -9\]
-$B(-7) = -9$ and the point $(-7, -9)$ is on the graph of $B$. It is an open dot. \\
+$B(-7) = -9$ and the point $(-7, -9)$ is on the graph of $B$. It is an open dot. 
 
 
 \item $(-1, -3)$ tells us that $T(-1) = -3$.   
 To match the template $B(k) = T(k+3)$, we need $k=-4$.  Replacing $k$ with $-4$ gives us
 \[ B(-4) = T(-4 + 3) = T(-1) = -3\]
-$B(-4) = -3$ and the point $(-4, -3)$ is on the graph of $B$. It is a closed dot. \\
+$B(-4) = -3$ and the point $(-4, -3)$ is on the graph of $B$. It is a closed dot. 
 
 
 \item $(1, 2)$ tells us that $T(1) = 2$.   
 To match the template $B(k) = T(k+3)$, we need $k=-2$.  Replacing $k$ with $-2$ gives us
 \[ B(-2) = T(-2 + 3) = T(1) = 2\]
-$B(-2) = 2$ and the point $(-2, 2)$ is on the graph of $B$. It is a closed dot. \\
+$B(-2) = 2$ and the point $(-2, 2)$ is on the graph of $B$. It is a closed dot. 
 
 
 \item $(7, -4)$ tells us that $T(7) = -4$.   
@@ -301,7 +303,7 @@ Now for the algebra.
 
 
 
-\begin{explanation} \textbf{\textcolor{red!75!green}{Formula (first interval)}} 
+\begin{explanation} \textbf{\textcolor{red!75!green}{On $k \in (-7,-4]$}}
 
 
 We have a formula for $T(v)$.  We are attempting to build a formula for $B(k)$ from the formula for $T(v)$.
@@ -333,7 +335,7 @@ All together: when $k \in (-7,-4]$, then $B(k) = 2(k+3)-1 = 2k+5$.
 
 
 
-\begin{explanation} \textbf{\textcolor{red!75!green}{Formula (second interval)}} 
+\begin{explanation} \textbf{\textcolor{red!75!green}{On $k \in [-2,4)$}} 
 
 
 We have a formula for $T(v)$.  We are attempting to build a formula for $B(k)$ from the formula for $T(v)$.
@@ -461,7 +463,7 @@ When we look at the graphs side-by-side, we can see that the graph of $T$ has si
 
 \end{tikzpicture}
 \end{image}
-The structure of the two graphs hasn't changed. \\
+The structure of the two graphs hasn't changed. 
 
 
 
@@ -471,7 +473,7 @@ From the definition, $B(k) = T(k+3)$, we can see that $v=k+3$, or $k=v-3$.  All 
 
 
 
-\begin{warning} \textbf{\textcolor{red!80!black}{Variables}} \\
+\begin{warning} \textbf{\textcolor{red!80!black}{Variables}} 
 
 Notice that four different variables, $v$, $y$, $k$, and $z$, are used to describe the domain and range values of $T$ and $B$.  We are using separate names for the different types of values to keep everything clear. If we use the same variable to represent both domains, then we run into problems.
 
@@ -931,14 +933,13 @@ Let $g(w)$ be defined as a shifted domain version of $P(t)$.  The domain of $g(w
 
 \begin{itemize}
 \item In terms of $t$, $w = \answer{t+4}$ 
-\item In terms of $w$, $t = \answer{w-4}$.  \\
+\item In terms of $w$, $t = \answer{w-4}$.  
 \end{itemize}
 
 
 \begin{itemize}
-\item $g(w) = P\left(\answer{w-4}\right)$ \\
-
-\item $P(t) = g\left(\answer{t+4}\right)$ \\
+\item $g(w) = P\left(\answer{w-4}\right)$ 
+\item $P(t) = g\left(\answer{t+4}\right)$ 
 \end{itemize}
 
 \end{example}

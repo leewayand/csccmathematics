@@ -58,7 +58,8 @@ We would like to extend this idea of a function operation beyond linear function
 
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Composition}}  
+
+\begin{idea} \textbf{\textcolor{blue!55!black}{Composition}}  
 
 
 Given two functions, $Outside$ and $Inside$, the composition, $Outside \circ Inside$ is defined by
@@ -67,7 +68,7 @@ Given two functions, $Outside$ and $Inside$, the composition, $Outside \circ Ins
 
 For $ a \in \{  x \in Dom_{Inside} \, | \,    Inside(x) \in Dom_{Outside}  \}$
 
-\end{formula}
+\end{idea}
 
 We would like to focus on the inside function being a linear function.
 
@@ -172,14 +173,14 @@ The values of $inside(h)$ still run along the real line left to right from $-\in
 The difference is that the identity function ran across its domain and range from $-\infty$ to $\infty$ at exactly the same rate - because the input and out were equal - it was the identity function.
 
 
-For $inside(h) - 5h$ the range is running through the real line left to right from $-\infty$ to $\infty$ - five times as fast as the domain. A little movement in the domain results in a lot of movement in the range and then this range is the domain for $Q(h)$.
+For $inside(h) = 5h$, the range is running through the real line left to right from $-\infty$ to $\infty$ - five times as fast as the domain. A little movement in the domain results in a lot of movement in the range and then this range is the domain for $Q(h)$.
 
 
 
 
 
 
-\begin{paradox}
+\begin{observation} \textbf{\textcolor{-red!75}{Hidden Exchange}}
 
 When we graph a composition function, $Outside \circ Inside$, on the Cartesian plane, we have to picture a two-step process, where the switch is hidden from view.  
 
@@ -187,7 +188,7 @@ Normally, when we graph one function, the horizontal axis represents the domain 
 
 With a composition, the horizontal axis represents the domain of the $Inside$ function and the vertical axis represents the range of the $Outside$ function.  There is a hidden switch occurring from the range of the $Inside$ to the domain of the $Outside$.
 
-\end{paradox}
+\end{observation}
 
 As we run across the horizontal axis, these values are going into $inside(h) = 5h$.  The output values, $5h$ are the new (hidden) horizontal axis for the inputs (domain) into $Outside(h) = Q(h)$.
 
@@ -197,10 +198,7 @@ As you run across the $h$-axis, those values are not going into $Q$.  $5$ times 
 
 
 
-\begin{observation}
-
-
-
+\begin{observation} \textbf{\textcolor{-red!75}{Distances}}
 
 
 
@@ -359,7 +357,7 @@ The zeros for $Q$ are $-1$ and $4$.  These move to $-2$ and $8$ for $Q \circ L$.
 
 
 
-\begin{question} Linear Composition
+\begin{question} 
 
 
 Let $R(t) = (t+7)(t-2)(t-5)$ 
@@ -387,12 +385,12 @@ $5$ is a zero of $R$.  The corresponding zero of $R \circ L$ is $\answer{\frac{5
 
 
 
-\begin{question} Linear Composition
+\begin{question} 
 
 
-Let $p(x) = (x+6)(x+2)(x+4)$ \\
+Let $p(x) = (x+6)(x+2)(x+4)$ 
 
-Let $L(t) = \frac{t}{5}$ \\
+Let $L(t) = \frac{t}{5}$ 
 
 
 $-6$ is a zero of $p$.  The corresponding zero of $p \circ L$ is $\answer{-30}$.
@@ -413,12 +411,12 @@ $-4$ is a zero of $p$.  The corresponding zero of $p \circ L$ is $\answer{-20}$.
 
 
 
-\begin{question} Linear Composition
+\begin{question} 
 
 
-Let $T(y) = \sqrt{y-10}$ \\
+Let $T(y) = \sqrt{y-10}$ 
 
-Let $L(k) = -2k$ \\
+Let $L(k) = -2k$ 
 
 
 The domain of $T$ is $[10, \infty)$.  The domain of $T \circ L$ is $\left( -\infty, \answer{-5} \right]$.
@@ -667,7 +665,7 @@ The corner on the graph is $\left( \answer{-2}, \answer{-3} \right)$
 
 
 
-\begin{example}
+\begin{example} Composition
 
 
 Let $F(x) = 5 \sqrt{x + 3} - 6$ with its natural or implied domain.
