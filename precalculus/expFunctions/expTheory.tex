@@ -16,7 +16,10 @@ the exponential story
 
 \textbf{Core Exponential Functions}
 
-We have two types of core exponential functions. Their different behaviors are dictated by the base.
+We have two types of core exponential functions, $r^x$. 
+
+
+Their different behaviors are dictated by the base.
 
 
 
@@ -40,15 +43,15 @@ General exponential functions insert a leading coefficient.
 
 The \textbf{general exponential function} is a function that \textbf{\textcolor{purple!85!blue}{can}} be represented in the form 
 
-\[  Exp(x) = a \cdot r^x    \, | \,  a \ne 0, \, r > 0   \]
+\[  Exp(x) = A \cdot r^x    \, | \,  A \ne 0, \, r > 0   \]
 
 \end{definition}
 
-We can think of exponential functions as shifts and stretches of a core exponential function. 
+We can think of exponential functions as shifts and stretches of a core exponential function, accomplished through composition. 
 
 
 
-The \textbf{\textcolor{purple!85!blue}{leading coefficient}}, $a$, controls vertical stretching or compression. The sign of $a$ dictates the sign of our function values, which is illustrated graphically as a vertical reflection. 
+The \textbf{\textcolor{purple!85!blue}{leading coefficient}}, $A$, controls vertical stretching or compression. The sign of $A$ dictates the sign of our function values, which is illustrated graphically as a vertical reflection. 
 
 
 
@@ -167,12 +170,12 @@ Graphs of the basic exponential functions have the horizontal axis as a horizont
 \begin{explanation}
 
 
-When $r$ \wordChoice{\choice{$<$} \choice[correct]{$>$}} $1$ we have a growing function. It could be growing positively or negatively, depending on the sign of $a$.
+When $r$ \wordChoice{\choice{$<$} \choice[correct]{$>$}} $1$ we have a growing function. It could be growing positively or negatively, depending on the sign of $A$.
 
-\[  \lim_{x \to -\infty} a \, r^x = 0 \, \text{ and } \, \lim_{x \to \infty} a \, r^x = \pm\infty \]
+\[  \lim_{x \to -\infty} A \, r^x = 0 \, \text{ and } \, \lim_{x \to \infty} A \, r^x = \pm\infty \]
 
 
-Since $r^x$ is always positive, it is the sign of $a$ that dictates if the unbounded growth is positive or negative.
+Since $r^x$ is always positive, it is the sign of $A$ that dictates if the unbounded growth is positive or negative.
 
 
 
@@ -215,7 +218,7 @@ Since $r^x$ is always positive, it is the sign of $a$ that dictates if the unbou
 \end{image}
 
 
-Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, a \right)$.
+Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, A \right)$.
 
 
 Exponential functions have unbounded growth in the direction that makes the exponent large and \wordChoice{\choice[correct]{positive} \choice{negative}}.
@@ -236,14 +239,14 @@ Exponential functions approach $0$ in the direction that makes the exponent larg
 
 
 
-When $r$ \wordChoice{\choice[correct]{$<$} \choice{$>$}} $1$, we have a decaying function. The horizontal axis is still a horizontal asymptote, just in the direction where $x$ is large and positive. The function now decays. It could decay positively or negatively, depending on the sign of $a$.
+When $r$ \wordChoice{\choice[correct]{$<$} \choice{$>$}} $1$, we have a decaying function. The horizontal axis is still a horizontal asymptote, just in the direction where $x$ is large and positive. The function now decays. It could decay positively or negatively, depending on the sign of $A$.
 
 
-\[ \lim_{x \to -\infty} a \, r^x = \pm\infty \, \text{ and } \, \lim_{x \to \infty} a \, r^x = 0 \]
+\[ \lim_{x \to -\infty} A \, r^x = \pm\infty \, \text{ and } \, \lim_{x \to \infty} A \, r^x = 0 \]
 
 
  
-The sign of $a$ dictates if the function decays through positive or negative values, because $r^x > 0$.
+The sign of $A$ dictates if the function decays through positive or negative values, because $r^x > 0$.
 
 
 
@@ -251,7 +254,7 @@ The sign of $a$ dictates if the function decays through positive or negative val
 \begin{tikzpicture}
    \begin{axis}[name = leftgraph, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$a>0$},
+            axis lines =center, xlabel=$x$, ylabel={$A>0$},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -266,7 +269,7 @@ The sign of $a$ dictates if the function decays through positive or negative val
   \end{axis}
   \begin{axis}[at={(leftgraph.outer east)},anchor=outer west, 
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel={$a<0$},
+            axis lines =center, xlabel=$x$, ylabel={$A<0$},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -284,7 +287,7 @@ The sign of $a$ dictates if the function decays through positive or negative val
 
 
 
-Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $(0, a)$, which is below the horizontal asymptote, when $a < 0$.
+Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $(0, A)$, which is below the horizontal asymptote, when $A < 0$.
 
 
 
@@ -306,7 +309,7 @@ All exponential functions share a common structure.
 
 
 \begin{itemize}
-\item Each is always positive or always negative. This depends on the sign of $a$.
+\item Each is always positive or always negative. This depends on the sign of $A$.
 \item Each approaches $0$ in one direction - the direction that makes the exponent large and negative.
 \item In the other direction, they grow unbounded. 
 \end{itemize}
@@ -319,7 +322,7 @@ All exponential graphs share a common structure.
 
 
 \begin{itemize}
-\item Each is always above or below the horizontal axis. This depends on the sign of $a$.
+\item Each is always above or below the horizontal axis. This depends on the sign of $A$.
 \item Each has the horizontal axis as an asymptote in one direction.
 \item In the other direction, they grow unbounded. 
 \end{itemize}
@@ -343,7 +346,7 @@ These are the important aspects or characteristics that we watch when moving ont
 \begin{summary} \textbf{\textcolor{red!70!yellow}{Exponential Behavior}}
 
 
-Basic exponential functions, $a \cdot r^x$, are either increasing functions or decreasing functions.
+Basic exponential functions, $A \cdot r^x$, are either increasing functions or decreasing functions.
 
 
 $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Greater than $1$: $r > 1$}} 
@@ -355,12 +358,12 @@ $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Greater than $1$:
 \end{itemize}
 
 
-The leading coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
+The leading coefficient in front, $A$, tells us if this larger/smaller value is positive or negative.
 
 
 \begin{itemize}
-\item $a > 0$ and $r > 1$ : \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  (positive) function
-\item $a < 0$ and $r > 1$ : \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  (negative) function  
+\item $A > 0$ and $r > 1$ : \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  (positive) function
+\item $A < 0$ and $r > 1$ : \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  (negative) function  
 \end{itemize}
 
 
@@ -377,12 +380,12 @@ $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Less than $1$: $0
 \end{itemize}
 
 
-The leading coefficient in front, $a$, tells us if this larger/smaller value is positive or negative.
+The leading coefficient in front, $A$, tells us if this larger/smaller value is positive or negative.
 
 
 \begin{itemize}
-\item $a > 0$ and $r < 1$ : \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  (positive) function
-\item $a < 0$ and $r < 1$ : \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  (negative) function  
+\item $A > 0$ and $r < 1$ : \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  (positive) function
+\item $A < 0$ and $r < 1$ : \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  (negative) function  
 \end{itemize}
 
 
@@ -395,10 +398,10 @@ The leading coefficient in front, $a$, tells us if this larger/smaller value is 
 As we see, basic exponential functions can be
 
 \begin{itemize}
-\item positive and increasing ($a>0$ and $r>1$)
-\item positive and decreasing ($a>0$ and $r<1$)
-\item negative and increasing ($a<0$ and $r<1$)
-\item negative and decreasing ($a<0$ and $r>1$)
+\item positive and increasing ($A>0$ and $r>1$)
+\item positive and decreasing ($A>0$ and $r<1$)
+\item negative and increasing ($A<0$ and $r<1$)
+\item negative and decreasing ($A<0$ and $r>1$)
 \end{itemize}
 
 
@@ -456,7 +459,7 @@ Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5}$
 
 
 
-Categorize: $f$ is an exponential function, because it can match our template for exponential functions, $a \, r^x$.
+Categorize: $f$ is an exponential function, because it can match our template for exponential functions, $A \, r^x$.
 
 
 \[
@@ -577,6 +580,26 @@ The other direction is where the exponential function is uunbounded.  Since the 
 
 \textbf{Behavior:} 
 
+We can think of $f$ as a composition with two linear functions.
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = \frac{1}{3} \, u$, an increasing linear function.
+\item Let $E(t) = 2^t$, an increasing core exponential function.
+\item Let $L_{in}(v) = v + 5$, an increasing linear function.
+\end{itemize}
+
+
+
+
+
+\[  f(x) = \frac{1}{3} \cdot \, 2^{x+5} = (L_{out} \circ E \circ L_{in})(x)\]
+
+\[ inc \circ inc \circ inc = inc  \]
+
+
+
+This gets shortened to leading coefficients and the base:\\
 The base of $f$ is $2$, which is greater than $1$. The leading coefficient of $f$ is $\frac{1}{3}$, which is positive. The leading coefficient of the linear exponent is $1$, which is also positive.  These make $f$ is a positive increasing exponential function.
 
 

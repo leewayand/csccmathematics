@@ -37,7 +37,7 @@ Logarithms are exponents.  They are the things we raise bases to, to get targete
 
 
 
-An example of a basic exponential function is $E(t) = 2^t$.  
+An example of a core exponential function is $E(t) = 2^t$.  
 
 Its graph looks like
 
@@ -73,11 +73,11 @@ Its graph looks like
 \end{tikzpicture}
 \end{image}
 
-$E(t)$ is an increasing function, which means when we select a greater exponent in the domain, then we get a greater function value.  
+Since its base is greater than $1$, $E(t)$ is an increasing function, which means when we select a greater exponent in the domain, then we get a greater function value.  
 
 
 
-We can see this by evaluating our exponential function with increasing domain numbers:
+We can illustrate this by evaluating our exponential function with greater domain numbers:
 \begin{itemize}
 \item $E(-1) = 2^{-1} = \frac{1}{2}$
 \item $E(0) = 2^0 = 1$
@@ -140,12 +140,12 @@ Thinking of an exponential function in reverse sounds like a new function. We ca
 \text{Exponential Function}  &     &  \text{Logarithmic Function}  \\
 domain = (-\infty, \infty)  &  \   &  domain = (0, \infty)  \\
 range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
-(a, r^a)    &    &   (r^a, a)
+(d, r^d)    &    &   (r^d, d)
 \end{array}
 \]
 
 
-The basic logarithmic function just reverses the pairs in the basic exponential function.  If $(a, 2^a)$ is a pair in the exponential function, then $(2^a, a)$ is a pair in the corresponding logarithmic function.
+The basic logarithmic function just reverses the pairs in the basic exponential function.  If $(d, 2^d)$ is a pair in the exponential function, then $(2^d, d)$ is a pair in the corresponding logarithmic function.
 
 
 Therefore, the domains and ranges switch. 
@@ -157,7 +157,7 @@ Therefore, the domains and ranges switch.
 
 \subsection*{Logarithm}
 
-It seems weird to write $(2^a, a)$, even though it is perfectly correct.  We are supplying values of an exponential function, which look like $2^a$ and then the value of the logarithmic function is the needed exponent.
+It seems weird to write $(2^d, d)$, even though it is perfectly correct.  We are supplying values of an exponential function, which look like $2^d$ and then the value of the logarithmic function is the needed exponent.
 
 We are used to writing the domain number by a letter, like $b$, and then the function value as a formula involving $b$. That's what we are used to.
 
@@ -196,7 +196,7 @@ $\log_2(b)$ is just the exponent that $2$ needs to equal $b$.
 
 
 
-$\blacktriangleright$ \textbf{Remember:} These pairs, $(b, \log_2(b))$, are the reverse of the exponential pairs : $(a, 2^a)$.  Therefore, $(b, \log_2(b))$ is also $(2^c, c)$ for some $c$. 
+$\blacktriangleright$ \textbf{Remember:} These logarithmic pairs, like $(b, \log_2(b))$, are the reverse of exponential pairs, like $(c, 2^c)$.  Therefore, $(b, \log_2(b))$ is also $(2^c, c)$ for some $c$. 
 
 $\blacktriangleright$  $\log_2(b)$ is the exponent, so that $2^? = b$ 
 
@@ -396,9 +396,9 @@ We have two types of core logarithmic functions whose behavior is dictated by th
           \addplot [line width=2, penColor, smooth,samples=200,domain=(0.003:8),<->] {-ln(x)/ln(2)};
 
 
-          \addplot[color=penColor,fill=penColor2,only marks,mark=*] coordinates{(1,0)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(1,0)};
 
-          \node[penColor2] at (axis cs:7,1) {$\log_{\tfrac{1}{2}}(x)$};
+          \node[penColor] at (axis cs:7,1) {$\log_{\tfrac{1}{2}}(x)$};
 
   \end{axis}
   \begin{axis}[at={(invexp.outer east)},anchor=outer west,
@@ -501,7 +501,7 @@ Now the Chain Rule can give us the behavior.
 \begin{fact}
 
 
-Unlike exponential functions, the $D$ can be absorded into the logarithm.
+Unlike exponential functions, the constant term, $D$, can be absorded into the logarithm.
 
 
 
@@ -1227,7 +1227,7 @@ It has special notation.
 $\ln(x)$ is the thing you raise $e$ to, to get $x$. 
 
 
-\textbf{Note:}  That is a lowercase ``el'' and a lowercase ``en''. It is not ``In''. 
+\textbf{Note:}  That is a lowercase ``el'' and a lowercase ``en''. It is not ``In''.  It is not ``eye-en''.
 
 
 \end{definition}

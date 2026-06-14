@@ -15,7 +15,7 @@ characteristics
 
 
 
-In the world of functions, polynomials play a similar role as the integers play in the real numbers. And, if we'll confine our discuss to only continuous functions on closed intervals, then polynomials are more like the rational numbers - you can find a polynomial as close as you want to any continuous function. 
+In the world of functions, polynomials play a similar role as the rational numbers - you can find a polynomial as close as you want to any continuous function. 
 
 
 In other words, no matter what small distance you think up...
@@ -63,7 +63,7 @@ $a_k x^k$ are called \textbf{terms}.
 When analyzing the behavior of polynomials, the characteristics depend on the zeros of the derivative, which Calculus will show us is another polynomial.  Analyzing polynomials rests on their zeros.
 
 
-For analytic purposes, we would prefer a product
+For this reason, we would prefer a product
 
 \[   p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)  \]
 
@@ -148,7 +148,7 @@ As you will see later, polynomials have a limit on the number of zeros and extre
 
 $p(x) = a (x-r_n)(x-r_{n-1})  \cdots (x-r_2)(x-r_1)$ is the \textbf{factored form} of a polynomial (a product).  
 
-In an effort to be clearer, we clean up the roots, because there could be repeated roots and we would like to point this out.  Therefore the reduced or simplified factored form looks like
+In an effort to be clearer, we clean up the roots, because there could be repeated roots and we would like to point this out.  Therefore, the reduced or simplified factored form looks like
 
 
 
@@ -158,7 +158,7 @@ In an effort to be clearer, we clean up the roots, because there could be repeat
 
 
 In this version, the $r_k$ are distinct roots.  They are all different. \\
-The $e_k$ are the exponents and tell us how many times a particular root repeats.  The exponents are referred to as the factor's or the root's \textbf{multiplicity}.\\
+The $e_k$ are the exponents and tell us how many times a particular root repeats.  The exponents are referred to as the factor's or the root's \textbf{multiplicity}.
 
 
 
@@ -174,7 +174,7 @@ If the factors are collected, then the multiplicity of $r$ is the exponent of $(
 As we saw with quadratics, this factorization into linear factors often requires complex numbers, which we will encounter later in this course. We are only using real numbers now.  Therefore, our factorizations will include linear factors as well as irreducible quadratic factors (quadratics with nonreal/complex roots).
 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}}  Therefore, our discussion on polynomial roots, will center around the linear factors.  Irreducible quadratics will have to stay that way until the next course.
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}}  Therefore, our discussion on polynomial roots, will center around the linear factors.  Irreducible quadratics will have to stay that way until later in the course.
 
 
 
@@ -412,9 +412,9 @@ $\blacktriangleright$ \textbf{The $x-3$ factor:}
   \end{image}
 
 
-The polynomial function has three zeros: $-4$, $1$, and $3$. \\
+The polynomial function has three zeros: $-4$, $1$, and $3$. 
 
-In between these zeros, the values of the polynomial function has a positive or negative sign. It can't change, since polynomilas are continuous. \\
+In between these zeros, the values of the polynomial function has a positive or negative sign. It can't change, since polynomials are continuous. 
 
 The sign of the whole polynomial depends on the \textbf{\textcolor{purple!85!blue}{product}} of the signs of the individual factors.
 
@@ -565,7 +565,7 @@ Graphically, the values of the function are measured vertically. Zeroes are repr
 \begin{example} Multiplicities
 
 
-In the graph below, change the sign of exponent for $(x+2)$ from $2$ to $3$.  
+For the graph below, alternate the exponent for $(x+2)$ between $2$ to $3$.  
 
 The sign of $(x+2)^3$ switches across $-2$ and the graph crosses over the axis.
 
@@ -577,12 +577,16 @@ If you change the sign of the leading coefficient, then the crossing and bouncin
 
 
 
+\pdfOnly{\textbf{$\mathcal{Desmos}$: Multiplicities}}
+\begin{onlineOnly}
+\textbf{\textcolor{teal}{$\blacktriangleright \mathcal{Desmos}$: Multiplicities}} 
 \begin{center}
 \desmos{igck8p6w15}{400}{300}
 \end{center}
+\end{onlineOnly}
+
 
 \end{example}
-
 
 
 
@@ -623,10 +627,13 @@ $-2$ and $3$ are consecutive zeros or roots of $f$.  Since $f$ is continuous, it
 This means there must be a local maximum or minimum somewhere inside the interval $(-2,3)$.
 
 
+\pdfOnly{\textbf{$\mathcal{Desmos}$: Approximating Extrema}}
+\begin{onlineOnly}
+\textbf{\textcolor{teal}{$\blacktriangleright \mathcal{Desmos}$: Approximating Extrema}} 
 \begin{center}
 \desmos{igck8p6w15}{400}{300}
 \end{center}
-
+\end{onlineOnly}
 
 
 $f(x)$ has an approximate global minimum value of $\answer[tolerance=0.1]{-6.6}$, which occurs approximately at $\answer[tolerance=0.1]{1.75}$.
@@ -645,7 +652,7 @@ Calculus will give us the tools to obtain derivatives for ourselves, and that wi
 Extending our analysis of quadratic functions, the global and local extreme values of a function occur at numbers in the domain where the corresponding points on the graph have horizontal tangent lines. We call these domain numbers \textbf{critical numbers}.  Thus, critical numbers play an important role in function analysis.  
 
 
-It will take some further analysis to get a full definition of critical numbers. We'll start with critical numbers pointing out horizontal tangent lines in the graph and improve from there.
+Graphically, we can think of critical numbers through characteristics of tangent lines.
 
 
 
@@ -673,7 +680,7 @@ It will take some further analysis to get a full definition of critical numbers.
 
 
 
-For polynomials, critical numbers are domain numbers marking flat/horizontal places in the graph.  These include tops of hills and bottoms of valleys. Critical numbers include places where extreme values occur.
+Since graphs of polynomials do not have breaks or cusps or vertical tangent lines, critical numbers are domain numbers marking flat/horizontal places in the graph.  These include tops of hills and bottoms of valleys. Critical numbers include places where extreme values occur.
 
 
 The next example shows that they also include places that are not marking maximums or minimums.
@@ -711,9 +718,15 @@ The graph of $y = f(x) = 0.1(x+2)^3(x-3)$.
 
 
 
+
+\pdfOnly{\textbf{$\mathcal{Desmos}$: Horizontal Tangent Line}}
+\begin{onlineOnly}
+\textbf{\textcolor{teal}{$\blacktriangleright \mathcal{Desmos}$: Horizontal Tangent Line}} 
 \begin{center}
 \desmos{qyzq162w2e}{400}{300}
 \end{center}
+
+\end{onlineOnly}
 
 
 
