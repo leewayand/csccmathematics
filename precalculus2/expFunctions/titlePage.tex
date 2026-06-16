@@ -24,22 +24,18 @@ Our focus is analyzing these functions.
 
 
 \begin{itemize}
-     \item \textbf{\textcolor{red!80!black}{Domain}} 
-     \item \textbf{\textcolor{red!80!black}{Zeros}} 
-     \item \textbf{\textcolor{red!80!black}{Continuity}} 
-\begin{itemize}
-     \item \textbf{\textcolor{purple!85!blue}{discontinuities}} 
-     \item \textbf{\textcolor{purple!85!blue}{singularities}} 
-\end{itemize}
-     \item \textbf{\textcolor{red!80!black}{End-Behavior}} 
-     \item \textbf{\textcolor{red!80!black}{Behavior}} 
-\begin{itemize}
-     \item \textbf{\textcolor{purple!85!blue}{intervals where increasing}} 
-     \item \textbf{\textcolor{purple!85!blue}{intervals where decreasing}} 
-\end{itemize}
-     \item \textbf{\textcolor{red!80!black}{Global Maximum and Minimum}} 
-     \item \textbf{\textcolor{red!80!black}{Local Maximums and Minimums}} 
-     \item \textbf{\textcolor{red!80!black}{Range}} 
+     \item \textbf{\textcolor{red!70!black}{Domain}} 
+     \item \textbf{\textcolor{red!70!black}{Zeros}} 
+     \item \textbf{\textcolor{red!70!black}{Continuity}} \\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{discontinuities}}\\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{singularities}}\\
+     \item \textbf{\textcolor{red!70!black}{End-Behavior}} 
+     \item \textbf{\textcolor{red!70!black}{Behavior}} \\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{intervals where increasing}}\\
+     \text{    }$\circ$ \textbf{\textcolor{purple!85!blue}{intervals where decreasing}}\\
+     \item \textbf{\textcolor{red!70!black}{Global Maximum and Minimum}} 
+     \item \textbf{\textcolor{red!70!black}{Local Maximums and Minimums}} 
+     \item \textbf{\textcolor{red!70!black}{Range}} 
      \item \textbf{\textcolor{blue!55!black}{...and we would like a nice graph}} 
 \end{itemize}
 
@@ -48,8 +44,47 @@ Our focus is analyzing these functions.
 
 
 
+As a segue from the first half of Precalculus, let's quickly review our growing library of Elementary Functions, which are compositions of the Core Funcitons withlinear functions.
 
-As a segue from the first half of Precalculus, let's quickly review our growing library of Elementary Functions. We'll begin with the exponential functions.   \\
+
+\subsection*{Core Functions} 
+
+
+
+\begin{itemize}
+\item{Constant Functions: $C(x) = c$}
+\item{The Identity Function: $Id(x) = x$}
+\item{Power Functions: $P(x) = x^n$}
+\item{Root Functions: $R(x) = \sqrt[n]{x}$}
+\item{Exponential Functions: $E(x) = r^x$}
+\item{Logarithmic Functions: $L(x) = \log_r(x)$}
+\item{Sine and Cosine: $S(x) = \sin(x)$ and $C(x) = \cos(x)$}
+\item{The Absolute Value Function: $AV(x) = |x|$}
+\end{itemize}
+
+
+By forming sums, differences, products, quotients, compositions, and inverses of these Core Functions, we obtain the \textbf{Elementary Functions}.
+
+
+\begin{itemize}
+\item{Constant}
+\item{Linear}
+\item{Quadratic}
+\item{Polynomial}
+\item{Rational}
+\item{Radical/Root}
+\item{Exponential}
+\item{Shifted Exponential}
+\item{Logarithmic}
+\item{Absolute Value}
+\item{Trigonometric}
+\item{Inverse Trigonometric}
+\end{itemize}
+
+
+
+
+After a quite reminder of the COre Functions, we'll begin analyzing exponential functions.   
 
 
 
@@ -58,10 +93,10 @@ As a segue from the first half of Precalculus, let's quickly review our growing 
 $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Basic Exponential Functions}} 
 
 
-The template for the basic exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = a \cdot r^x$}}. 
+The template for the basic exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = A \cdot r^x$}}. 
 
 \begin{itemize}
-\item $a$ is the \textbf{\textcolor{purple!85!blue}{leading coefficient}}.  It primarily determines the sign of the function values.
+\item $A$ is the \textbf{\textcolor{purple!85!blue}{leading coefficient}}.  It primarily determines the sign of the function values.
 \item $r$ is the \textbf{\textcolor{purple!85!blue}{base}}. It determines how the function values grow, depending on whether $0 < r < 1$ or $1 < r$.
 \end{itemize}
 
@@ -71,11 +106,11 @@ The template for the basic exponential function looks like \textbf{\textcolor{bl
 
 $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Shifted Exponential Functions}}   
 
-The template for a shifted exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = a \cdot r^{b \, x + c} + d$}}  or just \textbf{\textcolor{blue!55!black}{$a \cdot r^x + d$}}. 
+The template for a shifted exponential function looks like \textbf{\textcolor{blue!55!black}{$exp(x) = A \cdot r^x + D$}}  or  (\textbf{\textcolor{blue!55!black}{$A \cdot r^{B \, x + C} + D$}}). 
 
 \begin{itemize}
-\item $c$ describes a \textbf{\textcolor{purple!85!blue}{shift}} in the domain from the basic exponential function.  
-\item $d$ describes a \textbf{\textcolor{purple!85!blue}{shift}} in the function value from the basic exponential function. 
+\item $C$ describes a \textbf{\textcolor{purple!85!blue}{shift}} in the domain from the basic exponential function.  
+\item $D$ describes a \textbf{\textcolor{purple!85!blue}{shift}} in the function value from the basic exponential function. 
 \end{itemize}
 
 The first term in the formula for a shifted exponential function is, by itself, an exponential function:
@@ -87,7 +122,7 @@ a \cdot r^{b \, x + c} = a \cdot r^{b \, x} \cdot  r^c = (a \cdot r^c) \cdot r^{
 It \textbf{\textcolor{purple!85!blue}{CAN}} be written in the form $A \cdot R^x$, where $A = a \cdot r^c$ and $R = r^b$.
 
 
-Algebraically, the second term, the ``+ d'' cannot be absorbed into the exponential form.  However, shifting functions is a very common operation and so, we'll include $a \cdot r^{b \, x + c} + d$ in our general ideas of exponential functions.
+Algebraically, the constant term, the ``+ D'' cannot be absorbed into the exponential form.  However, shifting functions is a very common operation and so, we'll include $A \cdot r^{B \, x + C} + D$ in our general ideas of exponential functions.
 
 
 

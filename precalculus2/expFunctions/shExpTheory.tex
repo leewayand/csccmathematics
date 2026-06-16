@@ -15,26 +15,55 @@ the shifted story
 
 
 
-Shifted Exponential Functions are functions that can be represented with formulas of the form
-
-\[
-ShExp(x) = A \, r^{B \, x + C} + D
-\]
+Shifted Exponential Functions are exponential functions with an added constant term.
 
 
 
-Shifted exponential functions are not exponential functions.  Equal changes in the domain do not give equal percentage changes in the function. \\
 
 
 
-As an example, consider $f(x) = 2^{x} + 1$. \\
+\begin{definition} \textbf{\textcolor{green!50!black}{Basic Shifted Exponential Functions}}
+
+A basic \textbf{shifted exponential function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     ShExp(x) =    A \cdot r^x  + D         \]
+
+where $A$ and $D$ are real numbers, $A \ne 0$, and $r > 0$.
 
 
-$f(0) = 1$, $f(1) = 3$, and $f(2) = 5$. \\
+\end{definition}
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{General Shifted Exponential Functions}}
+
+A general \textbf{shifted exponential function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+
+\[     ShExp(x) =    A \cdot r^{B \, x + C}  + D         \]
+
+where $A$, $B$, $C$, and $D$ are real numbers, $A \ne 0$, $B \ne 0$, and $r > 0$.
+
+
+\end{definition}
+
+
+
+
+Shifted exponential functions are not exponential functions.  Equal changes in the domain do not give equal percentage changes in the function. 
+
+
+
+As an example, consider $f(x) = 2^{x} + 1$. 
+
+
+$f(0) = 1$, $f(1) = 3$, and $f(2) = 5$. 
 
 The change in the domain from $0$ to $1$ is $1$.  The change from $1$ to $2$ is also $1$. The same change in the domain.
 
-Let's now compare the percentage changes in the function values. \\
+Let's now compare the percentage changes in the function values. 
 
 
 
@@ -42,7 +71,7 @@ Let's now compare the percentage changes in the function values. \\
 \frac{f(1) - f(0)}{f(0)} = \frac{3 - 1}{1} = 2
 \]
 
-That is a $200\%$ change in the function value. \\
+That is a $200\%$ change in the function value. 
 
 
 
@@ -52,7 +81,7 @@ That is a $200\%$ change in the function value. \\
 \frac{f(2) - f(1)}{f(1)} = \frac{5 - 3}{3} = \frac{2}{3}
 \]
 
-That is a $66\%$ change in the function value. \\
+That is a $66\%$ change in the function value. 
 
 
 
@@ -61,11 +90,38 @@ Equal changes in the domain do not give equal percentage changes in the function
 
 
 \begin{center}
-\textbf{But they are really really really close.} \\
+\textbf{But they are really really really close.} 
 \end{center}
 
 
-The behavior of shifted exponential function is the same as for exponential functions.  They just exhibit this behavior away from $0$ (the horizontal axis).\\
+The behavior of shifted exponential function is the same as for exponential functions.  They just exhibit this behavior away from $0$ (the horizontal axis).
+
+
+So, we examine shifted exponential functions as we examined expoential functions.
+
+
+
+
+\begin{idea}  \textbf{\textcolor{blue!55!black}{Shifted Exponential Compositions}} 
+
+We can view shifted exponential functions as compositions
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = A \, u + D$, a linear function
+\item Let $E(t) = r^t$, a core shifted exponential function
+\item Let $L_{in}(v) = B \, v + C$, a linear function
+\end{itemize}
+
+With these component functions, we can view exponential functions as compositions.
+
+
+\[  Exp(x) =    A \cdot r^{B \, x + C} + D = (L_{out} \circ E \circ L_{in})(x) \]
+
+
+Now the Chain Rule can give us the behavior.
+
+\end{idea}
 
 
 
@@ -86,11 +142,16 @@ The behavior of shifted exponential function is the same as for exponential func
 
 
 
-\begin{example}  
+
+
+\begin{example}  Analysis
 
 
 
-Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7$ \\
+Analyze   $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7$ 
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
@@ -98,9 +159,15 @@ Categorize:   $f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7$ is a shifted exponential
 
 
 
-Let's think about the pieces of the formula to help write our analysis. \\
 
-\begin{idea}
+
+
+\textbf{Just Thinking...}  
+
+
+Let's think about the pieces of the formula to help write our analysis. 
+
+
 
 
 
@@ -122,8 +189,8 @@ Graph of $y = f(x)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -131,9 +198,9 @@ Graph of $y = f(x)$.
           
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-7};
 
-      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)-7};
 
-      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,-6.66)};
 
           
 
@@ -147,12 +214,11 @@ Graph of $y = f(x)$.
 
 
 
-With these ideas, we can write an algebraic analysis.
 
 
 
+\textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis.}} 
 
-\end{idea}
 
 
 
@@ -167,7 +233,7 @@ With these ideas, we can write an algebraic analysis.
 
 \textbf{Domain:} 
 
-The domain of every shifted exponential function is $(-\infty, \infty)$. \\
+The domain of every shifted exponential function is $(-\infty, \infty)$. 
 
 
 
@@ -175,7 +241,7 @@ The domain of every shifted exponential function is $(-\infty, \infty)$. \\
 
 
 
-$f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = 0$ \\
+$f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = 0$ 
 
 
 \begin{align*}
@@ -186,14 +252,14 @@ x+5 & = \log_2{21} \\
 x & = \log_2{21} - 5
 \end{align*}
 
-\textbf{Note:}  $\log_2{21} - 5 \approx -0.607$, which agrees with the graph. \\
+\textbf{Note:}  $\log_2{21} - 5 \approx -0.607$, which agrees with the graph. 
 
 
 
 
 \textbf{Continuity:}  
 
-Shifted exponential functions are continuous.  \\
+Shifted exponential functions are continuous.  
 
 
 
@@ -204,24 +270,47 @@ Shifted exponential functions are continuous.  \\
 
 \textbf{Behavior:} 
 
-Like exponential functions, shifted exponential functions are always increasing or always decreasing. \\
+Like exponential functions, shifted exponential functions are always increasing or always decreasing. 
 
 
 
-The leading coefficient of $f$ is $\frac{1}{3}$, which is positive. \\
 
-The base of $f$ is $2 > 1$.\\
+
+$\blacktriangleright$ \textbf{Thinking of formula pieces...}
+
+
+
+The leading coefficient of $f$ is $\frac{1}{3}$, which is positive. 
+
+The base of $f$ is $2 > 1$.
 
 The leading coefficient of the argument is $1$, which is also positive.  
 
 
 
-Comparing to $e^x$, a base of $2$ does not change the behavior. A positive leading coefficient does not chnage the behavior.  A positive leading coefficient for the linear exponent does not change the behavior.  We have an increasing function. \\
+Comparing to $e^x$, a base of $2$ does not change the behavior. A positive leading coefficient does not chnage the behavior.  A positive leading coefficient for the linear exponent does not change the behavior.  We have an increasing function. 
 
 
 
 
 
+$\blacktriangleright$ \textbf{Thinking with the Chain Rule...}
+
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = \frac{1}{3} \, u - 7$, an increasing linear function
+\item Let $E(t) = 2^t$, an increasing core shifted exponential function
+\item Let $L_{in}(v) = v + 2$, an increasing linear function
+\end{itemize}
+
+
+\[
+f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = (L_{out}(u) \circ E \circ L_{in}(u))(x)
+\]
+
+\[  inc \circ inc \circ inc = inc  \]
 
 \textbf{End-Behavior:} 
 
@@ -236,7 +325,7 @@ The negative direction is the direction that makes the exponent negative.  Since
 
 
 
-The other direction is where the shifted exponential function is uunbounded.  Since the leading coefficient of $f$ is positive, $f$ is unbounded positively. \\
+The other direction is where the shifted exponential function is uunbounded.  Since the leading coefficient of $f$ is positive, $f$ is unbounded positively. 
 
 
 
@@ -252,12 +341,12 @@ The other direction is where the shifted exponential function is uunbounded.  Si
 
 \textbf{Global Extrema:} 
 
-Shifted exponential functions do not have global maximums or minimums. \\
+Shifted exponential functions do not have global maximums or minimums. 
 
 
 \textbf{Local Extrema:} 
 
-Shifted exponentials function do not have local maximums or minimums. \\
+Shifted exponentials function do not have local maximums or minimums. 
 
 
 
@@ -292,14 +381,14 @@ Shifted exponentials function do not have local maximums or minimums. \\
 
 
 
-$f(x) = \frac{1}{3} \, 2^{x+5} - 7$ is the function in the last example.  We could take advantage of exponential algebra to simplify the formula.   \\
+$f(x) = \frac{1}{3} \, 2^{x+5} - 7$ is the function in the last example.  We could take advantage of exponential algebra to simplify the formula.   
 
 \[ 
 f(x) = \frac{1}{3} \, 2^{x+5} - 7 = \frac{1}{3} \, 2^x \cdot 2^5 - 7 = \frac{32}{3} \, 2^x  - 7
 \]
 
 
-We now have a basic exponential function shifted down $7$.  The new base is still $2$ and the new leading coefficient is $\frac{32}{3}$.
+We now have a basic exponential function shifted by $7$.  The new base is still $2$ and the new leading coefficient is $\frac{32}{3}$.
 
 
 
@@ -341,6 +430,12 @@ By doing this, we change our strategic point to $\left( 0, \frac{32}{3} - 7 \rig
 
 
 
+
+
+\[
+\lim\limits_{x \to -\infty} f(x) = -7
+\]
+
 \end{example}
 
 
@@ -370,7 +465,7 @@ By doing this, we change our strategic point to $\left( 0, \frac{32}{3} - 7 \rig
 
 Let $G(t) = 4 \cdot 3^{2t-1} - 5$.  
 
-We could take advantage of exponential algebra to simplify the exponent.   \\
+We could take advantage of exponential algebra to simplify the exponent.   
 
 \[ 
 G(t) = 4 \cdot 3^{2t-1} - 5 = 4 \cdot 3^{2t} \cdot \frac{1}{3} - 5 = \frac{4}{3} \cdot (3^2)^t - 5  = \frac{4}{3} \cdot 9^t - 5
@@ -382,7 +477,7 @@ We now have a basic exponential function shifted down $\answer{5}$.  The new bas
 
 
 
-The leading coefficient is $\frac{4}{3} > 0$ and the base is $9 > 1$. Therefore, $G(t)$ is an increasing function.  The function values will be positive, once they overcome the drop of $5$ to the horizontal asymptote.
+The leading coefficient is $\frac{4}{3} > 0$ and the base is $9 > 1$. Therefore, $G(t)$ is an increasing function.  The function values will be positive, once they overcome the drop of $5$.
 
 
 
@@ -436,25 +531,30 @@ End-Behavior:
 
 
 
-\begin{example}  
+\begin{example}  Analysis
 
 
 
 Analyze   $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
 
 
-Categorize: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ is a shifted exponential function, becuase it matches our template,  $A \, r^{B \, x + C} + D$. \\
-
-\begin{idea}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
-\textbf{\textcolor{purple!85!blue}{Formula dissection:}}  \\
+Categorize: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ is a shifted exponential function, because it matches our template,  $A \, r^{B \, x + C} + D$. \\
+
+
+
+
+
+
+\textbf{Just Thinking...}
 
 
 $\blacktriangleright$  the base: $\frac{2}{3} < 1$\\
 $\blacktriangleright$  the linear exponent: $3-t$ is positive for large negative $t$. \\
 $\blacktriangleright$  the linear exponent: $3-t$ is negative for large positive $t$. \\
-$\blacktriangleright$  the leading coefficient is negative. \\
+$\blacktriangleright$  the leading coefficient is negative. 
 
 
 Together, these tell us that $B(t)$ settles down for large negative $t$ and that $B(t)$ becomes unbounded when $t$ is large and positive.
@@ -491,7 +591,7 @@ Exponential growth to the right and decay to the left.
 
 
 
-Since $a = -2 < 0$, these smaller/larger values of $-2 \, \left( \frac{2}{3} \right)^{-t}$ are smaller/larger negative values.
+Since $a = -2 < 0$, we have $-2 \, \left( \frac{2}{3} \right)^{-t} < 0$ .
 
 
 
@@ -528,8 +628,8 @@ Graph of $y = B(t)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -537,9 +637,9 @@ Graph of $y = B(t)$.
           
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {4};
 
-      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:7.5),<->] {-2 * (0.666^(3-x)) + 4};
 
-      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,2)};
 
           
 
@@ -550,12 +650,9 @@ Graph of $y = B(t)$.
 
 
 
-With these ideas, we can write an algebraic analysis.
-
-\end{idea}
 
 
-
+\textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis.}} 
 
 
 
@@ -566,7 +663,7 @@ With these ideas, we can write an algebraic analysis.
 
 \textbf{Domain:} 
 
-The domain of every shifted exponential function is $(-\infty, \infty)$. \\
+The domain of every shifted exponential function is $(-\infty, \infty)$. 
 
 
 
@@ -574,7 +671,7 @@ The domain of every shifted exponential function is $(-\infty, \infty)$. \\
 
 
 
-$B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
+$B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ 
 
 
 \begin{align*}
@@ -585,7 +682,7 @@ $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
 3 - \log_{\tfrac{2}{3}}(2) & = t
 \end{align*}
 
-\textbf{Note:}  We'll need to switch bases to use the calculatr=or to get an approximatio to comapre with the graph.
+\textbf{Note:}  We'll need to switch bases to use the calculator to get an approximation to compare with the graph.
 
 
 
@@ -594,14 +691,14 @@ $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ \\
 \]
 
 
-That agrees with the graph. \\
+That agrees with the graph. 
 
 
 
 
 \textbf{Continuity:}  
 
-Shifted exponential functions are continuous.  \\
+Shifted exponential functions are continuous.  
 
 
 
@@ -612,23 +709,45 @@ Shifted exponential functions are continuous.  \\
 
 \textbf{Behavior:} 
 
-Like exponential functions, shifted exponential functions are always increasing or always decreasing. \\
+Like exponential functions, shifted exponential functions are always increasing or always decreasing. 
 
 
 
-The leading coefficient of $B$ is $-2$, which is negative. \\
 
-The base of $B$ is $\frac{2}{3} < 1$.\\
+$\blacktriangleright$ \textbf{Thinking about the formula pieces...}
+
+The leading coefficient of $B$ is $-2$, which is negative. 
+
+The base of $B$ is $\frac{2}{3} < 1$.
 
 The leading coefficient of the linear exponent is $-1$, which is negative.  
 
 
 
-Comparing to $e^x$, a base of $-2$ does change the behavior from increasing to decreasing. A negative leading coefficient changes the behavior back to increasing.  A negative leading coefficient for the linear exponent does changes the behavior again to decreasing.  We have an decreasing function. \\
+Comparing to $e^x$, a base of $\frac{2}{3}$ does change the behavior from increasing to decreasing. A negative leading coefficient changes the behavior back to increasing.  A negative leading coefficient for the linear exponent changes the behavior again to decreasing.  We have a decreasing function. 
 
 
 
 
+
+
+$\blacktriangleright$ \textbf{Thinking with the Chain Rule...}
+
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = -2 \, u + 4$, a decreasing linear function
+\item Let $E(x) = \left( \frac{2}{3} \right)^x$, a decreasing core shifted exponential function
+\item Let $L_{in}(v) = 3 - v$, a decreasing linear function
+\end{itemize}
+
+
+\[
+B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4 = (L_{out}(u) \circ E \circ L_{in}(u))(t)
+\]
+
+\[  dec \circ dec \circ dec = dec  \]
 
 
 \textbf{End-Behavior:} 
@@ -663,12 +782,12 @@ The other direction is where the shifted exponential function approached the con
 
 \textbf{Global Extrema:} 
 
-Shifted exponential functions do not have global maximums or minimums. \\
+Shifted exponential functions do not have global maximums or minimums. 
 
 
 \textbf{Local Extrema:} 
 
-Shifted exponentials function do not have local maximums or minimums. \\
+Shifted exponentials function do not have local maximums or minimums. 
 
 
 
@@ -750,7 +869,7 @@ We could have further transfered the negative sign in the exponent to the base b
 
 
 
-Algebra provides many tools for modifying the representing formula and altering how we think about the behavior. \\
+Algebra provides many tools for modifying the representing formula and altering how we think about the behavior. 
 
 
 
@@ -763,7 +882,7 @@ Algebra provides many tools for modifying the representing formula and altering 
 
 
 
-Consider  $K(f) = 3^{5-f} - 5$ \\
+Consider  $K(f) = 3^{5-f} - 5$ 
 
 \begin{question}
  
@@ -778,19 +897,21 @@ The exponent gets big and positive when $f$ gets big and \wordChoice{\choice{pos
 \begin{question}
 
 
-The graph will become unbounded to the \wordChoice{\choice{right}\choice[correct]{left}}.\\
+The graph will become unbounded to the \wordChoice{\choice{right}\choice[correct]{left}}.
+
 \end{question}
 
 \begin{question}
 
 
-The horizontal asymptote is $y = \answer{-5}$.
+The horizontal asymptote on the graph is $y = \answer{-5}$.
 \end{question}
 
 \begin{question}
 
 
-The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.\\
+The graph will approach the asymptote to the \wordChoice{\choice[correct]{right}\choice{left}}.
+
 \end{question}
 \begin{question}
 
@@ -800,7 +921,8 @@ Our one strategic anchor point moves to $\left(\answer{5}, \answer{-4}\right)$.
 \begin{question}
 
 
-The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.\\
+The graph will become unbounded \wordChoice{\choice[correct]{up}\choice{down}}.
+
 \end{question}
 
 
@@ -814,8 +936,8 @@ Graph of $y = K(f)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$f$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -823,9 +945,9 @@ Graph of $y = K(f)$.
           
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {-5};
 
-      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(2.75:10),<->] {3^(5-x) - 5};
 
-      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(5,-4)};
 
  
 
@@ -849,8 +971,6 @@ Quick ideas: \\
 
 
 \end{example}
-
-
 
 
 
