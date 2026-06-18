@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Steps}
+\title{Chaining}
 
 \begin{document}
 
@@ -13,11 +13,15 @@ range to domain
 
 
 
+Compositions are common place.
+
+It is much easier to think of smaller, simplier component functions and how they fit together, than it is to contemplate the composition as a whole.
+
+It is often necessary to trim the domain and range to fit the chain together.
 
 
 
-
-\begin{template} \textbf{\textcolor{blue!55!black}{Composition}}  \\
+\begin{idea} \textbf{\textcolor{blue!55!black}{Composition}}  
 
 
 Let $f$ be a function with domain $D_f$.
@@ -43,33 +47,34 @@ The composition is defined on a subset of the domain of $g$.  The composition is
 
 
 
-\end{template}
+\end{idea}
 
-The values of $g$ are becoming domain numbers for $f$. \\
+The values of $g$ (range) are becoming domain numbers for $f$. 
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Domain}}
 
-\begin{itemize}
-\item The domain of $(f \circ g)(x) = f(g(x))$ is not the domain of $g$.
-\item The domain of $(f \circ g)(x) = f(g(x))$ is a subset of the domain of $g$.
-\item The domain of $(f \circ g)(x) = f(g(x))$ is consists of the domain numbers of $g$, for which the value of $g$ is in the domain of $f$.
-\end{itemize}
+The domain of $(f \circ g)(x) = f(g(x))$ is not the domain of $g$.
+
+The domain of $(f \circ g)(x) = f(g(x))$ is a subset of the domain of $g$.
+
+The domain of $(f \circ g)(x) = f(g(x))$ consists of the domain numbers of $g$, for which the value of $g$ is in the domain of $f$.
+
 
 \end{warning}
 
 
+We can only use numbers in the domain of the inner function when their function value is inside the domain of the outer function.
 
 
 
 
+\subsection*{Domain}
 
 
 
-
-\begin{example}
-
+Consider these component functions.
 
 Let $X(a) = -\sqrt{3 - a}$ with its natural domain.
 
@@ -122,8 +127,10 @@ Is $2$ in the domain of $Z \circ X$?
 
 
 
+We cannot always use the full domain of the inner component function as the domain of the composition.
 
-\end{example}
+Sometimes, we must remove items from the full domain of the inner component function so that the collection of function values for the inner function are inside the domain of the outer function.
+
 
 
 
@@ -281,7 +288,7 @@ Is $5$ in the domain of $Y \circ Z$?
 
 
 
-
+\subsection*{Domain : Graphically}
 
 Define $f$ and $g$ graphically as follows:
 
@@ -620,23 +627,28 @@ Is $-2$ in the domain of $f \circ f$?
 
 \subsection*{Range Values}
 
-
-
-Let $H(x) = e^x + 20$ and $K(y) = \sqrt{y}$. \\
-
-Let $C(t) = (K \circ H)(t) = K(H(t))$. \\
+The range of the whole composition is inside the range of the outer function.  However, if we are trimming the domain, the values of the composition may not make up the whole range of the outer function.
 
 
 
-\begin{explanation}
 
+
+
+Let $H(x) = e^x + 20$ and $K(y) = \sqrt{y}$. 
+
+Let $C(t) = (K \circ H)(t) = K(H(t))$. 
+
+
+
+
+\textbf{For instance},
 
 $4$ is in the range of $K$, since $16$ is in the natural domain of $K$ and $K(16) = \sqrt{16} = 4$. \\
 
 However, $4$ is not in the range of $K \circ H$, because the value of $H$ is never $16$. 
 
 
-\end{explanation}
+
 
 
 
@@ -669,11 +681,17 @@ Is $1$ in the range of $K \circ H$?
 \end{question}
 
 
+For $K(y) = \sqrt{y} = 1$, we need $y=1$.  However, the values of $K$ are never less than $20$.  The function $H$ can never supply the value needed for $K$ to equal $1$.
 
-\begin{warning}
 
 
-The range of $K \circ H$ is inside the range of $K$, but it might not be all of the range of $K$. \\
+
+
+
+\begin{warning} \textbf{\textcolor{red!70!black}{Range}}
+
+
+The range of $K \circ H$ is inside the range of $K$, but it might not be all of the range of $K$. 
 
 
 It depends on how much of the domain of $K$ gets covered by the range of $H$.

@@ -13,7 +13,7 @@ increasing and decreasing
 
 
 
-Probably the most important characteristic we want to know about a function is its behavior.  That is, where is it increasing and where is it decreasing? \\
+Probably the most important characteristic we want to know about a function is its behavior.  That is, where is it increasing and where is it decreasing? 
 
 
 
@@ -22,13 +22,11 @@ Increasing and decreasing for a function is a comparison between its domain and 
 
 
 
-\textbf{\textcolor{blue!55!black}{Number Behavior:}}  Our real numbers have a natural ordering, which we call \textit{less than} and \textit{greater than}.  Visually, these mean ``to the left of'' and ``to the right of'' on a number line. \\
+\textbf{\textcolor{blue!55!black}{Number Behavior:}}  Our real numbers have a natural ordering, which we call \textit{less than} and \textit{greater than}.  Visually, these mean ``to the left of'' and ``to the right of'' on a number line. 
 
-If you move to the right on the number line, then the numbers are increasing. \\
+If you move to the right on the number line, then the numbers are becoming greater. 
 
-If you move to the left on the number line, then the numbers are decreasing. \\
-
-
+If you move to the left on the number line, then the numbers are becoming lesser. 
 
 
 
@@ -38,7 +36,9 @@ If you move to the left on the number line, then the numbers are decreasing. \\
 
 
 
-With functions, we have two number lines and we compare movement on them to each other. \\
+
+
+With functions, we have two number lines and we compare movement on them to each other. 
 
 
 
@@ -52,21 +52,37 @@ With functions, we have two number lines and we compare movement on them to each
 \begin{template} \textbf{\textcolor{blue!55!black}{Increasing Function}} 
 
 
-A function is increasing if its domain and range values change in the same way. \\
+A function is increasing if its domain and range values change in the same way. 
 
 
-In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is also to the right.
+In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is also to the right. Or, the reverse.  When we move to the left on the domain number line, the corresponding movement on the range number line is also to the left.
 
-When the domain increases, the function values also increase.
+\begin{itemize}
+\item When the domain becomes greater, the function value also becomes greater.
+\item When the domain becomes lesser, the function value also becomes lesser.
+\end{itemize}
+
+Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  For the range number line, moving ``right'' is moving up.
 
 
-Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  When we move to the right on the domain number line, then the corresponding movement on the range number line is up.
+For an increasing function, movement to the right on the domain number line, corresponds to up movement on the range number. 
 
 
 
 \[
 \text{ When } \,  a < b \, \text{ then } \, f(a) < f(b)
 \]
+
+
+Or, the reverse.
+
+
+\[
+\text{ When } \,  b > a \, \text{ then } \, f(b) > f(a)
+\]
+
+
+Either way, the movement is in the same direction for both the domain and range (function value).
 
 
 \end{template}
@@ -87,21 +103,37 @@ Graphically, we have to remember that our range number line is not horizontal.  
 \begin{template} \textbf{\textcolor{blue!55!black}{Decreasing Function}} 
 
 
-A function is decreasing if its domain and range values change in oppositely. \\
+A function is decreasing if its domain and range values change in the opposite same way. 
 
 
-In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is to the left.
+In other words, when we move to the right on the domain number line, the corresponding movement on the range number line is to the left. Or, the reverse.  When we move to the left on the domain number line, the corresponding movement on the range number line is to the left.
 
-When the domain increases, the function values decrease.
+\begin{itemize}
+\item When the domain becomes greater, the function value also becomes lesser.
+\item When the domain becomes lesser, the function value also becomes greater.
+\end{itemize}
+
+Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  For the range number line, moving ``left'' is moving down.
 
 
-Graphically, we have to remember that our range number line is not horizontal.  It is vertical.  When we move to the right on the domain number line, then the corresponding movement on the range number line is down.
+For a dcreasing function, movement to the right on the domain number line, corresponds to down movement on the range number. 
 
 
 
 \[
 \text{ When } \,  a < b \, \text{ then } \, f(a) > f(b)
 \]
+
+
+Or, the reverse.
+
+
+\[
+\text{ When } \,  b > a \, \text{ then } \, f(b) < f(a)
+\]
+
+
+Either way, the movement is in the opposite same direction for the domain and range (function value).
 
 
 \end{template}
@@ -111,9 +143,17 @@ Graphically, we have to remember that our range number line is not horizontal.  
 
 
 
-We want to following this idea through compositions.   \\
+\subsection*{Composition}
+
+For compositions, this greater and lesser story occurs twice. Once for the inner function which is chained to a story for the outer function.
 
 
+
+We want to following this story through compositions.   
+
+
+
+We'll first think of it visually with functions defined graphically.
 
 
 
@@ -122,9 +162,9 @@ We want to following this idea through compositions.   \\
 
 
 
-$f$ and $g$ are defined graphically below.  They are both increasing functions. \\
+$f$ and $g$ are defined graphically below.  They are both increasing functions. 
 
-What about $f \circ g$? \\
+What about $f \circ g$? 
 
 
 
@@ -173,7 +213,7 @@ What about $f \circ g$? \\
 
 
 
-To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+To decide the function behavior of a composition, we need to follow movement through two graphs. 
 
 
 
@@ -209,20 +249,22 @@ $f \circ g$ is an increasing function.
 
 
 
-\begin{observation}
+\begin{observation} \textbf{\textcolor{-red!75}{Domain}}
 
 
-This only applies to the domain of $f \circ g$, which needs to be determined. \\
+This only applies to the domain of $f \circ g$, which needs to be determined. 
 
+For the functions above...
 
-
-The range of $g$ is $(-4, 8)$.  However, the domain of $f$ is $(-4, 2)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(-4, 2)$? \\
+The range of $g$ is $(-4, 8)$.  However, the domain of $f$ is $(-4, 2)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(-4, 2)$? 
 
 
 We need solutions to $g(t) = 2$.  From the graph, it looks like $g(3) = 2$.  Therefore, we can only use $(0, 3)$ from the domain of $g$.
 
 
-Therefore, the domain of $f \circ g$ is $(0, 3)$.  On this domain, $f \circ g$ is increasing.
+Therefore, the domain of $f \circ g$ is $(0, 3)$.  
+
+On this domain, $f \circ g$ is increasing.
 
 
 
@@ -231,15 +273,15 @@ Therefore, the domain of $f \circ g$ is $(0, 3)$.  On this domain, $f \circ g$ i
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Both Directions}}
 
 Increasing means the domain and range change in the same way.
 
-When the domain increases, then range increases.
+When the domain becomes greater, then the range becomes greater.
 
 It goes the other way as well.
 
-When the domain decreases, the range decreases.
+When the domain becomes lesser, the range becomes lesser.
 
 They mean the same thing.
 
@@ -248,7 +290,7 @@ They mean the same thing.
 
 
 
-We can describe all of this thinking algebraically as well. \\
+We can describe all of this thinking algebraically as well. 
 
 
 If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.
@@ -289,9 +331,9 @@ If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)
 
 
 
-$f$ and $g$ are defined graphically below.  $f$ is an increasing function.  $g$ is a decreasing function. \\
+$f$ and $g$ are defined graphically below.  $f$ is an increasing function.  $g$ is a decreasing function. 
 
-What about $f \circ g$? \\
+What about $f \circ g$? 
 
 
 
@@ -340,7 +382,7 @@ What about $f \circ g$? \\
 
 
 
-To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+To decide the function behavior of a composition, we need to follow movement through two graphs. 
 
 
 
@@ -376,14 +418,15 @@ $f \circ g$ is a decreasing function.
 
 
 
-\begin{observation}
+\begin{observation} \textbf{\textcolor{-red!75}{Domain}}
 
 
-This only applies to the domain of $f \circ g$, which needs to be determined. \\
+This only applies to the domain of $f \circ g$, which needs to be determined. 
 
 
+For the functions above...
 
-The range of $g$ is $(-8, 4)$.  However, the domain of $f$ is $(-4, 2)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(-4, 2)$? \\
+The range of $g$ is $(-8, 4)$.  However, the domain of $f$ is $(-4, 2)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(-4, 2)$? 
 
 
 We need solutions to $g(t) = -4$ and $g(t) = 2$.  From the graph, it looks like $g(4) = -4$  and $g(2) = 2$. Therefore, we can only use $(2, 4)$ from the domain of $g$.
@@ -400,15 +443,15 @@ Therefore, the domain of $f \circ g$ is $(2, 4)$.  On this domain, $f \circ g$ i
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Both Directions}}
 
 Decreasing means the domain and range change in the opposite way.
 
-When the domain increases, then range decreases.
+When the domain becomes greater, then range becomes lesser.
 
 It goes the other way as well.
 
-When the domain decreases, the range increases.
+When the domain becomes lesser, the range becomes greater.
 
 They mean the same thing.
 
@@ -420,7 +463,7 @@ They mean the same thing.
 
 
 
-We can describe all of this thinking algebraically as well. \\
+We can describe all of this thinking algebraically as well. 
 
 
 If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.
@@ -479,9 +522,9 @@ If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)
 
 
 
-$f$ and $g$ are defined graphically below.  $f$ is a decreasing function.  $g$ is an increasing function. \\
+$f$ and $g$ are defined graphically below.  $f$ is a decreasing function.  $g$ is an increasing function. 
 
-What about $f \circ g$? \\
+What about $f \circ g$? 
 
 
 
@@ -532,7 +575,7 @@ What about $f \circ g$? \\
 
 
 
-To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+To decide the function behavior of a composition, we need to follow movement through two graphs. 
 
 
 
@@ -568,14 +611,16 @@ $f \circ g$ is a decreasing function.
 
 
 
-\begin{observation}
+\begin{observation} \textbf{\textcolor{-red!75}{Domain}}
 
 
-This only applies to the domain of $f \circ g$, which needs to be determined. \\
+This only applies to the domain of $f \circ g$, which needs to be determined. 
 
 
+For the functions above...
 
-The range of $g$ is $(-4, 2)$.  However, the domain of $f$ is $(0, 6)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(0, 6)$? \\
+
+The range of $g$ is $(-4, 2)$.  However, the domain of $f$ is $(0, 6)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(0, 6)$? 
 
 
 We need solutions to $g(t) = 0$.  From the graph, it looks like $g(-2) = 0$.  Therefore, we can only use $(-2, 2)$ from the domain of $g$.
@@ -592,15 +637,15 @@ Therefore, the domain of $f \circ g$ is $(-2, 2)$.  On this domain, $f \circ g$ 
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Both DIrections}}
 
 Decreasing means the domain and range change in the opposite way.
 
-When the domain increases, then range decreases.
+When the domain becomes greaters, then range becomes lesser.
 
 It goes the other way as well.
 
-When the domain decreases, the range increases.
+When the domain becomes lesser, the range becomes greaters.
 
 They mean the same thing.
 
@@ -612,7 +657,7 @@ They mean the same thing.
 
 
 
-We can describe all of this thinking algebraically as well. \\
+We can describe all of this thinking algebraically as well. 
 
 
 If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.
@@ -679,9 +724,9 @@ If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)
 
 
 
-$f$ and $g$ are defined graphically below.  $f$ and $g$ are both decreasing functions.  \\
+$f$ and $g$ are defined graphically below.  $f$ and $g$ are both decreasing functions.  
 
-What about $f \circ g$? \\
+What about $f \circ g$? 
 
 
 
@@ -732,7 +777,7 @@ What about $f \circ g$? \\
 
 
 
-To decide the function behavior of a composition, we need to follow movement through two graphs. \\
+To decide the function behavior of a composition, we need to follow movement through two graphs. 
 
 
 
@@ -764,20 +809,21 @@ To decide the function behavior of a composition, we need to follow movement thr
 
 Gluing the whole story, movement to the right in the domain of $f \circ g$ corresponds to movement to the right in the range of $f \circ g$.
 
-$f \circ g$ is a increasing function. \\
+$f \circ g$ is a increasing function. 
 
 
-Decreasing means turning around and we turned around twice. \\
+Decreasing means turning around and we turned around twice. 
 
 
-\begin{observation}
+\begin{observation} \textbf{\textcolor{-red!75}{Domain}}
 
 
-This only applies to the domain of $f \circ g$, which needs to be determined. \\
+This only applies to the domain of $f \circ g$, which needs to be determined. 
 
 
+For the functions above...
 
-The range of $g$ is $(2, 7)$.  However, the domain of $f$ is $(0, 6)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(0, 6)$? \\
+The range of $g$ is $(2, 7)$.  However, the domain of $f$ is $(0, 6)$.   We cannot use the whole range of $g$, which means we cannot use the whole domain of $g$.  Which part of the domain of $g$ does $g$ map into $(0, 6)$? 
 
 
 We need sa olution to $g(t) = 6$.  From the graph, it looks like $g(-2) = 6$.  Therefore, we can only use $(-2, 6)$ from the domain of $g$.
@@ -794,15 +840,15 @@ Therefore, the domain of $f \circ g$ is $(-2, 6)$.  On this domain, $f \circ g$ 
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Both Directions}}
 
 Decreasing means the domain and range change in the opposite way.
 
-When the domain increases, then range decreases.
+When the domain becomes greater, then range becomes lesser.
 
 It goes the other way as well.
 
-When the domain decreases, the range increases.
+When the domain becomes lesser, the range becomes greater.
 
 They mean the same thing.
 
@@ -814,7 +860,7 @@ They mean the same thing.
 
 
 
-We can describe all of this thinking algebraically as well. \\
+We can describe all of this thinking algebraically as well. 
 
 
 If $a < b$ in the domain of $f \circ g$, then we want to know about $(f \circ g)(a)$  and $(f \circ g)(b)$.

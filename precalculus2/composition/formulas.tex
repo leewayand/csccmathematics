@@ -13,13 +13,13 @@ functions
 
 
 
+Algebraically, formulas for compositions are formed through replacement.
 
 
 
 
 
-
-\begin{template} \textbf{\textcolor{blue!55!black}{Composition}}  \\
+\begin{idea} \textbf{\textcolor{blue!55!black}{Composition}}  
 
 
 Let $f$ be a function with domain $D_f$.
@@ -45,21 +45,21 @@ The composition is defined on a subset of the domain of $g$.  The composition is
 
 
 
-\end{template}
+\end{idea}
 
 
 
 
 
-Algebraically, $f(g(x))$ is our map. \\
+Algebraically, $f(g(x))$ is our map. 
 
 
-$f(g(x))$ tells us to replace all occurrences of the variable in the formula for $f$ with the whole formula for $g$. \\
+$f(g(x))$ tells us to replace all occurrences of the variable in the formula for $f$ with the whole formula for $g$. 
 
 
 
 
-\begin{example}
+\begin{example} Composition Domain
 
 
 Let $f(k) = (k + 5)(k - 3)$ with its natural domain.
@@ -69,13 +69,15 @@ Let $g(t) = \sqrt{3t}$ with its natural domain.
 
 
 
-\begin{explanation}
 
-We would like a formula for $f \circ g$. \\
 
-$(f \circ g)(x) = f(g(x))$ \\
+We would like a formula for $f \circ g$. 
 
-This tells us to replace all occurrences of the variable in $f$ with the whole formula for $g$.  There are two instances of the variable $k$ in the formula for $f$.  These should be replaced with $\sqrt{3t}$. We just have to remember to use the correct variable for $(f \circ g)(x)$. \\
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+$(f \circ g)(x) = f(g(x))$ 
+
+This tells us to replace all occurrences of the variable in the formula for $f$ with the whole formula for $g$.  There are two instances of the variable $k$ in the formula for $f$.  These should be replaced with $\sqrt{3t}$. We just have to remember to use the correct variable for $(f \circ g)(x)$. 
 
 
 
@@ -86,15 +88,21 @@ This tells us to replace all occurrences of the variable in $f$ with the whole f
 
 
 
-\end{explanation}
 
 
-\begin{observation}
+We would like a formula for $g \circ f$. 
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+$(g \circ f)(x) = g(f(x))$ 
+
+This tells us to replace all occurrences of the variable in the formula for $g$ with the whole formula for $f$.  There is only one instance of the variable $t$ in the formula for $g$.  It should be replaced with $(k + 5)(k - 3)$. We just have to remember to use the correct variable for $(g \circ f)(x)$. 
 
 
-We must always pay attention to domains.  Here the domain of $g$ is $[0, \infty)$ and the range of $g$ is $[0, \infty)$.  The range fits totally inside the domain of $f$, which is $(-\infty, \infty)$.  Therefore, we can use the whole domain of $g$ as the domnain of $(f \circ g)$.
 
-\end{observation}
+\[
+(g \circ f)(x) = g(f(x)) = \sqrt{3(x + 5)(x - 3)}
+\]
 
 
 \end{example}
@@ -104,6 +112,24 @@ We must always pay attention to domains.  Here the domain of $g$ is $[0, \infty)
 
 
 
+\begin{observation} \textbf{\textcolor{-red!75}{Domains}}
+
+
+We must always pay attention to domains.  Here the natural domain of $g$ is $[0, \infty)$ and the range of $g$ is $[0, \infty)$.  The range of $g$ fits totally inside the natural domain of $f$, which is $(-\infty, \infty)$.  Therefore, we can use the whole domain of $g$ as the domain of $(f \circ g)$.
+
+This is not the case for $(g \circ f)(x)$.
+
+
+The natural range of $f$ is $[-16, 8)$ contains negative numbers, which are not in the domain of $g$.
+
+In the composition, we cannot use domain numbers of $f$, for which $f$ has a negative value.
+
+We cannot use $(-5, 3)$.
+
+The domain of $(g \circ f)$ is $(-\infty, -5] \cup [3, \infty)$.
+
+
+\end{observation}
 
 
 
@@ -117,8 +143,7 @@ We must always pay attention to domains.  Here the domain of $g$ is $[0, \infty)
 
 
 
-
-\begin{example}
+\begin{example} Composition Domain
 
 
 Let $f(k) = \ln(k - 4)$ with its natural domain.
@@ -128,13 +153,13 @@ Let $g(t) = \frac{1}{t}$ with its natural domain.
 
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
-We would like a formula for $f \circ g$. \\
+We would like a formula for $f \circ g$. 
 
-$(f \circ g)(x) = f(g(x))$ \\
+$(f \circ g)(x) = f(g(x))$ 
 
-This tells us to replace all occurrences of the variable in $f$ with the whole formula for $g$.  There is only one instance of the variable $k$ in the formula for $f$.  This should be replaced with $\frac{1}{t}$. We just have to remember to use the correct variable for $(f \circ g)(x)$. \\
+This tells us to replace all occurrences of the variable in the formula for $f$ with the whole formula for $g$.  There is only one instance of the variable $k$ in the formula for $f$.  This should be replaced with $\frac{1}{t}$. We just have to remember to use the correct variable for $(f \circ g)(x)$. 
 
 
 
@@ -145,10 +170,11 @@ This tells us to replace all occurrences of the variable in $f$ with the whole f
 
 
 
-\end{explanation}
 
 
-\begin{observation}
+
+
+\begin{observation} \textbf{\textcolor{-red!75}{Domain}}
 
 
 We must always pay attention to domains.  Here the domain of $g$ is $(-\infty, 0) \cup (0, \infty)$ and the range of $g$ is $(-\infty, 0) \cup (0, \infty)$.  This range does not fit totally inside the domain of $f$, which is $(4, \infty)$.  We cannot have negative values of $g$ less than $4$.  \\
@@ -160,9 +186,10 @@ Therefore, we need to restrict the domain of $g$ to $\left(0, \frac{1}{4} \right
 
 
 
-Therefore, the domnain of $(f \circ g)$ is $\left(0, \frac{1}{4} \right)$.
+Therefore, the domain of $(f \circ g)$ is $\left(0, \frac{1}{4} \right)$.
 
 \end{observation}
+
 
 
 \end{example}
@@ -185,33 +212,99 @@ Therefore, the domnain of $(f \circ g)$ is $\left(0, \frac{1}{4} \right)$.
 
 
 
+\begin{example} Composition Domain
+
+
+Let $f(k) = \ln(k - 4)$ with its natural domain.
+
+
+Let $g(t) = \frac{1}{t}$ with its natural domain.
 
 
 
-\begin{example}
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+We would like a formula for $g \circ f$. 
+
+$(g \circ f)(x) = g(f(x))$ 
+
+This tells us to replace all occurrences of the variable in the formula for $g$ with the whole formula for $f$.  There is only one instance of the variable $t$ in the formula for $g$.  This should be replaced with $\ln(k - 4)$. We just have to remember to use the correct variable for $(g \circ f)(x)$. 
 
 
-Let $H(x) = 5 \ln(\sqrt{x^2-3})$ with its natural domain. \\
 
-
-We would like to view this as a composition. \\
-
-
-
-\begin{explanation}
-
-
-We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = 5 \ln(\sqrt{x^2-3})$ \\
-
-
-First, identify ``insides'' of functions.  In this case, $x^2 - 3$ is the inside of $5 \ln(\sqrt{x})$. \\
+\[
+(g \circ f)(x) = g(f(x)) =  \frac{1}{\ln(x - 4)}
+\]
 
 
 
 
-Let $f(t) = 5 \ln(\sqrt{t})$. \\
 
-Let $g(y) = y^2 - 3$. \\
+
+
+
+\begin{observation} \textbf{\textcolor{-red!75}{Domain}}
+
+
+We must always pay attention to domains.  Here the domain of $f$ is $(4, \infty)$ and the range of $f$ is $(-\infty, \infty)$.  This range does not fit totally inside the domain of $g$, which is $(-\infty, 0) \cup (0, \infty)$.  We cannot have $0$.  
+
+
+WWhere does $f(k) = \ln(k - 4) = 0$? At $5$.
+
+We need to remove $5$ from the domain of $(g \circ f)$.
+
+We need to restrict the domain of $f$ to $(4, 5) \cup (5, \infty)$.
+
+
+
+Therefore, the domain of $(g \circ f)$ is $(4, 5) \cup (5, \infty)$.
+
+\end{observation}
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example} Composition Components
+
+
+Let $H(x) = 5 \ln(\sqrt{x^2-3})$ with its natural domain. 
+
+
+We would like to view this as a composition. 
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = 5 \ln(\sqrt{x^2-3})$ 
+
+
+First, identify ``insides'' of functions.  In this case, $x^2 - 3$ is the inside of $5 \ln(\sqrt{x})$. 
+
+
+
+
+Let $f(t) = 5 \ln(\sqrt{t})$. 
+
+Let $g(y) = y^2 - 3$. 
 
 
 Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = 5 \ln(\sqrt{x^2-3})$.
@@ -223,20 +316,19 @@ Algebraically, this produces the formula want, $(f \circ g)(x) = f(g(x)) = 5 \ln
 
 
 
-\end{explanation}
 
 
-\begin{observation}
+\begin{observation} \textbf{\textcolor{-red!75}{Domain}}
 
-Our formula presents two problems.\\
+Our formula presents two problems.
 
-First, the inside of the square root must be $0$ of positive.\\
+First, the inside of the square root must be $0$ of positive.
 
-Second, the inside of the logarithm must be positive. \\
+Second, the inside of the logarithm must be positive. 
 
 
 
-So, we need $x^2 - 3 \geq 0 $, which means $x \in (-\infty, -\sqrt{3}] \cup [\sqrt{3}, \infty)$. \\
+So, we need $x^2 - 3 \geq 0 $, which means $x \in (-\infty, -\sqrt{3}] \cup [\sqrt{3}, \infty)$. 
 
 
 However, this domain for $g$ will produce $0$ as a function value for $g$, which cannot go into $f$.  SO, we need to remove $-\sqrt{3}$ and $\sqrt{3}$.
