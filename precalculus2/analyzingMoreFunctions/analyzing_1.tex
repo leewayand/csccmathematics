@@ -19,34 +19,33 @@ describe everything
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!80!black}{Reasoning:}} Reasoning is a logical explanation that describes our conclusions, how we arrived at those conclusions, and why we think those conclusions are correct. \\
+$\blacktriangleright$ \textbf{\textcolor{red!80!black}{Reasoning:}} Reasoning is a logical explanation that describes our conclusions, how we arrived at those conclusions, and why we think those conclusions are correct. 
 
-Analysis is not a list of conclusions. We are not looking for such a list. \\
+Analysis is not a list of conclusions. We are not looking for such a list. 
 
-We are looking for the thought process that arrived at the list of conclusions. \\
-
-
+We are looking for the thought process that arrived at the list of conclusions. 
 
 
 
 
-\begin{example}
+
+
 
 \textbf{\textcolor{purple!85!blue}{Completely analyze $g(t) = e^{-t^2} - 4$}}
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Domain}} \\
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Domain}} 
 
 
 It might help to apply a little algebra here
 
 
 \[
-g(t) = \frac{1}{e^{t^2}} - 4
+g(t) = e^{-t^2} - 4 =  \frac{1}{e^{t^2}} - 4
 \]
 
 
 
-The natural or implied domain is all real numbers that don't result in a $0$ denominator and exponential functions cannot equal $\answer{0}$.  Therefore, the natural or implied domain is all real numbers.
+The natural or implied domain is all real numbers that don't result in a $0$ denominator and exponential functions cannot equal $\answer{0}$.  Therefore, the natural or implied domain is all real numbers, $(-\infty, \infty)$.
 
 
 
@@ -54,7 +53,7 @@ The natural or implied domain is all real numbers that don't result in a $0$ den
 
 
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Zeros}} \\
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Zeros}} 
 
 \[
 g(t) = 0
@@ -79,7 +78,7 @@ This would require a negative exponent and $t^2$ cannot be negative.  There are 
 
 
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Continuity}} \\
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Continuity}} 
 
 
 $-t^2$ is continuous, since this is a polynomial.  $e^{-t^2}$ is the composition of an exponential function and a polynomial, so it is continuous. $4$ is continuous, as it is a constant function. $g$ is the difference between two continuous functions, making it continuous.
@@ -89,7 +88,7 @@ $-t^2$ is continuous, since this is a polynomial.  $e^{-t^2}$ is the composition
 
 
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{End-Behavior}} \\
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{End-Behavior}} 
 
 
 
@@ -105,26 +104,72 @@ First, we know that $\lim\limits_{t \to \infty}  \frac{1}{e^{t^2}} = \answer{0}$
 
 
 
-$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Behavior}} \\
-
-
-$t^2$ cannot be negative. Its lowest value is $0^2 = 0$.  From $0$, $t^2$ gets larger in both directions:  
-
-
-\begin{itemize}
-\item As $t$ gets larger positively, then $t^2$ also gets larger positively.
-\item As $t$ gets larger negatively, then $t^2$ also gets larger positively.
-\end{itemize}
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Behavior}} 
 
 
 
-Thus, $e^{t^2}$ gets large and positive in both directions from $0$.  That means  $\frac{1}{e^{t^2}}$ has a maximum of $\answer{1}$ at $\answer{0}$ and then gets smaller and heads to $0$ in both directions of $0$. \\
+\textbf{Chain Rule}
+
+
+
+$g(t) = e^{-t^2} - 4 = (A \circ B)(t)$
+
+where $A(x) = e^x - 4$ and $B(y) = -y^2$.
+
+$A$ is an increasing shifted exponential function.
+
+$B$ is a quadratic function and $0$ is the critical number.  $B$ increases on $(-\infty, 0)$ and decreases on $(0, \infty)$.
+
+
+$\blacktriangleright$ On $(-\infty, 0)$, $g = inc \circ inc = inc$.
+
+$\blacktriangleright$ On $(0, \infty)$, $g = inc \circ dec = dec$.
 
 
 
 
 
-$g(t)$ simply subtracts $4$ from all of this.
+
+
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Global Maximum and Minimum}} 
+
+
+$g$ has one critical number, $0$.
+
+
+$\lim\limits_{t \to \infty} g(t) =  -4$
+
+$g$ is increasing on $(-\infty, 0)$
+
+$\lim\limits_{t \to -\infty} g(t) =  -4$
+
+$g$ is decreasing on $(0, \infty)$.
+
+This makes $g(0) = e^0 - 4 = -3$ the global maximum.  The behavior and end-behavior tell us that there is no global minimum.
+
+
+
+
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Local Maximums and Minimums}}
+
+
+There is only one critical number, $0$.  Therefore , $-3$ a local maximum and the only local extrema.
+
+
+
+
+
+
+$\blacktriangleright$  \textbf{\textcolor{blue!55!black}{Range}}
+
+
+$\blacktriangleright$  $g$ is continuous.  $\answer{-3}$ is a global maximum and the only extreme value. The end-behavior is that the function approaches $-4$. This gives a range of $\left( \answer{-4}, \answer{-3} \right]$.
+
+
+
 
 
 
@@ -165,28 +210,42 @@ Graph of $y = g(t)$.
 
 
 
-$g$ increases on $\left( -\infty, \answer{0} \right]$ and decreases on $\left[ \answer{0}, \infty \right)$.  This gives a global (also a local) maximum of $\answer{-3}$, which occurs at $\answer{0}$.   There are no minimums.
-
-
-$\blacktriangleright$  $\answer{0}$ is the only critical number, because of the single extreme value.
-
-
-$\blacktriangleright$  $g$ is continuous.  $\answer{-3}$ is a global maximum and the only extreme value. The end-behavior is that the function approaches $-4$. This gives a range of $\left( \answer{-4}, \answer{-3} \right]$.
-
-
-
-\end{example}
 
 
 
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!80!black}{Notice:}}  The analysis was not simply graphing and describing the graph.  We don't trust graphs that much!  We want algebraic reasoning.  We want exact descriptions and the algebraic and function reasoning behind it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\blacktriangleright$ \textbf{\textcolor{red!70!black}{Notice:}}  The analysis was not simply graphing and describing the graph.  We don't trust graphs that much!  We want algebraic reasoning.  We want exact descriptions and the algebraic and function reasoning behind it.
 
 We are not interested in a Visual Calculus course.  We are interested in an Algebraic Calculus course.  We want algebraic and function reasoning.  We want to know why conclusions are correct.
 
-\textbf{\textcolor{red!80!black}{$\blacktriangleright$}} ``The graph looks like'' is not reassuring reasoning. 
+\textbf{\textcolor{red!70!black}{$\blacktriangleright$}} ``The graph looks like'' is not reassuring reasoning. 
 
 
 
@@ -196,11 +255,14 @@ We are not interested in a Visual Calculus course.  We are interested in an Alge
 
 \section*{with Calculus}
 
-Calculus will give us the derivative $g'(t) = e^{-t^2} \cdot (-2t)$.  We could then solve $g'(t) = 0$ and verify that the only critical number is $t = 0$.
+Calculus will give us the derivative $g'(t) = e^{-t^2} \cdot (-2t)$.  
 
 
+We could then solve $g'(t) = 0$ and verify that the only critical number is $t = 0$.
 
+We could then algebraically show that $g' > 0$ on $(-\infty, 0)$.
 
+We could then algebraically show that $g' < 0$ on $(0, \infty)$.
 
 
 
