@@ -85,7 +85,7 @@ $\blacktriangleright 3 - 2y = \frac{3\pi}{2}$ at $-\frac{1}{2}(\frac{3\pi}{2} - 
 
 
 \begin{center}
-The third quadrant of sine corresponds to $\left( \frac{3}{2} - \frac{3\pi}{2}, \frac{3}{2} - \frac{\pi}{2} \right)$.
+The third quadrant of sine corresponds to $\left( \frac{3}{2} - \frac{3\pi}{2}, \frac{3}{4} - \frac{\pi}{2} \right)$.
 
 \[ Out \circ \sin \circ In = inc \circ dec \circ dec = inc \]
 \end{center}
@@ -99,7 +99,7 @@ $\blacktriangleright 3 - 2y = 2\pi$ at $-\frac{1}{2} (2\pi - 3) = \frac{3-2\pi}{
 
 
 \begin{center}
-The fourth quadrant of sine corresponds to $\left( \frac{3}{2} - \pi, \frac{3}{2} - \frac{3\pi}{2} \right)$.
+The fourth quadrant of sine corresponds to $\left( \frac{3}{2} - \pi, \frac{3}{2} - \frac{3\pi}{4} \right)$.
 
 \[ Out \circ \sin \circ In = inc \circ inc \circ dec = dec \]
 \end{center}
@@ -118,10 +118,10 @@ The period is $\frac{3}{2} - \frac{3-2\pi}{2} = \pi$
 
 
 
-\textbf{\textcolor{blue!55!black}{On $\left( \frac{3}{2} - \pi, \frac{3}{2} - \frac{3\pi}{2} \right)$}} $H$ is decreasing.
+\textbf{\textcolor{blue!55!black}{On $\left( \frac{3}{2} - \pi, \frac{3}{2} - \frac{3\pi}{4} \right)$}} $H$ is decreasing.
 
 
-\textbf{\textcolor{blue!55!black}{On $\left( \frac{3}{2} - \frac{3\pi}{2}, \frac{3}{2} - \frac{\pi}{2} \right)$}} $H$ is increasing.
+\textbf{\textcolor{blue!55!black}{On $\left( \frac{3}{2} - \frac{3\pi}{4}, \frac{3}{2} - \frac{\pi}{2} \right)$}} $H$ is increasing.
 
 
 \textbf{\textcolor{blue!55!black}{On $\left( \frac{3}{2} - \frac{\pi}{2}, \frac{3}{2} - \frac{\pi}{4} \right)$}} $H$ is increasing.
@@ -148,7 +148,7 @@ The period is $\frac{3}{2} - \frac{3-2\pi}{2} = \pi$
 
 			   \addplot [line width=2, penColor, smooth,samples=200,domain=(-6:7)] {0.5*sin(deg(3-2*x)) - 4};
 
-          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-1.64:1.5)] {0.5*sin(deg(3-2*x)) - 4};
+          \addplot [line width=2, penColor2, smooth,samples=200,domain=(-1.64:1.5)] {3*sin(deg(3-2*x)) - 4};
 
   \end{axis}
 \end{tikzpicture}
@@ -157,7 +157,18 @@ The period is $\frac{3}{2} - \frac{3-2\pi}{2} = \pi$
 
 
 
+Just Checking...
 
+\textbf{\textcolor{blue!55!black}{On $(-1.64, -0.86)$}} $H$ is decreasing.
+
+
+\textbf{\textcolor{blue!55!black}{On $(-0.86, -0.07)$}} $H$ is increasing.
+
+
+\textbf{\textcolor{blue!55!black}{On $(-0.07, 0.71)$}} $H$ is increasing.
+
+
+\textbf{\textcolor{blue!55!black}{On $(0.71, 1.5)$}} $H$ is decreasing.
 
 
 
