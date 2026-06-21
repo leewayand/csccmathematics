@@ -15,7 +15,7 @@ circles and triangles
 
 
 
-\textbf{\textcolor{red!70!black}{All}}, \textbf{\textcolor{red!80!black}{Every}}, \textbf{\textcolor{red!80!black}{None}} - These are the words of mathematics. 
+\textbf{\textcolor{red!70!black}{All}}, \textbf{\textcolor{red!70!black}{Every}}, \textbf{\textcolor{red!70!black}{None}} - These are the words of mathematics. 
 
 
 
@@ -87,7 +87,7 @@ If we can understand the unit circle in terms of complex numbers, then we will h
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Multiplication on the Unit Circle}}  \\
+$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Multiplication on the Unit Circle}}  
 
 
 Pretend we have two Complex numbers on the unit circle.
@@ -353,14 +353,14 @@ Eventually, the sides meet to make a right triangle.  Let's enclose the whole di
 
 
 
-The problem is that this second right triangle is too big for our unit circle. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were suppose to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$. That is too much.  That is ok. We can still get the lengths of this triangle.  
+The problem is that this second right triangle is too big for our unit circle. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were supposed to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$. That is too much.  That is ok. We can still get the lengths of this triangle.  
 
-So, our new right triangle is not the $c-d-1$ right triangle for $c + d \, i$. \\
+So, our new right triangle is not the $c-d-1$ right triangle for $c + d \, i$. 
 
 
  The good news is that the new triangle we created is a right triangle with angle $\phi$.  That means it is similar to the $c-d-1$ right triangle for $c + d \, i$.  The sides must be proportional to the sides of the $c-d-1$ right triangle for $c + d \, i$.  We can use this proportionality.
 
-  Let's call the lengths of the sides of this new trinagle $k$ and $h$.  $k$ is one of the legs of the right triangle and $h$ is the hypotenuse.
+  Let's call the lengths of the sides of this new triangle $k$ and $h$.  $k$ is one of the legs of the right triangle and $h$ is the hypotenuse.
 
 
 
@@ -976,7 +976,7 @@ Finally, let's resize this triangle by a factor of $c$.
     \end{tikzpicture}
   \end{image}
 
-These two lengths are familiar. \\
+These two lengths are familiar. 
 
 
 
@@ -1038,7 +1038,7 @@ Let's flip it over.
 
  
 
-\textcolor{red!80!black}{$\blacktriangleright$} When multiplying complex numbers on the unit circle, just add their angles. \\
+\textcolor{red!80!black}{$\blacktriangleright$} When multiplying complex numbers on the unit circle, just add their angles. 
 
 
 
@@ -1046,7 +1046,7 @@ Let's flip it over.
 The product of two complex numbers on the unit circle is again on the unit circle. Its location is given by adding the angles of the two factors.
 
 
-We can now extend this to all complex numbers by bringing back in their distance from the origin - the modulus. \\
+We can now extend this to all complex numbers by bringing back in their distance from the origin - the modulus. 
 
 
 
@@ -1065,7 +1065,7 @@ We can now extend this to all complex numbers by bringing back in their distance
 
 
 
-\begin{example}  Squaring \\
+\begin{example}  Squaring 
 
 
 The two complex numbers could be the same number. $\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i = \left(1, \frac{\pi}{4} \right)$
@@ -1093,12 +1093,12 @@ $\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i$ is a square root of $i$.
 
 
 
-\begin{example}  Fourth Root \\
+\begin{example}  Fourth Root 
 
 
-We can work the angles backwards as well.  \\
+We can work the angles backwards as well.  
 
-To get a fourth root of $-1$, we would need an angle such that $4$ times the angle is $\pi$.    \\
+To get a fourth root of $-1$, we would need an angle such that $4$ times the angle is $\pi$.    
 
 $\frac{\pi}{4}$ will work.  We need the complex number on the unit circle at an angle of $\frac{\pi}{4}$.  That is $\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i$.
 
@@ -1108,7 +1108,70 @@ $\frac{\pi}{4}$ will work.  We need the complex number on the unit circle at an 
 
 
 
+\subsection*{Multiplication on the Unit Circle}
 
+Multiplication on the unit circle is easy, just add the angles.
+
+
+
+\[ (1, \theta_1) \cdot (1, \theta_2) = (1, \theta_1 + \theta_2)   \]
+
+
+We can rephrase this in terms of sine and cosine.
+
+
+
+\[ 
+(\cos(\theta_1) + i \, \sin(\theta_1)) \cdot (\cos(\theta_2) + i \, \sin(\theta_2)) = \cos(\theta_1 + \theta_2) + i \, \sin(\theta_1 + \theta_2)
+\]
+
+
+
+Let's apply the Distributive Property to the left side of this equation.
+
+Expanding the left side gives
+
+
+\[ \cos(\theta_1) \cdot \cos(\theta_2) + i \, \cos(\theta_1) \cdot \sin(\theta_2) + i \, \sin(\theta_1) \cdot \cos(\theta_2) + i \, \sin(\theta_1) \cdot i \, \sin(\theta_2) \]
+
+
+\[ \cos(\theta_1) \cdot \cos(\theta_2) + i \, \cos(\theta_1) \cdot \sin(\theta_2) + i \, \sin(\theta_1) \cdot \cos(\theta_2) - \sin(\theta_1) \cdot \sin(\theta_2) \]
+
+
+Gathering the real an imginary parts together gives
+
+
+\[
+(\cos(\theta_1) \cdot \cos(\theta_2) - \sin(\theta_1) \cdot \sin(\theta_2)) + i \, (\cos(\theta_1) \cdot \sin(\theta_2) + \sin(\theta_1) \cdot \cos(\theta_2))
+\]
+
+But, this must equal 
+
+
+\[ \cos(\theta_1 + \theta_2) + i \, \sin(\theta_1 + \theta_2) \]
+
+The real parts must be equal and the imaginary parts must be equal.  This gives
+
+
+\[ \cos(\theta_1 + \theta_2) =  \cos(\theta_1) \cdot \cos(\theta_2) - \sin(\theta_1) \cdot \sin(\theta_2) \]
+
+and
+
+\[ \sin(\theta_1 + \theta_2) =  \cos(\theta_1) \cdot \sin(\theta_2) + \sin(\theta_1) \cdot \cos(\theta_2) \]
+
+
+These are know as the ``\textbf{sum}'' rules for sine  and cosine.
+
+
+If we let $\theta_1 = \theta_2$, then we get the ``\theta{double angle rules}''.
+
+
+
+\[ \cos(2 \, \theta) =  (\cos(\theta))^2 - (\sin(\theta_1))^2  \]
+
+and
+
+\[ \sin(2 \, \theta) =  2 \, \sin(\theta) \,  \cos(\theta) \]
 
 
 
