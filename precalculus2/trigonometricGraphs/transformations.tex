@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Transform}
+\title{Waveform}
 
 \begin{document}
 
@@ -13,22 +13,44 @@ graphs
 
 
 
-When two sine functions have the same period, then their graphs (or waveforms) have the same distance between the hills and valleys.   The graphs of the two sine functions could be in synch, which means the tops of the hills and bottoms of valleys occur at the exact same angle.  In this case, we say the waveforms are \textbf{in phase}.
+When two sine functions have the same period, then their graphs (or waveforms) have the same distance between the hills and valleys.   
+
+It could happen that the graphs of the two sine functions are in synch, which means the tops of the hills and bottoms of valleys occur at the exact same angle.  
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=4.5, xmax=10, ymin=-4, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-3,-2,-1,1,2,3,4},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, dashed,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {2*sin(deg(x))+2};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+In this case, we say the waveforms are \textbf{in phase}.
 
 
 If one of the waveforms experiences a horizontal shift, then we say that the waveforms are \textbf{out of phase}.
-
-If the shift makes the hills of one waveform align perfectly with the valleys of the other waveform, then we say that the two waveforms are \textbf{completely out of phase}.
-
-
-
-
-\begin{example}  Sine
-
-
-
-Compare $s(\theta) = 2 \sin\left(\theta - \frac{\pi}{4}\right) + 2$ to the basic sine curve.\\
-
 
 
 
@@ -59,31 +81,82 @@ Compare $s(\theta) = 2 \sin\left(\theta - \frac{\pi}{4}\right) + 2$ to the basic
 \end{image}
 
 
-Since $\theta$ is multiplied by $1$, the period is still $2\pi$.
-
-These two sine waveforms are slightly out of phase.
 
 
-\end{example}
+If the horizontal shift makes the hills of one waveform align perfectly with the valleys of the other waveform, then we say that the two waveforms are \textbf{completely out of phase}.
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Period}} \\
 
-The \textbf{period} of a periodic function is the (domain)length of the repeating pattern.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=4.5, xmax=10, ymin=-4, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-3,-2,-1,1,2,3,4},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+
+            \addplot [line width=2, penColor, dashed,samples=300,domain=(-10:10),<->] {sin(deg(x)};
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {2*sin(deg(x-3.14))+2};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+These two sine waveforms are completely out of phase.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{definition} \textbf{\textcolor{green!50!black}{Period}} 
+
+The \textbf{period} of a periodic function is the length (in the domain) of the repeating pattern.
 
 
 For sine or cosine waveforms, this is distance from one peak to the next.
 
 \end{definition}
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Frequency}} \\
+\begin{definition} \textbf{\textcolor{green!50!black}{Frequency}} 
 
 The \textbf{frequency} is the reciprocal of period.
 
 \end{definition}
 
 
+The period is a distance.  It is the distance per cycle.
+
+The frequency is the cycles per distance.
+
+Sine waveforms are used extensively in situations where distance is a time measurement.
+
+In this situation, period is the time per cycle and frequency is the number of cycles per time.
+
+\textbf{For instance,} the period might be $2$ seconds per cycle and the frequency is $\frac{1}{2}$ cycles per second.
 
 
 
@@ -101,10 +174,9 @@ The \textbf{frequency} is the reciprocal of period.
 What is the period of the function in the previous example?
 
 
+\textbf{\textcolor{red!75!green}{explanation}} 
 
-\begin{explanation}
-
-$s(\theta) = 2 \sin\left(\theta - \frac{\pi}{4}\right) + 2$ \\
+$s(\theta) = 2 \sin\left(\theta - \frac{\pi}{4}\right) + 2$ 
 
 
 The period is the distance between cooresponding points in the waveform.  This can be found by setting the inside equal to $0$ and $2\pi$.
@@ -124,11 +196,10 @@ The period is the distance between cooresponding points in the waveform.  This c
 \]
 
 
-\end{explanation}
 
-The period is $2\pi radians$. \\
+The period is $2\pi \, radians$. 
 
-The frequency is $\frac{1}{2\pi} \tfrac{1}{radians}$. \\
+The frequency is $\frac{1}{2\pi} \tfrac{1}{radians}$. 
 
 \end{example}
 
@@ -139,7 +210,7 @@ The frequency is $\frac{1}{2\pi} \tfrac{1}{radians}$. \\
 
 Two waveforms of the same frequency are in phase, if their maximum and minimum magnitudes align perfectly.
 
-If one of these waveforms is shifted by half a period, then the waveforms are said to be \textbf{out of phase}. In this case, the sum of the two waveforms can be $0$.
+If one of these waveforms is shifted by half a period, then the waveforms are said to be \textbf{out of phase}. In this case, it is possible that the sum of the two waveforms is $0$.
 
 
 
@@ -171,13 +242,13 @@ The \textbf{phase shift} is the horizontal shift.
 
 
 
-\begin{example} Phase Shift \\
+\begin{example} Phase Shift 
 
 
 What is the phase shift for $T(\theta) = 3 \sin\left( \frac{\theta}{2}+3 \right)-2$ ?
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 To find the phase shift or horizontal shift, we need to locate the beginning of the waveform.
 
@@ -226,7 +297,6 @@ The phase shift is $-6$.  We can see this in the graph.  The beginning of the wa
 
 
 
-\end{explanation}
 
 
 

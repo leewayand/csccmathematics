@@ -1,0 +1,223 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\title{Rectangular}
+
+\begin{document}
+
+\begin{abstract}
+coordinates
+\end{abstract}
+\maketitle
+
+
+
+
+The Cartesian plane graphs dots using rectangular coordinates.
+
+\begin{center}
+(Left/Right, Up/Down)
+\end{center}
+
+These coordinates give the directional measurements from the origin to the point's location.
+
+We then extend this for functions.
+
+
+We use the coordinates of plotted points to visually encode function information. A function is a collection of domain-range pairs. We can view these pairs as ordered pairs and interpret the domain number as left/right information and interpret the funciton value as up/down information.  We cna then plot the point representing the domain-function value pair.
+
+Let $f(x) = 3 \, \sin(2x+\tfrac{\pi}{4}) - 1$
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-3,-2,-1,1,2,3,4},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {3*sin(deg(2*x+0.785))-1};
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+Each point on the graph visually encodes a domain-range pair in the function $f$
+
+\[  (a, f(a)) = (a, 3 \, \sin(2a+\tfrac{\pi}{4}) - 1)   \]
+
+
+
+
+We can view this function as a composition of the core sine function with two linear functions.
+
+
+
+\begin{itemize}
+\item Let $L_{out}(u) = 3 \, u - 1$, an increasing linear function
+\item Let $S(\theta) = \sin(\theta)$, the core sine function
+\item Let $L_{in}(v) = 2 \, v + \tfrac{\pi}{4}$, an increasing linear function
+\end{itemize}
+
+
+
+\[ 3 \, \sin(2x + \tfrac{\pi}{4}) - 1  = (L_{out} \circ S \circ L_{in})(x)\]
+
+
+
+When viewed this way, we say that the function $f$ is a \texbf{transformation} of $\sin(\theta)$.
+
+
+There is a domain transformation given by $L_{in}(v) = 2 \, v + \tfrac{\pi}{4}$.
+
+There is a range transformation given by $L_{out}(u) = 3 \, u - 1$.
+
+
+
+
+
+\subsection*{Graphical Transformation}
+
+
+
+Along with the function, we say that there has been a \textbf{graphical transformation} as well.
+
+
+
+There is a horizontal transformation given by $L_{in}(v) = 2 \, v + \tfrac{\pi}{4}$.
+
+There is a vertical transformation given by $L_{out}(u) = 3 \, u - 1$.
+
+
+
+
+The transformations are rectangular, because the measurements on the graph are rectangular.  Domain is measured horizontally. Range (function value) is measured vertically.
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Horizontal Transformations}} 
+
+Our transformations are \textbf{linear}, composed of shifts and stretches.
+
+We can describe the shifts and stretches by following the arithmetic performed on the old variable to obtain the new variable.
+
+Horizontally, $\sin(\theta)$ is transformed into $3 \, \sin(2x+\tfrac{\pi}{4}) - 1$, by replacing $\theta$ with $2x+\tfrac{\pi}{4}$.
+
+
+\[ \theta =  2x+\frac{\pi}{4}\]
+
+But, this shows the arithmetic to perform on $x$, the new variable.  We need to solve for 'x' in terms of '$\theta$''.
+
+
+
+ \[ \frac{1}{2} \left( \theta -  \frac{\pi}{4} \right) =  x\]
+
+
+First, subtract $\frac{\pi}{4}$, which is a horizontal shift left.
+
+Second, multiply by $\frac{1}{2}$, which is a horzontal compression.
+
+
+
+
+
+
+\textbf{\textcolor{blue!55!black}{Vertically Transformations}} 
+
+
+
+Vertically, $\sin(\theta)$ is transformed into $3 \, \sin(2x+\tfrac{\pi}{4}) - 1$, by replacing $\sin$ with $3 \, \sin - 1$.
+
+This shows exact what to do with the old function to get the new function, so there is nothing to be done.
+
+The old function is first multiplied by $3$, which is a vertical stretch.
+
+Then $1$ is subtracted, whcih is a vertical shift down.
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+            axis lines =center, xlabel={$\theta$}, ylabel=$y$, grid = major, grid style={dashed},
+            ytick={-3,-2,-1,1,2,3,4},
+            xtick={-7.85, -6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28, 7.85},
+            xticklabels={$-\tfrac{5\pi}{2}$,$-2\pi$,$-\tfrac{3\pi}{2}$,$-\pi$, $-\tfrac{\pi}{2}$, $0$, $\tfrac{\pi}{2}$, $\pi$, $\tfrac{3\pi}{2}$, $2\pi$, $\tfrac{5\pi}{2}$},
+            yticklabels={$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$}, 
+            ticklabel style={font=\scriptsize},
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            axis on top
+          ]
+          
+            \addplot [line width=2, penColor2, smooth,samples=300,domain=(-10:10),<->] {3*sin(deg(2*x+0.785))-1};
+
+             \addplot [line width=2, penColor, smooth,samples=300,domain=(-10:10),<->] {sin(deg(2x))};
+
+
+
+
+  \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{center}
+\textbf{\textcolor{green!50!black}{ooooo-=-=-=-ooOoo-=-=-=-ooooo}} \\
+
+more examples can be found by following this link\\ \link[More Examples of Trigonometric Graphs]{https://ximera.osu.edu/csccmathematics/precalculus2/precalculus2/trigonometricGraphs/examples/exampleList}
+
+\end{center}
+
+
+
+
+
+\end{document}
+

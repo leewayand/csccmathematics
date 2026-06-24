@@ -97,13 +97,129 @@ $\cos(t) + i \sin(t)$ is a Complex number on the unit circle and we have seen th
 Just like $\frac{A^B}{A^C} = A^{B-C}$
 
 
+
+
+
+\textbf{$\blacktriangleright 1$ }
+
+\[  \cos(0) + i \sin(0)  = 1\]
+
+
+Just like $r^0 = 1$
+
+
 The arithmetic of $\cos(t) + i \sin(t)$  is the same as the exponential arithmetic.
 
+And, since every exponential function can be written with base $e$, we have an odd conclusion.
 
 
-To get the exact exponential form, we will need derivative.
+\begin{conclusion} Exponential
 
-You can read the whole story here.
+$\cos(t) + i \sin(t)$ can somehow be represented as $e^{A + B \, i}$.
+
+
+\end{conclusion}
+
+
+
+What else can we deduce?
+
+
+\textbf{$\blacktriangleright$ Unit Circle}
+
+
+We know that every product of numbers of the form $\cos(t) + i \sin(t)$ is located on the unit circle, meaning its modulus is $1$.
+
+
+If $\cos(t) + i \sin(t) = e^{A + B \, i}$, then the modulus of $e^{A + B \, i}$ equals $1$, even for $b=0$.
+
+The modulus of $e^{A + 0 \, i} = e^A$ is $1$.  But, that can only happen if $A=0$.
+
+
+
+\begin{conclusion} Exponential
+
+$\cos(t) + i \sin(t)$ can somehow be represented as $e^{B \, i}$.
+
+
+\end{conclusion}
+
+
+We have it whittled down quite a bit.  On one side is $t$ and on the other side is $B$.
+
+It is not that much of a stretch of the imagination to conclude that $B=1$.
+
+
+
+
+
+
+
+
+\begin{theorem} \textbf{\textcolor{-red!75!green}{Theorem}} 
+
+
+\textbf{\textcolor{-red!75!green}{Euler's Formula}} 
+
+\[ \cos(t) + i \sin(t) = e^{t \, i} \].
+
+
+\end{theorem}
+
+
+
+\subsection*{$\mathbb{C}$}
+
+
+
+Every Complex number in $\mathbb{C}$ can be witten as a product of a number on the unit circle and a positive real number.
+
+The number on the unit circle gives the direction and the real number gives the distance from the origin.
+
+
+\begin{itemize}
+\item Every Complex number on the unit circle (direction) can be given in the form $\cos(t) + i \sin(t)$.
+\item Every positive real number can be given in the form $e^r$.
+\end{itemize}
+
+
+
+
+\[ R (\cos(\theta) + i \sin(\theta)) = e^r  (\cos(\theta) + i \sin(\theta)) = e^r \cdot e^{i \, t} = e^{r + i \, t}\]
+
+
+
+\begin{theorem} \textbf{\textcolor{-red!75!green}{$\mathbb{C}$}} 
+
+
+Every nonzero Complex number can be written in the exponential form 
+
+\[ e^{r + \theta \, i} \].
+
+
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
