@@ -15,7 +15,7 @@ sudden breaks
 
 Continuity is one of the characteristics, features, or properties of functions listed in our offical analysis list.
 
-The definition of continuity requires more experience with limits than we have so far. However, we can begin to get a feel for contiuity by first examining functions that are not continuous.
+The definition of continuity requires more experience with limits than we have so far. However, we can begin to get a feel for continuity by first examining functions that are not continuous.
 
 We have several types of discontinuities and they all have a similar graphical pattern - they appear as breaks in the graph.
 
@@ -74,9 +74,9 @@ The function represented by the graph below is experiencing some drastic behavio
 
 
 \begin{itemize}
-\item \textbf{\textcolor{blue!75!black}{Removeable:}}  The graph above has a very subtle break at $t=-6$. The graph is almost one piece, except one point has been shifted vertically. This type of break gets the name \textit{removeable}, because you could remove the break by just sliding that one point back in place. 
+\item \textbf{\textcolor{blue!75!black}{Removeable:}}  The graph above has a very subtle break at $t=-6$. The graph is almost one piece near $-6$, except one point has been shifted vertically. This type of break gets the name \textit{removeable}, because you could remove the break by just sliding that one point back in place. 
 
-\item \textbf{\textcolor{blue!75!black}{Asymptotic:}} The break at $t=3$ is not subtle at all.  One side is heading up to infinty and the other side is heading down to negative infinity.  You can't get a bigger break than that. Graphically, the asymptote is communicating this behavior, hence, the break is called an \textit{asymptotic} break. 
+\item \textbf{\textcolor{blue!75!black}{Asymptotic:}} The break at $t=3$ is not subtle at all.  One side is heading up to infinity and the other side is heading down to negative infinity.  You can't get a bigger break than that. Graphically, the asymptote is communicating this behavior, hence, the break is called an \textit{asymptotic} break. 
 
 \item \textbf{\textcolor{blue!75!black}{Jump:}} The break at $t=6$ is called a \textit{jump}, because the graph makes a sudden vertical jump from one location to another location.
 \end{itemize}
@@ -92,6 +92,33 @@ We would like to communicate the difference between values and expected values.
 Our language for expected values is called \textbf{limits}, which is a main interest of Calculus.
 
 
+\begin{example} Limits
+
+We want algebraic descriptions of discontinuities.
+
+Our algebraic descriptions are called limits. Limits communicate our expectations based on surrounding values.
+
+For the function $g$ above, the surrounding points give us the expectation that $g(-6)=1.9$.  However, $g(-6)=5$.  Our expectation did not match the actual value at $-6$.
+
+We would communicate our expectations with limit notation,
+
+
+\[ \lim\limits_{t \to -6} g(t) = 1.9 \]
+
+
+
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,7 +128,7 @@ Our language for expected values is called \textbf{limits}, which is a main inte
 
 One of the strongest purposes of mathematics is simply description and communication.  We like mathematics to be explicit and exact, which requires the support of lots of specific language and notation. We call this \textbf{\textcolor{purple!85!blue}{rigor}}. As we investigate breaks in the graphs of functions, we want language that is explicit, so that we can clearly communicate about the underlying function behavior.
 
-It is not enough to a basic idea. We want to be exact and we want to express our thoughts on exactness so that other people can understand what we see.
+It is not enough to form a basic idea. We want to be exact and we want to express our thoughts on exactness so that other people can understand what we see.
 
 With this in mind, let's compare the following two graphs.
 
@@ -971,7 +998,7 @@ Continuity only refers to domain numbers.
 
 A function can be continuous if it has singularities, because a singularity is not in the domain.
 
-The function is certainly not continuous at a singularity, because the number is not in the domain. But, it is not a discontinuity, which are the only places where a function could fail to be continuous.
+A function is certainly not continuous at a singularity, because the number is not in the domain. But, it is not a discontinuity, which are the only places where a function could fail to be continuous.
 
 
 
