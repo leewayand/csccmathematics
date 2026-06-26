@@ -17,11 +17,11 @@ describe everything
 
 
 
-$\blacktriangleright$ \textbf{\textcolor{red!80!black}{Reasoning:}} Reasoning is a logical explanation that describes our conclusions, how we arrived at those conclusions, and why we think those conclusions are correct. \\
+$\blacktriangleright$ \textbf{\textcolor{red!80!black}{Reasoning:}} Reasoning is a logical explanation that describes our conclusions, how we arrived at those conclusions, and why we think those conclusions are correct. 
 
-Analysis is not a list of conclusions. We are not looking for such a list. \\
+Analysis is not a list of conclusions. We are not looking for such a list. 
 
-We are looking for the thought process that arrived at the list of conclusions. \\
+We are looking for the thought process that arrived at the list of conclusions. 
 
 
 
@@ -35,7 +35,7 @@ We are looking for the thought process that arrived at the list of conclusions. 
 
 \begin{example}
 
-\textbf{\textcolor{purple!85!blue}{Completely analyze}} \\
+\textbf{\textcolor{purple!85!blue}{Completely analyze}} 
 
 
 \[   L(x) = \frac{5}{1 + 3 \, e^{-\tfrac{x}{2}}} \]
@@ -47,22 +47,18 @@ We are looking for the thought process that arrived at the list of conclusions. 
 
 $L = f \circ g$ where
 
-\[  f(y) =  \frac{5}{1 + 3 \, y}  \, \text{ and } \, g(k) = e^{-\tfrac{k}{2}}    \]
+\[  f(y) =  \frac{5}{y}  \, \text{ and } \, g(k) = 1 + 3 \, e^{-\tfrac{k}{2}}    \]
 
 
 
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Domain}} 
 
-$e^{-\tfrac{x}{2}}$ is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+$1 + 3 \, e^{-\tfrac{k}{2}}$ is a shifted exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. 
 
 
 
-The range of the exponential function, $e^{-\tfrac{x}{2}}$ is $(0, \infty)$. The range does not include \wordChoice{\choice{positive} \choice[correct]{negative}}  numbers. \\
-
-
-
-Since, the range of $g(k)$ does not include negative numbers, it does not include $-\frac{1}{3}$, which is the zero of the denominaotr of $f(y)$.  The denominator of $L(x)$ cannot equal $0$.  \\
+The range of the shifted exponential function, $1 + 3 \, e^{-\tfrac{k}{2}}$ is $(1, \infty)$. The range does not include $0$. The denominator of $L(x)$ cannot equal $0$.  
 
 
  That makes the domain of $L$ all real numbers, $(-\infty, \infty)$.
@@ -98,10 +94,10 @@ $L$ is a quotient, therefore the zeros of $L$ would be the zeros of the numerato
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Continuity}} 
 
 
-The denominator of $L$ is a shifted exponential function, so it is continuous everywhere. The numerator is a constant function, so it is continuous everywhere.  $L$ is the quotient of two continuous functions.  Therefore, it is continuous. \\
+The denominator of $L$ is a shifted exponential function, so it is continuous everywhere. The numerator is a constant function, so it is continuous everywhere.  $L$ is the quotient of two continuous functions.  Therefore, it is continuous. 
 
 
-Since the denominator is never equal to $0$, there are no singularities. \\
+Since the denominator is never equal to $0$, there are no singularities. 
 
 
 
@@ -119,9 +115,9 @@ Since the denominator is never equal to $0$, there are no singularities. \\
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ End-Behavior}} 
 
 
-The inside function is $e^{-\tfrac{x}{2}}$, which is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+The inside function is $e^{-\tfrac{x}{2}}$, which is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. 
 
-That means $g(k)$ is a positive decreasing exponential function. \\
+That means $g(k)$ is a positive decreasing exponential function. 
 
 
 
@@ -139,7 +135,7 @@ That means $g(k)$ is a positive decreasing exponential function. \\
 
 
 
-To get the end-behavior of $L(x)$, we need to see what $f(y)$ is doing when $g(k)$ is behaving as above. \\
+To get the end-behavior of $L(x)$, we need to see what $f(y)$ is doing when $g(k)$ is behaving as above. 
 
 
 
@@ -149,7 +145,7 @@ To get the end-behavior of $L(x)$, we need to see what $f(y)$ is doing when $g(k
 \lim\limits_{x \to -\infty}L(x) = \lim\limits_{y \to \infty}f(y) = \lim\limits_{y \to \infty}\frac{5}{1 + 3 y} = 0
 \]
 
-This is because $f(y)$ is a rational function with the degree of the denominator greater than the degree of the numerator. \\
+This is because $f(y)$ is a rational function with the degree of the denominator greater than the degree of the numerator. 
 
 
 
@@ -162,7 +158,7 @@ This is because $f(y)$ is a rational function with the degree of the denominator
 
 
 
-This is because $f$ is continuous, which means the limit as $y$ approaches $0$ is just the value of the function. \\
+This is because $f$ is continuous, which means the limit as $y$ approaches $0$ is just the value of the function. 
 
 
 
@@ -175,29 +171,71 @@ This is because $f$ is continuous, which means the limit as $y$ approaches $0$ i
 
 
 
-\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior}} 
-\textbf{Rate-of-Change}  
-\textbf{Increasing and Decreasing}   
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Behavior}} \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Rate-of-Change}} \\
+\textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Increasing and Decreasing}}
 
 
 
-The inside function, $e^{-\tfrac{x}{2}}$, is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. \\
+
+
+
+
+\textbf{First, thinking of the numerator and denominator...}
+
+The inside function, $e^{-\tfrac{x}{2}}$, is an exponential function with base $e > 1$.  It has a positive leading coefficient and the leading coefficient of the inside linear function is negative. 
 
 
 $e^{-\tfrac{x}{2}}$ is a strictly \wordChoice{\choice{increasing} \choice[correct]{decreasing}}  function 
 
 
-The outside function is a rational function with a constant positive numerator. \\
+The outside function is a rational function with a constant positive numerator. 
 
-The denominator of the fraction is positve and decreasing, which means it is getting smaller. \\
+The denominator of the fraction is positve and decreasing, which means it is getting smaller. 
 
-That makes $f$ an increasing function. \\
+That makes $f$ an increasing function. 
 
 
-$L$ is a composition of two increasing functions. \\
+$L$ is a composition of two increasing functions. 
 
 
 $L(x)$ is a strictly \wordChoice{\choice[correct]{increasing} \choice{decreasing}}  function.
+
+
+
+
+\textbf{Second, thinking as a composition...}
+
+
+
+\[   L(x) = \frac{5}{1 + 3 \, e^{-\tfrac{x}{2}}} = (f \circ g)(x)\]
+
+
+
+where $f(y) =  \frac{5}{y}$  \, and  \, $g(k) = 1 + 3 \, e^{-\tfrac{k}{2}}$   
+
+$f$ is the reciprocal function, which is always decreasing.
+
+$g$ is decreasing shifted exponential function.
+
+
+\[  dec \circ dec = inc  \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,7 +245,7 @@ $L(x)$ is a strictly \wordChoice{\choice[correct]{increasing} \choice{decreasing
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$ Extrema}} 
 
 
-As a strictly increasing function on $(-\infty, \infty)$, $L$ cannot have global or local maximums or minimums. \\
+As a strictly increasing function on $(-\infty, \infty)$, $L$ cannot have global or local maximums or minimums. 
 
 
 
@@ -327,7 +365,7 @@ The end-behavior tells us that the graph has horizontal asymptotes.
 
 Calculus will give us a formula for the derivative.
 
-\[  L'(x) =   \frac{-15}{2} \cdot \frac{e^{-\tfrac{x}{2}}}{\left(1+3 e^{-\tfrac{x}{2}}\right)^2}    \]
+\[  L'(x) =   \frac{15}{2} \cdot \frac{e^{-\tfrac{x}{2}}}{\left(1+3 e^{-\tfrac{x}{2}}\right)^2}    \]
 
 
 This derivative has no zeros, which tells us that $L(x)$ has no critical numbers.  $L'(x)$ is always positive, which tells us that $L(x)$ is always increasing.
