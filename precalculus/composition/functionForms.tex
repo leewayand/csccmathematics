@@ -16,7 +16,7 @@ elementary library
 
 Success at analyzing functions rests entirely on our ability to recognize what type of function we have.  Categorizing functions is the quickest and best way of gaining information about our function.
 
-Our library of elementary functions gives us a wonerful filter to begin idenitfying functions.  
+Our library of elementary functions gives us a wonerful filter to begin identifying functions.  
 
 
 
@@ -24,7 +24,7 @@ Our library of elementary functions gives us a wonerful filter to begin idenitfy
 
 
 
-Constant funtions are functions which give the same value for all domain numbers. 
+Constant functions are functions which give the same value for all domain numbers. 
 
 
 They can be represented by formulas that look like
@@ -48,7 +48,13 @@ The natural domain of a constant function is all real numbers.  However, we can 
 All of our definitions for the elementary functions use the word \textbf{\textcolor{red!80!black}{can}}.
 
 
-\begin{example}
+Constant functions are disguised with many formulas.  They \textbf{\textcolor{red!80!black}{can}} be written in the form $f(x) = C$.
+
+\end{warning}
+
+
+
+\begin{example} Constant Function
 
 The function representated by 
 
@@ -63,7 +69,7 @@ is a constant function.   $-1$ is the only function value.
 
 
 
-\begin{example}
+\begin{example} Constant Function
 
 The function representated by 
 
@@ -77,11 +83,13 @@ is a constant function.   $1$ is the only function value.
 
 
 
-Constant functions are disguised with many formulas.  They \textbf{\textcolor{red!80!black}{can}} be written in the form $f(x) = C$.
 
 
 
-\end{warning}
+
+
+
+
 
 
 
@@ -138,7 +146,7 @@ Graphs of constant functions are horizontal lines.
 
 
 
-Linear funtions are functions which exhibit a constant rate of change. 
+Linear functions are functions which exhibit a constant rate of change. 
 
 
 They can be represented by formulas that look like
@@ -198,14 +206,13 @@ Graphs of linear functions are lines.
 
 
 
-Although the definition quotes the slope-intercept form ($m x + b$), this is really not very useful.  In most situations, we do not have the intercept.  Instead, it is more common to have a slope and a random point or just two random points.
+Although the definition quotes the slope-intercept form ($m x + b$), this is really not very useful.  In most situations we do not have the intercept.  Instead, it is more common to have a slope and a random point or just two random points.
 
 
 
 \begin{itemize}
-
+\item \textbf{\textcolor{blue!55!black}{Slope-Intercept:}}  : $y = m \, x + b)$
 \item \textbf{\textcolor{blue!55!black}{Point-Slope:}}  : $(y - y_0) = m (x - x_0)$
-
 \item \textbf{\textcolor{blue!55!black}{Two Points:}}  : $(y - y_0) = \frac{y_1 - y_0}{x_1 - x_0} \, (x - x_0)$
 
 \end{itemize}
@@ -509,12 +516,12 @@ Exponential functions are characterized by a constant \textit{percentage} growth
 
 We have several thoughts about exponential functions.
 
-First, we have the basic expnential function, which has a formula like, $f(x) = r^x$ with $r > 0$. 
+First, we have the core exponential functions, which have a formula like, $f(x) = r^x$ with $r > 0$. 
 This give us a basic feeling for the behavior of exponential functions.
 
 
 
-for example $f(x) = e^x$:
+For instance, $f(x) = e^x$:
 
 
 \begin{image}
@@ -555,9 +562,9 @@ for example $f(x) = e^x$:
 
 
 
+Secondly, we have chosen our own favorite basic exponential function to which we can compare other exponential functions.
 
-
-Secondly, we have four basic forms of the basic exponential funciton that illustrate the basic variations of the basic behavior.
+We also have four basic alternative forms of the basic exponential function that illustrate the basic variations of the basic behavior.
 
 \begin{itemize}
 \item $f(x) = e^x$ 
@@ -574,15 +581,13 @@ Secondly, we have four basic forms of the basic exponential funciton that illust
 Finally, we include shifting and stretching, which algebraically is described by compositions with linear functions.
 
 
-\[ f(x) = A \, e^{B \, x + C} + D = L_o \circ E \circ L_i\]
+\[ f(x) = A \, e^{B \, x + C} = (L_o \circ E \circ L_i)(x) \]
 
 \[
-\text{ where } \,  E(y) = e^y   \,  \text{ and } \,   L_o(t) = A \, t + D    \,  \text{ and } \,   L_i(v) = B \, v + C
+\text{ where } \,  E(y) = e^y   \,  \text{ and } \,   L_o(t) = A \, t    \,  \text{ and } \,   L_i(v) = B \, v + C
 \]
 
 
-
-Strictly speaking, vertical shifts are not allowed for exponential functions.  We call them \textit{shifted exponential functions}.  However, nobody is going to complain if we just called them exponential functions.
 
 
 
@@ -595,7 +600,42 @@ Strictly speaking, vertical shifts are not allowed for exponential functions.  W
 
 
 
-The natural domain of an exponential function is all real numbers.  However, we can always state a restricted domain. 
+
+
+
+
+
+\subsection*{Exponential Functions}
+
+
+
+
+
+
+
+
+
+
+\begin{template}  \textbf{\textcolor{blue!55!black}{Shifted Exponential Functions}} 
+
+
+Shifted exponential functions exponential functions with an added constant term.
+
+
+\[ f(x) = A \, e^{B \, x + C} + D = (L_o \circ E \circ L_i)(x) \]
+
+\[
+\text{ where } \,  E(y) = e^y   \,  \text{ and } \,   L_o(t) = A \, t + D  \,  \text{ and } \,   L_i(v) = B \, v + C
+\]
+
+
+
+
+
+\end{template}
+
+
+The natural domain of exponential functions and shifted exponential functions is all real numbers.  However, we can always state a restricted domain. 
 
 
 
@@ -622,12 +662,12 @@ Logarithmic function are the inverse functions of exponential functions.
 
 We have several thoughts about logarithmic functions.
 
-First, we have the basic logarithmic function, which has a formula like, $f(x) = \log_r(x)$ with $r > 0$. 
-This give us a basic feeling for the behavior of exponential functions.
+First, we have the core logarithmic functions, which have a formula like, $f(x) = \log_r(x)$ with $r > 0, r \ne 1$. \\
+This give us a basic feeling for the behavior of logarithmic functions.
 
 
 
-for example $f(x) = \ln(x)$:
+For instance, $f(x) = \ln(x)$:
 
 
 \begin{image}
@@ -646,7 +686,7 @@ for example $f(x) = \ln(x)$:
           ]
           
             
-      \addplot [line width=2, penColor, smooth,samples=200,domain=(0.1:9),<->] {ln(x)};
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(0.01:9),<->] {ln(x)};
       \addplot [line width=1, black, dashed,samples=200,domain=(-9:9),<->] ({0}, {x});
 
 
@@ -668,9 +708,9 @@ for example $f(x) = \ln(x)$:
 
 
 
+Secondly, we have chose our favorite basic logarithmic function to which we can compare other logarithmic functions.
 
-
-Secondly, we have four basic forms of the basic logarithmic funciton that illustrate the basic variations of the basic behavior.
+We also have four basic alternatice forms of the basic logarithmic function that illustrate the basic variations of the basic behavior.
 
 \begin{itemize}
 \item $f(x) = \ln(x)$ 
@@ -735,7 +775,7 @@ Finally, we include shifting and stretching, which algebraically is described by
 
 
 
-Absolute value functions are usually identified by their vertical bars.
+Formulas for absolute value functions are usually identified by their vertical bars.
 
 
 
@@ -760,7 +800,7 @@ Absolute value functions are usually identified by their vertical bars.
 
 
 
-Unfortunately, our algebra doesn't work vrey well with the vertical bars.  Usually, our first algebraic thought is to get rid of the bars.  This is because the absolute value function is really a piecewise defined function.   
+Unfortunately, our algebra doesn't work very well with the vertical bars.  Usually, our first algebraic thought is to get rid of the bars.  This is because the absolute value function is really a piecewise defined function.   
 
 
 
@@ -853,7 +893,7 @@ The Order of Operations instructs us on how to make this decision.
 \begin{template}  \textbf{\textcolor{blue!55!black}{Constant Multiple}} 
 
 
-If  $f$ is a function and $A$ is a constant, then $A \, f$ is called a \textbf{\textcolor{green!50!black}{constant multiple}} of $f$. 
+If  $f$ is a function and $A$ is a constant, then $A \, f$ is called a \textbf{\textcolor{blue!55!black}{constant multiple}} of $f$. 
 
 The domain of a constant multiple of a function is equal to the domain of the function. 
 
@@ -875,7 +915,7 @@ If $f$ belongs to a nice category of functions, then the constant multiple also 
 
 
 
-\begin{example}
+\begin{example} Constant Multiples
 
 $f(x) = 4 \, e^x$ is a constant multiple of $e^x$. 
 
@@ -888,7 +928,7 @@ $T(n) = 4 (n+1) + 6$ is not a constant multiple of $(n+1) + 6$.
 
 \end{example}
 
-
+If you want to categorize a constant multiple as a product, that is ok.
 
 
 
@@ -911,7 +951,7 @@ $T(n) = 4 (n+1) + 6$ is not a constant multiple of $(n+1) + 6$.
 \begin{template}  \textbf{\textcolor{blue!55!black}{Sum}} 
 
 
-If  $f$ and $g$ are functions, then $f + g$ is called the \textbf{\textcolor{green!50!black}{sum}} of $f$ and $g$. 
+If  $f$ and $g$ are functions, then $f + g$ is called the \textbf{\textcolor{blue!55!black}{sum}} of $f$ and $g$. 
 
 The sum of two functions is defined on the intersection of their two domains. 
 
@@ -924,7 +964,7 @@ The sum of two functions is defined on the intersection of their two domains.
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Operations Often Change the Category}}
 
 If $f$ or $g$ belongs to a nice category of functions, their sum usually does not.
 
@@ -956,9 +996,9 @@ However, $(f + g)(k) = f(k) + g(k) = e^k + 3 k + 4$ is neither exponential nor l
 \begin{template}  \textbf{\textcolor{blue!55!black}{Difference}} 
 
 
-If  $f$ and $g$ are functions, then $f - g$ is called the \textbf{\textcolor{green!50!black}{difference}} of $f$ and $g$. 
+If  $f$ and $g$ are functions, then $f - g$ is called the \textbf{\textcolor{blue!55!black}{difference}} of $f$ and $g$. 
 
-The difference of two functions is defined on the intersection of their two domains. \\
+The difference of two functions is defined on the intersection of their two domains. 
 
 
 \[ (f - g)(a) = f(a) - g(a)  \]
@@ -969,7 +1009,7 @@ The difference of two functions is defined on the intersection of their two doma
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Operations Often Change the Category}}
 
 If $f$ or $g$ belongs to a nice category of functions, their difference usually does not.
 
@@ -1010,7 +1050,7 @@ However, $(f - g)(k) = f(k) - g(k) = e^k - 3 k - 4$ is neither exponential nor l
 \begin{template}  \textbf{\textcolor{blue!55!black}{Product}} 
 
 
-If  $f$ and $g$ are functions, then $f \cdot g$, or just $f g$, is called the \textbf{\textcolor{green!50!black}{product}} of $f$ and $g$. 
+If  $f$ and $g$ are functions, then $f \cdot g$, or just $f g$, is called the \textbf{\textcolor{blue!55!black}{product}} of $f$ and $g$. 
 
 The product of two functions is defined on the intersection of their two domains. 
 
@@ -1023,7 +1063,7 @@ The product of two functions is defined on the intersection of their two domains
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Operations Often Change the Category}}
 
 If $f$ or $g$ belongs to a nice category of functions, their product usually does not.
 
@@ -1076,7 +1116,7 @@ It has been very common to see numbers involved in division: $15 \div 7$. Howeve
 \begin{template}  \textbf{\textcolor{blue!55!black}{Quotients}} 
 
 
-If  $f$ and $g$ are functions, then $\frac{f}{g}$ is called the \textbf{\textcolor{green!50!black}{quotient}} of $f$ and $g$. 
+If  $f$ and $g$ are functions, then $\frac{f}{g}$ is called the \textbf{\textcolor{blue!55!black}{quotient}} of $f$ and $g$. 
 
 The quotient of two functions is defined on the intersection of their two domains except at the zeros of the function in the denominator. 
 
@@ -1089,7 +1129,7 @@ The quotient of two functions is defined on the intersection of their two domain
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Operations Often Change the Category}}
 
 If $f$ or $g$ belongs to a nice category of functions, their quotient usually does not.
 
@@ -1118,7 +1158,7 @@ However, $\left(\frac{f}{g}\right)(k) = \frac{f(k)}{g(k)} = \frac{e^k}{(3 k + 4)
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Watch Out For Symbols}}
 
 
 \begin{itemize}
@@ -1131,6 +1171,16 @@ However, $\left(\frac{f}{g}\right)(k) = \frac{f(k)}{g(k)} = \frac{e^k}{(3 k + 4)
 \end{warning}
 
 
+
+
+\begin{example} 
+
+$e^5 \, x^3 + \ln(4) \, x^2 + \sqrt{5} \, x$ is a polynomial.
+
+$\sqrt{7} (\pi \, t - 3^2) + \log_2(5)$ is a linear function.
+
+
+\end{example}
 
 
 
@@ -1190,7 +1240,7 @@ We can also build new functions by gluing together pieces of old functions.
 
 
 
-\begin{template} \textbf{\textcolor{blue!55!black}{Piecewise Defined Functions}} \\
+\begin{template} \textbf{\textcolor{blue!55!black}{Piecewise Defined Functions}} 
 
 
 Suppose we have several functions with their domains.
@@ -1215,7 +1265,7 @@ First, select disjoint subsets of the three given domains.
 \end{itemize}
 
 
-The domain of $N$ will be the union of these three subsets: $S_F \cup S_G \cup S_H$. \\
+The domain of $N$ will be the union of these three subsets: $S_F \cup S_G \cup S_H$. 
 
 When evaluating $N(a)$, use the formula from $F$, $G$, or $H$ that goes with the domain subset holding $a$.
 
@@ -1227,7 +1277,7 @@ $N$ is called a \textbf{\textcolor{blue!55!black}{piecewise defined function}}.
 
 
 
-\begin{notation}
+\begin{notation} \textbf{\textcolor{red!50!green}{Formula Column and Domain Interval Column}} 
 
 
 The notation for a piecewise defined function must list the formulas to use along with the domain subset corresponding to formula.

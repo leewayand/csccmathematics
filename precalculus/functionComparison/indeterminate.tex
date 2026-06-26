@@ -253,7 +253,7 @@ Let's investigate $R(t) = \frac{\sin(t)}{t}$
           ]
           
 
-            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-8:8),<->] {sin(deg(x))/x};
+            \addplot [line width=2, penColor2, smooth,samples=100,domain=(-1:1),<->] {sin(deg(x))/x};
 
 
 
@@ -316,7 +316,7 @@ The base is getting closer to $1$, but it is always greater than $1$.  The power
 
 We are heading to something like $1^{\infty}$.
 
-And we have seen this function actually approaches the value $e \approx 2.71828$. \\
+And we have seen this function actually approaches the value $e \approx 2.71828$. 
 
 How far out in the domain do you need to go for the graph to be inside the interval $[2.7, 2.8]$?
 
@@ -333,7 +333,7 @@ How far out in the domain do you need to go for the graph to be inside the inter
 \begin{image}
 \begin{tikzpicture}
   \begin{axis}[
-            domain=-10:10, ymax=10, xmax=10, ymin=10, xmin=-10,
+            domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel={$y$}, grid = major,
             ytick={1,2,4,6,8,10},
             xtick={1,2,4,6,8,10},
