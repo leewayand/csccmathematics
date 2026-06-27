@@ -2,7 +2,7 @@
 
 \input{../../preamble.tex}
 
-\title{Double Angle}
+\title{Double Angles}
 
 \begin{document}
 
@@ -13,10 +13,9 @@ changing angles
 
 
 
+The sum rules for sine and cosine give us a way to talk about double angles.
 
 
-
-The real parts must be equal and the imaginary parts must be equal.  This gives
 
 
 \[ \cos(\theta_1 + \theta_2) =  \cos(\theta_1) \cdot \cos(\theta_2) - \sin(\theta_1) \cdot \sin(\theta_2) \]
@@ -26,7 +25,7 @@ and
 \[ \sin(\theta_1 + \theta_2) =  \cos(\theta_1) \cdot \sin(\theta_2) + \sin(\theta_1) \cdot \cos(\theta_2) \]
 
 
-These are know as the ``\textbf{sum}'' rules for sine  and cosine.
+
 
 
 If we let $\theta_1 = \theta_2$, then we get the ``\textbf{double angle rules}''.
@@ -43,6 +42,106 @@ and
 
 
 
+
+
+
+
+
+
+
+\subsection*{More Relationships}
+
+
+$\sin(x)$ and $\cos(x)$ are the coordinates for points on the unit circle.
+
+Therefore, we know that 
+
+\[ (\cos(x))^2 + (\sin(x))^2 = 1\]
+
+
+From this equation, we also get 
+
+
+\[ (\cos(x))^2 = 1 - (\sin(x))^2 \]
+
+and
+
+\[ 1 - (\cos(x))^2 = (\sin(x))^2 \]
+
+
+Ssubstituting these into our equaiton for the double angle cosine rules gives two alternative.
+
+
+\begin{align*}
+\cos(2 \, \theta) & = (\cos(\theta))^2 - (\sin(\theta))^2 \\
+& = (\cos(\theta))^2 - (1 - (\cos(x))^2)  \\
+& = 2 \, (\cos(\theta))^2 - 1
+\end{align*}
+
+and
+
+
+\begin{align*}
+\cos(2 \, \theta) & = (\cos(\theta))^2 - (\sin(\theta))^2 \\
+& = 1 - (\sin(\theta))^2 - (\sin(\theta))^2  \\
+& = 1 - 2 \, (\sin(\theta))^2
+\end{align*}
+
+
+\textbf{\textcolor{blue!55!black}{Arithmetic}} 
+
+Arithmetic with trigonometric function is kind of like arithmetic with fractions.  
+
+Our arithmetic rules for fraction addition insist on common denominators.
+
+With trigonometric functions, we need the arguments (the insides) to be equal.
+
+
+The double angle rules give us a way convert angles to find common angles.
+
+This is very helpful when solving equations.
+
+
+
+
+\begin{example} Solving Equations
+
+
+Solve $\cos(2x) = \sin(x)$
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
+The problem here is really the arguments of sine and cosine.  They are different.
+
+We can make them the same using the double angle rules.
+
+
+\[  \cos(2x) = \sin(x)  \]
+
+\[  1 - 2(\sin(x))^2 = \sin(x)  \]
+
+\[  0 = 2(\sin(x))^2 + \sin(x) - 1  \]
+
+\[  0 = (2 \, \sin(x) - 1) (\sin(x) + 1)  \]
+
+
+Either $0 = 2 \, \sin(x) - 1$ or $0 = \sin(x) + 1$.
+
+Either $\frac{1}{2} = \sin(x) $ or $-1 = \sin(x)$.
+
+
+On the interval $[0, 2\pi)$, we get three solutions.
+
+
+\[ \frac{\pi}{6}, \frac{5\pi}{6}, \frac{3\pi}{2}  \]
+
+
+These can be extended with a period of $2\pi$ to get all of the solutions.
+
+
+
+\end{example}
 
 
 
