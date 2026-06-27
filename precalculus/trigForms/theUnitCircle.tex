@@ -47,8 +47,8 @@ We can think of adding angles together by rotating the first angle and then cont
           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.906,0.423)};
 
           \addplot [textColor] plot coordinates {(0,0) (0.767,0.643)}; %% 15 degrees
-          \addplot [textColor,smooth, domain=(25:40)] ({0.15*cos(x)},{0.15*sin(x)});   
-          \node at (axis cs:0.15,0.11) [anchor=west] {$\phi$};
+          \addplot [textColor,smooth, domain=(25:40)] ({0.17*cos(x)},{0.17*sin(x)});   
+          \node at (axis cs:0.14,0.13) [anchor=west] {$\phi$};
           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.767,0.643)};
 
 
@@ -176,13 +176,13 @@ How are these separate beginning values of sine and cosine related to the final 
 
 
 
-\section*{Adding Angles}
+\section*{Angle Arithmetic}
 
 
 Let's build the angle sum and watch what happens to the horizontal and vertical lengths.
 
 
-
+Our first angle will be $\theta$. We can picture $\sin(\theta)$ and $\cos(\theta)$ as the horizontal and vertical lengths of the right triangle formed with rotating an angle $\theta$.
 
 
 
@@ -219,9 +219,6 @@ Let's build the angle sum and watch what happens to the horizontal and vertical 
           \node[penColor2] at (axis cs:0.5,0) [anchor=north] {$\cos(\theta)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
 
-
-          \node at (axis cs:0.906,0.423) [anchor=west] {$a + bi$};
-
           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.906,0.423)};
 
         \end{axis}
@@ -232,21 +229,20 @@ Let's build the angle sum and watch what happens to the horizontal and vertical 
 
 
 
-Above is a diagram of the right triangle for $a + b \, i = (1, \theta)$. \\
+Above is a diagram of the right triangle formed for angle $\theta)$. Its hypotenuse has length $1$, since it is a radius of the unit circle.
 
 
+Our plan is to use this hypotenuse of this right triangle as the horizontal leg of the next right angle as we turn an angle $\phi$.
 
 
-The complex number $C_2 = c + d \, i$, has a polar form $(r_2, \phi)$, which similarly is $(1, \phi)$.  Normally, we would plot a point for this complex number by rotating counterclockwise an angle $\phi$ from the positive $x$-axis.  Instead, we are going to tack on this angle to $\theta$.
+Let's simplify the labels in our picture by letting $a$ represent $\sin(\theta)$ and letting $b$ represent $\cos(\theta)$. 
 
-So, we are sort of pretending that the radius for the first complex number, $a + b \, i$, is acting like a new $x$-axis and we are going to rotate counterclockwise an angle $\phi$ from that radius.
-
-
+Just thinking ahead, we'll let $c$ represent $\sin(\phi)$ and $d$ represent $\cos(\phi)$.
 
 
+Now we can begin an additional rotation of an angle $\phi$.
 
-We begin making a right triangle for   $c + d \, i$ with an angle $\phi$.
-
+Our plan is to form another right triangle. The base leg of this new right triangle is to be the hypotnesue of the first right triangle formed from angle $\theta$.
 
 
 
@@ -299,6 +295,9 @@ We begin making a right triangle for   $c + d \, i$ with an angle $\phi$.
   \end{image}
 
 
+Since the base of the newly formed right triangle is the hypotenuse of the first right triangle, its length is $1$.  That will result in our second hypotenuse having a length gretaer than $1$.
+
+Our second right triangle will grow outside the bounds of the unit circle.
 
 
 Eventually, the sides meet to make a right triangle.  Let's enclose the whole diagram with a rectangle at that height.
@@ -364,14 +363,19 @@ Eventually, the sides meet to make a right triangle.  Let's enclose the whole di
 
 
 
-The problem is that this second right triangle is too big for our unit circle. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were supposed to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$. That is too much.  That is ok. We can still get the lengths of this triangle.  
-
-So, our new right triangle is not the $c-d-1$ right triangle for $c + d \, i$. 
+The problem is that this second right triangle is too big for our unit circle. It is supposed to be a right triangle for $\phi$.  
 
 
- The good news is that the new triangle we created is a right triangle with angle $\phi$.  That means it is similar to the $c-d-1$ right triangle for $c + d \, i$.  The sides must be proportional to the sides of the $c-d-1$ right triangle for $c + d \, i$.  We can use this proportionality.
+The sides were going to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$. That is too much.  That is ok. We can still get the lengths of this triangle.  
 
-  Let's call the lengths of the sides of this new triangle $k$ and $h$.  $k$ is one of the legs of the right triangle and $h$ is the hypotenuse.
+So, our new right triangle is not the $c-d-1$ right triangle we originally pictured for $\phi$. 
+
+
+ The good news is that the new triangle we created is still a right triangle with angle $\phi$.  
+
+ That means it is similar to the $c-d-1$ right triangle for $\phi$.  The sides must be proportional to the sides of the $c-d-1$ right triangle for $\phi$.  We can use this proportionality.
+
+  We know the length of one leg of this right triangle has length $1$. Let's call the lengths of the sides of this new triangle $k$ and $h$.  $k$ is one of the legs of the right triangle and $h$ is the hypotenuse.
 
 
 
@@ -520,7 +524,7 @@ The other leg of our right triangle has length $\frac{d}{c}$.
 
 
 
-We can also deduce some information about the top-right right triangle in this diagram. 
+We can also deduce some information about the right triangle in top-right corner of this diagram. 
 
 
 If we label the angles $\alpha$ and $\beta$ in the diagram below, then
@@ -529,7 +533,7 @@ If we label the angles $\alpha$ and $\beta$ in the diagram below, then
 
 
 \begin{itemize}
-  \item Our original right triangle for $a + b \, i$  has non-right angles, $\theta$, and angle $\beta$.
+  \item Our original right triangle for $\theta$  has non-right angles, $\theta$, and angle $\beta$.
   \item The right side of the big encompassing rectangle forms a straight angle and it is cut up into three angles: a right angle, $\beta$ on one side, and $\alpha$ on the other side. The sum must be $180^{\circ}$.
 \end{itemize}
 
@@ -624,7 +628,7 @@ The sum of the angles of the bottom right triangle is $\theta + \beta + 90^{\cir
 The angles in the top-right right triangle are also $\theta$ and $\beta$. 
 
 
-The bottom right triangle representing $a + b \, i$ and the triangle formed in the upper-right corner of the rectangle are similar triangles.  We can get the lengths of the legs of the top right triangle. Let's call these lengths $x$ and $y$ in the diagram.
+The bottom right triangle representing $\theta$ and the triangle formed in the upper-right corner of the rectangle are similar triangles.  We can get the lengths of the legs of the top right triangle. Let's call these lengths $x$ and $y$ in the diagram.
 
 
 
@@ -937,7 +941,7 @@ If we view the slanted line as the diagonal of a rectangle, then we can see that
 
 
 
-
+The hypotenuse has length $\frac{1}{c}$.
 
 
 
@@ -987,18 +991,16 @@ Finally, let's resize this triangle by a factor of $c$.
     \end{tikzpicture}
   \end{image}
 
-These two lengths are familiar. 
-
-
-
-It is upsidedown, but this is the right triangle defined on the unit circle by the product of our two complex numbers:
-
-\[  (a + b \, i) \cdot (c + d \, i) = (ac-bd) + (ad+bc) \, i    \]
 
 
 
 
-Let's flip it over.
+It is upsidedown, but this is the right triangle defined on the unit circle by adding our angles $\theta$ and $\phi$.
+
+
+
+
+Let's flip it over and take a closer look.
 
 
 
@@ -1041,6 +1043,26 @@ Let's flip it over.
 
 
 
+The hypotenuse has length $1$, so it reaches out to the unit circle.
+
+The angle is $\theta + \phi$.
+
+
+What are the lengths of the sides?
+
+
+
+
+ 
+
+\textcolor{red!80!black}{$\blacktriangleright$} $\cos(\theta + \phi)$ is the length of the adjacent side, which is 
+
+
+\[  a \cdot c - b \cdot d = \cos(\theta) \cdot \cos(\phi) - \sin(\theta) \cdot \sin(\phi)  \]
+
+
+\[  \cos(\theta + \phi) = \cos(\theta) \cdot \cos(\phi) - \sin(\theta) \cdot \sin(\phi)  \]
+
 
 
 
@@ -1049,51 +1071,100 @@ Let's flip it over.
 
  
 
-\textcolor{red!80!black}{$\blacktriangleright$} When multiplying complex numbers on the unit circle, just add their angles. 
+\textcolor{red!80!black}{$\blacktriangleright$} $\sin(\theta + \phi)$ is the length of the opposite side, which is 
+
+
+\[  a \cdot d + b \cdot c = \cos(\theta) \cdot \sin(\phi) - \sin(\theta) \cdot \cos(\phi)  \]
+
+
+\[  \sin(\theta + \phi) = \cos(\theta) \cdot \sin(\phi) - \sin(\theta) \cdot \cos(\phi)  \]
 
 
 
 
-The product of two complex numbers on the unit circle is again on the unit circle. Its location is given by adding the angles of the two factors.
-
-
-We can now extend this to all complex numbers by bringing back in their distance from the origin - the modulus. 
 
 
 
 
-\textcolor{red!80!black}{$\blacktriangleright$} When multiplying any two complex numbers, multiply their moduli and add their angles.
 
 
 
-\begin{theorem}  \textbf{\textcolor{green!50!black}{Complex Multiplication (Polar)}}
 
-\[  (r_1, \theta_1) \cdot (r_2, \theta_2) = (r_1 \cdot r_2, \theta_1 + \theta_2)              \]
 
+
+\begin{theorem}  \textbf{\textcolor{-red!75!green}{Sine and Cosine of a Sum}}
+
+\[  \sin(\theta + \phi) = \cos(\theta) \cdot \sin(\phi) - \sin(\theta) \cdot \cos(\phi)  \]
+
+\[  \cos(\theta + \phi) = \cos(\theta) \cdot \cos(\phi) - \sin(\theta) \cdot \sin(\phi)  \]
 
 \end{theorem}
 
 
 
 
-\begin{example}  Squaring 
+The difference between two angles would be adding the opposite, which means to rotate clockwise.
 
-
-The two complex numbers could be the same number. $\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i = \left(1, \frac{\pi}{4} \right)$
-
-
-\[
-\left( \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i \right)^2 = \left(1, \frac{\pi}{4} \right) \cdot \left(1, \frac{\pi}{4} \right)
-\]
-
-\[
-= \left(1, \frac{\pi}{4} + \frac{\pi}{4} \right) = \left( 1, \frac{\pi}{2} \right) = i
-\]
+We have some relations to help us investigate this combination.
 
 
 
+\begin{itemize}
+\item $\sin(-\theta) = -\sin(\theta)$
+\item $\cos(-\theta) = \cos(\theta)$
+\end{itemize}
 
-$\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i$ is a square root of $i$.
+
+Now we can just think of adding again.
+
+
+
+
+
+\begin{theorem}  \textbf{\textcolor{-red!75!green}{Sine and Cosine of a Difference}}
+
+\[  \sin(\theta + \phi) = \cos(\theta) \cdot \sin(\phi) - \sin(\theta) \cdot \cos(\phi)  \]
+
+\[  \cos(\theta + \phi) = \cos(\theta) \cdot \cos(\phi) - \sin(\theta) \cdot \sin(\phi)  \]
+
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}  Quarter Circles 
+
+
+Rotating a quarter circle moves an angle into the next quadrant.  The lengths of the legs of the right triangles switch legs and the signs for sine and cosine need adjusting.
+
+
+
+\[  \sin\left( \theta + \frac{\pi}{2} \right) = \cos(\theta) \cdot \sin\left( \frac{\pi}{2} \right) - \sin(\theta) \cdot \cos\left( \frac{\pi}{2} \right)  \]
+
+
+
+\[  \sin\left( \theta + \frac{\pi}{2} \right) = \cos(\theta) \cdot 1 - \sin(\theta) \cdot 0  \]
+
+\[  \sin\left( \theta + \frac{\pi}{2} \right) = \cos(\theta)  \]
+
+
+
+\[  \cos\left( \theta + \frac{\pi}{2} \right) = \cos(\theta) \cdot \cos\left( \frac{\pi}{2} \right) - \sin(\theta) \cdot \sin\left( \frac{\pi}{2} \right)  \]
+
+\[  \cos\left( \theta + \frac{\pi}{2} \right) = \cos(\theta) \cdot 0 - \sin(\theta) \cdot 1  \]
+
+\[  \cos\left( \theta + \frac{\pi}{2} \right) =  - \sin(\theta)   \]
+
+
 
 
 \end{example}
@@ -1103,86 +1174,6 @@ $\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i$ is a square root of $i$.
 
 
 
-
-\begin{example}  Fourth Root 
-
-
-We can work the angles backwards as well.  
-
-To get a fourth root of $-1$, we would need an angle such that $4$ times the angle is $\pi$.    
-
-$\frac{\pi}{4}$ will work.  We need the complex number on the unit circle at an angle of $\frac{\pi}{4}$.  That is $\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \, i$.
-
-
-\end{example}
-
-
-
-
-\subsection*{Multiplication on the Unit Circle}
-
-Multiplication on the unit circle is easy, just add the angles.
-
-
-
-\[ (1, \theta_1) \cdot (1, \theta_2) = (1, \theta_1 + \theta_2)   \]
-
-
-We can rephrase this in terms of sine and cosine.
-
-
-
-\[ 
-(\cos(\theta_1) + i \, \sin(\theta_1)) \cdot (\cos(\theta_2) + i \, \sin(\theta_2)) = \cos(\theta_1 + \theta_2) + i \, \sin(\theta_1 + \theta_2)
-\]
-
-
-
-Let's apply the Distributive Property to the left side of this equation.
-
-Expanding the left side gives
-
-
-\[ \cos(\theta_1) \cdot \cos(\theta_2) + i \, \cos(\theta_1) \cdot \sin(\theta_2) + i \, \sin(\theta_1) \cdot \cos(\theta_2) + i \, \sin(\theta_1) \cdot i \, \sin(\theta_2) \]
-
-
-\[ \cos(\theta_1) \cdot \cos(\theta_2) + i \, \cos(\theta_1) \cdot \sin(\theta_2) + i \, \sin(\theta_1) \cdot \cos(\theta_2) - \sin(\theta_1) \cdot \sin(\theta_2) \]
-
-
-Gathering the real an imginary parts together gives
-
-
-\[
-(\cos(\theta_1) \cdot \cos(\theta_2) - \sin(\theta_1) \cdot \sin(\theta_2)) + i \, (\cos(\theta_1) \cdot \sin(\theta_2) + \sin(\theta_1) \cdot \cos(\theta_2))
-\]
-
-But, this must equal 
-
-
-\[ \cos(\theta_1 + \theta_2) + i \, \sin(\theta_1 + \theta_2) \]
-
-The real parts must be equal and the imaginary parts must be equal.  This gives
-
-
-\[ \cos(\theta_1 + \theta_2) =  \cos(\theta_1) \cdot \cos(\theta_2) - \sin(\theta_1) \cdot \sin(\theta_2) \]
-
-and
-
-\[ \sin(\theta_1 + \theta_2) =  \cos(\theta_1) \cdot \sin(\theta_2) + \sin(\theta_1) \cdot \cos(\theta_2) \]
-
-
-These are know as the ``\textbf{sum}'' rules for sine  and cosine.
-
-
-If we let $\theta_1 = \theta_2$, then we get the ``\textbf{double angle rules}''.
-
-
-
-\[ \cos(2 \, \theta) =  (\cos(\theta))^2 - (\sin(\theta))^2  \]
-
-and
-
-\[ \sin(2 \, \theta) =  2 \, \sin(\theta) \,  \cos(\theta) \]
 
 
 
