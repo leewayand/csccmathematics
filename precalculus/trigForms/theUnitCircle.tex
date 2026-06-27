@@ -13,7 +13,60 @@ circles and triangles
 
 
 
-Adding angles.
+We can think of adding angles together by rotating the first angle and then continuing to rotate for the second angle.
+
+
+
+
+
+
+
+
+\begin{image}
+\begin{tikzpicture}
+  \begin{axis}[
+            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+            axis lines=center,
+            width=4in,
+            xtick={-1,1},
+            ytick={-1,1},
+            clip=false,
+            unit vector ratio*=1 1 1,
+            xlabel=$x$, ylabel=$y$,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+
+          
+
+          \addplot [smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+
+          \addplot [textColor] plot coordinates {(0,0) (0.906,0.423)}; %% 25 degrees
+          \addplot [textColor,smooth, domain=(0:25)] ({0.15*cos(x)},{0.15*sin(x)});   
+          \node at (axis cs:0.17,0.06) [anchor=west] {$\theta$};
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.906,0.423)};
+
+          \addplot [textColor] plot coordinates {(0,0) (0.767,0.643)}; %% 15 degrees
+          \addplot [textColor,smooth, domain=(25:40)] ({0.15*cos(x)},{0.15*sin(x)});   
+          \node at (axis cs:0.15,0.11) [anchor=west] {$\phi$};
+          \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.767,0.643)};
+
+
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+
+
+
+
+How are the sine and cosine values related within these turns?
+
+
+
+Separately, each angle has its own sine and cosine values, which are the coordinates on the unit circle.
+
 
 
 
@@ -85,9 +138,9 @@ Adding angles.
           %\addplot [very thick,penColor] plot coordinates {(0,0) (.766,.643)}; %% sector
           %\addplot [very thick,penColor] plot coordinates {(0,0) (1,0)}; %% sector
           %\addplot [very thick, penColor, smooth, domain=(0:40)] ({cos(x)},{sin(x)}); %% sector
-          \node at (axis cs:0.17,0.06) [anchor=west] {$\theta$};
-          \node[penColor, rotate=-90] at (axis cs:0.83,0.17) {$\sin(\theta)$};
-          \node[penColor2] at (axis cs:0.5,0) [anchor=north] {$\cos(\theta)$};
+          \node at (axis cs:0.17,0.06) [anchor=west] {$\phi$};
+          \node[penColor, rotate=-90] at (axis cs:0.83,0.17) {$\sin(\phi)$};
+          \node[penColor2] at (axis cs:0.5,0) [anchor=north] {$\cos(\phi)$};
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
 
           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.906,0.423)};
@@ -99,68 +152,7 @@ Adding angles.
 
 
 
-If we can understand the unit circle in terms of complex numbers, then we will have a good understanding of all complex numbers.
-
-
-
-
-
-
-$\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Multiplication on the Unit Circle}}  
-
-
-Pretend we have two Complex numbers on the unit circle.
-
-\begin{itemize}
-\item $C_1 = a + b \, i$ with $|C_1| = 1$
-\item $C_2 = c + d \, i$ with $|C_2| = 1$
-\end{itemize}
-
-
-
-We know $a^2 + b^2 = 1$  and $c^2 + d^2 = 1$.
-
-
-
-Now, let's examine their product.
-
-
-
-
-
-
-\begin{align*}
-(a + b \, i) \cdot (c + d \, i)      & = ac + ad \, i + bc \, i - bd   \\
-                & = (ac - bd) + (ad + bd) \, i
-\end{align*}
-
-
-
-What is the modulus of the product?
-
-
-
-
-
-\begin{align*}
-|(a + b \, i) \cdot (c + d \, i)|      & = | (ac - bd) + (ad + bd) \, i | \\
-                & = (ac - bd)^2 + (ad + bd)^2   \\
-                & = a^2c^2 - 2abcd + b^2d^2 + a^2d^2 + 2abcd + b^2c^2  \\
-                & = a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2  \\
-                & = (a^2 + b^2) \cdot (c^2 + d^2)   \\
-                & = 1 \cdot 1  \\
-                & = 1
-\end{align*}
-
-
-
-\textbf{\textcolor{purple!85!blue}{The product is again on the unit circle!}}
-
-
-
-
-
-\textbf{Question:} Where is this product on the unit circle?
+How are these separate beginning values of sine and cosine related to the final values of sine and cosine after both rotations are added together?
 
 
 
@@ -175,19 +167,19 @@ What is the modulus of the product?
 
 
 
-\section*{Polar Perspective}
-
-
-
-The complex number $C_1 = a + b \, i$, is positioned at an angle $\theta$ from the positive $x$-axis and a distance $r_1$ from the origin. Therefore, it has the polar form $(r_1, \theta)$. But if  $a + b \, i$ is on the unit circle, then $r_1 = 1$ and the polar form is $(1, \theta)$.
 
 
 
 
-This point defines a right triangle with base $a$ and height $b$ and angle $\theta$ .  
 
 
 
+
+
+\section*{Adding Angles}
+
+
+Let's build the angle sum and watch what happens to the horizontal and vertical lengths.
 
 
 
