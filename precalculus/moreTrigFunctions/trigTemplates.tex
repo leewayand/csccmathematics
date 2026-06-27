@@ -57,7 +57,7 @@ Our general templates are really compositions of basic functions with linear fun
 
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Sine Functions}}
+\begin{formula} \textbf{\textcolor{blue!55!black}{Core Sine Function}}
 
 There is one \textbf{basic sine function}. 
 
@@ -69,13 +69,13 @@ There is one \textbf{basic sine function}.
 Our category of sine functions is built from composing this basic sine function with linear functions
 
 
-Let $L_{out}(t) = A t + D$
+Let $L_{out}(t) = A \, t + D$
 
-Let $L_{in}(v) = B v + C$
+Let $L_{in}(v) = B \, v + C$
 
 
 \[
-(L_{out} \, \circ \, \sin \, \circ L_{in})(x) = A \sin(B \, x + C) + D 
+(L_{out} \, \circ \, \sin \, \circ \, L_{in})(x) = A \, \sin(B \, x + C) + D 
 \]
 
 
@@ -83,7 +83,7 @@ Let $L_{in}(v) = B v + C$
 
 A \textbf{sine function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
 
-\[     S(x) =    A \sin(B \, x + C) + D           \]
+\[     S(x) =    A \, \sin(B \, x + C) + D           \]
 
 where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
 
@@ -101,7 +101,7 @@ where $A$, $B$, $C$, and $D$ are real numbers and $A \ne 0$, $B \ne 0$.
 
 
 
-\begin{formula} \textbf{\textcolor{blue!55!black}{Basic Cosine Functions}}
+\begin{formula} \textbf{\textcolor{blue!55!black}{Core Cosine Functions}}
 
 There is one \textbf{basic cosine function}. 
 
@@ -113,13 +113,13 @@ There is one \textbf{basic cosine function}.
 Our category of cosine functions is built from composing this basic sine function with linear functions
 
 
-Let $L_{out}(t) = A t + D$
+Let $L_{out}(t) = A \, t + D$
 
-Let $L_{in}(v) = B v + C$
+Let $L_{in}(v) = B \, v + C$
 
 
 \[
-(L_{out} \, \circ \, \cos \, \circ L_{in})(x) = A \cos(B \, x + C) + D 
+(L_{out} \, \circ \, \cos \, \circ \, L_{in})(x) = A \cos(B \, x + C) + D 
 \]
 
 
@@ -263,7 +263,7 @@ It is not true that the reciprocal of any sine function is a secant function.
 
 Let $f(x) = \sin(x) + 2$.
 
-This is a sine function, becasue it matches our template, $A \sin(B x + C) + D$.
+This is a sine function, because it matches our template, $A \sin(B x + C) + D$.
 
 The reciprocal of $f$ is another function, $g(t) = \frac{1}{\sin(t) + 2}$.
 
@@ -307,7 +307,7 @@ The problems is the added constant term.  Added constants are trouble for denomi
 
 
 
-If just stay with $0$ added constant terms, then the reciprocal of sine functions are cosecant functions.
+If we just stay with $0$ as constant terms, then the reciprocal of sine functions are cosecant functions.
 
 
 
@@ -318,7 +318,7 @@ If just stay with $0$ added constant terms, then the reciprocal of sine function
 
 
 
-\begin{warning} Reciprocals
+\begin{warning} \textbf{\textcolor{red!70!black}{Reciprocals}} 
 
 
 Reciprocals of trigonometric functions are not always trigonometric functions.
