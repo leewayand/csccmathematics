@@ -17,7 +17,7 @@ the logarithmic story
 $\log_A(B)$ is pronounced ``the logarithm base $A$ of $B$'' or ``the log base $A$ of $B$'' or ``the logarithm of $B$ base $A$''. 
 
 
-
+That's how you pronounced it but what does it represent?
 
 \begin{center}
 \textbf{\textcolor{red!70!black}{$\log_A(B)$ is the thing you raise $A$ to, to get $B$.}} 
@@ -139,14 +139,14 @@ Thinking of an exponential function in reverse sounds like a new function. We ca
 \[
 \begin{array}{lcl}
 \text{Exponential Function}  &     &  \text{Logarithmic Function}  \\
-domain = (-\infty, \infty)  &  \   &  domain = (0, \infty)  \\
-range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
+domain = (-\infty, \infty)  &  \   &  range = (-\infty, \infty)  \\
+range = (0, \infty)  &    &  domain = (0, \infty)  \\
 (d, r^d)    &    &   (r^d, d)
 \end{array}
 \]
 
 
-The basic logarithmic function just reverses the pairs in the basic exponential function.  If $(d, 2^d)$ is a pair in the exponential function, then $(2^d, d)$ is a pair in the corresponding logarithmic function.
+A core logarithmic function just reverses the pairs in a core exponential function.  If $(d, 2^d)$ is a pair in the exponential function, then $(2^d, d)$ is a pair in the corresponding logarithmic function.
 
 
 Therefore, the domains and ranges switch. 
@@ -206,7 +206,7 @@ $\blacktriangleright$  $\log_2(b)$ is the number that you raise $2$ to, to get $
 
 \[   2^{\log_2(b)} = b     \]
 
-We have a logarithmic function for every exponential function.  They are designated by their bases.
+We have a core logarithmic function for every core exponential function.  They are designated by their bases.
 
 
 
@@ -227,7 +227,7 @@ We have a logarithmic function for every exponential function.  They are designa
 $\log_r(B)$ is the number you raise $r$ to, to get $B$. 
 \end{center}
 
-\textbf{Note:} We are only considering $r > 0$.
+\textbf{Note:} We are only considering $r > 0$, with $r \ne 1$.
 
 \end{definition}
 
@@ -246,7 +246,7 @@ $\log_r(B)$ is the number you raise $r$ to, to get $B$.
 \end{conclusion}
 
 
-
+$\log_A(B)$ is the thing you raise $A$ to, to get $B$, gives us some simple algebraic rules.
 
 \begin{formuala} \textbf{\textcolor{blue!55!black}{Logarithmic Rules}}
 
@@ -260,9 +260,21 @@ $\log_r(B)$ is the number you raise $r$ to, to get $B$.
 
 \end{formula}
 
+\textbf{\textcolor{red!75!green}{explanation:}} 
 
+We have the exponent rule $A^{n + m} = A^n \cdot A^m$.
 
+Pretend $B = A^n$ and $C = A^m$, then $B \cdot C = A^{n + m}$.
 
+The exponent for $B \cdot C$ is equal to the exponent for $B$ plus the exponent for $C$.
+
+That is just the magic sentence talking.
+
+The other two logarithm rules come from
+
+$\frac{A^m}{A^n} = A^{m - n}$ and
+
+$(A^n)^m = A^{m cdot n}$.
 
 
 
@@ -274,10 +286,10 @@ Since all of the pairs of exponential and logarithmic functions are reversed, th
 
 
 
-The horizontal axis is an asymptote for the graph of a basic exponential function. Switching axes makes the vertical axis an asymptote for the graph of a basic logarithmic function.
+The horizontal axis is an asymptote for the graph of a core exponential function. Switching axes makes the vertical axis an asymptote for the graph of a core logarithmic function.
 
 
-The graph of a basic exponential function has $(0,1)$ as an intercept.  The graph of a basic logarithmic function has $(1,0)$ as an intercept. 
+The graph of a core exponential function has $(0,1)$ as an intercept.  The graph of a core logarithmic function has $(1,0)$ as an intercept. 
 
 
 Their graphs are mirror images of each other across the diagonal through quandrants I and III.
@@ -363,8 +375,8 @@ We have two types of core logarithmic functions whose behavior is dictated by th
 
 
 \begin{itemize}
-\item If $r > 1$, then $\log_r(x)$ is an increasing function.
 \item If $0 < r < 1$, then $\log_r(x)$ is a decreasing function.
+\item If $r > 1$, then $\log_r(x)$ is an increasing function.
 \end{itemize}
 
 
@@ -438,7 +450,7 @@ We have two types of core logarithmic functions whose behavior is dictated by th
 
 
 
-From these core logarithmic function we can transform and analyze more general logarithmic functions.
+From these core logarithmic function, we can transform and analyze more general logarithmic functions.
 
 
 
@@ -458,7 +470,7 @@ Genral \textbf{logarithmic functions} are functions that \textbf{\textcolor{red!
 \[     L(x) = A \log_r(B \, x + C) + D           \]
 
 
-$A \ne 0$, $B \ne 0$, and $r > 0$
+$A \ne 0$, $B \ne 0$, and $r > 0$ with $r \ne 1$
 
 \end{definition}
 
@@ -550,7 +562,7 @@ Therefore, while we separate exponential and shifted exponential functions, we d
 \end{fact}
 
 
-\textbf{Note:}  Many times people just speak about exponential functions, and they mean both exponential and shifted exponential.
+\textbf{Language:}  Many times people just speak about exponential functions, and they mean both exponential and shifted exponential.
 
 
 
@@ -644,7 +656,7 @@ Graph of $y = M(t)$.
 
 \textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis. }} 
 
-
+\textbf{\textcolor{purple!65!blue}{Algebraic Analysis}}
 
 
 
@@ -672,7 +684,7 @@ t & = 13
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = 4$.  Therefore, $4$ is also the thing that you raise $2$ to, to get $t+3$. Therefore, $t+3$ must be $16$.
+Remember, $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = 4$.  Therefore, $4$ is also the thing that you raise $2$ to, to get $t+3$. Therefore, $t+3$ must be $16$.
 
 
 
@@ -685,15 +697,15 @@ Logarithmic functions are continuous.  That is a property of all logarithmic fun
 
 \textbf{End-Behavior} 
 
-We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $M$ and compare back to $\ln(x)$, which is an increasing function.  
+We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $M$ and compare back to $\ln(x)$, which is an increasing function (both bases are greater than $1$).
 
 
 
 The base of $M$ is $2 > 1$, so this does not change the behavior from $\ln(x)$.
 
-The leading coefficient of $M$ is $1$, which is positive, so this does not change the behavior. 
+The leading coefficient of $M$ is $1$, which is positive, so this does not change the behavior, from $\ln(x)$. 
 
-the leading coefficient of the linear inside is $1$, which is also positive, so this does not change the behavior.
+The leading coefficient of the linear inside function is $1$, which is also positive, so this does not change the behavior, from $\ln(x)$.
 
 $M$ is an increasing function. 
 

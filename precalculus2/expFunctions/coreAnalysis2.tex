@@ -14,7 +14,12 @@ Part 2
 
 
 
+The Core Functions are our basic, beginning function building blocks. Linear combinations and linear compositions create the Elementary Functions.
+
+The Core Functions cannot be broken down any further and their analysis is generally straightforward.
+
 As a starting point for function analysis, let's just list characteristics of our Core Functions. A full analysis would also provide reasoning.
+
 
 
 \begin{explanation} \textbf{\textcolor{red!75!green}{Exponential Functions}} 
@@ -24,7 +29,7 @@ As a starting point for function analysis, let's just list characteristics of ou
 
 
 
-\textbf{Domain:} The domain $(-\infty, \infty)$.
+\textbf{Domain:} The natural domain $(-\infty, \infty)$.
 
 \textbf{Zeros:} Core Exponential Functions have no zeros.
 
@@ -56,6 +61,20 @@ If $0 < r < 1$, then this is reversed.
 
 
 
+\[
+\lim\limits_{x \to \infty} r^x = 0
+\]
+
+
+\[
+\lim\limits_{x \to -\infty} r^x = \infty
+\]
+
+
+
+
+
+
 \textbf{Behavior (Inc/Dec):} 
 
 
@@ -71,7 +90,7 @@ If $0 < r < 1$, then Core Exponential Functions are decreasing functions.
 
 \textbf{Local Maximum and Minimum:}  Core Exponential Functions have no local maximums or minimums.
 
-\textbf{Range:} The range of a Core Exponential Function is either $(0,\infty)$ or $(-\infty, 0)$.
+\textbf{Range:} The range of a Core Exponential Function is either $(0,\infty)$ or $(-\infty, 0)$, depending on teh size of $r$.
 
 \end{explanation}
 
@@ -92,7 +111,7 @@ If $0 < r < 1$, then Core Exponential Functions are decreasing functions.
 
 
 
-\textbf{Domain:} The domain $(0, \infty)$.
+\textbf{Domain:} The natural domain $(0, \infty)$.
 
 \textbf{Zeros:} Core Logarithmic Function have $1$ as their only zero.
 
@@ -102,7 +121,7 @@ If $0 < r < 1$, then Core Exponential Functions are decreasing functions.
 
 
 
-\textbf{End-Behavior:} Since the domain is $(0, \infty)$, Core Logarithmic Functions only end-behavior as the domain become unbounded positively.
+\textbf{End-Behavior:} Since the domain is $(0, \infty)$, Core Logarithmic Functions only have end-behavior as the domain become unbounded positively.
 
 
 If $r > 1$, then
@@ -159,7 +178,7 @@ If $0 < r < 1$, then Core Logarithmic Functions are decreasing functions.
 
 \textbf{Local Maximum and Minimum:}  Core Logarithmic Functions have no local maximums or minimums.
 
-\textbf{Range:} The range of Core Logarithmic Functions is $(-\infty,\infty)$.
+\textbf{Range:} The range of any Core Logarithmic Functions is $(-\infty,\infty)$.
 
 \end{explanation}
 
@@ -188,7 +207,7 @@ If $0 < r < 1$, then Core Logarithmic Functions are decreasing functions.
 
 
 
-\textbf{Domain:} The domain both functions is $(-\infty, \infty)$.
+\textbf{Domain:} The natural domain of both functions is $(-\infty, \infty)$.
 
 \textbf{Zeros:} Both functions have zeros and since both functions are periodic, they have an infinite number of zeros.
 
@@ -234,7 +253,7 @@ If $0 < r < 1$, then Core Logarithmic Functions are decreasing functions.
 
 
 
-\textbf{Local Maximum and Minimum:}  Both functions $1$ and $-1$ as their local extrema.
+\textbf{Local Maximum and Minimum:}  Both functions have $1$ and $-1$ as their local extrema.
 
 
 
@@ -268,7 +287,7 @@ If $0 < r < 1$, then Core Logarithmic Functions are decreasing functions.
 
 
 
-\textbf{Domain:} The domain is $(-\infty, \infty)$.
+\textbf{Domain:} The natural domain is $[0, \infty)$.
 
 \textbf{Zeros:} $0$ is the only zero.
 
@@ -278,6 +297,18 @@ If $0 < r < 1$, then Core Logarithmic Functions are decreasing functions.
 \textbf{Continuity:} The Core Absolute Value Function is continuous.
 
 \textbf{End-Behavior:} The Core Absolute Value Function becomes unbounded positively on both sides.
+
+
+
+
+\[
+\lim\limits_{x \to -\infty} |x| = \infty
+\]
+
+
+\[
+\lim\limits_{x \to \infty} |x| = \infty
+\]
 
 
 
@@ -311,14 +342,24 @@ The Core Absolute Value Function decreases on $(-\infty, 0)$ and increases on $(
 
 
 
+The Core Functions are our basic building blocks.  We will begin building the Elementary Functions as linear combinations of the Core Functions as well as through composition with linear functions. 
+
+
+The Chain Rule will be our tool for obtaining the behavior of composite functions.
 
 
 
+\begin{theorem} \textbf{\textcolor{-red!75!green}{Chain Rule}} 
 
+\[ inc \circ inc = inc \]
 
+\[ inc \circ dec = dec \]
 
+\[ dec \circ inc = dec \]
 
+\[ dec \circ dec = inc \]
 
+\end{theorem}
 
 
 

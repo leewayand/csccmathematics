@@ -12,7 +12,9 @@ Part 1
 \maketitle
 
 
+The Core Functions are our basic, beginning function building blocks. Linear combinations and linear compositions create the Elementary Functions.
 
+The Core Functions cannot be broken down any further and their analysis is generally straightforward.
 
 As a starting point for function analysis, let's just list characteristics of our Core Functions. A full analysis would also provide reasoning.
 
@@ -24,9 +26,9 @@ As a starting point for function analysis, let's just list characteristics of ou
 
 
 
-\textbf{Domain:} The domain of every constant function is always $(-\infty, \infty)$.
+\textbf{Domain:} The natural domain of every constant function is always $(-\infty, \infty)$.
 
-\textbf{Zeros:} If the constant funciton just happens to be the zero function and every value is $0$, then every number in the domain is a zero of the function.
+\textbf{Zeros:} If the constant function just happens to be the zero function (every value is $0$), then every number in the domain is a zero of the function.
 
 Otherwise, constant functions do not have zeros.
 
@@ -35,7 +37,7 @@ Otherwise, constant functions do not have zeros.
 \textbf{End-Behavior:} The end-behavior is just the value of constant function.
 
 
-\textbf{Behavior (Inc/Dec):} Constant functions do not increase and they do not decrease.
+\textbf{Behavior (Inc/Dec):} According to the definition of increasing and decreasing, constant functions technically both increase and they decrease. However, we don't view them in this way. We view them as remaining constant.
 
 \textbf{Global Maximum and Minimum:} Since a constant function has only one value, that value is the global maxmum and global minimum and they both occur at every domain number.
 
@@ -60,7 +62,7 @@ Otherwise, constant functions do not have zeros.
 
 
 
-\textbf{Domain:} The domain of the identity function is $(-\infty, \infty)$.
+\textbf{Domain:} The natural domain of the identity function is $(-\infty, \infty)$.
 
 \textbf{Zeros:} $0$ is the only zero of the identity function.
 
@@ -68,13 +70,13 @@ Otherwise, constant functions do not have zeros.
 
 \textbf{End-Behavior:} 
 
-As the domain becomes unbounded positively, the identity also becomes unbounded positively.  Our notation for this will look like
+As the domain becomes unbounded positively, the identity function also becomes unbounded positively.  Our notation for this looks like
 
 \[
 \lim\limits_{x \to \infty} Id(x) = \infty
 \]
 
-As the domain becomes unbounded negatively, the identity also becomes unbounded negatively.  Our notation for this will look like
+As the domain becomes unbounded negatively, the identity function also becomes unbounded negatively.  Our notation for this looks like
 
 \[
 \lim\limits_{x \to -\infty} Id(x) = -\infty
@@ -85,12 +87,12 @@ As the domain becomes unbounded negatively, the identity also becomes unbounded 
 
 \textbf{Behavior (Inc/Dec):} The identity is an increasing function.
 
-\textbf{Global Maximum and Minimum:} The identity function has no global maximum or global minimum.  This is explained by the end-behavior.
+\textbf{Global Maximum and Minimum:} The identity function has no global maximum or global minimum, which is seen in the end-behavior.
 
 
 
 
-\textbf{Local Maximum and Minimum:}  The identity function has no local maximums or global minimums. 
+\textbf{Local Maximum and Minimum:} The identity function has no local maximums or global minimums. 
 
 \textbf{Range:} The range of the identity function is $(-\infty, \infty)$.
 
@@ -116,12 +118,13 @@ The power makes a big difference here.  As a beginning, we will only consider tw
 
 \[ Power(x) = x^n  \]
 
+We group fractional powers in with radical functions.
 
 \textbf{Domain:} 
 
-If $n$ is a whole number, then the domain is $(-\infty, \infty)$.
+If $n$ is a whole number, then the natural domain is $(-\infty, \infty)$.
 
-If $n$ is a negative integer, then the domain is $(-\infty, 0) \cup (0, \infty)$.
+If $n$ is a negative integer, then the natural domain is $(-\infty, 0) \cup (0, \infty)$.
 
 
 \textbf{Zeros:} 
@@ -131,7 +134,7 @@ If $n$ is a whole number, then $0$ is the only zero.
 If $n$ is a negative integer, then the power function has no zeros.
 
 
-\textbf{Continuity:} Power functions are continuous functions
+\textbf{Continuity:} Power functions are continuous functions.
 
 \textbf{End-Behavior:} 
 
@@ -166,11 +169,28 @@ If $n$ is a negative integer, then there are two different cases.
 
 \textbf{Global Maximum and Minimum:} 
 
-A power function has a global minimums only if the power is an even whole number. In that case, $0$ is the global minimum, which occurs at $0$.
+A power function has a global minimum only if the power is an even whole number. In that case, $0$ is the global minimum, which occurs at $0$.
 
 \textbf{Local Maximum and Minimum:} 
 
+The only local extrema is a global minimum, if the power is even.
+
 \textbf{Range:} 
+
+If $n$ is a whole number, then there are two different cases.
+
+\begin{itemize}
+\item If $n$ is odd, then the range is $(-\infty, \infty)$.
+\item If $n$ is even, then the range is $[0, \infty)$.
+\end{itemize}
+
+If $n$ is a negative integer, then there are two different cases.
+
+\begin{itemize}
+\item If $n$ is odd, then the range is $(-\infty, 0) \cup (0, \infty)$.
+\item If $n$ is even, then the range is $(0, \infty)$.
+\end{itemize}
+
 
 \end{explanation}
 
@@ -195,8 +215,8 @@ To begin, we are only considering $n$ to be a natural number.
 
 
 \begin{itemize}
-\item If $n$ is odd, then the domain is $(-\infty, \infty)$.
-\item If $n$ is even, then the domain is $[0. \infty)$.
+\item If $n$ is odd, then the natural domain is $(-\infty, \infty)$.
+\item If $n$ is even, then the natural domain is $[0. \infty)$.
 \end{itemize}
 
 
@@ -210,7 +230,7 @@ To begin, we are only considering $n$ to be a natural number.
 \begin{itemize}
 \item If $n$ is odd, then the root function is unbounded positively as the domain becomes unbounded positively and unbounded negatively as the domain becomes unbounded negatively.
 
-Our notation for this will look like 
+Our notation for this looks like 
 
 
 \[
@@ -265,8 +285,18 @@ Our notation for this will look like
 
 
 
+\textbf{Power Functions} can have any real number as the power.
 
 
+\[  pow(x) = x^r  \]
+
+Our first investigation is with integer powers.
+
+We expand this to rational numbers through roots and radicals.
+
+\[ pow(x) = x^{\tfrac{n}{d}} = \sqrt[d]{x^n}  \]
+
+We'll leave irrational powers for Calculus.
 
 
 
