@@ -16,7 +16,7 @@ basic
 
 
 
-\textbf{\textcolor{blue!55!black}{A Different Perspective}} 
+
 
 
 Logarithmic functions, are those functions which \textbf{\textcolor{red!80!black}{CAN}} be represented by formulas of the form $A \, \log_r(B \, x + C) + D$.  
@@ -48,7 +48,7 @@ Now the Chain Rule can give us the behavior.
 
 
 
-
+\textbf{\textcolor{blue!55!black}{A Coefficient Perspective}} 
 
 
 We can decide whether the logarithmic function is increasing or decreasing by the size of $r$, the sign of $A$, and the sign of $B$. 
@@ -83,37 +83,32 @@ We can rewrite any logarithmic expression with an equivalent expression that has
 
 Suppose $0 < r < 1$ and consider $\log_r(inside)$.
 
-Then $\frac{1}{r} > 1$.  We would like to use $\frac{1}{r}$ as the new base, which we can accomplish through the change of base formula.
-
-\[
-\log_r(inside)
-\]
+Then $\frac{1}{r} > 1$.  We would like to use $\frac{1}{r}$ as the new base. What do you raise $\frac{1}{r}$ to, to get $inside$?
 
 
-\[
-\frac{\log_{\tfrac{1}{r}}(inside)}{\log_{\tfrac{1}{r}}(r)}
-\]
-
-
-$\log_{\tfrac{1}{r}}(r)$ is the thing you raise $\frac{1}{r}$ to, to get $r$, which is $-1$. 
-
-
-That gives us
-
-
-\[
-\frac{\log_{\tfrac{1}{r}}(inside)}{-1}
-\]
+We know that $\log_r(inside)$ is the thing you raise $r$ to, to get $inside$.
 
 
 
 \[
--\log_{\tfrac{1}{r}}(inside)
+r^{\log_r(inside)} = inside
 \]
 
 
+We also know that $r = \left( \frac{1}{r} \right)^{-1}$ 
 
-\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} We can switch any logarithm from a base less than $1$, to a base greater than $1$ just by negating the logarithm.
+
+\[
+(\left( \frac{1}{r} \right)^{-1})^{\log_r(inside)} = r^{\log_r(inside)} = inside
+\]
+
+
+\[
+\left( \frac{1}{r} \right)^{-\log_r(inside)} = r^{\log_r(inside)} = inside
+\]
+
+
+\textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} We can switch any logarithm from a base less than $1$, to a base greater than $1$ just by negating the logarithm (the exponent).
 
 
 
@@ -135,7 +130,7 @@ In this case, we would have the following behaviors:
 \item $A < 0$ and $B < 0$ : increasing positive function 
 \end{itemize}
 
-We would decide function behavior (increasing or decreasing) by the signs of \textbf{both} leading coefficients, $A$ and $A$.
+We would decide function behavior (increasing or decreasing) by the signs of \textbf{both} leading coefficients, $A$ and $B$.
 
 \textbf{\textcolor{red!70!darkgray}{$\blacktriangleright$}} If $A$ and $B$ are the same sign, then we have an increasing function. 
 
@@ -158,16 +153,56 @@ In this model, we are using bases that are greater than $1$.
 If this is the case, then we might as well use $e$ as our base. 
 
 
-\begin{explanation}
+\begin{explanation} \textbf{\textcolor{red!75!green}{Change of Base}} 
 
 
-If our formula looks like. $A \, \log_r(B \, x + C) + D$ and $r>1$, then we can use the change of base formula to rewrite our formula.
+How would we rewrite $\log_r(inside)$ as a natural logarithm? 
+
+The magic sentence will show us.
+
+
+
+$\log_r(inside)$ is the thing you raise $r$ to, to get $inside$.
+
+\[
+r^{\log_r(inside)} = inside
+\]
+
+
+We know we can write $r$ as $r = e^{\ln(r)}$. 
+
+\[
+\left(  e^{\ln(r)} \right)^{\log_r(inside)} = inside
+\]
+
+
+\[
+\left(  e \right)^{\ln(r) \cdot \log_r(inside)} = inside
+\]
+
+
+$\ln(r) \cdot \log_r(inside)$ is the thing you raise $e$ to, to get $inside$.
 
 
 
 \[
-\log_r(inside) = \frac{\log_e(inside)}{\log_e(r)} = \frac{\ln(inside)}{\ln(r)}
+\ln(r) \cdot \log_r(inside) = \ln(inside)
 \]
+
+
+\[
+\log_r(inside) = \frac{\ln(inside)}{\ln(r)}
+\]
+
+
+
+We can rewrite any logarithm to have a base of $e$.
+
+
+\[
+A \, \log_r(B \, x + C) + D = \frac{A}{\ln(r)} \, \ln(B \, x + C) + D
+\]
+
 
 
 \end{explanation}
@@ -182,7 +217,7 @@ If our formula looks like. $A \, \log_r(B \, x + C) + D$ and $r>1$, then we can 
 
 
 
-In this model, our core forms to memorize would be $e^x$ and there would be several alternative choices for you.
+In this model, our core form to memorize would be $e^x$ and there would be several alternative choices for you.
 
 
 
@@ -285,7 +320,7 @@ In this model, our core forms to memorize would be $e^x$ and there would be seve
 
 \subsection*{Pick Your Form}
 
-You should pick your own logarithmic exponential form that you like and understand.  
+You should pick your own logarithmic and exponential forms that you like and memorize all of their characteristics.  
 
 Then, you can change anything given to you into that form.
 

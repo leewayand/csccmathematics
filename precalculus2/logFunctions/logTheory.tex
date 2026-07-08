@@ -274,7 +274,7 @@ The other two logarithm rules come from
 
 $\frac{A^m}{A^n} = A^{m - n}$ and
 
-$(A^n)^m = A^{m cdot n}$.
+$(A^n)^m = A^{m \cdot n}$.
 
 
 
@@ -416,7 +416,7 @@ We have two types of core logarithmic functions whose behavior is dictated by th
   \end{axis}
   \begin{axis}[at={(invexp.outer east)},anchor=outer west,
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -450,7 +450,7 @@ We have two types of core logarithmic functions whose behavior is dictated by th
 
 
 
-From these core logarithmic function, we can transform and analyze more general logarithmic functions.
+From these core logarithmic functions, we can transform and analyze more general logarithmic functions.
 
 
 
@@ -651,7 +651,7 @@ Graph of $y = M(t)$.
 \end{image}
 
 
-
+We see that this graph has an intercept around $(11, 0)$. $M$ should have a zero around $1$.
 
 
 \textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis. }} 
@@ -670,7 +670,7 @@ The inside of the logarithm is positive on $(-3, \infty)$.  Therefore, the domai
 
 \textbf{Zeros}  
 
-All logarithmic functions have a single zero. We see that this graph will have a horizontal intercept around $(11, 0)$.  
+All logarithmic functions have a single zero.  
 
 To calculate exctly, we solve $M(t) = \log_2(t+3) - 4 = 0$ 
 
@@ -695,22 +695,29 @@ Remember, $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\l
 Logarithmic functions are continuous.  That is a property of all logarithmic functions. 
 
 
+Singularity Behavior \\
+$M$ is a logarithmic function. Therefore, it has a singularity.  $-3$ is the singularity for $M$.
+
+Since $M$ is a logarithmic function, we know $M$ will approach $-\infty$ or $\infty$ as $t$ approaches $-3$ from the positive side. 
+
+If $t$ is getting closer to $-3$, then the inside of the logarithm is getting closer to $0$, from the positive side.  Since the base of $M$ is $2$ is greater than $1$, $\log_2(t+3)$ approaches $-\infty$.
+
+
+\[
+\lim\limits_{t \to -3^+} M(t) = -\infty
+\]
+
+
+
 \textbf{End-Behavior} 
 
-We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $M$ and compare back to $\ln(x)$, which is an increasing function (both bases are greater than $1$).
+$M$ is a logarithmic function, we know the behavior at the singularity and the end-behavior must be opposite.
 
 
 
-The base of $M$ is $2 > 1$, so this does not change the behavior from $\ln(x)$.
-
-The leading coefficient of $M$ is $1$, which is positive, so this does not change the behavior, from $\ln(x)$. 
-
-The leading coefficient of the linear inside function is $1$, which is also positive, so this does not change the behavior, from $\ln(x)$.
-
-$M$ is an increasing function. 
-
-
-
+\[
+\lim\limits_{t \to \infty} M(t) = \infty
+\]
 
 
 
@@ -718,7 +725,7 @@ $M$ is an increasing function.
 
 \textbf{Behavior} 
 
-Logarithmic functins are either always increasing or always decreasing.
+Logarithmic functions are either always increasing or always decreasing.
 
 The end-behavior tells us which.
 
@@ -740,9 +747,9 @@ Or, we can use the Chain Rule...
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = u - 4$, an increasing linear function
-\item Let $L(x) = \log_2(x)$, an increasing core logarithmic function
-\item Let $L_{in}(v) = v + 3$, an increasing linear function
+\item Let $L_{out}(u) = u - 4$, an increasing linear function, since the leading coefficiewnt is positive.
+\item Let $L(x) = \log_2(x)$, an increasing core logarithmic function, since the base is greater than $1$.
+\item Let $L_{in}(v) = v + 3$, an increasing linear function, since the leading coefficiewnt is positive.
 \end{itemize}
 
 
@@ -929,7 +936,7 @@ Analyze   $K(x) = -2 \, \log_3(4-x)$
 \textbf{\textcolor{red!75!green}{explanation}} 
 
 
-Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic function, because it matches out template, $A \, \log_r(B \, x + C) + D$. 
+Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic function, because it matches our template, $A \, \log_r(B \, x + C) + D$. 
 
 
 We'll begin by thinking about the graph to help guide our analysis. 
@@ -993,7 +1000,7 @@ Graph of $y = K(x)$.
 
 
 
-
+We see that the graph is suggesting that the zero is around $3$. 
 
 
 
@@ -1001,7 +1008,7 @@ Graph of $y = K(x)$.
 
 
 
-
+\textbf{\textcolor{-red!75!green}{Algebraic Analysis}} 
 
 
 \textbf{Domain}  
@@ -1011,7 +1018,6 @@ The inside of the logarithm is positive on $(-\infty, 4)$.  Therefore, the domai
 
 \textbf{Zeros}  
 
-We see that the graph is suggesting that the zero is around $3$. 
 
 
 To calculate the zero exactly solve $K(x) = -2 \, \log_3(4 - x) = 0$ 
@@ -1036,6 +1042,19 @@ Logarithmic functions are continuous.  That is a property of all logarithmic fun
 
 
 
+Singularity Behavior \\
+$K$ is a logarithmic function. Therefore, it has a singularity.  $4$ is the singularity for $K$, since it makes the inside of the logarithm equal to $0$.
+
+Since $K$ is a logarithmic function, we know $K$ will approach $-\infty$ or $\infty$ as $x$ approaches $4$ from the negative side. 
+
+If $x$ is getting closer to $4$ from the negative side, then the inside of the logarithm is getting closer to $0$, from the positive side.  Since the base of $K$ is $3$ is greater than $1$, $\log_3(4-x)$ approaches $-\infty$.
+
+Then, multiplying by $-2$ makes $K$ approach $\infty$.
+
+
+\[
+\lim\limits_{t \to 4^-} M(t) = \infty
+\]
 
 
 
@@ -1062,9 +1081,9 @@ Or, we can use the Chain Rule...
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function
-\item Let $L(k) = \log_3(k)$, an increasing core logarithmic function
-\item Let $L_{in}(v) = 4 - v$, a decreasing linear function
+\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function, since it has a negative leading coeffcient.
+\item Let $L(k) = \log_3(k)$, an increasing core logarithmic function with a base greater than $1$.
+\item Let $L_{in}(v) = 4 - v$, a decreasing linear function, since it has a negative leading coeffcient.
 \end{itemize}
 
 
@@ -1082,7 +1101,7 @@ Or, we can use the Chain Rule...
 
 \textbf{End-Behavior} 
 
-$K$ is an increasing function. on the domain $(-\infty, 4)$. That tells us that 
+$K$ is an increasing function on the domain $(-\infty, 4)$. That tells us that 
 
 
 \[
