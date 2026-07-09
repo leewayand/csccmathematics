@@ -22,13 +22,13 @@ Shifted Exponential Functions are exponential functions with an added constant t
 
 
 
-\begin{definition} \textbf{\textcolor{green!50!black}{Basic Shifted Exponential Functions}}
+\begin{definition} \textbf{\textcolor{green!50!black}{Shifted Exponential Functions}}
 
-A basic \textbf{shifted exponential function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+A \textbf{shifted exponential function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
 
 \[     ShExp(x) =    A \cdot r^x  + D         \]
 
-where $A$ and $D$ are real numbers, $A \ne 0$, and $r > 0$.
+where $A$ and $D$ are real numbers, $A \ne 0$, and $r > 0$ with $r \ne 1$.
 
 
 \end{definition}
@@ -44,7 +44,7 @@ A general \textbf{shifted exponential function} is any function that \textbf{\te
 
 \[     ShExp(x) =    A \cdot r^{B \, x + C}  + D         \]
 
-where $A$, $B$, $C$, and $D$ are real numbers, $A \ne 0$, $B \ne 0$, and $r > 0$.
+where $A$, $B$, $C$, and $D$ are real numbers, $A \ne 0$, $B \ne 0$, and $r > 0$ with $r \ne 1$.
 
 
 \end{definition}
@@ -56,7 +56,7 @@ Shifted exponential functions are not exponential functions.  Equal changes in t
 
 
 
-As an example, consider $f(x) = 2^{x} + 1$. 
+\textbf{For Instance,} consider $f(x) = 2^{x} + 1$. 
 
 
 $f(0) = 1$, $f(1) = 3$, and $f(2) = 5$. 
@@ -172,11 +172,11 @@ Let's think about the pieces of the formula to help write our analysis.
 
 
 
-Compared to a basic exponential function graph, where the horizontal axis is the horizontal asymptote, here, the horizontal asymptote has been moved down $\answer{7}$ units, because the constant term in the formula is $-7$.
+Compared to a exponential function graph, where the horizontal axis is the horizontal asymptote, here, the horizontal asymptote has been moved down $\answer{7}$ units, because the constant term in the formula is $-7$.
 
 
 
-The ``inside'' (the argument) of the formula for $f(x)$, representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
+The ``inside'' of the formula for $f(x)$, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
 
 At $x=-5$, we have our one anchor point for the graph.  The point is $\left(-5, \frac{1}{3} - 7 \right)$, which is $\frac{1}{3}$ above the horizontal asymptote, $y = -7$.
 
@@ -220,6 +220,7 @@ Graph of $y = f(x)$.
 \textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis.}} 
 
 
+\textbf{\textcolor{purple!65!blue}{Algebraic Analysis}}
 
 
 
@@ -230,14 +231,11 @@ Graph of $y = f(x)$.
 
 
 
-
-\textbf{Domain:} 
-
-The domain of every shifted exponential function is $(-\infty, \infty)$. 
+\textbf{Domain:}  The domain of every shifted exponential function is $(-\infty, \infty)$. 
 
 
 
-\textbf{Zeros:}  
+\textbf{Zeros:}  Shifted exponential functions can have zeros.
 
 
 
@@ -257,9 +255,7 @@ x & = \log_2{21} - 5
 
 
 
-\textbf{Continuity:}  
-
-Shifted exponential functions are continuous.  
+\textbf{Continuity:}  Shifted exponential functions are continuous.  
 
 
 
@@ -300,14 +296,14 @@ $\blacktriangleright$ \textbf{Thinking with the Chain Rule...}
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = \frac{1}{3} \, u - 7$, an increasing linear function
-\item Let $E(t) = 2^t$, an increasing core shifted exponential function
-\item Let $L_{in}(v) = v + 2$, an increasing linear function
+\item Let $L_{out}(u) = \frac{1}{3} \, u - 7$, an increasing linear function, since the leading coefficient is positive.
+\item Let $E(t) = 2^t$, an increasing core shifted exponential function, since the base is greater than $1$.
+\item Let $L_{in}(v) = v + 2$, an increasing linear function, since the leading coefficient is positive.
 \end{itemize}
 
 
 \[
-f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = (L_{out}(u) \circ E \circ L_{in}(u))(x)
+f(x) = \frac{1}{3} \cdot \, 2^{x+5} - 7 = (L_{out} \circ E \circ L_{in})(x)
 \]
 
 \[  inc \circ inc \circ inc = inc  \]
@@ -339,14 +335,10 @@ The other direction is where the shifted exponential function is uunbounded.  Si
 
 
 
-\textbf{Global Extrema:} 
-
-Shifted exponential functions do not have global maximums or minimums. 
+\textbf{Global Extrema:}  Shifted exponential functions do not have global maximums or minimums. 
 
 
-\textbf{Local Extrema:} 
-
-Shifted exponentials function do not have local maximums or minimums. 
+\textbf{Local Extrema:}  Shifted exponentials function do not have local maximums or minimums. 
 
 
 
@@ -388,7 +380,7 @@ f(x) = \frac{1}{3} \, 2^{x+5} - 7 = \frac{1}{3} \, 2^x \cdot 2^5 - 7 = \frac{32}
 \]
 
 
-We now have a basic exponential function shifted by $7$.  The new base is still $2$ and the new leading coefficient is $\frac{32}{3}$.
+We now have a simplier shifted exponential function.  The base hasn't changed. It is still $2$. The new leading coefficient is $\frac{32}{3}$.
 
 
 
@@ -472,7 +464,7 @@ G(t) = 4 \cdot 3^{2t-1} - 5 = 4 \cdot 3^{2t} \cdot \frac{1}{3} - 5 = \frac{4}{3}
 \]
 
 
-We now have a basic exponential function shifted down $\answer{5}$.  The new base is $\answer{9}$ and the new leading coefficient is $\answer{\frac{4}{3}}$.
+We now have a simplier shifted exponential function.  The new base is $\answer{9}$ and the new leading coefficient is $\answer{\frac{4}{3}}$.
 
 
 
@@ -551,21 +543,22 @@ Categorize: $B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4$ is a shifted exp
 \textbf{Just Thinking...}
 
 
-$\blacktriangleright$  the base: $\frac{2}{3} < 1$\\
+$\blacktriangleright$  the base: $\frac{2}{3} < 1$ \\
+$\blacktriangleright$  the leading coefficient is negative. \\
 $\blacktriangleright$  the linear exponent: $3-t$ is positive for large negative $t$. \\
-$\blacktriangleright$  the linear exponent: $3-t$ is negative for large positive $t$. \\
-$\blacktriangleright$  the leading coefficient is negative. 
+$\blacktriangleright$  the linear exponent: $3-t$ is negative for large positive $t$. 
+ 
 
 
 Together, these tell us that $B(t)$ settles down for large negative $t$ and that $B(t)$ becomes unbounded when $t$ is large and positive.
 
 
 
-This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t} = \left( \answer{\frac{3}{2}} \right)^t$.  
+This is a transformed version of the core exponential function template $\left( \frac{2}{3} \right)^{-t} = \left( \answer{\frac{3}{2}} \right)^t$.  
 
 
 
-When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and the basic exponential portion is becoming smaller, approaching $0$.  
+When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and the core exponential portion is becoming smaller, approaching $0$.  
 
 
 
@@ -600,7 +593,7 @@ We also have two shifts. One from the $3$ in the exponent and the second from th
 
 
 
-$\blacktriangleright$ \textbf{Vertical Shift}
+Vertical Shift
 
 
 Adding $4$ to the outside shifts the graph vertically up $4$.  The asymptote is $y = 4$ and 
@@ -609,9 +602,9 @@ Adding $4$ to the outside shifts the graph vertically up $4$.  The asymptote is 
 
 
 
-$\blacktriangleright$ \textbf{Horizontal Shift}
+Horizontal Shift
 
-Our exponent here is $3 - t$.  Our function's exponent is zero, $3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away(below) from the horizontal asymptote, which is now $y=4$.  Our anchor point is $(3, 2)$.
+Our exponent here is $3 - t$.  Our function's exponent is zero, $3-t=0$ when $t=3$. Our one anchor point for the4 graph is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away(below) from the horizontal asymptote, which is now $y=4$.  Our anchor point is $(3, 2)$.
 
 
 
@@ -657,13 +650,11 @@ Graph of $y = B(t)$.
 
 
 
+\textbf{\textcolor{purple!65!blue}{Algebraic Analysis}}
 
 
 
-
-\textbf{Domain:} 
-
-The domain of every shifted exponential function is $(-\infty, \infty)$. 
+\textbf{Domain:} The domain of every shifted exponential function is $(-\infty, \infty)$. 
 
 
 
@@ -696,9 +687,7 @@ That agrees with the graph.
 
 
 
-\textbf{Continuity:}  
-
-Shifted exponential functions are continuous.  
+\textbf{Continuity:}  Shifted exponential functions are continuous.  
 
 
 
@@ -737,14 +726,14 @@ $\blacktriangleright$ \textbf{Thinking with the Chain Rule...}
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = -2 \, u + 4$, a decreasing linear function
-\item Let $E(x) = \left( \frac{2}{3} \right)^x$, a decreasing core shifted exponential function
-\item Let $L_{in}(v) = 3 - v$, a decreasing linear function
+\item Let $L_{out}(u) = -2 \, u + 4$, a decreasing linear function, since the leading coefficient is negative.
+\item Let $E(x) = \left( \frac{2}{3} \right)^x$, a decreasing core shifted exponential function, since the base is less than $1$.
+\item Let $L_{in}(v) = 3 - v$, a decreasing linear function, since the leading coefficient is negative.
 \end{itemize}
 
 
 \[
-B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4 = (L_{out}(u) \circ E \circ L_{in}(u))(t)
+B(t) = -2 \, \left( \frac{2}{3} \right)^{3-t} + 4 = (L_{out} \circ E \circ L_{in})(t)
 \]
 
 \[  dec \circ dec \circ dec = dec  \]
@@ -768,7 +757,7 @@ The other direction is where the shifted exponential function approached the con
 
 
 \[
-\lim\limits_{x \to -\infty} f(x) = 4
+\lim\limits_{t \to -\infty} B(t) = 4
 \]
 
 
@@ -780,14 +769,10 @@ The other direction is where the shifted exponential function approached the con
 
 
 
-\textbf{Global Extrema:} 
-
-Shifted exponential functions do not have global maximums or minimums. 
+\textbf{Global Extrema:}  Shifted exponential functions do not have global maximums or minimums. 
 
 
-\textbf{Local Extrema:} 
-
-Shifted exponentials function do not have local maximums or minimums. 
+\textbf{Local Extrema:}  Shifted exponentials function do not have local maximums or minimums. 
 
 
 
@@ -878,7 +863,7 @@ Algebra provides many tools for modifying the representing formula and altering 
 
 
 
-\begin{example}  Shifted Exponential Function
+\begin{example}  Shifted Exponential Function and Graph
 
 
 
