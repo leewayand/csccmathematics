@@ -199,6 +199,20 @@ $\langle 3, 4 \rangle + \langle -2, 5 \rangle = \left\langle \answer{1}, \answer
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection*{Scalars}
 
 We also have several ideas about manipulating a single vector. 
@@ -206,7 +220,7 @@ We also have several ideas about manipulating a single vector.
 
 
 \begin{itemize}
-\item We can think of add a vector to itself several times.
+\item We can think of adding a single vector to itself several times.
 \item We can think of stretching or compressing a vector.
 \item We can think of reversing a vector.
 \end{itemize}
@@ -321,7 +335,7 @@ To describe these operations, we use \textbf{scalars}.
 
 \begin{definition}  \textbf{\textcolor{green!50!black}{Scalars}}  
 
-A \textbf{scalar} is the new name for our old real numbers. 
+A \textbf{scalar} is just another name for our old real numbers.
 
 \end{definition}
 
@@ -390,7 +404,10 @@ Of course, scalars (our old real numbers) are also numbers in our new system.  T
 
 We haven't lost our 1-dimensional real numbers. Now, they are just embedded inside our new algebraic plane.  We can view the horizontal axis as the traditional real number line.
 
-Each real number $r$ is now either represented by the point $(r,0)$ or by the horizontal vector, $\langle r, 0 \rangle$.  All of our operations are duplicated with these new visual tools along the horizontal axis.
+Each real number $r$ is now either represented by the point $(r,0)$ on the old real line or by the horizontal vector, $\langle r, 0 \rangle$ in our new number plane.  All of our operations are duplicated with these new visual tools along the horizontal axis.
+
+
+We can think of real numbers as dots on the old real number line or we can think of them as horizontal vectors in our new 2D number line.
 
 
 \begin{itemize}
@@ -399,7 +416,7 @@ Each real number $r$ is now either represented by the point $(r,0)$ or by the ho
 \item $0$ is now either $(0,0)$ or $\langle 0, 0 \rangle$, a.k.a. the origin.
 \end{itemize}
 
-
+Both viewpoints can be seen in our our new 2D arithmetic plane.
 
 
 
@@ -425,7 +442,7 @@ We have definitions for addition and subtraction of vectors.  Next up is multipl
 \[    \langle 1, 0 \rangle * \langle a, b \rangle    = \langle a, b \rangle            \]
 
 
-As an example, we would like $\langle 0, 1 \rangle * \langle 1, 0 \rangle    = \langle 0, 1 \rangle $.
+For instance, we would like $\langle 0, 1 \rangle * \langle 1, 0 \rangle    = \langle 0, 1 \rangle $.
 
 We can view this equation as beginning with $\langle 0, 1 \rangle$ and then $\langle 1, 0 \rangle$ is the acting operand and it has no effect on $\langle 0, 1 \rangle$.  We begin with the first vector and then multiply it with the second vector and then end up with the first vector, because $\langle 1, 0 \rangle$ is supposed to act as a multiplicative identity. However, we want multiplication to be commutative.  So, we could view this as 
 
@@ -540,9 +557,10 @@ What else should multiplication do?
 
 Addition and multiplication of vectors should behave like addition and multiplication of real numbers.  Namely, the \textbf{\textcolor{purple!85!blue}{distributive property}} should hold.
 
-Along with scalar multiplication.
 
-Along with $90^{\circ}$ turning.
+$\bullet$ We want the distributive property to hold.\\
+$\bullet$ We want scalar multiplication.\\
+$\bullet$ We want multiplication by $\langle 0, 1 \rangle$ to result in $90^{\circ}$ turning.
 
 Puting all of this together, we get something like this:
 
@@ -631,9 +649,9 @@ Compute  $\langle 1, 2 \rangle  * \langle -2, 3 \rangle = \left\langle \answer{-
 
 
 
-\subsection*{\sqrt{-1}}
+\subsection*{$\sqrt{-1}$}
 
-Our new number system contains $\sqrt{-1}$.
+\textbf{Claim:} Our new number system contains $\sqrt{-1}$.
 
 
 \[  \sqrt{-1} = \langle 0, 1 \rangle  \]
@@ -660,7 +678,7 @@ And, $\langle -1, 0 \rangle = -1$ in our new 2D-Number system.
 
 
 
-\[  \langle 0, 1 \rangle$ is $\sqrt{-1}  \]
+\[  \langle 0, 1 \rangle \, \text{ is } \,  \sqrt{-1}  \]
 
 
 \end{conclusion}
