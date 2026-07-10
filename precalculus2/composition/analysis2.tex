@@ -22,34 +22,31 @@
 
 
 
-Analyze $K(x) = -4 \ln(5 - x^2)$ with its natural domain. \\
-
-
-
-
-\subsection*{Analysis}
-
-
-
-
-
-Our plan is to view this as a composition. \\
+\textbf{Analyze $K(x) = -4 \ln(5 - x^2)$ with its natural domain. }
 
 
 
 
 
 
-We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = -4 \ln(5 - x^2)$ \\
+
+Our plan is to view this as a composition. 
 
 
-First, identify ``insides'' of functions.  In this case, $5 - x^2$ is the inside of $-4 \ln(5 - x^2)$. \\
+
+
+
+
+We are looking for functions $f$ and $g$ such that $(f \circ g)(x) = f(g(x)) = -4 \ln(5 - x^2)$ 
+
+
+First, identify ``insides'' of functions.  In this case, $5 - x^2$ is the inside of $-4 \ln(5 - x^2)$. 
 
 
 
 \begin{itemize}
-\item Let $f(t) = -4 \ln(t)$ \\
-\item Let $g(y) = 5 - y^2$ \\
+\item Let $f(t) = -4 \ln(t)$ 
+\item Let $g(y) = 5 - y^2$ 
 \end{itemize}
 
 Algebraically, this produces the formula we want, $(f \circ g)(x) = f(g(x)) = -4 \ln(5 - x^2)$.
@@ -58,34 +55,34 @@ Algebraically, this produces the formula we want, $(f \circ g)(x) = f(g(x)) = -4
 To get us started, we are thinking that each component function comes with its natural domain.
 
 \begin{itemize}
-\item Let $f(t) = -4 \ln(t)$ with domain $(0, \infty)$ \\
-\item Let $g(y) = 5 - y^2$ with domain $(-\infty, \infty)$ \\
+\item Let $f(t) = -4 \ln(t)$ with natural domain $(0, \infty)$ 
+\item Let $g(y) = 5 - y^2$ with natural domain $(-\infty, \infty)$ 
 \end{itemize}
 
-We are also ready to revise and modify and restrict these domains to fit the composition together. \\
+We are also ready to revise and modify and restrict these domains to fit the composition together. 
 
 
 
 
-We are ready to analyze. \\
+We are ready to analyze. 
 
 
 
 
-\textbf{\textcolor{blue!55!black}{Domain:}} \\
+\textbf{\textcolor{blue!55!black}{Domain:}} 
 
 
 
-Since $H(x) = f \circ g)(x) = f(g(x))$, the domain of $H$ is inside the domain of $g$, which is $(\infty, \infty)$. \\
+Since $H(x) = f \circ g)(x) = f(g(x))$, the domain of $H$ is inside the domain of $g$, which is $(\infty, \infty)$. 
 
-We need to match up the domain of $f$ with the range of $g$. \\
-
-
-$f(t) = -4 \ln(t)$ has a domain of $(0, \infty)$.  We need the output of $g$ to be inside $(0, \infty)$. \\
+We need to match up the domain of $f$ with the range of $g$. 
 
 
+$f(t) = -4 \ln(t)$ has a domain of $(0, \infty)$.  We need the output of $g$ to be inside $(0, \infty)$. 
 
-$g(y) = 5 - y^2$ \\
+
+
+$g(y) = 5 - y^2$ 
 
 
 
@@ -103,16 +100,16 @@ y = -\sqrt{5}  \,  \text{ or } \, y = \sqrt{5}
 
 
 
-$5 - y^2 > 0$ on $(-\sqrt{5}, \sqrt{5})$. \\
+$5 - y^2 > 0$ on $(-\sqrt{5}, \sqrt{5})$. 
 
 
 
 
-Therefore, the domain of $K$ is the intersection of the domain of $g$ with $(-\sqrt{5}, \sqrt{5})$, which is $(-\sqrt{5}, \sqrt{5})$. \\
+Therefore, the domain of $K$ is the intersection of the domain of $g$ with $(-\sqrt{5}, \sqrt{5})$, which is $(-\sqrt{5}, \sqrt{5})$. 
 
 
 
-\textbf{\textcolor{blue!55!black}{Zeros:}} \\
+\textbf{\textcolor{blue!55!black}{Zeros:}} 
 
 
 
@@ -137,11 +134,9 @@ Therefore, the domain of $K$ is the intersection of the domain of $g$ with $(-\s
 \]
 
 
-We have two zeros, $-2$ and $2$. \\
+We have two zeros, $-2$ and $2$. 
 
-Both of these are inside the domain of $H$, since $2 < \sqrt{5}$. \\
-
-
+Both of these are inside the domain of $H$, since $2 < \sqrt{5}$. 
 
 
 
@@ -153,10 +148,12 @@ Both of these are inside the domain of $H$, since $2 < \sqrt{5}$. \\
 
 
 
-\textbf{\textcolor{blue!55!black}{Continuity:}} \\
 
 
-$K$ is a composition of a logarithmic function and a quadratic function.  Both of these are continuous, which means their composition is continuous. \\
+\textbf{\textcolor{blue!55!black}{Continuity:}} 
+
+
+$K$ is a composition of a logarithmic function and a quadratic function.  Both of these are continuous, which means their composition is continuous. 
 
 Logrithmic functions do not have discontinuites, but they do have singularities.  
 
@@ -181,7 +178,7 @@ $f(t) = -4\ln(t)$ has a singularity at $0$, which means $K$ has a singularity wh
 \left\{ -\sqrt{5}, \sqrt{5} \right\}
 \]
 
-We have two singularities, $-\sqrt{5}$ and $\sqrt{5}$. \\
+We have two singularities, $-\sqrt{5}$ and $\sqrt{5}$. 
 
 
 
@@ -194,11 +191,11 @@ We have two singularities, $-\sqrt{5}$ and $\sqrt{5}$. \\
 
 
 
-\textbf{\textcolor{blue!55!black}{Singularity-Behavior:}} \\
+\textbf{\textcolor{blue!55!black}{Singularity-Behavior:}} 
 
 
 
-Since, $f(t) = -4 \ln(t)$ is a logarithmic function with a negative leading coefficient and the inside linear function has a positive leading coefficient, we know that 
+Since, $f(t) = -4 \ln(t)$ is a logarithmic function with a negative leading coefficient and the inside linear function has a positive leading coefficient, we know that $f$ is a decreasing logarithmic function.
 
 
 \[
@@ -207,10 +204,10 @@ Since, $f(t) = -4 \ln(t)$ is a logarithmic function with a negative leading coef
 
 
 
-We need to find out where the values of $g$ approach $0^+$, meaning from the positive side. \\
+We need to find out where the values of $g$ approach $0^+$, meaning from the positive side. 
 
 
-We already fount the zeros of $g$.  They were $-\sqrt{5}$ and $\sqrt{5}$.  Now we have to think about which side of $-\sqrt{5}$ and $\sqrt{5}$ will make $g$ positive. \\
+We already found the zeros of $g$.  They were $-\sqrt{5}$ and $\sqrt{5}$.  Now we have to think about which side of $-\sqrt{5}$ and $\sqrt{5}$ will make $g$ positive. 
 
 
 Since $g(y) = 5 - y^2$ is a quadratic with a negative leading coefficent, it will be positive on the inside of its zeros. 
@@ -220,7 +217,7 @@ Since $g(y) = 5 - y^2$ is a quadratic with a negative leading coefficent, it wil
 \item approaching $\sqrt{5}$ from the negative/left side
 \end{itemize}
 
-Both of these will result in $f$ approaching $0$ from the positive direction. \\
+Both of these will result in $f$ approaching $0$ from the positive direction. 
 
 
 
@@ -249,7 +246,7 @@ Both of these will result in $f$ approaching $0$ from the positive direction. \\
 
 
 
-\textbf{\textcolor{blue!55!black}{End-Behavior:}} \\
+\textbf{\textcolor{blue!55!black}{End-Behavior:}} 
 
 There is no end-behavior here, because end-behavior refers to the behavior of the function as the domain becomes unbounded.  The domain here is $(-\sqrt{5}, \sqrt{5})$. It doesn't head to $-\infty$ or $\infty$.
 
@@ -263,20 +260,20 @@ There is no end-behavior here, because end-behavior refers to the behavior of th
 
 
 
-\textbf{\textcolor{blue!55!black}{Behavior:}} \\
+\textbf{\textcolor{blue!55!black}{Behavior:}} 
 
 
-We want to figure out where $H$ is increasing and decreasing. \\
+We want to figure out where $H$ is increasing and decreasing. 
 
-$H$ is a composition, so we need to know how the component functions behave individually. \\
-
-
+$H$ is a composition, so we need to know how the component functions behave individually. 
 
 
 
-$f(t) = -4 \ln(t)$ is a decreasing function, because it is a logarithmic function with a negative leading coefficient while the leading coefficient of the inside linear function is  positive. \\
 
-$g(y) = 5 - y^2$ is a quadratic with a negative leading coefficient.  Therefore, it increases and then decreases.   It switches at the criticial number.\\
+
+$f(t) = -4 \ln(t)$ is a decreasing function, because it is a logarithmic function with a negative leading coefficient while the leading coefficient of the inside linear function is  positive. 
+
+$g(y) = 5 - y^2$ is a quadratic with a negative leading coefficient.  Therefore, it increases and then decreases.   It switches at the criticial number.
 
 
 
@@ -297,7 +294,7 @@ $g$ decreases on $(-\infty, 0)$ and increases on $(0, \infty)$.  Of course, we c
 $g$ is increasing. Here, the range of $g$ is positive and $f$ is decreasing on positive domain numbers.
 
 \begin{center}
-$K$ is $decreasing \circ increasing$, which is decreasing. \\
+$K$ is $decreasing \circ increasing$, which is decreasing. 
 \end{center}
 
 
@@ -310,7 +307,7 @@ $g$ is decreasing. Here, the range of $g$ is positive and $f$ is decreasing on p
 
 
 \begin{center}
-$K$ is $decreasing \circ decreasing$, which is increasing. \\
+$K$ is $decreasing \circ decreasing$, which is increasing. 
 \end{center}
 
 
@@ -319,10 +316,10 @@ $K$ is $decreasing \circ decreasing$, which is increasing. \\
 
 
 
-\textbf{\textcolor{blue!55!black}{Global/Local Maximum and Minimum:}} \\
-\textbf{Extrema:} \\
+\textbf{\textcolor{blue!55!black}{Global/Local Maximum and Minimum:}} 
+\textbf{Extrema:} 
 
-$K$ is continuous, decreasing and then increasing, which means $K(0) = -4 \ln(5)$ is a local and global minimum. \\
+$K$ is continuous (with no singularities), decreasing and then increasing, which means $K(0) = -4 \ln(5)$ is a local and global minimum. 
 
 
 
@@ -339,14 +336,14 @@ Since $\lim\limits_{x \to -\sqrt{5}^-} K(x) = \infty$,  there is no global maxim
 
 
 
-\textbf{\textcolor{blue!55!black}{Range:}} \\
+\textbf{\textcolor{blue!55!black}{Range:}} 
 
-Since $K$ is continuous, the range is $[-4 \ln(5), \infty)$.
-
-
+Since $K$ is continuous (with no singularities), the range is $[-4 \ln(5), \infty)$.
 
 
-This all agrees with the graph. \\
+
+
+This all agrees with the graph. 
 
 
 
