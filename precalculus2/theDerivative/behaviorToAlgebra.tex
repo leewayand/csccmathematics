@@ -25,14 +25,17 @@ This is largely due to the Zero Property Property, which says that
 \]
 
 
-Unless you know of some handy property of a function, our procedure often begin with ``get eveything on one side and $0$ on the other and factor''.
+The first step in identifying a funciton's zeros is to form an equation by setting the function equal $0$.
+
+Now find solutions to the equation. 
+
+
+Unless you know of some handy property of the function, our procedure often begin with ``get eveything on one side and $0$ on the other and factor''.
 
 
 
 
-Contrast that to increasing and decreasing, which do not involve equations to solve.  They are comparisons of movement or change between the range and domain. 
-
-Our algebra is not that good at such comparisons. 
+Contrast that to increasing and decreasing, which do not involve equations to solve.  They are comparisons of movement or change between the range and domain. Our algebra is not that good at such comparisons. 
 
 
 The derivative rephrases this comparison of change back into algebra, where we have methods. 
@@ -47,12 +50,10 @@ Let $f$ be a function.
 
 Then the derivative is denoted as $f'$. 
 
-
-$f$ is increasing on intervals where $f'$ is positive. 
-
-
-$f$ is decreasing on intervals where $f'$ is negative. 
-
+\begin{itemize}
+\item where $f'$ is positive, $f$ is increasing  
+\item where $f'$ is negative, $f$ is decreasing   
+\end{itemize}
 
 \end{idea}
 
@@ -71,20 +72,20 @@ This allows us to bring our algebraic tools to the question of function behavior
 
 
 
-Any quadratic can be written in the form $a \, x^2 + b \, x + c$. 
+Any quadratic can be written in the form $A \, x^2 + B \, x + C$. 
 
-The derivative is given by $2a \, x + b$.
-
-
-The derivative switches signs at $\frac{-b}{2a}$, which is the only critical. It corresponds to the first coordinate of the vertex. 
+The derivative is given by $2A \, x + B$.
 
 
+The derivative switches signs at $\frac{-B}{2A}$, which is the only critical. It corresponds to the first coordinate of the vertex. 
 
-\textbf{$\blacktriangleright$} If $a < 0$, then 
+
+
+\textbf{$\blacktriangleright$} If $A < 0$, then 
 
 \begin{itemize}
-\item $f' > 0$ on $\left( -\infty, \frac{-b}{2a} \right)$ and $f$ is increasing on $\left( -\infty, \frac{-b}{2a} \right)$. \\
-\item $f' < 0$ on $\left( \frac{-b}{2a}, -\infty \right)$ and $f$ is decreasing on $\left( \frac{-b}{2a}, \infty \right)$. 
+\item $f' > 0$ on $\left( -\infty, \frac{-B}{2A} \right)$ and $f$ is increasing on $\left( -\infty, \frac{-B}{2A} \right)$. \\
+\item $f' < 0$ on $\left( \frac{-B}{2A}, -\infty \right)$ and $f$ is decreasing on $\left( \frac{-B}{2A}, \infty \right)$. 
 \end{itemize}
 
 
@@ -93,11 +94,11 @@ The derivative switches signs at $\frac{-b}{2a}$, which is the only critical. It
 
 
 
-\textbf{$\blacktriangleright$} If $a > 0$, then 
+\textbf{$\blacktriangleright$} If $A > 0$, then 
 
 \begin{itemize}
-\item $f' < 0$ on $\left( -\infty, \frac{-b}{2a} \right)$ and $f$ is decreasing on $\left( -\infty, \frac{-b}{2a} \right)$. \\
-\item $f' > 0$ on $\left( \frac{-b}{2a}, -\infty \right)$ and $f$ is increasing on $\left( \frac{-b}{2a}, \infty \right)$. 
+\item $f' < 0$ on $\left( -\infty, \frac{-B}{2A} \right)$ and $f$ is decreasing on $\left( -\infty, \frac{-B}{2A} \right)$. \\
+\item $f' > 0$ on $\left( \frac{-B}{2A}, -\infty \right)$ and $f$ is increasing on $\left( \frac{-B}{2A}, \infty \right)$. 
 \end{itemize}
 
 
@@ -119,21 +120,21 @@ We can get the derivative of $Q$: $Q'(k) = 6 \, k + 4$, which is a linear functi
 
 The zero of $Q'$ is $-\frac{4}{6} = -\frac{2}{3}$, which makes $-\frac{2}{3}$ a critical number for $Q$.
 
-$Q'(k)$ is negative on $\left(-\infty, \frac{2}{3} \right)$. 
-
-$Q'(k)$ is positive on $\left(\frac{2}{3}, \infty \right)$. 
+\begin{itemize}
+\item $Q'(k)$ is negative on $\left(-\infty, \frac{2}{3} \right)$. 
+\item $Q'(k)$ is positive on $\left(\frac{2}{3}, \infty \right)$. 
+\end{itemize}
 
 This gives us the behavior of $Q$.
 
+\begin{itemize}
+\item $Q'(k)$ is decreasing on $\left(-\infty, \frac{2}{3} \right)$. 
+\item $Q'(k)$ is increasing on $\left(\frac{2}{3}, \infty \right)$. 
+\end{itemize}
 
-$Q'(k)$ is decreasing on $\left(-\infty, \frac{2}{3} \right)$. 
+This reveals a minimum value for $Q$ at $\left(\frac{2}{3}$.
 
-$Q'(k)$ is increasing on $\left(\frac{2}{3}, \infty \right)$. 
-
-
-This reveals a minimum value of $Q$.
-
-Since $Q'$ switches signs over $-\frac{2}{3}$, $Q$ switches behavior. It switches from decreasing to increasing, which means $-\frac{2}{3}$ is the location of a local minimum.  For a quadratic, this is also the global minimum value of $Q$.
+Since $Q'$ switches signs over $-\frac{2}{3}$, $Q$ switches behavior. $Q$ switches from decreasing to increasing, which means $-\frac{2}{3}$ is the location of a local minimum.  For a quadratic, this is also the global minimum value of $Q$.
 
 
 \end{example}

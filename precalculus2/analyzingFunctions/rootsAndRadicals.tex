@@ -33,14 +33,16 @@ $x^{\tfrac{1}{n}}$ is called \textbf{the nth root of x}, where $n$ is a natural 
 
 \textbf{odd roots}
 
-When $n = 2k+1$ is odd, $x^{\tfrac{1}{n}} = x^{\tfrac{1}{2k+1}}$ is defined to be the unique real number, $r$, such that $r^n = x$. The domain is all real numbers.
+When $n$ is odd, then $n = 2k+1$, $x^{\tfrac{1}{n}} = x^{\tfrac{1}{2k+1}}$ is defined to be the unique real number, $r$, such that $r^n = x$. \\
+The domain is all real numbers.
 
 
 
 
 \textbf{even roots}
 
-When $n=2k$ is even, $x^{\tfrac{1}{n}} = x^{\tfrac{1}{2k}}$ is defined to be the unique nonnegative real number, $r$, such that $r^n = x$. The domain is all nonnegative real numbers.
+When $n$ is even, then $n = 2k$, $x^{\tfrac{1}{n}} = x^{\tfrac{1}{2k}}$ is defined to be the unique nonnegative real number, $r$, such that $r^n = x$. \\
+The domain is all nonnegative real numbers.
 
 
 \end{definition}
@@ -415,9 +417,9 @@ The graph of $y = f(v) = \frac{1}{3} \sqrt{5-3v}-4$
 \textbf{Continuity:} Root or Radical functions are continuous.
 
 
-\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction.  
+\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction.  Here, the domain is $\left(-\infty, \frac{5}{3} \right]$, whic tells us that the end-behavior is the negative tail of the domain.
 
-The leading coefficient tells us the end-behaviore. Here the leading coefficient of $f$ is $\frac{1}{3}$, which is positive.
+$f$ is unbounded in the left tail of the domain. It is either unbounded positively or negatively. The leading coefficient tells us the end-behavior. Here the leading coefficient of $f$ is $\frac{1}{3}$, which is positive.
 
 
 \[  \lim\limits_{v \to -\infty} f(v) = \infty   \]
@@ -468,7 +470,7 @@ Since $f$ is always decreasing, there are no other local extrema.
 \textbf{Range:} 
 
 \begin{itemize}
-\item $f$ is continuous
+\item $f$ is continuous, with no singularities
 \item $\lim\limits_{v \to -\infty} f(v) = \infty$
 \item $-4$ is the global minimum
 \end{itemize}
@@ -533,9 +535,9 @@ Here the inside $-k+5=0$ equals $0$ when $k=\answer{5}$.  That is the start of t
 \textbf{Continuity:} Root and Radical functions are continuous. 
 
 
-\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction.  
+\textbf{End-Behavior:} Root or Radical functions have end-behavior in only one direction. The domain tells us which direction. Here, the domain is $(-\infty,5]$ and the end-behavior is in the left tail.
 
-The leading coefficient tells us the end-behaviore. Here the leading coefficient of $T$ is $1$, which is positive.
+The leading coefficient tells us the end-behavior. Here the leading coefficient of $T$ is $1$, which is positive.
 
 
 \[  \lim\limits_{k \to -\infty} T(k) = \infty   \]
@@ -551,12 +553,12 @@ The leading coefficient tells us the end-behaviore. Here the leading coefficient
 $T$ is the composition of
 
 \begin{itemize}
-\item $SQR(x) = \sqrt{x}$, an increasing core function
+\item $SQ(x) = \sqrt{x}$, an increasing core function
 \item $L_{in}(t) = -k + 5$, a decreasing linear function
 \end{itemize}
 
 
-\[  T(k) =  \sqrt{-k+5} = (SQR \circ L_{in})(k) \]
+\[  T(k) =  \sqrt{-k+5} = (SQ \circ L_{in})(k) \]
 
 \[ inc \circ dec = dec  \]
 
@@ -585,7 +587,7 @@ Since $T$ is always decreasing, there are no other local extrema.
 \textbf{Range:} 
 
 \begin{itemize}
-\item $T$ is continuous
+\item $T$ is continuous, with no singularities
 \item $\lim\limits_{k \to -\infty} T(k) = \infty$
 \item $0$ is the global minimum
 \end{itemize}
@@ -618,7 +620,7 @@ Consider the general square root function.
 \textbf{Domain:} The domain is all real numbers that make the inside nonnegative
 
 
-\[ B \,x + C >= 0 \]
+\[ B \,x + C \geq 0 \]
 
 
 \textbf{Zeros:} Square root functions can have a single zero or no zeros.
@@ -629,7 +631,7 @@ Consider the general square root function.
 Since square roots of real numbers are always positive (or $0$), this equation has a solution only if $A$ and $D$ have opposite signs.
 
 
-\textbf{Continuity:} Square root functions are contuous functions.  They are continuous on their domain.
+\textbf{Continuity:} Square root functions are continuous functions.  They are continuous on their domain.
 
 
 
@@ -781,7 +783,7 @@ The cube root function has a vertical tangent line where the inside of the radic
 
 
 
-All odd root/radical functions can be viewed as the Core Cube Root function composed with linear function. One linear function affects the inside of the radical sign and the other affects the outside.
+All odd root/radical functions can be viewed as the core cube root function composed with linear function. One linear function affects the inside of the radical sign and the other affects the outside.
 
 
 \begin{idea} \textbf{\textcolor{blue!55!black}{Cube Root Functions}} 
@@ -798,7 +800,7 @@ In general, cube root (radical) functions are constructed by composing these com
 
 
 \[
-(L_{out} \circ CR \circ L_{in})(x) = A \sqrt[3]{B \,x + C} + D
+A \sqrt[3]{B \,x + C} + D = (L_{out} \circ CR \circ L_{in})(x)
 \]
 
 
@@ -952,7 +954,7 @@ Consider the general cube root function.
 
 
 
-\textbf{Continuity:} Cube root functions are contuous functions.   
+\textbf{Continuity:} Cube root functions are continuous functions.   
 
 
 
