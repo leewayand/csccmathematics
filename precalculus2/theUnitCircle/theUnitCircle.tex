@@ -93,13 +93,13 @@ $\blacktriangleright$ \textbf{\textcolor{blue!75!black}{Multiplication on the Un
 Pretend we have two Complex numbers on the unit circle.
 
 \begin{itemize}
-\item $C_1 = a + b \, i$ with $|C_1| = 1$
-\item $C_2 = c + d \, i$ with $|C_2| = 1$
+\item $C_1 = A + B \, i$ with $|C_1| = 1$
+\item $C_2 = C + D \, i$ with $|C_2| = 1$
 \end{itemize}
 
 
 
-We know $a^2 + b^2 = 1$  and $c^2 + d^2 = 1$.
+We know $A^2 + B^2 = 1$  and $C^2 + D^2 = 1$.
 
 
 
@@ -111,8 +111,8 @@ Now, let's examine their product.
 
 
 \begin{align*}
-(a + b \, i) \cdot (c + d \, i)      & = ac + ad \, i + bc \, i - bd   \\
-                & = (ac - bd) + (ad + bd) \, i
+(A + B \, i) \cdot (C + D \, i)      & = AC + AD \, i + BC \, i - BD   \\
+                & = (AC - BD) + (AD + BD) \, i
 \end{align*}
 
 
@@ -124,11 +124,11 @@ What is the modulus of the product?
 
 
 \begin{align*}
-|(a + b \, i) \cdot (c + d \, i)|      & = | (ac - bd) + (ad + bd) \, i | \\
-                & = (ac - bd)^2 + (ad + bd)^2   \\
-                & = a^2c^2 - 2abcd + b^2d^2 + a^2d^2 + 2abcd + b^2c^2  \\
-                & = a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2  \\
-                & = (a^2 + b^2) \cdot (c^2 + d^2)   \\
+|(A + B \, i) \cdot (C + D \, i)|      & = | (AC - BD) + (AD + BD) \, i | \\
+                & = (AC - BD)^2 + (Ad + BD)^2   \\
+                & = A^2C^2 - 2ABCD + B^2D^2 + A^2D^2 + 2ABCD + B^2C^2  \\
+                & = A^2C^2 + B^2D^2 + A^2D^2 + B^2C^2  \\
+                & = (A^2 + B^2) \cdot (C^2 + D^2)   \\
                 & = 1 \cdot 1  \\
                 & = 1
 \end{align*}
@@ -160,12 +160,12 @@ What is the modulus of the product?
 
 
 
-The complex number $C_1 = a + b \, i$, is positioned at an angle $\theta$ from the positive $x$-axis and a distance $r_1$ from the origin. Therefore, it has the polar form $(r_1, \theta)$. But if  $a + b \, i$ is on the unit circle, then $r_1 = 1$ and the polar form is $(1, \theta)$.
+The complex number $C_1 = A + B \, i$, is positioned at an angle $\theta$ from the positive $x$-axis and a distance $r_1$ from the origin. Therefore, it has the polar form $(r_1, \theta)$. But if  $A + B \, i$ is on the unit circle, then $r_1 = 1$ and the polar form is $(1, \theta)$.
 
 
 
 
-This point defines a right triangle with base $a$ and height $b$ and angle $\theta$ .  
+This point defines a right triangle with base $A$ and height $B$ and angle $\theta$ .  
 
 
 
@@ -209,7 +209,7 @@ This point defines a right triangle with base $a$ and height $b$ and angle $\the
           %\node[penColor3, rotate=-90] at (axis cs:1.06,.322) {$\tan(\theta)$};
 
 
-          \node at (axis cs:0.906,0.423) [anchor=west] {$a + bi$};
+          \node at (axis cs:0.906,0.423) [anchor=west] {$A + Bi$};
 
           \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.906,0.423)};
 
@@ -221,20 +221,20 @@ This point defines a right triangle with base $a$ and height $b$ and angle $\the
 
 
 
-Above is a diagram of the right triangle for $a + b \, i = (1, \theta)$. \\
+Above is a diagram of the right triangle for $A + B \, i = (1, \theta)$. \\
 
 
 
 
-The complex number $C_2 = c + d \, i$, has a polar form $(r_2, \phi)$, which similarly is $(1, \phi)$.  Normally, we would plot a point for this complex number by rotating counterclockwise an angle $\phi$ from the positive $x$-axis.  Instead, we are going to tack on this angle to $\theta$.
+The complex number $C_2 = C + D \, i$, has a polar form $(r_2, \phi)$, which similarly is $(1, \phi)$.  Normally, we would plot a point for this complex number by rotating counterclockwise an angle $\phi$ from the positive $x$-axis.  Instead, we are going to tack on this angle to $\theta$.
 
-So, we are sort of pretending that the radius for the first complex number, $a + b \, i$, is acting like a new $x$-axis and we are going to rotate counterclockwise an angle $\phi$ from that radius.
-
-
+So, we are sort of pretending that the radius for the first complex number, $A + B \, i$, is acting like a new $x$-axis and we are going to rotate counterclockwise an angle $\phi$ from that radius.
 
 
 
-We begin making a right triangle for   $c + d \, i$ with an angle $\phi$.
+
+
+We begin making a right triangle for   $C + D \, i$ with an angle $\phi$.
 
 
 
@@ -272,8 +272,8 @@ We begin making a right triangle for   $c + d \, i$ with an angle $\phi$.
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
 
 
-  \draw (1.5,-0.25) node {\scriptsize{$a$}};
-  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,-0.25) node {\scriptsize{$A$}};
+  \draw (3.25,0.5) node {\scriptsize{$B$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
 
@@ -331,8 +331,8 @@ Eventually, the sides meet to make a right triangle.  Let's enclose the whole di
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
 
 
-  \draw (1.5,-0.25) node {\scriptsize{$a$}};
-  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,-0.25) node {\scriptsize{$A$}};
+  \draw (3.25,0.5) node {\scriptsize{$B$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
 
@@ -353,14 +353,14 @@ Eventually, the sides meet to make a right triangle.  Let's enclose the whole di
 
 
 
-The problem is that this second right triangle is too big for our unit circle. It is supposed to be a right triangle for $c + d \, i$.  That means the sides were supposed to be $c$ and $d$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$. That is too much.  That is ok. We can still get the lengths of this triangle.  
+The problem is that this second right triangle is too big for our unit circle. It is supposed to be a right triangle for $C + D \, i$.  That means the sides were supposed to be $C$ and $D$.  The hypotenuse was suppose to be of length $1$, to be a radius on the unit circle. Instead, in our diagram, the bottom leg has length $1$. That is too much.  That is ok. We can still get the lengths of this triangle.  
 
-So, our new right triangle is not the $c-d-1$ right triangle for $c + d \, i$. 
+So, our new right triangle is not the $C-D-1$ right triangle for $C + D \, i$. 
 
 
- The good news is that the new triangle we created is a right triangle with angle $\phi$.  That means it is similar to the $c-d-1$ right triangle for $c + d \, i$.  The sides must be proportional to the sides of the $c-d-1$ right triangle for $c + d \, i$.  We can use this proportionality.
+ The good news is that the new triangle we created is a right triangle with angle $\phi$.  That means it is similar to the $C-D-1$ right triangle for $C + D \, i$.  The sides must be proportional to the sides of the $C-D-1$ right triangle for $C + D \, i$.  We can use this proportionality.
 
-  Let's call the lengths of the sides of this new triangle $k$ and $h$.  $k$ is one of the legs of the right triangle and $h$ is the hypotenuse.
+  Let's call the lengths of the sides of this new triangle $K$ and $H$.  $K$ is one of the legs of the right triangle and $H$ is the hypotenuse.
 
 
 
@@ -392,8 +392,8 @@ So, our new right triangle is not the $c-d-1$ right triangle for $c + d \, i$.
   %\draw [rotate=0] (2.75,1.1) node {\scriptsize{$\beta$}};
   %\draw [rotate=0] (2,2.7) node {\scriptsize{$\phi$}};
 
-  \draw (-1.4,0) node {\scriptsize{$c$}};
-  \draw (-1,0.7) node {\scriptsize{$d$}};
+  \draw (-1.4,0) node {\scriptsize{$C$}};
+  \draw (-1,0.7) node {\scriptsize{$D$}};
   \draw (-1.8,0.6) node {\scriptsize{$1$}};
 
 
@@ -408,8 +408,8 @@ So, our new right triangle is not the $c-d-1$ right triangle for $c + d \, i$.
   %\draw [rotate=0] (-1.2,0.4) node {\scriptsize{$\beta$}};
   %\draw [rotate=0] (-1.35,0.75) node {\scriptsize{$\phi$}};
 
-  \draw (2.8,2) node {\scriptsize{$k$}};
-  \draw (0.85,1.75) node {\scriptsize{$h$}};
+  \draw (2.8,2) node {\scriptsize{$K$}};
+  \draw (0.85,1.75) node {\scriptsize{$H$}};
   \draw (2,0.4) node {\scriptsize{$1$}};
 
 
@@ -432,16 +432,16 @@ These right triangles are similar.
 
 
 \[
-\frac{h}{1} = \frac{k}{d} = \frac{1}{c}
+\frac{H}{1} = \frac{K}{D} = \frac{1}{C}
 \]
 
 \[
-k = \frac{d}{c}
+K = \frac{D}{C}
 \]
 
 
 
-The other leg of our right triangle has length $\frac{d}{c}$.
+The other leg of our right triangle has length $\frac{D}{C}$.
 
 
 
@@ -483,11 +483,11 @@ The other leg of our right triangle has length $\frac{d}{c}$.
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
 
 
-  \draw (1.5,-0.25) node {\scriptsize{$a$}};
-  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,-0.25) node {\scriptsize{$A$}};
+  \draw (3.25,0.5) node {\scriptsize{$B$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
-  \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+  \draw (2.6,2.2) node {\tiny{$\tfrac{D}{C}$}};
 
 
   %\draw (2.9,1.5) node {\scriptsize{$\theta$}};
@@ -518,7 +518,7 @@ If we label the angles $\alpha$ and $\beta$ in the diagram below, then
 
 
 \begin{itemize}
-  \item Our original right triangle for $a + b \, i$  has non-right angles, $\theta$, and angle $\beta$.
+  \item Our original right triangle for $A + B \, i$  has non-right angles, $\theta$, and angle $\beta$.
   \item The right side of the big encompassing rectangle forms a straight angle and it is cut up into three angles: a right angle, $\beta$ on one side, and $\alpha$ on the other side. The sum must be $180^{\circ}$.
 \end{itemize}
 
@@ -568,11 +568,11 @@ If we label the angles $\alpha$ and $\beta$ in the diagram below, then
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
 
 
-  \draw (1.5,-0.25) node {\scriptsize{$a$}};
-  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,-0.25) node {\scriptsize{$A$}};
+  \draw (3.25,0.5) node {\scriptsize{$B$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
-  \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+  \draw (2.6,2.2) node {\tiny{$\tfrac{D}{C}$}};
 
 
   \draw (2.85,1.55) node {\scriptsize{$\alpha$}};
@@ -613,7 +613,7 @@ The sum of the angles of the bottom right triangle is $\theta + \beta + 90^{\cir
 The angles in the top-right right triangle are also $\theta$ and $\beta$. 
 
 
-The bottom right triangle representing $a + b \, i$ and the triangle formed in the upper-right corner of the rectangle are similar triangles.  We can get the lengths of the legs of the top right triangle. Let's call these lengths $x$ and $y$ in the diagram.
+The bottom right triangle representing $A + B \, i$ and the triangle formed in the upper-right corner of the rectangle are similar triangles.  We can get the lengths of the legs of the top right triangle. Let's call these lengths $X$ and $Y$ in the diagram.
 
 
 
@@ -655,14 +655,14 @@ The bottom right triangle representing $a + b \, i$ and the triangle formed in t
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
 
 
-  \draw (1.5,-0.25) node {\scriptsize{$a$}};
-  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,-0.25) node {\scriptsize{$A$}};
+  \draw (3.25,0.5) node {\scriptsize{$B$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
-  \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+  \draw (2.6,2.2) node {\tiny{$\tfrac{D}{C}$}};
 
-   \draw (2.6,3.25) node {\scriptsize{$x$}};
-  \draw (3.25,2.2) node {\scriptsize{$y$}};
+   \draw (2.6,3.25) node {\scriptsize{$X$}};
+  \draw (3.25,2.2) node {\scriptsize{$Y$}};
 
 
   \draw (2.85,1.55) node {\scriptsize{$\theta$}};
@@ -684,12 +684,12 @@ Simliar triangles gives us
 
 
 \[
-\frac{\tfrac{d}{c}}{1} = \frac{y}{a} = \frac{x}{b}
+\frac{\tfrac{D}{C}}{1} = \frac{Y}{A} = \frac{X}{B}
 \]
 
 
 \[
-y = \frac{d a}{c} \, \text{ and } \,  x = \frac{d b}{c}
+Y = \frac{D A}{C} \, \text{ and } \,  X = \frac{D B}{C}
 \]
 
 
@@ -731,19 +731,19 @@ y = \frac{d a}{c} \, \text{ and } \,  x = \frac{d b}{c}
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
 
 
-  \draw (1.5,-0.25) node {\scriptsize{$a$}};
-  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,-0.25) node {\scriptsize{$A$}};
+  \draw (3.25,0.5) node {\scriptsize{$B$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
-  \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+  \draw (2.6,2.2) node {\tiny{$\tfrac{D}{C}$}};
 
 
   \draw (2.85,1.55) node {\scriptsize{$\theta$}};
   \draw (2.85,0.75) node {\scriptsize{$\beta$}};
 
 
-  \draw (3.25,2.2) node {\tiny{$\tfrac{da}{c}$}};
-  \draw (2.6,3.2) node {\tiny{$\tfrac{db}{c}$}};
+  \draw (3.25,2.2) node {\tiny{$\tfrac{DA}{C}$}};
+  \draw (2.6,3.2) node {\tiny{$\tfrac{DB}{C}$}};
 
 
 
@@ -755,7 +755,7 @@ y = \frac{d a}{c} \, \text{ and } \,  x = \frac{d b}{c}
 
 
 
-We can now deduce the lengths of the other two pieces of the rectangle in terms of $a$, $b$, $c$, and $d$.
+We can now deduce the lengths of the other two pieces of the rectangle in terms of $A$, $B$, $C$, and $D$.
 
 
 
@@ -793,19 +793,19 @@ We can now deduce the lengths of the other two pieces of the rectangle in terms 
   \draw [rotate=36] (1,0) node {\scriptsize{$\phi$}};
 
 
-  \draw (1.5,-0.25) node {\scriptsize{$a$}};
-  \draw (3.25,0.5) node {\scriptsize{$b$}};
+  \draw (1.5,-0.25) node {\scriptsize{$A$}};
+  \draw (3.25,0.5) node {\scriptsize{$B$}};
   \draw (1.5,0.75) node {\scriptsize{$1$}};
 
 
   \draw (2.9,1.5) node {\scriptsize{$\theta$}};
-  \draw (2.6,2.2) node {\tiny{$\tfrac{d}{c}$}};
+  \draw (2.6,2.2) node {\tiny{$\tfrac{D}{C}$}};
 
-  \draw (3.25,2.2) node {\tiny{$\tfrac{da}{c}$}};
-  \draw (2.6,3.2) node {\tiny{$\tfrac{db}{c}$}};
+  \draw (3.25,2.2) node {\tiny{$\tfrac{DA}{C}$}};
+  \draw (2.6,3.2) node {\tiny{$\tfrac{DB}{C}$}};
 
-  \draw (-0.5,1.5) node {\tiny{b+$\tfrac{da}{c}$}};
-  \draw (1,3.2) node {\tiny{$a-\tfrac{db}{c}$}};
+  \draw (-0.5,1.5) node {\tiny{B+$\tfrac{DA}{C}$}};
+  \draw (1,3.2) node {\tiny{$A-\tfrac{DB}{C}$}};
 
 
 
@@ -857,8 +857,8 @@ The bottom exterior angle is the sum of $\theta$ and $\phi$.  It is just our two
 
 
 
-  \draw (-0.5,1.5) node {\tiny{b+$\tfrac{da}{c}$}};
-  \draw (1,3.2) node {\tiny{$a-\tfrac{db}{c}$}};
+  \draw (-0.5,1.5) node {\tiny{B+$\tfrac{DA}{C}$}};
+  \draw (1,3.2) node {\tiny{$A-\tfrac{DB}{C}$}};
 
 
 
@@ -906,8 +906,8 @@ If we view the slanted line as the diagonal of a rectangle, then we can see that
 
 
 
-  \draw (-0.5,1.5) node {\tiny{b+$\tfrac{da}{c}$}};
-  \draw (1,3.2) node {\tiny{$a-\tfrac{db}{c}$}};
+  \draw (-0.5,1.5) node {\tiny{B+$\tfrac{DA}{C}$}};
+  \draw (1,3.2) node {\tiny{$A-\tfrac{DB}{C}$}};
 
 
 
@@ -930,7 +930,7 @@ If we view the slanted line as the diagonal of a rectangle, then we can see that
 
 
 
-Finally, let's resize this triangle by a factor of $c$.
+Finally, let's resize this triangle by a factor of $C$.
 
 
 
@@ -965,8 +965,8 @@ Finally, let's resize this triangle by a factor of $c$.
 
 
 
-  \draw (-0.5,1.5) node {\tiny{$bc+ad$}};
-  \draw (1,3.2) node {\tiny{$ac-db$}};
+  \draw (-0.5,1.5) node {\tiny{$BC+AD$}};
+  \draw (1,3.2) node {\tiny{$AC-DB$}};
 
 
 
@@ -982,7 +982,7 @@ These two lengths are familiar.
 
 It is upsidedown, but this is the right triangle defined on the unit circle by the product of our two complex numbers:
 
-\[  (a + b \, i) \cdot (c + d \, i) = (ac-bd) + (ad+bc) \, i    \]
+\[  (A + B \, i) \cdot (C + D \, i) = (AC-BD) + (AD+BC) \, i    \]
 
 
 
@@ -1017,8 +1017,8 @@ Let's flip it over.
 
 
 
-  \draw (2.5,1.5) node {\tiny{$ad+bc$}};
-  \draw (1,-0.2) node {\tiny{$ac-bd$}};
+  \draw (2.5,1.5) node {\tiny{$AD+BC$}};
+  \draw (1,-0.2) node {\tiny{$AC-BD$}};
 
 
 
