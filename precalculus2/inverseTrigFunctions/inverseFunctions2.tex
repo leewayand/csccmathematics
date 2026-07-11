@@ -12,7 +12,7 @@ one-to-one
 \maketitle
 
 
-Let's first remind ourselves about inverse functions. \\
+Let's first remind ourselves about inverse functions. 
 
 
 Just like numbers, functions have an arithmetic.  They have all of the usual number operations, plus one more.  Functions also have \textbf{\textcolor{purple!85!blue}{composition}} as an operation.
@@ -30,9 +30,9 @@ Around these identity elements, we define inverses.
 
 
 \begin{itemize}
-\item The additive inverse of $a$ is the number that when added to $a$ results in $0$.  Our symbol is $-a$, which we call the \textbf{\textcolor{blue!55!black}{opposite}} of $a$.
-\item The multiplicative inverse of $a$ is the number that when multiplied to $a$ results in $1$.  Our symbol is $\frac{1}{a}$ or $a^{-1}$, which we call the \textbf{\textcolor{blue!55!black}{reciprocal}} of $a$.
-\item The composition inverse of a function $f$ is the function that when composed with $f$ gives the identity function. Our symbol is $f^{-1}$, which we call the \textbf{\textcolor{blue!55!black}{inverse}} of $f$.
+\item The additive inverse of $A$ is the number that when added to $A$ results in $0$.  Our symbol is $-A$, which we call the \textbf{\textcolor{blue!55!black}{opposite}} of $A$.
+\item The multiplicative inverse of $A$ is the number that when multiplied to $A$ results in $1$.  Our symbol is $\frac{1}{A}$ or $A^{-1}$, which we call the \textbf{\textcolor{blue!55!black}{reciprocal}} of $A$.
+\item The composition inverse of a function $F$ is the function that when composed with $F$ gives the identity function. Our symbol is $F^{-1}$, which we call the \textbf{\textcolor{blue!55!black}{inverse}} of $F$.
 \end{itemize}
 
 
@@ -80,15 +80,15 @@ Composition glues function pairs together producing a third function.
 Let $In$ and $Out$ be two functions and $Out \circ In$ their composition.
 
 
-Pairs in $In$ look like $(a, In(a))$.   The composition then interprets $In(a)$ as a member of the domain of $Out$.  $Out$ connects $In(a)$ to $Out(In(a))$.   The composition, $Out \circ In$ just ignores the middle part.  The composition sees $a$ as a domain number and then $Out(In(a))$ as the range partner.
+Pairs in $In$ look like $(A, In(A))$.   The composition then interprets $In(A)$ as a member of the domain of $Out$.  $Out$ connects $In(A)$ to $Out(In(A))$.   The composition, $Out \circ In$ just ignores the middle part.  The composition sees $A$ as a domain number and then $Out(In(A))$ as the range partner.
 
 
-Suppose we are in a situation where $Out(In(a)) = a$, which means the composition is the identity function.  That would tell us that $Out$ is the inverse function of $In$.  $Out = In^{-1}$.
+Suppose we are in a situation where $Out(In(A)) = A$, which means the composition is the identity function.  That would tell us that $Out$ is the inverse function of $In$.  $Out = In^{-1}$.
 
-Then we would have pairs inside $In$ looking like $(a, In(a))$ and pairs inside $In^{-1}$ looking like $(In(a), a)$.  The inverse function just reverses the order pair. \\
+Then we would have pairs inside $In$ looking like $(A, In(A))$ and pairs inside $In^{-1}$ looking like $(In(A), A)$.  The inverse function just reverses the order pair. 
 
 
-\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  The inverse function is just the reverse of the original function. \\
+\textbf{\textcolor{blue!75!black}{$\blacktriangleright$}}  The inverse function is just the reverse of the original function. 
 
 
 This brings up an important issue.
@@ -107,7 +107,7 @@ Reversing the pairs of a function does not always produce a function.
 \begin{example} Squaring Function
 
 
-The squaring function has the formula $Sq(a) =a^2$ with \textbf{$\mathbb{R}$} as its domain.
+The squaring function has the formula $Sq(A) =A^2$ with \textbf{$\mathbb{R}$} as its domain.
 
 It contains the two pairs: $(2, 4)$ and $(-2, 4)$.
 
@@ -131,7 +131,7 @@ Just like with numbers, some functions don't have inverses.  Like, $0$ just does
 \section*{One-to-One}
 
 
-Some functions just don't have an inverse, because they have a range number in two pairs.  This is fine for the function, but when reversing the pairs to obtain the inverse funciton, then that range number turns into a domain number in two pairs.
+Some functions just don't have an inverse, because they have a range number in two pairs.  This is fine for the function, but when reversing the pairs to obtain the inverse function, then that range number turns into a domain number in two pairs.
 
 
 For a function to have an inverse, every range number must be in only one pair.
@@ -176,31 +176,31 @@ This definition says that if two function values are equal, then they couldn't h
 
 \begin{example} Linear Functions
 
-If $C$ is a constant function, then it is not one-to-one and thus doesn't have an inverse. \\
+If $C$ is a constant function, then it is not one-to-one and thus doesn't have an inverse. 
 
 
-If $C$ is a nonconstant linear function, then it has a formula like $C(x) = a \cdot x + b$ where $a \ne 0$.
+If $C$ is a nonconstant linear function, then it has a formula like $C(x) = A \cdot x + B$ where $A \ne 0$.
 
 
-Then $C^{-1}(t) = \frac{1}{a} \cdot t - \frac{b}{a}$
+Then $C^{-1}(t) = \frac{1}{A} \cdot t - \frac{B}{A}$
 
 
-\begin{explanation}
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
 The composition is 
 
-\[  (C \circ C^{-1})(w) = C(C^{-1})(w) =     a \cdot \left(\frac{1}{a} \cdot w - \frac{b}{a}\right) + b  = w \]
+\[  (C \circ C^{-1})(w) = C(C^{-1})(w) =     A \cdot \left(\frac{1}{A} \cdot w - \frac{B}{A}\right) + B  = w \]
 
 
 and the other way
 
 
-\[  (C^{-1} \circ C)(y) = C^{-1}(C(y)) =     \frac{1}{a} \cdot (a \cdot y + b) - \frac{b}{a}  = y \]
+\[  (C^{-1} \circ C)(y) = C^{-1}(C(y)) =     \frac{1}{A} \cdot (A \cdot y + B) - \frac{B}{A}  = y \]
 
 
-\end{explanation}
+
 
 
 \end{example}
@@ -328,7 +328,7 @@ A function is one-to-one if its graph passes the horizontal line test.
 
 Functions that are not one-to-one do not have an inverse.
 
-We can't fix this situation, but we can salvage pieces. \\
+We can't fix this situation, but we can salvage pieces. 
 
 
 
@@ -477,27 +477,27 @@ Since the inverse function has the reverse pairs of the original function, its g
 \begin{example} Inverse Function
 
 
-Let $H(t) = 3t - 5$. \\
+Let $H(t) = 3t - 5$. 
 
-Then $H^{-1}(x)$ is a function such that $H \circ H^{-1} = Id$ \\
+Then $H^{-1}(x)$ is a function such that $H \circ H^{-1} = Id$ 
 
 
-We are looking for a function, $H^{-1}$, such that $(H \circ H^{-1})(k) = H(H^{-1}(k)) = 3 H^{-1}(k) - 5 = k$ \\
+We are looking for a function, $H^{-1}$, such that $(H \circ H^{-1})(k) = H(H^{-1}(k)) = 3 H^{-1}(k) - 5 = k$ 
 
 
 
 $H$ is linear and $Id$ is linear, therefore $H^{-1}$ should be linear.
 
-Let's start building.  $H^{-1}(x)$ should look like $a \cdot x + b$.  The leading coefficient of $H^{-1}$, $a$, should be $\frac{1}{3}$.
+Let's start building.  $H^{-1}(x)$ should look like $A \cdot x + B$.  The leading coefficient of $H^{-1}$, $a$, should be $\frac{1}{3}$.
 
 
-$H^{-1}(x) =\frac{1}{3} x + b$
+$H^{-1}(x) =\frac{1}{3} x + B$
 
 
-That would gets us $H(H^{-1}(k)) = 3 (\frac{1}{3}x + b) - 5 = x + 3b - 5 $
+That would gets us $H(H^{-1}(k)) = 3 (\frac{1}{3}x + B) - 5 = x + 3b - 5 $
 
 
-We need $3b - 5 = 0$ or $b = \answer{\frac{5}{3}}$.
+We need $3B - 5 = 0$ or $B = \answer{\frac{5}{3}}$.
 
 
 $H^{-1}(x) =\frac{1}{3} x + \frac{5}{3}$

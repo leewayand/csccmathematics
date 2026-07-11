@@ -101,7 +101,7 @@ If you give the calculator a value of sine and ask it for the angle, then there 
 
 
 
-\begin{example} Going Backwards
+\begin{example} Going Backwards with Sine
 
 $\blacktriangleright$ Given  $\sin(\theta) = \frac{1}{2}$, then any of the following are possible.
 
@@ -120,12 +120,18 @@ $\blacktriangleright$ Given  $\sin(\theta) = \frac{1}{2}$, then any of the follo
 
 
 
-Therefore, the calculator just focuses on two quadrants, one for each sign.  The calculate gives angles in the fourth  and first quadrants, $\left( -\frac{\pi}{2}, \frac{\pi}{2}   \right)$, when sine is negative or positive.  Then it is up to you to figure out which angle you really want from there.
+Therefore, the calculator just focuses on two quadrants, one for each sign. 
 
 
+For sine, the calculator gives angles in the fourth and first quadrants in the interval $\left( -\frac{\pi}{2}, \frac{\pi}{2}  \right)$. 
+
+\begin{itemize}
+\item When you supply a negative value for sine, the calculator returns an angle in the interval $\left( -\frac{\pi}{2}, 0 \right)$, which is the fourth quadrant.
+\item When you supply a positive value for sine, the calculator returns an angle in the interval $\left( 0, \frac{\pi}{2}, 0 \right)$, which is the first quadrant.
+\end{itemize}
 
 
-
+If the angle you desire is actually in another quadrant, then it is up to you to figure out its actual value from there.
 
 
 
@@ -151,6 +157,82 @@ It doesn't give $150^{\circ}$.  It gives $30^{\circ}$.
 
 
 
+
+
+
+
+
+
+
+
+
+
+\begin{example} Going Backwards with Cosine
+
+$\blacktriangleright$ Given  $\cos(\theta) = \frac{1}{2}$, then any of the following are possible.
+
+
+\begin{itemize}
+\item $\theta = \frac{\pi}{3}$
+\item $\theta = -\frac{\pi}{3}$
+\item $\theta = \frac{13\pi}{6}$
+\item $\theta = -\frac{13\pi}{6}$
+\item $\theta = \frac{25\pi}{6}$
+\item an infinite number of other angles
+\end{itemize}
+
+
+\end{example}
+
+
+
+Therefore, the calculator just focuses on two quadrants, one for each sign. 
+
+
+For cosine, the calculator gives angles in the first and second quadrants in the interval $(0, \pi)$. 
+
+\begin{itemize}
+\item When you supply a positive value for cosine, the calculator returns an angle in the interval $\left( 0, \frac{\pi}{2} \right)$, which is the first quadrant.
+\item When you supply a negative value for cosine, the calculator returns an angle in the interval $\left( \frac{\pi}{2}, \pi \right)$, which is the second quadrant.
+\end{itemize}
+
+
+If the angle you desire is actually in another quadrant, then it is up to you to figure out its actual value from there.
+
+
+
+
+
+
+
+\begin{question} 
+
+$240^{\circ}$ is an angle in the third quadrant. $\cos(240^{\circ}) = -\frac{1}{2} = 0.5$.
+
+
+Now, ask your calculator to give you an angle whose cosine is $-0.5$.
+
+
+$\cos^{-1}(-0.5) = \answer{120}^{\circ}$
+
+
+It doesn't give $240^{\circ}$.  It gives $120^{\circ}$.
+
+\end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 We'll study this more later in the course.  The short story is we have trigonometric functions and their inverse functions.
 
 
@@ -169,9 +251,9 @@ The above is certainly proper inverse function notation, but it confuses everyon
 
 
 \begin{itemize}
-\item $\arcsin(x)$ will give angles in the fourth and first quadrants.
-\item $\arccos(x)$ will give angles in the first and second quadrants.
-\item $\arctan(x)$ will give angles in the fourth and first quadrants.
+\item \textbf{\textcolor{blue!55!black}{$\arcsin(x)$}}  will give angles in the fourth and first quadrants.
+\item \textbf{\textcolor{blue!55!black}{$\arccos(x)$}}  will give angles in the first and second quadrants.
+\item \textbf{\textcolor{blue!55!black}{$\arctan(x)$}}  will give angles in the fourth and first quadrants.
 \end{itemize}
 
 

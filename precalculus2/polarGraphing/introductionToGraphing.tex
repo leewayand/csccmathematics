@@ -11,7 +11,7 @@ polar coordinates
 \end{abstract}
 \maketitle
 
-\section*{Polar Axes}
+\subsection*{Polar Axes}
 
 
 
@@ -146,12 +146,20 @@ $(-2,\pi)$ will mean to point in the $\pi$ direction and then move backwards $2$
 
 
 
-\begin{example}
+\begin{example} Polar Grid
+
+
 Plot the following points described by the following polar coordinates:
 \[
 A =\left(1,\frac{\pi}{4}\right)\quad B=(1.5,\pi)\quad C = \left(2,-\frac{\pi}{3}\right)\quad D = \left(-1,\frac{\pi}{4}\right)
 \]
-\begin{explanation}
+
+
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
+
   It helps to use a ``polar grid'' to plot these points:
   \begin{image}
     \begin{tikzpicture}
@@ -198,7 +206,9 @@ A =\left(1,\frac{\pi}{4}\right)\quad B=(1.5,\pi)\quad C = \left(2,-\frac{\pi}{3}
       \end{tikzpicture}
     \end{image}
   \end{hint}
-\end{explanation}
+
+
+
 \end{example}
 
 
@@ -297,7 +307,14 @@ r^2=x^2+y^2\qquad \tan(\theta) = \frac{y}{x}.
 
 \section*{Polar Graphs}
 
-Let's talk about how to plot polar functions in the two coordinate systems.  \\
+Functions don't have variables. Functions are just packages of pairs. 
+
+We represent functions using formulas and formulas use variables. 
+
+Separate from these variables in the formulas is a geometric interpretation of the variable and function values.  We can view any function's formula as giving us rectangular information or as giving us circular information.  The formula has nothing to do with how it ``should'' be interpreted graphically.
+
+
+Let's talk about how to plot functions in both rectangular and polar coordinate systems.  
 
 
 We can plot points on rectangular axes thinking $y = r(\theta)$. 
@@ -307,7 +324,7 @@ We can plot points on rectangular axes thinking $y = r(\theta)$.
 
 
 \begin{example}
-  Sketch the polar function $r=1+\cos(\theta)$ on $[0,2\pi]$ with rectangular coordinates.  \\
+  Sketch the polar function $r=1+\cos(\theta)$ on $[0,2\pi]$ with rectangular coordinates.  
 
 
   $\theta$ will be measured along the horzontal axis and $r$ will be measured along the vertical axis.
@@ -355,9 +372,12 @@ In the Polar graph, we turn counterclockwise to an angle of $\theta$ and then mo
 Then we continue turning counterclockwise and moving the radial measurement in and out until you get around the whole circle.
 
 
-\begin{example}
+\begin{example} Graphing in Both Coordinate Systems
+
   Sketch the polar function $r=1+\cos(\theta)$ on $[0,2\pi]$.
-  \begin{explanation} 
+
+
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 Begin at $0$ radians and work your way counterclockwise easy angles moving $r$ closer to the origin or further way.
 
@@ -592,7 +612,8 @@ Begin at $0$ radians and work your way counterclockwise easy angles moving $r$ c
           \end{polaraxis}
          \end{tikzpicture}
        \end{image}
-  \end{explanation}
+
+
 \end{example}
 
 
@@ -605,9 +626,12 @@ Begin at $0$ radians and work your way counterclockwise easy angles moving $r$ c
 
 
 
-\begin{example}
+\begin{example} Graphing in Both Coordinate Systems
+
   Sketch the polar function $r=\cos(2 \theta)$ on $[0,2\pi]$.
-  \begin{explanation}
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
    Begin at $0^{\circ}$, move counterclockwise to easy angles, plot radius.  Then sketch in the graph..
     \begin{image}%% 45
       \begin{tikzpicture}
@@ -839,7 +863,8 @@ Begin at $0$ radians and work your way counterclockwise easy angles moving $r$ c
           \end{polaraxis}
          \end{tikzpicture}
        \end{image}
-  \end{explanation}
+
+
 \end{example}
 
 
@@ -860,24 +885,22 @@ Begin at $0$ radians and work your way counterclockwise easy angles moving $r$ c
 
 
 
-\section*{Converting to and from Polar Coordinates}
+\subsection*{Converting Between Rectangular and Polar Coordinates}
 
 
-It is sometimes desirable to refer to a graph via a polar equation,
-and other times by a rectangular equation.  Therefore it is necessary
+It is sometimes desirable to refer to a graph via a polar equation $(r, \theta)$, and other times by a rectangular equation $(x, y)$.  Therefore it is necessary
 to be able to convert between polar and rectangular coordinates.  Here
 is the basic idea:
 
-Given a function $y=f(x)$ in rectangular coordinates, polar coordinates
+Given a function $y=f(x)$ thought of as written in rectangular coordinates, polar coordinates
 are given by setting
 \[
 x=r\cos(\theta)\qquad y=r\sin(\theta).
 \]
 and solving for $r$.
 
-Given a function $r(\theta)$ in polar coordinates, rectangular
-coordinates harder to find. The basic idea is to ``find'' $r\cdot
-\cos(\theta)$ and $r\cdot \sin(\theta)$ and write:
+Given a function $r(\theta)$ thought of as written in polar coordinates, rectangular
+coordinates follow the relationships:
 \[
 r\cos(\theta) = x\qquad r\sin(\theta) = y.
 \]
@@ -887,9 +910,12 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 \]
 
 
-\begin{example}
+\begin{example} Converting 
+
   Convert $y=x^2$ from rectangular coordinates to polar coordinates.
-  \begin{explanation}
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
     Replace $y$ with $r\sin(\theta)$ and replace $x$ with $r\cos(\theta)$, giving:
       \begin{align*}
 	y &=x^2\\
@@ -907,11 +933,7 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 
 
 
-
-
-  \end{explanation}
-
-
+\textbf{\textcolor{red!75!green}{explanation}} 
 
 
 
@@ -930,18 +952,17 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 
 
 
-\begin{warning}
+\begin{warning} \textbf{\textcolor{red!70!black}{Negative $r$}}
+
+      In the previous example we had 
+
+\[ r=\frac{\sin(\theta)}{\cos^2(\theta)} \]
+
       When $\theta$ is inside $\left( \frac{-\pi}{2}, 0 \right)$, then our direction is into the fourth quadrant.  However, $\sin(\theta) < 0$ in the fourth quadrant, which means $r < 0$.  This means we are plotting points in the second quadrant, which is where the parabola is.
 
 
       When $\theta$ is inside $\left( 0, \frac{\pi}{2} \right)$, then our direction is into the first quadrant.   $\sin(\theta) > 0$ in the first quadrant, which means $r > 0$.  This means we are plotting points in the first quadrant, which is where the parabola is.
 
-
-      $\theta = 0$ needs some thought.  When $\theta = 0$, then $\sin(\theta) = 0$ and $r = 0$.  That gives us the Cartesian point $(0,0)$, which is the bottom point on the parabola.  But, if $r =$ here, then how did we divide both sides of our equation above by $r$?
-
-      Just as algebraic thinking, there was a factor of $r$ on both and we divided both sides by $r$.  This is simply symbolic manipulation according to the symbols and operations.  When we thinking funationally or analytically, then we need to be thinking about possible values.
-
-      In this case, we might just talk about $\theta = 0$ separately, by itself, and then let the algebra descibe the rest of the points.  The $r$ will never equal $0$ and our division is ok.
 \end{warning}
 
 
@@ -950,7 +971,60 @@ r^2=x^2+y^2\qquad \tan \theta = \frac yx.
 
 
 
-\begin{idea}  
+
+
+\begin{warning} \textbf{\textcolor{red!70!black}{Dividing by $0$}}
+
+      In the previous example we began with 
+
+      \[  y = x^2 \] 
+
+We replaced $x$ and $y$ to obtain
+
+   \[  r \sin(\theta) = (r \cos(\theta))^2 = r^2 \, \cos^2(\theta) \] 
+
+
+Then we divided both sides of the equation by $r$ and $\cos^2(\theta)$ to obtain
+
+\[ r = \frac{\sin(\theta)}{\cos^2(\theta)} \]
+
+
+That was dangerous!
+
+
+When $\theta = 0$, then $r = 0$. But then we were dividing by $0$.
+
+
+Dividing both sides of an equation is dangerous, unless you know you are never ever dividing by $0$.
+
+      $\theta = 0$ needs some thought.  When $\theta = 0$, then $\sin(\theta) = 0$ and $r = 0$.  That gives us the Cartesian point $(0,0)$, which is the bottom point on the parabola.  But, if $r = 0$ here, then how did we divide both sides of our equation above by $r$?
+
+      Just as algebraic thinking, there was a factor of $r$ on both and we divided both sides by $r$.  This is simply symbolic manipulation according to the symbols and operations.  When we thinking funationally or analytically, then we need to be thinking about possible values.
+
+      In this case, we might just talk about $\theta = 0$ separately, by itself, and then let the algebra descibe the rest of the points.  
+
+For some angles, we just stick with 
+
+\[  r \sin(\theta) = r^2 \, \cos^2(\theta) \] 
+
+FOr instance, when $\theta = 0$, we get 
+
+\[  r \cdot 0 = r^2 \cdot 1 \] 
+
+This tells us that $r = 0$.
+
+Otherwise, the $r$ will never equal $0$ and our division is ok.
+
+\end{warning}
+
+
+
+
+
+
+
+
+\begin{idea}  \textbf{\textcolor{blue!55!black}{Factor instead of Dividing}} 
 
 
 
@@ -972,7 +1046,7 @@ Either $r = 0$ or $(\sin(\theta) - r \cos(\theta)) = 0$.
 We could think about $r=0$ and then we could think about $(\sin(\theta) - r \cos(\theta)) = 0$ with $r \ne 0$.
 
 
-Function analysis requires us to keep track of all of the loose ends that algebraic symbolic manipulation just doesn;t care about.
+Function analysis requires us to keep track of all of the loose ends that algebraic symbolic manipulation just doesn't care about.
 
 
 
@@ -989,9 +1063,12 @@ Function analysis requires us to keep track of all of the loose ends that algebr
 
 
 
-\begin{example}
+\begin{example} Converting
+
   Convert $xy = 1$ from rectangular coordinates to polar coordinates.
-  \begin{explanation}
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
     We again replace $x$ and $y$ using the standard identities and
     work to solve for $r$:
     \begin{align*}
@@ -1007,17 +1084,21 @@ Function analysis requires us to keep track of all of the loose ends that algebr
       
     We can rewrite the original rectangular equation $xy=1$ as
     $y=\frac{1}{x}$. Note it only exists in the first and third quadrants.
-  \end{explanation}
+
 \end{example}
 
 
 
 
 
-\begin{example}
+\begin{example} Converting
+
+
    Convert $r=\frac{2}{\sin(\theta)-\cos(\theta)}$ from polar coordinates
    to rectangular coordinates.
-   \begin{explanation}
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
      There is no set way to convert from polar to rectangular; in
      general, we look to form the products $r\cos(\theta)$ and
      $r\sin(\theta)$, and then replace these with $x$ and $y$,
@@ -1033,13 +1114,16 @@ Function analysis requires us to keep track of all of the loose ends that algebr
      The original polar equation, $r=\frac{2}{(\sin(\theta)-\cos(\theta))}$ does
      not easily reveal that its graph is simply a line. However, our
      conversion shows that it is.
-   \end{explanation}
+
 \end{example}
 
-\begin{example}
+\begin{example} Converting 
+
    Convert $r =2\cos(\theta)$ from polar coordinates to rectangular
    coordinates.        	
-   \begin{explanation}
+
+\textbf{\textcolor{red!75!green}{explanation}} 
+
      By multiplying both sides by $r$, we obtain both an $r^2$ term
      and an $r\cos(\theta)$ term, which we replace with $x^2+y^2$ and
      $x$, respectively.
@@ -1055,7 +1139,7 @@ Function analysis requires us to keep track of all of the loose ends that algebr
        \answer[given]{(x-1)^2 + y^2} &=1.
      \end{align*}
      The circle is centered at $(1,0)$ and has radius $1$.
-   \end{explanation}
+
  \end{example}
 
 
