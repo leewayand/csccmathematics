@@ -40,7 +40,7 @@ We use functions to describe an ordered application of actions. We might see thi
 
 Let $F$ and $G$ be two functions.
 
-The composition of $F$ and $G$ is another function built from pieces of $F$ and $G$. A circle between the function names denotes a composition.
+The \textbf{composition of $F$ and $G$} is another function built from pieces of $F$ and $G$. A circle between the function names denotes a composition.
 
 \[
 F \circ G
@@ -48,7 +48,7 @@ F \circ G
 
 
 \[
-(F \circ G)(a) = F(G(a))
+(F \circ G)(d) = F(G(d))
 \]
 
 
@@ -249,9 +249,9 @@ We have two functions: $Inner$ and $Outer$.
 
 We want to form the composition: $Outer \circ Inner$.
 
-Suppose $a$ is in the domain of $Inner$, but $Inner(a)$ is not a member of the domain of $Outer$.
+Suppose $A$ is in the domain of $Inner$, but $Inner(A)$ is not a member of the domain of $Outer$.
 
-In this case, we need to remove $a$ from the domain of the composition.
+In this case, we need to remove $A$ from the domain of the composition.
 
 
 
@@ -474,30 +474,53 @@ Select all items of the range of $B$.
 
 
 
+\subsection*{Chaining}
+
+
+We can chain together any number of functions as long as their domains and ranges match.
 
 
 
+\textbf{For Instance,} the functions $F$, $G$, and $H$ are defined as follows.
 
 
 
+\textbf{F:} \\
+domain: $\{ 1, 2, 3 \}$ \\
+range: $\{ 4, 5, 6 \}$ \\
+pairs: $\{ (1, 4), (2, 5) , (3, 6) \}$ \\
+
+
+\textbf{G:} \\
+domain: $\{ 4, 5, 6 \}$ \\
+range: $\{ A, B, C \}$ \\
+pairs: $\{ (4, A), (5, B), (6, C) \}$ \\
 
 
 
+\textbf{H:} \\
+domain: $\{ A, B, C \}$ \\
+range: $\{ 9, 8, 7 \}$ \\
+pairs: $\{ (A, 9), (B, 8), (C, 7) \}$ \\
 
 
 
+Then, we could define a new function, $M$, as a composition.
+
+\[ M = H \circ G \circ F \]
 
 
 
+\textbf{M:} \\
+domain: $\{ 1, 2, 3 \}$ \\
+range: $\{ 9, 8, 7 \}$ \\
+pairs: $\{ (1, 9), (2, 8) , (3, 7) \}$ \\
 
 
+Each pair in $M$ required gluing together three pairs.
 
 
-
-
-
-
-
+\[ (1, 9) = (1,4) \bigoplus (4, A) \bigoplus (A, 9) \]
 
 
 
