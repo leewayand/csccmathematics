@@ -13,10 +13,11 @@ the logarithmic story
 
 
 
+
 $\log_A(B)$ is pronounced ``the logarithm base $A$ of $B$'' or ``the log base $A$ of $B$'' or ``the logarithm of $B$ base $A$''. 
 
 
-
+That's how you pronounced it but what does it represent?
 
 \begin{center}
 \textbf{\textcolor{red!70!black}{$\log_A(B)$ is the thing you raise $A$ to, to get $B$.}} 
@@ -53,18 +54,18 @@ Its graph looks like
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$t$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
 
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
 
           
 
@@ -118,7 +119,7 @@ Here, we know the desired value of the function.  We seek the domain numbers pai
 
 
 
-\textbf{\textcolor{red!70!darkgray}{$\bigstar$}} For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number, one exponent, one \textbf{\textcolor{purple!85!blue}{logarithm}}. (That is eeriely similar to the function rule for pairs in the exponential function.) 
+\textbf{\textcolor{red!70!darkgray}{$\bigstar$}} For $E(t) = 2^t$, every positive function value has \textit{exactly one} associated domain number, one exponent, one \textbf{\textcolor{purple!85!blue}{logarithm}}. (That is eerily similar to the function rule for pairs in the exponential function.) 
 
 
 
@@ -138,14 +139,14 @@ Thinking of an exponential function in reverse sounds like a new function. We ca
 \[
 \begin{array}{lcl}
 \text{Exponential Function}  &     &  \text{Logarithmic Function}  \\
-domain = (-\infty, \infty)  &  \   &  domain = (0, \infty)  \\
-range = (0, \infty)  &    &  range = (-\infty, \infty)  \\
+domain = (-\infty, \infty)  &  \   &  range = (-\infty, \infty)  \\
+range = (0, \infty)  &    &  domain = (0, \infty)  \\
 (d, r^d)    &    &   (r^d, d)
 \end{array}
 \]
 
 
-The basic logarithmic function just reverses the pairs in the basic exponential function.  If $(d, 2^d)$ is a pair in the exponential function, then $(2^d, d)$ is a pair in the corresponding logarithmic function.
+A core logarithmic function just reverses the pairs in a core exponential function.  If $(d, 2^d)$ is a pair in the exponential function, then $(2^d, d)$ is a pair in the corresponding logarithmic function.
 
 
 Therefore, the domains and ranges switch. 
@@ -205,7 +206,7 @@ $\blacktriangleright$  $\log_2(b)$ is the number that you raise $2$ to, to get $
 
 \[   2^{\log_2(b)} = b     \]
 
-We have a logarithmic function for every exponential function.  They are designated by their bases.
+We have a core logarithmic function for every core exponential function.  They are designated by their bases.
 
 
 
@@ -226,7 +227,7 @@ We have a logarithmic function for every exponential function.  They are designa
 $\log_r(B)$ is the number you raise $r$ to, to get $B$. 
 \end{center}
 
-\textbf{Note:} We are only considering $r > 0$.
+\textbf{Note:} We are only considering $r > 0$, with $r \ne 1$.
 
 \end{definition}
 
@@ -245,7 +246,7 @@ $\log_r(B)$ is the number you raise $r$ to, to get $B$.
 \end{conclusion}
 
 
-
+The phrase ``$\log_A(B)$ is the thing you raise $A$ to, to get $B$'', gives us some simple algebraic rules.
 
 \begin{formuala} \textbf{\textcolor{blue!55!black}{Logarithmic Rules}}
 
@@ -259,9 +260,23 @@ $\log_r(B)$ is the number you raise $r$ to, to get $B$.
 
 \end{formula}
 
+\textbf{\textcolor{red!75!green}{explanation:}} 
 
+We have the exponent rule $A^{n + m} = A^n \cdot A^m$.
 
+Pretend $B = A^n$ and $C = A^m$, then $B \cdot C = A^{n + m}$.
 
+The exponent for $B \cdot C$ is equal to the exponent for $B$ plus the exponent for $C$.
+
+That's what ``$\log_A(B \cdot C) = \log_A(B) + \log_A(C)$'' says.
+
+That is just the magic sentence talking.
+
+The other two logarithm rules come from
+
+$\frac{A^m}{A^n} = A^{m - n}$ and
+
+$(A^n)^m = A^{m \cdot n}$.
 
 
 
@@ -269,17 +284,17 @@ $\log_r(B)$ is the number you raise $r$ to, to get $B$.
 
 \subsection*{Graphs}
 
-Since all of the pairs of exponential and logarithmic functions are reversed, the graphs switch axes.
+Since all the pairs of exponential and logarithmic functions are reversed, the graphs switch axes.
 
 
 
-The horizontal axis is an asymptote for the graph of a basic exponential function. Switching axes makes the vertical axis an asymptote for the graph of a basic logarithmic function.
+The horizontal axis is an asymptote for the graph of a core exponential function. Switching axes makes the vertical axis an asymptote for the graph of a core logarithmic function.
 
 
-The graph of a basic exponential function has $(0,1)$ as an intercept.  The graph of a basic logarithmic function has $(1,0)$ as an intercept. 
+The graph of a core exponential function has $(0,1)$ as an intercept.  The graph of a core logarithmic function has $(1,0)$ as an intercept. 
 
 
-Their graphs are mirror images of each other across the diagonal through quandrants I and III.
+Their graphs are mirror images of each other across the diagonal through quadrants I and III.
 
 
 
@@ -299,27 +314,27 @@ Their graphs are mirror images of each other across the diagonal through quandra
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
           ]
           
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
-      		\addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
-
-
-          	
+          \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:3.2),<->] {2^x};
 
 
-      		\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+            
 
 
-      		\node[penColor] at (axis cs:1.5,8) {$2^d$};
+          \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};
+
+
+          \node[penColor] at (axis cs:1.5,8) {$2^d$};
 
   \end{axis}
   \begin{axis}[at={(invexp.outer east)},anchor=outer west,
@@ -362,8 +377,8 @@ We have two types of core logarithmic functions whose behavior is dictated by th
 
 
 \begin{itemize}
-\item If $r > 1$, then $\log_r(x)$ is an increasing function.
 \item If $0 < r < 1$, then $\log_r(x)$ is a decreasing function.
+\item If $r > 1$, then $\log_r(x)$ is an increasing function.
 \end{itemize}
 
 
@@ -403,7 +418,7 @@ We have two types of core logarithmic functions whose behavior is dictated by th
   \end{axis}
   \begin{axis}[at={(invexp.outer east)},anchor=outer west,
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
-            axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
+            axis lines =center, xlabel=$domain$, ylabel=$range$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
             xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
             ticklabel style={font=\scriptsize},
@@ -437,7 +452,7 @@ We have two types of core logarithmic functions whose behavior is dictated by th
 
 
 
-From these core logarithmic function we can transform and analyze more general logarithmic functions.
+From these core logarithmic functions, we can transform and analyze more general logarithmic functions.
 
 
 
@@ -452,12 +467,12 @@ From these core logarithmic function we can transform and analyze more general l
 
 \begin{definition} \textbf{\textcolor{green!50!black}{Logarithmic Functions}}
 
-Genral \textbf{logarithmic functions} are functions that \textbf{\textcolor{red!70!black}{CAN}} be described by formulas of the form 
+General \textbf{logarithmic functions} are functions that \textbf{\textcolor{red!70!black}{CAN}} be described by formulas of the form 
 
 \[     L(x) = A \log_r(B \, x + C) + D           \]
 
 
-$A \ne 0$, $B \ne 0$, and $r > 0$
+$A \ne 0$, $B \ne 0$, and $r > 0$ with $r \ne 1$
 
 \end{definition}
 
@@ -549,7 +564,7 @@ Therefore, while we separate exponential and shifted exponential functions, we d
 \end{fact}
 
 
-\textbf{Note:}  Many times people just speak about exponential functions, and they mean both exponential and shifted exponential.
+\textbf{Language:}  Many times people just speak about exponential functions, and they mean both exponential and shifted exponential.
 
 
 
@@ -625,11 +640,11 @@ Graph of $y = M(t)$.
             axis on top
           ]
           
-			\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
+      \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({-3},{x});
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-2.95:8),<->] {ln(x+3)/ln(2)-4};
 
 
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-2,-4)};
 
 
 
@@ -638,28 +653,28 @@ Graph of $y = M(t)$.
 \end{image}
 
 
-
+We see that this graph has an intercept around $(11, 0)$. $M$ should have a zero around $1$.
 
 
 \textbf{\textcolor{red!75!green}{With these ideas, we can write an algebraic analysis. }} 
 
+\textbf{\textcolor{purple!65!blue}{Algebraic Analysis}}
 
 
 
 
 
 
-
-\textbf{Domain}  
+\textbf{Domain:}  
 
 The inside of the logarithm is positive on $(-3, \infty)$.  Therefore, the domain of $M$ is $(-3, \infty)$. 
 
 
-\textbf{Zeros}  
+\textbf{Zeros:}  
 
-All logarithmic functions have a single zero. We see that this graph will have a horizontal intercept around $(11, 0)$.  
+All logarithmic functions have a single zero.  
 
-To calculate exctly, we solve $M(t) = \log_2(t+3) - 4 = 0$ 
+To calculate exactly, we solve $M(t) = \log_2(t+3) - 4 = 0$ 
 
 
 \begin{align*}
@@ -671,41 +686,48 @@ t & = 13
 \end{align*}
 
 
-$\blacktriangleright$ \textbf{Remember:} $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = 4$.  Therefore, $4$ is also the thing that you raise $2$ to, to get $t+3$. Therefore, $t+3$ must be $16$.
+Remember, $\log_2(t+3)$ is the thing that you raise $2$ to, to get $t+3$ and $\log_2(t+3) = 4$.  Therefore, $4$ is also the thing that you raise $2$ to, to get $t+3$. Therefore, $t+3$ must be $16$.
 
 
 
 
-\textbf{Continuity}  
+\textbf{Continuity:}  
 
 
 Logarithmic functions are continuous.  That is a property of all logarithmic functions. 
 
 
-\textbf{End-Behavior} 
+Singularity Behavior \\
+$M$ is a logarithmic function. Therefore, it has a singularity.  $-3$ is the singularity for $M$.
 
-We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $M$ and compare back to $\ln(x)$, which is an increasing function.  
+Since $M$ is a logarithmic function, we know $M$ will approach $-\infty$ or $\infty$ as $t$ approaches $-3$ from the positive side. 
+
+If $t$ is getting closer to $-3$, then the inside of the logarithm is getting closer to $0$, from the positive side.  Since the base of $M$ is $2$ is greater than $1$, $\log_2(t+3)$ approaches $-\infty$.
 
 
-
-The base of $M$ is $2 > 1$, so this does not change the behavior from $\ln(x)$.
-
-The leading coefficient of $M$ is $1$, which is positive, so this does not change the behavior. 
-
-the leading coefficient of the linear inside is $1$, which is also positive, so this does not change the behavior.
-
-$M$ is an increasing function. 
+\[
+\lim\limits_{t \to -3^+} M(t) = -\infty
+\]
 
 
 
+\textbf{End-Behavior:} 
+
+$M$ is a logarithmic function, we know the behavior at the singularity and the end-behavior must be opposite.
+
+
+
+\[
+\lim\limits_{t \to \infty} M(t) = \infty
+\]
 
 
 
 
 
-\textbf{Behavior} 
+\textbf{Behavior:} 
 
-Logarithmic functins are either always increasing or always decreasing.
+Logarithmic functions are either always increasing or always decreasing.
 
 The end-behavior tells us which.
 
@@ -723,13 +745,13 @@ $M$ is an increasing function on $(-3, \infty)$.
 
 
 
-Or, we can use the Chain Rule...
+Or we can use the Chain Rule...
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = u - 4$, an increasing linear function
-\item Let $L(x) = \log_2(x)$, an increasing core logarithmic function
-\item Let $L_{in}(v) = v + 3$, an increasing linear function
+\item Let $L_{out}(u) = u - 4$, an increasing linear function, since the leading coefficient is positive.
+\item Let $L(x) = \log_2(x)$, an increasing core logarithmic function, since the base is greater than $1$.
+\item Let $L_{in}(v) = v + 3$, an increasing linear function, since the leading coefficient is positive.
 \end{itemize}
 
 
@@ -744,7 +766,7 @@ Or, we can use the Chain Rule...
 
 
 
-\textbf{Global Extrema} 
+\textbf{Global Extrema:} 
 
 Logarithmic functions do not have global maximums or minimums. 
 
@@ -842,11 +864,11 @@ Here is the graph of both the logarithmic and the associated exponential functio
             \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
-			\addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
+      \addplot [line width=2, penColor2, smooth,samples=200,domain=(-8:-0.25),<->] {2^(x+4)-3};
 
 
 
-			\addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-4,-2)};
+      \addplot[color=penColor2,fill=penColor2,only marks,mark=*] coordinates{(-4,-2)};
   \end{axis}
   \begin{axis}[at={(invexp2.outer east)},anchor=outer west,
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
@@ -916,7 +938,7 @@ Analyze   $K(x) = -2 \, \log_3(4-x)$
 \textbf{\textcolor{red!75!green}{explanation}} 
 
 
-Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic function, because it matches out template, $A \, \log_r(B \, x + C) + D$. 
+Categorize: $K(x) = -2 \, \log_3(4-x)$ is a logarithmic function, because it matches our template, $A \, \log_r(B \, x + C) + D$. 
 
 
 We'll begin by thinking about the graph to help guide our analysis. 
@@ -958,14 +980,14 @@ Graph of $y = K(x)$.
           ]
           
       \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
-			\addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+      \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
       
 
-		
+    
             %\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
-			\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
+      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
 
 
 
@@ -980,7 +1002,7 @@ Graph of $y = K(x)$.
 
 
 
-
+We see that the graph is suggesting that the zero is around $3$. 
 
 
 
@@ -988,17 +1010,16 @@ Graph of $y = K(x)$.
 
 
 
+\textbf{\textcolor{purple!65!blue}{Algebraic Analysis}} 
 
 
-
-\textbf{Domain}  
+\textbf{Domain:}  
 
 The inside of the logarithm is positive on $(-\infty, 4)$.  Therefore, the domain of $K$ is $(-\infty, 4)$. 
 
 
-\textbf{Zeros}  
+\textbf{Zeros:}  
 
-We see that the graph is suggesting that the zero is around $3$. 
 
 
 To calculate the zero exactly solve $K(x) = -2 \, \log_3(4 - x) = 0$ 
@@ -1017,21 +1038,34 @@ $\blacktriangleright$ \textbf{Remember} $\log_3(4 - x)$ is the thing that you ra
 
 
 
-\textbf{Continuity}  
+\textbf{Continuity:}  
 
 Logarithmic functions are continuous.  That is a property of all logarithmic functions. 
 
 
 
+Singularity Behavior \\
+$K$ is a logarithmic function. Therefore, it has a singularity.  $4$ is the singularity for $K$, since it makes the inside of the logarithm equal to $0$.
+
+Since $K$ is a logarithmic function, we know $K$ will approach $-\infty$ or $\infty$ as $x$ approaches $4$ from the negative side. 
+
+If $x$ is getting closer to $4$ from the negative side, then the inside of the logarithm is getting closer to $0$, from the positive side.  Since the base of $K$ is $3$ is greater than $1$, $\log_3(4-x)$ approaches $-\infty$.
+
+Then, multiplying by $-2$ makes $K$ approach $\infty$.
+
+
+\[
+\lim\limits_{t \to 4^-} M(t) = \infty
+\]
 
 
 
 
 
 
-\textbf{Behavior} 
+\textbf{Behavior:} 
 
-We are comparing back to our choice for a basic basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $K$ and compare back to $\ln(x)$, which is an increasing function.  
+We are comparing back to our choice for a basic logarithmic function.  If we chose $\ln(x)$, then we can inventory the pieces of the formula for $K$ and compare back to $\ln(x)$, which is an increasing function.  
 
 
 
@@ -1045,13 +1079,13 @@ $K$ is an increasing function.
 
 
 
-Or, we can use the Chain Rule...
+Or we can use the Chain Rule...
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function
-\item Let $L(k) = \log_3(k)$, an increasing core logarithmic function
-\item Let $L_{in}(v) = 4 - v$, a decreasing linear function
+\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function, since it has a negative leading coeffcient.
+\item Let $L(k) = \log_3(k)$, an increasing core logarithmic function with a base greater than $1$.
+\item Let $L_{in}(v) = 4 - v$, a decreasing linear function, since it has a negative leading coeffcient.
 \end{itemize}
 
 
@@ -1067,9 +1101,9 @@ Or, we can use the Chain Rule...
 
 
 
-\textbf{End-Behavior} 
+\textbf{End-Behavior:} 
 
-$K$ is an increasing function. on the domain $(-\infty, 4)$. That tells us that 
+$K$ is an increasing function on the domain $(-\infty, 4)$. That tells us that 
 
 
 \[
@@ -1079,25 +1113,25 @@ $K$ is an increasing function. on the domain $(-\infty, 4)$. That tells us that
 
 
 \[
-\lim\limits_{t \to 4^-} K(x) = \infty
+\lim\limits_{x \to 4^-} K(x) = \infty
 \]
 
 
 
 
 
-\textbf{Global Extrema} 
+\textbf{Global Extrema:} 
 
 Logarithmic function do not have global maximums or minimums. 
 
 
-\textbf{Local Extrema} 
+\textbf{Local Extrema:} 
 
 Logarithmic function do not have local maximums or minimums. 
 
 
 
-\textbf{Range} 
+\textbf{Range:} 
 
 The range of every logarithmic function is $(-\infty, \infty)$.
 
@@ -1119,7 +1153,7 @@ The range of every logarithmic function is $(-\infty, \infty)$.
 
 
 
-Reversing all of the pairs will give the inverse exponential function.  
+Reversing all the pairs will give the inverse exponential function.  
 
 
 
@@ -1170,13 +1204,13 @@ Here is the graph of both the logarithmic and exponential functions.  They are r
           ]
           
 
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
-          	\addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({4},{x});
+            \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] ({x},{x});
 
 
-			      \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
+            \addplot [line width=2, penColor, smooth,samples=200,domain=(-9:3.995),<->] {-2*ln(4-x)/ln(3)};
 
-			      \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
+            \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(3,0)};
 
 
   \end{axis}
@@ -1255,13 +1289,16 @@ Evaluate the following.
 
 The function $\left( 1 + \frac{1}{x}  \right)^{x}$ has a limiting value.  Take a look at its graph. Its graph has a horizontal asymptote. 
 
-Its end-behavior is a constant.   $e$ is this limiting value.
+Its end-behavior is constant.   $e$ is this limiting value.
 
 It might seem strange to select that number as the base for a logarithm and give it special notation.  However, it turns out that exponential functions with this base, $e$, are intricately connected to natural growth in the universe.
 
 It is used A LOT!
 
 \end{remark}
+
+
+
 
 
 
