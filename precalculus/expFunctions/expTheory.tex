@@ -13,26 +13,27 @@ the exponential story
 
 
 
+Exponential functions exhibit a constant percentage growth rate. The same change anywhere in the domain produces the same percentage change in the function value. That means the function value at the beginning of the domain interval is multiplied by the same constant to produce the function value at the end of the domain interval.
 
 \textbf{Core Exponential Functions}
 
-We have two types of core exponential functions, $r^x$. 
+We have two types of core exponential functions, $Exp(x) = r^x$. 
 
 
 Their different behaviors are dictated by the base.
 
 
 
-$\blacktriangleright$ If $r > 1$, then $r^x$ is an increasing exponential function.
+$\blacktriangleright$ If $r > 1$, then $Exp(x) = r^x$ is an increasing exponential function.
 
-$\blacktriangleright$ If $0 < r < 1$, then $r^x$ is a decreasing exponential function.
-
-
+$\blacktriangleright$ If $0 < r < 1$, then $Exp(x) = r^x$ is a decreasing exponential function.
 
 
 
 
-General exponential functions insert a leading coefficient.
+
+
+The Elementary Functions include \textbf{general exponential functions}, which insert a leading coefficient.
 
 
 
@@ -43,15 +44,21 @@ General exponential functions insert a leading coefficient.
 
 The \textbf{general exponential function} is a function that \textbf{\textcolor{purple!85!blue}{can}} be represented in the form 
 
-\[  Exp(x) = A \cdot r^x    \, | \,  A \ne 0, \, r > 0   \]
+\[  Exp(x) = A \cdot r^x    \, | \,  A \ne 0, \, r > 0 \, \text{ with } \, r \ne 1   \]
+
+
+We refer to \textbf{\textcolor{purple!85!blue}{A}} as the leading coefficient.
+
+We refer to \textbf{\textcolor{purple!85!blue}{r}} as the base.
+
 
 \end{definition}
 
-We can think of exponential functions as shifts and stretches of a core exponential function, accomplished through composition. 
 
 
 
-The \textbf{\textcolor{purple!85!blue}{leading coefficient}}, $A$, controls vertical stretching or compression. The sign of $A$ dictates the sign of our function values, which is illustrated graphically as a vertical reflection. 
+
+The leading coefficient controls vertical stretching or compression. The sign of the leading coefficient dictates the sign of our function values, which is illustrated graphically as a vertical reflection. 
 
 
 
@@ -100,7 +107,7 @@ The \textbf{\textcolor{purple!85!blue}{leading coefficient}}, $A$, controls vert
 
 
 
-The \textbf{\textcolor{purple!85!blue}{base}}, $r$, dictates a growing or decaying function - the constant prcentage change could be an increase or decrease.
+The base dictates a growing or decaying function - the constant prcentage change could be an increase or decrease.
 
 
 
@@ -152,7 +159,6 @@ The \textbf{\textcolor{purple!85!blue}{base}}, $r$, dictates a growing or decayi
 
 
 
-Exponential functions possess a constant percentage growth rate.
 
 
 
@@ -161,16 +167,12 @@ Exponential functions possess a constant percentage growth rate.
 
 
 
+Graphs of exponential functions have the horizontal axis as a horizontal asymptote in one direction or the other, which illustrates that they have no zeros.
+
+\begin{explanation} \textbf{\textcolor{red!75!green}{Base greater than $1$}} 
 
 
-
-
-Graphs of the basic exponential functions have the horizontal axis as a horizontal asymptote in one direction or the other, which illustrates that they have no zeros.
-
-\begin{explanation}
-
-
-When $r$ \wordChoice{\choice{$<$} \choice[correct]{$>$}} $1$ we have a growing function. It could be growing positively or negatively, depending on the sign of $A$.
+When $r > 1$ we have a \wordChoice{\choice{decaying} \choice[correct]{growing}} function. It could be growing positively or negatively, depending on the sign of theleading coefficient.
 
 \[  \lim_{x \to -\infty} A \, r^x = 0 \, \text{ and } \, \lim_{x \to \infty} A \, r^x = \pm\infty \]
 
@@ -218,13 +220,13 @@ Since $r^x$ is always positive, it is the sign of $A$ that dictates if the unbou
 \end{image}
 
 
-Graphs of basic exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, A \right)$.
+Graphs of exponential functions have one strategic point, which occurs when the exponent equals zero. For the basic exponential function, this point is $\left( \answer{0}, A \right)$.
 
 
-Exponential functions have unbounded growth in the direction that makes the exponent large and \wordChoice{\choice[correct]{positive} \choice{negative}}.
+When the base is greater than $1$, exponential functions have unbounded growth in the direction that makes the exponent large and \wordChoice{\choice[correct]{positive} \choice{negative}}.
 
 
-Exponential functions approach $0$ in the direction that makes the exponent large and \wordChoice{\choice{positive} \choice[correct]{negative}}.
+When the base is greater than $1$, exponential functions approach $0$ in the direction that makes the exponent large and \wordChoice{\choice{positive} \choice[correct]{negative}}.
 
 
 
@@ -235,11 +237,11 @@ Exponential functions approach $0$ in the direction that makes the exponent larg
 
 
 
-\begin{explanation}
+\begin{explanation} \textbf{\textcolor{red!75!green}{Base less than $1$}}
 
 
 
-When $r$ \wordChoice{\choice[correct]{$<$} \choice{$>$}} $1$, we have a decaying function. The horizontal axis is still a horizontal asymptote, just in the direction where $x$ is large and positive. The function now decays. It could decay positively or negatively, depending on the sign of $A$.
+When $r < 1$, we have a decaying function. The horizontal axis is still a horizontal asymptote, just in the direction where the exponent is large and positive. The function now decays. It could decay positively or negatively, depending on the sign of leading coefficient.
 
 
 \[ \lim_{x \to -\infty} A \, r^x = \pm\infty \, \text{ and } \, \lim_{x \to \infty} A \, r^x = 0 \]
@@ -292,10 +294,10 @@ Graphs of basic exponential functions have one strategic point, which occurs whe
 
 
 
-Exponential functions have unbounded growth in the direction that makes the exponent large and \wordChoice{\choice[correct]{positive} \choice{negative}}.
+When the base is less than $1$, exponential functions have unbounded growth in the direction that makes the exponent large and \wordChoice{\choice[correct]{positive} \choice{negative}}.
 
 
-Exponential functions approach $0$ in the direction that makes the exponent large and \wordChoice{\choice{positive} \choice[correct]{negative}}.
+When the base is less than $1$, exponential functions approach $0$ in the direction that makes the exponent large and \wordChoice{\choice{positive} \choice[correct]{negative}}.
 
 
 \end{explanation}
@@ -309,9 +311,9 @@ All exponential functions share a common structure.
 
 
 \begin{itemize}
-\item Each is always positive or always negative. This depends on the sign of $A$.
-\item Each approaches $0$ in one direction - the direction that makes the exponent large and negative.
-\item In the other direction, they grow unbounded. 
+\item Each is always positive or always negative. This depends on the sign of the leading coefficient.
+\item Each approaches $0$ in one direction.
+\item In the other direction, they grow unbounded (postively or negatively). 
 \end{itemize}
 
 
@@ -322,9 +324,9 @@ All exponential graphs share a common structure.
 
 
 \begin{itemize}
-\item Each is always above or below the horizontal axis. This depends on the sign of $A$.
+\item Each is always above or below the horizontal axis. This depends on the sign of the leading coefficient.
 \item Each has the horizontal axis as an asymptote in one direction.
-\item In the other direction, they grow unbounded. 
+\item In the other direction, they extend unbounded (up or down). 
 \end{itemize}
 
 
@@ -346,7 +348,7 @@ These are the important aspects or characteristics that we watch when moving ont
 \begin{summary} \textbf{\textcolor{red!70!yellow}{Exponential Behavior}}
 
 
-Basic exponential functions, $A \cdot r^x$, are either increasing functions or decreasing functions.
+Basic exponential functions, $E(x) = A \cdot r^x$, are either increasing functions or decreasing functions.
 
 
 $\blacktriangleright$  \textbf{\textcolor{purple!85!blue}{Base Greater than $1$: $r > 1$}} 
@@ -395,6 +397,30 @@ The leading coefficient in front, $A$, tells us if this larger/smaller value is 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Analysis}
+
 As we see, basic exponential functions can be
 
 \begin{itemize}
@@ -419,26 +445,6 @@ As we see, basic exponential functions can be
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection*{Analysis}
 
 
 
@@ -476,7 +482,7 @@ We'll begin by thinking about the graph to help guide our analysis.
 
 
 
-The ``inside'' (the argument) of the formula for $f(x)$, representing the domain, is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
+The ``inside'' of the formula for $f(x)$ is $x+5$.  This equals $0$, when $x=-5$.  The exponent is positive for $x>-5$, and because the base is $2 > 1$, this is the direction (right) of unbounded growth.  Therefore, the other direction (left) is where the horizontal asymptote is in effect.  Since the leading coefficient is $\frac{1}{3} > 0$, the unbounded growth is positive.
 
 At $x=-5$, we have our one anchor point for the graph.  The point is $\left(-5, \frac{1}{3} \right)$, which is $\frac{1}{3}$ above the horizontal axis.
 
@@ -489,8 +495,8 @@ Graph of $y = f(x)$.
             domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
             axis lines =center, xlabel=$x$, ylabel=$y$, grid = major,
             ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
-          	ticklabel style={font=\scriptsize},
+            xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+            ticklabel style={font=\scriptsize},
             every axis y label/.style={at=(current axis.above origin),anchor=south},
             every axis x label/.style={at=(current axis.right of origin),anchor=west},
             axis on top
@@ -498,9 +504,9 @@ Graph of $y = f(x)$.
           
           \addplot [line width=1, gray, dashed,samples=200,domain=(-10:10),<->] {0};
 
-      	  \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)};
+           \addplot [line width=2, penColor, smooth,samples=200,domain=(-10:0.6),<->] {0.33 * 2^(x+5)};
 
-      	  \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,0.333)};
+           \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-5,0.333)};
 
           
 
@@ -521,19 +527,15 @@ Graph of $y = f(x)$.
 \textbf{\textcolor{red!75!green}{Now, for our (algebraic) function analysis.}} 
 
 
+\textbf{\textcolor{purple!65!blue}{Algebraic Analysis}}
 
 
-
-\textbf{Domain:} 
-
-The domain of every exponential function is $(-\infty, \infty)$. 
+\textbf{Domain:}  The domain of every exponential function is $(-\infty, \infty)$. 
 
 
 
 
-\textbf{Zeros:}  
-
-Exponential functions do not have zeros. 
+\textbf{Zeros:}  Exponential functions do not have zeros. 
 
 
 
@@ -552,7 +554,7 @@ $2^{positive}$ will get big. $2^{negative}$ will get small.
 
 The linear exponent of $f$ is $x+5$ has a positive leading coefficient. 
 
-The negative direction is the direction that makes the exponent large and negative.  That makes this the direction that the function value levels off to $0$. 
+The negative direction is the direction that makes the exponent large and negative.  That makes this the direction that the function value approaches $0$. 
 
 
 \[
@@ -584,9 +586,9 @@ We can think of $f$ as a composition with two linear functions.
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = \frac{1}{3} \, u$, an increasing linear function.
-\item Let $E(t) = 2^t$, an increasing core exponential function.
-\item Let $L_{in}(v) = v + 5$, an increasing linear function.
+\item Let $L_{out}(u) = \frac{1}{3} \, u$, an increasing linear function, since it is a linear function with a positive leading coefficient.
+\item Let $E(t) = 2^t$, an increasing core exponential function, since it is a core exponential function with a base greater than $1$.
+\item Let $L_{in}(v) = v + 5$, an increasing linear function, since it is a linear function with a positive leading coefficient.
 \end{itemize}
 
 
@@ -599,7 +601,7 @@ We can think of $f$ as a composition with two linear functions.
 
 
 
-This gets shortened to leading coefficients and the base:\\
+This story gets shortened to leading coefficients and the base:\\
 The base of $f$ is $2$, which is greater than $1$. The leading coefficient of $f$ is $\frac{1}{3}$, which is positive. The leading coefficient of the linear exponent is $1$, which is also positive.  These make $f$ is a positive increasing exponential function.
 
 
@@ -639,7 +641,7 @@ $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Shifting or Not}}
 
 
 
-Exponential functions can swallow up horizontal shifting into the leading coefficient.
+Exponential functions can swallow up horizontal graphical shifting into the leading coefficient.
 
 
 
@@ -673,7 +675,7 @@ $\blacktriangleright$ \textbf{\textcolor{blue!55!black}{Stretching or Not}}
 
 
 
-Exponential functions swallow up stretching and compressing into the leading coefficient and base.
+Exponential functions swallow up graphical stretching and compressing into the leading coefficient and base.
 
 
 \begin{itemize}
@@ -721,17 +723,19 @@ Algebra let's us see exponential functions in more complex forms.
 
 \begin{definition} \textbf{\textcolor{green!50!black}{More General Exponential Functions}}
 
-A general \textbf{exponential function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
+An \textbf{exponential function} is any function that \textbf{\textcolor{purple!85!blue}{CAN}} be represented with a formula of the form
 
 \[     Exp(x) =    A \cdot r^{B \, x + C}          \]
 
-where $A$, $B$, and $C$ are real numbers and $A \ne 0$, $B \ne 0$.
+where $A$, $B$, and $C$ are real numbers and $A \ne 0$, $B \ne 0$, $r > 0$ with $r \ne 1$.
 
 
 \end{definition}
 
-We can use any algebra, any time, any where that we feel helps us.  
 
+\begin{center}
+\textbf{\textcolor{red!70!black}{We can use any algebra, any time, any where that we feel helps us.}}  
+\end{center}
 
 
 
@@ -746,7 +750,7 @@ We can view exponential functions as compositions
 \item Let $L_{in}(v) = B \, v + C$, a linear function
 \end{itemize}
 
-With these component functions, we can view exponential functions as compositions.
+With these core component functions, we can view exponential functions as compositions.
 
 
 \[  Exp(x) =    A \cdot r^{B \, x + C} = (L_{out} \circ E \circ L_{in})(x) \]
@@ -807,6 +811,7 @@ Analyze $G(t) = 4 \cdot 3^{2t-1}$.
 Categorize:  $G$ is an exponential function, since it matches our more general official template $A \, r^{B \, x + C}$. 
 
 
+\textbf{Just Thinking...}
 
 We could take advantage of exponential algebra to simplify the exponent.   
 
@@ -815,7 +820,7 @@ G(t) = 4 \cdot 3^{2t-1} = 4 \cdot 3^{2t} \cdot \frac{1}{3} = \frac{4}{3} \cdot (
 \]
 
 
-We now have a basic exponential function with the new base $\answer{9}$ and the new leading coefficient is $\answer{\frac{4}{3}}$.
+We now have a simpler formula with the new base $\answer{9}$ and the new leading coefficient is $\answer{\frac{4}{3}}$.
 
 
 
@@ -834,31 +839,22 @@ Since the new base $9$ is greater than the old base of $3$, the function grows f
 \textbf{\textcolor{red!75!green}{With these ideas, we can create an algebraic analysis.}} 
 
 
+\textbf{\textcolor{purple!65!blue}{Algebraic Analysis}}
 
 
 
-
-\textbf{Domain}
-
-
-$G$ is an exponential function, so its domain is $(-\infty, \infty)$.
+\textbf{Domain:}  $G$ is an exponential function, so its domain is $(-\infty, \infty)$.
 
 
 
 
 
-\textbf{Zeros}
-
-
-$G$ is an exponential function, so it has no zeros.
+\textbf{Zeros:}  $G$ is an exponential function, so it has no zeros.
 
 
 
 
-\textbf{Continuity}
-
-
-$G$ is an exponential function, so it is continuous.
+\textbf{Continuity:}  $G$ is an exponential function, so it is continuous.
 
 
 
@@ -873,7 +869,7 @@ $G(t) = 4 \cdot 3^{2t-1}$ is an exponential function.  It  is either always incr
 
 The leading coeffcient is $4$, which is positive.  Therefore, $G$ is positive.
 
-The leading coefficient of the linear exponent is $2$, which is positive.  That with a base of $2 > 1$ tell us us that $G$ becomes unbounded towards the positive side of the real numbers.
+The leading coefficient of the linear exponent is $2$, which is positive.  That with a base of $3 > 1$ tell us us that $G$ becomes unbounded towards the positive side of the real numbers.
 
 
 That means $G$ is an increasing function.
@@ -884,15 +880,15 @@ $\blacktriangleright$ Using the Chain Rule
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = 4 \,$, an increasing linear function
-\item Let $E(x) = 3^x$, an increasing core exponential function
-\item Let $L_{in}(v) = 2 \, v - 1$, an increasing linear function
+\item Let $L_{out}(u) = 4 \, u$, an increasing linear function, since the leading coefficient is positive.
+\item Let $E(x) = 3^x$, an increasing core exponential function, since the base is greater than $1$.
+\item Let $L_{in}(v) = 2 \, v - 1$, an increasing linear function, since the leading coefficient is positive.
 \end{itemize}
 
 With these component functions, we can view $G$ as a composition.
 
 
-\[  G(t) = 4 \cdot 3^{2t-1} = (L_{out} \circ E \circ L_{in})(x) \]
+\[  G(t) = 4 \cdot 3^{2t-1} = (L_{out} \circ E \circ L_{in})(t) \]
 
 \[ inc \circ inc \circ inc = inc  \]
 
@@ -920,27 +916,19 @@ $G$ is a positive increasing function.
 
 
 
-\textbf{Local Maximum and Minimum}
-
-Exponential functions do not have local maximums or minimums.
+\textbf{Local Maximum and Minimum:}  Exponential functions do not have local maximums or minimums.
 
 
 
 
 
 
-\textbf{Global Maximum and Minimum}
-
-Exponential functions do not have global maximums or minimums.
+\textbf{Global Maximum and Minimum:}  Exponential functions do not have global maximums or minimums.
 
 
 
 
-\textbf{Range}
-
-
-
-$G$ is a positive exponential function.   Its range is $(0, \infty)$.
+\textbf{Range:}  $G$ is a positive exponential function.   Its range is $(0, \infty)$.
 
 
 
@@ -970,7 +958,7 @@ Behavior is controlled by three pieces of the formula: the outside linear functi
 
 
 
-$f(x) = 3 \cdot e^{x}$ is an increasing function.
+\textbf{For Instance,} $f(x) = 3 \cdot e^{x}$ is an increasing function.
 
 \textbf{\textcolor{blue!55!black}{$\blacktriangleright$}} If we change the sign of the leading coefficient, $g(x) = -3 \cdot e^{x}$ is a decreasing function.
 
@@ -996,14 +984,14 @@ This is exactly what the Chain Rule tells us.
 
 
 
-When multiplying by $B$ on the inside of an exponential function, for a horizontal stretch or compression, 
+When multiplying by $B$ on the inside of an exponential function, the graph experiences a horizontal stretch or compression.
 
 
-if $1 < B$, then we are compressing horizontally.  This works out in the algebra. When $1 < B$, then $r < r^B$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. 
+If $1 < B$, then we are compressing horizontally.  This works out in the algebra. When $1 < B$, then $r < r^B$. The base becomes larger, which means the function grows faster, which means the graph goes up faster, which means the graph has been compressed horizontally. 
 
 
 
-if $0 < B < 1$, then we are stretching horizontally.  This works out in the algebra. When $0 < B < 1$, then $r^B < r$. The base becomes smaller, which means the function grows slower, which means the graph goes up slower, which means the graph has been stretched horizontally.
+If $0 < B < 1$, then we are stretching horizontally.  This works out in the algebra. When $0 < B < 1$, then $r^B < r$. The base becomes smaller, which means the function grows slower, which means the graph goes up slower, which means the graph has been stretched horizontally.
 
 
 \end{observation}
@@ -1015,7 +1003,7 @@ if $0 < B < 1$, then we are stretching horizontally.  This works out in the alge
 One way to watch this is to think of how the exponential function is built from a core exponential function through composition.
 
 
-Begin with the base, is it greater than or less than $1$.  That will tell you if the core exponential function is increasing or decreasing.
+Begin with the base, is it greater than or less than $1$?  That will tell you if the core exponential function is increasing or decreasing.
 
 Then look at the signs of the two leading coefficients. If they have the same sign, then the behavior doesn't change. If they have different signs, then the behavior changes.
 
@@ -1057,20 +1045,21 @@ Categorize: $B$ is an exponential function, since it matches our template, $A \,
 \textbf{Just Thinking...}  
 
 $\blacktriangleright$  the base: $\frac{2}{3} < 1$   \\
+$\blacktriangleright$  the leading coefficient is negative.  \\
 $\blacktriangleright$  the exponent: $3-t$ is positive for large negative $t$. \\
-$\blacktriangleright$  the exponent: $3-t$ is negative for large positive $t$. \\
-$\blacktriangleright$  the leading coefficient is negative. 
+$\blacktriangleright$  the exponent: $3-t$ is negative for large positive $t$. 
+
 
 
 Together, these tell us that $B(t)$ settles down for large negative values of $t$ and that $B(t)$ becomes unbounded when $t$ is large and positive.
 
 
 
-This is a transformed version of the basic exponential function template $\left( \frac{2}{3} \right)^{-t} = \left( \answer{\frac{3}{2}} \right)^t$.  
+This is a transformed version of the core exponential function template $\left( \frac{2}{3} \right)^{-t} = \left( \answer{\frac{3}{2}} \right)^t$.  
 
 
 
-When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and the basic exponential portion is becoming smaller, approaching $0$.  
+When $t < 0$, then $-t > 0$ and we get  $\left( \frac{2}{3} \right)^{positive}$ and the core exponential portion is becoming smaller, approaching $0$.  
 
 
 
@@ -1103,7 +1092,7 @@ Since the leading coefficient is $-2 < 0$, these smaller/larger values of $-2 \,
 
 
 
-$\blacktriangleright$ \textbf{Horizontal Shift}
+Horizontal Shift
 
 Our exponent here is $3 - t$.  Our function's exponent is zero, $3-t=0$ when $t=3$. Our one anchor point is shifted over to $3$.  Multipying by $-2$, means the dot is $2$ away(below) from the horizontal asymptote, which is $y=0$.  Our anchor point is $(3, -2)$.
 
@@ -1159,27 +1148,18 @@ Graph of $y = B(t)$.
 
 
 
-\textbf{Domain}
-
-
-$B$ is an exponential function, so its domain is $(-\infty, \infty)$.
+\textbf{Domain:}  $B$ is an exponential function, so its domain is $(-\infty, \infty)$.
 
 
 
 
 
-\textbf{Zeros}
-
-
-$B$ is an exponential function, so it has no zeros.
+\textbf{Zeros:}  $B$ is an exponential function, so it has no zeros.
 
 
 
 
-\textbf{Contiuity}
-
-
-$B$ is an exponential function, so it is continuous.
+\textbf{Contiuity:}  $B$ is an exponential function, so it is continuous.
 
 
 
@@ -1192,9 +1172,9 @@ $\blacktriangleright$ \textbf{Thinking with the Chain Rule...}
 
 
 \begin{itemize}
-\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function
-\item Let $E(x) = \left( \frac{2}{3} \right)^x$, a decreasing core exponential function
-\item Let $L_{in}(v) = 3 - v$, a decreasing linear function
+\item Let $L_{out}(u) = -2 \, u$, a decreasing linear function, since the leading coefficient is negative.
+\item Let $E(x) = \left( \frac{2}{3} \right)^x$, a decreasing core exponential function, since the base is less than $1$. 
+\item Let $L_{in}(v) = 3 - v$, a decreasing linear function, since the leading coefficient is negative.
 \end{itemize}
 
 
@@ -1218,14 +1198,14 @@ The leading coeffcient is $-2$, which is negative.  Therefore, $B$ is negative.
 The leading coefficient of the linear exponent is $-1$, which is negative.  That with a base of $\frac{2}{3} < 1$ tell us us that $B$ becomes unbounded towards the positive side of the real numbers.
 
 
-$B$ is a negative function that becomes unbounded toward the positive end of the real numbers.  That means $G$ is an decreasing function.
+$B$ is a negative function that becomes unbounded toward the positive end of the real numbers.  That means $G$ is a decreasing function.
 
 
 
-Or, we can compare back to a basic exponential function...
+Or, we can compare back to a core exponential function...
 
 
-$B$ is an exponential function, which might be compared to the basic basic exponential function $e^x$, which is a positive increasing function.
+$B$ is an exponential function, which might be compared to the core exponential function $e^x$, which is a positive increasing function.
 
 
 First, the base has been changed from $e > 1$ to $\frac{2}{3} < 1$.  That switches the behavior to decreasing.
@@ -1260,27 +1240,19 @@ $B$ is a negative decreasing function.
 
 
 
-\textbf{Local Maximum and Minimum}
-
-Exponential functions do not have local maximums or minimums.
+\textbf{Local Maximum and Minimum:}  Exponential functions do not have local maximums or minimums.
 
 
 
 
 
 
-\textbf{Global Maximum and Minimum}
-
-Exponential functions do not have global maximums or minimums.
+\textbf{Global Maximum and Minimum:}  Exponential functions do not have global maximums or minimums.
 
 
 
 
-\textbf{Range}
-
-
-
-$B$ is a negative exponential function.   Its range is $(-\infty, 0)$.
+\textbf{Range:}  $B$ is a negative exponential function.   Its range is $(-\infty, 0)$.
 
 
 
@@ -1355,11 +1327,12 @@ It just depends on how you like to think of it. \\
 
 
 
-\begin{example}  
+\begin{example}  Graphs
 
 
 
-Analyze   $K(f) = 3^{5-f}$ \\
+Analyze   $K(f) = 3^{5-f}$ 
+
 
 \begin{question}
  
@@ -1442,6 +1415,11 @@ Graph of $y = K(f)$.
 
 
 \end{example}
+
+
+
+
+
 
 
 
